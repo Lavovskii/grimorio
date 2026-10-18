@@ -1,0 +1,25 @@
+# O browser confirma sempre se há versão nova da página (as imagens ficam em cache)
+<IfModule mod_headers.c>
+	<FilesMatch "\.html?$">
+		Header set Cache-Control "no-cache"
+	</FilesMatch>
+</IfModule>
+AddDefaultCharset utf-8
+
+# Os dados do Grimório (data/*.json) são públicos; o .htaccess da raiz bloqueia .json para o MyAAC
+<FilesMatch "\.json$">
+	Require all granted
+	<IfModule mod_headers.c>
+		Header set Cache-Control "no-cache"
+	</IfModule>
+</FilesMatch>
+
+# Não herdar o reencaminhamento do MyAAC (ficheiro em falta = 404 normal)
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+</IfModule>
+
+# Compressão (se o módulo estiver ativo)
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html application/json text/css application/javascript
+</IfModule>
