@@ -1,18 +1,19 @@
 """Regera huntmaps.png (miniaturas dos mapas das hunts) a partir de maps/floor-XX-map.png e atualiza o índice em G.hm.
 Cada miniatura = recorte de 96×64 casas (1 px por casa) centrado nas coordenadas da hunt, como as originais.
 Grelha: 10 colunas, células 96×64, índices contínuos 0..N-1 (o huntMap() do site assume isto).
+O G lê-se e grava-se com load_G/save_G de gjson.py (formato canónico, uma entrada por linha).
 Uso: python -I build_huntmaps.py [raiz do site] [--dry]"""
-import json, re, sys, os
+import sys, os
 from PIL import Image
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.dont_write_bytecode = True  # sem __pycache__ dentro do repositório
+from gjson import load_G, save_G, default_root
 
 args = [a for a in sys.argv[1:] if not a.startswith('--')]
-ROOT = args[0] if args else r'C:\xampp\htdocs\grimorio'
+ROOT = args[0] if args else default_root()
 DRY = '--dry' in sys.argv
 OX, OY, CW, CH, COLS = 31744, 30976, 96, 64, 10
-P = os.path.join(ROOT, 'index.html')
-s = open(P, encoding='utf-8').read()
-m = re.search(r'(<script[^>]*id="G"[^>]*>)(.*?)(</script>)', s, re.S)
-G = json.loads(m.group(2))
+s, G, span = load_G(ROOT)
 floors = {}
 
 
@@ -46,6 +47,5 @@ for i, (pid, im) in enumerate(cells):
 print('miniaturas:', len(cells), '| sem mapa:', len(skipped), skipped[:10], '| folha', sheet.size)
 if not DRY:
     sheet.save(os.path.join(ROOT, 'huntmaps.png'), optimize=True)
-    out = json.dumps(G, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    open(P, 'w', encoding='utf-8', newline='').write(s[:m.start(2)] + out + s[m.end(2):])
+    save_G(ROOT, s, G, span)
     print('gravado')

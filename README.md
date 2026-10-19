@@ -32,13 +32,14 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
 
 - `smoke.mjs`: abre o site num Edge sem janela, cria personagens de teste e devolve os erros da consola e uma captura de ecrã. Exemplo:
   `node _dev/smoke.mjs --url http://localhost/grimorio/ --hash hunts --mode modern --w 375 --h 812 --shot teste.png`
+- `gjson.py`: lê e grava os dados `G` do `index.html` com uma entrada por linha. `python -I _dev/gjson.py --check` confirma que o JSON lê bem e está no formato certo; `--format` reformata. Os outros scripts que mudam dados usam-no (`load_G`/`save_G`).
 - `build_search.py`: regenera `data/search.json`. Corre-o depois de mudar ficheiros de `data/`.
 - `fix_hunt_mons.py`: refaz as criaturas e as quantidades de cada hunt (`G.pm`) a partir da lista curada (`G.places[pid].mons`).
 - `build_huntmaps.py`: refaz as miniaturas dos mapas das hunts (`huntmaps.png`). Depois muda o `?v=` de `huntmaps.png` no `index.html`, porque os browsers guardam a imagem antiga.
 - `apply_hunt_fixes.py`: aplica correções de hunts verificadas, em ficheiros `fix-*.json`.
 - `reap.ps1`: fecha browsers de testes que ficaram abertos.
 
-As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro sítio, ajusta-os.
+As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro sítio, ajusta-os. Corridas a partir de `_dev/` sem indicar a raiz, usam a pasta do teu clone; os registos vão para a pasta da variável `GRIM_WORK` ou para a pasta temporária.
 
 ## Como trabalhamos os dois
 
@@ -52,7 +53,8 @@ As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro síti
   ```
   Depois abre um Pull Request no GitHub, o outro revê e faz merge.
 - **O site público corre a partir desta pasta no PC de casa.** Para publicar o que está na `main`, nesse PC: `git pull` dentro de `C:\xampp\htdocs\grimorio`.
-- **Conflitos no `index.html`:** os dados `G` estão numa só linha muito longa, por isso duas pessoas a mudar dados ao mesmo tempo dão sempre conflito. Combinem quem mexe nos dados de cada vez, ou alterem-nos com scripts que se podem voltar a correr por cima da versão nova.
+- **Conflitos no `index.html`:** os dados `G` (o `<script id="G">`) têm uma entrada por linha (uma hunt, um item, uma criatura…), por isso o Git junta sozinho as alterações dos dois quando mexem em registos diferentes. Se houver conflito, resolve-o como noutro ficheiro qualquer e depois corre `python -I _dev/gjson.py --check` (diz a linha e a coluna se o JSON ficou estragado) e o `smoke.mjs`. Não mudes os dados com `json.dumps` à mão: os scripts gravam-nos com `save_G` de `_dev/gjson.py`, que mantém o formato.
+- **A pasta pública é um clone do repositório:** o `.htaccess` responde 404 a tudo o que começa por `.git` (a pasta `.git`, o `.gitignore` e o `.gitattributes`), para ninguém descarregar o histórico nem ver o email de quem faz commits; o `_dev/` dá 403. O `.editorconfig` diz aos editores para gravar em UTF-8 com fins de linha LF.
 - Antes de cada commit, corre o `smoke.mjs` em `inicio` e `hunts`, nos dois modos e a 375 px. Tem de dar `errors: []` e `hscroll: false`.
 
 ## Fontes dos dados

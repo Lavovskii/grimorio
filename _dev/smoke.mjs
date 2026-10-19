@@ -9,6 +9,7 @@ import { spawn, execSync } from 'node:child_process';
 import { mkdtempSync, readFileSync, writeFileSync, existsSync, rmSync, statfsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, basename } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const A = process.argv.slice(2), arg = (k, d) => { const i = A.indexOf('--' + k); return i < 0 ? d : (A[i + 1] && !A[i + 1].startsWith('--') ? A[i + 1] : true); };
 const URL0 = arg('url', 'http://localhost/grimorio/'), HASH = arg('hash', 'inicio'), MODE = arg('mode', 'modern');
@@ -20,7 +21,9 @@ let out = { url: URL0 + '#' + HASH, mode: MODE, size: [W, H], errors: [], warnin
 const emit = code => new Promise(() => { let k = false; const end = () => { if (!k) { k = true; process.exit(code); } }; try { process.stdout.write(JSON.stringify(out, null, 1) + '\n', end); } catch (e) { end(); } setTimeout(end, 3000); });
 
 // antes de abrir outro browser, limpa testes mortos (pastas sem dono vivo e os browsers delas); nunca toca em testes a correr
-try { execSync(`powershell -NoProfile -ExecutionPolicy Bypass -File C:/xampp/_tools/reap.ps1 -Caller ${process.pid}`, { stdio: 'ignore', timeout: 20000, windowsHide: true }); } catch (e) { }
+// usa o reap.ps1 que está ao lado deste script (num clone: _dev/reap.ps1); só sem ele o de C:/xampp/_tools
+const REAP = [fileURLToPath(new URL('./reap.ps1', import.meta.url)), 'C:/xampp/_tools/reap.ps1'].find(f => existsSync(f));
+try { if (REAP) execSync(`powershell -NoProfile -ExecutionPolicy Bypass -File "${REAP}" -Caller ${process.pid}`, { stdio: 'ignore', timeout: 20000, windowsHide: true }); } catch (e) { }
 
 // espaço em disco: com o disco cheio o site também falha (cache do market, logs), por isso não abre o browser
 const MINMB = +process.env.SMOKE_MIN_FREE_MB || 1024;

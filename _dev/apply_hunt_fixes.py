@@ -6,18 +6,28 @@
 - r2: tira a quest quando a verificação diz que não é precisa; tira as linhas da TibiaWiki (w) das vocações que não entram;
   linhas f ao lado de uma linha real saem; o nível vai para a linha mais baixa e marca v:1 nas linhas f (confiança high/medium;
   linhas v não mudam); as listas de equipa perdem as vocações a que a verificação deu nível solo. KEEP = exceções.
-  O registo vai SEMPRE para C:\\xampp\\_work\\hunts\\apply.log (faz cópia antes de testar numa pasta à parte).
+  O registo (apply.log; com --dry, apply.dry.log) vai para a pasta GRIM_WORK (variável de ambiente) ou para a pasta
+  temporária, e só se escreve quando há algo a registar. O G lê-se e grava-se com load_G/save_G de gjson.py.
 Depois correm fix_hunt_mons.py (criaturas e quantidades) e build_huntmaps.py (miniaturas).
-Uso: python -I apply_hunt_fixes.py [raiz] [--dry]"""
-import json, re, sys, os, glob, unicodedata, datetime
+Uso: python -I apply_hunt_fixes.py [raiz] [--dry] [--fixes PASTA]
+  PASTA = onde estão os fix-*.json (por omissão C:\\xampp\\_work\\hunts, se existir)."""
+import json, re, sys, os, glob, unicodedata, datetime, tempfile
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.dont_write_bytecode = True  # sem __pycache__ dentro do repositório
+from gjson import load_G, save_G, default_root
 
-args = [a for a in sys.argv[1:] if not a.startswith('--')]
-ROOT = args[0] if args else r'C:\xampp\htdocs\grimorio'
-DRY = '--dry' in sys.argv
+ARGV = sys.argv[1:]
+FIXES = r'C:\xampp\_work\hunts'
+if '--fixes' in ARGV:
+    i = ARGV.index('--fixes')
+    FIXES = ARGV[i + 1] if i + 1 < len(ARGV) else ''
+    ARGV = ARGV[:i] + ARGV[i + 2:]
+args = [a for a in ARGV if not a.startswith('--')]
+ROOT = args[0] if args else default_root()
+DRY = '--dry' in ARGV
+WORK = os.environ.get('GRIM_WORK') or tempfile.gettempdir()
 P = os.path.join(ROOT, 'index.html')
-s = open(P, encoding='utf-8').read()
-m = re.search(r'(<script[^>]*id="G"[^>]*>)(.*?)(</script>)', s, re.S)
-G = json.loads(m.group(2))
+s, G, span = load_G(ROOT)
 CR = json.load(open(os.path.join(ROOT, 'data', 'creatures.json'), encoding='utf-8'))
 EL = ['physical', 'fire', 'ice', 'earth', 'energy', 'holy', 'death']
 VOCS = ['knight', 'paladin', 'sorcerer', 'druid', 'monk']
@@ -27,7 +37,9 @@ fold = lambda t: unicodedata.normalize('NFD', str(t or '')).encode('ascii', 'ign
 KEEP = {('w_podzilla', 'knight')}
 
 E = []
-for f in sorted(glob.glob(r'C:\xampp\_work\hunts\fix-*.json')):
+if not os.path.isdir(FIXES):
+    print('sem pasta de correções (fix-*.json):', FIXES or '(nenhuma)')
+for f in sorted(glob.glob(os.path.join(FIXES, 'fix-*.json'))) if FIXES else []:
     try:
         E += json.load(open(f, encoding='utf-8'))
     except Exception as e:
@@ -204,10 +216,12 @@ for v in G['hunts']:
         keep.append(r)
     G['hunts'][v] = keep
 
-log.append('\nRESUMO ' + json.dumps(stats, ensure_ascii=False))
-open(r'C:\xampp\_work\hunts\apply.log', 'w', encoding='utf-8').write('\n'.join(log))
-print(json.dumps(stats, ensure_ascii=False), '| entradas', len(E), '| registo: C:\\xampp\\_work\\hunts\\apply.log')
+LOG = ''
+if log:
+    LOG = os.path.join(WORK, 'apply.dry.log' if DRY else 'apply.log')
+    with open(LOG, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(log + ['\nRESUMO ' + json.dumps(stats, ensure_ascii=False)]))
+print(json.dumps(stats, ensure_ascii=False), '| entradas', len(E), '| registo:', LOG or '(nada a registar)')
 if not DRY:
-    out = json.dumps(G, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    open(P, 'w', encoding='utf-8', newline='').write(s[:m.start(2)] + out + s[m.end(2):])
+    save_G(ROOT, s, G, span)
     print('gravado', P)

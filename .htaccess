@@ -17,6 +17,12 @@ AddDefaultCharset utf-8
 # Não herdar o reencaminhamento do MyAAC (ficheiro em falta = 404 normal)
 <IfModule mod_rewrite.c>
 	RewriteEngine On
+	# O repositório Git não é público
+	RewriteRule (^|/)\.git - [R=404,L]
+</IfModule>
+# Sem mod_rewrite: o mesmo pelo mod_alias
+<IfModule mod_alias.c>
+	RedirectMatch 404 "/\.git"
 </IfModule>
 
 # Compressão (se o módulo estiver ativo)

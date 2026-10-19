@@ -1,16 +1,21 @@
 """Corrige G.pm[pid].h (criaturas e quantidades de cada hunt) para usar os monstros curados de G.places[pid].mons.
 As áreas do mapa apanhavam criaturas de passagem (ex.: Demonwar Crypt com wild warriors e priestesses no topo).
 Quantidade: a do mapa se > 0; senão a soma dos spawns dessa criatura perto da hunt (data/spawns.json); senão 1.
+O G lê-se e grava-se com load_G/save_G de gjson.py (ao lado deste script ou em C:\\xampp\\_tools).
+O registo (fix_hunt_mons.log) vai para a pasta GRIM_WORK (variável de ambiente) ou para a pasta temporária, só quando há algo a registar.
 Uso: python -I fix_hunt_mons.py [raiz do site]"""
-import json, re, sys, math
-ROOT = sys.argv[1] if len(sys.argv) > 1 else r'C:\xampp\htdocs\grimorio'
-P = ROOT + r'\index.html'
-s = open(P, encoding='utf-8').read()
-m = re.search(r'(<script[^>]*id="G"[^>]*>)(.*?)(</script>)', s, re.S)
-raw = m.group(2)
-G = json.loads(raw)
-sp = json.load(open(ROOT + r'\data\spawns.json', encoding='utf-8'))
-log = open(r'C:\xampp\_work\fix_hunt_mons.log', 'w', encoding='utf-8')
+import json, re, sys, os, math, tempfile
+sys.path[:0] = [os.path.dirname(os.path.abspath(__file__)), r'C:\xampp\_tools']
+sys.dont_write_bytecode = True  # sem __pycache__ dentro do repositório
+from gjson import load_G, save_G, default_root
+
+args = [a for a in sys.argv[1:] if not a.startswith('--')]
+ROOT = args[0] if args else default_root()
+WORK = os.environ.get('GRIM_WORK') or tempfile.gettempdir()
+s, G, span = load_G(ROOT)
+raw = s[span[0]:span[1]]
+sp = json.load(open(os.path.join(ROOT, 'data', 'spawns.json'), encoding='utf-8'))
+log = []
 alias = {}
 for k, v in G['mon'].items():
     alias.setdefault(str(v[0]).lower(), k)
@@ -71,11 +76,14 @@ for pid, p in G['places'].items():
     new.sort(key=lambda x: -x[1])
     if [k for k, _ in old if _ > 0][:3] != [k for k, _ in new][:3]:
         changed += 1
-        log.write(f"{pid} | {p['n']}\n  antes: {[(k, c) for k, c in old][:6]}\n  depois: {new[:6]}\n")
+        log.append(f"{pid} | {p['n']}\n  antes: {[(k, c) for k, c in old][:6]}\n  depois: {new[:6]}\n")
     pm['h'] = new
-log.write(f"\nnomes curados sem criatura em G.mon: {sorted(missing)}\n")
-log.close()
-out = json.dumps(G, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-s = s[:m.start(2)] + out + s[m.end(2):]
-open(P, 'w', encoding='utf-8', newline='').write(s)
-print('hunts alteradas:', changed, '| tamanho G antes/depois:', len(raw), len(out), '| nomes sem criatura:', len(missing))
+if missing:
+    log.append(f"\nnomes curados sem criatura em G.mon: {sorted(missing)}\n")
+LOG = ''
+if log:
+    LOG = os.path.join(WORK, 'fix_hunt_mons.log')
+    with open(LOG, 'w', encoding='utf-8') as f:
+        f.write(''.join(log))
+s2, span2 = save_G(ROOT, s, G, span)
+print('hunts alteradas:', changed, '| tamanho G antes/depois:', len(raw), span2[1] - span2[0], '| nomes sem criatura:', len(missing), '| registo:', LOG or '(nada a registar)')
