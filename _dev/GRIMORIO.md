@@ -16,10 +16,21 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 - `data/*.json` (carregados quando precisos com `dload(n)`/`dsafe(n)` → `data/<n>.json`): items.json (por nome em minúsculas), creatures.json,
   npcs.json, quests.json, spawns.json, npcpos.json, crdmg.json (dano que cada criatura faz), e os novos spells.json, achievements.json, mounts.json,
   outfits.json, search.json (índice global de pesquisa) — ver o formato no próprio ficheiro.
+  r6-t4: `build_crdmg.py` (`C:\xampp\_tools` = `_dev/`; `python -I build_crdmg.py <raiz> [--write] [--fetch]`) faz o crdmg.json da
+  TibiaWiki e, para as criaturas das hunts que lá ficam sem d e sem u, do Canary (opentibiabr/canary: monster.attacks dos .lua,
+  sem os executar; feitiços com nome pelo COMBAT_PARAM_TYPE do ficheiro do feitiço; `src:'canary'`). Caches em
+  `C:\xampp\_work\crdmg` (keys.json, alts.json, extra_keys.json, dl\pages|alt|extra|extra2 da wiki, dl\canary\tree.json e files\);
+  sem --fetch nada vai à rede. Só acrescenta: com --write entram as chaves do site que faltam e as que estavam sem d e sem u
+  (o m da wiki fica); as outras ficam iguais. O fim lista as criaturas das hunts sem dano em nenhuma fonte (hoje 33: as de
+  15.10–15.30, ex. Radiant*, Raubritter*, Norcferatu*, Varg, Gloom Maw, Crypt*, e as do Bookworld).
 - Sprites: allitems.png (itens, 32×32, índice `ix`), creatures.png, npcs.png (+ npcs2.png), spells.png (+ spells2.png), loot.png, huntmaps.png,
   mounts.png/outfits.png (64×64), maps/floor-XX-map.png (mapa; origem 31744,30976). creatures.png e npcs2.png têm células de 64 px em 32 colunas
   (`G.cr[k]`, `ix2` em npcs.json; `npcSpr(n,ph)` procura em G.np e depois em npcs2.png; com `ph` devolve o ícone de espaço fixo `.ph-ic`).
   Quando regeneras um PNG de sprites, muda o ?v= em todos os URLs desse PNG (hoje `?v=20261018r2`; huntmaps.png tem o seu próprio).
+  r6-t4: loot.png com 1024×1472 (`?v=20261019r6`). `build_loot_sprites.py [raiz] [--dry] [nome …]` (`C:\xampp\_tools` = `_dev/`;
+  usa o client_outfits.py de C:\xampp\_tools) desenha a seguir ao maior índice de G.lt os itens de items.json sem imagem (os
+  supplies do build_supplies.py e o Enchanted Werewolf Helmet): render_item + fit_cell(…, 32), modo P com a paleta de sempre
+  (cor mais próxima; as células antigas ficam iguais byte a byte) e G.lt com save_G. Depois: ?v= e build_search.py.
 - `api/market.php?world=<Mundo>`: preços do Market por mundo (proxy com cache de 6 h do TibiaMarket). Resposta: `{world,updated,fetched,stale,items:{"<id>":[sell_offer,buy_offer,month_avg_sell,month_avg_buy,day_avg_sell,day_avg_buy,month_sold,month_bought]}}`.
 - `.htaccess`: HTML sem cache, JSON permitido (o .htaccess da raiz é de um MyAAC antigo), `RewriteEngine On`, deflate, e 404 a tudo o que
   começa por `.git` (a pasta pública é um clone do repositório; `RewriteRule` e, sem mod_rewrite, `RedirectMatch`). `_dev/` tem o seu `.htaccess` (403, também para os `*.json`,
@@ -34,18 +45,32 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   as cópias no `_dev/` do site são iguais (copia-as quando as mudares). Corridas a partir de `_dev/` sem raiz, usam a pasta-mãe (o clone); os
   registos (`apply.log`, `fix_hunt_mons.log`) vão para `%GRIM_WORK%` ou para a pasta temporária. O `apply_hunt_fixes.py` volta a pôr os valores
   dos fix-*.json (notas, acessos…) por cima do que mudou depois: corre-o primeiro com `--dry` e lê o registo. Trabalho temporário: `C:\xampp\_work\`.
+  r6-t1: a fix-26 dá as cidades das zonas novas (Isle of Ada → Bounac, Radiant → Venore), as quests (iksupan → galthen1, carnisylvans →
+  lostqueen, asuramirror → lostbrother; 'Adventures of Galthen Quest' dá galthen2) e os mapas aproximados. Armadilhas do apply: uma entrada
+  'fix' high/medium sem a chave quest e com a palavra 'quest' no problems TIRA o q da zona; com confidence 'high' e sem team, uma zona com
+  team:true perde a equipa (usa 'medium'). Atenção: hoje o apply sem --dry ainda repõe notas antigas em 24 zonas e tira 4 linhas f da
+  w_razachai_inner_sanctum (o registo não mostra as notas): compara o G antes e depois (`t1\apply_check.py` da ronda r6).
 
 ## Dados principais em `G`
 - `G.items`: equipamento `{id (id do cliente = id do Market), n, s (slot: helmet|amulet|armor|legs|boots|ring|weapon|shield|extra), l (nível), ix, v (vocações: "k","p","s","d","m" juntas, ex. "ds"), arm, def, edef, atk, wel [el,val], wd [el,min,max], hit, sk {ml, ml_fire, sword, dist, fist, shield...}, ab {elemento:%}, spd, rg [vida,mana], is (slots de imbuement), it (imbuements aceites), chg, dur, h2 (duas mãos), b (tipo de arma), ex [texto], mn (mantra), ns (sem stats), tp}`.
 - `G.mon[k]` = [nome, hp, xp, ix, imunidades, resistências {el:%}, loot [[ix,nome,%,valor]], boss]. Resistências: `G.mon[k][5] = 100 − el` da TibiaWiki (`el` = % de dano que a criatura leva, em data/creatures.json) nos 7 elementos; 100 = imune, acima de 100 = o elemento cura a criatura (ex.: fogo 200 na Ravenous Lava Lurker). `G.places[pid].eff` = média de 100 − resistência nas criaturas de `p.mons` (e `eff.min` = o mínimo), a fórmula de `eff()` em apply_hunt_fixes.py. `G.mc`/`G.mcn`: classe do Bestiary.
 - `G.places[pid]` = {n, mons, q (quest de acesso), d (risco 1–3), eff {el:% de dano}, team (true ou uma lista de vocações que só a fazem em equipa), w (da TibiaWiki), xs, ls, city, acc, note}.
+  r6-t1: `wn` = nomes oficiais da TibiaWiki que a pesquisa também procura (ex.: werecrocs ['Murky Caverns'], laststand ['Iksupan Waterways', …]);
+  `asuravaults` = Asura Vaults (Port Hope, The Lost Brother): as linhas 'True Asuras' do TibiaPal (a Asura Citadel de Marapur ficou com linhas f:1).
 - `G.hunts[voc]` = linhas {c (pid), place, l, xp, lo, how, f (preenchida), w, v (nível verificado)}. `how`: nos mages é a rotação do TibiaPal; no knight, no paladin e no monk é o tipo de arma ou munição do TibiaPal (coluna 5, ex. "Fire, Ice", "Diamond Arrows, Ethereal"), lido por `huntEls(how)` (elementos citados, por palavra inteira), `compatFor(voc,place,how)` (melhor elemento entre vd.els e a arma/munição elemental ou, nos druids e sorcerers, as runas citadas na rotação — r4-t3; `via` = o melhor vem da arma, da munição ou das runas; `imm`, `heal`) e `setupHTML` (linha "Ataca com" e linha "Arma"/"Munição"/"Rotação"); o `elemHTML` põe o "usa este" no elemento que o setupHTML escolheu (`ELPICK`, por place e vocação). Regra: linhas f: l nunca abaixo do nível real mais baixo de outra vocação, exceto as linhas com v:1 (nível confirmado na TibiaWiki ou na verificação online). `G.pm[pid].h` = [[criatura, quantidade]] do mapa.
 - Níveis do TibiaPal (r5-t1): `python -I C:\xampp\_work\rounds\2026-10-19-r5\audit-hunts\tp_levels_check.py G.json` compara os níveis das linhas
   de `G.hunts` sem f nem w com o TibiaPal (`lote16/dl/tp_rows.json`) e deve dizer '0 zonas com níveis diferentes'. Nos fix-*.json, `team` também
   pode ser uma lista de vocações (o apply_hunt_fixes.py grava-a assim).
+  r6-t2: `o:1` numa linha de G.hunts = número do TibiaPal de antes do rebalance de junho de 2026 (a página atual já não o mostra; xp e
+  lo ficam). `python -I C:\xampp\_tools\tp_xp_check.py [raiz | G.json]` (= `_dev/tp_xp_check.py`) compara o XP/lucro das linhas sem f,
+  w nem o com o TibiaPal (`lote16/dl/tp_rows.json`) e deve dizer '0 linhas diferentes'. `G.ha[pid]` = {s (soma das sessões solo), t
+  (em grupo), v {voc: [sessões, nível mínimo, nível mediano, XP/h, lucro/h]}}: uma sessão com mais de 4000 mortes/h (XP/h ÷
+  `avgXp(pid)`) não é solo nem desta zona e sai (registo em `C:\xampp\_work\hunts\ha_clean.log`); cada chave de G.ha existe em G.places.
 - `G.hv[pid]` = {t (transporte), rq (requisitos), st (passos), v ("ok" | "fix" | outro)}: o bloco "Acesso" do separador "Como chegar" (`vRoute`; etiqueta confirmado/revisto/por confirmar).
   Só texto para o jogador: as notas da verificação (n, ed, mf, e, s, ok e o texto original de rq/st antes da limpeza) ficam em `_dev/hv_notas.json`;
   um conselho para o jogador (boss, perigo, atalho) vai para `G.places[pid].note` ("Notas").
+  r6-t1: zona sem G.hv nem G.routes (as w_ da TibiaWiki) → o `huntRoute` faz o bloco 'Acesso' com o `p.acc` ('por confirmar', 'Requisitos:'
+  com a quest, o botão 'Lore e guia ›' e 'Premium') e põe o percurso automático por baixo, com o título 'Percurso aproximado'.
 - `G.hm[pid]` coordenadas; `G.voc[voc]` (n, promo, els, pots, charms, imbs, allsp = feitiços); `G.quests`, `G.charms`, `G.wheel`, `G.equip` (TibiaPal), `G.vr`, `G.ha`.
 
 ## Estado e funções úteis (dentro do IIFE)
@@ -86,12 +111,27 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `<span>` seguinte), `#itemAdv` reescrito com `itemAdvHTML` quando o Market chega. Look: `lookShow` redesenha quando cada dado chega.
   r5-t3: `data-xp` do separador Loot e lucro = XP sem evento (`h.xp0` / `g.party0` do `groupRows`); `data-evk` = criatura do dia (só na ficha
   solo, com o evento 'Uma criatura'): o `lpHTML` faz loot × (1 + parte dela no loot da zona) (loot ×2) e escreve a nota 'Criatura do dia (loot ×2)'.
+  r6-t4: também na ficha de grupo (o `.lp` do `groupSheet` leva o mesmo data-evk). `lootPerKill` → `nodata` (nenhuma linha de loot
+  com % de drop, ou fora do creatures.json); `lootAgg` → `nd` (criaturas com kills sem loot conhecido; `kills[].nd`) e `g1k:null`
+  quando são todas (o `gpPerXp` também): o `lpHTML` diz 'Sem dados de loot para as criaturas desta zona.' com os KPIs a '—' (nunca
+  '≈ 0 gp'); com só algumas, a nota `.lp-nd` 'Sem loot conhecido: A, B, C e mais N (contam como 0 gp no loot por hora).' Os
+  cartões, o filtro 'Dá lucro' e o comparar hunts não usam o g1k (usam o lo do TibiaPal).
 - Hunts: `huntRows(voc, L)` (L = nível máximo da variante do TibiaPal; sem L = nível da personagem + 5; nível/XP/lucro da mesma variante), `huntCard(h)`, `huntSheet(h)`, `setupHTML`, `hsetsHTML(pid)` (sets ofensivo/consistente/defensivo), `huntProfile(pid)` (dano da hunt).
   Evento de XP (r5-t2): o de uma criatura só liga com `hasKey(G.mon,…)` (`evOn`, `evLabel`, `#evMon`); +100 % por omissão (TibiaWiki: a boosted
   dá o dobro da XP e do loot).
   Magos (r4-t3): o `HOWEL` conhece as runas (gfb, sd, avalanche, stoneshower, thunderstorm), Forked Glacier/Thorns e Shatterstorm (físico);
   o `compatFor` e o `setupHTML` contam o elemento das runas citadas na rotação ('Ataca com … com runas de …'). No `huntRows`, uma linha
   com XP medida pelo TibiaPal para a vocação (sem f nem w) nunca fica 'bad' (passa a 'meh', '(o TibiaPal mediu esta hunt…)').
+  r6-t2: `huntRows(voc, L, pl)` (pl = nível do jogador, por omissão o de `C()`; o `groupRows` passa o de cada membro). `src`: 'tp'
+  (TibiaPal), 'old' (linha o:1: est='old', sem a exceção 'meh', as sessões reais da vocação ganham-lhe), 'ha' (sessões da vocação),
+  'est' (outra vocação; linhas o:1 só sem nenhuma atual), 'hao' (mediana das sessões reais de outras vocações com 3+ sessões e
+  pl ≥ 3/4 do nível mediano, × o fator das estimativas) ou 'mx' (hunts 300+: K × `avgXp(pid)` × dano entre 0,6 e 1,1; K = 1000
+  abaixo do 600, 1400 a partir do 850, linear no meio; no máximo 18 000 × pl ÷ vida média, o dano por hora da sessão real mais
+  rápida, Podzilla, sorcerer 925; e no máximo o ritmo medido na zona: linhas atuais do TibiaPal de outras vocações e sessões reais
+  com nível ≥ 0,6 × o da linha; lo null). `estx` = {n,v,m} ('hao') | {k,z} ('mx': mortes/h, medições) | {o:1} (estimativa de um número
+  antigo). `avgMon(pid)` = [XP, vida] média por morte (G.pm.h ∩ mons, sem bosses, pesada pela quantidade; cache `AVGXP`); `avgXp`.
+  Cartões: `hcEst(h)` (≈ com title, sup 'r' ou 'a' = `.rl.rla`); sem número, `<span class="hcx">` com as estrelas ou 'XP e
+  lucro por medir'; a ficha acaba com `estTxt(h)`. O Loot e lucro recebe `data-lsrc='est'` nas estimativas 'hao' e 'mx'.
   Charms: `G.charms` tem os 25 charms `{n,t,c,d,f}`; `f` = 'el:<elemento>' (Freeze, Zap, Wound, Poison, Enflame, Divine Wrath, Curse),
   'hp5' (Overpower), 'mana25' (Overflux) ou null. `charmFor(c,k)` → `[{k,dmg}]` dano por ativação na criatura k de `G.mon` (TibiaWiki):
   elementais e Wound = min(5 % da vida da criatura, 2 × nível) × dano %; Overpower = min(5 % de `hpOf(c)`, 8 % da vida) × físico %;
@@ -112,6 +152,19 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   de 1100 px; no Original fica uma coluna), a checkbox dentro de `<label class="qchk">` (44×44 no toque), `#questBar.zero` com 0 feitas e
   `.qpop` (`QPOP`) no cartão acabado de marcar. A ≤620 px (os dois modos) `#sheet .tabs`, `#subtabs .seg.scroll`, `.eqtabs` e `.sltabs`
   partem em linhas (sem nada escondido fora do ecrã) e o ✕ da ficha (`.sh-x`) tem 44×44 e fundo opaco (`.sh-h` com padding-right:52px).
+  r6-t5: Quests no Modern a partir de 1100 px: o 'Lore e guia ›' da `.meta` fica escondido (o `.qtitle` abre a ficha e mostra ' ›' ao
+  passar), a `.meta` sobe para a linha do título e a descrição fica inteira por baixo (página ≤ 3300 px a 1440 e a 1366).
+  Wheel (r6-t5): `wheelDom(w)` → {tl,tr,bl,br} 0–3 (o 'Vessel Resonance <Top|Bottom> <Left|Right>' I/II/III de w.conv) para a mini-roda
+  `.wh-dom` (só Modern, 4 `path.wq[data-l]`), `wnum(s)` põe os números do planner em pt-PT ('1,050' → '1050', '11.25%' → '11,25%');
+  vantagens em `.wpk` com `.wsep` (chips no Modern; no Original lê-se como texto), `.wh-prog` (--p) e 'N de M pontos · faltam K
+  (nível X)' até à build seguinte, 'Estás aqui' na linha atual; a ≤620 px a #wheelTable passa a cartões (td[data-l]). `tr.dim` em
+  #wheelTable/#defPots sem opacity (texto em --muted). `[data-copy]` com `data-copied="…"` escreve essa frase no `#copyLive`
+  (p.sr-only role=status, antes do script); sem a API da área de transferência (http fora do localhost) copia por um textarea.
+  Defesa (r6-t5): #defStats com os mosaicos `.stat` do Início (as regras Modern são `:is(.hero,#defStats) .stat`), `#blessSum`
+  (`.bless-sum`), blessings com `npcSpr` e os preços da TibiaWiki em todos os níveis (enhanced = 260 × (L − 20) até ao 120), a
+  tabela das poções `#defPots` gerada no `renderDefesa` (custo = preço NPC ÷ mana média; tr.now = poção de mana das hotkeys, tr.dim =
+  as que a vocação não usa) e a lista `.def-tips`. Taxa do Market num só valor: `MKPCT` (2; TibiaWiki, 19/10/2026) no `MKFEE` e no
+  `#defFee` da Defesa (o título 'Market −2 %' da tabela do `lpHTML` ainda é texto fixo).
 - Equipamento: `scoreItem(c,it,mode,prot)` (mode combat|speed|off|bal|def; prot = elemento ou perfil {el:peso}), `ranked`, `pickSet`, `bisSet`, `setTotals`,
   `setSumHTML`, `renderBis` (painel inicial), `renderEquip`/`renderSlot`/`renderInventory`, `pickOpen` (botão direito), `itemLookHTML` + `[data-look="<id>"]` (look ao passar por cima).
   Sets automáticos (r4-t5): paladino com a arma em 'Automático' (`c.wtype` vazio): o `pickSet` usa arco a partir do nível 100
@@ -140,7 +193,23 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   (não contam com sword)'); o mesmo filtro nas 3 skills da `.hset-kv`. Listas do slot da arma: `wGroup(c,slot)` → `{b,n,lab}` ou null
   (tipo escolhido): o `pickList` (`.pk-g`) e o `renderSlot` ('Melhores até ao nível': 8 do tipo do set, `<li class="ilist-g">` e 3 dos
   outros; 'Ver todos os N' conta todos) põem esse tipo primeiro; a `.note` diz o tipo usado no knight. Ficha: `.hset-note`.
+  r6-t3: no monk, o ataque da arma conta com a ligação elemental (`it.bond`; as 36 armas fist têm: 16 energia, 11 físico, 9 terra):
+  o `scoreItem` faz `EF(it.bond)` em vez de `EF('physical')`. `elPick(voc,p,how[,L])` (ao lado do `compatFor`, com o `elemList`,
+  que passou para lá) = a regra do 'Ataca com' do `setupHTML` (o elemento citado no how do TibiaPal que rende mais, se ficar a 10
+  pontos ou menos do melhor principal; senão o principal); devolve a linha do `elemList` ({x,v,main,imm,heal,low}). O `huntSet` do
+  monk põe `mbond` = `elPick('monk', zona, how).x` numa cópia da personagem (nunca gravado) quando há uma arma fist dessa ligação até
+  ao nível, e o `slotFits` só deixa essa ligação: os 3 sets e o 'Guardar nos meus sets' batem com o Setup; cada set do monk mostra
+  'Arma: … · ligação … · as criaturas levam N%' (`.hset-wb`). O BiS do Início não tem eff nem mbond (fica igual).
+  `itemKind(it)` (`IKIND`) = tipo do item para o jogador: Espada, Machado, Maça, Arco, Besta, Arremesso, Wand, Rod ('wand' só de
+  druid = Rod), 'Wand / rod', Arma de monk; Escudo, Livro, Aljava; os outros slots = SLOTNAME. Usado no look, na página do item, no
+  inventário, no #pathTable, nos imbuements, na lista de itens e no `.hs-sl`. `ELN`/`IMMN`: lifedrain = 'dreno de vida', manadrain =
+  'dreno de mana' (o 'roubo de vida' dos jogadores é o life leech). `nfdec(n)` = número pt-PT com até 2 casas ('0,2 vida/0,7 mana
+  por s'); velocidade com o sinal certo ('velocidade -5'). O `hsLookup` já não muda o `c.wtype` do knight: a escolha manual fica e o
+  'Automático' segue o skill dos highscores pelo `knightWType`. Scripts que correm o `huntSet` em node (auditorias) precisam também
+  do bloco `const HOWEL` … `/* tipos de criatura` (huntEls, compatFor, elemList, elPick) para o monk.
 - Pesquisa global: `gsOpen()` abre a lista que desce da barra (`#gsPop`); índice = `gsIndex()` (do G: hunts, quests, criaturas, itens, loot, charms, imbuements) + `data/search.json` (gerado por `python -I C:\xampp\_tools\build_search.py` — volta a correr sempre que mudares ficheiros de dados). Resultados `[data-gs="cat:key"]`.
+  r6-t1: as hunts entram no `gsIndex` com o `place` das linhas de G.hunts (nomes do TibiaPal, ex. 'Bulltaur Lair') e o `wn` como sinónimos
+  (`h.al`); quando só o sinónimo bate, o `gsRow` acrescenta ' · também: <nome>' ao subtítulo.
 - Páginas internas novas: rotas `#feitico/<slug>`, `#npc/<slug>`, `#conquista/<slug>`, `#montaria/<slug>`, `#outfit/<slug>` → `openWiki(kind,slug)` desenha em `#wikiPage` (painel `wiki2`) com `WKR.feitico/npc/conquista/montaria/outfit`; `wkHref(kind,nome)` dá o link. Listas no menu Wiki (com filtros, 120 cartões `.wcard` de cada vez): `#feiticos` → `renderSpellList()` (estado `ST.ui.spl`), `#npcs` → `renderNpcList()` (`ST.ui.npl`; vende/compra/ensina/viagens calculados uma vez em `WLS.np`; só aí carrega items.json), `#colecoes` → `renderColList()` (`ST.ui.col`, separadores conquistas/montarias/outfits via `tabsUI`, `wlColTab(k)`). `navOf(p)` dá o item do menu ativo (item→itens, criatura→criaturas, wiki2→feiticos/npcs/colecoes pelo hash); `secOf` e `renderNav` usam-no. Quests só da TibiaWiki: `openQuestW(nome)`.
 - Links internos para NPCs e feitiços: `elink(kind,nome[,inner])` (kind `npc`|`feitico`; nome pode ser lista de candidatos), `elinkKey`, `elinkTxt(texto)` (liga NPCs citados em frases); índice `LINKX` montado por `linkIdxLoad()` (npcs.json + spells.json). Nunca dentro de `<button>` ou de outro link.
 - Helpers: `$`, `esc`, `nf` (números pt-PT), `gp`, `fmt` (r5-t3: abaixo de 1000 mostra o número inteiro; a partir de 999 500 passa a kk), `fold` (sem acentos), `slug`, `cap1`, `spr(it)`, `sprOr`, `itemSpr(nome)`, `crSpr(k,size)`, `npcSpr`, `chip(el)`, `ELN` (nomes PT dos elementos), `SKN`, `SLOTNAME`, `DOLL`, `IC` (ícones SVG), `VI(voc)`.
