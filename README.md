@@ -34,6 +34,7 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
   `node _dev/smoke.mjs --url http://localhost/grimorio/ --hash hunts --mode modern --w 375 --h 812 --shot teste.png`
 - `gjson.py`: lê e grava os dados `G` do `index.html` com uma entrada por linha. `python -I _dev/gjson.py --check` confirma que o JSON lê bem e está no formato certo; `--format` reformata. Os outros scripts que mudam dados usam-no (`load_G`/`save_G`).
 - `build_search.py`: regenera `data/search.json`. Corre-o depois de mudar ficheiros de `data/`.
+- `build_supplies.py`: acrescenta a `data/items.json` as poções, munições e runas da linha 'Supplies' que faltam (lê a TibiaWiki).
 - `fix_hunt_mons.py`: refaz as criaturas e as quantidades de cada hunt (`G.pm`) a partir da lista curada (`G.places[pid].mons`).
 - `build_huntmaps.py`: refaz as miniaturas dos mapas das hunts (`huntmaps.png`). Depois muda o `?v=` de `huntmaps.png` no `index.html`, porque os browsers guardam a imagem antiga.
 - `apply_hunt_fixes.py`: aplica correções de hunts verificadas, em ficheiros `fix-*.json`.
@@ -43,6 +44,7 @@ As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro síti
 
 ## Como trabalhamos os dois
 
+- **O passo a passo está no [`CONTRIBUTING.md`](CONTRIBUTING.md):** ramos e Pull Requests, como testar com o `smoke.mjs` e como mexer nos dados.
 - **Nunca trabalhem os dois diretamente na `main`.** Cada um cria um ramo por tarefa:
   ```
   git checkout -b hunts-roshamuul

@@ -25,6 +25,10 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   começa por `.git` (a pasta pública é um clone do repositório; `RewriteRule` e, sem mod_rewrite, `RedirectMatch`). `_dev/` tem o seu `.htaccess` (403, também para os `*.json`,
   que o `<FilesMatch "\.json$">` da raiz deixaria ler).
   `.editorconfig`: UTF-8 e fins de linha LF (o `.gitattributes` tem `* -text`: o Git guarda os ficheiros tal e qual).
+- `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
+  o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
+  acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
+  cache em disco); nunca muda uma chave que já existe. Depois, `build_search.py`.
 - Backups: `C:\xampp\_backups\`. Ferramentas: `C:\xampp\_tools\` (este guia, `smoke.mjs`, `gjson.py`, `build_search.py`, `apply_hunt_fixes.py`,
   `build_huntmaps.py`, `client_outfits.py` = desenha outfits/objetos a partir do cliente Tibia instalado, só leitura) e `C:\xampp\_work\fix_hunt_mons.py`;
   as cópias no `_dev/` do site são iguais (copia-as quando as mudares). Corridas a partir de `_dev/` sem raiz, usam a pasta-mãe (o clone); os
@@ -34,8 +38,11 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 ## Dados principais em `G`
 - `G.items`: equipamento `{id (id do cliente = id do Market), n, s (slot: helmet|amulet|armor|legs|boots|ring|weapon|shield|extra), l (nível), ix, v (vocações: "k","p","s","d","m" juntas, ex. "ds"), arm, def, edef, atk, wel [el,val], wd [el,min,max], hit, sk {ml, ml_fire, sword, dist, fist, shield...}, ab {elemento:%}, spd, rg [vida,mana], is (slots de imbuement), it (imbuements aceites), chg, dur, h2 (duas mãos), b (tipo de arma), ex [texto], mn (mantra), ns (sem stats), tp}`.
 - `G.mon[k]` = [nome, hp, xp, ix, imunidades, resistências {el:%}, loot [[ix,nome,%,valor]], boss]. Resistências: `G.mon[k][5] = 100 − el` da TibiaWiki (`el` = % de dano que a criatura leva, em data/creatures.json) nos 7 elementos; 100 = imune, acima de 100 = o elemento cura a criatura (ex.: fogo 200 na Ravenous Lava Lurker). `G.places[pid].eff` = média de 100 − resistência nas criaturas de `p.mons` (e `eff.min` = o mínimo), a fórmula de `eff()` em apply_hunt_fixes.py. `G.mc`/`G.mcn`: classe do Bestiary.
-- `G.places[pid]` = {n, mons, q (quest de acesso), d (risco 1–3), eff {el:% de dano}, team, w (da TibiaWiki), xs, ls, city, acc, note}.
+- `G.places[pid]` = {n, mons, q (quest de acesso), d (risco 1–3), eff {el:% de dano}, team (true ou uma lista de vocações que só a fazem em equipa), w (da TibiaWiki), xs, ls, city, acc, note}.
 - `G.hunts[voc]` = linhas {c (pid), place, l, xp, lo, how, f (preenchida), w, v (nível verificado)}. `how`: nos mages é a rotação do TibiaPal; no knight, no paladin e no monk é o tipo de arma ou munição do TibiaPal (coluna 5, ex. "Fire, Ice", "Diamond Arrows, Ethereal"), lido por `huntEls(how)` (elementos citados, por palavra inteira), `compatFor(voc,place,how)` (melhor elemento entre vd.els e a arma/munição elemental ou, nos druids e sorcerers, as runas citadas na rotação — r4-t3; `via` = o melhor vem da arma, da munição ou das runas; `imm`, `heal`) e `setupHTML` (linha "Ataca com" e linha "Arma"/"Munição"/"Rotação"); o `elemHTML` põe o "usa este" no elemento que o setupHTML escolheu (`ELPICK`, por place e vocação). Regra: linhas f: l nunca abaixo do nível real mais baixo de outra vocação, exceto as linhas com v:1 (nível confirmado na TibiaWiki ou na verificação online). `G.pm[pid].h` = [[criatura, quantidade]] do mapa.
+- Níveis do TibiaPal (r5-t1): `python -I C:\xampp\_work\rounds\2026-10-19-r5\audit-hunts\tp_levels_check.py G.json` compara os níveis das linhas
+  de `G.hunts` sem f nem w com o TibiaPal (`lote16/dl/tp_rows.json`) e deve dizer '0 zonas com níveis diferentes'. Nos fix-*.json, `team` também
+  pode ser uma lista de vocações (o apply_hunt_fixes.py grava-a assim).
 - `G.hv[pid]` = {t (transporte), rq (requisitos), st (passos), v ("ok" | "fix" | outro)}: o bloco "Acesso" do separador "Como chegar" (`vRoute`; etiqueta confirmado/revisto/por confirmar).
   Só texto para o jogador: as notas da verificação (n, ed, mf, e, s, ok e o texto original de rq/st antes da limpeza) ficam em `_dev/hv_notas.json`;
   um conselho para o jogador (boss, perigo, atalho) vai para `G.places[pid].note` ("Notas").
@@ -47,6 +54,13 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 - Navegação: `SECS` (secções e subpáginas), `go(p)` (fecha o painel e põe o hash igual à página com replaceState), rotas por hash `#item/<slug>`, `#criatura/<slug>` em `route()`
   (decode com try, secções em minúsculas, `?…` ignorado, hash desconhecido volta ao da página; `hasKey(o,k)` contra chaves do Object.prototype). Histórico: cada entrada
   tem `history.state.gd` (profundidade; `NAVD` no JS); usa sempre `history.replaceState(history.state, …)`, nunca `null`. '← Voltar' (`[data-back]`) só faz history.back() se NAVD>0.
+  Hunts por cidade e por tipo de criatura (r5-t2): `#hunts/cidade/<slug>` e `#hunts/tipo/<slug>` → `hfRoute(kind,slug)` (cidade = `slug()` de uma
+  `G.places[*].city`; tipo = `slug()` da chave de `G.mcn` ou do nome PT do `clsName`) põe `ST.ui.hf = HF0()` com `city` ou `cls:[chave]` e a faixa
+  'upto'; sem correspondência abre as Hunts sem filtro e o `#huntLead` começa por 'Cidade não encontrada.'. Filtro 'Cidade' = `f.city` (`[data-hcity]`,
+  grupo 'Quem e onde'); `hfHash()` (só com a página das Hunts à vista e depois do 1.º `route()`) põe o hash da cidade ou do tipo quando é o único filtro,
+  senão volta a `#hunts`; com um destes endereços aparece 'Copiar link'. Índice no fim da lista (`#huntIdx`, `hidxRender`: 'Hunts por cidade' e
+  'Hunts por tipo de criatura'); na pesquisa, os ramos `hc`/`ht` ('Hunts em <Cidade>', 'Hunts de <tipo>', grupo 'h' com `gsGrp`); cartões com `data-pid`.
+  `hasKey` está no topo do IIFE (logo a seguir ao `esc`): pode usar-se em qualquer função.
   `openSheet(html)`/`closeSheet(o)`: o `#sheet` passa para o body no arranque (z-index acima do header e da barra inferior também no Modern); abrir faz pushState
   `{sheet:1}` (o Voltar do telemóvel fecha-o), põe inert no resto da página, prende o Tab e devolve o foco a quem o abriu; ✕/fundo/Esc fazem history.back();
   quem navega a partir do painel chama `closeSheet({nav:true})` (sem history.back);
@@ -62,7 +76,7 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   (comprar; Market quando fica 5 % ou mais abaixo do NPC). Ambas precisam de `ITV` (items.json) e de `MKV[w]` carregados (`mktLoad(w)`,
   10 s de tempo-limite; falha ou resposta vazia = null e volta a tentar ao fim de 60 s). `supRows(c,how)` → `[{k,n,kind:'pot'|'rune'|'ammo'}]`
   (poções da última linha de `G.voc[voc].pots` até ao nível; magos: runas citadas no how, senão as '(runa)' das hotkeys; paladino: 1.ª
-  munição do how; algumas poções e munições ainda não estão em items.json e ficam sem preço). `lootQty(a)`, `lootPerKill(k,CR,w)` →
+  munição do how; as poções e munições estão em items.json desde a r5-t3: `build_supplies.py`). `lootQty(a)`, `lootPerKill(k,CR,w)` →
   `{v (gp por kill), top:[[nome,gp,pct]], miss, none}` (k = chave de creatures.json), `lootAgg(pid,CR,w)` e `gpPerXp(pid,CR,w)` = gp por
   1000 XP (criaturas de `G.places[pid].mons` sem bosses, quantidade de `G.pm[pid].h`); loot por hora ≈ XP/h × gpPerXp / 1000.
   Separador 'Loot e lucro' da ficha: `<div class="lp" data-lootp=pid data-xp data-lo data-lsrc data-how [data-g data-sb]>` preenchido por
@@ -70,7 +84,11 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   (`[data-hcalc]`, `lpCalcRun`/`lpCalcSave`), gravada em `c.calc[pid] = {hrs, q:{chave:[quantidade, preço só se mudado, nome]}, loot (só
   se mudado), fee, t}` (no máximo 50 hunts). Página do item: `[data-mkt]` = ids separados por vírgula (`mktFill` escreve o valor e o
   `<span>` seguinte), `#itemAdv` reescrito com `itemAdvHTML` quando o Market chega. Look: `lookShow` redesenha quando cada dado chega.
+  r5-t3: `data-xp` do separador Loot e lucro = XP sem evento (`h.xp0` / `g.party0` do `groupRows`); `data-evk` = criatura do dia (só na ficha
+  solo, com o evento 'Uma criatura'): o `lpHTML` faz loot × (1 + parte dela no loot da zona) (loot ×2) e escreve a nota 'Criatura do dia (loot ×2)'.
 - Hunts: `huntRows(voc, L)` (L = nível máximo da variante do TibiaPal; sem L = nível da personagem + 5; nível/XP/lucro da mesma variante), `huntCard(h)`, `huntSheet(h)`, `setupHTML`, `hsetsHTML(pid)` (sets ofensivo/consistente/defensivo), `huntProfile(pid)` (dano da hunt).
+  Evento de XP (r5-t2): o de uma criatura só liga com `hasKey(G.mon,…)` (`evOn`, `evLabel`, `#evMon`); +100 % por omissão (TibiaWiki: a boosted
+  dá o dobro da XP e do loot).
   Magos (r4-t3): o `HOWEL` conhece as runas (gfb, sd, avalanche, stoneshower, thunderstorm), Forked Glacier/Thorns e Shatterstorm (físico);
   o `compatFor` e o `setupHTML` contam o elemento das runas citadas na rotação ('Ataca com … com runas de …'). No `huntRows`, uma linha
   com XP medida pelo TibiaPal para a vocação (sem f nem w) nunca fica 'bad' (passa a 'meh', '(o TibiaPal mediu esta hunt…)').
@@ -83,6 +101,17 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   faltar). Setup: pares `<div class="su su-el|rot|charm|safe|sup">` com `.su-ic` (mosaicos só no Modern; no Original `.su` é
   display:contents), `suRot` (chips, feitiços e munição com link, 'ver rotação ›') e a linha 'Supplies' (`suSup` com `supRows` e
   `buyOf`; o id `su-sup-N` é preenchido depois de items.json, do Market e do índice de links).
+  Página Charms (r5-t5): `CHARM_IC` (paths 24×24 em traço: os elementais pelo elemento do `f`, os outros pela chave) e `charmIc(k)` →
+  `<span class="ch-ic md-only" style="--cc:…">` (var(--<elemento>), senão var(--gold) nos majors e var(--accent) nos minors).
+  `renderCharms`: progresso `.ch-prog` em #charmProg/#minorProg ('x de n desbloqueados · faltam N charm points/echoes', N = soma do
+  1.º número de `c` dos por marcar, `charmCost(k)`); nas listas a `<label>` só envolve o nome e a descrição `.d` (#chd-<chave>,
+  aria-describedby) abre a linha (`li.open`); cartão #charmAll com os 25 charms (`<li id="cm-<chave>" tabindex="-1">`, selo 'na tua
+  ordem' = `.cm-mine`). Os links do `suCharm` levam `data-cfocus="<chave>"`: o handler de `[data-go]` e a pesquisa (ramo `ch`) chamam
+  `charmFocus(k)` (scrollIntoView do #cm-<chave>, suave só sem reduced-motion, foco e `.cfocus` durante 2,4 s).
+  Quests (r5-t5): `renderQuests` põe os `.q` de cada `details.qgroup[data-qg]` num `<div class="qgrid">` (2 colunas no Modern a partir
+  de 1100 px; no Original fica uma coluna), a checkbox dentro de `<label class="qchk">` (44×44 no toque), `#questBar.zero` com 0 feitas e
+  `.qpop` (`QPOP`) no cartão acabado de marcar. A ≤620 px (os dois modos) `#sheet .tabs`, `#subtabs .seg.scroll`, `.eqtabs` e `.sltabs`
+  partem em linhas (sem nada escondido fora do ecrã) e o ✕ da ficha (`.sh-x`) tem 44×44 e fundo opaco (`.sh-h` com padding-right:52px).
 - Equipamento: `scoreItem(c,it,mode,prot)` (mode combat|speed|off|bal|def; prot = elemento ou perfil {el:peso}), `ranked`, `pickSet`, `bisSet`, `setTotals`,
   `setSumHTML`, `renderBis` (painel inicial), `renderEquip`/`renderSlot`/`renderInventory`, `pickOpen` (botão direito), `itemLookHTML` + `[data-look="<id>"]` (look ao passar por cima).
   Sets automáticos (r4-t5): paladino com a arma em 'Automático' (`c.wtype` vazio): o `pickSet` usa arco a partir do nível 100
@@ -96,10 +125,25 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   dano drown na hunt. Mão esquerda: `slotLab(c,k)` ('Escudo / aljava', 'Livro / escudo', 'Escudo') no #bis, no #doll e nos sets
   da ficha; o `SLOTNAME`/`DOLL` ficam iguais (o renderSlot e o pickOpen usam-nos). No botão direito (`pickList`), o paladino
   em 'Automático' a partir do 100 vê os arcos primeiro e as bestas e o arremesso num grupo à parte (`.pk-g`).
+  Sets coerentes (r5-t4): knight em 'Automático' (sem `c.wtype`) → `knightWType(c)` = `c.wtype`, senão `c.hs.sk.k` (sword/axe/club), senão
+  o tipo cujo `pickSet` de combate (sem perfil nem filtro) soma mais `scoreItem`; em cache no `KWTC` (Map, chave id|nível|hs.sk.k). O
+  `pickSet` força-o logo a seguir ao bloco do paladino (com o filtro g e nenhuma arma desse tipo marcada até ao nível, o tipo da melhor
+  arma marcada): o BiS, os 3 sets da ficha, 'Preencher com o melhor' e o botão direito ficam com um só tipo de arma; o `relSkills` do
+  knight sem tipo também o usa (listas, look e sets com os mesmos pontos: o Axe ring não conta com espada). `WTYPES.knight[0]` =
+  'Automático (o teu skill mais alto)'. Elemento da hunt: 5.º parâmetro `eff` em `scoreItem(c,it,mode,prot,eff)`, `ranked(c,slot,mode,prot,f,set,eff)` e
+  `pickSet(c,mode,prot,g,eff)`; o `huntSet` passa `G.places[pid].eff`. Na arma, EF(x) = 1 sem eff; 0 se `eff.min[x]` < 0 (o elemento
+  cura alguma criatura); senão max(0, eff[x] ?? 100)/100: dano `wd` × EF(wd[0]), atk + munição × EF('physical'), `wel[1]` × EF(wel[0]).
+  Sem eff (Início, Equipamento, botão direito) nada muda. Regeneração `rg` × min(1, 100/nível); itens com dur fora dos anéis e amuletos
+  (Void boots, Firewalker boots, Tiara of power, velas…) × 0,6 (os anéis e amuletos ficam com ×0,35/0,6/0,8/0,9). `setSumHTML(t,lab,c)`
+  (#heroSet e #setSum passam a personagem): só as skills que contam (`setSkOk(c,t)`: peso > 0 no `relSkills` com o tipo de arma efetivo,
+  o da arma do set ou o `knightWType`; os ml_* que o relSkills não pesa contam) e as outras num chip `.hs-sk.hs-nc` ('+21 axe · +21 club
+  (não contam com sword)'); o mesmo filtro nas 3 skills da `.hset-kv`. Listas do slot da arma: `wGroup(c,slot)` → `{b,n,lab}` ou null
+  (tipo escolhido): o `pickList` (`.pk-g`) e o `renderSlot` ('Melhores até ao nível': 8 do tipo do set, `<li class="ilist-g">` e 3 dos
+  outros; 'Ver todos os N' conta todos) põem esse tipo primeiro; a `.note` diz o tipo usado no knight. Ficha: `.hset-note`.
 - Pesquisa global: `gsOpen()` abre a lista que desce da barra (`#gsPop`); índice = `gsIndex()` (do G: hunts, quests, criaturas, itens, loot, charms, imbuements) + `data/search.json` (gerado por `python -I C:\xampp\_tools\build_search.py` — volta a correr sempre que mudares ficheiros de dados). Resultados `[data-gs="cat:key"]`.
 - Páginas internas novas: rotas `#feitico/<slug>`, `#npc/<slug>`, `#conquista/<slug>`, `#montaria/<slug>`, `#outfit/<slug>` → `openWiki(kind,slug)` desenha em `#wikiPage` (painel `wiki2`) com `WKR.feitico/npc/conquista/montaria/outfit`; `wkHref(kind,nome)` dá o link. Listas no menu Wiki (com filtros, 120 cartões `.wcard` de cada vez): `#feiticos` → `renderSpellList()` (estado `ST.ui.spl`), `#npcs` → `renderNpcList()` (`ST.ui.npl`; vende/compra/ensina/viagens calculados uma vez em `WLS.np`; só aí carrega items.json), `#colecoes` → `renderColList()` (`ST.ui.col`, separadores conquistas/montarias/outfits via `tabsUI`, `wlColTab(k)`). `navOf(p)` dá o item do menu ativo (item→itens, criatura→criaturas, wiki2→feiticos/npcs/colecoes pelo hash); `secOf` e `renderNav` usam-no. Quests só da TibiaWiki: `openQuestW(nome)`.
 - Links internos para NPCs e feitiços: `elink(kind,nome[,inner])` (kind `npc`|`feitico`; nome pode ser lista de candidatos), `elinkKey`, `elinkTxt(texto)` (liga NPCs citados em frases); índice `LINKX` montado por `linkIdxLoad()` (npcs.json + spells.json). Nunca dentro de `<button>` ou de outro link.
-- Helpers: `$`, `esc`, `nf` (números pt-PT), `gp`, `fmt`, `fold` (sem acentos), `slug`, `cap1`, `spr(it)`, `sprOr`, `itemSpr(nome)`, `crSpr(k,size)`, `npcSpr`, `chip(el)`, `ELN` (nomes PT dos elementos), `SKN`, `SLOTNAME`, `DOLL`, `IC` (ícones SVG), `VI(voc)`.
+- Helpers: `$`, `esc`, `nf` (números pt-PT), `gp`, `fmt` (r5-t3: abaixo de 1000 mostra o número inteiro; a partir de 999 500 passa a kk), `fold` (sem acentos), `slug`, `cap1`, `spr(it)`, `sprOr`, `itemSpr(nome)`, `crSpr(k,size)`, `npcSpr`, `chip(el)`, `ELN` (nomes PT dos elementos), `SKN`, `SLOTNAME`, `DOLL`, `IC` (ícones SVG), `VI(voc)`.
 - Modern: tudo sob `html[data-ui="modern"]`; motor `md*` (mdStart, mdPanel, mdPage, mdHero, mdCount, mdVT, mdTipHide...). `title` vira tooltip `.md-tip` no Modern.
   Títulos (r4-t4): `mdSplit(h2)` parte por palavras — cada palavra num `span.chw` (inline-block) com as letras `.ch` (`--i` = ordem
   na cascata) e o espaço num `.ch.chs` inline, por isso o título só muda de linha entre palavras; nada depende de `.ch` ser filho do h2.

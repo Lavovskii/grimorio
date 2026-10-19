@@ -510,7 +510,7 @@ body.noch .hcmp-tray{display:none!important}
 .rt-st .ri svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .rt-st small{display:block;color:var(--muted);font-size:12.5px}
 .rt-st .sno{font-style:normal;font-weight:700;color:var(--gold);margin-right:6px;font-variant-numeric:tabular-nums}
-.hmap{position:relative;display:block;aspect-ratio:3/2;border-radius:10px;overflow:hidden;background-color:#000;background-image:url(huntmaps.png?v=20261018b);background-repeat:no-repeat;background-size:1000% auto;image-rendering:pixelated;border:1px solid var(--line);text-decoration:none}
+.hmap{position:relative;display:block;aspect-ratio:3/2;border-radius:10px;overflow:hidden;background-color:#000;background-image:url(huntmaps.png?v=20261019r5);background-repeat:no-repeat;background-size:1000% auto;image-rendering:pixelated;border:1px solid var(--line);text-decoration:none}
 .hmap::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;border:3px solid #E5484D;box-shadow:0 0 0 4px rgba(229,72,77,.35),0 1px 4px rgba(0,0,0,.6)}
 .hmap.area::after{width:46px;height:46px;margin:-23px 0 0 -23px;background:rgba(229,72,77,.18);border:2px dashed #fff;box-shadow:0 0 0 1px rgba(0,0,0,.5)}
 .hmap .cap{position:absolute;left:6px;bottom:6px;right:6px;display:flex;justify-content:space-between;gap:6px;font:600 11.5px/1.2 var(--sans);color:#fff;pointer-events:none}
@@ -1136,6 +1136,10 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .pk-m b{font-size:14px} .pk-m small{font-size:11px;color:var(--muted)}
 .pk-own{color:var(--ok);font-weight:700}
 .pk-g{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:12px 8px 4px}
+/* r5-t4: cabeçalho do grupo 'outros tipos de arma' na lista do slot, skills que não contam no total do set e a frase da ficha */
+.ilist li.ilist-g{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:14px 4px 4px}
+.hs-sk.hs-nc{opacity:.6;background:transparent;white-space:normal;border-radius:12px}
+.hset-note{margin:0}
 .pk-f{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
 .pk-f .btn{flex:1}
 @media (max-width:620px){ .pick{left:8px!important;right:8px;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;max-width:none;max-height:72vh} }
@@ -1560,6 +1564,9 @@ html[data-ui="modern"] .pk-o[aria-selected="true"]{background:linear-gradient(90
 html[data-ui="modern"] .pk-m b{font-family:"Russo One",var(--sans);font-weight:400;color:#C9B3FF;text-shadow:0 0 10px rgba(139,92,246,.5)}
 html[data-ui="modern"] .pk-own{color:#4ADE80;text-shadow:0 0 8px rgba(74,222,128,.6)}
 html[data-ui="modern"] .pk-g{color:#7DE8FF}
+html[data-ui="modern"] .ilist li.ilist-g{color:#7DE8FF;border-bottom-color:rgba(125,232,255,.22);text-shadow:0 0 10px rgba(34,211,238,.35)}
+html[data-ui="modern"] .hs-sk.hs-nc{background:transparent;border-color:rgba(167,139,250,.18);box-shadow:none;text-shadow:none}
+html[data-ui="modern"] .hset-note{color:#9F96CF}
 html[data-ui="modern"] .pk-f{border-top-color:rgba(167,139,250,.2)}
 
 html[data-ui="modern"] .hsets{background:linear-gradient(180deg,rgba(32,27,70,.7),rgba(14,12,38,.7));border:1px solid rgba(167,139,250,.24);border-radius:18px;padding:16px}
@@ -2058,6 +2065,179 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   .hc-th,.hthumb,.hthumb-x{width:72px;height:48px}
   .hc-b{grid-template-columns:minmax(0,1fr)} .hc-p{flex-wrap:wrap;row-gap:2px}
 }
+/* r5-t2: hunts por cidade e por tipo — 'Copiar link' ao lado do texto, filtro 'Cidade', índice no fim da lista e a classe da criatura com link */
+.hlead{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-width:0}
+.hlink{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.hlink[hidden],.hidx[hidden]{display:none}
+.hf-city select{min-width:0;max-width:100%}
+.hf-evn{flex-basis:100%;margin:0}
+.hidx{display:grid;gap:10px;margin-top:18px}
+.hidx-d.card{padding:0 16px}
+.hidx-d>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:48px;font-weight:700;font-size:15.5px;color:var(--ink)}
+.hidx-d>summary::-webkit-details-marker{display:none}
+.hidx-d>summary .n{font-size:12.5px;font-weight:700;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:99px;padding:0 8px}
+.hidx-d>summary::after{content:"";margin-left:auto;flex:none;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-2px) rotate(45deg)}
+.hidx-d[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+.hidx-d>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.hidx-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(170px,100%),1fr));gap:8px;padding:2px 0 16px}
+.hidx-a{display:grid;align-content:center;gap:2px;min-width:0;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);text-decoration:none}
+.hidx-a b{font-size:14.5px;overflow-wrap:anywhere}
+.hidx-a span{font-size:12.5px;color:var(--muted)}
+.hidx-a:hover{border-color:var(--accent)}
+.hidx-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:420px){ .hidx-g{grid-template-columns:repeat(auto-fill,minmax(min(130px,100%),1fr))} }
+a.tag{text-decoration:none;color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+a.tag:hover{border-color:var(--accent)}
+@media (prefers-reduced-motion:no-preference){ .hidx-d>summary::after{transition:transform var(--d2,200ms)} }
+@media (max-width:960px),(pointer:coarse){ .hlink .btn{min-height:44px;padding-inline:14px} .hf-city select{min-height:44px} }
+@media (pointer:coarse){ a.tag{position:relative} a.tag::after{content:"";position:absolute;left:-3px;right:-3px;top:50%;height:44px;transform:translateY(-50%)} }
+html[data-ui="modern"] .hidx-d>summary{font-family:var(--serif);font-weight:400;letter-spacing:.02em;color:#fff}
+html[data-ui="modern"] .hidx-d>summary .n{font-family:var(--sans);background:rgba(125,232,255,.12);border-color:rgba(125,232,255,.35);color:#9EEFFF}
+html[data-ui="modern"] .hidx-d>summary::after{border-color:#7DE8FF;filter:drop-shadow(0 0 4px rgba(125,232,255,.6))}
+html[data-ui="modern"] .hidx-d>summary:focus-visible{outline-color:#7DE8FF}
+html[data-ui="modern"] .hidx-a{background:linear-gradient(180deg,rgba(139,92,246,.14),rgba(17,14,42,.55));border:1px solid rgba(167,139,250,.3);border-radius:12px;color:#fff;transition:border-color var(--d2),box-shadow var(--d2),transform var(--d2) var(--e-spring)}
+html[data-ui="modern"] .hidx-a span{color:#A59DCB}
+html[data-ui="modern"] .hidx-a:hover{background-size:auto;border-color:rgba(125,232,255,.6);color:#fff;text-shadow:none}
+html[data-ui="modern"] .hidx-a:focus-visible{outline:2px solid #7DE8FF;outline-offset:2px}
+html[data-ui="modern"] a.tag{color:#9EEFFF;border-color:rgba(125,232,255,.4)}
+@media (prefers-reduced-motion:no-preference){
+  html[data-ui="modern"] .hidx-a:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(125,232,255,.35),0 0 18px rgba(125,232,255,.35)}
+  html[data-ui="modern"] .hidx-d[open] .hidx-a{animation:mdFade .4s var(--e-out) backwards}
+  html[data-ui="modern"] .hlink:not([hidden]){animation:mdFade .4s var(--e-out)}
+}
+/* r5-t3: nota da criatura do dia por baixo dos mosaicos do 'Loot e lucro'; no Modern, os valores dos mosaicos e do cartão 'Valor' do item numa só linha */
+.lp-ev{margin:8px 0 0;color:var(--ok)}
+.lp-ev .muted{color:var(--muted)}
+html[data-ui="modern"] .lp-ev{color:#6EE7B7;text-shadow:0 0 10px rgba(110,231,183,.35)}
+html[data-ui="modern"] .lp-ev .muted{color:#A59DCB;text-shadow:none}
+html[data-ui="modern"] .lp-kpi{container-type:inline-size}
+html[data-ui="modern"] .lp-kpi b{white-space:nowrap;font-size:clamp(17px,11.5cqi,26px)}
+html[data-ui="modern"] .ip-vals>div:last-child:nth-child(odd){grid-column:1/-1}
+html[data-ui="modern"] .ip-vals b{white-space:nowrap}
+/* sem partir, um valor grande ('362 474 999 gp') não cabe em meia coluna a 375 px: as caixas passam a flex e cada uma fica pelo menos da largura do
+   seu valor (min-content: o texto de baixo pode partir), por isso a que não cabe ao lado da outra desce para uma linha inteira */
+html[data-ui="modern"] .ip-vals{display:flex;flex-wrap:wrap}
+html[data-ui="modern"] .ip-vals>div{flex:1 1 calc(50% - 4px);min-width:min-content}
+html[data-ui="modern"] .ip-vals>div:last-child:nth-child(odd){flex-basis:100%}
+@media (max-width:360px){ html[data-ui="modern"] .ip-vals b{font-size:17px} }
+@media (prefers-reduced-motion:no-preference){ html[data-ui="modern"] .lp-ev{animation:mdFade .4s var(--e-out) .15s backwards} }
+/* r5-t5: Charms (glifo de cada charm, progresso, cartão com os 25 charms para onde levam os links da ficha) e Quests (grelha de
+   cartões) no Modern; toques de 44 px nas duas páginas nos dois modos; a ≤620 px os separadores da ficha, #subtabs, .eqtabs e .sltabs
+   partem em linhas (nada escondido fora do ecrã) e o ✕ da ficha fica com 44×44 e fundo opaco */
+.check .d{cursor:pointer}
+.ch-prog{display:grid;gap:6px;margin:4px 0 6px;font-size:14px;color:var(--muted)}
+.ch-prog b{color:var(--ink)}
+.cm-all{margin-top:14px;display:grid;gap:6px}
+.cm-all h3{font-size:20px}
+.cm-h{margin-top:10px;font-size:16px}
+.cm-h span{font-weight:400}
+.cm-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:0 24px}
+.cm-list li{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line);scroll-margin:90px}
+.cm-t{display:grid;gap:3px;min-width:0}
+.cm-n{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.cm-d{font-size:14px;color:var(--muted)}
+.cm-list li.cfocus{background:var(--accent-soft);box-shadow:0 0 0 2px var(--accent);border-radius:8px}
+.qchk{display:flex;cursor:pointer}
+.qchk>input{flex:none}
+.panel[data-p="charms"] .check li.done label b{text-decoration:line-through;text-decoration-color:var(--ok)}
+html[data-ui="modern"] .panel[data-p="charms"] .grid2{align-items:start}
+html[data-ui="modern"] .panel[data-p="charms"] .check li{position:relative;grid-template-columns:26px 40px minmax(0,1fr);align-items:center;border-radius:12px;padding-inline:8px;transition:background var(--d2)}
+html[data-ui="modern"] .panel[data-p="charms"] .check li:hover{background:rgba(167,139,250,.05)}
+/* o custo fica no canto, na linha do nome: a descrição ocupa a largura toda por baixo */
+html[data-ui="modern"] .panel[data-p="charms"] .check .tag{position:absolute;top:11px;right:8px}
+html[data-ui="modern"] .panel[data-p="charms"] .check .t>label{display:inline-flex;align-items:center;max-width:calc(100% - 156px)}
+html[data-ui="modern"] .ch-ic{position:relative;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:radial-gradient(circle at 30% 25%,color-mix(in srgb,var(--cc) 45%,transparent),rgba(7,6,22,.85));border:1px solid color-mix(in srgb,var(--cc) 55%,transparent);box-shadow:0 0 14px color-mix(in srgb,var(--cc) 35%,transparent)}
+html[data-ui="modern"] .ch-ic svg{width:22px;height:22px;fill:none;stroke:var(--cc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px var(--cc))}
+html[data-ui="modern"] .ch-prog{color:#A59DCB}
+html[data-ui="modern"] .ch-prog b{color:#fff;text-shadow:0 0 10px rgba(125,232,255,.45)}
+html[data-ui="modern"] .cm-h{font-family:var(--sans);font-weight:700;letter-spacing:.04em;color:#fff}
+html[data-ui="modern"] .cm-h span{color:#A59DCB}
+html[data-ui="modern"] .cm-list{gap:10px 12px;margin-top:4px}
+html[data-ui="modern"] .cm-list li{grid-template-columns:40px minmax(0,1fr);padding:12px;border:1px solid rgba(167,139,250,.16);border-radius:14px;background:linear-gradient(160deg,rgba(124,58,237,.08),rgba(15,12,40,.45));transition:border-color var(--d2),box-shadow var(--d3),background var(--d2)}
+html[data-ui="modern"] .cm-list li.cm-mine{border-color:rgba(125,232,255,.32)}
+html[data-ui="modern"] .cm-list li:hover{border-color:rgba(167,139,250,.45)}
+html[data-ui="modern"] .cm-n b{color:#fff}
+html[data-ui="modern"] .cm-d{color:#A59DCB}
+html[data-ui="modern"] .cm-list li.cfocus{background:rgba(125,232,255,.08);border-color:rgba(125,232,255,.75);box-shadow:0 0 0 1px rgba(125,232,255,.5),0 0 26px rgba(125,232,255,.3)}
+@media (min-width:1100px){ html[data-ui="modern"] .panel[data-p="charms"] .check .d{display:block;-webkit-line-clamp:unset} }
+@media (prefers-reduced-motion:no-preference){
+  .cm-list li{transition:background .4s,box-shadow .4s}
+  html[data-ui="modern"] .panel[data-p="charms"] li.done .ch-ic{animation:mdPop .5s var(--e-spring)}
+  html[data-ui="modern"] .cfocus .ch-ic::after{content:"";position:absolute;inset:-1px;border-radius:12px;border:2px solid var(--cc);animation:mdPing 1.2s 2;pointer-events:none}
+}
+/* Quests no Modern: cartões numa grelha (2 colunas a partir de 1100 px), título com traço animado, glifo de cada grupo, barra com marcador */
+html[data-ui="modern"] .qgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:6px 0 12px}
+/* a 2 colunas a descrição fica inteira (sem '…'): letra um pouco mais pequena e cartões mais baixos para a página não crescer */
+@media (min-width:1100px){
+  html[data-ui="modern"] .qgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;padding:8px 0 12px}
+  html[data-ui="modern"] .qgrid .q{padding:12px 16px}
+  html[data-ui="modern"] .qgrid .q p{display:block;-webkit-line-clamp:unset;font-size:14px;line-height:1.45}
+}
+html[data-ui="modern"] details.qgroup{padding:4px 18px 8px}
+html[data-ui="modern"] details.qgroup>summary{justify-content:flex-start;gap:12px}
+html[data-ui="modern"] details.qgroup>summary>.tag{margin-left:auto}
+html[data-ui="modern"] details.qgroup>summary::before{content:"";flex:none;width:28px;height:28px;background:center/contain no-repeat;filter:drop-shadow(0 0 5px rgba(125,232,255,.55))}
+html[data-ui="modern"] details.qgroup[data-qg="solo"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237DE8FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7.5' r='3.5'/%3E%3Cpath d='M5 21v-1.5A5.5 5.5 0 0 1 10.5 14h3a5.5 5.5 0 0 1 5.5 5.5V21'/%3E%3C/svg%3E")}
+html[data-ui="modern"] details.qgroup[data-qg="parcial"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C084FC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 4l-1.2 4.8L9.5 18 6 14.5l9.2-9.3L20 4zM4.5 12.5l7 7M7.2 16.8L3.5 20.5'/%3E%3C/svg%3E");filter:drop-shadow(0 0 5px rgba(192,132,252,.6))}
+html[data-ui="modern"] details.qgroup[data-qg="party"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F472B6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='3'/%3E%3Cpath d='M7 20v-1a5 5 0 0 1 10 0v1'/%3E%3Ccircle cx='5' cy='9.5' r='2.2'/%3E%3Cpath d='M1.5 19v-.5A3.5 3.5 0 0 1 5 15'/%3E%3Ccircle cx='19' cy='9.5' r='2.2'/%3E%3Cpath d='M22.5 19v-.5A3.5 3.5 0 0 0 19 15'/%3E%3C/svg%3E");filter:drop-shadow(0 0 5px rgba(244,114,182,.6))}
+html[data-ui="modern"] .q{position:relative;padding:14px 16px;border:1px solid rgba(167,139,250,.18);border-radius:16px;background:linear-gradient(160deg,rgba(124,58,237,.10),rgba(15,12,40,.55));transition:transform var(--d3) var(--e-out),border-color var(--d2),box-shadow var(--d2)}
+html[data-ui="modern"] .q:hover{border-color:rgba(167,139,250,.5)}
+html[data-ui="modern"] .q h5{padding-right:30px}
+html[data-ui="modern"] .q.done{border-color:rgba(69,232,166,.45)}
+html[data-ui="modern"] .q.done::after{content:"✓";content:"✓"/"";position:absolute;top:12px;right:12px;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1px solid rgba(69,232,166,.65);background:rgba(69,232,166,.14);color:#45E8A6;font:800 13px/1 var(--sans);box-shadow:0 0 12px rgba(69,232,166,.4);pointer-events:none}
+html[data-ui="modern"] .q.locked{filter:saturate(.6)}
+html[data-ui="modern"] .qtitle{text-decoration:none;font-weight:700;color:#fff;background:linear-gradient(90deg,#7DE8FF,#C084FC) no-repeat 0 100%/0 1px;background-origin:content-box;transition:background-size var(--d3) var(--e-out),color var(--d2)}
+html[data-ui="modern"] .qtitle:hover,html[data-ui="modern"] .qtitle:focus-visible{background-size:100% 1px;color:#fff}
+html[data-ui="modern"] .panel[data-p="quests"] .bar-prog{height:10px;border:1px solid rgba(167,139,250,.3);position:relative}
+html[data-ui="modern"] #questBar.zero{min-width:6px;border-radius:99px}
+@media (prefers-reduced-motion:no-preference){
+  html[data-ui="modern"] .q:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 18px rgba(139,92,246,.22)}
+  html[data-ui="modern"] .q.qpop::after{animation:mdPop .5s var(--e-spring)}
+}
+/* Charms a ≤620 px: descrição inteira e larga (a etiqueta do custo desce para a 2.ª linha); no Modern o glifo fica por baixo da checkbox */
+@media (max-width:620px){
+  .panel[data-p="charms"] .check li{grid-template-columns:44px minmax(0,1fr)}
+  .panel[data-p="charms"] .check li>input{justify-self:center}
+  .panel[data-p="charms"] .check .tag{grid-column:-2/-1;justify-self:start}
+  .panel[data-p="charms"] .check .d{display:block;-webkit-line-clamp:unset;overflow:visible}
+  html[data-ui="modern"] .panel[data-p="charms"] .check li{grid-template-columns:44px minmax(0,1fr);align-items:start;padding-inline:0}
+  html[data-ui="modern"] .panel[data-p="charms"] .check li>input{grid-area:1/1}
+  html[data-ui="modern"] .panel[data-p="charms"] .check li>.ch-ic{grid-area:2/1;justify-self:center}
+  html[data-ui="modern"] .panel[data-p="charms"] .check li>.t{grid-area:1/2/3/3}
+  html[data-ui="modern"] .panel[data-p="charms"] .check li>.tag{grid-area:3/2;position:static}
+  html[data-ui="modern"] .panel[data-p="charms"] .check .t>label{max-width:none}
+}
+/* toque (os dois modos): checkboxes dos charms com 24 px e o nome com 44 px de altura; quests com a checkbox, o título e os botões com 44 px */
+@media (pointer:coarse){
+  .panel[data-p="charms"] .check input[type=checkbox]{width:24px;height:24px;margin-top:10px}
+  .panel[data-p="charms"] .check label{display:inline-flex;align-items:center;min-height:44px}
+  .qchk{display:grid;place-items:center;width:44px;height:44px;margin:-12px;flex:none}
+  .qchk input[type=checkbox]{appearance:none;-webkit-appearance:none;display:grid;place-items:center;width:44px;height:44px;margin:0;border:11px solid transparent;border-radius:16px;background:var(--surface) padding-box;box-shadow:inset 0 0 0 2px var(--muted);cursor:pointer}
+  .qchk input[type=checkbox]::after{content:"";width:10px;height:6px;margin-top:-2px;border-left:2.5px solid var(--surface);border-bottom:2.5px solid var(--surface);transform:rotate(-45deg) scale(0)}
+  .qchk input[type=checkbox]:checked{background:var(--ok) padding-box;box-shadow:inset 0 0 0 2px var(--ok)}
+  .qchk input[type=checkbox]:checked::after{transform:rotate(-45deg) scale(1)}
+  .qchk input[type=checkbox]:focus-visible{outline-offset:-8px;border-radius:16px}
+  html[data-ui="modern"] .qchk input[type=checkbox]{width:44px;height:44px;margin:0;border:11px solid transparent;border-radius:17px;background:rgba(7,6,22,.6) padding-box;box-shadow:inset 0 0 0 1.5px rgba(185,155,255,.6)}
+  html[data-ui="modern"] .qchk input[type=checkbox]:checked{background:linear-gradient(135deg,#7C3AED,#22D3EE) padding-box;box-shadow:none;filter:drop-shadow(0 0 6px rgba(139,92,246,.65))}
+  html[data-ui="modern"] .qchk input[type=checkbox]:focus-visible{outline:2px solid #7DE8FF;outline-offset:-8px;border-radius:17px}
+  .qtitle{display:inline-block;padding-block:13px;margin-block:-13px}
+  .panel[data-p="quests"] .btn.small,.panel[data-p="quests"] .seg button{min-height:44px}
+  .panel[data-p="quests"] .q .meta{align-items:center}
+}
+@media (pointer:coarse) and (min-width:621px){ html[data-ui="modern"] .panel[data-p="charms"] .check input[type=checkbox]{margin-top:0} }
+/* separadores no telemóvel (os dois modos): partem em linhas em vez de esconder os últimos fora do ecrã; ✕ da ficha com 44×44 e fundo opaco */
+@media (max-width:620px){
+  #sheet .tabs{flex-wrap:wrap;overflow:visible;gap:4px}
+  #sheet .tabs button{flex:1 1 auto;min-height:44px}
+  #subtabs .seg.scroll{flex-wrap:wrap;overflow:visible}
+  #subtabs .seg button{min-height:44px}
+  .eqtabs,.sltabs{flex-wrap:wrap;overflow:visible}
+  .eqtabs button,.sltabs button{flex:1 1 auto;min-height:44px;white-space:normal}
+  .sh-x{width:44px;height:44px;margin-bottom:-44px;background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.35)}
+  .sh-h,.shero h2,.shero h3{padding-right:52px}
+  .sh-h h3{padding-right:0}
+  html[data-ui="modern"] .sh-x{background:rgba(20,14,48,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.35)}
+}
 /* campos com 16 px no toque: abaixo disso o iPhone faz zoom à página quando se escreve */
 @media (pointer:coarse){
   html input:not([type=checkbox]):not([type=radio]):not([type=range]),html select,html textarea{font-size:16px!important}
@@ -2153,13 +2333,14 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
 
     <!-- HUNTS -->
     <section class="panel" data-p="hunts">
-      <div class="ph"><span class="eyebrow" id="huntEyebrow"></span><h2>Hunts por nível</h2><p id="huntLead"></p></div>
+      <div class="ph"><span class="eyebrow" id="huntEyebrow"></span><h2>Hunts por nível</h2><div class="hlead"><p id="huntLead"></p><span class="hlink" id="huntLink" hidden><button type="button" class="btn small ghost" data-hlink="1">Copiar link</button><span class="tiny muted" id="huntLinkMsg" role="status" aria-live="polite"></span></span></div></div>
       <div style="display:grid;gap:12px">
         <div class="evbar" id="evBarH" hidden></div>
         <div class="card hfil" id="huntFilters"></div>
         <div class="legend"><span><i class="dot great"></i> fraco ao teu dano</span><span><i class="dot ok"></i> neutro</span><span><i class="dot meh"></i> resiste um pouco</span><span><i class="dot bad"></i> resiste</span></div>
       </div>
       <div id="huntList" style="margin-top:16px"></div>
+      <div class="hidx" id="huntIdx" hidden></div>
       <div class="sec" id="avoidBox" hidden><h3>A evitar com esta vocação</h3><p class="muted">Hunts populares que, depois de validadas, resistem ao teu dano ou dão prejuízo.</p><div class="card" style="padding:4px 16px"><ul class="check" id="avoidList"></ul></div></div>
       <p class="note" style="margin-top:14px" id="huntNote"></p>
     </section>
@@ -2254,13 +2435,14 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
     <section class="panel" data-p="charms">
       <div class="ph"><span class="eyebrow">Progresso</span><h2>Charms</h2><p id="charmLead"></p></div>
       <div class="grid2">
-        <div class="card"><h3 style="font-size:20px">Ordem para desbloquear</h3><ul class="check" id="charmList"></ul></div>
+        <div class="card"><h3 style="font-size:20px">Ordem para desbloquear</h3><div class="ch-prog" id="charmProg"></div><ul class="check" id="charmList"></ul></div>
         <div style="display:grid;gap:14px;align-content:start">
-          <div class="card"><h3 style="font-size:20px">Minors (echoes)</h3><ul class="check" id="minorList"></ul></div>
+          <div class="card"><h3 style="font-size:20px">Minors (echoes)</h3><div class="ch-prog" id="minorProg"></div><ul class="check" id="minorList"></ul></div>
           <div class="card"><h4>Onde se aplicam</h4><ol class="small" style="margin:6px 0 0;padding-left:20px;display:grid;gap:4px"><li>Cyclopedia → separador <b>Charms</b>.</li><li>Desbloqueia ou sobe o charm.</li><li>Escolhe a criatura: majors exigem o Bestiary completo; minors só o estágio 2.</li></ol><p class="small muted" style="margin-top:6px">Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.</p></div>
           <div class="callout"><h4>Como ganhar charm points</h4><p class="small">Completa entradas do Bestiary: Harmless 1, Trivial 5, Easy 15, Medium 25, Hard 50, Challenging 100 pontos. Os majors pedem a criatura completa; os minors chegam com o estágio 2. Mudar um charm de criatura custa nível × 100 gp. As criaturas Very Rare completam-se com 5 kills e dão o dobro; a primeira vitória contra cada Echo Warden também dá pontos.</p></div>
         </div>
       </div>
+      <div class="card cm-all" id="charmAll"></div>
     </section>
 
     <!-- IMBUEMENTS -->
@@ -2953,7 +3135,14 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   "w_rotten_wasteland":[33975,31044,11,"a",310],
   "w_shadow_caves":[32646,31655,9,"a",311],
   "w_sparkling_pools":[33661,32894,14,"a",312],
-  "replica":[32786,32818,13,"a",295]
+  "replica":[32786,32818,13,"a",295],
+  "bloodfire":[33834,32146,8,"a",313],
+  "stagbastion":[33890,32114,4,"a",319],
+  "forgottencrypt":[32925,31779,11,"a",315],
+  "jadedroots":[33842,31664,14,"a",317],
+  "gloompillars":[33810,31824,14,"a",316],
+  "putrefactory":[34100,31688,14,"a",318],
+  "darklightcore":[34118,31880,14,"a",314]
  },
  "sp":{
   "exana amp res":0,
@@ -7174,7 +7363,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
  },
  "places":{
   "targuna_liz":{
-   "n":"Targuna — Lizards",
+   "n":"Hidden Lizard Temple — Lizards (Targuna)",
    "mons":["Lizard Henchman","Lizard Swordmaster","Lizard Magician","Lizard Executioner"],
    "q":null,
    "d":1,
@@ -7187,7 +7376,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "prem":false
   },
   "targuna_pir":{
-   "n":"Targuna — Pirates",
+   "n":"Aragonia — Pirates (Targuna)",
    "mons":["Pirate Navigator","Pirate Gunner","Pirate Cook","Pirate Quartermaster"],
    "q":"targuna",
    "d":1,
@@ -7201,7 +7390,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "qn":"Targuna Quest"
   },
   "targuna_inf":{
-   "n":"Targuna — Infernoids",
+   "n":"Crimson Court — Infernoids (Targuna)",
    "mons":["Infernoid Blob","Infernoid Hound","Infernoid Soul","Infernoid Spiritual"],
    "q":"targuna",
    "d":1,
@@ -9484,7 +9673,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "unc":false,
    "eff":{"physical":100,"fire":118,"ice":108,"earth":82,"energy":95,"holy":100,"death":88,"min":{"physical":100,"fire":115,"ice":105,"earth":75,"energy":85,"holy":100,"death":80}},
    "boss":["Megasylvan Yselda"],
-   "city":"Thais",
+   "city":"Bounac",
    "prem":true,
    "qn":"Adventures of Galthen Quest"
   },
@@ -11541,7 +11730,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "xs":null,
    "ls":null,
    "city":"Carlin",
-   "team":true,
+   "team":["knight","paladin","sorcerer","druid"],
    "boss":["Lokathmor","Mazzinor","Ghulosh","Gorzindel","The Scourge of Oblivion"],
    "prem":true,
    "qn":"The Secret Library Quest"
@@ -11659,7 +11848,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "w":1,
    "xs":4,
    "ls":4,
-   "city":"Kilmaresh",
+   "city":"Yalahar",
    "team":true,
    "boss":["Goshnar's Cruelty"],
    "prem":true,
@@ -11839,6 +12028,228 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "city":"Thais",
    "boss":["Trollwut"],
    "prem":false
+  },
+  "bloodfire":{
+   "n":"Bloodfire Gorge (Isle of Ada)",
+   "mons":["Raubritter Skirmisher","Raubritter Marksman","Raubritter Chastener"],
+   "q":"orderstag",
+   "d":3,
+   "acc":"Por baixo da Stag Bastion, na Isle of Ada (The Order of the Stag Quest). Abre depois de esfolares 20 Night Harpy Beaks com uma Obsidian Knife e as entregares ao Guard Captain Hartford; as compradas no Market não contam.",
+   "note":"Usa físico, fogo ou terra: os três Raubritters levam 106-120% de todos. Evita gelo (75-85%), holy e energia. Em equipa, o TibiaPal aconselha esta gorge a partir do 500.",
+   "unc":false,
+   "eff":{"physical":116,"fire":111,"ice":80,"earth":110,"energy":88,"holy":85,"death":100,"min":{"physical":112,"fire":106,"ice":75,"earth":106,"energy":85,"holy":85,"death":100}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Edron",
+   "prem":true,
+   "qn":"The Order of the Stag Quest"
+  },
+  "stagbastion":{
+   "n":"Stag Bastion (Isle of Ada)",
+   "mons":["Raubritter Skirmisher","Raubritter Marksman","Raubritter Chastener","Night Harpy","Stag"],
+   "q":"orderstag",
+   "d":3,
+   "acc":"Isle of Ada (The Order of the Stag Quest, nível 250): em Bounac, fala com o Kesar the Younger e usa a corda do barco de pesca na costa a sul do castelo. Na ilha, o Second In Command Demeron deixa-te passar pelas minas a noroeste; a bastion fica no alto da ilha.",
+   "note":"Usa físico: os Raubritters levam 112-120% e a Night Harpy 100%. As Night Harpies resistem a terra e fogo (60-70%) e só aparecem à noite, em raids (nem todas as noites). Os bosses Clavius, Michael the Stalwart e Overseer Osverger também andam por aqui.",
+   "unc":false,
+   "eff":{"physical":110,"fire":101,"ice":90,"earth":98,"energy":93,"holy":93,"death":102,"min":{"physical":100,"fire":70,"ice":75,"earth":60,"energy":85,"holy":85,"death":100}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Edron",
+   "boss":["Clavius","Michael the Stalwart","Overseer Osverger"],
+   "prem":true,
+   "qn":"The Order of the Stag Quest"
+  },
+  "asuracitadel":{
+   "n":"Asura Citadel",
+   "mons":["True Midnight Asura","True Frost Flower Asura","Winged Jaracal"],
+   "q":"shards",
+   "d":3,
+   "acc":"Em Marapur, na Shards of a Broken Moon Quest (pede a Within the Tides Quest e a Grimvale – Paradise Lost): depois de falares com a Saraki e com o Udu, a Sharai, a nordeste dos Emerald Gardens, abre-te a gruta escondida a sudeste. As pedras da gruta levam-te à citadel.",
+   "note":"Usa terra ou energia: os True Asuras levam 110% de ambos e o Winged Jaracal 105%. Evita gelo e morte (a True Frost Flower Asura é imune a gelo e a True Midnight Asura a morte). A TibiaWiki compara a dificuldade à da Asura Mirror.",
+   "unc":false,
+   "eff":{"physical":98,"fire":95,"ice":67,"earth":108,"energy":108,"holy":77,"death":57,"min":{"physical":95,"fire":85,"ice":0,"earth":105,"energy":105,"holy":70,"death":0}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Marapur",
+   "prem":true,
+   "qn":"Shards of a Broken Moon Quest"
+  },
+  "asuracitadel1":{
+   "n":"Asura Citadel −1",
+   "mons":["True Midnight Asura","True Frost Flower Asura","Silverfrost Sentinel","Iceplume Strider"],
+   "q":"shards",
+   "d":3,
+   "acc":"Piso −1 da Asura Citadel, em Marapur (Shards of a Broken Moon Quest): entra pela gruta escondida que a Sharai te abre, a nordeste dos Emerald Gardens, e desce um piso.",
+   "note":"Usa terra: todas as criaturas levam 105-110%. A energia rende menos aqui (os Silverfrost Sentinels e os Iceplume Striders levam 90%); evita gelo e morte. O boss The Moonsnow Magnolia fica no piso de baixo.",
+   "unc":false,
+   "eff":{"physical":104,"fire":102,"ice":66,"earth":109,"energy":100,"holy":80,"death":74,"min":{"physical":100,"fire":90,"ice":0,"earth":105,"energy":90,"holy":70,"death":0}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Marapur",
+   "prem":true,
+   "qn":"Shards of a Broken Moon Quest"
+  },
+  "forsakencrypt":{
+   "n":"Forsaken Crypt",
+   "mons":["Roaming Dread","Cyclursus","Crypt Mage"],
+   "q":"roost",
+   "d":3,
+   "acc":"Nos crypts por baixo de Draconia, depois de acabares a The Roost of the Graveborn Quest (começa com o S'Zallar M'Andar, em Ab'Dendriel, que te leva de canoa ao cemitério dos dragões). Cada entrada gasta uma Ancestral Charge: ganhas 5 com cada Fetid Heart (cai dos Crypt Constructs da Forgotten Crypt) e 1 de duas em duas semanas com a Jade Dragon Head.",
+   "note":"Zona solo: o Cyclursus baixa os teus skills se houver mais jogadores perto. Cada entrada gasta uma Ancestral Charge. Usa morte (109-118%); os outros elementos dão 100-109%. Aqui caem os Cryptic Fossils que abrem a Unhallowed Crypt.",
+   "unc":false,
+   "eff":{"physical":100,"fire":104,"ice":104,"earth":104,"energy":104,"holy":101,"death":113,"min":{"physical":100,"fire":100,"ice":100,"earth":100,"energy":100,"holy":100,"death":109}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Ab'Dendriel",
+   "prem":true,
+   "qn":"The Roost of the Graveborn Quest"
+  },
+  "forgottencrypt":{
+   "n":"Forgotten Crypt",
+   "mons":["Bone Bear","Crypt Construct","Haunted Hunter","Walking Dread"],
+   "q":"roost",
+   "d":3,
+   "acc":"Por baixo de Draconia, no cemitério dos dragões: vai na canoa do S'Zallar M'Andar, em Ab'Dendriel, quando a The Roost of the Graveborn Quest (nível 450) te manda lá voltar. É a crypt de fora e a entrada é livre.",
+   "note":"Usa físico (100-109%), o único elemento que nenhuma criatura daqui resiste; evita energia nos Crypt Constructs (82%) e terra nos Haunted Hunters (85%). A quest pede nível 450, mas estas criaturas têm 23 000 a 25 000 de vida: conta com nível bem mais alto. Os Crypt Constructs deixam cair os Fetid Hearts (Ancestral Charges para a Forsaken Crypt) e o boss Bone Overlord está nesta crypt.",
+   "unc":false,
+   "eff":{"physical":104,"fire":96,"ice":102,"earth":96,"energy":99,"holy":96,"death":102,"min":{"physical":100,"fire":88,"ice":88,"earth":85,"energy":82,"holy":92,"death":92}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Ab'Dendriel",
+   "boss":["Bone Overlord"],
+   "prem":true,
+   "qn":"The Roost of the Graveborn Quest"
+  },
+  "unhallowedcrypt":{
+   "n":"Unhallowed Crypt",
+   "mons":["Crypt Fiend","Creepy Crawler","Crypt Construct"],
+   "q":"roost",
+   "d":3,
+   "acc":"Nos crypts por baixo de Draconia, depois de acabares a The Roost of the Graveborn Quest (canoa do S'Zallar M'Andar, em Ab'Dendriel). Cada entrada gasta um Favour of the Ancients: 1 por cada Cryptic Fossil (cai na Forsaken Crypt) ou 1 de duas em duas semanas com a Jade Dragon Head (Charged).",
+   "note":"Hunt de equipa (TibiaPal 800+): usa terra ou fogo (106-112% em todas) e evita energia (82-88%). Os Creepy Crawlers causam medo (feared) durante 2 segundos. Cada entrada gasta um Favour of the Ancients.",
+   "unc":false,
+   "eff":{"physical":102,"fire":109,"ice":91,"earth":111,"energy":85,"holy":100,"death":96,"min":{"physical":94,"fire":106,"ice":88,"earth":109,"energy":82,"holy":92,"death":92}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Ab'Dendriel",
+   "team":true,
+   "prem":true,
+   "qn":"The Roost of the Graveborn Quest"
+  },
+  "radiantskyhold":{
+   "n":"Radiant Skyhold",
+   "mons":["Radiant Warden","Radiant Paragon","Radiant Acolyte"],
+   "q":"makebelieve",
+   "d":3,
+   "acc":"Em Thalassara, na Make Believe Quest (nível 300; começa com o Wayland Smythers, ao lado do templo de Venore, que te mete num navio de abastecimento disfarçado de caixa de carga). Depois do primeiro boss, o Mimar Haffar, a Radiant Skyhold é o caminho até à sala do Maior Domus.",
+   "note":"Só XP: não dá ouro nem itens para vender. Hunt de equipa (TibiaPal 1200+): usa terra ou energia (105-115%) e evita fogo (60-70%) e morte. Depois de 3000 criaturas mortas, as que restam passam a Devoted durante 1 hora.",
+   "unc":false,
+   "eff":{"physical":92,"fire":67,"ice":92,"earth":108,"energy":108,"holy":102,"death":77,"min":{"physical":90,"fire":60,"ice":90,"earth":105,"energy":105,"holy":95,"death":70}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Marapur",
+   "team":true,
+   "boss":["Maior Domus"],
+   "prem":true,
+   "qn":"Make Believe Quest"
+  },
+  "radiantascend":{
+   "n":"Radiant Ascendancy",
+   "mons":["Radiant Templar","Radiant Inquisitor","Radiant Zealot"],
+   "q":"makebelieve",
+   "d":3,
+   "acc":"Em Thalassara, na Make Believe Quest (nível 300; começa com o Wayland Smythers, ao lado do templo de Venore, que te mete num navio de abastecimento disfarçado de caixa de carga). É uma das zonas Radiant que vais abrindo ao avançar na quest.",
+   "note":"Só XP: não dá ouro nem itens para vender. Hunt de equipa (TibiaPal 1000+): usa gelo, fogo ou morte (105-110%) e evita energia (60-80%) e holy. Depois de 3000 criaturas mortas, as que restam passam a Devoted durante 1 hora.",
+   "unc":false,
+   "eff":{"physical":107,"fire":107,"ice":108,"earth":93,"energy":73,"holy":77,"death":107,"min":{"physical":95,"fire":105,"ice":105,"earth":90,"energy":60,"holy":75,"death":105}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Marapur",
+   "team":true,
+   "prem":true,
+   "qn":"Make Believe Quest"
+  },
+  "jadedroots":{
+   "n":"Jaded Roots",
+   "mons":["Sopping Corpus","Bloated Man-Maggot","Mycobiontic Beetle","Oozing Corpus"],
+   "q":"rotten",
+   "d":3,
+   "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa energia ou gelo (110-125%) e evita terra e físico. As criaturas batem terra, físico e fogo (e morte a quem tem 3 ou mais Bakragore's Taints). Quando uma criatura morre pode aparecer um Decaying Totem, que solta quatro anéis de dano seguidos.",
+   "unc":false,
+   "eff":{"physical":65,"fire":74,"ice":115,"earth":52,"energy":119,"holy":106,"death":96,"min":{"physical":55,"fire":65,"ice":110,"earth":40,"energy":115,"holy":105,"death":90}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Darashia",
+   "team":true,
+   "boss":["Murcion"],
+   "prem":true,
+   "qn":"Rotten Blood Quest"
+  },
+  "gloompillars":{
+   "n":"Gloom Pillars",
+   "mons":["Darklight Emitter","Darklight Construct","Wandering Pillar","Converter"],
+   "q":"rotten",
+   "d":3,
+   "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa morte, físico ou energia (105-120%) e evita fogo e holy. As criaturas batem holy, fogo e terra (e energia a quem tem 3 ou mais Bakragore's Taints). Vais acumulando energia escura: aos 100, cai-te um raio em cadeia que salta para até 5 jogadores perto e fica mais forte a cada salto.",
+   "unc":false,
+   "eff":{"physical":116,"fire":55,"ice":101,"earth":94,"energy":109,"holy":62,"death":118,"min":{"physical":115,"fire":40,"ice":100,"earth":90,"energy":105,"holy":50,"death":115}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Darashia",
+   "team":true,
+   "boss":["Chagorz"],
+   "prem":true,
+   "qn":"Rotten Blood Quest"
+  },
+  "putrefactory":{
+   "n":"Putrefactory",
+   "mons":["Oozing Carcass","Sopping Carcass","Rotten Man-Maggot","Meandering Mushroom"],
+   "q":"rotten",
+   "d":3,
+   "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa holy, terra ou fogo (105-125%) e evita morte, gelo e energia. As criaturas batem morte, gelo e energia (e terra a quem tem 3 ou mais Bakragore's Taints). Os Radicular Totems (indestrutíveis) lançam ondas de terra que ficam mais fortes sempre que morre uma criatura perto deles.",
+   "unc":false,
+   "eff":{"physical":100,"fire":109,"ice":59,"earth":118,"energy":65,"holy":119,"death":55,"min":{"physical":100,"fire":105,"ice":50,"earth":115,"energy":45,"holy":115,"death":40}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Darashia",
+   "team":true,
+   "boss":["Ichgahal"],
+   "prem":true,
+   "qn":"Rotten Blood Quest"
+  },
+  "darklightcore":{
+   "n":"Darklight Core",
+   "mons":["Walking Pillar","Darklight Source","Darklight Striker","Darklight Matter"],
+   "q":"rotten",
+   "d":3,
+   "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa fogo ou terra (110-120%) e evita energia e gelo. As criaturas batem energia, físico e gelo (e fogo a quem tem 3 ou mais Bakragore's Taints). Os Darkfields que deixam debaixo de ti tiram muita vida (dano agony) e só desaparecem com a Destroy Field Rune.",
+   "unc":false,
+   "eff":{"physical":105,"fire":118,"ice":66,"earth":112,"energy":52,"holy":98,"death":98,"min":{"physical":90,"fire":115,"ice":55,"earth":110,"energy":40,"holy":90,"death":90}},
+   "w":1,
+   "xs":null,
+   "ls":null,
+   "city":"Darashia",
+   "team":true,
+   "boss":["Vemiath"],
+   "prem":true,
+   "qn":"Rotten Blood Quest"
   }
  },
  "hunts":{
@@ -12001,11 +12412,11 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"feruseals","place":"Feru Mazoran","l":600,"xp":null,"lo":null,"how":"Forked Glacier + Avalanche"},
    {"c":"feruseals","place":"Feru Juggernauts","l":600,"xp":null,"lo":null,"how":"Forked Glacier + Thunderstorm"},
    {"c":"ingol","place":"Ingol -3","l":800,"xp":null,"lo":null,"how":"Forked Glacier + Avalanche"},
-   {"c":null,"place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
-   {"c":null,"place":"Podzilla Quaras","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Stoneshower"},
-   {"c":null,"place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
-   {"c":null,"place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
-   {"c":null,"place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
+   {"c":"bloodfire","place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
+   {"c":"w_podzilla","place":"Podzilla Quaras","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Stoneshower"},
+   {"c":"asuracitadel","place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
+   {"c":"asuracitadel1","place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
+   {"c":"forsakencrypt","place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Forked Thorns + Forked Glacier"},
    {"c":"w_ghostlands","place":"Ghostlands","l":13,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_jakundaf_desert","place":"Jakundaf Desert","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_folda","place":"Folda","l":8,"xp":null,"lo":null,"how":"","w":1},
@@ -12130,7 +12541,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"w_monster_graveyard","place":"Monster Graveyard","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_sparkling_pools","place":"Sparkling Pools","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_rorc_plains","place":"Rorc Plains","l":45,"xp":null,"lo":null,"how":"","w":1},
-   {"c":"w_podzilla","place":"Podzilla","l":800,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_thais_wolf_den","place":"Thais Wolf Den","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"larvas","place":"Larvas","l":8,"xp":null,"lo":null,"how":"","f":1},
    {"c":"earthel","place":"Earth Elementals (Edron)","l":25,"xp":null,"lo":null,"how":"","f":1},
@@ -12165,7 +12575,15 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"flimsy","place":"Flimsies (Lost Souls)","l":450,"xp":null,"lo":null,"how":"","f":1},
    {"c":"ferusealsm","place":"Ferumbras — seals","l":600,"xp":null,"lo":null,"how":"","f":1},
    {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1},
-   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":250,"xp":null,"lo":null,"how":"","f":1,"w":1}
+   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":250,"xp":null,"lo":null,"how":"","f":1,"w":1},
+   {"c":"forgottencrypt","place":"Forgotten Crypt","l":450,"xp":null,"lo":null,"how":"","w":1},
+   {"c":"unhallowedcrypt","place":"Unhallowed Crypt","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantskyhold","place":"Radiant Skyhold","l":1200,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantascend","place":"Radiant Ascendancy","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"jadedroots","place":"Jaded Roots","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"gloompillars","place":"Gloom Pillars","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"putrefactory","place":"Putrefactory","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"darklightcore","place":"Darklight Core","l":800,"xp":null,"lo":null,"how":"","f":1}
   ],
   "knight":[
    {"c":"targuna_liz","place":"Targuna Lizards","l":8,"xp":45000.0,"lo":45000.0,"how":"Physical"},
@@ -12209,14 +12627,14 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"grimvale4","place":"Grimvale -4","l":90,"xp":1550000.0,"lo":400000.0,"how":"Physical"},
    {"c":"minirosha","place":"Mini Rosha","l":130,"xp":1150000.0,"lo":400000.0,"how":"Physical"},
    {"c":"darkfaun","place":"Dark Faun Cave","l":90,"xp":1100000.0,"lo":500000.0,"how":"Physical"},
-   {"c":"barkless","place":"Barkless","l":150,"xp":2300000.0,"lo":0.0,"how":"Physical"},
+   {"c":"barkless","place":"Barkless","l":130,"xp":2300000.0,"lo":0.0,"how":"Physical"},
    {"c":"lowerspike","place":"Lower Spike","l":150,"xp":null,"lo":null,"how":"Physical"},
    {"c":"elderwyrms","place":"Elder Wyrms Drefia","l":130,"xp":1800000.0,"lo":100000.0,"how":"Physical"},
    {"c":"edronweres","place":"Edron South Werecreatures","l":150,"xp":1700000.0,"lo":100000.0,"how":"Physical"},
    {"c":"oraminos","place":"Oramond Minos","l":150,"xp":1500000.0,"lo":250000.0,"how":"Physical"},
    {"c":"otherworldkazo","place":"Otherworld (Kazo)","l":150,"xp":1200000.0,"lo":200000.0,"how":"Physical"},
    {"c":"iksupan","place":"Iksupan","l":150,"xp":null,"lo":null,"how":"Physical"},
-   {"c":"deeplings","place":"Deeplings Library","l":150,"xp":1600000.0,"lo":800000.0,"how":"Physical"},
+   {"c":"deeplings","place":"Deeplings Library","l":130,"xp":1600000.0,"lo":800000.0,"how":"Physical"},
    {"c":"yalagr","place":"Yalahar Grim Reapers","l":200,"xp":2900000.0,"lo":-100000.0,"how":"Fire, Energy"},
    {"c":"hyaenas","place":"Werehyaenas South","l":200,"xp":2200000.0,"lo":250000.0,"how":"Ice"},
    {"c":"hyaenas","place":"Werehyaenas North","l":200,"xp":2200000.0,"lo":250000.0,"how":"Ice"},
@@ -12225,14 +12643,14 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"gloothtower","place":"Glooth Tower","l":200,"xp":2050000.0,"lo":250000.0,"how":"Physical, Energy"},
    {"c":"innerhive","place":"Hive Stage3","l":200,"xp":null,"lo":null,"how":"Ice"},
    {"c":"otherworldedron","place":"Otherworld (Edron)","l":200,"xp":1900000.0,"lo":250000.0,"how":"Physical"},
-   {"c":"gloothbandits","place":"Glooth Bandits","l":200,"xp":1700000.0,"lo":500000.0,"how":"Physical, Fire"},
+   {"c":"gloothbandits","place":"Glooth Bandits","l":130,"xp":1700000.0,"lo":500000.0,"how":"Physical, Fire"},
    {"c":"pirats","place":"Pirats","l":200,"xp":1700000.0,"lo":500000.0,"how":"Earth"},
    {"c":"minocults","place":"Minotaur Cults","l":200,"xp":null,"lo":null,"how":"Ice"},
-   {"c":"medusa","place":"Medusa Tower","l":250,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"medusa","place":"Medusa Tower","l":200,"xp":null,"lo":null,"how":"Energy"},
    {"c":"carnivoras","place":"Carnivora's Rock","l":250,"xp":null,"lo":null,"how":"Fire, Ice"},
    {"c":"warzone4","place":"Warzone 4","l":300,"xp":3500000.0,"lo":600000.0,"how":"Fire"},
-   {"c":"asurapalace","place":"Asura Palace","l":300,"xp":null,"lo":null,"how":"Energy"},
-   {"c":"banuta6","place":"Deeper Banuta (Bottom Floor)","l":300,"xp":3000000.0,"lo":800000.0,"how":"Energy"},
+   {"c":"asurapalace","place":"Asura Palace","l":200,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"banuta6","place":"Deeper Banuta (Bottom Floor)","l":250,"xp":3000000.0,"lo":800000.0,"how":"Energy"},
    {"c":"werelions","place":"Werelions -1","l":300,"xp":2900000.0,"lo":800000.0,"how":"Ice"},
    {"c":"candia","place":"Candia Nibblemaws","l":300,"xp":null,"lo":null,"how":"Energy"},
    {"c":"drefiagr","place":"Drefia Grim Reapers","l":300,"xp":2800000.0,"lo":200000.0,"how":"Fire"},
@@ -12305,10 +12723,10 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"feruseals","place":"Feru DT seal","l":800,"xp":null,"lo":null,"how":"Ice"},
    {"c":"norcdungeons","place":"Norcferatu Dungeons West","l":800,"xp":null,"lo":null,"how":"Ice, Earth, Fire"},
    {"c":"norcdungeons","place":"Norcferatu Dungeons East","l":800,"xp":null,"lo":null,"how":"Ice, Earth, Fire"},
-   {"c":null,"place":"Raubritters Castle","l":800,"xp":null,"lo":null,"how":"Physical"},
-   {"c":null,"place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Physical"},
-   {"c":null,"place":"True Asuras","l":1000,"xp":null,"lo":null,"how":"Energy"},
-   {"c":null,"place":"Asura Citadel","l":1000,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"stagbastion","place":"Raubritters Castle","l":800,"xp":null,"lo":null,"how":"Physical"},
+   {"c":"bloodfire","place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Physical"},
+   {"c":"asuracitadel","place":"True Asuras","l":1000,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"asuracitadel1","place":"Asura Citadel","l":1000,"xp":null,"lo":null,"how":"Earth"},
    {"c":"w_ghostlands","place":"Ghostlands","l":20,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_jakundaf_desert","place":"Jakundaf Desert","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_folda","place":"Folda","l":8,"xp":null,"lo":null,"how":"","w":1},
@@ -12499,7 +12917,16 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"warzone9","place":"Warzone 9","l":600,"xp":null,"lo":null,"how":"","f":1},
    {"c":"ingol","place":"Ingol","l":800,"xp":null,"lo":null,"how":"","f":1},
    {"c":"barrendrift","place":"Barren Drift","l":300,"xp":null,"lo":null,"how":"","f":1,"v":1},
-   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":190,"xp":null,"lo":null,"how":"","f":1,"w":1}
+   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":190,"xp":null,"lo":null,"how":"","f":1,"w":1},
+   {"c":"forsakencrypt","place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"forgottencrypt","place":"Forgotten Crypt","l":450,"xp":null,"lo":null,"how":"","w":1},
+   {"c":"unhallowedcrypt","place":"Unhallowed Crypt","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantskyhold","place":"Radiant Skyhold","l":1200,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantascend","place":"Radiant Ascendancy","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"jadedroots","place":"Jaded Roots","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"gloompillars","place":"Gloom Pillars","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"putrefactory","place":"Putrefactory","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"darklightcore","place":"Darklight Core","l":800,"xp":null,"lo":null,"how":"","f":1}
   ],
   "paladin":[
    {"c":"targuna_liz","place":"Targuna Lizards","l":8,"xp":60000.0,"lo":55000.0,"how":"Arrows/Simple Arrows"},
@@ -12666,17 +13093,17 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"warzone7","place":"Warzone 7","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"warzone8","place":"Warzone 8","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"warzone9","place":"Warzone 9","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
-   {"c":null,"place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
-   {"c":null,"place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
-   {"c":null,"place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
+   {"c":"bloodfire","place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
+   {"c":"asuracitadel","place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
+   {"c":"asuracitadel1","place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"ingol","place":"Ingol Surface/-1/-2","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"ingol","place":"Ingol -3/-4/-5","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"azzcatacombs","place":"Azzilon Catacombs","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"feruseals","place":"Feru DT","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
-   {"c":null,"place":"Podzilla Quaras","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
+   {"c":"w_podzilla","place":"Podzilla Quaras","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"feruseals","place":"Feru Juggernauts","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"feruseals","place":"Feru Mazoran","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
-   {"c":null,"place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
+   {"c":"forsakencrypt","place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"w_ghostlands","place":"Ghostlands","l":20,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_jakundaf_desert","place":"Jakundaf Desert","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_folda","place":"Folda","l":8,"xp":null,"lo":null,"how":"","w":1},
@@ -12801,7 +13228,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"w_monster_graveyard","place":"Monster Graveyard","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_sparkling_pools","place":"Sparkling Pools","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_rorc_plains","place":"Rorc Plains","l":50,"xp":null,"lo":null,"how":"","w":1},
-   {"c":"w_podzilla","place":"Podzilla","l":1000,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_thais_wolf_den","place":"Thais Wolf Den","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"rotworms","place":"Rotworms (Liberty Bay / Darashia)","l":8,"xp":null,"lo":null,"how":"","f":1},
    {"c":"crocs","place":"Crocodilos de Port Hope","l":10,"xp":null,"lo":null,"how":"","f":1},
@@ -12837,7 +13263,15 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"goannas","place":"Issavi — Goannas","l":500,"xp":null,"lo":null,"how":"","f":1},
    {"c":"ferusealsm","place":"Ferumbras — seals","l":800,"xp":null,"lo":null,"how":"","f":1},
    {"c":"barrendrift","place":"Barren Drift","l":350,"xp":null,"lo":null,"how":"","f":1,"v":1},
-   {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1}
+   {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"forgottencrypt","place":"Forgotten Crypt","l":450,"xp":null,"lo":null,"how":"","w":1},
+   {"c":"unhallowedcrypt","place":"Unhallowed Crypt","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantskyhold","place":"Radiant Skyhold","l":1200,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantascend","place":"Radiant Ascendancy","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"jadedroots","place":"Jaded Roots","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"gloompillars","place":"Gloom Pillars","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"putrefactory","place":"Putrefactory","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"darklightcore","place":"Darklight Core","l":800,"xp":null,"lo":null,"how":"","f":1}
   ],
   "sorcerer":[
    {"c":"targuna_liz","place":"Targuna Lizards","l":8,"xp":55000.0,"lo":50000.0,"how":""},
@@ -12999,11 +13433,11 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"feruseals","place":"Feru Mazoran","l":800,"xp":null,"lo":null,"how":"Energy"},
    {"c":"feruseals","place":"Feru Juggernauts","l":800,"xp":null,"lo":null,"how":"Energy"},
    {"c":"ingol","place":"Ingol -3","l":800,"xp":null,"lo":null,"how":"Fire"},
-   {"c":null,"place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Fire"},
-   {"c":null,"place":"Podzilla Quaras","l":800,"xp":null,"lo":null,"how":"Energy"},
-   {"c":null,"place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Energy"},
-   {"c":null,"place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Energy"},
-   {"c":null,"place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Death"},
+   {"c":"bloodfire","place":"Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Fire"},
+   {"c":"w_podzilla","place":"Podzilla Quaras","l":800,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"asuracitadel","place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"asuracitadel1","place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Energy"},
+   {"c":"forsakencrypt","place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"Death"},
    {"c":"w_ghostlands","place":"Ghostlands","l":13,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_jakundaf_desert","place":"Jakundaf Desert","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_folda","place":"Folda","l":8,"xp":null,"lo":null,"how":"","w":1},
@@ -13127,7 +13561,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"w_monster_graveyard","place":"Monster Graveyard","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_sparkling_pools","place":"Sparkling Pools","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_rorc_plains","place":"Rorc Plains","l":45,"xp":null,"lo":null,"how":"","w":1},
-   {"c":"w_podzilla","place":"Podzilla","l":800,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_thais_wolf_den","place":"Thais Wolf Den","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"mammoths","place":"Mammoths e Badgers (Svargrond)","l":28,"xp":null,"lo":null,"how":"","f":1},
    {"c":"treelings","place":"Haunted Treelings (Vengoth)","l":40,"xp":null,"lo":null,"how":"","f":1},
@@ -13166,7 +13599,15 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"cathedral","place":"Variantes Sanguine","l":600,"xp":null,"lo":null,"how":"","f":1},
    {"c":"barrendrift","place":"Barren Drift","l":300,"xp":null,"lo":null,"how":"","f":1,"v":1},
    {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1},
-   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":250,"xp":null,"lo":null,"how":"","f":1,"w":1}
+   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":250,"xp":null,"lo":null,"how":"","f":1,"w":1},
+   {"c":"forgottencrypt","place":"Forgotten Crypt","l":450,"xp":null,"lo":null,"how":"","w":1},
+   {"c":"unhallowedcrypt","place":"Unhallowed Crypt","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantskyhold","place":"Radiant Skyhold","l":1200,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantascend","place":"Radiant Ascendancy","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"jadedroots","place":"Jaded Roots","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"gloompillars","place":"Gloom Pillars","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"putrefactory","place":"Putrefactory","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"darklightcore","place":"Darklight Core","l":800,"xp":null,"lo":null,"how":"","f":1}
   ],
   "monk":[
    {"c":"targuna_liz","place":"Targuna Lizards","l":8,"xp":50000.0,"lo":50000.0,"how":"Energy"},
@@ -13184,7 +13625,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"upperspike","place":"Upper Spike (Runes)","l":30,"xp":220000.0,"lo":50000.0,"how":"Physical"},
    {"c":"mosl3","place":"Mother of Scarabs Lair -3","l":35,"xp":190000.0,"lo":200000.0,"how":"Physical"},
    {"c":"gargoyles","place":"Meriana Gargoyle Cave","l":35,"xp":160000.0,"lo":300000.0,"how":"Physical"},
-   {"c":"laguna","place":"Laguna Blood Crabs","l":50,"xp":160000.0,"lo":350000.0,"how":"Physical"},
+   {"c":"laguna","place":"Laguna Blood Crabs","l":35,"xp":160000.0,"lo":350000.0,"how":"Physical"},
    {"c":"lbwyrms","place":"Wyrms LB","l":50,"xp":420000.0,"lo":0.0,"how":"Physical"},
    {"c":"lionsrock","place":"Lion's Rock","l":50,"xp":375000.0,"lo":0.0,"how":"Physical"},
    {"c":"edronbb","place":"Edron Bonebeasts","l":50,"xp":375000.0,"lo":-50000.0,"how":"Physical"},
@@ -13319,18 +13760,18 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"warzone9","place":"Warzone 9","l":600,"xp":3800000.0,"lo":2200000.0,"how":"Earth"},
    {"c":"norcdungeons","place":"Norcferatu Dungeons East","l":700,"xp":null,"lo":null,"how":"Earth"},
    {"c":"norcdungeons","place":"Norcferatu Dungeons West","l":700,"xp":null,"lo":null,"how":"Earth"},
-   {"c":null,"place":"Raubritters Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Physical"},
-   {"c":null,"place":"Raubritters Ada Outskirts","l":800,"xp":null,"lo":null,"how":"Physical"},
+   {"c":"bloodfire","place":"Raubritters Bloodfire Gorge","l":800,"xp":null,"lo":null,"how":"Physical"},
+   {"c":"stagbastion","place":"Raubritters Ada Outskirts","l":800,"xp":null,"lo":null,"how":"Physical"},
    {"c":"bulltaurs","place":"Bulltaurs -2","l":800,"xp":null,"lo":null,"how":"Earth"},
    {"c":"ingol","place":"Ingol Surface","l":800,"xp":null,"lo":null,"how":"Physical"},
-   {"c":null,"place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Physical, Energy, Earth"},
-   {"c":null,"place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"asuracitadel","place":"True Asuras","l":800,"xp":null,"lo":null,"how":"Physical, Energy, Earth"},
+   {"c":"asuracitadel1","place":"Asura Citadel","l":800,"xp":null,"lo":null,"how":"Earth"},
    {"c":"azzcatacombs","place":"Azzilon Catacombs","l":800,"xp":null,"lo":null,"how":"Earth"},
    {"c":"ingol","place":"Ingol -3","l":800,"xp":null,"lo":null,"how":"Physical"},
-   {"c":null,"place":"Podzilla Quaras","l":1000,"xp":null,"lo":null,"how":"Earth"},
-   {"c":null,"place":"Energy Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
-   {"c":null,"place":"Fire Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
-   {"c":null,"place":"Ice Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"w_podzilla","place":"Podzilla Quaras","l":1000,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"w_secret_library","place":"Energy Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"w_secret_library","place":"Fire Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"w_secret_library","place":"Ice Library","l":1000,"xp":null,"lo":null,"how":"Earth"},
    {"c":"w_ghostlands","place":"Ghostlands","l":20,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_jakundaf_desert","place":"Jakundaf Desert","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_folda","place":"Folda","l":8,"xp":null,"lo":null,"how":"","w":1},
@@ -13438,7 +13879,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"w_poacher_caves_poachers","place":"Poacher Caves/Poachers","l":20,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_abandoned_sewers","place":"Abandoned Sewers","l":350,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_museum_of_tibian_arts","place":"Museum of Tibian Arts","l":100,"xp":null,"lo":null,"how":"","w":1},
-   {"c":"w_secret_library","place":"Secret Library","l":1000,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_percht_island","place":"Percht Island","l":80,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_brain_grounds","place":"Brain Grounds","l":600,"xp":6400000.0,"lo":900000.0,"how":"","w":1},
    {"c":"w_underground_nightmare_knights_base","place":"Underground Nightmare Knights Base","l":60,"xp":null,"lo":null,"how":"","w":1},
@@ -13453,7 +13893,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"w_monster_graveyard","place":"Monster Graveyard","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_sparkling_pools","place":"Sparkling Pools","l":600,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_rorc_plains","place":"Rorc Plains","l":55,"xp":null,"lo":null,"how":"","w":1},
-   {"c":"w_podzilla","place":"Podzilla","l":1000,"xp":null,"lo":null,"how":"","w":1},
    {"c":"w_thais_wolf_den","place":"Thais Wolf Den","l":8,"xp":null,"lo":null,"how":"","w":1},
    {"c":"rotworms","place":"Rotworms (Liberty Bay / Darashia)","l":8,"xp":null,"lo":null,"how":"","f":1},
    {"c":"crocs","place":"Crocodilos de Port Hope","l":10,"xp":null,"lo":null,"how":"","f":1},
@@ -13509,7 +13948,16 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    {"c":"usurpers","place":"Usurpers","l":500,"xp":null,"lo":null,"how":"","f":1},
    {"c":"barrendrift","place":"Barren Drift","l":300,"xp":null,"lo":null,"how":"","f":1,"v":1},
    {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1},
-   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":190,"xp":null,"lo":null,"how":"","f":1,"w":1}
+   {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":190,"xp":null,"lo":null,"how":"","f":1,"w":1},
+   {"c":"forsakencrypt","place":"Forsaken Crypt","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"forgottencrypt","place":"Forgotten Crypt","l":450,"xp":null,"lo":null,"how":"","w":1},
+   {"c":"unhallowedcrypt","place":"Unhallowed Crypt","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantskyhold","place":"Radiant Skyhold","l":1200,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"radiantascend","place":"Radiant Ascendancy","l":1000,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"jadedroots","place":"Jaded Roots","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"gloompillars","place":"Gloom Pillars","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"putrefactory","place":"Putrefactory","l":800,"xp":null,"lo":null,"how":"","f":1},
+   {"c":"darklightcore","place":"Darklight Core","l":800,"xp":null,"lo":null,"how":"","f":1}
   ]
  },
  "equip":{
@@ -19186,91 +19634,6 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
     "mw":[["swarmer",3],["ladybug",3],["insectoid worker",1]]
    }
   ],
-  "crumbling":[
-   {
-    "s":"Kazordoon",
-    "c":152,
-    "st":[
-     ["w",20,6,32629,31920,11],
-     ["t","vagoneta",0,32629,31920,11],
-     ["w",45,0,32601,31866,9],
-     ["t","Towards Too Hot to Handle hub",0,32601,31866,9],
-     ["w",18,0,32604,31845,9],
-     ["f",10,0,"",32604,31845,9],
-     ["w",26,2,32630,31839,10],
-     ["t","Crypts",0,32630,31839,10],
-     ["w",10,0,32663,31819,10],
-     ["t","Dwelling of the Forgotten (a.k.a. Warzone 9)",0,32663,31819,10],
-     ["w",33,6,32063,31463,11]
-    ],
-    "lg":[
-     [11,3,32649,31925,-15,0,-5,-5,6,32089,31453,0,7,-4,4,-6,2,-13,0,-3,-3],
-     [9,6,32605,31907,4,-7,0,-29,-2,-2,-4,0,-2,-3,4,32601,31863,0,-10,3,-3,0,-5],
-     [10,5,32604,31845,4,1,4,-3,14,0,4,-4,3,32660,31829,0,-7,3,-3]
-    ],
-    "rq":[],
-    "mw":[]
-   },
-   {
-    "s":"Farmine",
-    "c":188,
-    "st":[
-     ["f",10,1,"",33024,31531,11],
-     ["w",18,4,33024,31550,10],
-     ["n","Thorgrin","kazordoon",210,"b",33024,31550,10],
-     ["w",27,3,32677,31974,15],
-     ["t","vagoneta",0,32677,31974,15],
-     ["w",46,0,32601,31866,9],
-     ["t","Towards Too Hot to Handle hub",0,32601,31866,9],
-     ["w",18,0,32604,31845,9],
-     ["f",10,0,"",32604,31845,9],
-     ["w",26,2,32630,31839,10],
-     ["t","Crypts",0,32630,31839,10],
-     ["w",10,0,32663,31819,10],
-     ["t","Dwelling of the Forgotten (a.k.a. Warzone 9)",0,32663,31819,10],
-     ["w",33,6,32063,31463,11]
-    ],
-    "lg":[
-     [11,2,33023,31521,1,10,6,32089,31453,0,7,-4,4,-6,2,-13,0,-3,-3],
-     [10,2,33024,31532,0,18,5,32604,31845,4,1,4,-3,14,0,4,-4,3,32660,31829,0,-7,3,-3],
-     [15,5,32659,31957,0,8,11,12,4,0,3,-3],
-     [9,7,32605,31908,1,-5,3,-3,0,-29,-2,-2,-4,0,-2,-3,4,32601,31863,0,-10,3,-3,0,-5]
-    ],
-    "rq":[],
-    "mw":[]
-   },
-   {
-    "s":"Svargrond",
-    "c":196,
-    "st":[
-     ["w",44,1,32244,31109,7],
-     ["f",4,1,"",32244,31109,7],
-     ["n","Iyad","kazor",70,"c",32248,31100,4],
-     ["w",15,7,32577,31928,0],
-     ["t","vagoneta",0,32577,31928,0],
-     ["w",43,7,32601,31866,9],
-     ["t","Towards Too Hot to Handle hub",0,32601,31866,9],
-     ["w",18,0,32604,31845,9],
-     ["f",10,0,"",32604,31845,9],
-     ["w",26,2,32630,31839,10],
-     ["t","Crypts",0,32630,31839,10],
-     ["w",10,0,32663,31819,10],
-     ["t","Dwelling of the Forgotten (a.k.a. Warzone 9)",0,32663,31819,10],
-     ["w",33,6,32063,31463,11]
-    ],
-    "lg":[
-     [7,7,32212,31132,0,5,4,3,4,-4,0,-6,11,-8,13,-13],
-     [6,2,32245,31109,1,-3],
-     [5,2,32246,31105,2,-4],
-     [0,5,32588,31941,-2,0,-7,-7,0,-4,-2,-2],
-     [9,7,32616,31899,-3,2,-3,-2,-1,-28,-2,-2,-4,0,-2,-3,4,32601,31863,0,-10,3,-3,0,-5],
-     [10,5,32604,31845,4,1,4,-3,14,0,4,-4,3,32660,31829,0,-7,3,-3],
-     [11,6,32089,31453,0,7,-4,4,-6,2,-13,0,-3,-3]
-    ],
-    "rq":[],
-    "mw":[]
-   }
-  ],
   "seacrest":[
    {
     "s":"Rathleton",
@@ -22300,7 +22663,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   "wildlife":{"h":[["hydra",64],["bog raider",61],["glooth anemone",40],["drillworm",26],["elder wyrm",20],["devourer",17],["behemoth",5],["wyrm",2],["blood beast",2]],"r":[["rot elemental",1]]},
   "golemraid":{"h":[["glooth golem",26],["metal gargoyle",19],["war golem",9],["glooth battery",9],["control tower",9],["high voltage elemental",8],["rustheap golem",8],["worker golem",7],["walker",4]],"r":[]},
   "hyaenas":{"h":[["werehyaena",138],["werehyaena shaman",65]],"r":[["sandcrawler",1]]},
-  "crumbling":{"h":[["tremendous tyrant",21],["varnished diremaw",20],["cave chimera",16],["cinder wyrmling",1],["shell drake",1]],"r":[]},
+  "crumbling":{"h":[["cinder wyrmling",1],["shell drake",1]],"r":[]},
   "seacrest":{
    "h":[["sea serpent",8],["shark",5],["young sea serpent",2],["seacrest serpent",1],["deepsea blood crab",1],["abyssal calamary",1]],
    "r":[["rot elemental",5],["quara predator scout",3],["glooth blob",2],["quara pincher scout",2],["devourer",1],["blood beast",1],["quara hydromancer scout",1]]
@@ -22353,7 +22716,7 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "r":[["pixie",5],["boogy",3],["faun",2],["swan maiden",1]]
   },
   "werecrocs":{"h":[["werecrocodile",1],["feral werecrocodile",1],["werepanther",1]],"r":[]},
-  "sanctuary":{"h":[["iks chuka",46],["iks aucar",32],["iks pututu",25],["cursed ape",2],["mitmah seer",1],["mitmah scout",1],["iks yapunac",1]],"r":[]},
+  "sanctuary":{"h":[["mitmah seer",1],["mitmah scout",1],["iks yapunac",1]],"r":[["iks chuka",46],["iks aucar",32],["iks pututu",25],["cursed ape",2]]},
   "nagas":{"h":[["naga warrior",110],["makara",81],["naga archer",53]],"r":[]},
   "cryptwarriors":{"h":[["crypt warrior",33]],"r":[["usurper knight",3]]},
   "otherworld":{"h":[["reality reaver",140],["sparkion",123],["breach brood",115],["dread intruder",103]],"r":[["orc warrior",4],["sandcrawler",3],["orc",3],["insect swarm",1],["gnarlhound",1]]},
@@ -22391,8 +22754,8 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   "deepdesert":{"h":[["skeleton elite warrior",25],["undead elite gladiator",20]],"r":[["lion",1]]},
   "goannas":{"h":[["feral sphinx",56],["manticore",44],["adult goanna",15],["young goanna",13]],"r":[]},
   "ogres":{
-   "h":[["burning gladiator",25],["priestess of the wild sun",22],["black sphinx acolyte",20],["ogre sage",15],["ogre ruffian",12],["ogre rowdy",3]],
-   "r":[["young goanna",6],["adult goanna",6],["manticore",5],["feral sphinx",2]]
+   "h":[["ogre sage",15],["ogre ruffian",12],["ogre rowdy",3]],
+   "r":[["burning gladiator",25],["priestess of the wild sun",22],["black sphinx acolyte",20],["young goanna",6],["adult goanna",6],["manticore",5],["feral sphinx",2]]
   },
   "usurpers":{"h":[["usurper knight",29],["usurper warlock",15],["usurper archer",8]],"r":[["bat",4]]},
   "nimmersatt":{"h":[["dragolisk",41],["wardragon",32],["mega dragon",15]],"r":[["lizard legionnaire",5],["lizard high guard",3],["killer caiman",2]]},
@@ -22675,7 +23038,20 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   "w_sparkling_pools":{"h":[["gorerilla",1],["sabretooth",1],["hulking prehemoth",1],["gore horn",1],["emerald tortoise",1]],"r":[]},
   "w_rorc_plains":{"h":[["rorc",50]],"r":[]},
   "w_podzilla":{"h":[["quara raider",1],["quara plunderer",1],["quara looter",1],["rootthing amber shaper",1],["rootthing bug tracker",1],["rootthing nutshell",1]],"r":[]},
-  "w_thais_wolf_den":{"h":[["rabid wolf",1],["cave rat",1],["ragged rabid wolf",1]],"r":[]}
+  "w_thais_wolf_den":{"h":[["rabid wolf",1],["cave rat",1],["ragged rabid wolf",1]],"r":[]},
+  "bloodfire":{"h":[["raubritter skirmisher",1],["raubritter marksman",1],["raubritter chastener",1]],"r":[]},
+  "stagbastion":{"h":[["raubritter skirmisher",1],["raubritter marksman",1],["raubritter chastener",1],["night harpy",1],["stag",1]],"r":[]},
+  "asuracitadel":{"h":[["true midnight asura",1],["true frost flower asura",1],["winged jaracal",1]],"r":[]},
+  "asuracitadel1":{"h":[["true midnight asura",1],["true frost flower asura",1],["silverfrost sentinel",1],["iceplume strider",1]],"r":[]},
+  "forsakencrypt":{"h":[["roaming dread",1],["cyclursus",1],["crypt mage",1]],"r":[]},
+  "forgottencrypt":{"h":[["bone bear",1],["crypt construct",1],["haunted hunter",1],["walking dread",1]],"r":[]},
+  "unhallowedcrypt":{"h":[["crypt fiend",1],["creepy crawler",1],["crypt construct",1]],"r":[]},
+  "radiantskyhold":{"h":[["radiant warden",1],["radiant paragon",1],["radiant acolyte",1]],"r":[]},
+  "radiantascend":{"h":[["radiant templar",1],["radiant inquisitor",1],["radiant zealot",1]],"r":[]},
+  "jadedroots":{"h":[["mycobiontic beetle",89],["oozing corpus",61],["bloated man-maggot",59],["sopping corpus",15]],"r":[]},
+  "gloompillars":{"h":[["darklight construct",64],["darklight emitter",61],["wandering pillar",44],["converter",26]],"r":[]},
+  "putrefactory":{"h":[["sopping carcass",69],["oozing carcass",59],["meandering mushroom",56],["rotten man-maggot",14]],"r":[]},
+  "darklightcore":{"h":[["walking pillar",65],["darklight striker",51],["darklight matter",43],["darklight source",21]],"r":[]}
  },
  "cr":{
   "a carved stone tile":0,
@@ -33760,21 +34136,15 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
    "v":"ok"
   },
   "crumbling":{
-   "t":"A pé (Edron: barco/tapete para Kazordoon)",
-   "rq":[
-    "Premium",
-    "Quest: Too Hot to Handle (até ao Gnomevisor / escudo de cristal)",
-    "Pré-requisito: Bigfoot's Burden (missão Recruitment)",
-    "Escudo de cristal nível 3+ (níveis mais altos para andares mais fundos)",
-    "Nível 80 mínimo da quest (400+ recomendado)"
-   ],
+   "t":"Barco ou tapete para Edron; a Noodles Academy of Modern Magic (as torres de marfim) fica na parte leste da cidade.",
+   "rq":["Quest: Between the Lines, parte Pen and Sword (nível 200 e o feitiço Summon Familiar)","Premium"],
    "st":[
-    "Em Kazordoon, vai ao acesso das Crypts (32601,31867) e desce até ao hub 'Too Hot to Handle'",
-    "Segue para este e usa o teleporte 'Crypts' (32630,31839,-3)",
-    "Entra no teleporte 'Dwelling of the Forgotten' (Warzone 9, 32663,31819,-3)",
-    "Fala com o Gnomevisor para o escudo e desce pelos Gnomish Sanitizers até às Crumbling Caverns"
+    "Em Carlin, fala com o Phillip sobre o livro ('book'), segue o rasto de tinta e derrota o Inkwing",
+    "Em Edron, vai à Noodles Academy of Modern Magic e fala com o Wyrdin sobre o livro ('book')",
+    "Desce três pisos nas caves da academia e passa a porta de quest a leste",
+    "Cinder Wyrmlings e Shell Drakes por toda a gruta (é lá que estão as três páginas que o Wyrdin te pede)"
    ],
-   "v":"fix"
+   "v":"?"
   },
   "warzone2":{
    "t":"Teleportes dos gnomos (Gnomebase Alpha)",
@@ -34867,6 +35237,160 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
     "Depois da quest: atalho por barco/teleporte na Zao Steppe (33326,31352,7 / marcador 33328,31351,7)"
    ],
    "v":"fix"
+  },
+  "bloodfire":{
+   "t":"Em Bounac, o pequeno barco de pesca na costa a sul do castelo leva-te à Isle of Ada (usa a corda dentro do barco).",
+   "rq":[
+    "Quest: The Order of the Stag (nível 250)",
+    "Pré-requisito: The Order of the Lion",
+    "Frozen Starlight (abre a cripta da catedral de Bounac)",
+    "Premium",
+    "20 Night Harpy Beaks esfoladas por ti (Obsidian Knife)"
+   ],
+   "st":[
+    "Em Bounac, fala com o Kesar the Younger durante o dia ('help') e traz-lhe o documento da família, da cripta por baixo da catedral",
+    "Vai à costa a sul do castelo e usa a corda do barco de pesca: chegas à Isle of Ada",
+    "Fala com o Second In Command Demeron ('mission'): deixa-te passar pelas minas a noroeste",
+    "Atravessa as minas e sobe até aos portões da Stag Bastion, onde está o Guard Captain Hartford",
+    "Esfola 20 Night Harpies (só aparecem à noite, em raids) e entrega as beaks ao Hartford ('news')",
+    "Desce às caves da bastion: a Bloodfire Gorge fica por baixo"
+   ],
+   "v":"?"
+  },
+  "stagbastion":{
+   "t":"Em Bounac, o pequeno barco de pesca na costa a sul do castelo leva-te à Isle of Ada (usa a corda dentro do barco).",
+   "rq":["Quest: The Order of the Stag (nível 250)","Pré-requisito: The Order of the Lion","Frozen Starlight (abre a cripta da catedral de Bounac)","Premium"],
+   "st":[
+    "Em Bounac, fala com o Kesar the Younger durante o dia ('help') e traz-lhe o documento da família, da cripta por baixo da catedral",
+    "Vai à costa a sul do castelo e usa a corda do barco de pesca: chegas à Isle of Ada",
+    "Fala com o Second In Command Demeron ('mission'): deixa-te passar pelas minas a noroeste",
+    "Atravessa as minas e sobe até aos portões da Stag Bastion, onde está o Guard Captain Hartford"
+   ],
+   "v":"?"
+  },
+  "asuracitadel":{
+   "t":"Tapete voador para Marapur (Iyad em Svargrond, Pino em Edron, Chemar em Darashia, Melian em Farmine: 'hi, marapur, yes').",
+   "rq":["Quest: Shards of a Broken Moon (missões 1 e 2)","Quests: Within the Tides e Grimvale – Paradise Lost","Premium"],
+   "st":[
+    "Em Marapur, fala com a Saraki ('moon') e junta as três pistas (Sundara, Tarisu e Dhira)",
+    "Fala com o Udu na torre de observação ('moon')",
+    "Vai a nordeste dos Emerald Gardens e fala com a Sharai ('moon'): abre-te a gruta escondida a sudeste",
+    "Usa as pedras da gruta: levam-te à Asura Citadel"
+   ],
+   "v":"?"
+  },
+  "asuracitadel1":{
+   "t":"Tapete voador para Marapur (Iyad em Svargrond, Pino em Edron, Chemar em Darashia, Melian em Farmine: 'hi, marapur, yes').",
+   "rq":["Quest: Shards of a Broken Moon (missões 1 e 2)","Quests: Within the Tides e Grimvale – Paradise Lost","Premium"],
+   "st":[
+    "Em Marapur, fala com a Saraki ('moon') e junta as três pistas (Sundara, Tarisu e Dhira)",
+    "Fala com o Udu na torre de observação ('moon')",
+    "Vai a nordeste dos Emerald Gardens e fala com a Sharai ('moon'): abre-te a gruta escondida a sudeste",
+    "Usa as pedras da gruta: levam-te à Asura Citadel",
+    "Desce um piso dentro da citadel"
+   ],
+   "v":"?"
+  },
+  "forsakencrypt":{
+   "t":"Canoa do S'Zallar M'Andar, em Ab'Dendriel, até ao cemitério dos dragões (Draconia).",
+   "rq":["Quest: The Roost of the Graveborn (nível 450), acabada","1 Ancestral Charge por entrada (cada Fetid Heart dá 5)","Premium"],
+   "st":[
+    "Em Ab'Dendriel, fala com o S'Zallar M'Andar ('unrest') e recebe a Jade Dragon Head",
+    "Liberta os espíritos dos quatro dragões ancestrais (missões da The Roost of the Graveborn Quest)",
+    "Volta ao S'Zallar e usa a canoa dele para ires ao cemitério dos dragões, em Draconia",
+    "Desce aos crypts por baixo de Draconia: a Forgotten Crypt é a de fora",
+    "Entra na Forsaken Crypt: cada entrada gasta uma Ancestral Charge"
+   ],
+   "v":"?"
+  },
+  "forgottencrypt":{
+   "t":"Canoa do S'Zallar M'Andar, em Ab'Dendriel, até ao cemitério dos dragões (Draconia).",
+   "rq":["Quest: The Roost of the Graveborn (nível 450)","Premium"],
+   "st":[
+    "Em Ab'Dendriel, fala com o S'Zallar M'Andar ('unrest') e recebe a Jade Dragon Head",
+    "Liberta os espíritos dos quatro dragões ancestrais (missões da The Roost of the Graveborn Quest)",
+    "Volta ao S'Zallar e usa a canoa dele para ires ao cemitério dos dragões, em Draconia",
+    "Desce aos crypts por baixo de Draconia: a Forgotten Crypt é a de fora"
+   ],
+   "v":"?"
+  },
+  "unhallowedcrypt":{
+   "t":"Canoa do S'Zallar M'Andar, em Ab'Dendriel, até ao cemitério dos dragões (Draconia).",
+   "rq":["Quest: The Roost of the Graveborn (nível 450), acabada","1 Favour of the Ancients por entrada (cada Cryptic Fossil dá 1)","Premium"],
+   "st":[
+    "Em Ab'Dendriel, fala com o S'Zallar M'Andar ('unrest') e recebe a Jade Dragon Head",
+    "Liberta os espíritos dos quatro dragões ancestrais (missões da The Roost of the Graveborn Quest)",
+    "Volta ao S'Zallar e usa a canoa dele para ires ao cemitério dos dragões, em Draconia",
+    "Desce aos crypts por baixo de Draconia: a Forgotten Crypt é a de fora",
+    "Entra na Unhallowed Crypt: cada entrada gasta um Favour of the Ancients"
+   ],
+   "v":"?"
+  },
+  "radiantskyhold":{
+   "t":"Em Venore, o Wayland Smythers (ao lado do templo) mete-te num navio de abastecimento para Thalassara.",
+   "rq":["Quest: Make Believe (nível 300; a TibiaWiki aconselha 800+)","Premium"],
+   "st":[
+    "Em Venore, fala com o Wayland Smythers, ao lado do templo",
+    "No armazém, disfarça-te de caixa de carga e segue até ao teleporte a noroeste: chegas a Thalassara",
+    "Ajuda o Mayor Pocaro a defender Salgadara e segue a quest até ao primeiro boss, o Mimar Haffar",
+    "Depois do Mimar Haffar, sobe pela Radiant Skyhold: a sala do Maior Domus fica cinco pisos acima da entrada"
+   ],
+   "v":"?"
+  },
+  "radiantascend":{
+   "t":"Em Venore, o Wayland Smythers (ao lado do templo) mete-te num navio de abastecimento para Thalassara.",
+   "rq":["Quest: Make Believe (nível 300; a TibiaWiki aconselha 800+)","Premium"],
+   "st":[
+    "Em Venore, fala com o Wayland Smythers, ao lado do templo",
+    "No armazém, disfarça-te de caixa de carga e segue até ao teleporte a noroeste: chegas a Thalassara",
+    "Ajuda o Mayor Pocaro a defender Salgadara e segue a quest até ao primeiro boss, o Mimar Haffar",
+    "Segue a quest até abrires a Radiant Ascendancy"
+   ],
+   "v":"?"
+  },
+  "jadedroots":{
+   "t":"A pé de Darashia até Drefia, a oeste da cidade.",
+   "rq":["Quest: Rotten Blood (nível 250)","2 Bloody Tears ou 5 milhões de gp para entrar no Blood Vestibule","Premium"],
+   "st":[
+    "Em Drefia, fala com o Torkada ('expedition', 'mission', 'yes')",
+    "Entra no templo pelo ponto de levitate a noroeste e desce pelas escadas e pelo buraco até à sala da Bloodshade",
+    "Fala com a Bloodshade ('quest') e paga 2 Bloody Tears (na placa de sacrifício) ou 5 milhões de gp ('detour'); entra na poça de sangue",
+    "No Blood Vestibule, usa o teleporte esférico que leva às Jaded Roots"
+   ],
+   "v":"?"
+  },
+  "gloompillars":{
+   "t":"A pé de Darashia até Drefia, a oeste da cidade.",
+   "rq":["Quest: Rotten Blood (nível 250)","2 Bloody Tears ou 5 milhões de gp para entrar no Blood Vestibule","Premium"],
+   "st":[
+    "Em Drefia, fala com o Torkada ('expedition', 'mission', 'yes')",
+    "Entra no templo pelo ponto de levitate a noroeste e desce pelas escadas e pelo buraco até à sala da Bloodshade",
+    "Fala com a Bloodshade ('quest') e paga 2 Bloody Tears (na placa de sacrifício) ou 5 milhões de gp ('detour'); entra na poça de sangue",
+    "No Blood Vestibule, usa o teleporte esférico que leva aos Gloom Pillars"
+   ],
+   "v":"?"
+  },
+  "putrefactory":{
+   "t":"A pé de Darashia até Drefia, a oeste da cidade.",
+   "rq":["Quest: Rotten Blood (nível 250)","2 Bloody Tears ou 5 milhões de gp para entrar no Blood Vestibule","Premium"],
+   "st":[
+    "Em Drefia, fala com o Torkada ('expedition', 'mission', 'yes')",
+    "Entra no templo pelo ponto de levitate a noroeste e desce pelas escadas e pelo buraco até à sala da Bloodshade",
+    "Fala com a Bloodshade ('quest') e paga 2 Bloody Tears (na placa de sacrifício) ou 5 milhões de gp ('detour'); entra na poça de sangue",
+    "No Blood Vestibule, usa o teleporte esférico que leva à Putrefactory"
+   ],
+   "v":"?"
+  },
+  "darklightcore":{
+   "t":"A pé de Darashia até Drefia, a oeste da cidade.",
+   "rq":["Quest: Rotten Blood (nível 250)","2 Bloody Tears ou 5 milhões de gp para entrar no Blood Vestibule","Premium"],
+   "st":[
+    "Em Drefia, fala com o Torkada ('expedition', 'mission', 'yes')",
+    "Entra no templo pelo ponto de levitate a noroeste e desce pelas escadas e pelo buraco até à sala da Bloodshade",
+    "Fala com a Bloodshade ('quest') e paga 2 Bloody Tears (na placa de sacrifício) ou 5 milhões de gp ('detour'); entra na poça de sangue",
+    "No Blood Vestibule, usa o teleporte esférico que leva ao Darklight Core"
+   ],
+   "v":"?"
   }
  },
  "tt":{
@@ -41826,7 +42350,26 @@ html[data-ui="modern"] .hbs:focus-visible .well{outline:2px solid #7DE8FF;outlin
   "orc cult minion":11,
   "orc cult priest":11,
   "sugar cube worker":8,
-  "werepanther":13
+  "werepanther":13,
+  "devoted radiant acolyte":10,
+  "devoted radiant inquisitor":10,
+  "devoted radiant paragon":10,
+  "devoted radiant templar":10,
+  "devoted radiant warden":10,
+  "devoted radiant zealot":10,
+  "iceplume strider":3,
+  "night harpy":2,
+  "radiant acolyte":10,
+  "radiant inquisitor":10,
+  "radiant paragon":10,
+  "radiant templar":10,
+  "radiant warden":10,
+  "radiant zealot":10,
+  "raubritter chastener":10,
+  "raubritter marksman":10,
+  "raubritter skirmisher":10,
+  "silverfrost sentinel":3,
+  "winged jaracal":15
  },
  "vr":{
   "knight":{"paladin":1.0,"sorcerer":1.0,"druid":0.79,"monk":1.0},
@@ -41918,8 +42461,9 @@ catch (err) {
 const G = G0;
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hasKey=(o,k)=>o!=null&&Object.prototype.hasOwnProperty.call(o,k); // r2-t5: '#npc/toString', '#item/__proto__'... não são páginas (r5-t2: no topo, pode usar-se em qualquer função)
 const nf = n => Math.round(n).toLocaleString("pt-PT");
-const fmt = n => n==null ? "—" : (Math.abs(n)>=1e6 ? (n/1e6).toFixed(n%1e6===0?1:2).replace(/\.?0+$/,"").replace(".",",")+"kk" : Math.round(n/1e3)+"k");
+const fmt = n => n==null||!isFinite(n) ? "—" : Math.abs(n)<999.5 ? nf(n) : (Math.abs(n)>=999500 ? (n/1e6).toFixed(n%1e6===0?1:2).replace(/\.?0+$/,"").replace(".",",")+"kk" : Math.round(n/1e3)+"k"); // r5-t3: abaixo de 1000 o número inteiro (nunca '0k'); a partir de 999 500 'kk' (nunca '1000k')
 const VOCS = ["knight","paladin","sorcerer","druid","monk"];
 const ELN = {physical:"físico",fire:"fogo",ice:"gelo",earth:"terra",energy:"energia",holy:"holy",death:"morte",drown:"afogamento",lifedrain:"roubo de vida",manadrain:"roubo de mana"};
 const chip = e => `<span class="chip c-${e}">${ELN[e]||e}</span>`;
@@ -42084,9 +42628,9 @@ function clsShares(pid){
 }
 function mainCls(pid){ let b=null; Object.entries(clsShares(pid)).forEach(([c,v])=>{ if(c!=="?"&&(!b||v>b[1])) b=[c,v]; }); return b&&b[1]>=0.5?b:null; }
 function monShare(pid,k){ const l=huntMons(pid), all=l.reduce((s,m)=>s+monW(m),0), m=l.find(x=>x[0]===k); return all&&m?monW(m)/all:0; }
-const evOn = () => { const e=ST.ui.ev; return !!(e&&e.on&&e.v&&e.p>0); };
+const evOn = () => { const e=ST.ui.ev; return !!(e&&e.on&&e.v&&e.p>0&&(e.t!=="mon"||hasKey(G.mon,e.v))); }; // r5-t2: com hasKey
 function evShare(pid){ const e=ST.ui.ev; if(!evOn()||!pid) return 0; return e.t==="mon" ? monShare(pid,e.v) : (clsShares(pid)[e.v]||0); }
-const evLabel = () => { const e=ST.ui.ev; return `${e.t==="mon"?(G.mon[e.v]?G.mon[e.v][0]:e.v):clsName(e.v)} +${e.p}% XP`; };
+const evLabel = () => { const e=ST.ui.ev; return `${e.t==="mon"?(hasKey(G.mon,e.v)?G.mon[e.v][0]:cap1(e.v)):clsName(e.v)} +${e.p}% XP`; };
 function huntRows(voc, L){
   /* r1b-t3 */ // L = nível máximo da variante (zona do TibiaPal) que conta. Quem filtra por um teto (janela, faixa) passa esse teto;
   // sem L: nível da personagem + 5, a mesma folga de myWindow e doable. Nível, XP, lucro e rotação vêm sempre da MESMA variante.
@@ -42148,7 +42692,7 @@ function huntCard(h, cats){
   const c=C(), p=h.p, name=p?p.n:h.r.place, locked=h.l>c.level+3, key="h"+h.voc+h.i; HSTORE[key]=h;
   const qok = !h.q || qDone(c,h.q);
   const tops=((G.pm[h.r.c]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,3), mc=h.r.c?mainCls(h.r.c):null;
-  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.xp==null&&starsTxt(p)?starsTxt(p):`<b>${fmt(h.xp)}</b>${h.est?"≈":""}${h.src==="ha"?'<sup class="rl" title="Mediana de sessões solo reais desde junho">r</sup>':""} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b></span><span class="hc-p"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}${mc?` · <span class="cls">${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?' · <span class="lk">quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
+  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"${h.r.c?` data-pid="${esc(h.r.c)}"`:""}><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.xp==null&&starsTxt(p)?starsTxt(p):`<b>${fmt(h.xp)}</b>${h.est?"≈":""}${h.src==="ha"?'<sup class="rl" title="Mediana de sessões solo reais desde junho">r</sup>':""} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b></span><span class="hc-p"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}${mc?` · <span class="cls">${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?' · <span class="lk">quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
 }
 const DIRS=["norte","nordeste","leste","sudeste","sul","sudoeste","oeste","noroeste"];
 const CITIES=[["Thais",32369,32241],["Carlin",32360,31782],["Venore",32957,32076],["Ab'Dendriel",32732,31634],["Kazordoon",32649,31925],["Edron",33217,31814],["Darashia",33213,32454],["Ankrahmun",33194,32853],["Port Hope",32594,32745],["Liberty Bay",32317,32826],["Svargrond",32212,31132],["Yalahar",32787,31276],["Farmine",33023,31521],["Gray Beach",33447,31323],["Roshamuul",33513,32363],["Rathleton",33594,31899],["Krailos",33657,31665],["Issavi",33921,31477],["Feyrist",33490,32221],["Marapur",33783,32850],["Bounac",32424,32445],["Oskayaat",33025,32930],["Dawnport",32064,31894]];
@@ -42267,8 +42811,9 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-qdone]");
 /* ---------- pesquisa global: tudo o que existe, por categoria, numa lista que desce da barra ---------- */
 let GSI=null, GSX=null, GSXP=null;
 function gsLoadX(){ return GSXP||(GSXP=dsafe("search").then(d=>{ GSX=(d&&d.e)||[]; GSI=null; return GSX; })); }
-const GSC = {h:["Hunts","hunt"],c:["Criaturas","criatura"],b:["Bosses","boss"],i:["Itens","item"],s:["Feitiços","feitiço"],r:["Runas","runa"],q:["Quests","quest"],n:["NPCs","NPC"],ch:["Charms","charm"],im:["Imbuements","imbuement"],a:["Conquistas","conquista"],m:["Montarias","montaria"],o:["Outfits","outfit"]};
+const GSC = {h:["Hunts","hunt"],hc:["Hunts","lista"],ht:["Hunts","lista"],c:["Criaturas","criatura"],b:["Bosses","boss"],i:["Itens","item"],s:["Feitiços","feitiço"],r:["Runas","runa"],q:["Quests","quest"],n:["NPCs","NPC"],ch:["Charms","charm"],im:["Imbuements","imbuement"],a:["Conquistas","conquista"],m:["Montarias","montaria"],o:["Outfits","outfit"]};
 const GSORD = ["h","c","b","i","s","r","q","n","ch","im","a","m","o"];
+const gsGrp = t => t==="hc"||t==="ht" ? "h" : t; // r5-t2: as listas de hunts (por cidade e por tipo) ficam no grupo das hunts
 const GSIC = {q:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>', ch:'<path d="M12 3 4 7v6c0 4.4 3.4 7.5 8 8 4.6-.5 8-3.6 8-8V7z"/><path d="M12 8v8M8 12h8"/>',
   im:'<path d="m12 2 2.4 4.9L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-1.1z"/>', a:'<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/>',
   m:'<path d="M4 20c0-5 2-8 5-10l1-5 3 3h3l3 4-2 2-3-1-2 3v4"/><circle cx="15.5" cy="9.5" r=".6"/>', o:'<path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c-.5 2-2 3-4 3s-3.5-1-4-3z"/>',
@@ -42278,6 +42823,8 @@ function gsIndex(){
   if(GSI) return GSI; const L=[], seen=new Set();
   const add=(t,k,n,sub,al)=>{ if(!n) return; const f=fold(n), key=(t==="b"?"c":t)+"|"+f; if(seen.has(key)) return; seen.add(key); L.push({t,k,n,f,a:al?fold(al):"",sub:sub||""}); };
   Object.entries(G.places).forEach(([k,p])=>add("h",k,p.n,`Hunt${p.city?` · ${p.city}`:""}${p.d?` · risco ${["","baixo","médio","alto"][p.d]||p.d}`:""}`));
+  /* r5-t2 */ { const cs=new Set(), ts=new Set(); Object.entries(G.places).forEach(([k,p])=>{ if(p.city) cs.add(p.city); Object.entries(clsShares(k)).forEach(([x,v])=>{ if(x!=="?"&&v>=0.5) ts.add(x); }); });
+    cs.forEach(n=>add("hc",slug(n),"Hunts em "+n,"Lista de hunts",n)); (G.mcn||[]).filter(x=>ts.has(x)).forEach(x=>add("ht",slug(x),"Hunts de "+clsName(x).toLowerCase(),"Lista de hunts",x)); }
   G.quests.forEach(q=>add("q",q.id,q.n,"Quest"));
   Object.entries(G.mon).forEach(([k,m])=>{ if(m[2]>0||m[7]) add(m[7]?"b":"c",k,m[0],m[7]?`Boss${m[1]?` · ${nf(m[1])} de vida`:""}`:`Criatura · ${nf(m[2])} XP`); });
   G.items.forEach(x=>add("i",x.n.toLowerCase(),x.n,`${SLOTNAME[x.s==="trinket"?"extra":x.s]||"Item"}${x.l?` · nível ${x.l}`:""}`));
@@ -42302,6 +42849,8 @@ function gsRowIcon(h){
   if(h.t==="s"||h.t==="r") return sicon({k:[h.n],cls:"sm"});
   if(h.t==="n") return npcSpr(h.n) || npcSpr(h.k) || gsIcon("n");
   if(h.t==="h") return huntThumb(h.k) || gsIcon("h");
+  if(h.t==="hc") return gsIcon("h"); // r5-t2: listas de hunts por cidade e por tipo de criatura
+  if(h.t==="ht") return `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg>`;
   return gsIcon(h.t);
 }
 const GS={q:"",cat:"all",more:{},sel:-1};
@@ -42310,7 +42859,7 @@ function gsRow(h,q){ const eq=h.t==="i"&&EQBYN[h.k];
 function gsRender(){
   const L=$("gsList"), CT=$("gsCats"); if(!L) return; const q=GS.q.trim();
   if(fold(q).length<2){ CT.innerHTML=""; L.innerHTML=`<div class="gsp-empty"><p>Procura em tudo: hunts, criaturas, bosses, itens, feitiços, runas, quests, NPCs, charms, imbuements, conquistas, montarias e outfits.</p><div class="gsp-sug">${["gold","dragon","exura","soul","rashid","roshamuul","demon"].map(x=>`<button type="button" data-gsq="${x}">${x}</button>`).join("")}</div>${GSX?"":`<p class="tiny muted tkload">A carregar o índice completo…</p>`}</div>`; return; }
-  const hits=gsMatch(q), grp={}; hits.forEach(h=>(grp[h.t]=grp[h.t]||[]).push(h));
+  const hits=gsMatch(q), grp={}; hits.forEach(h=>{ const g=gsGrp(h.t); (grp[g]=grp[g]||[]).push(h); }); if(grp.h) grp.h=grp.h.filter(x=>x.t!=="h").concat(grp.h.filter(x=>x.t==="h")); /* r5-t2: as listas primeiro */
   const cats=GSORD.filter(t=>grp[t]); if(GS.cat!=="all"&&!grp[GS.cat]) GS.cat="all";
   CT.innerHTML = hits.length ? `<button type="button" data-gscat="all" aria-pressed="${GS.cat==="all"}">Tudo <span>${hits.length}</span></button>`+cats.map(t=>`<button type="button" data-gscat="${t}" aria-pressed="${GS.cat===t}">${GSC[t][0]} <span>${grp[t].length}</span></button>`).join("") : "";
   const show = GS.cat==="all" ? cats : [GS.cat];
@@ -42374,7 +42923,7 @@ const WKR = {
   async feitico(k,s){
     const c=C(), rune=s.t==="r", npcs=await npcData(), items=rune?await dsafe("items"):{};
     const tags=[...(s.v||[]).map(v=>`<span class="tag">${VI(v)} ${esc(VOCN(v))}</span>`), `<span class="tag">nível ${s.l||0}+</span>`, s.p?`<span class="tag gold">premium</span>`:"", s.pr?`<span class="tag">precisa de promoção</span>`:"", s.o==="wheel"?`<span class="tag acc">Wheel of Destiny</span>`:"", s.o==="quest"?`<span class="tag acc">recompensa de quest</span>`:""].join("");
-    const G2={attack:"Ataque",healing:"Cura",support:"Apoio"}, rows=[["Grupo",[G2[s.g]||s.g,s.g2].filter(Boolean).join(" · ")],["Mana",s.m!=null?nf(s.m):""],["Soul",s.s||""],["Cooldown",s.cd!=null?`${s.cd} s`:""],["Cooldown do grupo",s.gcd!=null?`${s.gcd} s${s.gcd2?` · ${s.g2||"grupo 2"}: ${s.gcd2} s`:""}`:""],["Elemento",s.el?`<span class="chip c-${s.el}">${esc(elName(s.el))}</span>`:""],["Área",s.ak||""],["Preço para aprender",s.pc?gp(s.pc):""]];
+    const G2={attack:"Ataque",healing:"Cura",support:"Apoio"}, rows=[["Grupo",[G2[s.g]||s.g,s.g2].filter(Boolean).join(" · ")],["Mana",s.m==="var"?(/party/.test(String(k))?"Variável (depende de quantos estão no grupo)":"Variável (depende da criatura)"):s.m!=null&&s.m!==""&&isFinite(+s.m)?nf(+s.m):""],["Soul",s.s||""],["Cooldown",s.cd!=null?`${s.cd} s`:""],["Cooldown do grupo",s.gcd!=null?`${s.gcd} s${s.gcd2?` · ${s.g2||"grupo 2"}: ${s.gcd2} s`:""}`:""],["Elemento",s.el?`<span class="chip c-${s.el}">${esc(elName(s.el))}</span>`:""],["Área",s.ak||""],["Preço para aprender",s.pc?gp(s.pc):""]];
     if(rune) rows.push(["Magic level para usar",s.ml!=null?s.ml:""],["Cargas por runa",s.ra||""],["Preço da runa",s.rp?gp(s.rp):""]);
     const mine=c&&(s.v||[]).includes(c.voc), lvOk=c&&(s.l||0)<=c.level;
     const teach=(s.npc||[]).map(([n,city,v])=>{ const o=npcs[String(n).toLowerCase()]||{}; return `<tr><td><a class="npcn" href="${wkHref("npc",n)}">${npcSpr(n,true)}<b>${esc(n)}</b></a></td><td>${esc(city||o.city||"—")}${v?`<div class="tiny muted">só para ${esc(VOCN(v).toLowerCase())}s</div>`:""}</td><td>${mapBtn(o.x,o.y,o.z,`${n}${city?" · "+city:""}`,"Mapa")}</td></tr>`; }).join("");
@@ -42464,7 +43013,8 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   else if(t==="a") location.hash=wkHref("conquista",k);
   else if(t==="m") location.hash=wkHref("montaria",k);
   else if(t==="o") location.hash=wkHref("outfit",k);
-  else if(t==="ch") mdVT(()=>go("charms"));
+  else if(t==="hc"||t==="ht"){ const x="#hunts/"+(t==="hc"?"cidade":"tipo")+"/"+k; if(location.hash===x) route(); else location.hash=x; } // r5-t2
+  else if(t==="ch") mdVT(()=>{ go("charms"); charmFocus(k); }); // r5-t5: leva ao charm no cartão dos 25
   else if(t==="im") mdVT(()=>go("imbu")); });
 function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); }
 document.addEventListener("change",e=>{ const s=e.target.closest("[data-rthome]"); if(!s) return; const c=C(); if(!c) return; c.home=s.value||""; save();
@@ -42557,7 +43107,7 @@ function huntSheet(h){
     ${h.r.c?hsetsHTML(h.r.c):""}
     ${tabsUI([["rota","Como chegar",huntRoute(h.r.c)],
       ["mons","Monstros e loot",`${h.r.how?`<p class="small" style="margin:0"><b>${h.voc==="paladin"?"Munição":h.voc==="knight"||h.voc==="monk"?"Arma":"Rotação"}:</b> ${esc(h.r.how)}</p>`:""}${monsPanel((G.pm[h.r.c]||{}).h,(G.pm[h.r.c]||{}).r)}`,((G.pm[h.r.c]||{}).h||[]).length||0],
-      ...(h.r.c?[["loot","Loot e lucro",`<div class="lp" data-lootp="${h.r.c}" data-xp="${h.xp??""}" data-lo="${h.lo??""}" data-lsrc="${h.src||""}" data-how="${esc(h.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
+      ...(h.r.c?[["loot","Loot e lucro",`<div class="lp" data-lootp="${h.r.c}" data-xp="${h.xp0??""}"${(()=>{ const e=ST.ui.ev; return evOn()&&e.t==="mon"&&hasKey(G.mon,e.v)?` data-evk="${esc(e.v)}"`:""; })()} data-lo="${h.lo??""}" data-lsrc="${h.src||""}" data-how="${esc(h.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
       ["quests","Quests",questsTab(questsForHunt(h.r.c,h)),questsForHunt(h.r.c,h).length||0],
       ...(vars||(p&&p.note)?[["info","Notas",`${p&&p.note?`<p class="small">${esc(p.note)}</p>`:""}${vars?`<h4 class="sub">Variantes no TibiaPal</h4>${vars}`:""}`]]:[])])}
     ${h.wiki?`<p class="tiny muted">Hunting place da TibiaWiki${p.city?` (perto de ${esc(p.city)})`:""}: nível recomendado e notas de XP e loot de 1 a 5. Ainda sem medição de XP/h. ${p.acc?esc(p.acc):""}</p>`:""}
@@ -42728,7 +43278,7 @@ function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:
 $("side").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
 $("subtabs").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
 $("bottom").addEventListener("click", e=>{ const b=e.target.closest("button[data-s]"); if(!b) return; const s=navSecs().find(x=>x.id===b.dataset.s); if(!s) return; const cur=ST.ui.p; const keep=s.subs.find(x=>x[0]===cur)||s.subs.find(x=>x[0]===(ST.ui["last_"+s.id]))||s.subs[0]; mdVT(()=>go(keep[0])); });
-document.addEventListener("click", e=>{ const b=e.target.closest("[data-go]"); if(b){ e.preventDefault(); if(b.dataset.band){ ST.ui.band=b.dataset.band; ST.ui.hf=HF0(); renderHunts(); } go(b.dataset.go); } });
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-go]"); if(b){ e.preventDefault(); if(b.dataset.band){ ST.ui.band=b.dataset.band; ST.ui.hf=HF0(); renderHunts(); } go(b.dataset.go); if(b.dataset.cfocus) charmFocus(b.dataset.cfocus); } });
 
 function renderHero(){
   const c=C(), vd=VD(), L=c.level;
@@ -42836,8 +43386,9 @@ function groupRows(ms){
     const hs=maps.map(o=>o[pid]), p=G.places[pid], xs=hs.map(h=>h.xp);
     // estimativa em party: soma do XP/h solo de cada um, com o bónus, a dividir pelo grupo
     const party = xs.every(x=>x!=null) ? Math.round(xs.reduce((s,x)=>s+x,0)*(1+bonus)/ms.length/1000)*1000 : null;
+    const xs0=hs.map(h=>h.xp0), party0 = xs0.every(x=>x!=null) ? Math.round(xs0.reduce((s,x)=>s+x,0)*(1+bonus)/ms.length/1000)*1000 : null; // r5-t3: sem o evento de XP (para o loot)
     const worst = hs.reduce((w,h)=>rank[h.cmp.cls]>rank[w.cmp.cls]?h:w, hs[0]).cmp;
-    return {g:true, i, pid, p, r:hs[0].r, hs, ms, l:Math.max(...hs.map(h=>h.l)), xp:party!=null?party:avg(xs), party, lo:avg(hs.map(h=>h.lo)), d:p?p.d:2, q:p?p.q:null, cmp:worst, boost:Math.max(...hs.map(h=>h.boost||0))};
+    return {g:true, i, pid, p, r:hs[0].r, hs, ms, l:Math.max(...hs.map(h=>h.l)), xp:party!=null?party:avg(xs), party, party0, lo:avg(hs.map(h=>h.lo)), d:p?p.d:2, q:p?p.q:null, cmp:worst, boost:Math.max(...hs.map(h=>h.boost||0))};
   });
 }
 const doable = (h,c) => h.g ? h.hs.every((x,i)=>x.l<=h.ms[i].level+5) : h.l<=c.level+5;
@@ -42865,7 +43416,7 @@ function haHTML(pid,voc){ const d=G.ha&&G.ha[pid]; if(!d) return "";
   const mv=voc&&d.v[voc], L0=(C()||{}).level||0, M=mv?Math.round(mv[2]*0.75):0, tp=!!voc&&(G.hunts[voc]||[]).some(x=>x.c===pid&&x.xp!=null&&x.l<=L0+5);
   const low=mv&&mv[0]>=3&&!tp&&L0<M ? `<p class="tiny muted" style="margin:4px 0 0">Sessões de jogadores de nível ${mv[2]} (mediana): o número no cartão só aparece a partir do nível ${M}.</p>` : "";
   const rows=VOCS.filter(v=>d.v[v]).map(v=>{ const [n,mn,ml,xp,pr]=d.v[v]; return `<tr class="${v===voc?"me":""}"><td>${VI(v)} ${G.voc[v].n}</td><td>${n}</td><td>${ml} <span class="tiny muted">(mín. ${mn})</span></td><td><b>${fmt(xp)}</b></td><td>${pr!=null?fmt(pr):"—"}</td></tr>`; }).join("");
-  return `<div class="hasess"><h5>Sessões reais desde junho de 2026</h5>${rows?`<div class="tablewrap"><table><thead><tr><th>Vocação</th><th>Sessões solo</th><th>Nível (mediana)</th><th>XP raw/h</th><th>Lucro/h</th></tr></thead><tbody>${rows}</tbody></table></div>`:""}<p class="tiny muted" style="margin:4px 0 0">${d.s} sessões solo e ${d.t} em grupo, publicadas por jogadores no Hunt Analyser depois do rebalance de junho. Medianas; os nomes dos jogadores não são mostrados.</p>${low}</div>`; }
+  return `<div class="hasess"><h5>Sessões reais desde junho de 2026</h5>${rows?`<div class="tablewrap"><table><thead><tr><th>Vocação</th><th>Sessões solo</th><th>Nível (mediana)</th><th>XP raw/h</th><th>Lucro/h</th></tr></thead><tbody>${rows}</tbody></table></div>`:""}<p class="tiny muted" style="margin:4px 0 0">${d.s} ${d.s===1?"sessão":"sessões"} solo e ${d.t} em grupo, publicadas por jogadores no Hunt Analyser depois do rebalance de junho. Medianas; os nomes dos jogadores não são mostrados.</p>${low}</div>`; }
 
 /* setup por vocação: o que levar e usar nesta hunt */
 const CHARM_EL={ice:"freeze",energy:"zap",physical:"wound",earth:"poison",fire:"enflame",holy:"divinewrath",death:"curse"};
@@ -42892,7 +43443,7 @@ const SUIC=(()=>{ const sv=d=>`<svg viewBox="0 0 24 24" width="18" height="18" f
 let SUPN=0;
 // linha 'Charm': um charm diferente para cada uma das 3 criaturas principais (pela parte do XP: xp × quantidade), porque no jogo um charm só
 // pode estar numa criatura de cada vez (TibiaWiki, Charm Expansion); ' ou X' quando o 2.º fica a menos de 5 %. Sem criaturas: média da zona.
-function suCharm(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms">${esc(G.charms[k].n)}</a>`, pid=h&&h.r&&h.r.c;
+function suCharm(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" data-cfocus="${k}">${esc(G.charms[k].n)}</a>`, pid=h&&h.r&&h.r.c;
   const note=`<span class="tiny muted su-note">Low Blow e Savage Blow somam dano crítico em qualquer criatura.</span>`;
   const ms=new Set(((p&&p.mons)||[]).map(x=>String(x).trim().toLowerCase())), used=new Set(), out=[];
   (pid?huntMons(pid):[]).filter(([k])=>ms.has(k)).sort((a,b)=>monW(b)-monW(a)).slice(0,3).forEach(([k])=>{
@@ -42944,11 +43495,11 @@ function setupHTML(voc,level,p,h){
 }
 
 /* ---------- filtros ---------- */
-const HF0 = () => ({sort:"rec", cls:[], only:[]});
+const HF0 = () => ({sort:"rec", cls:[], only:[], city:null});
 function hfState(){
   let f=ST.ui.hf;
-  if(!f){ f=HF0(); const c=ST.ui.cat; if(c==="xp") f.sort="xp"; else if(c==="lucro") f.sort="lo"; else if(c==="segura") f.only=["segura"]; else if(c==="livre") f.only=["livre"]; ST.ui.hf=f; }
-  f.cls=f.cls||[]; f.only=f.only||[]; return f;
+  if(!f||typeof f!=="object"||Array.isArray(f)){ f=HF0(); const c=ST.ui.cat; if(c==="xp") f.sort="xp"; else if(c==="lucro") f.sort="lo"; else if(c==="segura") f.only=["segura"]; else if(c==="livre") f.only=["livre"]; ST.ui.hf=f; }
+  f.cls=Array.isArray(f.cls)?f.cls.filter(k=>typeof k==="string"):[]; f.only=Array.isArray(f.only)?f.only.filter(k=>hasKey(ONLY,k)):[]; if(typeof f.city!=="string"||!f.city) f.city=null; return f; // r5-t2: f.city
 }
 const ONLY = {
   segura:[()=>"Segura",(h,c)=> h.g ? h.hs.every((x,i)=>isSafe(x,h.ms[i].level)) : isSafe(h,c.level)],
@@ -42957,7 +43508,39 @@ const ONLY = {
   fraco:[g=>g?"Fraca ao dano de todos":"Fraca ao teu dano",h=> h.g ? h.hs.every(x=>x.cmp.cls==="great") : h.cmp.cls==="great"]
 };
 const hasCls = (h,cl) => !cl.length || (!!h.r.c && cl.some(x=>(clsShares(h.r.c)[x]||0)>=0.5));
-const filterHunts = (rows,f,c) => rows.filter(h=>hasCls(h,f.cls) && f.only.every(k=>ONLY[k][1](h,c)));
+const filterHunts = (rows,f,c) => rows.filter(h=>hasCls(h,f.cls) && (!f.city || (!!h.p && h.p.city===f.city)) && f.only.every(k=>ONLY[k][1](h,c)));
+/* r5-t2 */ // hunts por cidade e por tipo de criatura: '#hunts/cidade/<slug>' e '#hunts/tipo/<slug>' (endereços partilháveis), índice no fim da lista
+let HFMISS="", HFRDY=false, HLINK_T=0, HIDX_H="";
+const hfCities = () => [...new Set(Object.values(G.places).map(p=>p.city).filter(Boolean))];
+function hfFind(kind,sl){ const s=slug(sl); if(!s) return null;
+  if(kind==="cidade") return hfCities().find(n=>slug(n)===s)||null;
+  return (G.mcn||[]).find(k=>!/[|=]/.test(k)&&(slug(k)===s||slug(clsName(k))===s))||null; }
+// cidade: slug de uma G.places[*].city; tipo: slug da chave de G.mcn ('dragon', 'extra-dimensional') ou do nome em português ('dragoes')
+function hfRoute(kind,sl){ const hit=hfFind(kind,sl), f0=ST.ui.hf;
+  HFMISS = hit ? "" : kind==="cidade" ? "Cidade não encontrada." : "Tipo de criatura não encontrado.";
+  ST.ui.hf=Object.assign(HF0(), f0&&typeof f0==="object"&&typeof f0.sort==="string"?{sort:f0.sort}:{});
+  if(hit){ ST.ui.band="upto"; if(kind==="cidade") ST.ui.hf.city=hit; else ST.ui.hf.cls=[hit]; }
+  save(); go("hunts"); if(ST.chars.length) renderHunts();
+  if(hit) history.replaceState(history.state,"","#hunts/"+kind+"/"+slug(hit)); }
+// o endereço dos filtros: só uma cidade ou só um tipo de criatura → '#hunts/cidade/…' ou '#hunts/tipo/…'; o resto → '#hunts'
+function hfWant(f){ if(!f||f.only.length) return "hunts"; if(f.city&&!f.cls.length) return "hunts/cidade/"+slug(f.city); if(!f.city&&f.cls.length===1) return "hunts/tipo/"+slug(f.cls[0]); return "hunts"; }
+// só com a página das Hunts à vista e depois do 1.º route() (no arranque o renderAll corre antes de o hash ser lido)
+function hfHash(f){ if(!HFRDY||ST.ui.p!=="hunts") return; const w=hfWant(f||hfState()), cur=(location.hash||"").slice(1);
+  if(w!=="hunts"){ if(cur!==w) history.replaceState(history.state,"","#"+w); } else if(/^hunts\//i.test(cur)) history.replaceState(history.state,"","#hunts"); }
+function hidxRender(rows,c){ const box=$("huntIdx"); if(!box) return;
+  const ok=rows.filter(h=>h.p&&doable(h,c)), agg=keys=>{ const m=new Map(); ok.forEach(h=>keys(h).forEach(k=>{ if(!k) return; const o=m.get(k)||{n:0,xp:null}; o.n++; if(h.xp!=null&&(o.xp==null||h.xp>o.xp)) o.xp=h.xp; m.set(k,o); })); return [...m].sort((a,b)=>b[1].n-a[1].n||String(a[0]).localeCompare(String(b[0]))); };
+  const cs=agg(h=>[h.p.city]), ts=agg(h=>h.r&&h.r.c?Object.entries(clsShares(h.r.c)).filter(([k,v])=>k!=="?"&&v>=0.5).map(([k])=>k):[]);
+  const a=(href,name,o)=>`<a class="hidx-a" href="#${href}"><b>${esc(name)}</b><span>${o.n} ${o.n===1?"hunt":"hunts"}${o.xp!=null?` · melhor ${fmt(o.xp)} XP/h`:""}</span></a>`;
+  const det=(k,t,l)=>l.length?`<details class="card hidx-d" data-hidx="${k}"><summary>${t}<span class="n">${l.length}</span></summary><div class="hidx-g">${l.join("")}</div></details>`:"";
+  const html=det("c","Hunts por cidade",cs.map(([k,o])=>a("hunts/cidade/"+slug(k),k,o)))+det("t","Hunts por tipo de criatura",ts.map(([k,o])=>a("hunts/tipo/"+slug(k),clsName(k),o)));
+  box.hidden=!html; if(html===HIDX_H) return;
+  const open=[...box.querySelectorAll("details[open]")].map(d=>d.dataset.hidx); box.innerHTML=html; HIDX_H=html;
+  open.forEach(k=>{ const d=box.querySelector(`details[data-hidx="${k}"]`); if(d) d.open=true; }); }
+// 'Copiar link' (só com um endereço de cidade ou de tipo); sem clipboard (http fora do localhost) tenta o execCommand
+document.addEventListener("click", async e=>{ const b=e.target.closest("[data-hlink]"); if(!b) return; hfHash(); const url=location.origin+location.pathname+location.hash, msg=$("huntLinkMsg"); let ok=false;
+  try{ if(navigator.clipboard&&window.isSecureContext){ await navigator.clipboard.writeText(url); ok=true; } }catch(err){ ok=false; }
+  if(!ok){ try{ const ta=document.createElement("textarea"); ta.value=url; ta.setAttribute("readonly",""); ta.style.cssText="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0"; document.body.appendChild(ta); ta.select(); ok=document.execCommand("copy"); ta.remove(); b.focus(); }catch(err){ ok=false; } }
+  if(msg){ msg.textContent=ok?"Link copiado":"Não deu para copiar: copia o endereço da barra do browser."; clearTimeout(HLINK_T); HLINK_T=setTimeout(()=>{ msg.textContent=""; },4000); } });
 function sortHunts(list,f,c,band){
   const st=(h,k)=>(h.p&&h.p[k])||0, evb=(evOn()&&f.sort==="rec") ? ((a,b)=>((b.boost>0)-(a.boost>0)) || ((b.boost||0)-(a.boost||0))) : (()=>0);
   if(f.sort==="xp") return list.sort((a,b)=>(b.xp!=null)-(a.xp!=null) || (b.xp||0)-(a.xp||0) || st(b,"xs")-st(a,"xs"));
@@ -42986,6 +43569,7 @@ function partyHTML(ms){
 }
 function renderHuntFilters(rows,allRows,f,ms){
   const c=C(), grp=ms.length>1, cnt=clsCount(rows), tot=clsCount(allRows.filter(h=>doable(h,c)));
+  /* r5-t2 */ const cityN={}; allRows.forEach(h=>{ const ct=h.p&&h.p.city; if(ct&&doable(h,c)) cityN[ct]=(cityN[ct]||0)+1; }); const cityL=Object.keys(cityN).sort((a,b)=>cityN[b]-cityN[a]||a.localeCompare(b)); if(f.city&&!cityL.includes(f.city)) cityL.push(f.city);
   const clsList=[...new Set(Object.keys(tot).concat(Object.keys(cnt)))].sort((a,b)=>(cnt[b]||0)-(cnt[a]||0)||(tot[b]||0)-(tot[a]||0)||clsName(a).localeCompare(clsName(b)));
   f.cls.forEach(k=>{ if(!clsList.includes(k)) clsList.push(k); });
   const btn=(at,v,t,on,n,cl)=>`<button type="button"${cl?` class="${cl}"`:""} ${at}="${esc(v)}" aria-pressed="${on}">${t}${n!=null?`<span class="n">${n}</span>`:""}</button>`;
@@ -42994,26 +43578,28 @@ function renderHuntFilters(rows,allRows,f,ms){
   if(!MONLIST){ const n=new Set(); Object.values(G.pm).forEach(v=>(v.h||[]).forEach(([k])=>{ if(G.mon[k]&&!G.mon[k][7]) n.add(G.mon[k][0]); })); MONLIST=[...n].sort(); }
   // r2-t4: barra recolhida (Filtros ▾ + resumo, ordenação, faixa); o painel abre com ST.ui.hfOpen
   let bd=ST.ui.band; if(bd==null||bd==="me"||bd<0||(bd!=="upto"&&!BANDS[bd])) bd=bd==="upto"?bd:"me";
-  const minL=Math.min(...ms.map(m=>m.level)), open=!!ST.ui.hfOpen, nAtivos=f.cls.length+f.only.length+(on?1:0);
+  const minL=Math.min(...ms.map(m=>m.level)), open=!!ST.ui.hfOpen, nAtivos=f.cls.length+f.only.length+(on?1:0)+(f.city?1:0);
   const sorts=[["rec","Recomendado"],["xp",grp?"XP/h em party":"XP/h"],["lo","Lucro/h"],["eq","XP e lucro"]];
   const meT=`${grp?"O nosso":"O meu"} nível · ${minL}`, uptoT=grp?"Até ao nosso nível":"Até ao meu nível";
-  const resumo=[bd==="me"?meT:bd==="upto"?uptoT:bandLabel(BANDS[bd]), f.cls.length?f.cls.map(clsName).join(", "):"Todas"].concat(f.only.filter(k=>ONLY[k]).map(k=>ONLY[k][0](grp)), [(sorts.find(([v])=>v===f.sort)||sorts[0])[1]]).map(esc).join(" · ");
+  const resumo=[bd==="me"?meT:bd==="upto"?uptoT:bandLabel(BANDS[bd])].concat(f.city?[f.city]:[], [f.cls.length?f.cls.map(clsName).join(", "):"Todas"]).concat(f.only.filter(k=>ONLY[k]).map(k=>ONLY[k][0](grp)), [(sorts.find(([v])=>v===f.sort)||sorts[0])[1]]).map(esc).join(" · ");
   const XN=7, nx=clsList.filter((k,i)=>i>=XN&&!f.cls.includes(k)).length, clsNote=`O número é quantas hunts desse tipo ${grp?"podem":"podes"} fazer. Escolher um tipo mostra-as todas, até ${grp?"ao vosso":"ao teu"} nível.`;
   $("huntFilters").innerHTML = `
     <div class="hf-bar"><button type="button" class="btn ghost hf-toggle" data-hfmore aria-expanded="${open}" aria-controls="huntFilters" aria-label="Filtros: ${resumo}${nAtivos?` (${nAtivos} ${nAtivos===1?"ativo":"ativos"})`:""}"><span class="hf-tt">Filtros</span><span class="hf-sum">${resumo}</span>${nAtivos?`<span class="n">${nAtivos}</span>`:""}<span class="hf-ch" aria-hidden="true">▾</span></button><div class="seg hf-sortq" role="group" aria-label="Ordenar por">${sorts.map(([v,t])=>btn("data-hsort",v,t,f.sort===v)).join("")}</div><div class="seg scroll hf-bandq" role="group" aria-label="Nível das hunts">${btn("data-hfband","me",meT,bd==="me")}${btn("data-hfband","upto",uptoT,bd==="upto")}</div></div>
     <div class="hf-grp hf-g1"><h4>Quem e onde</h4>
       ${partyHTML(ms)}
       <div class="hf-row"><span class="hf-l">Nível das hunts</span><div class="seg" id="bandSeg" role="group" aria-label="Faixa de nível"></div></div>
+      <div class="hf-row"><span class="hf-l">Cidade</span><div class="hf-city"><select data-hcity aria-label="Cidade"><option value="">Todas</option>${cityL.map(n=>`<option value="${esc(n)}"${f.city===n?" selected":""}>${esc(n)}${cityN[n]!=null?` (${cityN[n]})`:""}</option>`).join("")}</select></div></div>
     </div>
     <div class="hf-grp hf-g2"><h4>O que procuram</h4>
       <div class="hf-row"><span class="hf-l" title="${clsNote}">Criaturas</span><div style="display:grid;gap:6px;min-width:0"><div class="seg">${btn("data-hcls","","Todas",!f.cls.length)}${clsList.map((k,i)=>btn("data-hcls",k,clsName(k),f.cls.includes(k),tot[k]||0,i>=XN&&!f.cls.includes(k)?"hf-x":"")).join("")}${nx?`<button type="button" class="linkbtn md-only" data-hcls-all aria-expanded="${!!ST.ui.hfAll}">${ST.ui.hfAll?"Menos tipos":`+${nx} tipos`}</button>`:""}</div><p class="tiny muted hf-note" style="margin:0">${clsNote}</p></div></div>
-      <div class="hf-row"><span class="hf-l">Mostrar só</span><div class="seg">${Object.entries(ONLY).map(([k,[t]])=>btn("data-honly",k,t(grp),f.only.includes(k))).join("")}${f.cls.length||f.only.length?`<button type="button" class="linkbtn" data-hclear="1" style="margin-left:4px">Limpar filtros</button>`:""}</div></div>
+      <div class="hf-row"><span class="hf-l">Mostrar só</span><div class="seg">${Object.entries(ONLY).map(([k,[t]])=>btn("data-honly",k,t(grp),f.only.includes(k))).join("")}${f.cls.length||f.only.length||f.city?`<button type="button" class="linkbtn" data-hclear="1" style="margin-left:4px">Limpar filtros</button>`:""}</div></div>
       <div class="hf-row"><span class="hf-l">Ordenar por</span><div class="seg">${sorts.map(([v,t])=>btn("data-hsort",v,t,f.sort===v)).join("")}</div></div>
       <div class="hf-row"><span class="hf-l">Evento de XP</span><div class="hf-ev">
         <select id="evT" aria-label="Criaturas com bónus de XP"><option value="">Sem evento</option><optgroup label="Tipo de criatura">${allCls.map(k=>`<option value="c:${esc(k)}" ${pick==="c:"+k?"selected":""}>${clsName(k)}</option>`).join("")}</optgroup><optgroup label="Outro"><option value="mon" ${pick==="mon"?"selected":""}>Uma criatura (ex.: a boosted do dia)</option></optgroup></select>
-        <input id="evMon" type="text" list="evMonList" aria-label="Nome da criatura" placeholder="Nome da criatura" autocomplete="off" value="${ev.t==="mon"&&ev.v&&G.mon[ev.v]?esc(G.mon[ev.v][0]):""}" ${pick==="mon"?"":"hidden"}>
-        <label for="evP">+<input id="evP" type="number" inputmode="numeric" min="5" max="500" step="5" value="${ev.p||50}">% XP</label>
+        <input id="evMon" type="text" list="evMonList" aria-label="Nome da criatura" placeholder="Nome da criatura" autocomplete="off" value="${ev.t==="mon"&&ev.v&&hasKey(G.mon,ev.v)?esc(G.mon[ev.v][0]):""}" ${pick==="mon"?"":"hidden"}>
+        <label for="evP">+<input id="evP" type="number" inputmode="numeric" min="5" max="500" step="5" value="${ev.p||(pick==="mon"?100:50)}">% XP</label>
         <datalist id="evMonList">${MONLIST.map(n=>`<option value="${esc(n)}">`).join("")}</datalist>
+        ${pick==="mon"?`<p class="tiny muted hf-evn">A criatura do dia (boosted) dá +100 % de XP e o dobro do loot.</p>`:""}
       </div></div>
     </div>`;
   $("huntFilters").classList.toggle("hf-closed", !open); $("huntFilters").classList.toggle("more", open || nAtivos>0); $("huntFilters").classList.toggle("all", !!ST.ui.hfAll);
@@ -43027,7 +43613,7 @@ function groupCard(g,cats){
   const name=g.p?g.p.n:g.r.place, mc=mainCls(g.pid), tops=((G.pm[g.pid]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,3);
   const locked=g.hs.some((h,i)=>h.l>g.ms[i].level+3);
   const per=g.hs.map((h,i)=>`<span class="gm" title="${esc(g.ms[i].name)}: ${esc(h.cmp.txt)}">${VI(h.voc)}<b>${fmt(h.xp)}</b>${h.est?"≈":""}<span class="muted">· ${fmt(h.lo)}</span><i class="dot ${h.cmp.cls}"></i></span>`).join("");
-  return `<button class="hc ${locked?"locked":""}" data-ghunt="${key}"><span class="hc-th">${huntMap(g,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${g.party!=null?`<b>≈${fmt(g.party)}</b> XP/h cada em party`:starsTxt(g.p)||`XP/h por medir`}${g.boost?` <span class="hc-ev">+${Math.round(g.boost*100)}%</span>`:""} · <b>${g.l}+</b></span><span class="hc-g">${per}</span><span class="hc-p">${mc?`<span class="cls">${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${g.q?`${mc?" · ":""}<span class="lk">quest</span>`:""}${g.hs.some(isTeam)?` · <span class="tag acc" title="Só em equipa para ${esc(g.hs.filter(isTeam).map(h=>G.voc[h.voc].n).join(", "))}">equipa</span>`:""}<span class="danger-dots d${g.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[g.d]?`<span class="sr-only"> · risco ${HCMP_RISK[g.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
+  return `<button class="hc ${locked?"locked":""}" data-ghunt="${key}"${g.pid?` data-pid="${esc(g.pid)}"`:""}><span class="hc-th">${huntMap(g,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${g.party!=null?`<b>≈${fmt(g.party)}</b> XP/h cada em party`:starsTxt(g.p)||`XP/h por medir`}${g.boost?` <span class="hc-ev">+${Math.round(g.boost*100)}%</span>`:""} · <b>${g.l}+</b></span><span class="hc-g">${per}</span><span class="hc-p">${mc?`<span class="cls">${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${g.q?`${mc?" · ":""}<span class="lk">quest</span>`:""}${g.hs.some(isTeam)?` · <span class="tag acc" title="Só em equipa para ${esc(g.hs.filter(isTeam).map(h=>G.voc[h.voc].n).join(", "))}">equipa</span>`:""}<span class="danger-dots d${g.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[g.d]?`<span class="sr-only"> · risco ${HCMP_RISK[g.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
 }
 function groupSheet(g){
   const name=g.p?g.p.n:g.r.place, ms=g.ms, bonus=shareBonus(ms), share=canShare(ms), pm=G.pm[g.pid]||{};
@@ -43042,7 +43628,7 @@ function groupSheet(g){
     ${haHTML(g.pid,null)}
     ${tabsUI([["rota","Como chegar",huntRoute(g.pid)],
       ["mons","Monstros e loot",`${how?`<ul class="small" style="margin:0 0 8px;padding-left:18px">${how}</ul>`:""}${monsPanel(pm.h,pm.r)}`,(pm.h||[]).length||0],
-      ...(g.pid?[["loot","Loot e lucro",`<div class="lp" data-lootp="${g.pid}" data-g="1" data-xp="${g.party??""}" data-lo="${g.lo??""}" data-sb="${share?bonus:0}" data-how="${esc(g.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
+      ...(g.pid?[["loot","Loot e lucro",`<div class="lp" data-lootp="${g.pid}" data-g="1" data-xp="${g.party0??""}" data-lo="${g.lo??""}" data-sb="${share?bonus:0}" data-how="${esc(g.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
       ["quests","Quests",questsTab(questsForHunt(g.pid,g)),questsForHunt(g.pid,g).length||0]])}`;
 }
 function renderHunts(){
@@ -43059,18 +43645,20 @@ function renderHunts(){
   const rk = rankBand(rows);
   const catsOf = h => Object.keys(CATS).filter(k=>rk[k]===h);
   const list = sortHunts(filterHunts(rows,f,c),f,c,b);
-  const filt = f.cls.length || f.only.length;
+  const filt = f.cls.length || f.only.length || f.city;
   const bad = list.filter(h=>h.cmp.cls==="bad").length;
-  $("huntLead").textContent = `${filt?`${list.length} de ${rows.length}`:rows.length} hunts${grp?` para ${ms.length===2?"os dois":"o grupo"}`:""}${bad?` · ${bad} ${bad===1?"resiste":"resistem"} ${grp?"ao dano de alguém do grupo":"ao teu dano"}`:""}`;
+  if(ST.ui.p!=="hunts") HFMISS=""; // r5-t2
+  $("huntLead").textContent = `${HFMISS?HFMISS+" ":""}${filt?`${list.length} de ${rows.length}`:rows.length} hunts${f.city?` em ${f.city}`:""}${grp?` para ${ms.length===2?"os dois":"o grupo"}`:""}${f.cls.length?` · ${f.cls.map(clsName).join(", ")}`:""}${bad?` · ${bad} ${bad===1?"resiste":"resistem"} ${grp?"ao dano de alguém do grupo":"ao teu dano"}`:""}`;
   let more="";
-  if(f.cls.length && b!=="upto"){
+  if((f.cls.length||f.city) && b!=="upto"){
     const byB={}; let n=0; filterHunts(allRows,f,c).forEach(h=>{ if(!doable(h,c) || inWin(h)) return; const i=bandOf(h.l); if(i>=0){ byB[i]=(byB[i]||0)+1; n++; } });
     const bs=Object.keys(byB).map(Number).sort((x,y)=>x-y);
-    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} ${n} ${n===1?"hunt":"hunts"} de ${esc(f.cls.map(k=>clsName(k).toLowerCase()).join(" ou "))} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
+    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} ${n} ${n===1?"hunt":"hunts"} ${esc([f.cls.length?"de "+f.cls.map(k=>clsName(k).toLowerCase()).join(" ou "):"", f.city?"em "+f.city:""].filter(Boolean).join(" "))} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
   }
   const empty = grp && !allRows.length ? `Não há hunts recomendadas para ${ms.map(m=>G.voc[m.voc].n).join(" e ")} ao mesmo tempo.` : "Nada com estes filtros nesta faixa. Tira um filtro ou escolhe outra faixa de nível.";
   const cardsH = list.map(h=>grp?groupCard(h,catsOf(h)):huntCard(h,catsOf(h))); if(cardsH.length>8) cardsH.splice(6,0,adSlot("hunts","728 × 90 · 320 × 100","ad-feed"));
   $("huntList").innerHTML = (list.length ? `<div class="hunts">${cardsH.join("")}</div>` : `<p class="muted">${empty}</p>`) + more;
+  /* r5-t2 */ hidxRender(grp||b==="me"||b==="upto"?allRows:huntRows(c.voc).filter(h=>h.p&&!isTeam(h)),c); { const hl=$("huntLink"); if(hl) hl.hidden=hfWant(f)==="hunts"; } hfHash(f);
   const av=VD().avoid||[]; $("avoidBox").hidden=grp||!av.length; $("avoidList").innerHTML=av.map(([n,d])=>`<li><span style="color:var(--warn)">✕</span><span class="t"><b>${esc(n)}</b><span class="d">${esc(d)}</span></span><span></span></li>`).join("");
   hcmpTray(); // r3-t3
   $("huntNote").textContent = `XP e lucro: TibiaPal (raw exp, solo, atualizado a ${G.tpdate||"7/10"}); "r" = mediana de sessões solo reais (Hunt Analyser) quando o TibiaPal não tem número${grp?"; em grupo só entram as hunts que o TibiaPal recomenda para todas as vocações escolhidas":""}. ≈ = estimado a partir de outra vocação. Tipo de criatura: classe do Bestiary (TibiaWiki); uma hunt conta como de um tipo quando esse tipo dá pelo menos metade do XP do spawn.`;
@@ -43082,7 +43670,7 @@ $("huntFilters").addEventListener("click", e=>{ const f=hfState(), c=C(); let b;
   else if((b=e.target.closest("[data-hfband]"))) ST.ui.band = b.dataset.hfband==="upto" ? "upto" : "me";
   else if((b=e.target.closest("[data-hsort]"))) f.sort=b.dataset.hsort;
   else if((b=e.target.closest("[data-hcls]"))){ const k=b.dataset.hcls; f.cls = !k ? [] : f.cls.includes(k) ? f.cls.filter(x=>x!==k) : f.cls.concat(k); if(k && f.cls.length && (ST.ui.band==null||ST.ui.band==="me")) ST.ui.band="upto"; }
-  else if(e.target.closest("[data-hclear]")){ f.cls=[]; f.only=[]; }
+  else if(e.target.closest("[data-hclear]")){ f.cls=[]; f.only=[]; f.city=null; }
   else if((b=e.target.closest("[data-honly]"))){ const k=b.dataset.honly; f.only = f.only.includes(k) ? f.only.filter(x=>x!==k) : f.only.concat(k); }
   else if(e.target.closest("[data-pmopen]")) ST.ui.pmOpen=true;
   else if(e.target.closest("[data-pmclose]")) ST.ui.pmOpen=false;
@@ -43092,19 +43680,20 @@ $("huntFilters").addEventListener("click", e=>{ const f=hfState(), c=C(); let b;
   else return;
   // o innerHTML é refeito: o foco volta ao botão equivalente (na barra ou nos grupos)
   const box=$("huntFilters"), was=box.classList.contains("more"), tb=e.target.closest("button"), an=tb&&tb.getAttributeNames().find(n=>n.startsWith("data-")), q=an?`${tb.closest(".hf-bar")?".hf-bar":".hf-grp"} [${an}="${CSS.escape(tb.getAttribute(an))}"]`:"";
-  save(); renderHunts();
+  HFMISS=""; save(); renderHunts();
   const nb=q&&box.querySelector(q), fb=tb&&tb.closest(".hf-g2")&&[...box.querySelectorAll('.hf-g2 [data-hcls=""],[data-hfmore]')].find(x=>x.offsetParent), to=nb&&nb.offsetParent?nb:fb; if(to) to.focus({preventScroll:true});
   if(an==="data-hfmore"&&ST.ui.hfOpen){ const mob=matchMedia("(max-width:620px)").matches; if(mob||!was) box.querySelectorAll(mob?".hf-grp":".hf-g2").forEach(g=>g.classList.add("hf-in")); }
   else if(an==="data-hcls-all"&&ST.ui.hfAll) box.querySelectorAll(".hf-x").forEach(g=>g.classList.add("hf-in")); });
 $("huntFilters").addEventListener("change", e=>{
   const t=e.target;
   if(t.dataset.pmvoc || t.dataset.pmlvl){ const m=(ST.ui.party||[]).find(x=>x.id===(t.dataset.pmvoc||t.dataset.pmlvl)); if(m){ if(t.dataset.pmvoc) m.voc=t.value; else m.level=Math.max(8,Math.min(3000,Math.round(+t.value)||m.level)); } save(); renderHunts(); return; }
+  /* r5-t2 */ if(t.matches("[data-hcity]")){ const f=hfState(); f.city=t.value||null; if(f.city&&(ST.ui.band==null||ST.ui.band==="me")) ST.ui.band="upto"; HFMISS=""; save(); renderHunts(); const s2=$("huntFilters").querySelector("[data-hcity]"); if(s2) s2.focus({preventScroll:true}); return; }
   const ev=ST.ui.ev||(ST.ui.ev={t:"cls",v:"",p:50,on:false});
   if(t.id==="evT"){ const v=t.value; ST.ui.evPick=v;
     if(!v) ev.on=false;
-    else if(v==="mon"){ if(ev.t!=="mon"){ ev.t="mon"; ev.v=""; } ev.on=!!(ev.v&&G.mon[ev.v]); }
+    else if(v==="mon"){ if(ev.t!=="mon"){ ev.t="mon"; ev.v=""; } if(ev.p==null||ev.p===50) ev.p=100; ev.on=!!(ev.v&&hasKey(G.mon,ev.v)); } // r5-t2: a boosted dá o dobro da XP
     else { ev.t="cls"; ev.v=v.slice(2); ev.on=true; } }
-  else if(t.id==="evMon"){ const k=t.value.trim().toLowerCase(); ev.t="mon"; if(G.mon[k]){ ev.v=k; ev.on=true; } else { ev.v=""; ev.on=false; } }
+  else if(t.id==="evMon"){ const k=t.value.trim().toLowerCase(); ev.t="mon"; if(hasKey(G.mon,k)){ ev.v=k; ev.on=true; } else { ev.v=""; ev.on=false; } }
   else if(t.id==="evP"){ ev.p=Math.max(5,Math.min(500,Math.round(+t.value)||50)); }
   else return;
   save(); renderAll(); if(t.id==="evT"&&t.value==="mon"){ const i=$("evMon"); if(i) i.focus(); } });
@@ -43232,7 +43821,7 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-co
 /* ---------- equipment ---------- */
 const DOLL = [["amulet","Amuleto"],["helmet","Capacete"],["bag","Mochila"],["weapon","Arma"],["armor","Armadura"],["shield","Escudo / livro"],["ring","Anel"],["legs","Calças"],["extra","Extra"],[null],["boots","Botas"],[null]];
 const SLOTNAME = Object.fromEntries(DOLL.filter(d=>d[0]));
-const WTYPES = {knight:[["","Todas"],["club","Club"],["sword","Sword"],["axe","Axe"]], paladin:[["","Automático (arco a partir do 100)"],["bow","Arco"],["crossbow","Besta"],["throw","Arremesso"]]};
+const WTYPES = {knight:[["","Automático (o teu skill mais alto)"],["club","Club"],["sword","Sword"],["axe","Axe"]], paladin:[["","Automático (arco a partir do 100)"],["bow","Arco"],["crossbow","Besta"],["throw","Arremesso"]]};
 const VOCSHORT = {k:"EK",p:"RP",s:"MS",d:"ED",m:"EM"};
 const vocTag = it => !it.v ? "todas as vocações" : it.v.split("").map(x=>VOCSHORT[x]).join(" + ");
 const VC = {knight:"k",paladin:"p",sorcerer:"s",druid:"d",monk:"m"};
@@ -43269,7 +43858,8 @@ function slotFits(c,it,slot,set){
 }
 function relSkills(c){
   const v=c.voc;
-  if(v==="knight") return c.wtype ? {[c.wtype]:4, shield:2, ml:1.5} : {sword:4, axe:4, club:4, shield:2, ml:1.5};
+  /* r5-t4 */ // knight sem tipo escolhido: o do knightWType, para as listas, o look e os sets darem os mesmos pontos (Axe ring não conta com espada)
+  if(v==="knight"){ const w=c.wtype||knightWType(c); return w ? {[w]:4, shield:2, ml:1.5} : {sword:4, axe:4, club:4, shield:2, ml:1.5}; }
   if(v==="paladin") return {dist:4, ml:1.5};
   if(v==="monk") return {fist:4, ml:1.5};
   return {ml:6, ml_ice:v==="druid"?2.5:0, ml_earth:v==="druid"?2.5:0, ml_fire:v==="sorcerer"?2.5:0, ml_energy:v==="sorcerer"?2.5:0, ml_death:v==="sorcerer"?2.5:0, ml_healing:v==="druid"?1.5:0.5};
@@ -43282,7 +43872,8 @@ const AMMO={bow:[[0,25],[20,28],[40,40],[150,37]],crossbow:[[0,30],[30,33],[55,4
 const ammoAtk=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L).reduce((m,x)=>Math.max(m,x[1]),0);
 /* pontuação de um item para a personagem. mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
    prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}) */
-function scoreItem(c,it,mode,prot){
+/* r5-t4: eff (opcional) = G.places[pid].eff da hunt: a arma conta com o dano que as criaturas levam do elemento dela */
+function scoreItem(c,it,mode,prot,eff){
   if(it.ns||it.cu) return null;
   const rs=relSkills(c), speed=mode==="speed", off=mode==="off", dfn=mode==="def", pf=prot&&typeof prot==="object"?prot:null;
   const aw={knight:2.5,paladin:2,monk:2,sorcerer:1.2,druid:1.2}[c.voc]*(off?0.45:dfn?1.8:1);
@@ -43295,14 +43886,14 @@ function scoreItem(c,it,mode,prot){
   if(it.sk) for(const [k,v] of Object.entries(it.sk)) s+=v*(rs[k]||0)*(speed?0.5:off?2:dfn?0.55:1);
   if(it.spd) s+=it.spd*(speed?1.2:0.06);
   if(it.mn&&c.voc==="monk") s+=it.mn*2.5*(speed?0.5:off?1.5:dfn?0.7:1);
-  if(it.rg) s+=(it.rg[0]+it.rg[1])*3;
+  if(it.rg) s+=(it.rg[0]+it.rg[1])*3*Math.min(1,100/Math.max(1,c.level||1)); // r5-t4: a regeneração pesa menos acima do nível 100
   if(it.is) s+=it.is*(speed?(it.s==="boots"?6:0.5):2.5);
-  if(it.s==="weapon"){ const k=off?1.6:dfn?0.8:1; if(it.wd) s+=((it.wd[1]+it.wd[2])/2)/4*k; else { const am=(it.b==="bow"||it.b==="crossbow")?ammoAtk(it.b,c.level):0; s+=(((it.atk||0)+am)*1.2+(it.wel?it.wel[1]*1.1:0)+(it.hit||0)*0.2)*k; } }
-  if(it.chg) s*=0.15; else if(it.dur) s*= it.dur<900?0.35 : it.dur<1800?0.6 : it.dur<3600?0.8 : 0.9;
+  if(it.s==="weapon"){ const k=off?1.6:dfn?0.8:1, EF=x=>{ if(!eff||!x) return 1; const m=eff.min&&eff.min[x]; if(m!=null&&m<0) return 0; const v=eff[x]; return v==null?1:Math.max(0,v)/100; }; if(it.wd) s+=((it.wd[1]+it.wd[2])/2)*EF(it.wd[0])/4*k; else { const am=(it.b==="bow"||it.b==="crossbow")?ammoAtk(it.b,c.level):0; s+=(((it.atk||0)+am)*EF("physical")*1.2+(it.wel?it.wel[1]*EF(it.wel[0])*1.1:0)+(it.hit||0)*0.2)*k; } }
+  if(it.chg) s*=0.15; else if(it.dur&&it.s!=="ring"&&it.s!=="amulet") s*=0.6; else if(it.dur) s*= it.dur<900?0.35 : it.dur<1800?0.6 : it.dur<3600?0.8 : 0.9;
   return Math.round(s*10)/10;
 }
-function ranked(c,slot,mode,prot,f,set){
-  return allItems().filter(it=>slotFits(c,it,slot,set)&&canUse(c,it)&&(!f||f(it))).map(it=>({it,s:scoreItem(c,it,mode,prot)}))
+function ranked(c,slot,mode,prot,f,set,eff){
+  return allItems().filter(it=>slotFits(c,it,slot,set)&&canUse(c,it)&&(!f||f(it))).map(it=>({it,s:scoreItem(c,it,mode,prot,eff)}))
     .sort((a,b)=>((b.s??-1)-(a.s??-1)) || b.it.l-a.it.l);
 }
 const spr = it => it && it.ix>=0 ? `<span class="spr" style="background-position:-${(it.ix%G.spriteCols)*32}px -${Math.floor(it.ix/G.spriteCols)*32}px" aria-hidden="true"></span>` : "";
@@ -43310,13 +43901,18 @@ const hands = it => it && it.s==="weapon" && !it.cu ? (it.h2?"duas mãos":"uma m
 const sprOr = (it,slot) => spr(it) || `<span class="ph-ic">${IC[slot==="extra"?"trinket":(slot||"bag")]||""}</span>`;
 /* melhor item por slot até ao nível da personagem (g: filtro extra, ex.: só os que tem).
    Arma e escudo escolhem-se juntos: a melhor de duas mãos contra a melhor de uma mão + escudo. */
-function pickSet(c,mode,prot,g){
+function pickSet(c,mode,prot,g,eff){
   rebuildIndex();
   /* r4-t5 */ // paladino em 'Automático' (sem c.wtype): arco a partir do 100 (abaixo ficam as lanças e as estrelas);
   // com o filtro g ('só os que tenho') e nenhum arco marcado, ficam todos os tipos
   if(c.voc==="paladin"&&!c.wtype&&c.level>=100&&(!g||allItems().some(it=>it.s==="weapon"&&it.b==="bow"&&it.l<=c.level&&canUse(c,it)&&g(it)))) c=Object.assign({},c,{wtype:"bow"});
+  /* r5-t4 */ // knight em 'Automático' (sem c.wtype): um só tipo de arma, o do knightWType (no jogo treina-se um só skill). Com o filtro g
+  // ('só os que tenho') e nenhuma arma desse tipo marcada até ao nível, o tipo da melhor arma marcada (o set fica na mesma com um só tipo)
+  if(c.voc==="knight"&&!c.wtype){ let kt=knightWType(c);
+    if(g&&kt&&!allItems().some(it=>it.s==="weapon"&&it.b===kt&&it.l<=c.level&&canUse(c,it)&&g(it))){ const ow=ranked(c,"weapon",mode,prot,it=>it.l<=c.level&&!it.ns&&g(it),{slots:{}},eff)[0]; if(ow&&["sword","axe","club"].includes(ow.it.b)) kt=ow.it.b; }
+    if(kt) c=Object.assign({},c,{wtype:kt}); }
   const L=c.level, ok=k=>it=>it.l<=L && !it.ns && (k==="ring"||k==="amulet"?!it.chg&&!(it.dur&&it.dur<900):true) && (!g||g(it));
-  const best=(k,set,h)=>ranked(c,k,mode,prot,it=>ok(k)(it)&&(!h||h(it)),set)[0];
+  const best=(k,set,h)=>ranked(c,k,mode,prot,it=>ok(k)(it)&&(!h||h(it)),set,eff)[0];
   const opt=w=>{ if(!w) return {s:-1}; const sh=c.voc==="monk"?null:best("shield",{slots:{weapon:{id:w.it.id}}}); return {w,sh,s:(w.s??0)+(sh?(sh.s??0):0)}; };
   const a=opt(best("weapon",{slots:{}})), w1=best("weapon",{slots:{}},it=>!it.h2), b=w1&&(!a.w||w1.it.id!==a.w.it.id)?opt(w1):{s:-1}, ch=b.s>a.s?b:a;
   const out={}; if(ch.w) out.weapon=ch.w.it; if(ch.sh) out.shield=ch.sh.it;
@@ -43325,6 +43921,22 @@ function pickSet(c,mode,prot,g){
 }
 /* set BiS no Início: sem mexer nos sets da personagem */
 function bisSet(c){ const p=pickSet(c,"combat",""), slots={}; Object.entries(p).forEach(([k,it])=>slots[k]={id:it.id}); return {mode:"combat",prot:"",slots}; }
+/* r5-t4 */ // tipo de arma do knight em 'Automático': c.wtype; senão o skill dos highscores (c.hs.sk.k); senão o tipo cujo set de
+// combate (sem perfil nem filtro) soma mais pontos. Em cache por personagem, nível e skill dos highscores (3 pickSets só na 1.ª vez).
+const KWTC=new Map();
+function knightWType(c){ const KS=["sword","axe","club"]; if(!c) return ""; if(c.wtype) return c.wtype;
+  const h=(c.hs&&c.hs.sk&&c.hs.sk.k)||""; if(KS.includes(h)) return h;
+  const key=(c.id||"")+"|"+c.level+"|"+h; if(KWTC.has(key)) return KWTC.get(key);
+  let bt="", bs=-1;
+  for(const b of KS){ const cc=Object.assign({},c,{wtype:b}), p=pickSet(cc,"combat","",null); if(!p.weapon) continue;
+    const tot=Object.values(p).reduce((x,it)=>x+(scoreItem(cc,it,"combat","")||0),0); if(tot>bs){ bs=tot; bt=b; } }
+  KWTC.set(key,bt); return bt; }
+/* r5-t4 */ // listas do slot da arma (renderSlot 'Melhores até ao nível' e pickList): o tipo que o set automático usa vem primeiro
+// e os outros ficam num grupo à parte. null = sem grupos (tipo escolhido em Definições do set, ou outra vocação/slot).
+function wGroup(c,slot){ if(slot!=="weapon"||!c||c.wtype) return null;
+  if(c.voc==="paladin") return c.level>=100?{b:"bow",n:"Arco",lab:"Bestas e arremesso · o set automático usa arco a partir do nível 100"}:null;
+  if(c.voc!=="knight") return null; const b=knightWType(c); if(!b) return null; const n=(WTYPES.knight.find(x=>x[0]===b)||[,b])[1];
+  return {b,n,lab:`Outros tipos de arma · o set automático usa ${n}`}; }
 /* r4-t5 */ // rótulo da mão esquerda pela vocação (#bis, #doll, sets da ficha); o SLOTNAME e o DOLL ficam iguais (renderSlot e pickOpen)
 function slotLab(c,k){ if(k!=="shield"||!c) return SLOTNAME[k]||k;
   return c.voc==="paladin"?"Escudo / aljava":isMage(c)?"Livro / escudo":c.voc==="knight"?"Escudo":SLOTNAME[k]; }
@@ -43348,7 +43960,11 @@ const SUMI = {arm:'<path d="M12 3 19.5 6v5.6c0 4.6-3.2 7.9-7.5 9.4-4.3-1.5-7.5-4
   atk:'<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2"/>', spd:'<path d="M13 3 4 14h7l-1 7 9-11h-7z"/>', is:'<circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4"/>',
   mn:'<path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/>', rg:'<path d="M12 20s-7-4.4-9.2-8.7A5 5 0 0 1 12 6.6a5 5 0 0 1 9.2 4.7C19 15.6 12 20 12 20z"/>'};
 const elName = e => { const n=String(ELN[e]||e); return n.charAt(0).toUpperCase()+n.slice(1); };
-function setSumHTML(t,lab){
+/* r5-t4 */ // skills que contam no total de um set: peso > 0 no relSkills com o tipo de arma efetivo (knight sem tipo: o da arma
+// do set, senão o do knightWType); os ml_* que o relSkills não pesa (ex.: ML holy do paladino) contam. w = tipo usado (knight)
+function setSkOk(c,t){ const KS=["sword","axe","club"], kw=c.voc==="knight"?(c.wtype||(KS.includes(t&&t.wb)?t.wb:knightWType(c))):"", rs=relSkills(kw?Object.assign({},c,{wtype:kw}):c);
+  return {w:kw, ok:x=>(rs[x]||0)>0||(/^ml_/.test(x)&&!(x in rs))}; }
+function setSumHTML(t,lab,c){
   const kv=[["arm","Armadura",t.arm]];
   if(t.def) kv.push(["def","Defesa",t.def]);
   if(t.wd) kv.push(["atk",`Dano · ${ELN[t.wd[0]]||t.wd[0]}`,t.wd[1]===t.wd[2]?t.wd[1]:`${t.wd[1]}–${t.wd[2]}`]);
@@ -43358,10 +43974,12 @@ function setSumHTML(t,lab){
   kv.push(["is","Imbuements",t.is,t.is===1?"slot":"slots"]);
   if(t.mn) kv.push(["mn","Mantra","+"+t.mn]);
   if(t.rg[0]||t.rg[1]) kv.push(["rg","Regeneração",`${t.rg[0]}/${t.rg[1]}`,"vida/mana por s"]);
-  const sk=Object.entries(t.sk).filter(([,v])=>v).sort((a,b)=>b[1]-a[1]), ab=Object.entries(t.ab).filter(([,v])=>v).sort((a,b)=>b[1]-a[1]), ex=[...new Set(t.ex)];
+  const sk0=Object.entries(t.sk).filter(([,v])=>v).sort((a,b)=>b[1]-a[1]), ab=Object.entries(t.ab).filter(([,v])=>v).sort((a,b)=>b[1]-a[1]), ex=[...new Set(t.ex)];
+  /* r5-t4 */ // com a personagem (c): só as skills que contam; as outras num chip esbatido (.hs-nc)
+  const so=c?setSkOk(c,t):null, sk=so?sk0.filter(([x])=>so.ok(x)):sk0, nc=so?sk0.filter(([x])=>!so.ok(x)):[], skt=([x,v])=>`${v>0?"+":""}${v} ${esc(SKN[x]||x)}`;
   return `<div class="hs-h"><b>Bónus do set</b><span>${lab}</span></div>
     <div class="hs-kv">${kv.map(([k,l,v,u])=>`<div class="hs-i" data-k="${k}"><i aria-hidden="true"><svg viewBox="0 0 24 24">${SUMI[k]}</svg></i><b>${v}${u?` <small>${esc(String(u))}</small>`:""}</b><span>${l}</span></div>`).join("")}</div>
-    <div class="hs-row"><span class="hs-l">Skills</span><div class="hs-chips">${sk.length?sk.map(([x,v])=>`<span class="hs-sk">${v>0?"+":""}${v} ${esc(SKN[x]||x)}</span>`).join(""):`<span class="tiny muted">nenhuma</span>`}</div></div>
+    <div class="hs-row"><span class="hs-l">Skills</span><div class="hs-chips">${sk.length||nc.length?sk.map(x=>`<span class="hs-sk">${skt(x)}</span>`).join("")+(nc.length?`<span class="hs-sk hs-nc">${nc.map(skt).join(" · ")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:"não contam para esta vocação"})</span>`:""):`<span class="tiny muted">nenhuma</span>`}</div></div>
     <div class="hs-row"><span class="hs-l">Proteções</span><div class="hs-chips">${ab.length?ab.map(([e,v])=>`<span class="hs-pr c-${e}${v<0?" neg":""}">${esc(elName(e))} <b>${v>0?"+":""}${v}%</b></span>`).join(""):`<span class="tiny muted">nenhuma neste set</span>`}</div></div>
     ${ex.length?`<div class="hs-row"><span class="hs-l">Extra</span><div class="hs-chips">${ex.slice(0,6).map(x=>`<span class="hs-sk">${esc(x)}</span>`).join("")}</div></div>`:""}`;
 }
@@ -43382,7 +44000,7 @@ function renderBis(){
         return `<button class="bslot none" data-bslot="${k}" title="${lab}: ${why}" aria-label="${lab}: ${why}">${emptyIc(c,k)}</button>`; }
       return `<button class="bslot" data-bslot="${k}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}. Menu de contexto para trocar">${spr(it)}</button>`; }).join("")}</div>
     <div class="biscap" id="bisCap">${def}</div>`;
-  const hs=$("heroSet"); if(hs) hs.innerHTML = setSumHTML(setTotals(set.slots), mine?`o teu set · ${esc(my.name)}`:`set BiS · nível ${c.level}`);
+  const hs=$("heroSet"); if(hs) hs.innerHTML = setSumHTML(setTotals(set.slots), mine?`o teu set · ${esc(my.name)}`:`set BiS · nível ${c.level}`, c);
 }
 const LP={t:null,fired:false};
 $("bis").addEventListener("click", e=>{
@@ -43509,12 +44127,16 @@ function lpHTML(el,c,CR,NP){
   const pid=el.dataset.lootp, w=c&&c.world||"", mk=w?MKV[w]:null, mkOk=!!(mk&&mk.items), grp=el.dataset.g==="1", ITm=ITV||{};
   const xp=+el.dataset.xp||0, lo=el.dataset.lo!=null&&el.dataset.lo!==""&&isFinite(+el.dataset.lo)?+el.dataset.lo:null, sb=+el.dataset.sb||0, est=el.dataset.lsrc==="est";
   const loSrc=grp?"TibiaPal · média solo · já desconta os supplies":est?"estimado de outra vocação · já desconta os supplies":el.dataset.lsrc==="ha"?"sessões reais · já desconta os supplies":"TibiaPal · já desconta os supplies";
-  const A=lootAgg(pid,CR,w), g1k=A.g1k, loot=xp>0&&g1k!=null?Math.round(xp/(1+sb)*g1k/1000/1000)*1000:null;
+  const A=lootAgg(pid,CR,w), g1k=A.g1k, loot0=xp>0&&g1k!=null?xp/(1+sb)*g1k/1000:null;
+  /* r5-t3 */ // data-xp = XP/h sem evento (um evento de XP não dá mais mortes nem mais loot); data-evk = criatura do dia (G.mon): o loot dela conta a dobrar
+  const evk=el.dataset.evk||"", evAll=A.kills.reduce((t,x)=>t+x.v*x.n,0), evS=evk&&evAll>0?A.kills.filter(x=>x.gk===evk).reduce((t,x)=>t+x.v*x.n,0)/evAll:0;
+  const loot=loot0!=null?Math.round(loot0*(1+evS)/1000)*1000:null, evPlus=loot0!=null&&evS>0?loot-Math.round(loot0/1000)*1000:0;
+  const evNote=evPlus>0?`<p class="lp-ev small">Criatura do dia (loot ×2): +<span data-lpv="${evPlus}">${nf(evPlus)}</span> gp/h <span class="muted">· ${esc(hasKey(G.mon,evk)?G.mon[evk][0]:cap1(evk))} dá ${evS<0.01?"menos de 1":Math.round(evS*100)} % do loot desta hunt</span></p>`:"";
   const src=mkOk?`Market · ${esc(w)} · média do mês`:"preços de NPC", age=mkOk&&mk.updated?Math.floor((Date.now()/1000-mk.updated)/86400):null;
   const num=v=>`<span data-lpv="${Math.round(v)}">${nf(v)}</span><i class="lp-u"> gp</i>`, kpi=(lab,v,s2,neg)=>`<div class="lp-kpi${neg?" neg":""}"><small>${lab}</small><b>${v}</b><span class="lp-src">${s2}</span></div>`;
   const nameOf=o=>{ const inf=hasKey(ITm,o.k)?ITm[o.k]:null; return (inf&&inf.t)||cap1(o.n); }, lnk=o=>hasKey(ITm,o.k)?ilink(o.k,esc(nameOf(o))):esc(nameOf(o));
   const notes=[age!=null&&age>=3?`<span class="tag warn">preços de há ${age} dias</span>`:"", !w?`<span class="small muted">Liga a personagem ao Tibia para usares os preços do teu mundo.</span>`:!mkOk?`<span class="small muted">Sem dados do Market de ${esc(w)} agora: só preços de NPC.</span>`:""].filter(Boolean).join("");
-  const kp=`<div class="lp-kpis">${kpi(grp?"Loot por hora (cada um)":"Loot por hora", loot!=null?"≈ "+num(loot):"—", loot!=null?src:g1k==null?"sem dados de loot":"sem XP/h medido")}${kpi(est?"Lucro/h estimado":"Lucro/h medido", lo!=null?(est?"≈ ":"")+num(lo):"—", lo!=null?loSrc:"sem medição", lo!=null&&lo<0)}${kpi("gp por 1000 XP", g1k!=null?num(g1k):"—", g1k!=null?src:"sem dados de loot")}</div>`;
+  const kp=`<div class="lp-kpis">${kpi(grp?"Loot por hora (cada um)":"Loot por hora", loot!=null?"≈ "+num(loot):"—", loot!=null?src:g1k==null?"sem dados de loot":"sem XP/h medido")}${kpi(est?"Lucro/h estimado":"Lucro/h medido", lo!=null?(est?"≈ ":"")+num(lo):"—", lo!=null?loSrc:"sem medição", lo!=null&&lo<0)}${kpi("gp por 1000 XP", g1k!=null?num(g1k):"—", g1k!=null?src:"sem dados de loot")}</div>${evNote}`;
   if(!A.kills.length) return `${notes?`<div class="lp-note">${notes}</div>`:""}${kp}<p class="small muted">Sem dados de loot para as criaturas desta zona.</p>${grp?"":lpCalcHTML(pid,c,el.dataset.how,null,lo,w,est)}`;
   const its=A.items.filter(o=>!o.none&&o.sum>0&&!hasKey(MKCOIN,o.k)), top=its.slice(0,12), mx=top.length?top[0].pk:0, coin=A.items.filter(o=>hasKey(MKCOIN,o.k)).reduce((t,o)=>t+o.pk,0);
   const rows=top.map(o=>{ const p=priceOf(o.k,w); return `<tr><td><span class="lp-it" data-look="k:${esc(o.k)}"><span class="lp-ic">${itemSpr(o.k)}</span><span>${lnk(o)}<small>${esc(o.cr)}</small></span></span></td><td data-l="Chance">${pctTxt(o.pct)}</td><td data-l="NPC"${p.best==="npc"?' class="best"':""}>${p.npc?gp(p.npc[1]):"—"}</td>${mkOk?`<td data-l="Market −2 %"${p.best==="market"?' class="best"':""}>${p.mkt?`${gp(p.net)}<small>${esc(p.mkt.lab)}${p.mkt.ok?"":" · pouco fiável"}</small>`:"sem preço"}</td>`:""}<td data-l="gp por kill"><b>${gpx(o.pk)}</b><i class="lp-bar" style="--w:${mx>0?Math.max(2,Math.round(o.pk/mx*100)):0}%"></i></td></tr>`; }).join("");
@@ -43681,12 +44303,12 @@ function pickCur(c){ const set=heroSetSel(c); return c.hset==="mine"||ST.ui.p===
 function pickList(){
   const pop=$("pickPop"), c=C(), slot=PK.slot, set=heroSetSel(c), L=c.level, f=fold(PK.q).trim(), cur=pickCur(c);
   const all=ranked(c,slot,set.mode||"combat",set.prot||"",it=>!it.cu&&(!f||fold(it.n).includes(f)),set);
-  /* r4-t5 */ const aw=slot==="weapon"&&c.voc==="paladin"&&!c.wtype&&L>=100?"bow":"", now0=all.filter(x=>(x.it.l||0)<=L),
+  /* r4-t5, r5-t4 */ const wg=wGroup(c,slot), aw=wg?wg.b:"", now0=all.filter(x=>(x.it.l||0)<=L),
     now=aw?now0.filter(x=>x.it.b===aw):now0, oth=aw?now0.filter(x=>x.it.b!==aw):[];
   const up=all.filter(x=>(x.it.l||0)>L).sort((a,b)=>a.it.l-b.it.l);
   const row=(x,dim)=>`<button type="button" role="option" class="pk-o${dim?" dim":""}" data-pk="${x.it.id}" data-look="${x.it.id}" aria-selected="${String(x.it.id)===String(cur)}">${sprOr(x.it,slot)}<span class="pk-n"><b>${esc(x.it.n)}</b><small>${esc(statLine(x.it)||"sem bónus")}</small></span><span class="pk-m">${x.s!=null?`<b>${String(x.s).replace(".",",")}</b><small>pts</small>`:"<b>—</b>"}<small>nível ${x.it.l||0}</small></span>${c.owned[x.it.id]?'<span class="pk-own" title="Marcado como teu" aria-label="tens este item">✓</span>':""}</button>`;
   pop.querySelector(".pk-l").innerHTML = (now.length?now.slice(0,80).map(x=>row(x)).join(""):oth.length?"":`<p class="small muted" style="margin:10px">Nada encontrado${f?` com “${esc(PK.q)}”`:""}.</p>`)
-    + (oth.length?`<div class="pk-g">Bestas e arremesso · o set automático usa arco a partir do nível 100</div>${oth.slice(0,40).map(x=>row(x)).join("")}`:"")
+    + (oth.length?`<div class="pk-g">${esc(wg.lab)}</div>${oth.slice(0,40).map(x=>row(x)).join("")}`:"")
     + (up.length?`<div class="pk-g">Acima do teu nível</div>${up.slice(0,20).map(x=>row(x,1)).join("")}`:"");
 }
 function pickPlace(){ const pop=$("pickPop"); if(!pop||pop.hidden) return;
@@ -43741,7 +44363,7 @@ const HSM=[["off","Ofensivo","Mais dano: skills e arma em primeiro. Para quando 
 // '' = o do pickSet (arco a partir do 100). O [data-hsave] usa o huntSet, por isso guarda o mesmo set que a ficha mostra.
 function huntWType(c,pid){ if(!c||c.voc!=="paladin"||c.wtype) return ""; const r=(G.hunts.paladin||[]).find(x=>x&&x.c===pid&&x.how), h=r?String(r.how):"";
   return /bolt/i.test(h)?"crossbow":/arrow/i.test(h)?"bow":/spear|star/i.test(h)?"throw":""; }
-function huntSet(c,pid,k){ const wt=huntWType(c,pid); if(wt) c=Object.assign({},c,{wtype:wt}); const pf=huntProfile(pid)||{physical:1}, p=pickSet(c,k,pf), slots={}; Object.entries(p).forEach(([x,it])=>slots[x]={id:it.id}); return {slots,pf}; }
+function huntSet(c,pid,k){ const wt=huntWType(c,pid); if(wt) c=Object.assign({},c,{wtype:wt}); const pf=huntProfile(pid)||{physical:1}, p=pickSet(c,k,pf,null,(G.places[pid]||{}).eff), slots={}; Object.entries(p).forEach(([x,it])=>slots[x]={id:it.id}); return {slots,pf}; }
 /* r3-t2 */ // imbuements recomendados para um set de hunt: o mesmo cálculo na ficha e em 'Guardar nos meus sets'
 function huntImbs(c,pid,S){
   const pf=huntProfile(pid), ctx={pf, eff:(G.places[pid]||{}).eff}, PE=["fire","earth","energy","ice","holy","death"];
@@ -43768,7 +44390,7 @@ function hsetsHTML(pid){
     return hd+parts.join(" ")
       +(H.phys?` <span class="tiny muted hs-ph"><i class="hs-sep">· </i>dano quase todo físico: não há imbuement de proteção física${fr.length?", por isso "+fr.join(" e "):""}</span>`:"")
       +` <span class="tiny muted hs-fee"><i class="hs-sep">· </i>taxas do altar: ${nf(n*TFEE[imTier(c)])} gp a cada 20 h</span></p>`; };
-  const panes=HSM.map(([k,t,d],i)=>{ const S=sets[i], T=setTotals(S.slots), sk=Object.entries(T.sk).filter(([,v])=>v).sort((a,b)=>b[1]-a[1]).slice(0,3);
+  const panes=HSM.map(([k,t,d],i)=>{ const S=sets[i], T=setTotals(S.slots), so=setSkOk(c,T), sk=Object.entries(T.sk).filter(([x,v])=>v&&so.ok(x)).sort((a,b)=>b[1]-a[1]).slice(0,3);
     const twin = i>0 && same(S,sets[i-1]) ? HSM[i-1][1] : i<2 && same(S,sets[i+1]) ? HSM[i+1][1] : "";
     return `<div class="hset-p" data-hpane="${k}" ${k===sel?"":"hidden"}><p class="small hset-d">${esc(d)}${twin?` <span class="tiny muted">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:""}</p>
       <div class="hset-b"><div class="bisdoll sm" role="group" aria-label="Set ${esc(t.toLowerCase())}">${DOLL.map(([x,lab0])=>{ const lab=x?slotLab(c,x):lab0; if(!x) return '<div aria-hidden="true"></div>'; if(x==="bag") return `<span class="bslot none" aria-hidden="true">${IC.bag}</span>`;
@@ -43778,7 +44400,7 @@ function hsetsHTML(pid){
           ${imbLine(S)}
           <button type="button" class="btn small ghost" data-hsave="${pid}|${k}">Guardar nos meus sets</button></div></div></div>`; }).join("");
   return `<div class="hsets" data-hsets="${pid}"><div class="hsets-h"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class="hs-chips"><span class="tiny muted">Dano que vais levar:</span>${top.slice(0,4).map(([e,v])=>`<span class="chip c-${e}">${esc(elName(e))} ${Math.round(v*100)}%</span>`).join("")}</div>`:`<p class="tiny muted" style="margin:0">${CRDV?"Sem dados do dano destas criaturas: sets pensados para dano físico.":"A analisar o dano das criaturas…"}</p>`}</div>
-    <div class="hset-tabs" role="tablist" aria-label="Tipo de set">${HSM.map(([k,t])=>`<button type="button" role="tab" data-hsel="${k}" aria-selected="${k===sel}"><svg viewBox="0 0 24 24" aria-hidden="true">${HSI[k]}</svg><span>${t}</span></button>`).join("")}</div>${panes}</div>`;
+    <div class="hset-tabs" role="tablist" aria-label="Tipo de set">${HSM.map(([k,t])=>`<button type="button" role="tab" data-hsel="${k}" aria-selected="${k===sel}"><svg viewBox="0 0 24 24" aria-hidden="true">${HSI[k]}</svg><span>${t}</span></button>`).join("")}</div>${panes}${(G.places[pid]||{}).eff?`<p class="tiny muted hset-note">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:""}</div>`;
 }
 document.addEventListener("click", e=>{
   const t=e.target.closest("[data-hsel]");
@@ -43888,7 +44510,7 @@ function renderEquip(){
   // resumo do set
   const tot={arm:0,spd:0,ab:{},sk:{}}; const imbs=[];
   Object.entries(set.slots).forEach(([k,e])=>{ const it=BYID[e.id]; if(!it) return; tot.arm+=it.arm||0; tot.spd+=it.spd||0; Object.entries(it.ab||{}).forEach(([el,v])=>tot.ab[el]=(tot.ab[el]||0)+v); Object.entries(it.sk||{}).forEach(([s,v])=>tot.sk[s]=(tot.sk[s]||0)+v); (e.imb||[]).forEach(x=>imbs.push(IMBL[x]||x)); });
-  $("setSum").innerHTML = setSumHTML(setTotals(set.slots), `set ${esc(set.name)}`) + (miss.length?`<p class="small" style="color:var(--warn);margin:0">Ainda não tens: ${miss.map(esc).join(", ")}</p>`:"");
+  $("setSum").innerHTML = setSumHTML(setTotals(set.slots), `set ${esc(set.name)}`, c) + (miss.length?`<p class="small" style="color:var(--warn);margin:0">Ainda não tens: ${miss.map(esc).join(", ")}</p>`:"");
   $("equipLead").textContent = IS_TOUCH() ? "Toca num slot para ver as opções; toque longo para trocar depressa." : "Clica num slot para ver as opções; botão direito para trocar depressa. Passa por cima de um item para ver tudo sobre ele.";
   eqView();
   renderSlot(c,set,sel);
@@ -43933,15 +44555,17 @@ function renderSlot(c,set,sel){
   } else h+=`<p class="muted" style="margin:8px 0">Nada neste slot. Escolhe um item abaixo.</p>`;
   const mine = ranked(c,sel,set.mode,set.prot,it=>c.owned[it.id],set);
   const top = ranked(c,sel,set.mode,set.prot,it=>it.l<=L,set).filter(x=>!c.owned[x.it.id]);
+  /* r5-t4 */ // arma: o tipo que o set automático usa primeiro e os outros num grupo à parte (wGroup; com o tipo escolhido, sem grupos)
+  const wg = wGroup(c,sel), topA = wg ? top.filter(x=>x.it.b===wg.b) : top, topO = wg ? top.filter(x=>x.it.b!==wg.b) : [];
   const showAll = !!(ST.ui.allslot && ST.ui.allslot[c.id+":"+sel]);
-  const topShown = showAll ? top : top.filter(x=>x.s!=null).slice(0,8);
+  const topShown = showAll ? topA : topA.filter(x=>x.s!=null).slice(0,8), topOS = showAll ? topO : topO.filter(x=>x.s!=null).slice(0,3);
   const nxt = ranked(c,sel,set.mode,set.prot,it=>it.l>L && it.l<=L+120,set).sort((a,b)=>a.it.l-b.it.l).slice(0,10);
   const tab = ["top","mine","next"].includes(ST.ui.sltab) ? ST.ui.sltab : "top", row=x=>itemRow(c,set,sel,x.it,x.s,{score:1});
   const pane = {
-    top: `<ul class="ilist">${topShown.map(row).join("")||'<li class="muted small">Nada encontrado.</li>'}</ul>${top.length>8?`<button class="btn small ghost" data-allslot="1" style="margin-top:8px">${showAll?"Mostrar só os 8 melhores":`Ver todos os ${top.length} itens deste slot`}</button>`:""}`,
+    top: `<ul class="ilist">${topShown.map(row).join("")+(topOS.length?`<li class="ilist-g">${esc(wg.lab)}</li>${topOS.map(row).join("")}`:"")||'<li class="muted small">Nada encontrado.</li>'}</ul>${(wg&&!showAll?top.length>topShown.length+topOS.length:top.length>8)?`<button class="btn small ghost" data-allslot="1" style="margin-top:8px">${showAll?"Mostrar só os 8 melhores":`Ver todos os ${top.length} itens deste slot`}</button>`:""}`,
     mine: mine.length ? `<ul class="ilist">${mine.slice(0,40).map(row).join("")}</ul>` : `<p class="small muted" style="margin:6px 0">Ainda não marcaste nenhum item deste slot. Usa “tenho?” nas listas e no inventário, ou escolhe com o botão direito no boneco.</p>`,
     next: `<ul class="ilist">${nxt.map(row).join("")||'<li class="muted small">Nada nos próximos 120 níveis.</li>'}</ul>` };
-  h+=`<div class="sltabs" role="tablist" aria-label="Itens para este slot">${[["top",`Melhores até ao nível ${L}`,top.length],["mine","Os teus",mine.length],["next","Próximos upgrades",nxt.length]].map(([k,t,n])=>`<button type="button" role="tab" data-sltab="${k}" aria-selected="${k===tab}">${t}<span class="n">${n}</span></button>`).join("")}</div><div class="slpane">${pane[tab]}</div><p class="note">Pontos = armadura, proteções, skills${c.voc==="monk"?", mantra":""}, velocidade e slots de imbuement pesados para a tua vocação${set.mode==="speed"?" (modo velocidade)":""}${set.prot?` com prioridade a ${ELN[set.prot]}`:""}.${sel==="weapon"&&c.voc==="paladin"?" Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.":""}${sel==="ring"||sel==="amulet"?" Os que duram menos de 15 minutos (Ring of healing, Death ring…) contam pouco e ficam fora dos sets sugeridos.":""} Itens raros também aparecem: o que manda é o que marcaste como teu.</p>`;
+  h+=`<div class="sltabs" role="tablist" aria-label="Itens para este slot">${[["top",`Melhores até ao nível ${L}`,top.length],["mine","Os teus",mine.length],["next","Próximos upgrades",nxt.length]].map(([k,t,n])=>`<button type="button" role="tab" data-sltab="${k}" aria-selected="${k===tab}">${t}<span class="n">${n}</span></button>`).join("")}</div><div class="slpane">${pane[tab]}</div><p class="note">Pontos = armadura, proteções, skills${c.voc==="monk"?", mantra":""}, velocidade e slots de imbuement pesados para a tua vocação${set.mode==="speed"?" (modo velocidade)":""}${set.prot?` com prioridade a ${ELN[set.prot]}`:""}.${sel==="weapon"&&c.voc==="paladin"?" Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.":""}${sel==="ring"||sel==="amulet"?" Os que duram menos de 15 minutos (Ring of healing, Death ring…) contam pouco e ficam fora dos sets sugeridos.":""}${["boots","helmet","weapon","extra"].includes(sel)?" Botas, capacetes e armas que acabam contam menos.":""}${wg&&c.voc==="knight"?` Tipo de arma usado: ${esc(wg.n)} (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?"o teu skill mais alto":"o que dá o melhor set no teu nível"}; para outro, escolhe-o em Definições do set › Arma).`:""} Itens raros também aparecem: o que manda é o que marcaste como teu.</p>`;
   $("slotDetail").innerHTML=head+`<div id="slotBody">${h}</div>`;
   renderSlotSearch(c,set,sel);
 }
@@ -44000,13 +44624,61 @@ $("cuForm").addEventListener("submit", e=>{ e.preventDefault(); const n=$("cuNam
   (ST.custom=ST.custom||[]).push(it); C().owned[it.id]=true; $("cuName").value=""; $("cuNote").value=""; $("cuLvl").value=""; $("cuMsg").textContent=`${it.n} adicionado e marcado como teu.`; save(); renderEquip(); });
 
 /* ---------- charms & imbuements ---------- */
+/* r5-t5 */ // glifos dos charms (só no Modern: .md-only): paths 24×24 em traço; os elementais pelo elemento do f ('el:ice'…), os outros pela chave de G.charms
+const CHARM_IC={ice:"M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5",
+ energy:"M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z",
+ physical:"M5 19C8.5 15 11 10 12.5 4M10 20.5c3.5-4 6-9 7.5-15M15.5 21c2-2.5 3.5-5.5 4.5-9",
+ earth:"M12 2.5S5.5 9.7 5.5 14.3a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.5 12 2.5zM9 15.5a3 3 0 0 0 3 3",
+ fire:"M12 22c3.9 0 7-2.9 7-7 0-3.4-2.1-5.6-3.5-7.4-.4 2-1.4 3.3-2.6 3.9C13.3 8 12.6 4.6 10 2c0 3.6-2 5.4-3.5 7.3C5.1 11 5 12.8 5 15c0 4.1 3.1 7 7 7z",
+ holy:"M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8",
+ death:"M12 3a8 8 0 0 0-8 8c0 2.6 1.3 4.4 3 5.5V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-3.5c1.7-1.1 3-2.9 3-5.5a8 8 0 0 0-8-8zM9 10.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM15 10.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM10.5 21v-2.5M13.5 21v-2.5",
+ dodge:"M3 20c6.5 0 7-13 13.5-13H20M17 4l3 3-3 3M13 15.5l5 5M18 15.5l-5 5",
+ parry:"M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6l8-3zM8.5 13l3.5-3.5 3.5 3.5",
+ lowblow:"M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 1.5V7M12 17v5.5M1.5 12H7M17 12h5.5M12 11.5v1",
+ savageblow:"M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12zM12 2v4M12 18v4M2 12h4M18 12h4M5.5 18.5l13-13",
+ carnage:"M12 2l2 5 5-2-2 5 5 2-5 2 2 5-5-2-2 5-2-5-5 2 2-5-5-2 5-2-2-5 5 2z",
+ overpower:"M12 20.5S3.5 15.3 3.5 9.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.6c0 6.1-8.5 11.3-8.5 11.3zM12 10v6M9 13h6",
+ overflux:"M12 2.5S5.5 9.7 5.5 14.3a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.5 12 2.5zM12 11v6M9 14h6",
+ voidscall:"M10.5 12a1.5 1.5 0 0 1 3 0 3 3 0 0 1-6 0 4.5 4.5 0 0 1 9 0 6 6 0 0 1-12 0 7.5 7.5 0 0 1 15 0",
+ vampembrace:"M3.5 6c4.5 2.5 12.5 2.5 17 0M7 7.8l2 7.2 2-6.6M13 8.4l2 6.6 2-7.2M15 18.5V20",
+ gut:"M9 3h6l-1.5 4h-3L9 3zM10.5 7C6.5 9 4 12.5 4 16c0 3 2.5 5 8 5s8-2 8-5c0-3.5-2.5-7-6.5-9M12 11.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z",
+ fatalhold:"M10 14l4-4M8.5 11.5l-2 2a3.5 3.5 0 0 0 5 5l2-2M15.5 12.5l2-2a3.5 3.5 0 0 0-5-5l-2 2",
+ bless:"M21 4c-6.5 0-12 3-14.5 8.5L3 19c4.5 1 9.5-.5 12.5-3.5S20 8 21 4zM8 13.5c3-1 6-3 8.5-5.5M10 17c2-.5 4-2 5.5-3.5",
+ cleanse:"M10 3.5S4.5 9.6 4.5 13.5a5.5 5.5 0 0 0 11 0C15.5 9.6 10 3.5 10 3.5zM19 2.5v5M16.5 5h5M19.5 11v3M18 12.5h3",
+ cripple:"M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1M12 6l4.2 1.8L18 12l-1.8 4.2L12 18l-4.2-1.8L6 12l1.8-4.2z",
+ numb:"M13 2L5.5 12.5H10M14 11.5h4.5L11 22",
+ scavenge:"M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 10.5V4a1.5 1.5 0 0 1 3 0v7M14 10.5V5.5a1.5 1.5 0 0 1 3 0V12M17 9.5a1.5 1.5 0 0 1 3 0V14c0 4.4-3.1 8-7.5 8-2.7 0-4.4-1.2-5.8-3L4 15.4a1.6 1.6 0 0 1 2.4-2.1L8 15",
+ adrenaline:"M4 6l6 6-6 6M12 6l6 6-6 6",
+ voidinversion:"M6 2.5h12M6 21.5h12M7.5 2.5V5c0 3 4.5 4.5 4.5 7s-4.5 4-4.5 7v2.5M16.5 2.5V5c0 3-4.5 4.5-4.5 7s4.5 4 4.5 7v2.5"};
+function charmIc(k){ const m=G.charms[k]||{}, f=String(m.f||""), el=f.startsWith("el:")&&hasKey(CHARM_IC,f.slice(3))?f.slice(3):"",
+    d=el?CHARM_IC[el]:hasKey(CHARM_IC,k)?CHARM_IC[k]:"M12 3l7 9-7 9-7-9z", cor=el?`var(--${el})`:m.t==="minor"?"var(--accent)":"var(--gold)";
+  return `<span class="ch-ic md-only" style="--cc:${cor}" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="${d}"/></svg></span>`; }
+// custo do 1.º estágio = 1.º número de c ('320 / 480 / 1600' → 320; '100 / 150 / 225 echoes' → 100)
+function charmCost(k){ return parseInt(String((G.charms[k]||{}).c||""),10)||0; }
 function renderCharms(){
-  const c=C(), vd=VD();
+  const c=C(), vd=VD(), ks=(vd.charms||[]).filter(k=>hasKey(G.charms,k)), mk=(vd.minors||[]).filter(k=>hasKey(G.charms,k)), mine=new Set(ks.concat(mk));
   $("charmLead").textContent = `Ordem recomendada para ${vd.promo}.`;
-  $("charmList").innerHTML = vd.charms.map((k,i)=>{ const m=G.charms[k]; return `<li class="${c.charms[k]?"done":""}"><input type="checkbox" data-charm="${k}" id="ch-${k}" ${c.charms[k]?"checked":""}><label class="t" for="ch-${k}"><b>${i+1}. ${esc(m.n)}</b><span class="d">${esc(m.d)}</span></label><span class="tag">${esc(m.c)}</span></li>`; }).join("");
-  $("minorList").innerHTML = vd.minors.map(k=>{ const m=G.charms[k]; return `<li class="${c.charms[k]?"done":""}"><input type="checkbox" data-charm="${k}" id="ch-${k}" ${c.charms[k]?"checked":""}><label class="t" for="ch-${k}"><b>${esc(m.n)}</b><span class="d">${esc(m.d)}</span></label><span class="tag">${esc(m.c)}</span></li>`; }).join("");
+  // a <label> só envolve o nome: tocar na descrição (.d) abre a linha (handler de .check li) em vez de marcar o charm
+  const row=(k,i)=>{ const m=G.charms[k], f=!!c.charms[k]; return `<li class="${f?"done":""}"><input type="checkbox" data-charm="${k}" id="ch-${k}" aria-describedby="chd-${k}" ${f?"checked":""}>${charmIc(k)}<div class="t"><label for="ch-${k}"><b>${i==null?"":`${i+1}. `}${esc(m.n)}</b></label><span class="d" id="chd-${k}">${esc(m.d)}</span></div><span class="tag">${esc(m.c)}</span></li>`; };
+  const prog=(l,u)=>{ const x=l.filter(k=>c.charms[k]).length, n=l.length, N=l.filter(k=>!c.charms[k]).reduce((s,k)=>s+charmCost(k),0);
+    return `<span><b>${x}</b> de ${n} desbloqueados · ${N?`faltam <b>${nf(N)}</b> ${u}`:"já tens todos"}</span><div class="bar-prog"><i style="width:${n?x/n*100:0}%"></i></div>`; };
+  $("charmProg").innerHTML = prog(ks,"charm points");
+  $("minorProg").innerHTML = prog(mk,"echoes");
+  $("charmList").innerHTML = ks.map((k,i)=>row(k,i)).join("");
+  $("minorList").innerHTML = mk.map(k=>row(k,null)).join("");
+  // os 25 charms do jogo (para onde levam os links da ficha): do mais barato para o mais caro, sem checkboxes (a ordem da vocação fica nas listas de cima)
+  const grp=t=>Object.keys(G.charms).filter(k=>G.charms[k]&&G.charms[k].t===t).sort((a,b)=>charmCost(a)-charmCost(b)||String(G.charms[a].n).localeCompare(String(G.charms[b].n),"pt"));
+  const li=k=>{ const m=G.charms[k], my=mine.has(k); return `<li id="cm-${k}" tabindex="-1"${my?` class="cm-mine"`:""}>${charmIc(k)}<div class="cm-t"><span class="cm-n"><b>${esc(m.n)}</b><span class="tag">${esc(m.c)}</span>${my?`<span class="tag acc">na tua ordem</span>`:""}${c.charms[k]?`<span class="tag ok">desbloqueado</span>`:""}</span><span class="cm-d">${esc(m.d)}</span></div></li>`; };
+  const ma=grp("major"), mi=grp("minor"), n=ma.length+mi.length;
+  $("charmAll").innerHTML = `<h3>Todos os charms (${n})</h3><p class="small muted">Do mais barato para o mais caro. O selo <b>na tua ordem</b> marca os das listas de cima; os outros servem em hunts certas (a ficha de cada hunt diz qual usar em cada criatura).</p>`
+    + `<h4 class="cm-h">Majors <span class="muted">· charm points</span></h4><ul class="cm-list">${ma.map(li).join("")}</ul>`
+    + `<h4 class="cm-h">Minors <span class="muted">· echoes</span></h4><ul class="cm-list">${mi.map(li).join("")}</ul>`;
 }
-["charmList","minorList"].forEach(id=>$(id).addEventListener("change", e=>{ const k=e.target.dataset.charm; if(!k) return; const c=C(); if(e.target.checked) c.charms[k]=true; else delete c.charms[k]; save(); renderCharms(); renderInicio(); }));
+["charmList","minorList"].forEach(id=>$(id).addEventListener("change", e=>{ const k=e.target.dataset.charm; if(!k) return; const c=C(); if(e.target.checked) c.charms[k]=true; else delete c.charms[k]; save(); renderCharms(); renderInicio(); const nb=$("ch-"+k); if(nb) try{ nb.focus({preventScroll:true}); }catch(x){} }));
+/* r5-t5 */ // links do Setup da ficha (data-cfocus) e da pesquisa: leva ao cartão do charm nos 25 (#cm-<chave>), dá-lhe o foco e destaca-o 2,4 s
+function charmFocus(k){ if(!k) return; requestAnimationFrame(()=>{ const el=$("cm-"+k); if(!el) return; const mv=!(RM&&RM.matches);
+  el.scrollIntoView({block:"center",behavior:mv?"smooth":"auto"}); try{ el.focus({preventScroll:true}); }catch(e){}
+  el.classList.add("cfocus"); clearTimeout(el._cfT); el._cfT=setTimeout(()=>el.classList.remove("cfocus"),2400); }); }
 const TIERS=[["basic","Basic"],["intricate","Intricate"],["powerful","Powerful"]];
 const TFEE={basic:7500,intricate:60000,powerful:250000};
 // valores por nível (Basic, Intricate, Powerful)
@@ -44106,6 +44778,7 @@ $("imbList").addEventListener("change", e=>{ const k=e.target.dataset.imb; if(!k
 
 /* ---------- quests ---------- */
 const QG = [{k:"solo",t:"Fazes sozinho"},{k:"parcial",t:"Sozinho até à luta final"},{k:"party",t:"Precisas de grupo"}];
+let QPOP=""; /* r5-t5 */ // quest acabada de marcar (o cartão leva .qpop: o selo ✓ salta no Modern)
 const opensHunt = {}; Object.values(G.places).forEach(p=>{ if(p.q){ (p.q==="marapur"?G.marapur:[p.q]).forEach(q=>{ (opensHunt[q]=opensHunt[q]||[]).push(p.n); }); } });
 function renderQuests(){
   const c=C(), L=c.level, f=ST.ui.qf||"avail";
@@ -44113,13 +44786,13 @@ function renderQuests(){
   const pass = q => f==="all" ? true : f==="todo" ? (q.l<=L && !c.done[q.id]) : q.l<=L;
   const av=G.quests.filter(q=>q.l<=L), dn=av.filter(q=>c.done[q.id]).length, soloT=av.filter(q=>q.s==="solo"&&!c.done[q.id]).length;
   $("questLead").textContent = `${dn} de ${av.length} feitas · ${soloT} solo por fazer`;
-  $("questBar").style.width=(av.length?dn/av.length*100:0)+"%";
+  $("questBar").style.width=(av.length?dn/av.length*100:0)+"%"; $("questBar").classList.toggle("zero", !(av.length&&dn));
   $("questGroups").innerHTML = QG.map(g=>{ const list=G.quests.filter(q=>q.s===g.k && pass(q)).sort((a,b)=>a.l-b.l), todo=G.quests.filter(q=>q.s===g.k&&q.l<=L&&!c.done[q.id]).length;
-    return `<details class="qgroup" ${g.k==="party"?"":"open"}><summary><span>${g.t}</span><span class="tag">${todo} por fazer</span></summary>${list.map(q=>{ const lk=q.l>L, oh=opensHunt[q.id];
-      return `<div class="q ${c.done[q.id]?"done":""} ${lk?"locked":""}"><input type="checkbox" data-q="${q.id}" ${c.done[q.id]?"checked":""} aria-label="Marcar ${esc(q.n)} como feita"><div><h5><button class="qtitle" data-qopen="${q.id}">${esc(q.n)}</button></h5><p>${elinkTxt(q.d)} <b style="color:var(--ink-2);font-weight:500">Desbloqueia:</b> ${elinkTxt(q.u)}</p><div class="meta"><span class="tag">nível ${q.l}</span>${q.st?`<span class="stars" title="História">${"★".repeat(q.st)}${"☆".repeat(3-q.st)}</span>`:""}${oh?`<span class="tag ok">abre ${oh.length} ${oh.length===1?"hunt":"hunts"}</span>`:""}${lk?`<span class="tag">faltam ${q.l-L}</span>`:""}${c.qp&&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class="tag acc">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:""}<button class="btn small ghost" data-qopen="${q.id}">Lore e guia ›</button></div></div></div>`; }).join("") || '<p class="muted small" style="padding:8px 0 14px">Nada com este filtro.</p>'}</details>`; }).join("");
+    return `<details class="qgroup" data-qg="${g.k}" ${g.k==="party"?"":"open"}><summary><span>${g.t}</span><span class="tag">${todo} por fazer</span></summary>${list.length?`<div class="qgrid">${list.map(q=>{ const lk=q.l>L, oh=opensHunt[q.id];
+      return `<div class="q ${c.done[q.id]?"done":""} ${lk?"locked":""}${QPOP===q.id&&c.done[q.id]?" qpop":""}"><label class="qchk"><input type="checkbox" data-q="${q.id}" ${c.done[q.id]?"checked":""} aria-label="Marcar ${esc(q.n)} como feita"></label><div><h5><button class="qtitle" data-qopen="${q.id}">${esc(q.n)}</button></h5><p>${elinkTxt(q.d)} <b style="color:var(--ink-2);font-weight:500">Desbloqueia:</b> ${elinkTxt(q.u)}</p><div class="meta"><span class="tag">nível ${q.l}</span>${q.st?`<span class="stars" title="História">${"★".repeat(q.st)}${"☆".repeat(3-q.st)}</span>`:""}${oh?`<span class="tag ok">abre ${oh.length} ${oh.length===1?"hunt":"hunts"}</span>`:""}${lk?`<span class="tag">faltam ${q.l-L}</span>`:""}${c.qp&&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class="tag acc">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:""}<button class="btn small ghost" data-qopen="${q.id}">Lore e guia ›</button></div></div></div>`; }).join("")}</div>`:'<p class="muted small" style="padding:8px 0 14px">Nada com este filtro.</p>'}</details>`; }).join("");
 }
 $("questGroups").addEventListener("click", e=>{ const b=e.target.closest("[data-qopen]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
-$("questGroups").addEventListener("change", e=>{ const id=e.target.dataset && e.target.dataset.q; if(!id) return; const c=C(); if(e.target.checked) c.done[id]=true; else delete c.done[id]; save(); renderQuests(); renderInicio(); renderHunts(); });
+$("questGroups").addEventListener("change", e=>{ const id=e.target.dataset && e.target.dataset.q; if(!id) return; const c=C(); if(e.target.checked){ c.done[id]=true; QPOP=id; } else delete c.done[id]; save(); renderQuests(); QPOP=""; renderInicio(); renderHunts(); const nb=$("questGroups").querySelector(`[data-q="${CSS.escape(id)}"]`); if(nb) try{ nb.focus({preventScroll:true}); }catch(x){} });
 
 /* ---------- defesa ---------- */
 function renderDefesa(){
@@ -44807,7 +45480,7 @@ async function renderMonPage(key){
   const dmg=crDmg(key,cr), els=["physical","fire","ice","earth","energy","holy","death"];
   const mine=new Set(vd?vd.els:[]), best=vd?vd.els.slice().sort((a,b)=>(dmg[b]??100)-(dmg[a]??100))[0]:null;
   const imm=((g&&g[4])||[]).filter(x=>IMMN[x]);
-  const tags=[cls?`<span class="tag">${esc(clsName(cls))}</span>`:"", boss?`<span class="tag gold">boss</span>`:"", cr.blvl?`<span class="tag">Bestiary: ${esc(cr.blvl)}</span>`:"", cr.kills?`<span class="tag">${nf(cr.kills)} kills para completar</span>`:"", cr.charm?`<span class="tag">${cr.charm} charm points</span>`:""].join("");
+  const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"", boss?`<span class="tag gold">boss</span>`:"", cr.blvl?`<span class="tag">Bestiary: ${esc(cr.blvl)}</span>`:"", cr.kills?`<span class="tag">${nf(cr.kills)} kills para completar</span>`:"", cr.charm?`<span class="tag">${cr.charm} charm points</span>`:""].join("");
   const loot=(cr.loot&&cr.loot.length?cr.loot.map(l=>({n:String(l[0]).toLowerCase(),rar:l[1],amt:l[2],pct:l[3]})):((g&&g[6])||[]).map(l=>({n:l[1],rar:null,amt:"",pct:l[2]})))
     .map(l=>{ const it=items[l.n]||{}, s=(it.sell||[]).reduce((m,x)=>Math.max(m,x[1]||0),0)||it.npc||0, mk=it.val?it.val[0]:0; return {...l, val:Math.max(s,mk), v:rarVal(l.rar,l.pct)}; })
     .sort((a,b)=>(b.v*Math.max(b.val,1))-(a.v*Math.max(a.val,1)));
@@ -44838,7 +45511,7 @@ async function renderItemList(){
   const q=fold(f.q).trim(); let L=ILIST.filter(x=>(!q||x.f.includes(q)) && (f.t==="all" || (f.t==="eq"?x.s!=="loot":f.t==="loot"?x.s==="loot":x.s===f.t)));
   if(q) L.sort((a,b)=>(a.f.startsWith(q)?0:1)-(b.f.startsWith(q)?0:1)||a.n.length-b.n.length);
   $("ilLead").textContent=`${L.length} itens`;
-  box.innerHTML = L.length ? `<div class="wgrid">${L.slice(0,f.n).map(x=>`<a class="wcard" href="${itemHref(x.k)}">${itemSpr(x.k)}<span><b>${esc(x.n)}</b><span class="tiny muted">${x.s==="loot"?"loot":esc(SLOTNAME[x.s==="trinket"?"extra":x.s]||x.s)}${x.l?` · nível ${x.l}`:""}${x.v?` · ${fmt(x.v)}`:""}</span></span></a>`).join("")}</div>${L.length>f.n?`<button class="btn ghost" data-ilmore="1" style="margin-top:12px">Mostrar mais</button>`:""}` : `<p class="muted">Nenhum item com essa pesquisa.</p>`;
+  box.innerHTML = L.length ? `<div class="wgrid">${L.slice(0,f.n).map(x=>`<a class="wcard" href="${itemHref(x.k)}">${itemSpr(x.k)}<span><b>${esc(x.n)}</b><span class="tiny muted">${x.s==="loot"?"loot":esc(SLOTNAME[x.s==="trinket"?"extra":x.s]||x.s)}${x.l?` · nível ${x.l}`:""}${x.v?` · ${x.v<1000?gp(x.v):fmt(x.v)}`:""}</span></span></a>`).join("")}</div>${L.length>f.n?`<button class="btn ghost" data-ilmore="1" style="margin-top:12px">Mostrar mais</button>`:""}` : `<p class="muted">Nenhum item com essa pesquisa.</p>`;
 }
 async function renderMonList(){
   const box=$("monList"), f=ST.ui.ml||(ST.ui.ml={q:"",c:"",s:"xp",n:120,b:false});
@@ -44861,8 +45534,10 @@ const WL_SRC={loja:"Loja",domar:"Domar",quest:"Quest",tarefa:"Task Board",evento
 const WL_OT={loja:"Loja",quest:"Quest",premium:"Premium",evento:"Evento",base:"Base",tarefa:"Task Board",outro:"Outro"};
 const wlMore = (attr,n,total) => total>n ? `<button type="button" class="btn ghost wmore" ${attr}>Mostrar mais</button>` : "";
 function wlFocus(root,i){ const a=root&&root.querySelectorAll(".wcard")[i]; if(a) a.focus({preventScroll:true}); }
+/* r5-t3 */ // mana do feitiço: número → 'N mana'; 'var' (Heal/Protect/Enchant/Train Party, Summon Creature) → 'mana variável' (nunca 'NaN mana')
+const manaTxt=(m,k)=> typeof m==='number'&&isFinite(m) ? nf(m)+' mana' : m==='var' ? (/party/.test(k||'')?'mana variável (depende do grupo)':'mana variável') : '';
 function wlSpCard(s){ const n0=(s.npc||[])[0];
-  const meta=[s.t==="r"?"runa":"", `nível ${s.l||0}`, s.m!=null?`${nf(s.m)} mana`:"", s.pc?gp(s.pc):s.o==="wheel"?"Wheel of Destiny":s.o==="quest"?"recompensa de quest":"", n0?`com ${esc(n0[0])}`:""].filter(Boolean).join(" · ");
+  const meta=[s.t==="r"?"runa":"", `nível ${s.l||0}`, manaTxt(s.m,String(s.n).toLowerCase()), s.pc?gp(s.pc):s.o==="wheel"?"Wheel of Destiny":s.o==="quest"?"recompensa de quest":"", n0?`com ${esc(n0[0])}`:""].filter(Boolean).join(" · ");
   return `<a class="wcard" href="${wkHref("feitico",s.n)}">${spellSprite(s,"sm")}<span><b>${esc(s.n)}</b>${s.w||s.el?`<span class="wsp">${s.w?`<code>${esc(s.w)}</code>`:""}${s.el?chip(s.el):""}</span>`:""}<span class="tiny muted">${meta}</span></span></a>`; }
 async function renderSpellList(){
   const box=$("spList"); if(!box) return; const c=C(), f=ST.ui.spl||(ST.ui.spl={});
@@ -44994,7 +45669,7 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-hs
   openMap(x,y,bz==null?z:bz,`${G.places[pid].n} · spawns`,bz==null?[]:byZ[bz],true); });
 
 /* ---------- endereços (#item/..., #criatura/...) ---------- */
-const hasKey=(o,k)=>o!=null&&Object.prototype.hasOwnProperty.call(o,k); // r2-t5: '#npc/toString', '#item/__proto__'... não são páginas
+/* r5-t2: o hasKey passou para o topo do IIFE (a seguir ao esc) */
 async function openDetail(kind,sl){
   if($("sheet").classList.contains("on")) closeSheet({nav:true});
   if(!ST.chars.length){ ST.ui.p=kind; $(kind==="item"?"itemPage":"monPage").innerHTML=`<p class="tkload">A carregar…</p>`; renderNav(); } // r3-t5
@@ -45002,14 +45677,15 @@ async function openDetail(kind,sl){
   ST.ui.p=kind; renderNav(); window.scrollTo({top:0});
   if(kind==="item") renderItemPage(key); else renderMonPage(key);
 }
-function route(){ const raw=(location.hash||"").slice(1); let h; try{ h=decodeURIComponent(raw); }catch(e){ h=raw; } h=h.replace(/[?&].*$/,""); let m;
+function route(){ HFRDY=true; HFMISS=""; const raw=(location.hash||"").slice(1); let h; try{ h=decodeURIComponent(raw); }catch(e){ h=raw; } h=h.replace(/[?&].*$/,""); let m;
   if((m=h.match(/^item\/(.+)$/i))){ openDetail("item",m[1]); return true; }
   if((m=h.match(/^criatura\/(.+)$/i))){ openDetail("criatura",m[1]); return true; }
   if((m=h.match(/^(feitico|npc|conquista|montaria|outfit)\/(.+)$/i))){ openWiki(m[1].toLowerCase(),m[2]); return true; }
+  if((m=h.match(/^hunts\/(cidade|tipo)\/(.+)$/i))){ hfRoute(m[1].toLowerCase(),m[2]); return true; } // r5-t2
   const hl=h.toLowerCase();
-  if(hl && SECS.some(s=>s.subs.some(x=>x[0]===hl))){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); return true; } return false; }
+  if(hl && SECS.some(s=>s.subs.some(x=>x[0]===hl))){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); hfHash(); return true; } hfHash(); return false; }
   // endereço que não corresponde a nada ('#item/', '#xyz'): o hash volta a ser o da página à vista (ou o Início, se era uma página interna)
-  if(h && h!==ST.ui.p){ const det=["item","criatura","wiki2"].includes(ST.ui.p); history.replaceState(history.state,"","#"+(det?"inicio":ST.ui.p)); if(det) go("inicio"); }
+  if(h && h!==ST.ui.p){ const det=["item","criatura","wiki2"].includes(ST.ui.p); history.replaceState(history.state,"","#"+(det?"inicio":ST.ui.p)); if(det) go("inicio"); else hfHash(); }
   return false; }
 // entrada nova (link ou hash escrito à mão) fica com gd = NAVD+1; voltar/avançar para uma entrada conhecida repõe NAVD
 window.addEventListener("hashchange", ()=>{ const st=history.state; if(st&&typeof st.gd==="number") NAVD=st.gd; else { NAVD=NAVD+1; try{ history.replaceState(Object.assign({},st,{gd:NAVD}),""); }catch(e){} } route(); });

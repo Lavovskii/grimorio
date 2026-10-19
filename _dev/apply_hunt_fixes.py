@@ -133,7 +133,11 @@ for e in E:
         if e.get(src): p[dst] = e[src]
     for k in ('xs', 'ls'):
         if isinstance(e.get(k), int): p[k] = e[k]
-    if e.get('team'): p['team'] = True
+    if isinstance(e.get('team'), list):  # r5-t1: lista das vocações que só a fazem em equipa (ex.: Secret Library sem o monk)
+        tl = [v for v in e['team'] if v in VOCS]
+        if tl: p['team'] = tl
+        else: p.pop('team', None)
+    elif e.get('team'): p['team'] = True
     elif e.get('confidence') == 'high' and p.get('team') is True: p.pop('team', None)
     elif e.get('team') is False and e.get('confidence') in ('high', 'medium') and isinstance(p.get('team'), list):
         # r2-t1: sai da lista "só em equipa" a vocação a que a verificação deu nível solo (ex.: cathedral sorcerer)
