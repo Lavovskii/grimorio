@@ -1091,6 +1091,52 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 /* party: intervalo de níveis com XP partilhada */
 .pm-rng{margin:0 0 4px;flex-basis:100%}
 .pmadd .pm-out{opacity:.6}
+/* ======================= página de item (primeiro ecrã denso) ======================= */
+.ip-tiles{grid-template-columns:repeat(var(--n,6),minmax(0,1fr))!important}
+.ip-req{margin:0 0 8px;padding:4px 9px;border-radius:7px;background:var(--sunk)}
+.ip-req.ok{color:var(--ok)} .ip-req.bad{color:var(--warn)}
+.ip-dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:0 0 8px;font-size:13.5px}
+.ip-dl dt{color:var(--muted)} .ip-dl dd{margin:0;text-align:right;font-weight:600}
+.ip-pr{margin:6px 0}
+.ip-imb{display:grid;gap:2px;margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:13px}
+.ip-npcs{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.ip-npcs li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center;font-size:13px}
+.ip-npcs li .tiny{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ip-np{white-space:nowrap}
+.ip-top3 .ip-vals{grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
+@media (max-width:1100px){ .ip-tiles{grid-template-columns:repeat(4,minmax(0,1fr))!important} }
+/* Exaltation Forge na página do item */
+.forge{margin-top:12px;display:grid;gap:10px}
+.fz-h{display:grid;gap:4px}
+.fz-t td,.fz-t th{padding:6px 10px;vertical-align:top}
+.fz-t td:first-child{white-space:nowrap}
+.fz-f{display:grid;gap:4px;color:var(--ink-2,var(--ink))}
+.fz-f .tiny{margin-top:2px}
+/* ======================= página de criatura (primeiro ecrã denso) ======================= */
+.cp-stats{grid-template-columns:repeat(8,minmax(0,1fr))!important;margin:10px 0 12px}
+.cp-stats b{font-size:18px}
+.cp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr);gap:12px;align-items:start}
+.cp-grid>.card{padding:12px 14px}
+.cp-grid h3{font-size:17px;margin:0 0 8px}
+.cp-g{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:0 0 6px}
+.cp-g>span:first-child{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:70px}
+.cp-g.g-weak>span:first-child{color:var(--ok)} .cp-g.g-imm>span:first-child,.cp-g.g-heal>span:first-child{color:var(--warn)}
+.cp-best{margin:8px 0 0;padding-top:8px;border-top:1px solid var(--line)}
+.cp-bars li{padding:2px 0}
+.cp-props{margin:8px 0 0}
+.cp-atk{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.cp-atk li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.cp-atk li:last-child{border-bottom:0}
+.cp-an{min-width:0;overflow-wrap:anywhere}
+.cp-ad{white-space:nowrap;font-size:13px}
+.cp-ab{font-size:11px;padding:1px 7px;border-radius:999px;border:1px dashed var(--line);color:var(--muted);white-space:nowrap}
+.cp-oth li{font-size:12.5px}
+.cp-loot .dlist2 .drow{padding:4px 0}
+.cp-more{margin-top:6px}
+.cp-more summary{cursor:pointer;font-size:13px;color:var(--accent);padding:6px 0}
+.cp-more-sec{margin-top:14px}
+@media (max-width:1100px){ .cp-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .cp-grid>.cp-loot{grid-column:1/-1} .cp-stats{grid-template-columns:repeat(4,minmax(0,1fr))!important} }
+@media (max-width:700px){ .cp-grid{grid-template-columns:minmax(0,1fr)} .cp-grid>.cp-loot{grid-column:auto} .cp-g>span:first-child{min-width:0;width:100%} }
 /* ======================= "look" do item ======================= */
 .look{position:fixed;left:0;top:0;z-index:90;width:310px;max-width:calc(100vw - 16px);padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.35);font-size:13px;line-height:1.4;pointer-events:none;display:grid;gap:8px;color:var(--ink)}
 .look[hidden]{display:none}
@@ -1525,6 +1571,22 @@ html[data-ui="modern"] .sltabs button[aria-selected="true"]{color:#fff;border-bo
 html[data-ui="modern"] .slpane{animation:mdFade .3s var(--e-out)}
 html[data-ui="modern"] #setSum{gap:12px}
 
+/* ======================= Modern: página de item ======================= */
+html[data-ui="modern"] .ip-req{background:rgba(7,6,22,.5);border:1px solid currentColor}
+html[data-ui="modern"] .ip-dl dd{color:#fff;font-family:"Russo One",var(--sans);font-weight:400}
+html[data-ui="modern"] .ip-dl dt{color:#A59DCB}
+html[data-ui="modern"] .ip-imb{border-top-color:rgba(167,139,250,.18)}
+html[data-ui="modern"] .ip-np{font-family:"Russo One",var(--sans);font-weight:400;color:#FDE68A}
+html[data-ui="modern"] .fz-t td b{font-family:"Russo One",var(--sans);font-weight:400;color:#fff}
+html[data-ui="modern"] .fz-est{color:#FDE68A!important}
+/* ======================= Modern: página de criatura ======================= */
+html[data-ui="modern"] .cp-atk li{border-bottom-color:rgba(167,139,250,.14)}
+html[data-ui="modern"] .cp-ad{font-family:"Russo One",var(--sans);font-weight:400;color:#fff;text-shadow:0 0 10px rgba(139,92,246,.5)}
+html[data-ui="modern"] .cp-ab{border-color:rgba(167,139,250,.35);color:#C9B3FF}
+html[data-ui="modern"] .cp-g>span:first-child{color:#9D93C8;font-weight:600}
+html[data-ui="modern"] .cp-g.g-weak>span:first-child{color:#4ADE80;text-shadow:0 0 8px rgba(74,222,128,.4)}
+html[data-ui="modern"] .cp-g.g-imm>span:first-child,html[data-ui="modern"] .cp-g.g-heal>span:first-child{color:#FBBF24}
+html[data-ui="modern"] .cp-more summary{color:#7DE8FF}
 /* ======================= Modern: bónus do set, look, escolher item, sets por hunt ======================= */
 html[data-ui="modern"] #heroSet{grid-area:set;margin-top:12px;padding:14px 16px;border:1px solid rgba(167,139,250,.18);border-radius:16px;background:rgba(7,6,22,.42);gap:12px}
 html[data-ui="modern"] .hs-h b{font-family:"Russo One",var(--sans);font-weight:400;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#7DE8FF;text-shadow:0 0 10px rgba(34,211,238,.45)}
@@ -45797,84 +45859,181 @@ function rashidToday(){ const p=Object.fromEntries(new Intl.DateTimeFormat("en-G
 const CLS_IT={"Creature Products":"Produto de criatura","Quest Items":"Item de quest","Armors":"Armadura","Club Weapons":"Arma de club","Sword Weapons":"Espada","Axe Weapons":"Machado","Helmets":"Capacete","Distance Weapons":"Arma de distância","Valuables":"Valioso","Amulets and Necklaces":"Amuleto","Shields":"Escudo","Legs":"Calças","Boots":"Botas","Rings":"Anel","Food":"Comida","Rods":"Rod","Wands":"Wand","Tools":"Ferramenta","Fist Fighting Weapons":"Arma de monk","Spellbooks":"Spellbook","Light Sources":"Fonte de luz","Trophies":"Troféu","Documents and Papers":"Documento","Extra Slot":"Slot extra","Liquids":"Líquido","Plants and Herbs":"Planta","Decorations":"Decoração","Game Tokens":"Token","Attack Runes":"Runa de ataque","Taming Items":"Item para montarias","Rubbish":"Lixo","Containers":"Contentor","Magical Items":"Item mágico","Books":"Livro","Ammunition":"Munição","Quivers":"Aljava","Support Runes":"Runa de apoio","Healing Runes":"Runa de cura","Metals":"Metal","Rocks":"Pedra"};
 
 /* ---------- página de item ---------- */
+/* ---------- página de item: atributos, valor e drops no primeiro ecrã; forge e listas completas a seguir ---------- */
+let FORGE=null;
+function ipAttrHTML(eq,info,c){
+  if(!eq) return `<p class="small muted" style="margin:0">${esc(CLS_IT[info.cls]||info.cls||"Item")} sem atributos de combate.</p>`;
+  const rows=[];
+  if(eq.arm) rows.push(["Armadura",eq.arm]);
+  if(eq.wd) rows.push(["Dano",`${eq.wd[1]===eq.wd[2]?eq.wd[1]:eq.wd[1]+"–"+eq.wd[2]} ${ELN[eq.wd[0]]||eq.wd[0]}`]);
+  if(eq.atk) rows.push(["Ataque",`${eq.atk}${eq.wel&&eq.wel[1]?` + ${eq.wel[1]} ${ELN[eq.wel[0]]}`:""}`]);
+  if(eq.def) rows.push(["Defesa",`${eq.def}${eq.edef?` ${eq.edef>0?"+":""}${eq.edef}`:""}`]);
+  if(eq.hit) rows.push(["Precisão",`+${eq.hit}%`]);
+  Object.entries(eq.sk||{}).forEach(([k,v])=>rows.push([cap1(SKN[k]||k),`${v>0?"+":""}${v}`]));
+  if(eq.mn) rows.push(["Mantra","+"+eq.mn]);
+  if(eq.spd) rows.push(["Velocidade",(eq.spd>0?"+":"")+eq.spd]);
+  if(eq.rg) rows.push(["Regeneração",`${String(eq.rg[0]).replace(".",",")} vida · ${String(eq.rg[1]).replace(".",",")} mana por s`]);
+  if(eq.bond) rows.push(["Ligação elemental",cap1(ELN[eq.bond]||eq.bond)]);
+  if(eq.chg) rows.push(["Cargas",eq.chg]); else if(eq.dur) rows.push(["Duração",`${Math.round(eq.dur/60)} min`]);
+  const ab=eq.ab?Object.entries(eq.ab).sort((a,b)=>b[1]-a[1]):[];
+  const can=!c||canUse(c,eq), lvOk=!c||(eq.l||0)<=c.level;
+  const req=`<p class="ip-req small ${can&&lvOk?"ok":"bad"}">${eq.v?`Para ${esc(vocTag(eq))}`:"Todas as vocações"}${eq.l?` · nível ${eq.l}+`:""}${c&&!can?` · ${esc(G.voc[c.voc].n)} não pode usar`:c&&!lvOk?` · faltam ${eq.l-c.level} níveis`:""}</p>`;
+  const imb = eq.is ? `<div class="ip-imb"><b>${eq.is} ${eq.is===1?"slot":"slots"} de imbuement</b>${eq.it&&eq.it.length?`<span class="tiny muted">${esc(imbOptions(eq).map(x=>IMBL[x]||x).join(" · "))}</span>`:""}</div>` : `<p class="tiny muted" style="margin:6px 0 0">Não leva imbuements.</p>`;
+  return `${req}${rows.length?`<dl class="ip-dl">${rows.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(String(v))}</dd>`).join("")}</dl>`:""}
+    ${ab.length?`<div class="lk-pr ip-pr">${ab.map(([e,v])=>`<div class="c-${e}${v<0?" neg":""}"><span>${esc(cap1(ELN[e]||e))}</span><i><u style="width:${Math.min(100,Math.abs(v))}%"></u></i><b>${v>0?"+":""}${v}%</b></div>`).join("")}</div>`:""}
+    ${(eq.ex||[]).length?`<ul class="lk-ex">${eq.ex.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}${imb}${info.aug?`<p class="tiny muted" style="margin:6px 0 0">Augments: ${esc(Array.isArray(info.aug)?info.aug.join(" · "):String(info.aug))}</p>`:""}`;
+}
 async function renderItemPage(key){
   const el=$("itemPage"); el.innerHTML=`<p class="tkload">A carregar o item…</p>`;
   const [items,crs,npcs]=await Promise.all([dsafe("items"),dsafe("creatures"),npcData(),linkIdxLoad()]);
-  const info=items[key]||{}, eq=EQBYN[key], c=C(); if(!ITV&&items&&Object.keys(items).length) ITV=items; // r4-t2: priceOf precisa de ITV
+  const info=items[key]||{}, eq=EQBYN[key], c=C(); if(!ITV&&items&&Object.keys(items).length) ITV=items;
   if(!eq && !items[key] && G.lt[key]==null){ el.innerHTML=pageHead("Item","Item não encontrado","",null)+`<p class="muted">Não temos este item na base. Usa a pesquisa (tecla /).</p>`; return; }
+  if(!FORGE) FORGE=await dsafe("forge");
   const name = info.t || (eq ? eq.n : cap1(key));
   const type = eq ? itemKind(eq) : (CLS_IT[info.cls] || info.cls || (G.lt[key]!=null?"Loot de criaturas":"Item"));
+  const cl = info.up||null, maxT = cl&&FORGE&&FORGE.maxTier ? (FORGE.maxTier[cl]??FORGE.maxTier[String(cl)]) : null;
   const tags = [eq?`<span class="tag">${esc(vocTag(eq))}</span>`:"", eq&&eq.l?`<span class="tag">nível ${eq.l}+</span>`:"", eq&&hands(eq)?`<span class="tag">${hands(eq)}</span>`:"",
-    info.up?`<span class="tag">classe ${info.up}</span>`:"", (eq&&eq.is)||info.imb?`<span class="tag">${(eq&&eq.is)||info.imb} slot${((eq&&eq.is)||info.imb)>1?"s":""} de imbuement</span>`:"",
-    info.wt!=null?`<span class="tag">${String(info.wt).replace(".",",")} oz</span>`:"", info.stack?`<span class="tag">empilhável</span>`:"", info.mkt===false?`<span class="tag warn">não vai ao Market</span>`:""].join("");
-  // vender / comprar
+    cl?`<span class="tag acc">classe ${cl}${maxT?` · até tier ${maxT}`:""}</span>`:"", info.wt!=null?`<span class="tag">${String(info.wt).replace(".",",")} oz</span>`:"", info.stack?`<span class="tag">empilhável</span>`:"", info.mkt===false?`<span class="tag warn">não vai ao Market</span>`:""].join("");
+  // comércio
   const isGold = x => !x[2] || /gold/i.test(x[2]) && !/token/i.test(x[2]);
   const sell=(info.sell||[]).filter(s=>s[1]>0).sort((a,b)=>isGold(b)-isGold(a)||b[1]-a[1]), buy=(info.buy||[]).filter(s=>s[1]>0).sort((a,b)=>isGold(b)-isGold(a)||a[1]-b[1]);
   const gs=sell.filter(isGold), bestNpc = gs.length ? gs[0][1] : (info.npc||null), mk=info.val;
-  let adv=""; const wld=c&&c.world, mkr=mk&&mk[0]?(mk[1]&&mk[1]!==mk[0]?`${nf(mk[0])}–${gp(mk[1])}`:gp(mk[0])):""; // r4-t2: a TibiaWiki só conta sem mundo
+  let adv=""; const wld=c&&c.world, mkr=mk&&mk[0]?(mk[1]&&mk[1]!==mk[0]?`${nf(mk[0])}–${gp(mk[1])}`:gp(mk[0])):"";
   if(wld) adv = bestNpc ? `Vende a um NPC por ${gp(bestNpc)}. A ver o Market de ${wld}…` : `A ver o Market de ${wld}…`;
   else if(mkr && bestNpc) adv = mk[0]>bestNpc*1.1 ? `Pela referência da TibiaWiki (${mkr}), no Market costuma valer mais do que nos NPCs.` : `Os NPCs pagam ${gp(bestNpc)}, perto da referência da TibiaWiki para o Market (${mkr}): vende ao NPC e poupa a taxa.`;
   else if(bestNpc) adv=`Vende a um NPC por ${gp(bestNpc)}.`;
   else if(mkr) adv=`Nenhum NPC compra: vende no Market (referência da TibiaWiki: ${mkr}).`;
   if(!wld) adv+=(adv?" ":"")+`${c?"Liga a personagem ao Tibia":"Junta a tua personagem"} para veres o preço do Market no teu mundo.`;
+  const npcLine = ([n,p,cur]) => { const o=npcs[String(n).toLowerCase()]||{}, nl=elinkKey("npc",n), city=String(n).toLowerCase()==="rashid"?rashidToday().city:o.city; return `<li>${nl?`<a class="npcn elink" href="${wkHref("npc",nl)}">`:'<span class="npcn">'}${npcSpr(n,true)}<b>${esc(n)}</b>${nl?"</a>":"</span>"}<span class="tiny muted">${esc(city||"")}</span><b class="ip-np">${cur&&!/^gold coins?$/i.test(cur)?`${nf(p)} ${esc(cur)}`:gp(p)}</b></li>`; };
   const npcRow = ([n,p,cur]) => { const o=Object.assign({},npcs[String(n).toLowerCase()]||{}); if(String(n).toLowerCase()==="rashid"){ const R=rashidToday(); o.city=R.city; o.loc=`Hoje (${R.dia}) está em ${R.city}; muda todos os dias no server save.`; o.x=null; } const nl=elinkKey("npc",n); return `<tr><td>${nl?`<a class="npcn elink" href="${wkHref("npc",nl)}">`:'<span class="npcn">'}${npcSpr(n,true)}<b>${esc(n)}</b>${nl?"</a>":"</span>"}${o.job?`<div class="tiny muted">${esc(o.job)}</div>`:""}</td><td>${esc(o.city||(n==="Hireling"?"a tua casa":"—"))}${o.loc?`<div class="tiny muted">${esc(o.loc)}</div>`:""}</td><td><b>${cur&&!/^gold coins?$/i.test(cur)?`${nf(p)} ${esc(cur)}`:gp(p)}</b></td><td>${mapBtn(o.x,o.y,o.z,`${n}${o.city?" · "+o.city:""}`,"Mapa")}</td></tr>`; };
-  // quem deixa cair: lista da página do item + tabelas de loot das criaturas
+  // quem deixa cair
   const dropK = new Set((info.drop||[]).map(x=>String(x).toLowerCase()));
   Object.entries(crs).forEach(([k,v])=>{ if((v.loot||[]).some(l=>String(l[0]).toLowerCase()===key)) dropK.add(k); });
   Object.entries(G.mon).forEach(([k,m])=>{ if((m[6]||[]).some(l=>l[1]===key)) dropK.add(k); });
   const drops=[...dropK].map(k=>{ const cr=crs[k]||{}, g=G.mon[k], le=(cr.loot||[]).find(l=>String(l[0]).toLowerCase()===key), gl=g&&(g[6]||[]).find(l=>l[1]===key);
     const pct = le&&le[3]!=null ? le[3] : gl ? gl[2] : null; return {k, n:cr.n||(g?g[0]:cap1(k)), xp:cr.xp||(g?g[2]:0), boss:!!(cr.boss||(g&&g[7])), rar:le?le[1]:null, amt:le?le[2]:"", pct, v:rarVal(le&&le[1],pct)}; })
     .sort((a,b)=>(a.boss-b.boss)||(b.v-a.v)||(b.xp-a.xp));
-  const dropHTML = drops.length ? `<div class="dlist2">${drops.slice(0,24).map(d=>`<div class="drow">${crSpr(d.k,36)}<div style="min-width:0">${mlink(d.k,`<b>${esc(d.n)}</b>`)}${d.boss?' <span class="tag gold">boss</span>':""}<div class="tiny muted">${d.xp?nf(d.xp)+" XP":""}${d.amt?` · ${esc(d.amt)} por drop`:""}</div></div><span class="rar r-${slug(d.rar||"x")}">${d.pct!=null?pctTxt(d.pct):esc(rarTxt(d.rar))}</span></div>`).join("")}</div>${drops.length>24?`<p class="tiny muted">E mais ${drops.length-24} criaturas.</p>`:""}` : `<p class="small muted">Nenhuma criatura deixa cair este item.</p>`;
+  const drow=d=>`<div class="drow">${crSpr(d.k,32)}<div style="min-width:0">${mlink(d.k,`<b>${esc(d.n)}</b>`)}${d.boss?' <span class="tag gold">boss</span>':""}<div class="tiny muted">${d.xp?nf(d.xp)+" XP":""}${d.amt?` · ${esc(d.amt)} por drop`:""}</div></div><span class="rar r-${slug(d.rar||"x")}">${d.pct!=null?pctTxt(d.pct):esc(rarTxt(d.rar))}</span></div>`;
   const huntP = [...new Set(drops.filter(d=>!d.boss).slice(0,8).flatMap(d=>huntsWith(d.k)))];
-  const quests=(info.quest||[]).map(t=>{ const q=G.quests.find(x=>x.w&&x.w.replace(/_/g," ").toLowerCase()===String(t).toLowerCase()); return q?`<button type="button" class="btn small ghost" data-qopen2="${q.id}">${esc(q.n)}</button>`:`<span class="tag">${esc(String(t).replace(/ Quest$/,""))}</span>`; });
-  // atributos
-  const stats = eq ? `<div class="ip-stats">${statLine(eq).split(" · ").filter(Boolean).map(s=>`<span>${esc(s)}</span>`).join("")}</div>${protChips(eq)?`<div class="pills" style="margin-top:8px">${protChips(eq)}</div>`:""}${eq.it&&eq.it.length?`<p class="small muted" style="margin:8px 0 0">Imbuements possíveis: ${esc(imbOptions(eq).map(x=>IMBL[x]||x).join(", "))}</p>`:""}` : "";
+  const quests=(info.quest||[]).map(t=>{ const q=G.quests.find(x=>x.w&&x.w.replace(/_/g," ").toLowerCase()===String(t).toLowerCase()); return q?`<button type="button" class="btn small ghost" data-qopen2="${q.id}">${esc(q.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(String(t).toLowerCase())}">${esc(String(t).replace(/ Quest$/,""))}</button>`; });
   const alts = eq && c ? (()=>{ const set={mode:"combat",prot:"",slots:{}}; const r=ranked(c,eq.s,"combat","",it=>it.id!==eq.id && !it.ns && Math.abs((it.l||0)-(eq.l||0))<=60,set).slice(0,6); return r.length?`<div class="mlist">${r.map(x=>`<a class="altit" href="${itemHref(x.it.n)}">${spr(x.it)}<span><b>${esc(x.it.n)}</b><span class="tiny muted">nível ${x.it.l||0} · ${esc(statLine(x.it))}</span></span></a>`).join("")}</div>`:""; })() : "";
+  // números principais
+  const tiles=[]; if(eq){ if(eq.arm) tiles.push([eq.arm,"armadura"]); if(eq.def) tiles.push([eq.def+(eq.edef?(eq.edef>0?"+":"")+eq.edef:""),"defesa"]); if(eq.atk) tiles.push([eq.atk+(eq.wel&&eq.wel[1]?"+"+eq.wel[1]:""),"ataque"]); if(eq.wd) tiles.push([eq.wd[1]===eq.wd[2]?eq.wd[1]:eq.wd[1]+"–"+eq.wd[2],"dano"]); Object.entries(eq.sk||{}).slice(0,2).forEach(([k,v])=>tiles.push([(v>0?"+":"")+v,SKN[k]||k])); if(eq.spd) tiles.push([(eq.spd>0?"+":"")+eq.spd,"velocidade"]); if(eq.is) tiles.push([eq.is,eq.is===1?"slot de imbuement":"slots de imbuement"]); }
+  if(cl) tiles.push([cl+(maxT?` · T${maxT}`:""),"classe · tier máx."]); if(info.wt!=null) tiles.push([String(info.wt).replace(".",",")+" oz","peso"]);
+  // forge
+  const forge = cl && FORGE && FORGE.maxTier ? forgeHTML(cl,eq,info) : "";
+  const tabs=[["vender","Onde vender",sell.length?`<div class="tablewrap"><table><thead><tr><th>NPC</th><th>Cidade</th><th>Paga</th><th></th></tr></thead><tbody>${sell.map(npcRow).join("")}</tbody></table></div>`:`<p class="small muted">Nenhum NPC compra este item${mk?"; vende no Market":""}.</p>`,sell.length||0]];
+  if(buy.length) tabs.push(["comprar","Onde comprar",`<div class="tablewrap"><table><thead><tr><th>NPC</th><th>Cidade</th><th>Preço</th><th></th></tr></thead><tbody>${buy.map(npcRow).join("")}</tbody></table></div>`,buy.length]);
+  if(drops.length>6) tabs.push(["drops","Todos os drops",`<div class="dlist2">${drops.map(drow).join("")}</div>`,drops.length]);
+  if(huntP.length&&c) tabs.push(["cacar","Onde caçar",`<div class="hunts">${huntCardsFor(huntP,6)}</div>`,huntP.length]);
+  if(quests.length) tabs.push(["quests","Quests",`<div class="pills">${quests.join("")}</div>`,quests.length]);
+  if(alts) tabs.push(["alt","Alternativas",alts]);
   el.innerHTML = pageHead(esc(type), esc(name), `<span class="bigspr">${itemSpr(key)}</span>`, tags) + `
-    <div class="ip-grid">
-      ${eq?`<section class="card"><h3>Atributos</h3>${stats}</section>`:""}
-      <section class="card"><h3>Valor</h3><div class="ip-vals"><div><b>${gp(bestNpc)}</b><span>melhor preço em NPC</span></div>${wld&&info.mkt!==false?`<div><b data-mkt="${esc(mktIds(key,eq).join(","))}">…</b><span>Market em ${esc(wld)}</span></div>`:""}${mkr?`<div><b>${mkr}</b><span>referência (TibiaWiki)</span></div>`:""}</div><p class="small" id="itemAdv" style="margin:10px 0 0">${esc(adv)}</p></section>
-      ${adSlot("item","728 × 90 · 320 × 100","ip-wide")}
-      <section class="card ip-wide"><h3>Onde vender</h3>${sell.length?`<div class="tablewrap"><table><thead><tr><th>NPC</th><th>Cidade</th><th>Paga</th><th></th></tr></thead><tbody>${sell.map(npcRow).join("")}</tbody></table></div>`:`<p class="small muted">Nenhum NPC compra este item${mk?"; vende no Market":""}.</p>`}</section>
-      ${buy.length?`<section class="card ip-wide"><h3>Onde comprar</h3><div class="tablewrap"><table><thead><tr><th>NPC</th><th>Cidade</th><th>Preço</th><th></th></tr></thead><tbody>${buy.map(npcRow).join("")}</tbody></table></div></section>`:""}
-      <section class="card ip-wide"><h3>Quem deixa cair</h3>${dropHTML}</section>
-      ${huntP.length&&c?`<section class="ip-wide"><h3>Onde caçar para o conseguir <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· ${esc(G.voc[c.voc].n)} ${c.level}</span></h3><div class="hunts">${huntCardsFor(huntP,6)}</div></section>`:""}
-      ${quests.length?`<section class="card ip-wide"><h3>Recompensa de quests</h3><div class="pills">${quests.join("")}</div></section>`:""}
-      ${alts?`<section class="card ip-wide"><h3>Alternativas no mesmo slot</h3>${alts}</section>`:""}
+    ${tiles.length?`<div class="sh-n ip-n cp-stats ip-tiles" style="--n:${Math.min(8,tiles.length)}">${tiles.slice(0,8).map(([b,s])=>`<div><b>${esc(String(b))}</b><span>${esc(s)}</span></div>`).join("")}</div>`:""}
+    <div class="cp-grid ip-top3">
+      <section class="card"><h3>${eq?"Atributos e requisitos":"Item"}</h3>${ipAttrHTML(eq,info,c)}${quests.length?`<p class="tiny muted" style="margin:8px 0 0">Recompensa de quest: ${quests.length} (ver separador).</p>`:""}</section>
+      <section class="card"><h3>Valor</h3><div class="ip-vals"><div><b>${gp(bestNpc)}</b><span>melhor preço em NPC</span></div>${wld&&info.mkt!==false?`<div><b data-mkt="${esc(mktIds(key,eq).join(","))}">…</b><span>Market em ${esc(wld)}</span></div>`:""}${mkr?`<div><b>${mkr}</b><span>referência (TibiaWiki)</span></div>`:""}</div><p class="small" id="itemAdv" style="margin:8px 0 0">${esc(adv)}</p>
+        ${gs.length?`<h4 class="sub">Quem compra</h4><ul class="ip-npcs">${gs.slice(0,3).map(npcLine).join("")}</ul>`:""}${buy.length?`<h4 class="sub">Onde comprar</h4><ul class="ip-npcs">${buy.slice(0,3).map(npcLine).join("")}</ul>`:""}</section>
+      <section class="card"><h3>Quem deixa cair <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· ${drops.length}</span></h3>${drops.length?`<div class="dlist2">${drops.slice(0,6).map(drow).join("")}</div>${drops.length>6?`<p class="tiny muted" style="margin:6px 0 0">E mais ${drops.length-6} no separador "Todos os drops".</p>`:""}`:`<p class="small muted" style="margin:0">Nenhuma criatura deixa cair este item.</p>`}</section>
     </div>
+    ${forge}
+    <div class="cp-more-sec">${tabsUI(tabs)}</div>
+    ${adSlot("item","728 × 90 · 320 × 100","ip-wide")}
     <p class="tiny muted" style="margin-top:14px">Dados de outubro de 2026 (TibiaWiki, TibiaPal e mapa Canary), reunidos e verificados pelo Grimório. Preços do Market por mundo: TibiaMarket.</p>`;
   mdPage(el); mktFill(el);
-  const advEl=el.querySelector("#itemAdv"); if(wld&&advEl) mktLoad(wld).then(d=>{ if(advEl.isConnected) advEl.innerHTML=itemAdvHTML(key,wld,d,info); }); // r4-t2
+  const advEl=el.querySelector("#itemAdv"); if(wld&&advEl) mktLoad(wld).then(d=>{ if(advEl.isConnected) advEl.innerHTML=itemAdvHTML(key,wld,d,info); });
+  if(forge&&wld) mktLoad(wld).then(d=>{ const f=el.querySelector(".forge"); if(f&&f.isConnected) forgeFill(f,d,key,eq); });
+}
+/* ---------- Exaltation Forge na página do item: bónus por tier, custo de cada fusão e custo mínimo para chegar a cada tier ---------- */
+const kkk = n => n==null ? "—" : n>=1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace(".",",")+"kkk" : n>=1e6 ? (n/1e6).toFixed(n%1e6?1:0).replace(".",",")+"kk" : n>=1e3 ? Math.round(n/1e3)+"k" : String(n);
+// custo mínimo para fazer o tier t a partir de itens tier 0 (todas as fusões com sucesso): 2^t itens e Σ 2^(t-k)·gold(k)
+function forgeMin(costs,t){ let gold=0, cores=0; for(let k=1;k<=t;k++){ const c=costs&&costs[String(k)]; if(!c) return null; const n=2**(t-k); gold+=n*(c.gold||0); cores+=n*(c.cores||0); } return {items:2**t, gold, cores}; }
+function forgeHTML(cl,eq,info){
+  const F=FORGE, mx=F.maxTier[String(cl)]; if(!mx) return "";
+  const bk=(F.slotMap||{})[info.slot], B=bk&&F.bonus[bk], fu=(F.fusion.cost||{})[String(cl)]||{}, cv=F.convergence&&F.convergence.classes&&F.convergence.classes.includes(+cl) ? (F.convergence.cost||{})[String(cl)]||{} : null;
+  const rows=[]; for(let t=1;t<=mx;t++){ const f=fu[String(t)], m=forgeMin(fu,t), mc=cv?forgeMin(cv,t):null;
+    rows.push(`<tr><td><b>T${t}</b></td>${B?`<td><b>${String(B.v[t-1]).replace(".",",")}${B.unit||""}</b>${B.extra?`<div class="tiny muted">${String(B.extra.v[t-1]).replace(".",",")}${B.extra.unit||""} ${esc(B.extra.label.toLowerCase())}</div>`:""}</td>`:""}<td>${f?`${kkk(f.gold)} gp<div class="tiny muted">${f.dust||0} dust · ${F.fusion.chance}%</div>`:"—"}</td>${cv?`<td>${cv[String(t)]?`${kkk(cv[String(t)].gold)} gp<div class="tiny muted">${cv[String(t)].dust||0} dust · 100%</div>`:"—"}</td>`:""}<td>${m?`${m.items} itens + ${kkk(m.gold)} gp<div class="tiny muted fz-est" data-ft="${t}" data-fi="${m.items}" data-fg="${m.gold}"></div>`:"—"}</td></tr>`); }
+  const r=F.resources||{}, cvn=(r.convert||[]).map(x=>`${x.n} ${x.from==="dust"?"dust":"slivers"} → ${x.get} ${x.to==="sliver"?"slivers":"exalted core"}`).join(" · ");
+  return `<section class="card forge ip-wide"><div class="fz-h"><h3>Exaltation Forge <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· classe ${cl} · até tier ${mx}</span></h3>${B?`<p class="small" style="margin:0"><b>${esc(B.name)}</b> (${esc(B.label.toLowerCase())}): ${esc(B.desc)}</p>`:`<p class="small muted" style="margin:0">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`}</div>
+    <div class="tablewrap"><table class="fz-t"><thead><tr><th>Tier</th>${B?`<th>${esc(B.name)}</th>`:""}<th>Fusão (cada)</th>${cv?"<th>Convergência (cada)</th>":""}<th>Mínimo para fazer</th></tr></thead><tbody>${rows.join("")}</tbody></table></div>
+    <div class="fz-f small"><span><b>Fusão:</b> 2 itens iguais com o mesmo tier → +1 tier. ${F.fusion.chance}% de sucesso (${F.fusion.coreOpts&&F.fusion.coreOpts.chance?F.fusion.coreOpts.chance.to+"% com "+F.fusion.coreOpts.chance.cores+" exalted core":""}). Se falhar, um dos itens desce 1 tier (ou desaparece se for tier 0)${F.fusion.coreOpts&&F.fusion.coreOpts.protect?`; com mais ${F.fusion.coreOpts.protect.cores} exalted core o risco desce para ${F.fusion.coreOpts.protect.lossChance}%`:""}.</span>
+      ${cv?`<span><b>Convergência:</b> ${esc(F.convergence.diff||"")}</span>`:""}
+      <span class="fz-res"><b>Recursos:</b> ${esc(cvn)}. <span class="fz-pr" data-core="${r.ids?r.ids.core:""}" data-sliver="${r.ids?r.ids.sliver:""}"></span></span>
+      <span class="tiny muted">O Market não mostra preços separados por tier, por isso aqui está o custo de os fazer. "Mínimo" = todas as fusões com sucesso; com falhas custa mais. Dados: TibiaWiki (Equipment Upgrade), ${esc((F.sources||{}).date||"")}.</span></div></section>`;
+}
+function forgeFill(f,d,key,eq){
+  if(!d||!d.items) return; const w=C()&&C().world, row=id=>id!=null&&d.items[id], val=m=>m?(m[2]||m[4]||m[0]||0):0;
+  const ids=mktIds(key,eq), base=ids.map(i=>val(row(i))).find(v=>v>0)||0;
+  f.querySelectorAll(".fz-est").forEach(x=>{ if(!base) return; const tot=(+x.dataset.fi)*base+(+x.dataset.fg); x.textContent=`≈ ${kkk(tot)} gp com o item a ${kkk(base)} no Market de ${w}`; });
+  const pr=f.querySelector(".fz-pr"); if(pr){ const c=val(row(+pr.dataset.core)), s=val(row(+pr.dataset.sliver)); pr.textContent=[c?`exalted core ≈ ${gp(c)}`:"", s?`sliver ≈ ${gp(s)}`:""].filter(Boolean).join(" · ")+(c||s?` (Market de ${w})`:""); }
 }
 
 /* ---------- página de criatura ---------- */
+/* ---------- página de criatura: tudo no primeiro ecrã (números, dano que leva, ataques, loot), o resto em separadores ---------- */
+const CPEL = ["physical","fire","ice","earth","energy","holy","death","lifedrain","drown"];
+const CPTR = {fire:"fogo",energy:"energia",poison:"veneno",earth:"terra",ice:"gelo"};
+const cpTr = s => String(s||"").split(/,\s*/).map(x=>CPTR[x.trim().toLowerCase()]||x.trim()).filter(Boolean).join(", ");
+function cpAtkRow(a){ const [t,n,d,e,x]=a;
+  const ic = e ? `<span class="chip c-${e}">${esc(ELN[e]||e)}</span>` : `<span class="cp-ab">${t==="summon"?"invoca":t==="heal"?"cura":t==="haste"?"haste":t==="debuff"?"debuff":t==="buff"?"buff":"efeito"}</span>`;
+  const nm = t==="melee" ? "Corpo a corpo" : t==="summon" ? `${esc(n)}${d?` ×${esc(d)}`:""}` : esc(n||"");
+  const dm = t==="summon" ? "" : esc(d||"");
+  return `<li class="cp-a-${t}">${ic}<span class="cp-an">${t==="summon"&&n?mlink(n.toLowerCase(),nm):nm}${x&&t!=="debuff"&&t!=="buff"?` <span class="tiny muted">(${esc(x)})</span>`:""}</span><b class="cp-ad">${dm}${t==="debuff"&&x?` <span class="tiny muted">${esc(x)} s</span>`:""}</b></li>`; }
 async function renderMonPage(key){
   const el=$("monPage"); el.innerHTML=`<p class="tkload">A carregar a criatura…</p>`;
-  const [crs,items,sp]=await Promise.all([dsafe("creatures"),dsafe("items"),dsafe("spawns")]);
-  const cr=crs[key]||{}, g=G.mon[key], c=C(), vd=c?G.voc[c.voc]:null;
+  const [crs,items,sp,cinf,qs]=await Promise.all([dsafe("creatures"),dsafe("items"),dsafe("spawns"),dsafe("crinfo"),dsafe("quests")]);
+  const cr=crs[key]||{}, g=G.mon[key], ci=cinf[key]||{}, c=C(), vd=c?G.voc[c.voc]:null;
   if(!crs[key] && !g){ el.innerHTML=pageHead("Criatura","Criatura não encontrada","",null)+`<p class="muted">Não temos esta criatura na base.</p>`; return; }
   const name=cr.n||g[0], hp=cr.hp||(g?g[1]:0), xp=cr.xp||(g?g[2]:0), cls=cr.cls||monCls(key), boss=!!(cr.boss||(g&&g[7]));
-  const dmg=crDmg(key,cr), els=["physical","fire","ice","earth","energy","holy","death"];
-  const mine=new Set(vd?vd.els:[]), best=vd?vd.els.slice().sort((a,b)=>(dmg[b]??100)-(dmg[a]??100))[0]:null;
+  const dmg=crDmg(key,cr), mine=new Set(vd?vd.els:[]), best=vd?vd.els.slice().sort((a,b)=>(dmg[b]??100)-(dmg[a]??100))[0]:null;
   const imm=((g&&g[4])||[]).filter(x=>IMMN[x]);
-  const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"", boss?`<span class="tag gold">boss</span>`:"", cr.blvl?`<span class="tag">Bestiary: ${esc(cr.blvl)}</span>`:"", cr.kills?`<span class="tag">${nf(cr.kills)} kills para completar</span>`:"", cr.charm?`<span class="tag">${cr.charm} charm points</span>`:""].join("");
+  // cabeçalho
+  const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"",
+    boss?`<span class="tag gold">boss${ci.boss?` · ${esc(ci.boss)}`:""}</span>`:"", ci.blvl||cr.blvl?`<span class="tag">Bestiary: ${esc(ci.blvl||cr.blvl)}</span>`:"", ci.occ?`<span class="tag">${esc(ci.occ)}</span>`:"",
+    cr.kills?`<span class="tag">${nf(cr.kills)} kills</span>`:"", cr.charm?`<span class="tag">${cr.charm} charm points</span>`:"",
+    ci.sum?`<span class="tag">invocável · ${nf(ci.sum)} mana</span>`:"", ci.conv?`<span class="tag">convencível · ${nf(ci.conv)} mana</span>`:""].join("");
+  // números
+  const runN=parseInt(ci.run,10), run = ci.run!=null ? (!runN?"não foge":nf(runN)+" vida") : "—";
+  const stats=[[nf(hp),"vida"],[nf(xp),"XP"],[hp?(xp/hp).toFixed(2).replace(".",","):"—","XP por vida"],[cr.speed||"—","velocidade"],[cr.armor??"—","armadura"],[cr.mitig!=null?String(cr.mitig).replace(".",",")+"%":"—","mitigação"],[ci.maxdmg?nf(+ci.maxdmg):"—","dano máx./turno"],[run,"foge com"]];
+  // dano que leva, agrupado
+  const vals=CPEL.filter(e=>dmg[e]!=null||["physical","fire","ice","earth","energy","holy","death"].includes(e)).map(e=>[e,dmg[e]??100]);
+  const grp=(f)=>vals.filter(([e,v])=>f(v)).sort((a,b)=>b[1]-a[1]);
+  const gl=(t,l,cl)=>l.length?`<div class="cp-g ${cl}"><span>${t}</span>${l.map(([e,v])=>`<span class="chip c-${e}">${esc(ELN[e]||e)} ${v}%</span>`).join("")}</div>`:"";
+  const groups=gl("Fraco a",grp(v=>v>100),"g-weak")+gl("Neutro",grp(v=>v===100),"g-neu")+gl("Resiste",grp(v=>v>0&&v<100),"g-res")+gl("Imune",grp(v=>v===0),"g-imm")+gl("Cura-se com",grp(v=>v<0),"g-heal");
+  const bars=vals.filter(([e])=>e!=="drown").map(([e,v])=>`<li class="${mine.has(e)?"mine":""} ${e===best?"best":""}"><span class="chip c-${e}">${esc(ELN[e]||e)}</span><span class="bar"><i style="width:${Math.max(0,Math.min(100,v/1.4))}%"></i></span><b>${v}%</b>${e===best?'<span class="tag ok">usa este</span>':""}</li>`).join("");
+  const props=[ci.sinv?"vê invisível":"", ci.para===true?"imune a paralisia":ci.para===false?"pode ser paralisado":"", ci.push===false?"não se empurra":ci.push?"empurrável":"", ci.pobj?"empurra objetos":"", ci.ill===false?"não ilusionável":"", imm.filter(x=>!(x==="paralyze"&&ci.para!=null)).length?"imune a "+imm.filter(x=>!(x==="paralyze"&&ci.para!=null)).map(x=>IMMN[x]).join(", "):"", ci.thru?"atravessa "+cpTr(ci.thru):"", ci.walk?"evita "+cpTr(ci.walk):""].filter(Boolean);
+  // ataques
+  const ab=ci.ab||[], atk=ab.filter(a=>a[0]==="melee"||a[0]==="atk"), oth=ab.filter(a=>!(a[0]==="melee"||a[0]==="atk"));
+  const atkHTML = ab.length ? `<ul class="cp-atk">${atk.map(cpAtkRow).join("")}</ul>${oth.length?`<h4 class="sub">Outras habilidades</h4><ul class="cp-atk cp-oth">${oth.map(cpAtkRow).join("")}</ul>`:""}`
+    : `<p class="small muted" style="margin:0">Sem dados dos ataques desta criatura.</p>`;
+  // loot
   const loot=(cr.loot&&cr.loot.length?cr.loot.map(l=>({n:String(l[0]).toLowerCase(),rar:l[1],amt:l[2],pct:l[3]})):((g&&g[6])||[]).map(l=>({n:l[1],rar:null,amt:"",pct:l[2]})))
     .map(l=>{ const it=items[l.n]||{}, s=(it.sell||[]).reduce((m,x)=>Math.max(m,x[1]||0),0)||it.npc||0, mk=it.val?it.val[0]:0; return {...l, val:Math.max(s,mk), v:rarVal(l.rar,l.pct)}; })
     .sort((a,b)=>(b.v*Math.max(b.val,1))-(a.v*Math.max(a.val,1)));
+  const lrow=l=>`<div class="drow">${itemSpr(l.n)}<div style="min-width:0">${ilink(l.n,`<b>${esc(cap1(l.n))}</b>`)}<div class="tiny muted">${l.amt?esc(l.amt)+" · ":""}${l.val?gp(l.val):"sem valor de venda"}</div></div><span class="rar r-${slug(l.rar||"x")}">${l.pct!=null?pctTxt(l.pct):esc(rarTxt(l.rar))}</span></div>`;
+  const lootHTML = loot.length ? `<div class="dlist2">${loot.slice(0,10).map(lrow).join("")}</div>${loot.length>10?`<details class="cp-more"><summary>Ver todo o loot (${loot.length})</summary><div class="dlist2">${loot.slice(10).map(lrow).join("")}</div></details>`:""}`
+    : `<p class="small muted" style="margin:0">Sem loot conhecido.</p>`;
+  // separadores: onde aparece, quests
   const clsts=(sp[key]||[]).slice(0,8);
   const areas=clsts.map(([x,y,z,n,dots],i)=>{ const pid=nearHunt(x,y,z), lab=pid?G.places[pid].n:areaLabel([x,y,z]); return `<button type="button" class="spa" data-map="${x},${y},${z}" data-maplabel="${esc(name)} · ${esc(lab)}" data-dots="${dots.join(",")}"><canvas data-cl='${JSON.stringify([x,y,z,n,lab,pid,dots]).replace(/'/g,"&#39;")}' aria-hidden="true"></canvas><span class="inf">${i===0&&clsts.length>1?'<span class="rk">Mais spawns</span>':""}<b>${esc(lab)}</b><span>${n} criatura${n===1?"":"s"} · ${floorTxt(z)}</span><span class="tiny accent">Ver no mapa ›</span></span></button>`; }).join("");
   const hp_=huntsWith(key);
+  const where = `${hp_.length&&c?`<div class="hunts">${huntCardsFor(hp_,8)}</div>`:""}${areas?`<h4 class="sub">Zonas de spawn no mapa</h4><div class="spw">${areas}</div>`:""}${cr.loc?`<p class="small" style="margin:10px 0 0">${esc(cr.loc)}</p>`:""}` || `<p class="small muted">Sem zonas conhecidas.</p>`;
+  const nmL=String(name).toLowerCase(), qIn=Object.entries(qs).filter(([k,q])=>(q.boss||[]).concat(q.dangers||[]).some(x=>String(x).toLowerCase()===nmL)).map(([k,q])=>[k,(q.boss||[]).some(x=>String(x).toLowerCase()===nmL)]);
+  const qBtn=(nm)=>{ const gq=G.quests.find(x=>fold(x.n)===fold(nm)||fold((x.w||"").replace(/_/g," "))===fold(nm)||fold(x.n)===fold(String(nm).replace(/ Quest$/,""))); return gq?`<button type="button" class="btn small ghost" data-qopen2="${gq.id}">${esc(gq.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(nm.toLowerCase())}">${esc(nm.replace(/ Quest$/,""))}</button>`; };
+  const acc=[...new Set(hp_.map(pid=>{ const p=G.places[pid]; return p&&(p.q&&QBY[p.q]?QBY[p.q].n:p.qn)||null; }).filter(Boolean))];
+  const questHTML = (qIn.length?`<h4 class="sub" style="margin-top:0">Aparece nestas quests</h4><div class="pills">${qIn.map(([k,b])=>qBtn(k)+(b?' <span class="tag gold">boss</span>':"")).join("")}</div>`:"")
+    + (acc.length?`<h4 class="sub">Para lá chegar</h4><p class="small" style="margin:0 0 6px">Algumas zonas onde aparece pedem uma quest:</p><div class="pills">${acc.map(qBtn).join("")}</div>`:"")
+    || `<p class="small muted">Não faz parte de nenhuma quest conhecida e as zonas onde aparece não pedem quest.</p>`;
+  const tabs=[["onde","Onde aparece",where,hp_.length||0],["quests","Quests",questHTML,qIn.length+acc.length||0]];
+  if(ci.spawn||ci.att||ci.ptype) tabs.push(["info","Mais dados",`<dl class="dl">${ci.spawn?`<dt>Spawn</dt><dd>${esc(ci.spawn)}</dd>`:""}${ci.att?`<dt>Tipo de ataque</dt><dd>${esc(ci.att)}</dd>`:""}${ci.ptype?`<dt>Tipo</dt><dd>${esc(ci.ptype)}</dd>`:""}${ci.bclass?`<dt>Classe do Bestiary</dt><dd>${esc(ci.bclass)}</dd>`:""}${ci.heal?`<dt>Cura recebida</dt><dd>${esc(ci.heal)}</dd>`:""}</dl>`]);
   el.innerHTML = pageHead("Criatura", esc(name), crSpr(key,72), tags) + `
-    <div class="sh-n ip-n"><div><b>${nf(hp)}</b><span>vida</span></div><div><b>${nf(xp)}</b><span>XP</span></div><div><b>${hp?(xp/hp).toFixed(2).replace(".",","):"—"}</b><span>XP por vida</span></div><div><b>${cr.speed||"—"}</b><span>velocidade</span></div></div>
-    <div class="ip-grid">
-      <section class="card"><h3>Dano que leva</h3><ul class="elbars">${els.map(e=>{ const v=dmg[e]??100; return `<li class="${mine.has(e)?"mine":""} ${e===best?"best":""}"><span class="chip c-${e}">${ELN[e]}</span><span class="bar"><i style="width:${Math.min(100,v/1.4)}%"></i></span><b>${v}%</b>${e===best?'<span class="tag ok">usa este</span>':""}</li>`; }).join("")}</ul>${imm.length?`<p class="small muted" style="margin:8px 0 0">Imune a ${imm.map(x=>IMMN[x]).join(" e ")}.</p>`:""}${vd?`<p class="tiny muted" style="margin:6px 0 0">Realçados: os elementos de ${esc(vd.n)}.</p>`:""}</section>
-      <section class="card"><h3>Loot</h3>${loot.length?`<div class="dlist2">${loot.slice(0,30).map(l=>`<div class="drow">${itemSpr(l.n)}<div style="min-width:0">${ilink(l.n,`<b>${esc(cap1(l.n))}</b>`)}<div class="tiny muted">${l.amt?esc(l.amt)+" · ":""}${l.val?gp(l.val):"sem valor de venda"}</div></div><span class="rar r-${slug(l.rar||"x")}">${l.pct!=null?pctTxt(l.pct):esc(rarTxt(l.rar))}</span></div>`).join("")}</div>`:`<p class="small muted">Sem loot conhecido.</p>`}</section>
-      ${adSlot("criatura","728 × 90 · 320 × 100","ip-wide")}
-      ${hp_.length&&c?`<section class="ip-wide"><h3>Hunts com esta criatura <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· ${esc(G.voc[c.voc].n)} ${c.level}</span></h3><div class="hunts">${huntCardsFor(hp_,8)}</div></section>`:""}
-      ${areas?`<section class="card ip-wide"><h3>Zonas de spawn no mapa</h3><div class="spw">${areas}</div><p class="tiny muted" style="margin:8px 0 0">Posições aproximadas, a partir do mapa Canary.</p></section>`:""}
-      ${cr.loc?`<section class="card ip-wide"><h3>Onde aparece</h3><p class="small" style="margin:0">${esc(cr.loc)}</p></section>`:""}
-    </div>`;
+    <div class="sh-n ip-n cp-stats">${stats.map(([b,s])=>`<div><b>${b}</b><span>${s}</span></div>`).join("")}</div>
+    <div class="cp-grid">
+      <section class="card cp-dmg"><h3>Dano que leva</h3>${groups}${best&&vd?`<p class="cp-best small">Melhor dos teus elementos (${esc(vd.n)}): <span class="chip c-${best}">${esc(ELN[best])} ${dmg[best]??100}%</span></p>`:""}${props.length?`<p class="tiny muted cp-props">${props.map(esc).join(" · ")}</p>`:""}</section>
+      <section class="card cp-atks"><h3>Ataques${ci.maxdmg?` <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· até ${nf(+ci.maxdmg)} por turno</span>`:""}</h3>${atkHTML}</section>
+      <section class="card cp-loot"><h3>Loot <span class="tiny muted" style="font-family:var(--sans);font-weight:400">· ${loot.length} itens</span></h3>${lootHTML}</section>
+    </div>
+    <div class="cp-more-sec">${tabsUI(tabs)}</div>
+    ${adSlot("criatura","728 × 90 · 320 × 100","ip-wide")}`;
   el.querySelectorAll("canvas[data-cl]").forEach(cv=>drawSpawn(cv,JSON.parse(cv.dataset.cl)));
   mdPage(el);
 }
