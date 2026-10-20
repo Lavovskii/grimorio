@@ -1088,6 +1088,9 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .ach-ic svg{width:34px;height:34px;fill:none;stroke:var(--gold,#E0B44C);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ach-q{margin:0 0 14px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--sunk);border-radius:0 10px 10px 0;font-style:italic}
 
+/* party: intervalo de níveis com XP partilhada */
+.pm-rng{margin:0 0 4px;flex-basis:100%}
+.pmadd .pm-out{opacity:.6}
 /* ======================= "look" do item ======================= */
 .look{position:fixed;left:0;top:0;z-index:90;width:310px;max-width:calc(100vw - 16px);padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.35);font-size:13px;line-height:1.4;pointer-events:none;display:grid;gap:8px;color:var(--ink)}
 .look[hidden]{display:none}
@@ -43708,6 +43711,7 @@ const nVocs = ms => new Set(ms.map(m=>m.voc)).size;
 const shareBonus = ms => ms.length<2 ? 0 : [0,0.20,0.35,0.70,1.00][Math.min(4,nVocs(ms))];
 const shareMin = ms => Math.ceil(Math.max(...ms.map(m=>m.level))*2/3);
 const canShare = ms => Math.min(...ms.map(m=>m.level)) >= shareMin(ms);
+const shareMax = ms => Math.floor(Math.min(...ms.map(m=>m.level))*3/2);
 const charOf = id => ST.chars.find(x=>x.id===id);
 function groupRows(ms){
   const maps = ms.map(m=>{ const o={}; huntRows(m.voc, m.level+5, m.level).forEach(h=>{ if(h.r.c && !o[h.r.c]) o[h.r.c]=h; }); return o; });
@@ -43881,12 +43885,15 @@ function partyHTML(ms){
     ? `<span class="pmc">${VI(m.voc)}<span><b>${esc(m.name)}</b> <span class="tiny muted">${G.voc[m.voc].n} ${m.level}</span></span><button type="button" data-pmdel="${m.id}" aria-label="Tirar ${esc(m.name)}">✕</button></span>`
     : `<span class="pmc">${VI(m.voc)}<select data-pmvoc="${m.id}" aria-label="Vocação">${VOCS.map(v=>`<option value="${v}" ${v===m.voc?"selected":""}>${G.voc[v].n}</option>`).join("")}</select><label class="tiny muted">nível <input type="number" inputmode="numeric" min="8" max="3000" data-pmlvl="${m.id}" value="${m.level}"></label><button type="button" data-pmdel="${m.id}" aria-label="Tirar">✕</button></span>`;
   const others=ST.chars.filter(x=>x.id!==c.id && !party.some(p=>p.cid===x.id));
+  const lo=shareMin(ms), hi=shareMax(ms), okR=lo<=hi, rng=okR?`do nível <b>${lo}</b> ao <b>${hi}</b>`:"";
+  const outR=l=>okR&&(l<lo||l>hi);
   const add = party.length>=4 ? "" : ST.ui.pmOpen
-    ? `<div class="pmadd"><span class="small muted">Junta uma vocação:</span>${VOCS.map(v=>`<button type="button" class="btn small ghost" data-pmaddv="${v}">${VI(v)}${G.voc[v].n}</button>`).join("")}${others.length?`<span class="small muted">ou uma personagem tua:</span>${others.map(x=>`<button type="button" class="btn small ghost" data-pmaddc="${x.id}">${VI(x.voc)}${esc(x.name||G.voc[x.voc].n)} · ${x.level}</button>`).join("")}`:""}<button type="button" class="linkbtn" data-pmclose="1">Cancelar</button></div>`
+    ? `<div class="pmadd">${okR?`<p class="pm-rng small">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:""}<span class="small muted">Junta uma vocação:</span>${VOCS.map(v=>`<button type="button" class="btn small ghost" data-pmaddv="${v}">${VI(v)}${G.voc[v].n}</button>`).join("")}${others.length?`<span class="small muted">ou uma personagem tua:</span>${others.map(x=>`<button type="button" class="btn small ghost${outR(x.level)?" pm-out":""}" data-pmaddc="${x.id}"${outR(x.level)?` title="Fora do intervalo: não partilha XP"`:""}>${VI(x.voc)}${esc(x.name||G.voc[x.voc].n)} · ${x.level}${outR(x.level)?' <span class="tiny warnt">fora</span>':""}</button>`).join("")}`:""}<button type="button" class="linkbtn" data-pmclose="1">Cancelar</button></div>`
     : `<button type="button" class="btn small ghost" data-pmopen="1">+ Juntar alguém</button>`;
-  const info = ms.length<2 ? "Sozinho. Junta outra vocação para ver as hunts onde podem ir juntos."
-    : canShare(ms) ? `Partilha de XP: <b>+${Math.round(shareBonus(ms)*100)}%</b> (${nVocs(ms)===1?"mesma vocação":nVocs(ms)+" vocações"}). Só aparecem hunts onde ${ms.length===2?"os dois podem":"todos podem"} ir.`
+  const info = ms.length<2 ? `Sozinho. Podes fazer party com XP partilhada ${rng}. Junta outra vocação para ver as hunts onde podem ir juntos.`
+    : canShare(ms) ? `Partilha de XP: <b>+${Math.round(shareBonus(ms)*100)}%</b> (${nVocs(ms)===1?"mesma vocação":nVocs(ms)+" vocações"}). Só aparecem hunts onde ${ms.length===2?"os dois podem":"todos podem"} ir.${ms.length<5&&okR?` Quem se juntar tem de ter ${rng}.`:""}`
     : `<span class="warnt">Não dá para partilhar XP: o nível mais baixo tem de ser pelo menos ${shareMin(ms)} (2/3 do mais alto).</span>`;
+  /* intervalo de níveis da party */
   return `<div class="hf-row"><span class="hf-l">Quem vai</span><div class="party"><div class="pmlist">${ms.map(chip).join("")}${add}</div><p class="tiny muted" style="margin:0">${info}</p></div></div>`;
 }
 function renderHuntFilters(rows,allRows,f,ms){
