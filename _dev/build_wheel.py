@@ -65,6 +65,12 @@ S = [
     ('PURPLE_BOTTOM_100', 'purple', 100, 'cap', 'vr'), ('PURPLE_BOTTOM_150', 'purple', 150, 'mp', 'lleech'), ('PURPLE_200', 'purple', 200, 'hpmp', 'inst:P200'),
 ]
 assert len(S) == 36
+# pré-requisitos de cada fatia (player_wheel.cpp, canPlayerSelectPointOnSlot): só se põem pontos numa fatia com uma destas cheia;
+# as de 50 (centro) não pedem nenhuma. Mostra a geometria real: o anel de fora (200) só toca nas duas de 150 do domínio.
+ADJ = [[1, 6], [2, 6, 7], [3, 7, 8], [2, 4, 9, 10], [3, 10, 11], [4, 11], [1, 7, 12], [2, 8, 12, 13], [2, 7, 9, 13, 14], [3, 8, 10, 15, 16],
+       [3, 9, 16, 17], [4, 10, 17], [6, 7, 13, 18], [7, 8, 12, 14, 19], [], [], [9, 10, 15, 17, 22], [10, 11, 16, 23], [12, 19, 24, 25],
+       [13, 18, 20, 25, 26], [], [], [16, 21, 23, 27, 28], [17, 22, 28, 29], [18, 25, 31], [18, 19, 26, 32], [19, 20, 25, 27, 32],
+       [21, 22, 26, 28, 33], [22, 23, 27, 33], [23, 28, 34], [24, 31], [24, 25, 32], [25, 26, 31, 33], [27, 28, 32, 34], [28, 29, 33], [29, 34]]
 
 
 def decode(code):
@@ -134,6 +140,10 @@ def main():
             if ek != gk: msg.append(f'conv só no TibiaPal {sorted(ek - gk)} só previsto {sorted(gk - ek)}')
             exp_rev = {k: int(str(v).replace('Stage ', '')) for k, v in w['rev'] if k != 'Damage and Healing'}
             if exp_rev != {k: v for k, v in rev.items()}: msg.append(f'rev {exp_rev} vs {rev}')
+            # cada fatia com pontos tem de estar ligada ao centro por fatias cheias
+            full = {i for i in range(36) if pts[i] >= S[i][2]}
+            for i in range(36):
+                if pts[i] and ADJ[i] and not any(j in full for j in ADJ[i]): msg.append(f'fatia {S[i][0]} sem vizinha cheia')
             if msg:
                 bad += 1; print(voc, w['p'], ' | '.join(msg))
     print('builds com diferenças:', bad)
@@ -190,13 +200,14 @@ REV_PT = {
 def write_json():
     out = {'v': 1, 'src': 'Canary (io_wheel.cpp) + TibiaWiki (Wheel of Destiny, outubro de 2026), validado com as builds do TibiaPal',
            'mit': MIT, 'revdh': REVDH, 'stage': [250, 500, 1000],
-           'slots': [[d, mx, ded, cv] for (nm, d, mx, ded, cv) in S],
+           'slots': [[d, mx, ded, cv] for (nm, d, mx, ded, cv) in S], 'adj': ADJ,
            'voc': {v: {'hp': HP[v], 'mp': MP[v], 'cap': CAP[v], 'skill': SKILL[v], 'sp': SPELLS[v],
                        'inst': {k: INST[k][v] for k in INST}, 'rev': {d: REV[d][v] for d in DOMS}} for v in VOCS},
            'aug': AUG_PT, 'perk': PERK_PT, 'revd': REV_PT}
     # pontos de cada fatia de cada build (pelo código), para o site não ter de descomprimir os códigos
     G = [x for x in gjson.load_G(ROOT) if isinstance(x, dict)][0]
     out['b'] = {w['c']: decode(w['c'])[0] for v in VOCS for w in G['wheel'][v]}
+    out['g'] = {w['c']: decode(w['c'])[1] for v in VOCS for w in G['wheel'][v] if decode(w['c'])[1] != [255] * 12}  # gemas (só as builds que as têm)
     for v in VOCS:
         for n in SPELLS[v].values(): assert n in AUG_PT, n
         for k in INST: assert INST[k][v] in PERK_PT, INST[k][v]
