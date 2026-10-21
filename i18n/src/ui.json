@@ -572,7 +572,7 @@
   "k": "p"
  },
  "Abrir": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Abrir guia →": {
@@ -807,6 +807,10 @@
   "c": "quests/js/app.js: v></div></div></section>` : \"\"} ${quests.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"scroll\")}Aparece nos guias (${quests.length})</h2><div class=\"box-body\"><ul class=\"list-clean\"> ${quests.map((q) => ",
   "k": "p"
  },
+ "Aplicar na roda": {
+  "c": "index.html: ugestão de onde os meter */ const sl=sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-o",
+  "k": "x"
+ },
  "Aplicar recomendados": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -988,7 +992,7 @@
   "k": "p"
  },
  "Atualizar": {
-  "c": "index.html: \" prem\":\"\"}\">${tmi(\"p\")}${premium(t.status)}</span>${state||`<span class=\"tm-u\">${tmi(\"u\")}Atualizado ${ago(c.syncedAt)}</span><button class=\"btn small ghost tm-sync\" data-sync=\"${c.id}\">${tmi(\"s\")}Atualizar</button>`}${",
+  "c": "index.html: s onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><div class=\"wpts-row\"><input id=\"",
   "k": "x"
  },
  "Atualizar agora": {
@@ -1032,7 +1036,7 @@
   "k": "x"
  },
  "Available Promotion Points{0}": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Aves": {
@@ -1172,7 +1176,7 @@
   "k": "x"
  },
  "Build editada por ti": {
-  "c": "index.html: izada\":w.t); const eb=E.t?\"Do código que colaste\":E.dirty?\"Build editada por ti\":w===cur?\"A tua buil",
+  "c": "index.html: ree) : null; const eb=E.t?\"Do código que colaste\":E.dirty?\"Build editada por ti\":w===cur?\"A tua buil",
   "k": "x"
  },
  "Build escolhida": {
@@ -1188,7 +1192,7 @@
   "k": "x"
  },
  "Build personalizada": {
-  "c": "index.html: used=whUsed(E.pts), free=E.budget-used, title=E.t||(E.dirty?\"Build personalizada\":w.t); const eb=E.",
+  "c": "index.html: used=whUsed(E.pts), free=E.budget-used, title=E.t||(E.dirty?\"Build personalizada\":w.t); // as build",
   "k": "x"
  },
  "Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.": {
@@ -1400,7 +1404,7 @@
   "k": "x"
  },
  "Cola o código do jogo (ex.: {0}0Y2Bg…)": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Coleções": {
@@ -1784,7 +1788,7 @@
   "k": "x"
  },
  "Current Preset: {0}": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Custo": {
@@ -1804,7 +1808,7 @@
   "k": "x"
  },
  "Código da Wheel": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Dados de 7 de outubro de 2026; stats dos itens confirmados na TibiaWiki a 17 de outubro de 2026. O rebalanceamento de vocações (15.25, 16 jun) e os ajustes de 7 jul e 1 set mudaram muitos números: confirma sempre antes de gastar dinheiro.": {
@@ -2052,11 +2056,11 @@
   "k": "x"
  },
  "Distribuir pontos": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Do código que colaste": {
-  "c": "index.html: le=E.t||(E.dirty?\"Build personalizada\":w.t); const eb=E.t?\"Do código que colaste\":E.dirty?\"Build edit",
+  "c": "index.html: filter(x=>!same.includes(x))), free) : null; const eb=E.t?\"Do código que colaste\":E.dirty?\"Build edit",
   "k": "x"
  },
  "Do mais barato para o mais caro. O selo {0} marca os das listas de cima; os outros servem em hunts certas (a ficha de cada hunt diz qual usar em cada criatura).": {
@@ -3088,7 +3092,7 @@
   "k": "x"
  },
  "Importar código": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Imune a": {
@@ -3116,7 +3120,7 @@
   "k": "x"
  },
  "Information": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Inkborn": {
@@ -3269,6 +3273,10 @@
  },
  "Já está na tua lista.": {
   "c": "index.html: in ${ago(ch.last_login)}`:\"\"}</div></div></div> ${dup?`<div class=\"controls\"><span class=\"small muted\">Já está na tua lista.</span><button class=\"btn\" type=\"button\" data-lkopen=\"${dup.id}\">Abrir</button></div>` : v?`<div",
+  "k": "x"
+ },
+ "Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos».": {
+  "c": "index.html: .</b> ${E.t?\"Mete-os onde quiseres em «Distribuir pontos».\":\"Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return ",
   "k": "x"
  },
  "Já fizeste os guias que sugerimos para o teu nível.": {
@@ -3783,6 +3791,10 @@
   "c": "index.html: pport Runes\":\"Runa de apoio\",\"Healing Runes\":\"Runa de cura\",\"Metals\":\"Metal\",\"Rocks\":\"Pe",
   "k": "x"
  },
+ "Mete-os onde quiseres em «Distribuir pontos».": {
+  "c": "index.html: {free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> ${E.t?\"Mete-os onde quiseres em «Distribuir pontos».\":\"Já estás na build ",
+  "k": "x"
+ },
  "Minors (echoes)": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -3816,7 +3828,7 @@
   "k": "x"
  },
  "Modo": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Moedas: ≈ {0} por kill, já contadas no loot por hora.": {
@@ -4412,7 +4424,7 @@
   "k": "p"
  },
  "Nível {0} − 50 = {1}{2}. Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.": {
-  "c": "index.html: PtsHTML(c){ const base=wpts(c.level), tot=wpOf(c); return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><input id=\"whBudget\" type=\"number",
+  "c": "index.html: s onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><div class=\"wpts-row\"><input id=\"",
   "k": "p"
  },
  "Nível {0}{1}:": {
@@ -5376,7 +5388,7 @@
   "k": "x"
  },
  "Quantos wheel points tens?": {
-  "c": "index.html: PtsHTML(c){ const base=wpts(c.level), tot=wpOf(c); return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><input id=\"whBudget\" type=\"number",
+  "c": "index.html: s onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><div class=\"wpts-row\"><input id=\"",
   "k": "x"
  },
  "Quara Scale": {
@@ -5624,7 +5636,7 @@
   "k": "x"
  },
  "Repor": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Repor o do BiS": {
@@ -5816,7 +5828,7 @@
   "k": "x"
  },
  "Selection": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Sem \"{0}\" no bestiário.": {
@@ -6115,6 +6127,10 @@
   "c": "index.html: >${z===7?\"Zona à superfície\":z>7?`Desce ao subsolo −${z-7}`:`Sobe ao andar +${7-z}`}</li></ol>`; } /* r",
   "k": "p"
  },
+ "Sobram {0}: podes pô-los onde quiseres.": {
+  "c": "index.html: ug-n\">+${n}</b></li>`; }).join(\"\")}</ul> ${sug.left>0?`<p class=\"wsub\">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:\"\"}<button type=\"bu",
+  "k": "p"
+ },
  "Solo ED \"Forked Glacier\" build": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -6213,6 +6229,10 @@
  },
  "Sugerir o melhor do jogo": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
+  "k": "x"
+ },
+ "Sugestão aplicada: copia o código no fundo da janela.": {
+  "c": "index.html: sug.pts; WED.dirty=true; WHSELI=null; renderWheelX(); whMsg(\"Sugestão aplicada: copia o código no fundo da janela.\"); } }); document.ad",
   "k": "x"
  },
  "Sugestões para o nível {0}{1}": {
@@ -6876,7 +6896,7 @@
   "k": "p"
  },
  "Ver perks": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c)} <section class=\"wbox wbo",
+  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Ver quests para mim": {
@@ -7052,11 +7072,11 @@
   "k": "p"
  },
  "Wheel of Destiny: {0}, {1} pontos": {
-  "c": "index.html: x-w\">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div> <asi",
+  "c": "index.html: pts,{edit:E.edit,budget:E.budget,sug:E.sug&&E.sug.map,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div> <asi",
   "k": "p"
  },
  "Wheel points": {
-  "c": "index.html: PtsHTML(c){ const base=wpts(c.level), tot=wpOf(c); return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><input id=\"whBudget\" type=\"number",
+  "c": "index.html: s onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><div class=\"wpts-row\"><input id=\"",
   "k": "x"
  },
  "Wheel, gemas e charms": {
@@ -9108,7 +9128,7 @@
   "k": "x"
  },
  "lock": {
-  "c": "index.html: p&&!av; sh.push(`<g class=\"ws ${st}${av?\" av\":\"\"}${lock?\" lock\":\"\"}\" data-ws=\"${i}\"",
+  "c": "index.html: sug[i]; sh.push(`<g class=\"ws ${st}${av?\" av\":\"\"}${lock?\" lock\":\"\"}${sg?\" sug\":\"\"}\"",
   "k": "x"
  },
  "locked": {
@@ -9911,6 +9931,10 @@
   "c": "index.html: de||1)}</span>`, `<span class=\"tag\">${a.pts||0} ${a.pts===1?\"ponto\":\"pontos\"}</span>`, ",
   "k": "x"
  },
+ "ponto livre": {
+  "c": "index.html: <div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</",
+  "k": "x"
+ },
  "pontos": {
   "c": "index.html: /span>`, `<span class=\"tag\">${a.pts||0} ${a.pts===1?\"ponto\":\"pontos\"}</span>`, a.secret?",
   "k": "x"
@@ -9921,6 +9945,10 @@
  },
  "pontos de promoção": {
   "c": "index.html: p(), nx=ws.find(w=>w.p>pts); $(\"wheelLead\").textContent = `${pts} pontos de promoção`; /* r6-t5 */ // c",
+  "k": "x"
+ },
+ "pontos livres": {
+  "c": "index.html: ug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançare",
   "k": "x"
  },
  "pontos marcados": {
@@ -11431,6 +11459,10 @@
   "c": "recolhida: /grimorio/#imbu · ex.: {0} Midnight Tunic, Mystical Dragon Robe, Demonfang Mask, Falcon Circlet e mais 4",
   "k": "p"
  },
+ "{0} Para avançares para {1} ({2} pontos), mete-os aqui:": {
+  "c": "index.html: ugestão de onde os meter */ const sl=sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-o",
+  "k": "p"
+ },
  "{0} Página de {1} na wiki": {
   "c": "quests/js/app.js: ss=\"travel-body\">${travelBody(p, { maxCoords: 3 })}${href ? `<p><a href=\"${href}\">${icon(\"book\")} Página de ${esc(p.title)} na wiki</a></p>` : \"\"}</div></detail",
   "k": "p"
@@ -11703,12 +11735,20 @@
   "c": "index.html: &&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class=\"tag acc\">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:\"\"}<button class=\"b",
   "k": "p"
  },
+ "{0} ponto livre.": {
+  "c": "index.html: whPtsHTML — <b>${free} pontos livres.</b> (caixa Wheel points)",
+  "k": "p"
+ },
  "{0} pontos": {
   "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As",
   "k": "p"
  },
  "{0} pontos de promoção": {
   "c": "index.html: p(), nx=ws.find(w=>w.p>pts); $(\"wheelLead\").textContent = `${pts} pontos de promoção`; /* r6-t5 */ // c",
+  "k": "p"
+ },
+ "{0} pontos livres.": {
+  "c": "index.html: whPtsHTML — <b>${free} pontos livres.</b> (caixa Wheel points)",
   "k": "p"
  },
  "{0} pontos marcados": {
