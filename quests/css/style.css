@@ -197,6 +197,21 @@ kbd { font-family: var(--font-mono); }
 .view { flex: 1; padding: 22px clamp(14px, 3vw, 36px) 40px; max-width: 1280px; width: 100%; margin: 0 auto; }
 .footer { padding: 18px 24px 28px; text-align: center; font-size: 14px; color: var(--muted); }
 .scrim { display: none; }
+/* interruptor do visual Original / Modern no rodapé (o mesmo do Grimório; o Modern está em css/modern.css) */
+.ui-mode {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 12px; margin: 2px 0;
+  font-family: var(--font-head); font-weight: 700; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+}
+.ui-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--border-soft); background: var(--input-bg); }
+.ui-seg button {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 4px 16px;
+  border: 0; border-radius: 999px; background: transparent; color: var(--text-soft); cursor: pointer;
+  font-family: var(--font-body); font-size: 14.5px; font-weight: 700; letter-spacing: .01em; text-transform: none;
+  transition: background .2s, color .2s;
+}
+.ui-seg button:hover { color: var(--text); background: var(--hover); }
+.ui-seg button[aria-pressed="true"] { color: var(--caption-text); background: linear-gradient(180deg, var(--caption-1), var(--caption-2)); box-shadow: inset 0 0 0 1px var(--gold); }
+.ui-seg svg { width: 16px; height: 16px; flex: none; }
 
 /* =================== GENERIC BOX (tibia.com-ish) =================== */
 .box {
@@ -1013,6 +1028,58 @@ kbd { font-family: var(--font-mono); }
   .progress-row { grid-template-columns: 90px 1fr 56px; }
   .lightbox { padding: 20px 10px; }
   .lb-nav { display: none; }
+}
+/* topo: tem de caber em qualquer largura sem a página sair para o lado (a 375 px e a 320 px no telemóvel,
+   e entre 921 e 1400 px, onde o menu principal e o interruptor de sites disputam o espaço).
+   A pesquisa encolhe; até 480 px (e entre 921 e 1100 px) vira um botão redondo que, ao tocar, abre uma barra por cima do topo. */
+@media (min-width: 921px) and (max-width: 1400px) {
+  .search { min-width: 0; }
+}
+@media (min-width: 921px) and (max-width: 1280px) {
+  .brand-text { display: none; }
+}
+@media (min-width: 921px) and (max-width: 1100px) {
+  .topbar { gap: 12px; }
+  .topbar .sitesw a { padding: 4px 9px; }
+  .topbar .sitesw a span { display: none; }
+}
+@media (max-width: 600px) {
+  /* grelhas com mínimo fixo: nunca mais largas do que o ecrã (ex.: "Como usar" a 320 px) */
+  .split { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+  .acc-grid { grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
+  .drop-list { grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); }
+  .wiki-side-grid { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+  .prep, .travel-cols { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
+  /* nomes compridos de itens/NPCs no texto podem partir de linha (ex.: "Gingerbread Key (Moon Melon, …)" nos Acessos) */
+  .ent { white-space: normal; max-width: 100%; }
+  .list-clean li > * { min-width: 0; }
+  .topbar { gap: 6px; padding: 0 8px; }
+  .brand { min-width: 0; }
+  .brand-logo { height: 42px; }
+  .icon-btn { width: 36px; height: 36px; }
+  .search { min-width: 0; padding-left: 32px; }
+  .search-ico { left: 10px; }
+}
+@media (max-width: 480px), (min-width: 921px) and (max-width: 1100px) {
+  .search { flex: none; width: 38px; height: 38px; padding: 0; justify-content: center; border-radius: 50%; cursor: pointer; }
+  .search-ico { position: static; }
+  .search kbd { display: none; }
+  .search input { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; opacity: 0; cursor: pointer; font-size: 16px; }
+  .search:focus-within {
+    position: absolute; z-index: 5; left: auto; right: 8px; top: 50%; width: min(420px, calc(100% - 16px)); height: 42px; margin: -21px 0 0;
+    padding: 0 12px 0 38px; justify-content: flex-start; border-radius: 999px; background: var(--chrome-1);
+  }
+  .search:focus-within .search-ico { position: absolute; left: 13px; }
+  .search:focus-within input { position: static; width: auto; height: auto; opacity: 1; cursor: text; }
+  /* pesquisa fechada mas com texto escrito: um ponto avisa que a lista está filtrada */
+  .search:has(input:not(:placeholder-shown))::after {
+    content: ""; position: absolute; top: 2px; right: 2px; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--chrome-gold-2); box-shadow: 0 0 0 2px var(--chrome-1);
+  }
+  .search:focus-within::after { display: none; }
+}
+@media (max-width: 480px) {
+  .search { width: 36px; height: 36px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
