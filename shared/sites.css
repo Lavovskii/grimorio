@@ -25,6 +25,32 @@
 .sitesw svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 700px) { .sitesw a { padding: 4px 9px; } .sitesw a span { display: none; } }
 
+/* escolher a língua (rodapé dos dois sites; o shared/i18n.js põe-no em [data-lang-picker]) */
+.lang-pick {
+  position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  padding: 0 14px 0 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  font-size: 14px; font-weight: 600; transition: border-color .2s, box-shadow .2s;
+}
+.lang-pick svg { width: 18px; height: 18px; flex: none; }
+.lang-pick .lang-lab { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+.lang-pick select {
+  appearance: none; -webkit-appearance: none; border: 0; background: transparent; color: inherit;
+  font: inherit; padding: 8px 18px 8px 0; cursor: pointer; max-width: 210px;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 6px top 50%, right 1px top 50%; background-size: 5px 5px; background-repeat: no-repeat;
+}
+.lang-pick select:focus-visible { outline: none; }
+.lang-pick:focus-within { outline: 2px solid var(--sw-acc, #C8973A); outline-offset: 2px; }
+.lang-pick option { color: #111; background: #fff; }
+html[data-ui="modern"] .lang-pick { background: rgba(7,6,22,.7); border-color: rgba(167,139,250,.35); color: #E9E5FF; }
+html[data-ui="modern"] .lang-pick:hover { border-color: rgba(125,232,255,.6); box-shadow: 0 0 18px rgba(139,92,246,.45); }
+html[data-ui="modern"] .lang-pick svg { color: #7DE8FF; filter: drop-shadow(0 0 6px rgba(34,211,238,.6)); }
+html[data-ui="modern"] .lang-pick:focus-within { outline-color: #7DE8FF; }
+html[data-ui="modern"] .lang-pick option { color: #E9E5FF; background: #141029; }
+@media (max-width: 420px) { .lang-pick .lang-lab { display: none; } }
+
 html[data-ui="modern"] .sitesw { background: rgba(7,6,22,.55); border-color: rgba(167,139,250,.32); color: #E9E5FF; }
 html[data-ui="modern"] .sitesw a[aria-current="page"] { background: linear-gradient(135deg,#8B5CF6,#EC4899); color: #fff; box-shadow: 0 0 14px rgba(139,92,246,.55); }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }

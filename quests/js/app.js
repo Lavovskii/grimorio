@@ -1,6 +1,7 @@
 /* Tibia Questski — single page app (vanilla JS, hash routing). */
 (() => {
   "use strict";
+  const LOC = (window.I18N && I18N.locale) || "pt-PT"; // a língua do rodapé (shared/i18n.js): números e datas
 
   // ---------------------------------------------------------------- constants
   const MAP = { x0: 31744, y0: 30976, w: 2560, h: 2048 };
@@ -262,7 +263,9 @@
   async function getJSON(url) {
     const r = await fetch(url, { cache: "no-cache" });
     if (!r.ok) throw new Error(url + " " + r.status);
-    return r.json();
+    const d = await r.json();
+    // noutras línguas, os textos dos guias e dos locais vêm da tradução (i18n/en/q/…, ver shared/i18n.js)
+    return window.I18N ? I18N.overlay(url, d) : d;
   }
   async function loadQuest(slug) {
     if (!S.details[slug]) S.details[slug] = getJSON(`data/quests/${slug}.json`);
@@ -676,7 +679,7 @@
 
       <div class="stats">
         <div class="stat"><b>${total}</b><span>quests</span></div>
-        <div class="stat"><b>${steps.toLocaleString("pt-PT")}</b><span>passos guiados</span></div>
+        <div class="stat"><b>${steps.toLocaleString(LOC)}</b><span>passos guiados</span></div>
         <div class="stat"><b>${free}</b><span>free account</span></div>
         <div class="stat"><b>${total - free}</b><span>premium / outras</span></div>
         <div class="stat"><b>${done}</b><span>concluídas por ti</span></div>
@@ -1015,7 +1018,7 @@
               ${d.aka && d.aka.length ? `<div class="aka">Também conhecida como: ${d.aka.map(esc).join(", ")}</div>` : ""}
               ${d.summary ? `<p class="summary">${rich(d.summary)}</p>` : ""}
               ${(d.unlocks || []).length ? `<div class="unlock-strip">${icon("key")}<b>Dá acesso a:</b> ${d.unlocks.map((u) => `<a class="unlock-chip" href="${u.place && wikiHref(u.place) ? wikiHref(u.place) : `#/acessos/${encodeURIComponent(plainText(u.what))}`}" title="${esc(plainText(u.when || ""))}">${rich(u.what)}</a>`).join("")}<a class="unlock-more" href="#/quest/${d.slug}/recompensas">detalhes →</a></div>` : ""}
-              ${d.legend ? `<blockquote class="legend">“${esc(d.legend)}”${d.legend_pt ? `<span class="pt">${rich(d.legend_pt)}</span>` : ""}</blockquote>` : ""}
+              ${d.legend ? `<blockquote class="legend">“${esc(d.legend)}”${d.legend_pt && !(window.I18N && !/^pt/.test(I18N.lang)) ? `<span class="pt">${rich(d.legend_pt)}</span>` : ""}</blockquote>` : ""}
               <div class="hero-actions">
                 <button class="btn ${isDone(slug) ? "btn-ok" : ""}" id="toggleDone">${icon("check")}${isDone(slug) ? "Concluída!" : "Marcar como concluída"}</button>
                 ${d.start ? `<button class="btn btn-ghost" data-coord="${d.start.x},${d.start.y},${d.start.z}" data-label="${esc(plainText(d.start.label || "Início"))}">${icon("flag")}Onde começa</button>` : ""}
@@ -1165,7 +1168,7 @@
     const counts = {};
     S.wiki.pages.forEach((p) => (counts[p.k] = (counts[p.k] || 0) + 1));
     view().innerHTML = `
-      <div class="toolbar"><h1>Wiki do Questski <span class="muted" style="font-size:18px">(${S.wiki.pages.length.toLocaleString("pt-PT")} páginas)</span></h1></div>
+      <div class="toolbar"><h1>Wiki do Questski <span class="muted" style="font-size:18px">(${S.wiki.pages.length.toLocaleString(LOC)} páginas)</span></h1></div>
       <p class="muted" style="margin-top:-8px">Todos os itens, criaturas, NPCs, feitiços, locais e achievements referidos nos guias — com onde se compram, quem os larga, localização e muito mais.</p>
       <div class="wiki-search box"><div class="box-body">
         <input class="input" id="wikiQ" type="search" placeholder="Procurar na wiki: ex. Songs of the Forest, Dwarven Armor, Orc Warrior…" value="${esc(wikiQuery)}" autocomplete="off">
@@ -1184,7 +1187,7 @@
         list.sort((a, b) => (fold(b.t) === q) - (fold(a.t) === q) || (fold(b.t).startsWith(q)) - (fold(a.t).startsWith(q)) || (b.q || 0) - (a.q || 0) || a.t.localeCompare(b.t));
       } else list.sort((a, b) => (b.q || 0) - (a.q || 0) || a.t.localeCompare(b.t));
       const shown = list.slice(0, wikiLimit);
-      $("#wikiResults").innerHTML = `<p class="muted">${list.length.toLocaleString("pt-PT")} resultados${!words.length ? " · ordenados pelos mais usados nos guias" : ""}</p>
+      $("#wikiResults").innerHTML = `<p class="muted">${list.length.toLocaleString(LOC)} resultados${!words.length ? " · ordenados pelos mais usados nos guias" : ""}</p>
         <div class="ent-grid">${shown.map((p) => `<a class="ent-card" href="#/wiki/${encodeURIComponent(p.t)}"><span class="slot">${p.i ? `<img src="${p.i}" alt="" loading="lazy">` : icon(WIKI_KINDS[p.k]?.[1] || "book")}</span>
           <span style="min-width:0"><b>${esc(p.t)}</b><span>${WIKI_KINDS[p.k]?.[0] || ""}${p.q ? ` · em ${p.q} guia${p.q > 1 ? "s" : ""}` : ""}</span></span></a>`).join("")}</div>
         ${list.length > shown.length ? `<p style="text-align:center;margin-top:16px"><button class="btn btn-ghost" id="wikiMore">Mostrar mais (${list.length - shown.length})</button></p>` : ""}`;
@@ -1198,7 +1201,7 @@
     $$("[data-wk]").forEach((b) => (b.onclick = () => { wikiKind = b.dataset.wk; wikiLimit = 120; $$("[data-wk]").forEach((x) => x.classList.toggle("on", x === b)); draw(); }));
   }
 
-  const fmtPrice = (p) => (typeof p === "number" ? `${p.toLocaleString("pt-PT")} gp` : esc(p));
+  const fmtPrice = (p) => (typeof p === "number" ? `${p.toLocaleString(LOC)} gp` : esc(p));
   const wikiSprite = (name) => { const e = wikiEntry(name); return e && e.i ? `<img src="${e.i}" alt="" loading="lazy">` : ""; };
   const linkOrText = (href, text) => (href ? `<a href="${href}">${esc(text)}</a>` : `<b>${esc(text)}</b>`);
   const miniCoord = (c, label) => `<div class="coord-card">${minimapHTML(c.x, c.y, c.z, null, label || "")}

@@ -1,0 +1,7 @@
+# Dicionários e traduções (gerados por _dev/i18n.py build): o browser confirma sempre se há versão nova
+<IfModule mod_headers.c>
+	<FilesMatch "\.(js|json)$">
+		Header set Cache-Control "no-cache"
+	</FilesMatch>
+</IfModule>
+# As fontes (src/, ui/, tm/, tmq/) não precisam de ser públicas, mas também não têm nada de privado.
