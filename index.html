@@ -1179,6 +1179,64 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whp-ic{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--sunk);color:var(--gold);font-size:12px}
 .whp-gem,.whp-rv{width:22px;height:22px}
 .whp-rv path{fill:none;stroke:var(--wc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* r7: Wheel como no jogo — janela do cliente, roda grande ao centro (até 74% da altura do ecrã), barras dos dois lados */
+.shell:has(.panel.on[data-p="wheel"]){max-width:none}
+.whx{container-type:inline-size;margin:8px 0 18px}
+/* r7: na página da Wheel o título fica compacto, para a janela caber no ecrã sem scroll */
+/* a janela já tem a barra "Wheel of Destiny": o título da página fica só para os leitores de ecrã */
+.panel[data-p="wheel"]>.ph{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0}
+.whx-win{position:relative;z-index:1;--wsd:228px;--wsz:min(75vh, calc(100svh - 215px), calc(100cqi - 2*var(--wsd) - 44px));background:#262626;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px);border:1px solid #0c0c0c;border-radius:6px;box-shadow:inset 0 0 0 1px #474747,0 14px 40px rgba(0,0,0,.45);padding:0 10px 10px;color:#C9C9C9;font:12.5px/1.45 Verdana,Tahoma,var(--sans)}
+.whx-title{margin:0 -10px 10px;padding:6px 10px;text-align:center;font:700 12.5px Verdana,Tahoma,sans-serif;color:#BDBDBD;background:linear-gradient(#4b4b4b,#303030);border-bottom:1px solid #0c0c0c;border-radius:6px 6px 0 0;text-shadow:0 1px 0 #000}
+.whx-stage{display:grid;grid-template-columns:var(--wsd) var(--wsz) var(--wsd);justify-content:center;gap:10px;height:var(--wsz)}
+.whx-w{display:grid;place-items:center;min-width:0;min-height:0}
+.whx-w .whs{width:var(--wsz);height:var(--wsz);max-width:none;filter:none}
+.whx-side{display:flex;flex-direction:column;gap:8px;min-height:0;min-width:0}
+.whx-r .wbox{flex:1 1 0}
+.whx-l .wbox-sel{flex:1 1 0}
+.wbox{display:flex;flex-direction:column;min-height:0;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B}
+.wbox h5{margin:0;padding:3px 8px;text-align:center;font:700 12px Verdana,Tahoma,sans-serif;letter-spacing:0;text-transform:none;color:#A3A3A3;background:linear-gradient(#3C3C3C,#2A2A2A);border-bottom:1px solid #0b0b0b}
+.wbox-b{padding:6px 8px;overflow:auto;min-height:0;flex:1 1 auto;display:grid;align-content:start;gap:4px}
+.wbox-av{padding:6px 8px;border-top:1px solid #0b0b0b;text-align:center;display:grid;gap:2px;color:#A3A3A3}
+.wbox-av b{color:#EDEDED;font-weight:400} .wbox-av b.bad{color:#FF7A6B}
+.wrow{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0}
+.wrow .wrn{display:inline-flex;align-items:center;gap:6px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wrow b{font-weight:400;color:#EDEDED;font-variant-numeric:tabular-nums;white-space:nowrap}
+.wrow.off{opacity:.5}
+.wrow .si.wic{--s:18px;border-radius:3px;flex:none}
+.wrow .whp-gem{width:15px;height:15px;flex:none}
+.wsub{margin:0 0 2px;font-size:11.5px;color:#9A9A9A;line-height:1.4}
+.wnone{margin:0;color:#8A8A8A}
+.wbox-pts label{color:#A3A3A3} .wbox-pts input{width:100%;padding:5px 8px;font:inherit;font-size:14px;color:#F2F2F2;background:#0F0F0F;border:1px solid #4A4A4A;border-radius:3px}
+.wsel-h{display:flex;gap:8px;align-items:center} .wsel-h>div{display:grid;gap:3px;justify-items:start} .wsel-h b{color:#F0E3B8}
+.wsel-h .si.lg{--s:40px;border-radius:4px}
+.wsel-g{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:50%;background:#0D0A06;border:2px solid #8C7442}
+.wsel-g svg{width:24px;height:24px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wsel-t,.wsel-d,.wsel-n{margin:0} .wsel-d{color:#A9A9A9;font-size:11.5px} .wsel-n{color:#D9A441;font-size:11.5px}
+.wbox-info .whx-seg{justify-self:start;background:#0F0F0F;border-color:#4A4A4A}
+.wbox-info .whx-btn{display:flex;gap:6px;flex-wrap:wrap}
+.wbox-info .whx-imp input{width:100%}
+.whx-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 14px;margin-top:10px;padding:7px 10px;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B}
+.whx-cur{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px} .whx-cur b{color:#F0E3B8;font-weight:700} .whx-cur .eyebrow{color:#8D8D8D}
+/* ícones das fatias: o feitiço (spells.png), apagado até a fatia ter pontos; selos de dedicação; aro dourado por cima */
+.whs .wspr{image-rendering:pixelated;pointer-events:none}
+.whs .wbg.empty .wspr{opacity:.38;filter:grayscale(.7) brightness(.8)} .whs .wbg.part .wspr{opacity:.8}
+.whs .wbr{fill:none;stroke:#5B4520;stroke-width:1.8;pointer-events:none} .whs .wbg.part .wbr{stroke:#A88B4A} .whs .wbg.full .wbr{stroke:var(--wc);stroke-width:2.2}
+.whs .wbg.empty .wded{opacity:.45}
+.whs .wsi-skill{stroke:#5BE36B} .whs .wsi-mleech{stroke:#5AA7FF} .whs .wsi-lleech{stroke:#FF6B6B} .whs .wsi-inst{stroke:#FFD36B} .whs .wsi-vr{stroke:var(--wc)}
+.whs .wbg.empty .wsi{opacity:.45}
+.wsel-g.wsi-skill svg{stroke:#5BE36B} .wsel-g.wsi-mleech svg{stroke:#5AA7FF} .wsel-g.wsi-lleech svg{stroke:#FF6B6B} .wsel-g.wsi-inst svg{stroke:#FFD36B} .wsel-g.wsi-vr svg{stroke:#E2C0FF}
+.whs .wmed:not(.on) .wspr{opacity:.35;filter:grayscale(1)}
+.whs .wfig{pointer-events:none}
+/* janela estreita: a roda em cima, as barras por baixo (duas colunas, uma no telemóvel) */
+@container (max-width: 1040px){
+  .whx-win{--wsz:min(calc(100cqi - 22px), 82vh)}
+  .whx-stage{grid-template-columns:minmax(0,1fr);height:auto}
+  .whx-w{order:-1}
+  .whx-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));align-items:start}
+  .whx-r .wbox,.whx-l .wbox-sel{flex:none}
+  .wbox-b{max-height:none;overflow:visible}
+}
 #wheelTable tr.sel td{background:var(--accent-soft)}
 #wheelTable .wh-btns{white-space:nowrap}
 @media (max-width:1100px){ .whx-g{grid-template-columns:minmax(0,1fr)} }
@@ -2837,8 +2895,8 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <!-- WHEEL -->
     <section class="panel" data-p="wheel">
       <div class="ph"><span class="eyebrow">Combate</span><h2>Wheel of Destiny</h2><p id="wheelLead"></p></div>
+      <div class="whx" id="wheelX"></div>
       <div class="callout" id="wheelNow"></div>
-      <div class="whx card" id="wheelX"></div>
       <div class="sec"><h3>Todas as builds, por pontos</h3><div class="scroll-x card wh-tw"><table id="wheelTable"></table></div><div class="grid2" id="gemBox"></div><p class="note">Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.</p></div>
     </section>
 
@@ -43107,6 +43165,8 @@ const capOf = (c) => 470 + G.voc[c.voc].cap*(c.level-8);
 const isMage = c => c.voc==="druid"||c.voc==="sorcerer";
 const shield = c => Math.round(7*c.ml + 7.6*c.level + Math.max(300, 0.4*c.level));
 const wpts = L => Math.max(0, L-50);
+// r7: pontos da Wheel de uma personagem = nível − 50 + os que comprou (Hunting Task Shop, pergaminhos): c.wpx, escrito na página da Wheel
+const wpOf = (c,L) => wpts(L==null ? c.level : L) + Math.max(0, Math.round(+(c&&c.wpx)||0));
 function seg(el, list, cur, cb){ el.innerHTML = list.map(([v,t])=>`<button data-v="${esc(v)}" aria-pressed="${String(cur)===String(v)}">${t}</button>`).join(""); el.onclick = e => { const b=e.target.closest("button[data-v]"); if(!b) return; cb(b.dataset.v); }; }
 
 /* ---------- quests ---------- */
@@ -43905,7 +43965,7 @@ function renderHero(){
   $("skLab").hidden = isMage(c); $("skLab").firstChild.textContent = vd.skill||"Skill";
   $("ringProg").setAttribute("stroke-dashoffset", (276.46*(1-c.pct/100)).toFixed(1));
   $("whoName").innerHTML = `<span class="vocglyph">${VI(c.voc,"lg")}</span>${esc(c.name||vd.n)} <span class="tag acc">${esc(vd.promo)}</span>`;
-  const st = [[nf(hpOf(c)),"vida","hp"],[nf(manaOf(c)),"mana","mp"],[nf(capOf(c)),"capacidade","cap"],[wpts(L),"pontos da Wheel","wh"]];
+  const st = [[nf(hpOf(c)),"vida","hp"],[nf(manaOf(c)),"mana","mp"],[nf(capOf(c)),"capacidade","cap"],[wpOf(c,L),"pontos da Wheel","wh"]];
   if (isMage(c)) st.splice(2,0,[nf(shield(c)),"Magic Shield","ms"]);
   $("stats").style.setProperty("--n", st.length);
   $("stats").innerHTML = st.map(([b,s,k])=>`<div class="stat" data-k="${k}"><i class="sti" aria-hidden="true"><svg viewBox="0 0 24 24">${STI[k]}</svg></i><b>${b}</b><span${k==="wh"?' data-md="Wheel"':""}>${s}</span></div>`).join("");
@@ -43951,7 +44011,7 @@ function renderInicio(){
   const steps=[];
   const keyQ = cand.filter(h=>h.q && !qDone(c,h.q) && h.cmp.cls!=="bad").sort((a,b)=>(b.xp||0)-(a.xp||0))[0];
   if (keyQ){ const q=QBY[keyQ.q]; steps.push({q:keyQ.q,t:`Fazer <b>${esc(qName(keyQ.q))}</b>`,d:`Abre ${keyQ.p.n}${q?(q.s==="solo"?" — fazes sozinho.":q.s==="parcial"?" — sozinho até à luta final.":" — pede grupo."):""}`}); }
-  const ws=(G.wheel[c.voc]||[]), cw=ws.filter(w=>w.p<=wpts(L)).pop(), nw=ws.find(w=>w.p>wpts(L));
+  const ws=(G.wheel[c.voc]||[]), cw=ws.filter(w=>w.p<=wpOf(c,L)).pop(), nw=ws.find(w=>w.p>wpOf(c,L));
   if (cw) steps.push({t:`Wheel: <b>${esc(cw.t)}</b>`,d:nw?`Próxima build com ${nw.p} pontos (nível ${nw.p+50}).`:"Build completa para os teus pontos."}); else if(nw) steps.push({t:"Wheel: ainda sem pontos",d:`A primeira build chega com ${nw.p} pontos (nível ${nw.p+50}).`});
   const ch = vd.charms.find(k=>!c.charms[k]); if (ch){ const cm=G.charms[ch]; steps.push({t:`Charm seguinte: <b>${esc(cm.n)}</b> (${esc(cm.c.split(" / ")[0])} pontos)`,d:cm.d}); }
   const im = vd.imbs.findIndex((x,i)=>!c.imb["i"+i]); if (im>=0) steps.push({t:`Imbuement: <b>${esc(vd.imbs[im].s)}</b>`,d:vd.imbs[im].i});
@@ -44422,7 +44482,7 @@ $("spFilter").addEventListener("click", e=>{ const b=e.target.closest("[data-spf
 // números do planner (em inglês) em pt-PT: 'Mana +1,050' → 'Mana +1050'; 'Mitigation Multiplier 11.25%' → '11,25%'
 function wnum(s){ if(/^en/.test(LOC)) return String(s==null?"":s); /* r7: em inglês os números do planner ficam como vêm */ return String(s==null?"":s).replace(/(\d),(?=\d{3}\b)/g,"$1").replace(/(\d)\.(\d)/g,"$1,$2"); }
 function renderWheel(){
-  const c=C(), ws=G.wheel[c.voc]||[], pts=wpts(c.level), cur=ws.filter(w=>w.p<=pts).pop(), nx=ws.find(w=>w.p>pts);
+  const c=C(), ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), nx=ws.find(w=>w.p>pts);
   $("wheelLead").textContent = `${pts} pontos de promoção`;
   /* r6-t5 */ // cada vantagem num .wpk (chips no Modern) e o separador num .wsep (no Original lê-se como antes); números com wnum
   const pk = (lab,wk,a,f) => a&&a.length?`<div data-wk="${wk}"><b>${lab}:</b> ${a.map(x=>`<span class="wpk">${esc(wnum(f(x)))}</span>`).join('<span class="wsep"> · </span>')}</div>`:"";
@@ -44494,6 +44554,16 @@ function whGemMods(voc,n,prof,k){ if(!n) return []; const g=G.gems[voc]||{}, b=[
 function whGemShape(x,y,n,fill){ const r=[0,6.5,9,10.5][n], P=rr=>[...Array(8)].map((_,k)=>{ const [a,c]=whPt(rr,k*45+22.5); return `${(x+a).toFixed(1)},${(y+c).toFixed(1)}`; }).join(" ");
   if(n<3) return `<path d="M${x} ${y-r}L${x+r} ${y}L${x} ${y+r}L${x-r} ${y}Z" fill="${fill}" stroke="#fff" stroke-opacity=".55" stroke-width="1"/><path d="M${x} ${y-r}L${(x-r*.45).toFixed(1)} ${(y-r*.1).toFixed(1)}L${x} ${(y+r*.15).toFixed(1)}Z" fill="#fff" fill-opacity=".45"/>`;
   return `<polygon points="${P(r)}" fill="${fill}" stroke="#fff" stroke-opacity=".6" stroke-width="1"/><polygon points="${P(r*.5)}" fill="#fff" fill-opacity=".25"/>`; }
+const WHSP = "spells.png?v=20261018r2"; // r7: o mesmo ?v= do .si (CSS): quando o spells.png mudar, muda os dois
+// r7: ícone de spells.png (32×32, 16 por linha) dentro do SVG da roda, centrado em (cx,cy), lado 2·r
+function whSpr(ix,cx,cy,r){ const x=(ix%16)*32, y=Math.floor(ix/16)*32, d=(r*2).toFixed(1);
+  return `<svg class="wspr" x="${(cx-r).toFixed(1)}" y="${(cy-r).toFixed(1)}" width="${d}" height="${d}" viewBox="${x} ${y} 32 32" overflow="hidden"><image href="${WHSP}" width="512" height="352"/></svg>`; }
+// o feitiço de cada fatia, como no jogo (índice em spells.png; −1 = sem sprite e fica o desenho)
+function whSpIx(voc,cv){ const V=WHD.voc[voc], k=cv.split(":")[0]; return k==="sp"?spIdx(V.sp[cv.slice(3)]):k==="inst"?spIdx(V.inst[cv.slice(5)]):-1; }
+// dedicação de cada fatia: o selo pequeno do ícone (vida, mana, capacidade, mitigação; vida e mana = dois selos)
+const WHDED = {hp:["#E5484D","M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11z"], mp:["#3D8BFF","M12 3.5s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"],
+  cap:["#D9A441","M5 9h14l-1 11H6zM9 9V7a3 3 0 0 1 6 0v2"], mit:["#A8B3C2","M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6z"]};
+const whBadge = (t,x,y,r) => { const [c,d]=WHDED[t]; return `<g class="wded"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="#0B0805" stroke="${c}" stroke-width="1.1"/><path d="${d}" fill="${c}" transform="translate(${(x-r*.66).toFixed(1)} ${(y-r*.66).toFixed(1)}) scale(${(r*1.32/24).toFixed(3)})"/></g>`; };
 // SVG da roda; o = {size:'sm', edit, budget, label}
 function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})`, S=whSum(voc,pts), ed=!!o.edit, free=ed?(o.budget||0)-S.tot:0;
   const full=new Set(WHD.slots.map((s,i)=>(pts[i]||0)>=s[1]?i:-1).filter(i=>i>=0));
@@ -44506,15 +44576,20 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
   WHD.slots.forEach(([d,mx,ded,cv],i)=>{ const g=whGeo(i), r1=WHR[g.ring], r2=WHR[g.ring+1], p=Math.min(pts[i]||0,mx), f=p/mx, k=cv.split(":")[0], st=f>=1?"full":p?"part":"empty";
     const av=ed&&p<mx&&free>0&&(!WHD.adj[i].length||WHD.adj[i].some(j=>full.has(j))), lock=ed&&!p&&!av;
     sh.push(`<g class="ws ${st}${av?" av":""}${lock?" lock":""}" data-ws="${i}" style="--wc:${WHC[d][0]}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][2]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="${U(d)}"/>${f<1?`<path class="wse" d="${whLine(r1+(r2-r1)*f,g.a1,g.a2)}"/>`:""}`:""}</g>`);
-    const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?12.5:11.5, s=br/18.5;
-    bd.push(`<g class="wbg ${st}" style="--wc:${WHC[d][0]}"><circle class="wbd" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${br}"/><path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/></g>`); });
+    const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?15:14, s=br/18.5, ix=whSpIx(voc,cv);
+    /* r7: como no jogo: o ícone do feitiço (spells.png) ou o desenho, e o selo da dedicação em baixo (vida, mana, capacidade, mitigação) */
+    const ico=ix>=0?whSpr(ix,cx,cy,br*0.74):`<path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/>`;
+    const bx=cx-br*0.74, by=cy+br*0.74, bad=ded==="hpmp"?whBadge("hp",bx,by,5.4)+whBadge("mp",cx+br*0.74,by,5.4):WHDED[ded]?whBadge(ded,bx,by,5.4):"";
+    bd.push(`<g class="wbg ${st}${ix>=0?" spr":""}" style="--wc:${WHC[d][0]}"><circle class="wbd" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${br}"/>${ico}<circle class="wbr" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${br}"/>${bad}</g>`); });
   const ticks=[...Array(72)].map((_,k)=>`<circle cx="${whPt(236.5,k*5)[0].toFixed(1)}" cy="${whPt(236.5,k*5)[1].toFixed(1)}" r="1.3"/>`).join("");
   const axes=[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect x="24" y="-3" width="192" height="6" fill="${U("g")}"/><rect x="26" y="-.6" width="188" height="1.2" fill="#3B2A0C" opacity=".75"/>
-    <path d="M160 -14 L200 -20 L248 -31 L248 31 L200 20 L160 14 Z" fill="${U("g")}" stroke="#3B2A0C" stroke-width="2"/><path d="M171 -8 L200 -12 L238 -21 L238 21 L200 12 L171 8 Z" fill="${U("gd")}"/>
-    <path d="M178 0H236M196 -11V11M218 -16V16" stroke="#F8E3A0" stroke-opacity=".45" stroke-width="1.2"/><circle cx="229" cy="0" r="7.5" fill="${U("g")}" stroke="#3B2A0C" stroke-width="1.5"/><circle cx="229" cy="0" r="2.8" fill="#3B2A0C"/></g>`).join("");
-  const med=WHDOM.map(d=>{ const sx=d==="green"||d==="blue"?-1:1, sy=d==="green"||d==="red"?-1:1, mx=sx*232, my=sy*232, st=S.rev[d], n=S.vr[d], ang=Math.atan2(sy,sx)*180/Math.PI;
+    <path d="M174 -30 L288 -54 L288 54 L174 30 Z" fill="${U("g")}" stroke="#3B2A0C" stroke-width="2"/><path d="M184 -21 L278 -41 L278 41 L184 21 Z" fill="${U("gd")}"/>
+    <path d="M186 -17 L276 -36M186 17 L276 36M266 -34V34" stroke="#F8E3A0" stroke-opacity=".4" stroke-width="1.2" fill="none"/>
+    <g class="wfig" fill="${U("g")}" stroke="#3B2A0C" stroke-width="1.2"><circle cx="250" cy="0" r="8.5"/><path d="M240 -15 Q226 -21 206 -14 L200 0 L206 14 Q226 21 240 15 Q246 0 240 -15Z"/><path d="M238 -13 L256 -25 L260 -21 M238 13 L256 25 L260 21" fill="none" stroke-width="3" stroke="${U("g")}"/><path d="M262 -4h8M262 4h8" stroke="#3B2A0C" stroke-width="1.4"/></g>
+    <path d="M282 -46v92" stroke="#3B2A0C" stroke-width="3"/></g>`).join("");
+  const med=WHDOM.map(d=>{ const ri=spIdx(WHD.voc[voc].rev[d]), sx=d==="green"||d==="blue"?-1:1, sy=d==="green"||d==="red"?-1:1, mx=sx*232, my=sy*232, st=S.rev[d], n=S.vr[d], ang=Math.atan2(sy,sx)*180/Math.PI;
     const pips=[-26,0,26].map((da,k)=>{ const [px,py]=whPt(43,ang+da); return `<path class="wpip${k<st?" on":""}" d="M${(mx+px).toFixed(1)} ${(my+py-5.5).toFixed(1)}l5.5 5.5-5.5 5.5-5.5-5.5z"/>`; }).join(""), gx=sx*183, gy=sy*183;
-    return `<g class="wmed${st?" on":""}" data-wr="${d}" style="--wc:${WHC[d][0]}"><circle cx="${mx}" cy="${my}" r="47" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="41" fill="#22180E"/><circle cx="${mx}" cy="${my}" r="38" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34" fill="${st?U(d):"#15110C"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34" fill="${WHC[d][2]}" fill-opacity=".4"/>`}<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>${pips}</g>
+    return `<g class="wmed${st?" on":""}" data-wr="${d}" style="--wc:${WHC[d][0]}"><circle cx="${mx}" cy="${my}" r="47" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="41" fill="#22180E"/><circle cx="${mx}" cy="${my}" r="38" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34" fill="${st?U(d):"#15110C"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34" fill="${WHC[d][2]}" fill-opacity=".4"/>`}${ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`}${pips}</g>
       <g class="wsock${n?" on":""}"><circle cx="${gx}" cy="${gy}" r="17" fill="${U("g")}"/><circle cx="${gx}" cy="${gy}" r="13" fill="#0D0905"/>${n?whGemShape(gx,gy,n,U(d+"j")):`<path d="M${gx} ${gy-6}l6 6-6 6-6-6z" fill="none" stroke="#5B4520" stroke-width="1.5"/>`}</g>`; }).join("");
   const riv=[[-160,-284],[160,-284],[-160,284],[160,284],[-284,-160],[-284,160],[284,-160],[284,160]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.6" fill="${U("g")}" stroke="#3B2A0C"/>`).join("");
   const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`;
@@ -44530,7 +44605,13 @@ function whSlotTxt(voc,pts,i){ const [d,mx,ded,cv]=WHD.slots[i], V=WHD.voc[voc],
   const n=whConvName(voc,cv,d), k=cv.split(":")[0], nm=n.replace(/^Augmented /,""), desc=k==="sp"?(WHD.aug[nm]||[]).map((x,j)=>`estágio ${j+1}: ${x}`).join("; "):k==="vr"?WHD.perk["Vessel Resonance"]:k==="skill"?`+1 de ${WHSK[voc]}.`:k==="mleech"?WHD.perk["Mana Leech"]:k==="lleech"?WHD.perk["Life Leech"]:(WHD.perk[n]||"");
   return {t:`Fatia ${WHDN[d]} de ${mx}`, st:p>=mx?"cheia":p?`${p} de ${mx} pontos`:"vazia", ded:p?dv(p):dv(mx)+" (com a fatia cheia)", conv:n, desc, full:p>=mx}; }
 let WHTIP=null;
-function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]"); if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); }
+const WHWIDE = window.matchMedia ? matchMedia("(min-width: 1100px)") : {matches:true};
+let WHSELI = null; // r7: a última fatia vista na roda grande (painel Selection)
+function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]");
+  /* r7: na roda grande, com espaço para as barras laterais, o que a fatia dá vai para o painel Selection (sem tooltip) */
+  if(g&&WHD&&g.closest("#wheelX")&&WHWIDE.matches){ if(WHTIP) WHTIP.hidden=true; const sv=g.closest("svg"), sel=$("whSel"), i=+g.dataset.ws;
+    if(sel&&WHSELI!==i){ WHSELI=i; sel.innerHTML=whSelHTML(sv.dataset.wv,sv.dataset.wp.split(",").map(Number),i); } return; }
+  if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); }
   if(!g||!WHD){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), x=whSlotTxt(sv.dataset.wv,pts,+g.dataset.ws);
   const hint=sv.classList.contains("edit")?(g.classList.contains("lock")?`<div class="tiny whtip-h">Precisa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class="tiny whtip-h">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</div>`):"";
   WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}${hint}`;
@@ -44538,17 +44619,28 @@ function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]");
   WHTIP.style.left=Math.max(8,Math.min(innerWidth-r.width-8,px+14))+"px"; WHTIP.style.top=Math.max(8,py+16+r.height>innerHeight?py-r.height-12:py+16)+"px"; }
 document.addEventListener("pointermove", e=>{ if(e.pointerType!=="touch") whTip(e); }, {passive:true});
 document.addEventListener("click", e=>{ if(e.target.closest&&e.target.closest(".whs:not(.edit) [data-ws]")) whTip(e); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
-// painel ao lado da roda, como no jogo: dedicação, convicção, vessels (gemas) e revelação
-function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], cv=Object.entries(S.conv).filter(([n])=>!/^Vessel Resonance/.test(n));
-  const f2=v=>String(Math.round(v*100)/100).replace(".",",");
-  const ded=`<dl class="whp-dl"><div><dt>Vida</dt><dd>+${nf(S.hp)}</dd></div><div><dt>Mana</dt><dd>+${nf(S.mp)}</dd></div><div><dt>Capacidade</dt><dd>+${nf(S.cap)}</dd></div><div><dt>Mitigação</dt><dd>×${f2(S.mit)}%</dd></div></dl>`;
-  const cvl=cv.map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:(WHD.perk[n]||"");
-    return `<li><span class="whp-ic">${aug?"✦":n===V.skill?"▲":/Leech/.test(n)?"●":"♛"}</span><span><span class="whp-n"><b>${esc(nm)}</b>${aug?`<span class="tag acc">${ROM[Math.min(k,3)]}</span>`:""}</span><span class="tiny muted">${esc(desc)}</span></span></li>`; }).join("") || `<li class="muted small">Ainda nenhuma fatia cheia.</li>`;
-  let gk=0; const ves=WHDOM.map(d=>{ const n=S.vr[d], mods=whGemMods(voc,n,prof,n?gk++:0); return `<li class="${n?"":"off"}"><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${n?WHC[d][1]:"none"}" stroke="${WHC[d][0]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${n?WHGEM[n]:"Sem gema"}</b><span class="tiny muted">vessel ${WHDN[d]} · ${n} ${n===1?"ressonância":"ressonâncias"}</span></span>${n?`<span class="tiny">${esc(mods.join(" + "))}</span>`:""}</span></li>`; }).join("");
-  const rev=WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<li class="${st?"":"off"}" title="${esc(WHD.revd[nm]||"")}"><svg class="whp-rv" viewBox="0 0 24 24" aria-hidden="true" style="--wc:${WHC[d][0]}"><path d="${WHRV[d]}"/></svg><span><span class="whp-n"><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`estágio ${st}`:"bloqueado"}</span></span><span class="tiny muted">${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:""}</span></span></li>`; }).join("");
-  return `<div class="whp"><section><h5>Dedicação</h5>${ded}</section><section><h5>Convicção</h5><ul class="whp-l">${cvl}</ul></section>
-    <section><h5>Vessels e gemas <span class="tiny muted">+${S.gem} de dano e cura com as gemas certas</span></h5><ul class="whp-l">${ves}</ul></section>
-    <section><h5>Revelação <span class="tiny muted">+${S.dh} de dano e cura</span></h5><ul class="whp-l">${rev}</ul></section></div>`; }
+// painéis ao lado da roda, como no jogo: Dedication, Conviction, Vessels e Revelation Perks (r7: nomes do jogo, linhas como no cliente)
+function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v=>String(Math.round(v*100)/100).replace(".",",");
+  const row=(a,b,t,cls)=>`<div class="wrow${cls?" "+cls:""}"${t?` title="${esc(t)}"`:""}><span class="wrn">${a}</span><b>${b}</b></div>`;
+  const ded=row("Hit Points","+"+nf(S.hp))+row("Mana","+"+nf(S.mp))+row("Capacity","+"+nf(S.cap))+row("Mitigation Mult.",f2(S.mit)+"%");
+  const cvl=Object.entries(S.conv).map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, vr=/^Vessel Resonance /.test(n);
+    const desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:vr?WHD.perk["Vessel Resonance"]:(WHD.perk[n]||"");
+    const ic=aug?sicon({k:[nm],name:nm,cls:"sm wic"}):"";
+    return row(`${ic}${esc(vr?n.replace("Vessel Resonance","VR"):aug?"Aug. "+nm:nm)}`, aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join("") || `<p class="wnone">Ainda nenhuma fatia cheia.</p>`;
+  let gk=0; const ves=row("Damage and Healing","+"+S.gem)+WHDOM.map(d=>{ const n=S.vr[d], mods=whGemMods(voc,n,prof,n?gk++:0);
+    return `<div class="wrow${n?"":" off"}" title="${esc(n?mods.join(" + "):"")}"><span class="wrn"><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${n?WHC[d][1]:"none"}" stroke="${WHC[d][0]}" stroke-width="2"/></svg>${n?WHGEM[n]:"Sem gema"}</span><b>${esc(WHVR[d])}</b></div>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
+  const rev=row("Damage and Healing","+"+S.dh)+WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]);
+    return row(`${sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}`, st?`Stage ${st}`:"Locked", `${WHD.revd[nm]||""} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:""})`, st?"":"off"); }).join("");
+  const box=(t,b)=>`<section class="wbox"><h5>${t}</h5><div class="wbox-b">${b}</div></section>`;
+  return box("Dedication Perks",ded)+box("Conviction Perks",cvl)+box("Vessels",ves)+box("Revelation Perks",rev); }
+// r7: o painel Selection (à esquerda): o que dá a fatia que estás a ver
+function whSelHTML(voc,pts,i){ if(i==null||!WHD.slots[i]) return `<p class="wnone">Passa o rato numa fatia (ou toca nela) para ver o que dá.</p>`;
+  const x=whSlotTxt(voc,pts,i), cv=WHD.slots[i][3], k=cv.split(":")[0], nm=x.conv.replace(/^Augmented /,""), ic=k==="sp"||k==="inst"?sicon({k:[nm],name:nm,cls:"lg"}):`<span class="wsel-g wsi-${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${WHIC[k]||WHIC.sp}"/></svg></span>`;
+  return `<div class="wsel-h">${ic}<div><b>${esc(x.conv)}</b><span class="tag${x.full?" ok":""}">${esc(x.st)}</span></div></div><p class="wsel-t">${esc(x.t)} · ${esc(x.ded)}</p>${x.desc?`<p class="wsel-d">${esc(x.desc)}</p>`:""}${x.full?"":`<p class="wsel-n">A convicção só conta com a fatia cheia.</p>`}`; }
+// r7: caixa "Wheel points": quantos pontos tem a personagem (os do nível e os comprados)
+function whPtsHTML(c){ const base=wpts(c.level), tot=wpOf(c);
+  return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><input id="whBudget" type="number" inputmode="numeric" min="0" max="3000" value="${tot}">
+    <p class="wsub">Nível ${c.level} − 50 = ${base}${tot>base?` · +${tot-base} comprados`:""}. Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p></div></section>`; }
 // build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
 function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
   const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
@@ -44581,7 +44673,7 @@ function hCharmsHTML(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" dat
 // bloco 'Wheel, gemas e charms' da ficha da hunt
 function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return ""; const ph=`<div class="hwh" data-hwheel="${pid}" data-hd="${d||0}"><p class="small muted" style="margin:0">A preparar a Wheel para esta hunt…</p></div>`;
   if(!WHD||!CRDV){ Promise.all([whLoad(),crdLoad()]).then(()=>document.querySelectorAll("[data-hwheel]").forEach(x=>{ if(WHD) x.outerHTML=hwheelHTML(x.dataset.hwheel,+x.dataset.hd); })); return ph; }
-  const pts=wpts(c.level), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
+  const pts=wpOf(c), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
   const ch=`<div class="hwh-s"><h6>Charms</h6>${hCharmsHTML(Object.assign({},c),p,h)}</div>`;
   if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms</h5></div><p class="small">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:""}</p>${ch}</div>`; }
   const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
@@ -44609,7 +44701,7 @@ async function whDecode(code){ const m=/^([KPSDM])0([A-Za-z0-9_-]{8,})$/.exec(St
 // tira os pontos das fatias que deixam de estar ligadas ao centro por fatias cheias
 function whPrune(P){ let ch=true; while(ch){ ch=false; const full=new Set(WHD.slots.map((s,i)=>P[i]>=s[1]?i:-1)); P.forEach((p,i)=>{ if(p&&WHD.adj[i].length&&!WHD.adj[i].some(j=>full.has(j))){ P[i]=0; ch=true; } }); } return P; }
 let WED=null, WSELV=null;
-function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:[...WHD.b[w.c]], gems:[...((WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpts(c.level),w.p), code:w.c, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
+function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:[...WHD.b[w.c]], gems:[...((WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpOf(c),w.p), code:w.c, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
 const whUsed = P => P.reduce((a,b)=>a+b,0);
 function whMsg(t){ const m=$("whMsg"); if(m){ m.textContent=t; clearTimeout(whMsg.t); whMsg.t=setTimeout(()=>{ if(m.isConnected) m.textContent=""; },4000); } }
 function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD.slots[i][1], free=E.budget-whUsed(P), ok=!WHD.adj[i].length||WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1]);
@@ -44618,25 +44710,33 @@ function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD
   else { if(!ok) return whMsg("Primeiro enche uma fatia vizinha, mais perto do centro."); if(free<=0) return whMsg("Não tens pontos livres: aumenta os pontos ou esvazia outra fatia.");
     P[i]=Math.min(mx,P[i]+(mode==="plus"?Math.min(25,free):free)); }
   whPrune(P); E.dirty=true; if(WHTIP) WHTIP.hidden=true; renderWheelX(); }
-// página da Wheel: a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca), editável, com o painel ao lado
+// página da Wheel (r7: como no jogo): roda grande ao centro, à esquerda Wheel points/Selection/Information, à direita os perks,
+// por baixo o preset atual; a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca), editável
 function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
   if(!WHD){ box.innerHTML=`<p class="small muted" style="margin:0">A desenhar a Wheel…</p>`; whLoad().then(()=>{ if(WHD) renderWheelX(); }); return; }
-  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; }
-  const ws=G.wheel[c.voc]||[], pts=wpts(c.level), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0];
+  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; WHSELI=null; }
+  const ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0];
   if(!w||!WHD.b[w.c]){ box.hidden=true; return; } box.hidden=false;
   if(!WED||WED.w!==w) whLoadEd(w,c,true);
   const E=WED, used=whUsed(E.pts), free=E.budget-used, title=E.t||(E.dirty?"Build personalizada":w.t);
   const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
-  box.innerHTML=`<div class="whx-h"><div><span class="eyebrow">${eb}</span><h3>${esc(title)}</h3><div class="pills">${E.t||E.dirty?`<span class="tag">${used} pontos · nível ${used+50}</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">para o teu nível</span>':""}`}</div></div>
-    <div class="whx-a"><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div>
-    <div class="whx-tb" role="toolbar" aria-label="Planeador da Wheel">
-      <div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div>
-      <label class="whx-bud">Pontos <input type="number" id="whBudget" inputmode="numeric" min="0" max="3000" value="${E.budget}"></label>
-      <span class="whx-pts"><b>${used}</b> usados · <b class="${free<0?"bad":""}">${free}</b> livres</span>
-      <span class="whx-btn"><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button></span>
-      <details class="whx-imp"><summary>Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details>
-      <span class="tiny whx-msg" id="whMsg" role="status"></span></div>
-    <div class="whx-g"><div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,label:`Wheel of Destiny: ${title}, ${used} pontos`})}<p class="tiny muted whx-leg">${E.edit?"Clica numa fatia para a encher ou esvaziar (Shift: +25 · Ctrl: −25 · botão direito: esvaziar). As de contorno dourado já se podem encher.":"Passa o rato (ou toca) numa fatia para ver o que dá."} ✦ feitiço · ▲ skill · ● leech · ◆ vessel · ♛ perk especial. Nos cantos: revelações (os losangos pequenos são o estágio) e gemas.</p></div>${whPanelHTML(c.voc,E.pts,null)}</div>`;
+  const tags=E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">para os teus pontos</span>':""}`;
+  box.innerHTML=`<div class="whx-win"><div class="whx-title">Wheel of Destiny</div>
+    <div class="whx-stage">
+      <aside class="whx-side whx-l">${whPtsHTML(c)}
+        <section class="wbox wbox-sel"><h5>Selection</h5><div class="wbox-b" id="whSel">${whSelHTML(c.voc,E.pts,WHSELI)}</div><div class="wbox-av">Available Promotion Points<b class="${free<0?"bad":""}">${free} / ${E.budget}</b></div></section>
+        <section class="wbox wbox-info"><h5>Information</h5><div class="wbox-b">
+          <div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div>
+          <p class="wsub">${E.edit?"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.":"Passa o rato numa fatia para ver o que dá. Nos cantos: as revelações (os losangos são o estágio) e as gemas."}</p>
+          <div class="whx-btn"><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button></div>
+          <details class="whx-imp"><summary>Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details>
+          <span class="tiny whx-msg" id="whMsg" role="status"></span></div></section>
+      </aside>
+      <div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div>
+      <aside class="whx-side whx-r">${whPanelHTML(c.voc,E.pts,null)}</aside>
+    </div>
+    <div class="whx-foot"><div class="whx-cur"><span class="eyebrow">${eb}</span><span>Current Preset: <b>${esc(title)}</b></span><span class="pills">${tags}</span></div>
+      <div class="whx-a"><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
   if(E.dirty) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
   document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; WED=null; renderWheelX();
@@ -44645,9 +44745,11 @@ document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.close
   if(t.dataset.wmode){ WED.edit=t.dataset.wmode==="edit"; renderWheelX(); return; }
   if(t.dataset.wed==="reset"){ whLoadEd(WED.w,C(),true); renderWheelX(); return; }
   if(t.dataset.wed==="clear"){ WED.pts=Array(36).fill(0); WED.dirty=true; WED.edit=true; renderWheelX(); return; }
-  if(t.dataset.ws!=null) whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); });
+  if(t.dataset.ws!=null){ WHSELI=+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); } });
 document.addEventListener("contextmenu", e=>{ const g=e.target.closest&&e.target.closest(".whs.edit [data-ws]"); if(!g) return; e.preventDefault(); whEdit(+g.dataset.ws,"empty"); });
-document.addEventListener("change", e=>{ if(e.target.id!=="whBudget"||!WED) return; WED.budget=Math.max(0,Math.min(3000,parseInt(e.target.value,10)||0)); renderWheelX(); });
+document.addEventListener("change", e=>{ if(e.target.id!=="whBudget") return; const c=C(); if(!c) return; const v=Math.max(0,Math.min(3000,parseInt(e.target.value,10)||0));
+  /* r7: o que passa do nível − 50 são pontos comprados (tasks, pergaminhos): ficam na personagem e contam em todo o site */
+  c.wpx=Math.max(0,v-wpts(c.level)); save(); WSEL=null; WED=null; renderWheel(); });
 document.addEventListener("submit", async e=>{ const f=e.target.closest&&e.target.closest("[data-wimp]"); if(!f) return; e.preventDefault(); const c=C(), r=await whDecode($("whImp").value);
   if(r.err) return whMsg(r.err); if(r.voc!==c.voc) return whMsg(`Este código é de ${G.voc[r.voc].n}: troca para uma personagem dessa vocação para o abrir.`);
   WED.pts=whPrune(r.pts); WED.gems=r.gems; WED.code=String($("whImp").value).trim(); WED.dirty=false; WED.t="Build importada"; WED.budget=Math.max(WED.budget,whUsed(WED.pts)); renderWheelX(); });
@@ -45930,8 +46032,8 @@ let sampleFn=null, ctl=null;
 function ctx(){
   const c=C(), vd=VD(), L=c.level;
   const hs = candidates().filter(h=>h.cmp.cls!=="bad").sort((a,b)=>(b.xp||0)-(a.xp||0)).slice(0,40).map(h=>`${h.p.n} (${h.r.place}; nível ${h.l}+; XP ${fmt(h.xp)}/h${h.est?" estimado":""}; lucro ${fmt(h.lo)}/h; ${h.cmp.txt}; risco ${h.d}/3; acesso ${h.q?qName(h.q)+(qDone(c,h.q)?" (feita)":" (por fazer)"):"livre"})`);
-  const ws=(G.wheel[c.voc]||[]).filter(w=>w.p<=wpts(L)+150).map(w=>`${w.p} pontos: ${w.t}`);
-  return {personagem:{nome:c.name,vocacao:vd.promo,nivel:L,magic_level:c.ml,skill:isMage(c)?null:c.skill,arma:c.wtype||null,vida:hpOf(c),mana:manaOf(c),pontos_wheel:wpts(L)},
+  const ws=(G.wheel[c.voc]||[]).filter(w=>w.p<=wpOf(c,L)+150).map(w=>`${w.p} pontos: ${w.t}`);
+  return {personagem:{nome:c.name,vocacao:vd.promo,nivel:L,magic_level:c.ml,skill:isMage(c)?null:c.skill,arma:c.wtype||null,vida:hpOf(c),mana:manaOf(c),pontos_wheel:wpOf(c,L)},
     estilo:"Jogador português no Tibia oficial; joga sobretudo sozinho; prefere hunts sem risco de morrer; gosta de quests com história.",
     quests_feitas:G.quests.filter(q=>c.done[q.id]).map(q=>q.n), charms:Object.keys(c.charms).map(k=>G.charms[k]?G.charms[k].n:k), equipamento_que_tem:Object.keys(c.owned).map(k=>BYID[k]?BYID[k].n:null).filter(Boolean), sets:(c.sets||[]).map(s=>({nome:s.name,tipo:s.mode,itens:Object.entries(s.slots).map(([k,e])=>(BYID[e.id]||{}).n+(e.imb&&e.imb.filter(Boolean).length?" ["+e.imb.filter(Boolean).map(x=>IMBL[x]||x).join(", ")+"]":""))})),
     hunts_para_o_nivel:hs, wheel:ws, stances:vd.stances.map(s=>`${s.n}${s.w?" ("+s.w+")":""}: ${s.d}`), rotacoes:vd.rot.map(r=>r.t+": "+r.seq.map(s=>s[0]).join(" > ")),
