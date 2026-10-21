@@ -167,6 +167,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `#defFee` da Defesa (o título 'Market −2 %' da tabela do `lpHTML` ainda é texto fixo).
 - Equipamento: `scoreItem(c,it,mode,prot)` (mode combat|speed|off|bal|def; prot = elemento ou perfil {el:peso}), `ranked`, `pickSet`, `bisSet`, `setTotals`,
   `setSumHTML`, `renderBis` (painel inicial), `renderEquip`/`renderSlot`/`renderInventory`, `pickOpen` (botão direito), `itemLookHTML` + `[data-look="<id>"]` (look ao passar por cima).
+  Pontos v2 (r8): o `scoreItem` devolve o que o item muda no combate, em %: D (dano: skills e ML pelo skill/ML da personagem,
+  `chStats` estima-os pelo nível quando ficaram por omissão; arma pela fórmula do dano em `scBase`), P (dano recebido: proteções % ×
+  perfil da hunt ou `SCPF`; armadura e defesa ÷ golpe físico médio do nível `H`), velocidade em % (`SCSPD`) e X (slots de imbuement
+  0,15–1,5 % pelo nível; regeneração). Conta também perfect shot, cleave, damage reflection, magic shield capacity e life leech do
+  `it.ex`, e o ML holy do paladino. Modos: `SCMODE` [D,P,vel]. O jogador vê a nota 0–100 do `notaItem` (÷ `slotTop`: o melhor item do
+  slot até ao nível, sem cargas nem < 15 min; cache `NOTAC`) no botão direito, nas listas do slot e no look.
   Sets automáticos (r4-t5): paladino com a arma em 'Automático' (`c.wtype` vazio): o `pickSet` usa arco a partir do nível 100
   (abaixo, lanças e estrelas; com o filtro 'só os que tenho' e nenhum arco, todos os tipos); na ficha, `huntWType(c,pid)` dá o tipo
   da munição do TibiaPal (`how` da linha de G.hunts.paladin: bolt → besta, arrow → arco, spear/star → arremesso) ao `huntSet`, que
