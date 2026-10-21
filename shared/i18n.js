@@ -85,7 +85,7 @@
       var words = stat.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
       var p = { re: new RegExp(re + "$"), slots: slots, t: pt[1], len: stat.length };
       // sem palavras de 3+ letras (ex.: "{0} em {1}" → "{0} in {1}"): vão para uma lista à parte, só para textos curtos
-      if (!words) { if (/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(stat)) SHORT.push(p); return; }
+      if (!words) { if (/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(stat)) { p.nw = (stat.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+/g) || []).length; SHORT.push(p); } return; }
       var anchor = words.reduce(function (a, b) { return b.length > a.length ? b : a; });
       PATS.push(p);
       var b = BUCKET.get(anchor); if (!b) BUCKET.set(anchor, b = []); b.push(p);
@@ -109,7 +109,8 @@
   function exact(k) { var v = X.get(k); return v === undefined ? null : v; }
 
   var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as|e|a|o|à|é|não|mais|só)(?=\s)/gi;
-  function pattern(k) {
+  function pattern(k, depth) {
+    depth = depth || 0;
     var words = k.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
     if (!words) return null;
     var seen = new Set(), best = null, bm = null;
@@ -128,10 +129,20 @@
     if (!best) return null;
     var by = {};
     for (var n = 0; n < best.slots.length; n++) {
-      var cap = bm[n + 1], t = /\{\d+\}/.test(cap) ? null : exact(cap);
+      var cap = bm[n + 1], mk = /\{\d+\}/.test(cap), t = mk ? null : exact(cap);
+      // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}")
+      if (t == null && !mk && cap.length <= 60 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
+        if (conts()) t = cget(hkey(cap));
+        if (t == null && depth < 2) t = pattern(cap, depth + 1);
+      }
+      // nunca por cima do fim de uma frase (ex.: "{0} por {1}" em "Compra na Loja por 870 Tibia Coins. Não tem addons.")
+      if (t == null && /[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
       // um troço comprido que é uma frase em português (ex.: "… menos cooldown por cada alvo …" no modelo "{0} por {1}")
       // não é um valor: o modelo não serve e o texto segue para o dicionário do conteúdo
       if (t == null && cap.length > 30 && (cap.match(PT_FN) || []).length >= 2) return null;
+      // nem um troço com várias partes separadas por " · " (ex.: "Para {0}" em "Para MS · level 400+ · podes usar"):
+      // essas traduzem-se parte a parte (dots)
+      if (t == null && cap.indexOf(" · ") >= 0 && best.t.indexOf(" · ") < 0) return null;
       by[best.slots[n]] = t == null ? cap : t;
     }
     return best.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
@@ -139,10 +150,12 @@
 
   // modelos curtos (só palavras de 1–2 letras, ex.: "{0} em {1}"): só em textos curtos e com valores que não sejam frases
   // portuguesas — um nome ("King"), um número, uma marca de elemento ({0}) ou algo com tradução exata
-  function short(k) {
+  function short(k, minw) {
     if (k.length > 60) return null;
     for (var i = 0; i < SHORT.length; i++) {
-      var p = SHORT[i], m = p.re.exec(k);
+      var p = SHORT[i];
+      if (minw && p.nw < minw) continue;
+      var m = p.re.exec(k);
       if (!m) continue;
       var by = {}, ok = true;
       for (var n = 0; n < p.slots.length && ok; n++) {
@@ -197,8 +210,10 @@
   function dots(k) {
     var parts = k.split(" · ");
     if (parts.length < 2) return null;
-    var hit = 0, out = parts.map(function (p) {
+    var hit = 0, out = parts.map(function (p, i) {
       var v = OUT.has(p) ? null : ui(p);
+      // as partes do meio/fim também podem estar no dicionário com o separador à frente (ex.: "· podes usar")
+      if (v == null && i > 0) { var vd = ui("· " + p); if (vd != null) v = vd.replace(/^·\s*/, ""); }
       if (v == null) { var c = content(p); v = c && c.t; }
       if (v != null) { hit++; return v; }
       return p;
@@ -209,10 +224,17 @@
   // um texto sem marcas → tradução ou null: interface, conteúdo, partes com " · "
   function text(k) {
     if (OUT.has(k)) return null;
-    var t = ui(k);
+    // a frase inteira no dicionário do conteúdo vem antes dos modelos (um modelo curto como "{0} por {1}" estragava-a)
+    var t = exact(k);
+    if (t != null) return t;
+    if (conts()) { var cf = cget(hkey(k)); if (cf != null) return cf; }
+    t = ui(k);
     if (t != null) return t;
     var c = content(k);
-    return c ? c.t : dots(k);
+    if (c) return c.t;
+    // num texto simples só os modelos curtos com 2+ palavras fixas (ex.: "Só as de {0} ({1})"), nunca "{0} de {1}"
+    t = short(k, 2);
+    return t != null ? t : dots(k);
   }
 
   function edges(orig, t) {
