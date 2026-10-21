@@ -107,6 +107,7 @@
 
   function exact(k) { var v = X.get(k); return v === undefined ? null : v; }
 
+  var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as)(?=\s)/g;
   function pattern(k) {
     var words = k.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
     if (!words) return null;
@@ -127,6 +128,9 @@
     var by = {};
     for (var n = 0; n < best.slots.length; n++) {
       var cap = bm[n + 1], t = /\{\d+\}/.test(cap) ? null : exact(cap);
+      // um troço comprido que é uma frase em português (ex.: "… menos cooldown por cada alvo …" no modelo "{0} por {1}")
+      // não é um valor: o modelo não serve e o texto segue para o dicionário do conteúdo
+      if (t == null && cap.length > 30 && (cap.match(PT_FN) || []).length >= 2) return null;
       by[best.slots[n]] = t == null ? cap : t;
     }
     return best.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });

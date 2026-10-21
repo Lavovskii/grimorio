@@ -167,10 +167,6 @@
   "c": "index.html: yle=\"--imc:var(--accent)\">+${v} ${esc(SKN[k]||k)}${t.ski[k]?` <span class=\"tiny muted\">(${t.sk[k]||0} itens + ${t.ski[k]} imb.)</span>`:\"\"}</span>`).join(\"",
   "k": "p"
  },
- "({0} pontos no {1}{2})": {
-  "c": "index.html: e:nm,cls:\"sm wic\"})}${esc(nm)}`, st?`Stage ${st}`:\"Locked\", `${WHD.revd[nm]||\"\"} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:\"\"})`, st?\"\":\"off\"); }).j",
-  "k": "p"
- },
  "({0} páginas)": {
   "c": "quests/js/app.js: nts[p.k] = (counts[p.k] || 0) + 1)); view().innerHTML = ` <div class=\"toolbar\"><h1>Wiki do Questski <span class=\"muted\" style=\"font-size:18px\">(${S.wiki.pages.length.toLocaleString(LOC)} páginas)</span></h1></div> <p cla",
   "k": "p"
@@ -240,7 +236,7 @@
   "k": "p"
  },
  "+{0} vida e +{1} mana": {
-  "c": "index.html: ath.round(WHD.mit*x*100)/100).replace(\".\",\",\")}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`; const n=whConvNa",
+  "c": "index.html: .round(WHD.mit*x*100)/100).replace(\".\",DECSEP)}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`; const n=whConvNa",
   "k": "p"
  },
  "+{0}% XP": {
@@ -264,7 +260,7 @@
   "k": "p"
  },
  "+{0}% mitigação": {
-  "c": "index.html:  mana`:ded===\"cap\"?`+${nf(V.cap*x)} capacidade`:ded===\"mit\"?`+${String(Math.round(WHD.mit*x*100)/100).replace(\".\",\",\")}% mitigação`:`+${nf(V.hp*x)} vid",
+  "c": "index.html:  mana`:ded===\"cap\"?`+${nf(V.cap*x)} capacidade`:ded===\"mit\"?`+${String(Math.round(WHD.mit*x*100)/100).replace(\".\",DECSEP)}% mitigação`:`+${nf(V.hp*x)} vid",
   "k": "p"
  },
  ", e o XP é estimado": {
@@ -323,8 +319,20 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "1 modificador básico": {
+  "c": "index.html:  básicos e 1 supremo\":n===2?\"2 modificadores básicos\":n===1?\"1 modificador básico\":\"enche uma fatia Ve",
+  "k": "x"
+ },
  "10% de chance de crítico": {
   "c": "index.html: ><b>+${t.crit}%</b><span>dano crítico</span><small>${t.crit?\"10% de chance de crítico\":\"sem Strike\"}</smal",
+  "k": "x"
+ },
+ "2 modificadores básicos": {
+  "c": "index.html: {n}/3 · ${n===3?\"2 modificadores básicos e 1 supremo\":n===2?\"2 modificadores básicos\":n===1?\"1 modificado",
+  "k": "x"
+ },
+ "2 modificadores básicos e 1 supremo": {
+  "c": "index.html: v> <p class=\"wsel-t\">Vessel Resonance: ${n}/3 · ${n===3?\"2 modificadores básicos e 1 supremo\":n===2?\"2 modificado",
   "k": "x"
  },
  "2-digit": {
@@ -366,6 +374,10 @@
  ": quantas por hora": {
   "c": "index.html: span><label class=\"lp-f\"><span>por hora</span>${inp(\"q\",x.n+\": quantas por hora\",\"\",\"0\")}</label><la",
   "k": "x"
+ },
+ ": {0} pontos": {
+  "c": "index.html: \":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=",
+  "k": "p"
  },
  "; com mais {0} exalted core o risco desce para {1}%": {
   "c": "index.html: tens desce 1 tier (ou desaparece se for tier 0)${co.protect?`; com mais ${co.protect.cores} exalted core o risco desce para ${co.protect.lossChance}%`:\"\"}.</li> ${c",
@@ -435,6 +447,10 @@
   "c": "index.html: n renderMonPage(key){ const el=$(\"monPage\"); el.innerHTML=`<p class=\"tkload\">A carregar a criatura…</p>`; const [crs,items",
   "k": "x"
  },
+ "A carregar as gemas…": {
+  "c": "index.html: +d) sl.innerHTML=whSelHTML(voc,pts,WHSELK); }); return head+`<p class=\"wnone\">A carregar as gemas…</p>`; } const P=whGemP",
+  "k": "x"
+ },
  "A carregar as quests…": {
   "c": "quests/js/app.js: ----- boot async function boot() { view().innerHTML = `<div class=\"loading\">A carregar as quests…</div>`; try { co",
   "k": "x"
@@ -452,7 +468,7 @@
   "k": "x"
  },
  "A convicção só conta com a fatia cheia.": {
-  "c": "index.html: .desc?`<p class=\"wsel-d\">${esc(x.desc)}</p>`:\"\"}${x.full?\"\":`<p class=\"wsel-n\">A convicção só conta com a fatia cheia.</p>`}`; } // r7: caixa \"",
+  "c": "index.html: .desc?`<p class=\"wsel-d\">${esc(x.desc)}</p>`:\"\"}${x.full?\"\":`<p class=\"wsel-n\">A convicção só conta com a fatia cheia.</p>`}${ed?`<p class=\"wse",
   "k": "x"
  },
  "A criatura do dia (boosted) dá +100 % de XP e o dobro do loot.": {
@@ -523,6 +539,10 @@
   "c": "index.html: }</tbody></table></div></section>`:\"\"} ${rune&&s.rn?`<section class=\"card ip-wide\"><h3>A runa</h3><p class=\"small\" style=\"margin:0 0 8px\"><a href=\"${itemHref(s.rn)}\">${itemSpr(String(s.rn).toLowerCase())} <b>${esc(s.rn)}",
   "k": "x"
  },
+ "A seguir: faltam {0} pontos": {
+  "c": "index.html: ]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,\"acc\"]]:[])], V=WHD",
+  "k": "p"
+ },
  "A seguir: {0}, com {1} pontos.": {
   "c": "index.html: pan>`:\"\"}</h4><div class=\"small wpd\">${perk(cur)}</div>${nx?`<p class=\"small\">A seguir: <b>${esc(nx.t)}</b>, com ${nx.p} pontos.</p>${prog}`:`<p class=\"small\">B",
   "k": "p"
@@ -572,7 +592,7 @@
   "k": "p"
  },
  "Abrir": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Abrir guia →": {
@@ -652,7 +672,7 @@
   "k": "p"
  },
  "Ainda nenhuma fatia cheia.": {
-  "c": "index.html: , aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join(\"\") || `<p class=\"wnone\">Ainda nenhuma fatia cheia.</p>`; let gk=0; const ",
+  "c": "index.html: , aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join(\"\") || `<p class=\"wnone\">Ainda nenhuma fatia cheia.</p>`; /* r8: cada vess",
   "k": "x"
  },
  "Ainda não chegas à primeira build": {
@@ -927,6 +947,10 @@
   "c": "index.html: \"}`, open=box.classList.contains(\"open\"); box.innerHTML = `<button type=\"button\" class=\"csw-btn\" aria-haspopup=\"listbox\" aria-expanded=\"${open}\" aria-controls=\"cswList\" aria-label=\"Personagem ativa: ${nm(c)}. Mudar de pe",
   "k": "x"
  },
+ "Ascetic Mastery": {
+  "c": "index.html: down Base Damage\":[\"Monk_SweepingTakedown_DamageIncrease\"], \"Ascetic Mastery\":[\"Monk_RevelationMa",
+  "k": "x"
+ },
  "Asura Palace + The Lost Brother": {
   "c": "index.html:  !!(id && c.done[id]); const qName = id => id===\"marapur\" ? \"Asura Palace + The Lost Brother\" : (QBY[id] ? QBY[id",
   "k": "x"
@@ -1036,7 +1060,7 @@
   "k": "x"
  },
  "Available Promotion Points{0}": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Aves": {
@@ -1091,6 +1115,22 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Beam Mastery Mastery": {
+  "c": "index.html: Salvation Healing\":[\"Paladin_Salvation_HealingIncrease\"], \"Beam Mastery Mastery\":[\"Sorcerer_Revelati",
+  "k": "x"
+ },
+ "Best in slot": {
+  "c": "index.html: K(S,d)).sbis:[]; return head+`<p class=\"wsel-sec bis\">${n?\"Best in slot\":\"Best in slot (com ",
+  "k": "x"
+ },
+ "Best in slot (com 3 VR: Greater gem)": {
+  "c": "index.html: ; return head+`<p class=\"wsel-sec bis\">${n?\"Best in slot\":\"Best in slot (com 3 VR: Greater gem)\"}</p><ul class=\"wmod",
+  "k": "x"
+ },
+ "Best in slot e outras boas opções": {
+  "c": "index.html: [])], V=WHD.voc[c.voc]; if(!L.length) return \"\"; return `<div class=\"whx-oh\"><h3>Best in slot e outras boas opções</h3><p class=\"small muted\">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com ",
+  "k": "x"
+ },
  "Besta": {
   "c": "index.html: omático (arco a partir do 100)\"],[\"bow\",\"Arco\"],[\"crossbow\",\"Besta\"],[\"throw\",\"Arremess",
   "k": "x"
@@ -1109,6 +1149,10 @@
  },
  "Blessing": {
   "c": "index.html: {\"<i></i>\".repeat(7)}</div>`; $(\"blessTable\").innerHTML = `<thead><tr><th>Blessing</th><th>NPC</th><th>Onde</th><th>Preço</th></tr></thead><tbody>` + rows.map(r=>`<tr>",
+  "k": "x"
+ },
+ "Blessing of the Grove Mastery": {
+  "c": "index.html: win Bursts Mastery\":[\"Druid_RevelationMastery_TwinBursts\"], \"Blessing of the Grove Mastery\":[\"Druid_RevelationM",
   "k": "x"
  },
  "Blockade (shielding)": {
@@ -1364,7 +1408,7 @@
   "k": "x"
  },
  "Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.": {
-  "c": "index.html: ir pontos</button></div> <p class=\"wsub\">${E.edit?\"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.\":\"Passa o rato numa ",
+  "c": "index.html:  if(i==null||!WHD.slots[i]) return `<p class=\"wnone\">${ed?\"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.\":\"Passa o rato (ou t",
   "k": "x"
  },
  "Clica para copiar": {
@@ -1404,12 +1448,16 @@
   "k": "x"
  },
  "Cola o código do jogo (ex.: {0}0Y2Bg…)": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Coleções": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Com 3 VR (Greater gem) junta-se um supremo: {0}.": {
+  "c": "index.html: up?P.sbis.map(g=>li(g,1)).join(\"\"):\"\"}</ul> ${G3.length?`<p class=\"wsel-d\">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:\"\"} ${P.alt.len",
+  "k": "p"
  },
  "Com as 7 blessings perdes muito menos ao morrer.": {
   "c": "index.html (HTML)",
@@ -1426,6 +1474,10 @@
  "Com {0} pontos (nível {1}): {2}.": {
   "c": "index.html: ss=\"wh-main\"><h4>Ainda não chegas à primeira build</h4>${nx?`<p>Com ${nx.p} pontos (nível ${nx.p+50}): ${esc(nx.t)}.</p>`:\"\"}${prog}</div>`; ",
   "k": "p"
+ },
+ "Combat Mastery Mastery": {
+  "c": "index.html: Cleansing\":[\"Knight_FairWoundCleansing_HealingIncrease\"], \"Combat Mastery Mastery\":[\"Knight_Revelation",
+  "k": "x"
  },
  "Combate": {
   "c": "index.html (HTML)",
@@ -1788,7 +1840,7 @@
   "k": "x"
  },
  "Current Preset: {0}": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
  "Custo": {
@@ -1808,7 +1860,7 @@
   "k": "x"
  },
  "Código da Wheel": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Dados de 7 de outubro de 2026; stats dos itens confirmados na TibiaWiki a 17 de outubro de 2026. O rebalanceamento de vocações (15.25, 16 jun) e os ajustes de 7 jul e 1 set mudaram muitos números: confirma sempre antes de gastar dinheiro.": {
@@ -1840,7 +1892,7 @@
   "k": "x"
  },
  "Damage and Healing": {
-  "c": "index.html: >Ainda nenhuma fatia cheia.</p>`; let gk=0; const ves=row(\"Damage and Healing\",\"+\"+S.gem)+WHDOM.ma",
+  "c": "index.html: ostra tudo no painel Selection */ let gk=0; const ves=row(\"Damage and Healing\",\"+\"+S.gem)+WHDOM.ma",
   "k": "x"
  },
  "Dano": {
@@ -2056,7 +2108,15 @@
   "k": "x"
  },
  "Distribuir pontos": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "k": "x"
+ },
+ "Divine Caldera Base Damage": {
+  "c": "index.html:  Mastery\":[\"Knight_RevelationMastery_ExecutionersThrow\"], \"Divine Caldera Base Damage\":[\"Paladin_DivineCal",
+  "k": "x"
+ },
+ "Divine Empowerment Mastery": {
+  "c": "index.html: dera Base Damage\":[\"Paladin_DivineCaldera_DamageIncrease\"], \"Divine Empowerment Mastery\":[\"Paladin_Revelatio",
   "k": "x"
  },
  "Do código que colaste": {
@@ -2209,6 +2269,10 @@
  },
  "Energy": {
   "c": "index.html: e.g. Rosh\":\"criaturas que resistem a físico (ex.: Rosh)\", \"Energy\":\"energia\",\"Fire/Dea",
+  "k": "x"
+ },
+ "Energy Wave CD Reduction": {
+  "c": "index.html: UE Base Damage\":[\"Sorcerer_RageOfTheSkies_DamageIncrease\"], \"Energy Wave CD Reduction\":[\"Sorcerer_EnergyWa",
   "k": "x"
  },
  "Energy/Death/Fire (TH)": {
@@ -2459,6 +2523,10 @@
   "c": "index.html: t.core)), s=val(row(+pr.dataset.sliver)); pr.textContent=[c?`Exalted core ≈ ${gp(c)}`:\"\", s?`sliver ≈ ${g",
   "k": "p"
  },
+ "Executioner's Throw Mastery": {
+  "c": "index.html: astery Mastery\":[\"Knight_RevelationMastery_CombatMastery\"], \"Executioner's Throw Mastery\":[\"Knight_Revelation",
+  "k": "x"
+ },
  "Executioner's Throw acaba as criaturas mais depressa": {
   "c": "index.html:  dá mais segurança\":bw===\"fast\"&&/Executioner/.test(best.t)?\"Executioner's Throw acaba as criaturas mais depressa\":e!=null?`as criatur",
   "k": "x"
@@ -2491,6 +2559,10 @@
   "c": "index.html: t:\"Constructos\",\"Extra Dimensional\":\"Extradimensionais\",Fey:\"Fadas\",Giant:\"Gigantes\",In",
   "k": "x"
  },
+ "Fair Wound Cleansing": {
+  "c": "index.html: t Sweep Base Damage\":[\"Knight_Front_Sweep_DamageIncrease\"], \"Fair Wound Cleansing\":[\"Knight_FairWoundC",
+  "k": "x"
+ },
  "Faixa de nível": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
   "k": "x"
@@ -2513,6 +2585,10 @@
  },
  "Faltam {0} de experiência até ao nível {1}: cerca de {2} {3} de 3 horas.": {
   "c": "index.html:  h\"; const ses=Math.ceil(hrs/3); $(\"calcSub\").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?\"sessão\":\"sessões\"} de 3 horas.`; } else { $(\"calc",
+  "k": "p"
+ },
+ "Faltam {0} pontos no {1} para o estágio {2}.": {
+  "c": "index.html: ling +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ${nx?`<p class=\"wsel-n\">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:\"\"}`; } // r7: o pa",
   "k": "p"
  },
  "Farmine": {
@@ -2615,6 +2691,10 @@
   "c": "index.html: le, sul de Thais\",reg],[\"The Embrace of Tibia\",[\"Humphrey\"],\"Fields of Glory, norte de Carlin\",reg],[\"The Fire of ",
   "k": "x"
  },
+ "Fierce Berserk Base Damage": {
+  "c": "index.html: ManaDrainResistance_LifeDrainResistance\"]]; const GEMSUP = {\"Fierce Berserk Base Damage\":[\"Knight_Fierce_Ber",
+  "k": "x"
+ },
  "Filtrar feitiços": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -2663,6 +2743,10 @@
   "c": "index.html: nst SKLAB = {knight:\"Skill de arma\",paladin:\"Distance\",monk:\"Fist fighting\"}; function newDraft",
   "k": "x"
  },
+ "FoB Base Damage": {
+  "c": "index.html: Wave Base Damage\":[\"Druid_StrongIceWave_DamageIncrease\"], \"FoB Base Damage\":[\"Monk_FlurryOfBlow",
+  "k": "x"
+ },
  "Foge com": {
   "c": "index.html: cr.mitig!=null?String(cr.mitig).replace(\".\",\",\")+\"%\":null],[\"Foge com\",ci.run!=null?(runN?",
   "k": "x"
@@ -2709,6 +2793,10 @@
  },
  "Fri": {
   "c": "index.html: >[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].indexOf(p.we",
+  "k": "x"
+ },
+ "Front Sweep Base Damage": {
+  "c": "index.html: serk Base Damage\":[\"Knight_Fierce_Berserk_DamageIncrease\"], \"Front Sweep Base Damage\":[\"Knight_Front_Swee",
   "k": "x"
  },
  "Frost (gelo)": {
@@ -2785,6 +2873,14 @@
  },
  "Gray Beach": {
   "c": "index.html: 212,31132],[\"Yalahar\",32787,31276],[\"Farmine\",33023,31521],[\"Gray Beach\",33447,31323],[\"Rosh",
+  "k": "x"
+ },
+ "Great Energy/Death Beam Base Damage": {
+  "c": "index.html: astery Mastery\":[\"Sorcerer_RevelationMastery_BeamMastery\"], \"Great Energy/Death Beam Base Damage\":[\"Sorcerer_GreatEne",
+  "k": "x"
+ },
+ "Great Fire Wave Base Damage": {
+  "c": "index.html: amageIncrease\",\"Sorcerer_GreatDeathBeam_DamageIncrease\"], \"Great Fire Wave Base Damage\":[\"Sorcerer_GreatFir",
   "k": "x"
  },
  "Great Fireball": {
@@ -3092,7 +3188,7 @@
   "k": "x"
  },
  "Importar código": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Imune a": {
@@ -3117,10 +3213,6 @@
  },
  "Indica a quantidade e carrega em Adicionar.": {
   "c": "index.html: ue=cap1(n); $(\"tkSug\").innerHTML=\"\"; $(\"tkMsg\").textContent=\"Indica a quantidade e carrega em Adicionar.\"; $(\"tkN\").focus(); ",
-  "k": "x"
- },
- "Information": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Inkborn": {
@@ -3250,6 +3342,10 @@
  "Junta as quests de outras regiões que têm passos em {0} ou nos arredores": {
   "c": "quests/js/app.js: \">✕</button>` : \"\"} </div> ${f.region ? `<div class=\"filter-row\"><label class=\"check\" title=\"Junta as quests de outras regiões que têm passos em ${esc(f.region)} ou nos arredores\"><input type=\"checkbox\" id=\"fRegionAll\" $",
   "k": "p"
+ },
+ "Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.": {
+  "c": "index.html: ados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?\"\":`<p class=\"wsub\">Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>`}${sl}</div></sec",
+  "k": "x"
  },
  "Junta outra hunt na ficha (＋ Comparar)": {
   "c": "index.html: o\">${HCMP_X}</button></span>`; }).join(\"\") +(l.length<2?'<span class=\"hcmp-hint tiny\">Junta outra hunt na ficha (＋ Comparar)</span>':\"\"); const go=t.q",
@@ -3456,7 +3552,7 @@
   "k": "x"
  },
  "Locked": {
-  "c": "index.html: k:[nm],name:nm,cls:\"sm wic\"})}${esc(nm)}`, st?`Stage ${st}`:\"Locked\", `${WHD.revd[nm]||\"",
+  "c": "index.html: me:nm,cls:\"sm wic\"})}${esc(nm)}</span><b>${st?`Stage ${st}`:\"Locked\"}</b></button>`; }).",
   "k": "x"
  },
  "Loja": {
@@ -3828,7 +3924,7 @@
   "k": "x"
  },
  "Modo": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Moedas: ≈ {0} por kill, já contadas no loot por hora.": {
@@ -3981,6 +4077,10 @@
  },
  "NPCs vendem por": {
   "c": "quests/js/app.js:  \"Valor\", \"sold for\": \"NPCs compram por\", \"bought for\": \"NPCs vendem por\", \"field properties\"",
+  "k": "x"
+ },
+ "Na roda": {
+  "c": "index.html: opt-g\">${gm}</div>`:\"\"} <div class=\"wopt-a\">${x===w?`<span class=\"tag ok\">Na roda</span>`:`<button type=\"butt",
   "k": "x"
  },
  "Na zona": {
@@ -4193,6 +4293,10 @@
  },
  "Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.": {
   "c": "index.html: a ${ELN[set.prot]}`:\"\"}.${sel===\"weapon\"&&c.voc===\"paladin\"?\" Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.\":\"\"",
+  "k": "x"
+ },
+ "Nos cantos: as revelações (os losangos são o estágio) e as gemas.": {
+  "c": "index.html: ma gema ou numa revelação para veres o que dá.\"}</p>${ed?\"\":`<p class=\"wsel-d\">Nos cantos: as revelações (os losangos são o estágio) e as gemas.</p>`}`; const x=whSlot",
   "k": "x"
  },
  "Notas": {
@@ -4423,8 +4527,12 @@
   "c": "index.html: div> ${L.err?`<p class=\"err\">${L.err}</p>`:\"\"} ${ch?`<div class=\"lkres\">${v?VI(v,\"lg\"):\"\"}<div style=\"min-width:0\"><b>${esc(ch.name)}</b> <span class=\"tag acc\">${esc(ch.vocation)}</span><div class=\"small muted\">Nível ${c",
   "k": "p"
  },
- "Nível {0} − 50 = {1}{2}. Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.": {
-  "c": "index.html: s onde quiseres em «Distribuir pontos».\"}</p>`:\"\"; return `<section class=\"wbox wbox-pts\"><h5>Wheel points</h5><div class=\"wbox-b\"><label for=\"whBudget\">Quantos wheel points tens?</label><div class=\"wpts-row\"><input id=\"",
+ "Nível {0} − 50 = {1} · +{2} comprados.": {
+  "c": "index.html: \"1\">Atualizar</button></div> <p class=\"wsub\">${tot>base?`Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} −",
+  "k": "p"
+ },
+ "Nível {0} − 50 = {1}.": {
+  "c": "index.html: `Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?\"\":`",
   "k": "p"
  },
  "Nível {0}{1}:": {
@@ -4707,6 +4815,10 @@
   "c": "index.html: uest\",tarefa:\"Task Board\",evento:\"Evento\",item:\"Item\",outro:\"Outra\"}; const WL_OT={loja",
   "k": "x"
  },
+ "Outras boas opções:": {
+  "c": "index.html: .bis,...O.alt].filter(x=>x&&x!==w); const alts=oth.length?`<div class=\"whx-alt\"><span>Outras boas opções:</span>${oth.map(x=>`<button type=\"button\" class=\"whx-chip\" data-wsel=\"${ws.indexOf(x)}\" title=\"${esc(x.t)}\">${esc(",
+  "k": "x"
+ },
  "Outras personagens da conta": {
   "c": "index.html: > ${esc(d.r)}</li>`).join(\"\")}</ul></div>`:\"\"} ${others?`<div><h4 class=\"sub\">Outras personagens da conta</h4><ul class=\"olist\">${others}</ul></div>`:\"\"} <p class=\"t",
   "k": "x"
@@ -4799,6 +4911,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Para os teus {0} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.": {
+  "c": "index.html: [])], V=WHD.voc[c.voc]; if(!L.length) return \"\"; return `<div class=\"whx-oh\"><h3>Best in slot e outras boas opções</h3><p class=\"small muted\">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com ",
+  "k": "p"
+ },
  "Para partilhar XP, quem se juntar tem de ter {0}.": {
   "c": "index.html: ngth>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"sma",
   "k": "p"
@@ -4831,12 +4947,8 @@
   "c": "index.html: ra ver as hunts onde podem ir juntos.` : canShare(ms) ? `Partilha de XP: <b>+${Math.round(shareBonus(ms)*100)}%</b> (${nVocs(ms)===1?\"mesma vocação\":nVocs(ms)+\" vocações\"}). Só aparecem hunts onde ${ms.length===2?\"os doi",
   "k": "p"
  },
- "Passa o rato numa fatia (ou toca nela) para ver o que dá.": {
-  "c": "index.html: ion whSelHTML(voc,pts,i){ if(i==null||!WHD.slots[i]) return `<p class=\"wnone\">Passa o rato numa fatia (ou toca nela) para ver o que dá.</p>`; const x=whSlotTx",
-  "k": "x"
- },
- "Passa o rato numa fatia para ver o que dá. Nos cantos: as revelações (os losangos são o estágio) e as gemas.": {
-  "c": "index.html: eito: esvaziar. As de contorno dourado já se podem encher.\":\"Passa o rato numa fatia para ver o que dá. Nos cantos: as revelações (os losangos são o estágio) e as gemas.\"}</p> <div",
+ "Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá.": {
+  "c": "index.html: eito: esvaziar. As de contorno dourado já se podem encher.\":\"Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá.\"}</p>${ed?\"\":`<p cla",
   "k": "x"
  },
  "Passa o rato ou clica numa tecla para ver o que faz.": {
@@ -5636,7 +5748,7 @@
   "k": "x"
  },
  "Repor": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Repor o do BiS": {
@@ -5703,8 +5815,16 @@
   "c": "index.html: => pk(\"Conviction\",\"c\",w.conv,([k,v])=>k+(v?\" \"+v:\"\")) + pk(\"Revelation\",\"r\",w.rev,([k,v])=>",
   "k": "x"
  },
+ "Revelation Perk · {0} pontos no": {
+  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Locked\"}</span></div></div> <p c",
+  "k": "p"
+ },
+ "Revelation Perk · {0} pontos no {1}": {
+  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Locked\"}</span></div></div> <p c",
+  "k": "p"
+ },
  "Revelation Perks": {
-  "c": "index.html: ks\",ded)+box(\"Conviction Perks\",cvl)+box(\"Vessels\",ves)+box(\"Revelation Perks\",rev); } // r7: o pa",
+  "c": "index.html: ks\",ded)+box(\"Conviction Perks\",cvl)+box(\"Vessels\",ves)+box(\"Revelation Perks\",rev); } /* --------",
   "k": "x"
  },
  "Rings": {
@@ -5783,6 +5903,10 @@
   "c": "index.html: :\"Licantropos\",Magical:\"Mágicos\",Mammal:\"Mamíferos\",Reptile:\"Répteis\",Vermin:\"Vermes e in",
   "k": "x"
  },
+ "SOB Mastery": {
+  "c": "index.html: se\"], \"Ascetic Mastery\":[\"Monk_RevelationMastery_Ascetic\"], \"SOB Mastery\":[\"Monk_RevelationMa",
+  "k": "x"
+ },
  "Sai para {0} (~{1} sqm)": {
   "c": "index.html: const c=nearCity(x,y), dir=dirFrom(x,y,c.cx,c.cy); return `<ol class=\"route\"><li class=\"st\"><b>${esc(c.n)}</b></li><li>Sai para ${dir} (~${Math.round(c.d)} sqm)</li><li>${z===7?\"Zona à superfície\":z>7?`Desce ao subsolo −",
   "k": "p"
@@ -5790,6 +5914,10 @@
  "Saiu da comparação: {0} (já não há {1} para {2}).": {
   "c": "index.html: s para comparar\"}</h3></div></div>`; if(gone.length) out+=`<p class=\"small warnt\" style=\"margin:0\">Saiu da comparação: ${esc(gone.map(hcmpName).join(\", \"))} (já não há ${gone.length>1?\"estas hunts\":\"esta hunt\"} para ${vn",
   "k": "p"
+ },
+ "Salvation Healing": {
+  "c": "index.html: t Mastery\":[\"Paladin_RevelationMastery_DivineEmpowerment\"], \"Salvation Healing\":[\"Paladin_Salvation",
+  "k": "x"
  },
  "Sat": {
   "c": "index.html: pe,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].indexOf(p.weekday)",
@@ -5828,7 +5956,7 @@
   "k": "x"
  },
  "Selection": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Sem \"{0}\" no bestiário.": {
@@ -5888,7 +6016,7 @@
   "k": "x"
  },
  "Sem gema": {
-  "c": "index.html:  stroke=\"${WHC[d][0]}\" stroke-width=\"2\"/></svg>${n?WHGEM[n]:\"Sem gema\"}</span><b>${esc(WHV",
+  "c": "index.html: wsk=\"g:${d}\"><span class=\"wrn\">${whGemIco(n,d)}${n?WHGEM[n]:\"Sem gema\"}</span><b>${esc(WHV",
   "k": "x"
  },
  "Sem guia ainda.": {
@@ -6180,11 +6308,11 @@
   "k": "x"
  },
  "Stage": {
-  "c": "index.html: row(`${sicon({k:[nm],name:nm,cls:\"sm wic\"})}${esc(nm)}`, st?`Stage ${st}`:\"Locked\", `${WHD.re",
+  "c": "index.html: con({k:[nm],name:nm,cls:\"sm wic\"})}${esc(nm)}</span><b>${st?`Stage ${st}`:\"Locked\"}</b></butt",
   "k": "x"
  },
  "Stage {0}": {
-  "c": "index.html: row(`${sicon({k:[nm],name:nm,cls:\"sm wic\"})}${esc(nm)}`, st?`Stage ${st}`:\"Locked\", `${WHD.re",
+  "c": "index.html: con({k:[nm],name:nm,cls:\"sm wic\"})}${esc(nm)}</span><b>${st?`Stage ${st}`:\"Locked\"}</b></butt",
   "k": "p"
  },
  "Stamina + XP Boost ×2": {
@@ -6211,6 +6339,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Strong Ice Wave Base Damage": {
+  "c": "index.html: ve Mastery\":[\"Druid_RevelationMastery_BlessingOfTheGrove\"], \"Strong Ice Wave Base Damage\":[\"Druid_StrongIceWa",
+  "k": "x"
+ },
  "Subir (PageUp)": {
   "c": "quests/js/app.js:  fc.className = \"leaflet-overlay-floor\"; fc.innerHTML = `<button data-f=\"-1\" title=\"Subir (PageUp)\">▲</button><span></span><button data-f=\"1\" title=\"Descer (PageDown)\">▼</button>`; host.appendChi",
   "k": "x"
@@ -6232,7 +6364,7 @@
   "k": "x"
  },
  "Sugestão aplicada: copia o código no fundo da janela.": {
-  "c": "index.html: sug.pts; WED.dirty=true; WHSELI=null; renderWheelX(); whMsg(\"Sugestão aplicada: copia o código no fundo da janela.\"); } }); document.ad",
+  "c": "index.html: sug.pts; WED.dirty=true; WHSELK=null; renderWheelX(); whMsg(\"Sugestão aplicada: copia o código no fundo da janela.\"); } }); document.ad",
   "k": "x"
  },
  "Sugestões para o nível {0}{1}": {
@@ -6269,6 +6401,10 @@
  },
  "Svargrond": {
   "c": "index.html: 853],[\"Port Hope\",32594,32745],[\"Liberty Bay\",32317,32826],[\"Svargrond\",32212,31132],[\"Yala",
+  "k": "x"
+ },
+ "Sweeping Takedown Base Damage": {
+  "c": "index.html:  \"FoB Base Damage\":[\"Monk_FlurryOfBlows_DamageIncrease\"], \"Sweeping Takedown Base Damage\":[\"Monk_SweepingTake",
   "k": "x"
  },
  "Swiftness": {
@@ -6349,6 +6485,14 @@
  },
  "Tab": {
   "c": "index.html:  painel document.addEventListener(\"keydown\",e=>{ if(e.key!==\"Tab\") return; const sh=$",
+  "k": "x"
+ },
+ "Também boa": {
+  "c": "index.html: (O.bis?[[O.bis,\"Best in slot\",\"ok\"]]:[]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.next?[[O",
+  "k": "x"
+ },
+ "Também boas": {
+  "c": "index.html:  supremo: ${esc(gName(G3[0]))}.</p>`:\"\"} ${P.alt.length?`<p class=\"wsel-sec\">Também boas</p><ul class=\"wmods alt\">${P.alt.map(g=>li(g)).join(\"\")}${sup?P.salt.map(g=>li(g,1)).join(\"\"):\"\"}</ul>`:\"\"} <p class=\"w",
   "k": "x"
  },
  "Também conhecida como:": {
@@ -6727,12 +6871,20 @@
   "c": "quests/js/app.js:  { label: \"Evento\", icon: \"spark\" }, tutorial: { label: \"Tutorial\", icon: \"book\" }, ",
   "k": "x"
  },
+ "Twin Bursts Mastery": {
+  "c": "index.html: ergy Wave CD Reduction\":[\"Sorcerer_EnergyWave_Cooldown\"], \"Twin Bursts Mastery\":[\"Druid_RevelationM",
+  "k": "x"
+ },
  "Twist of Fate": {
   "c": "index.html:  of the Mountain\",[\"Nomad\"],\"Hrodmir (Buddel → Camp)\",enh],[\"Twist of Fate\",null,\"Só conta em P",
   "k": "x"
  },
  "Título": {
   "c": "index.html: `${esc(t.guild.r)} em ${esc(t.guild.n)}`:\"Sem guild\")}${row(\"Título\",esc(t.title))} ",
+  "k": "x"
+ },
+ "UE Base Damage": {
+  "c": "index.html: ave Base Damage\":[\"Sorcerer_GreatFireWave_DamageIncrease\"], \"UE Base Damage\":[\"Sorcerer_RageOfTh",
   "k": "x"
  },
  "Ultimate Mana Potion": {
@@ -6777,6 +6929,10 @@
  },
  "Valores e custos": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Valores no grau I: no Gem Atelier cada modificador sobe até ×1,5 (grau IV).": {
+  "c": "index.html: =n&&n<3?whGemPlan(voc,3,whGemK(S,d)).sbis:[]; return head+`<p class=\"wsel-sec bis\">${n?\"Best in slot\":\"Best in slot (com 3 VR: Greater gem)\"}</p><ul class=\"wmods\" style=\"--wc:${WHC[d][0]}\">${P.bis.map(g=>li(g)).join(\"\")}",
   "k": "x"
  },
  "Valuables": {
@@ -6879,6 +7035,10 @@
   "c": "index.html: r.slice(0,lim).map(h=>gsRow(h,q)).join(\"\")}${arr.length>lim?`<button type=\"button\" class=\"gsp-more\" data-gsmore=\"${t}\">Ver mais ${GSC[t][0].toLowerCase()} (${arr.length-lim})</button>`:\"\"}`; }).join(\"\") ",
   "k": "p"
  },
+ "Ver na roda": {
+  "c": "index.html: lass=\"wopt-a\">${x===w?`<span class=\"tag ok\">Na roda</span>`:`<button type=\"button\" class=\"btn small\" data-wsel=\"${i}\">Ver na roda</button>`}<button type=\"butto",
+  "k": "x"
+ },
  "Ver no Grimório": {
   "c": "quests/js/app.js: .t].x != null ? S.npcs[p.t] : null); view().innerHTML = ` <article class=\"wiki-page\"> <header class=\"box wiki-head\"><div class=\"box-body\"> <span class=\"slot wiki-sprite\">${p.i ? `<img src=\"${p.i}\" alt=\"\">` : icon(kind[1]",
   "k": "x"
@@ -6896,7 +7056,7 @@
   "k": "p"
  },
  "Ver perks": {
-  "c": "index.html: =\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
+  "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
  "Ver quests para mim": {
@@ -6947,12 +7107,28 @@
   "c": "quests/js/app.js: atChip(d.category)}${skulls(d.difficulty)}${d.implemented ? `<span class=\"chip\">Versão ${esc(d.implemented)}</span>` : \"\"}${isDone(slug)",
   "k": "p"
  },
+ "Vessel": {
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "k": "x"
+ },
  "Vessel Resonance": {
   "c": "index.html: hConvName(voc,cv,d){ const V=WHD.voc[voc]; return cv===\"vr\"?`Vessel Resonance ${WHVR[d]}`:cv===\"skill\"?V.skil",
   "k": "x"
  },
  "Vessel Resonance {0}": {
   "c": "index.html: hConvName(voc,cv,d){ const V=WHD.voc[voc]; return cv===\"vr\"?`Vessel Resonance ${WHVR[d]}`:cv===\"skill\"?V.skil",
+  "k": "p"
+ },
+ "Vessel Resonance: {0}/3 ·": {
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "k": "p"
+ },
+ "Vessel Resonance: {0}/3 · {1}": {
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "k": "p"
+ },
+ "Vessel {0}": {
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
   "k": "p"
  },
  "Vessels": {
@@ -7072,7 +7248,7 @@
   "k": "p"
  },
  "Wheel of Destiny: {0}, {1} pontos": {
-  "c": "index.html: pts,{edit:E.edit,budget:E.budget,sug:E.sug&&E.sug.map,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div> <asi",
+  "c": "index.html: get:E.budget,sug:E.sug&&E.sug.map,big:true,sel:WHSELK,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div> <asi",
   "k": "p"
  },
  "Wheel points": {
@@ -8331,6 +8507,10 @@
   "c": "index.html: sOff(t){ const p=Object.fromEntries(new Intl.DateTimeFormat(\"en-GB\",{timeZone:\"Europe/L",
   "k": "x"
  },
+ "enche uma fatia Vessel Resonance deste domínio para abrir o vessel": {
+  "c": "index.html: ===2?\"2 modificadores básicos\":n===1?\"1 modificador básico\":\"enche uma fatia Vessel Resonance deste domínio para abrir o vessel\"}</p>`; if(!GEMD){",
+  "k": "x"
+ },
  "energia": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -8709,6 +8889,10 @@
  },
  "gelo": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "gems": {
+  "c": "index.html: ull, GEMP=null; const gemLoad = () => GEMP || (GEMP = dsafe(\"gems\").then(d=>{ GEMD = d",
   "k": "x"
  },
  "general": {
@@ -9128,7 +9312,7 @@
   "k": "x"
  },
  "lock": {
-  "c": "index.html: sug[i]; sh.push(`<g class=\"ws ${st}${av?\" av\":\"\"}${lock?\" lock\":\"\"}${sg?\" sug\":\"\"}\"",
+  "c": "index.html: sug[i]; sh.push(`<g class=\"ws ${st}${av?\" av\":\"\"}${lock?\" lock\":\"\"}${sg?\" sug\":\"\"}$",
   "k": "x"
  },
  "locked": {
@@ -9300,7 +9484,7 @@
   "k": "x"
  },
  "minus": {
-  "c": "index.html: pty\"||(mode===\"toggle\"&&P[i]>=mx)) P[i]=0; else if(mode===\"minus\") P[i]=Math.max(0,P[",
+  "c": "index.html: aset.ws, e.shiftKey?\"plus\":(e.ctrlKey||e.altKey||e.metaKey)?\"minus\":\"toggle\"); const n=",
   "k": "x"
  },
  "minute": {
@@ -9488,7 +9672,7 @@
   "k": "x"
  },
  "none": {
-  "c": "index.html: e\"><path d=\"M12 2.5l9 9.5-9 9.5-9-9.5z\" fill=\"${n?WHC[d][1]:\"none\"}\" stroke=\"${WHC[d][",
+  "c": "index.html: \"true\"); nav.prepend(ind); if(MD_IND){ ind.style.transition=\"none\"; ind.style.transfor",
   "k": "x"
  },
  "nordeste": {
@@ -9772,7 +9956,7 @@
   "k": "x"
  },
  "para os teus pontos": {
-  "c": "index.html:  class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">para os teus pontos</span>':\"\"}`; box.innerHT",
+  "c": "index.html:  class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">Best in slot</span><span class=\"tag ok\">para os teus pontos</span>':\"\"}`; /* r8: as o",
   "k": "x"
  },
  "para veres o preço do Market no teu mundo.": {
@@ -9892,7 +10076,7 @@
   "k": "x"
  },
  "plus": {
-  "c": "index.html: u esvazia outra fatia.\"); P[i]=Math.min(mx,P[i]+(mode===\"plus\"?Math.min(25,free):f",
+  "c": "index.html:  WHSELK=\"s:\"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?\"plus\":(e.ctrlKey||e.altKe",
   "k": "x"
  },
  "pode mudar de cor": {
@@ -9956,11 +10140,11 @@
   "k": "x"
  },
  "pontos · nível": {
-  "c": "index.html: !E.t?`<span class=\"tag\">baseada em ${esc(w.t)}</span>`:\"\"}`:`<span class=\"tag\">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">para o",
+  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "x"
  },
  "pontos · nível {0}": {
-  "c": "index.html: !E.t?`<span class=\"tag\">baseada em ${esc(w.t)}</span>`:\"\"}`:`<span class=\"tag\">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">para o",
+  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "pontos: {0}": {
@@ -10740,7 +10924,7 @@
   "k": "x"
  },
  "spell": {
-  "c": "quests/js/app.js:  switch (kind) { case \"item\": case \"creature\": case \"spell\": return `${",
+  "c": "index.html: a||{})[voc]||0); if(k===\"rev\") return \"+\"+nf(b); if(k===\"spell\") return b===\"cd\"?\"−",
   "k": "x"
  },
  "spell id": {
@@ -10925,6 +11109,14 @@
  },
  "só {0} {1} este mês": {
   "c": "index.html: true, liq:ms>=10}; else if(mas>0&&ms>=1) sell={v:mas, lab:`só ${ms} ${ms===1?\"venda\":\"vendas\"} este mês`, n:ms, ok:false, li",
+  "k": "p"
+ },
+ "tabindex=\"0\" aria-label=\"Vessel {0}\"": {
+  "c": "index.html: \" on\":\"\"}${o.sel===\"g:\"+d?\" sel\":\"\"}\" data-wg=\"${d}\"${o.big?` tabindex=\"0\" aria-label=\"Vessel ${WHVR[d]}\"`:\"\"} style=\"--wc:${W",
+  "k": "p"
+ },
+ "tabindex=\"0\" aria-label=\"{0}\"": {
+  "c": "index.html:  sug\":\"\"}${o.sel===\"s:\"+i?\" sel\":\"\"}\" data-ws=\"${i}\"${o.big?` tabindex=\"0\" aria-label=\"${esc(whConvName(voc,cv,d))}\"`:\"\"} style=\"--wc:${W",
   "k": "p"
  },
  "tag acc": {
@@ -11427,10 +11619,6 @@
   "c": "index.html (HTML)",
   "k": "p"
  },
- "{0} ({1} pontos no {2}{3})": {
-  "c": "index.html: e:nm,cls:\"sm wic\"})}${esc(nm)}`, st?`Stage ${st}`:\"Locked\", `${WHD.revd[nm]||\"\"} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:\"\"})`, st?\"\":\"off\"); }).j",
-  "k": "p"
- },
  "{0} ({1}; nível {2}+; XP {3}/h{4}; lucro {5}/h; {6}; risco {7}/3; acesso {8})": {
   "c": "index.html: =\"bad\").sort((a,b)=>(b.xp||0)-(a.xp||0)).slice(0,40).map(h=>`${h.p.n} (${h.r.place}; nível ${h.l}+; XP ${fmt(h.xp)}/h${h.est?\" estimado\":\"\"}; lucro ${fmt(h.lo)}/h; ${h.cmp.txt}; risco ${h.d}/3; acesso ${h.q?qName(h.q)+(q",
   "k": "p"
@@ -11756,11 +11944,11 @@
   "k": "p"
  },
  "{0} pontos · nível": {
-  "c": "index.html: !E.t?`<span class=\"tag\">baseada em ${esc(w.t)}</span>`:\"\"}`:`<span class=\"tag\">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">para o",
+  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "{0} pontos · nível {1}": {
-  "c": "index.html: !E.t?`<span class=\"tag\">baseada em ${esc(w.t)}</span>`:\"\"}`:`<span class=\"tag\">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}${w===cur?'<span class=\"tag ok\">para o",
+  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "{0} pontos:": {
@@ -11923,12 +12111,20 @@
   "c": "index.html: true; return; } n.hidden=false; n.textContent = (h.sk ? `${skName(c)} ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fo",
   "k": "p"
  },
+ "{0} · Damage and Healing +": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
+  "k": "p"
+ },
+ "{0} · Damage and Healing +{1}": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
+  "k": "p"
+ },
  "{0} · NPCs": {
   "c": "quests/js/app.js:  if (st.dialogue && st.dialogue.length) { html += `<div class=\"chat\"><div class=\"chat-head\"><span>${esc(st.npc || \"Conversa\")} · NPCs</span><span>clica nas tuas falas para copiar</span></div>` + st.dialog",
   "k": "p"
  },
  "{0} · Shift +25 · Ctrl −25": {
-  "c": "index.html: sa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class=\"tiny whtip-h\">${x.full?\"Clica para esvaziar\":\"Clica para encher\"} · Shift +25 · Ctrl −25</div>`):\"\"; WHTIP.innerH",
+  "c": "index.html: sa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class=\"tiny whtip-h\">${x.full?\"Clica para esvaziar\":\"Clica para encher\"} · Shift +25 · Ctrl −25</div>`):\"\"; WHTIP.inne",
   "k": "p"
  },
  "{0} · Tibia Questski": {
@@ -12149,6 +12345,10 @@
  },
  "{0}: {0}. Menu de contexto para trocar": {
   "c": "index.html: =\"${lab}: ${why}\">${emptyIc(c,k)}</button>`; } return `<button class=\"bslot\" data-bslot=\"${k}\" data-look=\"${it.id}\" aria-label=\"${lab}: ${esc(it.n)}. Menu de contexto para trocar\">${spr(it)}</button>`; }).join(\"\")}</div>",
+  "k": "p"
+ },
+ "{0}: {1} pontos": {
+  "c": "index.html: \":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=",
   "k": "p"
  },
  "{0}A estimativa em party soma o XP/h solo de cada um, aplica o bónus e divide pelo grupo. Em grupo costuma render mais, porque puxam mais criaturas de cada vez.": {
@@ -12475,10 +12675,6 @@
   "c": "index.html: |{}, r=rs[i]; return p.city||r?`${p.city?esc(p.city):\"\"}${r?`<span class=\"hcmp-sub\">~${nf(r.c)} sqm de ${esc(r.s)}</span>`:\"\"}`:na; }),rs.map(",
   "k": "p"
  },
- "· +{0} comprados": {
-  "c": "index.html:  <p class=\"wsub\">Nível ${c.level} − 50 = ${base}${tot>base?` · +${tot-base} comprados`:\"\"}. Junta os que c",
-  "k": "p"
- },
  "· 10 a 99 gp/oz": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "x"
@@ -12486,6 +12682,14 @@
  "· 100 gp/oz ou mais": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "x"
+ },
+ "· Damage and Healing +": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
+  "k": "x"
+ },
+ "· Damage and Healing +{0}": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
+  "k": "p"
  },
  "· NPC": {
   "c": "index.html: esc(w)}`:b.best===\"npc\"&&b.npc?`≈ ${gp(b.npc[1])}${b.npc[0]?` · NPC ${elink(\"npc\",b.npc[0])}`:\"\"}`:\"\"; } return",
@@ -12500,7 +12704,7 @@
   "k": "x"
  },
  "· Shift +25 · Ctrl −25": {
-  "c": "index.html: sa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class=\"tiny whtip-h\">${x.full?\"Clica para esvaziar\":\"Clica para encher\"} · Shift +25 · Ctrl −25</div>`):\"\"; WHTIP.innerH",
+  "c": "index.html: sa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class=\"tiny whtip-h\">${x.full?\"Clica para esvaziar\":\"Clica para encher\"} · Shift +25 · Ctrl −25</div>`):\"\"; WHTIP.inne",
   "k": "x"
  },
  "· Tibia Questski": {
@@ -12562,14 +12766,6 @@
  "· empilhável": {
   "c": "index.html: Number(info.wt).toFixed(2).replace(\".\",\",\")} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <d",
   "k": "x"
- },
- "· estágio {0} aos": {
-  "c": "index.html:  `${WHD.revd[nm]||\"\"} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:\"\"})`, st?\"\":\"off\")",
-  "k": "p"
- },
- "· estágio {0} aos {1}": {
-  "c": "index.html:  `${WHD.revd[nm]||\"\"} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:\"\"})`, st?\"\":\"off\")",
-  "k": "p"
  },
  "· faltam {0} níveis": {
   "c": "index.html: `:\"\"}${!can?` · ${esc(G.voc[c.voc].n)} não pode usar`:!lvOk?` · faltam ${it.l-c.level} níveis`:\"\"}</div>` : \"\"; ",

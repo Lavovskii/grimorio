@@ -1186,14 +1186,27 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 /* r7: na página da Wheel o título fica compacto, para a janela caber no ecrã sem scroll */
 /* a janela já tem a barra "Wheel of Destiny": o título da página fica só para os leitores de ecrã */
 .panel[data-p="wheel"]>.ph{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0}
-.whx-win{position:relative;z-index:1;--wsd:228px;--wsz:min(75vh, calc(100svh - 215px), calc(100cqi - 2*var(--wsd) - 44px));background:#262626;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px);border:1px solid #0c0c0c;border-radius:6px;box-shadow:inset 0 0 0 1px #474747,0 14px 40px rgba(0,0,0,.45);padding:0 10px 10px;color:#C9C9C9;font:12.5px/1.45 Verdana,Tahoma,var(--sans)}
+.whx-win{position:relative;z-index:1;--wsd:250px;--wsz:min(75vh, calc(100svh - 262px), calc(100cqi - 2*var(--wsd) - 44px));background:#262626;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px);border:1px solid #0c0c0c;border-radius:6px;box-shadow:inset 0 0 0 1px #474747,0 14px 40px rgba(0,0,0,.45);padding:0 10px 10px;color:#C9C9C9;font:13px/1.45 Verdana,Tahoma,var(--sans)}
 .whx-title{margin:0 -10px 10px;padding:6px 10px;text-align:center;font:700 12.5px Verdana,Tahoma,sans-serif;color:#BDBDBD;background:linear-gradient(#4b4b4b,#303030);border-bottom:1px solid #0c0c0c;border-radius:6px 6px 0 0;text-shadow:0 1px 0 #000}
 .whx-stage{display:grid;grid-template-columns:var(--wsd) var(--wsz) var(--wsd);justify-content:center;gap:10px;height:var(--wsz)}
 .whx-w{display:grid;place-items:center;min-width:0;min-height:0}
 .whx-w .whs{width:var(--wsz);height:var(--wsz);max-width:none;filter:none}
 .whx-side{display:flex;flex-direction:column;gap:8px;min-height:0;min-width:0}
 .whx-r .wbox{flex:1 1 0}
-.whx-l .wbox-sel{flex:1 1 0}
+.whx-l .wbox-sel{flex:1 1 0;min-height:150px}
+.whx-l{overflow-y:auto;scrollbar-width:thin}
+.whx-l .wbox-pts,.whx-l .wbox-info{flex:none}
+.whx-l .wbox-pts .wbox-b,.whx-l .wbox-info .wbox-b{overflow:visible}
+.whx-foot .whx-a{align-items:center}
+.whx-foot .whx-seg{background:#0F0F0F;border-color:#4A4A4A}
+.whx-foot .whx-msg{flex-basis:100%}
+.wsel-h2{margin:2px 0 0;padding-top:4px;border-top:1px solid #333;color:#C8973A;font-size:12px}
+.whx-foot .whx-imp{position:relative}
+.whx-foot .whx-imp summary{list-style:none;cursor:pointer}
+.whx-foot .whx-imp summary::-webkit-details-marker{display:none}
+.whx-foot .whx-imp[open] summary{border-color:#C8973A;color:#F0E3B8}
+.whx-foot .whx-imp form{position:absolute;right:0;bottom:calc(100% + 8px);z-index:6;display:flex;gap:6px;width:min(380px,82vw);margin:0;padding:8px;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B,0 10px 28px rgba(0,0,0,.55)}
+.whx-foot .whx-imp input{flex:1;min-width:0;width:auto}
 .wbox{display:flex;flex-direction:column;min-height:0;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B}
 .wbox h5{margin:0;padding:3px 8px;text-align:center;font:700 12px Verdana,Tahoma,sans-serif;letter-spacing:0;text-transform:none;color:#A3A3A3;background:linear-gradient(#3C3C3C,#2A2A2A);border-bottom:1px solid #0b0b0b}
 .wbox-b{padding:6px 8px;overflow:auto;min-height:0;flex:1 1 auto;display:grid;align-content:start;gap:4px}
@@ -1205,11 +1218,11 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .wrow.off{opacity:.5}
 .wrow .si.wic{--s:18px;border-radius:3px;flex:none}
 .wrow .whp-gem{width:15px;height:15px;flex:none}
-.wsub{margin:0 0 2px;font-size:11.5px;color:#9A9A9A;line-height:1.4}
+.wsub{margin:0 0 2px;font-size:12px;color:#A3A3A3;line-height:1.4}
 .wnone{margin:0;color:#8A8A8A}
 .wpts-row{display:flex;gap:6px} .wpts-row input{flex:1;min-width:0} .wpts-row .btn{flex:none}
 .wsug-box{margin-top:4px;padding-top:6px;border-top:1px solid #333;display:grid;gap:5px}
-.wsug-l{list-style:none;margin:0;padding:0;display:grid;gap:3px;max-height:140px;overflow:auto}
+.wsug-l{list-style:none;margin:0;padding:0;display:grid;gap:3px;max-height:96px;overflow:auto}
 .wsug-l li{display:flex;justify-content:space-between;align-items:center;gap:6px} .wsug-l li>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .wsug-n{color:#7CF08C;font-weight:700}
 .whs .ws.sug .wsb{stroke:#7CF08C;stroke-width:2.6;stroke-dasharray:7 4;animation:wsugDash 1.2s linear infinite}
@@ -1221,7 +1234,7 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .wsel-h .si.lg{--s:40px;border-radius:4px}
 .wsel-g{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:50%;background:#0D0A06;border:2px solid #8C7442}
 .wsel-g svg{width:24px;height:24px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.wsel-t,.wsel-d,.wsel-n{margin:0} .wsel-d{color:#A9A9A9;font-size:11.5px} .wsel-n{color:#D9A441;font-size:11.5px}
+.wsel-t,.wsel-d,.wsel-n{margin:0} .wsel-d{color:#B0B0B0;font-size:12px} .wsel-n{color:#D9A441;font-size:12px}
 .wbox-info .whx-seg{justify-self:start;background:#0F0F0F;border-color:#4A4A4A}
 .wbox-info .whx-btn{display:flex;gap:6px;flex-wrap:wrap}
 .wbox-info .whx-imp input{width:100%}
@@ -1237,6 +1250,66 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .wsel-g.wsi-skill svg{stroke:#5BE36B} .wsel-g.wsi-mleech svg{stroke:#5AA7FF} .wsel-g.wsi-lleech svg{stroke:#FF6B6B} .wsel-g.wsi-inst svg{stroke:#FFD36B} .wsel-g.wsi-vr svg{stroke:#E2C0FF}
 .whs .wmed:not(.on) .wspr{opacity:.35;filter:grayscale(1)}
 .whs .wfig{pointer-events:none}
+/* r8: gemas lapidadas nos vessels, revelações e fatias com foco; o que está no painel Selection fica marcado */
+.whs .wsock,.whs .wmed,.whs .ws{outline:none}
+.whs .wsock,.whs .wmed{cursor:pointer}
+.whs .wsk-hit{fill:transparent}
+.whs .wsk-ring,.whs .wmd-ring{fill:none;stroke:var(--wc);stroke-width:2.6;opacity:0;transition:opacity .15s;pointer-events:none}
+.whs .wsock:hover .wsk-ring,.whs .wsock:focus-visible .wsk-ring,.whs .wsock.sel .wsk-ring,.whs .wmed:hover .wmd-ring,.whs .wmed:focus-visible .wmd-ring,.whs .wmed.sel .wmd-ring{opacity:1}
+.whs .wsock:focus-visible .wsk-ring,.whs .wmed:focus-visible .wmd-ring{stroke:#FFF3C4;stroke-dasharray:4 3}
+.whs .wsk-glow{opacity:.6}
+.whs .wsock.on .wgem{filter:drop-shadow(0 0 3px var(--wc))}
+.whs .wvp{fill:#1A130B;stroke:#5B4520;stroke-width:1}
+.whs .wvp.on{fill:var(--wc);stroke:#fff;stroke-opacity:.7}
+.whs .wgem-sp{animation:wgemSp 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes wgemSp{0%,100%{opacity:.15;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
+.whs .ws:focus-visible .wsb,.whs .ws.sel .wsb{stroke:#FFF3C4;stroke-width:3;stroke-dasharray:none;animation:none}
+.whs .ws.sel .wsb,.whs .ws.sel .wsf{filter:brightness(1.3)}
+.whs .ws:focus-visible .wsb{stroke-dasharray:6 3}
+@media (prefers-reduced-motion:reduce){.whs .wgem-sp{animation:none}}
+.wgi{width:18px;height:18px;flex:none;overflow:visible}
+.wrow .wgi{width:17px;height:17px}
+.wsel-gem{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#2A2010 0,#0D0A06 72%);border:2px solid #B08A3E;box-shadow:0 0 10px -2px var(--wc)}
+.wsel-gem .wgi{width:34px;height:34px}
+.wsel-sec{margin:6px 0 1px;font:700 11px Verdana,Tahoma,sans-serif;color:#8D8D8D;text-transform:uppercase;letter-spacing:.05em}
+.wsel-sec.bis{color:#7CF08C}
+.wmods{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.wmods li{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.wmods li>span{min-width:0;overflow-wrap:anywhere}
+.wbox-b>*{min-width:0} .wmods li b{color:#EDEDED;font-weight:400;white-space:nowrap;font-variant-numeric:tabular-nums}
+.wmods .wmk{display:inline-block;width:7px;height:7px;margin-right:7px;transform:rotate(45deg);background:var(--wc,#C8973A);vertical-align:1px}
+.wmods li.sup>span{color:#F0E3B8} .wmods li.sup .wmk{background:#F6DC8C;box-shadow:0 0 5px #F6DC8C}
+.wmods.alt li{color:#B9B9B9} .wmods.alt .wmk{background:#6B6B6B}
+.wrev-st{list-style:none;margin:2px 0;padding:0;display:grid;gap:3px}
+.wrev-st li{display:flex;justify-content:space-between;gap:8px;padding:2px 6px;border-left:3px solid #3A3A3A;color:#9A9A9A}
+.wrev-st li.on{border-color:var(--wc);color:#EDEDED} .wrev-st li b{font-weight:700}
+.wrow-b{appearance:none;font:inherit;color:inherit;text-align:left;width:calc(100% + 8px);background:none;border:0;cursor:pointer;padding:3px 4px;margin:0 -4px;border-radius:3px;min-height:26px}
+.wrow-b:hover,.wrow-b.on{background:#2C2C2C}
+.wrow-b.on{box-shadow:inset 2px 0 0 #C8973A}
+.wrow-b:focus-visible{outline:2px solid #C8973A;outline-offset:-2px}
+.whtip-sel{display:grid;gap:4px;max-width:300px;font-size:12.5px}
+.whx-alt{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.whx-alt>span{color:#8D8D8D}
+.whx-chip{appearance:none;font:inherit;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:3px 11px;border:1px solid #4A4A4A;border-radius:999px;background:#0F0F0F;color:#DADADA}
+.whx-chip .tiny{color:#8D8D8D}
+.whx-chip:hover,.whx-chip:focus-visible{border-color:#C8973A;color:#F0E3B8;outline:none}
+@media (pointer:coarse){ .whx-chip,.wrow-b{min-height:40px} }
+.whx-opts{display:grid;gap:12px;margin:0 0 18px}
+.whx-opts:empty{display:none}
+.whx-oh{display:grid;gap:2px} .whx-oh h3{margin:0;font-size:19px} .whx-oh p{margin:0}
+.wopt-l{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:12px}
+.wopt{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:var(--r1);background:var(--surface);transition:border-color .15s}
+.wopt:hover{border-color:var(--accent)}
+.wopt.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.wopt .whs.sm{max-width:120px}
+.wopt-b{display:grid;gap:7px;justify-items:start;min-width:0}
+.wopt-b h4{margin:0;font-size:15px;line-height:1.3}
+.wopt-b .pills{margin:0}
+.wopt-g{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--muted)} .wopt-g span{display:inline-flex;align-items:center;gap:5px}
+.wopt-a{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+@media (max-width:420px){ .wopt{grid-template-columns:minmax(0,1fr)} .wopt .whs.sm{max-width:170px;margin:0} }
+/* r8: na página da Wheel a roda precisa da largura toda: o anúncio lateral (ecrãs de 1600 px ou mais) não aparece aqui */
+body:has(.panel.on[data-p="wheel"]) .ad-slot.ad-side{display:none}
 /* janela estreita: a roda em cima, as barras por baixo (duas colunas, uma no telemóvel) */
 @container (max-width: 1040px){
   .whx-win{--wsz:min(calc(100cqi - 22px), 82vh)}
@@ -2905,6 +2978,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <section class="panel" data-p="wheel">
       <div class="ph"><span class="eyebrow">Combate</span><h2>Wheel of Destiny</h2><p id="wheelLead"></p></div>
       <div class="whx" id="wheelX"></div>
+      <div class="whx-opts" id="wheelOpts"></div>
       <div class="callout" id="wheelNow"></div>
       <div class="sec"><h3>Todas as builds, por pontos</h3><div class="scroll-x card wh-tw"><table id="wheelTable"></table></div><div class="grid2" id="gemBox"></div><p class="note">Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.</p></div>
     </section>
@@ -44559,10 +44633,15 @@ function whGemMods(voc,n,prof,k){ if(!n) return []; const g=G.gems[voc]||{}, b=[
   (g.lesser_gems||["Hit Points","Mitigation"]).forEach(x=>{ if(x==="Any Elemental Resistance"){ if(!prof) b.push("Resistência ao elemento que mais te bate"); } else if(!b.includes(GEMPT[x]||x)) b.push(GEMPT[x]||x); });
   const m=n===1?1:2, o=(k||0)%Math.max(1,b.length), out=[...b.slice(o),...b.slice(0,o)].slice(0,m); if(n===3&&(g.greater_gems||[]).length) out.push(supPT(g.greater_gems[(k||0)%g.greater_gems.length]));
   return out; }
-// gema no vessel: losango pequeno (lesser), maior (regular) ou octógono lapidado (greater)
-function whGemShape(x,y,n,fill){ const r=[0,6.5,9,10.5][n], P=rr=>[...Array(8)].map((_,k)=>{ const [a,c]=whPt(rr,k*45+22.5); return `${(x+a).toFixed(1)},${(y+c).toFixed(1)}`; }).join(" ");
-  if(n<3) return `<path d="M${x} ${y-r}L${x+r} ${y}L${x} ${y+r}L${x-r} ${y}Z" fill="${fill}" stroke="#fff" stroke-opacity=".55" stroke-width="1"/><path d="M${x} ${y-r}L${(x-r*.45).toFixed(1)} ${(y-r*.1).toFixed(1)}L${x} ${(y+r*.15).toFixed(1)}Z" fill="#fff" fill-opacity=".45"/>`;
-  return `<polygon points="${P(r)}" fill="${fill}" stroke="#fff" stroke-opacity=".6" stroke-width="1"/><polygon points="${P(r*.5)}" fill="#fff" fill-opacity=".25"/>`; }
+// r8: gema lapidada, como no jogo: lesser = losango, regular = hexágono, greater = octógono; facetas com a luz de cima à esquerda
+function whGemG(x,y,n,d,R){ if(!n) return ""; const C=WHC[d], N=[0,4,6,8][n], r=R||[0,9,11,13][n], a0=n===3?-112.5:-90, st=360/N;
+  const Q=(rr,a)=>{ const [p,q]=whPt(rr,a); return `${(x+p).toFixed(1)} ${(y+q).toFixed(1)}`; };
+  let f=""; for(let k=0;k<N;k++){ const a=a0+k*st, b=a+st, t=(1+Math.cos((a+st/2-225)*Math.PI/180))/2;
+    f+=`<path d="M${Q(r,a)}L${Q(r,b)}L${Q(r*.5,b)}L${Q(r*.5,a)}Z" fill="${t>.72?C[0]:t>.3?C[1]:C[2]}"/>`; }
+  const ring=rr=>[...Array(N)].map((_,k)=>Q(rr,a0+k*st)).join("L");
+  return `<g class="wgem">${f}<path d="M${ring(r*.5)}Z" fill="${C[1]}"/><path d="M${Q(r*.5,a0+st*(N===4?2:N/2))}L${Q(r*.5,a0+st*(N===4?3:N/2+1))}L${Q(r*.12,225)}Z" fill="#fff" fill-opacity=".45"/><path d="M${ring(r)}Z" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="1"/>${n===3?`<path class="wgem-sp" d="M${Q(r*.7,225)}m0 -4l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" fill="#fff"/>`:""}</g>`; }
+// a mesma gema num ícone pequeno (painéis e cartões); sem gema: o encaixe vazio
+const whGemIco = (n,d,cls) => `<svg class="${cls||"wgi"}" viewBox="-15 -15 30 30" aria-hidden="true">${n?whGemG(0,0,n,d,13.5):`<path d="M0 -9 9 0 0 9 -9 0Z" fill="none" stroke="${WHC[d][1]}" stroke-width="1.8" stroke-dasharray="3 2.2"/>`}</svg>`;
 const WHSP = "spells.png?v=20261018r2"; // r7: o mesmo ?v= do .si (CSS): quando o spells.png mudar, muda os dois
 // r7: ícone de spells.png (32×32, 16 por linha) dentro do SVG da roda, centrado em (cx,cy), lado 2·r
 function whSpr(ix,cx,cy,r){ const x=(ix%16)*32, y=Math.floor(ix/16)*32, d=(r*2).toFixed(1);
@@ -44585,7 +44664,7 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
   WHD.slots.forEach(([d,mx,ded,cv],i)=>{ const g=whGeo(i), r1=WHR[g.ring], r2=WHR[g.ring+1], p=Math.min(pts[i]||0,mx), f=p/mx, k=cv.split(":")[0], st=f>=1?"full":p?"part":"empty";
     const av=ed&&p<mx&&free>0&&(!WHD.adj[i].length||WHD.adj[i].some(j=>full.has(j))), lock=ed&&!p&&!av;
     const sg=o.sug&&o.sug[i];
-    sh.push(`<g class="ws ${st}${av?" av":""}${lock?" lock":""}${sg?" sug":""}" data-ws="${i}" style="--wc:${WHC[d][0]}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][2]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="${U(d)}"/>${f<1?`<path class="wse" d="${whLine(r1+(r2-r1)*f,g.a1,g.a2)}"/>`:""}`:""}</g>`);
+    sh.push(`<g class="ws ${st}${av?" av":""}${lock?" lock":""}${sg?" sug":""}${o.sel==="s:"+i?" sel":""}" data-ws="${i}"${o.big?` tabindex="0" aria-label="${esc(whConvName(voc,cv,d))}"`:""} style="--wc:${WHC[d][0]}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][2]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="${U(d)}"/>${f<1?`<path class="wse" d="${whLine(r1+(r2-r1)*f,g.a1,g.a2)}"/>`:""}`:""}</g>`);
     const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?15:14, s=br/18.5, ix=whSpIx(voc,cv);
     /* r7: como no jogo: o ícone do feitiço (spells.png) ou o desenho, e o selo da dedicação em baixo (vida, mana, capacidade, mitigação) */
     const ico=ix>=0?whSpr(ix,cx,cy,br*0.74):`<path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/>`;
@@ -44599,8 +44678,9 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
     <path d="M282 -46v92" stroke="#3B2A0C" stroke-width="3"/></g>`).join("");
   const med=WHDOM.map(d=>{ const ri=spIdx(WHD.voc[voc].rev[d]), sx=d==="green"||d==="blue"?-1:1, sy=d==="green"||d==="red"?-1:1, mx=sx*232, my=sy*232, st=S.rev[d], n=S.vr[d], ang=Math.atan2(sy,sx)*180/Math.PI;
     const pips=[-26,0,26].map((da,k)=>{ const [px,py]=whPt(43,ang+da); return `<path class="wpip${k<st?" on":""}" d="M${(mx+px).toFixed(1)} ${(my+py-5.5).toFixed(1)}l5.5 5.5-5.5 5.5-5.5-5.5z"/>`; }).join(""), gx=sx*183, gy=sy*183;
-    return `<g class="wmed${st?" on":""}" data-wr="${d}" style="--wc:${WHC[d][0]}"><circle cx="${mx}" cy="${my}" r="47" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="41" fill="#22180E"/><circle cx="${mx}" cy="${my}" r="38" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34" fill="${st?U(d):"#15110C"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34" fill="${WHC[d][2]}" fill-opacity=".4"/>`}${ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`}${pips}</g>
-      <g class="wsock${n?" on":""}"><circle cx="${gx}" cy="${gy}" r="17" fill="${U("g")}"/><circle cx="${gx}" cy="${gy}" r="13" fill="#0D0905"/>${n?whGemShape(gx,gy,n,U(d+"j")):`<path d="M${gx} ${gy-6}l6 6-6 6-6-6z" fill="none" stroke="#5B4520" stroke-width="1.5"/>`}</g>`; }).join("");
+    const vrp=[-34,0,34].map((da,k)=>{ const [px,py]=whPt(26,ang+180+da); return `<circle class="wvp${k<n?" on":""}" cx="${(gx+px).toFixed(1)}" cy="${(gy+py).toFixed(1)}" r="2.7"/>`; }).join("");
+    return `<g class="wmed${st?" on":""}${o.sel==="r:"+d?" sel":""}" data-wr="${d}"${o.big?` tabindex="0" aria-label="${esc(WHD.voc[voc].rev[d])}"`:""} style="--wc:${WHC[d][0]}"><circle cx="${mx}" cy="${my}" r="47" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="41" fill="#22180E"/><circle cx="${mx}" cy="${my}" r="38" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34" fill="${st?U(d):"#15110C"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34" fill="${WHC[d][2]}" fill-opacity=".4"/>`}${ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`}${pips}<circle class="wmd-ring" cx="${mx}" cy="${my}" r="50"/></g>
+      <g class="wsock${n?" on":""}${o.sel==="g:"+d?" sel":""}" data-wg="${d}"${o.big?` tabindex="0" aria-label="Vessel ${WHVR[d]}"`:""} style="--wc:${WHC[d][0]}"><circle class="wsk-hit" cx="${gx}" cy="${gy}" r="27"/><circle cx="${gx}" cy="${gy}" r="20" fill="${U("g")}" stroke="#3B2A0C" stroke-width="1.2"/><circle cx="${gx}" cy="${gy}" r="16.5" fill="#0D0905"/>${n?`<circle class="wsk-glow" cx="${gx}" cy="${gy}" r="16.5" fill="${WHC[d][2]}"/>${whGemG(gx,gy,n,d)}`:`<path d="M${gx} ${gy-7}l7 7-7 7-7-7z" fill="none" stroke="#6B5226" stroke-width="1.5" stroke-dasharray="3 2.4"/>`}<circle class="wsk-ring" cx="${gx}" cy="${gy}" r="22.5"/>${vrp}</g>`; }).join("");
   const riv=[[-160,-284],[160,-284],[-160,284],[160,284],[-284,-160],[-284,160],[284,-160],[284,160]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.6" fill="${U("g")}" stroke="#3B2A0C"/>`).join("");
   const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`;
   return `<svg class="whs${o.size==="sm"?" sm":""}${ed?" edit":""}" viewBox="-300 -300 600 600" role="img" aria-label="${esc(lab)}" data-wv="${voc}" data-wp="${WHD.slots.map((s,i)=>pts[i]||0).join(",")}"><defs>${defs}</defs>
@@ -44611,24 +44691,38 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
     <circle r="27" fill="${U("g")}"/><circle r="21.5" fill="#0D0905"/><circle r="19" fill="none" stroke="#C8973A" stroke-opacity=".5"/><text y="5" class="wpts${S.tot>=1000?" k":""}">${S.tot}</text>${med}</svg>`; }
 // texto de uma fatia (tooltip e leitores de ecrã)
 function whSlotTxt(voc,pts,i){ const [d,mx,ded,cv]=WHD.slots[i], V=WHD.voc[voc], p=pts[i]||0;
-  const dv=x=>ded==="hp"?`+${nf(V.hp*x)} vida`:ded==="mp"?`+${nf(V.mp*x)} mana`:ded==="cap"?`+${nf(V.cap*x)} capacidade`:ded==="mit"?`+${String(Math.round(WHD.mit*x*100)/100).replace(".",",")}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`;
+  const dv=x=>ded==="hp"?`+${nf(V.hp*x)} vida`:ded==="mp"?`+${nf(V.mp*x)} mana`:ded==="cap"?`+${nf(V.cap*x)} capacidade`:ded==="mit"?`+${String(Math.round(WHD.mit*x*100)/100).replace(".",DECSEP)}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`;
   const n=whConvName(voc,cv,d), k=cv.split(":")[0], nm=n.replace(/^Augmented /,""), desc=k==="sp"?(WHD.aug[nm]||[]).map((x,j)=>`estágio ${j+1}: ${x}`).join("; "):k==="vr"?WHD.perk["Vessel Resonance"]:k==="skill"?`+1 de ${WHSK[voc]}.`:k==="mleech"?WHD.perk["Mana Leech"]:k==="lleech"?WHD.perk["Life Leech"]:(WHD.perk[n]||"");
   return {t:`Fatia ${WHDN[d]} de ${mx}`, st:p>=mx?"cheia":p?`${p} de ${mx} pontos`:"vazia", ded:p?dv(p):dv(mx)+" (com a fatia cheia)", conv:n, desc, full:p>=mx}; }
 let WHTIP=null;
 const WHWIDE = window.matchMedia ? matchMedia("(min-width: 1100px)") : {matches:true};
-let WHSELI = null; // r7: a última fatia vista na roda grande (painel Selection)
-function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]");
-  /* r7: na roda grande, com espaço para as barras laterais, o que a fatia dá vai para o painel Selection (sem tooltip) */
-  if(g&&WHD&&g.closest("#wheelX")&&WHWIDE.matches){ if(WHTIP) WHTIP.hidden=true; const sv=g.closest("svg"), sel=$("whSel"), i=+g.dataset.ws;
-    if(sel&&WHSELI!==i){ WHSELI=i; sel.innerHTML=whSelHTML(sv.dataset.wv,sv.dataset.wp.split(",").map(Number),i); } return; }
+let WHSELK = null; // r8: o que está no painel Selection: "s:<fatia>", "g:<domínio>" (gema) ou "r:<domínio>" (revelação)
+const WHTGT = ".whs [data-ws],.whs [data-wg],.whs [data-wr],[data-wsk]";
+const whKey = g => g.dataset.ws!=null?"s:"+g.dataset.ws:g.dataset.wg?"g:"+g.dataset.wg:g.dataset.wr?"r:"+g.dataset.wr:g.dataset.wsk||null;
+// r8: escolhe o que o painel Selection mostra e marca-o na roda e nas listas (fica marcado até escolheres outra coisa)
+function whSelSet(k){ const sel=$("whSel"), c=C(); if(!sel||!WED||!c||k===WHSELK) return; WHSELK=k; sel.innerHTML=whSelHTML(c.voc,WED.pts,k);
+  const box=$("wheelX"); if(!box) return; box.querySelectorAll(".whs .sel,[data-wsk].on").forEach(x=>x.classList.remove("sel","on"));
+  const [t,v]=String(k).split(":"), at=t==="s"?"data-ws":t==="g"?"data-wg":"data-wr"; box.querySelectorAll(`.whs [${at}="${v}"]`).forEach(x=>x.classList.add("sel"));
+  box.querySelectorAll(`[data-wsk="${k}"]`).forEach(x=>x.classList.add("on")); }
+function whTip(e,el){ const g=el||(e.target.closest&&e.target.closest(WHTGT)), big=g&&WHD&&g.closest("#wheelX");
+  /* r7: na roda grande, com espaço para as barras laterais, o que a fatia dá vai para o painel Selection (sem tooltip); r8: também gemas, revelações e linhas dos painéis */
+  if(big&&(WHWIDE.matches||g.dataset.wsk)){ if(WHTIP) WHTIP.hidden=true; whSelSet(whKey(g)); return; }
   if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); }
-  if(!g||!WHD){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), x=whSlotTxt(sv.dataset.wv,pts,+g.dataset.ws);
-  const hint=sv.classList.contains("edit")?(g.classList.contains("lock")?`<div class="tiny whtip-h">Precisa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class="tiny whtip-h">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</div>`):"";
-  WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}${hint}`;
-  WHTIP.hidden=false; const r=WHTIP.getBoundingClientRect(), px=e.clientX||0, py=e.clientY||0;
+  if(!g||!WHD||g.dataset.wsk){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), voc=sv.dataset.wv, k=whKey(g);
+  if(big) whSelSet(k);
+  if(k[0]!=="s") WHTIP.innerHTML=`<div class="whtip-sel">${whSelHTML(voc,pts,k)}</div>`;
+  else { const x=whSlotTxt(voc,pts,+g.dataset.ws);
+    const hint=sv.classList.contains("edit")?(g.classList.contains("lock")?`<div class="tiny whtip-h">Precisa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class="tiny whtip-h">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</div>`):"";
+    WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}${hint}`; }
+  WHTIP.hidden=false; const r=WHTIP.getBoundingClientRect(), gr=el?g.getBoundingClientRect():null, px=gr?gr.right:(e.clientX||0), py=gr?gr.top:(e.clientY||0);
   WHTIP.style.left=Math.max(8,Math.min(innerWidth-r.width-8,px+14))+"px"; WHTIP.style.top=Math.max(8,py+16+r.height>innerHeight?py-r.height-12:py+16)+"px"; }
 document.addEventListener("pointermove", e=>{ if(e.pointerType!=="touch") whTip(e); }, {passive:true});
-document.addEventListener("click", e=>{ if(e.target.closest&&e.target.closest(".whs:not(.edit) [data-ws]")) whTip(e); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
+document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.closest(WHTGT); if(t&&(!t.closest(".whs.edit")||!t.matches("[data-ws]"))) whTip(e,t.dataset.wsk?t:null); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
+/* r8: com o teclado: Tab chega às fatias, gemas e revelações da roda grande; Enter/Espaço enche ou esvazia a fatia no modo Distribuir */
+document.addEventListener("focusin", e=>{ const t=e.target.closest&&e.target.closest(WHTGT); if(t&&t.closest("#wheelX")) whTip(e,t); else if(WHTIP&&!WHTIP.hidden&&!(e.target.closest&&e.target.closest(".whtip"))) WHTIP.hidden=true; });
+document.addEventListener("keydown", e=>{ if(e.key!=="Enter"&&e.key!==" ") return; const t=e.target.closest&&e.target.closest("#wheelX .whs [data-ws],#wheelX .whs [data-wg],#wheelX .whs [data-wr]"); if(!t) return; e.preventDefault();
+  if(t.dataset.ws!=null&&t.closest(".whs.edit")){ WHSELK="s:"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); const n=document.querySelector(`#wheelX .whs [data-ws="${t.dataset.ws}"]`); if(n) n.focus({preventScroll:true}); }
+  else whTip(e,t); });
 // painéis ao lado da roda, como no jogo: Dedication, Conviction, Vessels e Revelation Perks (r7: nomes do jogo, linhas como no cliente)
 function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v=>String(Math.round(v*100)/100).replace(".",DECSEP);
   const row=(a,b,t,cls)=>`<div class="wrow${cls?" "+cls:""}"${t?` title="${esc(t)}"`:""}><span class="wrn">${a}</span><b>${b}</b></div>`;
@@ -44637,16 +44731,86 @@ function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v
     const desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:vr?WHD.perk["Vessel Resonance"]:(WHD.perk[n]||"");
     const ic=aug?sicon({k:[nm],name:nm,cls:"sm wic"}):"";
     return row(`${ic}${esc(vr?n.replace("Vessel Resonance","VR"):aug?"Aug. "+nm:nm)}`, aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join("") || `<p class="wnone">Ainda nenhuma fatia cheia.</p>`;
-  let gk=0; const ves=row("Damage and Healing","+"+S.gem)+WHDOM.map(d=>{ const n=S.vr[d], mods=whGemMods(voc,n,prof,n?gk++:0);
-    return `<div class="wrow${n?"":" off"}" title="${esc(n?mods.join(" + "):"")}"><span class="wrn"><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${n?WHC[d][1]:"none"}" stroke="${WHC[d][0]}" stroke-width="2"/></svg>${n?WHGEM[n]:"Sem gema"}</span><b>${esc(WHVR[d])}</b></div>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
-  const rev=row("Damage and Healing","+"+S.dh)+WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]);
-    return row(`${sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}`, st?`Stage ${st}`:"Locked", `${WHD.revd[nm]||""} (${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:""})`, st?"":"off"); }).join("");
+  /* r8: cada vessel e cada revelação é um botão: passar o rato, tocar ou Tab mostra tudo no painel Selection */
+  let gk=0; const ves=row("Damage and Healing","+"+S.gem)+WHDOM.map(d=>{ const n=S.vr[d], mods=!n?[]:GEMD?whGemBis(voc,n,whGemK(S,d)):whGemMods(voc,n,prof,gk++);
+    return `<button type="button" class="wrow wrow-b${n?"":" off"}" data-wsk="g:${d}"><span class="wrn">${whGemIco(n,d)}${n?WHGEM[n]:"Sem gema"}</span><b>${esc(WHVR[d])}</b></button>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
+  const rev=row("Damage and Healing","+"+S.dh)+WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d];
+    return `<button type="button" class="wrow wrow-b${st?"":" off"}" data-wsk="r:${d}"><span class="wrn">${sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}</span><b>${st?`Stage ${st}`:"Locked"}</b></button>`; }).join("");
   const box=(t,b)=>`<section class="wbox"><h5>${t}</h5><div class="wbox-b">${b}</div></section>`;
   return box("Dedication Perks",ded)+box("Conviction Perks",cvl)+box("Vessels",ves)+box("Revelation Perks",rev); }
-// r7: o painel Selection (à esquerda): o que dá a fatia que estás a ver
-function whSelHTML(voc,pts,i){ if(i==null||!WHD.slots[i]) return `<p class="wnone">Passa o rato numa fatia (ou toca nela) para ver o que dá.</p>`;
+/* ---------- r8: gemas (data/gems.json, _dev/build_gems.py: valores do Canary no grau I) ---------- */
+let GEMD=null, GEMP=null;
+const gemLoad = () => GEMP || (GEMP = dsafe("gems").then(d=>{ GEMD = d&&d.basic ? d : null; return GEMD; }));
+// best in slot do TibiaPal (G.gems) → modificadores do jogo; os básicos que só mudam o elemento andam juntos num grupo
+const GEMBAS = {"Hit Points":["Vocation_Health"], "Mitigation":["General_MitigationMultiplier"], "Mana":["Vocation_Mana"]};
+const GEMRES = [["General_FireResistance","General_EarthResistance","General_IceResistance","General_EnergyResistance"],["General_DeathResistance","General_HolyResistance","General_PhysicalResistance"]];
+const GEMALT = [...GEMRES, ["Vocation_Health_FireResistance","Vocation_Health_EarthResistance","Vocation_Health_IceResistance","Vocation_Health_EnergyResistance"],
+  ["Vocation_Mana_FireResistance","Vocation_Mana_Earth_Resistance","Vocation_Mana_Ice_Resistance","Vocation_Mana_EnergyResistance"], ["Vocation_Mana"], ["General_ManaDrainResistance_LifeDrainResistance"]];
+const GEMSUP = {"Fierce Berserk Base Damage":["Knight_Fierce_Berserk_DamageIncrease"], "Front Sweep Base Damage":["Knight_Front_Sweep_DamageIncrease"], "Fair Wound Cleansing":["Knight_FairWoundCleansing_HealingIncrease"],
+  "Combat Mastery Mastery":["Knight_RevelationMastery_CombatMastery"], "Executioner's Throw Mastery":["Knight_RevelationMastery_ExecutionersThrow"],
+  "Divine Caldera Base Damage":["Paladin_DivineCaldera_DamageIncrease"], "Divine Empowerment Mastery":["Paladin_RevelationMastery_DivineEmpowerment"], "Salvation Healing":["Paladin_Salvation_HealingIncrease"],
+  "Beam Mastery Mastery":["Sorcerer_RevelationMastery_BeamMastery"], "Great Energy/Death Beam Base Damage":["Sorcerer_GreatEnergyBeam_DamageIncrease","Sorcerer_GreatDeathBeam_DamageIncrease"],
+  "Great Fire Wave Base Damage":["Sorcerer_GreatFireWave_DamageIncrease"], "UE Base Damage":["Sorcerer_RageOfTheSkies_DamageIncrease"], "Energy Wave CD Reduction":["Sorcerer_EnergyWave_Cooldown"],
+  "Twin Bursts Mastery":["Druid_RevelationMastery_TwinBursts"], "Blessing of the Grove Mastery":["Druid_RevelationMastery_BlessingOfTheGrove"], "Strong Ice Wave Base Damage":["Druid_StrongIceWave_DamageIncrease"],
+  "FoB Base Damage":["Monk_FlurryOfBlows_DamageIncrease"], "Sweeping Takedown Base Damage":["Monk_SweepingTakedown_DamageIncrease"], "Ascetic Mastery":["Monk_RevelationMastery_Ascetic"], "SOB Mastery":["Monk_RevelationMastery_SpiritualBurst"]};
+// nome de um grupo: as palavras que mudam juntam-se com "/" (Fire/Earth/Ice/Energy Resistance)
+const gName = g => { if(g.length<2) return g[0].n; const W=g.map(m=>m.n.split(" ")); if(W.some(w=>w.length!==W[0].length)) return g.map(m=>m.n).join(" / ");
+  return W[0].map((t,i)=>[...new Set(W.map(w=>w[i]))].join("/")).join(" "); };
+// valor de um efeito no grau I (as fraquezas e os cooldowns não mudam com o grau)
+function gVal(f,voc){ const [k,a,b,c]=f, n=v=>String(Math.round(Math.abs(v)*100)/100).replace(".",DECSEP);
+  if(k==="res") return (b<0?"−":"+")+n(b)+"%";
+  if(k==="hp"||k==="mp"||k==="cap") return "+"+nf((a||{})[voc]||0);
+  if(k==="rev") return "+"+nf(b);
+  if(k==="spell") return b==="cd"?"−"+(Math.abs(c)>=60?n(c/60)+" min":n(c)+" s"):"+"+n(c)+"%";
+  return "+"+n(a)+"%"; }
+// k = qual das gemas greater da build é esta (0 = a primeira): cada uma leva o supremo seguinte da lista
+const whGemK = (S,d) => Math.max(0,WHDOM.filter(x=>S.vr[x]===3).indexOf(d));
+// plano de uma gema com n ressonâncias (1 lesser, 2 regular, 3 greater): best in slot e outras boas opções
+function whGemPlan(voc,n,k){ const L=G.gems[voc]||{}, B=key=>GEMD.basic.find(m=>m.k===key), X=key=>GEMD.supreme.find(m=>m.k===key), nb=[0,1,2,2][n]||2, mage=voc==="sorcerer"||voc==="druid";
+  const grp=(L.lesser_gems||["Hit Points","Mitigation","Any Elemental Resistance"]).flatMap(x=>x==="Any Elemental Resistance"?GEMRES:[GEMBAS[x]||[]]).filter(a=>a.length);
+  const bis=grp.slice(0,nb), used=new Set(bis.flat()), M=a=>a.map(B).filter(Boolean);
+  const alt=[...grp.slice(nb),...GEMALT].filter((g,i,a)=>a.findIndex(h=>h[0]===g[0])===i&&!g.some(x=>used.has(x))&&!(voc==="knight"&&/Mana_/.test(g[0]+"_")));
+  const sp=(L.greater_gems||[]).map(x=>(GEMSUP[x]||[]).map(X).filter(Boolean)).filter(g=>g.length), j=sp.length?(k||0)%sp.length:0;
+  const gen=["General_CriticalDamage",mage?"General_ManaLeech":"General_LifeLeech","General_Dodge"].map(X).filter(Boolean).map(m=>[m]);
+  return {bis:bis.map(M).filter(g=>g.length), alt:alt.slice(0,5).map(M).filter(g=>g.length), sbis:sp.length?[sp[j]]:[], salt:[...sp.filter((g,i)=>i!==j),...gen].slice(0,5)}; }
+const whGemBis = (voc,n,k) => { const P=whGemPlan(voc,n,k); return [...P.bis,...(n===3?P.sbis:[])].map(gName); };
+// r8: o painel Selection de um vessel: a gema, o que está ativo (best in slot) e as outras boas opções, com valores
+function whGemSelHTML(voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d];
+  const head=`<div class="wsel-h"><span class="wsel-gem" style="--wc:${WHC[d][0]}">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:"Sem gema"}</b><span class="tag${n?" ok":""}">Vessel ${esc(WHVR[d])}</span></div></div>
+    <p class="wsel-t">Vessel Resonance: ${n}/3 · ${n===3?"2 modificadores básicos e 1 supremo":n===2?"2 modificadores básicos":n===1?"1 modificador básico":"enche uma fatia Vessel Resonance deste domínio para abrir o vessel"}</p>`;
+  if(!GEMD){ gemLoad().then(()=>{ const sl=$("whSel"); if(GEMD&&sl&&WHSELK==="g:"+d) sl.innerHTML=whSelHTML(voc,pts,WHSELK); }); return head+`<p class="wnone">A carregar as gemas…</p>`; }
+  const P=whGemPlan(voc,n||3,whGemK(S,d)), li=(g,sup)=>`<li${sup?' class="sup"':""}><span><i class="wmk" aria-hidden="true"></i>${esc(gName(g))}</span><b>${g[0].fx.map(f=>gVal(f,voc)).join(" · ")}</b></li>`;
+  const sup=n===3||!n, G3=n&&n<3?whGemPlan(voc,3,whGemK(S,d)).sbis:[];
+  return head+`<p class="wsel-sec bis">${n?"Best in slot":"Best in slot (com 3 VR: Greater gem)"}</p><ul class="wmods" style="--wc:${WHC[d][0]}">${P.bis.map(g=>li(g)).join("")}${sup?P.sbis.map(g=>li(g,1)).join(""):""}</ul>
+    ${G3.length?`<p class="wsel-d">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:""}
+    ${P.alt.length?`<p class="wsel-sec">Também boas</p><ul class="wmods alt">${P.alt.map(g=>li(g)).join("")}${sup?P.salt.map(g=>li(g,1)).join(""):""}</ul>`:""}
+    <p class="wsel-n">Valores no grau I: no Gem Atelier cada modificador sobe até ×1,5 (grau IV).</p>`; }
+// r8: o painel Selection de uma revelação: estágio, o que faz e quanto falta
+function whRevSelHTML(voc,pts,d){ const S=whSum(voc,pts), nm=WHD.voc[voc].rev[d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]);
+  return `<div class="wsel-h">${sicon({k:[nm],name:nm,cls:"lg"})}<div><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`Stage ${st}`:"Locked"}</span></div></div>
+    <p class="wsel-t">Revelation Perk · ${S.dom[d]} pontos no ${WHDN[d]}</p>${WHD.revd[nm]?`<p class="wsel-d">${esc(WHD.revd[nm])}</p>`:""}
+    <ol class="wrev-st" style="--wc:${WHC[d][0]}">${WHD.stage.map((x,j)=>`<li class="${S.dom[d]>=x?"on":""}"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join("")}</ol>
+    ${nx?`<p class="wsel-n">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:""}`; }
+// r7: o painel Selection (à esquerda): o que dá a fatia que estás a ver; r8: ou a gema de um vessel, ou uma revelação (k = "s:3", "g:red", "r:blue")
+function whSelHTML(voc,pts,key){ const [t,v]=String(key==null?"":key).split(":"); if(t==="g") return whGemSelHTML(voc,pts,v); if(t==="r") return whRevSelHTML(voc,pts,v);
+  const i=t==="s"?+v:null, ed=!!(WED&&WED.edit);
+  if(i==null||!WHD.slots[i]) return `<p class="wnone">${ed?"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.":"Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá."}</p>${ed?"":`<p class="wsel-d">Nos cantos: as revelações (os losangos são o estágio) e as gemas.</p>`}`;
   const x=whSlotTxt(voc,pts,i), cv=WHD.slots[i][3], k=cv.split(":")[0], nm=x.conv.replace(/^Augmented /,""), ic=k==="sp"||k==="inst"?sicon({k:[nm],name:nm,cls:"lg"}):`<span class="wsel-g wsi-${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${WHIC[k]||WHIC.sp}"/></svg></span>`;
-  return `<div class="wsel-h">${ic}<div><b>${esc(x.conv)}</b><span class="tag${x.full?" ok":""}">${esc(x.st)}</span></div></div><p class="wsel-t">${esc(x.t)} · ${esc(x.ded)}</p>${x.desc?`<p class="wsel-d">${esc(x.desc)}</p>`:""}${x.full?"":`<p class="wsel-n">A convicção só conta com a fatia cheia.</p>`}`; }
+  return `<div class="wsel-h">${ic}<div><b>${esc(x.conv)}</b><span class="tag${x.full?" ok":""}">${esc(x.st)}</span></div></div><p class="wsel-t">${esc(x.t)} · ${esc(x.ded)}</p>${x.desc?`<p class="wsel-d">${esc(x.desc)}</p>`:""}${x.full?"":`<p class="wsel-n">A convicção só conta com a fatia cheia.</p>`}${ed?`<p class="wsel-h2">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</p>`:""}`; }
+// r8: as boas opções para os teus pontos: a best in slot (a build mais completa que cabe nos pontos), as variantes perto dela e a seguinte
+function whOpts(voc,pts){ const ws=G.wheel[voc]||[], ok=ws.filter(w=>w.p<=pts), bis=ok[ok.length-1]||null, alt=[], seen=new Set([bis?bis.note||"":""]);
+  for(let k=ok.length-2;k>=0&&alt.length<3;k--){ const w=ok[k], n=w.note||""; if(!bis||w.p<bis.p-150) break;
+    if(w.p===bis.p||!seen.has(n)){ seen.add(n); alt.push(w); } }
+  return {bis, alt, next:ws.find(w=>w.p>pts)||null}; }
+function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok"]]:[]),...O.alt.map(x=>[x,"Também boa",""]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,"acc"]]:[])], V=WHD.voc[c.voc];
+  if(!L.length) return "";
+  return `<div class="whx-oh"><h3>Best in slot e outras boas opções</h3><p class="small muted">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.</p></div>
+    <div class="wopt-l">${L.map(([x,lab,cls])=>{ const b=WHD.b[x.c]; if(!b) return ""; const S=whSum(c.voc,b), i=ws.indexOf(x);
+      const rv=WHDOM.filter(d=>S.rev[d]).map(d=>`<span class="hwh-k" style="--wc:${WHC[d][0]}">${esc(V.rev[d])} <b>${S.rev[d]}</b></span>`).join("");
+      const gm=WHDOM.filter(d=>S.vr[d]).map(d=>`<span>${whGemIco(S.vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join("");
+      return `<article class="wopt${x===w?" on":""}"><div class="wopt-w">${whSVG(c.voc,b,{size:"sm",label:`${x.t}: ${x.p} pontos`})}</div><div class="wopt-b"><span class="tag ${cls}">${esc(lab)}</span><h4>${esc(x.t)}</h4>
+        <p class="pills"><span class="tag">${x.p} pontos · nível ${x.p+50}</span>${x.note?`<span class="tag acc">${esc(wnote(x.note))}</span>`:""}</p>${rv?`<div class="hwh-ks">${rv}</div>`:""}${gm?`<div class="wopt-g">${gm}</div>`:""}
+        <div class="wopt-a">${x===w?`<span class="tag ok">Na roda</span>`:`<button type="button" class="btn small" data-wsel="${i}">Ver na roda</button>`}<button type="button" class="btn small ghost" data-copy="${esc(x.c)}" data-copied="Código copiado">Copiar código</button></div></div></article>`; }).join("")}</div>`; }
 // r7: caixa "Wheel points": quantos pontos tem a personagem (os do nível e os comprados)
 function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
   /* r7: o total escreve-se e confirma-se com Atualizar (ou Enter); os pontos livres têm sugestão de onde os meter */
@@ -44655,7 +44819,7 @@ function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
       ${sug.left>0?`<p class="wsub">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
     :free>0?`<p class="wsub wsug-box"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> ${E.t?"Mete-os onde quiseres em «Distribuir pontos».":"Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos»."}</p>`:"";
   return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><div class="wpts-row"><input id="whBudget" type="number" inputmode="numeric" min="0" max="3000" value="${tot}"><button type="button" class="btn small" data-wpts-go="1">Atualizar</button></div>
-    <p class="wsub">Nível ${c.level} − 50 = ${base}${tot>base?` · +${tot-base} comprados`:""}. Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>${sl}</div></section>`; }
+    <p class="wsub">${tot>base?`Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?"":`<p class="wsub">Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>`}${sl}</div></section>`; }
 // r7: onde meter os pontos livres: o que as builds seguintes (por ordem) põem a mais, nas fatias que já se podem encher (ligação ao centro)
 function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((s,i)=>i).sort((a,b)=>WHD.slots[a][1]-WHD.slots[b][1]||a-b); let left=free, to=null;
   for(const w of next){ const T=WHD.b[w.c]; if(!T) continue; let moved=true;
@@ -44703,7 +44867,7 @@ function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return "
   const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
   const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
     ...Object.entries(S.conv).filter(([n])=>/^Augmented /.test(n)).map(([n,k])=>`<span class="hwh-k">${esc(n.replace(/^Augmented /,""))} <b>${ROM[Math.min(k,3)]}</b></span>`)];
-  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${WHC[x][1]}" stroke="${WHC[x][0]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${WHGEM[S.vr[x]]}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
+  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,"whp-gem")}<span><span class="whp-n"><b>${WHGEM[S.vr[x]]}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
   return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class="tiny muted">As resistências das gemas seguem o dano desta hunt.</span>`:""}</div>
     <div class="hwh-g"><div class="hwh-w">${whSVG(c.voc,b,{size:"sm"})}</div>
       <div class="hwh-c"><div class="hwh-s"><h6>Wheel</h6><p class="hwh-t"><b>${esc(w.t)}</b> <span class="tag">${w.p} pontos</span>${w.note?` <span class="tag acc">${esc(wnote(w.note))}</span>`:""}</p>${pk.why?`<p class="tiny muted" style="margin:2px 0 0">Porquê: ${esc(pk.why)}.</p>`:""}
@@ -44738,7 +44902,8 @@ function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD
 // por baixo o preset atual; a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca), editável
 function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
   if(!WHD){ box.innerHTML=`<p class="small muted" style="margin:0">A desenhar a Wheel…</p>`; whLoad().then(()=>{ if(WHD) renderWheelX(); }); return; }
-  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; WHSELI=null; }
+  if(!GEMD&&!GEMP) gemLoad().then(()=>{ if(GEMD) renderWheelX(); });
+  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; WHSELK=null; }
   const ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0];
   if(!w||!WHD.b[w.c]){ box.hidden=true; return; } box.hidden=false;
   if(!WED||WED.w!==w) whLoadEd(w,c,true);
@@ -44747,32 +44912,31 @@ function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
   const nxt=ws.filter(x=>x.p>w.p).sort((a,b)=>a.p-b.p), same=nxt.filter(x=>(x.note||"")===(w.note||""));
   E.sug = free>0 ? whSuggest(E.pts, same.concat(nxt.filter(x=>!same.includes(x))), free) : null;
   const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
-  const tags=E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">para os teus pontos</span>':""}`;
+  const tags=E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">Best in slot</span><span class="tag ok">para os teus pontos</span>':""}`;
+  /* r8: as outras boas opções logo no fundo da janela (e em cartões por baixo dela) */
+  const O=whOpts(c.voc,pts), oth=[O.bis,...O.alt].filter(x=>x&&x!==w);
+  const alts=oth.length?`<div class="whx-alt"><span>Outras boas opções:</span>${oth.map(x=>`<button type="button" class="whx-chip" data-wsel="${ws.indexOf(x)}" title="${esc(x.t)}">${esc(x===O.bis?"Best in slot":x.note?wnote(x.note):x.t)} <span class="tiny">${x.p}</span></button>`).join("")}</div>`:"";
   box.innerHTML=`<div class="whx-win"><div class="whx-title">Wheel of Destiny</div>
     <div class="whx-stage">
       <aside class="whx-side whx-l">${whPtsHTML(c,E,free,E.sug)}
-        <section class="wbox wbox-sel"><h5>Selection</h5><div class="wbox-b" id="whSel">${whSelHTML(c.voc,E.pts,WHSELI)}</div><div class="wbox-av">Available Promotion Points<b class="${free<0?"bad":""}">${free} / ${E.budget}</b></div></section>
-        <section class="wbox wbox-info"><h5>Information</h5><div class="wbox-b">
-          <div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div>
-          <p class="wsub">${E.edit?"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.":"Passa o rato numa fatia para ver o que dá. Nos cantos: as revelações (os losangos são o estágio) e as gemas."}</p>
-          <div class="whx-btn"><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button></div>
-          <details class="whx-imp"><summary>Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details>
-          <span class="tiny whx-msg" id="whMsg" role="status"></span></div></section>
+        <section class="wbox wbox-sel"><h5>Selection</h5><div class="wbox-b" id="whSel" aria-live="polite">${whSelHTML(c.voc,E.pts,WHSELK)}</div><div class="wbox-av">Available Promotion Points<b class="${free<0?"bad":""}">${free} / ${E.budget}</b></div></section>
       </aside>
-      <div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,sug:E.sug&&E.sug.map,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div>
+      <div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,sug:E.sug&&E.sug.map,big:true,sel:WHSELK,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div>
       <aside class="whx-side whx-r">${whPanelHTML(c.voc,E.pts,null)}</aside>
     </div>
-    <div class="whx-foot"><div class="whx-cur"><span class="eyebrow">${eb}</span><span>Current Preset: <b>${esc(title)}</b></span><span class="pills">${tags}</span></div>
-      <div class="whx-a"><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
+    <div class="whx-foot"><div class="whx-cur"><span class="eyebrow">${eb}</span><span>Current Preset: <b>${esc(title)}</b></span><span class="pills">${tags}</span></div>${alts}<span class="tiny whx-msg" id="whMsg" role="status"></span>
+      <div class="whx-a"><div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button>
+        <details class="whx-imp"><summary class="btn small ghost">Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
+  const op=$("wheelOpts"); if(op) op.innerHTML=whOptsHTML(c,ws,O,w,pts);
   if(E.dirty) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
   document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; WED=null; renderWheelX();
-  const box=$("wheelX"); if(box&&b.closest("#wheelTable")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
+  const box=$("wheelX"); if(box&&b.closest("#wheelTable,#wheelOpts")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
 document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.closest("[data-wmode],[data-wed],.whs.edit [data-ws]"); if(!t||!WED) return;
   if(t.dataset.wmode){ WED.edit=t.dataset.wmode==="edit"; renderWheelX(); return; }
   if(t.dataset.wed==="reset"){ whLoadEd(WED.w,C(),true); renderWheelX(); return; }
   if(t.dataset.wed==="clear"){ WED.pts=Array(36).fill(0); WED.dirty=true; WED.edit=true; renderWheelX(); return; }
-  if(t.dataset.ws!=null){ WHSELI=+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); } });
+  if(t.dataset.ws!=null){ WHSELK="s:"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); } });
 document.addEventListener("contextmenu", e=>{ const g=e.target.closest&&e.target.closest(".whs.edit [data-ws]"); if(!g) return; e.preventDefault(); whEdit(+g.dataset.ws,"empty"); });
 /* r7: o que passa do nível − 50 são pontos comprados (tasks, pergaminhos): ficam na personagem e contam em todo o site */
 function whSetPts(){ const c=C(), inp=$("whBudget"); if(!c||!inp) return; const v=Math.max(0,Math.min(3000,parseInt(inp.value,10)||0));
@@ -44781,7 +44945,7 @@ document.addEventListener("change", e=>{ if(e.target.id==="whBudget") whSetPts()
 document.addEventListener("keydown", e=>{ if(e.key==="Enter"&&e.target.id==="whBudget"){ e.preventDefault(); whSetPts(); } });
 document.addEventListener("click", e=>{ const b=e.target.closest&&e.target.closest("[data-wpts-go],[data-wsug]"); if(!b) return;
   if(b.dataset.wptsGo) return whSetPts();
-  if(WED&&WED.sug){ WED.pts=WED.sug.pts; WED.dirty=true; WHSELI=null; renderWheelX(); whMsg("Sugestão aplicada: copia o código no fundo da janela."); } });
+  if(WED&&WED.sug){ WED.pts=WED.sug.pts; WED.dirty=true; WHSELK=null; renderWheelX(); whMsg("Sugestão aplicada: copia o código no fundo da janela."); } });
 document.addEventListener("submit", async e=>{ const f=e.target.closest&&e.target.closest("[data-wimp]"); if(!f) return; e.preventDefault(); const c=C(), r=await whDecode($("whImp").value);
   if(r.err) return whMsg(r.err); if(r.voc!==c.voc) return whMsg(`Este código é de ${G.voc[r.voc].n}: troca para uma personagem dessa vocação para o abrir.`);
   WED.pts=whPrune(r.pts); WED.gems=r.gems; WED.code=String($("whImp").value).trim(); WED.dirty=false; WED.t="Build importada"; WED.budget=Math.max(WED.budget,whUsed(WED.pts)); renderWheelX(); });
