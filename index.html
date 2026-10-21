@@ -4813,8 +4813,8 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":9593,"n":"Broken wedding ring","s":"ring","l":0,"ix":571},
   {"id":25698,"n":"Butterfly ring","s":"ring","l":50,"ix":572,"arm":2,"ab":{"death":3}},
   {"id":39180,"n":"Charged alicorn ring","s":"ring","l":400,"ix":573,"v":"p","sk":{"dist":3,"ml":1,"ml_holy":1},"ab":{"fire":4,"earth":4,"energy":4,"ice":4,"holy":4,"death":4},"dur":10800},
-  {"id":39186,"n":"Charged arboreal ring","s":"ring","l":400,"ix":574,"v":"d","sk":{"ml":2,"ml_healing":2},"ab":{"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800},
-  {"id":39183,"n":"Charged arcanomancer sigil","s":"ring","l":400,"ix":575,"v":"s","sk":{"ml":2,"ml_fire":1,"ml_energy":1},"ab":{"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800},
+  {"id":39186,"n":"Charged arboreal ring","s":"ring","l":400,"ix":574,"v":"d","sk":{"ml":2,"ml_healing":2},"ab":{"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800,"lch":[0,1]},
+  {"id":39183,"n":"Charged arcanomancer sigil","s":"ring","l":400,"ix":575,"v":"s","sk":{"ml":2,"ml_fire":1,"ml_energy":1},"ab":{"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800,"lch":[0,1]},
   {"id":50147,"n":"Charged ethereal ring","s":"ring","l":400,"ix":576,"v":"m","sk":{"fist":3,"ml":2},"ab":{"physical":4,"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800,"ex":["life leech +2%"],"mn":2},
   {"id":39177,"n":"Charged spiritthorn ring","s":"ring","l":400,"ix":577,"v":"k","arm":2,"sk":{"sword":3,"club":3,"axe":3},"ab":{"physical":8,"fire":4,"earth":4,"energy":4,"ice":4},"dur":10800},
   {"id":9394,"n":"Claw of 'The Noxious Spawn'","s":"ring","l":100,"ix":578,"dur":10},
@@ -5346,12 +5346,12 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":3270,"n":"Club","s":"weapon","l":0,"ix":776,"b":"club","atk":7,"def":7},
   {"id":9385,"n":"Club of the fury","s":"weapon","l":0,"ix":777,"b":"club","atk":16,"def":8},
   {"id":30396,"n":"Cobra axe","s":"weapon","l":220,"ix":778,"b":"axe","v":"k","atk":8,"def":29,"edef":2,"sk":{"axe":2},"wel":["ice",44],"is":2,"it":["strike","vamp","void","s_axe"]},
-  {"id":50167,"n":"Cobra bo","s":"weapon","l":250,"ix":779,"b":"fist","v":"m","atk":42,"def":20,"sk":{"fist":4},"is":2,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"earth"},
+  {"id":50167,"n":"Cobra bo","s":"weapon","l":250,"ix":779,"b":"fist","v":"m","atk":42,"def":20,"sk":{"fist":4},"is":2,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"earth","lch":[14,0]},
   {"id":30395,"n":"Cobra club","s":"weapon","l":220,"ix":780,"b":"club","v":"k","atk":8,"def":29,"edef":2,"sk":{"club":2},"wel":["fire",44],"is":2,"it":["strike","vamp","void","s_club"]},
   {"id":30393,"n":"Cobra crossbow","s":"weapon","l":220,"ix":781,"b":"crossbow","v":"p","atk":7,"sk":{"dist":1},"is":2,"h2":1,"hit":6,"it":["strike","elem","vamp","void","s_dist"]},
-  {"id":30400,"n":"Cobra rod","s":"weapon","l":220,"ix":782,"b":"rod","v":"d","sk":{"ml":2},"is":2,"wd":["earth",70,110],"it":["strike","void","s_ml"]},
+  {"id":30400,"n":"Cobra rod","s":"weapon","l":220,"ix":782,"b":"rod","v":"d","sk":{"ml":2},"is":2,"wd":["earth",70,110],"it":["strike","void","s_ml"],"lch":[18,0]},
   {"id":30398,"n":"Cobra sword","s":"weapon","l":220,"ix":783,"b":"sword","v":"k","atk":52,"def":31,"edef":2,"sk":{"sword":3},"is":2,"it":["strike","elem","vamp","void","s_sword"]},
-  {"id":30399,"n":"Cobra wand","s":"weapon","l":270,"ix":784,"b":"wand","v":"s","sk":{"ml":2},"is":2,"wd":["energy",94,100],"it":["vamp","void","s_ml"]},
+  {"id":30399,"n":"Cobra wand","s":"weapon","l":270,"ix":784,"b":"wand","v":"s","sk":{"ml":2},"is":2,"wd":["energy",94,100],"it":["vamp","void","s_ml"],"crit":[5,25]},
   {"id":3292,"n":"Combat knife","s":"weapon","l":0,"ix":785,"b":"sword","atk":8,"def":6},
   {"id":8027,"n":"Composite hornbow","s":"weapon","l":50,"ix":786,"b":"bow","v":"p","atk":2,"is":3,"h2":1,"hit":2,"it":["strike","elem","vamp","void","s_dist"]},
   {"id":21177,"n":"Cowtana","s":"weapon","l":25,"ix":787,"b":"sword","atk":34,"def":19,"edef":1},
@@ -5578,7 +5578,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":25967,"n":"Energy heroic axe replica","s":"weapon","l":0,"ix":904,"b":"axe","atk":5,"def":5},
   {"id":25966,"n":"Energy knight axe replica","s":"weapon","l":0,"ix":906,"b":"axe","atk":5,"def":5},
   {"id":25971,"n":"Energy mace replica","s":"weapon","l":0,"ix":907,"b":"club","atk":5,"def":5},
-  {"id":25973,"n":"Energy orcish maul replica","s":"weapon","l":0,"ix":909,"b":"club","atk":5,"def":5,"h2":1},
+  {"id":25973,"n":"Energy orcish maul replica","s":"weapon","l":0,"ix":909,"b":"club","atk":5,"def":5},
   {"id":25961,"n":"Energy relic sword replica","s":"weapon","l":0,"ix":911,"b":"sword","atk":5,"def":5},
   {"id":25964,"n":"Energy slayer replica","s":"weapon","l":0,"ix":912,"b":"sword","atk":5,"def":5,"h2":1},
   {"id":25960,"n":"Energy spike sword replica","s":"weapon","l":0,"ix":914,"b":"sword","atk":5,"def":5},
@@ -5774,7 +5774,23 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":29286,"n":"Golden axe","s":"weapon","l":0,"ix":977,"b":"axe","atk":10,"def":5,"h2":1},
   {"id":3306,"n":"Golden sickle","s":"weapon","l":0,"ix":978,"b":"axe","atk":13,"def":6},
   {"id":43875,"n":"Grand sanguine battleaxe","s":"weapon","l":600,"ix":979,"b":"axe","v":"k","atk":8,"def":35,"sk":{"axe":4},"wel":["death",50],"is":3,"h2":1,"it":["strike","vamp","void","s_axe"]},
-  {"id":43865,"n":"Grand sanguine blade","s":"weapon","l":600,"ix":980,"b":"sword","v":"k","atk":8,"def":32,"edef":3,"sk":{"sword":4},"wel":["fire",46],"is":2,"it":["strike","vamp","void","s_sword"]},
+  {
+   "id":43865,
+   "n":"Grand sanguine blade",
+   "s":"weapon",
+   "l":600,
+   "ix":980,
+   "b":"sword",
+   "v":"k",
+   "atk":8,
+   "def":32,
+   "edef":3,
+   "sk":{"sword":4},
+   "wel":["fire",46],
+   "is":2,
+   "it":["strike","vamp","void","s_sword"],
+   "lch":[3,1]
+  },
   {"id":43873,"n":"Grand sanguine bludgeon","s":"weapon","l":600,"ix":981,"b":"club","v":"k","atk":8,"def":35,"sk":{"club":4},"wel":["earth",50],"is":3,"h2":1,"it":["strike","vamp","void","s_club"]},
   {"id":43878,"n":"Grand sanguine bow","s":"weapon","l":600,"ix":982,"b":"bow","v":"p","atk":9,"sk":{"dist":3},"ab":{"earth":6},"is":3,"h2":1,"hit":6,"it":["strike","elem","vamp","void","s_dist"]},
   {
@@ -5805,7 +5821,9 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "ab":{"earth":7},
    "is":2,
    "wd":["fire",103,125],
-   "it":["strike","void","s_ml"]
+   "it":["strike","void","s_ml"],
+   "crit":[0,5],
+   "lch":[2,1]
   },
   {
    "id":43880,
@@ -5823,10 +5841,57 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "hit":7,
    "it":["strike","elem","vamp","void","s_dist"]
   },
-  {"id":43867,"n":"Grand sanguine cudgel","s":"weapon","l":600,"ix":986,"b":"club","v":"k","atk":8,"def":32,"edef":3,"sk":{"club":4},"wel":["death",46],"is":2,"it":["strike","vamp","void","s_club"]},
-  {"id":43869,"n":"Grand sanguine hatchet","s":"weapon","l":600,"ix":987,"b":"axe","v":"k","atk":8,"def":32,"edef":3,"sk":{"axe":4},"wel":["fire",46],"is":2,"it":["strike","vamp","void","s_axe"]},
+  {
+   "id":43867,
+   "n":"Grand sanguine cudgel",
+   "s":"weapon",
+   "l":600,
+   "ix":986,
+   "b":"club",
+   "v":"k",
+   "atk":8,
+   "def":32,
+   "edef":3,
+   "sk":{"club":4},
+   "wel":["death",46],
+   "is":2,
+   "it":["strike","vamp","void","s_club"],
+   "lch":[3,1]
+  },
+  {
+   "id":43869,
+   "n":"Grand sanguine hatchet",
+   "s":"weapon",
+   "l":600,
+   "ix":987,
+   "b":"axe",
+   "v":"k",
+   "atk":8,
+   "def":32,
+   "edef":3,
+   "sk":{"axe":4},
+   "wel":["fire",46],
+   "is":2,
+   "it":["strike","vamp","void","s_axe"],
+   "lch":[3,1]
+  },
   {"id":43871,"n":"Grand sanguine razor","s":"weapon","l":600,"ix":988,"b":"sword","v":"k","atk":8,"def":35,"sk":{"sword":4},"wel":["energy",50],"is":3,"h2":1,"it":["strike","vamp","void","s_sword"]},
-  {"id":43886,"n":"Grand sanguine rod","s":"weapon","l":600,"ix":989,"b":"rod","v":"d","sk":{"ml":4,"ml_ice":1,"ml_earth":1},"ab":{"death":7},"is":2,"wd":["earth",100,124],"it":["strike","void","s_ml"]},
+  {
+   "id":43886,
+   "n":"Grand sanguine rod",
+   "s":"weapon",
+   "l":600,
+   "ix":989,
+   "b":"rod",
+   "v":"d",
+   "sk":{"ml":4,"ml_ice":1,"ml_earth":1},
+   "ab":{"death":7},
+   "is":2,
+   "wd":["earth",100,124],
+   "it":["strike","void","s_ml"],
+   "crit":[0,5],
+   "lch":[6,1]
+  },
   {"id":3303,"n":"Great axe","s":"weapon","l":95,"ix":990,"b":"axe","v":"k","atk":52,"def":22,"is":2,"h2":1,"it":["strike","elem","vamp","void","s_axe"]},
   {"id":14043,"n":"Guardian axe","s":"weapon","l":50,"ix":991,"b":"axe","atk":46,"def":11,"h2":1},
   {"id":3315,"n":"Guardian halberd","s":"weapon","l":55,"ix":992,"b":"axe","atk":46,"def":15,"is":3,"h2":1,"it":["strike","elem","vamp","void","s_axe"]},
@@ -5914,11 +5979,27 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":50166,"n":"Light jo staff","s":"weapon","l":0,"ix":1069,"b":"fist","v":"m","atk":10,"def":6,"sk":{"fist":1},"h2":1,"bond":"energy"},
   {"id":3325,"n":"Light mace","s":"weapon","l":0,"ix":1070,"b":"club","atk":14,"def":9},
   {"id":34253,"n":"Lion axe","s":"weapon","l":270,"ix":1071,"b":"axe","v":"k","atk":8,"def":31,"edef":2,"sk":{"axe":3},"wel":["earth",44],"is":2,"it":["strike","vamp","void","s_axe"]},
-  {"id":50162,"n":"Lion claws","s":"weapon","l":270,"ix":1072,"b":"fist","v":"m","atk":43,"def":19,"sk":{"fist":4},"is":2,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"energy"},
+  {
+   "id":50162,
+   "n":"Lion claws",
+   "s":"weapon",
+   "l":270,
+   "ix":1072,
+   "b":"fist",
+   "v":"m",
+   "atk":43,
+   "def":19,
+   "sk":{"fist":4},
+   "is":2,
+   "h2":1,
+   "it":["strike","elem","vamp","void","s_fist"],
+   "bond":"energy",
+   "crit":[5,0]
+  },
   {"id":34254,"n":"Lion hammer","s":"weapon","l":270,"ix":1073,"b":"club","v":"k","atk":8,"def":31,"edef":2,"sk":{"club":3},"wel":["earth",44],"is":2,"it":["strike","vamp","void","s_club"]},
   {"id":34150,"n":"Lion longbow","s":"weapon","l":270,"ix":1074,"b":"bow","v":"p","atk":6,"sk":{"dist":1},"ab":{"ice":5},"is":3,"h2":1,"hit":6,"it":["strike","elem","vamp","void","s_dist"]},
   {"id":34155,"n":"Lion longsword","s":"weapon","l":270,"ix":1075,"b":"sword","v":"k","atk":8,"def":31,"edef":2,"sk":{"sword":3},"wel":["earth",44],"is":2,"it":["strike","elem","vamp","void","s_sword"]},
-  {"id":34151,"n":"Lion rod","s":"weapon","l":270,"ix":1076,"b":"rod","v":"d","sk":{"ml":2},"is":2,"wd":["ice",85,105],"it":["vamp","void","s_ml"]},
+  {"id":34151,"n":"Lion rod","s":"weapon","l":270,"ix":1076,"b":"rod","v":"d","sk":{"ml":2},"is":2,"wd":["ice",85,105],"it":["vamp","void","s_ml"],"crit":[5,25]},
   {
    "id":34154,
    "n":"Lion shield",
@@ -5932,7 +6013,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "is":1,
    "it":["p_death","p_earth","p_energy","p_fire","p_holy","p_ice","s_shield"]
   },
-  {"id":34152,"n":"Lion wand","s":"weapon","l":220,"ix":1078,"b":"wand","v":"s","sk":{"ml":2},"is":2,"wd":["ice",89,109],"it":["strike","void","s_ml"]},
+  {"id":34152,"n":"Lion wand","s":"weapon","l":220,"ix":1078,"b":"wand","v":"s","sk":{"ml":2},"is":2,"wd":["ice",89,109],"it":["strike","void","s_ml"],"lch":[18,0]},
   {"id":29417,"n":"Living vine bow","s":"weapon","l":220,"ix":1079,"b":"bow","v":"p","atk":5,"sk":{"dist":1},"ab":{"earth":4},"is":3,"h2":1,"hit":5,"it":["strike","elem","vamp","void","s_dist"]},
   {"id":3285,"n":"Longsword","s":"weapon","l":0,"ix":1080,"b":"sword","atk":17,"def":14},
   {"id":7424,"n":"Lunar staff","s":"weapon","l":30,"ix":1081,"b":"club","atk":40,"def":25,"is":3,"h2":1,"it":["strike","elem","vamp","void","s_club"]},
@@ -6138,16 +6219,78 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":50183,"n":"Sai","s":"weapon","l":60,"ix":1235,"b":"fist","v":"m","atk":36,"def":16,"sk":{"fist":1},"h2":1,"bond":"energy","is":1,"it":["strike","elem","vamp","void","s_fist"]},
   {"id":50272,"n":"Sai of enlightenment","s":"weapon","l":100,"ix":1236,"b":"fist","v":"m","atk":40,"def":16,"is":1,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"earth","sk":{"fist":1}},
   {"id":43874,"n":"Sanguine battleaxe","s":"weapon","l":600,"ix":1237,"b":"axe","v":"k","atk":8,"def":35,"sk":{"axe":4},"wel":["death",50],"is":3,"h2":1,"it":["strike","vamp","void","s_axe"]},
-  {"id":43864,"n":"Sanguine blade","s":"weapon","l":600,"ix":1238,"b":"sword","v":"k","atk":8,"def":32,"edef":3,"sk":{"sword":4},"wel":["fire",46],"is":2,"it":["strike","vamp","void","s_sword"]},
+  {
+   "id":43864,
+   "n":"Sanguine blade",
+   "s":"weapon",
+   "l":600,
+   "ix":1238,
+   "b":"sword",
+   "v":"k",
+   "atk":8,
+   "def":32,
+   "edef":3,
+   "sk":{"sword":4},
+   "wel":["fire",46],
+   "is":2,
+   "it":["strike","vamp","void","s_sword"],
+   "lch":[3,1]
+  },
   {"id":43872,"n":"Sanguine bludgeon","s":"weapon","l":600,"ix":1239,"b":"club","v":"k","atk":8,"def":35,"sk":{"club":4},"wel":["earth",50],"is":3,"h2":1,"it":["strike","vamp","void","s_club"]},
   {"id":43877,"n":"Sanguine bow","s":"weapon","l":600,"ix":1240,"b":"bow","v":"p","atk":9,"sk":{"dist":3},"ab":{"earth":6},"is":3,"h2":1,"hit":6,"it":["strike","elem","vamp","void","s_dist"]},
   {"id":50157,"n":"Sanguine claws","s":"weapon","l":600,"ix":1241,"b":"fist","v":"m","atk":45,"def":21,"sk":{"fist":4,"ml":2},"is":3,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"earth"},
-  {"id":43882,"n":"Sanguine coil","s":"weapon","l":600,"ix":1242,"b":"wand","v":"s","sk":{"ml":4,"ml_fire":1,"ml_energy":1},"ab":{"earth":7},"is":2,"wd":["fire",113,125],"it":["strike","void","s_ml"]},
+  {
+   "id":43882,
+   "n":"Sanguine coil",
+   "s":"weapon",
+   "l":600,
+   "ix":1242,
+   "b":"wand",
+   "v":"s",
+   "sk":{"ml":4,"ml_fire":1,"ml_energy":1},
+   "ab":{"earth":7},
+   "is":2,
+   "wd":["fire",113,125],
+   "it":["strike","void","s_ml"],
+   "crit":[0,5],
+   "lch":[2,1]
+  },
   {"id":43879,"n":"Sanguine crossbow","s":"weapon","l":600,"ix":1243,"b":"crossbow","v":"p","atk":10,"sk":{"dist":3},"ab":{"fire":6},"is":3,"h2":1,"hit":7,"it":["strike","elem","vamp","void","s_dist"]},
-  {"id":43866,"n":"Sanguine cudgel","s":"weapon","l":600,"ix":1244,"b":"club","v":"k","atk":8,"def":32,"edef":3,"sk":{"club":4},"wel":["death",46],"is":2,"it":["strike","vamp","void","s_club"]},
-  {"id":43868,"n":"Sanguine hatchet","s":"weapon","l":600,"ix":1245,"b":"axe","v":"k","atk":8,"def":32,"edef":3,"sk":{"axe":4},"wel":["fire",46],"is":2,"it":["strike","vamp","void","s_axe"]},
+  {
+   "id":43866,
+   "n":"Sanguine cudgel",
+   "s":"weapon",
+   "l":600,
+   "ix":1244,
+   "b":"club",
+   "v":"k",
+   "atk":8,
+   "def":32,
+   "edef":3,
+   "sk":{"club":4},
+   "wel":["death",46],
+   "is":2,
+   "it":["strike","vamp","void","s_club"],
+   "lch":[3,1]
+  },
+  {"id":43868,"n":"Sanguine hatchet","s":"weapon","l":600,"ix":1245,"b":"axe","v":"k","atk":8,"def":32,"edef":3,"sk":{"axe":4},"wel":["fire",46],"is":2,"it":["strike","vamp","void","s_axe"],"lch":[3,1]},
   {"id":43870,"n":"Sanguine razor","s":"weapon","l":600,"ix":1246,"b":"sword","v":"k","atk":8,"def":35,"sk":{"sword":4},"wel":["energy",50],"is":3,"h2":1,"it":["strike","vamp","void","s_sword"]},
-  {"id":43885,"n":"Sanguine rod","s":"weapon","l":600,"ix":1247,"b":"rod","v":"d","sk":{"ml":4,"ml_ice":1,"ml_earth":1},"ab":{"death":7},"is":2,"wd":["earth",100,124],"it":["strike","void","s_ml"]},
+  {
+   "id":43885,
+   "n":"Sanguine rod",
+   "s":"weapon",
+   "l":600,
+   "ix":1247,
+   "b":"rod",
+   "v":"d",
+   "sk":{"ml":4,"ml_ice":1,"ml_earth":1},
+   "ab":{"death":7},
+   "is":2,
+   "wd":["earth",100,124],
+   "it":["strike","void","s_ml"],
+   "crit":[0,5],
+   "lch":[6,1]
+  },
   {"id":7437,"n":"Sapphire hammer","s":"weapon","l":30,"ix":1248,"b":"club","atk":37,"def":18,"is":2,"it":["strike","elem","vamp","void","s_club"]},
   {"id":32093,"n":"Schnitzel meat grinder","s":"weapon","l":0,"ix":1249,"b":"club","atk":10},
   {"id":3307,"n":"Scimitar","s":"weapon","l":0,"ix":1250,"b":"sword","atk":19,"def":13,"edef":1},
@@ -6185,7 +6328,23 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "it":["strike","elem","vamp","void","s_fist"],
    "bond":"energy"
   },
-  {"id":49872,"n":"Siphoning inferniarch flail","s":"weapon","l":300,"ix":1270,"b":"club","v":"k","atk":8,"def":31,"edef":3,"sk":{"club":3},"wel":["death",44],"is":1,"it":["strike","elem","vamp"]},
+  {
+   "id":49872,
+   "n":"Siphoning inferniarch flail",
+   "s":"weapon",
+   "l":300,
+   "ix":1270,
+   "b":"club",
+   "v":"k",
+   "atk":8,
+   "def":31,
+   "edef":3,
+   "sk":{"club":3},
+   "wel":["death",44],
+   "is":1,
+   "it":["strike","elem","vamp"],
+   "lch":[0,10]
+  },
   {
    "id":49869,
    "n":"Siphoning inferniarch greataxe",
@@ -6248,12 +6407,28 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":2992,"n":"Snowball","s":"weapon","l":0,"ix":1282,"b":"throw"},
   {"id":8097,"n":"Solar axe","s":"weapon","l":130,"ix":1283,"b":"axe","atk":52,"def":29,"edef":3,"is":1,"it":["strike","elem","vamp","void","s_axe"]},
   {"id":17111,"n":"Sorcerer and druid staff","s":"weapon","l":0,"ix":1284,"b":"wand","wd":["energy",8,18]},
-  {"id":34084,"n":"Soulbiter","s":"weapon","l":400,"ix":1285,"b":"axe","v":"k","atk":7,"def":32,"edef":3,"sk":{"axe":4},"wel":["death",45],"is":2,"it":["strike","vamp","void","s_axe"]},
+  {"id":34084,"n":"Soulbiter","s":"weapon","l":400,"ix":1285,"b":"axe","v":"k","atk":7,"def":32,"edef":3,"sk":{"axe":4},"wel":["death",45],"is":2,"it":["strike","vamp","void","s_axe"],"lch":[2,1]},
   {"id":34088,"n":"Soulbleeder","s":"weapon","l":400,"ix":1286,"b":"bow","v":"p","atk":8,"sk":{"dist":3},"ab":{"holy":7},"is":3,"h2":1,"hit":5,"it":["strike","elem","vamp","void","s_dist"]},
-  {"id":34086,"n":"Soulcrusher","s":"weapon","l":400,"ix":1287,"b":"club","v":"k","atk":6,"def":33,"edef":3,"sk":{"club":4},"wel":["ice",46],"is":2,"it":["strike","vamp","void","s_club"]},
-  {"id":34082,"n":"Soulcutter","s":"weapon","l":400,"ix":1288,"b":"sword","v":"k","atk":7,"def":32,"edef":3,"sk":{"sword":4},"wel":["death",45],"is":2,"it":["strike","vamp","void","s_sword"]},
+  {"id":34086,"n":"Soulcrusher","s":"weapon","l":400,"ix":1287,"b":"club","v":"k","atk":6,"def":33,"edef":3,"sk":{"club":4},"wel":["ice",46],"is":2,"it":["strike","vamp","void","s_club"],"lch":[2,1]},
+  {
+   "id":34082,
+   "n":"Soulcutter",
+   "s":"weapon",
+   "l":400,
+   "ix":1288,
+   "b":"sword",
+   "v":"k",
+   "atk":7,
+   "def":32,
+   "edef":3,
+   "sk":{"sword":4},
+   "wel":["death",45],
+   "is":2,
+   "it":["strike","vamp","void","s_sword"],
+   "lch":[2,1]
+  },
   {"id":34085,"n":"Souleater","s":"weapon","l":400,"ix":1289,"b":"axe","v":"k","atk":10,"def":34,"sk":{"axe":4},"wel":["ice",47],"is":3,"h2":1,"it":["strike","vamp","void","s_axe"]},
-  {"id":34091,"n":"Soulhexer","s":"weapon","l":400,"ix":1290,"b":"wand","v":"d","sk":{"ml":4},"ab":{"ice":12},"is":2,"wd":["ice",98,118],"it":["strike","void","s_ml"]},
+  {"id":34091,"n":"Soulhexer","s":"weapon","l":400,"ix":1290,"b":"wand","v":"d","sk":{"ml":4},"ab":{"ice":12},"is":2,"wd":["ice",98,118],"it":["strike","void","s_ml"],"lch":[2,1]},
   {"id":50159,"n":"Soulkamas","s":"weapon","l":400,"ix":1291,"b":"fist","v":"m","atk":44,"def":21,"sk":{"fist":4,"ml":1},"is":3,"h2":1,"it":["strike","elem","vamp","void","s_fist"],"bond":"energy"},
   {"id":34087,"n":"Soulmaimer","s":"weapon","l":400,"ix":1292,"b":"club","v":"k","atk":10,"def":35,"sk":{"club":4},"wel":["energy",47],"is":3,"h2":1,"it":["strike","vamp","void","s_club"]},
   {"id":34089,"n":"Soulpiercer","s":"weapon","l":400,"ix":1293,"b":"crossbow","v":"p","atk":9,"sk":{"dist":3},"ab":{"death":7},"is":3,"h2":1,"hit":6,"it":["strike","elem","vamp","void","s_dist"]},
@@ -7034,7 +7209,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
      "why":"Sharpshooter ligado; troca para Divine Defiance se estiveres a levar demasiado."
     }
    ],
-   "weapon":"Arco + quiver (as munições vão no slot do escudo, no quiver). Desde junho os arcos aceitam imbuements elementais e há munições de área: Shatterstorm Arrow (nível 50, ataque 27) e Firestorm, Terrastorm, Froststorm e Thunderstorm Arrow (nível 125, ataque 21 + o elemento).",
+   "weapon":"Arco + quiver (as munições vão no slot do escudo, no quiver). Desde junho os arcos aceitam imbuements elementais e há munições de área: Shatterstorm Arrow (nível 50, ataque 27) e Firestorm, Terrastorm, Froststorm e Thunderstorm Arrow (nível 125, 21 de dano do elemento, sem dano físico).",
    "pots":[
     {"l":8,"h":"Health Potion","m":"Mana Potion"},
     {"l":50,"h":"Strong Health Potion","m":"Strong Mana Potion"},
@@ -44688,16 +44863,16 @@ function relSkills(c){
   return {ml:6, ml_ice:v==="druid"?2.5:0, ml_earth:v==="druid"?2.5:0, ml_fire:v==="sorcerer"?2.5:0, ml_energy:v==="sorcerer"?2.5:0, ml_death:v==="sorcerer"?2.5:0, ml_healing:v==="druid"?1.5:0.5};
 }
 /* r4-t5 */ // munição sem elemento por tipo de arma: [nível mínimo, ataque] (TibiaWiki). Flechas: Arrow 25, Sniper Arrow 28 (20),
-// Onyx Arrow 40 (40), Diamond Arrow 37 (150, em área). Bolts: Bolt 30, Piercing Bolt 33 (30), Power Bolt 40 (55), Drill Bolt 56 (70),
+// Onyx Arrow 38 (40; r8: era 40, TibiaWiki), Diamond Arrow 37 (150, em área). Bolts: Bolt 30, Piercing Bolt 33 (30), Power Bolt 40 (55), Drill Bolt 56 (70),
 // Infernal Bolt 72 (110; r7: era 65), Spectral Bolt 78 (150). O scoreItem soma ao atk dos arcos e das bestas o da melhor munição até ao nível
 // (o atk do arco ou da besta é só o bónus; o dano vem da munição).
 /* r7 */ // 3.º valor = nome (página do item). Novas: Tarsal Arrow 33 (30), Crystalline Arrow 65 (90), Vortex Bolt 36 (40), Prismatic Bolt 66 (90).
 // Diamond Arrow é de área: conta no ammoAtk, mas o ammoBest (alvo único) não a escolhe.
-const AMMO={bow:[[0,25,"Arrow"],[20,28,"Sniper Arrow"],[30,33,"Tarsal Arrow"],[40,40,"Onyx Arrow"],[90,65,"Crystalline Arrow"],[150,37,"Diamond Arrow"]],
+const AMMO={bow:[[0,25,"Arrow"],[20,28,"Sniper Arrow"],[30,33,"Tarsal Arrow"],[40,38,"Onyx Arrow"],[90,65,"Crystalline Arrow"],[150,37,"Diamond Arrow"]],
   crossbow:[[0,30,"Bolt"],[30,33,"Piercing Bolt"],[40,36,"Vortex Bolt"],[55,40,"Power Bolt"],[70,56,"Drill Bolt"],[90,66,"Prismatic Bolt"],[110,72,"Infernal Bolt"],[150,78,"Spectral Bolt"]]};
 const ammoAtk=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L).reduce((m,x)=>Math.max(m,x[1]),0);
 /* r7 */ // flechas de área por nível: [nível, nome, elemento, ataque] (TibiaWiki, 15.25 de junho de 2026: Shatterstorm 27 no 50, as
-// elementais 21 + dano do elemento no 125; Diamond 37 no 150). As bestas não têm.
+// elementais 21 de dano do elemento e ataque físico 0 no 125; Diamond 37 no 150). As bestas não têm.
 const AMMOA={bow:[[50,"Shatterstorm Arrow","physical",27],[125,"Firestorm Arrow","fire",21],[125,"Froststorm Arrow","ice",21],[125,"Terrastorm Arrow","earth",21],
   [125,"Thunderstorm Arrow","energy",21],[150,"Diamond Arrow","physical",37]]};
 const ammoBest=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L&&!/^Diamond/.test(x[2])).reduce((m,x)=>!m||x[1]>m[1]?x:m,null);
@@ -44751,6 +44926,12 @@ function scoreItem(c,it,mode,prot,eff){
   if(it.spd) S+=100*it.spd/(2*B.L+110)*(speed?.35:SCSPD[v]||.2); // no modo velocidade conta igual para todos
   if(it.is){ const iw=1.5*Math.max(.1,Math.min(1,(B.L-100)/200)); X+=it.is*iw*(speed?(it.s==="boots"?2:.2):1); }
   if(it.rg) X+=150*(it.rg[0]+it.rg[1])/(B.L*1.5+50);
+  // crítico (it.crit = [chance %, dano extra %], TibiaWiki): o ganho com o Strike imbuido (10 % de chance, +50 %) × 0,15, calibrado para
+  // a progressão de armas do TibiaPal (Cobra wand 270 < Inferniarch 300 < Soultainter 400 < Sanguine 600). Leech (it.lch = [vida %,
+  // mana %]; a Lion wand e a Cobra rod têm 18 % fixos e não levam Vampirism): vale como parte de um imbuement (Vampirism 25 %, Void 8 %)
+  const ir=Math.max(.1,Math.min(1,(B.L-100)/200));
+  if(it.crit) D+=.15*(it.crit[0]*(50*ir+it.crit[1])+10*ir*it.crit[1])/100;
+  if(it.lch) X+=1.5*Math.max(.3,ir)*(it.lch[0]/25+it.lch[1]/8);
   for(const t of it.ex||[]){ let m;
     if((m=/perfect shot \+?(\d+)/i.exec(t))) D+=.35*(B.mage?50*m[1]/B.mag:200*(1-B.mls)*m[1]/B.phys); // só nos ataques automáticos a essa distância (≈ 1/3)
     else if((m=/cleave (\d+)/i.exec(t))) D+=.35*m[1];
@@ -45132,6 +45313,8 @@ function itemLookHTML(id){
     Object.entries(it.sk||{}).forEach(([k,v])=>rows.push([cap1(SKN[k]||k),`${v>0?"+":""}${v}`]));
     if(it.mn) rows.push(["Mantra","+"+it.mn]);
     if(it.spd) rows.push(["Velocidade",(it.spd>0?"+":"")+it.spd]);
+    /* r8 */ if(it.crit) rows.push(["Crítico",[it.crit[0]?`${it.crit[0]}% de chance`:"",it.crit[1]?`+${it.crit[1]}% de dano`:""].filter(Boolean).join(" · ")]);
+    if(it.lch) rows.push(["Leech",[it.lch[0]?`vida ${it.lch[0]}%`:"",it.lch[1]?`mana ${it.lch[1]}%`:""].filter(Boolean).join(" · ")]);
     if(it.rg) rows.push(["Regeneração",`${nfdec(it.rg[0])} vida · ${nfdec(it.rg[1])} mana por s`]);
     if(it.bond) rows.push(["Ligação elemental",elName(it.bond)]);
     if(it.is) rows.push(["Imbuements",`${it.is} ${it.is===1?"slot":"slots"}`]);
@@ -45336,6 +45519,8 @@ function statLine(it){
   if(it.sk) Object.entries(it.sk).forEach(([k,v])=>p.push(`${v<0?"":"+"}${v} ${SKN[k]||k}`));
   if(it.mn) p.push(`mantra +${it.mn}`);
   if(it.spd) p.push(`velocidade ${it.spd>0?"+":""}${it.spd}`);
+  /* r8 */ if(it.crit){ if(it.crit[0]) p.push(`+${it.crit[0]}% crítico`); if(it.crit[1]) p.push(`+${it.crit[1]}% dano crítico`); }
+  if(it.lch){ if(it.lch[0]) p.push(`life leech ${it.lch[0]}%`); if(it.lch[1]) p.push(`mana leech ${it.lch[1]}%`); }
   if(it.ex) it.ex.forEach(x=>p.push(x));
   if(it.rg) p.push(`regenera ${nfdec(it.rg[0])} vida/${nfdec(it.rg[1])} mana por s`);
   if(it.is) p.push(`${it.is} ${it.is===1?"slot":"slots"} de imbuement`);
@@ -46345,6 +46530,8 @@ const dmgTxt = wd => `${wd[1]===wd[2]?wd[1]:wd[1]+"–"+wd[2]} ${ELN[wd[0]]||wd[
 function ipSpec(eq,info,cl,maxT){ const r=[];
   if(eq){ if(eq.arm) r.push(["Armadura",eq.arm]); if(eq.def) r.push(["Defesa",eq.def+(eq.edef?` ${eq.edef>0?"+":""}${eq.edef}`:"")]); if(eq.atk) r.push(["Ataque",eq.atk+(eq.wel&&eq.wel[1]?` + ${eq.wel[1]} ${ELN[eq.wel[0]]}`:"")]); if(eq.wd) r.push(["Dano",dmgTxt(eq.wd)]); if(eq.hit) r.push(["Precisão",`+${eq.hit}%`]);
     Object.entries(eq.sk||{}).forEach(([k,v])=>r.push([cap1(SKN[k]||k),`${v>0?"+":""}${v}`])); if(eq.mn) r.push(["Mantra","+"+eq.mn]); if(eq.spd) r.push(["Velocidade",(eq.spd>0?"+":"")+eq.spd]);
+    /* r8 */ if(eq.crit) r.push(["Crítico",[eq.crit[0]?`${eq.crit[0]}% de chance`:"",eq.crit[1]?`+${eq.crit[1]}% de dano`:""].filter(Boolean).join(" · ")]);
+    if(eq.lch) r.push(["Leech",[eq.lch[0]?`vida ${eq.lch[0]}%`:"",eq.lch[1]?`mana ${eq.lch[1]}%`:""].filter(Boolean).join(" · ")]);
     if(eq.rg) r.push(["Regeneração",`${String(eq.rg[0]).replace(".",",")} vida · ${String(eq.rg[1]).replace(".",",")} mana/s`]); if(eq.bond) r.push(["Ligação",cap1(ELN[eq.bond]||eq.bond)]);
     if(eq.chg) r.push(["Cargas",eq.chg]); else if(eq.dur) r.push(["Duração",`${Math.round(eq.dur/60)} min`]); }
   const is=eq?eq.is:info.imb; if(is) r.push(["Imbuements",`${is} ${is===1?"slot":"slots"}`]);
