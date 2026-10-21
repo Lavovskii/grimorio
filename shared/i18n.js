@@ -260,7 +260,21 @@
   function dots(k) {
     var parts = k.split(" · ");
     if (parts.length < 2) return null;
-    var hit = 0, out = parts.map(function (p, i) {
+    // várias partes seguidas podem estar juntas no dicionário (ex.: "Piso 0 · térreo" em "32849, 32136, 7 · Piso 0 · térreo"):
+    // essas ficam já traduzidas (pre[i]) e as outras traduzem-se uma a uma
+    var units = [], pre = [];
+    for (var a = 0; a < parts.length; a++) {
+      var got = null, z;
+      for (z = Math.min(parts.length - 1, a + 3); z > a && got == null; z--) {
+        if (a === 0 && z === parts.length - 1) continue;
+        var g = parts.slice(a, z + 1).join(" · ");
+        if (!OUT.has(g)) got = exact(g);
+        if (got != null) { units.push(got); pre[units.length - 1] = true; a = z; }
+      }
+      if (got == null) units.push(parts[a]);
+    }
+    var hit = 0, out = units.map(function (p, i) {
+      if (pre[i]) { hit++; return p; }
       var v = OUT.has(p) ? null : ui(p);
       // as partes do meio/fim também podem estar no dicionário com o separador à frente (ex.: "· podes usar")
       if (v == null && i > 0) { var vd = ui("· " + p); if (vd != null) v = vd.replace(/^·\s*/, ""); }

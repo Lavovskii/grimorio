@@ -2072,7 +2072,7 @@
   "k": "x"
  },
  "Dano máx./turno": {
-  "c": "index.html: \"XP por vida\",hp?(xp/hp).toFixed(2).replace(\".\",\",\"):null],[\"Dano máx./turno\",ci.maxdmg?nf(+ci.ma",
+  "c": "index.html:  por vida\",hp?(xp/hp).toFixed(2).replace(\".\",DECSEP):null],[\"Dano máx./turno\",ci.maxdmg?nf(+ci.ma",
   "k": "x"
  },
  "Dano que vais levar": {
@@ -2672,7 +2672,7 @@
   "k": "x"
  },
  "Este tipo de item sobe de tier mas não tem bónus de tier próprio.": {
-  "c": "index.html: )}</b> (${esc(B.label.toLowerCase())}): ${esc(B.desc)}</p>`:`<p class=\"small muted fz-b\">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`} <div class=\"ta",
+  "c": "index.html: n>${esc(B.label)}</span>): <span>${esc(B.desc)}</span></p>`:`<p class=\"small muted fz-b\">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`} <div class=\"ta",
   "k": "x"
  },
  "Estimado a partir de {0} sessões reais de {1} (nível mediano {2}), com o teu dano e o que cada vocação costuma render.": {
@@ -2988,7 +2988,7 @@
   "k": "x"
  },
  "Foge com": {
-  "c": "index.html: cr.mitig!=null?String(cr.mitig).replace(\".\",\",\")+\"%\":null],[\"Foge com\",ci.run!=null?(runN?",
+  "c": "index.html: mitig!=null?String(cr.mitig).replace(\".\",DECSEP)+\"%\":null],[\"Foge com\",ci.run!=null?(runN?",
   "k": "x"
  },
  "Fogo/energia": {
@@ -3920,7 +3920,7 @@
   "k": "x"
  },
  "Ligação": {
-  "c": "index.html: (eq.rg[1]).replace(\".\",\",\")} mana/s`]); if(eq.bond) r.push([\"Ligação\",cap1(ELN[eq.bond]||",
+  "c": "index.html: .rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.push([\"Ligação\",cap1(ELN[eq.bond]||",
   "k": "x"
  },
  "Ligação elemental": {
@@ -5347,6 +5347,10 @@
   "c": "index.html: = \"warnt\"; warn.style.margin = \"16px\"; warn.textContent = \"Os dados do site têm um erro. Avisa quem mexeu por último.\"; host.insertBefor",
   "k": "x"
  },
+ "Os dois addons": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "x"
+ },
  "Os meus sets": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5620,11 +5624,11 @@
   "k": "x"
  },
  "Pesa {0} oz": {
-  "c": "index.html: ap(x=>IMBL[x]||x).join(\", \"))}</p>`:\"\"} ${info.wt!=null?`<p class=\"lk-wt\">Pesa ${Number(info.wt).toFixed(2).replace(\".\",\",\")} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <div class=",
+  "c": "index.html: ap(x=>IMBL[x]||x).join(\", \"))}</p>`:\"\"} ${info.wt!=null?`<p class=\"lk-wt\">Pesa ${Number(info.wt).toFixed(2).replace(\".\",DECSEP)} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <div class=",
   "k": "p"
  },
  "Pesa {0} oz{1}": {
-  "c": "index.html: ap(x=>IMBL[x]||x).join(\", \"))}</p>`:\"\"} ${info.wt!=null?`<p class=\"lk-wt\">Pesa ${Number(info.wt).toFixed(2).replace(\".\",\",\")} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <div class=",
+  "c": "index.html: ap(x=>IMBL[x]||x).join(\", \"))}</p>`:\"\"} ${info.wt!=null?`<p class=\"lk-wt\">Pesa ${Number(info.wt).toFixed(2).replace(\".\",DECSEP)} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <div class=",
   "k": "p"
  },
  "Peso": {
@@ -5670,6 +5674,14 @@
  "Piso 0 · térreo": {
   "c": "quests/js/app.js: t(2, \"0\")}-map.png`; const floorLabel = (z) => (z === 7 ? \"Piso 0 · térreo\" : z < 7 ? `Piso +${",
   "k": "x"
+ },
+ "Piso {0}": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "p"
+ },
+ "Piso −{0}": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "p"
  },
  "Piso −{0} · subsolo": {
   "c": "quests/js/app.js: > (z === 7 ? \"Piso 0 · térreo\" : z < 7 ? `Piso +${7 - z}` : `Piso −${z - 7} · subsolo`); function load(",
@@ -5724,7 +5736,7 @@
   "k": "p"
  },
  "Pontuação para {0}: {1} pts": {
-  "c": "index.html: )} (≈ ${gp(pb.net)} depois da taxa)</p>`:\"\"} ${sc!=null?`<p class=\"lk-sc\">Pontuação para ${esc(c.name||G.voc[c.voc].n)}: <b>${String(sc).replace(\".\",\",\")}</b> pts</p>`:\"\"}`; } function lo",
+  "c": "index.html: )} (≈ ${gp(pb.net)} depois da taxa)</p>`:\"\"} ${sc!=null?`<p class=\"lk-sc\">Pontuação para ${esc(c.name||G.voc[c.voc].n)}: <b>${String(sc).replace(\".\",DECSEP)}</b> pts</p>`:\"\"}`; } function lo",
   "k": "p"
  },
  "Por criatura": {
@@ -9284,7 +9296,7 @@
   "k": "x"
  },
  "dust · {0}%": {
-  "c": "index.html: el.toLowerCase())}</span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
+  "c": "index.html: tra.label)}</span></span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
  "e Paralyze": {
@@ -9302,6 +9314,10 @@
  "e o Market de {0} (média do mês menos a taxa de 2 %; conta quando houve 10 ou mais vendas e rende mais de 10 % acima do NPC)": {
   "c": "index.html: =\"tiny muted\">Preços: o NPC que paga mais (TibiaWiki)${mkOk?` e o Market de ${esc(w)} (média do mês menos a taxa de 2 %; conta quando houve 10 ou mais vendas e rende mais de 10 % acima do NPC)`:\"\"}. Loot e % de dr",
   "k": "p"
+ },
+ "e os dois addons": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "x"
  },
  "earth": {
   "c": "index.html: al:\"physical\",fisico:\"physical\",fire:\"fire\",ice:\"ice\",earth:\"earth\",energy:\"energy\",dea",
@@ -9353,6 +9369,14 @@
  },
  "em {0} este mês": {
   "c": "index.html: arket em ${w} · ${s.lab}${s.ok?\"\":\" · pouco fiável\"}` : d ? `em ${w} este mês` : `Market em ${w}`;",
+  "k": "p"
+ },
+ "em {0} guia": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "p"
+ },
+ "em {0} guias": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
   "k": "p"
  },
  "embriagado": {
@@ -12111,6 +12135,10 @@
   "c": "index.html: (\"mdFonts\")){ const l=document.createElement(\"link\"); l.rel=\"stylesheet\"; l.id=\"mdFonts\"; l.",
   "k": "x"
  },
+ "subsolo": {
+  "c": "r16: Questski em inglês (pisos, wiki)",
+  "k": "x"
+ },
  "subsolo −": {
   "c": "index.html: gura\"}; const floorTxt = z => z===7 ? \"superfície\" : (z>7 ? `subsolo −${z-7}` : `andar +${7-z}`);",
   "k": "x"
@@ -12628,7 +12656,7 @@
   "k": "p"
  },
  "vida · {0} mana/s": {
-  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",\",\")} vida · ${String(eq.rg[1]).replace(\".\",\",\")} mana/s`]); if(eq.bond) r.pu",
+  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
   "k": "p"
  },
  "vida/mana por s": {
@@ -13032,7 +13060,7 @@
   "k": "p"
  },
  "{0} dust · {1}%": {
-  "c": "index.html: el.toLowerCase())}</span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
+  "c": "index.html: tra.label)}</span></span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
  "{0} em {1}": {
@@ -13084,7 +13112,7 @@
   "k": "p"
  },
  "{0} gp": {
-  "c": "index.html: px(v){ v=+v||0; return v<=0 ? \"—\" : v<1 ? \"< 1 gp\" : v<10 ? `${v.toFixed(1).replace(/\\.0$/,\"\").replace(\".\",\",\")} gp` : gp(v); } function",
+  "c": "index.html: px(v){ v=+v||0; return v<=0 ? \"—\" : v<1 ? \"< 1 gp\" : v<10 ? `${v.toFixed(1).replace(/\\.0$/,\"\").replace(\".\",DECSEP)} gp` : gp(v); } function",
   "k": "p"
  },
  "{0} gp/oz": {
@@ -13092,7 +13120,7 @@
   "k": "p"
  },
  "{0} gp{1}": {
-  "c": "index.html: el.toLowerCase())}</span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
+  "c": "index.html: tra.label)}</span></span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
  "{0} hunts em {1}": {
@@ -13360,7 +13388,7 @@
   "k": "p"
  },
  "{0} vida · {1} mana/s": {
-  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",\",\")} vida · ${String(eq.rg[1]).replace(\".\",\",\")} mana/s`]); if(eq.bond) r.pu",
+  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
   "k": "p"
  },
  "{0} {1} (#{2} em {3})": {
@@ -14088,7 +14116,7 @@
   "k": "p"
  },
  "· empilhável": {
-  "c": "index.html: Number(info.wt).toFixed(2).replace(\".\",\",\")} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <d",
+  "c": "index.html: ber(info.wt).toFixed(2).replace(\".\",DECSEP)} oz${info.stack?\" · empilhável\":\"\"}</p>`:\"\"} <d",
   "k": "x"
  },
  "· faltam {0} níveis": {
