@@ -103,6 +103,10 @@
   "c": "index.html:  t=`Sem medição para ${vn(h.voc)}: valores de ${vn(e)}${x.o?\" (do TibiaPal, de antes do rebalance de junho de 2026)\":\"\"} ajustados ao te",
   "k": "x"
  },
+ "(duas mãos)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "(evento +{0}%)": {
   "c": "index.html: na de sessões solo reais desde junho\">r</sup>':\"\"}${h.boost?` <span class=\"tiny muted\">(evento +${Math.round(h.boost*100)}%)</span>`:\"\"}`),H.map(h=>h.xp",
   "k": "p"
@@ -162,6 +166,10 @@
  "(só {0})": {
   "c": "index.html: defaultImbs(c,set,Object.assign({},it,{is:3}))||[]).length)?` (só ${it.is===1?\"cabe 1\":\"cabem \"+it.is})`:\"\"}: <b>${rec.lengt",
   "k": "p"
+ },
+ "(uma mão)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
  },
  "({0} itens + {1} imb.)": {
   "c": "index.html: yle=\"--imc:var(--accent)\">+${v} ${esc(SKN[k]||k)}${t.ski[k]?` <span class=\"tiny muted\">(${t.sk[k]||0} itens + ${t.ski[k]} imb.)</span>`:\"\"}</span>`).join(\"",
@@ -306,6 +314,10 @@
  "/{0} passos": {
   "c": "index.html: +\".\"+si; return true; } return false; })); const prog=tot?`<div class=\"qprog\"><span>${nd}/${tot} passos</span><span class=\"bar\"><i style=\"width:${Math.round(nd/tot*100)}%\"></i></span></div>`:\"\"; const mis=(q.",
   "k": "p"
+ },
+ "0123456789abcdefghijklmnopqrstuvwxyzABCDE": {
+  "c": "index.html:  WOPT = d&&d.voc ? d : null; return WOPT; })); const WB36 = \"0123456789abcdefghijklmnopqrstuvwxyzABCDE\"; function whCalc(vo",
+  "k": "x"
  },
  "0px 0px -10% 0px": {
   "c": "quests/js/app.js: ersecting) { io.disconnect(); unroll(); } }), { rootMargin: \"0px 0px -10% 0px\" }); io.observ",
@@ -552,7 +564,7 @@
   "k": "x"
  },
  "A seguir: faltam {0} pontos": {
-  "c": "index.html: ]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,\"acc\"]]:[])], V=WHD",
+  "c": "index.html: =>[x,\"Calculada pelo algoritmo\",\"acc\"]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,\"acc\"]]:[])], V=WHD",
   "k": "p"
  },
  "A seguir: {0}, com {1} pontos.": {
@@ -564,7 +576,7 @@
   "k": "x"
  },
  "A tua build agora": {
-  "c": "index.html:  código que colaste\":E.dirty?\"Build editada por ti\":w===cur?\"A tua build agora\":w.p>pts?\"Build para",
+  "c": "index.html: tada por ti\":w.calc?\"Calculada para os teus pontos\":w===cur?\"A tua build agora\":w.p>pts?\"Build para",
   "k": "x"
  },
  "A tua conta": {
@@ -781,6 +793,10 @@
  },
  "Ammunition": {
   "c": "index.html: \":\"Contentor\",\"Magical Items\":\"Item mágico\",\"Books\":\"Livro\",\"Ammunition\":\"Munição\",\"Quivers\"",
+  "k": "x"
+ },
+ "Amplification (aumento da chance dos outros bónus):": {
+  "c": "recolhida: /grimorio/#item/sanguine-boots · ex.: Amplification (aumento da chance dos outros bónus):",
   "k": "x"
  },
  "Amuleto": {
@@ -1003,6 +1019,10 @@
   "c": "index.html: \"}`, open=box.classList.contains(\"open\"); box.innerHTML = `<button type=\"button\" class=\"csw-btn\" aria-haspopup=\"listbox\" aria-expanded=\"${open}\" aria-controls=\"cswList\" aria-label=\"Personagem ativa: ${nm(c)}. Mudar de pe",
   "k": "x"
  },
+ "As «Calculadas» vêm de um algoritmo que aprendeu com as builds do TibiaPal e as estende a qualquer número de pontos: servem para comparar e para os totais que a lista não tem.": {
+  "c": "index.html: d na janela de cima, com as gemas.</p>${(O.calc||[]).length?`<p class=\"small muted\">As «Calculadas» vêm de um algoritmo que aprendeu com as builds do TibiaPal e as estende a qualquer número de pontos: servem para compara",
+  "k": "x"
+ },
  "Ascetic Mastery": {
   "c": "index.html: down Base Damage\":[\"Monk_SweepingTakedown_DamageIncrease\"], \"Ascetic Mastery\":[\"Monk_RevelationMa",
   "k": "x"
@@ -1083,8 +1103,16 @@
   "c": "index.html: ia TibiaData. Atualizado ${ago(c.syncedAt)}.${busy[c.id]?\"\":` <button class=\"linkbtn\" data-sync=\"${c.id}\">Atualizar agora</button>`}</p> </div>`; } f",
   "k": "x"
  },
+ "Até ao meu level": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "Até ao meu nível": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Até ao nosso level": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "Até ao nosso nível": {
@@ -1138,6 +1166,22 @@
  "Axe fighting": {
   "c": "index.html: d\",\"axe\",\"club\"]}; const KSK = {sword:\"Sword fighting\", axe:\"Axe fighting\", club:\"Club fightin",
   "k": "x"
+ },
+ "Axe fighting fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Axe fighting {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Axe fighting {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Axe fighting: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Barco": {
   "c": "index.html: ?\"c\":s[4]===\"b\"?\"b\":\"n\",t:`${s[4]===\"c\"?\"Tapete\":s[4]===\"b\"?\"Barco\":\"Viagem\"}: ${s[1]}`",
@@ -1280,11 +1324,11 @@
   "k": "x"
  },
  "Build editada por ti": {
-  "c": "index.html: ree) : null; const eb=E.t?\"Do código que colaste\":E.dirty?\"Build editada por ti\":w===cur?\"A tua buil",
+  "c": "index.html: ree) : null; const eb=E.t?\"Do código que colaste\":E.dirty?\"Build editada por ti\":w.calc?\"Calculada p",
   "k": "x"
  },
  "Build escolhida": {
-  "c": "index.html: w===cur?\"A tua build agora\":w.p>pts?\"Build para mais tarde\":\"Build escolhida\"; const tags=E.t||",
+  "c": "index.html: w===cur?\"A tua build agora\":w.p>pts?\"Build para mais tarde\":\"Build escolhida\"; const tags=w.cal",
   "k": "x"
  },
  "Build importada": {
@@ -1292,7 +1336,7 @@
   "k": "x"
  },
  "Build para mais tarde": {
-  "c": "index.html: ?\"Build editada por ti\":w===cur?\"A tua build agora\":w.p>pts?\"Build para mais tarde\":\"Build escolhida\"; ",
+  "c": "index.html: da para os teus pontos\":w===cur?\"A tua build agora\":w.p>pts?\"Build para mais tarde\":\"Build escolhida\"; ",
   "k": "x"
  },
  "Build personalizada": {
@@ -1338,6 +1382,22 @@
  "Cai de {0} {1}": {
   "c": "index.html: pills\">${quests.join(\"\")}</div></div>`:\"\", drops.length?`<div class=\"ip-get\"><h4 class=\"sub\">Cai de ${drops.length} ${drops.length===1?\"criatura\":\"criaturas\"}</h4>${dropT(drops.slice(0,8))}${drops.length>8?`<p class=\"tin",
   "k": "p"
+ },
+ "Calculada": {
+  "c": "index.html: duce((x,y)=>x+y,0)); return {t:f.n?`Calculada (${f.n})`:\"Calculada\", p:b, note:\"\", calc",
+  "k": "x"
+ },
+ "Calculada ({0})": {
+  "c": "index.html:  whCalcRest(P,b-P.reduce((x,y)=>x+y,0)); return {t:f.n?`Calculada (${f.n})`:\"Calculada\", p:b, n",
+  "k": "p"
+ },
+ "Calculada para os teus pontos": {
+  "c": "index.html: o código que colaste\":E.dirty?\"Build editada por ti\":w.calc?\"Calculada para os teus pontos\":w===cur?\"A tua buil",
+  "k": "x"
+ },
+ "Calculada pelo algoritmo": {
+  "c": "index.html: O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.calc||[]).map(x=>[x,\"Calculada pelo algoritmo\",\"acc\"]),...(O.next?",
+  "k": "x"
  },
  "Calculadora de lucro": {
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
@@ -1413,6 +1473,10 @@
  },
  "Chance": {
   "c": "index.html: ):0}%\"></i></td></tr>`; }).join(\"\"); const tbl=top.length?`<div class=\"tablewrap\"><table class=\"lp-tbl\"><thead><tr><th>Item</th><th>Chance</th><th>NPC</th>${mkOk?`<th title=\"Média do mês menos a taxa de 2 % do Market\">Ma",
+  "k": "x"
+ },
+ "Chapéu (masculino):": {
+  "c": "recolhida: /grimorio/#outfit/mage · ex.: Chapéu (masculino):",
   "k": "x"
  },
  "Charm": {
@@ -1514,6 +1578,22 @@
  "Club fighting": {
   "c": "index.html: nst KSK = {sword:\"Sword fighting\", axe:\"Axe fighting\", club:\"Club fighting\"}; const hsURL = (w,",
   "k": "x"
+ },
+ "Club fighting fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Club fighting {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Club fighting {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Club fighting: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Cola o código do jogo (ex.: {0}0Y2Bg…)": {
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
@@ -2103,8 +2183,16 @@
   "c": "recolhida: /grimorio/#imbu · ex.: Desbloqueado na Wheel (perto do nível 300). Avatar of Balance (Wheel).",
   "k": "p"
  },
+ "Desbloqueia": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "Desbloqueia ou sobe o charm.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Desbloqueia:": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "Desbloqueia: {0}": {
@@ -2198,6 +2286,22 @@
  "Distance Weapons": {
   "c": "index.html: pons\":\"Espada\",\"Axe Weapons\":\"Machado\",\"Helmets\":\"Capacete\",\"Distance Weapons\":\"Arma de distância\"",
   "k": "x"
+ },
+ "Distance fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Distance {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Distance {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Distance: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Distribuir pontos": {
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
@@ -2359,6 +2463,26 @@
   "c": "index.html: y===\"ArrowDown\"||e.key===\"ArrowUp\"||e.key===\"Home\"||e.key===\"End\"){ if(!open){ if(e.t",
   "k": "x"
  },
+ "Energia/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Energia/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Energia/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Energia/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Energia/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "Energy": {
   "c": "index.html: e.g. Rosh\":\"criaturas que resistem a físico (ex.: Rosh)\", \"Energy\":\"energia\",\"Fire/Dea",
   "k": "x"
@@ -2389,6 +2513,10 @@
  },
  "Epiphany (magic level)": {
   "c": "index.html: e)\",s_club:\"Bash (club)\",s_dist:\"Precision (distance)\",s_ml:\"Epiphany (magic level)\",s_shield:\"Blockade ",
+  "k": "x"
+ },
+ "Equilíbrio entre dano e proteção:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Equilíbrio entre dano e proteção:",
   "k": "x"
  },
  "Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt.": {
@@ -2680,7 +2808,7 @@
   "k": "p"
  },
  "Faltam {0} pontos no {1} para o estágio {2}.": {
-  "c": "index.html: ling +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ${nx?`<p class=\"wsel-n\">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:\"\"}`; } // r7: o pa",
+  "c": "index.html: s tasks ou nos pergaminhos baixa-o 1 nível).\"}</p> ${nx?`<p class=\"wsel-n\">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:\"\"}`; } // r7: o pa",
   "k": "p"
  },
  "Farmine": {
@@ -2835,6 +2963,22 @@
   "c": "index.html: nst SKLAB = {knight:\"Skill de arma\",paladin:\"Distance\",monk:\"Fist fighting\"}; function newDraft",
   "k": "x"
  },
+ "Fist fighting fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Fist fighting {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Fist fighting {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Fist fighting: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "Fixo aqui: clica outra vez (ou fora da roda) para soltar.": {
   "c": "index.html: tra vez ou fora da roda solta const whPinHTML = () => WHPIN?`<p class=\"wpin-n\">Fixo aqui: clica outra vez (ou fora da roda) para soltar.</p>`:\"\"; const WHTGT = \"",
   "k": "x"
@@ -2845,6 +2989,26 @@
  },
  "Foge com": {
   "c": "index.html: cr.mitig!=null?String(cr.mitig).replace(\".\",\",\")+\"%\":null],[\"Foge com\",ci.run!=null?(runN?",
+  "k": "x"
+ },
+ "Fogo/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Fogo/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Fogo/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Fogo/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Fogo/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "Fonte de luz": {
@@ -2935,6 +3099,26 @@
   "c": "recolhida: /grimorio/#hunts · ex.: Físico 13%",
   "k": "p"
  },
+ "Físico/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Físico/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Físico/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Físico/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Físico/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "Galeria": {
   "c": "quests/js/app.js: \"Pode ser paralisado\", \"see also\": \"Ver também\", \"gallery\": \"Galeria\", \"buildings\": \"Edif",
   "k": "x"
@@ -2945,6 +3129,26 @@
  },
  "Gasta 1 teleport crystal": {
   "c": "index.html: /^(teleport|portal) to /i,\"Teleporte: \"):\"Teleporte\",d:s[2]?\"Gasta 1 teleport crystal\":\"\"}; return {i:\"w",
+  "k": "x"
+ },
+ "Gelo/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Gelo/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Gelo/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Gelo/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Gelo/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "Gem": {
@@ -3259,6 +3463,10 @@
   "c": "index.html: -g\">${l.join(\"\")}</div></details>`:\"\"; const html=det(\"c\",\"Hunts por cidade\",cs.map(([k,o])=>a(\"",
   "k": "x"
  },
+ "Hunts por cidade{0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "Hunts por nível": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -3266,6 +3474,10 @@
  "Hunts por tipo de criatura": {
   "c": "index.html: e\",cs.map(([k,o])=>a(\"hunts/cidade/\"+slug(k),k,o)))+det(\"t\",\"Hunts por tipo de criatura\",ts.map(([k,o])=>a(\"",
   "k": "x"
+ },
+ "Hunts por tipo de criatura{0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Hunts, builds, equipamento e wiki": {
   "c": "index.html (HTML)",
@@ -3276,11 +3488,75 @@
   "k": "x"
  },
  "Há": {
-  "c": "index.html: \"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?\"hunt",
+  "c": "index.html: \"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ",
   "k": "x"
  },
  "Há dois tipos: os {0} saem das Lesser e Regular Gems; os {1} saem das Greater Gems.": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "p"
+ },
+ "Há {0} hunt de {1} em {2} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt de {1} em {2} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt de {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt de {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt em {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt em {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunt que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts de {1} em {2} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts de {1} em {2} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts de {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts de {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts em {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts em {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Há {0} hunts que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
   "k": "p"
  },
  "ID do feitiço": {
@@ -3343,9 +3619,21 @@
   "c": "recolhida: /grimorio/#criatura/dragon · ex.: Imune a invisível",
   "k": "x"
  },
+ "Imune a outfit, invisível": {
+  "c": "recolhida: /grimorio/#criatura/mirror-image · ex.: Imune a outfit, invisível",
+  "k": "x"
+ },
  "Imune a paralisia": {
   "c": "index.html: prop(ci.sinv,\"Vê invisível\"):\"\", ci.para!=null?prop(ci.para,\"Imune a paralisia\"):\"\", ci.push!=null?",
   "k": "x"
+ },
+ "Imune a paralisia, invisível": {
+  "c": "recolhida: /grimorio/#criatura/zamulosh3 · ex.: Imune a paralisia, invisível",
+  "k": "x"
+ },
+ "Imune a {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
  },
  "Imunidades": {
   "c": "quests/js/app.js: Propriedades\", \"resistances\": \"Resistências\", \"immunities\": \"Imunidades\", \"bosses\": \"Bos",
@@ -3574,6 +3862,10 @@
  "Lesser gems (a partir dos 100 pontos)": {
   "c": "index.html: 6.5 12 12 16.5 7.5 12z\"/></svg>'; $(\"gemBox\").innerHTML = `<div class=\"card\"><h4>${gi}Lesser gems (a partir dos 100 pontos)</h4><p class=\"small\">Por ordem: ${gl(gm.lesser_gems)}<span class=\"wsep\">.</span> Revelar custa 1",
   "k": "x"
+ },
+ "Leste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
  },
  "Leva contigo": {
   "c": "quests/js/app.js: </ul>`); if ((d.items_needed || []).length) before.push(`<h4>Leva contigo</h4><ul class=\"list-clean\">${d.items_needed.map((it) => `<li>${icon(\"bag\")}<span>${it.item ? `${it.qty ? `<span class=\"qty\">${it.qty}× </span>` : ",
@@ -3819,9 +4111,25 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Magic level fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "Magic level para usar": {
   "c": "index.html:  para aprender\",s.pc?gp(s.pc):\"\"]]; if(rune) rows.push([\"Magic level para usar\",s.ml!=null?s.ml:\"\"]",
   "k": "x"
+ },
+ "Magic level {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Magic level {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Magic level: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Magical Items": {
   "c": "index.html: m para montarias\",\"Rubbish\":\"Lixo\",\"Containers\":\"Contentor\",\"Magical Items\":\"Item mágico\",\"Book",
@@ -4095,6 +4403,10 @@
   "c": "index.html: ll>· os 12 itens que mais rendem</small></h5>${tbl}${coin>0?`<p class=\"tiny muted\">Moedas: ≈ ${gpx(coin)} por kill, já contadas no loot por hora.</p>`:\"\"} <h5>Por cri",
   "k": "p"
  },
+ "Momentum (chance a cada {0} s):": {
+  "c": "recolhida: /grimorio/#item/antler-horn-helmet · ex.: Momentum (chance a cada 2 s):",
+  "k": "p"
+ },
  "Mon": {
   "c": "index.html: Parts(new Date()).map(x=>[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"",
   "k": "x"
@@ -4125,6 +4437,26 @@
  },
  "Montarias": {
   "c": "index.html: :[\"Imbuements\",\"imbuement\"],a:[\"Conquistas\",\"conquista\"],m:[\"Montarias\",\"montaria\"],o:[\"Out",
+  "k": "x"
+ },
+ "Morte/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Morte/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Morte/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Morte/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Morte/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "Mortes recentes": {
@@ -4467,13 +4799,25 @@
   "c": "index.html: .level, voc:c.vocation, sex:c.sex, title:c.title&&c.title!==\"None\"?c.title:\"\", res:c.r",
   "k": "x"
  },
+ "Nordeste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "Norf": {
   "c": "index.html: 0*(L-20) : 50000; const rows=[[\"The Spiritual Shielding\",[\"Norf\"],\"White Flower Temp",
   "k": "x"
  },
+ "Noroeste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "Norte de Tiquanda": {
   "c": "index.html: o\"],\"Eremo's Island\",reg],[\"Blood of the Mountain\",[\"Kais\"],\"Norte de Tiquanda\",enh],[\"Heart of the",
   "k": "x"
+ },
+ "Norte de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
  },
  "Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível;": {
   "c": "recolhida: /grimorio/#defesa · ex.: Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível;",
@@ -4759,6 +5103,22 @@
   "c": "index.html: ?`Estimativa a partir de outra vocação: ≈ ${gp(lo)}/h aqui`:`O TibiaPal mede ${gp(lo)}/h aqui`} (já sem os supplie",
   "k": "p"
  },
+ "O TibiaPal não lista esta hunt para Paladin:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: O TibiaPal não lista esta hunt para Paladin:",
+  "k": "x"
+ },
+ "O TibiaPal não lista esta hunt para Paladin: o nível vem da TibiaWiki ou das outras vocações.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: O TibiaPal não lista esta hunt para Paladin: o nível vem da TibiaWiki ou das outras vocações.",
+  "k": "x"
+ },
+ "O TibiaPal não lista esta hunt para Sorcerer:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: O TibiaPal não lista esta hunt para Sorcerer:",
+  "k": "x"
+ },
+ "O TibiaPal não lista esta hunt para Sorcerer: o nível vem da TibiaWiki ou das outras vocações.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: O TibiaPal não lista esta hunt para Sorcerer: o nível vem da TibiaWiki ou das outras vocações.",
+  "k": "x"
+ },
  "O TibiaPal não lista esta hunt para {0}: o nível vem da TibiaWiki ou das outras vocações{1}.": {
   "c": "index.html: ||G.routes[h.r.c])?\" \"+esc(p.acc):\"\"}</p>`:\"\"} ${h.fill?`<p class=\"tiny muted\">O TibiaPal não lista esta hunt para ${esc(G.voc[h.voc].n)}: o nível vem da TibiaWiki ou das outras vocações${h.est?\", e o XP é estimado\":\"\"}.",
   "k": "p"
@@ -4819,6 +5179,14 @@
   "c": "index.html: nagem.\",\"#f-name\"); if(!(L>=8 && L<=LVMAX)) return fail(`O nível tem de estar entre 8 e ${LVMAX}.`,\"#f-level\"); co",
   "k": "p"
  },
+ "O nível é o mínimo pondo neste domínio todos os teus pontos (cada wheel point comprado nas tasks ou nos pergaminhos baixa-o 1 nível).": {
+  "c": "index.html: nio todos os teus pontos, contando com os ${ex} comprados.`:\"O nível é o mínimo pondo neste domínio todos os teus pontos (cada wheel point comprado nas tasks ou nos pergaminhos baixa-o 1 nível).\"}</p> ${nx?`<p c",
+  "k": "x"
+ },
+ "O nível é o mínimo pondo neste domínio todos os teus pontos, contando com os {0} comprados.": {
+  "c": "index.html: j]}</span></li>`).join(\"\")}</ol> <p class=\"wsel-d\">${ex?`O nível é o mínimo pondo neste domínio todos os teus pontos, contando com os ${ex} comprados.`:\"O nível é o mínimo",
+  "k": "p"
+ },
  "O número é quantas hunts desse tipo {0} fazer. Escolher um tipo mostra-as todas, até {1} nível.": {
   "c": "index.html: st.filter((k,i)=>i>=XN&&!f.cls.includes(k)).length, clsNote=`O número é quantas hunts desse tipo ${grp?\"podem\":\"podes\"} fazer. Escolher um tipo mostra-as todas, até ${grp?\"ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\")",
   "k": "p"
@@ -4862,6 +5230,10 @@
  "Obter": {
   "c": "index.html: : até ser revelada é um item como os outros.`; const st=[[\"Obter\",drop], [\"Revela",
   "k": "x"
+ },
+ "Oeste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
  },
  "Ofensivo": {
   "c": "index.html: 8 10 8 10z\"/><path d=\"m9 12 2 2 4-4\"/>'}; const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills ",
@@ -5024,7 +5396,7 @@
   "k": "x"
  },
  "Outras boas opções:": {
-  "c": "index.html: .bis,...O.alt].filter(x=>x&&x!==w); const alts=oth.length?`<div class=\"whx-alt\"><span>Outras boas opções:</span>${oth.map(x=>`<button type=\"button\" class=\"whx-chip\" data-wsel=\"${ws.indexOf(x)}\" title=\"${esc(x.t)}\">${esc(",
+  "c": "index.html: O.alt,...calc].filter(x=>x&&x!==w); const alts=oth.length?`<div class=\"whx-alt\"><span>Outras boas opções:</span>${oth.map(x=>`<button type=\"button\" class=\"whx-chip${x.calc?\" calc\":\"\"}\" data-wsel=\"${all.indexOf(x)}\" title",
   "k": "x"
  },
  "Outras personagens da conta": {
@@ -5623,6 +5995,10 @@
   "c": "index.html: <=L+110).sort((a,b)=>a.l-b.l); $(\"pathTable\").innerHTML = `<thead><tr><th>Nível</th><th>Slot</th><th>Item</th><th>Proteção</th><th></th></tr></thead><tbody>` + (rows.map(it=>{ c",
   "k": "x"
  },
+ "Proteção máxima:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Proteção máxima:",
+  "k": "x"
+ },
  "Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.": {
   "c": "index.html: et para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\",\"Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.\"]]; /* r4-t5 */ // p",
   "k": "x"
@@ -6044,11 +6420,11 @@
   "k": "x"
  },
  "Revelation Perk · {0} pontos no": {
-  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
+  "c": "index.html: 0=C(), ex=c0?Math.max(0,Math.round(+c0.wpx||0)):0; return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
   "k": "p"
  },
  "Revelation Perk · {0} pontos no {1}": {
-  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
+  "c": "index.html: 0=C(), ex=c0?Math.max(0,Math.round(+c0.wpx||0)):0; return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
   "k": "p"
  },
  "Revelation Perks": {
@@ -6443,6 +6819,22 @@
   "c": "index.html: - */ let draft=null, pendingDel=null; const SKLAB = {knight:\"Skill de arma\",paladin:\"Distance\",",
   "k": "x"
  },
+ "Skill de arma fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Skill de arma {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Skill de arma {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Skill de arma: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "Skills": {
   "c": "index.html: kt=([x,v])=>`${v>0?\"+\":\"\"}${v} ${esc(SKN[x]||x)}`; return `<div class=\"hs-h\"><b>Bónus do set</b><span>${lab}</span></div> <div class=\"hs-kv\">${kv.map(([k,l,v,u])=>`<div class=\"hs-i\" data-k=\"${k}\"><i aria-hidden=\"true\"><s",
   "k": "x"
@@ -6595,6 +6987,14 @@
   "c": "index.html: +rot; if(voc===\"druid\"){ const X={gfb:\"Great Fireball\",sd:\"Sudden Death\",stoneshower:\"Stone ",
   "k": "x"
  },
+ "Sudeste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "Sudoeste de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "Sugerir imbuements": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
@@ -6609,6 +7009,10 @@
  },
  "Sugestões para o nível {0}{1}": {
   "c": "quests/js/app.js: oin(\"\")}</div></div></section>` : \"\"} ${sugg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"flag\")}Sugestões para o nível ${lvl}<span class=\"cap-extra\"><a href=\"#/quests\" style=\"color:inherit\">ver todas →",
+  "k": "p"
+ },
+ "Sul de {0}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "Summer Update 2026": {
@@ -6670,6 +7074,22 @@
  "Sword fighting": {
   "c": "index.html: \"fist\"], knight:[\"sword\",\"axe\",\"club\"]}; const KSK = {sword:\"Sword fighting\", axe:\"Axe fighting\"",
   "k": "x"
+ },
+ "Sword fighting fora do top 1000 de {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Sword fighting {0} (#{1} em {2})": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Sword fighting {0}: tirado dos highscores de {1} (#{2}).": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "Sword fighting: fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
  },
  "Só as de {0} ({1})": {
   "c": "quests/js/app.js: m passos por lá.</p> <div class=\"seg\">${[[true, `Só as de ${esc(reg.name)} (${reg.main})`], [false, `+ as que",
@@ -6740,7 +7160,7 @@
   "k": "x"
  },
  "Também boa": {
-  "c": "index.html: (O.bis?[[O.bis,\"Best in slot\",\"ok\"]]:[]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.next?[[O",
+  "c": "index.html: (O.bis?[[O.bis,\"Best in slot\",\"ok\"]]:[]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.calc||[]",
   "k": "x"
  },
  "Também boas": {
@@ -6756,8 +7176,80 @@
   "k": "p"
  },
  "Também há": {
-  "c": "index.html: `<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?",
+  "c": "index.html: `<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</s",
   "k": "x"
+ },
+ "Também há {0} hunt de {1}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt de {1} em {2} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt de {1} em {2} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt de {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt de {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt em {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt em {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunt que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts de {1}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts de {1} em {2} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts de {1} em {2} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts de {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts de {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts em {1} que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts em {1} que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts que já podem fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
+ },
+ "Também há {0} hunts que já podes fazer noutras faixas:": {
+  "c": "r14: hunts noutras faixas (Grimório)",
+  "k": "p"
  },
  "Também se compram no Market ou a NPCs de joias (ex.: Talila, Yonan): 750 000 gold cada Lesser Fragment e 2 250 000 cada Greater Fragment.": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
@@ -6818,6 +7310,26 @@
  "Tens {0} de capacidade: apanha primeiro o que rende mais por oz.": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "p"
+ },
+ "Terra/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Terra/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Terra/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Terra/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "Terra/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
  },
  "Tesouro": {
   "c": "quests/js/app.js:  label: \"História\", icon: \"scroll\" }, tesouro: { label: \"Tesouro\", icon: \"chest\" }, ",
@@ -7087,6 +7599,10 @@
   "c": "index.html: ra ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipament",
   "k": "x"
  },
+ "Transcendence (chance a cada {0} s):": {
+  "c": "recolhida: /grimorio/#item/bast-legs · ex.: Transcendence (chance a cada 2 s):",
+  "k": "p"
+ },
  "Transcrições": {
   "c": "quests/js/app.js: \", \"items\": \"Itens\", \"quests\": \"Quests\", \"transcripts\": \"Transcrições\", \"properties\": \"Pro",
   "k": "x"
@@ -7292,7 +7808,7 @@
   "k": "p"
  },
  "Ver na roda": {
-  "c": "index.html: lass=\"wopt-a\">${x===w?`<span class=\"tag ok\">Na roda</span>`:`<button type=\"button\" class=\"btn small\" data-wsel=\"${i}\">Ver na roda</button>`}<button type=\"butto",
+  "c": "index.html: lass=\"wopt-a\">${x===w?`<span class=\"tag ok\">Na roda</span>`:`<button type=\"button\" class=\"btn small\" data-wsel=\"${i}\">Ver na roda</button>`}${x.c?`<button type",
   "k": "x"
  },
  "Ver no Grimório": {
@@ -7340,7 +7856,7 @@
   "k": "p"
  },
  "Ver todas até {0} nível": {
-  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?\"hunt\":\"hunts\"} ${esc([f.cls.length?\"de \"+f.cls.map(k=>clsName(k).toLower",
+  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ${n===1?\"hunt\":\"hunts\"}${f.cls.length?` de <span>${esc(f.cls.map(k=>",
   "k": "p"
  },
  "Ver todos os guias ›": {
@@ -7743,6 +8259,10 @@
   "c": "index.html: dy || document.documentElement; warn.setAttribute(\"role\", \"alert\"); warn.className = ",
   "k": "x"
  },
+ "algoritmo": {
+  "c": "index.html: rde\":\"Build escolhida\"; const tags=w.calc&&!E.t&&!E.dirty?`<span class=\"tag\">${w.p} pontos</span><span class=\"tag acc\">algoritmo</span>`:E.t||E.dirty?`<span",
+  "k": "x"
+ },
  "alto": {
   "c": "index.html: ity?` · ${p.city}`:\"\"}${p.d?` · risco ${[\"\",\"baixo\",\"médio\",\"alto\"][p.d]||p.d}`:\"\"}`,a",
   "k": "x"
@@ -7763,6 +8283,10 @@
   "c": "index.html: &&/arrow|bolt|spear|star/i.test(a)) add(a.replace(/s$/i,\"\"),\"ammo\"); } return out; }",
   "k": "x"
  },
+ "amphibic": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "amulet": {
   "c": "index.html: ); }); /* ---------- equipment ---------- */ const DOLL = [[\"amulet\",\"Amuleto\"],[\"helmet",
   "k": "x"
@@ -7774,6 +8298,10 @@
  "andar +{0}": {
   "c": "index.html: xt = z => z===7 ? \"superfície\" : (z>7 ? `subsolo −${z-7}` : `andar +${7-z}`); function huntMap(",
   "k": "p"
+ },
+ "anfíbios": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
  },
  "ao NPC": {
   "c": "index.html: f(/^hireling$/i.test(n)) return \"ao teu Hireling\"; return `ao NPC ${link?elink(\"npc\",n):esc(n)}${/^rashid$/i.test(n)?` (hoje em ${esc(rashidToday().city)})`:\"\"}`; } // conselho do c",
@@ -7807,8 +8335,16 @@
   "c": "index.html: \"podes\"} fazer. Escolher um tipo mostra-as todas, até ${grp?\"ao vosso\":\"ao teu\"} nível.`; ",
   "k": "x"
  },
+ "aquatic": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "aqui só entra a aljava.": {
   "c": "index.html: p:6px\">A arma deste set é de duas mãos: ${c.voc===\"paladin\"?\"aqui só entra a aljava.\":\"não dá para usar e",
+  "k": "x"
+ },
+ "aquáticos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "area": {
@@ -7842,6 +8378,10 @@
  "as criaturas levam {0}% de {1}": {
   "c": "index.html: ecutioner's Throw acaba as criaturas mais depressa\":e!=null?`as criaturas levam ${e}% de ${ELN[bw]}`:\"\"; return {w:bes",
   "k": "p"
+ },
+ "as vendas deste mês podem incluir itens com tier.": {
+  "c": "recolhida: /grimorio/#item/albino-plate · ex.: as vendas deste mês podem incluir itens com tier.",
+  "k": "x"
  },
  "ascetic": {
   "c": "index.html: 1.3 4 3.7 1.3-3.7 1.3L16 20.5l-1.3-3.9-3.7-1.3 3.7-1.3z\", \"ascetic\":\"M12 5c2 2.2 3 4.6 ",
@@ -7911,6 +8451,10 @@
   "c": "index.html: eat fireball rune\"],[\"sd\",\"sudden death rune\"],[\"avalanche\",\"avalanche rune\"],[\"thunderstorm\",\"t",
   "k": "x"
  },
+ "aves": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "azul": {
   "c": "index.html: se, fundo const WHDN = {green:\"verde\", red:\"vermelho\", blue:\"azul\", purple:\"roxo\"}; co",
   "k": "x"
@@ -7953,6 +8497,10 @@
  },
  "best": {
   "c": "index.html: return `<ul class=\"elist\">${L.map(r=>`<li class=\"${r===best?\"best\":\"\"}\"><span class=\"c",
+  "k": "x"
+ },
+ "bird": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "blessing of the grove": {
@@ -8057,6 +8605,10 @@
  },
  "cacar": {
   "c": "index.html: opT(drops),drops.length]); if(huntP.length&&c) tabs.push([\"cacar\",\"Onde caçar\",`<div ",
+  "k": "x"
+ },
+ "calc": {
+  "c": "index.html: ${oth.map(x=>`<button type=\"button\" class=\"whx-chip${x.calc?\" calc\":\"\"}\" data-wsel=\"${a",
   "k": "x"
  },
  "cancelled": {
@@ -8331,6 +8883,14 @@
   "c": "index.html: (36); c.sets.push({id,name:`${short} · ${({off:\"ofens.\",bal:\"consist.\",def:\"defens.\"})[k]}",
   "k": "x"
  },
+ "construct": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "constructos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "conta": {
   "c": "index.html: length>3?` e mais ${l.length-3}`:\"\"} (${l.length>1?\"contam\":\"conta\"} como 0 gp no loot ",
   "k": "x"
@@ -8583,6 +9143,10 @@
   "c": "index.html: sug\">${[\"gold\",\"dragon\",\"exura\",\"soul\",\"rashid\",\"roshamuul\",\"demon\"].map(x=>`<button ty",
   "k": "x"
  },
+ "demónios": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "desbloqueado": {
   "c": "index.html: <span class=\"tag acc\">na tua ordem</span>`:\"\"}${c.charms[k]?`<span class=\"tag ok\">desbloqueado</span>`:\"\"}</span><span cla",
   "k": "x"
@@ -8669,6 +9233,10 @@
  },
  "dragon": {
   "c": "index.html: tas, montarias e outfits.</p><div class=\"gsp-sug\">${[\"gold\",\"dragon\",\"exura\",\"soul\",\"ras",
+  "k": "x"
+ },
+ "dragões": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "dreno de mana": {
@@ -8763,6 +9331,14 @@
   "c": "quests/js/app.js: \": \"Vocação\", \"vocations\": \"Vocações\", \"words\": \"Palavras\", \"element\": \"Elemento\", \"e",
   "k": "x"
  },
+ "elementais": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
+ "elemental": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "elemental synthesis": {
   "c": "index.html: -1.7-7-5.4-7-9.8V5.6zM12.5 3.3l-2 4.7 3 3-2.5 3.5 1 3.5\", \"elemental synthesis\":\"M12 3c.8 4.8 4.2 8",
   "k": "x"
@@ -8813,6 +9389,26 @@
  },
  "energia, morte e fogo (team hunt)": {
   "c": "index.html: Solo)/Death\":\"fogo (solo) e morte\",\"Energy/Death/Fire (TH)\":\"energia, morte e fogo (team hunt)\"}; const wnote = n =",
+  "k": "x"
+ },
+ "energia/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "energia/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "energia/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "energia/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "energia/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "energy": {
@@ -9003,8 +9599,20 @@
   "c": "index.html: =>add(\"i\",x.n.toLowerCase(),x.n,`${SLOTNAME[x.s===\"trinket\"?\"extra\":x.s]||\"Item\"}${x.l?",
   "k": "x"
  },
+ "extra Dimensional": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "extradimensionais": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "exura": {
   "c": "index.html: arias e outfits.</p><div class=\"gsp-sug\">${[\"gold\",\"dragon\",\"exura\",\"soul\",\"rashid\",\"ro",
+  "k": "x"
+ },
+ "fadas": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "faltam": {
@@ -9049,6 +9657,10 @@
  },
  "feito": {
   "c": "quests/js/app.js: \">${checked ? \"✓\" : n}</span><span class=\"tick\">${checked ? \"feito\" : \"marcar\"}</span><",
+  "k": "x"
+ },
+ "fey": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "field properties": {
@@ -9105,6 +9717,26 @@
  },
  "fogo, solo": {
   "c": "index.html: gia e morte\",\"Fire (TH)\":\"fogo, em team hunt\",\"Fire (Solo)\":\"fogo, solo\",\"Fire (Solo)/Death\"",
+  "k": "x"
+ },
+ "fogo/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "fogo/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "fogo/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "fogo/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "fogo/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "foi preenchida à mão. Liga-a ao Tibia para o nível, o mundo e as skills se atualizarem sozinhos.": {
@@ -9175,12 +9807,60 @@
   "c": "index.html: \"paladin\",\"sorcerer\",\"druid\",\"monk\"]; const ELN = {physical:\"físico\",fire:\"fogo\",ice:\"ge",
   "k": "x"
  },
+ "físico rende {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: físico rende 99%",
+  "k": "p"
+ },
+ "físico {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: físico 95%",
+  "k": "p"
+ },
+ "físico/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "físico/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "físico/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "físico/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "físico/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "gallery": {
   "c": "quests/js/app.js: alysable\": \"Pode ser paralisado\", \"see also\": \"Ver também\", \"gallery\": \"Galeria\", \"buildi",
   "k": "x"
  },
  "gelo": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "gelo/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "gelo/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "gelo/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "gelo/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "gelo/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "gems": {
@@ -9199,12 +9879,20 @@
   "c": "index.html: \"controls\" style=\"gap:6px\"><button class=\"btn small ${on?\"\":\"ghost\"}\" data-use=\"${x.id}",
   "k": "x"
  },
+ "giant": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "gift": {
   "c": "quests/js/app.js: \", \"Preparação\", \"bag\"], [\"recompensas\", \"Recompensas\", \"gift\"], [\"mapa\", \"Map",
   "k": "x"
  },
  "gift of life": {
   "c": "index.html: udo com espada, árvore que cura, duas explosões, lótus */ \"gift of life\":\"M12 20.5s-8-5.2-8-",
+  "k": "x"
+ },
+ "gigantes": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "globe": {
@@ -9217,6 +9905,10 @@
  },
  "gold coin": {
   "c": "index.html:  por · média do mês\"}; return {sell,buy}; } const MKCOIN={\"gold coin\":1,\"platinum coin\":1",
+  "k": "x"
+ },
+ "gosmas": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "gp por 1000 XP": {
@@ -9359,6 +10051,22 @@
   "c": "index.html: etch(url,{signal:ctl.signal}); if(!r.ok){ const e=new Error(\"http \"+r.status); e.status",
   "k": "x"
  },
+ "human": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "humanoid": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "humanoides": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
+ "humanos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "hunt": {
   "c": "index.html: ; } // r7: com os guias do Questski const GSC = {h:[\"Hunts\",\"hunt\"],hc:[\"Hunts\",\"lista",
   "k": "x"
@@ -9445,6 +10153,10 @@
  },
  "inicio": {
   "c": "index.html:  /* ---------- navigation ---------- */ const SECS = [ {id:\"inicio\",t:\"Início\",subs:[[\"",
+  "k": "x"
+ },
+ "inkborn": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "input,button,a,select,label": {
@@ -9555,6 +10267,10 @@
   "c": "quests/js/app.js: ture\": \"Criatura\", \"attack\": \"Ataque\", \"defense\": \"Defesa\", \"level\": \"Nível\", \"requ",
   "k": "x"
  },
+ "licantropos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "life leech": {
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "x"
@@ -9647,12 +10363,20 @@
   "c": "index.html: lemHTML(h.voc,g.p)}</details></div>`; }).join(\"\"); return `<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">Em grupo · ${ms.map(m=>VOC_SHORT[m.voc]).join(\" + \")}</span><h3>${esc(name)}</h3></div></div> <div ",
   "k": "x"
  },
+ "lycanthrope": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "magic": {
   "c": "index.html: 1000 do mundo) */ const busy = {}; const HSCAT = {sorcerer:[\"magic\"], druid:[\"magic\"], ",
   "k": "x"
  },
  "magic level": {
   "c": "index.html: K = {knight:\"skill de ataque\", paladin:\"distance\", sorcerer:\"magic level\", druid:\"magic level",
+  "k": "x"
+ },
+ "magical": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "maior": {
@@ -9665,6 +10389,10 @@
  },
  "major": {
   "c": "index.html: .charms||{}).forEach(([k,c])=>add(\"ch\",k,c.n,`Charm ${c.t===\"major\"?\"maior\":\"menor\"}`))",
+  "k": "x"
+ },
+ "mammal": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "mamíferos": {
@@ -9831,6 +10559,30 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "morte/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "morte/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "morte/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "morte/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "morte/terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "mortos-vivos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "mostrar NPCs antigos": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -9861,6 +10613,10 @@
  },
  "muted": {
   "c": "index.html: d)}</p>`:\"\"} ${c?`<p class=\"small ${mine&&lvOk?\"\":\"muted\"}\" style=\"margin:10p",
+  "k": "x"
+ },
+ "mágicos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "x"
  },
  "média de hoje": {
@@ -10115,6 +10871,10 @@
   "c": "index.html: rism\"); if(sr&&!sr[2].length) fr.push(sr[1].b===\"spellbook\"?\"o livro fica sem imbuement\":sr[1].b===\"quiver\"?",
   "k": "x"
  },
+ "o nível vem da TibiaWiki ou das outras vocações.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: o nível vem da TibiaWiki ou das outras vocações.",
+  "k": "x"
+ },
  "o que dá o melhor set no teu nível": {
   "c": "index.html:  (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?\"o teu skill mais alto\":\"o que dá o melhor set no teu nível\"}; para outro, escol",
   "k": "x"
@@ -10125,6 +10885,10 @@
  },
  "o set consistente desta hunt não tem slots de imbuement": {
   "c": "index.html: istente desta hunt: ${gp(feeH)} por hora, sem os materiais`:\"o set consistente desta hunt não tem slots de imbuement\"}</small></span></la",
+  "k": "x"
+ },
+ "o set para usar todos os dias nesta hunt.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: o set para usar todos os dias nesta hunt.",
   "k": "x"
  },
  "o teu": {
@@ -10371,6 +11135,14 @@
   "c": "quests/js/app.js: & f.w <= 120; return `<figure class=\"shot ${small ? \"pixel\" : \"\"}\"><img src=\"${",
   "k": "x"
  },
+ "plant": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "plantas": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
  "platinum coin": {
   "c": "index.html: o mês\"}; return {sell,buy}; } const MKCOIN={\"gold coin\":1,\"platinum coin\":100,\"crystal coin\":",
   "k": "x"
@@ -10482,6 +11254,10 @@
  "por {0}": {
   "c": "index.html: L(key,w,d,info){ const W=esc(w), p=priceOf(key,w), np=p.npc?`${npcTo(p.npc[0],true)} por ${gp(p.npc[1])}`:\"\"; const age=d&&",
   "k": "p"
+ },
+ "pouco fiável": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
  },
  "powerful": {
   "c": "index.html: } const TIERS=[[\"basic\",\"Basic\"],[\"intricate\",\"Intricate\"],[\"powerful\",\"Powerful\"]]; const",
@@ -10737,6 +11513,10 @@
  },
  "repete": {
   "c": "index.html: ode>${esc(sub)}</code></div></li>`; }).join(\"\"); return `<div class=\"card rot${r.seq.length>=4?\" long\":\"\"}\"><div class=\"rot-h\"><h4>${esc(r.t)}</h4><span class=\"tiny muted\">${r.seq.length} passos</span></div><ol class=\"se",
+  "k": "x"
+ },
+ "reptile": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "requer": {
@@ -11123,6 +11903,14 @@
   "c": "index.html: c[voc]; return cv===\"vr\"?`Vessel Resonance ${WHVR[d]}`:cv===\"skill\"?V.skill:cv===\"mleec",
   "k": "x"
  },
+ "skill de arma": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
+ "skill de arma {0}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "skill de ataque": {
   "c": "index.html: néis: 50 · 75 · 100 · 150 · 200 pontos const WHSK = {knight:\"skill de ataque\", paladin:\"distance\"",
   "k": "x"
@@ -11135,6 +11923,10 @@
   "c": "quests/js/app.js: itle=\"Dificuldade ${n}/5\">${[1, 2, 3, 4, 5].map((i) => icon(\"skull\", i <= n ? \"on\" : \"\"",
   "k": "x"
  },
+ "slime": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "sliver": {
   "c": "index.html: .n} ${x.from===\"dust\"?\"dust\":\"slivers\"} → ${x.get} ${x.to===\"sliver\"?\"slivers\":\"exalted ",
   "k": "x"
@@ -11145,6 +11937,10 @@
  },
  "sliver ≈ {0}": {
   "c": "index.html: sliver)); pr.textContent=[c?`Exalted core ≈ ${gp(c)}`:\"\", s?`sliver ≈ ${gp(s)}`:\"\"].filter(Boolean)",
+  "k": "p"
+ },
+ "sliver ≈ {0} no Market de {1}.": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "slivers": {
@@ -11431,6 +12227,14 @@
   "c": "index.html: Início\"]]}, {id:\"hunts\",t:\"Hunts\",subs:[[\"hunts\",\"Hunts\"],[\"tarefas\",\"Tarefas\"]]}, {id:",
   "k": "x"
  },
+ "taxas do altar para {0} imbuement {1}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "taxas do altar para {0} imbuements {1}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "taxas do altar para {0} imbuement{1}": {
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "p"
@@ -11457,6 +12261,26 @@
  },
  "terra": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "terra/energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "terra/fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "terra/físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "terra/gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "terra/morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "terça": {
@@ -11498,6 +12322,10 @@
  "tipo": {
   "c": "index.html: f(t===\"hc\"||t===\"ht\"){ const x=\"#hunts/\"+(t===\"hc\"?\"cidade\":\"tipo\")+\"/\"+k; if(location",
   "k": "x"
+ },
+ "tirado dos highscores de {0} (#{1}).": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
  },
  "title": {
   "c": "index.html: rySelectorAll(\"[data-mdtip]\").forEach(el=>{ el.setAttribute(\"title\",el.dataset.mdtip); ",
@@ -11617,6 +12445,10 @@
  },
  "uncommon": {
   "c": "index.html:  const RAR = {\"always\":[\"sempre\",100],\"common\":[\"comum\",25],\"uncommon\":[\"incomum\",8],\"semi",
+  "k": "x"
+ },
+ "undead": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "unrolled": {
@@ -11755,6 +12587,14 @@
   "c": "index.html: \"]}; // claro, base, fundo const WHDN = {green:\"verde\", red:\"vermelho\", blue:\"azul\", purpl",
   "k": "x"
  },
+ "vermes e insetos": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "x"
+ },
+ "vermin": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
  "version": {
   "c": "quests/js/app.js: a passagem\", \"other properties\": \"Outras propriedades\", \"version\": \"Versão\", \"notes\":",
   "k": "x"
@@ -11863,6 +12703,10 @@
   "c": "index.html: :\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"",
   "k": "x"
  },
+ "wheelopt": {
+  "c": "index.html: ll, WOPP=null; const woptLoad = () => WOPP || (WOPP = dsafe(\"wheelopt\").then(d=>{ WOPT = d",
+  "k": "x"
+ },
  "whtip": {
   "c": "index.html: HTIP){ WHTIP=document.createElement(\"div\"); WHTIP.className=\"whtip\"; WHTIP.setAttribute",
   "k": "x"
@@ -11923,6 +12767,22 @@
   "c": "index.html (HTML)",
   "k": "p"
  },
+ "{0} (energia)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} (fogo)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} (físico)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} (gelo)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} (jul 2026)": {
   "c": "index.html (HTML)",
   "k": "p"
@@ -11935,12 +12795,28 @@
   "c": "index.html: dd data-lpo=\"ses\">—</dd></div></dl></output> ${lo!=null?`<p class=\"tiny muted\">${est?`Estimativa a partir de outra vocação: ≈ ${gp(lo)}/h aqui`:`O TibiaPal mede ${gp(lo)}/h aqui`} (já sem os supplies).</p>`:\"\"} <p class=",
   "k": "p"
  },
+ "{0} (morte)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} (níveis e solo/grupo das quests)": {
   "c": "index.html (HTML)",
   "k": "p"
  },
+ "{0} (sagrado)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} (séries por vocação depois do rebalance)": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "{0} (terra)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} (veneno)": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "{0} ({1}; nível {2}+; XP {3}/h{4}; lucro {5}/h; {6}; risco {7}/3; acesso {8})": {
@@ -12111,6 +12987,30 @@
   "c": "index.html: olo\"&&!c.done[q.id]).length; $(\"questLead\").textContent = `${dn} de ${av.length} feitas · ${soloT} solo por fazer`; $(\"questBar\").st",
   "k": "p"
  },
+ "{0} de {1} hunts": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} de {1} hunts em {2}": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} de {1} hunts em {2} para o grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} de {1} hunts em {2} para os dois": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} de {1} hunts para o grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} de {1} hunts para os dois": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "{0} de {1} passos feitos": {
   "c": "index.html: ><b>${esc(r[1])}</b><small>${r[6]?`${esc(r[6])} · `:\"\"}${st?`${st} de ${r[7]} passos feitos`:`${r[7]} passos`}</",
   "k": "p"
@@ -12139,12 +13039,24 @@
   "c": "index.html: ss=\"tm-w\">${tmi(\"w\")}<b>${esc(c.world)}</b></span>${t.guild?`<span class=\"tm-g\">${tmi(\"g\")}<span>${esc(t.guild.r)} em <b>${esc(t.guild.n)}</b></span></span>`:\"\"}<span class=\"tm-",
   "k": "p"
  },
+ "{0} energia": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} fechar": {
   "c": "index.html: bute(\"aria-label\",\"Pesquisar no Grimório\"); p.innerHTML=`<div class=\"gsp-in\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input id=\"gsQ\" type=\"search\" autocomple",
   "k": "p"
  },
  "{0} feitiços e {1} runas · {2}": {
   "c": "recolhida: /grimorio/#feiticos · ex.: 55 feitiços e 21 runas · Sorcerer",
+  "k": "p"
+ },
+ "{0} feitiços · {1}": {
+  "c": "recolhida: /grimorio/#feiticos · ex.: 36 feitiços · Knight",
+  "k": "p"
+ },
+ "{0} fogo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "{0} foi preenchida à mão. Liga-a ao Tibia para o nível, o mundo e as skills se atualizarem sozinhos.": {
@@ -12163,6 +13075,14 @@
   "c": "index.html (HTML)",
   "k": "p"
  },
+ "{0} físico": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} gelo": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} gp": {
   "c": "index.html: px(v){ v=+v||0; return v<=0 ? \"—\" : v<1 ? \"< 1 gp\" : v<10 ? `${v.toFixed(1).replace(/\\.0$/,\"\").replace(\".\",\",\")} gp` : gp(v); } function",
   "k": "p"
@@ -12175,8 +13095,28 @@
   "c": "index.html: el.toLowerCase())}</span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
+ "{0} hunts em {1}": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} hunts em {1} para o grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} hunts em {1} para os dois": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
  "{0} hunts lado a lado": {
   "c": "index.html: row\" style=\"margin:0\">Comparar hunts</span><h3>${H.length>1?`${H.length} hunts lado a lado`:\"Hunts para compara",
+  "k": "p"
+ },
+ "{0} hunts para o grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} hunts para os dois": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
  },
  "{0} itens": {
@@ -12217,6 +13157,10 @@
  },
  "{0} min": {
   "c": "index.html: sh([\"Cargas\",it.chg]); else if(it.dur) rows.push([\"Duração\",`${Math.round(it.dur/60)} min`]); } const ab=i",
+  "k": "p"
+ },
+ "{0} morte": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "{0} neutro": {
@@ -12343,8 +13287,24 @@
   "c": "index.html (HTML)",
   "k": "p"
  },
+ "{0} resiste ao dano de alguém do grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} resiste ao teu dano": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} resiste um pouco": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "{0} resistem ao dano de alguém do grupo": {
+  "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
+  "k": "p"
+ },
+ "{0} resistem ao teu dano": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "{0} resultado": {
@@ -12363,6 +13323,10 @@
   "c": "quests/js/app.js: ion>`).join(\"\"); } $(\"#accResults\").innerHTML = `<p class=\"muted\">${list.length} resultado${list.length === 1 ? \"\" : \"s\"}</p><div class=\"acc-grid\">${html}</div>` + (list.len",
   "k": "p"
  },
+ "{0} sagrado": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} solo e {1} em grupo, publicadas por jogadores no Hunt Analyser depois do rebalance de junho. Medianas; os nomes dos jogadores não são mostrados.": {
   "c": "index.html: d>${pr!=null?fmt(pr):\"—\"}</td></tr>`; }).join(\"\"); return `<div class=\"hasess\"><h5>Sessões reais desde junho de 2026</h5>${rows?`<div class=\"tablewrap\"><table><thead><tr><th>Vocação</th><th>Sessões solo</th><th>Nível (me",
   "k": "p"
@@ -12371,8 +13335,20 @@
   "c": "index.html: d.v>=85?\"meh\":\"bad\"}\">${ELN[d.e]} ${d.v}%</span>`:\"\"}${m[8]?`<span class=\"tag\">${m[8]} spawns no mapa</span>`:\"\"}`; box.inn",
   "k": "p"
  },
+ "{0} terra": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
  "{0} teus": {
   "c": "index.html:  marcados`; if($(\"eqInvN\")) $(\"eqInvN\").textContent = own ? `${own} teus` : \"\"; $(\"invGrid\"",
+  "k": "p"
+ },
+ "{0} vendidos": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} veneno": {
+  "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "{0} vida": {
@@ -12419,12 +13395,8 @@
   "c": "index.html: ed\":\" disabled\"}><span>Contar as taxas do altar <small>${ns?`${ns} ${ns===1?\"imbuement\":\"imbuements\"} ${esc(tn)} no set consistente desta hunt: ${gp(feeH)} por hora, sem os materiais`:\"o set consistente ",
   "k": "p"
  },
- "{0} {1} {2} que já {3} fazer noutras faixas:": {
-  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?\"hunt\":\"hunts\"} ${esc([f.cls.length?\"de \"+f.cls.map(k=>clsName(k).toLower",
-  "k": "p"
- },
- "{0} {1} {2} {3} que já {4} fazer noutras faixas:": {
-  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?\"hunt\":\"hunts\"} ${esc([f.cls.length?\"de \"+f.cls.map(k=>clsName(k).toLower",
+ "{0} {1} {2}{3}{4} que já {5} fazer noutras faixas:": {
+  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ${n===1?\"hunt\":\"hunts\"}${f.cls.length?` de <span>${esc(f.cls.map(k=>",
   "k": "p"
  },
  "{0} {1} · armadura {2}{3}": {
@@ -12447,12 +13419,8 @@
   "c": "index.html: true; return; } n.hidden=false; n.textContent = (h.sk ? `${skName(c)} ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fo",
   "k": "p"
  },
- "{0} · Damage and Healing +": {
-  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
-  "k": "p"
- },
- "{0} · Damage and Healing +{1}": {
-  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
+ "{0} {1}{2}{3} que já {4} fazer noutras faixas:": {
+  "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ${n===1?\"hunt\":\"hunts\"}${f.cls.length?` de <span>${esc(f.cls.map(k=>",
   "k": "p"
  },
  "{0} · NPCs": {
@@ -12497,6 +13465,14 @@
  },
  "{0} · nível {1}": {
   "c": "index.html: </div><span class=\"tiny muted\">${mine?`set ${esc(my.name)}`:`${esc(VD().promo)} · nível ${c.level}`}</span></div> <",
+  "k": "p"
+ },
+ "{0} · nível {1} · Damage and Healing +": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · nível ${Math.max(8,50+x-ex)} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</",
+  "k": "p"
+ },
+ "{0} · nível {1} · Damage and Healing +{2}": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · nível ${Math.max(8,50+x-ex)} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</",
   "k": "p"
  },
  "{0} · nível {1}{2}": {
@@ -13031,14 +14007,6 @@
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "x"
  },
- "· Damage and Healing +": {
-  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
-  "k": "x"
- },
- "· Damage and Healing +{0}": {
-  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</ol> ",
-  "k": "p"
- },
  "· NPC": {
   "c": "index.html: esc(w)}`:b.best===\"npc\"&&b.npc?`≈ ${gp(b.npc[1])}${b.npc[0]?` · NPC ${elink(\"npc\",b.npc[0])}`:\"\"}`:\"\"; } return",
   "k": "x"
@@ -13161,6 +14129,14 @@
  },
  "· nível {0}": {
   "c": "index.html: ,x.n,`${SLOTNAME[x.s===\"trinket\"?\"extra\":x.s]||\"Item\"}${x.l?` · nível ${x.l}`:\"\"}`)); Object.ke",
+  "k": "p"
+ },
+ "· nível {0} · Damage and Healing +": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · nível ${Math.max(8,50+x-ex)} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</",
+  "k": "p"
+ },
+ "· nível {0} · Damage and Healing +{1}": {
+  "c": "index.html: =\"wrev-st\" style=\"--wc:${WHC[d][0]}\">${WHD.stage.map((x,j)=>`<li class=\"${S.dom[d]>=x?\"on\":\"\"}\"><b>Stage ${j+1}</b><span>${x} · nível ${Math.max(8,50+x-ex)} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join(\"\")}</",
   "k": "p"
  },
  "· nível {0}+": {

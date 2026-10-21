@@ -78,8 +78,15 @@
     PATS = []; BUCKET = new Map(); SHORT = [];
     (d.p || []).forEach(function (pt) {
       var src = pt[0], parts = src.split(/\{(\d+)\}/), re = "^", slots = [], stat = "";
-      for (var i = 0; i < parts.length; i++) {
-        if (i % 2) { re += "(.+?)"; slots.push(+parts[i]); }
+      // dois valores seguidos (ex.: "Market de {0}{1}", em que {1} é um acrescento opcional): o primeiro fica com tudo e o
+      // segundo com o que sobrar (antes ficava "B" + "ona" → "B Marketona")
+      for (var i = 0, opt = false; i < parts.length; i++) {
+        if (i % 2) {
+          var glued = parts[i + 1] === "" && i + 2 < parts.length;
+          // um valor logo antes de pontuação (ou no fim) pode vir vazio: é um acrescento opcional (ex.: "…atual{1}. ")
+          var optEnd = !glued && /^(?:[.;:,!?)]|$)/.test(parts[i + 1] || "");
+          re += opt || optEnd ? "(.*?)" : glued ? "(.+)" : "(.+?)"; slots.push(+parts[i]); opt = glued;
+        }
         else { re += reEsc(parts[i]); stat += parts[i]; }
       }
       var words = stat.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
@@ -130,19 +137,31 @@
     var by = {};
     for (var n = 0; n < best.slots.length; n++) {
       var cap = bm[n + 1], mk = /\{\d+\}/.test(cap), t = mk ? null : exact(cap);
-      // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}")
-      if (t == null && !mk && cap.length <= 60 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
-        if (conts()) t = cget(hkey(cap));
-        if (t == null && depth < 2) t = pattern(cap, depth + 1);
+      if (t == null) {
+        // um valor nunca passa o fim de uma frase (ex.: "{0} por {1}" em "Compra na Loja por 870 Tibia Coins. Não tem addons."),
+        // nem várias partes separadas por " · " (ex.: "Market de {0}" em "Market de Bona · média do mês · 36 vendidos"),
+        // nem é uma frase portuguesa comprida (ex.: "… menos cooldown por cada alvo …" em "{0} por {1}"): o modelo não serve
+        if (/[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
+        if (cap.indexOf(" · ") >= 0 && best.t.indexOf(" · ") < 0) return null;
+        // (num modelo comprido e específico — 40+ letras fixas — o valor pode ser uma frase, desde que se traduza por inteiro:
+        // "; com mais 1 exalted core o risco desce para 50%" na frase da fusão da Forge)
+        if (cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40) return null;
+        // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}"), mesmo com
+        // marcas de elementos (ex.: "ao NPC {0} (hoje em Port Hope) por 1,500 gp"); uma lista "fogo, energia, veneno" traduz-se item a item
+        if (cap.length <= 90 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
+          if (!mk && conts()) t = cget(hkey(cap));
+          if (t == null && depth < 3) t = pattern(cap, depth + 1);
+          if (t == null && !mk && cap.indexOf(", ") > 0) {
+            var it = cap.split(", "), tr = it.map(function (x) { return exact(x); });
+            if (tr.every(function (y) { return y != null; })) t = tr.join(", ");
+          }
+        }
+        // um valor que fica por traduzir e é português (ex.: "Até ao meu" em "{0} nível · {1}"): o modelo não serve
+        if (t == null && !mk && (/[ãõçâêô]/i.test(cap) || (cap.match(PT_FN) || []).length)) return null;
+        // num modelo quase só de valores (ex.: "{0} por {1}"), uma palavra minúscula por traduzir é português
+        // ("Hunts por cidade{0}" dava "Hunts for cidade")
+        if (t == null && best.len <= 6 && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
       }
-      // nunca por cima do fim de uma frase (ex.: "{0} por {1}" em "Compra na Loja por 870 Tibia Coins. Não tem addons.")
-      if (t == null && /[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
-      // um troço comprido que é uma frase em português (ex.: "… menos cooldown por cada alvo …" no modelo "{0} por {1}")
-      // não é um valor: o modelo não serve e o texto segue para o dicionário do conteúdo
-      if (t == null && cap.length > 30 && (cap.match(PT_FN) || []).length >= 2) return null;
-      // nem um troço com várias partes separadas por " · " (ex.: "Para {0}" em "Para MS · level 400+ · podes usar"):
-      // essas traduzem-se parte a parte (dots)
-      if (t == null && cap.indexOf(" · ") >= 0 && best.t.indexOf(" · ") < 0) return null;
       by[best.slots[n]] = t == null ? cap : t;
     }
     return best.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
@@ -160,7 +179,9 @@
       var by = {}, ok = true;
       for (var n = 0; n < p.slots.length && ok; n++) {
         var cap = m[n + 1], t = /^\{\d+\}$/.test(cap) ? null : exact(cap);
-        if (t == null && !/^\{\d+\}$/.test(cap) && !/^[\d\s.,%+\-–×#]+$/.test(cap) && ((cap.match(PT_FN) || []).length || cap.length > 30 || /^[a-zà-ÿ]/.test(cap))) ok = false;
+        // (uma palavra minúscula de 3+ letras que não seja de um nome inglês — "Isle of the Kings" — é português: "Os macacos")
+        if (t == null && !/^\{\d+\}$/.test(cap) && !/^[\d\s.,%+\-–×#]+$/.test(cap) && ((" " + cap).match(PT_FN) || cap.length > 30 || /^[a-zà-ÿ]/.test(cap) ||
+          (cap.replace(MARK, " ").match(/(^|\s)[a-zà-ÿ]{3,}/g) || []).some(function (w) { return !/^\s?(?:the|and|for|from|with)$/.test(w); }))) ok = false;
         by[p.slots[n]] = t == null ? cap : t;
       }
       if (ok) return p.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
@@ -190,7 +211,7 @@
   function content(p) {
     if (!conts()) return null;
     var t = cget(hkey(p));
-    if (t != null) return { t: t, map: [[0, p.length, 0, t.length]] };
+    if (t != null) return { t: t, map: [[0, p.length, 0, t.length]], full: true };
     var ss = SENT(p);
     if (ss.length < 2) return null;
     var hit = 0, out = "", map = [], pos = 0;
@@ -203,7 +224,16 @@
       map.push([at, at + s.length, out.length, out.length + v.length]);
       out += v;
     }
-    return hit ? { t: out, map: map } : null;
+    return hit ? { t: out, map: map, full: hit === ss.length } : null;
+  }
+
+  // lista curta separada por vírgulas (ex.: "Imune a paralisia, invisível"): só se cada item tiver tradução
+  function commas(k) {
+    if (k.indexOf(", ") < 0 || k.length > 120) return null;
+    var it = k.split(", ");
+    if (it.some(function (x) { return x.length > 40 || /[.;:!?]/.test(x); })) return null;
+    var tr = it.map(function (x) { var v = OUT.has(x) ? x : exact(x); if (v == null) v = pattern(x); return v; });
+    return tr.every(function (v) { return v != null; }) ? tr.join(", ") : null;
   }
 
   // partes separadas por " · " (ex.: "Amuleto · todas as vocações"): cada uma à parte
@@ -234,7 +264,17 @@
     if (c) return c.t;
     // num texto simples só os modelos curtos com 2+ palavras fixas (ex.: "Só as de {0} ({1})"), nunca "{0} de {1}"
     t = short(k, 2);
-    return t != null ? t : dots(k);
+    if (t == null) t = dots(k);
+    if (t == null) t = commas(k);
+    return t != null ? t : edgeSep(k);
+  }
+
+  // um separador nas pontas (ex.: "neutro · " antes de um <span>, "· podes usar", "Desbloqueia:"): traduz-se o miolo
+  function edgeSep(k) {
+    var m = /^([·:;,–—(]\s*)?(.*?)(\s*[·:;,–—)])?$/.exec(k);
+    if (!m || (!m[1] && !m[3]) || !/[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(m[2])) return null;
+    var v = OUT.has(m[2]) ? null : text(m[2]);
+    return v == null ? null : (m[1] || "") + v + (m[3] || "");
   }
 
   function edges(orig, t) {
@@ -335,7 +375,10 @@
     if (OUT.has(k)) return;
     var lead = plain.length - plain.replace(/^ +/, "").length;
     plain = plain.trim();
-    var t = ui(k), frag = document.createDocumentFragment(), used = [];
+    // a frase inteira no dicionário do conteúdo passa à frente dos modelos curtos ("Os macacos de {0}." apanhado por "{0} de {1}")
+    var t = exact(k), frag = document.createDocumentFragment(), used = [], ct0 = null;
+    if (t == null) t = pattern(k);
+    if (t == null) { ct0 = conts() ? content(plain) : null; if (ct0 && !ct0.full) ct0 = null; if (!ct0) t = short(k); }
     if (t != null) {
       // {n!} = elemento que esta língua não mostra (ex.: o "s" do plural português): sai da frase
       var bits = t.split(/\{(\d+)(!?)\}/);
@@ -344,7 +387,9 @@
         if (j + 1 < bits.length) { var n0 = +bits[j + 1], e = els[n0]; if (e && !used[n0]) { used[n0] = 1; if (!bits[j + 2]) frag.appendChild(e); else e.remove(); } }
       }
     } else {
-      var ct = conts() ? content(plain) : null;
+      // num bloco com elementos, o conteúdo só serve se traduzir todas as frases (senão ficava meia frase em português,
+      // ex.: "Dano pelo escudo; corta 50%…" junto ao custo em mana); se não, cada pedaço traduz-se à parte
+      var ct = ct0;
       if (!ct) {
         // sem os elementos das pontas (ex.: uma descrição em <span> colada ao fim da frase): só o troço entre o 1.º e o último texto
         if (!inner) {

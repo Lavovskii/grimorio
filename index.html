@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261021c" data-c></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261021f" data-c></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -1375,6 +1375,7 @@ details.wguide[open] summary::before{transform:rotate(90deg)}
 .whx-chip{appearance:none;font:inherit;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:3px 11px;border:1px solid #4A4A4A;border-radius:999px;background:#0F0F0F;color:#DADADA}
 .whx-chip .tiny{color:#8D8D8D}
 .whx-chip:hover,.whx-chip:focus-visible{border-color:#C8973A;color:#F0E3B8;outline:none}
+.whx-chip.calc{border-style:dashed}
 @media (pointer:coarse){ .whx-chip,.wrow-b{min-height:40px} }
 .whx-opts{display:grid;gap:12px;margin:0 0 18px}
 .whx-opts:empty{display:none}
@@ -44498,7 +44499,7 @@ function renderHunts(){
   if((f.cls.length||f.city) && b!=="upto"){
     const byB={}; let n=0; filterHunts(allRows,f,c).forEach(h=>{ if(!doable(h,c) || inWin(h)) return; const i=bandOf(h.l); if(i>=0){ byB[i]=(byB[i]||0)+1; n++; } });
     const bs=Object.keys(byB).map(Number).sort((x,y)=>x-y);
-    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} ${n} ${n===1?"hunt":"hunts"} ${esc([f.cls.length?"de "+f.cls.map(k=>clsName(k).toLowerCase()).join(" ou "):"", f.city?"em "+f.city:""].filter(Boolean).join(" "))} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
+    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} <span>${n}</span> ${n===1?"hunt":"hunts"}${f.cls.length?` de <span>${esc(f.cls.map(k=>clsName(k).toLowerCase()).join(", "))}</span>`:""}${f.city?` em <span>${esc(f.city)}</span>`:""} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
   }
   const empty = grp && !allRows.length ? `Não há hunts recomendadas para ${ms.map(m=>G.voc[m.voc].n).join(" e ")} ao mesmo tempo.` : "Nada com estes filtros nesta faixa. Tira um filtro ou escolhe outra faixa de nível.";
   const cardsH = list.map(h=>grp?groupCard(h,catsOf(h)):huntCard(h,catsOf(h))); if(cardsH.length>8) cardsH.splice(6,0,adSlot("hunts","728 × 90 · 320 × 100","ad-feed"));
@@ -44690,6 +44691,19 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-co
    O que dá cada fatia, as regras de ligação e os pontos de cada build vêm de data/wheel.json (_dev/build_wheel.py). */
 let WHD=null, WHP=null, WHN=0, WSEL=null;
 const whLoad = () => WHP || (WHP = dsafe("wheel").then(d=>{ WHD = d&&d.slots ? d : null; return WHD; }));
+/* r13: roda calculada (data/wheelopt.json, feito por _dev/build_wheel_opt.py): um modelo aprendido com as builds do TibiaPal dá,
+   para cada foco da vocação (sorcerer: energia/fogo; paladin: holy/físico), a melhor roda para cada total de pontos (passos de 25) */
+let WOPT=null, WOPP=null;
+const woptLoad = () => WOPP || (WOPP = dsafe("wheelopt").then(d=>{ WOPT = d&&d.voc ? d : null; return WOPT; }));
+const WB36 = "0123456789abcdefghijklmnopqrstuvwxyzABCDE";
+function whCalc(voc,pts){ const F=WOPT&&WOPT.voc[voc]; if(!F||!WHD) return []; const st=WOPT.step||25, b=Math.max(0,Math.min(4000,pts|0)), i=Math.floor(b/st);
+  return F.map(f=>{ const row=f.a.slice(i*36,i*36+36); if(row.length<36) return null; const P=[...row].map(ch=>Math.max(0,WB36.indexOf(ch))*5);
+    whCalcRest(P,b-P.reduce((x,y)=>x+y,0));
+    return {t:f.n?`Calculada (${f.n})`:"Calculada", p:b, note:"", calc:f.k, pts:P, c:null}; }).filter(Boolean); }
+// os pontos que sobram do passo de 25 vão para as fatias abertas do domínio com mais pontos
+function whCalcRest(P,left){ if(left<=0) return; const full=i=>P[i]>=WHD.slots[i][1], dom=d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?P[i]:0),0);
+  const open=WHD.slots.map((sl,i)=>i).filter(i=>!full(i)&&(!WHD.adj[i].length||WHD.adj[i].some(full))).sort((a,b)=>dom(WHD.slots[b][0])-dom(WHD.slots[a][0]));
+  for(const i of open){ if(left<=0) break; const r=Math.min(left,WHD.slots[i][1]-1-P[i]); if(r>0){ P[i]+=r; left-=r; } } }
 const WHC = {green:["#9DF7A8","#33A949","#12521F"], red:["#FFA898","#DA3D30","#701410"], blue:["#A6D2FF","#3179DA","#11397A"], purple:["#E2C0FF","#9452DA","#45197C"]}; // claro, base, fundo
 const WHDN = {green:"verde", red:"vermelho", blue:"azul", purple:"roxo"};
 const WHVR = {green:"Top Left", red:"Top Right", blue:"Bottom Left", purple:"Bottom Right"};
@@ -45045,15 +45059,15 @@ function whOpts(voc,pts){ const ws=G.wheel[voc]||[], ok=ws.filter(w=>w.p<=pts), 
   for(let k=ok.length-2;k>=0&&alt.length<3;k--){ const w=ok[k], n=w.note||""; if(!bis||w.p<bis.p-150) break;
     if(w.p===bis.p||!seen.has(n)){ seen.add(n); alt.push(w); } }
   return {bis, alt, next:ws.find(w=>w.p>pts)||null}; }
-function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok"]]:[]),...O.alt.map(x=>[x,"Também boa",""]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,"acc"]]:[])], V=WHD.voc[c.voc];
+function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok"]]:[]),...O.alt.map(x=>[x,"Também boa",""]),...(O.calc||[]).map(x=>[x,"Calculada pelo algoritmo","acc"]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,"acc"]]:[])], V=WHD.voc[c.voc];
   if(!L.length) return "";
-  return `<div class="whx-oh"><h3>Best in slot e outras boas opções</h3><p class="small muted">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.</p></div>
-    <div class="wopt-l">${L.map(([x,lab,cls])=>{ const b=WHD.b[x.c]; if(!b) return ""; const S=whSum(c.voc,b), i=ws.indexOf(x);
+  return `<div class="whx-oh"><h3>Best in slot e outras boas opções</h3><p class="small muted">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.</p>${(O.calc||[]).length?`<p class="small muted">As «Calculadas» vêm de um algoritmo que aprendeu com as builds do TibiaPal e as estende a qualquer número de pontos: servem para comparar e para os totais que a lista não tem.</p>`:""}</div>
+    <div class="wopt-l">${L.map(([x,lab,cls])=>{ const b=x.pts||WHD.b[x.c]; if(!b) return ""; const S=whSum(c.voc,b), i=ws.indexOf(x);
       const rv=WHDOM.filter(d=>S.rev[d]).map(d=>`<span class="hwh-k" style="--wc:${WHC[d][0]}">${whPkIco(c.voc,d,16)}${esc(V.rev[d])} <b>${S.rev[d]}</b></span>`).join("");
       const gm=WHDOM.filter(d=>S.vr[d]).map(d=>`<span>${whGemImg(c.voc,d,S.vr[d],20,"wgi")}${whGemName(c.voc,S.vr[d])}</span>`).join("");
       return `<article class="wopt${x===w?" on":""}"><div class="wopt-w">${whSVG(c.voc,b,{size:"sm",label:`${x.t}: ${x.p} pontos`})}</div><div class="wopt-b"><span class="tag ${cls}">${esc(lab)}</span><h4>${esc(x.t)}</h4>
         <p class="pills"><span class="tag">${x.p} pontos · nível ${x.p+50}</span>${x.note?`<span class="tag acc">${esc(wnote(x.note))}</span>`:""}</p>${rv?`<div class="hwh-ks">${rv}</div>`:""}${gm?`<div class="wopt-g">${gm}</div>`:""}
-        <div class="wopt-a">${x===w?`<span class="tag ok">Na roda</span>`:`<button type="button" class="btn small" data-wsel="${i}">Ver na roda</button>`}<button type="button" class="btn small ghost" data-copy="${esc(x.c)}" data-copied="Código copiado">Copiar código</button></div></div></article>`; }).join("")}</div>`; }
+        <div class="wopt-a">${x===w?`<span class="tag ok">Na roda</span>`:`<button type="button" class="btn small" data-wsel="${i}">Ver na roda</button>`}${x.c?`<button type="button" class="btn small ghost" data-copy="${esc(x.c)}" data-copied="Código copiado">Copiar código</button>`:""}</div></div></article>`; }).join("")}</div>`; }
 // r7: caixa "Wheel points": quantos pontos tem a personagem (os do nível e os comprados)
 function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
   /* r7: o total escreve-se e confirma-se com Atualizar (ou Enter); os pontos livres têm sugestão de onde os meter */
@@ -45150,7 +45164,7 @@ async function whDecode(code){ const m=/^([KPSDM])0([A-Za-z0-9_-]{8,})$/.exec(St
 // tira os pontos das fatias que deixam de estar ligadas ao centro por fatias cheias
 function whPrune(P){ let ch=true; while(ch){ ch=false; const full=new Set(WHD.slots.map((s,i)=>P[i]>=s[1]?i:-1)); P.forEach((p,i)=>{ if(p&&WHD.adj[i].length&&!WHD.adj[i].some(j=>full.has(j))){ P[i]=0; ch=true; } }); } return P; }
 let WED=null, WSELV=null;
-function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:[...WHD.b[w.c]], gems:[...((WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpOf(c),w.p), code:w.c, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
+function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:w.pts?[...w.pts]:[...WHD.b[w.c]], gems:[...((w.c&&WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpOf(c),w.p), code:w.c||null, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
 const whUsed = P => P.reduce((a,b)=>a+b,0);
 function whMsg(t){ const m=$("whMsg"); if(m){ m.textContent=t; clearTimeout(whMsg.t); whMsg.t=setTimeout(()=>{ if(m.isConnected) m.textContent=""; },4000); } }
 function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD.slots[i][1], free=E.budget-whUsed(P), ok=!WHD.adj[i].length||WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1]);
@@ -45165,18 +45179,21 @@ function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
   if(!WHD){ box.innerHTML=`<p class="small muted" style="margin:0">A desenhar a Wheel…</p>`; whLoad().then(()=>{ if(WHD) renderWheelX(); }); return; }
   if(!GEMD&&!GEMP) gemLoad().then(()=>{ if(GEMD) renderWheelX(); });
   if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; WHSELK=null; WHPIN=null; }
-  const ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0];
-  if(!w||!WHD.b[w.c]){ box.hidden=true; return; } box.hidden=false;
+  if(!WOPT&&!WOPP) woptLoad().then(()=>{ if(WOPT) renderWheelX(); });
+  const ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), calc=whCalc(c.voc,pts), all=ws.concat(calc);
+  if(WED&&WED.w&&WED.w.calc&&WSEL!=null&&all[WSEL]&&all[WSEL].calc===WED.w.calc) all[WSEL]=WED.w; // a mesma calculada (não recarregar a roda)
+  const w=WSEL!=null&&all[WSEL]?all[WSEL]:cur||ws[0];
+  if(!w||!(w.pts||WHD.b[w.c])){ box.hidden=true; return; } box.hidden=false;
   if(!WED||WED.w!==w) whLoadEd(w,c,true);
   const E=WED, used=whUsed(E.pts), free=E.budget-used, title=E.t||(E.dirty?"Build personalizada":w.t);
   // as builds seguintes, primeiro as da mesma variante (ex.: fogo e morte), depois as outras
   const nxt=ws.filter(x=>x.p>w.p).sort((a,b)=>a.p-b.p), same=nxt.filter(x=>(x.note||"")===(w.note||""));
   E.sug = free>0 ? whSuggest(E.pts, same.concat(nxt.filter(x=>!same.includes(x))), free) : null;
-  const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
-  const tags=E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">Best in slot</span><span class="tag ok">para os teus pontos</span>':""}`;
+  const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w.calc?"Calculada para os teus pontos":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
+  const tags=w.calc&&!E.t&&!E.dirty?`<span class="tag">${w.p} pontos</span><span class="tag acc">algoritmo</span>`:E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">Best in slot</span><span class="tag ok">para os teus pontos</span>':""}`;
   /* r8: as outras boas opções logo no fundo da janela (e em cartões por baixo dela) */
-  const O=whOpts(c.voc,pts), oth=[O.bis,...O.alt].filter(x=>x&&x!==w);
-  const alts=oth.length?`<div class="whx-alt"><span>Outras boas opções:</span>${oth.map(x=>`<button type="button" class="whx-chip" data-wsel="${ws.indexOf(x)}" title="${esc(x.t)}">${esc(x===O.bis?"Best in slot":x.note?wnote(x.note):x.t)} <span class="tiny">${x.p}</span></button>`).join("")}</div>`:"";
+  const O=whOpts(c.voc,pts); O.calc=calc; const oth=[O.bis,...O.alt,...calc].filter(x=>x&&x!==w);
+  const alts=oth.length?`<div class="whx-alt"><span>Outras boas opções:</span>${oth.map(x=>`<button type="button" class="whx-chip${x.calc?" calc":""}" data-wsel="${all.indexOf(x)}" title="${esc(x.t)}">${esc(x===O.bis?"Best in slot":x.calc?x.t:x.note?wnote(x.note):x.t)} <span class="tiny">${x.p}</span></button>`).join("")}</div>`:"";
   box.innerHTML=`<div class="whx-win"><div class="whx-title">Wheel of Destiny</div>
     <div class="whx-stage">
       <aside class="whx-side whx-l">${whPtsHTML(c,E,free,E.sug)}
@@ -45187,10 +45204,10 @@ function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
     </div>
     <div class="whx-foot"><div class="whx-cur"><span class="eyebrow">${eb}</span><span>Current Preset: <b>${esc(title)}</b></span><span class="pills">${tags}</span></div>${alts}<span class="tiny whx-msg" id="whMsg" role="status"></span>
       <div class="whx-a"><div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button>
-        <details class="whx-imp"><summary class="btn small ghost">Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
-  const op=$("wheelOpts"); if(op) op.innerHTML=whOptsHTML(c,ws,O,w,pts);
+        <details class="whx-imp"><summary class="btn small ghost">Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details><button class="btn small" id="whCopy" data-copy="${esc(E.dirty||!E.code?"":E.code)}" data-copied="Código copiado"${E.dirty||!E.code?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
+  const op=$("wheelOpts"); if(op) op.innerHTML=whOptsHTML(c,all,O,w,pts);
   const gf=$("wheelGF"); if(gf&&gf.dataset.voc!==c.voc){ gf.innerHTML=whGFHTML(c.voc); gf.dataset.voc=c.voc; }
-  if(E.dirty) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
+  if(E.dirty||!E.code) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
   document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; WED=null; renderWheelX();
   const box=$("wheelX"); if(box&&b.closest("#wheelTable,#wheelOpts")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
