@@ -80,9 +80,12 @@ header.bar .in{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:
 nav.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);align-self:start}
 nav.side ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
 nav.side .grp{font-size:14px;font-family:var(--sans);font-style:normal;font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);margin:14px 12px 2px}
-nav.side button{width:100%;display:flex;gap:11px;align-items:center;border:0;background:none;padding:8px 12px;border-radius:var(--r1);color:var(--ink-2);font-size:16px;text-align:left}
-nav.side button svg{width:18px;height:18px;flex:none;color:var(--muted)}
-nav.side button:hover{background:var(--surface)}
+nav.side button,nav.side a.navx{width:100%;display:flex;gap:11px;align-items:center;border:0;background:none;padding:8px 12px;border-radius:var(--r1);color:var(--ink-2);font-size:16px;text-align:left}
+nav.side button svg,nav.side a.navx svg{width:18px;height:18px;flex:none;color:var(--muted)}
+nav.side button:hover,nav.side a.navx:hover{background:var(--surface)}
+/* r7: entrada do menu que sai para o Questski (outro site no mesmo endereço): um link com o aspeto dos botões e uma seta ↗ */
+nav.side a.navx{text-decoration:none} nav.side a.navx .nx-go,.seg a.navx .nx-go{width:14px;height:14px;margin-left:auto;opacity:.7}
+.seg a.navx{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit} .seg a.navx .nx-go{margin-left:0}
 nav.side button[aria-current="true"]{background:var(--surface);color:var(--ink);font-weight:700;box-shadow:var(--shadow)}
 nav.side button[aria-current="true"] svg{color:var(--accent)}
 nav.bottom{display:none}
@@ -108,7 +111,7 @@ main{min-width:0}
 .tag.gold{background:var(--gold-soft);color:var(--gold);border-color:transparent}
 .tag.acc{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .seg{display:flex;flex-wrap:wrap;gap:6px}
-.seg button{border:1px solid var(--line);background:var(--surface);padding:5px 13px;border-radius:999px;font-size:15px;min-height:36px}
+.seg button,.seg a.navx{border:1px solid var(--line);background:var(--surface);padding:5px 13px;border-radius:999px;font-size:15px;min-height:36px}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .seg.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}
 .seg.scroll button{flex:none}
@@ -470,6 +473,26 @@ body.noch .hcmp-tray{display:none!important}
 .qcard .lore p{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
 .qcard .lore p:first-child::first-letter{font-family:var(--serif);font-size:2.2em;float:left;line-height:.9;margin:4px 6px 0 0;color:var(--accent)}
 .qmeta{display:flex;gap:6px;flex-wrap:wrap}
+/* r7: links para os guias do Questski (botão pequeno "Guia passo a passo ›", par quest + "Guia ›", etiqueta na ficha da hunt) e o cartão do Início */
+a.gbtn{display:inline-flex;align-items:center;gap:5px;text-decoration:none;white-space:nowrap}
+a.gbtn .gic{width:15px;height:15px;flex:none}
+.btn.gbtn{background:color-mix(in srgb,var(--accent) 13%,var(--surface));color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent)} .btn.gbtn:hover{background:var(--accent);color:var(--on-accent)}
+a.tag.gbtn{gap:4px} a.tag.gbtn .gic{width:13px;height:13px} a.tag.gbtn:hover{text-decoration:underline;text-underline-offset:2px}
+.gpair{display:inline-flex;align-items:stretch;vertical-align:middle;max-width:100%} /* quest + "Guia ›" colados num só bloco */
+.gpair>:first-child:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0} .gpair>.tag:first-child{display:inline-flex;align-items:center}
+.gpair>.gbtn{margin-left:-1px;border-top-left-radius:0;border-bottom-left-radius:0}
+a.gsp-o{text-decoration:none}
+.hguias{display:grid;gap:8px}
+.hg-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px}
+.hg-all{font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap} .hg-all:hover{text-decoration:underline}
+.hg-l{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.hg{display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:10px;height:100%;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);color:var(--ink);text-decoration:none}
+.hg:hover{border-color:var(--accent)}
+.hg-lv{display:grid;place-items:center;align-content:center;width:46px;height:46px;border-radius:10px;background:color-mix(in srgb,var(--accent) 13%,var(--surface));color:var(--accent);line-height:1}
+.hg-lv b{font-family:var(--serif);font-size:17px} .hg-lv small{font-size:10.5px;opacity:.8;margin-top:2px} .hg-lv[data-none] b{font-size:15px}
+.hg-tx{display:grid;min-width:0} .hg-tx b{font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hg-tx small{font-size:12.5px;line-height:1.3;color:var(--muted);margin-top:2px}
+.hg-go{color:var(--muted);font-size:20px;line-height:1}
 .qguide{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 .qguide>summary{cursor:pointer;list-style:none;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
 .qguide>summary::-webkit-details-marker{display:none}
@@ -1390,11 +1413,12 @@ html[data-ui="modern"] .csw-save::before{content:"";width:7px;height:7px;border-
 html[data-ui="modern"] nav.side{position:sticky}
 html[data-ui="modern"] nav.side .grp{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:#9C98CC;font-weight:700}
 html[data-ui="modern"] nav.side .grp::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(167,139,250,.35),transparent)}
-html[data-ui="modern"] nav.side button{position:relative;z-index:1;overflow:hidden;border-radius:12px;color:var(--ink-2);transition:color var(--d2),transform var(--d3) var(--e-out),background var(--d2)}
-html[data-ui="modern"] nav.side button svg{transition:transform var(--d3) var(--e-spring),color var(--d2),filter var(--d2)}
-html[data-ui="modern"] nav.side button:hover{color:#fff;transform:translateX(4px);background:rgba(167,139,250,.07)}
-html[data-ui="modern"] nav.side button:hover svg{transform:scale(1.18) rotate(-8deg);color:#C9B3FF;filter:drop-shadow(0 0 6px #8B5CF6)}
-html[data-ui="modern"] nav.side button:active{transform:translateX(4px) scale(.97)}
+html[data-ui="modern"] nav.side button,html[data-ui="modern"] nav.side a.navx{position:relative;z-index:1;overflow:hidden;border-radius:12px;color:var(--ink-2);transition:color var(--d2),transform var(--d3) var(--e-out),background var(--d2)}
+html[data-ui="modern"] nav.side button svg,html[data-ui="modern"] nav.side a.navx svg{transition:transform var(--d3) var(--e-spring),color var(--d2),filter var(--d2)}
+html[data-ui="modern"] nav.side button:hover,html[data-ui="modern"] nav.side a.navx:hover{color:#fff;transform:translateX(4px);background:rgba(167,139,250,.07)}
+html[data-ui="modern"] nav.side button:hover svg,html[data-ui="modern"] nav.side a.navx:hover svg{transform:scale(1.18) rotate(-8deg);color:#C9B3FF;filter:drop-shadow(0 0 6px #8B5CF6)}
+html[data-ui="modern"] nav.side a.navx:hover .nx-go{transform:translate(2px,-2px)}
+html[data-ui="modern"] nav.side button:active,html[data-ui="modern"] nav.side a.navx:active{transform:translateX(4px) scale(.97)}
 html[data-ui="modern"] nav.side button[aria-current="true"]{background:none;color:#fff;box-shadow:none;font-weight:700}
 html[data-ui="modern"] nav.side button[aria-current="true"] svg{color:var(--accent);filter:drop-shadow(0 0 7px var(--accent))}
 .md-ind{display:none}
@@ -1841,9 +1865,9 @@ html[data-ui="modern"] .shspawn{position:absolute}
 @keyframes mdRip{to{transform:scale(1);opacity:0}}
 
 /* pílulas de filtro */
-html[data-ui="modern"] .seg button{position:relative;overflow:hidden;background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.24);color:var(--ink-2);
+html[data-ui="modern"] .seg button,html[data-ui="modern"] .seg a.navx{position:relative;overflow:hidden;background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.24);color:var(--ink-2);
   transition:border-color var(--d2),color var(--d2),box-shadow var(--d2),transform var(--d2) var(--e-spring),background var(--d2)}
-html[data-ui="modern"] .seg button:hover{border-color:rgba(185,155,255,.75);color:#fff;transform:translateY(-2px);background:rgba(167,139,250,.12)}
+html[data-ui="modern"] .seg button:hover,html[data-ui="modern"] .seg a.navx:hover{border-color:rgba(185,155,255,.75);color:#fff;transform:translateY(-2px);background:rgba(167,139,250,.12)}
 html[data-ui="modern"] .seg button:active{transform:scale(.95)}
 html[data-ui="modern"] .seg button[aria-pressed="true"]{background:linear-gradient(135deg,rgba(124,58,237,.95),rgba(219,39,119,.88));color:#fff;border-color:transparent;box-shadow:0 0 22px rgba(168,85,247,.5),inset 0 1px 0 rgba(255,255,255,.25);animation:mdPop .45s var(--e-spring)}
 html[data-ui="modern"] .seg button[aria-pressed="true"]::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-120%);animation:mdShine 3.5s ease-in-out infinite}
@@ -2396,6 +2420,24 @@ html[data-ui="modern"] .cm-list li.cfocus{background:rgba(125,232,255,.08);borde
 }
 /* Quests no Modern: cartões numa grelha (2 colunas a partir de 1100 px), título com traço animado, glifo de cada grupo, barra com marcador */
 html[data-ui="modern"] .qgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:6px 0 12px}
+/* r7: guias do Questski no Modern — cartão do Início com os níveis em néon e o mesmo vidro dos cartões das quests */
+html[data-ui="modern"] .hg{border-color:rgba(167,139,250,.2);border-radius:14px;background:linear-gradient(160deg,rgba(124,58,237,.12),rgba(15,12,40,.55));transition:transform var(--d3) var(--e-out),border-color var(--d2),box-shadow var(--d2)}
+html[data-ui="modern"] .hg:hover{border-color:rgba(167,139,250,.55);box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 16px rgba(139,92,246,.2)}
+html[data-ui="modern"] .hg-lv{background:rgba(34,211,238,.1);border:1px solid rgba(125,232,255,.35);color:#7DE8FF;text-shadow:0 0 8px rgba(34,211,238,.45)}
+html[data-ui="modern"] .hg-tx b{color:#fff}
+html[data-ui="modern"] .hg-go{color:#C9B3FF;transition:transform var(--d2) var(--e-out)}
+html[data-ui="modern"] .hg:hover .hg-go{transform:translateX(3px)}
+html[data-ui="modern"] .hg-all{color:#7DE8FF}
+/* os links novos (resultado da pesquisa, cartões, entrada do menu, botões) não levam o sublinhado/brilho dos links de texto do Modern */
+html[data-ui="modern"] a.gsp-o,html[data-ui="modern"] a.gsp-o:hover,html[data-ui="modern"] a.hg{color:var(--ink);text-shadow:none}
+html[data-ui="modern"] a.hg:hover{background-size:auto;text-shadow:none;color:var(--ink)}
+html[data-ui="modern"] a.navx:hover,html[data-ui="modern"] a.gbtn:hover{text-shadow:none}
+html[data-ui="modern"] a.tag.gbtn{border:1px solid rgba(125,232,255,.35)}
+html[data-ui="modern"] .btn.gbtn{background:rgba(34,211,238,.10);color:#7DE8FF;border:1px solid rgba(125,232,255,.42);box-shadow:none}
+html[data-ui="modern"] .gpair>:first-child:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0}
+html[data-ui="modern"] .gpair>.gbtn{border-top-left-radius:0;border-bottom-left-radius:0}
+html[data-ui="modern"] .btn.gbtn:hover{background:rgba(34,211,238,.18);border-color:rgba(125,232,255,.8);color:#fff;box-shadow:0 0 18px rgba(34,211,238,.3)}
+@media (prefers-reduced-motion:no-preference){ html[data-ui="modern"] .hg:hover{transform:translateY(-2px)} }
 /* a 2 colunas a descrição fica inteira (sem '…'): letra um pouco mais pequena e cartões mais baixos para a página não crescer */
 @media (min-width:1100px){
   html[data-ui="modern"] .qgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;padding:8px 0 12px}
@@ -2739,6 +2781,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
           <div><b class="big" id="calcOut" style="font-family:var(--serif);font-size:30px;color:var(--accent)">—</b><p class="small muted" id="calcSub"></p></div>
         </div>
       </div>
+      <div class="sec" hidden><div class="card hguias" id="homeGuias"></div></div>
       <div class="sec">
         <h3>Próximos marcos</h3>
         <ul class="tl" id="timeline"></ul>
@@ -42972,6 +43015,7 @@ const IC = {
  charms:S('<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/>'),
  imbu:S('<path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z" opacity=".35"/><circle cx="12" cy="11" r="3"/>'),
  quests:S('<path d="M6 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6z"/><path d="M10 8h6M10 12h6M10 16h4"/>'),
+ guias:S('<path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/>'),
  defesa:S('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>'),
  ask:S('<path d="M4 5h16v11H9l-5 4z"/>'),
  perso:S('<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>'),
@@ -43007,7 +43051,7 @@ const SECS = [
  {id:"inicio",t:"Início",subs:[["inicio","Início"]]},
  {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["tarefas","Tarefas"]]},
  {id:"build",t:"Build",subs:[["rotacao","Rotação"],["hotkeys","Hotkeys"],["wheel","Wheel"],["equip","Equipamento"]]},
- {id:"prog",t:"Progresso",subs:[["charms","Charms"],["imbu","Imbuements"],["quests","Quests"]]},
+ {id:"prog",t:"Progresso",subs:[["charms","Charms"],["imbu","Imbuements"],["quests","Quests"],["guias","Guias de quests","quests/"]]},
  {id:"wiki",t:"Wiki",subs:[["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
  {id:"mais",t:"Mais",subs:[["defesa","Defesa"],["ask","Perguntar"],["perso","Personagens"],["fontes","Fontes"]]}
 ];
@@ -43017,6 +43061,8 @@ if(!HAS_AI){ SECS.forEach(sc=>{ sc.subs=sc.subs.filter(x=>x[0]!=="ask"); }); doc
 function navOf(p){ if(p==="item") return "itens"; if(p==="criatura") return "criaturas"; if(p!=="wiki2") return p;
   const m=/^#(feitico|npc|conquista|montaria|outfit)\//.exec(location.hash||""); return !m?"itens":m[1]==="feitico"?"feiticos":m[1]==="npc"?"npcs":"colecoes"; }
 const secOf = p => { p = navOf(p); return SECS.find(s=>s.subs.some(x=>x[0]===p)) || SECS[0]; };
+/* r7 */ const isPanel = p => SECS.some(s=>s.subs.some(x=>x[0]===p&&!x[2])); // as entradas com endereço (x[2], ex.: Guias de quests → quests/) são links para outro site, não painéis
+const navX = (id,t,href,cls) => `<a class="navx${cls||""}" href="${href}" title="Abre o Questski, o site dos guias de quests">${cls?"":IC[id]||""}${t}<svg class="nx-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>`;
 /* r3-t5 */ // visitante sem personagem: só estas páginas abrem (as outras precisam da personagem e mostram o ecrã de entrada)
 const PUBP = ["item","criatura","wiki2","itens","criaturas","feiticos","npcs","colecoes","fontes"];
 // secções do menu: com personagem, SECS; o visitante tem uma cópia filtrada (Início, Wiki e Fontes), sem grupos vazios e sem mexer em SECS
@@ -43048,6 +43094,8 @@ const VD = () => G.voc[C().voc];
 
 let dbRef=null, timer=null, writing=false, again=false;
 function save(){ try{ localStorage.setItem(LS, JSON.stringify(ST)); }catch(e){} if(!dbRef) return; clearTimeout(timer); timer=setTimeout(flush,900); }
+// o Questski (quests/), aberto noutro separador, marcou quests concluídas: adota o estado novo (o save() grava sempre tudo, nada se perde)
+addEventListener("storage", e=>{ if(e.key!==LS||!e.newValue) return; let m=null; try{ m=migrate(JSON.parse(e.newValue)); }catch(err){} if(!m) return; m.ui.p=ST.ui.p; ST=m; try{ renderAll(); }catch(err){ console.error(err); } });
 async function flush(){ if(!dbRef) return; if(writing){again=true;return;} writing=true; $("save").textContent="A guardar…";
   try{ await dbRef.set(JSON.parse(JSON.stringify(ST))); $("save").textContent="Guardado na tua conta"; }catch(e){ $("save").textContent="Guardado só neste browser"; }
   writing=false; if(again){again=false;flush();} }
@@ -43066,6 +43114,21 @@ function seg(el, list, cur, cb){ el.innerHTML = list.map(([v,t])=>`<button data-
 const QBY = Object.fromEntries(G.quests.map(q=>[q.id,q]));
 const qDone = (c,id) => id==="marapur" ? G.marapur.every(x=>c.done[x]) : !!(id && c.done[id]);
 const qName = id => id==="marapur" ? "Asura Palace + The Lost Brother" : (QBY[id] ? QBY[id].n : id);
+/* r7: guias passo a passo do Questski (quests/, o outro site no mesmo endereço). data/guias.json (_dev/build_guias.py):
+   g [slug, nome, nível mínimo, nível recomendado, premium 0/1, categoria, região, passos], q2s id do G.quests → slug, n2s nome normalizado → slug.
+   Carrega no arranque (54 KB); até lá (ou se falhar) não há links para os guias. */
+let GUIAS={g:[],q2s:{},n2s:{}}, GUIASP=null;
+const guiasLoad = () => GUIASP||(GUIASP=dsafe("guias").then(d=>{ if(d&&Array.isArray(d.g)) GUIAS={g:d.g,q2s:d.q2s||{},n2s:d.n2s||{}}; return GUIAS; }));
+const gKey = s => String(s||"").normalize("NFD").replace(/[^\x00-\x7f]/g,"").toLowerCase().replace(/_/g," ").replace(/\s*\(quest\)\s*$/,"").replace(/^the\s+/,"").replace(/\s+quest(\s+line)?$/,"").replace(/[^a-z0-9]+/g," ").trim(); // a mesma chave do build_guias.py
+// slug do guia: pelo id do G.quests (marapur: a primeira das duas por fazer) ou pelo nome
+function guiaOf(id,nm){ if(id==="marapur"){ const c=C(), m=G.marapur||[]; return guiaOf(m.find(x=>!(c&&c.done[x]))||m[0]); }
+  const k=nm?gKey(nm):""; return (id&&hasKey(GUIAS.q2s,id)?GUIAS.q2s[id]:null) || (k&&hasKey(GUIAS.n2s,k)?GUIAS.n2s[k]:null); }
+const guiaHref = s => `quests/#/quest/${encodeURIComponent(s)}`;
+const GIC = `<svg class="gic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg>`;
+// link para o guia (normal: navega para o Questski); t = texto, cls = classes (por omissão um botão pequeno)
+const guiaBtn = (s,t,cls) => s ? `<a class="${cls||"btn small"} gbtn" href="${guiaHref(s)}" title="Guia passo a passo no Questski">${GIC}${t||"Guia passo a passo ›"}</a>` : "";
+// botão de uma quest (modal do Grimório) seguido do link curto para o guia, juntos na mesma linha
+const guiaPair = (btn,s) => s ? `<span class="gpair">${btn}${guiaBtn(s,"Guia ›")}</span>` : btn;
 
 /* ---------- hunts ---------- */
 const EST_ORDER = {druid:["sorcerer","paladin","knight","monk"],sorcerer:["druid","paladin","knight","monk"],knight:["paladin","monk","sorcerer","druid"],paladin:["knight","sorcerer","druid","monk"],monk:["knight","paladin","sorcerer","druid"]};
@@ -43309,9 +43372,9 @@ function npcSpr(n,ph){ const k=String(n||"").toLowerCase(), i=(G.np||{})[k];
   return ph?`<span class="ph-ic npc-ph" aria-hidden="true">${IC.npcs}</span>`:""; }
 function itemChip(n){ return `<a class="ilink" href="${itemHref(n)}">${itemSpr(n)}${esc(n)}</a>`; }
 function questCardHTML(id,q){
-  const c=C(), b=QBY[id]||{}, dn=!!c&&qDone(c,id);
-  const head=`<div class="qmeta"><span class="tag">nível ${q&&q.req&&q.req.level||b.l||"?"}+</span><span class="tag">${b.s==="party"?"grupo":b.s==="parcial"?"parcial em grupo":"solo"}</span>${q&&q.req&&q.req.premium?'<span class="tag">premium</span>':""}${dn?'<span class="tag ok">✓ feita</span>':c?`<button class="btn small ghost" data-qdone="${id}">Marcar como feita</button>`:""}</div>`;
-  if(!q) return `<div class="qcard"><h4>${esc(qName(id))}</h4>${head}<p class="small">${esc(b.d||"")}</p>${b.u?`<p class="small muted">Desbloqueia: ${esc(b.u)}</p>`:""}<p class="small muted">Guia passo a passo em preparação.</p></div>`;
+  const c=C(), b=QBY[id]||{}, dn=!!c&&qDone(c,id), gs=guiaOf(id,b.w||b.n); /* r7: guia do Questski */
+  const head=`<div class="qmeta"><span class="tag">nível ${q&&q.req&&q.req.level||b.l||"?"}+</span><span class="tag">${b.s==="party"?"grupo":b.s==="parcial"?"parcial em grupo":"solo"}</span>${q&&q.req&&q.req.premium?'<span class="tag">premium</span>':""}${dn?'<span class="tag ok">✓ feita</span>':c?`<button class="btn small ghost" data-qdone="${id}">Marcar como feita</button>`:""}${guiaBtn(gs)}</div>`;
+  if(!q) return `<div class="qcard"><h4>${esc(qName(id))}</h4>${head}<p class="small">${esc(b.d||"")}</p>${b.u?`<p class="small muted">Desbloqueia: ${esc(b.u)}</p>`:""}${gs?"":`<p class="small muted">Guia passo a passo em preparação.</p>`}</div>`;
   const lore=(q.lore||"").split(/\n\n+/).map(t=>`<p>${esc(t)}</p>`).join("");
   const reqs=[...(q.req&&q.req.quests||[]).map(x=>"Quest: "+x),...(q.req&&q.req.items||[]).map(x=>"Leva: "+x)];
   const qp=(c&&c.qp&&c.qp[id])||{}, tot=(q.missions||[]).reduce((a,m)=>a+(m.steps||[]).length,0), nd=Object.keys(qp).length;
@@ -43340,7 +43403,7 @@ async function drawPos(cv){ const [x,y,z]=cv.dataset.qpos.split(",").map(Number)
   try{ const im=await floorImg(z); g.imageSmoothingEnabled=false; g.drawImage(im,x-w/2-31744,y-h/2-30976,w,h,0,0,cv.width,cv.height); }catch(e){}
   const X=(w/2+.5)*S, Y=(h/2+.5)*S; g.beginPath(); g.arc(X,Y,12,0,7); g.lineWidth=3; g.strokeStyle="#fff"; g.stroke(); g.beginPath(); g.arc(X,Y,5,0,7); g.fillStyle="#E5484D"; g.fill();
   g.font="600 12px system-ui"; g.fillStyle="rgba(0,0,0,.7)"; g.fillRect(6,6,g.measureText(floorTxt(z)).width+12,20); g.fillStyle="#fff"; g.fillText(floorTxt(z),12,20); }
-async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard; const q=await getQuest(id); el.innerHTML=questCardHTML(id,q); } }
+async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); if(els.length) await guiasLoad(); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard; const q=await getQuest(id); el.innerHTML=questCardHTML(id,q); } }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-qopen2]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen2}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen2))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
 document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("qguide")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
 document.addEventListener("change",e=>{ const b=e.target.closest("[data-qstep]"); if(!b) return; const c=C(), [id,k]=b.dataset.qstep.split(":"); c.qp=c.qp||{}; c.qp[id]=c.qp[id]||{};
@@ -43353,11 +43416,11 @@ document.addEventListener("change",e=>{ const b=e.target.closest("[data-qstep]")
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-qdone]"); if(!b) return; const c=C(); if(!c) return; c.done[b.dataset.qdone]=true; save(); const card=b.closest("[data-qcard]"); if(card){ card.removeAttribute("data-ok"); initQuests(card.parentElement); } renderQuests(); renderHunts(); });
 /* ---------- pesquisa global: tudo o que existe, por categoria, numa lista que desce da barra ---------- */
 let GSI=null, GSX=null, GSXP=null;
-function gsLoadX(){ return GSXP||(GSXP=dsafe("search").then(d=>{ GSX=(d&&d.e)||[]; GSI=null; return GSX; })); }
-const GSC = {h:["Hunts","hunt"],hc:["Hunts","lista"],ht:["Hunts","lista"],c:["Criaturas","criatura"],b:["Bosses","boss"],i:["Itens","item"],s:["Feitiços","feitiço"],r:["Runas","runa"],q:["Quests","quest"],n:["NPCs","NPC"],ch:["Charms","charm"],im:["Imbuements","imbuement"],a:["Conquistas","conquista"],m:["Montarias","montaria"],o:["Outfits","outfit"]};
-const GSORD = ["h","c","b","i","s","r","q","n","ch","im","a","m","o"];
+function gsLoadX(){ return GSXP||(GSXP=Promise.all([dsafe("search"),guiasLoad()]).then(([d])=>{ GSX=(d&&d.e)||[]; GSI=null; return GSX; })); } // r7: com os guias do Questski
+const GSC = {h:["Hunts","hunt"],hc:["Hunts","lista"],ht:["Hunts","lista"],c:["Criaturas","criatura"],b:["Bosses","boss"],i:["Itens","item"],s:["Feitiços","feitiço"],r:["Runas","runa"],q:["Quests","quest"],g:["Guias de quests","guia"],n:["NPCs","NPC"],ch:["Charms","charm"],im:["Imbuements","imbuement"],a:["Conquistas","conquista"],m:["Montarias","montaria"],o:["Outfits","outfit"]};
+const GSORD = ["h","c","b","i","s","r","q","g","n","ch","im","a","m","o"];
 const gsGrp = t => t==="hc"||t==="ht" ? "h" : t; // r5-t2: as listas de hunts (por cidade e por tipo) ficam no grupo das hunts
-const GSIC = {q:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>', ch:'<path d="M12 3 4 7v6c0 4.4 3.4 7.5 8 8 4.6-.5 8-3.6 8-8V7z"/><path d="M12 8v8M8 12h8"/>',
+const GSIC = {q:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>', g:'<path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/>', ch:'<path d="M12 3 4 7v6c0 4.4 3.4 7.5 8 8 4.6-.5 8-3.6 8-8V7z"/><path d="M12 8v8M8 12h8"/>',
   im:'<path d="m12 2 2.4 4.9L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-1.1z"/>', a:'<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/>',
   m:'<path d="M4 20c0-5 2-8 5-10l1-5 3 3h3l3 4-2 2-3-1-2 3v4"/><circle cx="15.5" cy="9.5" r=".6"/>', o:'<path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c-.5 2-2 3-4 3s-3.5-1-4-3z"/>',
   h:'<path d="M3 20h18M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/>', n:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>', s:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>'};
@@ -43371,6 +43434,7 @@ function gsIndex(){
   /* r5-t2 */ { const cs=new Set(), ts=new Set(); Object.entries(G.places).forEach(([k,p])=>{ if(p.city) cs.add(p.city); Object.entries(clsShares(k)).forEach(([x,v])=>{ if(x!=="?"&&v>=0.5) ts.add(x); }); });
     cs.forEach(n=>add("hc",slug(n),"Hunts em "+n,"Lista de hunts",n)); (G.mcn||[]).filter(x=>ts.has(x)).forEach(x=>add("ht",slug(x),"Hunts de "+clsName(x).toLowerCase(),"Lista de hunts",x)); }
   G.quests.forEach(q=>add("q",q.id,q.n,"Quest"));
+  /* r7 */ GUIAS.g.forEach(r=>add("g",r[0],r[1],`Guia · ${r[2]?`nível ${r[2]}+`:"qualquer nível"}${r[3]>r[2]?` (recomendado ${r[3]})`:""}${r[6]?` · ${r[6]}`:""}`)); // guias do Questski: abrem o guia (outra página)
   Object.entries(G.mon).forEach(([k,m])=>{ if(m[2]>0||m[7]) add(m[7]?"b":"c",k,m[0],m[7]?`Boss${m[1]?` · ${nf(m[1])} de vida`:""}`:`Criatura · ${nf(m[2])} XP`); });
   G.items.forEach(x=>add("i",x.n.toLowerCase(),x.n,`${SLOTNAME[x.s==="trinket"?"extra":x.s]||"Item"}${x.l?` · nível ${x.l}`:""}`));
   Object.keys(G.lt).forEach(k=>add("i",k,cap1(k),"Loot de criaturas"));
@@ -43401,10 +43465,12 @@ function gsRowIcon(h){
 const GS={q:"",cat:"all",more:{},sel:-1};
 function gsRow(h,q){ const eq=h.t==="i"&&EQBYN[h.k];
   /* r6-t1 */ let sub=h.sub; if(h.al){ const tk=fold(q).trim().split(/\s+/).filter(Boolean); if(tk.length&&!tk.every(t=>h.f.includes(t))){ const hit=h.al.find(x=>tk.every(t=>fold(x).includes(t)))||h.al.find(x=>tk.some(t=>fold(x).includes(t))); if(hit) sub=(sub?sub+" · ":"")+"também: "+hit; } }
-  return `<button type="button" role="option" class="gsp-o" data-gs="${h.t}:${esc(h.k)}"${eq?` data-look="${eq.id}"`:""}><span class="ic">${gsRowIcon(h)}</span><span class="tx"><b>${gsHi(h.n,q)}</b>${sub?`<small>${esc(sub)}</small>`:""}</span><span class="k">${GSC[h.t][1]}</span></button>`; }
+  const inner=`<span class="ic">${gsRowIcon(h)}</span><span class="tx"><b>${gsHi(h.n,q)}</b>${sub?`<small>${esc(sub)}</small>`:""}</span><span class="k">${GSC[h.t][1]}</span>`;
+  if(h.t==="g") return `<a role="option" class="gsp-o" href="${guiaHref(h.k)}" data-gs="g:${esc(h.k)}">${inner}</a>`; // r7: guia do Questski = link normal
+  return `<button type="button" role="option" class="gsp-o" data-gs="${h.t}:${esc(h.k)}"${eq?` data-look="${eq.id}"`:""}>${inner}</button>`; }
 function gsRender(){
   const L=$("gsList"), CT=$("gsCats"); if(!L) return; const q=GS.q.trim();
-  if(fold(q).length<2){ CT.innerHTML=""; L.innerHTML=`<div class="gsp-empty"><p>Procura em tudo: hunts, criaturas, bosses, itens, feitiços, runas, quests, NPCs, charms, imbuements, conquistas, montarias e outfits.</p><div class="gsp-sug">${["gold","dragon","exura","soul","rashid","roshamuul","demon"].map(x=>`<button type="button" data-gsq="${x}">${x}</button>`).join("")}</div>${GSX?"":`<p class="tiny muted tkload">A carregar o índice completo…</p>`}</div>`; return; }
+  if(fold(q).length<2){ CT.innerHTML=""; L.innerHTML=`<div class="gsp-empty"><p>Procura em tudo: hunts, criaturas, bosses, itens, feitiços, runas, quests, guias de quests, NPCs, charms, imbuements, conquistas, montarias e outfits.</p><div class="gsp-sug">${["gold","dragon","exura","soul","rashid","roshamuul","demon"].map(x=>`<button type="button" data-gsq="${x}">${x}</button>`).join("")}</div>${GSX?"":`<p class="tiny muted tkload">A carregar o índice completo…</p>`}</div>`; return; }
   const hits=gsMatch(q), grp={}; hits.forEach(h=>{ const g=gsGrp(h.t); (grp[g]=grp[g]||[]).push(h); }); if(grp.h) grp.h=grp.h.filter(x=>x.t!=="h").concat(grp.h.filter(x=>x.t==="h")); /* r5-t2: as listas primeiro */
   const cats=GSORD.filter(t=>grp[t]); if(GS.cat!=="all"&&!grp[GS.cat]) GS.cat="all";
   CT.innerHTML = hits.length ? `<button type="button" data-gscat="all" aria-pressed="${GS.cat==="all"}">Tudo <span>${hits.length}</span></button>`+cats.map(t=>`<button type="button" data-gscat="${t}" aria-pressed="${GS.cat===t}">${GSC[t][0]} <span>${grp[t].length}</span></button>`).join("") : "";
@@ -43458,7 +43524,7 @@ const colSprite = (file,ix) => ix!=null&&ix>=0 ? `<span class="mo-spr" style="ba
 function areaHTML(ar){ if(!ar||!ar[0]||!ar[1]) return ""; const w=+ar[0], cells=String(ar[1]); if(w<=1&&cells.length<=1) return "";
   return `<div class="sp-area" style="--w:${w}" role="img" aria-label="Área do feitiço">${[...cells].map(ch=>`<i class="${ch==="2"?"me":ch==="1"?"on":""}"></i>`).join("")}</div>`; }
 function wkLinks(link){ if(!link) return ""; const out=[];
-  (link.quest||[]).forEach(q=>{ const g=G.quests.find(x=>fold(x.n)===fold(q)||fold(x.n)===fold(String(q).replace(/ Quest$/,""))); out.push(g?`<button type="button" class="btn small ghost" data-qopen2="${g.id}">${esc(g.n)}</button>`:`<span class="tag">${esc(q)}</span>`); });
+  (link.quest||[]).forEach(q=>{ const g=G.quests.find(x=>fold(x.n)===fold(q)||fold(x.n)===fold(String(q).replace(/ Quest$/,""))); out.push(guiaPair(g?`<button type="button" class="btn small ghost" data-qopen2="${g.id}">${esc(g.n)}</button>`:`<span class="tag">${esc(q)}</span>`, guiaOf(g&&g.id,q))); });
   (link.creature||[]).forEach(n=>out.push(`<a class="tag" href="${monHref(n)}">${esc(n)}</a>`));
   (link.item||[]).forEach(n=>out.push(`<a class="tag" href="${itemHref(n)}">${esc(n)}</a>`));
   (link.mount||[]).forEach(n=>out.push(`<a class="tag" href="${wkHref("montaria",n)}">${esc(n)}</a>`));
@@ -43542,8 +43608,8 @@ async function openWiki(kind,sl){
   el.querySelectorAll("canvas[data-qpos]").forEach(cv=>drawPos(cv)); mdPage(el); if(typeof mktFill==="function") mktFill(el);
 }
 
-async function openQuestW(name){ const qs=await dsafe("quests"), key=Object.keys(qs).find(k=>k.toLowerCase()===String(name).toLowerCase()), q=key&&qs[key];
-  openSheet(`<div class="sh-h"><div><span class="eyebrow" style="margin:0">Quest</span><h3>${esc(key||name)}</h3></div></div>${q?`<dl class="dl">${q.lvl?`<dt>Nível</dt><dd>${q.lvl}+</dd>`:""}<dt>Premium</dt><dd>${q.prem?"sim":"não"}</dd>${q.loc?`<dt>Onde</dt><dd>${esc(q.loc)}</dd>`:""}${(q.boss||[]).length?`<dt>Bosses</dt><dd>${q.boss.map(x=>mlink(x)).join(", ")}</dd>`:""}${(q.dangers||[]).length?`<dt>Perigos</dt><dd>${q.dangers.map(x=>mlink(x)).join(", ")}</dd>`:""}</dl>${(q.rewards||[]).length?`<h4 class="sub">Recompensas</h4><div class="qitems">${q.rewards.map(itemChip).join("")}</div>`:""}${q.legend?`<p class="small">${esc(q.legend)}</p>`:""}`:`<p class="muted">Ainda sem detalhes desta quest.</p>`}`); }
+async function openQuestW(name){ const [qs]=await Promise.all([dsafe("quests"),guiasLoad()]), key=Object.keys(qs).find(k=>k.toLowerCase()===String(name).toLowerCase()), q=key&&qs[key], gs=guiaOf(null,key||name);
+  openSheet(`<div class="sh-h"><div><span class="eyebrow" style="margin:0">Quest</span><h3>${esc(key||name)}</h3></div></div>${gs?`<p style="margin:0 0 12px">${guiaBtn(gs)}</p>`:""}${q?`<dl class="dl">${q.lvl?`<dt>Nível</dt><dd>${q.lvl}+</dd>`:""}<dt>Premium</dt><dd>${q.prem?"sim":"não"}</dd>${q.loc?`<dt>Onde</dt><dd>${esc(q.loc)}</dd>`:""}${(q.boss||[]).length?`<dt>Bosses</dt><dd>${q.boss.map(x=>mlink(x)).join(", ")}</dd>`:""}${(q.dangers||[]).length?`<dt>Perigos</dt><dd>${q.dangers.map(x=>mlink(x)).join(", ")}</dd>`:""}</dl>${(q.rewards||[]).length?`<h4 class="sub">Recompensas</h4><div class="qitems">${q.rewards.map(itemChip).join("")}</div>`:""}${q.legend?`<p class="small">${esc(q.legend)}</p>`:""}`:`<p class="muted">Ainda sem detalhes desta quest.</p>`}`); }
 
 document.addEventListener("keydown",e=>{ if((e.key==="/"&&!/input|textarea|select/i.test(document.activeElement.tagName))||(e.key==="k"&&(e.ctrlKey||e.metaKey))){ e.preventDefault(); openSearch(); } });
 function monSheet(k){ location.hash=monHref(k); }
@@ -43585,7 +43651,7 @@ function huntRoute(pid){ const m=pid&&G.hm[pid], v=G.hv&&G.hv[pid];
   if(p&&p.acc){ const qq=p.q&&QBY[p.q], rq=[qq?`Quest: ${qName(p.q)}`:"",p.prem?"Premium":""].filter(Boolean);
     return `<div class="vroute"><div class="vr-h"><b>Acesso</b><span class="tag">por confirmar</span></div>
     <p class="small" style="margin:0">${elinkTxt(p.acc)}</p>
-    ${rq.length?`<div class="pills" style="align-items:center"><span class="small muted">Requisitos:</span>${rq.map(r=>`<span class="tag warn">${esc(r)}</span>`).join("")}${qq?`<button type="button" class="btn small ghost" data-qopen2="${esc(p.q)}">Lore e guia ›</button>`:""}</div>`:""}</div>${m&&auto?`<h4 class="sub" style="margin:4px 0 0">Percurso aproximado</h4>${auto}`:""}`; }
+    ${rq.length?`<div class="pills" style="align-items:center"><span class="small muted">Requisitos:</span>${rq.map(r=>`<span class="tag warn">${esc(r)}</span>`).join("")}${qq?`<button type="button" class="btn small ghost" data-qopen2="${esc(p.q)}">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:""}</div>`:""}</div>${m&&auto?`<h4 class="sub" style="margin:4px 0 0">Percurso aproximado</h4>${auto}`:""}`; }
   return vRoute(pid)+(auto?`${v&&v.st?'<h4 class="sub" style="margin:4px 0 0">Percurso no mapa</h4>':""}${auto}`:""); }
 function routeHTML(pid,x,y,z){
   const R = pid && G.routes[pid];
@@ -43647,7 +43713,7 @@ function huntSheet(h){
   const c=C(), p=h.p, name=p?p.n:h.r.place, cmp=h.cmp, m=h.r.c&&G.hm[h.r.c];
   /* r6-t2 */ const nA = h.src==="old" ? " (antes do rebalance)" : h.est ? " ≈" : "";
   let acc="";
-  if (h.q){ const dn=qDone(c,h.q), qq=QBY[h.q]; acc = dn ? `<span class="tag ok">acesso ✓ ${esc(qName(h.q))}</span>` : `<span class="tag warn">precisa de ${esc(qName(h.q))}${qq&&qq.s==="party"?" (grupo)":""}</span>`; }
+  if (h.q){ const dn=qDone(c,h.q), qq=QBY[h.q]; acc = dn ? `<span class="tag ok">acesso ✓ ${esc(qName(h.q))}</span>` : `<span class="tag warn">precisa de ${esc(qName(h.q))}${qq&&qq.s==="party"?" (grupo)":""}</span>${guiaBtn(guiaOf(h.q),"Guia passo a passo ›","tag acc")}`; }
   const vars = h.vars.length>1 ? `<div class="vars">${h.vars.map(v=>`<span class="tag">${esc(v.place)}${v.xp?` · ${fmt(v.xp)}`:""}</span>`).join("")}</div>` : "";
   return `<div class="sh-h"><div><span class="eyebrow" style="margin:0">${esc(VD().n)} · ${h.l}+</span><h3>${esc(name)}</h3></div>${hcmpBtn(h)}</div>
     <div class="shero">${huntMap(h)}${m?`<button type="button" class="btn small shspawn" data-hspawn="${h.r.c}">Ver spawns no mapa</button>`:""}${((G.pm[h.r.c]||{}).h||[]).length?`<span class="hero-mons">${((G.pm[h.r.c]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,4).map(([k])=>crSpr(k,56)).join("")}</span>`:""}</div>
@@ -43819,9 +43885,9 @@ $("charSw").addEventListener("keydown", e=>{ const box=$("charSw"), open=box.cla
 function renderNav(){
   const cur = ST.ui.p, NS = navSecs(), nv = navOf(cur), sec = NS.find(s=>s.subs.some(x=>x[0]===nv)) || NS[0];
   document.body.classList.toggle("guest", !ST.chars.length && PUBP.includes(cur)); // r3-t5: visitante numa página pública
-  $("side").innerHTML = NS.map(s=> s.subs.length===1 ? `<ul><li><button data-p="${s.subs[0][0]}" aria-current="${cur===s.subs[0][0]||nv===s.subs[0][0]}">${IC[s.subs[0][0]]}${s.t}</button></li></ul>` : `<div class="grp">${s.t}</div><ul>${s.subs.map(([id,t])=>`<li><button data-p="${id}" aria-current="${cur===id||nv===id}">${IC[id]}${t}</button></li>`).join("")}</ul>`).join("");
+  $("side").innerHTML = NS.map(s=> s.subs.length===1 ? `<ul><li><button data-p="${s.subs[0][0]}" aria-current="${cur===s.subs[0][0]||nv===s.subs[0][0]}">${IC[s.subs[0][0]]}${s.t}</button></li></ul>` : `<div class="grp">${s.t}</div><ul>${s.subs.map(([id,t,href])=>href?`<li>${navX(id,t,href)}</li>`:`<li><button data-p="${id}" aria-current="${cur===id||nv===id}">${IC[id]}${t}</button></li>`).join("")}</ul>`).join("");
   $("bottom").innerHTML = NS.map(s=>`<button data-s="${s.id}" aria-current="${sec.id===s.id}">${IC[s.ic||s.id]}<span>${s.t}</span></button>`).join("");
-  $("subtabs").innerHTML = sec.subs.length>1 ? `<div class="seg scroll">${sec.subs.map(([id,t])=>`<button data-p="${id}" aria-pressed="${cur===id||nv===id}">${t}</button>`).join("")}</div>` : "";
+  $("subtabs").innerHTML = sec.subs.length>1 ? `<div class="seg scroll">${sec.subs.map(([id,t,href])=>href?navX(id,t,href," sub"):`<button data-p="${id}" aria-pressed="${cur===id||nv===id}">${t}</button>`).join("")}</div>` : "";
   document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on", p.dataset.p===cur));
   { const sb=$("side"), sa=sb.querySelector('button[aria-current="true"]'); if(sa&&sb.scrollHeight>sb.clientHeight+1){ const t=sa.offsetTop, h=sa.offsetHeight; if(t<sb.scrollTop||t+h>sb.scrollTop+sb.clientHeight) sb.scrollTop=Math.max(0,t-(sb.clientHeight-h)/2); } }
   { const sg=$("subtabs").querySelector(".seg"), st=sg&&sg.querySelector('[aria-pressed="true"]'); if(st&&sg.scrollWidth>sg.clientWidth+1){ const r=sg.getBoundingClientRect(), b=st.getBoundingClientRect(); if(b.left<r.left||b.right>r.right) sg.scrollLeft+=b.left-r.left-(r.width-b.width)/2; } } // menu lateral e separadores com scroll: o item ativo fica à vista
@@ -43831,7 +43897,7 @@ function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:
   if(location.hash!=="#"+p) history.replaceState(history.state,"","#"+p); if(scroll!==false) window.scrollTo({top:0}); if(typeof mdPanel==="function") mdPanel(p); }
 $("side").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
 $("subtabs").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
-$("bottom").addEventListener("click", e=>{ const b=e.target.closest("button[data-s]"); if(!b) return; const s=navSecs().find(x=>x.id===b.dataset.s); if(!s) return; const cur=ST.ui.p; const keep=s.subs.find(x=>x[0]===cur)||s.subs.find(x=>x[0]===(ST.ui["last_"+s.id]))||s.subs[0]; mdVT(()=>go(keep[0])); });
+$("bottom").addEventListener("click", e=>{ const b=e.target.closest("button[data-s]"); if(!b) return; const s=navSecs().find(x=>x.id===b.dataset.s); if(!s) return; const cur=ST.ui.p; const ps=s.subs.filter(x=>!x[2]), keep=ps.find(x=>x[0]===cur)||ps.find(x=>x[0]===(ST.ui["last_"+s.id]))||ps[0]; mdVT(()=>go(keep[0])); });
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-go]"); if(b){ e.preventDefault(); if(b.dataset.band){ ST.ui.band=b.dataset.band; ST.ui.hf=HF0(); renderHunts(); } go(b.dataset.go); if(b.dataset.cfocus) charmFocus(b.dataset.cfocus); } });
 
 function renderHero(){
@@ -43891,7 +43957,8 @@ function renderInicio(){
   const ch = vd.charms.find(k=>!c.charms[k]); if (ch){ const cm=G.charms[ch]; steps.push({t:`Charm seguinte: <b>${esc(cm.n)}</b> (${esc(cm.c.split(" / ")[0])} pontos)`,d:cm.d}); }
   const im = vd.imbs.findIndex((x,i)=>!c.imb["i"+i]); if (im>=0) steps.push({t:`Imbuement: <b>${esc(vd.imbs[im].s)}</b>`,d:vd.imbs[im].i});
   const pot = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||"").split(" (")[0].trim()).filter(x=>x&&x!=="—").join(" e "))}</b> · <a href="#" data-go="defesa">ver custos ›</a>`,d:"As que deves ter nas hotkeys agora."}); /* r6-t5: só os nomes (sem o parêntese do G) */
-  $("nextSteps").innerHTML = steps.map(s=>`<li><span aria-hidden="true" style="color:var(--accent)">→</span><span class="t">${s.t}<span class="d">${esc(s.d.split(/(?<=\.)\s|;|—/)[0])}</span>${s.q?`<button class="btn small ghost" style="justify-self:start;margin-top:4px" data-qopen2="${s.q}">Lore e guia ›</button>`:""}</span><span></span></li>`).join("");
+  $("nextSteps").innerHTML = steps.map(s=>`<li><span aria-hidden="true" style="color:var(--accent)">→</span><span class="t">${s.t}<span class="d">${esc(s.d.split(/(?<=\.)\s|;|—/)[0])}</span>${s.q?`<span class="gpair" style="margin-top:4px"><button class="btn small ghost" data-qopen2="${s.q}">Lore e guia ›</button>${guiaBtn(guiaOf(s.q))}</span>`:""}</span><span></span></li>`).join("");
+  renderGuiasHome();
   // calculator
   const opts = huntRows(c.voc, L+2).filter(h=>h.p && !isTeam(h) && h.l<=L+2 && h.xp && h.l>=wlo).sort((a,b)=>b.xp-a.xp).slice(0,20);
   if (!opts.some(h=>String(h.i)===String(c.hunt))){ const h0=opts.find(h=>!h.est)||opts[0]; c.hunt = h0 ? h0.i : null; }
@@ -43910,6 +43977,21 @@ function renderInicio(){
   lv.forEach(x=>{ if(!you && x>L){ out+=youRow; you=true; } out+=`<li class="${x<=L?"past":""}"><span class="lv">${x}</span><span class="dt"></span><div style="display:grid;gap:3px">${ev.filter(e=>e.l===x).map(e=>`<div class="small"><span class="tag">${e.k}</span> ${esc(e.t)}</div>`).join("")}</div></li>`; });
   if(!you) out+=youRow; $("timeline").innerHTML=out;
 }
+/* r7: Início — guias do Questski para o nível da personagem: nível mínimo até ao dela e recomendado perto (abaixo conta menos do que acima);
+   fora os já feitos (no Grimório pelo q2s, todas as quests do guia; no Questski pelo localStorage "tq-progress"), os tutoriais e Rookgaard/Dawnport.
+   Os começados no Questski vêm primeiro; depois histórias e acessos, tarefas, tesouros, outfits... e os eventos no fim. */
+const GCAT={historia:0,acesso:0,tarefas:15,tesouro:20,outfit:25,troca:30,"world-change":45,evento:60};
+function guiasFor(c,n){ const L=c.level; let tq={}; try{ tq=JSON.parse(localStorage.getItem("tq-progress")||"{}")||{}; }catch(e){}
+  const ids={}; Object.entries(GUIAS.q2s).forEach(([id,s])=>(ids[s]=ids[s]||[]).push(id));
+  const st=s=>tq[s]&&tq[s].s?Object.keys(tq[s].s).length:0, done=s=>!!(tq[s]&&tq[s].done)||!!(ids[s]&&ids[s].every(id=>c.done[id]));
+  const sc=r=>{ const rec=r[3]||r[2]||0; return (rec>L?(rec-L)*2:L-rec)+(GCAT[r[5]]??30)-(st(r[0])?1e4:0); };
+  return GUIAS.g.filter(r=>r[2]<=L&&r[5]!=="tutorial"&&r[6]!=="Rookgaard"&&r[6]!=="Dawnport"&&!done(r[0])).sort((a,b)=>sc(a)-sc(b)||a[1].localeCompare(b[1])).slice(0,n).map(r=>({r,st:st(r[0])})); }
+function renderGuiasHome(){ const el=$("homeGuias"), c=C(); if(!el||!c) return; el.parentElement.hidden=!GUIAS.g.length; if(!GUIAS.g.length) return;
+  const list=guiasFor(c,4);
+  el.innerHTML=`<div class="hg-h"><h3 style="font-size:20px">Guias de quests</h3><a class="hg-all" href="quests/">Ver todos os guias ›</a></div>
+    <p class="small muted">Passo a passo no Questski, escolhidos para o nível ${c.level}.</p>
+    ${list.length?`<ul class="hg-l">${list.map(({r,st})=>{ const lv=r[3]||r[2]; return `<li><a class="hg" href="${guiaHref(r[0])}" title="Nível mínimo ${r[2]||"—"} · recomendado ${r[3]||"—"}"><span class="hg-lv"${lv?"":' data-none="1"'}><b>${lv||"—"}</b><small>nível</small></span><span class="hg-tx"><b>${esc(r[1])}</b><small>${r[6]?`${esc(r[6])} · `:""}${st?`${st} de ${r[7]} passos feitos`:`${r[7]} passos`}</small></span><span class="hg-go" aria-hidden="true">›</span></a></li>`; }).join("")}</ul>`
+      :`<p class="small" style="margin:0">Já fizeste os guias que sugerimos para o teu nível.</p>`}`; }
 $("calcHunt").onchange=e=>{C().hunt=e.target.value;save();renderInicio();};
 $("tgtIn").onchange=e=>{C().target=Math.max(C().level+1,parseInt(e.target.value,10)||C().level+1);save();renderInicio();};
 $("bonusSel").onchange=e=>{C().bonus=e.target.value;save();renderInicio();};
@@ -45562,7 +45644,7 @@ function renderQuests(){
   $("questBar").style.width=(av.length?dn/av.length*100:0)+"%"; $("questBar").classList.toggle("zero", !(av.length&&dn));
   $("questGroups").innerHTML = QG.map(g=>{ const list=G.quests.filter(q=>q.s===g.k && pass(q)).sort((a,b)=>a.l-b.l), todo=G.quests.filter(q=>q.s===g.k&&q.l<=L&&!c.done[q.id]).length;
     return `<details class="qgroup" data-qg="${g.k}" ${g.k==="party"?"":"open"}><summary><span>${g.t}</span><span class="tag">${todo} por fazer</span></summary>${list.length?`<div class="qgrid">${list.map(q=>{ const lk=q.l>L, oh=opensHunt[q.id];
-      return `<div class="q ${c.done[q.id]?"done":""} ${lk?"locked":""}${QPOP===q.id&&c.done[q.id]?" qpop":""}"><label class="qchk"><input type="checkbox" data-q="${q.id}" ${c.done[q.id]?"checked":""} aria-label="Marcar ${esc(q.n)} como feita"></label><div><h5><button class="qtitle" data-qopen="${q.id}">${esc(q.n)}</button></h5><p>${elinkTxt(q.d)} <b style="color:var(--ink-2);font-weight:500">Desbloqueia:</b> ${elinkTxt(q.u)}</p><div class="meta"><span class="tag">nível ${q.l}</span>${q.st?`<span class="stars" title="História">${"★".repeat(q.st)}${"☆".repeat(3-q.st)}</span>`:""}${oh?`<span class="tag ok">abre ${oh.length} ${oh.length===1?"hunt":"hunts"}</span>`:""}${lk?`<span class="tag">faltam ${q.l-L}</span>`:""}${c.qp&&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class="tag acc">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:""}<button class="btn small ghost" data-qopen="${q.id}">Lore e guia ›</button></div></div></div>`; }).join("")}</div>`:'<p class="muted small" style="padding:8px 0 14px">Nada com este filtro.</p>'}</details>`; }).join("");
+      return `<div class="q ${c.done[q.id]?"done":""} ${lk?"locked":""}${QPOP===q.id&&c.done[q.id]?" qpop":""}"><label class="qchk"><input type="checkbox" data-q="${q.id}" ${c.done[q.id]?"checked":""} aria-label="Marcar ${esc(q.n)} como feita"></label><div><h5><button class="qtitle" data-qopen="${q.id}">${esc(q.n)}</button></h5><p>${elinkTxt(q.d)} <b style="color:var(--ink-2);font-weight:500">Desbloqueia:</b> ${elinkTxt(q.u)}</p><div class="meta"><span class="tag">nível ${q.l}</span>${q.st?`<span class="stars" title="História">${"★".repeat(q.st)}${"☆".repeat(3-q.st)}</span>`:""}${oh?`<span class="tag ok">abre ${oh.length} ${oh.length===1?"hunt":"hunts"}</span>`:""}${lk?`<span class="tag">faltam ${q.l-L}</span>`:""}${c.qp&&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class="tag acc">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:""}<button class="btn small ghost" data-qopen="${q.id}">Lore e guia ›</button>${guiaBtn(guiaOf(q.id))}</div></div></div>`; }).join("")}</div>`:'<p class="muted small" style="padding:8px 0 14px">Nada com este filtro.</p>'}</details>`; }).join("");
 }
 $("questGroups").addEventListener("click", e=>{ const b=e.target.closest("[data-qopen]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
 $("questGroups").addEventListener("change", e=>{ const id=e.target.dataset && e.target.dataset.q; if(!id) return; const c=C(); if(e.target.checked){ c.done[id]=true; QPOP=id; } else delete c.done[id]; save(); renderQuests(); QPOP=""; renderInicio(); renderHunts(); const nb=$("questGroups").querySelector(`[data-q="${CSS.escape(id)}"]`); if(nb) try{ nb.focus({preventScroll:true}); }catch(x){} });
@@ -46256,7 +46338,7 @@ async function renderItemPage(key){
   const dtr=d=>`<tr><td><a class="pt-i" href="${monHref(d.k)}">${crSpr(d.k,32)}<span>${esc(d.n)}${d.boss?' <span class="tag gold">boss</span>':""}<span class="pt-s">${d.xp?nf(d.xp)+" XP":""}${d.amt?` · ${esc(d.amt)} por drop`:""}</span></span></a></td><td class="num">${d.pct!=null?pctTxt(d.pct):d.rar?esc(rarTxt(d.rar)):"—"}</td></tr>`;
   const dropT=list=>`<table class="pt"><thead><tr><th>Criatura</th><th class="num">Chance</th></tr></thead><tbody>${list.map(dtr).join("")}</tbody></table>`;
   const huntP = [...new Set(drops.filter(d=>!d.boss).slice(0,8).flatMap(d=>huntsWith(d.k)))];
-  const quests=(info.quest||[]).map(t=>{ const q=G.quests.find(x=>x.w&&x.w.replace(/_/g," ").toLowerCase()===String(t).toLowerCase()); return q?`<button type="button" class="btn small ghost" data-qopen2="${q.id}">${esc(q.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(String(t).toLowerCase())}">${esc(String(t).replace(/ Quest$/,""))}</button>`; });
+  const quests=(info.quest||[]).map(t=>{ const q=G.quests.find(x=>x.w&&x.w.replace(/_/g," ").toLowerCase()===String(t).toLowerCase()); return guiaPair(q?`<button type="button" class="btn small ghost" data-qopen2="${q.id}">${esc(q.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(String(t).toLowerCase())}">${esc(String(t).replace(/ Quest$/,""))}</button>`, guiaOf(q&&q.id,t)); }); // r7: + guia do Questski
   const alts = eq && c ? (()=>{ const set={mode:"combat",prot:"",slots:{}}; const r=ranked(c,eq.s,"combat","",it=>it.id!==eq.id && !it.ns && Math.abs((it.l||0)-(eq.l||0))<=60,set).slice(0,6); return r.length?`<div class="mlist">${r.map(x=>`<a class="altit" href="${itemHref(x.it.n)}">${spr(x.it)}<span><b>${esc(x.it.n)}</b><span class="tiny muted">nível ${x.it.l||0} · ${esc(statLine(x.it))}</span></span></a>`).join("")}</div>`:""; })() : "";
   // como se obtém: quest, criaturas, NPCs
   const get = [quests.length?`<div class="ip-get"><h4 class="sub">Recompensa de quest</h4><div class="pills">${quests.join("")}</div></div>`:"",
@@ -46332,7 +46414,7 @@ const CPTR = {fire:"fogo",energy:"energia",poison:"veneno",earth:"terra",ice:"ge
 const cpTr = s => String(s||"").split(/,\s*/).map(x=>CPTR[x.trim().toLowerCase()]||x.trim()).filter(Boolean).join(", ");
 async function renderMonPage(key){
   const el=$("monPage"); el.innerHTML=`<p class="tkload">A carregar a criatura…</p>`;
-  const [crs,items,sp,cinf,qs]=await Promise.all([dsafe("creatures"),dsafe("items"),dsafe("spawns"),dsafe("crinfo"),dsafe("quests")]);
+  const [crs,items,sp,cinf,qs]=await Promise.all([dsafe("creatures"),dsafe("items"),dsafe("spawns"),dsafe("crinfo"),dsafe("quests"),guiasLoad()]);
   const cr=crs[key]||{}, g=G.mon[key], ci=cinf[key]||{}, c=C(), vd=c?G.voc[c.voc]:null;
   if(!crs[key] && !g){ el.innerHTML=pageHead("Criatura","Criatura não encontrada","",null)+`<p class="muted">Não temos esta criatura na base.</p>`; return; }
   const name=cr.n||g[0], hp=cr.hp||(g?g[1]:0), xp=cr.xp||(g?g[2]:0), cls=cr.cls||monCls(key), boss=!!(cr.boss||(g&&g[7]));
@@ -46365,7 +46447,7 @@ async function renderMonPage(key){
   const hp_=huntsWith(key);
   const where = `${hp_.length&&c?`<div class="hunts">${huntCardsFor(hp_,8)}</div>`:""}${areas?`<h4 class="sub">Zonas de spawn no mapa</h4><div class="spw">${areas}</div>`:""}${cr.loc?`<p class="small" style="margin:10px 0 0">${esc(cr.loc)}</p>`:""}` || `<p class="small muted">Sem zonas conhecidas.</p>`;
   const nmL=String(name).toLowerCase(), qIn=Object.entries(qs).filter(([k,q])=>(q.boss||[]).concat(q.dangers||[]).some(x=>String(x).toLowerCase()===nmL)).map(([k,q])=>[k,(q.boss||[]).some(x=>String(x).toLowerCase()===nmL)]);
-  const qBtn=(nm)=>{ const gq=G.quests.find(x=>fold(x.n)===fold(nm)||fold((x.w||"").replace(/_/g," "))===fold(nm)||fold(x.n)===fold(String(nm).replace(/ Quest$/,""))); return gq?`<button type="button" class="btn small ghost" data-qopen2="${gq.id}">${esc(gq.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(nm.toLowerCase())}">${esc(nm.replace(/ Quest$/,""))}</button>`; };
+  const qBtn=(nm)=>{ const gq=G.quests.find(x=>fold(x.n)===fold(nm)||fold((x.w||"").replace(/_/g," "))===fold(nm)||fold(x.n)===fold(String(nm).replace(/ Quest$/,""))); return guiaPair(gq?`<button type="button" class="btn small ghost" data-qopen2="${gq.id}">${esc(gq.n)}</button>`:`<button type="button" class="btn small ghost" data-gs="q:w:${esc(nm.toLowerCase())}">${esc(nm.replace(/ Quest$/,""))}</button>`, guiaOf(gq&&gq.id,nm)); }; // r7: + guia do Questski
   const acc=[...new Set(hp_.map(pid=>{ const p=G.places[pid]; return p&&(p.q&&QBY[p.q]?QBY[p.q].n:p.qn)||null; }).filter(Boolean))];
   const questHTML = (qIn.length?`<h4 class="sub" style="margin-top:0">Aparece nestas quests</h4><div class="pills">${qIn.map(([k,b])=>qBtn(k)+(b?' <span class="tag gold">boss</span>':"")).join("")}</div>`:"")
     + (acc.length?`<h4 class="sub">Para lá chegar</h4><p class="small" style="margin:0 0 6px">Algumas zonas onde aparece pedem uma quest:</p><div class="pills">${acc.map(qBtn).join("")}</div>`:"")
@@ -46568,7 +46650,7 @@ function route(){ HFRDY=true; HFMISS=""; const raw=(location.hash||"").slice(1);
   if((m=h.match(/^(feitico|npc|conquista|montaria|outfit)\/(.+)$/i))){ openWiki(m[1].toLowerCase(),m[2]); return true; }
   if((m=h.match(/^hunts\/(cidade|tipo)\/(.+)$/i))){ hfRoute(m[1].toLowerCase(),m[2]); return true; } // r5-t2
   const hl=h.toLowerCase();
-  if(hl && SECS.some(s=>s.subs.some(x=>x[0]===hl))){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); hfHash(); return true; } hfHash(); return false; }
+  if(hl && isPanel(hl)){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); hfHash(); return true; } hfHash(); return false; }
   // endereço que não corresponde a nada ('#item/', '#xyz'): o hash volta a ser o da página à vista (ou o Início, se era uma página interna)
   if(h && h!==ST.ui.p){ const det=["item","criatura","wiki2"].includes(ST.ui.p); history.replaceState(history.state,"","#"+(det?"inicio":ST.ui.p)); if(det) go("inicio"); else hfHash(); }
   return false; }
@@ -46602,12 +46684,13 @@ function renderAll(){
     renderChars(); $("obHost").innerHTML = manual ? formHTML(false) : lookHTML(false); $("formHost").innerHTML=""; renderNav(); return; }
   $("obHost").innerHTML="";
   renderChars(); renderNav(); renderHero(); renderInicio(); renderHunts(); renderRotation(); renderHotkeys(); renderWheel(); renderEquip(); renderCharms(); renderImbu(); renderQuests(); renderDefesa(); renderPerso(); renderTasks(); if(ST.ui.p==="feiticos"&&WLS.sp) renderSpellList(); }
-if (!SECS.some(s=>s.subs.some(x=>x[0]===ST.ui.p))) ST.ui.p="inicio";
-const hash = (location.hash||"").slice(1).replace(/[?&].*$/,"").toLowerCase(); if (hash && SECS.some(s=>s.subs.some(x=>x[0]===hash))) ST.ui.p=hash;
+if (!isPanel(ST.ui.p)) ST.ui.p="inicio";
+const hash = (location.hash||"").slice(1).replace(/[?&].*$/,"").toLowerCase(); if (hash && isPanel(hash)) ST.ui.p=hash;
 document.body.appendChild($("sheet")); // r2-t5: o painel fica no body (no Modern o main cria um contexto de empilhamento e a barra inferior ficava por cima)
 try{ if(!(history.state&&typeof history.state.gd==="number")) history.replaceState(Object.assign({},history.state,{gd:0}),""); if(history.state.sheet) history.replaceState(Object.assign({},history.state,{sheet:0}),""); NAVD=history.state.gd; }catch(e){} // recarregar a meio não perde a profundidade
 rebuildIndex(); // r3-t5: o BYID (look dos itens) também para o visitante; com personagem o Equipamento e o BiS voltam a montá-lo
 renderAll();
+guiasLoad().then(()=>{ if(!ST.chars.length) return; renderQuests(); renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
 bootSync();
 route(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
 setUI(isMd()?"modern":"original", false);
