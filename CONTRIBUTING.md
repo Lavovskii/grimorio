@@ -49,3 +49,16 @@ python -I -c "import sys;s=open('index.html',encoding='utf-8').read();a=s.index(
 - Telemóvel: a 375 px sem scroll para o lado e toques de 44 px.
 - Texto para o jogador em português de Portugal, curto e claro.
 - Sem links para outros sites no conteúdo: itens, criaturas, NPCs e feitiços abrem páginas internas.
+
+## 5. Questski (guias de quests)
+
+- O site está em `quests/` e a fonte em `_questski/` (guias em `guides/`, um JSON por quest; fichas de locais em `places/`).
+  O formato dos guias está em `_questski/tools/GUIDE_FORMAT.md`; o dos locais em `_questski/tools/PLACES_FORMAT.md`.
+- Depois de mudar um guia: `python _questski/tools/validate.py <ficheiro>`, `python _questski/tools/build.py`
+  e `python -I _dev/build_guias.py` (volta a ligar os guias às quests do Grimório).
+- Testar: `export MSYS_NO_PATHCONV=1` e depois
+  `node _dev/smoke.mjs --url http://localhost/grimorio/quests/ --hash "/quest/<slug>" [--mode original] [--w 375 --h 812]`.
+- O Modern do Questski está em `quests/css/modern.css` (tudo começa por `html[data-ui="modern"]`); o Original é o
+  `quests/css/style.css`, com o tema claro/escuro do próprio Questski.
+- A ligação ao Grimório (personagem, quests concluídas, links) está em `quests/js/ponte.js`; o switch do topo em `shared/sites.css`.
+  Se mudares o formato do estado do Grimório (`grimorio-tibia-v4`), atualiza também o `ponte.js`.

@@ -1,13 +1,21 @@
 # Tibia Questski
 
+> **Faz parte do Grimório de Tibia.** O site do Questski está em `quests/` na raiz do repositório
+> (endereço `/grimorio/quests/`, com o switch Grimório ⇄ Questski no topo) e esta pasta, `_questski/`,
+> tem a fonte: os guias (`guides/`), as fichas de locais (`places/`) e as ferramentas (`tools/`).
+> O `.htaccess` desta pasta não a deixa ver de fora. A ligação ao Grimório está explicada no fim deste ficheiro.
+
 Guias passo-a-passo, em português, de todas as quests do Tibia que se podem começar até ao nível 100
 (requisito de nível ≤ 100 ou sem requisito),
 com mini-mapas, coordenadas, mapa interativo, capturas de ecrã, diálogos dos NPCs e progresso guardado.
 
 ## Abrir o site
 
-Duplo clique em `start.bat`: abre o site em <http://localhost:8080> e deixa uma janela aberta a servi-lo
-(fecha-a para desligar). Usa o Python 3 se estiver instalado (`serve.py`); se não estiver, usa o servidor em
+Com o Apache do XAMPP ligado (como o resto do Grimório): <http://localhost/grimorio/quests/>.
+
+Sem o XAMPP: duplo clique em `start.bat`. Serve a pasta do repositório inteira em <http://localhost:8080>
+(Grimório em `/`, Questski em `/quests/`, que abre logo) e deixa uma janela aberta a servi-lo
+(fecha-a para desligar). Os preços do Market do Grimório precisam do PHP do XAMPP. Usa o Python 3 se estiver instalado (`serve.py`); se não estiver, usa o servidor em
 PowerShell que já vem com o Windows (`serve.ps1`), por isso funciona em qualquer PC com Windows sem instalar nada.
 Abrir o `index.html` diretamente não funciona, porque os dados são carregados por `fetch`.
 
@@ -45,12 +53,15 @@ e depois Importar no outro.
 ## Estrutura
 
 ```
-site/              o site estático (index.html, css/, js/, data/, assets/)
-  data/            gerado pelo build: index.json, quests/<slug>.json, images.json, npcs.json
-  assets/map/      pisos do mapa do Tibia (TibiaMaps)
-  assets/wiki/     sprites e capturas descarregadas da TibiaWiki
-guides/            os guias escritos (um JSON por quest) — a fonte de verdade do conteúdo
-tools/             scripts para atualizar os dados
+quests/                (na raiz do repositório) o site estático: index.html, css/, js/, data/, assets/
+  js/app.js            a app (vanilla JS, rotas #/...)
+  js/ponte.js          ligação ao Grimório (personagem, quests concluídas, links para a wiki do Grimório)
+  data/                gerado pelo build: index.json, quests/<slug>.json, images.json, npcs.json, wiki/
+  assets/map/          pisos do mapa do Tibia (TibiaMaps)
+  assets/wiki/         sprites e capturas descarregadas da TibiaWiki
+_questski/guides/      os guias escritos (um JSON por quest) — a fonte de verdade do conteúdo
+_questski/places/      as fichas de locais (como chegar / como sair)
+_questski/tools/       scripts para atualizar os dados (escrevem em ../quests/)
 ```
 
 ## Atualizar os dados
@@ -60,7 +71,8 @@ python tools/fetch_wiki.py      # descarrega as páginas das quests da TibiaWiki
 python tools/fetch_npcs.py      # posições de todos os NPCs
 python tools/prepare_briefs.py  # gera os "briefs" (fonte para escrever/rever guias)
 python tools/validate.py --all  # valida todos os guias em guides/
-python tools/build.py           # gera site/data e descarrega as imagens novas
+python tools/build.py           # gera quests/data e descarrega as imagens novas
+python -I ../_dev/build_guias.py  # volta a ligar os guias às quests do Grimório (data/guias.json)
 ```
 
 O formato dos guias está descrito em `tools/GUIDE_FORMAT.md`.
@@ -73,7 +85,7 @@ coordenadas, NPCs que o vendem/compram (com a posição no mapa), criaturas que 
 vida, experiência e locais de spawn, e locais exatos indicados na wiki.
 
 ```bash
-python tools/build_wiki.py            # descarrega o que falta da TibiaWiki e gera site/data/wiki/
+python tools/build_wiki.py            # descarrega o que falta da TibiaWiki e gera quests/data/wiki/
 python tools/build_wiki.py --offline  # só volta a processar o que já está em cache
 ```
 
@@ -91,7 +103,7 @@ e `tools/TRAVEL_PASS.md` explica como documentar "como chegar" e "como sair" de 
 
 ## Logótipo
 
-A arte original está em `site/assets/logo-original.webp`. A partir dela, `tools/make_logo_assets.py` gera
+A arte original está em `quests/assets/logo-original.webp`. A partir dela, `tools/make_logo_assets.py` gera
 o logótipo com fundo transparente (`logo-full.webp`, página inicial), a versão sem letras para a barra de topo
 (`logo-mark.webp`) e os ícones (`favicon.png`, `apple-touch-icon.png`). Para trocar de logótipo:
 
@@ -103,3 +115,23 @@ python tools/make_logo_assets.py caminho/para/nova-arte.png
 
 Conteúdo baseado na [TibiaWiki](https://tibia.fandom.com/) (CC BY-SA). Mapa de [TibiaMaps.io](https://tibiamaps.io/).
 Tibia é uma marca da CipSoft GmbH; este é um projeto de fãs sem afiliação.
+
+## Ligação ao Grimório
+
+O Questski e o Grimório estão no mesmo endereço, por isso partilham o `localStorage` do browser:
+
+- **Switch no topo** (`shared/sites.css`, igual nos dois sites) e transição suave entre eles. Numa página da wiki que
+  também existe no Grimório (item, criatura, NPC, feitiço, conquista), o switch e o botão "Ver no Grimório" abrem essa página lá.
+- **Aspeto**: o Original/Modern escolhido no rodapé de qualquer um dos dois vale para os dois (chave `grimorio-ui`).
+- **Personagem**: o filtro "O meu nível" usa sozinho o nível da personagem ativa do Grimório (`grimorio-tibia-v4`),
+  até escreveres outro nível.
+- **Quests concluídas**: marcar uma quest como concluída aqui marca-a também na personagem ativa do Grimório, quando a
+  quest existe lá (e vice-versa). A correspondência está em `data/guias.json` (campo `q2s`), gerado por
+  `python -I _dev/build_guias.py` a partir de `quests/data/index.json` e das quests do Grimório.
+- **No Grimório**: a pesquisa global encontra os guias, e as quests, as hunts e as criaturas têm botões para o guia.
+
+Notas para quem continua o trabalho:
+- `tools/cache/` não vai para o Git (é a cache da TibiaWiki): `python tools/fetch_wiki.py` e `python tools/fetch_npcs.py`
+  voltam a criá-la antes de `validate_places.py`, `prepare_briefs.py` e `build.py`.
+- `python tools/validate.py --all` dá avisos em ~127 guias por imagens de rotas que não estão nos "briefs"
+  (vêm das fichas de locais); já estava assim antes da junção.

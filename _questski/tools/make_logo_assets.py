@@ -12,7 +12,7 @@ from collections import deque
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "site", "assets")
+OUT = os.path.join(os.path.dirname(ROOT), "quests", "assets")
 BG_MAX = 26          # a pixel this dark (every channel) that touches the border counts as background
 EDGE_MAX = 70        # darker edge pixels next to the background get partial transparency
 

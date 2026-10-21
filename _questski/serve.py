@@ -1,11 +1,12 @@
-"""Serve Tibia Questski on http://localhost:8080  (usage: python serve.py [port])"""
+"""Serve o Grimório e o Questski em http://localhost:8080 (Questski em /quests/) sem o XAMPP  (usage: python serve.py [port])
+Sem PHP: os preços do Market do Grimório (api/market.php) só funcionam com o Apache do XAMPP."""
 import functools
 import http.server
 import os
 import sys
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
-SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "site")
+SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # a raiz do repositório (grimorio/)
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -24,5 +25,5 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     handler = functools.partial(Handler, directory=SITE)
     with http.server.ThreadingHTTPServer(("127.0.0.1", PORT), handler) as httpd:
-        print(f"Tibia Questski a correr em http://localhost:{PORT}  (Ctrl+C para parar)")
+        print(f"Grimório em http://localhost:{PORT}/ e Questski em http://localhost:{PORT}/quests/  (Ctrl+C para parar)")
         httpd.serve_forever()

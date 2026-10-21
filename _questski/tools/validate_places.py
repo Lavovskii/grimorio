@@ -16,7 +16,7 @@ KEYS = {"title", "type", "near", "summary", "entrance", "requirements", "items",
 
 
 def known_images():
-    path = os.path.join(ROOT, "site", "data", "images.json")
+    path = os.path.join(os.path.dirname(ROOT), "quests", "data", "images.json")
     names = set(json.load(open(path, encoding="utf-8"))) if os.path.exists(path) else set()
     return names | EXTRA_IMAGES
 

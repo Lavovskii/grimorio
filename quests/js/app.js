@@ -124,6 +124,8 @@
     route: { name: "home", args: [] },
   };
   const saveFilters = () => { const f = Object.assign({}, S.filters); delete f.q; save("tq-filters", f); };
+  // ponte com o Grimório (js/ponte.js): personagem ativa, quests concluídas nos dois sites, links para as páginas de lá
+  const QP = window.QPonte || { load: () => Promise.resolve(), char: () => null, grimDone: () => false, setGrimDone: () => false, grimHref: async () => null, paired: () => false };
 
   // internal wiki ------------------------------------------------------------
   function wikiEntry(title) {
@@ -214,7 +216,7 @@
     save("tq-progress", S.progress);
   }
   const stepsDone = (slug) => Object.keys(prog(slug).s || {}).length;
-  const isDone = (slug) => !!prog(slug).done;
+  const isDone = (slug) => !!prog(slug).done || QP.grimDone(slug);
   const pct = (q) => isDone(q.slug) ? 100 : q.steps ? Math.round((stepsDone(q.slug) / q.steps) * 100) : 0;
 
   // ---------------------------------------------------------------- rich text
@@ -307,6 +309,8 @@
       <details class="filters" ${f.open ? "open" : ""}>
         <summary class="filter-summary"><span><b id="fcount"></b></span><span class="link-btn">Filtros</span></summary>
         <div style="margin-top:10px">
+          ${(() => { const ch = QP.char(); return ch ? `<div class="filter-row gp-char"><span class="gp-voc">${esc(ch.vn)}</span><span class="gp-nm"><b>${esc(ch.name)}</b> · nível ${ch.level}</span>${f.level === ch.level && f.lvlChar ? `<span class="muted gp-on">nível da tua personagem</span>` : `<button class="link-btn" data-gpchar>usar este nível</button>`}</div>`
+            : `<div class="filter-row gp-char muted">Junta a tua personagem no <a href="../#inicio">Grimório</a> e o nível dela entra aqui sozinho.</div>`; })()}
           <div class="filter-row">
             <span class="filter-label">O meu nível</span>
             <input class="input level-input" id="fLevel" type="number" min="1" max="2000" placeholder="ex. 45" value="${f.level || ""}">
@@ -349,15 +353,17 @@
         const c = b.dataset.cat, cats = S.filters.cats;
         S.filters.cats = cats.includes(c) ? cats.filter((x) => x !== c) : cats.concat(c);
       } else if (b.id === "fReset") {
-        Object.assign(S.filters, { q: "", level: null, onlyAvail: false, prem: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec" });
+        Object.assign(S.filters, { q: "", level: null, lvlChar: false, onlyAvail: false, prem: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec" });
         $("#search").value = "";
+      } else if ("gpchar" in b.dataset) {
+        const ch = QP.char(); if (ch && ch.level) { S.filters.level = ch.level; S.filters.lvlChar = true; }
       } else if ("regionClear" in b.dataset) {
         S.filters.region = ""; S.filters.regionMain = true;
       } else return;
       filtersChanged(true);
     });
     box.addEventListener("input", (e) => {
-      if (e.target.id === "fLevel") { const v = parseInt(e.target.value, 10); S.filters.level = v > 0 ? v : null; filtersChanged(false); }
+      if (e.target.id === "fLevel") { const v = parseInt(e.target.value, 10); S.filters.level = v > 0 ? v : null; S.filters.lvlChar = false; filtersChanged(false); }
     });
     box.addEventListener("change", (e) => {
       if (e.target.id === "fAvail") S.filters.onlyAvail = e.target.checked;
@@ -715,6 +721,7 @@
       e.preventDefault();
       const v = parseInt($("#heroLevel").value, 10);
       S.filters.level = v > 0 ? v : null;
+      S.filters.lvlChar = false;
       S.filters.onlyAvail = !!S.filters.level;
       saveFilters(); renderFilters(); renderList();
       location.hash = "#/quests";
@@ -1025,7 +1032,7 @@
         <div class="qtab-body" id="qtabBody">${tab === "guia" ? guideTab(d) : tab === "preparacao" ? prepTab(d) : tab === "recompensas" ? rewardsTab(d) : mapTab(d)}</div>
       </article>`;
     hydrateMinimaps(view());
-    $("#toggleDone").onclick = () => { const pp = prog(slug); pp.done = !pp.done; setProg(slug, pp); toast(pp.done ? "Quest marcada como concluída!" : "Quest desmarcada"); rerenderQuest(); };
+    $("#toggleDone").onclick = () => { const pp = prog(slug), v = !isDone(slug); pp.done = v; setProg(slug, pp); const g = QP.setGrimDone(slug, v); toast(v ? (g ? "Quest concluída, também no Grimório!" : "Quest marcada como concluída!") : "Quest desmarcada"); rerenderQuest(); };
     $$("[data-mark-done]").forEach((b) => (b.onclick = () => $("#toggleDone").click()));
     // unroll the reward scroll when it comes into view
     $$(".quest-scroll:not(.unrolled)").forEach((el) => {
@@ -1091,6 +1098,7 @@
     const wasDone = p.done;
     if (meta.steps && n >= meta.steps) p.done = true;
     setProg(slug, p);
+    if (p.done && !wasDone) QP.setGrimDone(slug, true);
     const el = $(`[data-step="${id}"]`);
     if (el) {
       el.classList.toggle("checked", on);
@@ -1266,7 +1274,7 @@
         <header class="box wiki-head"><div class="box-body">
           <span class="slot wiki-sprite">${p.i ? `<img src="${p.i}" alt="">` : icon(kind[1])}</span>
           <div style="min-width:0">
-            <div class="meta"><a class="chip" href="#/wiki">${icon("book")}Wiki</a><span class="chip chip-cat">${icon(kind[1])}${kind[0].replace(/s$/, "")}</span></div>
+            <div class="meta"><a class="chip" href="#/wiki">${icon("book")}Wiki</a><span class="chip chip-cat">${icon(kind[1])}${kind[0].replace(/s$/, "")}</span><a class="chip chip-grim" id="grimLink" hidden title="Preço no Market, onde cai, hunts e mais, no Grimório">${icon("ext")}Ver no Grimório</a></div>
             <h1>${esc(p.t)}</h1>
             <div class="hero-actions">
               <button class="btn btn-ghost btn-sm" id="wikiBack">‹ Voltar</button>
@@ -1294,6 +1302,7 @@
       </article>`;
     translateWiki($(".wiki-content"));
     hydrateMinimaps(view());
+    QP.grimHref(p.k, p.t).then((h) => { const a = $("#grimLink"), sw = $("#swGrimorio"); if (!h || !a || S.route.name !== "wiki") return; a.href = h; a.hidden = false; if (sw) sw.href = h; });
     $("#wikiBack").onclick = () => (history.length > 1 ? history.back() : (location.hash = "#/wiki"));
     $$(".wiki-content img").forEach((img) => (img.onerror = () => img.remove()));
   }
@@ -1442,6 +1451,7 @@
     const prev = S.route;
     S.route = parseRoute();
     document.body.classList.remove("drawer-open");
+    const sw = $("#swGrimorio"); if (sw) sw.href = "../";
     $$("#mainnav a").forEach((a) => a.classList.toggle("active", a.dataset.nav === (S.route.name === "quest" ? "quests" : S.route.name)));
     if (S.route.name !== "quest") { delete view().dataset.slug; document.title = "Tibia Questski"; }
     if (questMap && !(S.route.name === "quest" && S.route.args[1] === "mapa")) { questMap.map.remove(); questMap = null; }
@@ -1560,6 +1570,15 @@
       else if (e.key === "Enter" && e.target.matches(".minimap")) e.target.click();
     });
     window.addEventListener("hashchange", render);
+    // o Grimório aberto noutro separador mudou de personagem ou marcou quests: atualiza o nível e as concluídas
+    const grimSig = () => { const ch = QP.char(); return ch ? ch.name + "|" + ch.level + "|" + S.quests.filter((q) => QP.grimDone(q.slug)).length : ""; };
+    let lastSig = grimSig();
+    window.addEventListener("storage", (e) => {
+      if (e.key !== "grimorio-tibia-v4" || grimSig() === lastSig) return;
+      lastSig = grimSig();
+      const ch = QP.char(); if (ch && ch.level && S.filters.lvlChar) S.filters.level = ch.level;
+      const y = window.scrollY; renderFilters(); render(); window.scrollTo(0, y);
+    });
   }
 
   // ---------------------------------------------------------------- boot
@@ -1586,6 +1605,9 @@
       S.wiki.alias = wiki.alias || {};
       wiki.pages.forEach((p) => (S.wiki.byLower[p.t.toLowerCase()] = p));
       S.tabs = S.tabs.filter((s) => S.bySlug[s]);
+      await QP.load();
+      const ch = QP.char();
+      if (ch && ch.level && (S.filters.level == null || S.filters.lvlChar)) { S.filters.level = ch.level; S.filters.lvlChar = true; }
     } catch (e) {
       view().innerHTML = `<div class="note-box"><b>Não foi possível carregar os dados.</b><br>Abre o site através do servidor local (<code>python serve.py</code>) e não diretamente pelo ficheiro.<br><span class="muted">${esc(e.message)}</span></div>`;
       return;

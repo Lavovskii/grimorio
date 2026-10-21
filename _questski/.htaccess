@@ -1,0 +1,5 @@
+Require all denied
+# O .htaccess da raiz deixa ler os *.json (para a pasta data/); aqui dentro nada é público
+<FilesMatch "\.json$">
+	Require all denied
+</FilesMatch>

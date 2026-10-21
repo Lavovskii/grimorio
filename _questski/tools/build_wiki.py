@@ -28,7 +28,7 @@ from wiki_extract import build_howto, extract, guide_item_refs, mapper_coord
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "tools", "cache")
 RAW = os.path.join(CACHE, "wiki_html")
-OUT = os.path.join(ROOT, "site", "data", "wiki")
+OUT = os.path.join(os.path.dirname(ROOT), "quests", "data", "wiki")
 TOKEN_RE = re.compile(r"\{(npc|item|creature|spell|wiki):([^{}|]+)")
 INVISIBLE = re.compile("[​-‏‪-‮⁠﻿]")
 IMG_URL_RE = re.compile(r"/tibia/images/[0-9a-f]/[0-9a-f]{2}/([^/?]+)")
@@ -398,7 +398,7 @@ def main():
                   separators=(",", ":"))
 
     alias_out = {a.lower(): c for a, c in aliases.items() if c in pages and a.lower() != c.lower()}
-    json.dump({"pages": index, "alias": alias_out}, open(os.path.join(ROOT, "site", "data", "wiki-index.json"),
+    json.dump({"pages": index, "alias": alias_out}, open(os.path.join(os.path.dirname(ROOT), "quests", "data", "wiki-index.json"),
                                                          "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     kinds = {}
     for e in index:

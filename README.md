@@ -2,6 +2,14 @@
 
 Site de fãs de Tibia, em português de Portugal, centrado em **hunts solo por vocação**: que hunt fazer ao teu nível, com que set, que elemento usar, quanto rende, como lá chegar. Inclui também uma wiki interna (itens, criaturas, feitiços, NPCs, conquistas, montarias, outfits), equipamento e sets, rotação, hotkeys, Wheel, charms, imbuements e quests. Tem dois aspetos: **Original** e **Modern**, que se escolhe no rodapé.
 
+Junta dois sites num só, com um switch no topo para passar de um para o outro:
+
+- **Grimório** (`/grimorio/`): hunts, builds, equipamento, Wheel, charms, wiki com preços do Market.
+- **Questski** (`/grimorio/quests/`): guias passo a passo das quests até ao nível 100, com mapa, acessos e wiki própria.
+
+Os dois partilham o aspeto (Original/Modern), a personagem ativa e as quests concluídas, e ligam-se entre si
+(a pesquisa do Grimório encontra os guias; a wiki do Questski abre as páginas do Grimório).
+
 Endereço público (servidor de casa): `http://<IP>/grimorio/`
 
 ## Como pôr a correr no teu PC
@@ -25,6 +33,11 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
 | `maps/` | Mapa do jogo por piso (`floor-XX-map.png`, 1 px = 1 casa, origem 31744,30976). |
 | `api/market.php` | Proxy do TibiaMarket (cache de 6 h em `api/cache/`, que não vai para o Git). |
 | `_dev/` | Ferramentas e guia técnico. O `.htaccess` bloqueia esta pasta ao público. |
+| `quests/` | O site do **Questski** (app própria: `index.html`, `js/app.js`, `js/ponte.js`, `css/`, `data/`, `assets/`). |
+| `_questski/` | A fonte do Questski: guias (`guides/`), fichas de locais (`places/`) e ferramentas (`tools/`). Bloqueada ao público. Ver `_questski/README.md`. |
+| `shared/sites.css` | O switch Grimório ⇄ Questski, igual nos dois sites, e a transição entre eles. |
+| `data/guias.json` | Os guias do Questski e a ligação às quests do Grimório (gerado por `_dev/build_guias.py`). |
+| `data/wheel.json` | As 36 fatias da Wheel por vocação e os pontos de cada build (gerado por `_dev/build_wheel.py`). |
 
 **Antes de mexer no código, lê `_dev/GRIMORIO.md`.** Explica os dados, as funções principais e as regras que já nos custaram bugs: nomes de funções únicos, ordem de arranque, os dois modos, telemóvel, PT-PT e sem links externos.
 
@@ -38,6 +51,8 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
 - `fix_hunt_mons.py`: refaz as criaturas e as quantidades de cada hunt (`G.pm`) a partir da lista curada (`G.places[pid].mons`).
 - `build_huntmaps.py`: refaz as miniaturas dos mapas das hunts (`huntmaps.png`). Depois muda o `?v=` de `huntmaps.png` no `index.html`, porque os browsers guardam a imagem antiga.
 - `apply_hunt_fixes.py`: aplica correções de hunts verificadas, em ficheiros `fix-*.json`.
+- `build_wheel.py`: refaz `data/wheel.json` (o que dá cada fatia da Wheel, por vocação) e confirma que bate com todas as builds do `G.wheel`.
+- `build_guias.py`: refaz `data/guias.json` depois de mudar os guias do Questski ou as quests do Grimório.
 - `reap.ps1`: fecha browsers de testes que ficaram abertos.
 
 As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro sítio, ajusta-os. Corridas a partir de `_dev/` sem indicar a raiz, usam a pasta do teu clone; os registos vão para a pasta da variável `GRIM_WORK` ou para a pasta temporária.
@@ -58,6 +73,8 @@ As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro síti
 - **Conflitos no `index.html`:** os dados `G` (o `<script id="G">`) têm uma entrada por linha (uma hunt, um item, uma criatura…), por isso o Git junta sozinho as alterações dos dois quando mexem em registos diferentes. Se houver conflito, resolve-o como noutro ficheiro qualquer e depois corre `python -I _dev/gjson.py --check` (diz a linha e a coluna se o JSON ficou estragado) e o `smoke.mjs`. Não mudes os dados com `json.dumps` à mão: os scripts gravam-nos com `save_G` de `_dev/gjson.py`, que mantém o formato.
 - **A pasta pública é um clone do repositório:** o `.htaccess` responde 404 a tudo o que começa por `.git` (a pasta `.git`, o `.gitignore` e o `.gitattributes`), para ninguém descarregar o histórico nem ver o email de quem faz commits; o `_dev/` dá 403. O `.editorconfig` diz aos editores para gravar em UTF-8 com fins de linha LF.
 - Antes de cada commit, corre o `smoke.mjs` em `inicio` e `hunts`, nos dois modos e a 375 px. Tem de dar `errors: []` e `hscroll: false`.
+  Se mexeste no Questski, testa também `--url http://localhost/grimorio/quests/ --hash "/"` (no Git Bash, antes, `export MSYS_NO_PATHCONV=1`, senão as rotas que começam por `/` ficam estragadas).
+- **Quem mexe em quê:** o Grimório e o Questski são apps separadas, por isso podem trabalhar um em cada uma sem conflitos. O que é dos dois está em `shared/` e em `data/guias.json`.
 
 ## Fontes dos dados
 

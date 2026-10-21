@@ -1,8 +1,8 @@
-# Serve Tibia Questski on http://localhost:8080 without Python, using the PowerShell that ships with Windows.
+# Serve o Grimorio e o Questski (/quests/) on http://localhost:8080 without Python, using the PowerShell that ships with Windows.
 # Usage: powershell -ExecutionPolicy Bypass -File serve.ps1 [-Port 8080] [-NoBrowser]
 param([int]$Port = 8080, [switch]$NoBrowser)
 
-$root = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'site'))
+$root = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))  # a raiz do repositório (grimorio/); o Questski está em /quests/
 $types = @{
   '.html' = 'text/html; charset=utf-8'; '.js' = 'text/javascript; charset=utf-8'; '.css' = 'text/css; charset=utf-8'
   '.json' = 'application/json; charset=utf-8'; '.txt' = 'text/plain; charset=utf-8'; '.svg' = 'image/svg+xml'
@@ -18,8 +18,8 @@ catch {
   Write-Host "Se o site ja esta aberto noutra janela, usa essa."
   exit 1
 }
-Write-Host "Tibia Questski a correr em http://localhost:${Port}  (fecha esta janela para parar)"
-if (-not $NoBrowser) { Start-Process "http://localhost:${Port}/" }
+Write-Host "Grimorio em http://localhost:${Port}/ e Questski em http://localhost:${Port}/quests/  (fecha esta janela para parar)"
+if (-not $NoBrowser) { Start-Process "http://localhost:${Port}/quests/" }
 
 while ($listener.IsListening) {
   $ctx = $listener.GetContext()
@@ -28,7 +28,7 @@ while ($listener.IsListening) {
     $rel = [System.Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath).TrimStart('/')
     if ($rel -eq '' -or $rel.EndsWith('/')) { $rel += 'index.html' }
     $path = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($root, $rel))
-    # only files inside site/
+    # only files inside the repository root
     if ($path.StartsWith($root + [System.IO.Path]::DirectorySeparatorChar, [System.StringComparison]::OrdinalIgnoreCase) -and [System.IO.File]::Exists($path)) {
       $bytes = [System.IO.File]::ReadAllBytes($path)
       $ext = [System.IO.Path]::GetExtension($path).ToLowerInvariant()

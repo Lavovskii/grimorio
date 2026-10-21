@@ -126,7 +126,7 @@ def extract(raw):
 # ------------------------------------------------------------------ our guides
 def guide_item_refs(alias_of):
     """{canonical item title: [{slug, quest, step, title, kind, coords}]}"""
-    index = json.load(open(os.path.join(ROOT, "site", "data", "index.json"), encoding="utf-8"))
+    index = json.load(open(os.path.join(os.path.dirname(ROOT), "quests", "data", "index.json"), encoding="utf-8"))
     names = {q["slug"]: q["name"] for q in index["quests"]}
     npcs = json.load(open(os.path.join(ROOT, "tools", "cache", "npcs.json"), encoding="utf-8"))
     refs = {}

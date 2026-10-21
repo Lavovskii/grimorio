@@ -9,7 +9,7 @@ import sys
 from PIL import Image, ImageDraw
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "site", "assets")
+OUT = os.path.join(os.path.dirname(ROOT), "quests", "assets")
 W, H = 64, 52
 
 C = {

@@ -22,7 +22,7 @@ from fetch_wiki import api
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, "tools")
 CACHE = os.path.join(TOOLS, "cache")
-SITE = os.path.join(ROOT, "site")
+SITE = os.path.join(os.path.dirname(ROOT), "quests")
 DATA = os.path.join(SITE, "data")
 WIKI_IMG = os.path.join(SITE, "assets", "wiki")
 TOKEN_RE = re.compile(r"\{(npc|item|creature|spell|wiki|key|coord):([^{}]+)\}")
