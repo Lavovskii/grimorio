@@ -2399,7 +2399,7 @@
    "ok": true
   },
   "wildlife": {
-   "n": "ERRO de identificação: não é uma raid 'Wildlife'. O map_point é a entrada do Rathleton Slime Pits (Hydra Cave), hunt permanente de 3 andares com Hydras e Bog Raiders; sem Bonebeast. A wiki diz 'sem invasões nesta localização' e não existe raid Wildlife em Oramond (invasões: Quaras, Wild Creatures, Mechanical Creatures, Minotaurs). Renomear para 'Rathleton Slime Pits (Hydra Cave)' e remover o requisito de raid. Spawns confirmados nos z8-z12 em x 33393-33526, y 31874-31902.",
+   "n": "r7: a nota anterior (Slime Pits) estava errada. O Wildlife é o raid oeste das Oramond Factory Raids (TibiaWiki: Oramond Factory Raids e Unstable Tunnel; TibiaPal mede 'Oramond Wildlife Raid'): 2.º piso da Underground Glooth Factory, ala oeste, entrada pelo Slime Slide (rank Citizen). G.hm (33482,31955,13) bate com os spawns de Glooth Anemone, Drillworm, Behemoth e Devourer no z13. Antes: ERRO de identificação: não é uma raid 'Wildlife'. O map_point é a entrada do Rathleton Slime Pits (Hydra Cave), hunt permanente de 3 andares com Hydras e Bog Raiders; sem Bonebeast. A wiki diz 'sem invasões nesta localização' e não existe raid Wildlife em Oramond (invasões: Quaras, Wild Creatures, Mechanical Creatures, Minotaurs). Renomear para 'Rathleton Slime Pits (Hydra Cave)' e remover o requisito de raid. Spawns confirmados nos z8-z12 em x 33393-33526, y 31874-31902.",
    "ed": "Buraco 'Hydra cave' (Rathleton Slime Pits) a noroeste de Rathleton (marcador 33517,31906,7; a wiki dá 33515,31906,7); desce ao −1",
    "mf": [
     "Hydra",
@@ -2411,7 +2411,24 @@
     7
    ],
    "s": "Rathleton",
-   "ok": true
+   "ok": false,
+   "orig": {
+    "rq": [
+     "Premium",
+     "Levitate (exani hur down) no spot 33572,31915,6 para o atalho a partir de Rathleton",
+     "Nível ~150 (a wiki mostra '150', ambíguo)",
+     "Sem raid: é um hunt permanente",
+     "Útil para a task Hydra do Paw and Fur"
+    ],
+    "st": [
+     "Apanha o barco do Captain Gulliver para Oramond",
+     "Entra em Rathleton (Slime Slide com rank Citizen, ou escada em 33636,31944,7)",
+     "Do templo (33594,31899,6) vai ~22 sqm para sudoeste até ao levitate spot 33572,31915,6 e usa 'exani hur down'",
+     "Segue ~56 sqm para oeste até ao buraco 'Hydra cave' (33517,31906) e desce",
+     "Três andares com Hydras e Bog Raiders"
+    ],
+    "t": "Barco do Captain Gulliver (Oramond Marshes, 33479,31986): Thais 150 gp, Venore 130, Edron 110, Port Hope 200, Krailos 180, Issavi 130"
+   }
   },
   "sanctuary": {
    "n": "A página 'Iksupan Occupied Sanctuary' não existe na TibiaWiki BR (só categoria): monstros (Iks Yapunac, Mitmah Scout, Mitmah Seer) confirmados em guias externos (tibiaroute). O andar exato do santuário não foi verificado; o map_point (z8) fica ~89 sqm a norte da chegada do teleporte segundo a auto-rota. Não há spawns de Iksupan no otservbr-monster.xml local. A Key Intihuatac só exige City of Gold I; a curada diz 'II' por os guias exigirem a quest iniciada.",

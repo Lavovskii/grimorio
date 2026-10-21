@@ -9293,7 +9293,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "qn":"Wrath of the Emperor Quest"
   },
   "wildlife":{
-   "n":"Oramond — raid Wildlife",
+   "n":"Oramond — raid Wildlife (Glooth Factory)",
    "mons":["Glooth Anemone","Drillworm","Devourer","Behemoth","Wyrm","Blood Beast","Elder Wyrm"],
    "q":null,
    "d":2,
@@ -9304,7 +9304,8 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "boss":["Tremor Worm"],
    "city":"Rathleton",
    "prem":true,
-   "qn":"Rathleton Quest"
+   "qn":"Rathleton Quest",
+   "wn":["Oramond Factory Raids","Wild Life"]
   },
   "golemraid":{
    "n":"Oramond — raid de golems",
@@ -14085,7 +14086,6 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    {"c":"issavisewers","place":"Issavi Sewers","l":500,"xp":null,"lo":null,"how":"","f":1},
    {"c":"issavipuzzle","place":"Issavi Puzzle","l":500,"xp":null,"lo":null,"how":"","f":1},
    {"c":"ferusealsm","place":"Ferumbras — seals","l":800,"xp":null,"lo":null,"how":"","f":1},
-   {"c":"cathedral","place":"Variantes Sanguine","l":600,"xp":null,"lo":null,"how":"","f":1},
    {"c":"barrendrift","place":"Barren Drift","l":300,"xp":null,"lo":null,"how":"","f":1,"v":1},
    {"c":"templesunsea","place":"Temple of the Sun and Sea","l":600,"xp":null,"lo":null,"how":"","f":1},
    {"c":"w_razachai_inner_sanctum","place":"Razachai/Inner Sanctum","l":250,"xp":null,"lo":null,"how":"","f":1,"w":1},
@@ -14233,8 +14233,8 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    {"c":"feruseals","place":"Feru DT Seal -1","l":600,"xp":null,"lo":null,"how":"Physical"},
    {"c":"cathedral","place":"Buried Cathedral (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
    {"c":"feruseals","place":"Feru Way","l":600,"xp":null,"lo":null,"how":"Physical"},
-   {"c":"cathedral","place":"Winter Court (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
-   {"c":"cathedral","place":"Summer Court (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"wintercourt","place":"Winter Court (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"summercourt","place":"Summer Court (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
    {"c":"flimsy","place":"Flimsy Lost Souls Port Hope","l":600,"xp":null,"lo":null,"how":"Earth"},
    {"c":"feruseals","place":"Feru DT Seal -2","l":600,"xp":null,"lo":null,"how":"Physical"},
    {"c":"issavipuzzle","place":"Issavi Puzzle","l":600,"xp":null,"lo":null,"how":"Earth"},
@@ -14245,7 +14245,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    {"c":"feruseals","place":"Juggernaut Feru Seal","l":600,"xp":null,"lo":null,"how":"Energy"},
    {"c":"warzone8","place":"Warzone 8","l":600,"xp":4100000.0,"lo":2500000.0,"how":"Earth","o":1},
    {"c":"warzone7","place":"Warzone 7","l":600,"xp":3400000.0,"lo":1500000.0,"how":"Physical","o":1},
-   {"c":"cathedral","place":"Otherworld (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
+   {"c":"otherworld","place":"Otherworld (Sanguine)","l":600,"xp":null,"lo":null,"how":"Earth"},
    {"c":"deepdesert","place":"Deep Desert (Darashia Skeletons)","l":600,"xp":4000000.0,"lo":2200000.0,"how":"Earth","o":1},
    {"c":"warzone9","place":"Warzone 9","l":600,"xp":3800000.0,"lo":2200000.0,"how":"Earth","o":1},
    {"c":"norcdungeons","place":"Norcferatu Dungeons East","l":700,"xp":null,"lo":null,"how":"Earth"},
@@ -35690,20 +35690,13 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "v":"fix"
   },
   "wildlife":{
-   "t":"Barco do Captain Gulliver (Oramond Marshes, 33479,31986): Thais 150 gp, Venore 130, Edron 110, Port Hope 200, Krailos 180, Issavi 130",
-   "rq":[
-    "Premium",
-    "Levitate (exani hur down) no spot 33572,31915,6 para o atalho a partir de Rathleton",
-    "Nível ~150 (a wiki mostra '150', ambíguo)",
-    "Sem raid: é um hunt permanente",
-    "Útil para a task Hydra do Paw and Fur"
-   ],
+   "t":"Barco do Captain Gulliver para Oramond (Thais 150 gp, Venore 130, Edron 110, Port Hope 200, Krailos 180, Issavi 130); depois a pé até Rathleton",
+   "rq":["Rathleton Quest: rank Citizen (300 votos) para usar o Slime Slide","Premium","Nível 150+ (o TibiaPal mede a partir do 150)"],
    "st":[
-    "Apanha o barco do Captain Gulliver para Oramond",
-    "Entra em Rathleton (Slime Slide com rank Citizen, ou escada em 33636,31944,7)",
-    "Do templo (33594,31899,6) vai ~22 sqm para sudoeste até ao levitate spot 33572,31915,6 e usa 'exani hur down'",
-    "Segue ~56 sqm para oeste até ao buraco 'Hydra cave' (33517,31906) e desce",
-    "Três andares com Hydras e Bog Raiders"
+    "Em Rathleton, vai ao Workshop Quarter: o Slime Slide fica no edifício a leste da escada para Upper Rathleton",
+    "Desce pelo Slime Slide até à Underground Glooth Factory",
+    "No 2.º piso da fábrica, segue para a ala oeste: é a zona do raid Wildlife",
+    "Há criaturas sempre; com o raid ativo (de hora a hora, a partir do server save, ondas durante 45 min) os Unstable Tunnels chamam Drillworms, Glooth Anemones e Behemoths, que não deixam loot"
    ],
    "v":"fix"
   },
