@@ -1084,3 +1084,10 @@ kbd { font-family: var(--font-mono); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* r8: alvos de toque com 44 px no telemóvel (filtros, segmentos e títulos dos cartões; a área extra é invisível) */
+@media (pointer: coarse) {
+  .seg button { min-height: 44px; }
+  .cat-pill, .qcard h3 a { position: relative; }
+  .cat-pill::after, .qcard h3 a::after { content: ""; position: absolute; left: -2px; right: -2px; top: 50%; height: 44px; transform: translateY(-50%); }
+}
