@@ -1282,6 +1282,23 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whs .wtw{animation:wtw 3.6s ease-in-out infinite}
 @keyframes wtw{0%,100%{opacity:.15}50%{opacity:.95}}
 @media (prefers-reduced-motion:reduce){.whs .wmotes,.whs .waura,.whs .wtw{animation:none}}
+/* r11: secção «Gemas e fragments» */
+.wgf>h3{margin:0 0 10px}
+.wgf-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:14px;align-items:start}
+.wgf-g>.card:first-child{grid-column:1/-1}
+.wgf-x{overflow-x:auto;overflow-y:hidden;max-width:100%;padding-bottom:2px}
+.wgf-t thead th,.wgf-t td,.wgf-t tbody th{white-space:normal}
+html[data-ui] body .wgf-t tbody th,html[data-ui] body .wgf-t tbody th b{text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:inherit;font-family:inherit}
+html[data-ui] body .wgf-t tbody th b{font-weight:700}
+.wgf-g .card{display:grid;gap:10px;margin:0}
+.wgf-g h4{margin:0}
+.wgf-t{width:100%;border-collapse:collapse;font-size:13px}
+.wgf-t th,.wgf-t td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.wgf-t thead th{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.wgf-t td{font-variant-numeric:tabular-nums}
+.wgf-n{display:inline-flex;flex-wrap:wrap;align-items:center;gap:2px 3px} .wgf-n b{margin-left:4px;white-space:nowrap}
+.wgf-n .wico{border-radius:0}
+.wgf-l{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px;color:var(--ink-2,inherit)}
 /* r10: ícones do cliente */
 .whs .wx-cv,.whs .wx-pk,.whs .wx-gm,.whs .wx-dd{pointer-events:none}
 .whs .wbg.cv.empty .wx-cv{filter:grayscale(.7) brightness(.78)}
@@ -3044,6 +3061,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <div class="ph"><span class="eyebrow">Combate</span><h2>Wheel of Destiny</h2><p id="wheelLead"></p></div>
       <div class="whx" id="wheelX"></div>
       <div class="whx-opts" id="wheelOpts"></div>
+      <div class="sec wgf" id="wheelGF"></div>
       <div class="callout" id="wheelNow"></div>
       <div class="sec"><h3>Todas as builds, por pontos</h3><div class="scroll-x card wh-tw"><table id="wheelTable"></table></div><div class="grid2" id="gemBox"></div><p class="note">Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.</p></div>
     </section>
@@ -44964,9 +44982,36 @@ function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${["","Lesser ","","Greater
     ["Cor",`Só entra no vessel da mesma cor: aqui, ${WHDN[d]}. Se sair outra, «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde) por ${nf(GEMCOST.rot[t])} gold de cada vez.`],
     ["Colocar","No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo."],
     ["Ativar",`Cada mod precisa de um Vessel Resonance cheio neste domínio (tens ${n} de 3). Com tantos VR como mods, a gema dá ainda +${t===3?2:1} de Damage and Healing.`],
-    ["Melhorar","No Fragment Workshop cada mod sobe do grau I ao IV (+50%) com fragments (desmonta as gemas que não usas) e gold. Cada mod no grau IV dá +1 wheel point."]];
+    ["Melhorar","No Fragment Workshop cada mod sobe do grau I ao IV (+50% no IV) e o grau vale em todas as gemas com esse mod. Os básicos gastam Lesser Fragments e os supremos Greater Fragments, mais gold. Cada mod no grau IV dá +1 wheel point."],
+    ["Fragments",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.`:`A ${nm} dá 1–4 Lesser Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`} Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos). Tabela completa em «Gemas e fragments», por baixo da roda.`]];
   const ol=`<ol class="wg-l">${st.map(([a,b])=>`<li><b>${a}</b><span>${esc(b)}</span></li>`).join("")}</ol>`;
   return fold?`<details class="wguide" style="--wc:${WHC[d][0]}"><summary class="wsel-sec">Como obter e colocar</summary>${ol}</details>`:`<div class="wguide" style="--wc:${WHC[d][0]}"><p class="wsel-sec">Como obter e colocar</p>${ol}</div>`; }
+// r11: «Gemas e fragments» por baixo da roda: os três tamanhos de gema da vocação (onde caem, mods, custos) e os fragments
+// (como se obtêm, para que servem, custos do Fragment Workshop). Fontes: TibiaWiki (Gem Atelier, Lesser/Greater Fragment, Crusher,
+// Amber Crusher) e o cliente (workshop.lua: os mods básicos gastam Lesser Fragments, os supremos Greater Fragments)
+function whGFHTML(voc){ const T=[1,2,3], tb=(h,r)=>`<div class="wgf-x"><table class="wgf-t"><thead><tr>${h.map(x=>`<th scope="col">${x}</th>`).join("")}</tr></thead><tbody>${r}</tbody></table></div>`;
+  const nm=t=>`<span class="wgf-n">${WHDOM.map(d=>whGemImg(voc,d,t,22,"wgi")).join("")}<b>${esc(whGemName(voc,t))}</b></span>`;
+  const gems=tb(["Gema","Mods","Onde cai","Revelar","Mudar de cor"], T.map(t=>`<tr><th scope="row">${nm(t)}</th><td>${["","1 básico","2 básicos","2 básicos e 1 supremo"][t]}</td><td>${["","criaturas influenced (às vezes, fiendish)","bosses Archfoe com loot cooperativo (às vezes, criaturas fiendish)","criaturas fiendish (raramente, bosses Archfoe)"][t]}</td><td>${nf(GEMCOST.rev[t])}</td><td>${nf(GEMCOST.rot[t])}</td></tr>`).join(""));
+  const yld=tb(["Gema","Partida por revelar (Crusher)","Desmontada depois de revelada"], [[1,"1–4","1–5","Lesser"],[2,"2–8","2–10","Lesser"],[3,"1–4","1–5","Greater"]].map(([t,a,b,f])=>`<tr><th scope="row">${nm(t)}</th><td>${a} ${f} Fragments</td><td>${b} ${f} Fragments</td></tr>`).join(""));
+  const up=tb(["Grau","Fragments","Gold (mod básico)","Gold (mod supremo)"], [["II",5,2000000,5000000],["III",15,5000000,12500000],["IV",30,30000000,75000000]].map(([g,f,a,b])=>`<tr><th scope="row">${g}</th><td>${f}</td><td>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(""));
+  return `<h3>Gemas e fragments</h3>
+    <div class="wgf-g"><section class="card"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems}
+      <ul class="wgf-l"><li>Antes de revelada, a gema é um item normal: compra-se e vende-se no Market.</li>
+        <li>Revelar (Wheel of Destiny → Gem Atelier → Reveal) mostra a cor e os mods, que saem ao acaso, e prende a gema à personagem (até 225 gemas).</li>
+        <li>Só entra no vessel da sua cor; «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde).</li>
+        <li>Cada mod precisa de um Vessel Resonance cheio nesse domínio; com tantos VR como mods, a gema dá ainda +1 de Damage and Healing (+2 com a greater).</li></ul></section>
+    <section class="card"><h4>Fragments: como se obtêm</h4>
+      <p class="small">Há dois tipos: os <b>Lesser Fragments</b> saem das Lesser e Regular Gems; os <b>Greater Fragments</b> saem das Greater Gems.</p>${yld}
+      <ul class="wgf-l"><li><b>Crusher</b>: 500 gold em qualquer Equipment Shopkeeper; 10 usos; parte gemas ainda por revelar.</li>
+        <li><b>Amber Crusher</b>: prémio da primeira vitória sobre The Rootkraken; sem limite de usos e parte 10 gemas de cada vez.</li>
+        <li>As gemas já reveladas que não queres desmontam-se no Gem Atelier, e dão um pouco mais.</li>
+        <li>Também se compram no Market ou a NPCs de joias (ex.: Talila, Yonan): 750 000 gold cada Lesser Fragment e 2 250 000 cada Greater Fragment.</li></ul></section>
+    <section class="card"><h4>Fragments: para que servem</h4>
+      <p class="small">No Fragment Workshop (no Gem Atelier) os mods sobem do grau I ao IV. Os <b>básicos</b> gastam <b>Lesser Fragments</b>; os <b>supremos</b>, <b>Greater Fragments</b>; e todos gastam gold.</p>${up}
+      <ul class="wgf-l"><li>O grau é do mod, não da gema: vale em todas as gemas que tenham esse mod.</li>
+        <li>No grau IV o mod dá +50% do valor do grau I, e cada mod no grau IV dá +1 wheel point (até 69).</li>
+        <li>Numa gema, cada mod só usa um grau até ao do mod anterior: um supremo no grau IV com os básicos no grau I conta como grau I.</li>
+        <li>Nos mods de cooldown, subir de grau não corta mais tempo: dá uma chance de Momentum.</li></ul></section></div>`; }
 // r8: o painel Selection de um vessel: a gema, o que está ativo (best in slot) e as outras boas opções, com valores
 function whGemSelHTML(voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d];
   const head=`<div class="wsel-h"><span class="wsel-gem" style="--wc:${WHC[d][0]}">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):"Sem gema"}</b><span class="tag${n?" ok":""}">Vessel ${esc(WHVR[d])}</span></div></div>
@@ -45121,6 +45166,7 @@ function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
       <div class="whx-a"><div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button>
         <details class="whx-imp"><summary class="btn small ghost">Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
   const op=$("wheelOpts"); if(op) op.innerHTML=whOptsHTML(c,ws,O,w,pts);
+  const gf=$("wheelGF"); if(gf&&gf.dataset.voc!==c.voc){ gf.innerHTML=whGFHTML(c.voc); gf.dataset.voc=c.voc; }
   if(E.dirty) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
   document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; WED=null; renderWheelX();

@@ -319,12 +319,24 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "1 básico": {
+  "c": "index.html: cor\"], T.map(t=>`<tr><th scope=\"row\">${nm(t)}</th><td>${[\"\",\"1 básico\",\"2 básicos\",\"2 bási",
+  "k": "x"
+ },
  "1 modificador básico": {
   "c": "index.html:  básicos e 1 supremo\":n===2?\"2 modificadores básicos\":n===1?\"1 modificador básico\":\"enche uma fatia Ve",
   "k": "x"
  },
  "10% de chance de crítico": {
   "c": "index.html: ><b>+${t.crit}%</b><span>dano crítico</span><small>${t.crit?\"10% de chance de crítico\":\"sem Strike\"}</smal",
+  "k": "x"
+ },
+ "2 básicos": {
+  "c": "index.html: p(t=>`<tr><th scope=\"row\">${nm(t)}</th><td>${[\"\",\"1 básico\",\"2 básicos\",\"2 básicos e 1 supr",
+  "k": "x"
+ },
+ "2 básicos e 1 supremo": {
+  "c": "index.html: h scope=\"row\">${nm(t)}</th><td>${[\"\",\"1 básico\",\"2 básicos\",\"2 básicos e 1 supremo\"][t]}</td><td>${[\"\",",
   "k": "x"
  },
  "2 modificadores básicos": {
@@ -579,6 +591,18 @@
   "c": "index.html: \",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1?`A ${nm} cai sobretudo de criaturas influenced e, às vezes, de fiendish. Também se compra no Market: até ser revelada é um item como os outros.` :t===2?`A ${nm}",
   "k": "p"
  },
+ "A {0} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.": {
+  "c": "index.html:  no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2",
+  "k": "p"
+ },
+ "A {0} dá 1–4 Lesser Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.": {
+  "c": "index.html:  por revelar, ou 2–10 se a desmontares depois de revelada.`:`A ${nm} dá 1–4 Lesser Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`} Parte-se com um Cr",
+  "k": "p"
+ },
+ "A {0} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.": {
+  "c": "index.html: revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.`:`A ${nm} dá 1–4 Les",
+  "k": "p"
+ },
  "Ab'Dendriel": {
   "c": "index.html: 32369,32241],[\"Carlin\",32360,31782],[\"Venore\",32957,32076],[\"Ab'Dendriel\",32732,31634],[\"Kazo",
   "k": "x"
@@ -751,6 +775,10 @@
   "c": "index.html: untP,6)}</div>`,huntP.length]); if(alts) tabs.push([\"alt\",\"Alternativas\",alts]); const lef",
   "k": "x"
  },
+ "Amber Crusher": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Ammunition": {
   "c": "index.html: \":\"Contentor\",\"Magical Items\":\"Item mágico\",\"Books\":\"Livro\",\"Ammunition\":\"Munição\",\"Quivers\"",
   "k": "x"
@@ -794,6 +822,10 @@
  "Antes de começares{0}": {
   "c": "quests/js/app.js:  `<div class=\"guide-layout\"><div> ${before.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"flag\")}Antes de começares<span class=\"cap-extra\"><a style=\"color:inherit\" href=\"#/quest/${d.slug}/preparacao\">prep",
   "k": "p"
+ },
+ "Antes de revelada, a gema é um item normal: compra-se e vende-se no Market.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
  },
  "Any Elemental Resistance": {
   "c": "index.html: sser_gems||[\"Hit Points\",\"Mitigation\"]).forEach(x=>{ if(x===\"Any Elemental Resistance\"){ if(!prof) b.push(",
@@ -942,6 +974,18 @@
  "As 7 blessings no nível {0}": {
   "c": "index.html: \"mageBox\").hidden = !isMage(c); $(\"blessSum\").innerHTML = `<div class=\"bs-t\"><span class=\"tiny muted\">As 7 blessings no nível ${L}</span><b>${nf(total)} gp</b></div><p class=\"small\">Cada uma tira 8 % à perda de XP e skil",
   "k": "p"
+ },
+ "As gemas de": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
+ "As gemas de {0}": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "p"
+ },
+ "As gemas já reveladas que não queres desmontam-se no Gem Atelier, e dão um pouco mais.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
  },
  "As outras {0} estão em \"Todos os drops\", mais abaixo.": {
   "c": "index.html: \"criaturas\"}</h4>${dropT(drops.slice(0,8))}${drops.length>8?`<p class=\"tiny muted\" style=\"margin:6px 0 0\">As outras ${drops.length-8} estão em \"Todos os drops\", mais abaixo.</p>`:\"\"}</div>`:\"\", ",
@@ -1269,6 +1313,10 @@
  },
  "Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Cada mod precisa de um Vessel Resonance cheio nesse domínio; com tantos VR como mods, a gema dá ainda +1 de Damage and Healing (+2 com a greater).": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Cada mod precisa de um Vessel Resonance cheio neste domínio (tens {0} de 3). Com tantos VR como mods, a gema dá ainda +{1} de Damage and Healing.": {
@@ -1851,6 +1899,10 @@
   "c": "index.html: ame(k)} ${Math.round(v*100)}%`).join(\" · \"):\"\"; return comp?`<p class=\"small muted\" style=\"margin:0\">Criaturas, pela parte do XP: ${esc(comp)}</p>`:\"\"; })()} ${h.b",
   "k": "p"
  },
+ "Crusher": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Cuidado": {
   "c": "quests/js/app.js: ievements relacionados\", \"general\": \"Geral\", \"caution\": \"Cuidado\", \"creatures\": \"Cria",
   "k": "x"
@@ -2089,6 +2141,10 @@
  },
  "Desligar": {
   "c": "index.html: All); } function renderEvBars(){ const on=evOn(), html=on?`<span>Evento ativo: ${esc(evLabel())}. O XP das hunts já tem o bónus.</span><button class=\"btn small ghost\" data-evoff=\"1\">Desligar</button>`:\"\"; [\"evBarH\",\"ev",
+  "k": "x"
+ },
+ "Desmontada depois de revelada": {
+  "c": "index.html: \")); const yld=tb([\"Gema\",\"Partida por revelar (Crusher)\",\"Desmontada depois de revelada\"], [[1,\"1–4\",\"1–5\",\"",
   "k": "x"
  },
  "Destino": {
@@ -2819,6 +2875,18 @@
   "c": "index.html: h.lo!=null&&h.lo>0], fraco:[g=>g?\"Fraca ao dano de todos\":\"Fraca ao teu dano\",h=> h.g ? h.hs.ever",
   "k": "x"
  },
+ "Fragments": {
+  "c": "index.html: , mais gold. Cada mod no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} d",
+  "k": "x"
+ },
+ "Fragments: como se obtêm": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
+ "Fragments: para que servem": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Fraquezas e resistências{0}": {
   "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
   "k": "p"
@@ -2879,8 +2947,16 @@
   "c": "index.html: m, Sage Gem, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"}${GEMVN[voc]||\"\"} Gem`; // r9: runas grava",
   "k": "x"
  },
+ "Gema": {
+  "c": "index.html: )}<b>${esc(whGemName(voc,t))}</b></span>`; const gems=tb([\"Gema\",\"Mods\",\"Onde cai\",\"",
+  "k": "x"
+ },
  "Gemas": {
   "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As",
+  "k": "x"
+ },
+ "Gemas e fragments": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Geral": {
@@ -2899,6 +2975,14 @@
   "c": "index.html: \",\"Extra Dimensional\":\"Extradimensionais\",Fey:\"Fadas\",Giant:\"Gigantes\",Inkborn:\"Inkborn\",P",
   "k": "x"
  },
+ "Gold (mod básico)": {
+  "c": "index.html: ts</td></tr>`).join(\"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (mod básico)\",\"Gold (mod supremo)",
+  "k": "x"
+ },
+ "Gold (mod supremo)": {
+  "c": "index.html: \"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (mod básico)\",\"Gold (mod supremo)\"], [[\"II\",5,2000000,",
+  "k": "x"
+ },
  "Golpe mais forte": {
   "c": "index.html: } ${Math.round(v*100)}%</span>`).join(\" \"):na; })), row(\"Golpe mais forte\",hits.map(m=>!CRDV?w",
   "k": "x"
@@ -2908,7 +2992,7 @@
   "k": "x"
  },
  "Grau": {
-  "c": "quests/js/app.js: ed\": \"Velocidade\", \"description\": \"Descrição\", \"grade\": \"Grau\", \"points\": \"Pontos\"",
+  "c": "index.html: d>${b} ${f} Fragments</td></tr>`).join(\"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (",
   "k": "x"
  },
  "Gray Beach": {
@@ -2937,6 +3021,10 @@
  },
  "Greater": {
   "c": "index.html:  Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"}${GEMVN[voc]||\"\"",
+  "k": "x"
+ },
+ "Greater Fragments": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Greater gem": {
@@ -3186,6 +3274,10 @@
  "Há": {
   "c": "index.html: \"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?\"hunt",
   "k": "x"
+ },
+ "Há dois tipos: os {0} saem das Lesser e Regular Gems; os {1} saem das Greater Gems.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "p"
  },
  "ID do feitiço": {
   "c": "quests/js/app.js: \"group\": \"Grupo\", \"magic level\": \"Magic level\", \"spell id\": \"ID do feitiço\", \"price for vocatio",
@@ -3465,6 +3557,10 @@
  },
  "Lesser": {
   "c": "index.html: em, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"",
+  "k": "x"
+ },
+ "Lesser Fragments": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Lesser gem": {
@@ -3987,6 +4083,10 @@
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
+ "Mods": {
+  "c": "index.html: esc(whGemName(voc,t))}</b></span>`; const gems=tb([\"Gema\",\"Mods\",\"Onde cai\",\"Revelar",
+  "k": "x"
+ },
  "Moedas: ≈ {0} por kill, já contadas no loot por hora.": {
   "c": "index.html: ll>· os 12 itens que mais rendem</small></h5>${tbl}${coin>0?`<p class=\"tiny muted\">Moedas: ≈ ${gpx(coin)} por kill, já contadas no loot por hora.</p>`:\"\"} <h5>Por cri",
   "k": "p"
@@ -4045,6 +4145,10 @@
  },
  "Mostrar só os 8 melhores": {
   "c": "index.html: ll ghost\" data-allslot=\"1\" style=\"margin-top:8px\">${showAll?\"Mostrar só os 8 melhores\":`Ver todos os ${top",
+  "k": "x"
+ },
+ "Mudar de cor": {
+  "c": "index.html: span>`; const gems=tb([\"Gema\",\"Mods\",\"Onde cai\",\"Revelar\",\"Mudar de cor\"], T.map(t=>`<tr><th",
   "k": "x"
  },
  "Mudar de site": {
@@ -4299,8 +4403,12 @@
   "c": "recolhida: /grimorio/#hunts · ex.: Nimmersatt's (Dragões) — 8.5kk/h ≈",
   "k": "p"
  },
- "No Fragment Workshop cada mod sobe do grau I ao IV (+50%) com fragments (desmonta as gemas que não usas) e gold. Cada mod no grau IV dá +1 wheel point.": {
-  "c": "index.html: nda +${t===3?2:1} de Damage and Healing.`], [\"Melhorar\",\"No Fragment Workshop cada mod sobe do grau I ao IV (+50%) com fragments (desmonta as gemas que não usas) e gold. Cada mod no grau IV dá +1 wheel point.\"]]; const o",
+ "No Fragment Workshop (no Gem Atelier) os mods sobem do grau I ao IV. Os {0} gastam {1}; os {2}, {3}; e todos gastam gold.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "p"
+ },
+ "No Fragment Workshop cada mod sobe do grau I ao IV (+50% no IV) e o grau vale em todas as gemas com esse mod. Os básicos gastam Lesser Fragments e os supremos Greater Fragments, mais gold. Cada mod no grau IV dá +1 wheel point.": {
+  "c": "index.html: nda +${t===3?2:1} de Damage and Healing.`], [\"Melhorar\",\"No Fragment Workshop cada mod sobe do grau I ao IV (+50% no IV) e o grau vale em todas as gemas com esse mod. Os básicos gastam Lesser Fragments e os supremos Grea",
   "k": "x"
  },
  "No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo.": {
@@ -4313,6 +4421,10 @@
  },
  "No chão": {
   "c": "quests/js/app.js:  por\", \"bought for\": \"NPCs vendem por\", \"field properties\": \"No chão\", \"blocking\": \"Bloqu",
+  "k": "x"
+ },
+ "No grau IV o mod dá +50% do valor do grau I, e cada mod no grau IV dá +1 wheel point (até 69).": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "No terreno da hunt": {
@@ -4371,6 +4483,10 @@
   "c": "index.html: ma gema ou numa revelação para veres o que dá.\"}</p>${ed?\"\":`<p class=\"wsel-d\">Nos cantos: as revelações (os losangos são o estágio) e as gemas.</p>`}`; const x=whSlot",
   "k": "x"
  },
+ "Nos mods de cooldown, subir de grau não corta mais tempo: dá uma chance de Momentum.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Notas": {
   "c": "index.html: t(h.r.c,h).length||0], ...(vars||(p&&p.note)?[[\"info\",\"Notas\",`${p&&p.note?`<p cl",
   "k": "x"
@@ -4389,6 +4505,10 @@
  },
  "Novo set": {
   "c": "index.html: s.prot?ELN[s.prot]:\"combate\")}</span></button>`).join(\"\") + `<button data-newset=\"1\" class=\"addset\" aria-label=\"Novo set\">+ set</button>`; const wt = WTYPE",
+  "k": "x"
+ },
+ "Numa gema, cada mod só usa um grau até ao do mod anterior: um supremo no grau IV com os básicos no grau I conta como grau I.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Não consegui contactar o Tibia agora. Tenta outra vez daqui a pouco, ou preenche à mão.": {
@@ -4659,6 +4779,10 @@
   "c": "index.html:  porque puxam mais criaturas de cada vez.</p> ${g.boost?`<p class=\"small\" style=\"margin:0;color:var(--ok)\">O evento (${esc(evLabel())}) já está incluído.</p>`:\"\"} <div class=",
   "k": "p"
  },
+ "O grau é do mod, não da gema: vale em todas as gemas que tenham esse mod.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "O guia detalhado desta quest ainda está a ser preparado.": {
   "c": "quests/js/app.js: (!d.has_guide || !(d.sections || []).length) { return `<div class=\"note-box\">O guia detalhado desta quest ainda está a ser preparado.</div>`; } let n = ",
   "k": "x"
@@ -4749,6 +4873,10 @@
  },
  "Onde aprender": {
   "c": "index.html: t(\"item\",\"728 × 90 · 320 × 100\",\"ip-wide\")} ${teach?`<section class=\"card ip-wide\"><h3>Onde aprender</h3><div class=\"tablewrap\"><table><thead><tr><th>NPC</th><th>Cidade</th><th></th></tr></thead><tbody>${teach}</tbody></",
+  "k": "x"
+ },
+ "Onde cai": {
+  "c": "index.html: emName(voc,t))}</b></span>`; const gems=tb([\"Gema\",\"Mods\",\"Onde cai\",\"Revelar\",\"Mudar de",
   "k": "x"
  },
  "Onde caçar": {
@@ -5005,6 +5133,18 @@
  },
  "Parar": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos).": {
+  "c": "index.html: whGemGuide — passo Fragments (o tradutor parte o texto em frases)",
+  "k": "x"
+ },
+ "Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos). Tabela completa em «Gemas e fragments», por baixo da roda.": {
+  "c": "index.html:  Cada mod no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a parti",
+  "k": "x"
+ },
+ "Partida por revelar (Crusher)": {
+  "c": "index.html: COST.rot[t])}</td></tr>`).join(\"\")); const yld=tb([\"Gema\",\"Partida por revelar (Crusher)\",\"Desmontada depois ",
   "k": "x"
  },
  "Partida: {0}": {
@@ -5891,6 +6031,10 @@
   "c": "index.html:  um item como os outros.`; const st=[[\"Obter\",drop], [\"Revelar\",`Wheel of Destiny →",
   "k": "x"
  },
+ "Revelar (Wheel of Destiny → Gem Atelier → Reveal) mostra a cor e os mods, que saem ao acaso, e prende a gema à personagem (até 225 gemas).": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Revelation": {
   "c": "index.html: => pk(\"Conviction\",\"c\",w.conv,([k,v])=>k+(v?\" \"+v:\"\")) + pk(\"Revelation\",\"r\",w.rev,([k,v])=>",
   "k": "x"
@@ -6539,6 +6683,10 @@
   "c": "index.html:  e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só entra no vessel da mesma cor: aqui, ${WHDN[d]}. Se sair outra, «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde) por ${nf(GEMCOS",
   "k": "p"
  },
+ "Só entra no vessel da sua cor; «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde).": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "Só grátis": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -6579,6 +6727,10 @@
   "c": "index.html:  painel document.addEventListener(\"keydown\",e=>{ if(e.key!==\"Tab\") return; const sh=$",
   "k": "x"
  },
+ "Tabela completa em «Gemas e fragments», por baixo da roda.": {
+  "c": "index.html: whGemGuide — passo Fragments (o tradutor parte o texto em frases)",
+  "k": "x"
+ },
  "Também boa": {
   "c": "index.html: (O.bis?[[O.bis,\"Best in slot\",\"ok\"]]:[]),...O.alt.map(x=>[x,\"Também boa\",\"\"]),...(O.next?[[O",
   "k": "x"
@@ -6597,6 +6749,10 @@
  },
  "Também há": {
   "c": "index.html: `<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} ${n} ${n===1?",
+  "k": "x"
+ },
+ "Também se compram no Market ou a NPCs de joias (ex.: Talila, Yonan): 750 000 gold cada Lesser Fragment e 2 250 000 cada Greater Fragment.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "Taming Items": {
@@ -7823,6 +7979,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "bosses Archfoe com loot cooperativo (às vezes, criaturas fiendish)": {
+  "c": "index.html: }</td><td>${[\"\",\"criaturas influenced (às vezes, fiendish)\",\"bosses Archfoe com loot cooperativo (às vezes, criaturas fiendish)\",\"criaturas fiendish",
+  "k": "x"
+ },
  "bottom": {
   "c": "index.html: {IC[id]}${t}</button></li>`).join(\"\")}</ul>`).join(\"\"); $(\"bottom\").innerHTML = NS.map",
   "k": "x"
@@ -7873,6 +8033,10 @@
  },
  "buys": {
   "c": "quests/js/app.js: o\", \"job\": \"Profissão\", \"city\": \"Cidade\", \"sells\": \"Vende\", \"buys\": \"Compra\", \"tri",
+  "k": "x"
+ },
+ "básicos": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
  "cabe 1": {
@@ -8221,6 +8385,14 @@
  },
  "criaturas": {
   "c": "index.html: \"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feit",
+  "k": "x"
+ },
+ "criaturas fiendish (raramente, bosses Archfoe)": {
+  "c": "index.html: rchfoe com loot cooperativo (às vezes, criaturas fiendish)\",\"criaturas fiendish (raramente, bosses Archfoe)\"][t]}</td><td>${nf(G",
+  "k": "x"
+ },
+ "criaturas influenced (às vezes, fiendish)": {
+  "c": "index.html: ico\",\"2 básicos\",\"2 básicos e 1 supremo\"][t]}</td><td>${[\"\",\"criaturas influenced (às vezes, fiendish)\",\"bosses Archfoe com",
   "k": "x"
  },
  "criaturas que resistem a físico (ex.: Rosh)": {
@@ -11171,6 +11343,10 @@
   "c": "index.html: :\"cura\",heal_party:\"cura\"}; const kind = s => KK[s.kind]||\"suporte\"; const KL={aoe:\"á",
   "k": "x"
  },
+ "supremos": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
  "swap": {
   "c": "index.html: SUG.length; s.textContent=MD_SUG[MD_SI]; s.classList.remove(\"swap\"); void s.offsetWidt",
   "k": "x"
@@ -11775,6 +11951,10 @@
   "c": "quests/js/app.js:  Set(all.map((e) => e.q.slug)).size; view().innerHTML = ` <div class=\"toolbar\"><h1>${icon(\"key\")} Acessos</h1></div> <p class=\"muted\" style=\"margin-top:-6px\">Que quests desbloqueiam cada zona, transporte, NPC ou funciona",
   "k": "p"
  },
+ "{0} Fragments": {
+  "c": "index.html: 2–10\",\"Lesser\"],[3,\"1–4\",\"1–5\",\"Greater\"]].map(([t,a,b,f])=>`<tr><th scope=\"row\">${nm(t)}</th><td>${a} ${f} Fragments</td><td>${b} ${f} Fragments</td></tr>`).join(\"\")); const",
+  "k": "p"
+ },
  "{0} HP": {
   "c": "quests/js/app.js: eature)}</div> <div class=\"drop-stats\">${d.hp ? `${icon(\"checkCircle\")} ${esc(d.hp)} HP` : \"\"}${d.exp ? ` · ",
   "k": "p"
@@ -11789,6 +11969,10 @@
  },
  "{0} Para avançares para {1} ({2} pontos), mete-os aqui:": {
   "c": "index.html: ugestão de onde os meter */ const sl=sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-o",
+  "k": "p"
+ },
+ "{0} Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos). Tabela completa em «Gemas e fragments», por baixo da roda.": {
+  "c": "index.html:  Cada mod no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a parti",
   "k": "p"
  },
  "{0} Página de {1} na wiki": {
@@ -12199,6 +12383,10 @@
   "c": "index.html: hscores…\"; const h=c.hs; if(!h) return \"\"; return [h.sk?`${skName(c)} ${h.sk.v} (#${h.sk.r} em ${esc(h.w)})`:`${skName(c)} fora ",
   "k": "p"
  },
+ "{0} {1} Fragments": {
+  "c": "index.html: 2–10\",\"Lesser\"],[3,\"1–4\",\"1–5\",\"Greater\"]].map(([t,a,b,f])=>`<tr><th scope=\"row\">${nm(t)}</th><td>${a} ${f} Fragments</td><td>${b} ${f} Fragments</td></tr>`).join(\"\")); const",
+  "k": "p"
+ },
  "{0} {1} HP": {
   "c": "quests/js/app.js: eature)}</div> <div class=\"drop-stats\">${d.hp ? `${icon(\"checkCircle\")} ${esc(d.hp)} HP` : \"\"}${d.exp ? ` · ",
   "k": "p"
@@ -12439,6 +12627,10 @@
   "c": "index.html (HTML)",
   "k": "p"
  },
+ "{0}: 500 gold em qualquer Equipment Shopkeeper; 10 usos; parte gemas ainda por revelar.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "p"
+ },
  "{0}: Entrega {1} Chicken Feathers, {2} Honeycombs e {3} Legion Helmet à Hanna (Thais).": {
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: {0}: Entrega 100 Chicken Feathers, 50 Honeycombs e 1 Legion Helmet à Hanna (Thais).",
   "k": "p"
@@ -12469,6 +12661,10 @@
  },
  "{0}: posições aproximadas dos spawns de 897 criaturas e de 956 NPCs.": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "{0}: prémio da primeira vitória sobre The Rootkraken; sem limite de usos e parte 10 gemas de cada vez.": {
+  "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "p"
  },
  "{0}: relatórios de jogadores por hunt.": {
