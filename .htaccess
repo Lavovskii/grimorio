@@ -27,5 +27,25 @@ AddDefaultCharset utf-8
 
 # Compressão (se o módulo estiver ativo)
 <IfModule mod_deflate.c>
-	AddOutputFilterByType DEFLATE text/html application/json text/css application/javascript
+	AddOutputFilterByType DEFLATE text/html application/json text/css application/javascript text/javascript image/svg+xml
+</IfModule>
+
+# Imagens e fontes: 7 dias em cache (as folhas de sprites mudam de ?v= quando são refeitas)
+<IfModule mod_headers.c>
+	<FilesMatch "\.(png|jpe?g|gif|webp|svg|ico|woff2?)$">
+		Header set Cache-Control "public, max-age=604800"
+	</FilesMatch>
+</IfModule>
+
+# Sem listagem de pastas (ex.: /grimorio/data/ ou /grimorio/maps/)
+Options -Indexes
+
+# Segurança: só carrega scripts e estilos do próprio site (e as Google Fonts); só fala com o próprio site e com o TibiaData;
+# não pode ser metido dentro de outro site (clickjacking). Testado com o smoke.mjs no Grimório e no Questski.
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' https://api.tibiadata.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
 </IfModule>
