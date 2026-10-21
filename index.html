@@ -193,7 +193,7 @@ tr.dim td{opacity:.5} tr.now td{background:var(--accent-soft)}
 .hc-cat{font-size:14px;line-height:1;font-family:var(--sans);font-style:normal;font-weight:600;letter-spacing:0;text-transform:none;font-weight:700}
 .hc-t{font-family:var(--serif);font-size:17px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hc-n{font-size:13px;color:var(--muted)} .hc-n b{color:var(--ink);font-weight:700}
-.hc-p{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
+.hc-p{display:flex;flex-wrap:wrap;row-gap:2px;align-items:center;gap:2px 6px;font-size:13px;color:var(--ink-2)}
 .hc-p .danger-dots{margin-left:auto}
 .hc-p .lk{color:var(--warn);font-weight:600}
 .hc-ev{color:var(--ok);font-weight:700}
@@ -278,6 +278,9 @@ button.rt-ext{border:0;font:inherit;cursor:pointer}
 .stars{color:var(--gold);letter-spacing:1px}
 .hmap.hmap-x{display:grid;align-content:end;min-height:120px;background:var(--sunk);border:1px dashed var(--line)}
 .hc-p .cls{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+/* r8: o elemento ("fraco ao teu dano") não parte a meio; o "·" vai com o item seguinte */
+.hc-pe{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.hc-sep{font-style:normal;color:var(--muted)}
 .hfil{display:grid;gap:16px;padding:14px 16px}
 .hf-grp{display:grid;gap:10px}
 .hf-grp+.hf-grp{border-top:1px solid var(--line);padding-top:14px}
@@ -410,7 +413,7 @@ body.noch .hcmp-tray{display:none!important}
 .sh h4.sub{margin:6px 0 0}
 .route{list-style:none;margin:0;padding:0 0 0 4px;display:grid;gap:0;counter-reset:r}
 .route li{position:relative;padding:0 0 12px 26px;font-size:15px}
-.route li::before{counter-increment:r;content:counter(r);position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 11px/18px var(--sans);text-align:center}
+.route li::before{counter-increment:r;content:counter(r);position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 12px/20px var(--sans);text-align:center}
 .route li:not(:last-child)::after{content:"";position:absolute;left:8.5px;top:20px;bottom:2px;width:1px;background:var(--line)}
 .route li.st::before{content:"⌂";counter-increment:none;background:var(--accent);color:var(--surface)}
 .route li.st span{display:block;font-size:13px;color:var(--muted)}
@@ -538,7 +541,7 @@ a.gsp-o{text-decoration:none}
 .hmap{position:relative;display:block;aspect-ratio:3/2;border-radius:10px;overflow:hidden;background-color:#000;background-image:url(huntmaps.png?v=20261019r6);background-repeat:no-repeat;background-size:1000% auto;image-rendering:pixelated;border:1px solid var(--line);text-decoration:none}
 .hmap::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;border:3px solid #E5484D;box-shadow:0 0 0 4px rgba(229,72,77,.35),0 1px 4px rgba(0,0,0,.6)}
 .hmap.area::after{width:46px;height:46px;margin:-23px 0 0 -23px;background:rgba(229,72,77,.18);border:2px dashed #fff;box-shadow:0 0 0 1px rgba(0,0,0,.5)}
-.hmap .cap{position:absolute;left:6px;bottom:6px;right:6px;display:flex;justify-content:space-between;gap:6px;font:600 11.5px/1.2 var(--sans);color:#fff;pointer-events:none}
+.hmap .cap{position:absolute;left:6px;bottom:6px;right:6px;display:flex;justify-content:space-between;gap:6px;font:600 12px/1.2 var(--sans);color:#fff;pointer-events:none}
 .hmap .cap span{background:rgba(0,0,0,.68);padding:3px 7px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hmap:hover{border-color:var(--accent)}
 .hmini{display:inline-block;width:72px;height:48px;border-radius:6px;vertical-align:middle;margin-right:8px;aspect-ratio:auto}
@@ -565,7 +568,7 @@ a.gsp-o{text-decoration:none}
 .si{--s:40px;width:var(--s);height:var(--s);flex:none;display:inline-block;border-radius:8px;background-image:url(spells.png?v=20261018r2);background-repeat:no-repeat;background-size:calc(var(--s)*16) auto;image-rendering:pixelated;box-shadow:0 0 0 1px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.08),0 2px 6px rgba(0,0,0,.25);position:relative;vertical-align:middle}
 .si.fb{background:radial-gradient(120% 120% at 30% 20%,color-mix(in srgb,var(--el,var(--accent)) 70%,#fff 10%),color-mix(in srgb,var(--el,var(--accent)) 55%,#000 45%));display:inline-grid;place-items:center;color:#fff;font:700 calc(var(--s)*.34)/1 var(--sans);letter-spacing:.02em;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 .si.sm{--s:30px;border-radius:6px} .si.bare{box-shadow:none;border-radius:0} .si.lg{--s:48px;border-radius:10px}
-.si .n{position:absolute;left:-6px;top:-6px;width:19px;height:19px;border-radius:50%;background:var(--ink);color:var(--surface);font:700 11px/19px var(--sans);text-align:center;box-shadow:0 0 0 2px var(--surface)}
+.si .n{position:absolute;left:-6px;top:-6px;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--surface);font:700 12px/20px var(--sans);text-align:center;box-shadow:0 0 0 2px var(--surface)}
 /* r4-t4 */ .si .n,.hbs .well i{z-index:1} .si .ini{font-weight:inherit} .si.sg svg{display:none}
 /* stances */
 .stance{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;align-items:start}
@@ -606,7 +609,7 @@ a.gsp-o{text-decoration:none}
 .hbs{flex:none;width:52px;display:grid;justify-items:center;gap:4px;border:0;background:none;padding:0;cursor:pointer}
 .hbs .well{width:48px;height:48px;border-radius:10px;background:var(--sunk);border:1px solid var(--line);display:grid;place-items:center;position:relative}
 .hbs .well .si{--s:40px}
-.hbs .well i{position:absolute;right:-4px;bottom:-5px;font:600 10.5px/1 var(--mono);font-style:normal;background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:2px 4px;color:var(--ink-2)}
+.hbs .well i{position:absolute;right:-4px;bottom:-5px;font:600 12px/1 var(--mono);font-style:normal;background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:2px 4px;color:var(--ink-2)}
 .hbs .well i.mab{left:-4px;right:auto;top:-5px;bottom:auto;background:var(--accent);color:var(--surface);border-color:var(--accent)}
 .hbs:hover .well,.hbs:focus-visible .well{border-color:var(--accent)}
 .hbs.gap{width:10px}
@@ -620,7 +623,7 @@ a.gsp-o{text-decoration:none}
 .act.alt{gap:4px;padding-right:10px}
 .act.alt .or{color:var(--muted);font-size:12px;margin:0 2px}
 .hk .chev{color:var(--muted)}
-.mabtag{font:700 10.5px/1 var(--sans);letter-spacing:.06em;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:999px;padding:4px 7px;margin-right:2px}
+.mabtag{font:700 12px/1 var(--sans);letter-spacing:.06em;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:999px;padding:4px 7px;margin-right:2px}
 .hk .d{display:block;font-size:14px;color:var(--muted);margin-top:6px}
 .hk .nx{display:inline-block;font-size:13px;margin-top:6px;padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
 .hkfut{grid-column:1/-1}
@@ -1022,7 +1025,7 @@ html[data-ui="modern"] .srchbtn:hover svg{animation:mdTilt .5s var(--e-spring)}
 
 /* ======================= equipamento: vistas, ações, separadores ======================= */
 .eqtabs{display:flex;width:max-content;max-width:100%;gap:4px;padding:4px;margin-bottom:14px;border:1px solid var(--line);border-radius:12px;background:var(--sunk);overflow-x:auto;scrollbar-width:none}
-.eqtabs button{border:0;background:none;padding:0 14px;min-height:40px;border-radius:9px;font:inherit;font-weight:600;color:var(--muted);white-space:nowrap;cursor:pointer;display:flex;gap:6px;align-items:center}
+.eqtabs button{border:0;background:none;padding:0 14px;min-height:40px;border-radius:9px;font:inherit;font-weight:600;color:var(--ink-2);white-space:nowrap;cursor:pointer;display:flex;gap:6px;align-items:center}
 .eqtabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.2)}
 .eqtabs .n:empty{display:none}
 .eqtabs .n,.sltabs .n{font-size:12px;padding:0 7px;border-radius:99px;background:var(--surface-2);color:var(--muted);line-height:1.7}
@@ -1053,7 +1056,7 @@ html[data-ui="modern"] .srchbtn:hover svg{animation:mdTilt .5s var(--e-spring)}
 .gsp-in svg{width:19px;height:19px;fill:none;stroke:var(--muted);stroke-width:2;flex:none}
 .gsp-in input{flex:1;min-width:0;border:0;background:none;outline:none;font:inherit;font-size:16px;padding:14px 0;color:var(--ink)}
 .gsp-in input::-webkit-search-cancel-button{display:none}
-.gsp-x{border:1px solid var(--line);background:var(--surface-2);color:var(--muted);font:600 11.5px var(--mono,monospace);border-radius:7px;padding:4px 8px;cursor:pointer;min-height:30px}
+.gsp-x{border:1px solid var(--line);background:var(--surface-2);color:var(--muted);font:600 12px var(--mono,monospace);border-radius:7px;padding:4px 8px;cursor:pointer;min-height:30px}
 .gsp-cats{display:flex;gap:6px;padding:8px 12px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
 .gsp-cats:empty{display:none}
 .gsp-cats button{flex:none;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:999px;padding:4px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:32px;display:flex;gap:6px;align-items:center}
@@ -1078,7 +1081,7 @@ html[data-ui="modern"] .srchbtn:hover svg{animation:mdTilt .5s var(--e-spring)}
 .gsp-sug{display:flex;flex-wrap:wrap;gap:6px}
 .gsp-sug button{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;min-height:34px}
 .gsp-f{display:flex;gap:14px;padding:8px 14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.gsp-f kbd{font:600 10.5px var(--mono,monospace);border:1px solid var(--line);border-radius:5px;padding:1px 5px;margin-right:3px;background:var(--surface-2)}
+.gsp-f kbd{font:600 12px var(--mono,monospace);border:1px solid var(--line);border-radius:5px;padding:1px 5px;margin-right:3px;background:var(--surface-2)}
 @media (max-width:620px){ .gsp{max-height:calc(100vh - 80px)} .gsp-f{display:none} .gsp-o .k{display:none} }
 /* ======================= páginas internas: feitiço, NPC, conquista, montaria, outfit ======================= */
 .mo-spr{display:inline-block;width:64px;height:64px;background-repeat:no-repeat;image-rendering:pixelated;flex:none}
@@ -1160,7 +1163,8 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whx-btn{display:inline-flex;gap:6px}
 .whx-imp summary{cursor:pointer;font-size:13px;color:var(--accent);padding:4px 0}
 .whx-imp form{display:flex;gap:6px;margin-top:6px}
-.whx-imp input{width:min(320px,62vw);padding:6px 9px;font:inherit;font-size:13px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.whx-imp form .btn{flex:none} /* r8: o "Abrir" ficava espremido com 20 px */
+.whx-imp input{flex:1 1 200px;min-width:0;max-width:320px;padding:6px 9px;font:inherit;font-size:13px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
 .whx-msg{flex-basis:100%;color:var(--warn)} .whx-msg:empty{display:none}
 .whx-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:start}
 .whx-w{display:grid;gap:8px}
@@ -1333,6 +1337,7 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 /* r5-t4: cabeçalho do grupo 'outros tipos de arma' na lista do slot, skills que não contam no total do set e a frase da ficha */
 .ilist li.ilist-g{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:14px 4px 4px}
 .hs-sk.hs-nc{opacity:.6;background:transparent;white-space:normal;border-radius:12px}
+.hs-sk.hs-wr{white-space:normal;flex-wrap:wrap;border-radius:12px} /* r8: chip das flechas elementais pode partir */
 .hset-note{margin:0}
 .pk-f{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
 .pk-f .btn{flex:1}
@@ -1503,7 +1508,7 @@ html[data-ui="modern"] .hc-th .hthumb{transition:transform .6s var(--e-out),filt
 html[data-ui="modern"] .hc:hover .hc-th .hthumb{transform:scale(1.08);filter:saturate(1.3) brightness(1.1)}
 /* r6-t1: zona ainda sem miniatura do mapa */
 html[data-ui="modern"] .hthumb-x{width:100%;height:100%;border-radius:10px;position:relative;background:radial-gradient(circle at 50% 42%,rgba(139,92,246,.38),transparent 62%),repeating-linear-gradient(45deg,rgba(167,139,250,.09) 0 6px,transparent 6px 12px),rgba(7,6,22,.85)}
-html[data-ui="modern"] .hthumb-x::after{content:"mapa em breve";position:absolute;left:6px;top:5px;font:600 9.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#B4ACD8}
+html[data-ui="modern"] .hthumb-x::after{content:"mapa em breve";position:absolute;left:6px;top:5px;font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#B4ACD8}
 html[data-ui="modern"] .hc:hover .hc-mons .cr{animation:mdBob .7s var(--e-spring)}
 html[data-ui="modern"] .hc:hover .hc-mons .cr:nth-child(2){animation-delay:.08s}
 html[data-ui="modern"] .hc:hover .hc-mons .cr:nth-child(3){animation-delay:.16s}
@@ -1611,7 +1616,7 @@ html[data-ui="modern"] .lvcard .lvstep #down:hover,html[data-ui="modern"] .lvcar
 html[data-ui="modern"] .lvcard .lvctl #hsNote{flex:1 1 250px;max-width:none;align-self:center;display:flex;gap:8px;align-items:flex-start;padding:2px 0 2px 12px;border-left:2px solid rgba(125,232,255,.35);font-size:13px;line-height:1.45;color:#A59DCB}
 html[data-ui="modern"] :is(.hero,#defStats) .stat span[data-md]{font-size:0}
 html[data-ui="modern"] :is(.hero,#defStats) .stat span[data-md]::before{content:attr(data-md);font-size:12px}
-html[data-ui="modern"] .lvcard .lvctl #hsNote::before{content:"i";flex:none;display:grid;place-items:center;width:17px;height:17px;margin-top:1px;border-radius:50%;border:1.5px solid #7DE8FF;color:#7DE8FF;font:700 10.5px/1 var(--sans);font-style:italic;box-shadow:0 0 8px rgba(34,211,238,.35)}
+html[data-ui="modern"] .lvcard .lvctl #hsNote::before{content:"i";flex:none;display:grid;place-items:center;width:18px;height:18px;margin-top:1px;border-radius:50%;border:1.5px solid #7DE8FF;color:#7DE8FF;font:700 12px/1 var(--sans);font-style:italic;box-shadow:0 0 8px rgba(34,211,238,.35)}
 
 html[data-ui="modern"] .hero .bis{grid-area:bis;align-self:stretch;align-content:center;gap:12px;padding:16px 12px 14px;border:1px solid rgba(167,139,250,.22);border-radius:18px;
   background:radial-gradient(80% 60% at 50% 0,rgba(139,92,246,.18),transparent 70%),rgba(7,6,22,.42)}
@@ -2698,7 +2703,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
 @media (pointer:coarse){
   .btn.small,.own-btn,.cchip,.seg button,.bis-seg button,.csw-btn,.tabs button,#spFilter button,#tkType button,.setacts .btn{min-height:44px}
   #gsBtn,.cchip.add{min-width:44px;min-height:44px}
-  .sf-mode .seg button,.hf-row .seg button,#tMeta .btn,#tgtIn{min-height:44px}
+  .sf-mode .seg button,.hf-row .seg button,.seg a.navx,#tMeta .btn,#tgtIn{min-height:44px}
   .step a.elink,.bnpc a.elink,.hd a,a.pt-i,b>a.elink,code>a.elink,h4>a.elink{position:relative}
   .step a.elink::after,.bnpc a.elink::after,.hd a::after,a.pt-i::after,b>a.elink::after,code>a.elink::after,h4>a.elink::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
 }
@@ -43470,7 +43475,7 @@ function huntCard(h, cats){
   const c=C(), p=h.p, name=p?p.n:h.r.place, locked=h.l>c.level+3, key="h"+h.voc+h.i; HSTORE[key]=h;
   const qok = !h.q || qDone(c,h.q);
   const tops=((G.pm[h.r.c]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,3), mc=h.r.c?mainCls(h.r.c):null;
-  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"${h.r.c?` data-pid="${esc(h.r.c)}"`:""}><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.xp==null?`<span class="hcx">${starsTxt(p)||"XP e lucro por medir"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b></span><span class="hc-p"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}${mc?` · <span class="cls">${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?' · <span class="lk">quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
+  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"${h.r.c?` data-pid="${esc(h.r.c)}"`:""}><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.xp==null?`<span class="hcx">${starsTxt(p)||"XP e lucro por medir"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b></span><span class="hc-p"><span class="hc-pe"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}</span>${mc?`<span class="cls"><i class="hc-sep" aria-hidden="true">· </i>${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?'<span class="lk"><i class="hc-sep" aria-hidden="true">· </i>quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
 }
 const DIRS=["norte","nordeste","leste","sudeste","sul","sudoeste","oeste","noroeste"];
 const CITIES=[["Thais",32369,32241],["Carlin",32360,31782],["Venore",32957,32076],["Ab'Dendriel",32732,31634],["Kazordoon",32649,31925],["Edron",33217,31814],["Darashia",33213,32454],["Ankrahmun",33194,32853],["Port Hope",32594,32745],["Liberty Bay",32317,32826],["Svargrond",32212,31132],["Yalahar",32787,31276],["Farmine",33023,31521],["Gray Beach",33447,31323],["Roshamuul",33513,32363],["Rathleton",33594,31899],["Krailos",33657,31665],["Issavi",33921,31477],["Feyrist",33490,32221],["Marapur",33783,32850],["Bounac",32424,32445],["Oskayaat",33025,32930],["Dawnport",32064,31894]];
@@ -44885,10 +44890,17 @@ const AMMOA={bow:[[50,"Shatterstorm Arrow","physical",27],[125,"Firestorm Arrow"
   [125,"Thunderstorm Arrow","energy",21],[150,"Diamond Arrow","physical",37]]};
 const ammoBest=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L&&!/^Diamond/.test(x[2])).reduce((m,x)=>!m||x[1]>m[1]?x:m,null);
 const ammoArea=(b,L)=>(AMMOA[b]||[]).filter(x=>x[0]<=L);
-// chips 'Alvo único' e 'Área' (eff = G.places[pid].eff: o que as criaturas levam de cada elemento; a de área que rende mais leva 'usa esta')
-function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L), ln=n=>ITV&&hasKey(ITV,n.toLowerCase())?`<a href="${itemHref(n)}">${esc(n)}</a>`:esc(n); // só com página (items.json carregado e com o item) if(!st) return "";
-  const ev=x=>eff&&eff[x[2]]!=null?Math.round(eff[x[2]]):null, top=eff&&ar.length?ar.reduce((m,x)=>(ev(x)||0)>(ev(m)||0)?x:m,ar[0]):null;
-  return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+ar.map(x=>`<span class="hs-sk">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!=="physical"?` ${chip(x[2])}`:""}${ev(x)!=null?` <b>${ev(x)}%</b>`:""}${x===top&&ar.length>1?' <span class="tag ok">usa esta</span>':""}</span>`).join(""); }
+// chips 'Alvo único' e 'Área' (eff = G.places[pid].eff: o que as criaturas levam de cada elemento; a de área que rende mais leva 'usa esta').
+// r8: uma flecha física de área (a de mais ataque) e, das elementais, a do elemento que rende mais na hunt; sem hunt, as elementais
+// ficam num só chip ('Área elemental +21' com os elementos), para a linha não encher o set
+function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L); if(!st) return "";
+  const ln=n=>ITV&&hasKey(ITV,n.toLowerCase())?`<a href="${itemHref(n)}">${esc(n)}</a>`:esc(n); // link só com página (items.json carregado e com o item)
+  const ev=x=>eff&&eff[x[2]]!=null?Math.round(eff[x[2]]):null, val=x=>x[3]*((ev(x)??100)/100);
+  const ph=ar.filter(x=>x[2]==="physical").reduce((m,x)=>!m||x[3]>m[3]?x:m,null), els=ar.filter(x=>x[2]!=="physical");
+  const el=eff&&els.length?els.reduce((m,x)=>val(x)>val(m)?x:m):null, show=[ph,el].filter(Boolean), top=eff&&show.length>1?show.reduce((m,x)=>val(x)>val(m)?x:m):null;
+  const one=x=>`<span class="hs-sk">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!=="physical"?` ${chip(x[2])}`:""}${ev(x)!=null?` <b>${ev(x)}%</b>`:""}${x===top?' <span class="tag ok">usa esta</span>':""}</span>`;
+  return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+show.map(one).join("")
+    +(!eff&&els.length?`<span class="hs-sk hs-wr" title="${esc(els.map(x=>x[1]).join(", "))}">Área elemental <b>+${els[0][3]}</b> ${els.map(x=>chip(x[2])).join(" ")}</span>`:""); }
 // sem aljava com arco ou besta (abaixo do 150 não há nenhuma com stats): as simples não têm nível nem bónus
 const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)";
 /* pontuação de um item para a personagem (r8: valor em %, ver em baixo). mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
