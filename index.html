@@ -44691,8 +44691,21 @@ function relSkills(c){
 // Onyx Arrow 40 (40), Diamond Arrow 37 (150, em área). Bolts: Bolt 30, Piercing Bolt 33 (30), Power Bolt 40 (55), Drill Bolt 56 (70),
 // Infernal Bolt 65 (110), Spectral Bolt 78 (150). O scoreItem soma ao atk dos arcos e das bestas o da melhor munição até ao nível
 // (o atk do arco ou da besta é só o bónus; o dano vem da munição).
-const AMMO={bow:[[0,25],[20,28],[40,40],[150,37]],crossbow:[[0,30],[30,33],[55,40],[70,56],[110,65],[150,78]]};
+/* r7 */ // 3.º valor = nome (página do item). Novas: Tarsal Arrow 33 (30), Crystalline Arrow 65 (90), Vortex Bolt 36 (40), Prismatic Bolt 66 (90).
+// Diamond Arrow é de área: conta no ammoAtk, mas o ammoBest (alvo único) não a escolhe.
+const AMMO={bow:[[0,25,"Arrow"],[20,28,"Sniper Arrow"],[30,33,"Tarsal Arrow"],[40,40,"Onyx Arrow"],[90,65,"Crystalline Arrow"],[150,37,"Diamond Arrow"]],
+  crossbow:[[0,30,"Bolt"],[30,33,"Piercing Bolt"],[40,36,"Vortex Bolt"],[55,40,"Power Bolt"],[70,56,"Drill Bolt"],[90,66,"Prismatic Bolt"],[110,65,"Infernal Bolt"],[150,78,"Spectral Bolt"]]};
 const ammoAtk=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L).reduce((m,x)=>Math.max(m,x[1]),0);
+/* r7 */ // flechas de área por nível: [nível, nome, elemento] (junho de 2026: Shatterstorm 50 e as elementais 125; Diamond 150). As bestas não têm.
+const AMMOA={bow:[[50,"Shatterstorm Arrow","physical"],[125,"Firestorm Arrow","fire"],[125,"Froststorm Arrow","ice"],[150,"Diamond Arrow","physical"]]};
+const ammoBest=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L&&!/^Diamond/.test(x[2])).reduce((m,x)=>!m||x[1]>m[1]?x:m,null);
+const ammoArea=(b,L)=>(AMMOA[b]||[]).filter(x=>x[0]<=L);
+// chips 'Alvo único' e 'Área' (eff = G.places[pid].eff: o que as criaturas levam de cada elemento; a de área que rende mais leva 'usa esta')
+function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L), ln=n=>ITV&&hasKey(ITV,n.toLowerCase())?`<a href="${itemHref(n)}">${esc(n)}</a>`:esc(n); // só com página (items.json carregado e com o item) if(!st) return "";
+  const ev=x=>eff&&eff[x[2]]!=null?Math.round(eff[x[2]]):null, top=eff&&ar.length?ar.reduce((m,x)=>(ev(x)||0)>(ev(m)||0)?x:m,ar[0]):null;
+  return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+ar.map(x=>`<span class="hs-sk">Área: ${ln(x[1])}${x[2]!=="physical"?` ${chip(x[2])}`:""}${ev(x)!=null?` <b>${ev(x)}%</b>`:""}${x===top&&ar.length>1?' <span class="tag ok">usa esta</span>':""}</span>`).join(""); }
+// sem aljava com arco ou besta (abaixo do 150 não há nenhuma com stats): as simples não têm nível nem bónus
+const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; leva as munições na mão do escudo)";
 /* pontuação de um item para a personagem. mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
    prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}) */
 /* r5-t4: eff (opcional) = G.places[pid].eff da hunt: a arma conta com o dano que as criaturas levam do elemento dela */
@@ -44781,6 +44794,7 @@ function setTotals(slots){
   Object.entries(slots||{}).forEach(([k,e])=>{ const it=e&&BYID[e.id]; if(!it) return; t.n++;
     t.arm+=it.arm||0; t.spd+=it.spd||0; t.is+=it.is||0; t.mn+=it.mn||0;
     if(it.s==="shield"&&it.def) shDef=(it.def||0)+(it.edef||0);
+    if(it.s==="shield") t.sb=it.b||""; /* r7 */
     if(it.s==="weapon"){ wDef=(it.def||0)+(it.edef||0); t.wb=it.b||""; if(it.wd) t.wd=it.wd; else if(it.atk) t.atk=[it.atk,it.wel]; }
     if(it.rg){ t.rg[0]+=it.rg[0]; t.rg[1]+=it.rg[1]; }
     Object.entries(it.sk||{}).forEach(([x,v])=>t.sk[x]=(t.sk[x]||0)+v);
@@ -44802,7 +44816,8 @@ function setSumHTML(t,lab,c){
   if(t.def) kv.push(["def","Defesa",t.def]);
   if(t.wd) kv.push(["atk",`Dano · ${ELN[t.wd[0]]||t.wd[0]}`,t.wd[1]===t.wd[2]?t.wd[1]:`${t.wd[1]}–${t.wd[2]}`]);
   else if(t.atk||t.wb==="bow"||t.wb==="crossbow"){ /* r4-t5 */ const am=t.wb==="bow"||t.wb==="crossbow", a=t.atk||[0,null];
-    kv.push(["atk",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:"Ataque",a[0],am?"+ munição":""]); }
+    const mb=am&&c?ammoBest(t.wb,c.level):null; /* r7 */
+    kv.push(["atk",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:"Ataque",a[0],mb?`+ ${mb[1]} munição`:am?"+ munição":""]); }
   kv.push(["spd","Velocidade",t.spd?(t.spd>0?"+":"")+t.spd:"0"]);
   kv.push(["is","Imbuements",t.is,t.is===1?"slot":"slots"]);
   if(t.mn) kv.push(["mn","Mantra","+"+t.mn]);
@@ -44814,7 +44829,8 @@ function setSumHTML(t,lab,c){
     <div class="hs-kv">${kv.map(([k,l,v,u])=>`<div class="hs-i" data-k="${k}"><i aria-hidden="true"><svg viewBox="0 0 24 24">${SUMI[k]}</svg></i><b>${v}${u?` <small>${esc(String(u))}</small>`:""}</b><span>${l}</span></div>`).join("")}</div>
     <div class="hs-row"><span class="hs-l">Skills</span><div class="hs-chips">${sk.length||nc.length?sk.map(x=>`<span class="hs-sk">${skt(x)}</span>`).join("")+(nc.length?`<span class="hs-sk hs-nc">${nc.map(skt).join(" · ")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:"não contam para esta vocação"})</span>`:""):`<span class="tiny muted">nenhuma</span>`}</div></div>
     <div class="hs-row"><span class="hs-l">Proteções</span><div class="hs-chips">${ab.length?ab.map(([e,v])=>`<span class="hs-pr c-${e}${v<0?" neg":""}">${esc(elName(e))} <b>${v>0?"+":""}${v}%</b></span>`).join(""):`<span class="tiny muted">nenhuma neste set</span>`}</div></div>
-    ${ex.length?`<div class="hs-row"><span class="hs-l">Extra</span><div class="hs-chips">${ex.slice(0,6).map(x=>`<span class="hs-sk">${esc(x)}</span>`).join("")}</div></div>`:""}`;
+    ${ex.length?`<div class="hs-row"><span class="hs-l">Extra</span><div class="hs-chips">${ex.slice(0,6).map(x=>`<span class="hs-sk">${esc(x)}</span>`).join("")}</div></div>`:""}${c&&(t.wb==="bow"||t.wb==="crossbow")?`
+    <div class="hs-row"><span class="hs-l">Munição</span><div class="hs-chips">${ammoChips(t.wb,c.level)}${t.sb!=="quiver"?`<span class="hs-sk" title="${esc(quivTip)}">Aljava: Quiver, Red ou Blue</span>`:""}</div></div>`:""}`;
 }
 const IS_TOUCH = () => matchMedia("(hover:none)").matches;
 function heroSetSel(c){ ensureSets(c); return c.sets.find(s=>s.id===c.aset); }
@@ -44829,7 +44845,7 @@ function renderBis(){
       if(!k) return '<div aria-hidden="true"></div>';
       if(k==="bag") return `<button class="bslot none" data-bslot="bag" title="Mochila: poções e runas" aria-label="Mochila: poções e runas">${IC.bag}</button>`;
       const it=set.slots[k]&&BYID[set.slots[k].id];
-      if(!it){ const why = k==="shield"&&c.voc==="monk" ? "os monks usam as duas mãos" : mine ? "vazio (botão direito para escolher)" : "nada para este nível";
+      if(!it){ const why = k==="shield"&&c.voc==="monk" ? "os monks usam as duas mãos" : k==="shield"&&c.voc==="paladin"&&!mine ? quivTip : mine ? "vazio (botão direito para escolher)" : "nada para este nível";
         return `<button class="bslot none" data-bslot="${k}" title="${lab}: ${why}" aria-label="${lab}: ${why}">${emptyIc(c,k)}</button>`; }
       return `<button class="bslot" data-bslot="${k}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}. Menu de contexto para trocar">${spr(it)}</button>`; }).join("")}</div>
     <div class="biscap" id="bisCap">${def}</div>`;
@@ -45237,8 +45253,9 @@ function hsetsHTML(pid){
     const W=c.voc==="monk"&&S.slots.weapon?BYID[S.slots.weapon.id]:null, ef=(G.places[pid]||{}).eff, wv=W&&W.bond&&ef&&ef[W.bond]!=null?Math.round(ef[W.bond]):null; // r6-t3: arma do monk e o que as criaturas levam da ligação
     return `<div class="hset-p" data-hpane="${k}" ${k===sel?"":"hidden"}><p class="small hset-d">${esc(d)}${twin?` <span class="tiny muted">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:""}</p>
       <div class="hset-b"><div class="bisdoll sm" role="group" aria-label="Set ${esc(t.toLowerCase())}">${DOLL.map(([x,lab0])=>{ const lab=x?slotLab(c,x):lab0; if(!x) return '<div aria-hidden="true"></div>'; if(x==="bag") return `<span class="bslot none" aria-hidden="true">${IC.bag}</span>`;
-        const it=S.slots[x]&&BYID[S.slots[x].id]; return it?`<a class="bslot" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}">${spr(it)}</a>`:`<span class="bslot none" title="${lab}: nada">${emptyIc(c,x)}</span>`; }).join("")}</div>
+        const it=S.slots[x]&&BYID[S.slots[x].id]; return it?`<a class="bslot" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}">${spr(it)}</a>`:`<span class="bslot none" title="${lab}: ${x==="shield"&&c.voc==="paladin"?esc(quivTip):"nada"}">${emptyIc(c,x)}</span>`; }).join("")}</div>
         <div class="hset-t"><div class="hset-kv"><div><b>${T.arm}</b><span>armadura</span></div>${T.def?`<div><b>${T.def}</b><span>defesa</span></div>`:""}${sk.map(([x,v])=>`<div><b>+${v}</b><span>${esc(SKN[x]||x)}</span></div>`).join("")}</div>
+          ${c.voc==="paladin"&&(T.wb==="bow"||T.wb==="crossbow")?`<p class="small hset-wb hs-am"><b>Munição:</b> <span class="hs-chips">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!=="quiver"?` <span class="tiny muted">Aljava: ${esc(quivTip)}.</span>`:""}</p>`:""}
           ${W&&W.bond?`<p class="tiny muted hset-wb">Arma: <a href="${itemHref(W.n)}" data-look="${W.id}">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:""}</p>`:""}
           <div class="hs-chips">${top.slice(0,4).map(([e])=>{ const v=T.ab[e]||0; return `<span class="hs-pr c-${e}${v<0?" neg":""}">${esc(elName(e))} <b>${v>0?"+":""}${v}%</b></span>`; }).join("")}</div>
           ${imbLine(S)}
