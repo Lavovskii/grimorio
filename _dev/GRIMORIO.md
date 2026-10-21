@@ -256,3 +256,40 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 - Disco: com menos de 1 GB livre o smoke não abre o browser e sai com código 2 (`errors: ['disco quase cheio (N MB livres)']`); com menos de 2 GB avisa em
   `warnings` (`pouco espaço em disco`). Liberta espaço antes de continuar: com o disco cheio o site público também falha (cache do `api/market.php`, logs).
 - Pasta de ensaio (só local): `C:\xampp\htdocs\_grimorio_staging\` → `http://localhost/_grimorio_staging/`.
+
+## Wheel desenhada, páginas de item/criatura e a junção com o Questski (outubro de 2026)
+
+**Wheel (`data/wheel.json`, `_dev/build_wheel.py`).** 36 fatias numa grelha 6×6 lida por linhas, na ordem do enum
+`WheelSlots_t` do Canary e dos 36 primeiros bytes do código de exportação do jogo (letra da vocação + `0` + deflate cru
+em base64url sem `=`; 12 bytes de gemas a seguir, 255 = vazio). Verde em cima à esquerda, vermelho em cima à direita, azul
+em baixo à esquerda, roxo em baixo à direita; por domínio: 50 no centro, 2 × 75, 3 × 100, 2 × 150 e a de 200 a toda a volta
+por fora. `slots[i] = [domínio, máximo, dedicação, convicção]` (dedicação hp/mp/cap/mit/hpmp; convicção vr, skill, mleech,
+lleech, `sp:A`–`sp:E` = feitiço aumentado do grupo, `inst:G200`/`inst:P200`), `adj[i]` = fatias das quais pelo menos uma tem
+de estar cheia (as de 50 não pedem nenhuma), `voc[v]` = vida/mana/cap por ponto, nomes dos feitiços por grupo, perks das de
+200 e revelação de cada domínio; `aug`/`perk`/`revd` = textos pt-PT; `b[código]` = os 36 pontos de cada build do G.wheel e
+`g[código]` = as gemas (só as que as têm). O build valida tudo contra as 70 builds (vida, mana, cap, mitigação 0,075 %/ponto,
+convicções com grau, revelações e ligações) e deve dizer "builds com diferenças: 0".
+JS (antes do `/* ---------- equipment`): `whLoad`, `whGeo(i)` (anel e ângulos), `whSum(voc,pts)`, `whSVG(voc,pts,{size,edit,budget})`,
+`whSlotTxt` (dica), `whPanelHTML` (dedicação, convicção, vessels/gemas, revelação), `whGemMods`, `whPick(voc,pts,pid,risco)` (build
+para uma hunt: a variante holy/físico ou energia/fogo/morte que rende mais nas criaturas), `hwheelHTML(pid,risco)` (bloco "Wheel,
+gemas e charms" da ficha da hunt, com `charmPicks`/`hCharmsHTML`), `renderWheelX` (página da Wheel, editável: `WED`, `whEdit`,
+`whPrune`, `whEncode`/`whDecode` com Compression/DecompressionStream 'deflate-raw').
+
+**Páginas de item e de criatura.** `specBar([[rótulo,html]])` = faixa de números no topo (ignora os que faltam); `.pg2` = duas
+colunas; `.pt` = tabela simples (ataques, loot, drops, preço, forge); `.rs`/`.rs-c` = fraquezas e resistências, uma célula por
+elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
+
+**Questski (`quests/`, fonte em `_questski/`).** App própria (vanilla JS, rotas `#/…`, estado `tq-*` no localStorage). Partilhado:
+- `shared/sites.css`: o switch `.sitesw` (no `header.bar` do Grimório e no `header.topbar` do Questski) e a transição
+  `@view-transition` entre os dois sites.
+- `data/guias.json` (`_dev/build_guias.py`): `g` = guias `[slug, nome, nível mín., nível rec., premium, categoria, região, passos]`,
+  `q2s` = id da quest do G.quests → slug, `n2s` = nome normalizado → slug (a mesma normalização em `gKey()` no Grimório).
+- Grimório: `guiasLoad`, `guiaOf(id,nome)`, `guiaHref`, `guiaBtn`, `guiaPair` (depois de `qName`); categoria `g` na pesquisa
+  (`GSC.g`); item de menu `["guias","Guias de quests","quests/"]` (o 3.º elemento = link, ver `isPanel()`); cartão do início
+  `renderGuiasHome`/`guiasFor` (lê também o progresso do Questski, `tq-progress`). Um `storage` listener adota o estado novo
+  quando o Questski, noutro separador, marca quests.
+- Questski: `quests/js/ponte.js` (`window.QPonte`: `char()`, `grimDone(slug)`, `setGrimDone(slug,v)`, `grimHref(tipo,título)`,
+  lê `grimorio-tibia-v4`, `../data/guias.json` e `../data/search.json`); em `app.js`, `QP` usa-o no `isDone`, no "Marcar como
+  concluída", no filtro "O meu nível" (`S.filters.lvlChar` = nível vem da personagem) e na wiki ("Ver no Grimório" e o switch).
+- O Original/Modern é o mesmo nos dois (`grimorio-ui`); o Modern do Questski está em `quests/css/modern.css`.
+- Ferramentas do Questski: `_questski/tools/*.py` escrevem em `../quests/` (antes `site/`); `tools/cache/` não vai para o Git.
