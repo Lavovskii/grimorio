@@ -1,0 +1,95 @@
+{
+  "slug": "mastermind-potion-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 3,
+  "duration": "45–60 min",
+  "summary": "Nas {wiki:Formorgar Mines|Formorgar Mines}, na ilha de Svargrond, há duas caixas escondidas, cada uma com uma {item:Mastermind Potion}. Segue os dois caminhos pelas minas, cheias de {wiki:Voodoo Cultists|cultistas voodoo} e golems, para apanhares as duas poções, algum ouro e peixe.",
+  "start": {"x": 32145, "y": 31123, "z": 7, "label": "Escadas para as Formorgar Mines (oeste de Svargrond)"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 90).",
+    "Acesso às Formorgar Mines: ganha-se ao aceitar a missão 9 da {wiki:Ice Islands Quest|Ice Islands Quest}.",
+    "O spell {spell:Levitate}, para subir (e depois descer) no caminho de Svargrond até às minas."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"},
+    {"text": "Poções de vida/mana suficientes para os dois percursos"}
+  ],
+  "rewards": [
+    {"item": "Mastermind Potion", "qty": 2},
+    {"text": "78 gp e 123 gp"},
+    {"item": "Green Perch"},
+    {"item": "Rainbow Trout", "qty": 2}
+  ],
+  "dangers": ["Penguin", "Winter Wolf", "Frost Troll", "Polar Bear", "Bandit", "Gargoyle", "Mammoth", "Stone Golem", "Ice Golem", "Crystal Spider", "Nightmare"],
+  "tips": [
+    "As minas têm todo o tipo de {wiki:Voodoo Cultists|Voodoo Cultists}. Vai preparado para lutar em várias frentes.",
+    "Os dois baús ficam em percursos diferentes que começam ambos na entrada das minas: guarda os mapas abertos enquanto andas."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar às Formorgar Mines",
+      "steps": [
+        {
+          "title": "Chegar a Svargrond",
+          "text": "Se ainda não estás em **Svargrond**, apanha um barco até lá (por exemplo em Carlin ou com o {npc:Captain Bluebear} em Thais): fala com o capitão do porto e diz {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.",
+          "npc": "Captain Breezelda"
+        },
+        {
+          "title": "Sair de Svargrond para oeste",
+          "text": "Na cidade de **Svargrond**, vai para **oeste**, usa {spell:Levitate} para subir e segue o caminho em direção às {wiki:Formorgar Mines}, como no mapa.",
+          "images": [{"file": "Route to Formorgar Mines.jpg", "caption": "Caminho de Svargrond até às Formorgar Mines"}]
+        },
+        {
+          "title": "Ir à entrada das minas",
+          "text": "No fim do caminho, desce as escadas para entrares nas {wiki:Formorgar Mines|Formorgar Mines}, por baixo do {wiki:Formorgar Glacier}. Só consegues entrar se já tiveres chegado à missão \"Formorgar Mines 1\" da {wiki:Ice Islands Quest|Ice Islands Quest}.",
+          "coords": [{"x": 32145, "y": 31123, "z": 7, "label": "Escadas para as minas"}, {"x": 32146, "y": 31120, "z": 9, "label": "Formorgar Mines (entrada)"}],
+          "images": [{"file": "Minas1.jpg‎", "caption": "Localização das Formorgar Mines"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Primeira Mastermind Potion",
+      "steps": [
+        {
+          "title": "Seguir o primeiro caminho",
+          "text": "A partir da entrada, segue o caminho marcado no mapa.",
+          "images": [{"file": "Mastermindquest1.jpg", "caption": "Caminho até à primeira Mastermind Potion"}],
+          "warning": "No 3.º piso (marcado no mapa com um pequeno quadrado) pode aparecer um {creature:Nightmare}, por vezes trazido por outros jogadores."
+        },
+        {
+          "title": "Abrir a caixa junto à parede",
+          "text": "No fim do caminho, a recompensa está numa caixa **junto à parede**.",
+          "reward": "Mastermind Potion"
+        }
+      ]
+    },
+    {
+      "title": "3. Segunda Mastermind Potion",
+      "steps": [
+        {
+          "title": "Voltar à entrada e seguir o segundo caminho",
+          "text": "Volta à entrada das minas e segue o segundo caminho marcado no mapa.",
+          "images": [{"file": "Mastermindquest2.jpg‎", "caption": "Caminho até à segunda Mastermind Potion"}]
+        },
+        {
+          "title": "Abrir a caixa junto à fogueira",
+          "text": "A recompensa está numa caixa **junto ao fogo**.",
+          "reward": "Mastermind Potion"
+        },
+        {
+          "title": "Sair das Formorgar Mines",
+          "text": "Para sair, volta pelo mesmo caminho até à entrada: regressa às escadas por onde desceste e sobe-as. Depois faz o caminho do mapa ao contrário até **Svargrond**, usando outra vez {spell:Levitate} (desta vez para baixo) no sítio onde subiste. Em Svargrond, a {npc:Captain Breezelda} leva-te de barco de volta.",
+          "npc": "Captain Breezelda",
+          "coords": [{"x": 32145, "y": 31123, "z": 7, "label": "Escadas (saída)"}],
+          "images": [{"file": "Route to Formorgar Mines.jpg", "caption": "Faz este caminho ao contrário para voltar a Svargrond"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Além das duas {item:Mastermind Potion|Mastermind Potions}, as caixas dão também 78 gp, 123 gp, 1 {item:Green Perch} e 2 {item:Rainbow Trout|Rainbow Trouts}."
+  ]
+}

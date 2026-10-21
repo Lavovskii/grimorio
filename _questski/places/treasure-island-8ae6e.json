@@ -1,0 +1,32 @@
+{
+  "title": "Treasure Island",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "Pequena ilha das {wiki:Shattered Isles} a **sudoeste de Liberty Bay**, transformada num enorme local de escavação por caçadores de tesouros; as grutas por baixo só se abrem com a {wiki:Treasure Island Quest}.",
+  "entrance": {"x": 32132, "y": 32913, "z": 7, "label": "Cais de Treasure Island (Captain Waverider)"},
+  "requirements": [
+    "Para entrares nas grutas da ilha tens de fazer a {wiki:Treasure Island Quest} de cada vez."
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** (por exemplo de Venore, no {npc:Captain Fearless}: {key:hi}, {key:liberty bay}, {key:yes}).",
+    "Vai à pequena cabana na península a **sudeste** do depot e fala com o {npc:Captain Waverider} ({coord:32344,32855,7}).",
+    "Diz {key:hi}, {key:treasure island} e {key:yes}: a viagem custa **200 gp**. Desembarcas no cais de Treasure Island ({coord:32132,32913,7})."
+  ],
+  "leave": [
+    "Volta ao cais da ilha: o {npc:Captain Waverider} também está lá ({coord:32132,32913,7}).",
+    "Diz {key:hi}, {key:liberty bay} e {key:yes}: o regresso a Liberty Bay custa **50 gp** (guarda o dinheiro para a volta!).",
+    "Em Liberty Bay, o {npc:Jack Fate} ({coord:32161,32556,6}) leva-te de barco a outras cidades."
+  ],
+  "coords": [
+    {"x": 32344, "y": 32855, "z": 7, "label": "Captain Waverider em Liberty Bay"},
+    {"x": 32156, "y": 32948, "z": 7, "label": "Treasure Island"},
+    {"x": 32045, "y": 32931, "z": 7, "label": "Captain Waverider em Treasure Hunt Island ({wiki:Treasure Hunt Quest})"}
+  ],
+  "images": [
+    {"file": "Treasure island map.png", "caption": "Mapa de Treasure Island"}
+  ],
+  "warnings": [
+    "A ilha está cheia de buracos e entulho dos escavadores: anda com cuidado. À superfície só há gaivotas, {creature:Larva|Larvas}, {creature:Crab|Crabs} e muitos {creature:Scorpion|Scorpions}.",
+    "Nas grutas há {creature:Ghost|Ghosts}, {creature:Pirate Ghost|Pirate Ghosts} e, nas grutas de leste, {creature:Crustacea Gigantica}: knights devem levar uma arma encantada (por exemplo {item:Fire Sword} ou {item:Fire Axe}) para os fantasmas."
+  ]
+}

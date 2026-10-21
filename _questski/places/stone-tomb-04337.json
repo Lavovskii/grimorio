@@ -1,0 +1,28 @@
+{
+  "title": "Stone Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo por baixo do deserto de Kha'labal, perto de **Ankrahmun** (oficialmente Thalas' Venomous Pit), com a entrada coberta de pedras; cheio de {creature:Scarab|Scarabs}, cobras, escorpiões e múmias.",
+  "entrance": {"x": 33282, "y": 32743, "z": 7, "label": "Entrada da Stone Tomb (escava com a Shovel)"},
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Apanha um barco para **Ankrahmun**: por exemplo o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para o deserto de Kha'labal e vai a pé até à entrada do túmulo ({coord:33282,32743,7}), coberta de pedras.",
+    "Usa a {item:Shovel} no sítio da entrada para abrires o buraco e desce."
+  ],
+  "leave": [
+    "Volta pelo caminho por onde vieste até ao início do túmulo (o {item:Magic Forcefield} da sala do faraó, usado sem o item de passe, também te leva ao início).",
+    "Sobe as rampas/escadas até ao buraco que abriste na areia e usa a {item:Rope} para voltares à superfície ({coord:33282,32743,7}).",
+    "Regressa a pé a Ankrahmun. O {npc:Captain Sinbeard} ({coord:33094,32884,6}) leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Tombstones.jpg", "caption": "Entrada da Stone Tomb, coberta de pedras"}
+  ],
+  "warnings": [
+    "Para chegares às partes profundas (piso -6) tens de pisar a {item:Mystic Flame} e pôr uma {item:Scarab Coin} no {item:Coal Basin} vazio.",
+    "Os pisos depois dos teleportes são para níveis 60–90."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "thawing-mini-world-change",
+  "category": "world-change",
+  "region": "Svargrond",
+  "difficulty": 1,
+  "duration": "20 min",
+  "summary": "Quando este Mini World Change está ativo, a neve do glaciar a norte de Svargrond começa a derreter e revela relva e plantas raras. Aparecem 15 {item:Ice Flower|Ice Flowers} que, ao serem usadas, podem dar {item:Ice Flower Seeds}. Colhe 10 com sucesso para ganhares o achievement Ice Harvester.",
+  "legend_pt": "A neve no glaciar a norte de Svargrond começa de repente a derreter.",
+  "start": {"x": 32217, "y": 31093, "z": 5, "label": "Primeira Ice Flower, a oeste do caminho para Svargrond"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo (recomendado 8).",
+    "Só quando o Mini World Change está ativo."
+  ],
+  "rewards": [
+    {"item": "Ice Flower Seeds"},
+    {"text": "Achievement **Ice Harvester** (10 colheitas com sucesso)"}
+  ],
+  "achievements": ["Ice Harvester"],
+  "dangers": ["Winter Wolf", "Polar Bear", "Mammoth"],
+  "tips": [
+    "Cada Ice Flower só tem uma pequena hipótese (~20%) de dar sementes, por isso usa todas as que encontrares.",
+    "Depois de colhida, uma Ice Flower demora 4 horas a voltar a crescer: se outros jogadores passaram antes, podes encontrar flores já colhidas."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se o glaciar está a derreter",
+      "steps": [
+        {
+          "title": "Mensagens do Mini World Change",
+          "text": "O evento está ativo quando aparecem mensagens como *\"Judging by the unnerved mammoths in Svargrond, enough snow has melted away to reveal some very special flora.\"* ou *\"Hear ye! Hear ye! Mammoths silently watch as the snow melts away. It reveals special flowers which are not meant to stay. Grow their seeds to brighten up your day!\"*. Nessa altura o {wiki:Formorgar Glacier|glaciar} a norte de Svargrond começa a derreter e aparece {item:Grass (Tile)|relva} e outras plantas."
+        }
+      ]
+    },
+    {
+      "title": "2. Colher as Ice Flowers",
+      "steps": [
+        {
+          "title": "Ir ao glaciar",
+          "text": "Se não estás em **Svargrond**, apanha o barco em **Carlin**, **Thais** ou **Venore** (diz ao capitão {key:hi}, {key:svargrond}, {key:yes}); chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade. Sai de **Svargrond** para norte e sobe ao glaciar (2 andares acima do nível do chão). As 15 {item:Ice Flower|Ice Flowers} estão espalhadas pela zona marcada no mapa.",
+          "warning": "Pelo caminho há {creature:Winter Wolf|Winter Wolves}, {creature:Polar Bear|Polar Bears} e {creature:Mammoth|Mammoths}.",
+          "map": {"x": 32181, "y": 31070, "z": 5, "marks": [{"x": 32256, "y": 31079, "z": 5, "label": "1"}, {"x": 32254, "y": 31067, "z": 5, "label": "2"}, {"x": 32204, "y": 31056, "z": 5, "label": "3"}, {"x": 32192, "y": 31049, "z": 5, "label": "4"}, {"x": 32162, "y": 31032, "z": 5, "label": "5"}, {"x": 32152, "y": 31031, "z": 5, "label": "6"}, {"x": 32145, "y": 31037, "z": 5, "label": "7"}, {"x": 32135, "y": 31050, "z": 5, "label": "8"}, {"x": 32122, "y": 31062, "z": 5, "label": "9"}, {"x": 32112, "y": 31073, "z": 5, "label": "10"}, {"x": 32120, "y": 31083, "z": 5, "label": "11"}, {"x": 32150, "y": 31061, "z": 5, "label": "12"}, {"x": 32155, "y": 31086, "z": 5, "label": "13"}, {"x": 32185, "y": 31093, "z": 5, "label": "14"}, {"x": 32217, "y": 31093, "z": 5, "label": "15"}]}
+        },
+        {
+          "title": "Usar cada Ice Flower",
+          "text": "Usa cada flor. Há cerca de 20% de hipótese de receberes {item:Ice Flower Seeds}.",
+          "table": {
+            "head": ["#", "Onde", "Coordenada"],
+            "rows": [
+              ["1", "A norte do caminho para a {wiki:Frost Manor}", "{coord:32256,31079,5}"],
+              ["2", "A sul da gruta do {wiki:Sleeping Bear}", "{coord:32254,31067,5}"],
+              ["3", "A oeste da cabana do {npc:Romir}", "{coord:32204,31056,5}"],
+              ["4", "Mais a noroeste da cabana do Romir", "{coord:32192,31049,5}"],
+              ["5", "A leste do Mammoth imóvel", "{coord:32162,31032,5}"],
+              ["6", "A sul do Mammoth imóvel", "{coord:32152,31031,5}"],
+              ["7", "A sudoeste do Mammoth imóvel", "{coord:32145,31037,5}"],
+              ["8", "Bem a sudoeste do Mammoth imóvel", "{coord:32135,31050,5}"],
+              ["9", "A norte do caminho para o ponto mais a oeste", "{coord:32122,31062,5}"],
+              ["10", "No caminho para o ponto mais a oeste", "{coord:32112,31073,5}"],
+              ["11", "A norte do {npc:A Starving Dog}", "{coord:32120,31083,5}"],
+              ["12", "A noroeste da entrada do Formorgar Glacier", "{coord:32150,31061,5}"],
+              ["13", "A oeste da entrada do Formorgar Glacier", "{coord:32155,31086,5}"],
+              ["14", "A leste da entrada do Formorgar Glacier", "{coord:32185,31093,5}"],
+              ["15", "A oeste do caminho para Svargrond", "{coord:32217,31093,5}"]
+            ]
+          },
+          "tip": "As flores voltam a crescer 4 horas depois da última colheita."
+        },
+        {
+          "title": "Conseguir o achievement",
+          "text": "Depois de colheres com sucesso 10 vezes recebes o achievement **Ice Harvester**.\n\nPara voltares, desce do glaciar pelo mesmo caminho (2 andares abaixo) até Svargrond; para saíres da ilha, apanha outra vez o barco da {npc:Captain Breezelda}.",
+          "reward": "{item:Ice Flower Seeds} e achievement **Ice Harvester**",
+          "coords": [{"x": 32347, "y": 31108, "z": 6, "label": "Barco de Svargrond (Captain Breezelda)"}]
+        }
+      ]
+    }
+  ]
+}

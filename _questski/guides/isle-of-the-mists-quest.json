@@ -1,0 +1,72 @@
+{
+  "slug": "isle-of-the-mists-quest",
+  "category": "tesouro",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "15–30 min",
+  "summary": "Algumas vocações têm locais especiais onde só elas podem entrar, e os druids não são exceção. Atravessa o {wiki:Magic Forcefield} nas Plains of Havoc para chegares à {wiki:Isle of the Mists} e recolhe 2 {item:Small Emerald|Small Emeralds} e um {item:Book} da caixa e da gaveta do rés-do-chão.",
+  "legend_pt": "Algumas vocações do Tibia têm locais especiais onde só essa vocação pode entrar. Os druids não são exceção. Se fores druid, tenta encontrar o teu próprio local e receberás o teu prémio.",
+  "start": {"x": 32831, "y": 32295, "z": 7, "label": "Magic Forcefield nas Plains of Havoc"},
+  "requirements": [
+    "Vocação **druid** (é o local especial dos druids).",
+    "Sem nível mínimo; recomendado nível 40.",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [],
+  "rewards": [
+    {"item": "Small Emerald", "qty": 2},
+    {"item": "Book"}
+  ],
+  "achievements": [],
+  "dangers": ["Fernfang", "Giant Spider", "Orc"],
+  "npcs": [],
+  "tips": [
+    "Pelo caminho nas {wiki:Plains of Havoc} podes encontrar {creature:Giant Spider|Giant Spiders}: vai preparado."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar à Isle of the Mists",
+      "steps": [
+        {
+          "title": "Chegar às Plains of Havoc",
+          "text": "Sai de {wiki:Venore} a pé e segue para **sudoeste** até às {wiki:Plains of Havoc}, a sudeste de {wiki:Kazordoon}. No meio das planícies está o templo do {npc:Oldrak} (no 1.º andar acima do chão), onde podes descansar. O {wiki:Magic Forcefield} da ilha fica a **sul** desse templo.",
+          "coords": [
+            {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"},
+            {"x": 32816, "y": 32260, "z": 6, "label": "Templo das Plains of Havoc (Oldrak)"}
+          ]
+        },
+        {
+          "title": "Entrar no Magic Forcefield",
+          "text": "Vai às {wiki:Plains of Havoc} e entra no {wiki:Magic Forcefield}, perto de alguns {creature:Orc|Orcs}. És teletransportado para a {wiki:Isle of the Mists}.",
+          "coords": [{"x": 32831, "y": 32295, "z": 7, "label": "Magic Forcefield"}],
+          "warning": "Podes encontrar {creature:Giant Spider|Giant Spiders} pelo caminho."
+        }
+      ]
+    },
+    {
+      "title": "2. Recolher o prémio",
+      "steps": [
+        {
+          "title": "Abrir a caixa e a gaveta",
+          "text": "No **rés-do-chão** da ilha encontras uma {item:Box} e uma {item:Drawer}. Abre-as para recolheres 2 {item:Small Emerald|Small Emeralds} e um {item:Book}.",
+          "reward": "2 {item:Small Emerald|Small Emeralds} e um {item:Book}",
+          "warning": "Às vezes o {creature:Fernfang} aparece no andar de cima."
+        }
+      ]
+    },
+    {
+      "title": "3. Sair da Isle of the Mists",
+      "steps": [
+        {
+          "title": "Voltar às Plains of Havoc",
+          "text": "A TibiaWiki não descreve a saída da ilha: volta ao ponto onde apareceste ao atravessar o {wiki:Magic Forcefield} e procura aí o caminho de regresso às {wiki:Plains of Havoc}. Já nas planícies, segue para **nordeste** até {wiki:Venore} (ou descansa no templo do {npc:Oldrak}).",
+          "coords": [
+            {"x": 32831, "y": 32295, "z": 7, "label": "Magic Forcefield (lado das Plains of Havoc)"},
+            {"x": 32816, "y": 32260, "z": 6, "label": "Templo das Plains of Havoc"}
+          ],
+          "tip": "Antes de saíres, confirma que já abriste a {item:Box} e a {item:Drawer} no rés-do-chão."
+        }
+      ]
+    }
+  ]
+}

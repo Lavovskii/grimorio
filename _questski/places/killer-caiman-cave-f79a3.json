@@ -1,0 +1,27 @@
+{
+  "title": "Killer Caiman Cave",
+  "type": "gruta",
+  "near": "Farmine",
+  "summary": "Gruta de {creature:Killer Caiman|Killer Caimans} na {wiki:Zao Steppe}, a **sudoeste do acampamento orc central** de Zao; bom sítio de caça para knights a partir do nível 60.",
+  "entrance": {"x": 33137, "y": 31448, "z": 7, "label": "Entrada da Killer Caiman Cave"},
+  "arrive": [
+    "Apanha o {wiki:Steamship} para **Farmine**: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe} em {coord:33085,31532,7}.",
+    "Vai para **nordeste** pela estepe até à entrada da gruta ({coord:33137,31448,7}), a sudoeste do acampamento orc central."
+  ],
+  "leave": [
+    "Sai da gruta e volta pela estepe para **sudoeste** até à passagem em {coord:33085,31532,7}.",
+    "Sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine.",
+    "No Steamship, o {npc:Thorgrin} leva-te a {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp): {key:hi}, o destino, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Steamship de Farmine (Thorgrin)"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"},
+    {"x": 33137, "y": 31448, "z": 7, "label": "Killer Caiman Cave"},
+    {"x": 33173, "y": 31395, "z": 7, "label": "Acampamento orc central (Curos)"}
+  ],
+  "warnings": [
+    "Leva poções de mana e algumas {item:Strong Health Potion|Strong Health Potions}: 3 ou mais {creature:Killer Caiman|Killer Caimans} de uma vez fazem estragos."
+  ]
+}

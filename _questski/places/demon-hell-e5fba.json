@@ -1,0 +1,42 @@
+{
+  "title": "Demon Hell",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Zona funda da {wiki:Hero Cave} de **Edron**, depois da porta de nível 100, com 5 spawns de {creature:Demon|Demons} (mais 4 na sala da {wiki:Demon Helmet Quest}).",
+  "entrance": {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (Edron)"},
+  "requirements": [
+    "**Nível 100** para passar a porta de nível (Gate of Expertise).",
+    "{item:Key 6010} (golden key), da {wiki:Parchment Room Quest}, para a porta logo a seguir.",
+    "**Dois jogadores** em cima dos interruptores para abrir a parede (Gate of the Lost Souls)."
+  ],
+  "items": ["Key 6010", "Rope"],
+  "arrive": [
+    "Apanha um barco para **Edron** (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}); chegas junto ao {npc:Captain Seahorse}.",
+    "Do porto vai para **norte** até à entrada da {wiki:Hero Cave} ({coord:33164,31638,7}) e desce até ao Gate of Expertise de nível 100, perto do spawn de um único Demon.",
+    "Passa a porta de nível e abre a porta seguinte com a {item:Key 6010}.",
+    "Põe dois jogadores nos interruptores ({coord:33191,31629,13}) para abrir a parede ({coord:33211,31630,13}) e passa.",
+    "Depois da parede vai para **norte** e **leste**, desce a escada para o fosso com cerca de 15 {creature:Fire Elemental|Fire Elementals}, sobe as escadas, passa os rope holes/rampas (com a {item:Rope}) e entra no teleporte: desces à sala do Demon solitário.",
+    "Nessa sala usa o buraco a **leste**: por baixo há outro buraco e cais **2 andares** de uma vez, na parte principal da Demon Hell. Bem a **leste** fica o teleporte para a sala da {wiki:Demon Helmet Quest}."
+  ],
+  "leave": [
+    "Na parte principal, as escadas para cima ficam um pouco a **oeste** de onde caíste. Sobe-as e sobe as seguintes: voltas à sala do Demon solitário (não dá para descer outra vez por essas escadas).",
+    "Nessa sala entra no teleporte, que te leva de volta ao primeiro teleporte.",
+    "Refaz o caminho ao contrário: rampas e rope holes (com a {item:Rope}), o fosso dos Fire Elementals, a parede (se estiver fechada, dois jogadores têm de voltar aos interruptores) e a porta de nível 100; depois sobe a Hero Cave até à entrada.",
+    "Cá fora, vai para **sul** até Edron e fala com o {npc:Captain Seahorse} no porto ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33191, "y": 31629, "z": 13, "label": "Interruptores (2 jogadores)"},
+    {"x": 33211, "y": 31630, "z": 13, "label": "Gate of the Lost Souls (parede)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}
+  ],
+  "images": [
+    {"file": "Demonhell lvl door.jpg", "caption": "A porta de nível 100 (com a porta trancada ao fundo)"},
+    {"file": "Demonhell switches.jpg", "caption": "Os dois interruptores que abrem a parede"},
+    {"file": "Demonhell wall.jpg", "caption": "A parede que abre com os dois interruptores"},
+    {"file": "Demonhell.JPG", "caption": "Demon Hell"}
+  ],
+  "warnings": [
+    "O buraco a leste da sala do Demon solitário **não** te leva ao fosso dos 5 Demons que vês (só lá chegas com {spell:Levitate}); cais 2 andares de uma vez.",
+    "Na Hero Cave, a caminho, há {creature:Dragon|Dragons}, {creature:Priestess|Priestesses}, {creature:Demon Skeleton|Demon Skeletons}, {creature:Hero|Heroes}, {creature:Minotaur Mage|Minotaur Mages} e outros; lá em baixo, {creature:Fire Elemental|Fire Elementals}, {creature:Demon|Demons} e {creature:Banshee|Banshees}."
+  ]
+}

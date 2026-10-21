@@ -1,0 +1,26 @@
+{
+  "title": "Ancient Temple",
+  "type": "dungeon",
+  "near": "Thais",
+  "summary": "Templo antigo erguido em honra de Banor, logo a **noroeste da porta norte de Thais**, com vários pisos de túneis por baixo (orcs, trolls, rotworms, cyclops, minotauros e dragões) e muitas quests pequenas.",
+  "entrance": {"x": 32356, "y": 32170, "z": 7, "label": "Entrada do Ancient Temple (noroeste da porta norte de Thais)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Parte do templo ou do depot de **Thais** e sai da cidade pela porta **norte**.",
+    "O {wiki:Ancient Temple} fica logo a **noroeste** dessa porta ({coord:32356,32170,7}). Entra no templo e desce pelos degraus para os subterrâneos.",
+    "A maior parte das quests fica **2 andares abaixo** (vai o mais para **norte** que conseguires) ou ainda mais fundo, no caminho para {wiki:Mintwallin} (piso -4 e abaixo); leva {item:Rope} para os buracos.",
+    "Se já tens acesso ao {wiki:GCTS|Gnomish Crystal Teleport System}, há também um teleporte do GCTS dentro do Ancient Temple ({coord:32331,32173,9})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: usa a {item:Rope} nos buracos por onde desceste e sobe as escadas de piso em piso até aos degraus do templo.",
+    "Sais à superfície a **noroeste da porta norte de Thais**; entra na cidade por essa porta."
+  ],
+  "coords": [
+    {"x": 32356, "y": 32170, "z": 7, "label": "Entrada/saída do Ancient Temple"},
+    {"x": 32331, "y": 32173, "z": 9, "label": "Teleporte do GCTS (Ancient Temple)"}
+  ],
+  "warnings": [
+    "Os pisos mais fundos têm {creature:Dragon|Dragons}, {creature:Bonelord|Bonelords}, {creature:Fire Devil|Fire Devils}, {creature:Slime|Slimes} e, na zona da {wiki:Devil Helmet Quest}, até {creature:Giant Spider|Giant Spiders}: não desças sem nível para isso.",
+    "Em várias partes das grutas pode aparecer o raro {creature:Grorlam} (3000 HP)."
+  ]
+}

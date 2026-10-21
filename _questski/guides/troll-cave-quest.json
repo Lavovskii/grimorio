@@ -1,0 +1,72 @@
+{
+  "slug": "troll-cave-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 1,
+  "duration": "20–30 min",
+  "summary": "Uma quest curta na Edron Troll Cave, a oeste da cidade. Sai pelo esgoto do castelo, atravessa a gruta até à zona de relva, desce à gruta dos trolls e abre as duas caixas no último andar para receberes umas {item:Brass Legs} e um {item:Garlic Necklace}.",
+  "start": {"x": 33165, "y": 31828, "z": 7, "label": "Esgoto no canto sudoeste do castelo de Edron"},
+  "requirements": ["Conta Premium.", "Sem nível mínimo (recomendado 12+)."],
+  "items_needed": [{"item": "Rope"}],
+  "rewards": [{"item": "Brass Legs"}, {"item": "Garlic Necklace"}],
+  "achievements": [],
+  "dangers": ["Rat", "Bug", "Wolf", "Goblin", "Bear", "Troll Champion", "Troll", "Frost Troll"],
+  "npcs": [],
+  "tips": [
+    "Se ninguém lá foi há algum tempo, podes encontrar até 20 {creature:Troll Champion|Troll Champions}. Para níveis baixos, avança devagar e aproveita a passagem estreita onde só um Troll Champion te consegue atacar de cada vez.",
+    "No caminho só encontras {creature:Rat|Rats}; {creature:Bug|Bugs}, {creature:Wolf|Wolves} e {creature:Goblin|Goblins} só aparecem se te desviares demasiado."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar à Troll Cave",
+      "steps": [
+        {
+          "title": "Descer pelo esgoto",
+          "text": "Viaja até **Edron** de barco (no porto da tua cidade, {key:hi}, {key:edron}, {key:yes}; chegas junto ao {npc:Captain Seahorse}). Do depot de **Edron**, desce pelo esgoto no canto **sudoeste** do castelo.",
+          "coords": [{"x": 33165, "y": 31828, "z": 7, "label": "Esgoto do castelo"}]
+        },
+        {
+          "title": "Atravessar a gruta",
+          "text": "Só há um caminho: segue a gruta, a descer e a subir, até saíres numa zona de relva.",
+          "coords": [{"x": 33129, "y": 31811, "z": 7, "label": "Saída na zona de relva"}]
+        },
+        {
+          "title": "Entrar na Troll Cave",
+          "text": "Vai até à Troll Cave a **noroeste** e desce pelo buraco.",
+          "coords": [{"x": 33117, "y": 31776, "z": 7, "label": "Buraco da Troll Cave"}],
+          "warning": "Prepara-te para enfrentar até 20 {creature:Troll Champion|Troll Champions} se ninguém tiver passado por lá há algum tempo."
+        }
+      ]
+    },
+    {
+      "title": "2. Descer até às caixas",
+      "steps": [
+        {
+          "title": "Primeiro andar",
+          "text": "Segue este caminho para **norte** e **leste** e desce pelo buraco.",
+          "images": [{"file": "Troll Cave Quest Map 01.jpg", "caption": "Primeiro andar da Troll Cave"}]
+        },
+        {
+          "title": "Segundo andar",
+          "text": "Segue o caminho até à sala a **norte** e desce pelo buraco.",
+          "images": [{"file": "Troll Cave Quest Map 02.jpg", "caption": "Segundo andar da Troll Cave"}]
+        },
+        {
+          "title": "Último andar e recompensa",
+          "text": "Aqui enfrentas vários {creature:Troll|Trolls}, {creature:Bear|Bears}, {creature:Troll Champion|Troll Champions} e um {creature:Frost Troll}. A recompensa está em **duas caixas** no lado **leste** da sala. Abre as duas.",
+          "images": [{"file": "Troll Cave Quest Map 03.jpg", "caption": "Último andar com as duas caixas a leste"}],
+          "reward": "{item:Brass Legs} e {item:Garlic Necklace}"
+        },
+        {
+          "title": "Sair da Troll Cave",
+          "text": "Volta pelo mesmo caminho: em cada andar regressa ao buraco por onde desceste e usa a {item:Rope} para subir, até saíres na zona de relva. Daí atravessa outra vez a gruta para **sudeste** até ao esgoto do castelo de **Edron**.",
+          "coords": [
+            {"x": 33117, "y": 31776, "z": 7, "label": "Buraco da Troll Cave"},
+            {"x": 33129, "y": 31811, "z": 7, "label": "Zona de relva (entrada da gruta)"},
+            {"x": 33165, "y": 31828, "z": 7, "label": "Esgoto do castelo de Edron"}
+          ]
+        }
+      ]
+    }
+  ]
+}

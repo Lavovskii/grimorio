@@ -1,0 +1,28 @@
+{
+  "title": "Island of Destiny",
+  "type": "ilha",
+  "near": "Rookgaard",
+  "summary": "Ilha de passagem entre **Rookgaard** e o continente, onde os jogadores vindos de Rookgaard escolhem a vocação, fazem o *Festival of Initiates* e partem no barco do {npc:Captain Kurt}.",
+  "entrance": {"x": 32099, "y": 31965, "z": 6, "label": "Barco do Captain Kurt (norte da ilha)"},
+  "requirements": [
+    "Só chegas cá a partir de **Rookgaard**, com **nível 8 ou 9** e o e-mail da conta confirmado.",
+    "Não podes levar mais de 2000 gp: 1000 gp no banco e 1000 gp na mochila. Com mais de 1000 gp na mochila, o {npc:Captain Kurt} não te leva."
+  ],
+  "arrive": [
+    "Em **Rookgaard**, sobe ao 1.º andar da {wiki:Rookgaard Academy} e fala com {npc:The Oracle} ({coord:32104,32190,6}).",
+    "Diz {key:hi}, {key:yes} e outra vez {key:yes}: ela teleporta-te para a Island of Destiny. **Não podes voltar a Rookgaard.**"
+  ],
+  "leave": [
+    "Escolhe a vocação num dos quatro edifícios (cavaleiro a noroeste, paladino a nordeste, druida a sudeste, feiticeiro a sudoeste).",
+    "Vai ao barco do {npc:Captain Kurt}, no **norte** da ilha, 1 andar acima do chão ({coord:32099,31965,6}). Fala com ele ({key:hi}) e escolhe uma das cidades acessíveis: Ab'Dendriel, Carlin, Thais ou Venore (e, com conta premium, Ankrahmun, Darashia, Edron, Liberty Bay ou Port Hope).",
+    "Já a bordo, abre o baú do barco: tem uma {item:Adventurer's Stone} e um {item:Paper (Adventurer's Guild)|Paper}."
+  ],
+  "coords": [
+    {"x": 32104, "y": 32190, "z": 6, "label": "The Oracle (Rookgaard Academy, 1.º andar)"},
+    {"x": 32099, "y": 31965, "z": 6, "label": "Captain Kurt (barco para o continente)"}
+  ],
+  "warnings": [
+    "Ao chegares a **nível 10** na ilha, as dungeons fecham-se e, passados uns minutos, és teleportado para fora: vai ao {npc:Captain Kurt}.",
+    "Há PvP nas dungeons da ilha. Se morreres e desceres a nível 5, voltas para Rookgaard como no continente."
+  ]
+}

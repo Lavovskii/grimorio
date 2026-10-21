@@ -1,0 +1,33 @@
+{
+  "title": "Kha'zeel Pass",
+  "type": "montanha",
+  "near": "Ankrahmun",
+  "summary": "Passagem à superfície pelas montanhas de Kha'zeel, que liga o deserto de Kha'labal (Ankrahmun) à selva de Tiquanda (Port Hope); do lado da selva ficam o mercador {npc:Tarun}, a ponte de madeira e o {wiki:Asura Palace}.",
+  "entrance": {"x": 32976, "y": 32715, "z": 7, "label": "Tarun, junto à ponte de madeira (lado de Tiquanda)"},
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para **oeste** e sobe as montanhas (há {creature:Hyaena|Hyaenas}).",
+    "No topo, atravessa a ponte (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}).",
+    "Desce sem monstros pelo caminho até chegares a uma escada que te leva para o lado da selva, perto do {npc:Tarun} ({coord:32976,32715,7}).",
+    "Alternativa: vem a pé de **Port Hope**, para **leste** através da selva de Tiquanda. Também existe uma rota subterrânea pela {wiki:Darama Terramite Cave}."
+  ],
+  "leave": [
+    "Para Ankrahmun: faz o caminho ao contrário — sobe a escada, atravessa a ponte no topo e desce para **leste** até à cidade. No porto, o {npc:Captain Sinbeard} leva-te a outras cidades.",
+    "Para Port Hope: segue para **oeste** pela selva de Tiquanda. Ir a direito para oeste costuma demorar mais por causa das plantas e árvores; quanto mais para **sul** fores, mais fácil e seguro é o terreno. Em Port Hope, o {npc:Charles} leva-te de barco a outras cidades."
+  ],
+  "coords": [
+    {"x": 32976, "y": 32715, "z": 7, "label": "Tarun (perto da ponte de madeira)"},
+    {"x": 32953, "y": 32685, "z": 7, "label": "Asura Palace (a norte do Tarun)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "Ank PH Route1.png", "caption": "Rota Ankrahmun → Port Hope (1): subir as montanhas a oeste de Ankrahmun"},
+    {"file": "Ank PH Route2.png", "caption": "Rota Ankrahmun → Port Hope (2)"},
+    {"file": "Ank PH Route3.png", "caption": "Rota Ankrahmun → Port Hope (3)"},
+    {"file": "Ank PH Route4.png", "caption": "Rota Ankrahmun → Port Hope (4)"}
+  ],
+  "warnings": [
+    "Do lado da selva há {creature:Tarantula|Tarantulas}, {creature:Crocodile|Crocodiles}, {creature:Elephant|Elephants}, {creature:Spit Nettle|Spit Nettles}, {creature:Terror Bird|Terror Birds} e {creature:Dworc Venomsniper|Dworcs}; cuidado com {creature:Hydra|Hydras} atraídas até ao caminho."
+  ]
+}

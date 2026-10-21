@@ -1,0 +1,393 @@
+{
+  "slug": "a-pirates-death-to-me",
+  "category": "evento",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "15–30 min por viagem (evento de 4 dias)",
+  "summary": "Evento mensal em que ajudas um pirata amaldiçoado a libertar a alma, navegando num navio fantasma pelos oceanos do além. Apanhas {creature:Spectral Scum|Spectral Scums} nas cidades, formas uma tripulação de 4 jogadores com a mesma marca de alma e mantens o navio inteiro durante 5 minutos. Cada viagem bem-sucedida dá 20 {item:Platinum Coin|Platinum Coins} e uma {item:Pirate Bag}, e há 4 achievements para ganhar.",
+  "legend_pt": "Ajuda um pirata amaldiçoado na sua viagem desesperada que pode libertar a sua alma de uma vez por todas. Junta forças com velhos e novos amigos, unidos pelo destino e pelas estrelas, para formar uma tripulação e navegar pelos oceanos fantasmagóricos do além, com todos os seus perigos.",
+  "start": {
+    "x": 32226,
+    "y": 32277,
+    "z": 7,
+    "label": "Farol de Thais (a Smaralda fica logo a sul)"
+  },
+  "requirements": [
+    "Não precisa de Premium nem tem nível mínimo (recomendado nível 8+).",
+    "Só funciona durante o evento: de sexta a segunda-feira, quando a sexta-feira calha entre os dias 18 e 23 do mês (exceto março, setembro e outubro).",
+    "Uma tripulação de **4 jogadores com a mesma marca de alma**."
+  ],
+  "items_needed": [
+    {
+      "item": "Scum Bag",
+      "note": "dada pela Smaralda (outra custa 500 gp)"
+    },
+    {
+      "item": "Ghost Duster",
+      "note": "encontra-se no convés inferior do navio"
+    },
+    {
+      "item": "Emergency Kit",
+      "note": "encontra-se no convés inferior do navio"
+    },
+    {
+      "item": "Dwarven Ring",
+      "note": "recomendado para o convés inferior e para apanhar Spectral Scums"
+    },
+    {
+      "item": "Stealth Ring",
+      "note": "recomendado para o convés inferior e para apanhar Spectral Scums"
+    },
+    {
+      "item": "Time Ring",
+      "note": "ou outro item de velocidade (Magical Torch, Speed Set, feitiço Haste)"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Platinum Coin",
+      "qty": 20,
+      "note": "por cada viagem bem-sucedida"
+    },
+    {
+      "item": "Pirates Surprise",
+      "note": "dentro de uma Pirate Bag, por cada viagem bem-sucedida"
+    },
+    {
+      "text": "4 achievements (11 pontos no total): **Ghost Sailor**, **Spectral Traveller**, **Nether Pirate** e **Scourge of Death**"
+    },
+    {
+      "text": "Se o mundo completar 50 viagens: +10% de experiência em várias criaturas mortas-vivas durante 5 dias"
+    }
+  ],
+  "achievements": [
+    "Ghost Sailor",
+    "Spectral Traveller",
+    "Nether Pirate",
+    "Scourge of Death"
+  ],
+  "dangers": [
+    "Spectral Scum",
+    "Soul Spark",
+    "Sloth Wraith",
+    "Ghost Rat"
+  ],
+  "npcs": [
+    "Smaralda"
+  ],
+  "tips": [
+    "O evento não arranca se houver outro World Event ativo ou prestes a começar no mesmo dia. Se {wiki:A Piece of Cake|A Piece of Cake} ou {wiki:Bewitched|Bewitched} estiverem ativos nessas condições, o evento também pode acontecer em fevereiro ou junho, respetivamente.",
+    "Dividam as tarefas antes de embarcar: 1 jogador no convés superior, o jogador **mais rápido** no convés do meio e 2 jogadores no convés inferior.",
+    "Jogadores abaixo do nível 60 devem usar {spell:Haste}, {item:Time Ring} e equipamento de velocidade para o convés do meio.",
+    "Guarda o {item:Ghost Duster} e o {item:Emergency Kit} das viagens anteriores: com extras, os dois jogadores do convés inferior podem fazer as duas tarefas."
+  ],
+  "sections": [
+    {
+      "title": "1. Receber a marca de alma e a Scum Bag",
+      "steps": [
+        {
+          "title": "Falar com a Smaralda",
+          "text": "Vai ter com a {npc:Smaralda}, a sudoeste de Thais, logo a **sul** do farol (o {wiki:Thais Lighthouse} fica a sudoeste do depot de Thais: vai a pé desde o templo ou o depot). Diz {key:hi} e pede um {key:soul seeing} e aceita juntar-te à tripulação do capitão. Ela atribui-te uma **marca de alma**.",
+          "npc": "Smaralda",
+          "coords": [
+            {
+              "x": 32226,
+              "y": 32277,
+              "z": 7,
+              "label": "Farol de Thais"
+            }
+          ],
+          "images": [
+            {
+              "file": "Quest3.jpg",
+              "caption": "Atribuição da tripulação"
+            }
+          ]
+        },
+        {
+          "title": "Conhecer a tua marca",
+          "text": "Há 5 marcas de alma possíveis: **Arrow**, **Rock**, **Rope**, **Rune** e **Torch**. Se te esqueceres da tua, volta a pedir {key:soul seeing} à Smaralda ou pisa os {item:Glowing Switch|Glowing Switches} dentro da casa dela."
+        },
+        {
+          "title": "Receber a Scum Bag",
+          "text": "Diz {key:join} à Smaralda para receberes a {item:Scum Bag}.",
+          "npc": "Smaralda",
+          "tip": "Se perderes a Scum Bag, pede {key:trade} à Smaralda e compra outra por 500 gp."
+        }
+      ]
+    },
+    {
+      "title": "2. Apanhar 5 Spectral Scums",
+      "steps": [
+        {
+          "title": "Esperar pelos raids",
+          "text": "Os {creature:Spectral Scum|Spectral Scums} atacam Thais, Carlin, Ab'Dendriel e Liberty Bay **a cada 2 horas**, a contar do {wiki:Server Save|Server Save}. Vai a uma destas cidades quando o raid acontecer.",
+          "images": [
+            {
+              "file": "Pirate_Raid_Iridia.jpg",
+              "caption": "Raid de Spectral Scums"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar os piratas",
+          "text": "**Usa** a {item:Scum Bag} num Spectral Scum para o apanhares. Repete até apanhares 5: recebes uma mensagem quando o saco estiver cheio.",
+          "tip": "Um {item:Dwarven Ring} ou um {item:Stealth Ring} ajudam enquanto andas atrás dos piratas."
+        },
+        {
+          "title": "Voltar à Smaralda",
+          "text": "Com o saco cheio, volta à {npc:Smaralda} e diz {key:join}.",
+          "npc": "Smaralda"
+        }
+      ]
+    },
+    {
+      "title": "3. Formar a tripulação e embarcar",
+      "steps": [
+        {
+          "title": "Encontrar 3 companheiros",
+          "text": "Encontra **3 jogadores com a mesma marca de alma** que tu (que também tenham entregado os 5 Spectral Scums)."
+        },
+        {
+          "title": "Usar a bola de cristal",
+          "text": "Os 4 jogadores usam a {item:Crystal Ball} dentro da casa da Smaralda. São teleportados para outra sala."
+        },
+        {
+          "title": "Ir para o navio",
+          "text": "Os 4 jogadores põem-se em cima dos {item:Glowing Switch|Glowing Switches} e um usa a {item:Lever|alavanca}. São todos teleportados para o navio fantasma. Não precisas de barco: o navio fantasma só se alcança por este teleporte."
+        }
+      ]
+    },
+    {
+      "title": "4. A viagem: regras gerais",
+      "steps": [
+        {
+          "title": "Ocupar os conveses",
+          "text": "Tens **2 minutos** para ires para o teu convés antes de a viagem começar. A viagem dura **5 minutos**. O navio começa com **40 pontos de vida**; se chegar a zero, falham.",
+          "table": {
+            "head": [
+              "Causa",
+              "Dano ao navio",
+              "Mensagem"
+            ],
+            "rows": [
+              [
+                "Morcegos fantasma (convés superior)",
+                "15",
+                "The ship took 15 damage due to marauding pirate bats!"
+              ],
+              [
+                "Chama espiritual apagada (convés do meio)",
+                "10",
+                "The ship took 10 damage due to a burnt down spirit flame!"
+              ],
+              [
+                "Buracos feitos pelos ratos (convés inferior)",
+                "4",
+                "The ship took 4 damage due to spirit rat investation!"
+              ],
+              [
+                "Ship Core sem vida (convés superior)",
+                "Aleatório, mas alto",
+                "—"
+              ]
+            ]
+          },
+          "tip": "Põe o jogador mais rápido no convés do meio."
+        },
+        {
+          "title": "Sair do navio",
+          "text": "Quando a viagem acaba (ao fim dos 5 minutos, ou antes, se o navio ficar sem pontos de vida) és tirado do navio: não há saída própria a bordo. O wiki não indica o sítio exato onde apareces. Para outra viagem, volta à casa da {npc:Smaralda}, junto ao farol de Thais, e repete a bola de cristal e a alavanca com a tripulação.",
+          "npc": "Smaralda"
+        }
+      ]
+    },
+    {
+      "title": "5. Convés superior",
+      "steps": [
+        {
+          "title": "Abater os morcegos",
+          "text": "Mata os morcegos usando o **telescópio** correspondente a cada um.",
+          "images": [
+            {
+              "file": "Upper deck 1.png",
+              "caption": "A matar um morcego com o telescópio"
+            }
+          ]
+        },
+        {
+          "title": "Proteger a Soul Spark",
+          "text": "**Não mates** a {creature:Soul Spark}. Mantém-na perto do {item:Ship Core}: ela cura-o continuamente e evita o dano ao navio vindo do Ship Core. Podes prendê-la junto ao Ship Core com {item:Fire Wall|Fire Walls} e/ou {item:Fire Field|Fire Fields}.",
+          "images": [
+            {
+              "file": "Upper deck 2.png",
+              "caption": "Uma Soul Spark a curar o Ship Core"
+            },
+            {
+              "file": "A Pirate's Death to Me Trapped Soul Spark.png",
+              "caption": "Soul Spark presa junto ao Ship Core"
+            }
+          ],
+          "warning": "Se matares a Soul Spark ou o Ship Core ficar sem vida, o navio leva muito dano."
+        }
+      ]
+    },
+    {
+      "title": "6. Convés do meio",
+      "steps": [
+        {
+          "title": "Carregar-te na chama roxa",
+          "text": "Dois minutos depois de a equipa entrar no navio, aparece uma **chama roxa** no canto **oeste**. Pisa o piso de madeira à **direita** dela e ficas carregado com **Fire**, **Energy** ou **Earth**.",
+          "images": [
+            {
+              "file": "Pwq1.jpg",
+              "caption": "Local onde ficas carregado"
+            }
+          ]
+        },
+        {
+          "title": "Usar o santuário certo",
+          "text": "Corre até ao santuário do elemento com que estás carregado e **usa-o**. Depois volta à chama roxa e repete, vezes sem conta, até a viagem acabar. Cada santuário certo dá mais tempo de vida à chama roxa.",
+          "images": [
+            {
+              "file": "Pwq2.jpg",
+              "caption": "Santuário de Energy"
+            },
+            {
+              "file": "Pwq4.jpg",
+              "caption": "Santuário de Fire"
+            },
+            {
+              "file": "Pwq3.jpg",
+              "caption": "Santuário de Earth"
+            }
+          ],
+          "warning": "Se demorares demasiado, a chama roxa transforma-se num {item:Poison Field} cinzento durante algum tempo e o navio perde 10 pontos de vida. Podes continuar, a não ser que sejas teleportado para fora."
+        },
+        {
+          "title": "Evitar os pisos proibidos",
+          "text": "Enquanto estás carregado, **não pises** os Spectral Vortex ({item:Water Vortex|vórtices de água}) nem os pisos de ferro ({item:Rock (Grate)|grelhas}). Perdes a carga e tens de voltar à chama roxa, o que te faz perder tempo. Concentra-te em não pisar os pisos errados em vez de correr às cegas.",
+          "images": [
+            {
+              "file": "Pwq5.jpg",
+              "caption": "Pisos onde não deves pisar"
+            }
+          ],
+          "tip": "Um {item:Dwarven Ring} ajuda caso pises os pisos errados."
+        },
+        {
+          "title": "Lidar com os Sloth Wraiths",
+          "text": "Aparecem {creature:Sloth Wraith|Sloth Wraiths} que podem paralisar-te. Atrai-os para cima de um Spectral Vortex e eles desaparecem."
+        },
+        {
+          "title": "Método alternativo com fire fields",
+          "text": "Há quem prefira esperar **70 segundos** depois de entrar no navio e pôr {item:Fire Field|Fire Fields} em cima de todos os Spectral Vortex e pisos de ferro. Depois usa marcas no mapa para ir da chama roxa (oeste) aos santuários quando for preciso.",
+          "map": {
+            "x": 32209,
+            "y": 32313,
+            "z": 13,
+            "marks": [
+              {
+                "x": 32196,
+                "y": 32313,
+                "z": 13,
+                "label": "Chama roxa (oeste)"
+              },
+              {
+                "x": 32205,
+                "y": 32309,
+                "z": 13,
+                "label": "Santuário"
+              },
+              {
+                "x": 32205,
+                "y": 32316,
+                "z": 13,
+                "label": "Santuário"
+              },
+              {
+                "x": 32218,
+                "y": 32317,
+                "z": 13,
+                "label": "Santuário"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "7. Convés inferior",
+      "steps": [
+        {
+          "title": "Apanhar as ferramentas",
+          "text": "No canto **nordeste** do convés inferior encontras o {item:Ghost Duster} e o {item:Emergency Kit}."
+        },
+        {
+          "title": "Matar os ratos e tapar os buracos",
+          "text": "Aparecem {creature:Ghost Rat|Ghost Rats} que roem buracos no navio. Um jogador usa o {item:Ghost Duster} para matar os ratos e o outro tapa os buracos com o {item:Emergency Kit}.",
+          "tip": "Os ratos fogem dos jogadores e podem embebedar-te, mas não veem jogadores invisíveis. O ideal é os dois usarem um {item:Stealth Ring} ou o feitiço {spell:Invisible} (a cada 2 minutos). Sem isso, usa um {item:Dwarven Ring}."
+        },
+        {
+          "title": "Verificar os pontos cegos",
+          "text": "À volta dos mastros deste convés há pontos cegos onde os buracos são difíceis de ver. Quando tiverem tempo livre, verifiquem-nos e reparem os buracos, sobretudo se viram ratos perto dos mastros."
+        }
+      ]
+    },
+    {
+      "title": "8. Recompensas",
+      "steps": [
+        {
+          "title": "Por cada viagem bem-sucedida",
+          "text": "Recebes 20 {item:Platinum Coin|Platinum Coins} e um {item:Pirates Surprise} dentro de uma {item:Pirate Bag}. Os achievements desbloqueiam-se assim:",
+          "table": {
+            "head": [
+              "Achievement",
+              "Requisito"
+            ],
+            "rows": [
+              [
+                "Ghost Sailor",
+                "1.ª viagem bem-sucedida"
+              ],
+              [
+                "Spectral Traveller",
+                "5 viagens bem-sucedidas"
+              ],
+              [
+                "Nether Pirate",
+                "10 viagens bem-sucedidas"
+              ],
+              [
+                "Scourge of Death",
+                "50 viagens bem-sucedidas"
+              ]
+            ]
+          },
+          "reward": "20 Platinum Coins + Pirates Surprise por viagem"
+        },
+        {
+          "title": "Bónus para o mundo",
+          "text": "Se o teu mundo completar **50 viagens**, recebe +10% de experiência em algumas criaturas mortas-vivas durante 5 dias. Diz {key:journeys} à {npc:Smaralda} para saberes quantas viagens o mundo já fez.",
+          "npc": "Smaralda",
+          "table": {
+            "head": [
+              "Criaturas com bónus de experiência"
+            ],
+            "rows": [
+              [
+                "{creature:Ghoul}, {creature:Skeleton}, {creature:Demon Skeleton}, {creature:Ghost}, {creature:Mummy}, {creature:Vampire}, {creature:Banshee}, {creature:Lich}"
+              ],
+              [
+                "{creature:Crypt Shambler}, {creature:Bonebeast}, {creature:Pirate Skeleton}, {creature:Pirate Ghost}, {creature:Undead Dragon}, {creature:Lost Soul}, {creature:Betrayed Wraith}, {creature:Spectre}"
+              ],
+              [
+                "{creature:Skeleton Warrior}, {creature:Grim Reaper}, {creature:Vampire Bride}, {creature:Zombie}, {creature:Undead Mine Worker}, {creature:Souleater}, {creature:Undead Cavebear}"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

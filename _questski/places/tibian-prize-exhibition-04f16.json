@@ -1,0 +1,23 @@
+{
+  "title": "Tibian Prize Exhibition",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Sala de exposição subterrânea **junto ao Games Hall de Thais**, na Main Street, onde estão expostos os prémios de concursos (sobretudo itens de fansites); só abre ao **domingo**.",
+  "entrance": {"x": 32387, "y": 32210, "z": 7, "label": "Games Hall de Thais (entrada da exposição)"},
+  "requirements": [
+    "Só abre ao domingo: nos outros dias a {npc:Cillia} não está lá.",
+    "Bilhete de **50 gp**, comprado à Cillia; é grátis durante a {wiki:Kingsday Mini World Change}."
+  ],
+  "arrive": [
+    "Vai a **Thais** (de barco: {key:hi}, {key:thais}, {key:yes}; chegas ao porto do {npc:Captain Bluebear}).",
+    "Na Main Street, entra no Games Hall ({coord:32387,32210,7}) e desce ao piso de baixo, onde está a {npc:Cillia} ({coord:32392,32199,8}).",
+    "Ao domingo, compra-lhe o bilhete (50 gp) e entra na exposição."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe ao Games Hall e sais para a Main Street de Thais."
+  ],
+  "coords": [
+    {"x": 32387, "y": 32210, "z": 7, "label": "Games Hall de Thais"},
+    {"x": 32392, "y": 32199, "z": 8, "label": "Cillia (bilhetes)"}
+  ]
+}

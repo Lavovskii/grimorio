@@ -1,0 +1,545 @@
+{
+  "slug": "the-ape-city-quest",
+  "category": "historia",
+  "region": "Port Hope",
+  "difficulty": 4,
+  "duration": "Várias horas (9 missões e muitas viagens)",
+  "summary": "O xamã {npc:Hairycles}, de Banuta, quer encontrar verdadeiros amigos entre os humanos. Ao longo de 9 missões vais a Trapwood, Carlin, Chor, Ankrahmun, Fibula, às Forbidden Lands e às profundezas de Banuta para curar a praga dos macacos e destruir o monumento do deus serpente. No fim ganhas as {wiki:Shaman Outfits|Shaman Outfits}, as estátuas de macaco para a casa e acesso às Forbidden Lands e a Deeper Banuta.",
+  "legend_pt": "O famoso Merlkin Hairycles está a tentar encontrar verdadeiros amigos entre os humanos. Para provares que podes ser um desses amigos, tens de ajudar os macacos.",
+  "start": {"x": 32826, "y": 32574, "z": 6, "label": "Hairycles, templo no sudeste de Banuta"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível recomendado é **130+** (para a última missão, em Deeper Banuta, convém uma equipa; quem corre as alavancas deve ser de nível 200+).",
+    "Muito dinheiro para viagens (Port Hope, Carlin, Ankrahmun, Thais/Fibula)."
+  ],
+  "items_needed": [
+    {"item": "Shovel", "note": "ou equivalente"},
+    {"item": "Rope", "note": "ou equivalente"},
+    {"item": "Cough Syrup", "note": "missão 2; compra-se à Padreia em Carlin por 50 gp (convém comprar antes)"},
+    {"item": "Hydra Egg", "note": "missão 5; convém comprar antes, no Market"},
+    {"item": "Key 3940", "note": "missão 6; compra-se ao Simon the Beggar (800 gp) ou ao Dermot (2.000 gp)"},
+    {"item": "Crowbar", "note": "missão 7, para destruir os Small Casks"},
+    {"text": "Uma **arma corpo-a-corpo** para partir as Wooden Bars e as ânforas (a {item:Crowbar} também serve; o {item:Snake Destroyer} não)"},
+    {"item": "Dwarven Ring", "note": "recomendado 1 por membro da equipa para a última missão"},
+    {"item": "Egg of The Many", "note": "opcional: abre um túnel secreto de Tiquanda para Deeper Banuta"},
+    {"item": "Snake Destroyer", "note": "dado pelo Hairycles na missão 9 — não te esqueças dele!"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Shaman Outfits|Shaman Outfits}"},
+    {"text": "O {npc:Hairycles} passa a curar-te quando tens pouca vida"},
+    {"text": "Podes comprar {item:Banana|Bananas} ao Hairycles por 2 gp"},
+    {"item": "Monkey Statue (No Hearing)", "note": "compra-se em Furniture Kit"},
+    {"item": "Monkey Statue (No Seeing)", "note": "compra-se em Furniture Kit"},
+    {"item": "Monkey Statue (No Speaking)", "note": "compra-se em Furniture Kit"},
+    {"text": "Acesso às {wiki:Forbidden Lands|Forbidden Lands} e a {wiki:Deeper Banuta|Deeper Banuta}"}
+  ],
+  "unlocks": [
+    {"what": "Cura do Hairycles", "kind": "npc", "when": "Na missão 6 (Witches' Cap Spot), quando passas a ser *friend of the apes*: o {npc:Hairycles} cura-te quando tens pouca vida (pede {key:healing})."},
+    {"what": "Bananas à venda no Hairycles", "kind": "loja", "when": "Na missão 6 (Witches' Cap Spot), quando passas a ser *friend of the apes*.", "note": "Custam 2 gp cada."},
+    {"what": "Forbidden Lands (transporte do The Blind Prophet)", "kind": "zona", "place": "Forbidden Lands", "when": "Na missão 8, quando o {npc:Hairycles} te dá autorização: o {npc:The Blind Prophet} passa a levar-te lá ({key:transport})."},
+    {"what": "Deeper Banuta", "kind": "zona", "place": "Deeper Banuta", "when": "Na missão 9 (The Deepest Catacombs), quando o {npc:Hairycles} te dá o {item:Snake Destroyer}."},
+    {"what": "Estátuas de macaco para a casa (Monkey Statues) à venda no Hairycles", "kind": "loja", "when": "No fim da quest, depois de receberes as Shaman Outfits.", "note": "Vendidas em {item:Furniture Kit|Furniture Kits}."}
+  ],
+  "dangers": ["Kongra", "Merlkin", "Sibang", "Dworc Fleshhunter", "Dworc Venomsniper", "Dworc Voodoomaster", "Carniphila", "Spit Nettle", "Lizard Snakecharmer", "Lizard Templar", "Cobra", "Skeleton", "Ghoul", "Scarab", "Crypt Shambler", "Fire Devil", "Bonelord", "Elder Bonelord", "Green Djinn", "Efreet", "Gargoyle", "Stone Golem", "Demon Skeleton", "Bonebeast", "Giant Spider", "Behemoth", "Massive Earth Elemental", "Hydra", "Serpent Spawn", "Medusa"],
+  "npcs": ["Hairycles", "Brewster", "Ustan", "Padreia", "The Blind Prophet", "Simon the Beggar", "Dermot", "Black Bert"],
+  "tips": [
+    "Compra antes de começar o {item:Cough Syrup} (Padreia, Carlin) e um {item:Hydra Egg} (Market): poupas duas viagens a Banuta.",
+    "Em todas as missões o esquema é igual: diz {key:hi} e {key:mission} ao {npc:Hairycles}, aceita com {key:yes}, faz a tarefa e volta a dizer {key:mission} para entregar.",
+    "Para a missão 9 leva **sempre** o {item:Snake Destroyer}. Sem ele não consegues acabar a quest e perdes muito tempo.",
+    "Em Banuta há muitos macacos ({creature:Kongra|Kongras}, {creature:Merlkin|Merlkins} e {creature:Sibang|Sibangs}). Magos: leva {item:Avalanche Rune|Avalanche Runes}."
+  ],
+  "sections": [
+    {
+      "title": "0. Chegar ao Hairycles",
+      "steps": [
+        {
+          "title": "Chegar a Banuta",
+          "text": "Apanha um barco para **Port Hope** (diz {key:hi}, {key:port hope}, {key:yes} ao capitão do porto); chegas ao porto do {npc:Charles}. De Port Hope atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta}. Se tiveres o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope, leva-te diretamente a Banuta por 30 gp.",
+          "coords": [{"x": 32807, "y": 32542, "z": 7, "label": "Banuta"}]
+        },
+        {
+          "title": "Ir ao templo do Hairycles",
+          "text": "Vai a **Banuta**, a cidade dos macacos em Tiquanda, e dirige-te ao templo do {npc:Hairycles}, no **sudeste** da cidade. Sobe ao **primeiro andar acima do chão**: é aí que está o Hairycles, o NPC principal da quest.",
+          "coords": [{"x": 32827, "y": 32577, "z": 7, "label": "Templo do Hairycles (rés-do-chão)"}],
+          "warning": "Pelo caminho encontras {creature:Carniphila|Carniphilas}, os monstros habituais de Tiquanda e muitos macacos de todos os tipos."
+        },
+        {
+          "title": "Sair de Banuta",
+          "text": "Sempre que uma missão te mandar para fora de Banuta, desce do templo e atravessa a selva para **sudoeste** até Port Hope, onde o {npc:Charles} te leva de barco para outras cidades. Para voltares, faz o passo «Chegar a Banuta»."
+        }
+      ]
+    },
+    {
+      "title": "1. Missão 1: Whisper Moss",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz ao {npc:Hairycles} {key:hi}, {key:mission}, {key:yes} e {key:yes}. Ele conta-te que uma praga atacou um pequeno macaco e pede-te {item:Whisper Moss}, que os {wiki:Dworcs|dworcs} guardam na parte leste do andar de cima do seu covil.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "These are dire times for our people. [...] Are you willing to prove you friend of ape people?"},
+            {"you": "yes"},
+            {"npc": "[...] Will you listen to story of Hairycles?"},
+            {"you": "yes"},
+            {"npc": "[...] Me need whisper moss. [...] the moss is hidden in east of upper level of dworc lair [...]"}
+          ]
+        },
+        {
+          "title": "Cair no pitfall certo",
+          "text": "Vai a **Trapwood**, a parte sul de Tiquanda, e cai no {wiki:Pitfall|pitfall} mais a **sudeste**, que leva às {wiki:Dworc Caves|Dworc Caves}. Se caíres noutro pitfall tens de fazer o caminho até à sala certa. A Trapwood fica a **sul** de Port Hope: sai da cidade e anda para sul.",
+          "coords": [{"x": 32773, "y": 32912, "z": 7, "label": "Pitfall mais a sudeste (Trapwood)"}],
+          "images": [
+            {"file": "Whisper Moss Surface Map Location.png", "caption": "Localização do pitfall à superfície"},
+            {"file": "Whisper Moss Underground Map Location.png", "caption": "A sala da Whisper Moss no subterrâneo"}
+          ]
+        },
+        {
+          "title": "Partir as grades e abrir a caixa",
+          "text": "Usa uma arma corpo-a-corpo nas {item:Wooden Bars} danificadas. Na parte **leste** desta sala há uma {item:Door (Sealed)|porta de quest}: entra e abre a caixa lá dentro para receberes a {item:Whisper Moss}.",
+          "images": [{"file": "Whisper Moss Sealed Door.png", "caption": "A porta de quest com a caixa da Whisper Moss"}],
+          "reward": "Whisper Moss"
+        },
+        {
+          "title": "Sair das Dworc Caves",
+          "text": "Os pitfalls são só de descida: não voltes por onde caíste. Para regressares à superfície da Trapwood, procura a saída das grutas (as Dworc Caves têm uma entrada por escadas e alguns buracos com rope spot, por isso leva uma {item:Rope}); a wiki não detalha o caminho a partir desta sala. Depois volta para **norte**, a Port Hope, e daí a Banuta."
+        },
+        {
+          "title": "Entregar a Whisper Moss",
+          "text": "Volta ao {npc:Hairycles} e diz {key:hi}, {key:mission} e {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Oh, you brought me whisper moss? Good hairless ape you are! Can me take it?"},
+            {"you": "yes"},
+            {"npc": "Ah yes! That's it. [...] Just ask for other mission if you ready."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Missão 2: The Cure",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} ao {npc:Hairycles}. Ele precisa de **cough syrup**, o xarope que os humanos usam.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Whisper moss strong is, but me need liquid that humans have to make it work ... Our raiders brought it from human settlement, it's called cough syrup. Go ask healer there for it."}
+          ]
+        },
+        {
+          "title": "Brewster e Ustan (Port Hope) — opcional",
+          "text": "O caminho da história passa pelo {npc:Brewster} ({key:cough syrup}), que te manda ao {npc:Ustan} ({key:cough syrup}), que te diz que o xarope foi roubado num ataque dos macacos e te manda à guilda dos druidas de Carlin. Se já sabes isto, podes ir diretamente a Carlin.",
+          "dialogue": [
+            {"you": "cough syrup"},
+            {"npc": "Brewster: The only person who might have some cough syrup is this druid Ustan. [...]"},
+            {"you": "cough syrup"},
+            {"npc": "Ustan: I had some cough syrup a while ago. It was stolen in an ape raid. [...] you will have to buy it in the druids guild in carlin."}
+          ]
+        },
+        {
+          "title": "Comprar o xarope à Padreia (Carlin)",
+          "text": "Vai a **Carlin**, à Druid Guild, e fala com a {npc:Padreia}: {key:hi}, {key:cough syrup}, {key:yes}. Custa **50 gp**. Para voltares a Banuta, apanha um barco para Port Hope e faz o passo «Chegar a Banuta».",
+          "npc": "Padreia",
+          "dialogue": [
+            {"you": "cough syrup"},
+            {"npc": "Do you want to buy a bottle of cough syrup for 50 gold?"},
+            {"you": "yes"},
+            {"npc": "Thank you. Here it is."}
+          ],
+          "images": [
+            {"file": "Padreia Map Location.png", "caption": "Localização da Padreia em Carlin"},
+            {"file": "Purchasing Cough Syrup.png", "caption": "Comprar o Cough Syrup à Padreia"}
+          ],
+          "tip": "Podes comprá-lo antes de começar a quest ou recebê-lo de outro jogador: não tens de ser tu a comprá-lo."
+        },
+        {
+          "title": "Entregar o xarope",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You brought me that cough syrup from human healer me asked for?"},
+            {"you": "yes"},
+            {"npc": "You so good! Brought syrup to me! [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 3: Lizard Parchment",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission}, {key:yes} e {key:yes} ao {npc:Hairycles}. Ele acha que a praga é obra dos {wiki:Lizards|lizards} e quer os papéis do mago lagarto na cidade de **Chor**.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] But me suspect we in more trouble than we thought. Will you help us again?"},
+            {"you": "yes"},
+            {"npc": "[...] Me need papers of lizard magician! [...] Are you willing to go?"},
+            {"you": "yes"},
+            {"npc": "Good thing that is! Report about your mission when have scroll."}
+          ]
+        },
+        {
+          "title": "Chegar a Chor",
+          "text": "{wiki:Chor|Chor} fica a **sudeste** de Port Hope. O caminho mais fácil é sair pela parte **sul** de Port Hope e andar sempre para **leste** (evitas a Hydra e os elefantes do norte), até à ponte de troncos sobre o rio. Também podes vir de **Ankrahmun** pelas montanhas de Kha'zeel (só encontras alguns Nomads e Bandits) ou, com o rank **Ranger** na {wiki:Paw and Fur Society}, ir com o {npc:Lorek} num barco **só de ida** para Chor (30 gp).",
+          "coords": [{"x": 32952, "y": 32855, "z": 7, "label": "Chor"}]
+        },
+        {
+          "title": "Entrar em Chor",
+          "text": "Prepara a equipa e entra em {wiki:Chor|Chor} pelo tronco do **sudoeste**. Vai para **sul**, atravessa a ponte e vira para **leste**.",
+          "coords": [{"x": 32906, "y": 32855, "z": 7, "label": "Tronco de entrada em Chor (sudoeste)"}],
+          "images": [{"file": "Chor Lizard Parchment Map.png", "caption": "Ciano = tronco para entrar em Chor; amarelo = Old Parchment"}],
+          "warning": "Chor está cheia de lagartos. Um mago com {spell:Great Fireball} ajuda muito. Mata primeiro os {creature:Lizard Snakecharmer|Lizard Snakecharmers}, porque as {creature:Cobra|Cobras} que invocam são irritantes.",
+          "tip": "Um {item:Stealth Ring} funciona contra os {creature:Lizard Templar|Lizard Templars}, mas os outros dois tipos de lagarto veem-te na mesma. Os Templars são os únicos que te tentam cercar."
+        },
+        {
+          "title": "Apanhar o Old Parchment",
+          "text": "Encontras um edifício com uma {item:Door (Sealed)|porta de quest} no lado **leste**. Entra e abre a caixa para receberes o {item:Old Parchment}.",
+          "images": [{"file": "Chor Lizard Parchment.png", "caption": "A sala com a caixa do Old Parchment"}],
+          "reward": "Old Parchment"
+        },
+        {
+          "title": "Sair de Chor",
+          "text": "Volta a pé pelo mesmo caminho: sai pelo tronco do **sudoeste**, atravessa a ponte e segue para **oeste** até Port Hope (ou volta para Ankrahmun pelas montanhas de Kha'zeel, se vieste por aí). O barco do {npc:Lorek} não faz a viagem de volta."
+        },
+        {
+          "title": "Entregar o pergaminho",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You got scroll from lizard village in south east?"},
+            {"you": "yes"},
+            {"npc": "You brought scroll with lizard text? Good! [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 4: Parchment Decyphering",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} e {key:yes} ao {npc:Hairycles}. Ele não consegue ler o pergaminho e manda-te a uma pedra com sinais num túmulo a leste da cidade do deserto.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] You go east to big desert. In desert there city. East of city under sand hidden tomb is. You will have to dig until you find it, so take shovel [...] Are you up to that challenge?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Cavar até ao Shadow Tomb",
+          "text": "Vai a **Ankrahmun** e sai da cidade pela saída **nordeste**. Segue as muralhas para **sudeste** e cava com a {item:Shovel} no ponto indicado para entrares no {wiki:Shadow Tomb|Shadow Tomb}. Para ires a Ankrahmun de barco, diz ao capitão do porto {key:hi}, {key:ankrahmun}, {key:yes}.",
+          "coords": [{"x": 33255, "y": 32834, "z": 7, "label": "Entrada do Shadow Tomb (cava aqui)"}]
+        },
+        {
+          "title": "Ler os sinais no obelisco",
+          "text": "Desce no túmulo até ao **segundo andar principal**, o andar com a chama azul (não passes por ela). Da rampa vai para **sul** e depois sempre para **leste** até ao fim, onde há um {wiki:Obelisk|obelisco} e 4 {item:Red Shrine Stone|Red Shrine Stones}. Aproxima-te do obelisco para decifrar o pergaminho. Aparece por cima da tua cabeça o texto *\"!-! -O- I_I (/( --I Morgathla\"*.",
+          "images": [
+            {"file": "Shadow Tomb Second Floor Obelisk Map.png", "caption": "Mapa do segundo andar do Shadow Tomb com o obelisco"},
+            {"file": "Shadow Tomb Second Floor Obelisk.png", "caption": "O obelisco entre as pedras vermelhas"}
+          ],
+          "warning": "No túmulo há {creature:Skeleton|Skeletons}, {creature:Scarab|Scarabs}, {creature:Ghoul|Ghouls}, {creature:Crypt Shambler|Crypt Shamblers} e 1 {creature:Fire Devil}. Podem também aparecer {creature:Stalker|Stalkers}, {creature:Ghost|Ghosts}, {creature:Vampire|Vampires} e {creature:Mummy|Mummies} trazidos por outros jogadores.",
+          "tip": "Não precisas de levar o pergaminho contigo para o decifrar."
+        },
+        {
+          "title": "Sair do Shadow Tomb",
+          "text": "Volta pelo mesmo caminho: sobe os pisos da {wiki:Shadow Tomb} até à entrada e usa a {item:Rope} no buraco que escavaste para saíres para o deserto. Depois regressa a **Ankrahmun** pela rampa **nordeste** da cidade e apanha o barco para Port Hope.",
+          "coords": [{"x": 33255, "y": 32834, "z": 7, "label": "Entrada do Shadow Tomb (sobe com a Rope)"}]
+        },
+        {
+          "title": "Relatar ao Hairycles",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Ah yes, you read the signs in tomb? Good! May me look into your mind to see what you saw?"},
+            {"you": "yes"},
+            {"npc": "Oh, so clear is all now! [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 5: Hydra Egg",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} e {key:yes} ao {npc:Hairycles}. Ele precisa de um {item:Hydra Egg} para o seu amuleto.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Bring me egg of hydra please. [...] You think you can do?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Arranjar um Hydra Egg",
+          "text": "Serve **qualquer** {item:Hydra Egg}. O mais simples é comprá-lo no **Market** (é loot comum de {creature:Hydra|Hydras}). Se não conseguires, mata hydras ou vai buscá-lo ao {wiki:Hydra's Nest|Hydra's Nest} da {wiki:Hydra Egg Quest|Hydra Egg Quest}.",
+          "coords": [{"x": 32947, "y": 32702, "z": 7, "label": "Hydra Egg Quest"}],
+          "images": [
+            {"file": "Hydra Egg Quest Map Location.png", "caption": "Amarelo = Hydra Egg Quest; vermelho = Hydra"},
+            {"file": "Hydra Egg Quest.png", "caption": "O ninho do Hydra Egg"}
+          ],
+          "warning": "Se não comprares o ovo, conta com lutar contra uma ou várias {creature:Hydra|Hydras}."
+        },
+        {
+          "title": "Entregar o ovo",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You bring Hairycles egg of hydra?"},
+            {"you": "yes"},
+            {"npc": "Ah, the egg! Mighty warrior you be! [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Missão 6: Witches' Cap Spot",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} e {key:yes} ao {npc:Hairycles}. Ele quer uma amostra do cogumelo {item:Witches' Cap Spot}, que só existe na zona dos {creature:Bonelord|Bonelords} do {wiki:Fibula Dungeon|Fibula Dungeon}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Hidden under Fibula is a secret dungeon. There you will find witches cap. Are you willing to go there for good ape people?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Ir a Fibula e arranjar a chave",
+          "text": "Vai a **Fibula**, pelo túnel muito a sul de **Thais**. Precisas da {item:Key 3940}: se não a tiveres, compra-a ao {npc:Simon the Beggar} (800 gp) ou ao {npc:Dermot} (2.000 gp). O túnel começa a sul de Thais; atravessa-o a pé até à ilha.",
+          "coords": [{"x": 32261, "y": 32385, "z": 7, "label": "Túnel para Fibula"}]
+        },
+        {
+          "title": "Entrar no Fibula Dungeon",
+          "text": "Usa o {item:Draw Well|poço} no meio da pequena vila para entrares no Fibula Dungeon. Segue o caminho para **sul**, **leste** e depois **norte**, atravessa uma ponte e usa a chave na porta (se estiver trancada). Entra e desce as escadas lá dentro.",
+          "images": [{"file": "Fibula Dungeon First Floor Map.png", "caption": "Primeiro andar do Fibula Dungeon"}]
+        },
+        {
+          "title": "Apanhar a amostra",
+          "text": "Vai a direito para **sul**, passa a porta e desce por uma das duas escadas de mão no fim do corredor. Continua para **sul** até ao fim e depois vira para **oeste** até bateres numa parede. Encontras uma {item:Door (Sealed)|porta de quest}: entra e usa o {item:Witches' Cap Spot} para recolheres uma amostra.",
+          "images": [
+            {"file": "The Ape City Fibula Dungeon Sealed Door Map.png", "caption": "Localização da porta de quest no Fibula Dungeon"},
+            {"file": "The Ape City Fibula Dungeon Sealed Door.png", "caption": "A porta de quest e o Witches' Cap Spot"}
+          ],
+          "warning": "Aqui há vários {creature:Bonelord|Bonelords}.",
+          "tip": "A amostra dura **24 horas**. Se a perderes, só podes apanhar outra 24 horas depois de teres apanhado a primeira."
+        },
+        {
+          "title": "Sair do Fibula Dungeon",
+          "text": "Volta pelo mesmo caminho: sobe a escada de mão e as escadas, regressa pela ponte e pela porta até ao poço por onde entraste e sobe para a vila de Fibula. Depois volta a Thais pelo túnel e apanha o barco para Port Hope.",
+          "coords": [{"x": 32171, "y": 32440, "z": 7, "label": "Poço de Fibula (entrada/saída)"}]
+        },
+        {
+          "title": "Entregar o cogumelo",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}. Passas a ser **friend of the apes**: podes comprar {item:Banana|Bananas} por 2 gp e o Hairycles cura-te quando tens pouca vida (pede {key:healing}).",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You brought Hairycles witches cap from Fibula?"},
+            {"you": "yes"},
+            {"npc": "Incredible, you brought a witches cap! [...]"}
+          ],
+          "reward": "Bananas a 2 gp e cura grátis do Hairycles"
+        }
+      ]
+    },
+    {
+      "title": "7. Missão 7: Destroying Casks",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} e {key:yes} ao {npc:Hairycles}. Ele quer que destruas **3** {item:Small Cask|Small Casks} com fluido vermelho no templo subterrâneo dos lagartos, por baixo da cidade. Precisas de uma {item:Crowbar}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Take crowbar and destroy three of them to stop this madness. Are you willing to do that?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Descer à cave",
+          "text": "A partir do Hairycles desce **duas vezes** para entrares na cave. Leva uma {item:Rope}.",
+          "coords": [{"x": 32827, "y": 32575, "z": 7, "label": "Escadas para descer"}],
+          "images": [{"file": "Hairycles Temple Location.png", "caption": "Desce as escadas aqui"}]
+        },
+        {
+          "title": "Atravessar o segundo piso",
+          "text": "Vai para **norte** e segue o corredor até uma sala grande cheia de macacos. Vira para **oeste** e desce as escadas no fim do salão.",
+          "coords": [{"x": 32802, "y": 32546, "z": 8, "label": "Escadas para o piso seguinte"}],
+          "images": [{"file": "Map to Banuta Second Floor.png", "caption": "Depois desce aqui"}]
+        },
+        {
+          "title": "Chegar à sala dos casks",
+          "text": "Vai para **leste**, **norte**, **oeste** e **norte** outra vez. Ignora a primeira saída para **leste** e apanha a **segunda**. Segue a passagem até uma sala grande com muitos macacos e 7 {item:Cask|Casks} no lado **leste**.",
+          "coords": [{"x": 32864, "y": 32503, "z": 9, "label": "Sala dos Small Casks"}],
+          "images": [{"file": "The Ape City Cask Map.png", "caption": "Aqui encontras os Small Casks"}],
+          "warning": "Há muitos macacos no subterrâneo. Magos: leva {item:Avalanche Rune|Avalanche Runes}."
+        },
+        {
+          "title": "Destruir 3 casks",
+          "text": "Entra em cada porta e usa a {item:Crowbar} nos casks até teres destruído **3**.",
+          "images": [{"file": "The Ape City Quest Casks.png", "caption": "Um dos três casks destruído"}],
+          "tip": "São precisos 3 casks por pessoa. Em grupos grandes podes ter de esperar que voltem a aparecer (cerca de 3–5 minutos)."
+        },
+        {
+          "title": "Sair do subterrâneo de Banuta",
+          "text": "Volta pelo mesmo caminho: regressa ao salão cheio de macacos, sobe as escadas do fundo do salão e depois sobe **duas vezes** até ao andar do {npc:Hairycles}."
+        },
+        {
+          "title": "Relatar ao Hairycles",
+          "text": "Volta ao {npc:Hairycles} e diz {key:hi} e {key:mission}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You do please Hairycles again, friend. Me hope madness will not spread further now. Perhaps you are ready for other mission."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Missão 8: Evidence of Holy Ape",
+      "intro": "A seguir à última missão, esta é a parte mais difícil da quest.",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz outra vez {key:mission} e depois {key:yes} ao {npc:Hairycles}. Ele dá-te autorização para entrares nas Forbidden Lands e procurares um pelo do macaco sagrado **Bong**.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] To enter the forbidden land in the north-east of the jungle, look for a cave in the mountains east of it. There you will find the blind prophet ... Tell him Hairycles you sent and he will grant you entrance [...] Will you do this for Hairycles?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Pedir transporte ao The Blind Prophet",
+          "text": "A **leste** de Banuta encontras o {npc:The Blind Prophet}. Diz {key:hi} e pede-lhe {key:transport} para as {wiki:Forbidden Lands|Forbidden Lands}. Ele fica no sopé da montanha, a **leste** de Banuta, junto à paliçada das Forbidden Lands. Responde {key:yes} quando ele perguntar se queres ir.",
+          "npc": "The Blind Prophet",
+          "coords": [{"x": 33020, "y": 32605, "z": 7, "label": "The Blind Prophet"}],
+          "warning": "As Forbidden Lands têm 2–3 {creature:Behemoth|Behemoths}, 2–4 {creature:Giant Spider|Giant Spiders}, muitos {creature:Massive Earth Elemental|Massive Earth Elementals} e outros monstros de Tiquanda ({creature:Carniphila|Carniphilas}, {creature:Spit Nettle|Spit Nettles}). As {creature:Hydra|Hydras} estão no nordeste e é pouco provável encontrá-las."
+        },
+        {
+          "title": "Atravessar as Forbidden Lands",
+          "text": "Da rampa das Forbidden Lands vai sempre para **oeste**, junto à {wiki:Palisade|paliçada} do **sul**, para evitar a maioria dos monstros (assim evitas o {creature:Behemoth} da superfície junto à rampa). Quando chegares ao canto, vira para **norte** e segue o caminho até encontrares um buraco (leva à gruta das hydras). Provavelmente vais encontrar um Behemoth ao subir para norte."
+        },
+        {
+          "title": "Apanhar o pelo do Bong",
+          "text": "A **nordeste** do buraco encontras duas {item:Giant Footprint|pegadas gigantes}. **Usa** o quadrado do **noroeste** da pegada da **esquerda** para receberes o {item:Giant Ape's Hair}.",
+          "coords": [{"x": 32933, "y": 32496, "z": 7, "label": "Giant Footprints"}],
+          "images": [
+            {"file": "Forbidden Lands Giant Footprint Map.png", "caption": "Localização das pegadas gigantes"},
+            {"file": "Forbidden Lands Giant Footprint.png", "caption": "As duas pegadas: usa o canto noroeste da da esquerda"}
+          ],
+          "reward": "Giant Ape's Hair"
+        },
+        {
+          "title": "Sair das Forbidden Lands",
+          "text": "Volta pelo mesmo caminho, junto à paliçada do **sul**, até à rampa onde o {npc:The Blind Prophet} te deixou, e sai por aí para Tiquanda. A wiki não descreve esta saída em pormenor. Depois regressa a **oeste**, a Banuta."
+        },
+        {
+          "title": "Entregar o pelo",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, {key:yes}.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You brought hair of holy ape?"},
+            {"you": "yes"},
+            {"npc": "Incredible! You got a hair of holy Bong! [...] But one last mission awaits you."}
+          ],
+          "tip": "Se perderes o {item:Giant Ape's Hair}, podes comprá-lo ao {npc:Black Bert}, mas só o podes entregar se já o tiveres apanhado tu uma vez."
+        }
+      ]
+    },
+    {
+      "title": "9. Missão 9: The Deepest Catacombs",
+      "intro": "Leva o {item:Snake Destroyer} e uma arma corpo-a-corpo para partir os jarros (o Snake Destroyer não serve para isso).",
+      "steps": [
+        {
+          "title": "Pedir a última missão",
+          "text": "Diz {key:mission} e {key:yes} ao {npc:Hairycles}. Recebes o {item:Snake Destroyer} e acesso a {wiki:Deeper Banuta|Deeper Banuta}, onde tens de destruir o monumento do deus serpente.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] find the monument of the serpent god and destroy it with hammer me give to you [...] Please tell Hairycles, will you go there?"},
+            {"you": "yes"},
+            {"npc": "Hairycles sure you will make it. Just use hammer on all that looks like snake or lizard. [...]"}
+          ],
+          "reward": "Snake Destroyer",
+          "warning": "Sem o {item:Snake Destroyer} não consegues acabar a quest. Não o deixes no depot!"
+        },
+        {
+          "title": "Entrar em Deeper Banuta",
+          "text": "Vai a este ponto (piso -2, por baixo de Banuta) e entra no {wiki:Magic Forcefield|Magic Forcefield} para apareceres no primeiro andar de Deeper Banuta.",
+          "coords": [{"x": 32839, "y": 32533, "z": 9, "label": "Magic Forcefield para Deeper Banuta"}],
+          "images": [{"file": "Map to Banuta Third Floor.png", "caption": "Verde = começas aqui; amarelo = teleporte para o andar seguinte"}],
+          "tip": "Recomendado: leva um {item:Egg of The Many} e usa-o na cabeça de cobra logo a **leste** do teleporte, dentro de Deeper Banuta, para desbloqueares um túnel secreto de Tiquanda para Deeper Banuta.",
+          "warning": "Aqui há {creature:Green Djinn|Green Djinns}, {creature:Efreet|Efreets}, {creature:Bonelord|Bonelords} e {creature:Elder Bonelord|Elder Bonelords}, entre outros."
+        },
+        {
+          "title": "Partir os 4 Canopic Jars",
+          "text": "Para descer tens de abrir o teleporte deste andar, partindo os **4** {item:Canopic Jar (Object)|Canopic Jars}. Os jarros recuperam passado algum tempo, por isso sê rápido. O melhor é a equipa esperar no teleporte do **centro** enquanto uma pessoa corre a partir os jarros, ignorando os monstros. Com dois jogadores (um no lado **sul**, outro no **norte**) é ainda mais rápido.",
+          "images": [
+            {"file": "Deeper Banuta Amphora Map.png", "caption": "Ciano = início (teleporte para o andar anterior); verde = Canopic Jars a partir (4x); amarelo = teleporte para o andar seguinte"},
+            {"file": "Deeper Banuta Amphora.png", "caption": "Um dos Canopic Jars"}
+          ]
+        },
+        {
+          "title": "Descer ao andar da quest",
+          "text": "Quando os jarros estiverem partidos, toda a equipa entra no Magic Forcefield no **centro** do andar.",
+          "warning": "Ao chegares ao andar de baixo podes ser logo perseguido por uma {creature:Serpent Spawn}. Este andar é muito mais difícil: {creature:Bonebeast|Bonebeasts}, {creature:Hydra|Hydras}, {creature:Serpent Spawn|Serpent Spawns} e {creature:Medusa|Medusae}."
+        },
+        {
+          "title": "Puxar as 7 alavancas",
+          "text": "A {wiki:The Statue of the Snake God|The Statue of the Snake God} está na sala do **norte**, que está selada por uma parede. Para a abrir, puxa as **7 alavancas** do andar, todas para a **direita**. A ordem não importa, exceto a **última**: tem de ser a alavanca junto à parede que vai desaparecer. Tens tempo limitado para puxar todas.",
+          "images": [
+            {"file": "Deeper Banuta Lever Route.png", "caption": "Verde = rota sugerida; amarelo = alavancas a puxar (7x); ciano = monumento a destruir"},
+            {"file": "Deeper Banuta Lever.png", "caption": "Uma das alavancas"}
+          ],
+          "tip": "O mais rápido é um jogador de nível alto (200+ recomendado) correr as alavancas ignorando os monstros. Outra opção: dois jogadores dividem o andar ao meio, ambos começam no **sudoeste** e seguem em direções opostas.",
+          "warning": "Para níveis mais baixos é perigoso, sobretudo pela {wiki:Paralysis|paralisia} constante das Hydras."
+        },
+        {
+          "title": "Destruir a estátua",
+          "text": "Quando todas as alavancas estiverem puxadas a parede desaparece. Passa pelo buraco na parede e vai para **norte** até à estátua (nesta sala não há criaturas). Usa o {item:Snake Destroyer} na estátua para completares a missão. A {item:Smashed Stone Head} demora 40 segundos a reparar-se.",
+          "images": [
+            {"file": "Deeper Banuta Statue Location.png", "caption": "Amarelo = parede a remover; verde = The Statue of the Snake God"},
+            {"file": "Deeper Banuta God Monument.png", "caption": "O monumento do deus serpente"}
+          ],
+          "tip": "Nesta sala podes apanhar o {item:Damaged Steel Helmet} (a norte) se estiveres a fazer a {wiki:Knight Outfits Quest|Knight Outfits Quest}. A leste vês a {item:Door of Expertise} de nível 999."
+        },
+        {
+          "title": "Sair de Deeper Banuta",
+          "text": "Quando a equipa acabar, sai pelo portal do início do andar. Se a parede voltar e estiveres do lado de dentro, usa a alavanca junto à parede para a abrir outra vez. O portal do início leva-te ao **segundo andar de Banuta** (com macacos), não ao andar de onde vieste. Daí sobe as escadas até à superfície de Banuta e ao templo do Hairycles."
+        },
+        {
+          "title": "Receber o outfit",
+          "text": "Volta ao {npc:Hairycles}: {key:hi}, {key:mission}, depois {key:shamanic powers} e {key:yes}. Recebes as {wiki:Shaman Outfits|Shaman Outfits}. A partir de agora podes comprar ao Hairycles as três estátuas de macaco ({item:Monkey Statue (No Hearing)|No Hearing}, {item:Monkey Statue (No Seeing)|No Seeing} e {item:Monkey Statue (No Speaking)|No Speaking}) em {item:Furniture Kit|Furniture Kits} para a tua casa.",
+          "npc": "Hairycles",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Finally my people are safe! [...] Perhaps you want to check me offers for special friends... or shamanic powers."},
+            {"you": "shamanic powers"},
+            {"npc": "Me truly proud of you, friend. [...] Me want grant you shamanic power now. You ready?"},
+            {"you": "yes"},
+            {"npc": "Friend of the ape people! Take my gift and become me apprentice! Here is shaman clothing for you!"}
+          ],
+          "reward": "Shaman Outfits + acesso às Monkey Statues"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A quest também é conhecida como Banuta Quest, Ape Quest, Monkey Quest, King Bong Quest, Big Bong Quest ou Forbidden Lands Quest.",
+    "Depois da quest ficas com acesso permanente às Forbidden Lands (através do The Blind Prophet) e a Deeper Banuta."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Kharos",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "A ilha mais pequena, a sudeste, das Forbidden Islands (Shattered Isles), **a oeste de Liberty Bay**, onde fica a {wiki:Ferumbras Citadel}; chega-se pelo subsolo a partir de Malada.",
+  "entrance": {"x": 32024, "y": 32734, "z": 7, "label": "Alçapão para Kharos (sul de Malada)"},
+  "requirements": [
+    "Precisas do acesso a Goroma, Ramoa, Talahu e Malada da {wiki:The Shattered Isles Quest} (secção do acesso a Kharos).",
+    "Para atravessar a barreira de energia da Citadel precisas de autorização do {npc:Zoltan} em Edron ({key:hi}, {key:Ferumbras}, {key:yes}, depois {key:permission}, {key:yes}: 500 gp por cada entrada). Antes disso tens de tentar pisar a barreira uma vez."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Em **Liberty Bay**, fala com o {npc:Jack Fate} nas docas: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas no leste de Goroma.",
+    "Em Goroma desce as escadas do {wiki:Teleportation Hub} ({coord:32038,32561,7}) e usa sempre o teleporte da **direita** (Goroma → Ramoa → Talahu → Malada).",
+    "Em Malada sobe as escadas do hub e vai para **sul** até ao alçapão ({coord:32024,32734,7}): desce para o subsolo de Kharos, onde fica a Ferumbras Citadel ({coord:32121,32688,7}). O alçapão **só serve para descer**."
+  ],
+  "leave": [
+    "Se já passaste a barreira da Citadel, não consegues sair por ela: vai para **leste**, desce um buraco, segue para **oeste** e sobe por um buraco de corda com a {item:Rope}.",
+    "Vai ao buraco a **leste** ({coord:32138,32697,7}) e desce até ao teleporte de **sentido único** que te leva a Goroma.",
+    "Em Goroma, fala com o {npc:Jack Fate} no navio dele ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32121, "y": 32686, "z": 7, "label": "Kharos"},
+    {"x": 32038, "y": 32561, "z": 7, "label": "Escadas para o Teleportation Hub de Goroma"},
+    {"x": 32018, "y": 32679, "z": 7, "label": "Escadas do Teleportation Hub de Malada"},
+    {"x": 32138, "y": 32697, "z": 7, "label": "Buraco com o teleporte de regresso a Goroma"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"}
+  ],
+  "warnings": [
+    "O alçapão de Malada é só de descida e o teleporte de saída é só de ida para Goroma: leva {item:Rope} e supplies.",
+    "A autorização do Zoltan vale para **uma** entrada; para voltares a entrar na Citadel pagas outra vez 500 gp."
+  ]
+}

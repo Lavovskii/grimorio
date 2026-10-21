@@ -1,0 +1,269 @@
+{
+  "slug": "jack-to-the-future-quest",
+  "category": "historia",
+  "region": "Edron",
+  "difficulty": 1,
+  "duration": "30–45 min",
+  "summary": "O cientista {npc:Spectulus}, da Edron Academy, perdeu o seu estagiário {npc:Jack} numa experiência com uma máquina do tempo. Ajudas a convencer o Jack de quem ele \"realmente\" é: decoras a casa dele com mobília antiga, falas com a família e destróis a escultura dele. No fim recebes 6000 de experiência, um {item:Piece of Marble Rock} e um de dois achievements, consoante digas a verdade ou mintas ao Jack.",
+  "legend_pt": "O Spectulus precisa de ajuda.",
+  "start": {"x": 33268, "y": 31832, "z": 1, "label": "Spectulus, Edron Academy"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Ter completado a {wiki:Sea of Light Quest|Sea of Light Quest}.",
+    "Sem nível mínimo (recomendado 10)."
+  ],
+  "items_needed": [
+    {"item": "Large Used Amphora Kit", "note": "comprado ao Edvard"},
+    {"item": "Used Globe Kit", "note": "comprado ao Edvard"},
+    {"item": "Used Red Chair Kit", "note": "comprado ao Edvard"},
+    {"item": "Used Rocking Horse Kit", "note": "comprado ao Edvard"},
+    {"item": "Used Telescope Kit", "note": "comprado ao Edvard"},
+    {"text": "290 gp para a mobília (total)"},
+    {"item": "Pick", "note": "para partir a estátua do Jack"}
+  ],
+  "rewards": [
+    {"text": "6000 pontos de experiência"},
+    {"item": "Piece of Marble Rock"},
+    {"text": "Achievement **Truth Be Told** (se disseres a verdade ao Jack) **ou** **You Don't Know Jack** (se lhe mentires)"}
+  ],
+  "achievements": ["Truth Be Told", "You Don't Know Jack"],
+  "dangers": [],
+  "npcs": ["Spectulus", "Jack", "Mother Of Jack", "Sister Of Jack", "Edvard"],
+  "tips": [
+    "Não há monstros nesta quest: é só falar com NPCs e andar por Edron.",
+    "Compra a mobília **usada** (*Used ...*) ao {npc:Edvard}: os kits normais de mobília não servem.",
+    "Escolhe bem no fim: só podes ganhar **um** dos dois achievements."
+  ],
+  "sections": [
+    {
+      "title": "1. Missão 1: Encontrar o Jack",
+      "steps": [
+        {
+          "title": "Pedir a missão ao Spectulus",
+          "text": "Depois de completares a {wiki:Sea of Light Quest|Sea of Light Quest}, fala com o {npc:Spectulus} na Edron Academy. Diz {key:hi}, {key:mission} e {key:yes}. Ele conta-te a história do estagiário Jack, que desapareceu na máquina do tempo. Ouve tudo e responde {key:yes} mais duas vezes.\n\nSe não estás em Edron, apanha um barco e diz ao capitão {key:hi}, {key:edron}, {key:yes}; chegas ao porto, junto ao {npc:Captain Seahorse}. O Spectulus está no **último andar** da Edron Academy ({coord:33268,31832,1}): sobe as escadas da academia até lá acima.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "[...] So are you in for another mission?"},
+            {"you": "yes"},
+            {"npc": "[...] You know, I once had an intern. His name was Jack. [...] There is still a chance to rescue him - and you can help me. What do you say?"},
+            {"you": "yes"},
+            {"npc": "[...] Now you know it all. Still want to help?"},
+            {"you": "yes"}
+          ],
+          "coords": [{"x": 33268, "y": 31832, "z": 1, "label": "Spectulus (topo da Edron Academy)"}]
+        },
+        {
+          "title": "Falar com o Jack",
+          "text": "Vai à **casa do Jack**, marcada no teu mapa. Fala com o {npc:Jack}: {key:hi}, {key:Spectulus}, {key:yes} e {key:yes}. Ele acha que estás maluco e manda-te embora. A casa fica um pouco a **norte** da cidade de Edron: vai e volta a pé pelo mesmo caminho.",
+          "npc": "Jack",
+          "coords": [{"x": 33276, "y": 31756, "z": 7, "label": "Casa do Jack"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "Spectulus"},
+            {"npc": "Gesundheit! Are you alright? Did you... want to tell me something by that?"},
+            {"you": "yes"},
+            {"npc": "[...] And you say you are telling the truth?"},
+            {"you": "yes"},
+            {"npc": "I see. Well for starters, I think you're crazy. [...] please close the door behind you when you leave my house. Now."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Missão 2: A mobília antiga",
+      "steps": [
+        {
+          "title": "Reportar ao Spectulus",
+          "text": "Volta ao {npc:Spectulus} e diz {key:mission}, {key:yes} e {key:yes}. Ele pede-te que mudes o ambiente da casa do Jack com a mobília que ele tinha: uma cadeira vermelha almofadada, um globo, um telescópio pequeno, uma ânfora enorme e um cavalo de baloiço.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So you found him? Have you talked to Jack yet?"},
+            {"you": "yes"},
+            {"npc": "[...] Are you ready to continue?"},
+            {"you": "yes"},
+            {"npc": "[...] he used to have a very comfy red cushioned chair and an old globe [...] a smaller telescope and he had that extremely large amphora in a corner. [...] A rocking horse. [...]"}
+          ]
+        },
+        {
+          "title": "Comprar a mobília usada",
+          "text": "Vai à loja de mobília do {npc:Edvard}, em Edron, e compra os 5 kits **usados** (290 gp no total). O Edvard vende estes itens únicos para esta quest.",
+          "npc": "Edvard",
+          "table": {
+            "head": ["Kit a comprar"],
+            "rows": [
+              ["{item:Large Used Amphora Kit}"],
+              ["{item:Used Globe Kit}"],
+              ["{item:Used Red Chair Kit}"],
+              ["{item:Used Rocking Horse Kit}"],
+              ["{item:Used Telescope Kit}"]
+            ]
+          },
+          "warning": "Os kits normais de mobília não servem: têm de ser os *used*."
+        },
+        {
+          "title": "Montar a mobília na casa do Jack",
+          "text": "Na casa do Jack, usa cada kit em qualquer sítio **deste andar**, como se fosse a tua casa. Por cada peça aparece uma mensagem e o Jack reclama:",
+          "coords": [{"x": 33276, "y": 31756, "z": 7, "label": "Casa do Jack"}],
+          "table": {
+            "head": ["Peça", "Mensagem", "Reação do Jack"],
+            "rows": [
+              ["Ânfora", "There seems to be no better place for this amphora than right here.", "Trying to get rid of your junk in my house? Do I look like I need such a... 'vase'?"],
+              ["Globo", "A globe like this should be in every household.", "What the... what do I need a 'globe' for? Take this away."],
+              ["Telescópio", "The telescope just looks like it was the one thing missing from this room.", "Nice, a... what is this actually?"],
+              ["Cavalo de baloiço", "What a cute horse - and just the right thing to place into this cute room.", "A rocking horse? What's wrong with you?"],
+              ["Cadeira vermelha", "The red cushioned chair looks quite comfy in that corner.", "Yeah, uhm... impressive chair. Now would you please remove it? Thanks."]
+            ]
+          }
+        },
+        {
+          "title": "Perguntar ao Jack pela mobília",
+          "text": "Depois das 5 mensagens, fala com o {npc:Jack}: {key:hi}, {key:furniture} e {key:Spectulus}. Ele insiste que sempre viveu ali com a mãe e a irmã.",
+          "npc": "Jack",
+          "dialogue": [
+            {"you": "furniture"},
+            {"npc": "What have you done? What are all these pieces of furniture doing here? [...] Who's behind all this?"},
+            {"you": "Spectulus"},
+            {"npc": "[...] I always lived here with my mother and sister, I'm happy here and I certainly don't want to go to that academy of yours."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 3: A família do Jack",
+      "steps": [
+        {
+          "title": "Reportar ao Spectulus",
+          "text": "Volta ao {npc:Spectulus} e diz {key:mission} e {key:yes}. Ele pede-te para contares a verdade à mãe e à irmã do Jack.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "You're back from Jack! [...] ready to give it another try?"},
+            {"you": "yes"},
+            {"npc": "[...] Tell them the truth about him - maybe they will understand and even help him getting this over with. [...]"}
+          ]
+        },
+        {
+          "title": "Falar com a mãe do Jack",
+          "text": "Na casa do Jack, sobe **1 andar** e fala com a {npc:Mother Of Jack}. Responde exatamente: {key:hi}, {key:jack}, {key:yes}, {key:no}, {key:yes}.",
+          "npc": "Mother Of Jack",
+          "dialogue": [
+            {"you": "jack"},
+            {"npc": "What about him? He's downstairs as he always has been. [...] He rarely ever took a walk to Edron, did he?"},
+            {"you": "yes"},
+            {"npc": "What...? But he wasn't up to something, was he?"},
+            {"you": "no"},
+            {"npc": "[...] But... he wasn't there often, was he?"},
+            {"you": "yes"},
+            {"npc": "Oh my... he did what? Why was he there? Edron Academy? [...] JAAAAACK!"}
+          ]
+        },
+        {
+          "title": "Falar com a irmã do Jack",
+          "text": "Sobe mais **1 andar** e fala com a {npc:Sister Of Jack}. Responde: {key:hi}, {key:jack}, {key:yes}, {key:yes}, {key:Spectulus}, {key:yes}.",
+          "npc": "Sister Of Jack",
+          "dialogue": [
+            {"you": "jack"},
+            {"npc": "Why are you asking, he didn't get himself into something again did he?"},
+            {"you": "yes"},
+            {"npc": "[...] I bet he went to Edron in secrecy or something like that, didn't he? [...]"},
+            {"you": "yes"},
+            {"npc": "What?! And what did he do there? Who did he visit there?"},
+            {"you": "Spectulus"},
+            {"npc": "Spelltolust?! [...] are you telling me he lived an alternate life and he didn't even tell mother?"},
+            {"you": "yes"},
+            {"npc": "Yesss! So this time he will get it for a change! [...] Ma!! Maaaaa!!"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 4: O passatempo do Jack",
+      "steps": [
+        {
+          "title": "Reportar ao Spectulus",
+          "text": "Volta ao {npc:Spectulus} e diz {key:mission} e {key:yes}. Ele quer que perguntes ao Jack pelos passatempos e o convenças de que não combinam com o verdadeiro Jack.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So, did you talk to his family? Were you able to convince them?"},
+            {"you": "yes"},
+            {"npc": "[...] A hobby or something! Yes, ask him about his hobbies! [...] you MUST convince him, no matter what! [...]"}
+          ]
+        },
+        {
+          "title": "Perguntar pelos passatempos",
+          "text": "Fala com o {npc:Jack}: {key:hi} e {key:hobbies}. Ele conta-te que esculpe estátuas e mostra-te a obra-prima no canto da sala.",
+          "npc": "Jack",
+          "dialogue": [
+            {"you": "hobbies"},
+            {"npc": "Ah, also a keen lover of arts I assume? You might have already caught a glimpse of that humble masterpiece over there in the corner - I sculpt sulky sculptures! [...]"}
+          ]
+        },
+        {
+          "title": "Partir a estátua",
+          "text": "Usa a {item:Pick} na {item:Lizard Statue} que está atrás do Jack para a destruíres."
+        },
+        {
+          "title": "Falar outra vez com o Jack",
+          "text": "Diz {key:hi} ao {npc:Jack}. Ele desiste e aceita que foi estagiário na academia; quer ver o Spectulus.",
+          "npc": "Jack",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "What did you do to my SCULPTURE? You simply DESTROYED it? [...]"},
+            {"npc": "Alright, alright you win. I am done for. [...] Just... tell this Spectulus guy I want to see him. I have nothing left. I am ready."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 5: A verdade ou a mentira",
+      "steps": [
+        {
+          "title": "Reportar ao Spectulus",
+          "text": "Volta ao {npc:Spectulus} e diz {key:mission}. Recebes **6000 de experiência**. Ele confessa que o verdadeiro Jack viajou para o **passado** (e não para outra dimensão) e deixou uma carta para ser aberta há 20 anos, que o Spectulus nunca recebeu por não estar na academia. Ou seja, este Jack era outra pessoa, e ele pede-te para esqueceres o assunto.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Oh you are back already. Hm... I doubt it worked, did it? It DID? [...] Jack was indeed not transported to the future... but to the past. [...]"},
+            {"npc": "[...] So our Jack here was in fact... a completely different person. [...]"}
+          ],
+          "reward": "6000 de experiência"
+        },
+        {
+          "title": "Escolher: mentir ao Jack",
+          "text": "Para o achievement **You Don't Know Jack**, fala com o {npc:Jack} e responde {key:hi}, {key:no}, {key:yes} (ou {key:hi}, {key:yes}, {key:yes}). Ou seja, confirma que lhe disseste a verdade.",
+          "npc": "Jack",
+          "dialogue": [
+            {"npc": "[...] You DID tell me the truth here, didn't you?"},
+            {"you": "no"},
+            {"npc": "WHAT?? No way, I ask you again - you DID tell me the TRUTH here... right?"},
+            {"you": "yes"},
+            {"npc": "Yeah, yeah... so what are you still doing here? I guess I... will have to seek out this Spectulus now [...]"}
+          ],
+          "reward": "Achievement You Don't Know Jack"
+        },
+        {
+          "title": "Ou: dizer a verdade ao Jack",
+          "text": "Para o achievement **Truth Be Told**, fala com o {npc:Jack} e responde {key:hi}, {key:no}, {key:no} (ou {key:hi}, {key:yes}, {key:no}). Ou seja, admites que não era verdade.",
+          "npc": "Jack",
+          "dialogue": [
+            {"npc": "[...] You DID tell me the truth here, didn't you?"},
+            {"you": "no"},
+            {"npc": "WHAT?? No way, I ask you again - you DID tell me the TRUTH here... right?"},
+            {"you": "no"},
+            {"npc": "So... so this wasn't EVEN REAL? [...] Well, at least you told me the truth. [...]"}
+          ],
+          "reward": "Achievement Truth Be Told",
+          "warning": "Só podes escolher uma vez: ganhas apenas um dos dois achievements."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Depois desta quest podes pedir ao {npc:Spectulus} mais missões e tarefas.",
+    "Esta quest faz parte do registo {wiki:Tibia Tales|Tibia Tales}."
+  ]
+}

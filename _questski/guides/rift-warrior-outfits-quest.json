@@ -1,0 +1,242 @@
+{
+  "slug": "rift-warrior-outfits-quest",
+  "category": "outfit",
+  "region": "Thais",
+  "difficulty": 4,
+  "duration": "Longa (depende de juntar 200 Silver Tokens)",
+  "summary": "Os {wiki:Rift Warrior Outfits|Rift Warrior Outfits} ganham-se ao completar a {wiki:Ferumbras' Ascension Quest}. Os dois addons compram-se ao {npc:Cledwyn}, cada um por 100 {item:Silver Token|Silver Tokens}, juntados nas masmorras dos {wiki:The Ruthless Seven Minions|The Ruthless Seven Minions}. No fim ganhas também o achievement **Rift Warrior**.",
+  "start": {
+    "x": 32190,
+    "y": 32292,
+    "z": 7,
+    "label": "Cledwyn (Adventurer's Guild)"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 250+** (as masmorras têm {creature:Hellflayer|Hellflayers}, {creature:Vexclaw|Vexclaws} e os bosses dos Ruthless Seven Minions).",
+    "Outfit base: ter completado a {wiki:Ferumbras' Ascension Quest}.",
+    "Addons: 100 {item:Silver Token|Silver Tokens} por cada addon (200 no total)."
+  ],
+  "items_needed": [
+    {
+      "item": "Silver Token",
+      "qty": 200,
+      "note": "100 por addon"
+    },
+    {
+      "item": "Adventurer's Stone",
+      "note": "para ires ao Adventurers' Guild a partir de um templo"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Rift Warrior Outfits|Rift Warrior Outfit} (base)"
+    },
+    {
+      "text": "1.º addon Rift Warrior"
+    },
+    {
+      "text": "2.º addon Rift Warrior"
+    },
+    {
+      "text": "Achievement **Rift Warrior**"
+    }
+  ],
+  "achievements": [
+    "Rift Warrior"
+  ],
+  "dangers": [
+    "Hellflayer",
+    "Vexclaw"
+  ],
+  "npcs": [
+    "Cledwyn",
+    "Mazarius",
+    "Charos"
+  ],
+  "tips": [
+    "O {npc:Cledwyn} também troca Silver Tokens por armaduras de torso; se pedires {key:silver}, ele mostra todas as opções. Para os addons diz {key:addons}.",
+    "Os addons podem ser comprados por qualquer ordem: escolhe {key:first} ou {key:second}."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "steps": [
+        {
+          "title": "Completar a Ferumbras' Ascension Quest",
+          "text": "Completa a {wiki:Ferumbras' Ascension Quest}. Ao terminá-la recebes o {wiki:Rift Warrior Outfits|Rift Warrior Outfit} base.",
+          "images": [
+            {
+              "file": "Outfit Rift Warrior Male.gif",
+              "caption": "Rift Warrior masculino (base)"
+            },
+            {
+              "file": "Outfit Rift Warrior Female.gif",
+              "caption": "Rift Warrior feminino (base)"
+            }
+          ],
+          "reward": "Rift Warrior Outfit"
+        }
+      ]
+    },
+    {
+      "title": "2. Juntar os Silver Tokens",
+      "steps": [
+        {
+          "title": "Chegar às masmorras dos Ruthless Seven Minions",
+          "text": "As masmorras ficam por trás do portal do {npc:Mazarius}, em **Darashia** (parte **nordeste** da cidade). Só tens acesso depois de lhe entregares as 30 {item:Demonic Essence|Demonic Essences} no início da {wiki:Ferumbras' Ascension Quest} (nível 150+ para falar com ele). Entra no portal a **norte** do Mazarius, na sala dele: chegas a uma zona de proteção. Segue pelas grutas (com {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}) até ao fim, desce as escadas e chegas à sala grande com o caminho para os portais de cada um dos sete minions.",
+          "npc": "Mazarius",
+          "coords": [
+            {
+              "x": 33271,
+              "y": 32395,
+              "z": 7,
+              "label": "Casa do Mazarius, nordeste de Darashia"
+            }
+          ],
+          "images": [
+            {
+              "file": "Ferumbras Ascension - Path to hub.png",
+              "caption": "Caminho da entrada até à sala dos portais dos minions"
+            }
+          ]
+        },
+        {
+          "title": "Caçar nas masmorras dos Ruthless Seven Minions",
+          "text": "Junta {item:Silver Token|Silver Tokens} nas masmorras dos {wiki:The Ruthless Seven Minions|The Ruthless Seven Minions}. Precisas de **100 por addon** (200 para os dois).",
+          "warning": "Nestas masmorras encontras {creature:Hellflayer|Hellflayers}, {creature:Vexclaw|Vexclaws} e os sete membros mais recentes dos Ruthless Seven Minions. Vai bem preparado e em equipa."
+        },
+        {
+          "title": "Sair das masmorras",
+          "text": "Depois de matares um boss, o teleporte de saída da sala leva-te de volta à sala segura antes da entrada, por isso não precisas de guardar supplies para a volta. Daí, volta pelo mesmo caminho até à sala do Mazarius, em Darashia.",
+          "tip": "Não fiques na sala do boss depois de o matares: se o tempo acabar és teleportado para fora."
+        }
+      ]
+    },
+    {
+      "title": "3. Comprar os addons ao Cledwyn",
+      "steps": [
+        {
+          "title": "Chegar ao Adventurers' Guild",
+          "text": "Vai ao templo de qualquer cidade e usa uma {item:Adventurer's Stone} para seres levado ao {wiki:Adventurers' Guild}. Se não tiveres nenhuma, pede outra a um NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}. O {npc:Cledwyn} está perto do Reward Chest.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "adventurer's stone"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32190,
+              "y": 32292,
+              "z": 7,
+              "label": "Cledwyn, Adventurers' Guild"
+            }
+          ],
+          "images": [
+            {
+              "file": "Adventurers Guild (0).png",
+              "caption": "Mapa do Adventurers' Guild (rés-do-chão)"
+            }
+          ]
+        },
+        {
+          "title": "1.º addon",
+          "text": "Com 100 Silver Tokens na mochila, fala com o {npc:Cledwyn}: {key:hi}, {key:silver}, {key:addons} e {key:first}.",
+          "npc": "Cledwyn",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Blessings! How may I be of service? Do you wish to trade some tokens, or would you like some information or talk?"
+            },
+            {
+              "you": "silver"
+            },
+            {
+              "npc": "Here's the deal. For 100 of your silver tokens, I can offer you some first-class torso armor. [...] Additionally I sell both addons for the Rift Outfit."
+            },
+            {
+              "you": "addons"
+            },
+            {
+              "npc": "Ah, very good. Now choose your addon: first or second."
+            },
+            {
+              "you": "first"
+            },
+            {
+              "npc": "Ah, excellent. Obtain the first addon for your rift warrior outfit."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Rift Warrior Male Addon 1.gif",
+              "caption": "Rift Warrior masculino com o 1.º addon"
+            },
+            {
+              "file": "Outfit Rift Warrior Female Addon 1.gif",
+              "caption": "Rift Warrior feminino com o 1.º addon"
+            }
+          ],
+          "reward": "1.º addon Rift Warrior"
+        },
+        {
+          "title": "2.º addon",
+          "text": "Com outros 100 Silver Tokens, fala de novo com o {npc:Cledwyn}: {key:hi}, {key:silver}, {key:addons} e {key:second}.",
+          "npc": "Cledwyn",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "silver"
+            },
+            {
+              "you": "addons"
+            },
+            {
+              "npc": "Ah, very good. Now choose your addon: first or second."
+            },
+            {
+              "you": "second"
+            },
+            {
+              "npc": "Ah, excellent. Obtain the second addon for your rift warrior outfit."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Rift Warrior Male Addon 2.gif",
+              "caption": "Rift Warrior masculino com o 2.º addon"
+            },
+            {
+              "file": "Outfit Rift Warrior Female Addon 2.gif",
+              "caption": "Rift Warrior feminino com o 2.º addon"
+            },
+            {
+              "file": "Outfit Rift Warrior Male Addon 3.gif",
+              "caption": "Rift Warrior masculino com os dois addons"
+            },
+            {
+              "file": "Outfit Rift Warrior Female Addon 3.gif",
+              "caption": "Rift Warrior feminino com os dois addons"
+            }
+          ],
+          "reward": "2.º addon Rift Warrior + achievement Rift Warrior"
+        },
+        {
+          "title": "Sair do Adventurers' Guild",
+          "text": "Para saíres, pisa o teleporte do Guild: leva-te de volta à cidade de onde vieste. Se preferires aparecer noutra cidade, o {npc:Charos} pode mudar o destino do teleporte ({key:service}).",
+          "npc": "Charos"
+        }
+      ]
+    }
+  ]
+}

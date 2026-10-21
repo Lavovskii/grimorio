@@ -1,0 +1,233 @@
+{
+  "slug": "ancient-aucar-outfits-quest",
+  "category": "outfit",
+  "region": "Port Hope",
+  "difficulty": 4,
+  "duration": "Depende da Adventures of Galthen Quest; cada addon é uma luta de boss (≈15–30 min)",
+  "summary": "Os {wiki:Ancient Aucar Outfits|Ancient Aucar Outfits} (também chamados *Iks Outfit*) obtêm-se na cidade perdida de {wiki:Iksupan}, em Tiquanda, durante a {wiki:Adventures of Galthen Quest}. O outfit base vem do ídolo que o boss {creature:Ahau} deixa cair na primeira vez; o primeiro addon ganha-se a lutar de novo com o Ahau vestido com o equipamento Broken Iks; o segundo addon vem do boss {creature:Mitmah Vanguard}.",
+  "start": {
+    "x": 32727,
+    "y": 32876,
+    "z": 7,
+    "label": "Passagem secreta para Iksupan (Tiquanda, perto de Port Hope)"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo; nível **recomendado 250+**.",
+    "**Outfit e addon 1:** acesso ao boss {creature:Ahau}, na missão *Galthen and the City of Gold* da {wiki:Adventures of Galthen Quest}.",
+    "**Addon 2:** ter completado a missão *Galthen and the City of Gold Part II* da {wiki:Adventures of Galthen Quest}."
+  ],
+  "items_needed": [
+    {
+      "item": "Broken Iks Headpiece",
+      "note": "addon 1 (destruído no processo)"
+    },
+    {
+      "item": "Broken Iks Cuirass",
+      "note": "addon 1 (destruído no processo)"
+    },
+    {
+      "item": "Broken Iks Faulds",
+      "note": "addon 1 (destruído no processo)"
+    },
+    {
+      "item": "Broken Iks Sandals",
+      "note": "addon 1 (destruído no processo)"
+    },
+    {
+      "text": "Não precisas de {item:Broken Iks Spear} nem de {item:Broken Macuahuitl}"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Ancient Aucar Outfits|Ancient Aucar Outfit} base (com {item:The Living Idol of Tukh})"
+    },
+    {
+      "text": "Addon 1 (macuahuitl) + título **Challenger of the Iks**"
+    },
+    {
+      "text": "Addon 2 (pelo Mitmah Vanguard)"
+    },
+    {
+      "text": "Achievement **Warrior of the Iks**"
+    }
+  ],
+  "achievements": [
+    "Warrior of the Iks"
+  ],
+  "unlocks": [
+    {
+      "what": "Teleporte esférico para o Iksupan Last Stand",
+      "kind": "transporte",
+      "when": "Depois de derrotares o Ahau, ao aceitares a ajuda do {npc:Ahau's Dead Chamberlain} ({key:yes}).",
+      "place": "Iksupan Last Stand"
+    }
+  ],
+  "dangers": [
+    "Iks Aucar",
+    "Iks Chuka",
+    "Iks Pututu",
+    "Cursed Ape",
+    "Iks Ahpututu",
+    "Iks Churrascan",
+    "Ahau",
+    "Iks Yapunac",
+    "Mitmah Scout",
+    "Mitmah Seer",
+    "Mitmah Vanguard"
+  ],
+  "npcs": [
+    "Ahau's Dead Chamberlain"
+  ],
+  "tips": [
+    "Guarda as peças Broken Iks que lootares em Iksupan: precisas das 4 (cabeça, peito, pernas e pés) para o primeiro addon.",
+    "Cada jogador que quiser o addon 1 tem de ter o seu próprio conjunto Broken Iks vestido durante a luta."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "steps": [
+        {
+          "title": "Chegar a Iksupan",
+          "text": "{wiki:Iksupan} fica por baixo de **Tiquanda**, a selva à volta de **Port Hope**. Apanha um barco para Port Hope (por exemplo, com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:port hope}, {key:yes}) e atravessa a selva até às ruínas onde está o Writ da {wiki:Adventures of Galthen Quest}. Usa {item:The Key Intihuatac} (obtida nessa quest) nas inscrições: a passagem secreta leva-te para dentro da cidade do ouro.",
+          "coords": [
+            {
+              "x": 32727,
+              "y": 32876,
+              "z": 7,
+              "label": "Passagem secreta para Iksupan (Tiquanda)"
+            }
+          ],
+          "warning": "Iksupan tem {creature:Iks Chuka|Iks Chukas}, {creature:Iks Aucar|Iks Aucars}, {creature:Iks Pututu|Iks Pututus}, {creature:Iks Churrascan|Iks Churrascans} e {creature:Iks Ahpututu|Iks Ahpututus}."
+        },
+        {
+          "title": "Chegar à sala do Ahau",
+          "text": "Lá dentro, encontra o caminho até ao **terceiro andar** e vai sempre para **norte**. Passas por uma zona de lava com pedras onde se pode andar até chegares a uma sala com **duas chamas azuis**. A chama do **norte** leva à sala da alavanca, onde começas a luta (até **5 jogadores**).",
+          "map": {
+            "x": 34036,
+            "y": 31725,
+            "z": 10,
+            "marks": []
+          },
+          "warning": "No terceiro andar há lava onde se pode andar que tira vida **proporcional à tua vida máxima**. Não andes por map-click e presta atenção ao caminho."
+        },
+        {
+          "title": "Derrotar o Ahau",
+          "text": "Completa a missão *Galthen and the City of Gold* da {wiki:Adventures of Galthen Quest}, derrotando o boss {creature:Ahau} em {wiki:Iksupan}. Na primeira vez que o matas, lootas {item:The Living Idol of Tukh}.",
+          "warning": "Pelo caminho e na luta enfrentas {creature:Iks Aucar|Iks Aucars}, {creature:Iks Chuka|Iks Chukas}, {creature:Iks Pututu|Iks Pututus}, {creature:Cursed Ape|Cursed Apes}, {creature:Iks Ahpututu|Iks Ahpututus} e {creature:Iks Churrascan|Iks Churrascans}."
+        },
+        {
+          "title": "Usar o ídolo",
+          "text": "Usa {item:The Living Idol of Tukh} para receberes o outfit.",
+          "images": [
+            {
+              "file": "Outfit Ancient Aucar Male Addon 3.gif",
+              "caption": "Ancient Aucar completo (masculino)"
+            },
+            {
+              "file": "Outfit Ancient Aucar Female Addon 3.gif",
+              "caption": "Ancient Aucar completo (feminino)"
+            }
+          ],
+          "reward": "Ancient Aucar Outfit"
+        },
+        {
+          "title": "Sair de Iksupan",
+          "text": "Para sair, usa o atalho logo a **leste** das chamas azuis: a {item:Slab with a Skull} teleporta-te de volta à entrada, nas ruínas de Tiquanda. Daí volta pela selva até **Port Hope**, onde o {npc:Charles} te leva de barco."
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1",
+      "steps": [
+        {
+          "title": "Juntar o conjunto Broken Iks",
+          "text": "Arranja as 4 peças: {item:Broken Iks Headpiece}, {item:Broken Iks Cuirass}, {item:Broken Iks Faulds} e {item:Broken Iks Sandals}. A {item:Broken Iks Spear} e o {item:Broken Macuahuitl} **não** são precisos.",
+          "table": {
+            "head": [
+              "Slot",
+              "Item"
+            ],
+            "rows": [
+              [
+                "Cabeça",
+                "{item:Broken Iks Headpiece}"
+              ],
+              [
+                "Peito",
+                "{item:Broken Iks Cuirass}"
+              ],
+              [
+                "Pernas",
+                "{item:Broken Iks Faulds}"
+              ],
+              [
+                "Pés",
+                "{item:Broken Iks Sandals}"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Equipar antes da alavanca",
+          "text": "Volta à sala do {creature:Ahau} pelo mesmo caminho da secção 1 (passagem secreta em Tiquanda, terceiro andar, chama azul do norte) — tens de o matar outra vez, mesmo que já o tenhas feito. **Antes** de puxares a alavanca, veste as 4 peças Broken Iks e mantém-nas equipadas durante toda a luta.",
+          "warning": "Só recebe o addon e o título quem estiver com o conjunto vestido durante a luta. As peças Broken Iks são destruídas no processo."
+        },
+        {
+          "title": "Esperar 2 minutos",
+          "text": "Exatamente **2 minutos** depois de começar a luta recebes a mensagem do addon. Se o boss morrer antes disso, fica na sala e espera pela mensagem: *\"A challenger worthy of the aucar warrior attire would now bear the right to carry a macuahuitl as well.\"*",
+          "images": [
+            {
+              "file": "Outfit Ancient Aucar Female Addon 1.gif",
+              "caption": "Ancient Aucar com o addon 1 (feminino)"
+            },
+            {
+              "file": "Outfit Ancient Aucar Male Addon 1.gif",
+              "caption": "Ancient Aucar com o addon 1 (masculino)"
+            }
+          ],
+          "reward": "Addon 1 + título **Challenger of the Iks**"
+        },
+        {
+          "title": "Sair da sala do Ahau",
+          "text": "Sai como na secção 1: a {item:Slab with a Skull}, logo a **leste** das chamas azuis, teleporta-te de volta à entrada de Iksupan."
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2",
+      "steps": [
+        {
+          "title": "Chegar ao Iksupan Last Stand",
+          "text": "Depois de derrotares o Ahau, fala com o fantasma {npc:Ahau's Dead Chamberlain}, fora da sala da alavanca do Ahau, e aceita a ajuda com {key:yes}. Passas a poder usar o {wiki:Spheric Teleporter|teleporte esférico} dessa sala, que te leva para perto da cidade subterrânea. Segue o corredor, sobe as escadas até um túmulo com uma abertura a **leste** e desce pelo buraco: chegas ao {wiki:Iksupan Last Stand}. O resto do caminho até ao boss faz parte da missão *Galthen and the City of Gold Part II* (corredor das armadilhas e as quatro chaves Mitmah).",
+          "npc": "Ahau's Dead Chamberlain",
+          "tip": "Com o **primeiro addon** deste outfit, o contador das armadilhas de espinhos no caminho para norte começa em **99** em vez de **3**."
+        },
+        {
+          "title": "Derrotar o Mitmah Vanguard",
+          "text": "Completa a missão *Galthen and the City of Gold Part II* da {wiki:Adventures of Galthen Quest} e derrota o boss {creature:Mitmah Vanguard}.",
+          "warning": "Nesta parte enfrentas {creature:Iks Yapunac|Iks Yapunacs}, {creature:Mitmah Scout|Mitmah Scouts}, {creature:Mitmah Seer|Mitmah Seers} e o {creature:Mitmah Vanguard}.",
+          "images": [
+            {
+              "file": "Outfit Ancient Aucar Female Addon 2.gif",
+              "caption": "Ancient Aucar com o addon 2 (feminino)"
+            },
+            {
+              "file": "Outfit Ancient Aucar Male Addon 2.gif",
+              "caption": "Ancient Aucar com o addon 2 (masculino)"
+            }
+          ],
+          "reward": "Addon 2"
+        },
+        {
+          "title": "Sair do Iksupan Last Stand",
+          "text": "Para sair, volta pelo mesmo caminho até à zona do Ahau e usa a {item:Slab with a Skull}, a **leste** das chamas azuis, para seres teleportado para a entrada de Iksupan, em Tiquanda."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como **Iks Outfit Quest**.",
+    "As peças Broken Iks gastas no addon 1 não podem ser reutilizadas por outros jogadores."
+  ]
+}

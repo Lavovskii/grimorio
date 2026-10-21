@@ -1,0 +1,81 @@
+{
+  "slug": "geomancer-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "30–60 min",
+  "summary": "No fundo da {wiki:Mount Sternum Undead Cave|Mount Sternum Undead Cave}, perto de Thais, um {creature:Dwarf Geomancer} e os seus guardas protegem um baú. Desce vários andares, passa pelo {wiki:Graveyard of the Doomed|Graveyard of the Doomed} e pelos mortos-vivos e abre a caixa da quest para receberes uma {item:Small Sapphire}, um {item:Small Diamond} e um {item:Dwarven Ring}.",
+  "start": {"x": 32441, "y": 32008, "z": 13, "label": "Escadas no centro de Mount Sternum"},
+  "requirements": [
+    "Não precisa de Premium nem tem nível mínimo (recomendado nível 45+)."
+  ],
+  "items_needed": [
+    {"item": "Rope"}
+  ],
+  "rewards": [
+    {"item": "Small Sapphire"},
+    {"item": "Small Diamond"},
+    {"item": "Dwarven Ring"}
+  ],
+  "dangers": ["Poison Spider", "Dwarf", "Dwarf Soldier", "Dwarf Guard", "Cyclops", "Mummy", "Crypt Shambler", "Ghost", "Dwarf Geomancer"],
+  "tips": [
+    "Leva poções e algo contra veneno por causa das {creature:Poison Spider|Poison Spiders}."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer à Undead Cave",
+      "steps": [
+        {
+          "title": "Entrar em Mount Sternum",
+          "text": "{wiki:Mount Sternum|Mount Sternum} fica a **nordeste** de Thais e a sudoeste de Kazordoon ({coord:32494,32072,7}): sai de Thais a pé para nordeste (se não estás em Thais, apanha um barco e diz ao capitão {key:hi}, {key:thais}, {key:yes}). Encontra um buraco no centro da montanha e desce as escadas no ponto indicado. A {wiki:Mount Sternum/Undead Cave|Undead Cave} também tem uma entrada à superfície em {coord:32418,32017,7}, perto da torre da bruxa a sul de Kazordoon, e outra pela gruta dos ciclopes de Mount Sternum.",
+          "coords": [
+            {"x": 32494, "y": 32072, "z": 7, "label": "Mount Sternum"},
+            {"x": 32418, "y": 32017, "z": 7, "label": "Entrada da Undead Cave (junto à torre da bruxa)"},
+            {"x": 32441, "y": 32008, "z": 13, "label": "Escadas no centro de Mount Sternum"}
+          ],
+          "images": [{"file": "Map Mountsternum.jpg", "caption": "Mapa de Mount Sternum"}]
+        },
+        {
+          "title": "Passar o Graveyard of the Doomed",
+          "text": "Segue o caminho da imagem, passando pelo {wiki:Graveyard of the Doomed|Graveyard of the Doomed}, para **oeste** e depois para **norte**, e desce um andar.",
+          "images": [{"file": "Geomancer Quest Map 01.jpg", "caption": "Caminho para oeste e norte até à descida"}]
+        },
+        {
+          "title": "Buraco a noroeste",
+          "text": "Vai diretamente para **noroeste** e desce pelo buraco.",
+          "images": [{"file": "Geomancer Quest Map 02.jpg", "caption": "Buraco a noroeste"}]
+        },
+        {
+          "title": "Norte e primeira à esquerda",
+          "text": "Vai para **norte**, vira na primeira para **oeste** e desce pelo buraco.",
+          "images": [{"file": "Geomancer Quest Map 03.jpg", "caption": "Caminho até ao buraco seguinte"}]
+        },
+        {
+          "title": "Buraco a leste",
+          "text": "Vai para **leste** e desce por um buraco.",
+          "images": [{"file": "Geomancer Quest Map 04.jpg", "caption": "Buraco a leste"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Os mortos-vivos e o Geomancer",
+      "steps": [
+        {
+          "title": "Atravessar o andar dos mortos-vivos",
+          "text": "Aqui enfrentas {creature:Mummy|Mummies}, {creature:Crypt Shambler|Crypt Shamblers} e {creature:Ghost|Ghosts}. Mata-os, vai para **leste** e desce mais um andar.",
+          "images": [{"file": "Geomancer Quest Map 05.jpg", "caption": "Caminho para leste até à última descida"}]
+        },
+        {
+          "title": "Abrir a caixa da quest",
+          "text": "A caixa da quest está no lado **leste** desta sala, atrás de alguns {creature:Dwarf Guard|Dwarf Guards} e de um {creature:Dwarf Geomancer}. Mata-os e abre a caixa.",
+          "reward": "{item:Small Sapphire}, {item:Small Diamond} e {item:Dwarven Ring}"
+        },
+        {
+          "title": "Sair da Undead Cave",
+          "text": "Volta pelo mesmo caminho, seguindo os mapas ao contrário: sobe os andares por onde desceste e usa a {item:Rope} em cada buraco (leste, oeste, noroeste), passa outra vez pelo Graveyard of the Doomed e sobe as escadas do centro da montanha ({coord:32441,32008,13}) até à superfície. Daí regressa a pé para **sudoeste** até Thais.",
+          "coords": [{"x": 32441, "y": 32008, "z": 13, "label": "Escadas do centro de Mount Sternum"}]
+        }
+      ]
+    }
+  ]
+}

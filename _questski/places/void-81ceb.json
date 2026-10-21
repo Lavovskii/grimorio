@@ -1,0 +1,27 @@
+{
+  "title": "Void",
+  "type": "outro",
+  "near": "Thais",
+  "summary": "Plano vazio e sem vida \"na borda da criação\". O mais conhecido fica por baixo das {wiki:Plains of Havoc} (entra-se por um portal avariado na {wiki:Necromant House}); na {wiki:The Scatterbrained Sorcerer Quest} o {npc:Eclesius} leva-te a outro vazio, por baixo da casa dele, perto de Thais.",
+  "entrance": {"x": 32291, "y": 32291, "z": 7, "label": "Eclesius (casa perto de Thais)"},
+  "requirements": [
+    "Vazio das Plains of Havoc: precisas da {item:Key 3701} para chegares ao portal avariado da Necromant House.",
+    "Vazio do Eclesius: só durante a missão 3 (Love's a Wicked Game) da {wiki:The Scatterbrained Sorcerer Quest}."
+  ],
+  "items": ["Key 3701"],
+  "arrive": [
+    "**Pela Scatterbrained Sorcerer Quest:** vai à casa do {npc:Eclesius}, perto de Thais ({coord:32291,32291,7}). Na parte final da missão 3 diz {key:hi}, {key:mission}, depois outra vez {key:hi}, {key:mission} e {key:yes}: ele leva-te ao vazio no continuum espaço-tempo debaixo da casa.",
+    "**Pelas Plains of Havoc:** na {wiki:Necromant House} há um portal avariado que, em vez de ir para as Pits of Inferno, te teleporta para o Void. Para lá chegares precisas da {item:Key 3701}."
+  ],
+  "leave": [
+    "**Vazio do Eclesius:** diz ao {npc:Eclesius} {key:hi}, {key:yes} e {key:yes}: ele leva-te de volta a casa.",
+    "**Vazio das Plains of Havoc:** sai por outro portal, que te deixa perto da quest das SD, a norte das Plains of Havoc ({coord:32768,32230,7}). Daí volta a pé para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32768, "y": 32230, "z": 7, "label": "Saída do Void (norte das Plains of Havoc)"}
+  ],
+  "images": [
+    {"file": "Space-Time Continuum.png", "caption": "O vazio no continuum espaço-tempo"},
+    {"file": "Voidjpeg.JPG", "caption": "O Void por baixo das Plains of Havoc"}
+  ]
+}

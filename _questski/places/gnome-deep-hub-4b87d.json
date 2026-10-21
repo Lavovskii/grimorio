@@ -1,0 +1,33 @@
+{
+  "title": "Gnome Deep Hub",
+  "type": "zona",
+  "near": "Kazordoon",
+  "summary": "Posto avançado de gnomos e anões na guerra contra *Those Below*, muito fundo **debaixo do mar a leste**; entra-se a partir de Kazordoon e é a base da {wiki:Dangerous Depths Quest} e das Warzones 4, 5 e 6.",
+  "entrance": {"x": 32624, "y": 31868, "z": 11, "label": "Entrada do Gnome Deep Hub (Kazordoon, perto do blesser do norte)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Para usar o {wiki:Gnomish Crystal Teleport System} precisas de nível 80+ e da autorização do {npc:Xelvar}; cada viagem gasta um {item:Teleport Crystal} (150 gp)."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de {wiki:Cormaya} (com o {npc:Gurbasch}) ou de Farmine (com o {npc:Thorgrin}), dizendo {key:hi}, {key:kazordoon}, {key:yes}; chegas ao porto subterrâneo junto ao {npc:Brodrosch}. Também podes ir a pé pela entrada da montanha (leva {item:Rope} e {item:Shovel}).",
+    "Em Kazordoon, vai até ao blesser do **norte** da cidade, **4 andares abaixo** do nível do chão, e entra na passagem do Gnome Deep Hub ({coord:32624,31868,11}).",
+    "Em alternativa, com nível 80+, usa o teleporte de cristal do GCTS mesmo ao lado da entrada ({coord:32628,31863,11}).",
+    "Chegas ao hub, debaixo do mar a leste ({coord:33752,32190,14}); o {npc:Gnomus} está logo a **norte** do sítio onde chegas."
+  ],
+  "leave": [
+    "Das Warzones, volta pela sala da Lava Pump e pelo caminho da Warzone até ao hub.",
+    "Do hub, sai pela mesma entrada para **Kazordoon** ({coord:32624,31868,11}).",
+    "Para saíres de Kazordoon: apanha o {wiki:Steamship} do {npc:Brodrosch} ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), usa o teleporte de cristal ao lado da entrada do hub, ou sai a pé pela entrada da montanha."
+  ],
+  "coords": [
+    {"x": 32624, "y": 31868, "z": 11, "label": "Entrada/saída do Gnome Deep Hub (Kazordoon)"},
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte de cristal (GCTS) de Kazordoon"},
+    {"x": 32622, "y": 31861, "z": 11, "label": "Xelvar (acesso ao GCTS)"},
+    {"x": 33752, "y": 32190, "z": 14, "label": "Gnome Deep Hub"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 33838, "y": 32178, "z": 14, "label": "Descida para a zona de tasks do Gnomus (leste do hub)"}
+  ],
+  "warnings": [
+    "Zona de nível alto (a wiki recomenda 100+): {creature:Deepworm|Deepworms}, {creature:Diremaw|Diremaws} e {creature:Lava Lurker|Lava Lurkers} nas zonas de caça à volta do hub."
+  ]
+}

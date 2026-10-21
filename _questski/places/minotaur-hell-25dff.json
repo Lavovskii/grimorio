@@ -1,0 +1,25 @@
+{
+  "title": "Minotaur Hell",
+  "type": "gruta",
+  "near": "Rookgaard",
+  "summary": "Gruta de minotauros no **norte de Rookgaard**, no fundo da grande gruta da ilha (a norte da ponte de nível 2); é onde fica a {wiki:Minotaur Hell Quest}.",
+  "entrance": {"x": 32094, "y": 32137, "z": 7, "label": "Entrada da grande gruta de Rookgaard"},
+  "requirements": [
+    "Nível recomendado: 6+ (de preferência em equipa)."
+  ],
+  "items": ["Rope", "Box"],
+  "arrive": [
+    "Na vila de **Rookgaard**, vai para **norte**, atravessa a ponte de nível 2 e continua até à grande gruta de Rookgaard ({coord:32094,32137,7}); desce.",
+    "Piso -1: atravessa a gruta para **leste** (há um {creature:Rat}, alguns {creature:Troll|Trolls} e talvez {creature:Spider|Spiders}) até à escada e desce.",
+    "Piso -2: vai para **norte**; no primeiro cruzamento segue para **nordeste** e no segundo para **noroeste**, até à escada seguinte. Desce.",
+    "Piso -3 (labirinto dos lobos): segue para **norte**, entre {creature:Wolf|Wolves} e {creature:Orc|Orcs}, até mais uma escada: essa leva à Minotaur Hell."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho, escada a escada: o labirinto dos lobos (-3) para **sul**, o piso -2 de volta pelos dois cruzamentos e o piso -1 para **oeste**.",
+    "Sais na grande gruta a norte da ponte de nível 2; daí volta para **sul** até à vila de Rookgaard."
+  ],
+  "warnings": [
+    "Os monstros vêm em grande número (minotauros, orcs e lobos): usa uma {item:Box|caixa} para bloquear caminhos e deixa só 1–2 criaturas atacarem-te de cada vez.",
+    "Às vezes aparece o boss {creature:Apprentice Sheng}. O {creature:Minotaur Mage} que vês numa sala a oeste é inalcançável."
+  ]
+}

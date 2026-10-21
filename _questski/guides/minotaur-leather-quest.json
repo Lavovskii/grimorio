@@ -1,0 +1,47 @@
+{
+  "slug": "minotaur-leather-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "10–15 min",
+  "summary": "A sul de Thais há uma jangada suspeita guardada por {creature:Minotaur|Minotaurs}. Em cima dela estão duas caixas: a castanha-clara tem uma {item:Minotaur Leather} à tua espera.",
+  "legend_pt": "Há uma jangada suspeita a sul de Thais, guardada por minotauros.",
+  "start": {"x": 32302, "y": 32416, "z": 7, "label": "Jangada a sul de Thais"},
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo; recomendado nível 10+."
+  ],
+  "items_needed": [
+    {"text": "Nenhum equipamento especial"}
+  ],
+  "rewards": [
+    {"item": "Minotaur Leather"}
+  ],
+  "dangers": ["Wolf", "Bear", "Minotaur"],
+  "npcs": [],
+  "tips": [
+    "Pelo caminho a sul de Thais podes encontrar {creature:Wolf|Wolves} e {creature:Bear|Bears}; a jangada é guardada por {creature:Minotaur|Minotaurs}."
+  ],
+  "sections": [
+    {
+      "title": "1. A jangada a sul de Thais",
+      "steps": [
+        {
+          "title": "Ir até à jangada",
+          "text": "Sai de **Thais** e vai a pé para **sul** até à jangada ({coord:32302,32416,7}). Não precisas de barco nem de equipamento especial para lá chegar.",
+          "coords": [{"x": 32302, "y": 32416, "z": 7, "label": "Jangada com as duas caixas"}],
+          "warning": "A jangada está guardada por {creature:Minotaur|Minotaurs}. Mata-os ou afasta-os antes de abrires as caixas."
+        },
+        {
+          "title": "Abrir a caixa certa",
+          "text": "Na jangada há duas caixas. Abre a caixa **castanha-clara** para receberes a {item:Minotaur Leather}.",
+          "reward": "Minotaur Leather"
+        },
+        {
+          "title": "Voltar a Thais",
+          "text": "Para sair, volta a **Thais** a pé pelo mesmo caminho, para **norte**. Cuidado com os {creature:Wolf|Wolves} e {creature:Bear|Bears} pelo caminho."
+        }
+      ]
+    }
+  ]
+}

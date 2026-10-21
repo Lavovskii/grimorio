@@ -1,0 +1,39 @@
+{
+  "title": "Pits of Inferno",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Antiga fortaleza dos Nightmare Knights por baixo das {wiki:Plains of Havoc}, a **sudoeste de Venore**, hoje tomada pelos Ruthless Seven e cheia de demónios; é o cenário da {wiki:The Pits of Inferno Quest}.",
+  "entrance": {"x": 32781, "y": 32330, "z": 7, "label": "Cemitério junto à Necromant House (Plains of Havoc)"},
+  "requirements": [
+    "Conta **Premium**: quem tem Free Account não passa o Magic Wall do Shrine of Wonders.",
+    "A {item:Holy Tible} na mochila para atravessar o Shrine of Wonders (está num baú numa pequena montanha junto à {wiki:Knightwatch Tower}, a que se sobe com {spell:Levitate} ou 3 {item:Parcel|Parcels}).",
+    "Para passar o Hall of the Five Ways a primeira vez é preciso uma equipa com um jogador de cada vocação; a porta de nível antes da sala principal pede nível 80."
+  ],
+  "items": ["Shovel", "Pick", "Rope", "Blood", "Oil", "Holy Tible"],
+  "arrive": [
+    "Sai de **Venore** e caminha para **sudoeste** até às {wiki:Plains of Havoc}. Vai ao cemitério perto da {wiki:Necromant House} ({coord:32781,32330,7}) e usa a {item:Shovel} numa {item:Loose Stone Pile} (todas levam à mesma gruta estreita).",
+    "Na parte **leste** da gruta há uma sala de 3x4: usa o {item:Pick} no **canto noroeste** ({coord:32775,32344,7}) e desce pelo buraco.",
+    "A campa de {wiki:Goshnar} fica logo a **oeste**: põe-te **1 sqm a sul** da lápide e usa o {item:Blood} na lápide. Todos os jogadores nesse tile vão para as catacumbas.",
+    "Vai para **norte** e pisa o tile com inscrições antes do {item:Magic Wall} com a {item:Holy Tible} na mochila: passas para o outro lado (o Shrine of Wonders).",
+    "A **leste** há uma placa *\"To the Pits of Inferno\"*: desce por esse buraco e segue para **sul** até à ponte. Se estiver partida, usa o {item:Oil} na alavanca a **sul da ponte, do lado oeste**, puxa-a e atravessa.",
+    "Se houver um rio de lava, usa o {item:Pick} na pedra junto a ela para a arrefecer. Atravessa até aos **3 buracos**, que levam todos ao {wiki:Pits of Inferno Dragon Lair}.",
+    "No dragon lair desce pelo buraco **norte**; a **leste** há um rope hole: sobe com a {item:Rope} e chegas ao Hall of the Five Ways ({coord:32834,32333,11})."
+  ],
+  "leave": [
+    "Pela placa de saída: volta pelo reino dos Ruthless Seven e segue as placas que indicam a saída.",
+    "Ou fala com {npc:A Ghostly Sage}, mesmo antes da sala das recompensas, e pede-lhe um teletransporte.",
+    "Em ambos os casos apareces na gruta dos {creature:Slime|Slimes} por baixo das Plains of Havoc: sobe à superfície e caminha para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House (cemitério com as Loose Stone Piles)"},
+    {"x": 32775, "y": 32344, "z": 7, "label": "Canto noroeste da sala: usar Pick aqui"},
+    {"x": 32834, "y": 32333, "z": 11, "label": "Hall of the Five Ways"},
+    {"x": 32828, "y": 32340, "z": 7, "label": "Baú da Holy Tible (montanha junto à Knightwatch Tower)"},
+    {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"}
+  ],
+  "warnings": [
+    "Zona de nível muito alto (a wiki recomenda 130–160+): {creature:Dragon Lord|Dragon Lords} no dragon lair, {creature:Hellfire Fighter|Hellfire Fighters}, {creature:Phantasm|Phantasms} e {creature:Nightmare|Nightmares} mais à frente.",
+    "Depois do labirinto há um **ponto sem retorno**: o buraco **norte** leva à gruta dos Slimes das Plains of Havoc (sem volta) e o buraco **sul** continua para a sala principal (hub).",
+    "Leva {item:Destroy Field Rune|Destroy Field Runes}: há campos de fogo em cima de buracos e alavancas."
+  ]
+}

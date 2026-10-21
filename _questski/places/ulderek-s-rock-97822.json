@@ -1,0 +1,31 @@
+{
+  "title": "Ulderek's Rock",
+  "type": "zona",
+  "near": "Venore",
+  "summary": "A **Orc Fortress**, a maior cidade-fortaleza dos orcs, numa colina na costa **a norte de Venore** e a sudeste de Ab'Dendriel (a leste de {wiki:Ferngrims Gate}); no fundo fica a sala do trono do {npc:The Orc King}.",
+  "entrance": {"x": 32930, "y": 31774, "z": 7, "label": "Orc Fortress (Ulderek's Rock)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Venore** (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:venore}, {key:yes}).",
+    "De Venore segue a pé para **norte/noroeste** até à fortaleza ({coord:32930,31774,7}). Também se chega a pé de Ab'Dendriel, para **sudeste**.",
+    "Entra pelo buraco marcado no mapa e segue para **leste** pela linha azul, o caminho mais seguro. Para os pisos de baixo há escadas (a {wiki:Orc Fortress Quest} passa ainda por um {item:Gate of Expertise} de nível 40)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe as escadas e regressa pela linha azul até ao buraco por onde entraste; sobe por ele com a {item:Rope}.",
+    "Volta a pé para **sul/sudeste** até Venore (ou para **noroeste** até Ab'Dendriel). Em Venore, o {npc:Captain Fearless} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32930, "y": 31774, "z": 7, "label": "Orc Fortress (Ulderek's Rock)"},
+    {"x": 32968, "y": 31780, "z": 7, "label": "Caixa de correio real"},
+    {"x": 32939, "y": 31776, "z": 9, "label": "Sala escondida da Druid Outfits Quest (2 andares abaixo)"},
+    {"x": 32983, "y": 31728, "z": 9, "label": "Sala do trono do Orc King"}
+  ],
+  "images": [
+    {"file": "Orc_Fortress_Map_01.png", "caption": "Mapa da Orc Fortress com o buraco de entrada"},
+    {"file": "Orc_Fortress_Map_AB.png", "caption": "Caminho mais seguro (linha azul)"}
+  ],
+  "warnings": [
+    "Os orcs andam em grupos de quatro ou mais; nos pisos de baixo há {creature:Orc Warlord|Orc Warlords}, {creature:Orc Leader|Orc Leaders} e {creature:Orc Berserker|Orc Berserkers}. Leva runas de área, poções e, se tiveres, um {item:Stealth Ring}.",
+    "Não pares para descansar perto do forte: os acampamentos de cerco à volta também têm orcs."
+  ]
+}

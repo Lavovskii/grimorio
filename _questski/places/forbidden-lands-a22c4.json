@@ -1,0 +1,33 @@
+{
+  "title": "Forbidden Lands",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Zona perigosa no nordeste de {wiki:Tiquanda}, a **leste de Banuta**, fechada por uma grande paliçada, com pegadas gigantes e monstros como {creature:Behemoth|Behemoths}, {creature:Giant Spider|Giant Spiders} e {creature:Hydra|Hydras}.",
+  "entrance": {"x": 32973, "y": 32549, "z": 7, "label": "Forbidden Lands"},
+  "requirements": [
+    "O {npc:The Blind Prophet} só te leva depois de o {npc:Hairycles} te dar autorização (missão 8 da {wiki:The Ape City Quest})."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope** (diz ao capitão do porto {key:hi}, {key:port hope}, {key:yes}) e atravessa a selva para **nordeste** até {wiki:Banuta} (ou usa o ferry do {npc:Lorek}, se tiveres o rank Ranger da {wiki:Paw and Fur Society}).",
+    "A **leste** de Banuta, no sopé da montanha e junto à paliçada das Forbidden Lands, está o {npc:The Blind Prophet} ({coord:33022,32604,7}).",
+    "Diz-lhe {key:hi}, {key:transport} e responde {key:yes}: ele leva-te para uma rampa dentro das Forbidden Lands."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à rampa onde o {npc:The Blind Prophet} te deixou e sai por aí para Tiquanda (o wiki não descreve esta saída em pormenor).",
+    "Regressa para **oeste**, a Banuta, e daí pela selva até Port Hope, onde o {npc:Charles} tem barco para outras cidades."
+  ],
+  "coords": [
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+    {"x": 33013, "y": 32565, "z": 7, "label": "Gruta de Behemoths (perto das escadas)"},
+    {"x": 32961, "y": 32546, "z": 7, "label": "Gruta de Giant Spiders"},
+    {"x": 32988, "y": 32524, "z": 7, "label": "Gruta de Hydras (costa leste)"},
+    {"x": 32933, "y": 32496, "z": 7, "label": "Giant Footprints (Ape City Quest)"}
+  ],
+  "images": [
+    {"file": "Forbidden Lands.PNG", "caption": "Mapa das Forbidden Lands"}
+  ],
+  "warnings": [
+    "Zona de nível alto (60–100+): {creature:Behemoth|Behemoths} (um deles junto à rampa de chegada), {creature:Giant Spider|Giant Spiders}, {creature:Stone Golem|Stone Golems}, {creature:Massive Earth Elemental|Massive Earth Elementals}, {creature:Spit Nettle|Spit Nettles} e {creature:Hydra|Hydras}.",
+    "Para evitares a maioria dos monstros, anda junto à paliçada do **sul**."
+  ]
+}

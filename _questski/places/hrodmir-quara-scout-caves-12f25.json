@@ -1,0 +1,30 @@
+{
+  "title": "Hrodmir Quara Scout Caves",
+  "type": "gruta",
+  "near": "Svargrond",
+  "summary": "Duas grutas em plataformas de gelo na **costa noroeste de Hrodmir** (a ilha de Svargrond), para lá das Formorgar Troll Caves e dos {wiki:Barbarian Settlements}; cheias de Quara Scouts, boas para níveis baixos.",
+  "entrance": {"x": 32023, "y": 31123, "z": 7, "label": "Gruta oeste (a maior)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Svargrond** (de barco, por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:svargrond}, {key:yes}).",
+    "Vai até aos {wiki:Barbarian Settlements}, a sudoeste da cidade: com o {npc:Buddel}, a **sul** de Svargrond ({coord:32254,31195,7}), diz {key:hi}, {key:passage}, {key:camp}, {key:yes} (50 gp; precisas da {wiki:Barbarian Test Quest}); ou a pé, saindo de Svargrond para **oeste** pelo glaciar e por uma pequena ponte.",
+    "Daí segue para **norte/noroeste**, para lá das Formorgar Troll Caves e dos povoados (Bittermor fica em {coord:31996,31233,7}), até às plataformas de gelo da costa noroeste. O wiki não descreve o caminho exato.",
+    "As duas grutas entram-se por buracos: a **oeste** em {coord:32023,31123,7} (maior, para níveis 66–80) e a **leste** em {coord:32086,31093,7} (mais pequena, para níveis 50–65)."
+  ],
+  "leave": [
+    "Sobe pelo buraco por onde entraste (usa a {item:Rope}) e volta pelo mesmo caminho para **sul** até aos povoados dos bárbaros.",
+    "No barco do {npc:Buddel} ({coord:32020,31294,7}) diz {key:hi}, {key:passage}, {key:svargrond}, {key:yes} (50 gp), ou volta a pé para **leste** pelo glaciar até Svargrond."
+  ],
+  "coords": [
+    {"x": 32086, "y": 31093, "z": 7, "label": "Gruta leste (mais pequena)"},
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32020, "y": 31294, "z": 7, "label": "Barco do Buddel nos Barbarian Settlements"}
+  ],
+  "images": [
+    {"file": "HQS Caves.png", "caption": "Hrodmir Quara Scout Caves"}
+  ],
+  "warnings": [
+    "Ao desceres por qualquer dos buracos podes ser logo cercado por 4–5 {creature:Quara Constrictor Scout|Constrictors} e {creature:Quara Mantassin Scout|Mantassins}: runas de Poison Bomb ou de parede ajudam.",
+    "No caminho pelo glaciar há {creature:Mammoth|Mammoths}, {creature:Polar Bear|Polar Bears}, {creature:Ice Golem|Ice Golems} e {creature:Crystal Spider|Crystal Spiders}."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Hrodmir",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "A maior das Ice Islands, a **norte do continente principal** e a oeste de Yalahar: a leste fica a cidade de **Svargrond**, no centro o {wiki:Formorgar Glacier} (com as {wiki:Formorgar Mines} por baixo) e a sudoeste as aldeias bárbaras de Bittermor, Krimhorn e Ragnir.",
+  "entrance": {"x": 32347, "y": 31108, "z": 6, "label": "Porto de Svargrond (Captain Breezelda)"},
+  "arrive": [
+    "Apanha um barco para **Svargrond**: o {npc:Captain Greyhound} em Carlin (110 gp), o {npc:Captain Fearless} em Venore (150 gp) ou o {npc:Captain Bluebear} em Thais (180 gp). Diz {key:hi}, {key:svargrond}, {key:yes}.",
+    "Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** de Svargrond.",
+    "Para as aldeias bárbaras do sudoeste (e para {wiki:Tyrsung}, {wiki:Okolnir} ou {wiki:Helheim}), vai ao {npc:Buddel}, a **sul** de Svargrond: {key:hi}, {key:passage}, o destino ({key:camp}, {key:tyrsung}, {key:okolnir}, {key:helheim}) e {key:yes}; custa 50 gp. As aldeias ficam em {coord:32020,31294,7}.",
+    "Para o {wiki:Formorgar Glacier}, sai de Svargrond para **oeste** e sobe com {spell:Levitate}. Para {wiki:Nibelor}, o {npc:Iskan} (trenó de cães, no gelo a **norte** da cidade) leva-te com {key:hi}, {key:passage}, depois do {wiki:Barbarian Test Quest} e da primeira missão da {wiki:The Ice Islands Quest}."
+  ],
+  "leave": [
+    "Se estás nas aldeias bárbaras, volta a Svargrond com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond}, {key:yes} (50 gp).",
+    "No porto, a **leste** de Svargrond, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp): {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel, a sul de Svargrond"},
+    {"x": 32020, "y": 31294, "z": 7, "label": "Buddel nas aldeias bárbaras (Camp)"},
+    {"x": 32301, "y": 31083, "z": 7, "label": "Iskan (trenó para Nibelor)"},
+    {"x": 32145, "y": 31123, "z": 7, "label": "Entrada das Formorgar Mines"}
+  ],
+  "warnings": [
+    "O {npc:Buddel} está sempre bêbedo e muitas vezes leva-te ao sítio errado. Se tiveres um {item:Dwarven Ring} na mochila ele acerta sempre (e não pagas), mas fica com o anel; diz {key:no} quando ele o pedir se o quiseres guardar.",
+    "No glaciar há {creature:Frost Giant|Frost Giants}, {creature:Mammoth|Mammoths}, {creature:Ice Golem|Ice Golems} e {creature:Crystal Spider|Crystal Spiders}."
+  ]
+}

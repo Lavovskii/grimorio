@@ -1,0 +1,27 @@
+{
+  "title": "Horestis Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo do faraó {creature:Horestis} no deserto a **noroeste de Ankrahmun**, com 6 pisos de caça cada vez mais difíceis; a entrada fica 1 andar acima do spawn de dragões mais perto da cidade.",
+  "entrance": {"x": 33062, "y": 32731, "z": 6, "label": "Entrada da Horestis Tomb (1 andar acima do chão)"},
+  "arrive": [
+    "Viaja até **Ankrahmun** de barco: no porto da tua cidade diz {key:hi}, {key:ankrahmun} e {key:yes}. Chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Sai da cidade para **noroeste**, pelo deserto, até à rampa em {coord:33061,32740,7}.",
+    "Sobe a rampa e segue diretamente para **norte**; a entrada da tumba fica 1 andar acima do chão, por cima do spawn de dragões ({coord:33062,32731,6}). Segue o caminho que desce para os túmulos.",
+    "Lá dentro desces piso a piso pelas escadas: o primeiro piso subterrâneo é o mais fácil e cada piso abaixo é mais perigoso."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe as escadas de cada piso até à entrada, desce a rampa ({coord:33061,32740,7}) e regressa a pé a **Ankrahmun**, para **sudeste**.",
+    "No porto de Ankrahmun, o {npc:Captain Sinbeard} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33061, "y": 32740, "z": 7, "label": "Rampa de acesso à tumba"},
+    {"x": 33005, "y": 32749, "z": 8, "label": "Horestis Tomb, piso -1"},
+    {"x": 33029, "y": 32706, "z": 7, "label": "An Ancient Priest (junto à entrada da tumba)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard — porto de Ankrahmun"}
+  ],
+  "warnings": [
+    "A entrada fica por cima de um spawn de dragões: cuidado no caminho se tens nível baixo.",
+    "Níveis recomendados pela wiki: piso 1 a partir de 20, piso 2 ~30, piso 3 ~35, piso 4 ~45, piso 5 ~45–50 e piso 6 ~65–70."
+  ]
+}

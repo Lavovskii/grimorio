@@ -1,0 +1,46 @@
+# PLACE: Razachai/Inner Sanctum
+slug: razachai-inner-sanctum-770c2
+mentioned in 2 guides: killing-in-the-name-of-quest, wrath-of-the-emperor-quest
+
+## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
+## Inner Sanctum 
+## General Properties 
+## Near city 
+ Farmine 
+## Location 
+ Northern Zao deep beneath Razachai . 
+## Vocation(s) 
+ Paladins 
+ Experience Loot | Average Very Good
+## Maps and Pictures 
+## Other Properties 
+## Version 
+ 8.60 June 30, 2010 Summer Update 2010 
+ See also: Hunting Places Help 
+ Note: While the area is accessible to all vocations, it is highly recommended to only hunt here if you are a paladin. 
+The Inner Sanctum of Razachai is the deepest parts of northern Zao, where the Emperor keeps his finest guards as well as four of his own clones, each representing an aspect of his personality. 
+It is recommended that you bring Energy Wall and Bomb Runes to cut off the area in case you get swarmed. If not, prepare to have to fight up to 20 creatures in a row before you can catch your breath. Also Hatebreeder, one of the Ghastly Dragon bosses, appears here.
+ To get access to this area, you must complete the Wrath of the Emperor Quest up until the tenth mission. Because of this, the area is sometimes informally referred to as "Mission 10".
+ Name Exp HP Max. Damage Loot | Draken Abomination 4,500 6,250 1200 1-199× Gold Coin (common) 1-4× Meat (common) 1-8× Platinum Coin (common) Eye of Corruption (uncommon) Scale of Corruption (uncommon) 1-3× Ultimate Health Potion (uncommon) 1-3× Great Mana Potion (uncommon) Terra Hood (uncommon) Tail of Corruption (uncommon) 1-3× Great Spirit Potion (semi-rare) 1-4× Small Topaz (semi-rare) Wand of Voodoo (rare) Zaoan Legs (rare) Zaoan Armor (rare) Zaoan Helmet (rare) Draken Boots (rare) Bamboo Leaves (very rare) Shield of Corruption (very rare) Snake God's Wristguard (very rare) | Ghastly Dragon 4,600 7,800 1221 ( 500 , 63 , 430 , 228 ) + 500 from Curse 0-266× Gold Coin (common) 0-2× Great Mana Potion (common) 0-5× Small Emerald (common) 0-2× Platinum Coin (common) Dark Armor (common) Plate Legs (common) 0-2× Great Spirit Potion (common) Ultimate Health Potion (common) Terra Boots (uncommon) Soul Orb (uncommon) Demonic Essence (uncommon) Slightly Rusted Armor (uncommon) Twin Hooks (uncommon) Zaoan Halberd (uncommon) Ghastly Dragon Head (uncommon) Undead Heart (uncommon) Terra Legs (semi-rare) Drakinata (semi-rare) Shiny Stone (rare) Zaoan Armor (rare) Zaoan Shoes (rare) Zaoan Legs (rare) Spellweaver's Robe (rare) Jade Hat (rare) Guardian Boots (very rare) Zaoan Helmet (very rare) Zaoan Sword (very rare) | Undead Dragon 7,500 8,350 2750 ( 880 , 570 , 600 , 700 ) 10-198× Gold Coin (common) 1-5× Platinum Coin (common) Unholy Bone (common) 1-2× Small Sapphire (common) 1-5× Assassin Star (common) 1-3× Great Mana Potion (common) 1-3× Great Health Potion (common) 1-2× Black Pearl (uncommon) 1-15× Power Bolt (uncommon) Hardened Bone (uncommon) Demonic Essence (uncommon) Golden Mug (semi-rare) Knight Armor (semi-rare) Dragonbone Staff (semi-rare) Life Crystal (semi-rare) War Axe (semi-rare) Death Ring (semi-rare) Gold Ingot (semi-rare) Royal Helmet (rare) Dragon Slayer (rare) Golden Armor (rare) Spellweaver's Robe (rare) Blue Gem (rare) Divine Plate (rare) Stone Skin Amulet (rare) Skullcracker Armor (very rare)
+ And sometimes:
+ Name Exp HP Max. Damage Loot | Hatebreeder 10,000 18,000 1800+ 1-262× Gold Coin 1-2× Platinum Coin 1-5× Great Spirit Potion 1-5× Ultimate Health Potion 1-5× Great Health Potion Demonic Essence Undead Heart Ghastly Dragon Head Zaoan Shoes Zaoan Legs Jade Hat Spellweaver's Robe Guardian Boots Zaoan Helmet Zaoan Armor Zaoan Halberd Twin Hooks Drakinata Zaoan Sword Cobra Crown Snake God's Sceptre Zaoan Monk Robe Snake God's Wristguard
+ Name Exp HP Max. Damage Loot | Draken Abomination 4,500 6,250 1200 1-199× Gold Coin (common) 1-4× Meat (common) 1-8× Platinum Coin (common) Eye of Corruption (uncommon) Scale of Corruption (uncommon) 1-3× Ultimate Health Potion (uncommon) 1-3× Great Mana Potion (uncommon) Terra Hood (uncommon) Tail of Corruption (uncommon) 1-3× Great Spirit Potion (semi-rare) 1-4× Small Topaz (semi-rare) Wand of Voodoo (rare) Zaoan Legs (rare) Zaoan Armor (rare) Zaoan Helmet (rare) Draken Boots (rare) Bamboo Leaves (very rare) Shield of Corruption (very rare) Snake God's Wristguard (very rare) | Draken Elite 4,750 5,550 1500 (with wave) 1-200× Gold Coin (common) 1-8× Platinum Coin (common) Meat (common) Broken Slicer (common) Broken Draken Mail (uncommon) Draken Wristbands (uncommon) 0-3× Ultimate Health Potion (uncommon) 0-3× Great Mana Potion (uncommon) Draken Sulphur (uncommon) 0-4× Small Diamond (semi-rare) Magic Sulphur (semi-rare) Twiceslicer (rare) Zaoan Legs (rare) Assassin Dagger (rare) Draken Boots (rare) Zaoan Armor (rare) Zaoan Sword (rare) Zaoan Helmet (very rare) Elite Draken Mail (very rare) Snake God's Wristguard (very rare) Blade of Corruption (very rare) Cobra Crown (very rare) | Ghastly Dragon 4,600 7,800 1221 ( 500 , 63 , 430 , 228 ) + 500 from Curse 0-266× Gold Coin (common) 0-2× Great Mana Potion (common) 0-5× Small Emerald (common) 0-2× Platinum Coin (common) Dark Armor (common) Plate Legs (common) 0-2× Great Spirit Potion (common) Ultimate Health Potion (common) Terra Boots (uncommon) Soul Orb (uncommon) Demonic Essence (uncommon) Slightly Rusted Armor (uncommon) Twin Hooks (uncommon) Zaoan Halberd (uncommon) Ghastly Dragon Head (uncommon) Undead Heart (uncommon) Terra Legs (semi-rare) Drakinata (semi-rare) Shiny Stone (rare) Zaoan Armor (rare) Zaoan Shoes (rare) Zaoan Legs (rare) Spellweaver's Robe (rare) Jade Hat (rare) Guardian Boots (very rare) Zaoan Helmet (very rare) Zaoan Sword (very rare) | Undead Dragon 7,500 8,350 2750 ( 880 , 570 , 600 , 700 ) 10-198× Gold Coin (common) 1-5× Platinum Coin (common) Unholy Bone (common) 1-2× Small Sapphire (common) 1-5× Assassin Star (common) 1-3× Great Mana Potion (common) 1-3× Great Health Potion (common) 1-2× Black Pearl (uncommon) 1-15× Power Bolt (uncommon) Hardened Bone (uncommon) Demonic Essence (uncommon) Golden Mug (semi-rare) Knight Armor (semi-rare) Dragonbone Staff (semi-rare) Life Crystal (semi-rare) War Axe (semi-rare) Death Ring (semi-rare) Gold Ingot (semi-rare) Royal Helmet (rare) Dragon Slayer (rare) Golden Armor (rare) Spellweaver's Robe (rare) Blue Gem (rare) Divine Plate (rare) Stone Skin Amulet (rare) Skullcracker Armor (very rare) | Fury of the Emperor 550~ 51,000 ? This creature drops no loot. | Scorn of the Emperor 450 45,000 ? This creature drops no loot. | Spite of the Emperor 500~ 48,000 ? This creature drops no loot. | Wrath of the Emperor 600 55,000 ? This creature drops no loot.
+
+## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[lions-rock-quest 2-4] Entrar no Inner Sanctum
+Com as 3 provas feitas recebes *“You have passed the Lion's Tests and are now worthy to enter the inner sanctum!”*. Atravessa a {item:Mystic Flame} no lado **oeste** deste andar para entrares no Inner Sanctum.
+coords: [{'x': 33128, 'y': 32308, 'z': 8, 'label': 'Mystic Flame para o Inner Sanctum'}]
+
+## OTHER GUIDE STEPS MENTIONING IT (context)
+[in-service-of-yalahar-quest 12-0] Receber a última missão
+Diz {key:mission} a quem escolheste. O **Palimuth** conta que um círculo de Yalahari quer abrir um portal para demónios e que a entrada do santuário interior foi aberta para ti. O **Yalahari** convida-te para uma 'cerimónia' no centro da cidade interior e diz que podes passar todas as portas até ao salão.
+coords: []
+[killing-in-the-name-of-quest 4-1] Onde caçar e dicas
+Melhores locais e conselhos para cada task desta faixa:
+coords: []
+[lions-rock-quest 1-0] Usar o Dead Explorer
+Com os dois itens, vai à gruta subterrânea. Perto do início encontras um {item:Dead Explorer} (corpo). Usa-o para obteres um {item:Lion's Rock Three Tests (Book)|Old Parchment}, que fala das três provas. Se precisares de sair antes de chegares ao Inner Sanctum, volta à superfície pelo mesmo caminho por onde desceste.
+coords: [{'x': 33145, 'y': 32342, 'z': 8, 'label': 'Dead Explorer'}]
+[lions-rock-quest 4-0] Encontrar a sala das gemas
+Na zona **noroeste** do Inner Sanctum, encontra a sala retangular a **sul**, a sudoeste. Tem 4 inscrições de "sol" no chão (encaixes para gemas) e uma rocha no centro. Olha (Look) para cada tile para ver o que representa.
+coords: [{'x': 33074, 'y': 32300, 'z': 9, 'label': 'Sala das gemas'}]

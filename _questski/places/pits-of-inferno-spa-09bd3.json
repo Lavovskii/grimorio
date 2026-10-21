@@ -1,0 +1,38 @@
+{
+  "title": "Pits of Inferno Spa",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Sala grande no interior das {wiki:Pits of Inferno} (também chamada *DT City*), por baixo das {wiki:Plains of Havoc}, a **sudoeste de Venore**; chega-se depois do Hall of the Five Ways e das PoI levers e é famosa pelos {creature:Dark Torturer|Dark Torturers}.",
+  "entrance": {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House (início do caminho para as Pits of Inferno)"},
+  "requirements": [
+    "Conta **Premium**: jogadores Free Account não passam o {item:Magic Wall} do Shrine of Wonders.",
+    "A {item:Holy Tible} na mochila para atravessar o Shrine of Wonders (está num baú numa pequena montanha junto à {wiki:Knightwatch Tower}; sobes com {spell:Levitate} ou 3 {item:Parcel|Parcels}).",
+    "Uma equipa com **um jogador de cada vocação** (Knight, Paladin, Sorcerer, Druid e Monk) para abrir as chamas do Hall of the Five Ways, e pelo menos dois jogadores para abrir o buraco do Spa."
+  ],
+  "items": ["Shovel", "Pick", "Rope", "Blood", "Oil", "Holy Tible", "Destroy Field Rune"],
+  "arrive": [
+    "Sai de **Venore** pela saída sul e caminha para **sudoeste** até às {wiki:Plains of Havoc}. Vai ao cemitério junto à {wiki:Necromant House} ({coord:32781,32330,7}) e usa a {item:Shovel} numa {item:Loose Stone Pile} (todas levam à mesma gruta estreita).",
+    "Na parte **leste** da gruta há uma sala de 3x4: usa o {item:Pick} no **canto noroeste** ({coord:32775,32344,7}) e desce. Põe-te **1 sqm a sul** da lápide de Goshnar (a **oeste**) e usa {item:Blood} nela: és levado para as catacumbas.",
+    "Vai para **norte** e pisa o tile com inscrições antes do Magic Wall com a {item:Holy Tible} na mochila. A **leste**, desce pelo buraco da placa *\"To the Pits of Inferno\"* e segue para **sul** até à ponte (se estiver partida, usa {item:Oil} na alavanca a sul da ponte, do lado oeste, e puxa-a).",
+    "Se houver lava, usa o {item:Pick} na pedra junto a ela. Desce por um dos 3 buracos para o {wiki:Pits of Inferno Dragon Lair}, desce pelo buraco **norte** e sobe com a {item:Rope} no rope hole a **leste**: chegas ao Hall of the Five Ways ({coord:32834,32333,11}).",
+    "Cada vocação atravessa o seu caminho de fogos e puxa a alavanca no fim; com as 5 alavancas puxadas, as paredes de fogo desaparecem e passas para as PoI levers ({coord:32863,32345,12}). Puxa as 15 alavancas pela ordem certa: a alavanca final abre as 2 pedras junto à entrada e dá acesso a uma escada.",
+    "Sobe a escada (ignora as 15 alavancas desta sala: são inúteis). Um jogador fica **1 sqm a sul** da pedra no centro da sala (a do esqueleto) e outro vai para **norte** e puxa as **duas alavancas**: abre-se o buraco que leva ao Spa."
+  ],
+  "leave": [
+    "No Spa, vai à parte **leste** e pisa o tile secreto ({coord:32907,32286,12}): aparece uma escada na sala de cima. Os jogadores lá em cima puxam-te com a {item:Rope} a partir do tile onde a escada apareceu.",
+    "A wiki não descreve uma saída direta a partir do Spa. A saída documentada é seguir em frente: sobe com a corda (1 sqm a **norte** do buraco que volta para baixo) para o labirinto, atravessa-o até ao beco do **nordeste**, usa o {item:Pick} no tile do meio, puxa a alavanca do caminho **leste** e segue o caminho de sentido único até ao ponto sem retorno.",
+    "Aí desce pelo buraco **norte**: deixa-te na gruta dos {creature:Slime|Slimes} por baixo das Plains of Havoc. Sobe à superfície e caminha para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"},
+    {"x": 32828, "y": 32340, "z": 7, "label": "Baú da Holy Tible (montanha junto à Knightwatch Tower)"},
+    {"x": 32834, "y": 32333, "z": 11, "label": "Hall of the Five Ways"},
+    {"x": 32863, "y": 32345, "z": 12, "label": "Zona das PoI levers"}
+  ],
+  "warnings": [
+    "No Spa há {creature:Diabolic Imp|Diabolic Imps}, {creature:Nightmare|Nightmares}, {creature:Defiler|Defilers}, {creature:Destroyer|Destroyers}, {creature:Hellfire Fighter|Hellfire Fighters}, {creature:Phantasm|Phantasms}, {creature:Dark Torturer|Dark Torturers}, {creature:Plaguesmith|Plaguesmiths}, {creature:Blightwalker|Blightwalkers} e {creature:Fire Devil|Fire Devils}.",
+    "Se a ponte se desfizer contigo do outro lado, a única forma de voltar é pelo dragon lair. Leva muitos frascos de {item:Blood} e {item:Oil}.",
+    "No Hall of the Five Ways, no caminho errado o dano duplica a cada fogo: se receberes o aviso, volta para trás imediatamente.",
+    "O buraco **norte** do ponto sem retorno é só de saída: por ele não há forma de voltar a entrar."
+  ]
+}

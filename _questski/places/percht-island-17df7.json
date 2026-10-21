@@ -1,0 +1,36 @@
+{
+  "title": "Percht Island",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Ilha secreta (região \"Secluded Island\") que só se pode visitar durante o evento {wiki:Winterlight Solstice}, num pequeno barco perto do porto de Svargrond; tem {creature:Percht|Percht}, {creature:Schiach|Schiachs} e coelhos encantados.",
+  "requirements": [
+    "Conta **Premium**.",
+    "Só durante o {wiki:Winterlight Solstice}: de 22 de dezembro (server save) a 10 de janeiro. Recomendado nível 80-100."
+  ],
+  "arrive": [
+    "Apanha o barco para **Svargrond** em Carlin, Thais ou Venore: diz ao capitão {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, no porto de Svargrond ({coord:32347,31108,6}).",
+    "Durante o evento aparece um pequeno barco ancorado perto do porto de Svargrond ({coord:32326,31106,7}). **Usa-o** para viajar até à Percht Island.",
+    "Na ilha, o {npc:Frosty} conta-te mais sobre o lugar."
+  ],
+  "leave": [
+    "Se estás na masmorra da ilha, volta à superfície pelo mesmo caminho por onde desceste (a primeira descida fica em {coord:33745,31063,7}).",
+    "Regressa ao sítio onde o barco te deixou na ilha para voltares a Svargrond; as fontes não descrevem outro caminho de volta.",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp): {key:hi}, nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda, porto de Svargrond"},
+    {"x": 32326, "y": 31106, "z": 7, "label": "Barco para a Percht Island"},
+    {"x": 33745, "y": 31063, "z": 7, "label": "Primeira descida para a masmorra da ilha"}
+  ],
+  "images": [
+    {"file": "Winterlight Solstice Boat.png", "caption": "O barco perto do porto de Svargrond"},
+    {"file": "Percht Island 1.png", "caption": "Percht Island"},
+    {"file": "Percht Island 2.png", "caption": "Percht Island"},
+    {"file": "Percht Island 3.png", "caption": "Percht Island"},
+    {"file": "Percht Island 4.png", "caption": "Percht Island"}
+  ],
+  "warnings": [
+    "Os {creature:Baleful Bunny|Baleful Bunnies}, {creature:Schiach|Schiachs} e {creature:Percht|Percht} têm 500-620 HP: recomendado nível 80+.",
+    "A ilha partilha o mesmo sítio no mapa com a {wiki:Orcsoberfest Island}: o automapa pode parecer estranho se já visitaste as duas."
+  ]
+}

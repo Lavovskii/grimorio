@@ -1,0 +1,27 @@
+{
+  "title": "Edron Troll Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta de trolls na parte **norte** da península dos trolls e goblins, a **oeste de Edron**; um bom primeiro sítio de caça para níveis baixos.",
+  "entrance": {"x": 33117, "y": 31781, "z": 7, "label": "Entrada da Edron Troll Cave"},
+  "requirements": ["Conta **Premium** (Edron)."],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Edron**: de barco (no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes}; chegas ao barco do {npc:Captain Seahorse}, {coord:33176,31764,6}) ou de {wiki:Magic Carpet|tapete voador} ({key:edron}; chegas ao tapete de Edron, {coord:33192,31784,3}).",
+    "Sai de Edron para **oeste**, até à península dos trolls e goblins.",
+    "A Troll Cave fica na parte **norte** da península ({coord:33117,31781,7}); a {wiki:Edron Goblin Cave} fica mais a sul e as Lost Mines entre as duas, perto do mar."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada da gruta (a wiki não descreve outras saídas; leva {item:Rope} por precaução).",
+    "Regressa a pé para **leste** até Edron, onde o {npc:Captain Seahorse} tem barcos para outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33117, "y": 31781, "z": 7, "label": "Entrada da Edron Troll Cave"},
+    {"x": 33103, "y": 31811, "z": 7, "label": "Entrada das Lost Mines (mais a sul)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"},
+    {"x": 33192, "y": 31784, "z": 3, "label": "Tapete voador de Edron"}
+  ],
+  "warnings": [
+    "Zona para níveis baixos (a wiki recomenda nível 8+). No 2.º piso subterrâneo, a **sudoeste**, há uma pequena sala de culto aos goblins; a **noroeste**, uma sala com ursos."
+  ]
+}

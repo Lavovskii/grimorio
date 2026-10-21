@@ -1,0 +1,28 @@
+{
+  "title": "Gray Beach",
+  "type": "cidade",
+  "near": "Gray Beach",
+  "summary": "Pequena vila no sul da ilha de {wiki:Quirefang}, nos mares a leste de Zao, sem casas mas com depot e templo no subsolo; só se chega lá através da {wiki:Gray Island}.",
+  "entrance": {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para a {wiki:Gray Island} em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): fala com o capitão do porto e diz {key:hi}, {key:gray island}, {key:yes}.",
+    "Na Gray Island entra no **único buraco** da ilha, a **sul** do {npc:Scrutinon} ({coord:33189,31982,7}).",
+    "No piso -1 segue a passagem subterrânea para **nordeste** e entra no {item:Water Vortex}.",
+    "Do outro lado usa a {item:Rope} no ponto do chão para subires e vai para **norte** até Gray Beach. O depot e o templo ficam no subsolo, a **noroeste** da vila."
+  ],
+  "leave": [
+    "Faz a passagem subterrânea ao contrário: volta para **sul** até ao ponto de corda, desce e entra no {item:Water Vortex} para regressares à Gray Island.",
+    "Na Gray Island fala com o {npc:Scrutinon} ({coord:33189,31982,7}): ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, o nome da cidade, por exemplo {key:venore}, e {key:yes})."
+  ],
+  "coords": [
+    {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island) — buraco a sul dele"},
+    {"x": 33514, "y": 31323, "z": 7, "label": "Buraco a sudeste de Gray Beach (para Fiehonja)"}
+  ],
+  "images": [
+    {"file": "Map graybeach.jpg", "caption": "Mapa de Gray Beach"}
+  ],
+  "warnings": [
+    "A norte fica a {wiki:Hive} (Hive Born) e a sudeste, no subsolo, {wiki:Fiehonja} (Deeplings): são zonas de caça de nível alto."
+  ]
+}

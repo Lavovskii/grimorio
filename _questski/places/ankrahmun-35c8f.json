@@ -1,0 +1,30 @@
+{
+  "title": "Ankrahmun",
+  "type": "cidade",
+  "near": "Ankrahmun",
+  "summary": "Cidade das pirâmides no **sul da ilha de {wiki:Darama}**, rodeada de deserto por três lados e com o porto a **sul**; à volta ficam os túmulos, as fortalezas dos djinns e as montanhas de Kha'zeel.",
+  "entrance": {"x": 33094, "y": 32884, "z": 6, "label": "Porto de Ankrahmun (Captain Sinbeard)"},
+  "requirements": [
+    "Ankrahmun é uma cidade **Premium**."
+  ],
+  "arrive": [
+    "Apanha um barco para Ankrahmun: há barcos em Darashia, Edron, Liberty Bay, Port Hope, Venore e Yalahar. Diz ao capitão {key:hi}, {key:ankrahmun}, {key:yes} (por exemplo, o {npc:Captain Fearless} em Venore ou o {npc:Captain Seahorse} em Edron, 160 gp).",
+    "Desembarcas no porto **sul** da cidade, junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}). O centro da cidade fica a nordeste ({coord:33146,32816,7})."
+  ],
+  "leave": [
+    "Vai ao porto, a **sul**, e fala com o {npc:Captain Sinbeard}: {key:hi}, o nome da cidade (por exemplo {key:venore}, {key:edron}, {key:darashia}, {key:port hope}, {key:liberty bay} ou {key:yalahar}) e {key:yes}.",
+    "A pé, a saída **norte** da cidade ({coord:33182,32773,7}) leva ao deserto de Kha'labal, às fortalezas dos djinns e aos túmulos."
+  ],
+  "coords": [
+    {"x": 33146, "y": 32816, "z": 7, "label": "Centro de Ankrahmun"},
+    {"x": 33182, "y": 32773, "z": 7, "label": "Saída norte da cidade"},
+    {"x": 33120, "y": 32578, "z": 7, "label": "Rampa para Ashta'daramai (djinns azuis)"},
+    {"x": 33101, "y": 32657, "z": 7, "label": "Passagem junto ao oásis para Mal'ouquah (djinns verdes)"}
+  ],
+  "images": [
+    {"file": "Map of Ankrahmun.jpg", "caption": "Mapa de Ankrahmun"}
+  ],
+  "warnings": [
+    "Fora da cidade o deserto e as montanhas têm {creature:Dragon|Dragons} (montanhas a oeste) e túmulos cheios de mortos-vivos; não saias sem preparação se fores de nível baixo."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Warzone 6",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Warzone selada a **nordeste do {wiki:Gnome Deep Hub}**, vigiada pelo {npc:Lardoc Bashsmite}, onde está o boss {creature:The Duke of the Depths} da {wiki:Dangerous Depths Quest}.",
+  "entrance": {"x": 33829, "y": 32128, "z": 14, "label": "Entrada da Warzone 6 (nordeste do Gnome Deep Hub)"},
+  "requirements": [
+    "Precisas de **15 pontos** com os Scouts do {npc:Lardoc Bashsmite} (**10** se já derrotaste os bosses das Warzones 1, 2 e 3 da {wiki:Bigfoot's Burden Quest}); ganhas pontos com as tarefas dele ou entregando {item:Suspicious Device|Suspicious Devices}.",
+    "Para entrar destróis um {item:Fragile Lava Funnel} (gasta os pontos) e ficas com **8 horas** de acesso: podes sair e voltar à vontade durante esse tempo."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de {wiki:Cormaya} ({npc:Gurbasch}) ou de Farmine ({npc:Thorgrin}), com {key:hi}, {key:kazordoon}, {key:yes} (chegas junto ao {npc:Brodrosch}); ou a pé pela entrada da montanha.",
+    "Em Kazordoon, vai à entrada do {wiki:Gnome Deep Hub}, perto do blesser do **norte** da cidade, 4 andares abaixo do nível do chão ({coord:32624,31868,11}), e entra. Em alternativa (nível 80+), usa o cristal do {wiki:Gnomish Crystal Teleport System} logo ao lado, gastando um {item:Teleport Crystal}.",
+    "No hub, vai para **nordeste** até ao {npc:Lardoc Bashsmite} ({coord:33838,32123,14}).",
+    "Com os pontos necessários, entra no portal de energia perto da zona das tarefas do Lardoc e destrói um dos três {item:Fragile Lava Funnel|Fragile Lava Funnels}. Depois passa o teleporte da Warzone 6 ({coord:33829,32128,14})."
+  ],
+  "leave": [
+    "Depois do boss, destrói a Lava Pump e volta pelo **mesmo caminho** da Warzone (pela sala da Lava Pump) até ao Gnome Deep Hub.",
+    "Do hub, sai pela entrada para **Kazordoon**. Para saíres de Kazordoon, apanha o {wiki:Steamship} do {npc:Brodrosch} ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), usa o teleporte de cristal ao lado da entrada do hub, ou sai a pé pela entrada da montanha."
+  ],
+  "coords": [
+    {"x": 32661, "y": 31957, "z": 15, "label": "Steamship de Kazordoon (Brodrosch)"},
+    {"x": 32624, "y": 31868, "z": 11, "label": "Entrada do Gnome Deep Hub (Kazordoon)"},
+    {"x": 33752, "y": 32190, "z": 14, "label": "Gnome Deep Hub"},
+    {"x": 33275, "y": 32315, "z": 15, "label": "Hollow Geode (abre o teleporte do boss com 30 Heavy Crystal Fragments)"}
+  ],
+  "warnings": [
+    "Se as 8 horas de acesso acabarem enquanto estás lá dentro não és expulso, mas se saíres só voltas a entrar destruindo outro funnel e gastando mais pontos.",
+    "{creature:The Duke of the Depths} dá combos de mais de 4000 de dano quando está invencível: é uma luta para equipa."
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "slug": "mystery-of-the-valley-quest",
+  "category": "tesouro",
+  "region": "Vários",
+  "difficulty": 2,
+  "duration": "≈1–2 horas de viagem (se usares as pistas da Lai, ela demora alguns dias a revelá-las)",
+  "summary": "A {npc:Lai}, no Azzilon Castle, conta a lenda de um aventureiro que roubou um fragmento do cristal de uma estátua-guardiã dos Merudri e escondeu os pedaços da sua miniatura em três santuários pelo mundo. Encontra os três fragmentos — em Nibelor, em Zao e em Kilmaresh — e junta-os aos fragmentos de cristal no topo de uma rocha em Kha'zeel para montares a {item:Guardian Statue (Quest)}.",
+  "start": {"x": 33834, "y": 32352, "z": 4, "label": "Lai, no Azzilon Castle (opcional)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 250** (passas por zonas com criaturas fortes, como Burning Gladiators e Massive Energy Elementals).",
+    "{wiki:The Ice Islands Quest} feita até à missão *Cure the Dogs* (Nibelor 5), para teres acesso a {wiki:Inukaya}.",
+    "{wiki:The New Frontier Quest} feita até à missão *An Offer You Can't Refuse* (missão 8), para teres acesso às {wiki:Muggy Plains}.",
+    "Opcional: acesso ao {wiki:Azzilon Castle} ({wiki:No Rest for the Wicked Quest}) para falares com a Lai. É possível fazer a quest sem ir a Azzilon nem falar com ela.",
+    "Spell {spell:Levitate} (sobes montanhas e plataformas em Inukaya, Kilmaresh e Kha'zeel)."
+  ],
+  "items_needed": [
+    {"item": "Ham", "qty": 2, "note": "para usar o trenó de ida e volta a Inukaya"},
+    {"item": "Shovel", "note": "ou uma Pick: a Lai avisa que há fendas na pedra em Kha'zeel"}
+  ],
+  "rewards": [
+    {"item": "Guardian Statue (Quest)"}
+  ],
+  "dangers": ["Winter Wolf", "Polar Bear", "Chakoya Tribewarden", "Chakoya Toolshaper", "Chakoya Windcaller", "Lizard Legionnaire", "Lizard Dragon Priest", "Lizard High Guard", "Priestess of the Wild Sun", "Black Sphinx Acolyte", "Burning Gladiator", "Energy Elemental", "Massive Energy Elemental"],
+  "npcs": ["Lai", "Tefrit"],
+  "tips": [
+    "Não precisas de esperar pelas pistas da Lai: com este guia podes ir diretamente aos três santuários.",
+    "Leva pelo menos 2 {item:Ham|Hams}: precisas deles na mochila para ir e voltar de Inukaya de trenó."
+  ],
+  "sections": [
+    {
+      "title": "1. A lenda da estátua (opcional)",
+      "intro": "Este passo é opcional, mas desbloqueia as pistas da Lai e a história da quest.",
+      "steps": [
+        {
+          "title": "Falar com a Lai",
+          "text": "Vai a **Edron** (de barco: {key:hi}, {key:edron}, {key:yes} ao capitão do porto da tua cidade) e entra no teleporte para o {wiki:Azzilon Castle} (só funciona se tiveres acesso pela {wiki:No Rest for the Wicked Quest}). Fala com a {npc:Lai}: {key:hi}, {key:statue}, {key:legend} e {key:yes}. Ela conta-te o segredo do vale dos Merudri e a lenda do intruso que viu um peregrino usar uma estátua de três dragões a segurar um cristal para viajar até ao vale. Para te ajudar, ela vai canalizar o Dhar-Enpa Udra, o que demora alguns dias.",
+          "npc": "Lai",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be greeted, seeker of knowledge!"},
+            {"you": "statue"},
+            {"npc": "Who told you about this? Knowledge of the valley was secret [...] Legend has it among our kin that a stranger once glimpsed upon the valley [...]"},
+            {"you": "legend"},
+            {"npc": "[...] he build three shrines across the world to house its fragments and honour the Merudri. [...] Do you really want to find it?"},
+            {"you": "yes"},
+            {"npc": "[...] This will take a few days, however. [...] search the cold places of this world as one of the fragments is definitely hidden in the eternal ice."}
+          ],
+          "coords": [{"x": 33281, "y": 31848, "z": 8, "label": "Teleporte para o Azzilon Castle (Edron)"}]
+        },
+        {
+          "title": "Pedir pistas à Lai",
+          "text": "Sempre que quiseres uma nova pista, pergunta à Lai {key:fragment of a statue}. Ela vai revelando, aos poucos, onde ficam os três santuários e, no fim, onde estão os fragmentos de cristal. Para voltares a Edron, sai do castelo pelo mesmo caminho por onde entraste.",
+          "npc": "Lai",
+          "dialogue": [
+            {"you": "fragment of a statue"},
+            {"npc": "Enpa Udra tries to show me location... [...] The first shrine seems hidden in ice and snow, not far from a large human settlement."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Primeiro fragmento — Inukaya (Nibelor)",
+      "steps": [
+        {
+          "title": "Chegar a Nibelor",
+          "text": "Vai a **Svargrond** de barco (por exemplo de Thais, Carlin ou Venore: {key:hi}, {key:svargrond}, {key:yes}); chegas junto à {npc:Captain Breezelda}. Vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}, o dono do trenó de cães: {key:hi}, {key:passage}. Ele leva-te à ilha de {wiki:Nibelor}.",
+          "npc": "Iskan",
+          "coords": [
+            {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"},
+            {"x": 32301, "y": 31083, "z": 7, "label": "Iskan (trenó Svargrond → Nibelor)"},
+            {"x": 32353, "y": 31053, "z": 7, "label": "Ilha de Nibelor"}
+          ]
+        },
+        {
+          "title": "Apanhar o trenó para Inukaya",
+          "text": "Vai a **Nibelor** e usa o trenó para chegares à parte leste da ilha, {wiki:Inukaya}. Tens de ter {item:Ham|Hams} na mochila para ir e voltar.",
+          "coords": [{"x": 32367, "y": 31058, "z": 7, "label": "Trenó em Nibelor"}]
+        },
+        {
+          "title": "Subir a montanha",
+          "text": "Caminha mais um pouco para **leste** e usa {spell:Levitate} para subir esta montanha **duas vezes**.",
+          "coords": [{"x": 32458, "y": 31089, "z": 7, "label": "Montanha (levitate 2x)"}]
+        },
+        {
+          "title": "Usar o santuário",
+          "text": "No topo, usa o santuário e encontras o {item:Fragment of a Statue (1st)|primeiro fragmento da estátua}.",
+          "images": [{"file": "Mystery of the Valley - First Fragment.png", "caption": "Santuário do primeiro fragmento"}],
+          "reward": "Fragment of a Statue (1st)"
+        },
+        {
+          "title": "Sair de Inukaya e de Nibelor",
+          "text": "Desce a montanha com {spell:Levitate} (para baixo) nos mesmos dois sítios onde subiste e volta para **oeste** até ao trenó. Usa-o outra vez (os cães comem mais um {item:Ham}) para regressares a Nibelor. Em Nibelor, fala com o {npc:Nilsor}, a **oeste** do círculo de pedras: {key:hi}, {key:passage}. Ele leva-te de volta a **Svargrond**.",
+          "npc": "Nilsor",
+          "coords": [{"x": 32329, "y": 31044, "z": 7, "label": "Nilsor (trenó Nibelor → Svargrond)"}],
+          "warning": "Se ficares sem {item:Ham} em Inukaya, os cães não te levam de volta. Leva sempre um extra."
+        }
+      ]
+    },
+    {
+      "title": "3. Segundo fragmento — Muggy Plains (Zao)",
+      "steps": [
+        {
+          "title": "Chegar às Muggy Plains",
+          "text": "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, em {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}. Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe}. No **norte** da estepe, a sul dos Dragonblaze Peaks, usa o antigo teleporte lagarto para as {wiki:Muggy Plains} (só funciona depois da missão 8 da {wiki:The New Frontier Quest}).",
+          "coords": [
+            {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch (Steamship de Kazordoon)"},
+            {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin (Steamship de Farmine)"},
+            {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"}
+          ]
+        },
+        {
+          "title": "Subir as escadas nas Muggy Plains",
+          "text": "Vai às {wiki:Muggy Plains}, em **Zao** (a Lai descreve uma zona verde, com insetos, calor, bambus e erva). Sobe as escadas neste ponto.",
+          "coords": [{"x": 33198, "y": 31184, "z": 7, "label": "Escadas nas Muggy Plains"}]
+        },
+        {
+          "title": "Usar o santuário",
+          "text": "Usa o santuário e encontras o {item:Fragment of a Statue (2nd)|segundo fragmento da estátua}.",
+          "images": [{"file": "Mystery of the Valley - Second Fragment.png", "caption": "Santuário do segundo fragmento"}],
+          "reward": "Fragment of a Statue (2nd)"
+        },
+        {
+          "title": "Sair das Muggy Plains",
+          "text": "Desce as escadas e volta pelo mesmo caminho: teleporte lagarto até à estepe de Zao, montanha (sobe com {spell:Levitate} onde desceste) e elevador até Farmine. No porto de Farmine, fala com o {npc:Thorgrin}: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}.",
+          "npc": "Thorgrin"
+        }
+      ]
+    },
+    {
+      "title": "4. Terceiro fragmento — Southern Steppe (Kilmaresh)",
+      "steps": [
+        {
+          "title": "Chegar a Issavi",
+          "text": "A Southern Steppe fica em {wiki:Kilmaresh}, a ilha cuja capital é **Issavi**. Há barco para Issavi em **Venore**, **Darashia**, **Krailos** e **Oramond** ({key:hi}, {key:issavi}, {key:yes}); chegas ao barco do {npc:Captain Harava}, no porto a **norte** da cidade. Em alternativa, vem de tapete voador e chegas à plataforma do {npc:Tanyt}. Da cidade, segue para **sul** até à Southern Steppe.",
+          "coords": [
+            {"x": 33902, "y": 31462, "z": 6, "label": "Captain Harava (porto de Issavi)"},
+            {"x": 33958, "y": 31514, "z": 0, "label": "Tanyt (tapetes voadores)"},
+            {"x": 33907, "y": 31512, "z": 7, "label": "Centro de Issavi"}
+          ]
+        },
+        {
+          "title": "Subir as escadas na Southern Steppe",
+          "text": "Vai à Southern Steppe, em **Kilmaresh** (zona seca, com rochas, falésias e um rio grande). Sobe as escadas neste ponto.",
+          "coords": [{"x": 33838, "y": 31710, "z": 7, "label": "Escadas na Southern Steppe"}]
+        },
+        {
+          "title": "Levitar para a plataforma e usar o santuário",
+          "text": "Usa {spell:Levitate} para subir a uma plataforma a **oeste** do NPC {npc:Tefrit}. Usa o santuário e encontras o {item:Fragment of a Statue (3rd)|terceiro fragmento da estátua}.",
+          "npc": "Tefrit",
+          "images": [{"file": "Mystery of the Valley - Third Fragment.png", "caption": "Santuário do terceiro fragmento"}],
+          "reward": "Fragment of a Statue (3rd)"
+        },
+        {
+          "title": "Sair da Southern Steppe",
+          "text": "Desce da plataforma com {spell:Levitate} (para baixo) e desce as escadas. Volta para **norte** até Issavi e, no porto, fala com o {npc:Captain Harava}: {key:hi}, o destino ({key:darashia}, {key:venore}, {key:krailos} ou {key:oramond}) e {key:yes}. Também podes usar o tapete voador do {npc:Tanyt}.",
+          "npc": "Captain Harava"
+        }
+      ]
+    },
+    {
+      "title": "5. Fragmentos de cristal — Kha'zeel (Ankrahmun)",
+      "intro": "Com os três pedaços, falta encontrar os fragmentos de cristal da estátua original, no topo de uma rocha no sopé das montanhas de Kha'zeel.",
+      "steps": [
+        {
+          "title": "Pista da Lai (opcional)",
+          "text": "Se perguntares à {npc:Lai} {key:fragment of a statue} depois de teres os três pedaços, ela dá-te os parabéns e diz-te onde estava a estátua original. Avisa que há fendas na pedra: leva uma {item:Shovel} ou {item:Pick}.",
+          "npc": "Lai",
+          "dialogue": [
+            {"you": "fragment of a statue"},
+            {"npc": "You found all three missing pieces, congratulations! [...] atop a rock on the foot of the Kha'zeel mountains. [...] I saw cracks in the stone there, so bring a shovel or pick."}
+          ]
+        },
+        {
+          "title": "Subir as montanhas a oeste de Ankrahmun",
+          "text": "Vai a **Ankrahmun** de barco (por exemplo de Darashia, Venore, Edron, Liberty Bay ou Port Hope: {key:hi}, {key:ankrahmun}, {key:yes}; chegas junto ao {npc:Captain Sinbeard}). No deserto da cidade, e usa {spell:Levitate} para subir as montanhas a **oeste**, onde há {creature:Energy Elemental|Energy Elementals}: primeiro no primeiro ponto e depois no segundo.",
+          "coords": [
+            {"x": 33094, "y": 32690, "z": 7, "label": "Primeiro levitate"},
+            {"x": 33082, "y": 32704, "z": 6, "label": "Segundo levitate"},
+            {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+          ]
+        },
+        {
+          "title": "Último levitate",
+          "text": "Caminha um pouco para **norte** e usa {spell:Levitate} uma última vez.",
+          "coords": [{"x": 33084, "y": 32669, "z": 4, "label": "Último levitate"}]
+        },
+        {
+          "title": "Montar a estátua",
+          "text": "Usa um dos três pedaços da estátua que tens na mochila nos fragmentos de cristal que estão no chão. A {item:Guardian Statue (Quest)} fica montada.",
+          "images": [{"file": "Mystery of the Valley - Crystal Fragments.png", "caption": "Fragmentos de cristal no topo da rocha"}],
+          "reward": "Guardian Statue (Quest)"
+        },
+        {
+          "title": "Descer das montanhas de Kha'zeel",
+          "text": "Para voltares, desce com {spell:Levitate} (para baixo) nos mesmos três sítios onde subiste, pela ordem inversa, e regressa a Ankrahmun pelo deserto."
+        },
+        {
+          "title": "Contar à Lai (opcional)",
+          "text": "Se voltares a perguntar à {npc:Lai} {key:fragment of a statue}, ela comenta que reconstruíste a estátua-guardiã e que talvez esteja na hora de convidar estrangeiros para o vale.",
+          "npc": "Lai",
+          "dialogue": [
+            {"you": "fragment of a statue"},
+            {"npc": "So, you reconstructed the guardian statue. You know, it was scattered and hidden for a reason back then. [...] Maybe it is time to finally invite outsiders into the valley and Udra has seen its future. [...]"}
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A Lai diz que a estátua \"não tem nenhum propósito real\" para os Merudri; a quest é sobretudo uma caça aos fragmentos pela história do vale.",
+    "Locais dos fragmentos: 1.º em Nibelor (Inukaya), 2.º em Zao (Muggy Plains), 3.º em Kilmaresh (Southern Steppe); cristal em Kha'zeel."
+  ]
+}

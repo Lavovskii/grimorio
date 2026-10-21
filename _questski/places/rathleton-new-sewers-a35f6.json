@@ -1,0 +1,28 @@
+{
+  "title": "Rathleton New Sewers",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Esgotos por baixo do Workshop Quarter, a parte nova de Rathleton em **Oramond**, com teleportes que servem de atalhos entre zonas; usados sobretudo nas missões da {wiki:Oramond Quest}.",
+  "entrance": {"x": 33621, "y": 31979, "z": 7, "label": "Sewer Grate (entrada, a sul do Workshop Quarter)"},
+  "arrive": [
+    "Vai a **Oramond**: em Thais, o {npc:Captain Bluebear} leva-te lá ({key:hi}, {key:oramond}, {key:yes}, 150 gp). Da jangada do {npc:Captain Gulliver} usa o {item:Slime Slide}, desce ao piso térreo, anda para **leste** até ao pequeno barco, usa o portal dele e segue até **Rathleton**.",
+    "Vai ao **Workshop Quarter** (a parte nova da cidade). A entrada fica a **sul** do Workshop Quarter, por baixo das docas, a **sudoeste** do edifício do {npc:Doubleday} ({coord:33640,31961,6}).",
+    "Entra na {item:Sewer Grate} ({coord:33621,31979,7}): desces 2 andares e chegas ao piso -2 ({coord:33622,31979,9}).",
+    "Lá dentro podes andar a pé ou usar os teleportes que ligam as várias zonas; a zona dos abnormal spots da missão Probing fica no piso -4 ({coord:33639,31896,11})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao ponto de chegada da grelha ({coord:33622,31979,9}) e sobe pelos {item:Rungs In The Wall|degraus na parede} (usa-os como uma escada) até à superfície.",
+    "Para saíres de Oramond, faz o caminho da chegada ao contrário (ou, com o rank Citizen, usa o Slime Slide de Rathleton que leva ao barco) e diz ao {npc:Captain Gulliver} {key:hi}, o nome da cidade e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33641, "y": 31950, "z": 9, "label": "Rathleton New Sewers"},
+    {"x": 33622, "y": 31979, "z": 9, "label": "Chegada da grelha (piso -2)"},
+    {"x": 33639, "y": 31896, "z": 11, "label": "Zona dos abnormal spots (piso -4)"},
+    {"x": 33640, "y": 31961, "z": 6, "label": "Doubleday"},
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (jangada de Oramond)"}
+  ],
+  "warnings": [
+    "Apesar de ficarem mesmo ao lado dos {wiki:Rathleton Ancient Sewers}, os dois esgotos não estão ligados diretamente.",
+    "Criaturas: {creature:Devourer|Devourers}, {creature:Glooth Anemone|Glooth Anemones}, {creature:Glooth Golem|Glooth Golems}, {creature:Rustheap Golem|Rustheap Golems}, {creature:Humongous Fungus} e {creature:Hideous Fungus}; às vezes o boss {creature:Glooth Fairy}."
+  ]
+}

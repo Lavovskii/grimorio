@@ -1,0 +1,30 @@
+{
+  "title": "Rathleton Ancient Sewers",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Esgotos antigos por baixo de Lower Rathleton, o lado abandonado da cidade de {wiki:Oramond}; pouco usados para caça, mas visitados nas missões da {wiki:Oramond Quest}.",
+  "entrance": {"x": 33569, "y": 31920, "z": 7, "label": "Entrada mais usada dos Ancient Sewers"},
+  "requirements": ["Conta **Premium**."],
+  "arrive": [
+    "Chega a **Rathleton**: no porto de Thais fala com o {npc:Captain Bluebear} ({key:hi}, {key:oramond}, {key:yes}, 150 gp). Da jangada do {npc:Captain Gulliver} entra no {item:Slime Slide}, desce do monte, vai para **leste** até ao pequeno barco com o portal ({coord:33628,32005,7}) e segue para **norte** até à cidade. Com o rank *Citizen* da {wiki:Rathleton Quest}, o Slime Slide leva-te diretamente à cidade.",
+    "Em Lower Rathleton, vai para **norte** da {npc:Roswitha} ({coord:33584,31942,7}) e passa pela {npc:Fillias}.",
+    "Desce pela entrada dos esgotos ({coord:33569,31920,7}); se for preciso, usa a tampa do esgoto. Também se chega rapidamente a esta entrada descendo com {spell:Levitate} a partir da cidade alta. Há várias outras entradas no piso térreo de Lower Rathleton.",
+    "Lá em baixo, anda para **leste** e **norte** até ao {npc:Elliott} ({coord:33570,31908,8}); a entrada de esgoto logo a norte dele ({coord:33571,31901,8}) leva aos pisos de baixo, onde está o {npc:Jacob}."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada por onde desceste ({coord:33569,31920,7}) e sobe para Lower Rathleton.",
+    "Para deixares Oramond, volta à jangada do {npc:Captain Gulliver} e diz {key:hi}, {key:thais}, {key:yes} (150 gp); com o rank Citizen também vai a Edron, Venore, Port Hope e Krailos, e Issavi está sempre disponível."
+  ],
+  "coords": [
+    {"x": 33569, "y": 31920, "z": 7, "label": "Entrada dos Ancient Sewers"},
+    {"x": 33584, "y": 31955, "z": 8, "label": "Rathleton Ancient Sewers"},
+    {"x": 33570, "y": 31908, "z": 8, "label": "Elliott"},
+    {"x": 33571, "y": 31901, "z": 8, "label": "Entrada de esgoto a norte do Elliott"},
+    {"x": 33571, "y": 31983, "z": 9, "label": "Jacob"},
+    {"x": 33479, "y": 31986, "z": 7, "label": "Jangada do Captain Gulliver"}
+  ],
+  "warnings": [
+    "Os Ancient Sewers ficam mesmo ao lado dos esgotos novos, mas **não** estão ligados diretamente a eles.",
+    "O caminho entre a jangada e a cidade passa por minotauros (a wiki aconselha nível ~100 ou ir em grupo)."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Realm of Dreams",
+  "type": "ilha",
+  "near": "Ankrahmun",
+  "summary": "Pequena ilha de sonho, com um sistema subterrâneo, entre Vengoth e Mistrock, a que só se chega durante a {wiki:Realm of Dreams Quest} através de um campo de força no dragon lair norte de Ankrahmun; não tem criaturas nem NPCs.",
+  "entrance": {
+    "x": 32821,
+    "y": 31504,
+    "z": 7,
+    "label": "Realm of Dreams (ilha)"
+  },
+  "requirements": [
+    "Ter a {item:Chayenne's Magical Key} na mochila.",
+    "Ter aberto o baú do topo da pirâmide de {wiki:Draconia} e recebido o livro {item:Key to Magic (Book)|Key to Magic}.",
+    "Ter limpado o dragon lair norte de Ankrahmun e puxado a alavanca escondida (ver {wiki:Realm of Dreams Quest}).",
+    "Nível 40 para o {item:Gate of Expertise} dentro da ilha; conta Premium."
+  ],
+  "items": [
+    "Chayenne's Magical Key",
+    "Destroy Field Rune"
+  ],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes}) e segue a pé para **norte**, pelo deserto de {wiki:Kha'labal}, até à entrada do dragon lair norte ({coord:33116,32606,7}).",
+    "Mata **todas** as criaturas do lair. No piso mais alto, usa uma {item:Destroy Field Rune} no {item:Fire Field} que tapa o interruptor, pisa o interruptor e puxa a alavanca que aparece.",
+    "Vai para **sul**: a {item:Magic Wall} desaparece (volta 5 minutos depois). Com a {item:Chayenne's Magical Key} na mochila, entra no {item:Magic Forcefield}: és enviado para o Realm of Dreams.",
+    "Segue o caminho até à pequena ilha e vai para **nordeste**, onde fica a casa com alguém a dormir numa cama."
+  ],
+  "leave": [
+    "Usa o portal de saída da ilha: leva-te de volta ao sítio de onde vieste, a entrada do dragon lair norte de Ankrahmun. Atenção: o spoiler da quest diz que fica a **noroeste** da ilha e a página do local diz **nordeste** — se não o encontrares num lado, procura no outro.",
+    "Daí volta a pé para **sul**, pelo deserto, até Ankrahmun."
+  ],
+  "coords": [
+    {
+      "x": 33116,
+      "y": 32606,
+      "z": 7,
+      "label": "Entrada do dragon lair norte de Ankrahmun"
+    }
+  ],
+  "images": [
+    {
+      "file": "Ankrahmun Dragon Lair Mystery.png",
+      "caption": "O interruptor e a alavanca no dragon lair"
+    },
+    {
+      "file": "Dream Realm ground.png",
+      "caption": "Realm of Dreams — piso térreo"
+    },
+    {
+      "file": "Dream Realm -1.png",
+      "caption": "Realm of Dreams — piso -1"
+    },
+    {
+      "file": "Dream Realm -2.png",
+      "caption": "Realm of Dreams — piso -2"
+    }
+  ],
+  "warnings": [
+    "Para lá chegar tens de limpar um dragon lair com {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords} e {creature:Fire Elemental|Fire Elementals}; se o spawn não estiver completo quando começas, o mecanismo não funciona."
+  ]
+}

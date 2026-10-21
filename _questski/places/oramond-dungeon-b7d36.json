@@ -1,0 +1,31 @@
+{
+  "title": "Oramond Dungeon",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Masmorra subterrânea a **norte de Rathleton** (Oramond), cujas criaturas mudam conforme as votações da {wiki:Rathleton Quest}: golems, minotauros de Oramond ou demónios (Destroyers, Demons, Juggernauts...).",
+  "entrance": {"x": 33669, "y": 31887, "z": 5, "label": "Slime Slide no Rathleton Magistrate (entrada da masmorra)"},
+  "requirements": [
+    "Para poderes entrar tens de ter lançado **pelo menos 50 votos** na {wiki:Rathleton Quest}."
+  ],
+  "arrive": [
+    "Vai a **Oramond**: em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Se já tens o posto de Squire na Rathleton Quest, também há barco de Edron ({npc:Captain Seahorse}) e Venore ({npc:Captain Fearless}).",
+    "Desembarcas na jangada do {npc:Captain Gulliver} ({coord:33479,31988,7}), numa ilhota a **oeste** de Oramond. Entra no {item:Slime Slide}: leva-te a um monte na ilha principal.",
+    "Desce ao piso térreo e anda para **leste** até uns edifícios com um pequeno barco; o portal desse barco ({coord:33628,32005,7}) leva-te para o outro lado da água, perto da cidade.",
+    "Vai para **norte** até ao portão principal de Rathleton e depois para **oeste** até à rampa da cidade alta (Upper Rathleton).",
+    "Vai ao {wiki:Rathleton Magistrate} (Rathleton Magistrate Plaza) e usa o {item:Slime Slide} que lá está ({coord:33669,31887,5}): leva-te à masmorra, por baixo do norte da cidade ({coord:33467,31778,8})."
+  ],
+  "leave": [
+    "A wiki não descreve a saída da Oramond Dungeon (só documenta a entrada pelo Slime Slide do Magistrate); procura a saída de volta a Rathleton na própria masmorra.",
+    "Para saíres da ilha, volta pelo mesmo caminho (portal do barco, Slime Slide do monte) até à jangada do {npc:Captain Gulliver} e diz {key:hi}, {key:thais}, {key:yes} (150 gp)."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (chegada a Oramond)"},
+    {"x": 33539, "y": 32014, "z": 7, "label": "Monte onde o Slime Slide te deixa"},
+    {"x": 33628, "y": 32005, "z": 7, "label": "Portal no pequeno barco"},
+    {"x": 33635, "y": 31943, "z": 7, "label": "Rampa para Upper Rathleton"},
+    {"x": 33467, "y": 31778, "z": 8, "label": "Oramond Dungeon (subsolo, norte de Rathleton)"}
+  ],
+  "warnings": [
+    "As criaturas mudam de 14 em 14 dias conforme a votação, e o respawn é aleatório: uma sala com 5 {creature:Destroyer|Destroyers} pode ter depois {creature:Hellhound|Hellhounds}, {creature:Juggernaut|Juggernauts} e um {creature:Demon}. A wiki recomenda nível 120–200+ e, para knights e mages, caçar em equipa."
+  ]
+}

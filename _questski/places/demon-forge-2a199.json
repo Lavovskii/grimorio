@@ -1,0 +1,31 @@
+{
+  "title": "Demon Forge",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Zona principal da {wiki:The Inquisition Quest}, no fundo da {wiki:Edron Hero Cave}, atrás da porta de nível 100 do {wiki:Temple of Xayepocax}: cheia de demónios e dos lacaios dos {wiki:The Ruthless Seven}.",
+  "entrance": {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (norte de Edron)"},
+  "requirements": [
+    "Conta **Premium** e **nível 100** (porta de nível 100); pelo caminho há um {item:Gate of Expertise} de **nível 70**.",
+    "Na {wiki:The Inquisition Quest} só entras na missão 7 se tiveres absorvido o espírito de pelo menos um dos {wiki:The Ruthless Seven} na {wiki:The Pits of Inferno Quest} e reportado a missão do Ungreez."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco (por exemplo, em Thais diz ao {npc:Captain Bluebear} {key:hi}, {key:edron}, {key:yes}).",
+    "Sai da cidade para **norte** até à entrada da Hero Cave ({coord:33164,31638,7}) e desce até ao {wiki:Temple of Xayepocax}, uma sala com muitas criaturas diferentes.",
+    "Passa o {item:Gate of Expertise} de **nível 70** no **sul** da sala e entra no teleporte que está atrás da porta de **nível 100**.",
+    "Do outro lado és logo atacado por {creature:Hellfire Fighter|Hellfire Fighters}, {creature:Fire Devil|Fire Devils} e {creature:Fire Elemental|Fire Elementals}. Mata-os e vai para **sul** até ao **Retreat**, o centro com teleportes para cada secção."
+  ],
+  "leave": [
+    "Em qualquer secção, o teleporte do início leva-te de volta ao **Retreat** sem perderes o progresso; depois da missão, o teleporte do Shadow Nexus também te leva ao Retreat.",
+    "Do Retreat, volta pelo caminho por onde entraste até ao Temple of Xayepocax e sobe pela Hero Cave até à superfície, a norte de Edron.",
+    "No porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a Thais ({key:hi}, {key:thais}, {key:yes}, 160 gp) ou a outras cidades."
+  ],
+  "coords": [
+    {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (norte de Edron)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "images": [{"file": "Demon forge.jpg", "caption": "Demon Forge"}],
+  "warnings": [
+    "Zona para equipas de nível alto (100+ mínimo, 150+ recomendado): logo à entrada há 6 {creature:Hellfire Fighter|Hellfire Fighters} (3800 HP) e lá dentro estão os demónios mais perigosos de Tibia.",
+    "Ao entrares numa sala de boss podes estar mesmo ao lado do teleporte de saída: não te mexas até perceberes onde estás."
+  ]
+}

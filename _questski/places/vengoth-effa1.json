@@ -1,0 +1,30 @@
+{
+  "title": "Vengoth",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Terra escura e árida a **sudeste de Yalahar** (a oeste de Farmine), com o castelo assombrado dos irmãos vampiros; só se chega lá no barco do {npc:Harlow}.",
+  "entrance": {"x": 32857, "y": 31550, "z": 7, "label": "Harlow (chegada no oeste de Vengoth)"},
+  "requirements": [
+    "O {npc:Harlow} só te leva depois de começares a missão 4 (The Dark Lands) da {wiki:Blood Brothers Quest}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Yalahar** (por exemplo em Venore: {key:hi}, {key:yalahar}, {key:yes}).",
+    "Em Yalahar vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp).",
+    "Ele deixa-te no **oeste** de Vengoth ({coord:32857,31550,7}). Daí segue para **leste** até à montanha do portão de energia ({coord:32949,31520,7}); o portal da costa **sul** fica em {coord:32909,31540,7}."
+  ],
+  "leave": [
+    "Volta a pé para **oeste** até ao {npc:Harlow} ({coord:32857,31550,7}).",
+    "Diz {key:hi}, {key:yalahar} e {key:yes} (50 gp): ele leva-te de volta às docas do Trade Quarter de Yalahar, perto do {npc:Julius}."
+  ],
+  "coords": [
+    {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32949, "y": 31520, "z": 7, "label": "Portão de energia / Bottomless pit"},
+    {"x": 32909, "y": 31540, "z": 7, "label": "Portal na costa sul de Vengoth"},
+    {"x": 32953, "y": 31488, "z": 6, "label": "Entrada do castelo (montanha)"},
+    {"x": 32933, "y": 31563, "z": 4, "label": "Old shrine (montanha do sudeste)"}
+  ],
+  "warnings": [
+    "Para chegar ao castelo sobe a montanha do **sudeste** e passa pelos {item:Strange Whirl|Strange Whirls}; para descer, volta pelos mesmos Strange Whirls.",
+    "Há {creature:War Wolf|War Wolves}, {creature:Tarantula|Tarantulas}, {creature:Haunted Treeling|Haunted Treelings}, {creature:Slime|Slimes} e {creature:Demon Skeleton|Demon Skeletons} à superfície, e {creature:Vampire|Vampires}, {creature:Gargoyle|Gargoyles} e {creature:Elder Bonelord|Elder Bonelords} no castelo. Recomendado nível 40+."
+  ]
+}

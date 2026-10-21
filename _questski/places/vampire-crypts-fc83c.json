@@ -1,0 +1,31 @@
+{
+  "title": "Vampire Crypts",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Grande masmorra de vampiros por baixo das areias de {wiki:Drefia}, a **oeste de Darashia**, ligada às {wiki:Necromancer Halls}; no fundo repousa o boss {creature:The Pale Count}.",
+  "entrance": {"x": 32973, "y": 32442, "z": 12, "label": "Vampire Crypts (primeiro piso, por baixo de Drefia)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).",
+    "Atravessa as montanhas para **oeste** até {wiki:Drefia}: por exemplo, usa a {item:Rope} para subires a montanha em {coord:33048,32429,7}, ou vem pela passagem entre Darashia e Ankrahmun.",
+    "Em Drefia vai à entrada da masmorra principal ({coord:32996,32412,7}) e desce **3 andares** até às {wiki:Necromancer Halls} ({coord:33003,32413,10}).",
+    "Nas Necromancer Halls vai para **sul** até à descida para as crypts ({coord:33005,32480,10}). Desce, anda um pouco para **norte** e desce no segundo ponto ({coord:33012,32457,11}): estás no primeiro piso das Vampire Crypts.",
+    "Para o segundo piso, segue para **norte** até às escadas que descem."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe pelos dois pontos por onde desceste ({coord:33012,32457,11} e {coord:33005,32480,10}; usa a {item:Rope} nos buracos) até às Necromancer Halls.",
+    "Sobe os **3 andares** até à entrada da masmorra principal de Drefia ({coord:32996,32412,7}).",
+    "Atravessa a montanha de volta para **Darashia** (pelo sítio de corda {coord:33048,32429,7} ou pela passagem entre Darashia e Ankrahmun) e apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}."
+  ],
+  "coords": [
+    {"x": 33018, "y": 32443, "z": 7, "label": "Drefia (superfície)"},
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda entre Darashia e Drefia"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (barco de Darashia)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete de Darashia)"}
+  ],
+  "warnings": [
+    "A wiki diz que as crypts também têm uma entrada própria, mas não indica onde: usa o caminho pelas Necromancer Halls.",
+    "Na montanha entre Darashia e Drefia há muitos {creature:Scorpion|Scorpions}: guarda mana para curar o veneno.",
+    "Zona para nível 50–60+: {creature:Vampire|Vampires}, {creature:Necromancer|Necromancers}, {creature:Lich|Liches} e {creature:Gravedigger|Gravediggers}. Leva uma {item:Blessed Wooden Stake} para os vampiros."
+  ]
+}

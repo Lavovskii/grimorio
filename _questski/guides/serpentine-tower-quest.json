@@ -1,0 +1,124 @@
+{
+  "slug": "serpentine-tower-quest",
+  "category": "tesouro",
+  "region": "Ankrahmun",
+  "difficulty": 1,
+  "duration": "10–15 min",
+  "summary": "Uma pequena quest na {wiki:Serpentine Tower|Serpentine Tower}, a guilda dos sorcerers de Ankrahmun. Põe um pote ao lume para ativar um campo mágico que te leva a uma sala escondida com um baú: lá dentro está uma {item:White Pearl}. A torre guarda ainda um mistério por resolver com criaturas enjauladas e alavancas.",
+  "start": {
+    "x": 33147,
+    "y": 32866,
+    "z": 7,
+    "label": "Serpentine Tower, a sudeste do depot de Ankrahmun"
+  },
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 8)."
+  ],
+  "items_needed": [
+    {
+      "item": "Pot",
+      "note": "para pôr no lume aberto"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "White Pearl"
+    }
+  ],
+  "dangers": [
+    "Fire Elemental",
+    "Green Djinn"
+  ],
+  "tips": [
+    "Não desças abaixo do rés-do-chão da torre: a parte de baixo é perigosa."
+  ],
+  "sections": [
+    {
+      "title": "1. A White Pearl",
+      "steps": [
+        {
+          "title": "Subir ao topo da torre",
+          "text": "Vai à {wiki:Serpentine Tower|Serpentine Tower} em Ankrahmun, a **sudeste** do {wiki:Depot|depot}, e sobe até ao topo. Se não estás em Ankrahmun, chega lá de barco (fala com o capitão do porto da tua cidade e diz {key:hi}, {key:ankrahmun} e {key:yes}). A torre fica dentro da cidade: a entrada é **1 andar acima** da rua, a sudeste do depot.",
+          "coords": [
+            {
+              "x": 33147,
+              "y": 32866,
+              "z": 7,
+              "label": "Serpentine Tower"
+            }
+          ],
+          "images": [
+            {
+              "file": "White Pearl Quest Location.png",
+              "caption": "A Serpentine Tower"
+            },
+            {
+              "file": "Serpentine.JPG",
+              "caption": "Vista exterior da Serpentine Tower"
+            },
+            {
+              "file": "Serpentine Tower Map.PNG",
+              "caption": "Mapa da Serpentine Tower"
+            }
+          ]
+        },
+        {
+          "title": "Descer ao rés-do-chão",
+          "text": "Dentro da torre, desce até ao rés-do-chão.",
+          "warning": "Não desças abaixo do rés-do-chão: é perigoso."
+        },
+        {
+          "title": "Pôr o pote no lume",
+          "text": "Na sala a **norte**, põe um {item:Pot} no lume aberto. Isto ativa o {item:Magic Forcefield|campo de força mágico} no lado **leste** da sala, que te teleporta para a sala da quest.",
+          "images": [
+            {
+              "file": "White Pearl Quest Animation.gif",
+              "caption": "Põe o Pot no lume aberto"
+            }
+          ]
+        },
+        {
+          "title": "Abrir o baú",
+          "text": "Entra no teleporte e tira a {item:White Pearl} do baú.",
+          "reward": "White Pearl"
+        },
+        {
+          "title": "Sair da torre",
+          "text": "A pequena sala da White Pearl tem escadas que descem para a zona perigosa das criaturas enjauladas: **não** as uses para sair (só se quiseres fazer a parte opcional abaixo). Volta pelo caminho por onde vieste, sobe dentro da torre até à entrada (1 andar acima da rua) e sai para as ruas de Ankrahmun. O depot fica logo a noroeste.",
+          "coords": [
+            {
+              "x": 33148,
+              "y": 32867,
+              "z": 7,
+              "label": "Serpentine Tower (a entrada é 1 andar acima)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Possível continuação (mistério, opcional)",
+      "intro": "Muitos jogadores acreditam que a torre esconde mais do que a White Pearl. O mistério anda à volta das criaturas enjauladas e da alavanca dentro da jaula do {creature:Green Djinn}. Não há recompensa conhecida.",
+      "steps": [
+        {
+          "title": "Usar o candeeiro",
+          "text": "Na pequena sala da White Pearl há um {item:Wall Lamp|candeeiro} na parede. Usa-o: brilha com faíscas vermelhas no teu corpo, mas não acende."
+        },
+        {
+          "title": "Descer às criaturas enjauladas",
+          "text": "Desce as {item:Stairs (White)|escadas} até à sala das criaturas enjauladas.",
+          "warning": "O {creature:Fire Elemental} fica solto a partir de agora!"
+        },
+        {
+          "title": "Matar o Fire Elemental e puxar a alavanca",
+          "text": "Mata o {creature:Fire Elemental} e puxa a alavanca que está dentro da jaula dele. Isto remove as {item:Magic Wall|Magic Walls} que prendem o {creature:Green Djinn} no andar de baixo."
+        },
+        {
+          "title": "A alavanca do Green Djinn",
+          "text": "Há uma alavanca na jaula do {creature:Green Djinn}, mas não se sabe o que faz, nem se faz alguma coisa."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1749 @@
+{
+  "slug": "kilmaresh-quest",
+  "category": "historia",
+  "region": "Issavi",
+  "difficulty": 5,
+  "duration": "Vários dias (dezenas de horas no total, com cooldowns e recolha de itens)",
+  "summary": "Grande quest de Kilmaresh em que ajudas os cidadãos de Issavi em sete missões independentes: desmascarar o {npc:Ambassador of Rathleton}, rituais com a {npc:Kallimae}, os pedidos da medusa {npc:Alyxo}, a vingança dos ogres com a {npc:Saideh}, o tubarão da {npc:Ninev}, o oráculo da {npc:Taya} e os foragidos procurados pelo {npc:Eshaya}. No fim juntas as quatro peças da {item:The Regalia of Suon}, ganhas três partes do {item:Sun Mosaic}, os {wiki:Citizen of Issavi Outfits|Citizen of Issavi Outfits}, o achievement **Sun and Sea** e acesso aos atalhos para o sul de Kilmaresh.",
+  "legend_pt": "Explora Kilmaresh e ajuda os seus cidadãos.",
+  "start": {
+    "x": 33915,
+    "y": 31498,
+    "z": 6,
+    "label": "Eshaya, 2.º andar do edifício a norte do mercado de Issavi"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 250+** (toda a ilha está cheia de criaturas fortes e há vários bosses e minibosses).",
+    "Equipa de até 5 jogadores para o boss {creature:Urmahlullu the Immaculate} (missão Fafnar's Wrath). Os três foragidos da missão Wanted têm de ser mortos **sozinho**.",
+    "A última parte da missão dos ogres (o sarcófago) só é precisa para quem tem a {wiki:Grave Danger Quest} ativa; para esta quest bastam os 4 primeiros puzzles.",
+    "Acesso a {wiki:Krailos} (barco ou túnel nas Ruins of Nuur) para a missão Aspiring Oracle."
+  ],
+  "items_needed": [
+    {
+      "item": "Sphinx Feather",
+      "qty": 10,
+      "note": "para o Moe (missão Fafnar's Wrath)"
+    },
+    {
+      "item": "Flask of Hallucinogen",
+      "note": "compra-se ao Faloriel, pedindo 'hallucinogen'"
+    },
+    {
+      "item": "Small Emerald",
+      "note": "para obter a Ivory Mask no Ornamented Ankh da biblioteca"
+    },
+    {
+      "item": "Scissors",
+      "note": "para Veldt Flowers, Snake Maws, teias, rosas e lã de ovelha"
+    },
+    {
+      "item": "Hand Auger",
+      "note": "compra-se em qualquer loja de ferramentas (ex.: Tefrit)"
+    },
+    {
+      "item": "Vial",
+      "qty": 5,
+      "note": "para recolher Ink dos Biting Books mortos"
+    },
+    {
+      "item": "Secret Agent Tool",
+      "note": "ou {item:Obsidian Knife}, para raspar o espelho na missão Wanted"
+    },
+    {
+      "item": "Net (Fishing)",
+      "note": "opcional, para apanhar a Small Tortoise no mar"
+    },
+    {
+      "item": "Rope"
+    },
+    {
+      "text": "Muitas poções e suprimentos: há vários bosses e muitas zonas de caça perigosas."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Sun Medal",
+      "note": "missão Fafnar's Wrath"
+    },
+    {
+      "item": "Blue and Golden Cordon",
+      "note": "missão Midnight Rituals"
+    },
+    {
+      "item": "Sunray Emblem",
+      "note": "missão The Boards that Mean the World"
+    },
+    {
+      "item": "Golden Bijou",
+      "note": "missão The Revenge of the Ogres"
+    },
+    {
+      "item": "The Regalia of Suon",
+      "note": "o Yonan junta as quatro peças"
+    },
+    {
+      "item": "Golden Sea Horse Figurine",
+      "note": "missão A Shark in Need"
+    },
+    {
+      "item": "Sun Mosaic",
+      "note": "três partes, missão Aspiring Oracle"
+    },
+    {
+      "text": "{wiki:Citizen of Issavi Outfits|Citizen of Issavi Outfits} (básico), missão Wanted"
+    },
+    {
+      "text": "Permissão para usar os atalhos entre Issavi e o sul de Kilmaresh (Ruins of Nuur e Salt Caves)"
+    },
+    {
+      "text": "Achievement **Sun and Sea**"
+    }
+  ],
+  "achievements": [
+    "Sun and Sea"
+  ],
+  "unlocks": [
+    {"what": "Atalho do Nykri Delta para as Ruins of Nuur", "kind": "transporte", "place": "Ruins of Nuur", "when": "Depois de completares todas as missões da quest."},
+    {"what": "Atalho do sul de Issavi para as Salt Caves", "kind": "transporte", "place": "Salt Caves", "when": "Depois de completares todas as missões da quest."}
+  ],
+  "dangers": [
+    "Urmahlullu the Immaculate",
+    "Wildness of Urmahlullu",
+    "Urmahlullu the Tamed",
+    "Wisdom of Urmahlullu",
+    "Urmahlullu the Weakened",
+    "Earworm",
+    "Priestess of the Wild Sun",
+    "Burning Gladiator",
+    "Sphinx",
+    "Crypt Warden",
+    "Adult Goanna",
+    "Young Goanna",
+    "Sun-Marked Goanna",
+    "Ogre Sage",
+    "Ogre Brute",
+    "Ogre Rowdy",
+    "Bashmu",
+    "Juvenile Bashmu",
+    "Girtablilu Warrior",
+    "Venerable Girtablilu",
+    "Mozradek",
+    "Xogixath",
+    "Bragrumol",
+    "Enusat the Onyx Wing",
+    "Neferi the Spy",
+    "Amenef the Burning",
+    "Sister Hetai"
+  ],
+  "npcs": [
+    "Eshaya",
+    "Ambassador of Rathleton",
+    "Moe",
+    "The Librarian",
+    "Faloriel",
+    "The Empress",
+    "Kallimae",
+    "Yonan",
+    "Narsai",
+    "Shimun",
+    "Tefrit",
+    "Alyxo",
+    "Saideh",
+    "Ninev",
+    "Taya"
+  ],
+  "tips": [
+    "As sete missões são independentes: podes fazê-las em paralelo. Fala logo com todos os NPCs para abrir as missões e vai recolhendo itens enquanto caças.",
+    "Para a recompensa final ({item:The Regalia of Suon}) precisas das quatro peças: {item:Sun Medal}, {item:Blue and Golden Cordon}, {item:Sunray Emblem} e {item:Golden Bijou}.",
+    "O {creature:Urmahlullu the Immaculate} tem cooldown de 20 horas e o {npc:Moe} demora 1 hora a roubar o anel: planeia estas esperas.",
+    "Guarda a {item:Ivory Mask} depois da missão Fafnar's Wrath: volta a ser precisa na missão Wanted.",
+    "Não entregues a missão do Midnight Pilgrimage antes de apanhares o {item:Symbol of Sun and Sea} na bacia de sangue, se o quiseres (é opcional)."
+  ],
+  "sections": [
+    {
+      "title": "1. Fafnar's Wrath — investigar o Embaixador",
+      "intro": "O {npc:Eshaya} suspeita que o Embaixador de Rathleton é um traidor ligado ao culto de Fafnar. Tens de arranjar provas.",
+      "steps": [
+        {
+          "title": "Chegar a Issavi",
+          "text": "Toda a quest se passa na ilha de {wiki:Kilmaresh|Kilmaresh}, cuja capital é **Issavi**. Há barco para Issavi a partir de **Venore**, **Darashia**, **Krailos** e **Oramond**: fala com o capitão do porto e diz {key:hi}, {key:issavi}, {key:yes}. Chegas ao barco do {npc:Captain Harava}, no porto a **norte** da cidade. Em alternativa, vem de tapete mágico a partir de qualquer cidade com esse serviço: chegas à plataforma do {npc:Tanyt}.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "issavi"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33902,
+              "y": 31462,
+              "z": 6,
+              "label": "Captain Harava, barco de Issavi"
+            },
+            {
+              "x": 33958,
+              "y": 31514,
+              "z": 0,
+              "label": "Tanyt, plataforma dos tapetes mágicos"
+            },
+            {
+              "x": 33907,
+              "y": 31512,
+              "z": 7,
+              "label": "Centro de Issavi"
+            }
+          ]
+        },
+        {
+          "title": "Pedir a missão ao Eshaya",
+          "text": "Em Issavi, vai ao **2.º andar** do edifício a norte do mercado e fala com o {npc:Eshaya}. Diz {key:hi}, {key:mission} e aceita com {key:yes}. Ele pede-te para procurares provas na residência do Embaixador.",
+          "npc": "Eshaya",
+          "coords": [
+            {
+              "x": 33916,
+              "y": 31498,
+              "z": 6,
+              "label": "Eshaya"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "I'm willing to admit that I need help. [...] Will you help me anyhow?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] I need unequivocal evidence that the Ambassador conspires with the Fafnar cultists. Please go to his residence in the eastern part of the city and search for letters, journals ... anything that could prove him guilty."
+            }
+          ]
+        },
+        {
+          "title": "Ir à casa do Embaixador",
+          "text": "A casa do Embaixador fica em cima da muralha da cidade, a **sudeste** de Issavi.",
+          "coords": [
+            {
+              "x": 33959,
+              "y": 31501,
+              "z": 4,
+              "label": "Casa do Embaixador (em cima da muralha)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ambassador 1.png",
+              "caption": "Casa do Embaixador — objetos a investigar"
+            }
+          ]
+        },
+        {
+          "title": "Investigar os quatro pontos da casa",
+          "text": "Investiga, por esta ordem: 1) a {item:Pile of Scrolls (Ambassador)|Pile of Scrolls} no primeiro andar da casa; 2) o {item:Half Burnt Scroll} no segundo andar; 3) o {item:Torn Piece of Paper} também no segundo andar; 4) dá uma volta pelo **telhado**. No fim recebes a mensagem de que não encontraste nada.",
+          "table": {
+            "head": [
+              "Objeto",
+              "Mensagem que recebes"
+            ],
+            "rows": [
+              [
+                "Pile of Scrolls (1.º andar)",
+                "*You examine the scrolls carefully. Those are orders from Rathleton for the Ambassador. No sign of treason here.*"
+              ],
+              [
+                "Half Burnt Scroll (2.º andar)",
+                "*Documents were burnt here recently. Only the part of one scroll still lies in front of the chimney but it's too sooted to read.*"
+              ],
+              [
+                "Torn Piece of Paper (2.º andar)",
+                "*Paper scraps lie scattered on the floor. [...] But it's only a badly written poem.*"
+              ],
+              [
+                "Telhado (anda à volta)",
+                "*You find nothing in the Ambassador's house. If he's in fact a traitor he got rid of any evidence that could incriminate him.*"
+              ]
+            ]
+          },
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ambassador 2.png",
+              "caption": "Casa do Embaixador — objeto a investigar"
+            },
+            {
+              "file": "Kilmaresh Quest - Ambassador 3.png",
+              "caption": "Casa do Embaixador — objeto a investigar"
+            },
+            {
+              "file": "Kilmaresh Quest - Ambassador 4.png",
+              "caption": "Telhado da casa do Embaixador"
+            }
+          ]
+        },
+        {
+          "title": "Voltar ao Eshaya",
+          "text": "Volta ao {npc:Eshaya} e diz {key:mission}. Como não há provas, ele quer que vejas as memórias do Embaixador com um {item:Ring of Secret Thoughts}, que está na posse do monstro **Urmahlullu**.",
+          "npc": "Eshaya",
+          "dialogue": [
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "[...] You have to find a Ring of Secret Thoughts. Legend has it that a monstrous being called Urmahlullu has such a ring. If the myths are true you can find this creature in a subterranean tomb south of Issavi."
+            }
+          ]
+        },
+        {
+          "title": "Matar o Urmahlullu (obter o Ring of Secret Thoughts)",
+          "text": "Vai à gruta a **sul** da cidade e entra na sala do boss (equipa até 5 jogadores). Tens de matar as cinco formas seguidas: {creature:Urmahlullu the Immaculate}, {creature:Wildness of Urmahlullu}, {creature:Urmahlullu the Tamed}, {creature:Wisdom of Urmahlullu} e por fim {creature:Urmahlullu the Weakened}. Todos os participantes recebem um {item:Ring of Secret Thoughts} sempre que derrotam o boss, até concluírem esta missão.",
+          "coords": [
+            {
+              "x": 33924,
+              "y": 31609,
+              "z": 7,
+              "label": "Gruta do Urmahlullu"
+            },
+            {
+              "x": 33920,
+              "y": 31612,
+              "z": 8,
+              "label": "Urmahlullu the Immaculate (1 andar abaixo)"
+            }
+          ],
+          "warning": "A luta é simples mas longa: três das cinco formas têm muita vida. A 4.ª forma ({creature:Wisdom of Urmahlullu}) ataca à distância e foge da equipa se não estiver encurralada. Recomenda-se prender o boss junto ao teleporte de saída ou no canto sudoeste.",
+          "tip": "Não é obrigatório matares o boss: se arranjares o {item:Ring of Secret Thoughts} de outra forma (ex.: comprado), basta entregá-lo. A sala só pode ser reentrada após **20 horas**.",
+          "reward": "Ring of Secret Thoughts"
+        },
+        {
+          "title": "Sair da sala do Urmahlullu",
+          "text": "Depois de matares a última forma, sai pelo **teleporte de saída** da sala do boss (o mesmo junto ao qual se aconselha prender o boss). Depois volta para **norte**, pelo mesmo caminho através do Green Belt, até Issavi.",
+          "coords": [
+            {
+              "x": 33924,
+              "y": 31609,
+              "z": 7,
+              "label": "Entrada/saída da gruta do Urmahlullu"
+            },
+            {
+              "x": 33907,
+              "y": 31512,
+              "z": 7,
+              "label": "Issavi"
+            }
+          ]
+        },
+        {
+          "title": "Dar o anel ao Embaixador",
+          "text": "Encontra o {npc:Ambassador of Rathleton} dentro da **Library** e dá-lhe o {item:Ring of Secret Thoughts}. Ele aceita-o de bom grado.",
+          "npc": "Ambassador of Rathleton"
+        },
+        {
+          "title": "Pedir ajuda ao ladrão Moe",
+          "text": "Para recuperar o anel precisas de um ladrão. Vai **dois andares acima** no edifício a norte do mercado e fala com o {npc:Moe}: {key:hi}, {key:thief}. Ele pede 10 {item:Sphinx Feather|Sphinx Feathers}. Entrega-lhas (aparece no Quest Log como a missão separada *Gifts for Moe*).",
+          "npc": "Moe",
+          "coords": [
+            {
+              "x": 33910,
+              "y": 31496,
+              "z": 5,
+              "label": "Moe"
+            }
+          ]
+        },
+        {
+          "title": "Esperar 1 hora e receber o anel carregado",
+          "text": "O Moe pede tempo para roubar o anel: espera **1 hora**. Depois volta e pergunta outra vez por {key:thief} ou por {key:ring}. Recebes o {item:Ring of Secret Thoughts (Charged)}.",
+          "npc": "Moe",
+          "reward": "Ring of Secret Thoughts (Charged)"
+        },
+        {
+          "title": "Falar com o The Librarian",
+          "text": "Vai à biblioteca e fala com o {npc:The Librarian}: {key:hi}, {key:ring}. Ele explica que precisas de um {item:Flask of Hallucinogen}, à venda no {npc:Faloriel}.",
+          "npc": "The Librarian"
+        },
+        {
+          "title": "Comprar o Flask of Hallucinogen",
+          "text": "Fala com o {npc:Faloriel}, o vendedor de poções, e pede especificamente {key:hallucinogen} para comprar o {item:Flask of Hallucinogen}.",
+          "npc": "Faloriel",
+          "tip": "Podes comprar vários frascos e dá-los a jogadores que já fizeram a missão: assim eles podem voltar a entrar na mente do Embaixador para te ajudar."
+        },
+        {
+          "title": "Entrar no Ambassador's Mind",
+          "text": "Vai ao **templo de Bastesh** (edifício a sul, no lado oeste da cidade). **Equipa** o {item:Ring of Secret Thoughts (Charged)} e usa o {item:Flask of Hallucinogen} em ti próprio. És enviado para o {wiki:Ambassador's Mind|Ambassador's Mind}.",
+          "coords": [
+            {
+              "x": 33864,
+              "y": 31527,
+              "z": 7,
+              "label": "Templo de Bastesh"
+            }
+          ],
+          "images": [
+            {
+              "file": "Ambassador's Mind Map.png",
+              "caption": "Mapa do Ambassador's Mind"
+            }
+          ],
+          "warning": "A mente tem dois lados e cada jogador pode ser enviado para qualquer um deles, aparentemente ao acaso. A equipa pode ficar separada e terá de se reunir através dos {item:Mirror Neuron|Mirror Neurons}."
+        },
+        {
+          "title": "Recolher os três Memory Shards",
+          "text": "Mata os {creature:Earworm|Earworms} (força parecida com as outras criaturas de Kilmaresh) e recolhe três fragmentos: {item:Green Memory Shard|verde}, {item:Violet Memory Shard|violeta} e {item:Blue Memory Shard|azul}. Cada jogador precisa de **um de cada**.",
+          "images": [
+            {
+              "file": "Ambassador's Mind 1.png",
+              "caption": "Usa os Mirror Neurons para passar de um lado para o outro"
+            },
+            {
+              "file": "Ambassador's Mind 2.png",
+              "caption": "Ambassador's Mind"
+            },
+            {
+              "file": "Ambassador's Mind 3.png",
+              "caption": "Ambassador's Mind"
+            }
+          ],
+          "warning": "**Não pises os campos de energia**: se o fizeres, um dos fragmentos que tens na mochila desaparece."
+        },
+        {
+          "title": "Usar os fragmentos no Memory Enlightener",
+          "text": "Com os três fragmentos, vai ao lado **esquerdo (oeste)** do mapa, onde está o {item:Memory Enlightener} (uma Fire Basin). Usa um fragmento de cada cor nele. Depois encontra o caminho de volta ao teleporte de saída.",
+          "images": [
+            {
+              "file": "Ambassador's Mind 4.png",
+              "caption": "Ambassador's Mind"
+            }
+          ],
+          "warning": "Não percas os fragmentos no caminho de volta: ainda vais precisar deles para falar com a Empress."
+        },
+        {
+          "title": "Sair do Ambassador's Mind",
+          "text": "Volta ao **teleporte de saída** da mente e entra nele para regressares a Kilmaresh, ainda com os três Memory Shards na mochila. Não há outro caminho para dentro: para voltares a entrar precisas sempre de um novo {item:Flask of Hallucinogen} e do anel carregado. Depois de concluíres a quest, só consegues outro frasco se alguém com a missão aberta to comprar.",
+          "coords": [
+            {
+              "x": 33909,
+              "y": 31640,
+              "z": 9,
+              "label": "Ambassador's Mind (por baixo de Kilmaresh)"
+            }
+          ]
+        },
+        {
+          "title": "Reportar ao Eshaya",
+          "text": "Volta ao {npc:Eshaya} e diz {key:mission}. Ele manda-te reportar à {npc:The Empress}.",
+          "npc": "Eshaya",
+          "dialogue": [
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "This is the proof we need! Very well done! You have to report this to our Empress. She will grant you an audience now."
+            }
+          ]
+        },
+        {
+          "title": "Falar com a Empress",
+          "text": "Fala com a {npc:The Empress} (diz {key:hi}) com os **três Memory Shards na mochila**. Ela confirma que o Embaixador é traidor e dá-te um {item:Sceptre of Sun and Sea} para abençoar cinco estátuas de Fafnar nas catacumbas.",
+          "npc": "The Empress",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "I see. There is enough and adequate evidence that the Ambassador of Rathleton is indeed an arch traitor. [...]"
+            },
+            {
+              "npc": "[...] they want to activate five Fafnar statues which they have already enchanted. They are hidden in the catacombs underneath the city. [...]"
+            },
+            {
+              "npc": "Then use this sceptre to bless them in the name of Suon and Bastesh. [...]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Fafnar's Wrath — One last favor (as estátuas das catacumbas)",
+      "intro": "Para circular nas {wiki:Kilmaresh Catacombs|Kilmaresh Catacombs} precisas de quatro máscaras; cada uma abre um conjunto de portas. Os documentos {item:Secret Instruction} explicam onde estão, mas não são precisos.",
+      "steps": [
+        {
+          "title": "Mirror Mask",
+          "text": "A {item:Mirror Mask} está num caixão, numa masmorra por baixo da **Central Steppe**. Abre a primeira porta junto à entrada principal das catacumbas. A entrada fica na Central Steppe, a **sudoeste** de Issavi, quase no mesmo sítio que o túmulo do {creature:Enusat the Onyx Wing}. Depois de apanhares a máscara, volta à superfície pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33796,
+              "y": 31551,
+              "z": 7,
+              "label": "Zona da masmorra da Mirror Mask (Central Steppe)"
+            },
+            {
+              "x": 33884,
+              "y": 31510,
+              "z": 9,
+              "label": "Porta da Mirror Mask (catacumbas)"
+            }
+          ]
+        },
+        {
+          "title": "Ivory Mask",
+          "text": "A {item:Ivory Mask} obtém-se na **Library**, usando uma {item:Small Emerald} no Ornamented Ankh que lá está. Abre as portas que dão acesso ao centro pelo **sul**.",
+          "coords": [
+            {
+              "x": 33879,
+              "y": 31489,
+              "z": 6,
+              "label": "Library (Ornamented Ankh)"
+            },
+            {
+              "x": 33883,
+              "y": 31478,
+              "z": 9,
+              "label": "Portas da Ivory Mask"
+            }
+          ],
+          "map": {
+            "x": 33883,
+            "y": 31478,
+            "z": 9,
+            "marks": [
+              {
+                "x": 33855,
+                "y": 31496,
+                "label": "Porta da Ivory Mask"
+              },
+              {
+                "x": 33911,
+                "y": 31496,
+                "label": "Porta da Ivory Mask"
+              }
+            ]
+          },
+          "tip": "Guarda a Ivory Mask: vais precisar dela outra vez na missão Wanted."
+        },
+        {
+          "title": "Silver Mask",
+          "text": "A {item:Silver Mask} está numa árvore, na pequena ilha a **oeste** da Central Steppe. Abre as portas que dão acesso ao centro pelo **norte**. Depois de a apanhares, volta pelo mesmo caminho para a Central Steppe.",
+          "coords": [
+            {
+              "x": 33780,
+              "y": 31664,
+              "z": 7,
+              "label": "Ilha da Silver Mask"
+            },
+            {
+              "x": 33911,
+              "y": 31466,
+              "z": 9,
+              "label": "Portas da Silver Mask"
+            }
+          ]
+        },
+        {
+          "title": "Gryphon Mask",
+          "text": "A {item:Gryphon Mask} está num {item:Gryphon Nest} no topo das {wiki:Kilmaresh Mountains|Kilmaresh Mountains}. Abre a porta da pequena sala a sul da zona principal. O ninho fica no ponto mais alto da montanha (4 andares acima do chão); depois desce pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33841,
+              "y": 31682,
+              "z": 3,
+              "label": "Gryphon Nest (topo da montanha)"
+            },
+            {
+              "x": 33883,
+              "y": 31536,
+              "z": 9,
+              "label": "Porta da Gryphon Mask"
+            }
+          ]
+        },
+        {
+          "title": "Chegar às Kilmaresh Catacombs",
+          "text": "As {wiki:Kilmaresh Catacombs|Kilmaresh Catacombs} ficam por baixo do lado **oeste** de Issavi e estão ligadas ao **Nykri Delta** por uma série de túneis com saída na estepe. A entrada mais segura é pelo **norte**, pela gruta das {creature:Sphinx|Sphinxes} e dos {creature:Crypt Warden|Crypt Wardens}. As portas das máscaras ficam **dois andares abaixo** do chão; a da Mirror Mask é a primeira, junto à entrada principal.",
+          "coords": [
+            {
+              "x": 33884,
+              "y": 31510,
+              "z": 9,
+              "label": "Porta da Mirror Mask (junto à entrada principal)"
+            },
+            {
+              "x": 33911,
+              "y": 31466,
+              "z": 9,
+              "label": "Portas da Silver Mask (acesso pelo norte)"
+            }
+          ]
+        },
+        {
+          "title": "Abençoar as 5 Statues of Fafnar",
+          "text": "Com o {item:Sceptre of Sun and Sea} na mão, desce às catacumbas e abre caminho até às cinco {item:Statue of Fafnar (Meditating)|Statues of Fafnar}. Usa o ceptro em cada uma delas. A rota mais segura começa a **norte**, entrando pela gruta das {creature:Sphinx|Sphinxes}/{creature:Crypt Warden|Crypt Wardens}.",
+          "map": {
+            "x": 33884,
+            "y": 31488,
+            "z": 9,
+            "marks": [
+              {
+                "x": 33854,
+                "y": 31523,
+                "label": "Estátua 1"
+              },
+              {
+                "x": 33891,
+                "y": 31505,
+                "label": "Estátua 2"
+              },
+              {
+                "x": 33853,
+                "y": 31465,
+                "label": "Estátua 3"
+              },
+              {
+                "x": 33879,
+                "y": 31545,
+                "label": "Estátua 4"
+              },
+              {
+                "x": 33874,
+                "y": 31433,
+                "label": "Estátua 5"
+              }
+            ]
+          },
+          "warning": "As catacumbas estão cheias de {creature:Priestess of the Wild Sun|Priestesses of the Wild Sun}, {creature:Burning Gladiator|Burning Gladiators} e outras criaturas fortes."
+        },
+        {
+          "title": "Sair das Kilmaresh Catacombs",
+          "text": "Depois da quinta estátua, volta pelo mesmo caminho até à gruta por onde entraste e sobe para a superfície (ou segue os túneis até à saída no Nykri Delta). Depois regressa a Issavi."
+        },
+        {
+          "title": "Entregar à Empress",
+          "text": "Volta à {npc:The Empress} depois de abençoar as cinco estátuas. Recebes a {item:Sun Medal}, a primeira peça da Regalia of Suon.",
+          "npc": "The Empress",
+          "reward": "Sun Medal"
+        }
+      ]
+    },
+    {
+      "title": "3. Midnight Rituals — os ingredientes da Kallimae",
+      "steps": [
+        {
+          "title": "Pedir a missão à Kallimae",
+          "text": "Vai **dois andares acima** no edifício logo a leste do depot e fala com a {npc:Kallimae}: {key:hi}, {key:mission}. Ela precisa de ingredientes para rituais mágicos.",
+          "npc": "Kallimae",
+          "coords": [
+            {
+              "x": 33935,
+              "y": 31482,
+              "z": 5,
+              "label": "Kallimae"
+            }
+          ]
+        },
+        {
+          "title": "Arranjar as ferramentas",
+          "text": "Antes de recolher os ingredientes precisas destas ferramentas:",
+          "table": {
+            "head": [
+              "Ferramenta",
+              "Onde a obter"
+            ],
+            "rows": [
+              [
+                "{item:Ritual Scissors}",
+                "Dentro de um sarcófago em {coord:33873,31446,8}"
+              ],
+              [
+                "{item:Bark Peeler}",
+                "Numa caixa, numa casinha perto do porto, em {coord:33898,31477,7}"
+              ],
+              [
+                "{item:Hand Auger}",
+                "Compra-se em qualquer loja de ferramentas: em Issavi ({npc:Tefrit}) ou noutras cidades"
+              ],
+              [
+                "{item:Empty Honey Glass}",
+                "Loot dos cultistas nas {wiki:Issavi Sewers|Issavi Sewers}, {wiki:Kilmaresh Catacombs|Kilmaresh Catacombs} e {wiki:Kilmaresh Mountains|Kilmaresh Mountains}"
+              ],
+              [
+                "{item:Pick (Enchanted)}",
+                "Dada pelo {npc:Yonan} quando lhe pedes a lista"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 33873,
+              "y": 31446,
+              "z": 8,
+              "label": "Sarcófago com a Ritual Scissors"
+            },
+            {
+              "x": 33898,
+              "y": 31477,
+              "z": 7,
+              "label": "Caixa com o Bark Peeler"
+            }
+          ]
+        },
+        {
+          "title": "Pedir as quatro listas",
+          "text": "Fala com {npc:Yonan}, {npc:Narsai}, {npc:Shimun} e {npc:Tefrit} e pede a cada um {key:mission}. Cada um dá-te uma lista de ingredientes.",
+          "coords": [
+            {
+              "x": 33922,
+              "y": 31513,
+              "z": 7,
+              "label": "Yonan (mercado)"
+            },
+            {
+              "x": 33914,
+              "y": 31530,
+              "z": 7,
+              "label": "Narsai (a sul do mercado)"
+            },
+            {
+              "x": 33758,
+              "y": 31493,
+              "z": 7,
+              "label": "Shimun (casinha no Nykri Delta)"
+            },
+            {
+              "x": 33838,
+              "y": 31692,
+              "z": 5,
+              "label": "Tefrit (escondido no topo da montanha)"
+            }
+          ]
+        },
+        {
+          "title": "Recolher os ingredientes",
+          "text": "Recolhe tudo o que está nas quatro listas:",
+          "table": {
+            "head": [
+              "Lista",
+              "Ingrediente",
+              "Qtd",
+              "Como obter"
+            ],
+            "rows": [
+              [
+                "Yonan",
+                "{item:Scorpion Tail}",
+                "3",
+                "Loot de {creature:Scorpion|Scorpions}"
+              ],
+              [
+                "Yonan",
+                "{item:Veldt Flowers}",
+                "12",
+                "Usa {item:Scissors} em {item:Veldt Flowers (Object)}"
+              ],
+              [
+                "Yonan",
+                "{item:Tagralt Nugget}",
+                "10",
+                "Usa a {item:Pick (Enchanted)} em {item:Veined Stone|Veined Stones}. A picareta dá 3 usos e depois perde o encantamento: espera 5 minutos até recarregar"
+              ],
+              [
+                "Narsai",
+                "{item:Vial of Cactus Milk}",
+                "10",
+                "Usa a {item:Hand Auger} em {item:Flowering Cactus}"
+              ],
+              [
+                "Narsai",
+                "{item:Piece of Crocodile Leather}",
+                "2",
+                "Loot de {creature:Crocodile|Crocodiles}"
+              ],
+              [
+                "Narsai",
+                "{item:Glass Full of Honey}",
+                "5",
+                "Usa um {item:Empty Honey Glass} em {item:Honey Palm|Honey Palms}"
+              ],
+              [
+                "Shimun",
+                "{item:Lizard Heart}",
+                "1",
+                "—"
+              ],
+              [
+                "Shimun",
+                "{item:Snake Maw}",
+                "12",
+                "Usa {item:Scissors} em {item:Snake Maw (Object)}"
+              ],
+              [
+                "Shimun",
+                "{item:Ink|Vial of Ink}",
+                "5",
+                "Usa um {item:Vial} num {creature:Biting Book} morto (há dois por baixo da biblioteca de Kilmaresh)"
+              ],
+              [
+                "Tefrit",
+                "{item:Crab Pincers}",
+                "5",
+                "Loot de {creature:Crab|Crabs}"
+              ],
+              [
+                "Tefrit",
+                "{item:Honey Palm Bark}",
+                "20",
+                "Usa o {item:Bark Peeler} em {item:Honey Palm|Honey Palms}"
+              ],
+              [
+                "Tefrit",
+                "{item:Spiderweb Clouds Shreds}",
+                "25",
+                "Usa {item:Scissors} em {item:Large Spider Webs}"
+              ],
+              [
+                "Tefrit",
+                "{item:Wild Desert Rose}",
+                "15",
+                "Usa {item:Scissors} em {item:Wild Desert Roses}"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Entregar as listas",
+          "text": "Quando tiveres tudo, entrega os ingredientes a cada NPC respetivo ({npc:Yonan}, {npc:Narsai}, {npc:Shimun} e {npc:Tefrit})."
+        }
+      ]
+    },
+    {
+      "title": "4. Midnight Rituals — Midnight Pilgrimage",
+      "intro": "A Kallimae pede-te a Midnight Pilgrimage: encontrar quatro Omens que a própria Bastesh anunciou.",
+      "steps": [
+        {
+          "title": "Pedir a última missão",
+          "text": "Volta à {npc:Kallimae} e diz {key:mission} para receber a Midnight Pilgrimage.",
+          "npc": "Kallimae"
+        },
+        {
+          "title": "Omen 1 — a coruja",
+          "text": "No pequeno templo a **norte do Nykri Delta**, encontra a {creature:Owl|coruja} e aproxima-te dela. Mensagem: *\"You discover an owl resting in a tree. That's special, because you have never seen an owl in all of Kilmaresh.\"*",
+          "coords": [
+            {
+              "x": 33816,
+              "y": 31459,
+              "z": 7,
+              "label": "Templo com a coruja"
+            }
+          ],
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Omen 1.png",
+              "caption": "Omen 1: a coruja"
+            }
+          ]
+        },
+        {
+          "title": "Omen 2 — a bacia de sangue",
+          "text": "Dentro das Kilmaresh Catacombs, encontra a {item:Basin Filled with Blood} e usa-a. Mensagem: *\"You find a golden symbol at the bottom of the blood-filled basin.\"*",
+          "coords": [
+            {
+              "x": 33867,
+              "y": 31442,
+              "z": 9,
+              "label": "Basin Filled with Blood (catacumbas)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Omen 2.png",
+              "caption": "Omen 2: a bacia cheia de sangue"
+            }
+          ],
+          "tip": "Se clicares na bacia **sem nenhum anel equipado**, recebes um {item:Symbol of Sun and Sea}. Não é necessário para a quest, mas deixa de ser possível obtê-lo depois de entregares esta missão."
+        },
+        {
+          "title": "Omen 3 — o Sun-Marked Goanna",
+          "text": "Vai bem para **leste** da Southern Steppe, encontra o {creature:Sun-Marked Goanna} e mata-o para obteres a {item:Goanna Hide with Sun Symbol}.",
+          "coords": [
+            {
+              "x": 33912,
+              "y": 31679,
+              "z": 7,
+              "label": "Sun-Marked Goanna (leste da Southern Steppe)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Omen 3.png",
+              "caption": "Omen 3: o Sun-Marked Goanna"
+            }
+          ]
+        },
+        {
+          "title": "Omen 4 — a seta no tronco",
+          "text": "Na parte **oeste** do Green Belt, junto à montanha, encontra o {item:Bloodspot} num {item:Sequoia Trunk} atingido por uma seta. Mensagem: *\"You discover an arrow sticking in a tree. Mysteriously, fresh blood is trickling from the spot where the arrow hit the trunk.\"*",
+          "coords": [
+            {
+              "x": 33862,
+              "y": 31617,
+              "z": 7,
+              "label": "Sequoia Trunk com a seta"
+            }
+          ],
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Omen 4.png",
+              "caption": "Omen 4: a seta no tronco"
+            }
+          ]
+        },
+        {
+          "title": "Reportar à Kallimae",
+          "text": "Volta à {npc:Kallimae} e reporta a missão. Recebes o {item:Blue and Golden Cordon}.",
+          "npc": "Kallimae",
+          "reward": "Blue and Golden Cordon"
+        }
+      ]
+    },
+    {
+      "title": "5. The Boards that Mean the World (Alyxo)",
+      "steps": [
+        {
+          "title": "Pedir a missão à Alyxo",
+          "text": "Encontra a medusa {npc:Alyxo} a **nordeste** do depot e diz {key:hi}, {key:mission}. Primeiro tens de matar três demónios invocados.",
+          "npc": "Alyxo"
+        },
+        {
+          "title": "Matar o Bragrumol",
+          "text": "O {creature:Bragrumol} está numa gruta na **Central Steppe**: desce e mata-o. Depois de o matares, sobe pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33792,
+              "y": 31594,
+              "z": 7,
+              "label": "Gruta do Bragrumol"
+            },
+            {
+              "x": 33807,
+              "y": 31598,
+              "z": 8,
+              "label": "Bragrumol (1 andar abaixo)"
+            }
+          ]
+        },
+        {
+          "title": "Matar o Xogixath",
+          "text": "O {creature:Xogixath} está numa pequena gruta no **Nykri Delta**. Desce **um andar** para o encontrares e volta a subir pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33791,
+              "y": 31478,
+              "z": 7,
+              "label": "Gruta do Xogixath"
+            },
+            {
+              "x": 33796,
+              "y": 31478,
+              "z": 8,
+              "label": "Xogixath (1 andar abaixo)"
+            }
+          ]
+        },
+        {
+          "title": "Matar o Mozradek",
+          "text": "O {creature:Mozradek} está numa pequena gruta a **nordeste** de Issavi, no segundo andar. Fica **dois andares abaixo** da entrada; sai pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33955,
+              "y": 31467,
+              "z": 7,
+              "label": "Gruta do Mozradek"
+            },
+            {
+              "x": 33934,
+              "y": 31450,
+              "z": 9,
+              "label": "Mozradek (2 andares abaixo)"
+            }
+          ]
+        },
+        {
+          "title": "Receber as três tarefas",
+          "text": "Volta à {npc:Alyxo} e pede {key:mission}. Ela dá-te três tarefas: matar 300 cultistas, arranjar um presente para a {npc:Narsai} e recuperar a {item:Ivory Lyre}.",
+          "npc": "Alyxo"
+        },
+        {
+          "title": "Tarefa 1 — 300 Fafnar Cultists",
+          "text": "Mata 300 {wiki:Fafnar Cultists|Fafnar Cultists} nas Kilmaresh Catacombs, nas Issavi Sewers ou na Kilmaresh Mountain.",
+          "warning": "Só contam as {creature:Priestess of the Wild Sun|Priestesses of the Wild Sun} e os {creature:Burning Gladiator|Burning Gladiators}."
+        },
+        {
+          "title": "Tarefa 2 — Small Tortoise",
+          "text": "O presente para a {npc:Narsai} é uma {item:Small Tortoise}. Obtém-se como loot de {creature:Young Goanna|Young Goannas} ou usando uma {item:Net (Fishing)|Net} no mar de Kilmaresh (são precisas várias tentativas)."
+        },
+        {
+          "title": "Tarefa 3 — Ivory Lyre (falar com o Moe)",
+          "text": "Fala com o {npc:Moe} e pergunta-lhe pela {key:ivory lyre}: ele diz-te onde está e dá-te permissão para abrir a porta fechada.",
+          "npc": "Moe"
+        },
+        {
+          "title": "Recuperar a Ivory Lyre",
+          "text": "A {item:Ivory Lyre} está **dois andares abaixo** da gruta onde mataste o {creature:Xogixath}, no Nykri Delta. Vai lá buscá-la. Depois volta a subir os dois andares pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 33791,
+              "y": 31478,
+              "z": 7,
+              "label": "Entrada da gruta do Xogixath (desce 2 andares)"
+            }
+          ]
+        },
+        {
+          "title": "Entregar as tarefas",
+          "text": "Volta à {npc:Alyxo} e entrega cada tarefa **separadamente**, dizendo {key:fafnar cultists}, {key:small tortoise} e {key:lyre}. Depois diz {key:mission}. Recebes o {item:Sunray Emblem}.",
+          "npc": "Alyxo",
+          "reward": "Sunray Emblem"
+        }
+      ]
+    },
+    {
+      "title": "6. The Revenge of the Ogres (Saideh)",
+      "intro": "Para concluir a missão da Saideh só precisas dos 4 primeiros puzzles. Os puzzles 5 e 6 só servem para abrir o último andar como zona de caça e para uma missão da {wiki:Grave Danger Quest}, mas aproveita para os fazer todos.",
+      "steps": [
+        {
+          "title": "Encontrar a Saideh atrás da cascata",
+          "text": "Dá a volta pela Central e Southern Steppe até ao lado **oeste** do Green Belt e entra na Kilmaresh Mountain. Nada no rio e passa por **trás da cascata**, onde está a {npc:Saideh}. Diz {key:hi}, {key:mission}: ela quer que voltes a enterrar os restos do herói Dayyan, atravessando uma masmorra com puzzles.",
+          "npc": "Saideh",
+          "coords": [
+            {
+              "x": 33844,
+              "y": 31639,
+              "z": 7,
+              "label": "Saideh (atrás da cascata)"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar a Wooden Cage Key",
+          "text": "Entra na gruta e desce um andar. Encontra a {item:Wooden Cage Key} na parte **oeste** da gruta.",
+          "coords": [
+            {
+              "x": 33768,
+              "y": 31624,
+              "z": 8,
+              "label": "Wooden Cage Key"
+            }
+          ]
+        },
+        {
+          "title": "Abrir a jaula",
+          "text": "Vai para **sudeste** e usa a chave aqui para abrir a passagem. Ficas com acesso permanente, mas a chave é destruída.",
+          "coords": [
+            {
+              "x": 33835,
+              "y": 31667,
+              "z": 8,
+              "label": "Onde usar a Wooden Cage Key"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à sala dos puzzles",
+          "text": "Desce as escadas, segue o caminho para **norte** e entra na pequena sala a **oeste** com 4 {item:Magic Forcefield|Magic Forcefields} (teleportes)."
+        },
+        {
+          "title": "Puzzle 1 — As vocações",
+          "text": "Cada teleporte tem um item que representa uma das quatro vocações. Entra no teleporte correspondente à tua vocação.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 1.png",
+              "caption": "Puzzle 1: os quatro teleportes das vocações"
+            }
+          ],
+          "warning": "Se usares o teleporte errado és enviado para a superfície do Green Belt."
+        },
+        {
+          "title": "Puzzle 2 — As bacias",
+          "text": "Há três Fire Basins que acendem e apagam e 4 teleportes. Entra no teleporte que corresponde ao **número de bacias acesas nesse momento**, de 0 a 3 da esquerda para a direita: o teleporte mais à esquerda quando estão todas apagadas, o mais à direita quando estão todas acesas.",
+          "table": {
+            "head": [
+              "Bacias acesas",
+              "Teleporte"
+            ],
+            "rows": [
+              [
+                "0",
+                "1.º (mais à esquerda)"
+              ],
+              [
+                "1",
+                "2.º"
+              ],
+              [
+                "2",
+                "3.º"
+              ],
+              [
+                "3",
+                "4.º (mais à direita)"
+              ]
+            ]
+          },
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 2.png",
+              "caption": "Puzzle 2: as três bacias e os quatro teleportes"
+            }
+          ]
+        },
+        {
+          "title": "Puzzle 3 — As múmias",
+          "text": "Outra sala com 4 teleportes. A sul há uma salinha com duas {creature:Mummy|Mummies} e listas pretas no chão, cada uma correspondente a um teleporte. Entra no teleporte cuja lista tem **pelo menos uma múmia em cima** nesse momento.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 3.png",
+              "caption": "Puzzle 3: as listas pretas e as múmias"
+            }
+          ]
+        },
+        {
+          "title": "Puzzle 4 — O caminho",
+          "text": "Há 4 linhas com tiles diferentes que tens de atravessar. A sul delas há 4 tiles que indicam o tile seguro de cada linha: o primeiro da esquerda corresponde à 1.ª linha, o segundo à 2.ª, etc. Estratégia recomendada: atravessa primeiro a 1.ª linha, espera que o padrão mude, memoriza rapidamente os tiles da 2.ª, 3.ª e 4.ª linhas e corre por eles.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 4.png",
+              "caption": "Cada tile a sul corresponde a uma linha que tens de atravessar"
+            },
+            {
+              "file": "Kilmaresh Quest - Ogre 4.2.png",
+              "caption": "Este seria o caminho para o padrão que apareceu"
+            }
+          ]
+        },
+        {
+          "title": "Usar o Scorpion Grave",
+          "text": "Segue o caminho para **oeste** até uma grande sala com um {item:Scorpion Grave}. Usa o **lado esquerdo** da sepultura para receber uma mensagem e a atualização do Quest Log.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 4.3.png",
+              "caption": "O Scorpion Grave que a Saideh te pediu para verificar"
+            }
+          ],
+          "warning": "Se usares o **lado direito** do Scorpion Grave levas dano de fogo igual a 50% da tua vida total. Cuidado, sobretudo se ainda não mataste as criaturas da sala."
+        },
+        {
+          "title": "Puzzle 5 — O tabuleiro (opcional)",
+          "text": "Segue para **oeste** e depois **sul**. Há dois retângulos com os mesmos tipos de tile do puzzle anterior, que mudam constantemente, e um teleporte para cada tipo de tile. Entra no teleporte do tile que aparece **em maior quantidade** nesse momento.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 5.png",
+              "caption": "Puzzle 5: os dois retângulos e os teleportes"
+            }
+          ]
+        },
+        {
+          "title": "Puzzle 6 — O labirinto (opcional)",
+          "text": "Atravessa o labirinto pisando **todas** as Sparkles que fecham as pequenas salas, **sem passar duas vezes** por nenhuma. Se te enganares aparecem notas musicais vermelhas na tua personagem e tens de usar a alavanca no lado **oeste** da sala para recomeçar. Há várias rotas possíveis; uma está na imagem.",
+          "images": [
+            {
+              "file": "Kilmaresh Quest - Ogre 6.png",
+              "caption": "Puzzle 6: uma rota possível pelo labirinto"
+            }
+          ]
+        },
+        {
+          "title": "O sarcófago (só Grave Danger Quest)",
+          "text": "Depois dos puzzles, desce ao andar de baixo e usa o {item:Vial of Potent Holy Water} no sarcófago.",
+          "warning": "Esta parte só é precisa para a {wiki:Grave Danger Quest}. Se não tiveres essa quest aberta, não te deixam descer."
+        },
+        {
+          "title": "Sair da masmorra dos ogres",
+          "text": "Quando acabares (Scorpion Grave e, se quiseres, os puzzles 5 e 6), volta pelo mesmo caminho até às escadas, sobe ao andar da {item:Wooden Cage Key} (a jaula fica aberta para sempre) e sai da gruta para a cascata, onde está a {npc:Saideh}. Lembra-te de que entrar num teleporte errado no puzzle 1 te põe na superfície do Green Belt.",
+          "coords": [
+            {
+              "x": 33835,
+              "y": 31667,
+              "z": 8,
+              "label": "Jaula aberta com a Wooden Cage Key"
+            },
+            {
+              "x": 33844,
+              "y": 31639,
+              "z": 7,
+              "label": "Saideh (atrás da cascata)"
+            }
+          ]
+        },
+        {
+          "title": "Entregar a missão à Saideh",
+          "text": "Volta à {npc:Saideh} atrás da cascata e reporta a missão. Recebes o {item:Golden Bijou}.",
+          "npc": "Saideh",
+          "reward": "Golden Bijou"
+        }
+      ]
+    },
+    {
+      "title": "7. A Shark in Need (Ninev)",
+      "steps": [
+        {
+          "title": "Falar com a Ninev",
+          "text": "No templo de Bastesh, fala com a {npc:Ninev}: {key:hi}, {key:shark}. Tens de juntar materiais para um medicamento para o tubarão doente.",
+          "npc": "Ninev"
+        },
+        {
+          "title": "Apanhar a Box with Balm",
+          "text": "A {item:Box with Balm} está logo a **norte** da saída junto ao barco.",
+          "coords": [
+            {
+              "x": 33878,
+              "y": 31439,
+              "z": 7,
+              "label": "Box with Balm"
+            }
+          ]
+        },
+        {
+          "title": "Tosquiar uma ovelha",
+          "text": "Usa {item:Scissors} numa {creature:Sheep|ovelha} viva para obter {item:Greasy Wool}. Há ovelhas no **oeste** do Nykri Delta."
+        },
+        {
+          "title": "Fazer o bálsamo",
+          "text": "Usa a {item:Greasy Wool} na {item:Box with Balm} para criar a {item:Box with Waterproof Balm}."
+        },
+        {
+          "title": "Entregar à Ninev",
+          "text": "Entrega a {item:Box with Waterproof Balm} à {npc:Ninev}. Recebes uma {item:Golden Sea Horse Figurine}.",
+          "npc": "Ninev",
+          "reward": "Golden Sea Horse Figurine"
+        }
+      ]
+    },
+    {
+      "title": "8. Aspiring Oracle (Taya e Narsai)",
+      "steps": [
+        {
+          "title": "Falar com a Taya",
+          "text": "Encontra a {npc:Taya} a oeste, no **Nykri Delta**. Diz {key:hi}, {key:oracle} e {key:yes}.",
+          "npc": "Taya",
+          "coords": [
+            {
+              "x": 33815,
+              "y": 31463,
+              "z": 7,
+              "label": "Taya"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "oracle"
+            },
+            {
+              "npc": "Have you ever heard of the Circle of the Midnight Flame? [...] I really want to be an oracle and join the Midnight Flame. Would you help me?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Suon be praised. Ask Narsai in Issavi about it. I guess she knows more."
+            }
+          ]
+        },
+        {
+          "title": "Falar com a Narsai",
+          "text": "Volta a Issavi e fala com a {npc:Narsai}, logo a sul do mercado: {key:hi}, {key:oracle}. Tens de encontrar as duas partes do Eye of Suon: uma moldura dourada e uma gema vermelha.",
+          "npc": "Narsai",
+          "dialogue": [
+            {
+              "you": "oracle"
+            },
+            {
+              "npc": "[...] It is called the Eye of Suon. [...] it consists of two parts: a precious red gem and a golden frame shaped like an eye. [...]"
+            },
+            {
+              "npc": "[...] the frame is still here in Kilmaresh. [...] in the Salt Caves underneath the Green Belt. Be careful, they are inhabited by Bashmu. [...]"
+            },
+            {
+              "npc": "[...] there is also a secret tunnel in the Ruins of Nuur. [...] you can open it by drawing a sun symbol on the door with your finger, right above the door knob. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Eye-Shaped Frame (Salt Caves)",
+          "text": "Vai às {wiki:Salt Caves|Salt Caves}, a sul de Issavi. A {item:Eye-Shaped Frame} está dentro do **Floating Cask** no centro da gruta. A gruta fica **um andar abaixo** da entrada. Para sair, volta pelo mesmo caminho até à entrada a sul de Issavi.",
+          "coords": [
+            {
+              "x": 33968,
+              "y": 31652,
+              "z": 7,
+              "label": "Entrada das Salt Caves"
+            },
+            {
+              "x": 33970,
+              "y": 31653,
+              "z": 8,
+              "label": "Salt Caves (1 andar abaixo)"
+            }
+          ],
+          "warning": "As Salt Caves estão cheias de {creature:Bashmu} e {creature:Juvenile Bashmu}."
+        },
+        {
+          "title": "Chegar a Krailos",
+          "text": "No porto de Issavi, fala com o {npc:Captain Harava} e diz {key:hi}, {key:krailos}, {key:yes} (80 gp). Chegas ao porto de {wiki:Krailos}, junto à {npc:Captain Pelagia}. As {wiki:Krailos Ruins|Krailos Ruins} ficam no **noroeste** de Krailos. Segundo a {npc:Narsai}, também há um túnel secreto nas Ruins of Nuur que liga a Krailos, com uma porta selada que se abre desenhando um símbolo do sol na porta, por cima da maçaneta.",
+          "npc": "Captain Harava",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "krailos"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33492,
+              "y": 31710,
+              "z": 6,
+              "label": "Captain Pelagia, porto de Krailos"
+            },
+            {
+              "x": 33580,
+              "y": 31584,
+              "z": 7,
+              "label": "Entrada das Krailos Ruins"
+            }
+          ]
+        },
+        {
+          "title": "Red Gem (Krailos Ruins)",
+          "text": "Viaja até {wiki:Krailos} (barco, ou o túnel secreto nas Ruins of Nuur) e entra nas {wiki:Krailos Ruins|Krailos Ruins} (gruta dos {creature:Nightmare Scion|Nightmare Scions}). Vai ao segundo andar e tira a {item:Red Gem (Eye)} do sarcófago.",
+          "coords": [
+            {
+              "x": 33545,
+              "y": 31555,
+              "z": 9,
+              "label": "Sarcófago com a Red Gem"
+            }
+          ]
+        },
+        {
+          "title": "Voltar a Issavi",
+          "text": "Sobe os dois andares pelo mesmo caminho e sai das Krailos Ruins. No porto de Krailos fala com a {npc:Captain Pelagia} e diz {key:hi}, {key:issavi}, {key:yes} para voltares ao porto de Issavi.",
+          "npc": "Captain Pelagia",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "issavi"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33580,
+              "y": 31584,
+              "z": 7,
+              "label": "Saída das Krailos Ruins"
+            },
+            {
+              "x": 33902,
+              "y": 31462,
+              "z": 6,
+              "label": "Captain Harava, porto de Issavi"
+            }
+          ]
+        },
+        {
+          "title": "Montar o Eye of Suon",
+          "text": "Usa a gema na moldura para criares {item:The Eye of Suon}. Mensagem: *\"You put together the bright red gem and the golden frame. The Eye of Suon is restored.\"*"
+        },
+        {
+          "title": "Voltar à Narsai",
+          "text": "Diz {key:oracle} à {npc:Narsai}. Recebes um Old Parchment com os nomes de 7 esfinges e lamassu e uma garrafa de {item:Sacramental Wine}.",
+          "npc": "Narsai",
+          "dialogue": [
+            {
+              "you": "oracle"
+            },
+            {
+              "npc": "You really found the parts and restored the Eye of Suon! [...] Take this wine and sacrifice it at each of the statues by pouring it out in front of them. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Oferecer o vinho às 7 estátuas",
+          "text": "Equipa {item:The Eye of Suon} no **colar** e usa o {item:Sacramental Wine} junto de cada uma das sete estátuas. Em cada uma recebes a mensagem *\"You pour out the sacramental wine in front of [nome]'s statue.\"* Três estátuas ficam debaixo do chão: a Yaeta nas Kilmaresh Catacombs (entra como na missão das estátuas de Fafnar), a Rimush nas Ruins of Nuur (por baixo de Kilmaresh, a sul) e a Anunit num túmulo por baixo do Nykri Delta. De cada uma, volta à superfície pelo mesmo caminho.",
+          "table": {
+            "head": [
+              "Estátua",
+              "Local",
+              "Coordenada"
+            ],
+            "rows": [
+              [
+                "Kematef",
+                "A leste do depot",
+                "{coord:33931,31476,3}"
+              ],
+              [
+                "Nesertis",
+                "Saída sul da cidade",
+                "{coord:33947,31527,7}"
+              ],
+              [
+                "Zabaya",
+                "Oeste da cidade, perto das Sphinxes e Lamassu",
+                "{coord:33854,31479,7}"
+              ],
+              [
+                "Yaeta",
+                "Dentro das catacumbas",
+                "{coord:33896,31439,9}"
+              ],
+              [
+                "Nasramet",
+                "Central Steppe, perto da ponte",
+                "{coord:33848,31580,7}"
+              ],
+              [
+                "Rimush",
+                "Ruins of Nuur, numa sala do lado leste",
+                "{coord:33836,31714,10}"
+              ],
+              [
+                "Anunit",
+                "Num túmulo por baixo do Nykri Delta",
+                "{coord:33741,31507,8}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 33931,
+              "y": 31476,
+              "z": 3,
+              "label": "Kematef"
+            },
+            {
+              "x": 33947,
+              "y": 31527,
+              "z": 7,
+              "label": "Nesertis"
+            },
+            {
+              "x": 33854,
+              "y": 31479,
+              "z": 7,
+              "label": "Zabaya"
+            },
+            {
+              "x": 33896,
+              "y": 31439,
+              "z": 9,
+              "label": "Yaeta"
+            },
+            {
+              "x": 33848,
+              "y": 31580,
+              "z": 7,
+              "label": "Nasramet"
+            },
+            {
+              "x": 33836,
+              "y": 31714,
+              "z": 10,
+              "label": "Rimush"
+            },
+            {
+              "x": 33741,
+              "y": 31507,
+              "z": 8,
+              "label": "Anunit"
+            },
+            {
+              "x": 33808,
+              "y": 31694,
+              "z": 8,
+              "label": "Ruins of Nuur"
+            }
+          ]
+        },
+        {
+          "title": "Falar com a Narsai e a Taya",
+          "text": "Fala com a {npc:Narsai} ({key:oracle}): ela confirma que ofereceste todos os sacrifícios. Depois volta à {npc:Taya} e diz {key:oracle}. Ela pede-te para matares o Enusat the Onyx Wing.",
+          "npc": "Taya",
+          "dialogue": [
+            {
+              "you": "oracle"
+            },
+            {
+              "npc": "You offered a sacrifice for the holy seer sphinxes and lamassu! [...] Enusat the Onyx Wing! He is a black Manticore who threatens the people living in the small steppe villages. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Matar o Enusat the Onyx Wing",
+          "text": "O {creature:Enusat the Onyx Wing} está num túmulo por baixo da **Central Steppe**. Mata-o. Depois sobe pelo mesmo caminho para a estepe.",
+          "coords": [
+            {
+              "x": 33795,
+              "y": 31552,
+              "z": 7,
+              "label": "Túmulo do Enusat"
+            }
+          ]
+        },
+        {
+          "title": "Entregar à Taya",
+          "text": "Volta à {npc:Taya} e diz {key:oracle}. Recebes as três partes do {item:Sun Mosaic}.",
+          "npc": "Taya",
+          "dialogue": [
+            {
+              "you": "oracle"
+            },
+            {
+              "npc": "You killed the Onyx Wing! Well done, you saved the lives of many villagers out there! [...] take this mosaic as a sign of my gratitude."
+            }
+          ],
+          "reward": "Três partes do Sun Mosaic"
+        }
+      ]
+    },
+    {
+      "title": "9. Wanted (Eshaya e Kallimae)",
+      "steps": [
+        {
+          "title": "Falar com o Eshaya",
+          "text": "Fala com o {npc:Eshaya} a norte do mercado: {key:hi}, {key:wanted} e {key:yes}. Há quatro procurados (Amenef, Neferi, Petaris e Hetai), mas um deles pode estar inocente.",
+          "npc": "Eshaya",
+          "dialogue": [
+            {
+              "you": "wanted"
+            },
+            {
+              "npc": "[...] there are four persons, we are currently looking for: Amenef, a Burning Gladiator [...] Neferi, an Issavi scribe [...] Petaris the spice merchant [...] and Hetai [...]. Will you help to find the wanted persons?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] One of them might be innocent. [...] You could talk to Kallimae, perhaps she knows more thanks to her visionary power."
+            }
+          ]
+        },
+        {
+          "title": "Falar com a Kallimae",
+          "text": "Vai à {npc:Kallimae} (a leste do depot) e diz {key:wanted}. Ela explica o ritual: um espelho de mão **dourado**, escurecido ao fogo, raspado no santuário de Suon enquanto usas uma máscara de marfim.",
+          "npc": "Kallimae",
+          "dialogue": [
+            {
+              "you": "wanted"
+            },
+            {
+              "npc": "[...] Find a precious golden hand mirror. [...] Then blacken it over a fire and cover it in soot. [...]"
+            },
+            {
+              "npc": "You also have to find a mask made from ivory. Then go to the shrine of Suon on the shore north-west of Issavi. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Arranjar a Ivory Mask",
+          "text": "Recupera a {item:Ivory Mask} das missões anteriores, ou arranja uma nova (Small Emerald no Ornamented Ankh da biblioteca)."
+        },
+        {
+          "title": "Apanhar o Golden Hand Mirror",
+          "text": "Vai às {wiki:Ruins of Nuur|Ruins of Nuur} e tira o {item:Golden Hand Mirror} de um {item:Ornate Case} numa pequena sala a **leste**. As {wiki:Ruins of Nuur|Ruins of Nuur} ficam por baixo de Kilmaresh, a **sul** de Issavi; sai pelo mesmo caminho por onde entraste.",
+          "coords": [
+            {
+              "x": 33860,
+              "y": 31715,
+              "z": 10,
+              "label": "Ornate Case com o Golden Hand Mirror"
+            },
+            {
+              "x": 33808,
+              "y": 31694,
+              "z": 8,
+              "label": "Ruins of Nuur"
+            }
+          ]
+        },
+        {
+          "title": "Escurecer o espelho",
+          "text": "Usa o espelho numa {item:Fire Bowl} em qualquer ponto de Issavi. Ele passa a {item:Blackened Hand Mirror}."
+        },
+        {
+          "title": "Fazer o ritual no santuário",
+          "text": "Vai ao Nykri Delta, onde está a {npc:Taya}, e sobe ao santuário. **Equipa a {item:Ivory Mask}** e usa o teu {item:Secret Agent Tool} ou {item:Obsidian Knife} no espelho escurecido. Mensagem: *\"A young woman's face appears in the mirror and a voice seems to whisper into your ear: 'Petaris is innocent.'\"*",
+          "coords": [
+            {
+              "x": 33810,
+              "y": 31464,
+              "z": 7,
+              "label": "Santuário de Suon (Nykri Delta)"
+            }
+          ],
+          "warning": "Se não tiveres a máscara equipada, ou se raspares o espelho fora do altar, tens de voltar a escurecê-lo no fogo."
+        },
+        {
+          "title": "Reportar ao Eshaya",
+          "text": "Volta ao {npc:Eshaya} e diz {key:wanted}. Agora tens de derrotar os outros três foragidos.",
+          "npc": "Eshaya",
+          "dialogue": [
+            {
+              "you": "wanted"
+            },
+            {
+              "npc": "Good to know that Petaris is innocent. My heart could not betray me! Bring the rest of them to justice now."
+            }
+          ]
+        },
+        {
+          "title": "Matar os três foragidos (sozinho)",
+          "text": "Os três foragidos são minibosses que tens de matar **sozinho**. Cada um tem um portal:",
+          "table": {
+            "head": [
+              "Miniboss",
+              "Portal"
+            ],
+            "rows": [
+              [
+                "{creature:Neferi the Spy}",
+                "Perto do barco em Issavi, {coord:33887,31478,6}"
+              ],
+              [
+                "{creature:Sister Hetai}",
+                "No centro das Kilmaresh Catacombs, {coord:33883,31468,9}"
+              ],
+              [
+                "{creature:Amenef the Burning}",
+                "Dentro das Ruins of Nuur, a sul, {coord:33819,31773,10}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 33887,
+              "y": 31478,
+              "z": 6,
+              "label": "Portal da Neferi the Spy"
+            },
+            {
+              "x": 33883,
+              "y": 31468,
+              "z": 9,
+              "label": "Portal da Sister Hetai"
+            },
+            {
+              "x": 33819,
+              "y": 31773,
+              "z": 10,
+              "label": "Portal do Amenef the Burning"
+            }
+          ]
+        },
+        {
+          "title": "Sair das salas dos foragidos",
+          "text": "Depois de cada luta, sai da sala do foragido e volta pelo mesmo caminho: o portal da Neferi fica junto ao barco de Issavi (já estás na cidade); para o da Sister Hetai, sai das Kilmaresh Catacombs como na missão das estátuas; para o do Amenef, sobe das Ruins of Nuur pelo mesmo caminho por onde desceste."
+        },
+        {
+          "title": "Entregar ao Eshaya",
+          "text": "Depois de matares os três, volta ao {npc:Eshaya} e reporta. Recebes os {wiki:Citizen of Issavi Outfits|Citizen of Issavi Outfits} (básico).",
+          "npc": "Eshaya",
+          "reward": "Citizen of Issavi Outfits (básico)"
+        }
+      ]
+    },
+    {
+      "title": "10. Regalia of Suon e atalhos",
+      "steps": [
+        {
+          "title": "Juntar a Regalia of Suon",
+          "text": "Com as quatro peças na mochila ({item:Blue and Golden Cordon}, {item:Golden Bijou}, {item:Sunray Emblem} e {item:Sun Medal}), fala com o {npc:Yonan} no mercado: {key:hi}, {key:the regalia of suon} e {key:yes}. Ele combina as peças na {item:The Regalia of Suon}.",
+          "npc": "Yonan",
+          "dialogue": [
+            {
+              "you": "the regalia of suon"
+            },
+            {
+              "npc": "You have all parts of the famous Regalia of Suon! [...] As you have all four pieces, I could combine them into the full insignia. Shall I do this for you?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Well then, let me have a look."
+            }
+          ],
+          "reward": "The Regalia of Suon"
+        },
+        {
+          "title": "Usar os atalhos",
+          "text": "Depois de completares todas as missões, podes usar os dois atalhos perto de Issavi: do **Nykri Delta** para as {wiki:Ruins of Nuur|Ruins of Nuur}, e do **sul de Issavi** para as {wiki:Salt Caves|Salt Caves}.",
+          "coords": [
+            {
+              "x": 33809,
+              "y": 31506,
+              "z": 7,
+              "label": "Atalho no Nykri Delta"
+            },
+            {
+              "x": 33777,
+              "y": 31710,
+              "z": 7,
+              "label": "Saída nas Ruins of Nuur"
+            },
+            {
+              "x": 33891,
+              "y": 31568,
+              "z": 7,
+              "label": "Atalho a sul de Issavi"
+            },
+            {
+              "x": 33917,
+              "y": 31656,
+              "z": 7,
+              "label": "Saída nas Salt Caves"
+            }
+          ],
+          "reward": "Acesso aos atalhos"
+        },
+        {
+          "title": "Sair de Kilmaresh",
+          "text": "Para saíres da ilha, vai ao porto de Issavi e fala com o {npc:Captain Harava}: diz {key:hi}, o destino ({key:darashia}, {key:venore}, {key:krailos} ou {key:oramond}) e {key:yes}. Também podes usar o tapete mágico do {npc:Tanyt}.",
+          "npc": "Captain Harava",
+          "coords": [
+            {
+              "x": 33902,
+              "y": 31462,
+              "z": 6,
+              "label": "Captain Harava, porto de Issavi"
+            },
+            {
+              "x": 33958,
+              "y": 31514,
+              "z": 0,
+              "label": "Tanyt, plataforma dos tapetes mágicos"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "As missões **Wanted** e **Aspiring Oracle** foram acrescentadas no Summer Update 2021.",
+    "O {item:Symbol of Sun and Sea} (da bacia de sangue nas catacumbas) é opcional e só pode ser apanhado antes de entregares a Midnight Pilgrimage, e só sem anel equipado.",
+    "Depois de concluíres a Fafnar's Wrath, podes dar {item:Flask of Hallucinogen|Flasks of Hallucinogen} a amigos que já a fizeram para te acompanharem de novo ao Ambassador's Mind."
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "slug": "the-djinn-war-efreet-faction",
+  "category": "acesso",
+  "region": "Ankrahmun",
+  "difficulty": 3,
+  "duration": "2–4 horas",
+  "summary": "Junta-te aos {creature:Efreet|Efreets}, os djinns verdes de {wiki:Mal'ouquah|Mal'ouquah}, na guerra contra os {creature:Marid|Marids}. Em três missões descobres o ladrão de mantimentos, roubas a {item:Tear of Daraman} aos djinns azuis e trocas a lâmpada do rei Gabel pela lâmpada de Fa'hradin. No fim podes negociar com {npc:Yaman} e {npc:Alesar}, que compram e vendem equipamento forte.",
+  "legend_pt": "Alia-te aos poderosos Efreets, uma raça quase esquecida pelas areias do tempo, para obteres a vitória na eterna guerra dos djinns contra os seus rivais, os temíveis Marids.",
+  "start": {"x": 33192, "y": 32820, "z": 7, "label": "Melchior, ruas de Ankrahmun"},
+  "requirements": [
+    "Nível mínimo 40 (recomendado 50+).",
+    "Conta Premium.",
+    "Não teres escolhido o lado dos Marids: só podes aliar-te a **uma** das facções de djinns."
+  ],
+  "items_needed": [
+    {"item": "Dwarven Ring", "qty": 2, "note": "contra a embriaguez dos djinns na fortaleza azul"},
+    {"item": "Poison Bomb Rune", "note": "opcional, para te protegeres quando falas com o Orc King"},
+    {"text": "Uma equipa forte para a missão 3 (subir ao topo da fortaleza dos Marids)"}
+  ],
+  "rewards": [
+    {"item": "Gold Coin", "qty": 600},
+    {"item": "Gemmed Lamp"},
+    {"text": "Permissão para negociar com {npc:Yaman} e {npc:Alesar}"},
+    {"text": "Possibilidade de caçar {creature:Marid|Marids} e {creature:Blue Djinn|Blue Djinns} em Ankrahmun e Yalahar"},
+    {"text": "Acesso à task de caça de Blue Djinns ({wiki:Killing in the Name of... Quest|Killing in the Name of...}) com o {npc:Malor}"}
+  ],
+  "unlocks": [
+    {"what": "Comércio com Yaman e Alesar", "kind": "loja", "place": "Mal'ouquah", "when": "Missão 3 (*Orc Fortress*): ao reportares ao {npc:Malor}, passas a poder negociar com o {npc:Yaman} e o {npc:Alesar}.", "note": "Só podes aliar-te a **uma** facção: depois desta já não podes fazer a {wiki:The Djinn War - Marid Faction}."},
+    {"what": "Caçar Marids e Blue Djinns em Ankrahmun e Yalahar", "kind": "funcionalidade", "when": "Com a quest concluída."},
+    {"what": "Task de caça a Blue Djinns", "kind": "funcionalidade", "place": "Killing in the Name of... Quest", "when": "Missão 3 (*Orc Fortress*): depois de reportares, pede uma {key:task} ao {npc:Malor}."}
+  ],
+  "dangers": ["Blue Djinn", "Marid", "Fire Elemental", "Scarab", "Stone Golem", "Orc Warlord", "Orc Leader", "Orc Berserker", "Orc Warrior", "Scorpion", "Hyaena"],
+  "npcs": ["Melchior", "Ubaid", "Baa'Leal", "Partos", "Alesar", "Malor", "The Orc King", "Yaman"],
+  "tips": [
+    "Se ainda não fizeste a {wiki:To Appease the Mighty Quest|To Appease the Mighty Quest} (20 {item:Platinum Coin|Platinum Coins}), faz-a **antes** de começares a Djinn War: depois já não é possível.",
+    "A escolha é definitiva: depois de te aliares aos Efreets não podes trabalhar para os Marids. Os Efreets e os Marids compram e vendem itens diferentes.",
+    "Cumprimenta os djinns com {key:DJANNI'HAH} (em vez de {key:hi}) até te juntares aos Efreets. Depois disso, {key:hi} também funciona.",
+    "Leva {item:Dwarven Ring|Dwarven Rings} e companheiros (bons atiradores e bloqueadores) para as visitas à fortaleza dos Marids."
+  ],
+  "sections": [
+    {
+      "title": "1. Aprender a palavra de saudação",
+      "steps": [
+        {
+          "title": "Falar com o Melchior",
+          "text": "Viaja até {wiki:Ankrahmun|Ankrahmun} de barco (por exemplo, de Venore com o {npc:Captain Fearless} ou de Edron com o {npc:Captain Seahorse}: {key:hi}, {key:ankrahmun}, {key:yes}); desembarcas junto ao {npc:Captain Sinbeard}. Em Ankrahmun, procura o mendigo cego {npc:Melchior}, que anda pelas ruas. Diz {key:hi} e {key:word of greeting}. Ele ensina-te a palavra dos djinns: **DJANNI'HAH**. A partir daqui podes entrar em qualquer uma das fortalezas.",
+          "npc": "Melchior",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings, Player. I do not see your face, but I can read a thousand things in your voice!"},
+            {"you": "word of greeting"},
+            {"npc": "[...] I can tell you the word of greeting if you're interested. It is DJANNI'HAH. Remember this word well, stranger. It might save your life one day. ..."},
+            {"npc": "And keep in mind that you must choose sides in this conflict. You can only follow the Efreet or the Marid - once you have made your choice there is no way back. [...]"}
+          ],
+          "coords": [{"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Entrar em Mal'ouquah e juntar-te aos Efreets",
+      "steps": [
+        {
+          "title": "Ir até à fortaleza verde",
+          "text": "Sobe a rampa a **oeste** do oásis e segue o caminho para **oeste** até veres as {item:Door of Expertise|portas de expertise} de nível 30. Atrás delas fica {wiki:Mal'ouquah|Mal'ouquah}, a fortaleza dos djinns verdes. Para saíres, volta pelo mesmo caminho até à rampa e desce para Ankrahmun.",
+          "coords": [{"x": 33101, "y": 32657, "z": 7, "label": "Rampa a oeste do oásis"}]
+        },
+        {
+          "title": "Falar com o Ubaid",
+          "text": "À entrada, fala com o {npc:Ubaid} dizendo {key:DJANNI'HAH} (não digas \"hi\"). Pede {key:passage}. Quando ele te mandar embora, responde {key:no}. Quando te perguntar se queres lutar contra os Marids, diz {key:yes} e jura lealdade ao rei Malor com {key:yes}. Ele manda-te falar com o general {npc:Baa'Leal}.",
+          "npc": "Ubaid",
+          "dialogue": [
+            {"you": "DJANNI'HAH"},
+            {"npc": "What? You know the word, Player? All right then - I won't kill you. At least, not now."},
+            {"you": "passage"},
+            {"npc": "Only the mighty Efreet, the true djinn of Tibia, may enter Mal'ouquah! [...] All Marids and little worms like yourself should leave now or something bad may happen. Am I right?"},
+            {"you": "no"},
+            {"npc": "[...] Would you be interested in working for us. Helping to fight the Marid?"},
+            {"you": "yes"},
+            {"npc": "So you pledge loyalty to king Malor and you are willing to never ever set foot on Marids' territory, unless you want to kill them? Yes?"},
+            {"you": "yes"},
+            {"npc": "Well then - welcome to Mal'ouquah. [...] Go now to general Baa'leal and don't forget to greet him correctly!"}
+          ],
+          "warning": "Esta escolha é definitiva: a partir daqui ficas do lado dos Efreets."
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 1: The Supply Thief",
+      "steps": [
+        {
+          "title": "Pedir a missão ao Baa'leal",
+          "text": "Fala com o {npc:Baa'Leal} usando {key:DJANNI'HAH}, depois {key:mission} e {key:yes}. Ele manda-te a Thais procurar o ladrão dos mantimentos.",
+          "npc": "Baa'Leal",
+          "dialogue": [
+            {"you": "DJANNI'HAH"},
+            {"npc": "You know the code human! Very well then... What do you want, Player?"},
+            {"you": "mission"},
+            {"npc": "[...] Since you are no djinn, there is something you could help us with. Are you interested, human?"},
+            {"you": "yes"},
+            {"npc": "[...] we have been told that the thief fled to the human settlement called Thais. I want you to find him and report back to me. [...]"}
+          ],
+          "warning": "Se não usares {key:DJANNI'HAH}, o Baa'leal lança-te *soulfire*: 150 ticks de dano de fogo, 1500 de dano no total, durante 12,5 minutos. Para te livrares disso vai a um templo para seres curado, salta para a água ou espera que passe."
+        },
+        {
+          "title": "Encontrar o Partos na prisão de Thais",
+          "text": "Viaja até **Thais** (de Ankrahmun, o {npc:Captain Sinbeard} leva-te a Venore, {key:venore}, e aí o {npc:Captain Fearless} leva-te a Thais, {key:thais}) e desce para a prisão no ponto indicado. Encontra o prisioneiro {npc:Partos} numa cela subterrânea. Diz {key:hi}, {key:ankrahmun} e {key:supplies}. Ele recusa-se a falar, mas já sabes o nome do ladrão: **Partos** (também fica no teu Quest Log). Sai da prisão pelas mesmas escadas.",
+          "npc": "Partos",
+          "coords": [{"x": 32320, "y": 32276, "z": 7, "label": "Descida para a prisão de Thais"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Welcome to my little kingdom, Player."},
+            {"you": "ankrahmun"},
+            {"npc": "Yes, I've lived in Ankrahmun for quite some time. Ahh, good old times! [...] Business reasons - you know."},
+            {"you": "supplies"},
+            {"npc": "What!? I bet, Baa'leal sent you! ... I won't tell you anything! Shove off!"}
+          ]
+        },
+        {
+          "title": "Reportar ao Baa'leal",
+          "text": "Volta a Mal'ouquah (em Thais, o {npc:Captain Bluebear} leva-te a Venore ou Edron, {key:venore}/{key:edron}, e daí apanhas o barco para Ankrahmun, {key:ankrahmun}) e diz ao {npc:Baa'Leal}: {key:DJANNI'HAH}, {key:mission}, {key:yes} e o nome do ladrão, {key:partos}. Recebes 600 gp e ele manda-te falar com o {npc:Alesar}.",
+          "npc": "Baa'Leal",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Did you find the thief of our supplies?"},
+            {"you": "yes"},
+            {"npc": "Finally! What is his name then?"},
+            {"you": "partos"},
+            {"npc": "You found the thief! Excellent work, soldier! [...] Here - take this as a reward. [...] If you are interested go to Alesar and ask him about it."}
+          ],
+          "reward": "600 {item:Gold Coin|gold coins}"
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 2: The Tear of Daraman",
+      "steps": [
+        {
+          "title": "Pedir a missão ao Alesar",
+          "text": "Fala com o {npc:Alesar}: {key:DJANNI'HAH}, {key:mission} e {key:yes}. Ele quer que roubes uma {item:Tear of Daraman} da fortaleza dos Marids, {wiki:Ashta'daramai|Ashta'daramai}.",
+          "npc": "Alesar",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Anyway. Are you prepared to embark on a dangerous mission for us?"},
+            {"you": "yes"},
+            {"npc": "[...] your mission is to sneak into Ashta'daramai and to steal it. [...] Try not to get killed until you have delivered the stone to me."}
+          ]
+        },
+        {
+          "title": "Encontrar a entrada secreta dos Marids",
+          "text": "Vai à rampa entre Ankrahmun e Darashia. Em vez de seguires para norte em direção a Darashia, segue a passagem para **oeste** e desce a rampa escondida a **sul**.",
+          "coords": [{"x": 33177, "y": 32558, "z": 7, "label": "Rampa entre Ankrahmun e Darashia"}],
+          "images": [{"file": "Green Djinn Map 01.jpg", "caption": "Caminho até à rampa escondida para a entrada secreta dos Marids"}]
+        },
+        {
+          "title": "Chegar à entrada secreta",
+          "text": "Depois de desceres a rampa vais encontrar um ou mais {creature:Stone Golem|Stone Golems}. Continua para **sul** até à entrada secreta da fortaleza dos djinns azuis."
+        },
+        {
+          "title": "Subir até ao 4.º andar",
+          "text": "Sobe as escadas até ao **4.º andar** (um andar acima dos {creature:Fire Elemental|Fire Elementals}). Procura duas fontes no lado **leste** da sala. Quanto mais subires, mais {creature:Blue Djinn|Blue Djinns}, {creature:Marid|Marids}, {creature:Fire Elemental|Fire Elementals} e {creature:Scarab|Scarabs} encontras.",
+          "warning": "Logo ao subires para o 3.º andar podes ter à tua espera até 5 Blue Djinns, 1 Marid, 4 Fire Elementals e 2 Scarabs!",
+          "tip": "Leva {item:Dwarven Ring|Dwarven Rings} e, se possível, bons atiradores e bloqueadores."
+        },
+        {
+          "title": "Usar a fonte do norte",
+          "text": "Das duas fontes, **usa a do norte**. A água faz ondas e aparece uma {item:Tear of Daraman} no chão, debaixo de ti. Apanha-a.",
+          "reward": "{item:Tear of Daraman}"
+        },
+        {
+          "title": "Sair da fortaleza dos Marids",
+          "text": "Desce as escadas pelo mesmo caminho até à entrada secreta, volta para **norte** até à rampa escondida e sobe-a. Daí regressa a Mal'ouquah pela rampa a oeste do oásis de Ankrahmun.",
+          "coords": [{"x": 33177, "y": 32558, "z": 7, "label": "Rampa entre Ankrahmun e Darashia"}, {"x": 33101, "y": 32657, "z": 7, "label": "Rampa a oeste do oásis (Mal'ouquah)"}]
+        },
+        {
+          "title": "Entregar a lágrima ao Alesar",
+          "text": "Volta ao {npc:Alesar} e diz {key:DJANNI'HAH}, {key:mission} e {key:yes}. Ele manda-te falar com o {npc:Malor}.",
+          "npc": "Alesar",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Did you find the tear of Daraman?"},
+            {"you": "yes"},
+            {"npc": "So you have made it? You have really managed to steal a Tear of Daraman? [...] Baa'leal, wants you to talk to Malor concerning some new mission. ..."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 3: Orc Fortress",
+      "steps": [
+        {
+          "title": "Pedir a missão ao Malor",
+          "text": "Sobe até ao rei {npc:Malor} e diz {key:DJANNI'HAH}, {key:mission} e {key:yes}. Ele quer a lâmpada de Fa'hradin, que está com o {npc:The Orc King|Orc King}, e quer que a troques pela lâmpada onde o Gabel dorme.",
+          "npc": "Malor",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] But think carefully, human, for this mission will bring you close to certain death. Are you prepared to embark on this mission?"},
+            {"you": "yes"},
+            {"npc": "Well, listen. We are trying to acquire the ultimate weapon to defeat Gabel: Fa'hradin's lamp! ..."},
+            {"npc": "[...] Once you have found the lamp you must enter Ashta'daramai again. Sneak into Gabel's personal chambers and exchange his sleeping lamp with Fa'hradin's lamp! ..."}
+          ]
+        },
+        {
+          "title": "Pedir a lâmpada ao Orc King",
+          "text": "Viaja até **Venore** (o {npc:Captain Sinbeard} leva-te lá: {key:hi}, {key:venore}, {key:yes}, 150 gp) e vai a pé para **noroeste** até {wiki:Ulderek's Rock|Ulderek's Rock} (Orc Fortress). Desce até à sala do trono, 2 andares abaixo do chão (para entrares na câmara precisas de **nível 40**), e fala com o {npc:The Orc King|Orc King}. Ao primeiro {key:hi} ele invoca muitos orcs. Diz {key:hi} outra vez, depois {key:lamp} e responde {key:malor}. Recebes a {item:Gemmed Lamp (Fa'hradin's)|lâmpada de Fa'hradin}.",
+          "npc": "The Orc King",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Arrrrgh! A dirty paleskin! To me my children! Kill them my guards!"},
+            {"you": "hi"},
+            {"npc": "Harrrrk! You think you are strong now? You shall never escape my wrath! I am immortal!"},
+            {"you": "lamp"},
+            {"npc": "[...] Who do you want to trap in this cursed lamp?"},
+            {"you": "malor"},
+            {"npc": "I was waiting for this day! Take the lamp and let Malor feel my wrath!"}
+          ],
+          "warning": "Ao dizeres {key:hi}, o Orc King faz aparecer vários tipos de orcs ({creature:Orc Warlord|Orc Warlords}, {creature:Orc Leader|Orc Leaders}, {creature:Orc Berserker|Orc Berserkers}...).",
+          "tip": "Põe uma {item:Poison Bomb Rune|poison bomb} centrada em ti antes de o cumprimentares: ajuda a não ficares cercado.",
+          "coords": [{"x": 32930, "y": 31774, "z": 7, "label": "Ulderek's Rock (Orc Fortress)"}, {"x": 32983, "y": 31728, "z": 9, "label": "Sala do trono do Orc King"}]
+        },
+        {
+          "title": "Sair de Ulderek's Rock",
+          "text": "Sai do forte pelo mesmo caminho por onde entraste e volta a pé para **sudeste** até Venore. Aí o {npc:Captain Fearless} leva-te a Ankrahmun ({key:hi}, {key:ankrahmun}, {key:yes}, 150 gp).",
+          "npc": "Captain Fearless",
+          "warning": "Não pares para descansar perto do forte: os orcs andam em grupos grandes."
+        },
+        {
+          "title": "Subir ao topo da fortaleza dos Marids",
+          "text": "Volta à entrada secreta da fortaleza dos djinns azuis (como na missão 2) e sobe as escadas **até ao topo**, onde fica o quarto pessoal do {npc:Gabel}.",
+          "warning": "Vais enfrentar MUITOS {creature:Blue Djinn|Blue Djinns}, {creature:Marid|Marids}, {creature:Scarab|Scarabs} e {creature:Fire Elemental|Fire Elementals}. No quarto há 3 Marids e as suas invocações. Leva pelo menos um {item:Dwarven Ring} e uma boa equipa: um knight de nível 80+ ou um paladin/mago de nível alto para o quarto. Um knight de nível 70+ consegue limpar o caminho até ao último andar, mas terá dificuldades no quarto."
+        },
+        {
+          "title": "Trocar as lâmpadas",
+          "text": "No quarto do Gabel, com a lâmpada de Fa'hradin no inventário, **usa** a lâmpada com pedras preciosas que está no balcão dele. Depois desce pelo mesmo caminho até à entrada secreta e sai pela rampa escondida, para **norte**."
+        },
+        {
+          "title": "Reportar ao Malor",
+          "text": "Volta ao {npc:Malor} em Mal'ouquah e diz {key:hi} (ou {key:DJANNI'HAH}), {key:mission} e {key:yes}. A partir de agora podes negociar com o {npc:Yaman} e o {npc:Alesar}. Podes também pedir ao Malor uma {key:task} de caça a Blue Djinns.",
+          "npc": "Malor",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Have you found Fa'hradin's lamp and placed it in Gabel's personal chambers?"},
+            {"you": "yes"},
+            {"npc": "Well, well, human. So you really made it - you have smuggled the modified lamp into Gabel's bedroom! [...] For now, I will confine myself to give you the permission to trade with my people whenever you want to. ..."}
+          ],
+          "reward": "Permissão para negociar com Yaman e Alesar"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se preferires aliar-te aos djinns azuis, faz antes a {wiki:The Djinn War - Marid Faction|The Djinn War - Marid Faction}. Não podes fazer as duas.",
+    "O {npc:Yaman} e o {npc:Alesar} compram e vendem equipamento diferente do dos Marids."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Devourer (Geography)",
+  "type": "zona",
+  "near": "Darashia",
+  "summary": "O **Devourer** é o deserto à volta de **Darashia**, à superfície, com nómadas, hienas, leões, muitas criaturas venenosas e as torres de vespas que produzem o mel de Darashia.",
+  "entrance": {"x": 33168, "y": 32392, "z": 7, "label": "Devourer (deserto de Darashia)"},
+  "arrive": [
+    "Vai a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).",
+    "Sai da cidade a pé: o deserto começa logo à volta de Darashia. A costa norte (onde aparece o teleporte da {wiki:Nightmare Isles Mini World Change}) fica a **norte** da cidade ({coord:33216,32273,7})."
+  ],
+  "leave": [
+    "Está tudo à superfície: volta a pé até Darashia.",
+    "No porto, o {npc:Petros} leva-te a Venore (60 gp), Ankrahmun (100), Liberty Bay (200), Port Hope (180), Yalahar (210), Gray Island (150), Issavi (130) ou Krailos (110): {key:hi}, o destino, {key:yes}. O {npc:Chemar} tem o tapete voador."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (porto de Darashia)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete de Darashia)"},
+    {"x": 33032, "y": 32356, "z": 7, "label": "Giant Spider confinada (oeste do deserto)"},
+    {"x": 33063, "y": 32397, "z": 7, "label": "Ilusão de um oásis"}
+  ],
+  "warnings": [
+    "A maioria das criaturas do deserto é venenosa ({creature:Scorpion|Scorpions}, {creature:Poison Spider|Poison Spiders}, {creature:Wasp|Wasps}); leva cura para o veneno. Há também {creature:Nomad|Nomads}, {creature:Hyaena|Hyaenas} e {creature:Lion|Lions}.",
+    "No oeste há uma {creature:Giant Spider} fechada e, mais a nordeste, a Dark Pyramid com {creature:Minotaur|Minotaurs}."
+  ]
+}

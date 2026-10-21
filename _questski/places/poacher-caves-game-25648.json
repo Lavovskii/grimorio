@@ -1,0 +1,27 @@
+{
+  "title": "Poacher Caves/Game",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Variante \"da caça\" das Poacher Caves, no **sul de {wiki:Ferngrims Gate}**, a norte do {wiki:Green Claw Swamp} (noroeste de Venore): grutas de 4 pisos com Wolves, War Wolves, Bears, Boars e alguns Wyverns no fundo.",
+  "entrance": {"x": 32754, "y": 31928, "z": 7, "label": "Entrada das Poacher Caves"},
+  "requirements": [
+    "Esta variante só está ativa em alguns dias: faz parte da {wiki:Poacher Caves Mini World Change} (noutros dias encontras as variantes Poachers ou Gloomy)."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Venore** ({key:hi}, {key:venore}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Fearless}.",
+    "Segue a pé para **noroeste**, passando a **norte** do Green Claw Swamp, até ao sul de Ferngrims Gate.",
+    "A entrada das grutas fica em {coord:32754,31928,7}; desce pelos buracos para os pisos de baixo."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada, usando a {item:Rope} nos buracos por onde desceste.",
+    "Regressa a pé para **sudeste** até Venore; no porto, o {npc:Captain Fearless} leva-te de barco a outras cidades."
+  ],
+  "coords": [
+    {"x": 32754, "y": 31928, "z": 7, "label": "Entrada/saída das Poacher Caves"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "No 4.º piso há uma gruta só com {creature:Wyvern|Wyverns}; o resto ({creature:War Wolf|War Wolves}, {creature:Bear|Bears}, {creature:Boar|Boars}) é acessível a níveis baixos."
+  ]
+}

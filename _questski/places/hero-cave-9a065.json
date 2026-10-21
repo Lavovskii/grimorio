@@ -1,0 +1,35 @@
+{
+  "title": "Hero Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Grande gruta (também chamada Edron Ruins) por baixo do vale a **norte de Edron**, perto de Cyclopolis e dos dragon lairs; tem o principal spawn de Demons e Heroes e muitas quests (Annihilator, Demon Helmet, Ring, Double Hero, entre outras).",
+  "entrance": {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (norte de Edron)"},
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Do porto, sai da cidade para **norte** até ao vale a norte de Edron: a entrada da Hero Cave fica em {coord:33164,31638,7}.",
+    "À entrada há {creature:Hunter|Hunters} (e {creature:Poacher|Poachers}) a guardá-la. Entra e desce pelo buraco.",
+    "Lá dentro, segue os mapas de cada piso (imagens abaixo) e usa a {item:Rope} e a {item:Shovel} nos buracos. O piso principal das quests e dos Demons é o **6.º piso** da gruta (piso -6)."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: refaz os mapas ao contrário, sobe as escadas por onde vieste e usa a {item:Rope} nos buracos por onde desceste, até à entrada da Hero Cave.",
+    "Cá fora, vai para **sul** até à cidade de **Edron**.",
+    "Para sair da ilha, fala com o {npc:Captain Seahorse} no porto: {key:hi}, o nome da cidade (por exemplo {key:thais}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"},
+    {"x": 33144, "y": 31639, "z": 11, "label": "Sala do Ungreez (4 andares abaixo da entrada)"},
+    {"x": 33162, "y": 31650, "z": 13, "label": "Teleporte para a zona da Demon Wars"}
+  ],
+  "images": [
+    {"file": "Hero Cave 1.png", "caption": "Hero Cave, piso 1"},
+    {"file": "Hero Cave 2.png", "caption": "Hero Cave, piso 2"},
+    {"file": "Hero Cave 3.png", "caption": "Hero Cave, piso 3"},
+    {"file": "Hero Cave 4.png", "caption": "Hero Cave, piso 4"},
+    {"file": "Hero Cave 5.png", "caption": "Hero Cave, piso 5"},
+    {"file": "Hero Cave 6.png", "caption": "Hero Cave, piso 6 (piso principal)"}
+  ],
+  "warnings": [
+    "Os {creature:Hunter|Hunters} à entrada atacam à distância; nos pisos de baixo há {creature:Necromancer|Necromancers}, {creature:Priestess|Priestesses}, {creature:Dragon|Dragons} e, no fundo, {creature:Demon|Demons} e {creature:Hero|Heroes}. A wiki recomenda nível 50+ (mages) a 70+ (knights), e 130+ para os Demons."
+  ]
+}

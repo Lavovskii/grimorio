@@ -1,0 +1,33 @@
+{
+  "title": "Temple of Equilibrium",
+  "type": "edificio",
+  "near": "Farmine",
+  "summary": "Templo em ruínas de 7 pisos no **norte das {wiki:Muggy Plains}**, em Zao, cheio de lagartos de elite; é a entrada para o {wiki:Fire Dragon Dojo}.",
+  "entrance": {"x": 33176, "y": 31199, "z": 7, "label": "Temple of Equilibrium"},
+  "requirements": [
+    "O teleporte lagarto para as {wiki:Muggy Plains} só funciona depois das **8 primeiras missões** da {wiki:The New Frontier Quest}.",
+    "Nível recomendado: 80+ (magos), 85+ (paladinos), 110+ (cavaleiros)."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: {npc:Brodrosch} em Kazordoon ou {npc:Gurbasch} em Cormaya ({key:hi}, {key:farmine}, {key:yes}).",
+    "Sai de Farmine para a estepe de Zao e usa o antigo teleporte lagarto no **norte** da estepe para chegares às {wiki:Muggy Plains}.",
+    "O templo fica no **norte** das Muggy Plains ({coord:33176,31199,7}).",
+    "Lá dentro, o lado direito do templo só se alcança subindo a torre até ao topo e descendo do outro lado; em alternativa, do 2.º piso (lado esquerdo) podes usar {spell:Levitate} para chegar ao 1.º piso do lado direito."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada do templo.",
+    "Atravessa as Muggy Plains para **sul** até ao teleporte lagarto, volta à estepe de Zao e a Farmine.",
+    "Em Farmine apanha o Steamship do {npc:Thorgrin} ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33187, "y": 31190, "z": 7, "label": "Ominous Trashcan (para o Breeding Ground)"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin (Steamship de Farmine)"}
+  ],
+  "images": [
+    {"file": "Temple of Equilibrium Map.png", "caption": "Mapa do Temple of Equilibrium"}
+  ],
+  "warnings": [
+    "O templo está cheio de {creature:Lizard Legionnaire|Lizard Legionnaires}, {creature:Lizard High Guard|Lizard High Guards}, {creature:Lizard Dragon Priest|Lizard Dragon Priests}, {creature:Lizard Zaogun|Lizard Zaoguns} e {creature:Lizard Chosen}; às vezes aparece o {creature:Battlemaster Zunzu}.",
+    "Nas Muggy Plains podem aparecer centenas de {creature:Lancer Beetle|Lancer Beetles}, que reduzem o skill de distância."
+  ]
+}

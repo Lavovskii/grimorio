@@ -1,0 +1,20 @@
+{
+  "title": "Suntower (Blessing)",
+  "type": "edificio",
+  "near": "Ab'Dendriel",
+  "summary": "Torre de 6 pisos dentro de uma árvore antiga, a **sul de Ab'Dendriel**, junto ao mar; no topo está a {npc:Edala}, que vende a bênção *The Fire of the Suns*. (Não confundir com a guildhall Suntower de Carlin.)",
+  "entrance": {"x": 32697, "y": 31719, "z": 7, "label": "Suntower (rés-do-chão)"},
+  "arrive": [
+    "Vai a **Ab'Dendriel** (de barco: no capitão da tua cidade diz {key:hi}, {key:ab'dendriel}, {key:yes}; chegas ao {npc:Captain Seagull}, {coord:32735,31668,6}).",
+    "Sai pelos portões da cidade e vai para **sul**/sudeste até à árvore antiga junto ao mar: lá dentro fica a Suntower ({coord:32697,31719,7}).",
+    "Sobe as escadas até ao topo: a {npc:Edala} está **5 andares acima** do chão ({coord:32698,31718,2})."
+  ],
+  "leave": [
+    "Desce pelas mesmas escadas até ao rés-do-chão.",
+    "Volta a pé para **norte** até Ab'Dendriel, onde o {npc:Captain Seagull} te leva de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32698, "y": 31718, "z": 2, "label": "Edala (topo da torre)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull — porto de Ab'Dendriel"}
+  ]
+}

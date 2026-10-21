@@ -1,0 +1,32 @@
+{
+  "title": "Upper Spike",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Os 3 primeiros andares de caça de {wiki:The Spike}, a estrutura de cristal dos gnomos que desce pela terra adentro; é a divisão dos **níveis 25 a 49** (tarefas do {npc:Gnomilly}, {wiki:Spike Tasks Quest}).",
+  "entrance": {"x": 32246, "y": 32601, "z": 8, "label": "The Spike — zona de chegada (Upper Spike)"},
+  "requirements": [
+    "**Premium** e nível **25 a 49**: só entras na divisão do teu nível (50–79 vai para a Middle Spike, 80+ para a Lower Spike).",
+    "Não precisas de {item:Teleport Crystal|Teleport Crystals} para chegar a The Spike."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon** (a pé pela entrada da montanha, ou de {wiki:Steamship} a partir de Cormaya ou Farmine: {key:hi}, {key:kazordoon}, {key:yes}).",
+    "Na zona do templo, entra no teleporte **norte**, perto do {npc:Xelvar} ({coord:32623,31857,11}). É um {item:Large Crystal Teleporter (Berg)|large crystal teleporter} e não gasta cristais.",
+    "Chegas a The Spike ({coord:32246,32601,8}); o {npc:Gnomilly}, responsável pela Upper Spike, está no piso -2 ({coord:32242,32598,9}). Sai da zona segura pelo large crystal teleporter para as grutas de caça."
+  ],
+  "leave": [
+    "Volta à zona segura da tua divisão e depois à zona onde chegaste à Spike.",
+    "Usa o teleporte de cristal de volta para a zona do templo de **Kazordoon** ({coord:32623,31857,11}). Daí sais a pé pela entrada da montanha ou pelo Steamship do {npc:Brodrosch}."
+  ],
+  "coords": [
+    {"x": 32623, "y": 31857, "z": 11, "label": "Teleporte para The Spike (templo de Kazordoon)"},
+    {"x": 32248, "y": 32604, "z": 8, "label": "Gnommander (piso -1 da Spike)"},
+    {"x": 32242, "y": 32598, "z": 9, "label": "Gnomilly (piso -2, Upper Spike)"}
+  ],
+  "images": [
+    {"file": "Summer 2013 Spike 1.png", "caption": "The Spike"}
+  ],
+  "warnings": [
+    "No primeiro andar de caça há {creature:Gargoyle|Gargoyles}, {creature:Mummy|Mummies}, {creature:Ghost|Ghosts}, {creature:Crypt Shambler|Crypt Shamblers}, {creature:Demon Skeleton|Demon Skeletons} e {creature:Zombie|Zombies}.",
+    "Leva um {item:Stealth Ring} para o caso de ficares encurralado."
+  ]
+}

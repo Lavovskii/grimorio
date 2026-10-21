@@ -1,0 +1,186 @@
+{
+  "slug": "barbarian-axe-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 3,
+  "duration": "45–90 min",
+  "summary": "Os orcs de Edron guardam bem o seu equipamento no esconderijo subterrâneo. Desce andar a andar pela {wiki:Edron Orc Cave|Edron Orc Cave}, enfrenta muitos {creature:Orc Berserker|Orc Berserkers} e abre a caixa no fim da última sala para receberes um {item:Barbarian Axe} e um {item:Scimitar}.",
+  "legend_pt": "Os orcs de Edron guardam bem o seu equipamento no seu esconderijo subterrâneo.",
+  "start": {
+    "x": 33173,
+    "y": 31900,
+    "z": 7,
+    "label": "Entrada da Edron Orc Cave"
+  },
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo, mas é recomendado nível 40+."
+  ],
+  "items_needed": [
+    {
+      "item": "Shovel"
+    },
+    {
+      "item": "Rope"
+    },
+    {
+      "item": "Stealth Ring",
+      "note": "aconselhável (não obrigatório) para o último andar"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Barbarian Axe"
+    },
+    {
+      "item": "Scimitar"
+    }
+  ],
+  "dangers": [
+    "Snake",
+    "Poison Spider",
+    "Orc",
+    "Orc Spearman",
+    "Orc Warrior",
+    "Orc Berserker",
+    "Orc Leader"
+  ],
+  "tips": [
+    "Mata sempre os {creature:Orc Berserker|Orc Berserkers} primeiro: são os que batem mais.",
+    "Leva poções suficientes: os últimos andares têm grupos grandes de Berserkers."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar à Edron Orc Cave",
+      "steps": [
+        {
+          "title": "Chegar a Edron",
+          "text": "Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.",
+          "coords": [
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse, porto de Edron"
+            }
+          ]
+        },
+        {
+          "title": "Entrar pela cave dos Edron Flats",
+          "text": "Entra na {wiki:Edron Orc Cave|Edron Orc Cave} por um buraco na cave dos **Edron Flats**. Os {wiki:Edron Flats|Edron Flats} são os apartamentos logo a **sul** do castelo de Edron: procura o {item:Sewer Grate} na cave, entra e segue o esgoto até saíres à superfície do outro lado.",
+          "images": [
+            {
+              "file": "Edron Orc Cave Sewer Grate.png",
+              "caption": "O Sewer Grate na cave dos Edron Flats"
+            }
+          ],
+          "warning": "Nunca vás sem {item:Shovel}: o sítio de entrada tem sempre de ser escavado e, sem pá, não consegues voltar a Edron sem a ajuda de outros jogadores."
+        },
+        {
+          "title": "Atravessar a superfície para sul",
+          "text": "Vai para **sul**, enfrentando {creature:Snake|Snakes}, {creature:Poison Spider|Poison Spiders}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors}. Desce pelo buraco que dá para uma gruta perto da costa mais a **sul**. A entrada da gruta está escondida debaixo de uma montanha: se não a vires, usa o minimapa.",
+          "coords": [
+            {
+              "x": 33173,
+              "y": 31900,
+              "z": 7,
+              "label": "Entrada da Edron Orc Cave"
+            }
+          ],
+          "images": [
+            {
+              "file": "Edron Orc Cave Ramp.png",
+              "caption": "A entrada da Edron Orc Cave, escondida debaixo da montanha"
+            }
+          ],
+          "tip": "Se, ao entrares no primeiro andar, o caminho estiver bloqueado por uma pedra, usa a alavanca ao lado para a tirar."
+        }
+      ],
+      "intro": "A {wiki:Edron Orc Cave|Edron Orc Cave} fica numa península de orcs a **sudoeste** do castelo de Edron, a que se chega por um esgoto na cave dos **Edron Flats**."
+    },
+    {
+      "title": "2. Descer pelos andares da gruta",
+      "steps": [
+        {
+          "title": "Primeiro andar",
+          "text": "Neste andar encontras {creature:Poison Spider|Poison Spiders}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors}. Segue a seta até ao buraco e desce.",
+          "images": [
+            {
+              "file": "Dark Armor Quest Map 01.jpg",
+              "caption": "Primeiro andar: segue a seta até ao buraco"
+            }
+          ]
+        },
+        {
+          "title": "Segundo andar",
+          "text": "Aqui encontras {creature:Poison Spider|Poison Spiders}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen}, {creature:Orc Warrior|Orc Warriors} e provavelmente um ou dois {creature:Orc Berserker|Orc Berserkers} puxados. Encontra o buraco seguinte e desce.",
+          "images": [
+            {
+              "file": "Barbarian Axe Quest Map 2.jpg",
+              "caption": "Segundo andar: caminho até ao buraco seguinte"
+            }
+          ]
+        },
+        {
+          "title": "Terceiro andar: usar o canto",
+          "text": "Assim que desces, enfrentas {creature:Orc Berserker|Orc Berserkers}, {creature:Poison Spider|Poison Spiders} e {creature:Orc Warrior|Orc Warriors}. Para poupares poções, põe-te no canto **inferior esquerdo** (sudoeste): assim só 3 monstros te podem bater ao mesmo tempo. Mata primeiro os Berserkers e depois desce pelo buraco.",
+          "images": [
+            {
+              "file": "Barbarian Axe Quest Map 3.jpg",
+              "caption": "Terceiro andar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. A sala final",
+      "steps": [
+        {
+          "title": "Sobreviver à chegada",
+          "text": "Logo depois de desceres o buraco vais encontrar 3 a 5 {creature:Orc Berserker|Orc Berserkers}. Segue a seta com cuidado: há mais Berserkers pelo caminho.",
+          "warning": "**Avança com cuidado!** Usar um {item:Stealth Ring} aqui é muito aconselhável.",
+          "images": [
+            {
+              "file": "Barbarian Axe Quest Map 4.jpg",
+              "caption": "Último andar: segue a seta até à sala final, a sul"
+            }
+          ]
+        },
+        {
+          "title": "Limpar a última sala",
+          "text": "Ao entrares na sala final, a **sul**, tens de enfrentar 3 ou mais {creature:Orc Berserker|Orc Berserkers}, 2 {creature:Orc Leader|Orc Leaders} e 2 a 3 {creature:Orc Warrior|Orc Warriors}."
+        },
+        {
+          "title": "Abrir a caixa",
+          "text": "Abre a caixa no extremo **sul** da sala para receberes a recompensa.",
+          "reward": "{item:Barbarian Axe} e {item:Scimitar}"
+        },
+        {
+          "title": "Sair da Edron Orc Cave",
+          "text": "Volta pelo mesmo caminho: em cada andar regressa ao sítio onde caíste e usa a {item:Rope} para subires (seguindo os mesmos mapas ao contrário). No primeiro andar volta para **norte** até à entrada e sai para a superfície.",
+          "coords": [
+            {
+              "x": 33173,
+              "y": 31900,
+              "z": 7,
+              "label": "Entrada/saída da Edron Orc Cave"
+            }
+          ]
+        },
+        {
+          "title": "Voltar a Edron",
+          "text": "À superfície, vai para **norte** até ao sítio por onde saíste do esgoto e refaz o caminho até à cave dos **Edron Flats** (escava a passagem com a {item:Shovel} se estiver tapada). No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades.",
+          "coords": [
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse, porto de Edron"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

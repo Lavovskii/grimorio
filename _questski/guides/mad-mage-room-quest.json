@@ -1,0 +1,164 @@
+{
+  "slug": "mad-mage-room-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 3,
+  "duration": "1–2 horas",
+  "summary": "O Mad Mage invocou mais monstros do que conseguia controlar, e o seu quarto, por baixo do Ancient Temple de Thais, ficou cheio de criaturas. Arranjas a chave do quarto com {npc:A Prisoner} em Mintwallin (resolvendo uma adivinha e dando-lhe maçãs), limpas a sala e abres os baús com o {item:Hat of the Mad}, o {item:Stone Skin Amulet} e o {item:Star Amulet}.",
+  "legend_pt": "O Mad Mage invocou mais monstros do que conseguia controlar.",
+  "start": {"x": 32356, "y": 32171, "z": 7, "label": "Ancient Temple, a norte de Thais"},
+  "requirements": [
+    "Nível mínimo 40 (recomendado 50+).",
+    "Não precisa de Premium.",
+    "{item:Key 3620} (para chegares ao {npc:A Prisoner}) e depois a {item:Key 3666} (para a porta do quarto)."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"},
+    {"item": "Key 3620", "note": "nas barracas a sul do Markwin, em Mintwallin"},
+    {"item": "Red Apple", "qty": 7, "note": "para trocar pela Key 3666"},
+    {"item": "Antidote", "note": "ou o feitiço Destroy Field, por causa dos Poison Fields"}
+  ],
+  "rewards": [
+    {"item": "Hat of the Mad"},
+    {"item": "Stone Skin Amulet"},
+    {"item": "Star Amulet"},
+    {"text": "Num outro baú da sala aparecem itens uma vez por dia: {item:Energy Ring}, {item:Silver Dagger}, {item:Strong Mana Potion|Strong Mana Potions}, {item:Blank Rune|Blank Runes}, {item:Throwing Star|Throwing Stars} e comida."}
+  ],
+  "achievements": [],
+  "dangers": ["Dragon", "Demon Skeleton", "Giant Spider", "Bonelord", "Skeleton", "Ghoul", "Scorpion", "Minotaur", "Cyclops", "Rotworm"],
+  "npcs": ["A Prisoner", "Markwin"],
+  "tips": [
+    "Vais passar pelo quarto do Mad Mage a caminho de Mintwallin. Primeiro tens de ir a Mintwallin buscar a chave, depois voltas ao quarto.",
+    "Leva as 7 {item:Red Apple|Red Apples} logo na primeira descida para não teres de voltar à superfície.",
+    "A sala do Mad Mage tem um {creature:Dragon} e vários {creature:Demon Skeleton|Demon Skeletons}: leva poções suficientes."
+  ],
+  "sections": [
+    {
+      "title": "1. Caminho desde o Ancient Temple",
+      "intro": "Este é o caminho da superfície até ao quarto do Mad Mage. É também o início da rota para Mintwallin.",
+      "steps": [
+        {
+          "title": "Entrar no Ancient Temple",
+          "text": "Vai ao {wiki:Ancient Temple}, a norte de **Thais**. Desce **dois andares** e vai o mais para **norte** que conseguires.",
+          "coords": [{"x": 32356, "y": 32171, "z": 7, "label": "Ancient Temple"}]
+        },
+        {
+          "title": "Andar dos Rotworms",
+          "text": "Desce até ao andar dos {creature:Rotworm|Rotworms}. Segue o caminho da imagem para **leste** e **sul** e desce a escada.",
+          "images": [{"file": "Route Mintwallin 1.png", "caption": "Caminho no andar dos Rotworms até à escada"}]
+        },
+        {
+          "title": "Andar dos Poison Fields",
+          "text": "Neste andar há muitos {item:Poison Field|Poison Fields}. Corre por cima deles e usa um {item:Antidote} depois, ou usa {spell:Destroy Field} para abrir caminho. Depois desce mais um andar."
+        },
+        {
+          "title": "Andar dos Minotauros",
+          "text": "Segue o caminho da imagem para **leste** e **norte**. Desce pelo buraco marcado com um círculo no mapa. Lá em baixo vais encontrar alguns {creature:Cyclops|Cyclopes}.",
+          "images": [{"file": "Route Mintwallin 2.png", "caption": "Caminho até ao buraco marcado"}],
+          "warning": "Cuidado com os {creature:Minotaur|Minotaurs} neste andar."
+        },
+        {
+          "title": "Sobe e desce",
+          "text": "Vai para **sul** pela passagem mais à esquerda. Sobe pelo buraco até uma salinha e sobe outra vez até outra sala. Aí vai até ao fim da passagem e desce pelo buraco até uma salinha, e desce outra vez.",
+          "images": [{"file": "Route Mintwallin 3.png", "caption": "Sobe duas vezes e desce duas vezes"}]
+        },
+        {
+          "title": "Até à porta de nível",
+          "text": "Vai para **sul**, depois **oeste**, depois **norte** e vira à **direita** em direção à porta de nível.",
+          "images": [{"file": "Mad Mage Room Quest Map 04.png", "caption": "Caminho até à porta de nível"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Arranjar a Key 3666 em Mintwallin",
+      "intro": "A chave do quarto do Mad Mage está com {npc:A Prisoner}, preso em Mintwallin. Segue a rota para Mintwallin ({wiki:Route:Mintwallin}) a partir do Ancient Temple.",
+      "steps": [
+        {
+          "title": "Chegar a Mintwallin",
+          "text": "Faz o caminho da secção 1 até ao buraco dos {creature:Cyclops|Cyclopes}. Depois de os matares, segue os mapas (linha azul, de A até B): neste troço não há monstros, exceto talvez um {creature:Rat}. Quando chegares a duas escadas, desce por qualquer uma e anda uns passos para **oeste**: estás no portão de Mintwallin.",
+          "images": [
+            {"file": "Route to Mintwallin 1.png", "caption": "Rota para Mintwallin: mapa 1 de 10"},
+            {"file": "Route to Mintwallin 2.png", "caption": "Rota para Mintwallin: mapa 2 de 10"},
+            {"file": "Route to Mintwallin 3.png", "caption": "Rota para Mintwallin: mapa 3 de 10"},
+            {"file": "Route to Mintwallin 4.png", "caption": "Rota para Mintwallin: mapa 4 de 10"},
+            {"file": "Route to Mintwallin 5.png", "caption": "Rota para Mintwallin: mapa 5 de 10"},
+            {"file": "Route to Mintwallin 6.png", "caption": "Rota para Mintwallin: mapa 6 de 10"},
+            {"file": "Route to Mintwallin 7.png", "caption": "Rota para Mintwallin: mapa 7 de 10"},
+            {"file": "Route to Mintwallin 8.png", "caption": "Rota para Mintwallin: mapa 8 de 10"},
+            {"file": "Route to Mintwallin 9.png", "caption": "Rota para Mintwallin: mapa 9 de 10"},
+            {"file": "Route to Mintwallin 10.png", "caption": "Rota para Mintwallin: mapa 10 de 10"}
+          ]
+        },
+        {
+          "title": "Arranjar a Key 3620",
+          "text": "Em **Mintwallin**, vai às barracas a **sul** do {npc:Markwin} para obteres a {item:Key 3620}, que abre a cela do prisioneiro.",
+          "warning": "Mintwallin está cheia de minotauros."
+        },
+        {
+          "title": "Responder à adivinha",
+          "text": "Vai à prisão de Mintwallin e fala com {npc:A Prisoner}. Diz {key:hi} e {key:riddle}. A adivinha pergunta por que ordem um Knight, um Druid, um Paladin e um Sorcerer conseguem atravessar uma ponte quando são perseguidos por orcs. A resposta certa é {key:PD-D-KS-P-PD}.",
+          "npc": "A Prisoner",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Huh? What? I can see! Wow! A non-mino. Did they capture you as well?"},
+            {"you": "riddle"},
+            {"npc": "Great riddle, isn´t it? If you can tell me the correct answer, I will give you something. Hehehe!"},
+            {"you": "PD-D-KS-P-PD"},
+            {"npc": "Hurray! For that I will give you my key for - hmm - let´s say ... some apples. Interested?"}
+          ],
+          "tip": "Há mais do que uma solução possível para a adivinha, mas só esta é aceite. Ela vem do livro {item:The Riddle (Book)} que está numa estante a nordeste do quarto do Mad Mage."
+        },
+        {
+          "title": "Trocar as maçãs pela chave",
+          "text": "Com as 7 {item:Red Apple|Red Apples} no inventário, diz {key:yes} quatro vezes. Recebes a {item:Key 3666} (chave de prata).",
+          "npc": "A Prisoner",
+          "dialogue": [
+            {"you": "yes"},
+            {"npc": "Mnjam - excellent apples. Now - about that key. You are sure want it?"},
+            {"you": "yes"},
+            {"npc": "Really, really?"},
+            {"you": "yes"},
+            {"npc": "Really, really, really, really?"},
+            {"you": "yes"},
+            {"npc": "Then take it and get happy - or die, hehe."}
+          ],
+          "reward": "Key 3666"
+        },
+        {
+          "title": "Sair de Mintwallin",
+          "text": "Para voltares ao quarto do Mad Mage, sai pelo portão de Mintwallin, sobe uma das duas escadas e refaz o caminho dos mapas ao contrário (de B até A) até à zona dos Cyclopes; depois segue o caminho da secção 1 até à porta de nível.",
+          "tip": "Se quiseres sair de Mintwallin para a superfície, há um atalho por um buraco com 2 {creature:Bonelord|Bonelords} (linha vermelha nos mapas), seguindo depois a linha azul até à saída. Atenção: o buraco do círculo vermelho é \"cego\" (cais por ele mas não consegues subir de volta com corda), por isso não dá para regressar a Mintwallin por aí."
+        }
+      ]
+    },
+    {
+      "title": "3. O quarto do Mad Mage",
+      "steps": [
+        {
+          "title": "Limpar a sala",
+          "text": "Volta à porta de nível da secção 1 (nível 40) e desce as escadas. A sala tem pelo menos um {creature:Dragon}, uma {creature:Giant Spider}, um {creature:Bonelord}, 3 {creature:Demon Skeleton|Demon Skeletons}, um {creature:Ghoul}, um {creature:Scorpion} e um {creature:Skeleton}. Limpa a sala.",
+          "images": [{"file": "Mad Mage Room Quest Map 05.jpg", "caption": "Sala dos monstros e porta trancada a sudeste"}],
+          "warning": "CUIDADO! Não desças sem poções: o Dragon e os Demon Skeletons juntos são perigosos para níveis baixos."
+        },
+        {
+          "title": "Abrir a porta trancada",
+          "text": "Vai para **sudeste** e abre a porta trancada com a {item:Key 3666}."
+        },
+        {
+          "title": "Subir e abrir os baús",
+          "text": "Passa a porta e sobe a escada. Enfrentas mais 3 {creature:Demon Skeleton|Demon Skeletons}. As recompensas estão nos {item:Chest (Quest)|baús} desta sala: {item:Hat of the Mad}, {item:Stone Skin Amulet} e {item:Star Amulet}.",
+          "reward": "Hat of the Mad, Stone Skin Amulet, Star Amulet"
+        },
+        {
+          "title": "Ver o baú diário",
+          "text": "Explora a sala: uma vez por dia aparecem num baú itens como {item:Energy Ring}, {item:Silver Dagger}, {item:Strong Mana Potion|Strong Mana Potions}, {item:Blank Rune|Blank Runes}, {item:Throwing Star|Throwing Stars} e comida."
+        },
+        {
+          "title": "Sair do quarto do Mad Mage",
+          "text": "Desce a escada, volta a passar a porta e sobe as escadas até à porta de nível. Depois refaz o caminho da secção 1 ao contrário: sobe pelos buracos (usa a {item:Rope}), atravessa outra vez o andar dos minotauros e o dos {item:Poison Field|Poison Fields}, sobe a escada do andar dos {creature:Rotworm|Rotworms} e os dois andares do Ancient Temple até saíres a norte de Thais."
+        }
+      ]
+    }
+  ]
+}

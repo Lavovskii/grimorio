@@ -1,0 +1,180 @@
+{
+  "slug": "strong-potions-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 3,
+  "duration": "30–60 min",
+  "summary": "Na {wiki:Hero Cave}, a norte de Edron, um grupo de {creature:Priestess|Priestesses} guarda algo muito valioso. Desce até ao piso de caça principal (onde se chega aos Demons), limpa a última sala e abre a caixa no canto para receberes 5 {item:Strong Mana Potion|Strong Mana Potions}.",
+  "legend_pt": "Um par de sacerdotisas guarda algo muito valioso para elas.",
+  "start": {
+    "x": 33164,
+    "y": 31638,
+    "z": 7,
+    "label": "Entrada da Hero Cave, a norte de Edron"
+  },
+  "requirements": [
+    "Premium Account (Edron).",
+    "Sem nível mínimo, mas recomendado 60+."
+  ],
+  "items_needed": [
+    {
+      "item": "Rope",
+      "note": "para voltares a subir pelos buracos ao sair"
+    },
+    {
+      "item": "Shovel"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Strong Mana Potion",
+      "qty": 5
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Poacher",
+    "Hunter",
+    "Wild Warrior",
+    "Bat",
+    "Bonelord",
+    "Demon Skeleton",
+    "Priestess",
+    "Stalker",
+    "Dragon",
+    "Dragon Hatchling",
+    "Orc Shaman",
+    "Witch",
+    "Dark Apprentice",
+    "Dark Magician",
+    "Minotaur Mage",
+    "Monk (Creature)",
+    "Hero",
+    "Stone Golem"
+  ],
+  "npcs": [],
+  "tips": [
+    "O piso -4 tem 3 {creature:Dragon|Dragons}: se fores nível baixo, passa com cuidado ou vai acompanhado.",
+    "Na mesma sala está o {item:Simon the Beggar's Favorite Staff}, usado noutra quest."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer a Hero Cave",
+      "intro": "Segue o caminho da Hero Cave até ao piso de caça principal, onde se chega aos {creature:Demon|Demons}.",
+      "steps": [
+        {
+          "title": "Chegar a Edron",
+          "text": "Se não estás em Edron, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de **Edron**, junto ao {npc:Captain Seahorse}.",
+          "coords": [
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Porto de Edron (Captain Seahorse)"
+            }
+          ]
+        },
+        {
+          "title": "Entrar na Hero Cave",
+          "text": "Do porto, vai para **norte** até à entrada da {wiki:Hero Cave}, a norte de **Edron**. Cuidado com os {creature:Hunter|Hunters} (e {creature:Poacher|Poachers}) no nível do chão, que guardam a entrada.",
+          "coords": [
+            {
+              "x": 33164,
+              "y": 31638,
+              "z": 7,
+              "label": "Entrada da Hero Cave"
+            }
+          ]
+        },
+        {
+          "title": "Pisos -1 a -3",
+          "text": "Desce os primeiros pisos. No -1 há {creature:Wild Warrior|Wild Warriors}. No -2 há um {creature:Bonelord}, {creature:Priestess|Priestesses}, {creature:Demon Skeleton|Demon Skeletons} e Wild Warriors. No -3 há Demon Skeletons, {creature:Monk (Creature)|Monks} e Wild Warriors.",
+          "images": [
+            {
+              "file": "TripleUHRune3.jpg",
+              "caption": "Piso -1: Wild Warriors"
+            },
+            {
+              "file": "TripleUHRune4.jpg",
+              "caption": "Piso -2: Bonelord, Priestesses, Demon Skeletons e Wild Warriors"
+            },
+            {
+              "file": "TripleUHRune5.jpg",
+              "caption": "Piso -3: Demon Skeletons, Monks e Wild Warriors"
+            }
+          ]
+        },
+        {
+          "title": "Pisos -4 e -5",
+          "text": "No -4 há 3 {creature:Dragon|Dragons}. No -5 há um {creature:Hero} e {creature:Monk (Creature)|Monks}.",
+          "images": [
+            {
+              "file": "TripleUHRune6.jpg",
+              "caption": "Piso -4: 3 Dragons"
+            },
+            {
+              "file": "TripleUHRune7.jpg",
+              "caption": "Piso -5: Hero e Monks"
+            }
+          ],
+          "warning": "Os Dragons do piso -4 são perigosos para níveis baixos."
+        },
+        {
+          "title": "Piso -6",
+          "text": "No -6 (o piso de caça principal) há {creature:Priestess|Priestesses}, {creature:Demon Skeleton|Demon Skeletons} e muitas outras criaturas. Procura a sala final das Priestesses.",
+          "images": [
+            {
+              "file": "SimonsStaffRoom.jpg",
+              "caption": "Piso -6: Priestesses, Demon Skeletons e muitas outras criaturas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A sala das Priestesses",
+      "steps": [
+        {
+          "title": "Limpar a sala",
+          "text": "A sala final tem 4 {creature:Priestess|Priestesses} e um {creature:Stone Golem}. Mata-os.",
+          "images": [
+            {
+              "file": "Simon_the_Beggar_staff.JPG",
+              "caption": "A sala final, onde também está o bastão do Simon the Beggar"
+            }
+          ]
+        },
+        {
+          "title": "Abrir a caixa",
+          "text": "As poções estão numa {item:Box|caixa} no canto da sala. Abre-a para receberes 5 {item:Strong Mana Potion|Strong Mana Potions}.",
+          "reward": "5 Strong Mana Potions"
+        }
+      ]
+    },
+    {
+      "title": "3. Sair da Hero Cave",
+      "steps": [
+        {
+          "title": "Voltar à superfície",
+          "text": "Para saíres, volta pelo **mesmo caminho**. Sobe as escadas de cada piso e usa a {item:Rope} nos buracos por onde desceste, do piso -6 até ao nível do chão. Cuidado outra vez com os Dragons do piso -4.",
+          "coords": [
+            {
+              "x": 33164,
+              "y": 31638,
+              "z": 7,
+              "label": "Entrada/saída da Hero Cave"
+            }
+          ]
+        },
+        {
+          "title": "Voltar a Edron",
+          "text": "Cá fora, vai para **sul** até à cidade de **Edron**. Se quiseres sair da ilha, fala com o {npc:Captain Seahorse} no porto ({key:hi} e o nome da cidade, por exemplo {key:thais}, e {key:yes}).",
+          "npc": "Captain Seahorse"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A mesma sala tem o {item:Simon the Beggar's Favorite Staff}."
+  ]
+}

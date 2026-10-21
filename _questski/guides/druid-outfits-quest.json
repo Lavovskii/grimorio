@@ -1,0 +1,562 @@
+{
+  "slug": "druid-outfits-quest",
+  "category": "outfit",
+  "region": "Ab'Dendriel",
+  "difficulty": 3,
+  "duration": "Addon 1: 15 min (com os itens); Addon 2: várias horas + espera pela flor (até 1 mês)",
+  "summary": "Os dois addons do {wiki:Druid Outfits|Druid Outfit}. O primeiro (patas de urso/lobo) é uma simples troca com o {npc:Ustan} em Port Hope. O segundo (pele de urso/lobo) exige ganhar o respeito do druida {npc:Ceiron}, em Ab'Dendriel, com quatro tarefas (uma flor rara em Nargor, água pura de uma gruta de hydras, pó de demónio e um colar perdido na Orc Fortress) até poderes falar com a loba Faolan em Cormaya.",
+  "legend_pt": "Druidas pacíficos e amantes da natureza podem gostar deste outfit, especialmente dos addons de aspeto animal. Ouvi dizer que há um druida a viver perto de Ab'Dendriel que pode fornecer addons adequados.",
+  "start": {
+    "x": 32669,
+    "y": 31715,
+    "z": 7,
+    "label": "Ceiron, perto de Ab'Dendriel"
+  },
+  "requirements": [
+    "Premium Account (o Druid Outfit base está disponível para todos os Premium; esta quest dá só os addons).",
+    "Sem nível mínimo, mas recomendado 100+ (hydras, demónios e Orc Fortress).",
+    "Acesso a {wiki:Nargor} para a flor Griffinclaw."
+  ],
+  "items_needed": [
+    {
+      "item": "Bear Paw",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Wolf Paw",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Botanist's Container (Empty)",
+      "note": "dado pelo Ceiron (missão 1)"
+    },
+    {
+      "item": "Ceiron's Waterskin",
+      "note": "dado pelo Ceiron (missão 2)"
+    },
+    {
+      "item": "Demon Dust",
+      "note": "100 ounces (missão 3)"
+    },
+    {
+      "item": "Blessed Wooden Stake",
+      "note": "para tirar Demon Dust dos corpos de Demon"
+    },
+    {
+      "item": "Ceiron's Wolf Tooth Chain",
+      "note": "missão 4 (Orc Fortress ou comprado ao Black Bert)"
+    },
+    {
+      "item": "Rope",
+      "note": "para voltares a subir na Orc Fortress e nas grutas"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Addon 1 do Druid Outfit: Bear Paws (masculino) / Wolf Paws (feminino)"
+    },
+    {
+      "text": "Addon 2 do Druid Outfit: Bear Fur (masculino) / Wolf Fur (feminino)"
+    },
+    {
+      "text": "Achievement **Of Wolves and Bears**"
+    }
+  ],
+  "achievements": [
+    "Of Wolves and Bears"
+  ],
+  "dangers": [
+    "Orc",
+    "Orc Berserker",
+    "Orc Leader",
+    "Dragon",
+    "Demon",
+    "Hydra",
+    "Wolf",
+    "Bear"
+  ],
+  "npcs": [
+    "Ustan",
+    "Ceiron",
+    "A Majestic Warwolf",
+    "Black Bert"
+  ],
+  "tips": [
+    "Junta os 50 {item:Bear Paw|Bear Paws} e os 50 {item:Wolf Paw|Wolf Paws} antes de falar com o Ustan para poupar tempo.",
+    "A {item:Blooming Griffinclaw} só floresce mais ou menos uma vez por mês e fica em flor apenas entre dois Server Saves. Começa já a missão 1 e passa por Nargor regularmente.",
+    "Não percas o {item:Ceiron's Waterskin}: o Ceiron não aceita outro odre qualquer."
+  ],
+  "sections": [
+    {
+      "title": "1. Addon 1: Bear Paws / Wolf Paws (Ustan)",
+      "steps": [
+        {
+          "title": "Juntar as patas",
+          "text": "Junta 50 {item:Bear Paw|Bear Paws} e 50 {item:Wolf Paw|Wolf Paws}. Podes juntá-las antes de começar.",
+          "images": [
+            {
+              "file": "Outfit Druid Male Addon 1.gif",
+              "caption": "Druid masculino com o addon Bear Paws"
+            },
+            {
+              "file": "Outfit Druid Female Addon 1.gif",
+              "caption": "Druid feminino com o addon Wolf Paws"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Ustan",
+          "text": "Vai a **Port Hope** e sobe ao andar de cima onde está o {npc:Ustan}. Diz {key:hi}, {key:addon}, {key:bear paws} e {key:yes}. Ele fica com as patas e dá-te o addon. Para chegares a Port Hope, apanha o barco no porto da tua cidade ({key:hi}, {key:port hope}, {key:yes}; por exemplo o {npc:Captain Bluebear} em Thais). Chegas junto ao {npc:Charles}, que também te leva de volta.",
+          "npc": "Ustan",
+          "coords": [
+            {
+              "x": 32576,
+              "y": 32754,
+              "z": 7,
+              "label": "Casa do Ustan (sobe as escadas)"
+            },
+            {
+              "x": 32529,
+              "y": 32785,
+              "z": 6,
+              "label": "Charles (porto de Port Hope)"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Crunor's blessing, traveller. I'm a druid teacher."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "Would you like to wear bear paws like I do? No problem, just bring me 50 bear paws and 50 wolf paws and I'll fit them on."
+            },
+            {
+              "you": "bear paws"
+            },
+            {
+              "npc": "Have you brought 50 bear paws and 50 wolf paws?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Excellent! Like promised, here are your bear paws."
+            }
+          ],
+          "reward": "Addon Bear Paws / Wolf Paws"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 2 — Missão 1: a Griffinclaw florida (Nargor)",
+      "intro": "Para o segundo addon tens de ganhar a confiança do {npc:Ceiron} e depois da {npc:A Majestic Warwolf|loba Faolan}. Primeiro tens de aprender a língua dos lobos.",
+      "steps": [
+        {
+          "title": "Falar com o Ceiron",
+          "text": "Vai a **Ab'Dendriel** e fala com o druida {npc:Ceiron}: diz {key:hi}, {key:outfit}, {key:faolan}, {key:yes} e {key:yes}. Ele dá-te um {item:Botanist's Container (Empty)} e pede uma amostra da Griffinclaw florida.",
+          "npc": "Ceiron",
+          "coords": [
+            {
+              "x": 32669,
+              "y": 31715,
+              "z": 7,
+              "label": "Ceiron"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "outfit"
+            },
+            {
+              "npc": "[...] Only Faolan can grant you a fur like this one."
+            },
+            {
+              "you": "faolan"
+            },
+            {
+              "npc": "I know where the great wolf mother lives, but I will not tell that to just anyone. You have to earn my respect first. Are you willing to help me?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] collect a sample of the blooming Griffinclaw for me. [...] Have you understood everything I told you and will fullfil this task for me?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Alright then. Take this botanist's container and return to me once you were able to retrieve a sample. Don't lose patience!"
+            }
+          ],
+          "tip": "Se perderes o recipiente, o Ceiron não te dá outro: tens de comprar um a um representante da {wiki:The Explorer Society}."
+        },
+        {
+          "title": "Chegar a Nargor",
+          "text": "{wiki:Nargor} é uma ilha dos piratas a oeste de Liberty Bay. Apanha um barco para **Liberty Bay**. Aí fala com o {npc:Captain Waverider}: {key:hi}, {key:peg leg}, {key:yes} (50 gp) para ires a **Meriana**. Em Meriana, a **sul** de Sabrehaven, pede ao {npc:Sebastian} {key:hi}, {key:nargor}, {key:yes} (50 gp).",
+          "coords": [
+            {
+              "x": 32347,
+              "y": 32859,
+              "z": 7,
+              "label": "Captain Waverider (Liberty Bay)"
+            },
+            {
+              "x": 32347,
+              "y": 32623,
+              "z": 7,
+              "label": "Sebastian (Meriana)"
+            },
+            {
+              "x": 31994,
+              "y": 32860,
+              "z": 7,
+              "label": "Nargor"
+            }
+          ],
+          "images": [
+            {
+              "file": "Map nargor.jpg",
+              "caption": "Mapa de Nargor"
+            }
+          ],
+          "warning": "O Waverider só te leva a Meriana depois da missão *Access to Meriana* da {wiki:The Shattered Isles Quest}."
+        },
+        {
+          "title": "Encontrar a flor em Nargor",
+          "text": "Vai a {wiki:Nargor} e sobe ao 3.º andar acima do chão, na zona **nordeste**. Lá está a Griffinclaw. Normalmente está {item:Dry Griffinclaw|seca} e não serve. Floresce mais ou menos uma vez por mês e fica em flor só entre dois {wiki:Server Save|Server Saves}: podes ter de voltar muitas vezes.",
+          "coords": [
+            {
+              "x": 32024,
+              "y": 32831,
+              "z": 4,
+              "label": "Griffinclaw em Nargor (3 andares acima)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Blooming griffinclaw.PNG",
+              "caption": "A Blooming Griffinclaw em Nargor"
+            }
+          ],
+          "warning": "Nargor está cheia de piratas. Vai preparado."
+        },
+        {
+          "title": "Recolher a amostra",
+          "text": "Quando a encontrares em flor ({item:Blooming Griffinclaw}), usa o {item:Botanist's Container (Empty)} nela. Recebes um {item:Griffinclaw Container}.",
+          "tip": "Se tentares recolher mais de uma amostra aparece: *\"You just collected a fragile griffinclaw. At least wait for the rest of the plant to recover a bit before gathering more.\"* Se já tens este addon, não consegues voltar a interagir com a flor."
+        },
+        {
+          "title": "Sair de Nargor",
+          "text": "Desce da montanha pelo mesmo caminho até ao sítio onde desembarcaste e fala com o {npc:Sebastian} de Nargor: {key:hi}, {key:liberty bay}, {key:yes} (100 gp) para voltares diretamente a Liberty Bay (ou {key:meriana}, 50 gp). Para Ab'Dendriel, apanha um barco em Liberty Bay (por exemplo para Venore ou Thais e daí para Ab'Dendriel).",
+          "coords": [
+            {
+              "x": 32024,
+              "y": 32815,
+              "z": 7,
+              "label": "Sebastian em Nargor (regresso)"
+            }
+          ]
+        },
+        {
+          "title": "Entregar a flor",
+          "text": "Volta ao Ceiron e diz {key:hi}, {key:griffinclaw} e {key:yes}.",
+          "npc": "Ceiron",
+          "dialogue": [
+            {
+              "you": "griffinclaw"
+            },
+            {
+              "npc": "Were you able to obtain a sample of the Griffinclaw?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Crunor be praised! The Griffinclaw really exists! [...] If you are ready to help me again, just ask me for a task."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 2: água pura da gruta das hydras",
+      "steps": [
+        {
+          "title": "Pedir a tarefa",
+          "text": "Diz ao Ceiron {key:hi}, {key:task} e {key:yes}. Ele dá-te o {item:Ceiron's Waterskin}.",
+          "npc": "Ceiron",
+          "dialogue": [
+            {
+              "you": "task"
+            },
+            {
+              "npc": "[...] In the mountains between Ankrahmun and Tiquanda are two hydra lairs. The northern one has many waterfalls whereas the southern one has just tiny water trickles. [...] It is important that you take the water directly from the trickle, not from the pond [...]"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Great! Here, take my waterskin and try to fill it with water from this special trickle. Don't lose my waterskin, I will not accept some random dirty waterskin."
+            }
+          ]
+        },
+        {
+          "title": "Ir à gruta das hydras",
+          "text": "Vai ao spawn de {creature:Hydra|Hydras} nas montanhas entre Ankrahmun e Tiquanda e dirige-te ao lago mais a **leste** (um andar acima). O caminho mais simples é a partir de **Ankrahmun** pelo {wiki:Kha'zeel Pass}: sai da cidade para **oeste** e sobe as montanhas ({creature:Hyaena|Hyaenas}), atravessa a ponte lá em cima (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce até à escada para o lado da selva; o spawn das hydras fica nas montanhas a **norte** dessa zona (ver coordenadas). Também podes vir a pé de **Port Hope**, para leste através da selva de Tiquanda.",
+          "coords": [
+            {
+              "x": 32987,
+              "y": 32681,
+              "z": 7,
+              "label": "Spawn de hydras"
+            },
+            {
+              "x": 33024,
+              "y": 32673,
+              "z": 6,
+              "label": "Lago mais a leste (fio de água)"
+            }
+          ],
+          "warning": "As {creature:Hydra|Hydras} são perigosas. Vai com nível e suprimentos adequados.",
+          "images": [
+            {
+              "file": "Ank PH Route1.png",
+              "caption": "De Ankrahmun pelo Kha'zeel Pass (1)"
+            },
+            {
+              "file": "Ank PH Route2.png",
+              "caption": "De Ankrahmun pelo Kha'zeel Pass (2)"
+            },
+            {
+              "file": "Ank PH Route3.png",
+              "caption": "De Ankrahmun pelo Kha'zeel Pass (3)"
+            }
+          ]
+        },
+        {
+          "title": "Encher o odre",
+          "text": "Usa o {item:Ceiron's Waterskin} diretamente no **fio de água** (\"trickle\"), não no lago: usar no lago não faz nada. Quando funciona vês o {item:Ripple Effect|efeito de ondulação}."
+        },
+        {
+          "title": "Sair da zona das hydras",
+          "text": "Volta pelo mesmo caminho: desce ao andar do spawn e regressa pela ponte do Kha'zeel Pass até **Ankrahmun** (ou pela selva até **Port Hope**). Em Ankrahmun, o {npc:Captain Sinbeard} leva-te de barco a Edron, Venore e outras cidades; de lá segues para Ab'Dendriel.",
+          "coords": [
+            {
+              "x": 33094,
+              "y": 32884,
+              "z": 6,
+              "label": "Captain Sinbeard (Ankrahmun)"
+            }
+          ]
+        },
+        {
+          "title": "Entregar a água",
+          "text": "Volta ao Ceiron e diz {key:hi}, {key:water} e {key:yes}.",
+          "npc": "Ceiron"
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 3: 100 ounces de Demon Dust",
+      "steps": [
+        {
+          "title": "Pedir a tarefa",
+          "text": "Diz ao Ceiron {key:hi}, {key:task} e {key:yes}. Ele quer 100 ounces de {item:Demon Dust} como prova de que estás \"do lado certo, contra Zathroth\".",
+          "npc": "Ceiron"
+        },
+        {
+          "title": "Juntar o Demon Dust",
+          "text": "Compra o {item:Demon Dust} a outros jogadores, ou usa um {item:Blessed Wooden Stake} no corpo fresco de um {creature:Demon} (nem sempre funciona). O Ceiron diz que um sacerdote te pode ajudar a obter a estaca abençoada.",
+          "warning": "Os {creature:Demon|Demons} são muito perigosos. Só caces se tiveres nível e equipa para isso; caso contrário, compra o pó."
+        },
+        {
+          "title": "Entregar o pó",
+          "text": "Volta ao Ceiron e diz {key:hi}, {key:demon dust} e {key:yes}.",
+          "npc": "Ceiron"
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 4: o colar de dentes de lobo",
+      "steps": [
+        {
+          "title": "Pedir a tarefa",
+          "text": "Diz ao Ceiron {key:hi}, {key:task} e {key:yes}. Ele perdeu o seu colar de dentes de lobo (tem a letra \"C\" gravada num dente) quando fugiu da {wiki:Orc Fortress}.",
+          "npc": "Ceiron"
+        },
+        {
+          "title": "Encontrar o colar na Orc Fortress",
+          "text": "A {wiki:Orc Fortress} (Ulderek's Rock) fica a **noroeste** de Venore e a **sudeste** de Ab'Dendriel (ver coordenada); vai a pé desde uma dessas cidades. Na {wiki:Orc Fortress}, desce ao mesmo piso da {wiki:Orc Fortress Quest}. O colar está numa sala escondida a **oeste das escadas**. Apanha o {item:Ceiron's Wolf Tooth Chain}. Fica **2 andares abaixo** do chão.",
+          "coords": [
+            {
+              "x": 32939,
+              "y": 31776,
+              "z": 9,
+              "label": "Sala escondida com o colar"
+            },
+            {
+              "x": 32930,
+              "y": 31774,
+              "z": 7,
+              "label": "Orc Fortress (Ulderek's Rock)"
+            }
+          ],
+          "warning": "A fortaleza está cheia de orcs fortes ({creature:Orc Berserker|Orc Berserkers}, {creature:Orc Leader|Orc Leaders}).",
+          "tip": "Desde o patch de 9 de fevereiro de 2021 também podes comprar o colar ao {npc:Black Bert}, em Thais."
+        },
+        {
+          "title": "Sair da Orc Fortress",
+          "text": "Volta pelo mesmo caminho: sobe as escadas (ou usa a {item:Rope} onde desceste por buracos) até à superfície da fortaleza e regressa a pé a Ab'Dendriel, para **noroeste**."
+        },
+        {
+          "title": "Entregar o colar",
+          "text": "Volta ao Ceiron e diz {key:hi}, {key:wolf tooth chain} e {key:yes}.",
+          "npc": "Ceiron",
+          "dialogue": [
+            {
+              "you": "wolf tooth chain"
+            },
+            {
+              "npc": "Have you really found my wolf tooth chain??"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Crunor be praised! You found my beloved chain! [...] Remind me to tell you about Faolan sometime."
+            }
+          ]
+        },
+        {
+          "title": "Aprender a língua dos lobos",
+          "text": "Diz ao Ceiron {key:hi} e {key:faolan}. Ele lança-te um feitiço para falares a língua dos lobos durante algum tempo e diz-te que a Faolan dorme numa gruta em Cormaya.",
+          "npc": "Ceiron",
+          "dialogue": [
+            {
+              "you": "faolan"
+            },
+            {
+              "npc": "Right, I will keep my promise. Faolan roams Tibia freely, but her favourite sleeping cave is on Cormaya. I will cast a spell on you that enables you to speak the wolf language for a while."
+            }
+          ],
+          "warning": "O feitiço dura apenas algum tempo: vai logo para Cormaya."
+        }
+      ]
+    },
+    {
+      "title": "6. Receber o addon da Faolan (Cormaya)",
+      "steps": [
+        {
+          "title": "Chegar a Cormaya",
+          "text": "O feitiço do Ceiron dura pouco, por isso vai logo. De Ab'Dendriel, o {npc:Captain Seagull} leva-te a **Edron** ({key:hi}, {key:edron}, {key:yes}, 70 gp). No barco a **norte** de Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}.",
+          "coords": [
+            {
+              "x": 32735,
+              "y": 31668,
+              "z": 6,
+              "label": "Captain Seagull (Ab'Dendriel)"
+            },
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse (Edron)"
+            },
+            {
+              "x": 33287,
+              "y": 31956,
+              "z": 6,
+              "label": "Porto norte de Cormaya (Pemaret)"
+            }
+          ]
+        },
+        {
+          "title": "Ir à gruta da loba",
+          "text": "Vai a **Cormaya** e desce à gruta de {npc:A Majestic Warwolf} pela entrada marcada.",
+          "coords": [
+            {
+              "x": 33364,
+              "y": 31975,
+              "z": 7,
+              "label": "Entrada da gruta (desce aqui)"
+            }
+          ]
+        },
+        {
+          "title": "Pedir o addon",
+          "text": "Diz à {npc:A Majestic Warwolf} {key:hi}, {key:addon} e {key:yes}. Recebes o segundo addon.",
+          "npc": "A Majestic Warwolf",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Interesting. A human who can speak the language of wolves."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "[...] You were patient enough to learn our language and I will grant you a special gift. Will you accept it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "From now on, you shall be known as Player, the bear warrior. You shall be strong and proud as Angros, the great dark bear. He shall guide your path."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Druid Male Addon 2.gif",
+              "caption": "Druid masculino com o addon Bear Fur"
+            },
+            {
+              "file": "Outfit Druid Female Addon 2.gif",
+              "caption": "Druid feminino com o addon Wolf Fur"
+            },
+            {
+              "file": "Outfit Druid Male Addon 3.gif",
+              "caption": "Druid masculino com os dois addons"
+            },
+            {
+              "file": "Outfit Druid Female Addon 3.gif",
+              "caption": "Druid feminino com os dois addons"
+            }
+          ],
+          "reward": "Addon Bear Fur / Wolf Fur + achievement Of Wolves and Bears"
+        },
+        {
+          "title": "Sair da gruta e de Cormaya",
+          "text": "Sobe pelo mesmo sítio por onde desceste para a gruta e volta ao porto **norte** de Cormaya. O {npc:Pemaret} leva-te a Edron ({key:hi}, {key:edron}, {key:yes}, 20 gp).",
+          "coords": [
+            {
+              "x": 33364,
+              "y": 31975,
+              "z": 7,
+              "label": "Entrada/saída da gruta"
+            },
+            {
+              "x": 33287,
+              "y": 31956,
+              "z": 6,
+              "label": "Pemaret (porto norte de Cormaya)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os dois addons são independentes: podes fazer o do Ustan sem fazer o do Ceiron e vice-versa.",
+    "Os addons ficam disponíveis para as versões masculina e feminina do Druid Outfit."
+  ]
+}

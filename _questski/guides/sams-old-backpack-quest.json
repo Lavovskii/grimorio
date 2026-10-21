@@ -1,0 +1,128 @@
+{
+  "slug": "sams-old-backpack-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "1–2 horas (depende da sorte com o orc raro)",
+  "summary": "O {npc:Sam}, ferreiro de Thais, perdeu a sua velha mochila de aventureiro num ataque de orcs em Ulderek's Rock. Encontra-a num orc raro da Orc Fortress, devolve-a ao Sam e ele manda-te ao seu amigo {npc:Kroox}, em Kazordoon, que te deixa ir buscar uma {item:Dwarven Armor} às minas dos anões.",
+  "legend_pt": "O Sam, o ferreiro de Thais, foi em tempos um explorador ávido e perdeu a sua mochila numa das suas aventuras.",
+  "start": {"x": 32360, "y": 32199, "z": 7, "label": "Sam, loja de armas em Thais"},
+  "requirements": [
+    "Nível mínimo 35 para abrir a porta de quest (recomendado 40+).",
+    "Não precisa de Premium: tudo se faz em zona Free.",
+    "Arma corpo-a-corpo (ou qualquer arma) para partir as {item:Spider Web|teias de aranha} no caminho para o baú."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "para sair dos buracos nas minas"},
+    {"item": "Shovel", "note": "ou equivalente, para os buracos das Dwarf Mines"},
+    {"item": "Old and Used Backpack", "note": "obtida no orc raro (passo 1)"}
+  ],
+  "rewards": [
+    {"item": "Dwarven Armor"},
+    {"text": "Achievement **Backpack Tourist**"}
+  ],
+  "achievements": ["Backpack Tourist"],
+  "dangers": ["Orc", "Orc Warrior", "Orc Berserker", "Orc Leader", "Dwarf Guard", "Dwarf Soldier", "Giant Spider"],
+  "npcs": ["Sam", "Kroox"],
+  "tips": [
+    "Leva uma mochila vazia para a Orc Fortress: o orc raro deixa cair a mochila do Sam e queres espaço para o loot.",
+    "Abre a {item:Old and Used Backpack} e tira tudo de lá antes de a entregares: o Sam deita fora qualquer item que esteja lá dentro.",
+    "As {creature:Giant Spider|Giant Spiders} nas minas são perigosas para níveis baixos. Se fores nível 40–50, vai com um amigo ou usa {wiki:Invisible|invisibilidade} e corre."
+  ],
+  "sections": [
+    {
+      "title": "1. Encontrar a mochila do Sam na Orc Fortress",
+      "intro": "A mochila foi roubada por um orc. Só um orc específico, que aparece raramente no canto nordeste da Orc Fortress (Ulderek's Rock), a pode deixar cair.",
+      "steps": [
+        {
+          "title": "Ir até à torre do Orc Powder",
+          "text": "Viaja até à **Orc Fortress** ({wiki:Ulderek's Rock|Ulderek's Rock}), a noroeste de Venore e a leste de Kazordoon: o mais simples é ir de barco até **Venore** e seguir a pé para **noroeste**. Dentro da fortaleza, dirige-te à ponta **nordeste**, junto à torre onde está o {item:Orc Powder}. É aqui que nasce o orc raro que carrega a mochila.",
+          "coords": [
+            {"x": 32930, "y": 31774, "z": 7, "label": "Ulderek's Rock (Orc Fortress)"},
+            {"x": 32980, "y": 31740, "z": 7, "label": "Spawn do orc raro (perto da torre do Orc Powder)"}
+          ],
+          "images": [{"file": "SamsOldBpQuest1.gif", "caption": "Local de spawn do orc que tem a mochila do Sam"}],
+          "warning": "A fortaleza está cheia de {creature:Orc Berserker|Orc Berserkers} e {creature:Orc Leader|Orc Leaders}. Não puxes demasiados de uma vez."
+        },
+        {
+          "title": "Matar o orc e lootar a mochila",
+          "text": "Mata os {creature:Orc|orcs} que aparecem nesse ponto até um deles deixar cair a {item:Old and Used Backpack}. A mochila é **vermelha, bordada** com a mensagem *\"Property of Sam, Thais.\"*. Pode demorar: o orc é um spawn raro, por isso fica a fazer respawn no local.",
+          "tip": "Tira todos os itens de dentro da mochila assim que a tiveres."
+        },
+        {
+          "title": "Sair da Orc Fortress",
+          "text": "Com a mochila, sai da fortaleza pelo mesmo caminho por onde entraste e volta a pé para **sudeste** até Venore. Daí apanha o barco para **Thais** ({key:hi}, {key:thais}, {key:yes})."
+        }
+      ]
+    },
+    {
+      "title": "2. Devolver a mochila ao Sam (Thais)",
+      "steps": [
+        {
+          "title": "Falar com o Sam",
+          "text": "Volta a **Thais** e vai à loja de armas do {npc:Sam}. Com a mochila no inventário, diz {key:hi}, depois {key:backpack} e confirma duas vezes com {key:yes}. Ganhas o achievement **Backpack Tourist** e o Sam pede-te para ires ter com o amigo dele, o {npc:Kroox}, em Kazordoon.",
+          "npc": "Sam",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Welcome to my shop, adventurer! I trade with weapons and armor."},
+            {"you": "backpack"},
+            {"npc": "What? Are you telling me you found my old adventurer's backpack that I lost years ago??"},
+            {"you": "yes"},
+            {"npc": "Is it in pristine condition? I'll throw away any items I find inside. Did you check if there's anything left in there you want to keep?"},
+            {"you": "yes"},
+            {"npc": "Thank you very much! [...] travel to Kazordoon and ask my old friend Kroox to provide you a special dwarven armor."}
+          ],
+          "reward": "Achievement Backpack Tourist"
+        }
+      ]
+    },
+    {
+      "title": "3. Falar com o Kroox (Kazordoon)",
+      "steps": [
+        {
+          "title": "Pedir a armadura",
+          "text": "Viaja até **Kazordoon**, a cidade dos anões dentro da montanha, a **leste** de Thais (vai a pé, ou pelo {wiki:Steamship|steamship} de Cormaya ou Farmine). Procura a loja de armaduras do {npc:Kroox} (Kroox Quality Armor), no piso -2 da cidade. Diz {key:hi} e depois {key:Sam sent me}. O Kroox não tem armaduras em stock, mas dá-te autorização para ires buscar uma às minas.",
+          "npc": "Kroox",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Welcome to Kroox Quality Armor!"},
+            {"you": "Sam sent me"},
+            {"npc": "Oh, so it's you, he wrote me about? Sadly I have no dwarven armor in stock. But I give you the permission to retrieve one from the mines."},
+            {"npc": "The problem is, some giant spiders made the tunnels where the storage is their new home. Good luck."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Ir buscar a Dwarven Armor às Dwarf Mines",
+      "steps": [
+        {
+          "title": "Descer até à zona da Crusader Helmet Quest",
+          "text": "Leva {item:Rope} e {item:Shovel}. A {wiki:Dwarf Mines|Pick 'N Shovel Mine} é a mina verde, com entrada a **oeste** de Kazordoon. Entra, segue para **leste** e desce pelo buraco; desce logo por outro buraco e segue bem para **oeste**; vai para **norte** e **oeste** e desce por mais um buraco. Aí segue para **leste** (há {creature:Dwarf Guard|Dwarf Guards}), vai para **norte** e passa a porta de expertise de **nível 35**; desce pelo buraco seguinte até ao túnel das aranhas, o local da {wiki:Crusader Helmet Quest}. Pelo caminho vais encontrar cerca de três {creature:Giant Spider|Giant Spiders} (há quatro na gruta) e várias {item:Spider Web|teias} que tens de partir com a arma.",
+          "warning": "As Giant Spiders envenenam e batem forte. Leva poções de vida e antídotos (ou o feitiço {spell:Cure Poison}).",
+          "coords": [
+            {"x": 32548, "y": 31987, "z": 7, "label": "Entrada da Pick 'N Shovel Mine"},
+            {"x": 32469, "y": 31972, "z": 12, "label": "Caminho para leste (Dwarf Guards)"},
+            {"x": 32477, "y": 31943, "z": 13, "label": "Buraco para o túnel das aranhas"}
+          ],
+          "images": [{"file": "Dwarf Mines 0.png", "caption": "Rés-do-chão das Dwarf Mines com as 6 entradas (a Pick 'N Shovel é a verde, E)"}]
+        },
+        {
+          "title": "Abrir a porta de quest e o baú",
+          "text": "**Antes** de chegares ao spot do Crusader Helmet, segue uma passagem que vai para **sul**. Encontras uma {item:Door (Sealed)|porta de quest} (precisa de nível 35) com um {item:Chest (Quest)|baú} lá dentro. Abre a porta, entra e abre o baú para receberes a tua {item:Dwarven Armor}.",
+          "coords": [{"x": 32455, "y": 31969, "z": 14, "label": "Porta de quest e baú da Dwarven Armor"}],
+          "reward": "Dwarven Armor"
+        },
+        {
+          "title": "Sair das Dwarf Mines",
+          "text": "Volta pelo mesmo caminho: regressa ao túnel das aranhas, sobe com a {item:Rope} pelos buracos por onde desceste, passa outra vez a porta de nível 35 e refaz a mina ao contrário até à entrada da Pick 'N Shovel Mine, a oeste de Kazordoon.",
+          "coords": [{"x": 32548, "y": 31987, "z": 7, "label": "Entrada/saída da Pick 'N Shovel Mine"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Só podes fazer esta quest **uma vez** por personagem.",
+    "Se o orc deixar cair outra {item:Old and Used Backpack}, podes usá-la como contentor normal, fazer a quest noutra personagem ou vendê-la a outro jogador."
+  ]
+}

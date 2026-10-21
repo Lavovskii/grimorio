@@ -1,0 +1,25 @@
+{
+  "title": "Tiquanda",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "A grande selva do continente de Darama, à volta de **Port Hope**, do outro lado das montanhas de {wiki:Kha'zeel} (a oeste de Ankrahmun e a sudoeste de Darashia), atravessada pelo rio Mahaji.",
+  "entrance": {"x": 32812, "y": 32699, "z": 7, "label": "Tiquanda (centro da selva)"},
+  "arrive": [
+    "Apanha um barco para **Port Hope**: diz ao capitão do porto {key:hi}, {key:port hope}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais). Chegas ao porto do {npc:Charles} ({coord:32529,32785,6}).",
+    "De Port Hope sai a pé para a selva: o noroeste e o norte (a caminho de {wiki:Banuta}) ficam para **norte/nordeste**, as ruínas e a zona de Trapwood para **sul/sudeste**.",
+    "Se tiveres o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope ({coord:32679,32775,7}), leva-te diretamente a Banuta por 30 gp."
+  ],
+  "leave": [
+    "Volta a pé pela selva até **Port Hope** (a oeste da selva, junto à costa).",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te a outras cidades ({key:hi}, o nome da cidade, por exemplo {key:edron}, e {key:yes})."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek (ferry para Banuta)"},
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"}
+  ],
+  "warnings": [
+    "Cuidado com as plantas e árvores: podes ficar encurralado na selva densa (sobretudo no centro, a Baksha).",
+    "A selva tem muitos monstros: {creature:Terror Bird|Terror Birds}, {creature:Tarantula|Tarantulas}, {creature:Carniphila|Carniphilas}, {creature:Crocodile|Crocodiles} e até {creature:Hydra|Hydras}; os mais fortes estão no sul e no extremo leste (nível 45–50+)."
+  ]
+}

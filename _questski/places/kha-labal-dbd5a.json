@@ -1,0 +1,31 @@
+{
+  "title": "Kha'labal",
+  "type": "zona",
+  "near": "Ankrahmun",
+  "summary": "O deserto à volta de **Ankrahmun** (entre Ankrahmun e Darashia), devastado pela guerra civil dos djinns; à superfície há poucas estruturas, mas por baixo da areia estão os túmulos dos faraós e grutas de {creature:Larva|Larvas} e {creature:Scarab|Scarabs}.",
+  "entrance": {"x": 33174, "y": 32695, "z": 7, "label": "Deserto de Kha'labal (norte de Ankrahmun)"},
+  "requirements": [
+    "Conta **Premium** para chegar de barco a Ankrahmun ou Darashia."
+  ],
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai de barco a **Ankrahmun** (por exemplo, com o {npc:Captain Seahorse} em Edron: {key:hi}, {key:ankrahmun}, {key:yes}); chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Sai da cidade para **norte** (pelo portão norte ou pela rampa **nordeste**): o deserto começa logo fora das muralhas ({coord:33174,32695,7}).",
+    "Também se chega a pé a partir de **Darashia**, seguindo para **sul** pelo deserto e pela passagem de montanha entre as duas cidades.",
+    "As entradas dos túmulos e das grutas estão escondidas na areia: abrem-se cavando com a {item:Shovel} no sítio certo."
+  ],
+  "leave": [
+    "O deserto é à superfície: volta a pé para **sul** até Ankrahmun (ou para **norte** até Darashia). Se estiveres num túmulo, sobe pelo buraco da entrada com a {item:Rope}.",
+    "Em Ankrahmun, o {npc:Captain Sinbeard} leva-te a Darashia, Venore, Edron, Port Hope, Liberty Bay ou Yalahar ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33174, "y": 32695, "z": 7, "label": "Kha'labal"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33077, "y": 32547, "z": 7, "label": "Entrada do Kha'zeel Scarab Lair (norte do deserto)"},
+    {"x": 33265, "y": 32653, "z": 7, "label": "Tar pits (teleporte do Nightmare Isles world change)"}
+  ],
+  "images": [{"file": "Minimap Floor 7.png", "caption": "Mapa da superfície"}],
+  "warnings": [
+    "À superfície há {creature:Hyaena|Hyaenas} e bandos de {creature:Nomad (Basic)|Nomads}; por baixo da areia, os túmulos têm mortos-vivos muito mais perigosos."
+  ]
+}

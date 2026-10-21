@@ -1,0 +1,23 @@
+{
+  "title": "Ghoul Hill",
+  "type": "zona",
+  "near": "Edron",
+  "summary": "Pequena colina com {creature:Ghoul|Ghouls} à superfície, a **nordeste de Edron** e a oeste de Cyclopolis; a nordeste dela há um pequeno cemitério com esqueletos e ghouls (o Unholy Cemetery).",
+  "entrance": {"x": 33203, "y": 31680, "z": 7, "label": "Ghoul Hill"},
+  "arrive": [
+    "Vai a **Edron**: de barco (no capitão da tua cidade diz {key:hi}, {key:edron}, {key:yes}; chegas ao {npc:Captain Seahorse}, {coord:33176,31764,6}) ou de tapete voador (chegas ao {npc:Pino}).",
+    "Sai de Edron para **norte**/nordeste, a pé pela superfície (não precisas de corda nem pá). Pelo caminho passas pelo acampamento dos {creature:Hunter|Hunters}.",
+    "Chegas à Ghoul Hill ({coord:33203,31680,7}); o Unholy Cemetery fica junto, à superfície ({coord:33196,31695,7})."
+  ],
+  "leave": [
+    "Volta a pé para **sul** até Edron, pelo mesmo caminho.",
+    "No porto de Edron, o {npc:Captain Seahorse} leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33196, "y": 31695, "z": 7, "label": "Unholy Cemetery"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"}
+  ],
+  "warnings": [
+    "Cuidado com os {creature:Hunter|Hunters} do acampamento por onde passas. No cemitério a nordeste há também {creature:Demon Skeleton|Demon Skeletons}."
+  ]
+}

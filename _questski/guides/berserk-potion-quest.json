@@ -1,0 +1,201 @@
+{
+  "slug": "berserk-potion-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Um aventureiro que morreu em Helheim, perto de Svargrond, deixou para trás alguns itens úteis. Desce três pisos da masmorra de Helheim, cheia de mortos-vivos, e procura o seu monte de ossos para ficares com uma {item:Berserk Potion}, 2 {item:Platinum Coin|Platinum Coins}, um {item:Shard} e 3 {item:Demonic Essence|Demonic Essences}.",
+  "legend_pt": "Um aventureiro que morreu em Helheim deixou para trás alguns itens úteis.",
+  "start": {
+    "x": 32254,
+    "y": 31195,
+    "z": 7,
+    "label": "Buddel, a sul de Svargrond"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Acesso a Helheim: {wiki:Barbarian Test Quest} e {wiki:The Ice Islands Quest} até à missão *The Secret of Helheim*.",
+    "Sem nível mínimo (recomendado 50+)."
+  ],
+  "items_needed": [
+    {
+      "item": "Rope"
+    },
+    {
+      "text": "Poções de vida e uma boa arma contra mortos-vivos"
+    },
+    {
+      "text": "50 gp por cada viagem com o {npc:Buddel} (ida e volta)."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Berserk Potion"
+    },
+    {
+      "item": "Platinum Coin",
+      "qty": 2
+    },
+    {
+      "item": "Shard"
+    },
+    {
+      "item": "Demonic Essence",
+      "qty": 3
+    }
+  ],
+  "dangers": [
+    "Ghoul",
+    "Mummy",
+    "Demon Skeleton",
+    "Crypt Shambler",
+    "Bonebeast"
+  ],
+  "npcs": [
+    "Buddel"
+  ],
+  "tips": [
+    "Para poupar tempo, faz esta quest ao mesmo tempo que a missão *The Secret of Helheim* da {wiki:Ice Islands Quest}."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a Helheim",
+      "steps": [
+        {
+          "title": "Falar com o Buddel",
+          "text": "A partir de **Svargrond**, vai para **sul** e encontra o {npc:Buddel} no seu barco. Pede-lhe uma viagem para Helheim: {key:hi}, {key:passage}, {key:helheim} e confirma com {key:yes}. Custa 50 gp e desembarcas no barco do Buddel em {wiki:Helheim} ({coord:32465,31174,7}).",
+          "npc": "Buddel",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "npc": "Where are we at the moment? Is this Svargrond? Ahh yes!*HICKS* Where do you want to go?"
+            },
+            {
+              "you": "helheim"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32254,
+              "y": 31195,
+              "z": 7,
+              "label": "Buddel, a sul de Svargrond"
+            },
+            {
+              "x": 32465,
+              "y": 31174,
+              "z": 7,
+              "label": "Buddel em Helheim (chegada)"
+            }
+          ],
+          "tip": "O Buddel está sempre bêbado e pode levar-te para o sítio errado. Com um {item:Dwarven Ring} na mochila leva-te ao destino certo (fica com o anel em vez dos 50 gp); diz {key:no} quando ele o pedir ou usa o anel no slot se não o quiseres perder."
+        },
+        {
+          "title": "Entrar na masmorra",
+          "text": "Ao chegares a Helheim, vai para **sudeste** a partir do barco do Buddel e sobe a montanha. Depois segue para **nordeste** e desce as **2 rampas** para entrares na masmorra.",
+          "images": [
+            {
+              "file": "Helheim Quest Route 1.png",
+              "caption": "Rota em Helheim (1/3): azul = início, verde = destino"
+            },
+            {
+              "file": "Map helheim.jpg",
+              "caption": "Mapa da ilha de Helheim"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Descer até ao monte de ossos",
+      "steps": [
+        {
+          "title": "Primeiro piso",
+          "text": "No primeiro piso vai até ao extremo **sul** da gruta e desce a rampa.",
+          "warning": "Aqui há {creature:Mummy|Mummies} e {creature:Ghoul|Ghouls}.",
+          "images": [
+            {
+              "file": "Helheim Quest Route 2.png",
+              "caption": "Rota em Helheim (2/3)"
+            }
+          ]
+        },
+        {
+          "title": "Segundo piso",
+          "text": "Vai para **oeste** até encontrares outra escada e desce.",
+          "warning": "Neste piso há {creature:Demon Skeleton|Demon Skeletons}, {creature:Crypt Shambler|Crypt Shamblers} e {creature:Mummy|Mummies}.",
+          "images": [
+            {
+              "file": "Helheim Quest Route 3.png",
+              "caption": "Rota em Helheim (3/3)"
+            }
+          ]
+        },
+        {
+          "title": "Terceiro piso e o tesouro",
+          "text": "Vai para **norte** até encontrares um {item:Pile of Bones (Quest)}. Abre o monte de ossos para receberes a recompensa.",
+          "warning": "Neste piso há {creature:Demon Skeleton|Demon Skeletons}, {creature:Crypt Shambler|Crypt Shamblers} e {creature:Bonebeast|Bonebeasts}. Junto aos ossos podem estar até 3 Bonebeasts e um Demon Skeleton ao mesmo tempo.",
+          "images": [
+            {
+              "file": "Berserk Potion Quest Map.png",
+              "caption": "Mapa da Berserk Potion Quest"
+            }
+          ],
+          "reward": "Berserk Potion, 2 Platinum Coins, Shard e 3 Demonic Essences"
+        }
+      ]
+    },
+    {
+      "title": "3. Voltar a Svargrond",
+      "steps": [
+        {
+          "title": "Sair de Helheim",
+          "text": "Volta pelo mesmo caminho: no 3.º piso regressa para **sul** até às escadas e sobe; no 2.º piso vai para **leste** até à rampa e sobe; no 1.º piso vai para **norte** e sobe as **2 rampas** até à superfície. Depois volta para **sudoeste**, desce a montanha e regressa para **noroeste** até ao barco do {npc:Buddel}. Diz {key:hi}, {key:passage}, {key:svargrond} e {key:yes} para voltares ao cais a sul de Svargrond.",
+          "npc": "Buddel",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "you": "svargrond"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32465,
+              "y": 31174,
+              "z": 7,
+              "label": "Buddel em Helheim (regresso)"
+            },
+            {
+              "x": 32254,
+              "y": 31195,
+              "z": 7,
+              "label": "Chegada: a sul de Svargrond"
+            }
+          ],
+          "images": [
+            {
+              "file": "Helheim Quest Route 1.png",
+              "caption": "Rota entre o barco e a entrada da masmorra (faz ao contrário para voltar)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

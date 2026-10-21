@@ -1,0 +1,75 @@
+{
+  "slug": "nightmare-isles-mini-world-change",
+  "category": "world-change",
+  "region": "Vários",
+  "difficulty": 5,
+  "duration": "Variável (zona de caça; ativo todos os dias)",
+  "summary": "Mini world change ativo todos os dias: uma tempestade de areia em Darama revela um teleporte para as temíveis {wiki:Nightmare Isles|Nightmare Isles}. O teleporte aparece num de três locais (perto de Drefia, no norte do Devourer ou em Kha'labal). Nas ilhas, criaturas terríveis guardam um {item:Nightmare Teddy}, que podes tentar obter.",
+  "start": {"x": 33037, "y": 32404, "z": 7, "label": "Um dos três locais possíveis do teleporte (perto do Plague Spike)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 250+**: as mensagens avisam que as criaturas são morte instantânea para aventureiros novos.",
+    "Este mini world change está ativo **todos os dias**; a mensagem do servidor diz-te em qual dos três locais está o teleporte."
+  ],
+  "items_needed": [
+    {"text": "Muitas poções e equipamento para caçar criaturas de nível alto ({creature:Silencer|Silencers}, {creature:Retching Horror|Retching Horrors}, {creature:Choking Fear|Choking Fears}, {creature:Terrorsleep|Terrorsleeps})."}
+  ],
+  "rewards": [
+    {"item": "Nightmare Teddy", "note": "possibilidade de o obter nas Nightmare Isles"}
+  ],
+  "unlocks": [
+    {"what": "Nightmare Isles", "kind": "zona", "place": "Nightmare Isles", "when": "Pelo teleporte que a tempestade de areia revela em Darama: perto de Drefia, no norte do Devourer ou nas tar pits de Kha'labal (a mensagem do servidor diz qual).", "note": "O mini world change está ativo todos os dias. Premium; nível recomendado 250+."},
+    {"what": "Nightmare Teddy Quest", "kind": "missao", "place": "Nightmare Teddy Quest", "when": "Nas Nightmare Isles, enquanto o mini world change estiver ativo."}
+  ],
+  "dangers": ["Silencer", "Retching Horror", "Choking Fear", "Terrorsleep"],
+  "tips": [
+    "Não entres nas ilhas sem preparação: as criaturas são muito perigosas.",
+    "Lê a mensagem do servidor ao entrar no jogo para saberes onde está o teleporte nesse dia."
+  ],
+  "sections": [
+    {
+      "title": "1. Descobrir onde está o teleporte hoje",
+      "intro": "Há três variantes do world change. Cada uma tem duas mensagens possíveis do servidor, que indicam onde apareceu o teleporte.",
+      "steps": [
+        {
+          "title": "Nightmare River — perto de Drefia",
+          "text": "Mensagens: *\"A sandstorm travels through Darama, leading to isles full of deadly creatures inside a nightmare. Avoid the river near Drefia!\"* ou *\"Near Drefia's mountains, a storm has revealed the entry to a nightmare that can't be sealed. Horrible creatures there spell instant death to all young adventurers who dare take a breath!\"*. O teleporte fica perto do {wiki:Plague Spike}, no deserto a **oeste** de Darashia, junto ao rio perto de Drefia.",
+          "coords": [{"x": 33037, "y": 32404, "z": 7, "label": "Teleporte (rio perto de Drefia / Plague Spike)"}]
+        },
+        {
+          "title": "Nightmare Coast — norte do Devourer",
+          "text": "Mensagens: *\"A sandstorm travels through Darama, leading to isles full of deadly creatures inside a nightmare. Avoid the northernmost coast!\"* ou *\"Near Darashia's coast, a storm has revealed the entry to a nightmare that can't be sealed. Horrible creatures there spell instant death to all young adventurers who dare take a breath!\"*. O teleporte fica no norte do {wiki:Devourer (Geography)|Devourer}, na costa a **norte** de Darashia.",
+          "coords": [{"x": 33216, "y": 32273, "z": 7, "label": "Teleporte (costa norte / Devourer)"}]
+        },
+        {
+          "title": "Nightmare in the Tar Pits — Kha'labal",
+          "text": "Mensagens: *\"A sandstorm travels through Darama, leading to isles full of deadly creatures inside a nightmare. Avoid the Ankrahmun tar pits!\"* ou *\"In Ankrahmun's desert, a storm has revealed the entry to a nightmare that can't be sealed. Horrible creatures there spell instant death to all young adventurers who dare take a breath!\"*. O teleporte fica em {wiki:Kha'labal}, no deserto a **norte** de Ankrahmun.",
+          "coords": [{"x": 33265, "y": 32653, "z": 7, "label": "Teleporte (tar pits de Ankrahmun / Kha'labal)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Entrar nas Nightmare Isles",
+      "steps": [
+        {
+          "title": "Usar o teleporte",
+          "text": "Vai ao local indicado pela mensagem do dia (de Darashia ou de Ankrahmun, a pé pelo deserto) e entra no teleporte. Ele leva-te às {wiki:Nightmare Isles|Nightmare Isles}: várias plataformas ligadas por escadas mágicas que funcionam como teleportes, como na Roshamuul Cistern."
+        },
+        {
+          "title": "Caçar e procurar o Nightmare Teddy",
+          "text": "Nas ilhas, criaturas temíveis guardam um {item:Nightmare Teddy}. Abre caminho por elas para teres a possibilidade de o obter.",
+          "warning": "Aqui vivem {creature:Silencer|Silencers}, {creature:Retching Horror|Retching Horrors}, {creature:Choking Fear|Choking Fears} e {creature:Terrorsleep|Terrorsleeps}. Não entres sem preparação.",
+          "reward": "Possibilidade de obter um Nightmare Teddy"
+        },
+        {
+          "title": "Sair das Nightmare Isles",
+          "text": "A wiki não descreve a saída das ilhas. Volta pelas mesmas escadas mágicas até à plataforma onde chegaste e procura aí o caminho de regresso ao deserto de Darama; depois volta a pé a Darashia ou a Ankrahmun.",
+          "warning": "Em algumas plataformas há mais de dez criaturas que te atacam todas ao mesmo tempo: não mudes de plataforma sem vida e mana suficientes, nem mesmo na volta."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Este mini world change não tem entrada no Quest Log nem NPCs."
+  ]
+}

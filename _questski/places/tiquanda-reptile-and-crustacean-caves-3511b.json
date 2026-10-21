@@ -1,0 +1,28 @@
+{
+  "title": "Tiquanda/Reptile and Crustacean Caves",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Sistema de grutas com 3 pisos logo a **norte de Port Hope**, na selva de Tiquanda, com {creature:Crocodile|Crocodiles}, {creature:Tortoise|Tortoises} e {creature:Blood Crab|Blood Crabs}; fica perto dos Swamp Trolls de Port Hope e das Tiquanda Bandit Caves.",
+  "entrance": {"x": 32595, "y": 32703, "z": 7, "label": "Buraco de entrada (norte de Port Hope)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Port Hope** de barco ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai da cidade para **norte**. Há quatro buracos de entrada, todos a norte da cidade: {coord:32613,32704,7}, {coord:32595,32703,7}, {coord:32550,32702,7} e {coord:32594,32654,7}.",
+    "Desce por um deles. O teleporte do boss {creature:The Snapper} (task de Crocodiles da {wiki:Killing in the Name of... Quest}) fica no 1.º piso subterrâneo ({coord:32608,32714,8})."
+  ],
+  "leave": [
+    "Volta a um dos buracos de entrada e usa a {item:Rope} para subires à superfície.",
+    "Regressa para **sul** até Port Hope; no porto, o {npc:Charles} leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32613, "y": 32704, "z": 7, "label": "Buraco de entrada 1"},
+    {"x": 32595, "y": 32703, "z": 7, "label": "Buraco de entrada 2"},
+    {"x": 32550, "y": 32702, "z": 7, "label": "Buraco de entrada 3"},
+    {"x": 32594, "y": 32654, "z": 7, "label": "Buraco de entrada 4"},
+    {"x": 32608, "y": 32714, "z": 8, "label": "Teleporte de The Snapper"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "warnings": [
+    "Zona para nível 15–20+: nos pisos de baixo há {creature:Blood Crab|Blood Crabs} e {creature:Carrion Worm|Carrion Worms}."
+  ]
+}

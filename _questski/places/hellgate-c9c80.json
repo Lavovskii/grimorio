@@ -1,0 +1,51 @@
+{
+  "title": "Hellgate",
+  "type": "dungeon",
+  "near": "Ab'Dendriel",
+  "summary": "Masmorra antiga e sem zona de proteção **por baixo de Ab'Dendriel**, onde os elfos atiram os criminosos; tem a {wiki:Hellgate Library}, a sala do tesouro e a entrada para {wiki:Draconia}.",
+  "entrance": {"x": 32675, "y": 31647, "z": 10, "label": "Portal de entrada em Hellgate (subsolo de Ab'Dendriel)"},
+  "requirements": [
+    "Precisas da {item:Key 3012} para abrir as duas portas da entrada; o {npc:Elathriel} vende-ta por **5000 gp**."
+  ],
+  "items": ["Key 3012", "Rope", "Parcel"],
+  "arrive": [
+    "Viaja até **Ab'Dendriel** (por exemplo de Thais, no barco do {npc:Captain Bluebear}: {key:hi}, {key:ab'dendriel}, {key:yes}).",
+    "Em Ab'Dendriel, desce ao piso de baixo (a zona das lojas), desce outra vez junto às casinhas e desce mais uma vez.",
+    "Segue para **sul** e depois para **leste** até à porta com o quadro *Hellgate* ({coord:32676,31672,10}) e abre-a com a {item:Key 3012}. Se não a tiveres, o guarda {npc:Elathriel}, ali perto ({coord:32684,31671,9}), vende-ta por 5000 gp.",
+    "Logo a **norte** há uma segunda porta que também pede a {item:Key 3012}. Passa-a e entra no portal para Hellgate ({coord:32675,31647,10}). **Não** uses o portal do lado **oeste** da sala: esse leva-te para fora.",
+    "Em Hellgate apareces numa plataforma com uma escada: sobe-a para começares a explorar."
+  ],
+  "leave": [
+    "O portal de Ab'Dendriel é **só de ida**: sai a pé pela {wiki:Route:Hellgate|Route:Hellgate}. Volta ao primeiro cruzamento junto à escada da entrada e segue o corredor comprido para **oeste** (só {creature:Skeleton|Skeletons}); desce o buraco no fim.",
+    "Vai para **leste** por outro corredor comprido (mais Skeletons) e desce o buraco seguinte.",
+    "Vai para **oeste** e dá a volta pelo corredor comprido (só {creature:Spider|Spiders} e Skeletons) até ao sítio de corda (o círculo amarelo do mapa) e sobe com a {item:Rope}.",
+    "Vai para **sudeste** (alguns {creature:Rotworm|Rotworms}), desce o buraco, anda um pouco para **sul** (2 {creature:Ghoul|Ghouls}) e sobe. Segue o caminho para **sul** (mais Ghouls e Rotworms) e sobe outra vez.",
+    "Vai para **sul** e desce pelo **primeiro** buraco que vires (o segundo sítio de corda tem {creature:Poison Spider|Poison Spiders} e 1 Ghoul).",
+    "Vai para **oeste** e atravessa a sala grande dos Ghouls (uns 15 Ghouls, uns 5 Skeletons e 2 {creature:Bonelord|Bonelords}) encostado à parede **sul**; desce o buraco.",
+    "Vai para **noroeste** (sem monstros), sobe **2 andares** com {spell:Levitate} ou empilhando 6 {item:Parcel|Parcels}, e sobe a escada.",
+    "Vai para **sudoeste** e sobe pelo buraco (não vás pelo buraco a **sudeste**: desce até ao andar da lava).",
+    "Se a ponte do andar de cima estiver levantada, puxa a alavanca. Depois segue o único caminho para cima (muitas {creature:Wasp|Wasps}) até saíres à superfície perto de Ab'Dendriel ({coord:32603,31705,7}).",
+    "Em Ab'Dendriel, o {npc:Captain Seagull} leva-te a Carlin, Edron, Thais, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32676, "y": 31672, "z": 10, "label": "Porta de Hellgate (Key 3012)"},
+    {"x": 32684, "y": 31671, "z": 9, "label": "Elathriel (vende a Key 3012)"},
+    {"x": 32675, "y": 31647, "z": 10, "label": "Portal de entrada em Hellgate"},
+    {"x": 32603, "y": 31705, "z": 7, "label": "Saída de Hellgate (superfície, perto de Ab'Dendriel)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (barco de Ab'Dendriel)"}
+  ],
+  "images": [
+    {"file": "RouteHellgate1.png", "caption": "Saída 1: corredor dos Skeletons para oeste a partir da escada da entrada"},
+    {"file": "RouteHellgate2.png", "caption": "Saída 2: corredor para leste até ao buraco seguinte"},
+    {"file": "RouteHellgate3.png", "caption": "Saída 3: volta pelo corredor das Spiders até ao sítio de corda"},
+    {"file": "RouteHellgate4&5.png", "caption": "Saída 4 e 5: gruta dos Rotworms, para sul"},
+    {"file": "RouteHellgate7.png", "caption": "Saída: sala grande dos Ghouls (encostado à parede sul)"},
+    {"file": "RouteHellgate8.png", "caption": "Saída: subir 2 andares com Levitate ou Parcels"},
+    {"file": "RouteHellgate9.png", "caption": "Saída: buraco a sudoeste, ponte e caminho até à superfície"}
+  ],
+  "warnings": [
+    "Não há nenhuma zona de proteção em Hellgate e o caminho de saída é longo: Skeletons, Ghouls, Bonelords e, às vezes, {creature:Demon Skeleton|Demon Skeletons} e {creature:Elder Bonelord|Elder Bonelords} atraídos por outros jogadores.",
+    "Leva sempre {item:Rope} e 6 {item:Parcel|Parcels} (ou {spell:Levitate}): sem eles não consegues sair.",
+    "Há uma saída alternativa através de {wiki:Draconia} e do {wiki:Redbone Castle}, mas a partir do Redbone Castle o caminho é de sentido único até à superfície de Draconia."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "slug": "bear-room-quest",
+  "category": "tesouro",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "5–10 min",
+  "summary": "Uma quest clássica de Rookgaard na gruta principal da ilha. Desce vários andares pela gruta cheia de trolls, orcs e minotauros, arranja a {item:Key 4601} (ou usa uma {item:Pick} para a ir buscar), abre o caminho até à sala do urso, mata o {creature:Bear} e abre as três caixas para receberes uma {item:Chain Armor}, um {item:Brass Helmet}, flechas e ouro.",
+  "requirements": [
+    "Personagem em Rookgaard; sem nível mínimo (recomendado nível 6).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Key 4601", "note": "abre a sala do urso; se não a tiveres, usa uma Pick para a ir buscar"},
+    {"item": "Pick", "note": "só se não tiveres a chave (ver Pick Quest)"}
+  ],
+  "rewards": [
+    {"item": "Chain Armor"},
+    {"item": "Brass Helmet"},
+    {"item": "Arrow", "qty": 12},
+    {"item": "Gold Coin", "qty": 40}
+  ],
+  "dangers": ["Rat", "Snake", "Spider", "Young Troll", "Troll", "Orc", "Minotaur", "Bear"],
+  "npcs": [],
+  "tips": [
+    "Se ainda não tens uma {item:Pick}, vê a {wiki:Pick Quest|Pick Quest} para saberes como a obter em Rookgaard.",
+    "Os orcs dos andares de baixo são fáceis de despistar: não precisas de os matar a todos."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer pela gruta principal",
+      "steps": [
+        {
+          "title": "Entrar pelo edifício abandonado",
+          "text": "Vai ao edifício abandonado um pouco a **norte** da vila de Rookgaard e desce pelo buraco.",
+          "images": [{"file": "Bear Room Quest 1.png", "caption": "O buraco no edifício abandonado a norte da vila"}]
+        },
+        {
+          "title": "Segundo andar",
+          "text": "Vai para **leste** e desce. Há {creature:Troll|Trolls} nesta zona.",
+          "images": [{"file": "Bear Room Quest 2.png", "caption": "Caminho para leste até à descida seguinte"}]
+        },
+        {
+          "title": "Terceiro andar",
+          "text": "Desce outra vez, como mostra o mapa. Há alguns {creature:Orc|Orcs} aqui.",
+          "images": [{"file": "Bear Room Quest 3.png", "caption": "Caminho até à descida seguinte"}]
+        },
+        {
+          "title": "Quarto andar",
+          "text": "Desce mais uma vez. Há 2 a 4 {creature:Orc|Orcs}, mas é fácil fugir-lhes.",
+          "images": [{"file": "Bear Room Quest 4.png", "caption": "Caminho até ao último andar"}]
+        },
+        {
+          "title": "Sala central",
+          "text": "Chegas ao último andar: uma sala com 1–2 {creature:Minotaur|Minotaurs} e alguns {creature:Orc|Orcs}, com uma mesa grande."
+        }
+      ]
+    },
+    {
+      "title": "2. Arranjar a chave (se não a tiveres)",
+      "steps": [
+        {
+          "title": "Abrir o buraco com a picareta",
+          "text": "Usa a {item:Pick} no quadrado de lama **logo a sul da mesa grande**. Abre-se um buraco: desce por ele.",
+          "images": [{"file": "Bearroom6.jpg", "caption": "O quadrado de lama a sul da mesa grande"}]
+        },
+        {
+          "title": "Apanhar a Key 4601",
+          "text": "Lá em baixo há um baú com a {item:Key 4601}. Apanha-a e volta a subir pela escada.",
+          "reward": "Key 4601"
+        }
+      ]
+    },
+    {
+      "title": "3. A sala do urso",
+      "steps": [
+        {
+          "title": "Libertar a porta",
+          "text": "A **norte da mesa grande** há um interruptor que controla a pedra que pode bloquear a porta da sala do urso (mais a norte). Se a pedra estiver a bloquear a porta, usa o interruptor para a tirar.",
+          "tip": "Ao lado do interruptor está o baú da {wiki:Present Box Quest|Present Box Quest}."
+        },
+        {
+          "title": "Matar o urso",
+          "text": "Abre a porta com a {item:Key 4601}, entra e mata o {creature:Bear}."
+        },
+        {
+          "title": "Abrir as três caixas",
+          "text": "Abre as **três caixas** da sala para receberes a recompensa.",
+          "images": [{"file": "Bear Room Quest 5.png", "caption": "A sala do urso com as três caixas"}],
+          "reward": "Chain Armor, Brass Helmet, 12 Arrows e 40 gold"
+        },
+        {
+          "title": "Se te bloquearem a saída",
+          "text": "Se alguém bloquear o caminho de volta, desce pela grade de esgoto até uma sala com 4 {creature:Spider|Spiders} e depois sobe a escada a **sul** para voltares à sala central dos minotauros e orcs."
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Da sala central, faz o caminho dos mapas ao contrário: sobe andar a andar pelos mesmos sítios por onde desceste (onde desceste por um buraco, usa a {item:Rope} para subir) até saíres no edifício abandonado a **norte** da vila de Rookgaard. Depois volta a pé para **sul**, até à vila.",
+          "images": [{"file": "Bear Room Quest 1.png", "caption": "O edifício abandonado a norte da vila, onde sais da gruta"}],
+          "warning": "Sem {item:Rope} ficas preso nos andares de baixo: não a percas nem a vendas antes de saíres."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Venore Corym Cave",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Gruta de {creature:Corym Vanguard|Coryms} no pântano a **leste de Venore**, com entrada dentro de um edifício e um teleporte no fundo para as Corym Mines.",
+  "entrance": {"x": 33073, "y": 32085, "z": 7, "label": "Edifício de entrada da Venore Corym Cave"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Venore** (por exemplo em Edron, o {npc:Captain Seahorse}: {key:hi}, {key:venore}, {key:yes}, 40 gp; em Thais, o {npc:Captain Bluebear}, 170 gp).",
+    "Sai de Venore pela **entrada leste** da cidade ({coord:33002,32096,7}), o caminho mais rápido, e segue pelo pântano até ao edifício da gruta ({coord:33073,32085,7}), a nordeste do edifício do Rafzan.",
+    "**Sobe as escadas** do edifício e depois **desce pelas escadas de mão** (ladders): assim entras na gruta sem precisar de rope.",
+    "Para as Corym Mines: desce pelo buraco a **nordeste**, depois pelo buraco seguinte, vai para **sul** e desce outra vez; no andar mais fundo segue a parede **norte** na zona **noroeste** até ao teleporte ({coord:33054,32008,11})."
+  ],
+  "leave": [
+    "Se estiveres nas Corym Mines, volta ao teleporte por onde entraste: ele leva-te de volta à Venore Corym Cave.",
+    "Sobe com a {item:Rope} pelos buracos por onde desceste, sobe as escadas de mão e desce as escadas do edifício do pântano.",
+    "Regressa a Venore pela entrada **leste** e apanha o barco do {npc:Captain Fearless} ({coord:32955,32022,6}): {key:hi}, o destino (por exemplo {key:edron}, 40 gp) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33002, "y": 32096, "z": 7, "label": "Entrada leste de Venore"},
+    {"x": 33072, "y": 32088, "z": 7, "label": "Entrada da Venore Corym Cave"},
+    {"x": 33054, "y": 32008, "z": 11, "label": "Teleporte para as Corym Mines"},
+    {"x": 33010, "y": 32075, "z": 11, "label": "Bom spot de Corym Vanguards"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "As {creature:Corym Vanguard|Corym Vanguards} (com {creature:Corym Charlatan|Charlatans} e {creature:Corym Skirmisher|Skirmishers}) batem forte para níveis baixos: o wiki recomenda nível 40+ para knights e 35+ para paladins e mages."
+  ]
+}

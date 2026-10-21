@@ -1,0 +1,263 @@
+{
+  "slug": "makeshift-warrior-outfits-quest",
+  "category": "outfit",
+  "region": "Kazordoon",
+  "difficulty": 4,
+  "duration": "Depende da sorte com o loot dos bosses",
+  "summary": "Os {wiki:Makeshift Warrior Outfits|Makeshift Warrior Outfits} obtêm-se usando três itens raros deixados pelos bosses das Warzones 4, 5 e 6 do {wiki:Gnome Deep Hub|Gnome Deep Hub}: um plano para a armadura, tábuas de madeira para o escudo e arma, e um tacho para usar como capacete. Com o outfit ganhas também o achievement **Cobbled and Patched**.",
+  "requirements": [
+    "Conta **Premium**.",
+    "Acesso às {wiki:Warzone 4|Warzone 4}, {wiki:Warzone 5|Warzone 5} e {wiki:Warzone 6|Warzone 6} do Gnome Deep Hub, para lutares contra os bosses."
+  ],
+  "items_needed": [
+    {
+      "item": "Plan for a Makeshift Armour",
+      "note": "loot de The Baron from Below (Warzone 4)"
+    },
+    {
+      "item": "Crude Wood Planks",
+      "note": "loot de The Duke of the Depths (Warzone 6)"
+    },
+    {
+      "item": "Tinged Pot",
+      "note": "loot de The Count of the Core (Warzone 5)"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Makeshift Warrior Outfits|Makeshift Warrior Outfits} (outfit base)"
+    },
+    {
+      "text": "Addon 1: escudo e arma"
+    },
+    {
+      "text": "Addon 2: tacho (capacete)"
+    },
+    {
+      "text": "Achievement **Cobbled and Patched**"
+    }
+  ],
+  "achievements": [
+    "Cobbled and Patched"
+  ],
+  "dangers": [
+    "The Baron from Below",
+    "The Count of the Core",
+    "The Duke of the Depths"
+  ],
+  "npcs": [
+    "Gnomus",
+    "Klom Stonecutter",
+    "Lardoc Bashsmite",
+    "Brodrosch",
+    "Xelvar"
+  ],
+  "tips": [
+    "Os três itens são loot dos bosses: pode ser preciso matá-los várias vezes até caírem.",
+    "Cada item desbloqueia uma parte do outfit quando o usas: plano → armadura, tábuas → escudo e arma, tacho → capacete."
+  ],
+  "sections": [
+    {
+      "title": "Antes de começar: chegar ao Gnome Deep Hub",
+      "steps": [
+        {
+          "title": "Chegar a Kazordoon",
+          "text": "A entrada do {wiki:Gnome Deep Hub|Gnome Deep Hub} fica em **Kazordoon**. Há duas formas de lá chegar:\n1. **{wiki:Steamship}**: de {wiki:Cormaya} (perto de Edron, com o {npc:Gurbasch}) ou de **Farmine** (com o {npc:Thorgrin}), diz {key:hi}, {key:kazordoon} e {key:yes}. Chegas ao porto subterrâneo de Kazordoon, junto ao {npc:Brodrosch}.\n2. **A pé**: pela entrada da montanha (vê {wiki:Route: Kazordoon|o caminho até à entrada de Kazordoon}). Leva {item:Rope} e {item:Shovel}.",
+          "coords": [
+            {
+              "x": 32661,
+              "y": 31957,
+              "z": 15,
+              "label": "Steamship de Kazordoon (Brodrosch)"
+            }
+          ]
+        },
+        {
+          "title": "Entrar no Gnome Deep Hub",
+          "text": "Em Kazordoon, vai até à entrada do Gnome Deep Hub, perto do blesser do **norte** da cidade (4 andares abaixo do nível do chão), e entra. Em alternativa, se tens nível 80+, usa o {wiki:Gnomish Crystal Teleport System|Gnomish Crystal Teleport System}: o acesso é dado pelo {npc:Xelvar} em Kazordoon e cada viagem gasta um {item:Teleport Crystal} (150 gp); o cristal de Kazordoon fica mesmo ao lado da entrada.",
+          "coords": [
+            {
+              "x": 32624,
+              "y": 31868,
+              "z": 11,
+              "label": "Entrada do Gnome Deep Hub (Kazordoon)"
+            },
+            {
+              "x": 32628,
+              "y": 31863,
+              "z": 11,
+              "label": "Teleporte de cristal de Kazordoon"
+            }
+          ]
+        },
+        {
+          "title": "Ganhar acesso às Warzones",
+          "text": "As Warzones 4, 5 e 6 estão fechadas: precisas de **15 pontos** de tarefas com a fação de cada uma (10 se já derrotaste os bosses das Warzones 1, 2 e 3) e de destruir um {item:Fragile Lava Funnel} na zona dessa fação. Tudo isto está explicado na {wiki:Dangerous Depths Quest|Dangerous Depths Quest}.",
+          "table": {
+            "head": [
+              "Warzone",
+              "Fação (NPC)",
+              "Onde fica",
+              "Boss"
+            ],
+            "rows": [
+              [
+                "4",
+                "Gnomes ({npc:Gnomus})",
+                "**Leste** do hub ({coord:33827,32172,14})",
+                "{creature:The Baron from Below}"
+              ],
+              [
+                "5",
+                "Dwarves ({npc:Klom Stonecutter})",
+                "**Sul** do hub ({coord:33777,32192,14})",
+                "{creature:The Count of the Core}"
+              ],
+              [
+                "6",
+                "Scouts ({npc:Lardoc Bashsmite})",
+                "**Nordeste** do hub ({coord:33829,32128,14})",
+                "{creature:The Duke of the Depths}"
+              ]
+            ]
+          },
+          "warning": "Depois de passares o teleporte de uma Warzone tens **8 horas** de acesso; se saíres depois disso, tens de destruir outro funnel (e gastar mais pontos) para voltar a entrar."
+        }
+      ]
+    },
+    {
+      "title": "1. Outfit base (armadura)",
+      "steps": [
+        {
+          "title": "Obter o plano",
+          "text": "Mata o boss da {wiki:Warzone 4|Warzone 4}, {creature:The Baron from Below}, até ele deixar cair um {item:Plan for a Makeshift Armour}. A Warzone 4 fica a **leste** do Gnome Deep Hub.",
+          "coords": [
+            {
+              "x": 33827,
+              "y": 32172,
+              "z": 14,
+              "label": "Entrada da Warzone 4"
+            }
+          ],
+          "warning": "Vais enfrentar as criaturas do Gnome Deep Hub e da Warzone 4."
+        },
+        {
+          "title": "Usar o plano",
+          "text": "Usa o {item:Plan for a Makeshift Armour}. Aparece a mensagem *\"By using the plan you knock together a makeshift armour out of wooden planks, rusty nails and leather rags.\"* e recebes o outfit base.",
+          "images": [
+            {
+              "file": "Outfit_Makeshift_Warrior_Male.gif",
+              "caption": "Makeshift Warrior masculino (outfit base)"
+            },
+            {
+              "file": "Outfit_Makeshift_Warrior_Female.gif",
+              "caption": "Makeshift Warrior feminino (outfit base)"
+            }
+          ],
+          "reward": "Makeshift Warrior Outfit"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1 (escudo e arma)",
+      "steps": [
+        {
+          "title": "Obter as tábuas",
+          "text": "Mata o boss da {wiki:Warzone 6|Warzone 6}, {creature:The Duke of the Depths}, até ele deixar cair umas {item:Crude Wood Planks}. A Warzone 6 fica a **nordeste** do Gnome Deep Hub.",
+          "coords": [
+            {
+              "x": 33829,
+              "y": 32128,
+              "z": 14,
+              "label": "Entrada da Warzone 6"
+            }
+          ],
+          "warning": "Vais enfrentar as criaturas da Warzone 6."
+        },
+        {
+          "title": "Usar as tábuas",
+          "text": "Usa as {item:Crude Wood Planks}. Aparece a mensagem *\"You use the wooden planks to knock up a makeshift shield and weapon.\"*",
+          "images": [
+            {
+              "file": "Outfit_Makeshift_Warrior_Male_Addon_1.gif",
+              "caption": "Makeshift Warrior masculino com o addon 1"
+            },
+            {
+              "file": "Outfit_Makeshift_Warrior_Female_Addon_1.gif",
+              "caption": "Makeshift Warrior feminino com o addon 1"
+            }
+          ],
+          "reward": "Addon 1 (escudo e arma)"
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2 (tacho)",
+      "steps": [
+        {
+          "title": "Obter o tacho",
+          "text": "Mata o boss da {wiki:Warzone 5|Warzone 5}, {creature:The Count of the Core}, até ele deixar cair um {item:Tinged Pot}. A Warzone 5 fica a **sul** do Gnome Deep Hub.",
+          "coords": [
+            {
+              "x": 33777,
+              "y": 32192,
+              "z": 14,
+              "label": "Entrada da Warzone 5"
+            }
+          ],
+          "warning": "Vais enfrentar as criaturas da Warzone 5."
+        },
+        {
+          "title": "Usar o tacho",
+          "text": "Usa o {item:Tinged Pot}. Aparece a mensagem *\"You use the tinged pot as a makeshift helmet.\"*",
+          "images": [
+            {
+              "file": "Outfit_Makeshift_Warrior_Male_Addon_2.gif",
+              "caption": "Makeshift Warrior masculino com o addon 2"
+            },
+            {
+              "file": "Outfit_Makeshift_Warrior_Female_Addon_2.gif",
+              "caption": "Makeshift Warrior feminino com o addon 2"
+            },
+            {
+              "file": "Outfit_Makeshift_Warrior_Male_Addon_3.gif",
+              "caption": "Makeshift Warrior masculino completo"
+            },
+            {
+              "file": "Outfit_Makeshift_Warrior_Female_Addon_3.gif",
+              "caption": "Makeshift Warrior feminino completo"
+            }
+          ],
+          "reward": "Addon 2 (tacho)"
+        }
+      ]
+    },
+    {
+      "title": "Sair das Warzones e do Gnome Deep Hub",
+      "steps": [
+        {
+          "title": "Voltar a Kazordoon",
+          "text": "Depois de matares um boss, sai da sala pelo teleporte (vai dar à sala da Lava Pump desse boss) e volta pelo mesmo caminho da Warzone até ao Gnome Deep Hub. Do hub, sai pela entrada para **Kazordoon** ({coord:32624,31868,11}). Para saíres de Kazordoon, apanha o {wiki:Steamship} do {npc:Brodrosch} ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), usa o teleporte de cristal ao lado da entrada do hub, ou sai a pé pela entrada da montanha.",
+          "coords": [
+            {
+              "x": 32624,
+              "y": 31868,
+              "z": 11,
+              "label": "Entrada/saída do Gnome Deep Hub"
+            },
+            {
+              "x": 32661,
+              "y": 31957,
+              "z": 15,
+              "label": "Steamship de Kazordoon (Brodrosch)"
+            }
+          ],
+          "tip": "Enquanto as 8 horas de acesso não acabarem, podes sair e voltar a entrar na Warzone as vezes que quiseres."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O achievement **Cobbled and Patched** foi adicionado um mês depois da quest e dos outfits."
+  ]
+}

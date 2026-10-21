@@ -1,0 +1,29 @@
+{
+  "title": "Robson's Isle",
+  "type": "ilha",
+  "near": "Kazordoon",
+  "summary": "Ilha subterrânea (também chamada Underground Isle) onde vivem o carteiro {npc:Robson} e o seu guarda goblin {npc:Lunch}; só se chega pelo steamship do {npc:Junkar}, quando os world changes Awash ou Steamship estão ativos.",
+  "requirements": [
+    "Só acessível pelo steamship do {npc:Junkar}: a partir das {wiki:Sunken Mines} quando as minas estão abertas ({wiki:Awash World Change}), ou a partir do steamship por baixo do norte de Thais quando o {wiki:Steamship World Change} está ativo."
+  ],
+  "arrive": [
+    "**Pelas Sunken Mines (Awash):** vai a **Kazordoon** (de {wiki:Steamship} a partir de {wiki:Cormaya} ou Farmine, ou a pé pela montanha), sai da montanha e caminha para **oeste** até à entrada das Sunken Mines ({coord:32548,31989,7}). Com as minas abertas, vai ao steamship do {npc:Junkar}.",
+    "**Por Thais (Steamship):** sai de Thais para **norte** e entra no {wiki:Ancient Temple} ({coord:32356,32171,7}). Desce as escadas dois andares e, em vez de ires para norte, vai para **sul** e um pouco para **leste** ({coord:32361,32190,9}): essas escadas descem até à sala do {npc:Junkar} e ao seu navio a vapor ({coord:32524,32038,14}).",
+    "Fala com o {npc:Junkar}: {key:hi}, {key:passage} e escolhe Robson's Isle."
+  ],
+  "leave": [
+    "Fala com o {npc:Junkar} junto ao steamship da ilha: {key:hi}, {key:passage} e escolhe o destino (Thais, Kazordoon ou as minas). A opção {key:mines} só funciona quando as Sunken Mines não estão inundadas.",
+    "A wiki não descreve outra saída da ilha: se o steamship não estiver a funcionar, não há outro caminho documentado."
+  ],
+  "coords": [
+    {"x": 32548, "y": 31989, "z": 7, "label": "Entrada das Sunken Mines (oeste de Kazordoon)"},
+    {"x": 32356, "y": 32171, "z": 7, "label": "Entrada do Ancient Temple (norte de Thais)"},
+    {"x": 32524, "y": 32038, "z": 14, "label": "Junkar — steamship de Thais"}
+  ],
+  "images": [
+    {"file": "Robson Isle Map.jpg", "caption": "Mapa de Robson's Isle"}
+  ],
+  "warnings": [
+    "Na ilha há {creature:Bonebeast|Bonebeasts}, {creature:Bog Raider|Bog Raiders}, {creature:Giant Spider|Giant Spiders}, {creature:Nightstalker|Nightstalkers}, um {creature:Nightmare Scion} e uma {creature:Banshee}. A wiki recomenda nível 60–80+."
+  ]
+}

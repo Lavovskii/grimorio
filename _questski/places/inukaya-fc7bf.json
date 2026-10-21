@@ -1,0 +1,31 @@
+{
+  "title": "Inukaya",
+  "type": "zona",
+  "near": "Svargrond",
+  "summary": "Povoação dos Chakoyas, com igloos e longos túneis por baixo deles, na ilha de **Grimlund**, logo a **leste de {wiki:Nibelor}** (Northern Ice Islands, perto de Svargrond).",
+  "requirements": [
+    "Conta **Premium**.",
+    "O trenó do {npc:Iskan} (Svargrond → Nibelor) só aceita depois da {wiki:Barbarian Test Quest} e da primeira missão da {wiki:The Ice Islands Quest}.",
+    "O trenó de Nibelor para Inukaya só fica disponível depois da missão 5 da {wiki:The Ice Islands Quest} (entregar os ingredientes ao {npc:Nilsor})."
+  ],
+  "items": ["Ham"],
+  "arrive": [
+    "Vai a **Svargrond** de barco (em Carlin, Thais ou Venore: {key:hi}, {key:svargrond}, {key:yes}).",
+    "Em Svargrond, vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}, o dono do trenó de cães ({coord:32301,31083,7}): {key:hi}, {key:passage}. Ele leva-te à ilha de {wiki:Nibelor}.",
+    "Em Nibelor, entra no trenó de cães que está logo a **leste** do sítio onde chegas ({coord:32367,31058,7}). Os cães comem um {item:Ham} e levam-te a Inukaya, em Grimlund."
+  ],
+  "leave": [
+    "Volta ao mesmo trenó por onde chegaste e entra outra vez: os cães comem mais um {item:Ham} e levam-te a **Nibelor**.",
+    "Em Nibelor, fala com o {npc:Nilsor}, a **oeste** do círculo de pedras ({coord:32329,31044,7}): {key:hi}, {key:passage}. Ele leva-te de volta a **Svargrond**."
+  ],
+  "coords": [
+    {"x": 32301, "y": 31083, "z": 7, "label": "Iskan (trenó Svargrond → Nibelor)"},
+    {"x": 32367, "y": 31058, "z": 7, "label": "Trenó Nibelor ↔ Inukaya"},
+    {"x": 32329, "y": 31044, "z": 7, "label": "Nilsor (trenó Nibelor → Svargrond)"},
+    {"x": 32426, "y": 31085, "z": 7, "label": "Sinatuki (sudeste de Grimlund)"}
+  ],
+  "warnings": [
+    "Leva {item:Ham|Hams} suficientes para a ida **e** para a volta: sem eles os cães não te levam.",
+    "A wiki recomenda nível 25–30+ para caçar em Inukaya."
+  ]
+}

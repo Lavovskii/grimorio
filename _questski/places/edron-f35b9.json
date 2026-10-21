@@ -1,0 +1,35 @@
+{
+  "title": "Edron",
+  "type": "cidade",
+  "near": "Edron",
+  "summary": "Cidade **premium** na ilha do mesmo nome, a **leste** do continente, com o porto do {npc:Captain Seahorse}, o tapete voador do {npc:Pino} e acesso a zonas como a {wiki:Hero Cave}, o {wiki:Edron Dragon Lair} e a {wiki:Edron Orc Cave}.",
+  "entrance": {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"},
+  "requirements": [
+    "Edron só está disponível para contas **Premium**."
+  ],
+  "arrive": [
+    "De barco: no porto da tua cidade fala com o capitão — por exemplo {npc:Captain Bluebear} em Thais, {npc:Captain Fearless} em Venore ou {npc:Captain Greyhound} em Carlin — e diz {key:hi}, {key:edron}, {key:yes} (de Carlin custa 110 gp).",
+    "Desembarcas no porto de Edron, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}), no lado **norte** da cidade.",
+    "De tapete voador: no tapete de Kazordoon (no topo da montanha, {npc:Gewen}) diz {key:hi}, {key:edron}, {key:yes}; aterras no tapete do {npc:Pino}, no alto de uma torre de Edron ({coord:33192,31783,3}). Desce as escadas até à rua.",
+    "De {wiki:Cormaya}: no porto **norte** da ilha fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp)."
+  ],
+  "leave": [
+    "Vai ao porto, a **norte** da cidade, e fala com o {npc:Captain Seahorse}: {key:hi}, o nome do destino (por exemplo {key:thais}, {key:carlin}, {key:venore} ou {key:cormaya}) e {key:yes}. Ele navega para Thais, Carlin, Ab'Dendriel, Venore, Port Hope, Ankrahmun, Liberty Bay, Cormaya, Gray Island, Oramond, Krailos e Travora.",
+    "Para Kazordoon (que não tem barco), sobe à torre do tapete e fala com o {npc:Pino}: {key:hi}, {key:kazordoon}, {key:yes}.",
+    "Para {wiki:Cormaya}: {npc:Captain Seahorse}, {key:hi}, {key:cormaya}, {key:yes} (20 gp)."
+  ],
+  "coords": [
+    {"x": 33211, "y": 31830, "z": 7, "label": "Centro de Edron"},
+    {"x": 33192, "y": 31783, "z": 3, "label": "Tapete voador do Pino"},
+    {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (norte da cidade)"},
+    {"x": 33097, "y": 31701, "z": 7, "label": "Edron Dragon Lair"},
+    {"x": 33251, "y": 31698, "z": 7, "label": "Cyclopolis"},
+    {"x": 33173, "y": 31901, "z": 7, "label": "Edron Orc Cave (pelo esgoto dos Edron Flats)"}
+  ],
+  "images": [
+    {"file": "Map edron.jpg", "caption": "Mapa de Edron"}
+  ],
+  "warnings": [
+    "A norte das montanhas da cidade há criaturas fortes (Dragons, Dragon Lords, Heroes, Behemoths e Demons): não te afastes muito se fores de nível baixo."
+  ]
+}

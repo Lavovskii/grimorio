@@ -1,0 +1,62 @@
+{
+  "slug": "wedding-ring-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 3,
+  "duration": "30–60 min",
+  "summary": "No fundo da Hero Cave de Edron, guardados por {creature:Hero|Heroes} e um {creature:Dark Apprentice}, há dois baús com um {item:Wedding Ring} e um {item:Dragon Necklace}. Segue a rota pela gruta, vence os Heroes e abre os baús.",
+  "start": {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave, Edron"},
+  "requirements": [
+    "Premium Account.",
+    "Sem nível mínimo (recomendado 70+)."
+  ],
+  "items_needed": [
+    {"text": "Supplies para matar {creature:Hero|Heroes} e criaturas menores."}
+  ],
+  "rewards": [
+    {"item": "Wedding Ring"},
+    {"item": "Dragon Necklace"}
+  ],
+  "dangers": ["Hunter", "Wild Warrior", "Demon Skeleton", "Priestess", "Stalker", "Dragon", "Dragon Hatchling", "Orc Shaman", "Witch", "Dark Apprentice", "Dark Magician", "Minotaur Mage", "Monk (Creature)", "Hero"],
+  "npcs": [],
+  "tips": [
+    "A Hero Cave tem muitos tipos de criaturas diferentes, incluindo {creature:Stalker|Stalkers} e {creature:Demon Skeleton|Demon Skeletons}. Avança devagar e segue a rota do mapa."
+  ],
+  "sections": [
+    {
+      "title": "1. Atravessar a Hero Cave",
+      "steps": [
+        {
+          "title": "Entrar na Hero Cave",
+          "text": "Vai a **Edron** de barco (no capitão do porto da tua cidade diz {key:hi}, {key:edron}, {key:yes}; desembarcas junto ao {npc:Captain Seahorse}). A {wiki:Hero Cave} fica a **norte** da cidade: vai até à entrada e entra.",
+          "coords": [{"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave"}, {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}]
+        },
+        {
+          "title": "Seguir a rota",
+          "text": "Segue a rota indicada no mapa, ecrã a ecrã, até ao ecrã 8. Pelo caminho encontras {creature:Hunter|Hunters}, {creature:Wild Warrior|Wild Warriors}, {creature:Priestess|Priestesses}, {creature:Witch|Witches}, {creature:Dark Magician|Dark Magicians}, {creature:Minotaur Mage|Minotaur Mages}, {creature:Monk (Creature)|Monks}, {creature:Dragon|Dragons}, entre outros.",
+          "images": [{"file": "Wedding Ring Quest.png", "caption": "Rota pela Hero Cave até aos baús (ecrãs numerados)"}]
+        },
+        {
+          "title": "Ecrã 8: Heroes",
+          "text": "No ecrã 8 enfrentas **3 {creature:Hero|Heroes}** e um {creature:Dark Apprentice}. Mata-os para chegares aos baús.",
+          "warning": "Os Heroes batem forte e curam-se. Puxa-os um de cada vez se puderes."
+        }
+      ]
+    },
+    {
+      "title": "2. Abrir os baús",
+      "steps": [
+        {
+          "title": "Recolher a recompensa",
+          "text": "Abre os baús para receberes o {item:Wedding Ring} e o {item:Dragon Necklace}.",
+          "reward": "Wedding Ring e Dragon Necklace"
+        },
+        {
+          "title": "Sair",
+          "text": "Volta pelo mesmo caminho para saíres da gruta: segue o mapa ao contrário, ecrã a ecrã, até à entrada da Hero Cave. Lá fora, vai para **sul** até Edron; para saíres da ilha fala com o {npc:Captain Seahorse} no porto ({key:hi}, o nome da cidade, {key:yes}).",
+          "coords": [{"x": 33164, "y": 31638, "z": 7, "label": "Entrada/saída da Hero Cave"}, {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}]
+        }
+      ]
+    }
+  ]
+}

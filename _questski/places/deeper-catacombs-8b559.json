@@ -1,0 +1,30 @@
+{
+  "title": "Deeper Catacombs",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Catacumbas com os caixões das antigas famílias de Darashia, com entrada no **sudeste da cidade**, junto ao tapete voador e ao barco; os pisos de baixo abrem-se com um puzzle de tochas e levam ao {creature:Koshei the Deathless}.",
+  "entrance": {"x": 33281, "y": 32445, "z": 7, "label": "Entrada das Deeper Catacombs (sudeste de Darashia)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).",
+    "A entrada das catacumbas fica no **sudeste** da cidade, ao lado do tapete voador e do barco ({coord:33281,32445,7}).",
+    "Para desceres aos pisos de baixo: acende as **2 tochas (estátuas) a norte e a leste** e deixa todas as outras **apagadas**; depois usa o {item:Ancient Sundial} junto às escadas.",
+    "Ouves um *CLICK* na sala a **sudoeste**: dentro de um caixão abriu-se uma escada secreta. Desce por ela (a escada desaparece e as luzes voltam a acender-se)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada das catacumbas, no sudeste de Darashia, usando a {item:Rope} onde precisares.",
+    "Atenção: a escada secreta do caixão desaparece depois de desceres e o alçapão da zona do Koshei só funciona para baixo; o wiki não descreve a saída a partir da zona do Koshei."
+  ],
+  "coords": [
+    {"x": 33281, "y": 32445, "z": 7, "label": "Entrada das Deeper Catacombs"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete voador de Darashia)"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (barco de Darashia)"}
+  ],
+  "images": [
+    {"file": "Koshei Quest Entrance.jpg", "caption": "Acende as tochas a norte e a leste e usa o Ancient Sundial"},
+    {"file": "Koshei Quest Map.png", "caption": "Mapa dos pisos de baixo até à sala do Koshei"}
+  ],
+  "warnings": [
+    "Nos pisos de baixo há {creature:Skeleton|Skeletons}, {creature:Ghoul|Ghouls} e {creature:Crypt Shambler|Crypt Shamblers}."
+  ]
+}

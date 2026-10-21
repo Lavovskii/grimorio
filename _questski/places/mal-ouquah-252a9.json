@@ -1,0 +1,32 @@
+{
+  "title": "Mal'ouquah",
+  "type": "edificio",
+  "near": "Ankrahmun",
+  "summary": "Fortaleza dos djinns verdes (Efreets) do {npc:Malor}, escondida nas montanhas de Kha'zeel a **norte/noroeste de Ankrahmun**; aqui estão os comerciantes {npc:Alesar} e {npc:Yaman}.",
+  "entrance": {"x": 33101, "y": 32657, "z": 7, "label": "Passagem junto ao oásis para Mal'ouquah"},
+  "requirements": [
+    "Só jogadores de **nível 30** ou mais passam as portas da entrada.",
+    "Para comprar e vender ao {npc:Alesar} e ao {npc:Yaman} tens de ter feito a {wiki:The Djinn War - Efreet Faction} (Green Djinn Quest)."
+  ],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para **norte** até ao oásis e segue a passagem que entra nas montanhas ({coord:33101,32657,7}).",
+    "A passagem leva à fortaleza ({coord:33041,32627,7}); a entrada fica no **1.º andar acima do solo**. Passa as portas de nível 30."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sai da fortaleza pela entrada do 1.º andar, desce a passagem das montanhas até ao oásis e segue para **sul** até Ankrahmun.",
+    "No porto de Ankrahmun, o {npc:Captain Sinbeard} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33101, "y": 32657, "z": 7, "label": "Passagem junto ao oásis"},
+    {"x": 33041, "y": 32627, "z": 7, "label": "Mal'ouquah"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Green Djinn Fortress.png", "caption": "Mal'ouquah, a fortaleza dos djinns verdes"},
+    {"file": "Green Djinn Fortress 0.png", "caption": "Piso térreo da fortaleza"}
+  ],
+  "warnings": [
+    "Dentro da fortaleza há {creature:Green Djinn|Green Djinns}, {creature:Efreet|Efreets}, {creature:Gargoyle|Gargoyles} e {creature:Stalker|Stalkers} (sobretudo nos pisos subterrâneos); a zona de caça é para nível 50+."
+  ]
+}

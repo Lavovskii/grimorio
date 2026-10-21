@@ -1,0 +1,39 @@
+{
+  "title": "Well of Life",
+  "type": "outro",
+  "near": "Venore",
+  "summary": "A Fonte da Vida, num pequeno jardim à entrada das Pits of Inferno, por baixo das {wiki:Plains of Havoc} (sudoeste de Venore); beber dela enche a vida uma vez e dá o achievement **Fountain of Life**.",
+  "entrance": {"x": 32806, "y": 32321, "z": 11, "label": "Well of Life (entrada das Pits of Inferno)"},
+  "requirements": [
+    "Precisas da {item:Holy Tible} na mochila para atravessares o Shrine of Wonders, e de conta Premium (os Free Account não passam o {item:Magic Wall} do shrine).",
+    "Para a Holy Tible: sobe com {spell:Levitate} (ou 3 {item:Parcel|Parcels}) à pequena montanha junto à {wiki:Knightwatch Tower} e abre o baú ({coord:32828,32340,7})."
+  ],
+  "items": ["Shovel", "Pick", "Blood", "Holy Tible", "Rope"],
+  "arrive": [
+    "Sai de **Venore** e caminha para **sudoeste** até às {wiki:Plains of Havoc} ({coord:32735,32297,7}).",
+    "No cemitério perto da {wiki:Necromant House} ({coord:32781,32330,7}), usa a {item:Shovel} numa {item:Loose Stone Pile}: todas levam à mesma gruta estreita.",
+    "Na parte **leste** da gruta há uma sala de 3x4: usa o {item:Pick} no **canto noroeste** ({coord:32775,32344,7}) e desce pelo buraco.",
+    "A campa de Goshnar fica logo a **oeste**: põe-te **1 sqm a sul** da lápide e usa o {item:Blood} nela. És levado para as catacumbas.",
+    "Vai para **norte** e pisa o tile com inscrições antes do {item:Magic Wall} (com a Holy Tible na mochila) para passares para o outro lado.",
+    "Desce pelo buraco a **norte**: chegas ao jardim com o Well of Life. Usa a fonte para beber."
+  ],
+  "leave": [
+    "O wiki não descreve a saída do jardim: sobe com a {item:Rope} pelo buraco por onde desceste.",
+    "As saídas documentadas das Pits of Inferno (o buraco **norte** do ponto sem retorno, ou o teleporte do {npc:A Ghostly Sage} junto à sala das recompensas) deixam-te na gruta dos {creature:Slime|Slimes} por baixo das Plains of Havoc; daí sobe à superfície e caminha para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"},
+    {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House (cemitério ao lado)"},
+    {"x": 32775, "y": 32344, "z": 7, "label": "Canto noroeste: usar o Pick aqui"},
+    {"x": 32828, "y": 32340, "z": 7, "label": "Baú da Holy Tible (montanha junto à Knightwatch Tower)"}
+  ],
+  "images": [
+    {"file": "Well of Life.png", "caption": "O Well of Life"},
+    {"file": "Well of life panorama.PNG", "caption": "Panorama do jardim do Well of Life"},
+    {"file": "Pits of Inferno Quest Entrance.jpg", "caption": "A campa de Goshnar (usa o Blood a partir de 1 sqm a sul)"}
+  ],
+  "warnings": [
+    "Só podes beber uma vez: da segunda recebes *\"You have already drunk from the fountain of life.\"*",
+    "A sul das catacumbas há {creature:Demon Skeleton|Demon Skeletons} e {creature:Ghost|Ghosts}: não é fácil para níveis baixos."
+  ]
+}

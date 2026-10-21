@@ -1,0 +1,33 @@
+{
+  "title": "Darama",
+  "type": "zona",
+  "near": "Darashia",
+  "summary": "O continente desértico e de selva onde ficam **Darashia**, **Ankrahmun** e **Port Hope**, com o deserto de {wiki:Kha'labal}, as montanhas de {wiki:Kha'zeel} e a selva de Tiquanda; o nome vem do líder espiritual Daraman.",
+  "requirements": [
+    "Conta **Premium** para viajar de barco para as cidades de Darama."
+  ],
+  "arrive": [
+    "Apanha um barco para uma das três cidades do continente: diz ao capitão {key:hi}, {key:darashia} (ou {key:ankrahmun} / {key:port hope}), {key:yes}.",
+    "**Darashia** (norte): chegas ao barco do {npc:Petros} ({coord:33289,32481,6}). **Ankrahmun** (leste): chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}). **Port Hope** (oeste, na selva): chegas ao cais do {npc:Charles} ({coord:32529,32785,6}).",
+    "Entre Darashia e Ankrahmun há uma passagem comum a pé pelo deserto de Kha'labal e pela passagem norte de Kha'zeel (ver mapas da rota). Entre Ankrahmun e Port Hope há uma passagem secreta: está na segunda escada a **oeste** de Ankrahmun, seguindo a estrada para muito longe a **leste** de Port Hope."
+  ],
+  "leave": [
+    "Volta a uma das cidades e apanha o barco: {npc:Petros} em Darashia ({key:venore} 60 gp, {key:ankrahmun} 100 gp, {key:port hope} 180 gp, {key:liberty bay} 200 gp, {key:yalahar} 210 gp, {key:issavi} 130 gp, {key:krailos} 110 gp).",
+    "{npc:Captain Sinbeard} em Ankrahmun: {key:darashia} 100 gp, {key:venore} 150 gp, {key:edron} 160 gp, {key:port hope} 80 gp, {key:liberty bay} 90 gp, {key:yalahar} 230 gp.",
+    "{npc:Charles} em Port Hope: {key:thais} 160 gp, {key:venore} 160 gp, {key:edron} 150 gp, {key:ankrahmun} 110 gp, {key:darashia} 180 gp, {key:liberty bay} 50 gp."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard — barco de Ankrahmun"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — barco de Port Hope"}
+  ],
+  "images": [
+    {"file": "Darama Route 1.png", "caption": "Rota Darashia → Ankrahmun (1/4)"},
+    {"file": "Darama Route 2.png", "caption": "Rota Darashia → Ankrahmun (2/4)"},
+    {"file": "Darama Route 3.png", "caption": "Rota Darashia → Ankrahmun (3/4)"},
+    {"file": "Darama Route 4.png", "caption": "Rota Darashia → Ankrahmun (4/4)"}
+  ],
+  "warnings": [
+    "Na travessia do deserto entre Darashia e Ankrahmun encontras {creature:Sandcrawler|Sandcrawlers}, {creature:Hyaena|Hyaenas}, {creature:Nomad (Basic)|Nomads} e {creature:Scorpion|Scorpions}; durante raids também {creature:Scarab|Scarabs}, {creature:Larva|Larvas} e {creature:Ancient Scarab|Ancient Scarabs}."
+  ]
+}

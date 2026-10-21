@@ -1,0 +1,24 @@
+{
+  "title": "Thais Troll Cave",
+  "type": "gruta",
+  "near": "Thais",
+  "summary": "Gruta de trolls e orcs debaixo de uma pequena montanha a **leste de Thais**, boa para níveis baixos; aqui fazem-se a {wiki:Dead Archer Quest} e a {wiki:Silver Amulet Quest}.",
+  "entrance": {"x": 32491, "y": 32260, "z": 7, "label": "Entrada principal (buraco no lado norte da montanha)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Sai de **Thais** pela porta **leste** e segue para **leste** até à pequena montanha da gruta.",
+    "A entrada principal é um buraco no lado **norte** da montanha ({coord:32491,32260,7}): abre-o com a {item:Shovel} e desce.",
+    "Lá em baixo escolhes o caminho: pela **esquerda** vais ter aos {creature:Troll|Trolls}, pela **direita** aos {creature:Orc|Orcs}. Os dois lados juntam-se no terceiro piso.",
+    "Há também uma **entrada traseira no meio da montanha** ({coord:32503,32267,7}), que também se abre com a Shovel: não liga à gruta principal e leva diretamente à zona da {wiki:Silver Amulet Quest}."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao buraco por onde desceste e sobe com a {item:Rope} (sobe cada buraco com a Rope até à superfície).",
+    "Cá fora, Thais fica a **oeste**: entra pela porta leste."
+  ],
+  "coords": [
+    {"x": 32503, "y": 32267, "z": 7, "label": "Entrada traseira (meio da montanha, Silver Amulet Quest)"}
+  ],
+  "warnings": [
+    "Nos pisos de baixo há {creature:Orc Warrior|Orc Warriors}, {creature:Troll Champion|Troll Champions}, {creature:Scorpion|Scorpions}, {creature:Carrion Worm|Carrion Worms}, {creature:Slime|Slimes} e {creature:Skeleton|Skeletons}: não é sítio para nível muito baixo sem cuidado."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Lake Equivocolao",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Lago na selva de Tiquanda, a **norte de Port Hope** e a sudoeste de Banuta, onde o pescador {npc:Yawno} espera; é o único sítio onde se pescam {item:Shimmer Swimmer|Shimmer Swimmers} ({wiki:Twisted Waters World Change}).",
+  "entrance": {"x": 32612, "y": 32655, "z": 7, "label": "Lake Equivocolao"},
+  "requirements": [
+    "Conta Premium (Port Hope)."
+  ],
+  "items": ["Fishing Rod"],
+  "arrive": [
+    "Se não estás em **Port Hope**, apanha um barco: diz ao capitão do porto {key:hi}, {key:port hope}, {key:yes}. Chegas ao porto do {npc:Charles}.",
+    "Em Port Hope, vai para **norte** do templo e do depot, pela selva, até ao lago ({coord:32612,32655,7}). O {npc:Yawno} está à beira da água ({coord:32614,32651,7})."
+  ],
+  "leave": [
+    "Faz o mesmo caminho para **sul** até Port Hope.",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te às outras cidades: {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32614, "y": 32651, "z": 7, "label": "Yawno (pescador)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "Lake Equivocolao.jpg", "caption": "O Lake Equivocolao"},
+    {"file": "Twisted waters.gif", "caption": "O lago sujo durante o Twisted Waters World Change"}
+  ],
+  "warnings": [
+    "Pelo caminho há {creature:Swamp Troll|Swamp Trolls}, {creature:Slime|Slimes}, {creature:Terror Bird|Terror Birds}, {creature:Filth Toad|Filth Toads} e outras criaturas da selva (recomendado nível 20+). Junto à água há um sítio onde só tens 2 slimes de cada vez."
+  ]
+}

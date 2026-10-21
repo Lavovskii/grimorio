@@ -1,0 +1,34 @@
+{
+  "title": "Fibula Dungeon",
+  "type": "dungeon",
+  "near": "Thais",
+  "summary": "Grande masmorra por baixo da ilha de **Fibula**, a sudoeste de Thais, com rotworms, orcs e bonelords nos pisos de cima e a gruta dos dragões da {wiki:Deeper Fibula Quest} mais abaixo; entra-se pelo poço da vila.",
+  "entrance": {"x": 32171, "y": 32440, "z": 7, "label": "Poço da vila de Fibula (entrada da masmorra)"},
+  "items": ["Key 3940"],
+  "requirements": [
+    "A porta logo depois do poço pode estar trancada (depende de quem entrou por último): abre-a com a {item:Key 3940}, que o {npc:Simon the Beggar} vende por 800 gp na costa sul de Fibula.",
+    "A parte dos dragões (Deeper Fibula) precisa também da {item:Key 3980} e passa por uma porta de nível 50."
+  ],
+  "arrive": [
+    "Vai a **Fibula**, a pequena ilha a **sudoeste** de Thais: a partir de Thais atravessa o {wiki:Fibula Tunnel} ({coord:32261,32385,7}) ou usa o teleporte do segundo andar da {wiki:Knightwatch Tower}.",
+    "Na vila, usa o {item:Draw Well|poço} no meio da vila ({coord:32171,32440,7}) para desceres à masmorra.",
+    "Lá em baixo, segue o caminho para **sul**, **leste** e depois **norte**, atravessa uma ponte e abre a porta com a {item:Key 3940} se estiver trancada (podem aparecer alguns {creature:Poison Spider|Poison Spiders} pelo caminho).",
+    "Entra e desce as escadas. Daí há portas para várias zonas: **leste** (o \"tesouro\" e a sala dos teletransportes), **norte** (orcs), **oeste** (rotworms e carrion worms, boa para níveis baixos) e **sul** (cidade destruída com bonelords e esqueletos)."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: sobe a escada de mão e as escadas, regressa pela ponte e pela porta até ao poço por onde entraste e sobe para a vila de Fibula.",
+    "Se estiveres na gruta dos dragões, o portal na parte **sudoeste** da última sala leva-te de volta à entrada da masmorra. Na zona do \"tesouro\" a **leste** há também uma sala com dois teleportes, um deles para a saída.",
+    "Da vila, volta a Thais pelo {wiki:Fibula Tunnel}, para **nordeste**."
+  ],
+  "coords": [
+    {"x": 32261, "y": 32385, "z": 7, "label": "Fibula Tunnel (ligação a Thais)"},
+    {"x": 32186, "y": 32468, "z": 7, "label": "Simon the Beggar (vende a Key 3940)"}
+  ],
+  "images": [
+    {"file": "Fibula Dungeon Hub.png", "caption": "A sala central da Fibula Dungeon, com as portas para as várias zonas"}
+  ],
+  "warnings": [
+    "Junto às escadas podem estar {creature:Bonelord|Bonelords} ou {creature:Demon Skeleton|Demon Skeletons} atraídos por outros jogadores.",
+    "A zona **sudeste** está cheia de buracos falsos."
+  ]
+}

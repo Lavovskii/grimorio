@@ -1,0 +1,123 @@
+{
+  "slug": "tinder-box-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "15 min",
+  "summary": "Alguém morreu no topo de uma montanha remota de {wiki:Chyllfroest} levando consigo algo muito valioso para sobreviver ao frio. Sobe ao cimo da montanha, usa a pilha de ossos e recebes uma {item:Tinder Box}. Só é possível entre 1 de abril e 1 de maio, quando a ilha está acessível, e podes repetir a cada 20 horas.",
+  "legend_pt": "Alguém morreu numa montanha remota levando consigo algo extremamente valioso para vencer as duras condições do lugar.",
+  "start": {
+    "x": 32068,
+    "y": 31093,
+    "z": 7,
+    "label": "Ponte de gelo para Chyllfroest"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Só entre **1 de abril e 1 de maio** de cada ano, quando a ilha de {wiki:Chyllfroest} está acessível.",
+    "Sem nível mínimo; recomendado nível 25."
+  ],
+  "items_needed": [
+    {
+      "text": "O feitiço {spell:Levitate} (é preciso no 5.º andar da montanha para subir ao topo e depois para descer)"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Tinder Box"
+    }
+  ],
+  "dangers": [
+    "Frost Giant",
+    "Frost Giantess"
+  ],
+  "npcs": [],
+  "tips": [
+    "Podes repetir a quest a cada **20 horas** enquanto a ilha estiver aberta."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao topo da montanha",
+      "steps": [
+        {
+          "title": "Chegar a Chyllfroest",
+          "text": "Entre 1 de abril e 1 de maio, parte de **Svargrond** e vai até à gruta dos {creature:Frost Troll|Frost Trolls} que fica no caminho para o atalho das {wiki:Formorgar Mines}. Em vez de desceres e seguires o atalho, segue para **oeste**, em direção à gruta dos Quara Scouts. A \"ponte\" de gelo para a ilha fica em {coord:32068,31093,7}; atravessa-a para chegares a {wiki:Chyllfroest}. Pelo caminho há {wiki:Chakoyas}, {creature:Frost Giant|Frost Giants} e {creature:Frost Giantess|Frost Giantesses}.",
+          "coords": [
+            {
+              "x": 32068,
+              "y": 31093,
+              "z": 7,
+              "label": "Ponte de gelo para Chyllfroest"
+            },
+            {
+              "x": 32060,
+              "y": 31034,
+              "z": 7,
+              "label": "Ilha de Chyllfroest"
+            }
+          ],
+          "images": [
+            {
+              "file": "Chyllfroest Entrance.png",
+              "caption": "Entrada de Chyllfroest"
+            }
+          ]
+        },
+        {
+          "title": "Subir a montanha",
+          "text": "Vai até à {wiki:Chyllfroest Mountain|montanha de Chyllfroest} e sobe até ao **topo** (6.º andar acima do chão). No 1.º andar há um buraco que leva aos {creature:Frost Dragon|Frost Dragons} e no 3.º andar uma rampa para o andar de cima da gruta dos Frost Dragons: ignora-os e continua a subir. No **5.º andar** (sem criaturas) usa o feitiço {spell:Levitate} no lado **leste** para subires ao 6.º andar.",
+          "coords": [
+            {
+              "x": 32049,
+              "y": 31052,
+              "z": 7,
+              "label": "Montanha de Chyllfroest"
+            }
+          ],
+          "images": [
+            {
+              "file": "Chyllfroest Mountain Sign.png",
+              "caption": "Placa da montanha de Chyllfroest"
+            },
+            {
+              "file": "Chyllfroest Tinderbox Levitate.png",
+              "caption": "Ponto onde usas Levitate para chegar ao topo"
+            },
+            {
+              "file": "Tinderbox.png",
+              "caption": "Localização da pilha de ossos com a Tinder Box"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Apanhar a Tinder Box",
+      "steps": [
+        {
+          "title": "Usar a pilha de ossos",
+          "text": "No cimo da montanha encontras uma {item:Pile of Bones (Quest)|pilha de ossos}. Usa-a para receberes uma {item:Tinder Box}.",
+          "reward": "Tinder Box"
+        }
+      ]
+    },
+    {
+      "title": "3. Voltar a Svargrond",
+      "steps": [
+        {
+          "title": "Sair de Chyllfroest",
+          "text": "Volta pelo mesmo caminho: no topo usa {spell:Levitate} para desceres do 6.º para o 5.º andar no lado leste, desce a montanha pelas mesmas escadas e rampas até ao chão e atravessa de novo a ponte de gelo em {coord:32068,31093,7} para leste, de volta à gruta dos Frost Trolls e a **Svargrond**.",
+          "coords": [
+            {
+              "x": 32068,
+              "y": 31093,
+              "z": 7,
+              "label": "Ponte de gelo (regresso a Svargrond)"
+            }
+          ],
+          "tip": "Se tiveres um {item:Fireproof Horn} (dos Chakoyas), usa-o na Tinder Box para fazeres o {item:Melting Horn} com que podes domar o Ursagrodon."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Tiquanda/Tarantula Caves",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Cinco covas no meio da selva de **Tiquanda**, a leste e nordeste de Port Hope, que descem para grutas de aranhas; à superfície, à volta das covas, andam {creature:Tarantula|Tarantulas}.",
+  "entrance": {"x": 32726, "y": 32794, "z": 7, "label": "Cova mais próxima de Port Hope"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para **Port Hope** ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto); chegas ao porto do {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai de Port Hope para **leste**, pela selva de Tiquanda, até uma das cinco covas: {coord:32726,32794,7}, {coord:32758,32792,7} ou {coord:32818,32810,7} (a leste da cidade), ou {coord:32776,32686,7} e {coord:32827,32690,7} (mais a **nordeste**).",
+    "Desce pela cova: em baixo estás na gruta das aranhas."
+  ],
+  "leave": [
+    "Volta à cova por onde desceste e usa a {item:Rope} para subires à superfície.",
+    "Atravessa a selva para **oeste** até Port Hope, onde o {npc:Charles} te leva de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32758, "y": 32792, "z": 7, "label": "Cova de entrada (leste de Port Hope)"},
+    {"x": 32818, "y": 32810, "z": 7, "label": "Cova de entrada (leste)"},
+    {"x": 32776, "y": 32686, "z": 7, "label": "Cova de entrada (nordeste)"},
+    {"x": 32827, "y": 32690, "z": 7, "label": "Cova de entrada (nordeste)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — porto de Port Hope"}
+  ],
+  "warnings": [
+    "Lá em baixo há {creature:Tarantula|Tarantulas}, {creature:Poison Spider|Poison Spiders}, {creature:Centipede|Centipedes} e {creature:Toad|Toads}; os {item:Spider Egg|Spider Eggs} invocam mais aranhas. Leva a {item:Rope}: sem ela não sais das covas."
+  ]
+}

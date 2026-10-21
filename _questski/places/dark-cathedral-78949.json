@@ -1,0 +1,33 @@
+{
+  "title": "Dark Cathedral",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Ruínas amaldiçoadas de uma catedral nunca terminada, a **oeste das {wiki:Plains of Havoc}** e a sul do Outlaw Camp e do pântano de Venore, com três andares de subsolo cheios de bandidos, contrabandistas e mortos-vivos.",
+  "entrance": {"x": 32664, "y": 32344, "z": 7, "label": "Dark Cathedral (superfície)"},
+  "arrive": [
+    "**De Venore:** sai da cidade para **sudoeste**. **De Thais:** sai pela porta **leste**. Em ambos os casos tens de atravessar as {wiki:Plains of Havoc} até às ruínas ({coord:32664,32344,7}), a sul do Outlaw Camp.",
+    "Os dois primeiros andares de subsolo descem-se por **escadas**.",
+    "O andar mais fundo (subsolo -3, onde está a {npc:Angelina}) só se alcança pelo **teleporte**: a partir das escadas do 2.º andar segue para **sul** até uma sala grande; o teleporte está no fim dela ({coord:32615,32473,9}).",
+    "Antes de entrares no teleporte tens de puxar as **6 alavancas** espalhadas pelas 5 salas à volta da sala grande. Há um limite de tempo (entre 30 segundos e 2,5 minutos, não confirmado): faz isto em grupo ou limpa primeiro os monstros e só depois puxa as alavancas."
+  ],
+  "leave": [
+    "No andar mais fundo, entra no teleporte junto à {npc:Angelina} ({coord:32635,32402,10}): leva-te para fora do andar mais fundo.",
+    "Sobe pelas escadas por onde desceste até à superfície.",
+    "Volta a pé pelas planícies: para **nordeste** até Venore (barco do {npc:Captain Fearless}: {key:hi}, o destino, {key:yes}) ou para **oeste** até Thais."
+  ],
+  "coords": [
+    {"x": 32615, "y": 32473, "z": 9, "label": "Sala das alavancas e teleporte (2.º andar de subsolo)"},
+    {"x": 32635, "y": 32402, "z": 10, "label": "Angelina, junto ao teleporte de saída"},
+    {"x": 32695, "y": 32310, "z": 7, "label": "Lorbas (perto da Dark Cathedral)"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "images": [
+    {"file": "Dark Cathedral 0.png", "caption": "Dark Cathedral — superfície"},
+    {"file": "Dark Cathedral 1.png", "caption": "Dark Cathedral — 1.º andar de subsolo"},
+    {"file": "Resp-2DC.GIF", "caption": "Spawns do 2.º andar de subsolo"}
+  ],
+  "warnings": [
+    "No centro das {wiki:Plains of Havoc} pode haver {creature:Giant Spider|Giant Spiders} atraídas por outros jogadores — atravessa com cuidado.",
+    "O 1.º andar tem {creature:Bandit|Bandits}, {creature:Smuggler|Smugglers}, {creature:Wild Warrior|Wild Warriors}, {creature:Assassin|Assassins} e um {creature:Dark Monk}; mais abaixo há {creature:Vampire|Vampires}."
+  ]
+}

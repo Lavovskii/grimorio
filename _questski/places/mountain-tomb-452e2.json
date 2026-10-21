@@ -1,0 +1,29 @@
+{
+  "title": "Mountain Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo debaixo do deserto de Kha'labal, a **norte de Ankrahmun**, junto às montanhas e à colina da Giant Spider (por isso também se chama \"GS Tomb\"); é o túmulo do faraó {creature:Dipthrah}.",
+  "entrance": {"x": 33132, "y": 32568, "z": 7, "label": "Entrada da Mountain Tomb (escava aqui)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade pela saída **norte** ({coord:33182,32773,7}) e segue pelo deserto para **norte** até ao sopé das montanhas, perto da rampa para {wiki:Ashta'daramai} ({coord:33120,32578,7}).",
+    "A entrada fica em {coord:33132,32568,7}: usa a {item:Shovel} para abrires o buraco e desce."
+  ],
+  "leave": [
+    "O {item:Magic Forcefield} da sala do faraó, usado **sem** o item de passe no inventário, leva-te ao início do túmulo; se não houver teleporte, volta pelo caminho por onde vieste.",
+    "No início do túmulo usa a {item:Rope} no buraco da entrada para saíres à superfície.",
+    "Regressa a pé para **sul** até Ankrahmun; no porto, o {npc:Captain Sinbeard} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33132, "y": 32568, "z": 7, "label": "Entrada (escava com a Shovel)"},
+    {"x": 33182, "y": 32773, "z": 7, "label": "Saída norte de Ankrahmun"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Tombgs.jpg", "caption": "Zona da entrada da Mountain Tomb"}
+  ],
+  "warnings": [
+    "Quanto mais desces, mais fortes são as criaturas: o 1.º piso serve para nível baixo, mas o 2.º tem {creature:Demon Skeleton|Demon Skeletons} e os pisos depois dos teleportes são para nível 50–80+."
+  ]
+}

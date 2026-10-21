@@ -1,0 +1,85 @@
+{
+  "slug": "deeplings-world-change",
+  "category": "world-change",
+  "region": "Gray Beach",
+  "difficulty": 3,
+  "duration": "Contínuo (depende dos pontos que o servidor junta)",
+  "summary": "O world change Deeplings decide quanto de {wiki:Fiehonja|Fiehonja}, a cidade submarina dos {wiki:Deeplings|Deeplings} em Quirefang, está acessível. Tem 3 estágios: no estágio 1 (o normal) só uma pequena parte de Fiehonja está aberta; no estágio 3 tens acesso à zona inteira. Os jogadores fazem avançar os estágios com as missões da {wiki:Liquid Black Quest|Liquid Black Quest}.",
+  "start": {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon, Gray Island (caminho para Quirefang)"},
+  "requirements": [
+    "Sem nível mínimo, mas o nível **recomendado é 130**.",
+    "Conta **Premium**.",
+    "Para participar precisas de chegar a Fiehonja e fazer as missões da {wiki:Liquid Black Quest|Liquid Black Quest}."
+  ],
+  "items_needed": [
+    {"text": "O que for pedido em cada missão da {wiki:Liquid Black Quest|Liquid Black Quest} (vê esse guia)"}
+  ],
+  "rewards": [
+    {"text": "Acesso a mais zonas de {wiki:Fiehonja|Fiehonja} à medida que o estágio sobe"}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Mais zonas de Fiehonja (a cidade inteira no estágio 3)", "kind": "zona", "place": "Fiehonja", "when": "À medida que o servidor sobe de estágio com as missões da {wiki:Liquid Black Quest|Liquid Black Quest}: no estágio 1 quase nada está aberto; no **estágio 3** tens acesso a toda a zona.", "note": "World change do servidor; precisas de Premium."}
+  ],
+  "dangers": ["Deepling Guard"],
+  "npcs": ["Scrutinon"],
+  "tips": [
+    "Este world change gira à volta de uma quest: todos os passos detalhados (como chegar, o que fazer em cada missão) estão no guia da {wiki:Liquid Black Quest|Liquid Black Quest}. Aqui só explicamos como funcionam os estágios.",
+    "Em Fiehonja enfrentas todos os tipos de {wiki:Deeplings|Deeplings}."
+  ],
+  "sections": [
+    {
+      "title": "1. Como funciona",
+      "steps": [
+        {
+          "title": "Os três estágios",
+          "text": "O world change Deeplings passa-se em {wiki:Fiehonja|Fiehonja} (Quirefang) e tem **3 estágios**. O estágio 1 é o padrão e quase nada de Fiehonja está acessível. Cada estágio seguinte abre mais área, e no **estágio 3** tens acesso a toda a zona.",
+          "table": {
+            "head": ["Estágio", "O que está acessível"],
+            "rows": [
+              ["1 (padrão)", "Só uma pequena parte de Fiehonja"],
+              ["2", "Mais áreas de Fiehonja"],
+              ["3", "Fiehonja inteira"]
+            ]
+          }
+        },
+        {
+          "title": "Como se faz avançar o estágio",
+          "text": "O estágio sobe quando os jogadores do servidor juntam **200 pontos** com as missões da {wiki:Liquid Black Quest|Liquid Black Quest}. As missões disponíveis mudam conforme o estágio.",
+          "table": {
+            "head": ["Estágio", "Missões disponíveis", "Como somar pontos"],
+            "rows": [
+              ["1", "Heart of the Sea, Soul Net", "Soul Net (5 pontos); matar um {creature:Deepling Guard} (1 ponto até aos 100 pontos, depois cerca de 0,1)"],
+              ["2", "Coral Mine, Soul Net", "Igual ao estágio 1 + Coral Mine (2 pontos por caixa de coral)"],
+              ["3", "Deepling Guardians (1.º addon), Anchor (2.º addon), Soul Net", "Igual ao estágio 1"]
+            ]
+          },
+          "warning": "Não há estágio 4. Se forem juntados 200 pontos no último dia do estágio 3, o world change volta ao estágio 2 em vez de cair para o estágio 1."
+        }
+      ]
+    },
+    {
+      "title": "2. Como participar",
+      "steps": [
+        {
+          "title": "Chegar a Fiehonja",
+          "text": "Vai a {wiki:Gray Island|Gray Island} (só tem barco a partir de Ab'Dendriel, Venore, Darashia e Edron). Lá podes falar com o {npc:Scrutinon} sobre Quirefang. Segue depois a primeira parte do guia da {wiki:Liquid Black Quest|Liquid Black Quest} (The First Visitor) para chegares a {wiki:Gray Beach|Gray Beach} e receberes o equipamento que te deixa entrar debaixo de água em Fiehonja.\nResumo do caminho: no porto diz {key:hi}, {key:gray island}, {key:yes} (150 gp); na Gray Island entra no buraco a **sul** do Scrutinon, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}; do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até Gray Beach. Para Fiehonja, entra no buraco mais a **sudeste** de Gray Beach e desce a escadaria gigante (ou, depois de teres feito o atalho da Liquid Black Quest, usa o teleporte de Gray Beach, que te deixa junto à estátua de Qjell).",
+          "npc": "Scrutinon",
+          "coords": [
+            {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island)"},
+            {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach"},
+            {"x": 33514, "y": 31323, "z": 7, "label": "Buraco a sudeste de Gray Beach (para Fiehonja)"}
+          ],
+          "tip": "Para saíres, regressa a Gray Beach pelo teleporte do atalho (ou volta pela escadaria) e faz o caminho da chegada ao contrário até à Gray Island, onde apanhas o barco para Ab'Dendriel, Venore, Darashia ou Edron. A wiki diz que a Gray Island é a única forma conhecida de chegar a Gray Beach."
+        },
+        {
+          "title": "Fazer as missões do estágio atual",
+          "text": "Faz as missões disponíveis no estágio em que o teu servidor está (ver tabela acima). Cada uma soma pontos para o servidor chegar aos 200 e abrir o estágio seguinte, e também dá recompensas da Liquid Black Quest (incluindo o {wiki:Deepling Outfits|Deepling Outfit} e addons)."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Para todos os passos das missões, consulta o guia da {wiki:Liquid Black Quest|Liquid Black Quest}."
+  ]
+}

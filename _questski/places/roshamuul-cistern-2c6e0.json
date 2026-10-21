@@ -1,0 +1,37 @@
+{
+  "title": "Roshamuul Cistern",
+  "type": "dungeon",
+  "near": "Roshamuul",
+  "summary": "Grande reservatório subterrâneo no **nordeste de Upper Roshamuul**, cheio de {creature:Terrorsleep|Terrorsleeps} e {creature:Feversleep|Feversleeps}, com escadas que funcionam como teleportes fixos; aqui decorrem várias tarefas da {wiki:Roshamuul Quest}.",
+  "requirements": [
+    "Upper Roshamuul só fica acessível a partir do **estágio 3** da {wiki:Roshamuul Quest} (world change do servidor), quando a muralha a norte de Guzzlemaw Valley está aberta."
+  ],
+  "arrive": [
+    "Em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca no acampamento humano do sul, em Lower Roshamuul, junto ao {npc:Captain Chelop}.",
+    "Atravessa {wiki:Guzzlemaw Valley} para **nordeste** e passa pela muralha aberta ({coord:33632,32401,7}) para {wiki:Upper Roshamuul}. Se fores cidadão de Roshamuul, podes ir diretamente para o templo de Upper Roshamuul e evitar o vale.",
+    "A cisterna fica no **nordeste** de Upper Roshamuul (a wiki não indica a coordenada exata da entrada).",
+    "Lá dentro, cada escada leva sempre ao mesmo destino fixo, que não é necessariamente o andar ao lado: usa os mapas marcados abaixo para te orientares. As alavancas das rodas de água ficam no piso 8 ({coord:33677,32276,8})."
+  ],
+  "leave": [
+    "Volta pelas mesmas escadas por onde entraste, seguindo os mapas da cisterna. Depois da sala de recompensa da tarefa Waters of Life, as escadas levam-te diretamente para fora da cisterna ({coord:33675,32304,7}).",
+    "Para saíres da ilha, volta ao acampamento da Inquisition no **sudoeste** (de Upper Roshamuul atravessa primeiro a ponte para sul) e fala com o {npc:Captain Chelop}: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento, Lower Roshamuul)"},
+    {"x": 33631, "y": 32343, "z": 6, "label": "Morax (Upper Roshamuul)"},
+    {"x": 33673, "y": 32279, "z": 11, "label": "Safe zone da cisterna (piso 11)"},
+    {"x": 33675, "y": 32304, "z": 7, "label": "Saída da cisterna"}
+  ],
+  "images": [
+    {"file": "Rosh cistern.gif", "caption": "Roshamuul Cistern"},
+    {"file": "Roshamuul Cistern Top Floor Marked.png", "caption": "Cisterna — piso de cima (escadas marcadas)"},
+    {"file": "Roshamuul Cistern Main Floor Marked.png", "caption": "Cisterna — piso principal"},
+    {"file": "Roshamuul Cistern Bottom Floor Marked.png", "caption": "Cisterna — piso de baixo"},
+    {"file": "Roshamuul Cistern Gateway Marked.png", "caption": "Cisterna — gateway"}
+  ],
+  "warnings": [
+    "Leva muitos supplies e {item:Energy Wall Rune|Energy Wall Runes} para prender os Terrorsleeps e Feversleeps. Há também 3 {creature:Shiversleep|Shiversleeps}.",
+    "À saída podes aparecer no meio de {creature:Retching Horror|Retching Horrors} e {creature:Choking Fear|Choking Fears}, que andam pela superfície de Upper Roshamuul."
+  ]
+}

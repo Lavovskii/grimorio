@@ -1,0 +1,30 @@
+{
+  "title": "Goroma",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "A maior das {wiki:Forbidden Islands}, a **noroeste de Liberty Bay**: ilha seca e quente com um grande vulcão, casa de um culto voodoo e de muitos piratas mortos-vivos.",
+  "entrance": {"x": 32161, "y": 32558, "z": 6, "label": "Navio do Jack Fate na costa leste de Goroma"},
+  "requirements": [
+    "O {npc:Jack Fate} só te leva a Goroma depois de fazeres a parte *Access to Goroma* da {wiki:The Shattered Isles Quest}.",
+    "Para passares as faíscas elétricas e entrares na parte mais funda da ilha tens de completar a {wiki:VoodooMaster Quest}."
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** e, no porto, fala com o capitão {npc:Jack Fate} no barco dele.",
+    "Diz {key:hi}, {key:goroma}, {key:yes} (500 gp). Ele deixa-te no navio dele, encalhado na costa **leste** de Goroma ({coord:32161,32558,6}).",
+    "O centro da ilha fica a **oeste** do navio ({coord:32095,32583,7}); o vulcão {wiki:Hellgore} fica a sul ({coord:32097,32631,7})."
+  ],
+  "leave": [
+    "Volta ao navio do {npc:Jack Fate} na costa **leste** da ilha ({coord:32161,32558,6}).",
+    "Diz {key:hi}, {key:passage} (ou {key:liberty bay}) e {key:yes}: ele leva-te de volta a **Liberty Bay**."
+  ],
+  "coords": [
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate — chegada e regresso (leste de Goroma)"},
+    {"x": 32095, "y": 32583, "z": 7, "label": "Goroma (centro da ilha)"},
+    {"x": 32097, "y": 32631, "z": 7, "label": "Vulcão Hellgore"}
+  ],
+  "warnings": [
+    "Na viagem de barco entre Liberty Bay e Thais (com nível 20 ou mais) há cerca de 8% de hipótese de naufragares em Goroma. Nesse caso só sais juntando 30 {item:Wood} para reparar o barco ({creature:Island Troll|Island Trolls} largam madeira).",
+    "Recomenda-se nível 60+ (knights 70+): há {creature:Pirate Ghost|Pirate Ghosts}, {creature:Blood Crab|Blood Crabs}, {creature:Fire Elemental|Fire Elementals} e {creature:Dragon|Dragons} no vulcão.",
+    "Durante a {wiki:Fire from the Earth Mini World Change} o vulcão enche-se de {creature:Demon|Demons}, {creature:Hellfire Fighter|Hellfire Fighters} e {creature:Diabolic Imp|Diabolic Imps}: espera que acabe."
+  ]
+}

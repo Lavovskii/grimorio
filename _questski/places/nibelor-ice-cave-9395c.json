@@ -1,0 +1,34 @@
+{
+  "title": "Nibelor Ice Cave",
+  "type": "gruta",
+  "near": "Svargrond",
+  "summary": "Gruta de {creature:Ice Golem|Ice Golems} e {creature:Crystal Spider|Crystal Spiders} na ilha de {wiki:Nibelor}, a **nordeste de Svargrond**; entra-se por dois buracos no sul da ilha.",
+  "entrance": {"x": 32356, "y": 31087, "z": 7, "label": "Entrada da Nibelor Ice Cave (buraco)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "O {npc:Iskan} só te leva a Nibelor depois da primeira missão da {wiki:The Ice Islands Quest} (encontrar o cão Sniffler), que exige o Barbarian Test feito."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Svargrond** (em Carlin, ou com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda} ({coord:32347,31108,6}).",
+    "Vai ao **nordeste** de Svargrond e fala com o {npc:Iskan} ({coord:32301,31085,7}): {key:hi}, {key:passage}. Ele leva-te a Nibelor.",
+    "Os dois buracos de entrada ficam no **sul** de Nibelor ({coord:32356,31087,7} e {coord:32388,31075,7}). Desce por um deles."
+  ],
+  "leave": [
+    "Sobe pelo mesmo buraco com a {item:Rope}.",
+    "Para voltares a Svargrond, fala com o {npc:Nilsor}, a **oeste** do círculo de pedras de Nibelor ({coord:32329,31044,7}), e pede {key:passage}.",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp): {key:hi}, nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32301, "y": 31085, "z": 7, "label": "Iskan (barco para Nibelor)"},
+    {"x": 32356, "y": 31087, "z": 7, "label": "Entrada 1 (buraco)"},
+    {"x": 32388, "y": 31075, "z": 7, "label": "Entrada 2 (buraco)"},
+    {"x": 32396, "y": 31079, "z": 8, "label": "Inactive Geyser (dentro da gruta)"},
+    {"x": 32329, "y": 31044, "z": 7, "label": "Nilsor (barco de volta a Svargrond)"},
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"}
+  ],
+  "images": [{"file": "NibelorIceCave.png", "caption": "Mapa da Nibelor Ice Cave"}],
+  "warnings": [
+    "Os {creature:Crystal Spider|Crystal Spiders} (1250 HP) são bastante mais fortes que os {creature:Ice Golem|Ice Golems}: recomendado nível 45-60+."
+  ]
+}

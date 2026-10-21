@@ -1,0 +1,34 @@
+{
+  "title": "Abandoned Sewers",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Esgotos esquecidos (também chamados *Catacombs*) por baixo de **Rathleton**, a oeste da cidade e sob a Glooth Factory, com uma gruta de jade cheia de {creature:Demon|Demons} e {creature:Grim Reaper|Grim Reapers}.",
+  "entrance": {"x": 33542, "y": 31979, "z": 9, "label": "Porta de quest dos Abandoned Sewers"},
+  "requirements": [
+    "O acesso ganha-se na {wiki:Dark Trails Quest}: o {npc:Jacob} ou o {npc:Elliott} dão-te a autorização depois de reparares 20 válvulas nos esgotos ({key:abandoned sewers}, {key:mission}, {key:ok}, {key:abandoned sewers})."
+  ],
+  "arrive": [
+    "Em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Desembarcas na jangada do {npc:Captain Gulliver}, numa ilhota a **oeste** de Oramond.",
+    "Entra no {item:Slime Slide}: leva-te a um monte na ilha principal. Desce ao piso térreo, anda para **leste** até ao pequeno barco e usa o portal dele ({coord:33628,32005,7}); segue para **norte** até ao portão principal de Rathleton.",
+    "Na cidade, vai ao quintal da sucata e daí para **oeste** até à muralha; sobe a escada para cima da muralha e segue-a para **sul** até ela virar para leste. Na saída seguinte há uma grelha de esgoto: desce por ela e depois desce as escadas um pouco a norte. O {npc:Jacob} está na sala a leste ({coord:33571,31983,9}).",
+    "A partir do Jacob anda para **oeste**, desce um andar e passa a porta de quest ({coord:33542,31979,9}). Segue a ligação até à gruta de jade."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: atravessa a gruta de jade, passa a porta de quest e regressa aos esgotos do Jacob; sobe as escadas e sai pela grelha para cima da muralha.",
+    "Conforme as votações da {wiki:Rathleton Quest}, pode haver um {item:Slime Slide} na parte **sudoeste** da masmorra ({coord:33392,32086,10}) que te leva de volta a {wiki:Upper Rathleton}.",
+    "Para saíres de Oramond, faz o caminho da chegada ao contrário até à jangada do {npc:Captain Gulliver} (com o rank Citizen, o Slime Slide de Rathleton leva-te ao barco) e diz {key:hi}, {key:thais}, {key:yes} (150 gp)."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (chegada a Oramond)"},
+    {"x": 33571, "y": 31983, "z": 9, "label": "Jacob (Rathleton Sewers)"},
+    {"x": 33542, "y": 31979, "z": 9, "label": "Porta de quest dos Abandoned Sewers"},
+    {"x": 33392, "y": 32086, "z": 10, "label": "Slime Slide (se estiver ativo)"}
+  ],
+  "images": [
+    {"file": "Abandoned Sewers Route.png", "caption": "Rota de Rathleton até aos Abandoned Sewers"},
+    {"file": "Abandoned Sewers.png", "caption": "Mapa dos Abandoned Sewers"}
+  ],
+  "warnings": [
+    "Zona para **nível 200+**: {creature:Demon|Demons}, {creature:Grim Reaper|Grim Reapers} e {creature:Metal Gargoyle|Metal Gargoyles}. A pequena sala a sudeste do Slime Slide serve de sítio seguro."
+  ]
+}

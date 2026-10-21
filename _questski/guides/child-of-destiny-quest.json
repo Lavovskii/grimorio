@@ -1,0 +1,177 @@
+{
+  "slug": "child-of-destiny-quest",
+  "category": "tutorial",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "10–15 min",
+  "summary": "No {wiki:Festival of Initiates}, na Isle of Destiny, quatro instrutores deixam-te experimentar o estilo de luta de cada vocação: espada e escudo com o {npc:Neill}, cajado com o {npc:Tylius}, lanças com a {npc:Shanoya} e runas e feitiços com a {npc:Salbra}. Testas tudo em {creature:Party Skeleton|Party Skeletons} e no fim vais escolher a tua vocação.",
+  "start": {
+    "x": 32076,
+    "y": 32027,
+    "z": 7,
+    "label": "Neill, Festival of Initiates"
+  },
+  "requirements": [
+    "Nenhum: é a introdução da Isle of Destiny, sem nível mínimo nem Premium."
+  ],
+  "items_needed": [
+    {
+      "text": "Nada"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Mean Knight Sword"
+    },
+    {
+      "item": "Studded Shield"
+    },
+    {
+      "item": "Small Health Potion"
+    },
+    {
+      "item": "Sorc and Druid Staff"
+    },
+    {
+      "item": "Meat",
+      "qty": 3
+    },
+    {
+      "item": "Mean Paladin Spear",
+      "qty": 3
+    },
+    {
+      "item": "Lightest Magic Missile Rune",
+      "qty": 10
+    },
+    {
+      "item": "Mana Potion",
+      "qty": 1
+    },
+    {
+      "text": "Feitiços de treino {spell:Practise Fire Wave} e {spell:Practise Healing} (temporários)"
+    }
+  ],
+  "dangers": [
+    "Party Skeleton"
+  ],
+  "npcs": [
+    "Neill",
+    "Willem",
+    "Ula",
+    "Tylius",
+    "Willow (NPC)",
+    "Shanoya",
+    "Salbra",
+    "Captain Kurt",
+    "Raffael"
+  ],
+  "tips": [
+    "A espada, as lanças, as runas e os feitiços do festival são só para treino: desaparecem quando te aproximas do {npc:Captain Kurt}.",
+    "Depois de saíres pela vedação a norte não podes voltar ao festival."
+  ],
+  "sections": [
+    {
+      "title": "1. Treino corpo a corpo – Neill",
+      "steps": [
+        {
+          "title": "Espada e escudo",
+          "text": "Fala com o {npc:Neill}. Ele dá-te a {item:Mean Knight Sword} e o {item:Studded Shield}. Mata alguns {creature:Party Skeleton|Party Skeletons} para experimentares a luta corpo a corpo.",
+          "npc": "Neill",
+          "reward": "Mean Knight Sword e Studded Shield"
+        },
+        {
+          "title": "Willem e Ula (opcional)",
+          "text": "Podes falar com o {npc:Willem} e a {npc:Ula}, mas não é obrigatório.",
+          "npc": "Willem"
+        }
+      ]
+    },
+    {
+      "title": "2. Treino com cajado – Tylius",
+      "steps": [
+        {
+          "title": "O cajado",
+          "text": "Fala com o {npc:Tylius} e recebe o {item:Sorc and Druid Staff}. Experimenta-o nos {creature:Party Skeleton|Party Skeletons} dentro da tenda dele.",
+          "npc": "Tylius",
+          "reward": "Sorc and Druid Staff"
+        },
+        {
+          "title": "Carne e Willow",
+          "text": "Anda para **leste** e abre o baú para obteres 3 {item:Meat}. Se quiseres, fala com a {npc:Willow (NPC)|Willow}.",
+          "reward": "3 Meat"
+        }
+      ]
+    },
+    {
+      "title": "3. Treino à distância – Shanoya",
+      "steps": [
+        {
+          "title": "As lanças",
+          "text": "Continua para **leste** até à {npc:Shanoya} e fala com ela. Depois tira 3 {item:Mean Paladin Spear|Mean Paladin Spears} do baú da tenda dela e tenta matar alguns {creature:Party Skeleton|Party Skeletons} com elas.",
+          "npc": "Shanoya",
+          "reward": "3 Mean Paladin Spears"
+        }
+      ]
+    },
+    {
+      "title": "4. Magia – Salbra",
+      "steps": [
+        {
+          "title": "Practise Fire Wave",
+          "text": "Segue até à {npc:Salbra} e fala com ela. Ela ensina-te o feitiço {spell:Practise Fire Wave}.",
+          "npc": "Salbra"
+        },
+        {
+          "title": "Runas",
+          "text": "Fala outra vez com a Salbra e diz {key:proceed}. Recebes 10 {item:Lightest Magic Missile Rune|Lightest Magic Missile Runes}: experimenta-as nos {creature:Party Skeleton|Party Skeletons}.",
+          "npc": "Salbra",
+          "reward": "10 Lightest Magic Missile Runes"
+        },
+        {
+          "title": "Practise Healing",
+          "text": "Diz {key:proceed} mais uma vez. A Salbra ensina-te o {spell:Practise Healing} e tira-te 85 pontos de vida para poderes testar o feitiço de cura. Apanha a {item:Mana Potion} do baú atrás dela.",
+          "npc": "Salbra",
+          "reward": "Mana Potion"
+        }
+      ]
+    },
+    {
+      "title": "5. Sair do festival",
+      "steps": [
+        {
+          "title": "Terminar",
+          "text": "Sai da tenda da Salbra para **leste**. Aparece a mensagem *\"Congratulations, initiate! Go to a vocation trainer and choose your destiny!\"*. Ao andares para **norte** e passares a vedação, a quest fica concluída.",
+          "warning": "Depois de passares a vedação não podes voltar ao festival."
+        },
+        {
+          "title": "Itens do festival desaparecem",
+          "text": "Ao chegares perto do {npc:Captain Kurt} perdes a {item:Mean Knight Sword}, as {item:Mean Paladin Spear|Mean Paladin Spears}, as {item:Lightest Magic Missile Rune|Lightest Magic Missile Runes} e os feitiços de treino. Aparece: *\"Your Festival items just miraculously disappeared! In the distance, you hear Tylius chuckle.\"*",
+          "npc": "Captain Kurt"
+        },
+        {
+          "title": "Sair da Isle of Destiny",
+          "text": "Depois de escolheres a vocação, vai ao barco do {npc:Captain Kurt}, no **norte** da {wiki:Isle of Destiny} (1 andar acima do chão). Fala com ele para te levar a um dos portos acessíveis do continente.",
+          "npc": "Captain Kurt",
+          "coords": [
+            {
+              "x": 32099,
+              "y": 31965,
+              "z": 6,
+              "label": "Captain Kurt, no barco"
+            }
+          ],
+          "warning": "O Captain Kurt não te deixa sair da ilha com mais de 1000 gp no personagem. Deposita o resto antes no banco (podes fazê-lo com o {npc:Raffael}, ali perto)."
+        },
+        {
+          "title": "Baú no barco",
+          "text": "Depois de escolheres a vocação e partires para o continente no barco do {npc:Captain Kurt}, abre o baú no barco para obteres um saco com uma {item:Adventurer's Stone} e um {item:Paper (Adventurer's Guild)|Paper}.",
+          "reward": "Adventurer's Stone e Paper"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Quando chegas ao continente o questlog recebe 5 atualizações (é adicionada a {wiki:Loose Ends}), mas estranhamente a Child of Destiny continua a não aparecer como concluída."
+  ]
+}

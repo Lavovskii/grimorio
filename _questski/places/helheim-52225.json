@@ -1,0 +1,33 @@
+{
+  "title": "Helheim",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Pequena ilha a **nordeste de {wiki:Hrodmir}**, perto de Svargrond, tomada por mortos-vivos por causa de uma experiência necromântica do {creature:Braindeath}; por baixo tem uma masmorra de vários pisos.",
+  "entrance": {"x": 32465, "y": 31174, "z": 7, "label": "Barco do Buddel em Helheim (chegada)"},
+  "requirements": [
+    "Só podes ir à ilha depois de chegares à missão *The Secret of Helheim* da {wiki:The Ice Islands Quest} (o {npc:Hjaern} dá-te a autorização)."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Svargrond** (de barco: {key:hi}, {key:svargrond}, {key:yes} ao capitão de Carlin, Thais ou Venore).",
+    "A partir de Svargrond vai para **sul** até ao barco do {npc:Buddel} ({coord:32254,31195,7}).",
+    "Diz {key:hi}, {key:passage}, {key:helheim} e {key:yes}. Quando ele pedir o {item:Dwarven Ring} diz {key:no} e paga **50 gp**. Desembarcas em {coord:32465,31174,7}.",
+    "Para entrares na masmorra, vai para **sudeste** a partir do barco e sobe a montanha/escadas; depois segue para **nordeste** e desce (2 rampas / pelo buraco) para o primeiro piso."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à superfície: sobe as escadas e rampas por onde desceste (usa a {item:Rope} no buraco do início).",
+    "Lá fora desce a montanha para **sudoeste** e volta para **noroeste** até ao barco do {npc:Buddel} ({coord:32465,31174,7}).",
+    "Diz {key:hi}, {key:passage}, {key:svargrond} e {key:yes} (diz {key:no} se ele pedir o Dwarven Ring e paga 50 gp). Ficas no cais a **sul** de Svargrond."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel, a sul de Svargrond"},
+    {"x": 32478, "y": 31179, "z": 7, "label": "Helheim"}
+  ],
+  "images": [
+    {"file": "Map helheim.jpg", "caption": "Mapa de Helheim"}
+  ],
+  "warnings": [
+    "O {npc:Buddel} às vezes deixa-te na ilha errada: se isso acontecer, pede a viagem outra vez.",
+    "Logo à entrada há {creature:Mummy|Mummies} e {creature:Ghoul|Ghouls}; nos pisos de baixo há {creature:Bonebeast|Bonebeasts}, {creature:Demon Skeleton|Demon Skeletons} e, em salas fechadas, o {creature:Braindeath} e o {creature:Elder Bonelord}."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Thais Jail",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "A prisão de **Thais**, na Harbour Street, no **sul** da cidade; as celas ficam no subsolo, onde está o guarda {npc:Henricus}.",
+  "entrance": {"x": 32328, "y": 32276, "z": 7, "label": "Thais Jail (edifício)"},
+  "arrive": [
+    "Se não estás em **Thais**, apanha um barco para lá ({key:hi}, {key:thais}, {key:yes} ao capitão da tua cidade); chegas ao porto, junto ao {npc:Captain Bluebear} ({coord:32310,32210,6}).",
+    "Vai para o **sul** da cidade, à Harbour Street, e entra no edifício da prisão ({coord:32328,32276,7}).",
+    "Desce as escadas um piso até às celas, onde está o {npc:Henricus} ({coord:32314,32266,8})."
+  ],
+  "leave": [
+    "Sobe pelas mesmas escadas até ao rés-do-chão e sai para a Harbour Street.",
+    "Para saíres de Thais, o {npc:Captain Bluebear}, no porto, leva-te a outras cidades ({key:hi}, o destino, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32314, "y": 32266, "z": 8, "label": "Celas da prisão (Henricus)"},
+    {"x": 32311, "y": 32171, "z": 6, "label": "King Tibianus (castelo de Thais)"}
+  ],
+  "warnings": [
+    "Durante a {wiki:Kingsday Mini World Change}, se insultares o {npc:King Tibianus} és teleportado para a prisão e não podes fazer logout até ao raid seguinte de Kingsday, que te põe junto às escadas de saída."
+  ]
+}

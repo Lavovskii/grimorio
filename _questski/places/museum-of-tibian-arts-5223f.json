@@ -1,0 +1,29 @@
+{
+  "title": "Museum of Tibian Arts",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Museu de arte tibiana (MOTA) gerido pelo {npc:Gareth}, a que se chega por um teleporte **por baixo do Games Hall de Thais**; à noite as estátuas do 2.º andar ganham vida e no 3.º andar há cultistas.",
+  "entrance": {"x": 32395, "y": 32193, "z": 8, "label": "Teleporte para o museu (por baixo do Games Hall de Thais)"},
+  "requirements": [
+    "O teleporte só funciona com **conta Premium**.",
+    "Para a missão da {wiki:Cults of Tibia Quest} tens de te tornar patrono do museu: diz ao {npc:Gareth} {key:hi}, {key:patron} e {key:yes} (10.000 gp)."
+  ],
+  "arrive": [
+    "Vai a **Thais** (de barco, no capitão da tua cidade: {key:hi}, {key:thais}, {key:yes}).",
+    "Vai ao Games Hall ({coord:32387,32210,7}), a oeste da Knights Guild, e desce **1 andar** (subsolo -1).",
+    "Entra no teleporte ({coord:32395,32193,8}): és levado para dentro do museu, onde está o {npc:Gareth} ({coord:33305,32140,8})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao teleporte de entrada do museu: ele leva-te de volta à cave do Games Hall de Thais.",
+    "Sobe para a rua; o porto de Thais ({npc:Captain Bluebear}, {coord:32310,32210,6}) fica a oeste."
+  ],
+  "coords": [
+    {"x": 32387, "y": 32210, "z": 7, "label": "Games Hall de Thais"},
+    {"x": 33305, "y": 32140, "z": 8, "label": "Gareth (curador do museu)"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"}
+  ],
+  "warnings": [
+    "À **noite** as estátuas do 2.º andar ganham vida (incluindo um {creature:Animated Guzzlemaw}); jogadores de nível baixo não devem andar por esse andar de noite. O wiki aponta nível 100 para caçar aqui.",
+    "No 3.º andar há {creature:Goldhanded Cultist|Goldhanded Cultists} e {creature:Goldhanded Cultist Bride|Cultist Brides}."
+  ]
+}

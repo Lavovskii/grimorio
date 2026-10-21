@@ -1,0 +1,29 @@
+{
+  "title": "Oramond Minotaur Camp",
+  "type": "zona",
+  "near": "Rathleton",
+  "summary": "Planícies de minotauros na **parte leste de Oramond**, a leste de Rathleton e dos Rathleton Workshops, divididas em East Plains, North Plains e as colinas com os minotauros mais fortes.",
+  "entrance": {"x": 33682, "y": 31942, "z": 7, "label": "Monte da entrada do acampamento"},
+  "arrive": [
+    "Vai a **Oramond**: em Thais, o {npc:Captain Bluebear} leva-te lá ({key:hi}, {key:oramond}, {key:yes}, 150 gp). Desembarcas na jangada do {npc:Captain Gulliver}, numa ilhota a **oeste** de Oramond.",
+    "Entra no {item:Slime Slide}, desce ao piso térreo, anda para **leste** até ao pequeno barco e usa o portal dele; segue depois até **Rathleton**.",
+    "A partir de Rathleton atravessa os Rathleton Workshops para **leste** e passa o monte da entrada ({coord:33682,31942,7}). Também chegas a este monte vindo das planícies do sul (pelo teleporte).",
+    "Dentro do acampamento, a rampa seguinte fica em {coord:33707,31938,7}; as North Plains alcançam-se passando o monte em {coord:33725,31919,7}."
+  ],
+  "leave": [
+    "Volta para **oeste** pelo monte da entrada ({coord:33682,31942,7}) e atravessa os Workshops até Rathleton.",
+    "Dependendo dos votos na {wiki:Rathleton Quest}, pode existir um {item:Slime Slide} em {coord:33703,31939,6} que serve de atalho de volta a Rathleton.",
+    "Para saíres de Oramond, faz o caminho da chegada ao contrário (ou, com o rank Citizen, usa o Slime Slide de Rathleton que leva ao barco) e diz ao {npc:Captain Gulliver} {key:hi}, o nome da cidade (por exemplo {key:thais}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (jangada de Oramond)"},
+    {"x": 33707, "y": 31938, "z": 7, "label": "Rampa no centro do acampamento"},
+    {"x": 33725, "y": 31919, "z": 7, "label": "Monte para as North Plains"},
+    {"x": 33703, "y": 31939, "z": 6, "label": "Slime Slide de volta a Rathleton (se existir)"},
+    {"x": 33701, "y": 31929, "z": 7, "label": "Oramond Minotaur Camp (centro)"}
+  ],
+  "warnings": [
+    "Nas East Plains só há os minotauros mais fracos ({creature:Mooh'Tah Warrior|Mooh'Tah Warriors}, {creature:Minotaur Hunter|Minotaur Hunters}, {creature:Worm Priestess|Worm Priestesses}); nas North Plains e nas colinas aparecem {creature:Execowtioner|Execowtioners} e {creature:Moohtant|Moohtants}, que spawnam muito juntos.",
+    "Pelo caminho, nos Workshops, há {creature:Metal Gargoyle|Metal Gargoyles} e {creature:Rustheap Golem|Rustheap Golems}. O wiki recomenda nível 80+ para knights, 70+ para paladins e 120+ para mages."
+  ]
+}

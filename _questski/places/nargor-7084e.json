@@ -1,0 +1,33 @@
+{
+  "title": "Nargor",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "A segunda maior ilha das {wiki:Shattered Isles}, a **oeste de Liberty Bay**, rodeada de recifes e montanhas; é a maior base pirata conhecida, cheia de grutas e armadilhas.",
+  "entrance": {"x": 32024, "y": 32815, "z": 7, "label": "Sebastian em Nargor (sítio onde desembarcas)"},
+  "requirements": [
+    "O barco para Meriana precisa da palavra-passe {key:peg leg} (missão *Access to Meriana* da {wiki:The Shattered Isles Quest}).",
+    "O wiki indica que o acesso a Nargor se ganha com a {wiki:Meriana Quest}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Liberty Bay**.",
+    "No cais de Liberty Bay fala com o {npc:Captain Waverider} ({coord:32347,32859,7}): {key:hi}, {key:peg leg}, {key:yes} (50 gp). Ele leva-te a **Meriana**.",
+    "Em Meriana, a **sul** de Sabrehaven, fala com o {npc:Sebastian} ({coord:32347,32623,7}): {key:hi}, {key:nargor}, {key:yes} (50 gp).",
+    "Desembarcas em Nargor junto ao outro barco do {npc:Sebastian} ({coord:32024,32815,7})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao sítio onde desembarcaste ({coord:32024,32815,7}).",
+    "Fala com o {npc:Sebastian} de Nargor: {key:hi}, {key:liberty bay}, {key:yes} (100 gp) para voltares diretamente a Liberty Bay, ou {key:meriana} (50 gp) para Sabrehaven."
+  ],
+  "coords": [
+    {"x": 31994, "y": 32860, "z": 7, "label": "Nargor"},
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay)"},
+    {"x": 32347, "y": 32623, "z": 7, "label": "Sebastian em Meriana"},
+    {"x": 31977, "y": 32853, "z": 1, "label": "Teleporte do esconderijo dos líderes piratas"}
+  ],
+  "images": [
+    {"file": "Map nargor.jpg", "caption": "Mapa de Nargor"}
+  ],
+  "warnings": [
+    "A ilha está cheia de piratas ({creature:Pirate Marauder|Pirate Marauders}, {creature:Pirate Cutthroat|Pirate Cutthroats}, {creature:Pirate Buccaneer|Pirate Buccaneers}, {creature:Pirate Corsair|Pirate Corsairs}), grutas e armadilhas; recomendado nível 35–45+."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Poacher Caves/Gloomy",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Variante \"Gloomy\" das Poacher Caves, em {wiki:Ferngrims Gate}, a norte do Green Claw Swamp (noroeste de Venore), cheia de {creature:Ghost Wolf|Ghost Wolves} e {creature:Gloom Wolf|Gloom Wolves}; faz parte do {wiki:Poacher Caves Mini World Change}.",
+  "entrance": {"x": 32754, "y": 31928, "z": 7, "label": "Entrada das Poacher Caves"},
+  "requirements": [
+    "Só encontras esta versão quando os lobos fantasma dominam a gruta (mensagem *\"Poachers have slaughtered nearly all wild animals north of the Green Claw Swamp. But vengeful spirits show up there now!\"*). Noutros dias aparecem as variantes {wiki:Poacher Caves/Game} ou {wiki:Poacher Caves/Poachers}."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Venore** ({key:hi}, {key:venore}, {key:yes} ao capitão da tua cidade).",
+    "Segue a pé para **noroeste**, passando a norte do Green Claw Swamp, até {wiki:Ferngrims Gate} (fica também a leste de Kazordoon e a sudeste de Ab'Dendriel).",
+    "Desce pela entrada no sul de Ferngrims Gate ({coord:32754,31928,7}). A gruta tem 4 andares; no 2.º andar está dividida em duas zonas separadas."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada, subindo com a {item:Rope} nos buracos por onde desceste.",
+    "Regressa a pé a Venore, para **sudeste**, e apanha o barco do {npc:Captain Fearless} ({coord:32955,32022,6}): {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "No 4.º andar, na zona **norte**, há {creature:Wyvern|Wyverns}; o resto da gruta tem Ghost Wolves e Gloom Wolves (recomendado nível 20+)."
+  ]
+}

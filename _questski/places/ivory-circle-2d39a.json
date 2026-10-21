@@ -1,0 +1,27 @@
+{
+  "title": "Ivory Circle",
+  "type": "zona",
+  "near": "Liberty Bay",
+  "summary": "Rua no **nordeste de Liberty Bay**, junto à Admiral's Avenue (oeste) e ao Trader's Point (sul), com joalharias, a sede da Explorer Society e a torre da loja de magia do {npc:Malunga}.",
+  "entrance": {"x": 32347, "y": 32809, "z": 7, "label": "Ivory Circle (torre do Malunga)"},
+  "requirements": ["Conta **Premium** (Liberty Bay)."],
+  "arrive": [
+    "Apanha um barco para **Liberty Bay**: no porto da tua cidade diz {key:hi}, {key:liberty bay}, {key:yes} (por exemplo o {npc:Captain Fearless} em Venore, 180 gp, ou o {npc:Captain Seahorse} em Edron, 170 gp). Chegas às docas de Liberty Bay.",
+    "Atravessa a cidade para o **nordeste**: o Ivory Circle fica a **norte do depot**, ligado à Admiral's Avenue e ao Trader's Point.",
+    "No sentido dos ponteiros do relógio, a partir de noroeste: Ivory Circle 1, as joalharias ({npc:Bertram}, {npc:Chantalle}, Theodore Loveless no 2.º andar), a Explorer Society da {npc:Berenice}, Ivory Circle 2 e a torre da loja de magia ({npc:Frederik} em baixo, {npc:Malunga} no 3.º andar)."
+  ],
+  "leave": [
+    "Volta às docas de Liberty Bay e fala com o {npc:Jack Fate}: {key:hi}, o destino e {key:yes} — Ankrahmun (90 gp), Darashia (200), Edron (170), Port Hope (50), Thais (180), Venore (180) ou Yalahar (275).",
+    "Para Meriana, o {npc:Captain Waverider} está na pequena península a **sudeste** do depot ({key:hi}, {key:peg leg}, {key:yes}, 50 gp)."
+  ],
+  "coords": [
+    {"x": 32347, "y": 32808, "z": 5, "label": "Malunga (topo da torre)"},
+    {"x": 32345, "y": 32808, "z": 7, "label": "Frederik (loja de magia)"},
+    {"x": 32359, "y": 32812, "z": 7, "label": "Berenice (Explorer Society)"},
+    {"x": 32363, "y": 32791, "z": 7, "label": "Chantalle (joalharia)"},
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (península a sudeste do depot)"}
+  ],
+  "warnings": [
+    "Na viagem de Liberty Bay para Thais com o {npc:Jack Fate} há cerca de 8% de hipótese de ficares encalhado em {wiki:Goroma}."
+  ]
+}

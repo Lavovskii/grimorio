@@ -1,0 +1,62 @@
+{
+  "slug": "battle-axe-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "5–10 min",
+  "summary": "Alguém morreu nos esgotos de Thais enquanto carregava um machado. Desces aos esgotos perto do depot, abres um buraco escondido com uma {item:Pick}, matas 4 {creature:Cave Rat|Cave Rats} e tiras um {item:Battle Axe} de uma pilha de ossos.",
+  "legend_pt": "Alguém morreu nos esgotos enquanto carregava um machado.",
+  "start": {"x": 32302, "y": 32257, "z": 8, "label": "Ponta sudoeste dos esgotos de Thais"},
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo (recomendado 8+)."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "ou equivalente, para sair do buraco"},
+    {"item": "Pick", "note": "ou equivalente, para abrir o buraco"}
+  ],
+  "rewards": [
+    {"item": "Battle Axe"}
+  ],
+  "achievements": [],
+  "dangers": ["Rat", "Cave Rat"],
+  "npcs": [],
+  "tips": [
+    "É uma quest muito rápida (1–5 minutos), ideal para níveis baixos."
+  ],
+  "sections": [
+    {
+      "title": "1. Buscar o Battle Axe",
+      "steps": [
+        {
+          "title": "Entrar nos esgotos",
+          "text": "Em {wiki:Thais}, vai até ao depot e entra nos {wiki:Thais Sewers|esgotos de Thais} por uma das {item:Sewer Grate|grades de esgoto} que estão perto dele (vê a imagem): basta pisares a grade para caíres para o piso de baixo. Lá em baixo há {creature:Rat|Rats}.",
+          "images": [{"file": "Battle Axe Quest 0,01.PNG", "caption": "Entra por uma destas grades de esgoto"}]
+        },
+        {
+          "title": "Ir até à ponta sudoeste",
+          "text": "Atravessa os esgotos até ao extremo **sudoeste** da gruta.",
+          "coords": [{"x": 32302, "y": 32257, "z": 8, "label": "Ponta sudoeste dos esgotos"}],
+          "images": [{"file": "Battle Axe Quest 0,02.PNG", "caption": "Segue a linha verde até ao extremo sudoeste dos esgotos"}]
+        },
+        {
+          "title": "Abrir o buraco com a pick",
+          "text": "No beco sem saída do lado **leste**, usa a {item:Pick} no chão **2 quadrados a norte** do fim do beco. Abre-se um buraco: desce.",
+          "images": [{"file": "Battle Axe Quest 0,03.PNG", "caption": "Usa a Pick neste quadrado"}]
+        },
+        {
+          "title": "Matar os Cave Rats e apanhar o machado",
+          "text": "Mata os 4 {creature:Cave Rat|Cave Rats} e usa a {item:Pile of Bones (Quest)|pilha de ossos} para receberes o {item:Battle Axe}.",
+          "images": [{"file": "Battle Axe Quest 0,05.PNG", "caption": "Usa a pilha de ossos para receberes o Battle Axe"}],
+          "reward": "Battle Axe"
+        },
+        {
+          "title": "Sair dos esgotos",
+          "text": "Usa a {item:Rope} no buraco por onde desceste para voltares aos esgotos. Depois faz o caminho da linha verde ao contrário, de volta à zona do depot, e sobe pela escada por baixo da grade por onde entraste: sais outra vez nas ruas de {wiki:Thais}, junto ao depot.",
+          "coords": [{"x": 32302, "y": 32257, "z": 8, "label": "Ponta sudoeste dos esgotos (perto do buraco)"}],
+          "warning": "Sem {item:Rope} (ou equivalente) não consegues subir do buraco dos {creature:Cave Rat|Cave Rats}."
+        }
+      ]
+    }
+  ]
+}

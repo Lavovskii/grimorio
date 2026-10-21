@@ -1,0 +1,174 @@
+{
+  "slug": "skeleton-decoration-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "20–30 min",
+  "summary": "Diz-se que um grupo de {creature:Frost Giant|Frost Giants} torturou um prisioneiro na ilha de {wiki:Tyrsung} e lhe roubou o dinheiro. Atravessa o território dos gigantes até à sala deles e tira de um barril o que resta do prisioneiro: uma {item:Skeleton Decoration}, 89 gp e um {item:Shard}.",
+  "legend_pt": "Dizem que um grupo de gigantes de gelo torturou um prisioneiro e lhe roubou o dinheiro.",
+  "start": {
+    "x": 32254,
+    "y": 31195,
+    "z": 7,
+    "label": "Buddel, a sul de Svargrond"
+  },
+  "requirements": [
+    "Premium.",
+    "Sem nível mínimo; recomendado 30+.",
+    "Sem quests prévias para a quest em si, mas para viajares com o {npc:Buddel} até {wiki:Tyrsung} precisas da {wiki:Barbarian Test Quest} e de ter pelo menos começado a missão \"Nibelor 2: Ecological Terrorism\" da {wiki:The Ice Islands Quest}."
+  ],
+  "items_needed": [
+    {
+      "text": "Poções suficientes: a sala final tem vários Frost Giants e Frost Giantesses."
+    },
+    {
+      "text": "50 gp para cada viagem com o {npc:Buddel} (ou um {item:Dwarven Ring} na mochila para ele te levar ao sítio certo)."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Skeleton Decoration"
+    },
+    {
+      "text": "89 gp"
+    },
+    {
+      "item": "Shard"
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Mammoth",
+    "Frost Giant",
+    "Frost Giantess",
+    "Polar Bear",
+    "Smuggler",
+    "Pirate Marauder",
+    "Bandit",
+    "Hunter"
+  ],
+  "npcs": [
+    "Buddel"
+  ],
+  "tips": [
+    "Às vezes há criaturas perdidas atraídas por outros jogadores: {creature:Smuggler}, {creature:Pirate Marauder}, {creature:Bandit} ou {creature:Hunter}."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar à gruta dos gigantes",
+      "steps": [
+        {
+          "title": "Ir para Tyrsung",
+          "text": "Em **Svargrond**, vai ao barco a **sul** da cidade e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} e confirma com {key:yes}. A viagem custa 50 gp. Desembarcas no cais de {wiki:Tyrsung} ({coord:32332,31230,7}).",
+          "npc": "Buddel",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "you": "tyrsung"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32254,
+              "y": 31195,
+              "z": 7,
+              "label": "Buddel, a sul de Svargrond"
+            },
+            {
+              "x": 32332,
+              "y": 31230,
+              "z": 7,
+              "label": "Buddel em Tyrsung (cais)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Map tyrsung.jpg",
+              "caption": "Mapa de Tyrsung"
+            }
+          ],
+          "tip": "O Buddel está sempre bêbado e pode levar-te para o sítio errado. Se levares um {item:Dwarven Ring} na mochila, ele leva-te ao destino certo (fica com o anel e não cobra os 50 gp). Para não perderes o anel, diz {key:no} quando ele o pedir ou usa-o no slot do anel."
+        },
+        {
+          "title": "Contornar a montanha",
+          "text": "Contorna a montanha pelo **leste** até encontrares uma escada a subir. Sobe.",
+          "images": [
+            {
+              "file": "Skeleton_decoration_spoiler_map.PNG‎",
+              "caption": "Mapa com o caminho até ao barril"
+            }
+          ]
+        },
+        {
+          "title": "Seguir a encosta até à gruta",
+          "text": "Neste piso há muitos {creature:Frost Giant|Frost Giants}, {creature:Frost Giantess|Frost Giantesses} e {creature:Mammoth|Mammoths}. Começa a andar para **oeste** e segue a falésia até chegares a uma gruta.",
+          "warning": "Não puxes vários gigantes e mamutes ao mesmo tempo."
+        },
+        {
+          "title": "Descer na gruta",
+          "text": "Dentro da gruta, desce as escadas."
+        },
+        {
+          "title": "Até às escadas seguintes",
+          "text": "Na nova gruta vai para **norte** e depois para **leste**, até encontrares escadas a descer. Desce."
+        }
+      ]
+    },
+    {
+      "title": "2. A sala dos gigantes",
+      "steps": [
+        {
+          "title": "Entrar na sala",
+          "text": "Vai para **norte** até chegares a uma sala com bastantes {creature:Frost Giant|Frost Giants} e {creature:Frost Giantess|Frost Giantesses}. Limpa a sala ou atrai-os aos poucos.",
+          "warning": "A sala tem muitos gigantes: não fiques rodeado e mantém as poções à mão."
+        },
+        {
+          "title": "Abrir o barril",
+          "text": "Na parte **norte** da sala há um barril em cima de uma mesa. Abre-o para receberes a recompensa.",
+          "reward": "Skeleton Decoration, 89 gp e Shard"
+        },
+        {
+          "title": "Sair de Tyrsung",
+          "text": "Volta pelo mesmo caminho: sobe as escadas das duas grutas, sai da gruta pela encosta, contorna a falésia de volta para **leste**, desce a escada e contorna a montanha até ao cais. Fala com o {npc:Buddel} em Tyrsung: {key:hi}, {key:passage}, {key:svargrond}, {key:yes} para voltares ao cais a sul de Svargrond.",
+          "npc": "Buddel",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "you": "svargrond"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32332,
+              "y": 31230,
+              "z": 7,
+              "label": "Buddel em Tyrsung (regresso)"
+            },
+            {
+              "x": 32254,
+              "y": 31195,
+              "z": 7,
+              "label": "Chegada: a sul de Svargrond"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

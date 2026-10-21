@@ -1,0 +1,36 @@
+{
+  "title": "Temple of Xayepocax",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Sala de templo muito funda na {wiki:Hero Cave}, a **norte de Edron**, cheia de criaturas variadas; tem a {wiki:Vampire Shield Quest} e, atrás das portas de nível 70 e 100, o teleporte para a {wiki:Demon Forge}.",
+  "entrance": {"x": 33164, "y": 31638, "z": 7, "label": "Entrada da Hero Cave (norte de Edron)"},
+  "requirements": [
+    "Conta **Premium** (Edron).",
+    "Nível 70 para o {item:Gate of Expertise} no **sul** da sala; nível 100 para o teleporte da Demon Forge."
+  ],
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Edron** de barco (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}). Chegas ao porto, junto ao {npc:Captain Seahorse}.",
+    "Do porto vai para **norte** até à entrada da {wiki:Hero Cave} ({coord:33164,31638,7}), onde costuma haver 3 {creature:Hunter|Hunters}. Desce pelo buraco (1).",
+    "Desce pelo buraco seguinte (2), depois vai para **norte** até outro buraco na mesma sala (3) e desce.",
+    "Vai para **leste** e depois **norte** até ao buraco seguinte (4), numa sala com 3 {creature:Dragon|Dragons}, e desce. Desce também pelo buraco no **meio da sala** seguinte (5).",
+    "Dá a volta até ao piso principal (6), vai para **sul** até ao fim e depois para **leste**; no cruzamento (com minotauros) segue o caminho do **sul** e desce as escadas (7): estás no Temple of Xayepocax."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: sobe as escadas do templo (7) e faz o mapa ao contrário, do 7 até ao 1, usando a {item:Rope} em cada buraco por onde desceste (5, 4, 3, 2 e o da entrada).",
+    "Cá fora, vai para **sul** até Edron. O {npc:Captain Seahorse} leva-te a outras cidades ({key:hi}, o nome da cidade, por exemplo {key:thais}, e {key:yes}).",
+    "O teleporte atrás da porta de nível 70 **não** é uma saída: leva à Demon Forge."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"},
+    {"x": 33164, "y": 31638, "z": 7, "label": "Entrada/saída da Hero Cave"}
+  ],
+  "images": [
+    {"file": "Vampire_Shield_Quest_map.png", "caption": "Caminho pela Hero Cave: os números 1 a 8 são os pontos referidos"},
+    {"file": "Temple of Xayepocax.png", "caption": "O Temple of Xayepocax"}
+  ],
+  "warnings": [
+    "No templo há 3 {creature:Demon Skeleton|Demon Skeletons}, 3 Monks, 3 Hunters, 2 {creature:Hero|Heroes}, 2 Priestesses, 2 Witches, 2 Dark Magicians, 2 Dark Apprentices, um Orc Shaman, um Stalker e um {creature:Warlock}, e renascem depressa. Não puxes tudo de uma vez.",
+    "No caminho de volta passas outra vez pelos Dragons e pelo Hero."
+  ]
+}

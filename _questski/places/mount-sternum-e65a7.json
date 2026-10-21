@@ -1,0 +1,35 @@
+{
+  "title": "Mount Sternum",
+  "type": "montanha",
+  "near": "Thais",
+  "summary": "Montanha a **nordeste de Thais** e sudoeste de Kazordoon, com grutas profundas de {creature:Cyclops|Cyclopes}, mortos-vivos e um covil de dragões no andar mais fundo; antigamente era o único caminho entre Thais e o resto do continente.",
+  "entrance": {"x": 32450, "y": 32070, "z": 7, "label": "Entrada oeste do Mount Sternum"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Thais** (se estás noutra cidade, apanha um barco e diz ao capitão {key:hi}, {key:thais}, {key:yes}).",
+    "Sai de Thais a pé para **nordeste**, em direção a Kazordoon, até à montanha ({coord:32494,32072,7}).",
+    "Entra pela **entrada oeste** ({coord:32450,32070,7}) e desce as escadas para as grutas.",
+    "A {wiki:Mount Sternum/Undead Cave|Undead Cave} tem também uma entrada à superfície em {coord:32418,32017,7}, perto da torre da bruxa a sul de Kazordoon."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe os pisos por onde desceste (usa a {item:Rope} nos buracos onde for preciso) até à entrada oeste e regressa a Thais, a **sudoeste**.",
+    "Também podes atravessar a montanha até **Kazordoon** pela {wiki:Route:Thais to Kazordoon|passagem secreta do Mount Sternum} (ver mapas abaixo).",
+    "Se entraste pelas Dwarf Mines, a saída do outro lado é a Pick 'N Shovel Mine, a oeste de Kazordoon ({coord:32548,31987,7})."
+  ],
+  "coords": [
+    {"x": 32494, "y": 32072, "z": 7, "label": "Mount Sternum"},
+    {"x": 32418, "y": 32017, "z": 7, "label": "Entrada da Undead Cave (junto à torre da bruxa)"},
+    {"x": 32416, "y": 32024, "z": 9, "label": "Buraco na Undead Cave"},
+    {"x": 32450, "y": 32038, "z": 8, "label": "Skjaar (junto à campa do mestre)"},
+    {"x": 32441, "y": 32008, "z": 13, "label": "Escadas no centro de Mount Sternum"},
+    {"x": 32548, "y": 31987, "z": 7, "label": "Pick 'N Shovel Mine (saída para Kazordoon)"}
+  ],
+  "images": [
+    {"file": "Route Thais - Kazordoon.png", "caption": "Passagem de Thais para Kazordoon pelo Mount Sternum (parte 1)"},
+    {"file": "Route Thais - Kazordoon 2.png", "caption": "Passagem de Thais para Kazordoon pelo Mount Sternum (parte 2)"}
+  ],
+  "warnings": [
+    "Cuidado para não ficares cercado pelos {creature:Cyclops Smith|Cyclops Smiths} em nível baixo; se só estás de passagem, um {spell:Magic Shield} ajuda.",
+    "Na passagem para Kazordoon podes encontrar {creature:Bonelord|Bonelords}, {creature:Ghoul|Ghouls} e, se alguém os atrair, {creature:Crypt Shambler|Crypt Shamblers}, {creature:Mummy|Mummies} e {creature:Ghost|Ghosts}."
+  ]
+}

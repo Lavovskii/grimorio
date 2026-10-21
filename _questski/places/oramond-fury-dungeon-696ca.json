@@ -1,0 +1,27 @@
+{
+  "title": "Oramond Fury Dungeon",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Dungeon perigosa a **norte de Rathleton**, na ilha de Oramond, cheia de {creature:Fury|Furies}, {creature:Spectre|Spectres} e {creature:Undead Dragon|Undead Dragons}; o acesso ganha-se na {wiki:Dark Trails Quest}.",
+  "entrance": {"x": 33666, "y": 31924, "z": 7, "label": "Porta da Oramond Fury Dungeon"},
+  "requirements": [
+    "O acesso é dado durante a {wiki:Dark Trails Quest}."
+  ],
+  "arrive": [
+    "Em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Desembarcas na jangada do {npc:Captain Gulliver}, numa ilhota a **oeste** de Oramond.",
+    "Entra no {item:Slime Slide}: leva-te a um monte na ilha principal (com minotauros). Desce ao piso térreo e anda para **leste** até uns edifícios com um pequeno barco; o portal desse barco ({coord:33628,32005,7}) leva-te para o outro lado da água, perto de Rathleton.",
+    "Vai até à ponte **leste** de Oramond. A porta da dungeon ({coord:33666,31924,7}) fica a **norte** dessa ponte: contorna a montanha e desce a rampa que está logo a norte da entrada."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à porta e regressa a Rathleton.",
+    "Para voltares ao continente, faz o caminho inverso até à jangada do {npc:Captain Gulliver} (com o rank *Citizen*, o Slime Slide de Rathleton leva-te diretamente ao barco). Diz {key:hi}, {key:thais}, {key:yes} (150 gp)."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (chegada a Oramond)"},
+    {"x": 33628, "y": 32005, "z": 7, "label": "Portal no pequeno barco"},
+    {"x": 33666, "y": 31924, "z": 7, "label": "Porta da Oramond Fury Dungeon"}
+  ],
+  "warnings": [
+    "É uma zona de alto nível: {creature:Fury|Furies}, {creature:Nightmare|Nightmares}, {creature:Spectre|Spectres}, {creature:Lost Soul|Lost Souls}, {creature:Dark Torturer|Dark Torturers} e {creature:Undead Dragon|Undead Dragons}."
+  ]
+}

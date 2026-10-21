@@ -1,0 +1,30 @@
+{
+  "title": "Necromant House",
+  "type": "edificio",
+  "near": "Venore",
+  "summary": "Casa grande do necromante Arcian nas {wiki:Plains of Havoc}, **a leste da Dark Cathedral** (sudoeste de Venore), construída sobre o Shrine of Wonders que guarda o caminho para as Pits of Inferno.",
+  "entrance": {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House"},
+  "requirements": [
+    "O teleporte verdadeiro para a sala principal das Pits of Inferno (1 andar acima do teleporte avariado) está atrás de uma porta selada: só a abres se já tiveres entrado em pelo menos uma sala do trono na {wiki:The Pits of Inferno Quest}."
+  ],
+  "items": ["Shovel"],
+  "arrive": [
+    "Vai a **Venore** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:venore}, {key:yes}) e sai da cidade a pé para **sudoeste** até às {wiki:Plains of Havoc} ({coord:32735,32297,7}). O templo das Plains, onde está o {npc:Oldrak}, serve de referência.",
+    "A casa fica a **leste** da {wiki:Dark Cathedral} ({coord:32781,32330,7}). Segundo o wiki, entra-se pela **gruta subterrânea a sul** da casa.",
+    "Junto à casa há um cemitério: usar a {item:Shovel} numa {item:Loose Stone Pile} abre a gruta estreita usada na {wiki:The Pits of Inferno Quest} (há várias pilhas, todas levam à mesma gruta)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à superfície das Plains of Havoc e regressa a pé para **nordeste** até Venore.",
+    "Em Venore, o {npc:Captain Fearless} ({coord:32955,32022,6}) leva-te às outras cidades: {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"},
+    {"x": 32816, "y": 32260, "z": 6, "label": "Oldrak (templo das Plains of Havoc)"},
+    {"x": 32799, "y": 32365, "z": 8, "label": "Trashcan para o Bulltaur Lair (1 andar abaixo do cemitério)"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "O teleporte do piso térreo está avariado e leva ao \"Void\" (há um quadro a avisar: *\"Somehow the teleporter got damaged.\"*).",
+    "Nas Plains of Havoc há {creature:Cyclops|Cyclopes}, {creature:Giant Spider|Giant Spiders}, {creature:Demon Skeleton|Demon Skeletons} e {creature:Dragon|Dragons} a oeste do templo — cuidado em nível baixo."
+  ]
+}

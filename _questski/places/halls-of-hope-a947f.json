@@ -1,0 +1,35 @@
+{
+  "title": "Halls of Hope",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Templo dos Astral Shapers à superfície, a **norte de Thais**; depois de restaurado (na {wiki:Forgotten Knowledge Quest}) tem seis portais coloridos para as zonas dos bosses.",
+  "entrance": {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope"},
+  "requirements": [
+    "Os portais só aparecem com o templo restaurado (entregam-se {item:Heavy Old Tome|Heavy Old Tomes} ao {npc:Albinius}: {key:hi}, {key:temple}, {key:yes}).",
+    "Cada portal, exceto o de fogo, paga-se uma vez ao Albinius dizendo o nome do portal: {key:energy portal} (50 {item:Marsh Stalker Feather|Marsh Stalker Feathers}), {key:death portal} (50 {item:Pelvis Bone|Pelvis Bones}), {key:ice portal} (50 {item:Fish}), {key:earth portal} (50 {item:Acorn|Acorns}) e {key:holy portal} (50 {item:Incantation Notes}).",
+    "O **Fire Portal** só deixa passar quem fez toda a {wiki:The New Frontier Quest}."
+  ],
+  "arrive": [
+    "Vai a **Thais** (de barco, chegas ao {npc:Captain Bluebear}, {coord:32310,32210,6}).",
+    "Sai da cidade pela saída **norte** e continua a pé para **norte** até ao templo ({coord:32326,32090,7}).",
+    "Lá dentro estão o {npc:Albinius} ({coord:32335,32091,7}) e a {npc:Ivalisse} ({coord:32329,32091,7})."
+  ],
+  "leave": [
+    "Faz o mesmo caminho para **sul** até Thais.",
+    "Se usaste um dos portais, volta ao ponto onde chegaste na zona do boss: cada zona tem um portal igual que te traz de volta às Halls of Hope."
+  ],
+  "coords": [
+    {"x": 32335, "y": 32091, "z": 7, "label": "Albinius"},
+    {"x": 32329, "y": 32091, "z": 7, "label": "Ivalisse"},
+    {"x": 32805, "y": 31657, "z": 8, "label": "Death Portal → Old Masonry (Lady Tenebris)"},
+    {"x": 32786, "y": 32818, "z": 13, "label": "Energy Portal → Replica Dungeon (Lloyd)"},
+    {"x": 32635, "y": 32257, "z": 7, "label": "Earth Portal → perto da Desecrated Glade (Mounted Thorn Knight)"},
+    {"x": 33339, "y": 31168, "z": 7, "label": "Fire Portal → Temple Complex, Zao (Soul of Dragonking Zyrtarch)"},
+    {"x": 32206, "y": 31027, "z": 10, "label": "Ice Portal → Formorgar Mines (Melting Frozen Horror)"},
+    {"x": 32780, "y": 32686, "z": 14, "label": "Holy Portal → Astral Shaper Dungeon (The Time Guardian)"},
+    {"x": 32905, "y": 32847, "z": 13, "label": "Energy Gate → Astral Shaper Boss Dungeon"}
+  ],
+  "warnings": [
+    "Num mundo novo o templo começa inacabado: sem portais e só com ruínas e um {item:Imbuing Shrine}."
+  ]
+}

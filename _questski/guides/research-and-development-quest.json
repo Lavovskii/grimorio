@@ -1,0 +1,134 @@
+{
+  "slug": "research-and-development-quest",
+  "category": "historia",
+  "region": "Edron",
+  "difficulty": 1,
+  "duration": "30–60 min",
+  "summary": "Uma pequena quest das {wiki:Tibia Tales} em Edron: o {npc:Spectulus} e o {npc:Sinclair} querem estudar fantasmas. Medes a energia de campas no cemitério de Edron com um aparelho mágico e depois capturas a essência de um {creature:Ghost} numa jaula de espíritos. Ganhas 2 × 500 pontos de experiência e o achievement **Guinea Pig**, e abres a {wiki:Spirithunters Quest}.",
+  "legend_pt": "O Spectulus e o Sinclair precisam de ajuda numa investigação sobre fantasmas.",
+  "start": {"x": 33268, "y": 31832, "z": 1, "label": "Spectulus, Ivory Towers (Edron)"},
+  "requirements": [
+    "Premium.",
+    "{wiki:Sea of Light Quest} concluída.",
+    "Sem nível mínimo; recomendado nível 35+."
+  ],
+  "items_needed": [
+    {"item": "Pick"},
+    {"item": "Shovel"}
+  ],
+  "rewards": [
+    {"text": "500 pontos de experiência"},
+    {"text": "500 pontos de experiência"},
+    {"text": "Achievement **Guinea Pig**"}
+  ],
+  "achievements": ["Guinea Pig"],
+  "unlocks": [
+    {"what": "Spirithunters Quest", "kind": "missao", "place": "Spirithunters Quest", "when": "Depois de entregares a jaula cheia ao {npc:Sinclair}: fala outra vez com ele para começares."}
+  ],
+  "dangers": ["Poacher", "Hunter", "Ghoul", "Skeleton", "Slime", "Ghost", "Squidgy Slime"],
+  "npcs": ["Spectulus", "Sinclair"],
+  "tips": [
+    "Cada uso do aparelho numa campa faz aparecer um {creature:Squidgy Slime}: está preparado para o matar.",
+    "Na missão 2, usa a jaula no corpo do Ghost **logo a seguir** a matá-lo."
+  ],
+  "sections": [
+    {
+      "title": "1. Medições no cemitério",
+      "steps": [
+        {
+          "title": "Pedir a tarefa ao Spectulus",
+          "text": "Viaja de barco até **Edron** (chegas ao porto do {npc:Captain Seahorse}, que também te leva de volta) e vai às {wiki:Ivory Towers}, as sete torres de marfim na parte **leste** da cidade. Sobe ao topo da torre central (a mais alta) e fala com o {npc:Spectulus}. Diz {key:hi}, {key:tasks}, {key:research} e responde às perguntas: {key:yes}, {key:yes}, {key:yes}, {key:no}, {key:yes}. Depois diz outra vez {key:research} e {key:yes}. Ele dá-te o {item:Magical Measurement Device} (a *spirit meter*).",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "tasks"},
+            {"you": "research"},
+            {"npc": "[...] Are you ready to help science once again?"},
+            {"you": "yes"},
+            {"npc": "[...] One: You ain't afraid of no ghost, right?"},
+            {"you": "yes"},
+            {"npc": "Good. Two: You know that ghosts exist and/or have found and/or defeated one or more of them?"},
+            {"you": "yes"},
+            {"npc": "[...] Three: You can explain at least three of the following terms [...]?"},
+            {"you": "no"},
+            {"npc": "Ah well, let's forget about the scientific details [...] Ready for me to go on with your task?"},
+            {"you": "yes"},
+            {"npc": "[...] Just tell me whenever you are ready to help us with our research."},
+            {"you": "research"},
+            {"npc": "[...] So are you in?"},
+            {"you": "yes"},
+            {"npc": "Good. Take this wand - we call it a spirit meter - and go to the graveyard I have marked on your map and take a few measurements on the graves."}
+          ]
+        },
+        {
+          "title": "Medir quatro campas",
+          "text": "Vai ao {wiki:Edron Graveyard|cemitério de Edron} e usa o {item:Magical Measurement Device} em **quatro** campas. Sempre que o usas aparece um {creature:Squidgy Slime}: mata-o. O cemitério fica à superfície, a **norte** da cidade: no fim volta a pé pelo mesmo caminho até às Ivory Towers e sobe outra vez à torre central.",
+          "coords": [
+            {"x": 33216, "y": 31670, "z": 7, "label": "Cemitério de Edron"}
+          ]
+        },
+        {
+          "title": "Entregar as medições",
+          "text": "Volta ao {npc:Spectulus} e diz {key:hi}, {key:task}, {key:research}, {key:yes}.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "task"},
+            {"you": "research"},
+            {"npc": "You are back, how did the measurements go? Did you recognise anything of interest?"},
+            {"you": "yes"},
+            {"npc": "Let me see the spirit meter. Hmmm... those are grave news you bring [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Capturar um fantasma",
+      "steps": [
+        {
+          "title": "Pedir a missão seguinte",
+          "text": "Diz ao {npc:Spectulus} {key:task} e {key:research}. Ele pede-te para ires buscar a jaula de espíritos ao {npc:Sinclair}.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {"you": "task"},
+            {"you": "research"},
+            {"npc": "[...] Take the spirit cage from him and use it on the essence of a common ghost. [...]"}
+          ]
+        },
+        {
+          "title": "Receber a Spirit Cage",
+          "text": "Fala com o {npc:Sinclair} (também nas Ivory Towers). Diz {key:hi}, {key:mission}, {key:yes}, {key:yes}. Ele dá-te a {item:Spirit Cage}.",
+          "npc": "Sinclair",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "[...] Did he tell you about the spirit cage?"},
+            {"you": "yes"},
+            {"npc": "[...] Using the device on the remains of a ghost right after its defeat should capture it inside this trap. [...] Are you ready for this?"},
+            {"you": "yes"},
+            {"npc": "Good, now all you need to do is find a ghost, defeat it and catch its very essence with the cage. [...]"}
+          ]
+        },
+        {
+          "title": "Apanhar a essência de um Ghost",
+          "text": "Encontra um {creature:Ghost}, mata-o e **logo a seguir** usa a {item:Spirit Cage} nos restos dele para capturares a essência."
+        },
+        {
+          "title": "Entregar a jaula cheia",
+          "text": "Volta ao {npc:Sinclair} com a jaula cheia e entrega-a (diz {key:hi} e {key:mission}).",
+          "npc": "Sinclair",
+          "reward": "Achievement Guinea Pig"
+        }
+      ]
+    },
+    {
+      "title": "3. Continuação: Spirithunters Quest",
+      "steps": [
+        {
+          "title": "Próximo passo",
+          "text": "Fala outra vez com o {npc:Sinclair}: começa a {wiki:Spirithunters Quest}, em que tens de capturar 5 {creature:Ghost|Ghosts}, 5 {creature:Nightstalker|Nightstalkers} e 5 {creature:Souleater|Souleaters}.",
+          "npc": "Sinclair"
+        }
+      ]
+    }
+  ]
+}

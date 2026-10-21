@@ -1,0 +1,23 @@
+{
+  "title": "Old Fortress",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Ruínas de uma fortaleza antiga a **nordeste de Edron**, parecidas com a Hero Cave, com {creature:Wyvern|Wyverns} à entrada e {creature:Bonebeast|Bonebeasts}, {creature:Necromancer|Necromancers} e {creature:Vicious Squire|Vicious Squires} no interior.",
+  "entrance": {"x": 33224, "y": 31652, "z": 7, "label": "Old Fortress (ruínas)"},
+  "arrive": [
+    "Vai a **Edron**: no capitão do porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, {npc:Captain Bluebear}, 160 gp). Chegas ao porto, junto ao {npc:Captain Seahorse}.",
+    "Sai da cidade a pé para **norte/nordeste** até às ruínas ({coord:33224,31652,7}). A wiki não descreve o caminho em detalhe nem onde fica a descida para os andares interiores.",
+    "Para a {wiki:Cartography 101 Quest} basta usares o mapa à superfície, no meio das ruínas ({coord:33223,31648,7})."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída própria: volta pelo mesmo caminho até à superfície e regressa a pé para **sul/sudoeste** até Edron.",
+    "No porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te às outras cidades: {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33223, "y": 31648, "z": 7, "label": "Ponto da Cartography 101 (meio das ruínas)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "À entrada há {creature:Wyvern|Wyverns}; no 1.º andar, {creature:Bonebeast|Bonebeasts}, {creature:Necromancer|Necromancers} e {creature:Vicious Squire|Vicious Squires}. O wiki recomenda nível 60+."
+  ]
+}

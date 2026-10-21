@@ -1,0 +1,58 @@
+{
+  "slug": "iron-helmet-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "10–15 min",
+  "summary": "Um amigo do Muriel tentou fugir das Plains of Havoc, mas não saiu de lá vivo. O corpo dele está meio escondido por uma árvore, a oeste do acampamento dos cyclopes, orcs e minotauros. Abre-o para receberes um {item:Iron Helmet}, uma {item:Sudden Death Rune}, uma {item:Leather Armor}, o livro {item:Porgol's Strange Behaviour (Book)|Porgol's Strange Behaviour}, umas {item:Worn Leather Boots} e uma {item:Longsword}.",
+  "legend_pt": "Um amigo do Muriel tentou fugir das Plains of Havoc, mas não conseguiu sair de lá com vida.",
+  "start": {"x": 32787, "y": 32232, "z": 7, "label": "Corpo junto à árvore, Plains of Havoc"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 25+).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [],
+  "rewards": [
+    {"item": "Iron Helmet"},
+    {"item": "Sudden Death Rune"},
+    {"item": "Leather Armor"},
+    {"item": "Porgol's Strange Behaviour (Book)"},
+    {"item": "Worn Leather Boots"},
+    {"item": "Longsword"}
+  ],
+  "achievements": [],
+  "dangers": ["Minotaur", "Minotaur Archer", "Minotaur Guard", "Minotaur Mage", "Cyclops"],
+  "npcs": [],
+  "tips": [
+    "Normalmente não há criaturas junto ao corpo, mas o acampamento ao lado tem {creature:Minotaur|Minotaurs}, {creature:Minotaur Archer|Minotaur Archers}, {creature:Minotaur Guard|Minotaur Guards}, {creature:Minotaur Mage|Minotaur Mages} e {creature:Cyclops|Cyclopes}: não te aproximes demasiado."
+  ],
+  "sections": [
+    {
+      "title": "1. Encontrar o corpo",
+      "steps": [
+        {
+          "title": "Chegar às Plains of Havoc",
+          "text": "As {wiki:Plains of Havoc} ficam no sul do continente, a **sudoeste de Venore** e a sudeste de Kazordoon ({coord:32747,32258,7}). Parte de **Venore** e vai a pé para **sudoeste** até às planícies. Não é preciso barco nem equipamento especial.",
+          "coords": [
+            {"x": 32747, "y": 32258, "z": 7, "label": "Plains of Havoc"}
+          ]
+        },
+        {
+          "title": "Ir ao corpo",
+          "text": "Já nas **Plains of Havoc**, procura o acampamento dos {creature:Cyclops|Cyclopes}, {creature:Orc|Orcs} e {creature:Minotaur|Minotaurs}. O corpo está mesmo a **oeste** desse acampamento, parcialmente escondido por uma árvore.",
+          "coords": [{"x": 32787, "y": 32232, "z": 7, "label": "Corpo junto à árvore"}],
+          "tip": "Perto da árvore costuma haver muitas {item:Leather Armor|Leather Armors}, {item:Letter|Letters} e {item:Worn Leather Boots} espalhadas no chão: é sinal de que estás no sítio certo."
+        },
+        {
+          "title": "Abrir o corpo",
+          "text": "Abre o corpo e tira as recompensas.",
+          "reward": "{item:Iron Helmet}, {item:Sudden Death Rune}, {item:Leather Armor}, {item:Porgol's Strange Behaviour (Book)|Porgol's Strange Behaviour}, {item:Worn Leather Boots} e {item:Longsword}"
+        },
+        {
+          "title": "Sair das Plains of Havoc",
+          "text": "Para sair, volta a pé pelo mesmo caminho para **nordeste**, até **Venore**. Se precisares de descansar antes, as Plains of Havoc têm um templo (o do {npc:Oldrak})."
+        }
+      ]
+    }
+  ]
+}

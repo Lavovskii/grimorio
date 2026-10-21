@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/sites.css">
 <style>
 /* Layout: app shell — barra de personagem no topo, navegação lateral no desktop e barra inferior no telemóvel; conteúdo numa coluna de leitura. */
 :root{
@@ -2685,6 +2686,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
 <header class="bar">
   <div class="in">
     <div class="brand"><svg class="sig" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h15a5 5 0 0 1 5 5v17H11a5 5 0 0 1-5-5z"/><path d="M6 22a5 5 0 0 1 5-5h15"/><path d="M15 8l1.5 3 3 .4-2.2 2 .6 3-2.9-1.5-2.9 1.5.6-3-2.2-2 3-.4z" fill="currentColor" stroke="none"/></svg><b>Grimório de Tibia</b></div>
+    <nav class="sitesw" aria-label="Mudar de site"><a href="./" aria-current="page" title="Hunts, builds, equipamento e wiki"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M5 16a4 4 0 0 1 4-4h11"/></svg><span>Grimório</span></a><a href="quests/" id="swQuests" title="Guias de quests passo a passo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg><span>Questski</span></a></nav>
     <div class="chars" id="chars" role="group" aria-label="Personagens"></div>
     <div class="charsw" id="charSw"></div>
     <button class="srchbtn" id="gsBtn" aria-label="Pesquisar hunts, monstros, itens e quests"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sb-txt" aria-hidden="true">Procurar hunts, itens, criaturas…</span><kbd aria-hidden="true">/</kbd></button>

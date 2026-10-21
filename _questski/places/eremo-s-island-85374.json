@@ -1,0 +1,21 @@
+{
+  "title": "Eremo's Island",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Pequena ilha entre **Edron e Cormaya** onde vive o eremita {npc:Eremo}, que vende {item:Amulet of Loss|Amulets of Loss}, {item:Protection Amulet|Protection Amulets} e a bênção *The Wisdom of Solitude*.",
+  "entrance": {"x": 33322, "y": 31883, "z": 7, "label": "Eremo (ilha do eremita)"},
+  "arrive": [
+    "Vai a **Edron** (por exemplo de Liberty Bay, no barco do {npc:Jack Fate}: {key:hi}, {key:edron}, {key:yes}).",
+    "No porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a **Cormaya**: {key:hi}, {key:cormaya}, {key:yes} (20 gp).",
+    "No **porto norte** de Cormaya, pede ao barqueiro {npc:Pemaret} ({coord:33287,31956,6}) a passagem para a ilha do eremita: {key:hi}, {key:eremo}, {key:yes}. A viagem é **grátis**."
+  ],
+  "leave": [
+    "Fala com o {npc:Eremo} e diz {key:hi} e {key:cormaya} (também aceita {key:tibia}, {key:back} ou {key:teleport}): ele manda-te de volta a Cormaya.",
+    "Em Cormaya, o {npc:Pemaret} leva-te a Edron ({key:hi}, {key:edron}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33322, "y": 31883, "z": 7, "label": "Eremo"}
+  ]
+}

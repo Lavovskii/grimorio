@@ -1,0 +1,73 @@
+{
+  "slug": "small-health-potion-quest",
+  "category": "troca",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "5–10 min (se já tiveres a frigideira)",
+  "summary": "O agricultor {npc:Billy}, em Rookgaard, recompensa quem o ajudar: troca uma {item:Pan} (frigideira) da Goblin Temple Quest por uma {item:Small Health Potion}, para o caso de comeres alguma coisa cozinhada pelo primo dele.",
+  "legend_pt": "O Billy recompensa quem o ajudar.",
+  "start": {"x": 32051, "y": 32205, "z": 7, "label": "Billy, em Rookgaard"},
+  "requirements": [
+    "Conta Premium (o Billy está no lado Premium de Rookgaard).",
+    "Sem nível mínimo (recomendado 6+)."
+  ],
+  "items_needed": [
+    {"item": "Pan", "note": "obtida na {wiki:Goblin Temple Quest|Goblin Temple Quest}"},
+    {"item": "Shovel", "note": "para abrir a entrada da gruta dos trolls (só se ainda não tiveres a frigideira)"},
+    {"item": "Rope", "note": "para voltares a subir da gruta dos trolls"}
+  ],
+  "rewards": [
+    {"item": "Small Health Potion"}
+  ],
+  "achievements": [],
+  "dangers": ["Troll", "Orc", "Orc Spearman", "Goblin", "Minotaur", "Wasp"],
+  "npcs": ["Billy"],
+  "tips": [
+    "Se encontrares mais frigideiras, também as podes trocar: não há limite de uma só troca."
+  ],
+  "sections": [
+    {
+      "title": "1. Arranjar a frigideira",
+      "steps": [
+        {
+          "title": "Chegar ao templo dos goblins",
+          "text": "Com uma {item:Shovel}, vai à gruta dos trolls da zona Premium de **Rookgaard** ({coord:32001,32213,7}) e usa a pá para desceres. Lá em baixo segue sempre para **sul** até à ponte, atravessa-a a correr (os goblins atiram pedras) e desce as escadas do outro lado: estás no templo dos goblins.",
+          "coords": [{"x": 32001, "y": 32213, "z": 7, "label": "Entrada da gruta dos trolls Premium (usa a Shovel)"}],
+          "images": [
+            {"file": "Goblin Temple Quest Map 1.png", "caption": "Caminho na gruta dos trolls até à ponte"},
+            {"file": "Goblin Temple Quest Map 2.png", "caption": "Caminho dentro do templo dos goblins"}
+          ]
+        },
+        {
+          "title": "Fazer a Goblin Temple Quest",
+          "text": "Obtém uma {item:Pan} na {wiki:Goblin Temple Quest|Goblin Temple Quest}: no fundo do templo sobe as escadas até à sala dos baús, mata os monstros e abre os baús.",
+          "warning": "Pelo caminho podes encontrar {creature:Troll|Trolls}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen}, {creature:Goblin|Goblins}, um {creature:Minotaur} e {creature:Wasp|Wasps}."
+        },
+        {
+          "title": "Sair do templo dos goblins",
+          "text": "Volta pelo mesmo caminho: escadas do templo para cima, ponte para **norte** e gruta dos trolls até ao buraco por onde entraste. Usa a {item:Rope} para subires de volta à superfície, perto de {coord:32001,32213,7}, e segue para o {npc:Billy}."
+        }
+      ]
+    },
+    {
+      "title": "2. Trocar com o Billy",
+      "steps": [
+        {
+          "title": "Entregar a frigideira",
+          "text": "Vai ter com o {npc:Billy}, no lado Premium de Rookgaard. Diz {key:hi}, {key:pan} e {key:yes}.",
+          "npc": "Billy",
+          "coords": [{"x": 32051, "y": 32205, "z": 7, "label": "Billy"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Howdy."},
+            {"you": "pan"},
+            {"npc": "Have you found a pan for me?"},
+            {"you": "yes"},
+            {"npc": "A pan! At last! Take this in case you eat something my cousin has cooked."}
+          ],
+          "reward": "{item:Small Health Potion}"
+        }
+      ]
+    }
+  ]
+}

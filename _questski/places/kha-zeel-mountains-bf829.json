@@ -1,0 +1,34 @@
+{
+  "title": "Kha'zeel Mountains",
+  "type": "montanha",
+  "near": "Ankrahmun",
+  "summary": "Cordilheira de Darama entre os desertos de Darashia (Devourer) e Ankrahmun (Kha'labal) e a selva de Tiquanda, com três ramos: o {wiki:Plague Spike} a nordeste, a passagem entre os dois desertos e o ramo principal com o {wiki:Kha'zeel Pass}, as fortalezas dos djinns e o portal para Marapur.",
+  "entrance": {"x": 33172, "y": 32551, "z": 6, "label": "Passagem entre o Devourer e o Kha'labal"},
+  "arrive": [
+    "**De Ankrahmun** (o caminho mais simples): apanha o barco para Ankrahmun ({key:hi}, {key:ankrahmun}, {key:yes}; chegas junto ao {npc:Captain Sinbeard}). Sai da cidade para **oeste** e sobe as montanhas ({creature:Hyaena|Hyaenas}) pelo {wiki:Kha'zeel Pass}: lá em cima há uma ponte (com um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e do outro lado uma escada que desce para o lado da selva, perto do {npc:Tarun} ({coord:32974,32716,7}).",
+    "Para as fortalezas dos djinns, a partir de Ankrahmun: a rampa para {wiki:Ashta'daramai} fica nas montanhas a **norte** da cidade ({coord:33120,32578,7}); a passagem para {wiki:Mal'ouquah} começa junto ao oásis ({coord:33101,32657,7}).",
+    "**De Darashia:** parte para **sudoeste** pelo deserto até à montanha; a passagem entre os dois desertos fica em {coord:33172,32551,6}.",
+    "**De Port Hope:** vai a pé para **leste** através da selva de Tiquanda até ao lado de Tiquanda do Kha'zeel Pass.",
+    "O portal para {wiki:Marapur} fica no alto da montanha, no piso +5 ({coord:33037,32738,2})."
+  ],
+  "leave": [
+    "Desce pelo **mesmo caminho** por onde subiste (nos sítios onde subiste com {spell:Levitate}, desce também com Levitate).",
+    "Regressa a **Ankrahmun** (o {npc:Captain Sinbeard} leva-te de barco a outras cidades), a **Darashia** (barco do {npc:Petros} ou tapete do {npc:Chemar}) ou, pelo lado da selva, a **Port Hope** (barco do {npc:Charles})."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 32974, "y": 32716, "z": 7, "label": "Tarun (lado da selva do Kha'zeel Pass)"},
+    {"x": 33061, "y": 32435, "z": 2, "label": "Altar no topo do Plague Spike"},
+    {"x": 33105, "y": 32549, "z": 6, "label": "Entrada de Ashta'daramai (djinns azuis)"},
+    {"x": 33031, "y": 32619, "z": 6, "label": "Porta das traseiras de Mal'ouquah (djinns verdes)"},
+    {"x": 33047, "y": 32713, "z": 3, "label": "Dragon Gate (para The First Dragon's Lair)"},
+    {"x": 33037, "y": 32738, "z": 2, "label": "Portal para Marapur (piso +5)"}
+  ],
+  "images": [
+    {"file": "Kha'zeel Marked.png", "caption": "Os três ramos das Kha'zeel Mountains (1 = Plague Spike, 2 = passagem entre desertos, 3 = ramo principal)"}
+  ],
+  "warnings": [
+    "As criaturas mais perigosas na montanha são os {creature:Massive Energy Elemental|Massive Energy Elementals}, que podem matar um jogador desprevenido de nível 80–90. Há também {creature:Stone Golem|Stone Golems} no caminho para Ashta'daramai e {creature:Wyvern|Wyverns} no Plague Spike.",
+    "Muitas zonas só se alcançam com {spell:Levitate}: presta atenção aos sítios onde dá para subir."
+  ]
+}

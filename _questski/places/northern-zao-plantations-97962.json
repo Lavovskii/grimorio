@@ -1,0 +1,35 @@
+{
+  "title": "Northern Zao Plantations",
+  "type": "zona",
+  "near": "Farmine",
+  "summary": "As plantações corrompidas do **norte de Zao**, à saída das {wiki:Souleater Mountains} e perto do {wiki:Zao Rebel Camp}: zona de lagartos de classe alta, com um caminho para {wiki:Razachai} e uma torre de lagartos no extremo leste.",
+  "entrance": {"x": 33192, "y": 31081, "z": 7, "label": "Plantações por cima do Zao Rebel Camp"},
+  "requirements": [
+    "O acesso ao norte de Zao faz-se pela {wiki:Wrath of the Emperor Quest}: pelo Lion's Den (missão 1) ou, depois da missão 2, pela ligação reativada até ao esconderijo dos rebeldes."
+  ],
+  "items": ["Shovel"],
+  "arrive": [
+    "Apanha o {wiki:Steamship} para **Farmine**: o {npc:Brodrosch} (muito abaixo de Kazordoon) ou o {npc:Gurbasch} (8 andares abaixo de {wiki:Cormaya}), com {key:hi}, {key:farmine}, {key:yes}.",
+    "Em Farmine, vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até à {wiki:Zao Steppe} ({coord:33085,31532,7}).",
+    "Usa o teleporte para as {wiki:Muggy Plains}, no norte da Zao Steppe ({coord:33198,31350,7}).",
+    "Com a missão 2 da Wrath of the Emperor Quest feita, segue a ligação reativada até ao esconderijo dos rebeldes, o {wiki:Zao Rebel Camp} ({coord:33213,31058,9}), e sobe às plantações ({coord:33192,31081,7}).",
+    "Da primeira vez (missão 1), entra no Lion's Den com a {item:Shovel} no buraco do leste das Muggy Plains ({coord:33353,31182,7}), passa as defesas disfarçado e sais numa torre de vigia no **leste** do norte de Zao ({coord:33326,31082,7})."
+  ],
+  "leave": [
+    "Depois da missão 2: no Rebel Camp, vai para **sul** do {npc:Chartan} e pisa a chama azul, que te leva às Muggy Plains.",
+    "Nas Muggy Plains, volta à Zao Steppe pelo teleporte por onde lá chegaste e segue para **sudoeste** até à passagem pela montanha ({coord:33085,31532,7}). Sobe-a com {spell:Levitate} e vai para **oeste** até ao elevador de Farmine.",
+    "No Steamship de Farmine, o {npc:Thorgrin} leva-te a {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp): {key:hi}, o destino, {key:yes}.",
+    "Antes da missão 2 não há caminho rápido de volta: o wiki não descreve outra saída além do túnel por onde vieste."
+  ],
+  "coords": [
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da passagem de Farmine para a Zao Steppe"},
+    {"x": 33198, "y": 31350, "z": 7, "label": "Teleporte para as Muggy Plains"},
+    {"x": 33353, "y": 31182, "z": 7, "label": "Buraco para o Lion's Den (usa a pá)"},
+    {"x": 33326, "y": 31082, "z": 7, "label": "Torre de vigia (saída do túnel)"},
+    {"x": 33213, "y": 31058, "z": 9, "label": "Zao Rebel Camp (Chartan)"},
+    {"x": 33324, "y": 31090, "z": 7, "label": "Torre dos lagartos (extremo leste)"}
+  ],
+  "warnings": [
+    "As plantações têm {creature:Lizard Legionnaire|Lizard Legionnaires}, {creature:Lizard Dragon Priest|Lizard Dragon Priests} e {creature:Lizard High Guard|Lizard High Guards}; pelo caminho também há {creature:Souleater|Souleaters} e animais mutantes. A torre do leste é mais fácil (no máximo 6 lagartos por andar)."
+  ]
+}

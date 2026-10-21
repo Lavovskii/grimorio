@@ -1,0 +1,34 @@
+{
+  "title": "Ghostlands",
+  "type": "zona",
+  "near": "Carlin",
+  "summary": "Terras amaldiçoadas logo a **oeste de Carlin**, fechadas por uma sebe mágica, com uma superfície fraca e buracos que descem a grutas cheias de mortos-vivos (Ghouls, Demon Skeletons) e a um cemitério meio destruído.",
+  "entrance": {"x": 32222, "y": 31767, "z": 7, "label": "Gruta de entrada das Ghostlands (a oeste de Carlin)"},
+  "arrive": [
+    "Vai a **Carlin** de barco: no porto da tua cidade diz {key:hi}, {key:carlin}, {key:yes} ao capitão (por exemplo o {npc:Captain Fearless} em Venore). Chegas ao porto, junto ao {npc:Captain Greyhound}.",
+    "Sai da cidade para **oeste**. As Ghostlands estão fechadas por uma muralha/sebe: entra passando por baixo dela pelo buraco/gruta de entrada ({coord:32219,31768,7}).",
+    "Do outro lado estás na superfície das Ghostlands. O **primeiro buraco** para as grutas fica em {coord:32190,31782,7} e o **segundo** mais a sul, em {coord:32190,31839,7}; a casa abandonada fica a **sul** ({coord:32246,31837,7})."
+  ],
+  "leave": [
+    "Se desceste às grutas, volta pelo mesmo caminho e usa a {item:Rope} em cada buraco por onde caíste até regressares à superfície.",
+    "Na superfície volta para **norte/leste** até à gruta de entrada ({coord:32222,31767,7}) e passa por baixo da muralha para o lado de Carlin.",
+    "Anda para **leste** até Carlin; no porto, o {npc:Captain Greyhound} leva-te a outras cidades ({key:hi}, nome da cidade, por exemplo {key:thais} ou {key:venore}, e {key:yes})."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 32219, "y": 31768, "z": 7, "label": "Buraco sob a muralha (entrada)"},
+    {"x": 32190, "y": 31782, "z": 7, "label": "Primeiro buraco para as grutas"},
+    {"x": 32190, "y": 31839, "z": 7, "label": "Segundo buraco para as grutas"},
+    {"x": 32246, "y": 31837, "z": 7, "label": "Casa abandonada"},
+    {"x": 32176, "y": 31788, "z": 7, "label": "Portal dos Ghostlands (costa noroeste)"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+  ],
+  "images": [
+    {"file": "Ghostlands Map.jpg", "caption": "Mapa das Ghostlands"},
+    {"file": "Ghostlands Slimes.png", "caption": "Como entrar na pequena gruta do terceiro buraco (cuidado com os Slimes)"},
+    {"file": "Ghostlands Skeleton Warrior.png", "caption": "O quarto buraco fica dentro de uma casa, junto a um spawn de Skeleton Warriors"}
+  ],
+  "warnings": [
+    "Na superfície há {creature:Skeleton Warrior|Skeleton Warriors} e {creature:Slime|Slimes}; nos pisos de baixo aparecem {creature:Ghoul|Ghouls}, {creature:Fire Devil|Fire Devils} e {creature:Demon Skeleton|Demon Skeletons} (recomendado nível 20+)."
+  ]
+}

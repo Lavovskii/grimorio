@@ -1,0 +1,145 @@
+{
+  "slug": "tower-defence-quest",
+  "category": "historia",
+  "region": "Carlin",
+  "difficulty": 1,
+  "duration": "30–45 min",
+  "summary": "A general {npc:Bunny Bonecrusher}, de Carlin, manda-te levar uma encomenda de mantimentos à torre de vigia de Femor Hills. Lá, a {npc:Thanita} só te dá a palavra-passe da entrega se a livrares do {creature:Goblin Leader}, que tens de fazer sair do quarto pegando fogo à cama dele. Como recompensa recebes 200 flechas elementais.",
+  "start": {"x": 32315, "y": 31753, "z": 5, "label": "Bunny Bonecrusher, castelo de Carlin"},
+  "requirements": [
+    "Não precisa de Premium nem de nível mínimo (recomendado 10+).",
+    "140 oz de capacidade livre para a recompensa."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Fire Bug", "note": "para pegar fogo à cama do Goblin Leader"},
+    {"item": "Parcel (Watchtower)", "note": "dada pela Bunny Bonecrusher"}
+  ],
+  "rewards": [
+    {"item": "Shiver Arrow", "qty": 50},
+    {"item": "Earth Arrow", "qty": 50},
+    {"item": "Flaming Arrow", "qty": 50},
+    {"item": "Flash Arrow", "qty": 50}
+  ],
+  "achievements": [],
+  "dangers": ["Goblin", "Wolf", "Rotworm", "Goblin Leader"],
+  "npcs": ["Bunny Bonecrusher", "Thanita"],
+  "tips": [
+    "A recompensa pesa **140 oz** no total: garante que tens capacidade **antes** de falares com a Bunny no fim, ou não a recebes.",
+    "Em equipa, só o jogador que fizer mais dano (mais experiência) ao Goblin Leader recebe a palavra-passe da Thanita."
+  ],
+  "sections": [
+    {
+      "title": "1. A encomenda da Bunny Bonecrusher",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Sobe ao castelo de **Carlin** e fala com a {npc:Bunny Bonecrusher}. Cumprimenta-a com {key:hi} e depois {key:hail general} (ela exige ser tratada como deve ser). Diz {key:mission} e {key:yes}. Recebes uma {item:Parcel (Watchtower)|encomenda} para levar à torre de vigia de Femor Hills. Se não estás em Carlin, apanha um barco e diz ao capitão {key:hi}, {key:carlin}, {key:yes}.",
+          "npc": "Bunny Bonecrusher",
+          "coords": [{"x": 32315, "y": 31753, "z": 5, "label": "Bunny Bonecrusher"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Address me properly Player!"},
+            {"you": "hail general"},
+            {"npc": "Salutations, commoner Player!"},
+            {"you": "mission"},
+            {"npc": "[...] I need a courier to deliver a parcel to the watchtower in Femor Hills. You think you can handle that??"},
+            {"you": "yes"},
+            {"npc": "[...] you will get a password so I will know if you just threw it away or actually delivered it. Here is the parcel. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A torre de vigia de Femor Hills",
+      "steps": [
+        {
+          "title": "Chegar à torre",
+          "text": "As {wiki:Femor Hills} ficam a **leste** de Carlin, a **sudoeste** de Ab'Dendriel e a **norte** de Kazordoon: sai de Carlin e vai a pé para **leste**. Com Premium podes apanhar um {wiki:Magic Carpet} (Darashia, Edron, Farmine, Svargrond, Kazordoon ou Issavi: {key:hi}, {key:femor hills}, {key:yes}); aterras no topo de um monte no **sudoeste** das colinas, junto ao {npc:Uzon}, e desces até ao chão. Vai a **Femor Hills** e sobe um nível por qualquer uma das entradas. Continua a andar até veres uma torre; do lado **esquerdo** há umas escadas. Sobe-as, entra na torre de vigia e sobe até ao topo.",
+          "warning": "Não é a torre com a relva que cresce depressa: é a torre de vigia.",
+          "coords": [
+            {"x": 32535, "y": 31837, "z": 4, "label": "Magic Carpet das Femor Hills (Uzon)"},
+            {"x": 32569, "y": 31803, "z": 7, "label": "Femor Hills"}
+          ],
+          "images": [
+            {"file": "Femor Hills 1 up.gif", "caption": "Mapa das Femor Hills, um andar acima"},
+            {"file": "Femor Hills Ground.gif", "caption": "Mapa das Femor Hills ao nível do chão"}
+          ]
+        },
+        {
+          "title": "Entregar a encomenda à Thanita",
+          "text": "No topo da torre, fala com a {npc:Thanita}: {key:hi} e {key:mission}. Ela abre a encomenda e só te dá a palavra-passe se matares o líder dos goblins. Os goblins não gostam de fogo e as camas deles são de palha.",
+          "npc": "Thanita",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "Oh great! Supplies from Carlin! [...] before I give you the password for the delivery, you have to help me! [...]"},
+            {"npc": "[...] I heard they don't like fire very much, maybe that's worth a try. Their beds are mostly made of straw which is known as easily inflammable. [...]"},
+            {"npc": "The entrance to their cave is at the pond south east of here."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. O Goblin Leader",
+      "steps": [
+        {
+          "title": "Entrar na gruta dos goblins",
+          "text": "A entrada da gruta dos goblins fica junto ao lago a **sudeste** da torre. Entra e segue todo o caminho até ao quarto do {creature:Goblin Leader} (perto da {wiki:Power Ring Quest|Power Ring Quest}).",
+          "coords": [{"x": 32576, "y": 31798, "z": 7, "label": "Gruta dos goblins"}],
+          "warning": "Pelo caminho há {creature:Goblin|Goblins}, {creature:Wolf|Wolves} e {creature:Rotworm|Rotworms}."
+        },
+        {
+          "title": "Abrir a porta selada",
+          "text": "Passa pela porta selada: para a abrir, clica nela com o **botão direito** do rato (usar)."
+        },
+        {
+          "title": "Pegar fogo à cama",
+          "text": "Usa o {item:Fire Bug} na **cama**. A porta trancada abre-se e o Goblin Leader sai a correr."
+        },
+        {
+          "title": "Matar o Goblin Leader",
+          "text": "Mata o {creature:Goblin Leader}. Não tenhas medo: é fácil de matar e dá 75 de experiência.",
+          "tip": "Em equipa, quem fizer mais dano é o único que recebe a palavra-passe."
+        },
+        {
+          "title": "Sair da gruta dos goblins",
+          "text": "Volta pelo mesmo caminho até à entrada da gruta ({coord:32576,31798,7}), usando a {item:Rope} em qualquer buraco por onde tenhas descido. Depois regressa à torre de vigia, subindo outra vez um nível nas Femor Hills e as escadas do lado esquerdo da torre.",
+          "coords": [{"x": 32576, "y": 31798, "z": 7, "label": "Entrada/saída da gruta dos goblins"}]
+        }
+      ]
+    },
+    {
+      "title": "4. A palavra-passe e a recompensa",
+      "steps": [
+        {
+          "title": "Pedir a palavra-passe à Thanita",
+          "text": "Volta à {npc:Thanita} e diz {key:hi} e {key:mission}. Ela diz-te a palavra-passe, que é diferente para cada personagem: **massacre**, **doom**, **slaughter** ou **bunny slippers**.",
+          "npc": "Thanita",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Impressive!! I could need someone like you here at the watchtower! Okay, the password you need to tell Bunny is '...'. Come back and visit me if you like to!"}
+          ],
+          "tip": "Se te esqueceres, a palavra-passe fica no registo de quests: Quest Log → Tibia Tales → Password from Thanita."
+        },
+        {
+          "title": "Dizer a palavra-passe à Bunny",
+          "text": "Volta a Carlin, à {npc:Bunny Bonecrusher}. Diz {key:hi}, {key:hail general}, {key:mission} e depois a tua palavra-passe (por exemplo {key:massacre}). Recebes as flechas elementais.\n\nPara voltares, desce da torre e das colinas e vai a pé para **oeste** até Carlin (ou, com Premium, apanha o tapete do {npc:Uzon}: {key:hi}, o nome da cidade e {key:yes}). A Bunny está no castelo, 2 andares acima ({coord:32315,31753,5}).",
+          "npc": "Bunny Bonecrusher",
+          "dialogue": [
+            {"you": "hail general"},
+            {"you": "mission"},
+            {"npc": "Alright, you delivered the parcel. So what is the password Thanita told you?"},
+            {"you": "(a tua palavra-passe)"},
+            {"npc": "That's right. Here is your reward some elementary arrows. You did pretty well on your mission!"}
+          ],
+          "warning": "Garante que tens 140 oz de capacidade livre antes de falares com ela.",
+          "reward": "50 Shiver Arrows, 50 Earth Arrows, 50 Flaming Arrows e 50 Flash Arrows"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Esta quest faz parte do registo {wiki:Tibia Tales|Tibia Tales}."
+  ]
+}

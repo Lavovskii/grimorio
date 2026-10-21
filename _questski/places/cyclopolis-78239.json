@@ -1,0 +1,30 @@
+{
+  "title": "Cyclopolis",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Grande cidade subterrânea construída pelos {creature:Cyclops|Cyclopes}, escondida atrás das montanhas a **norte de Edron**, com vários andares de subsolo onde vivem também dragões, {creature:Fire Elemental|Fire Elementals} e {creature:Behemoth|Behemoths}.",
+  "entrance": {"x": 33250, "y": 31698, "z": 7, "label": "Entrada de Cyclopolis (norte de Edron)"},
+  "arrive": [
+    "Viaja até **Edron**: no capitão do porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, {npc:Captain Bluebear}, 160 gp).",
+    "Sai da cidade por uma passagem na montanha para **oeste** e continua para **norte**, para trás das montanhas.",
+    "A entrada ({coord:33250,31698,7}) está marcada por grandes pedras em forma de obelisco dispostas em círculo. Entra e desce para os andares de baixo."
+  ],
+  "leave": [
+    "Volta a subir pelos andares de Cyclopolis pelo mesmo caminho até à entrada, a **norte de Edron**.",
+    "Se vens da {wiki:Behemoth Quest} (piso 8), sai da sala final pela porta de nível 80, volta às escadas da plataforma pequena e usa {spell:Levitate} (*exani hur up*) na borda **sul** para regressar à plataforma; daí sobe os 5 andares até à saída.",
+    "Regressa a pé para **sul** até Edron e apanha o barco do {npc:Captain Seahorse} ({coord:33176,31764,6}): {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33250, "y": 31698, "z": 7, "label": "Entrada/saída de Cyclopolis"},
+    {"x": 33251, "y": 31719, "z": 14, "label": "Teleporte do boss Stonecracker (por baixo de Cyclopolis)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "images": [
+    {"file": "Floor -6 cyclopolis.jpg", "caption": "Mapa do andar -6 de Cyclopolis"},
+    {"file": "Floor -8 cyclopolis.jpg", "caption": "Mapa do andar -8 de Cyclopolis"}
+  ],
+  "warnings": [
+    "Os andares de cima têm {creature:Cyclops}, {creature:Cyclops Drone|Cyclops Drones}, {creature:Cyclops Smith|Cyclops Smiths} e {creature:Dwarf Soldier|Dwarf Soldiers}; mais abaixo aparecem {creature:Fire Elemental|Fire Elementals}, {creature:Dragon|Dragons} e, numa sala a sul do piso 5, {creature:Dragon Lord|Dragon Lords}.",
+    "O wiki recomenda nível 40+ para knights, 34+ para paladins e 45+ para mages."
+  ]
+}

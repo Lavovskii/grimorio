@@ -1,0 +1,36 @@
+{
+  "title": "Zao Rebel Camp",
+  "type": "gruta",
+  "near": "Farmine",
+  "summary": "Esconderijo da resistência dos lagartos, liderada pelo {npc:Chartan}, **por baixo das Souleater Mountains** no norte de Zao; tem Royal Mailbox e o carteiro {npc:Ezean}.",
+  "entrance": {"x": 33171, "y": 31078, "z": 7, "label": "Entrada do esconderijo dos rebeldes (montanha)"},
+  "requirements": [
+    "A primeira chegada faz-se na missão 1 da {wiki:Wrath of the Emperor Quest} (pelo Lion's Den, com o {item:Marked Crate}). A ligação rápida (chama azul) só funciona depois da missão 2."
+  ],
+  "items": ["Shovel"],
+  "arrive": [
+    "Apanha o {wiki:Steamship} para **Farmine**: o {npc:Brodrosch} (muito abaixo de Kazordoon) ou o {npc:Gurbasch} (8 andares abaixo de Cormaya), com {key:hi}, {key:farmine}, {key:yes}.",
+    "Em Farmine, vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate}, até saíres na Zao Steppe ({coord:33085,31532,7}).",
+    "Primeira vez (missão 1 da WotE): usa o teleporte para as {wiki:Muggy Plains} ({coord:33198,31350,7}), vai ao ponto marcado no leste das Muggy Plains e usa a {item:Shovel} no buraco ({coord:33353,31182,7}) para entrares no Lion's Den. Sais numa torre de vigia ({coord:33326,31082,7}); segue a estrada para **oeste** até à montanha do esconderijo ({coord:33171,31078,7}).",
+    "Depois da missão 2: nas Muggy Plains usa a ligação que reativaste (chama azul) para ires diretamente ao esconderijo, onde está o {npc:Chartan} ({coord:33213,31058,9}).",
+    "Depois de terminares a WotE, também há teleporte entre Razachai, o Rebel Camp e o Inner Sanctum (em Razachai, na cave por baixo do {npc:Zlak})."
+  ],
+  "leave": [
+    "Pisa a chama azul a **sul** do {npc:Chartan}: leva-te às Muggy Plains (só depois da missão 2 da WotE; antes disso, volta a pé pela estrada e pelo Lion's Den).",
+    "Nas Muggy Plains volta à Zao Steppe pelo teleporte por onde lá chegaste e segue para **sudoeste** até à passagem pela montanha ({coord:33085,31532,7}).",
+    "Sobe-a com {spell:Levitate} e vai para **oeste** até ao elevador de Farmine. No steamship de Farmine, o {npc:Thorgrin} leva-te a Kazordoon ou Cormaya ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33213, "y": 31058, "z": 9, "label": "Zao Rebel Camp (Chartan)"},
+    {"x": 33171, "y": 31078, "z": 7, "label": "Entrada do esconderijo"},
+    {"x": 33198, "y": 31350, "z": 7, "label": "Teleporte para as Muggy Plains"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Steamship de Farmine (Thorgrin)"},
+    {"x": 33078, "y": 31219, "z": 8, "label": "Teleporte por baixo do Zlak (Razachai → Chartan)"}
+  ],
+  "images": [
+    {"file": "Rebel Camp.png", "caption": "O Zao Rebel Camp"}
+  ],
+  "warnings": [
+    "O norte de Zao é perigoso: na estrada há lagartos de classe alta, {creature:Mutated Tiger|Mutated Tigers}, {creature:Souleater|Souleaters} e {creature:Brimstone Bug|Brimstone Bugs} (recomendado nível 130+)."
+  ]
+}

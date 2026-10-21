@@ -1,0 +1,425 @@
+{
+  "slug": "hunter-outfits-quest",
+  "category": "outfit",
+  "region": "Thais",
+  "difficulty": 3,
+  "duration": "Depende da recolha de itens (vários dias); 1–2 horas para o crossbow",
+  "summary": "A {npc:Elane}, líder da guilda de paladins de Thais, dá os addons do {wiki:Hunter Outfits|Hunter Outfit}. Para o Hooded Cloak (homem) ou Winged Tiara (mulher) recuperas o crossbow dela no culto escondido de Liberty Bay e entregas couros, asas encantadas e três peças de aço. Para as Sniper Gloves basta entregares um par de {item:Sniper Gloves}. A quest dá também o achievement **Hunting with Style**.",
+  "legend_pt": "Um outfit de patrulheiro leve e confortável, que todos os paladins adoram usar. Se queres ganhar addons para este outfit, a guilda de paladins de Thais é um bom sítio para começar.",
+  "start": {
+    "x": 32343,
+    "y": 32239,
+    "z": 7,
+    "label": "Elane, guilda de paladins de Thais"
+  },
+  "requirements": [
+    "Conta Premium (uma conta Free só consegue vender as Sniper Gloves à Elane por 2000 gold).",
+    "Sem nível mínimo (recomendado 50+).",
+    "Para o crossbow: ter aprendido os **4 versos** do {wiki:Hymn|Hymn} (com {item:Music Sheet|Music Sheets}) **e** ter aceitado a tarefa da Elane."
+  ],
+  "items_needed": [
+    {
+      "item": "Elane's Crossbow",
+      "note": "Engraved Crossbow, obtido no Cult Cave de Liberty Bay"
+    },
+    {
+      "item": "Lizard Leather",
+      "qty": 100
+    },
+    {
+      "item": "Red Dragon Leather",
+      "qty": 100
+    },
+    {
+      "item": "Enchanted Chicken Wing",
+      "qty": 5,
+      "note": "troca de Boots of Haste"
+    },
+    {
+      "item": "Piece of Royal Steel",
+      "qty": 1,
+      "note": "troca de Crown Armor"
+    },
+    {
+      "item": "Piece of Draconian Steel",
+      "qty": 1,
+      "note": "troca de Dragon Shield"
+    },
+    {
+      "item": "Piece of Hell Steel",
+      "qty": 1,
+      "note": "troca de Devil Helmet"
+    },
+    {
+      "item": "Sniper Gloves",
+      "note": "para o segundo addon"
+    },
+    {
+      "item": "Music Sheet",
+      "qty": 4,
+      "note": "os 4 versos do Hymn, para chegar ao crossbow"
+    },
+    {
+      "item": "Rope",
+      "note": "para saíres da Cult Cave pelo buraco da entrada"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Addon Hooded Cloak (masculino) / Winged Tiara (feminino)"
+    },
+    {
+      "text": "Addon Sniper Gloves"
+    },
+    {
+      "text": "Achievement **Hunting with Style**"
+    }
+  ],
+  "achievements": [
+    "Hunting with Style"
+  ],
+  "dangers": [
+    "Dragon Lord",
+    "Novice of the Cult",
+    "Acolyte of the Cult",
+    "Adept of the Cult",
+    "Enlightened of the Cult",
+    "Tarantula",
+    "Witch",
+    "Bonelord",
+    "Elder Bonelord",
+    "Dark Monk",
+    "Hunter"
+  ],
+  "npcs": [
+    "Elane",
+    "Legola",
+    "A Sweaty Cyclops",
+    "Haroun",
+    "Yaman"
+  ],
+  "tips": [
+    "O Hunter Outfit está disponível para todos; só os addons fazem parte da quest.",
+    "Todos os itens, exceto o crossbow, podem ser juntados antes de falares com a Elane. Junta-os primeiro.",
+    "Os versos do Hymn são drops muito raros dos cultistas; podes comprar os Music Sheets a outros jogadores em vez de os caçar."
+  ],
+  "sections": [
+    {
+      "title": "1. Hooded Cloak / Winged Tiara: preparar os itens",
+      "steps": [
+        {
+          "title": "Juntar os itens",
+          "text": "Onde arranjar cada item:",
+          "images": [
+            {
+              "file": "Outfit Hunter Male Addon 1.gif",
+              "caption": "Hunter masculino com o Hooded Cloak"
+            },
+            {
+              "file": "Outfit Hunter Female Addon 2.gif",
+              "caption": "Hunter feminino com a Winged Tiara"
+            }
+          ],
+          "table": {
+            "head": [
+              "Item",
+              "Qtd.",
+              "Como obter"
+            ],
+            "rows": [
+              [
+                "{item:Lizard Leather}",
+                "100",
+                "Lizards"
+              ],
+              [
+                "{item:Red Dragon Leather}",
+                "100",
+                "{creature:Dragon Lord|Dragon Lords}"
+              ],
+              [
+                "{item:Enchanted Chicken Wing}",
+                "5",
+                "Troca {item:Boots of Haste} com o {npc:Haroun} (Darashia) ou o {npc:Yaman} (Ankrahmun)"
+              ],
+              [
+                "{item:Piece of Royal Steel}",
+                "1",
+                "Troca uma {item:Crown Armor} com o {npc:A Sweaty Cyclops} em Ab'Dendriel"
+              ],
+              [
+                "{item:Piece of Draconian Steel}",
+                "1",
+                "Troca um {item:Dragon Shield} com o {npc:A Sweaty Cyclops}"
+              ],
+              [
+                "{item:Piece of Hell Steel}",
+                "1",
+                "Troca um {item:Devil Helmet} com o {npc:A Sweaty Cyclops}"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Aprender os 4 versos do Hymn",
+          "text": "Para chegares ao crossbow tens de ter aprendido os 4 versos do Hymn, usando os {item:Music Sheet|Music Sheets}:",
+          "table": {
+            "head": [
+              "Verso",
+              "Quem o deixa cair"
+            ],
+            "rows": [
+              [
+                "1.º",
+                "{creature:Novice of the Cult}"
+              ],
+              [
+                "2.º",
+                "{creature:Acolyte of the Cult}"
+              ],
+              [
+                "3.º",
+                "{creature:Adept of the Cult}"
+              ],
+              [
+                "4.º",
+                "{creature:Enlightened of the Cult}"
+              ]
+            ]
+          },
+          "tip": "São drops muito raros. Comprar os Music Sheets a outros jogadores é muitas vezes mais rápido."
+        }
+      ]
+    },
+    {
+      "title": "2. Aceitar a tarefa da Elane",
+      "steps": [
+        {
+          "title": "Falar com a Elane",
+          "text": "Vai à guilda de paladins de **Thais** e fala com a {npc:Elane}: {key:hi}, {key:outfit}, {key:task}, {key:yes}. Ela explica o que precisa; confirma com {key:yes}.",
+          "npc": "Elane",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "outfit"
+            },
+            {
+              "npc": "Oh, my winged tiara? Those are traditionally awarded after having completed a difficult task for our guild, only to female aspirants though. Male warriors will receive a hooded cloak."
+            },
+            {
+              "you": "task"
+            },
+            {
+              "npc": "So you are saying that you would like to prove that you deserve to wear such a hooded cloak?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] one of our members moved to Liberty Bay out of nowhere, talking about some strange cult. [...] he took my favourite crossbow with him. [...] Did you understand everything I told you and are willing to handle this task?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "That's the spirit! I hope you will find my crossbow."
+            }
+          ],
+          "warning": "Tens de aceitar esta tarefa **antes** de ires ao culto: sem ela não consegues abrir a porta selada que dá acesso ao baú do crossbow."
+        }
+      ]
+    },
+    {
+      "title": "3. Recuperar o Elane's Crossbow (Cult Cave de Liberty Bay)",
+      "intro": "Em todas as imagens, a **bandeira** marca onde começas e a **estrela** onde tens de ir.",
+      "steps": [
+        {
+          "title": "Ir à gruta escondida do culto",
+          "text": "Vai à {wiki:Cult Cave (Liberty Bay)|gruta escondida do culto}, a **norte** de {wiki:Liberty Bay|Liberty Bay}, na ilha de Vandura. A entrada é um buraco escondido no pátio de um dos barracões a **nordeste** da cidade; os cultistas plantaram um {creature:Jungle Maw} perto dela. Desce pelo buraco.",
+          "coords": [
+            {
+              "x": 32359,
+              "y": 32721,
+              "z": 7,
+              "label": "Entrada da Cult Cave (buraco no barracão)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Elane Crossbow Way1.GIF",
+              "caption": "Caminho até à gruta do culto, a norte de Liberty Bay"
+            }
+          ]
+        },
+        {
+          "title": "Primeira parte da gruta",
+          "text": "Depois de entrares, segue o caminho do minimapa.",
+          "images": [
+            {
+              "file": "Elane Crossbow Way2.GIF",
+              "caption": "Caminho dentro da gruta"
+            }
+          ],
+          "warning": "Prepara-te para {creature:Tarantula|Tarantulas}, vários {creature:Novice of the Cult|Novices of the Cult} e {creature:Witch|Witches}."
+        },
+        {
+          "title": "Usar o piano",
+          "text": "Continua a seguir o mapa: vais encontrar mais cultistas, {creature:Bonelord|Bonelords} e Witches. No fim da sala há um piano. Se aprendeste todos os versos do Hymn, usa o piano para seres teletransportado para o outro lado da sala.",
+          "images": [
+            {
+              "file": "Elane Crossbow Way3.GIF",
+              "caption": "Caminho até ao piano"
+            }
+          ]
+        },
+        {
+          "title": "Passar a porta selada e abrir o baú",
+          "text": "Nesta sala há {creature:Novice of the Cult|Novices}, {creature:Acolyte of the Cult|Acolytes} e {creature:Dark Monk|Dark Monks}. Segue o caminho até ao baú, passando por uma porta selada (só abre se tiveres a tarefa da Elane). Abre o baú e recebes o {item:Elane's Crossbow}.",
+          "images": [
+            {
+              "file": "Elane Crossbow Way4.GIF",
+              "caption": "Caminho até ao baú do crossbow"
+            }
+          ],
+          "tip": "Runas de área como {item:Thunderstorm Rune|Thunderstorm} e {item:Great Fireball Rune|GFB} são úteis aqui.",
+          "reward": "Elane's Crossbow"
+        },
+        {
+          "title": "Sair da gruta do culto",
+          "text": "Volta pelo mesmo caminho até à sala onde o piano te deixou: lá há um teleporte que te leva de volta à sala do piano. Daí faz o caminho dos mapas ao contrário até ao buraco da entrada e sobe com a {item:Rope}. Sais no barracão a nordeste de Liberty Bay.",
+          "coords": [
+            {
+              "x": 32359,
+              "y": 32721,
+              "z": 7,
+              "label": "Saída (buraco no barracão)"
+            }
+          ],
+          "warning": "Sem {item:Rope} não consegues subir pelo buraco da entrada."
+        }
+      ]
+    },
+    {
+      "title": "4. Entregar tudo à Elane",
+      "steps": [
+        {
+          "title": "Entregar os itens pela ordem",
+          "text": "Volta à {npc:Elane} em Thais e entrega os itens por esta ordem, confirmando sempre com {key:yes}:",
+          "npc": "Elane",
+          "table": {
+            "head": [
+              "#",
+              "Diz",
+              "Entregas"
+            ],
+            "rows": [
+              [
+                "1",
+                "{key:crossbow}",
+                "{item:Elane's Crossbow}"
+              ],
+              [
+                "2",
+                "{key:leathers}",
+                "100 Lizard Leather e 100 Red Dragon Leather"
+              ],
+              [
+                "3",
+                "{key:5 enchanted chicken wings}",
+                "5 Enchanted Chicken Wings"
+              ],
+              [
+                "4",
+                "{key:steel}",
+                "Piece of Royal Steel, Piece of Draconian Steel e Piece of Hell Steel"
+              ]
+            ]
+          },
+          "dialogue": [
+            {
+              "you": "crossbow"
+            },
+            {
+              "npc": "I'm so excited! Have you really found my crossbow?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Yeah! [...] Please bring me 100 pieces of lizard leather and 100 pieces of red dragon leather now!"
+            },
+            {
+              "you": "steel"
+            },
+            {
+              "npc": "Ah, have you brought one piece of royal steel, draconian steel and hell steel each?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Wow, I'm impressed. Your really are a valuable member of our paladin guild. I shall grant you your reward now. Wear it proudly!"
+            }
+          ],
+          "reward": "Addon Hooded Cloak (masculino) / Winged Tiara (feminino)"
+        }
+      ]
+    },
+    {
+      "title": "5. Sniper Gloves",
+      "steps": [
+        {
+          "title": "Lootar as Sniper Gloves",
+          "text": "Mata {creature:Hunter|Hunters} até te cair um par de {item:Sniper Gloves}.",
+          "images": [
+            {
+              "file": "Outfit Hunter Male Addon 2.gif",
+              "caption": "Hunter masculino com as Sniper Gloves"
+            },
+            {
+              "file": "Outfit Hunter Female Addon 1.gif",
+              "caption": "Hunter feminino com as Sniper Gloves"
+            }
+          ]
+        },
+        {
+          "title": "Entregar as luvas",
+          "text": "Leva as luvas à {npc:Elane} (Thais) ou ao {npc:Legola} (Carlin) e diz {key:sniper gloves} e {key:yes}.",
+          "npc": "Elane",
+          "dialogue": [
+            {
+              "you": "sniper gloves"
+            },
+            {
+              "npc": "You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations!"
+            }
+          ],
+          "warning": "Com conta Free a Elane não te dá o addon: oferece-te 2000 gold pelas luvas. Se disseres {key:yes}, perdes as luvas.",
+          "reward": "Addon Sniper Gloves",
+          "images": [
+            {
+              "file": "Outfit Hunter Male Addon 3.gif",
+              "caption": "Hunter masculino completo"
+            },
+            {
+              "file": "Outfit Hunter Female Addon 3.gif",
+              "caption": "Hunter feminino completo"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Esta quest dá também o achievement **Hunting with Style**.",
+    "Perigos para recolher os itens: Lizards, {creature:Dragon Lord|Dragon Lords}, todos os tipos de cultistas do {wiki:Voodoo Cult|Voodoo Cult}, {creature:Tarantula|Tarantulas}, {creature:Witch|Witches}, {creature:Bonelord|Bonelords}, {creature:Elder Bonelord|Elder Bonelords}, {creature:Dark Monk|Dark Monks} e {creature:Hunter|Hunters}."
+  ]
+}

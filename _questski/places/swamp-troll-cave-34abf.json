@@ -1,0 +1,27 @@
+{
+  "title": "Swamp Troll Cave",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Gruta de {creature:Swamp Troll|Swamp Trolls} no pântano a **sul de Venore**, boa para jogadores novos (Medicine Pouches e lanças para paladins).",
+  "entrance": {"x": 32938, "y": 32219, "z": 7, "label": "Entrada da Swamp Troll Cave (sul de Venore)"},
+  "arrive": [
+    "Vai a **Venore** (de barco, chegas ao {npc:Captain Fearless}, {coord:32955,32022,6}).",
+    "Sai de Venore para **sul**, pelo pântano, até à entrada da gruta ({coord:32938,32219,7}), e desce."
+  ],
+  "leave": [
+    "Sai da gruta pelo mesmo sítio por onde entraste ({coord:32938,32219,7}).",
+    "Volta para **norte**, pelo pântano, até Venore. No porto, o {npc:Captain Fearless} leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless — porto de Venore"},
+    {"x": 32880, "y": 32117, "z": 7, "label": "Asilo de Venore (Ottokar)"}
+  ],
+  "images": [
+    {"file": "Swamp Troll Cave Map 1.png", "caption": "Mapa da Swamp Troll Cave"},
+    {"file": "Swamp Troll Cave Map 2.png", "caption": "Mapa da Swamp Troll Cave (continuação)"},
+    {"file": "Swamp Troll Cave Map 3.png", "caption": "Mapa da Swamp Troll Cave (continuação)"}
+  ],
+  "warnings": [
+    "A zona principal está cheia de Swamp Trolls (e {creature:Slug|Slugs} a norte); há um spawn de {creature:Ghoul} e {creature:Skeleton|Skeletons} atrás de uma porta na parte **sul**, e {creature:Rotworm|Rotworms} na gruta mais a sul."
+  ]
+}

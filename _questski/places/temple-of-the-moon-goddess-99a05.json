@@ -1,0 +1,30 @@
+{
+  "title": "Temple of the Moon Goddess",
+  "type": "dungeon",
+  "near": "Marapur",
+  "summary": "Templo afundado **por baixo da ilha principal de {wiki:Marapur}**, cheio de {creature:Naga Warrior|Naga Warriors}, {creature:Naga Archer|Naga Archers} e {creature:Makara|Makaras}; no 2.º piso fica a sala secreta da {wiki:Within the Tides Quest}.",
+  "entrance": {"x": 33659, "y": 32740, "z": 8, "label": "Temple of the Moon Goddess (primeiro piso)"},
+  "requirements": [
+    "Para chegares a Marapur pelo portal tens de ter feito a primeira parte da {wiki:Within the Tides Quest} (que exige a {wiki:The Lost Brother Quest}).",
+    "Precisas de um capacete de mergulho ({item:Helmet of the Deep} ou {item:Depth Galea}) para andar debaixo de água."
+  ],
+  "items": ["Helmet of the Deep"],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade) e sobe às {wiki:Kha'zeel Mountains}, a **oeste** da cidade.",
+    "Entra no portal no alto da montanha (piso +5, {coord:33037,32738,2}): és teletransportado para Marapur.",
+    "Com o capacete de mergulho posto, desce ao templo, que fica por baixo da ilha principal de Marapur ({coord:33659,32740,8}). A wiki não descreve a entrada exata do templo."
+  ],
+  "leave": [
+    "Sai do templo pelo mesmo caminho por onde entraste e volta à superfície de Marapur.",
+    "Vai ao tapete mágico de **Moonfall** ({coord:33805,32768,2}) e fala com o {npc:Ziyad}: {key:hi} e pergunta-lhe pelos destinos (os tapetes mágicos só servem jogadores Premium)."
+  ],
+  "coords": [
+    {"x": 33037, "y": 32738, "z": 2, "label": "Portal para Marapur (Kha'zeel Mountains)"},
+    {"x": 33659, "y": 32740, "z": 8, "label": "Temple of the Moon Goddess (primeiro piso)"},
+    {"x": 33627, "y": 32776, "z": 9, "label": "Parede da sala secreta (2.º piso)"},
+    {"x": 33805, "y": 32768, "z": 2, "label": "Tapete mágico de Moonfall (Ziyad)"}
+  ],
+  "warnings": [
+    "Zona para **nível 400+**: {creature:Naga Warrior|Naga Warriors}, {creature:Naga Archer|Naga Archers} e {creature:Makara|Makaras}."
+  ]
+}

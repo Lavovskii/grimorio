@@ -1,0 +1,33 @@
+{
+  "title": "Roshamuul Mines",
+  "type": "gruta",
+  "near": "Roshamuul",
+  "summary": "Pequena mina no lado **leste** de {wiki:Upper Roshamuul}, infestada de {creature:Terrorsleep|Terrorsleeps} e {creature:Feversleep|Feversleeps}; parte da {wiki:Roshamuul Quest} passa-se aqui.",
+  "entrance": {"x": 33690, "y": 32348, "z": 7, "label": "Entrada das Roshamuul Mines"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Upper Roshamuul só fica acessível quando o teu servidor chega ao **estágio 3** da {wiki:Roshamuul Quest} (muralha de Guzzlemaw Valley partida).",
+    "Nível recomendado 200–250+: todas as criaturas da ilha são muito fortes."
+  ],
+  "arrive": [
+    "Em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca em Lower Roshamuul, no acampamento da Inquisition, no **sudoeste** da ilha (junto ao {npc:Captain Chelop}).",
+    "Atravessa a ponte para **norte**, para {wiki:Guzzlemaw Valley}, e atravessa o vale para **nordeste** até à passagem na muralha ({coord:33632,32401,7}): estás em Upper Roshamuul. Se fores cidadão de Roshamuul, podes ir diretamente para o templo de Upper Roshamuul e evitar o vale.",
+    "Segue para o lado **leste** de Upper Roshamuul até à entrada da mina ({coord:33690,32348,7}). À entrada há uma caixa com o {item:Dream Nebuliser} da quest."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada da mina, no lado leste de Upper Roshamuul.",
+    "Para saíres de Roshamuul, volta ao acampamento da Inquisition no **sudoeste** (atravessa a ponte para **sul** e desce a rampa de Lower Roshamuul) e fala com o {npc:Captain Chelop}: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino.",
+    "Em alternativa, a **noroeste** do depot de Roshamuul há um tapete ({coord:33514,32345,4}) que, ao pisares, te leva ao templo de Thais."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento, Lower Roshamuul)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"},
+    {"x": 33690, "y": 32348, "z": 7, "label": "Entrada das Roshamuul Mines"},
+    {"x": 33631, "y": 32343, "z": 6, "label": "Morax (a norte da montanha central)"},
+    {"x": 33514, "y": 32345, "z": 4, "label": "Tapete que leva ao templo de Thais"}
+  ],
+  "warnings": [
+    "A wiki desaconselha caçar aqui: os Dreamhaunters da mina são pouco rentáveis e incómodos."
+  ]
+}

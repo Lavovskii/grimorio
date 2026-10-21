@@ -1,0 +1,32 @@
+{
+  "title": "Drefia",
+  "type": "zona",
+  "near": "Darashia",
+  "summary": "Antiga colónia de Thais engolida pela areia, hoje cheia de necromantes e mortos-vivos, a **oeste de Darashia**, do outro lado das montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda.",
+  "entrance": {"x": 33018, "y": 32443, "z": 7, "label": "Drefia (superfície)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai primeiro a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia} e {key:yes}; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Sai de Darashia para **oeste**, em direção às montanhas que separam Darashia de Drefia. Na montanha há muitos {creature:Scorpion|Scorpions}: guarda mana para curar o veneno.",
+    "Usa a {item:Rope} para subires a montanha neste sítio de corda ({coord:33048,32429,7}) ou vem pela passagem entre Darashia e Ankrahmun.",
+    "Do outro lado chegas a Drefia ({coord:33018,32443,7}). A entrada do dungeon principal fica aqui: {coord:32996,32413,7}."
+  ],
+  "leave": [
+    "Não há atalho de saída: se estás no subsolo, sobe pelos mesmos andares (usa a {item:Rope} onde desceste por buracos) até à superfície, por exemplo pela entrada do dungeon principal ({coord:32996,32413,7}).",
+    "Atravessa a montanha de volta para **Darashia** pelo mesmo caminho por onde vieste: pelo sítio de corda ({coord:33048,32429,7}) ou pela passagem entre Darashia e Ankrahmun.",
+    "Em Darashia apanha o barco do {npc:Petros} ({key:hi}, nome da cidade, {key:yes}) ou o tapete voador do {npc:Chemar}."
+  ],
+  "coords": [
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda entre Darashia e Drefia"},
+    {"x": 32996, "y": 32413, "z": 7, "label": "Entrada do dungeon principal de Drefia"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"}
+  ],
+  "images": [
+    {"file": "Drefia Map.gif", "caption": "Mapa de Drefia"}
+  ],
+  "warnings": [
+    "Drefia está dividida em duas metades: a metade **sul** é a mais fácil. No subsolo há {creature:Demon Skeleton|Demon Skeletons}, vampiros e necromantes.",
+    "Para lá da {wiki:Medusa Shield Quest} há um grande spawn de {creature:Wyrm|Wyrms} ({wiki:Drefia Wyrm Lair}), só para níveis altos."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Lower Drainage Area",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Zona de drenagem por baixo dos esgotos de **Rathleton** (Oramond), cheia de criaturas fungo que batem forte e ficam invisíveis; aqui decorrem missões da {wiki:Oramond Quest} e da {wiki:Opticording Sphere Quest}.",
+  "entrance": {"x": 33622, "y": 31978, "z": 7, "label": "Sewer Grate no Workshop Quarter (entrada dos esgotos)"},
+  "arrive": [
+    "Vai a **Oramond**: em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Desembarcas na jangada do {npc:Captain Gulliver} ({coord:33479,31988,7}), a **oeste** de Oramond.",
+    "Entra no {item:Slime Slide} (leva-te a um monte na ilha principal), desce ao piso térreo e anda para **leste** até ao pequeno barco: o portal desse barco ({coord:33628,32005,7}) leva-te para perto da cidade. Vai para **norte** até Rathleton.",
+    "No Workshop Quarter, vai para **sudoeste** do edifício do {npc:Doubleday}, por baixo das docas, e entra na {item:Sewer Grate} ({coord:33622,31978,7}). Desces 2 andares.",
+    "Nos esgotos, segue até à rampa em {coord:33660,31892,9} e desce para a Lower Drainage Area ({coord:33643,31893,10}). Atalho: um piso abaixo da escada há um teleporte ({coord:33614,31985,10}) que te aproxima da rampa."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho** até ao sítio onde chegaste pela grelha e sobe pelos {item:Rungs In The Wall|degraus na parede} (usa-os como uma escada) até ao Workshop Quarter.",
+    "Para saíres da ilha, volta pelo portal do barco e pelo Slime Slide até à jangada do {npc:Captain Gulliver} e diz {key:hi}, {key:thais}, {key:yes} (150 gp)."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (chegada a Oramond)"},
+    {"x": 33640, "y": 31961, "z": 6, "label": "Doubleday"},
+    {"x": 33622, "y": 31979, "z": 9, "label": "Chegada pela grelha (piso -2)"},
+    {"x": 33660, "y": 31892, "z": 9, "label": "Rampa para a Lower Drainage Area"},
+    {"x": 33614, "y": 31985, "z": 10, "label": "Teleporte (atalho), um piso abaixo da escada"}
+  ],
+  "images": [
+    {"file": "Lower Drainage Area 1.png", "caption": "Lower Drainage Area (1)"},
+    {"file": "Lower Drainage Area 2.png", "caption": "Lower Drainage Area (2)"}
+  ],
+  "warnings": [
+    "Não é bom sítio para caçar: as criaturas fungo batem com força, ficam invisíveis muitas vezes e o loot é fraco. A wiki recomenda nível 150+."
+  ]
+}

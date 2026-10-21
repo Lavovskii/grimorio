@@ -1,0 +1,37 @@
+{
+  "title": "Maze of Bazir",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Labirinto de 3 andares nas {wiki:Pits of Inferno} (por baixo das Plains of Havoc, sudoeste de Venore) que leva à sala do trono de {wiki:Bazir}, o senhor das mentiras; está cheio de armadilhas e de monstros falsos.",
+  "entrance": {"x": 32806, "y": 32328, "z": 15, "label": "Início do labirinto de Bazir"},
+  "requirements": [
+    "Chegar à sala principal (sala dos teleportes) das Pits of Inferno, seguindo a {wiki:The Pits of Inferno Quest} (equipa, {item:Holy Tible}, porta de nível 80, etc.).",
+    "Atalho: depois de já teres entrado numa sala de trono, a {item:Sealed Door|porta selada} da {wiki:Necromant House} (um andar acima do teleporte para o Void) leva-te ao Hub Shortcut ({coord:32837,32235,13}), mesmo antes da sala principal."
+  ],
+  "items": ["Rope", "Destroy Field Rune"],
+  "arrive": [
+    "Faz o caminho da {wiki:The Pits of Inferno Quest} até à sala principal das Pits of Inferno (ou usa o atalho da Necromant House, se já o tens).",
+    "Na sala principal entra no teleporte do Throne of Deceit (Bazir): começas no andar de baixo do labirinto ({coord:32806,32328,15}).",
+    "Segue as **linhas verdes** dos mapas: cada uma acaba num buraco ou rope spot onde sobes ou desces; quando acabar num tile que não é buraco nem rope spot, chegaste ao fim."
+  ],
+  "leave": [
+    "Na sala final, puxa a alavanca do lado **sudeste** (pode estar tapada por um corpo de {creature:Orc}); aparece um teleporte no buraco do **sudoeste**: entra nele para saíres do labirinto.",
+    "Segue as salas seguintes até à sala do trono; depois de pisares o trono, pisa o tapete junto à estátua de cavaleiro do **noroeste** para voltares à sala principal.",
+    "Para saíres das Pits of Inferno: volta pelo reino dos Ruthless Seven seguindo as placas de saída, ou pede um teletransporte ao {npc:A Ghostly Sage} (mesmo antes da sala das recompensas). Apareces na gruta dos {creature:Slime|Slimes} debaixo das Plains of Havoc; sobe à superfície e caminha para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32837, "y": 32235, "z": 13, "label": "Hub Shortcut (atalho da Necromant House)"},
+    {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House"}
+  ],
+  "images": [
+    {"file": "Pits of Inferno Quest Bazir Maze Floor 1.jpg", "caption": "Andar de baixo, com o início"},
+    {"file": "Pits of Inferno Quest Bazir Maze Floor 2.jpg", "caption": "Andar do meio"},
+    {"file": "Pits of Inferno Quest Bazir Maze Floor 3.jpg", "caption": "Andar de cima, com o fim"},
+    {"file": "POI Bazir Maze.png", "caption": "Mapa completo com instruções e rope holes"}
+  ],
+  "warnings": [
+    "Vê **sempre** o minimapa antes de subir um rope hole: no andar de cima, qualquer rope hole leva-te para o {wiki:Pits of Inferno Dragon Lair}, **sem forma de voltar**.",
+    "Nunca uses alavancas nem {item:Magic Forcefield|Magic Forcefields} dentro do labirinto (só a alavanca final): mandam-te para sítios errados. A porta trancada com um buraco que leva a um teleporte também é uma armadilha.",
+    "Há {creature:Phantasm|Phantasms}, {creature:Nightmare|Nightmares}, {creature:Demon|Demons}, {creature:Demon (Goblin)|\"Demon\" Goblins} falsos e, raramente, a {creature:Countess Sorrow}."
+  ]
+}

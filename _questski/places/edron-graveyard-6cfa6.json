@@ -1,0 +1,28 @@
+{
+  "title": "Edron Graveyard",
+  "type": "zona",
+  "near": "Edron",
+  "summary": "Cemitério à superfície **a norte de Stonehome**, a nordeste da cidade de Edron, com vinte campas, uma cripta com um {item:Stone Coffin} e {item:Grave Flower|Grave Flowers} que renascem todos os dias.",
+  "entrance": {"x": 33315, "y": 31734, "z": 7, "label": "Edron Graveyard (norte de Stonehome)"},
+  "requirements": [
+    "Só jogadores **Premium** têm acesso (ilha de Edron)."
+  ],
+  "arrive": [
+    "Viaja de barco até **Edron** (no capitão da tua cidade: {key:hi}, {key:edron}, {key:yes}; de Thais, {npc:Captain Bluebear}, 160 gp). Chegas ao porto do {npc:Captain Seahorse}.",
+    "Caminha para **nordeste** até **Stonehome** e continua para **norte** até ao cemitério ({coord:33315,31734,7}). O barco do {npc:Cornell} para Grimvale ({coord:33305,31720,7}) fica também a norte de Stonehome."
+  ],
+  "leave": [
+    "Volta a pé pelo mesmo caminho até Edron (para **sul** até Stonehome e depois para **sudoeste** até à cidade).",
+    "No porto, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te às outras cidades: {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33305, "y": 31720, "z": 7, "label": "Cornell (barco para Grimvale, norte de Stonehome)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "images": [
+    {"file": "Edron Graveyard.png", "caption": "O cemitério de Edron"}
+  ],
+  "warnings": [
+    "Na cripta aparece um {creature:Skeleton} e há mais alguns num buraco a norte do cemitério. Na {wiki:Research and Development Quest}, cada medição numa campa faz aparecer um {creature:Squidgy Slime}."
+  ]
+}

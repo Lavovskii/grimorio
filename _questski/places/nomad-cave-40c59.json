@@ -1,0 +1,41 @@
+{
+  "title": "Nomad Cave",
+  "type": "gruta",
+  "near": "Ankrahmun",
+  "summary": "Grande gruta dos nómadas por baixo da passagem de montanha entre **Darashia e Ankrahmun**, boa para caçar em níveis baixos; o líder {npc:Muhad} vive lá dentro.",
+  "entrance": {"x": 33205, "y": 32544, "z": 7, "label": "Entrada oficial da Nomad Cave (leste da passagem para Darashia)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Entrada oficial: tens de começar a {wiki:Arito's Task Quest} (falar com o {npc:Arito} em Ankrahmun com um {item:Nomad Parchment}: {key:hi}, {key:nomads}, {key:yes}).",
+    "Entrada secreta (traseiras): a porta lá dentro só abre depois de concluíres a {wiki:Arito's Task Quest}."
+  ],
+  "items": ["Scimitar", "Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Ankrahmun** (de barco: {key:hi}, {key:ankrahmun}, {key:yes}; chegas ao porto do {npc:Captain Sinbeard}).",
+    "Segue para **norte** pela passagem de montanha que liga Ankrahmun a Darashia. A entrada fica logo a **leste** dessa passagem, numa pequena gruta com uma rocha ao meio e uma fenda no chão ({coord:33205,32544,7}).",
+    "**Entrada oficial** (com a Arito's Task começada): põe uma {item:Scimitar} no tile da fenda e despeja água num tile **2 casas à direita** dela. Aparece um portão; passa-o e entra no teleporte da pequena gruta.",
+    "**Entrada secreta** (com a Arito's Task concluída): no deserto ali perto ({coord:33214,32553,7}) cava com a {item:Shovel} (às vezes é preciso cavar várias vezes no tile certo), desce e passa a porta."
+  ],
+  "leave": [
+    "Sobe pelas escadas atrás do {npc:Muhad} ({coord:33279,32526,9}) — a saída das traseiras.",
+    "Usa a {item:Rope} para subires à superfície pelo buraco do deserto ({coord:33214,32553,7}).",
+    "Daí segue a pé para **sul**, pelo deserto, até **Ankrahmun**, ou para **norte** pela passagem de montanha até **Darashia**."
+  ],
+  "coords": [
+    {"x": 33205, "y": 32544, "z": 7, "label": "Entrada oficial (fenda: Scimitar + água)"},
+    {"x": 33214, "y": 32553, "z": 7, "label": "Buraco secreto no deserto (traseiras)"},
+    {"x": 33279, "y": 32526, "z": 9, "label": "Muhad"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Nomads Entrance1.png", "caption": "Entrada oficial: fenda na gruta"},
+    {"file": "Nomads Entrance2.png", "caption": "Entrada oficial: o portão aberto"},
+    {"file": "Nomad Cave 0.png", "caption": "Mapa da Nomad Cave"},
+    {"file": "Nomad Cave 1.png", "caption": "Mapa da Nomad Cave — piso -1"},
+    {"file": "Nomad Cave 2.png", "caption": "Mapa da Nomad Cave — piso -2"},
+    {"file": "Nomad Cave 3.png", "caption": "Mapa da Nomad Cave — piso -3"}
+  ],
+  "warnings": [
+    "Se entrares pela entrada oficial depois da quest, os {creature:Nomad (Basic)|Nomads} atacam-te; a porta das traseiras evita problemas com eles."
+  ]
+}

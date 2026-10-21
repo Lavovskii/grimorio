@@ -1,0 +1,67 @@
+{
+  "slug": "goblin-temple-quest",
+  "category": "tesouro",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "5–10 minutos",
+  "summary": "Quest de Rookgaard na zona Premium. Entra pela gruta dos trolls Premium, atravessa uma ponte sob as pedradas dos {creature:Goblin|Goblins}, desce ao templo dos goblins e sobe à sala dos baús. Recebes 50 gp, 4 {item:Snowball|Snowballs}, 5 {item:Small Stone|Small Stones}, umas {item:Sandals}, uma {item:Pan} e um {item:Vial} de leite.",
+  "start": {"x": 32001, "y": 32213, "z": 7, "label": "Gruta dos trolls Premium, Rookgaard"},
+  "requirements": ["Conta **Premium** (zona Premium de Rookgaard).", "Sem nível mínimo (recomendado 6)."],
+  "items_needed": [
+    {"item": "Shovel"},
+    {"item": "Rope"},
+    {"text": "Opcional: {item:Spear|Spears} ou {item:Small Stone|Small Stones} para matar os goblins presos"}
+  ],
+  "rewards": [
+    {"text": "50 gp"},
+    {"item": "Snowball", "qty": 4},
+    {"item": "Small Stone", "qty": 5},
+    {"item": "Sandals"},
+    {"item": "Pan"},
+    {"text": "1 {item:Vial} de {item:Milk}"}
+  ],
+  "dangers": ["Troll", "Orc", "Orc Spearman", "Goblin", "Minotaur", "Wasp"],
+  "npcs": ["Billy"],
+  "tips": ["Atravessa a ponte depressa: os goblins atiram-te pedras.", "Os goblins também atacam corpo-a-corpo, não só com pedras."],
+  "sections": [
+    {
+      "title": "1. Entrar na gruta dos trolls",
+      "steps": [
+        {
+          "title": "Descer com a pá",
+          "text": "Com uma {item:Shovel}, vai à gruta dos trolls da zona Premium de **Rookgaard** e desce. Lá em baixo, segue o mapa.",
+          "coords": [
+            {"x": 32001, "y": 32213, "z": 7, "label": "Entrada da gruta dos trolls Premium"}
+          ],
+          "images": [
+            {"file": "Goblin Temple Quest Map 1.png", "caption": "Caminho na gruta dos trolls até à ponte"}
+          ]
+        },
+        {"title": "Atravessar a ponte", "text": "Segue sempre para **sul**. Antes da ponte vais encontrar {creature:Troll|Trolls} e {creature:Orc|Orcs}. Atravessa a ponte a correr: os {creature:Goblin|Goblins} **vão** atirar-te pedras.", "warning": "Na ponte estás exposto às pedradas dos goblins: não pares."}
+      ]
+    },
+    {
+      "title": "2. O templo dos goblins",
+      "steps": [
+        {
+          "title": "Descer ao templo",
+          "text": "Do outro lado da ponte há uma escada para baixo. Lá em baixo há goblins (atacam corpo-a-corpo e atiram pedras): mata-os ou foge, e segue outra vez o mapa.",
+          "images": [
+            {"file": "Goblin Temple Quest Map 2.png", "caption": "Caminho dentro do templo dos goblins"}
+          ]
+        },
+        {"title": "Passar pelos goblins", "text": "Ao desceres encontras 3 goblins. Do lado **norte** há mais 3 goblins presos, que só consegues matar com {item:Spear|Spears} ou {item:Small Stone|Small Stones}."},
+        {"title": "Subir à sala dos baús", "text": "Vais ver umas escadas para cima. Lá em cima estão 3 {creature:Goblin|Goblins}, 1 {creature:Minotaur}, 1 {creature:Orc Spearman} e 1 {creature:Wasp}. Mata-os todos e abre os baús para receberes a recompensa.", "reward": "50 gp, 4 Snowballs, 5 Small Stones, Sandals, Pan e um Vial de Milk"},
+        {
+          "title": "Sair do templo dos goblins",
+          "text": "Volta pelo mesmo caminho: desce da sala dos baús, regressa pelo templo até à escada e sobe-a, atravessa outra vez a ponte a correr (os goblins voltam a atirar pedras) e segue para **norte** pela gruta dos trolls até ao buraco por onde entraste. Sobe com a {item:Rope} para voltares à superfície da zona Premium de Rookgaard.",
+          "coords": [
+            {"x": 32001, "y": 32213, "z": 7, "label": "Entrada/saída da gruta dos trolls Premium"}
+          ],
+          "warning": "Na ponte voltas a estar exposto às pedradas dos goblins: não pares."
+        }
+      ]
+    }
+  ],
+  "notes": ["Antes da Winter Update 2007, a {item:Pan} podia ser trocada com o {npc:Billy} por uma antidote rune. Agora ele dá-te uma {item:Small Health Potion} em troca."]
+}

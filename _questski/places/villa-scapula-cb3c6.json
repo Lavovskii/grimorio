@@ -1,0 +1,32 @@
+{
+  "title": "Villa Scapula",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "As ruínas da casa do antigo comandante do Royal Army, hoje o {creature:Black Knight}, meio afundadas no pântano a **noroeste de Venore**; por baixo há caves com {creature:Bonelord|Bonelords} até à sala do Black Knight.",
+  "entrance": {"x": 32827, "y": 31959, "z": 7, "label": "Villa Scapula"},
+  "requirements": [
+    "A porta da cave pode estar trancada: abre-a com a {item:Key 5010}, que está numa das duas árvores mortas a **oeste** da villa.",
+    "Para a sala do Black Knight passas um {item:Gate of Expertise} de **nível 50**."
+  ],
+  "items": ["Rope", "Key 5010"],
+  "arrive": [
+    "Sai de **Venore** pela saída **noroeste** e segue para noroeste em direção ao {wiki:Amazon Camp (Venore)|Amazon Camp}, até um grande edifício em ruínas no pântano ({coord:32827,31959,7}).",
+    "Desce à cave e vai até à ponta **sul**, onde há uma porta. Se estiver trancada, apanha a {item:Key 5010} numa das árvores mortas a oeste ({coord:32813,31964,7} ou {coord:32800,31959,7}).",
+    "Desce as escadas, desce outra vez, segue a gruta até ao fim e salta para o buraco. Segue para **sul** e sobe com a {item:Rope}.",
+    "Continua para **sul** até à sala dos {creature:Skeleton|Skeletons} e salta para um dos dois buracos.",
+    "No andar dos {creature:Bonelord|Bonelords}, vai para **leste** até à parede e depois para **norte** até às escadas; desce. A **norte** passa o {item:Gate of Expertise} de nível 50 e, na sala grande, entra no teleporte a **norte**: leva-te à sala do {creature:Black Knight}."
+  ],
+  "leave": [
+    "Na sala do Black Knight, entra no teleporte do lado **sul**: leva-te de volta ao andar onde estavas antes.",
+    "Volta a passar o {item:Gate of Expertise}, sobe as escadas do andar dos Bonelords, usa a {item:Rope} no buraco da sala dos esqueletos, desce pelo sítio onde subiste com a corda, volta a usar a {item:Rope} no buraco onde saltaste no fim da gruta e sobe as escadas das duas caves até à villa.",
+    "Regressa a **Venore** pelo pântano, para **sudeste**, pelo mesmo caminho do Amazon Camp."
+  ],
+  "coords": [
+    {"x": 32827, "y": 31959, "z": 7, "label": "Villa Scapula"},
+    {"x": 32813, "y": 31964, "z": 7, "label": "Árvore morta com a Key 5010"},
+    {"x": 32800, "y": 31959, "z": 7, "label": "Outra árvore morta com a Key 5010"}
+  ],
+  "warnings": [
+    "O {creature:Black Knight} bate forte (até 500 de dano); nas caves há Bonelords, {creature:Slime|Slimes} e um {creature:Wyvern}."
+  ]
+}

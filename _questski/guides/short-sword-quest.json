@@ -1,0 +1,119 @@
+{
+  "slug": "short-sword-quest",
+  "category": "troca",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "10 min",
+  "summary": "Quando a {npc:Amber} chegou a Rookgaard na sua jangada, esqueceu-se do caderno. Vai buscá-lo ao baú da doca a leste da vila e devolve-lho na Academia: em troca ela dá-te uma {item:Short Sword}.",
+  "legend_pt": "Quando a Amber navegou até Rookgaard na sua jangada esqueceu-se do seu {wiki:Amber's Notebook (Book)|caderno} e agora quer recuperá-lo.",
+  "start": {
+    "x": 32172,
+    "y": 32197,
+    "z": 7,
+    "label": "Doca a leste da vila de Rookgaard"
+  },
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 2.",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [],
+  "rewards": [
+    {
+      "item": "Short Sword",
+      "note": "ou ficas com o caderno, se não o trocares"
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Poison Spider",
+    "Bug",
+    "Wolf",
+    "Spider"
+  ],
+  "npcs": [
+    "Amber",
+    "Obi"
+  ],
+  "tips": [
+    "Cuidado com as {creature:Poison Spider|Poison Spiders} perto da doca: envenenam e são perigosas para personagens de nível 1–2."
+  ],
+  "sections": [
+    {
+      "title": "1. Encontrar o caderno",
+      "steps": [
+        {
+          "title": "Ir à doca",
+          "text": "Sai da vila de Rookgaard pela saída **leste** e segue a pé até à doca, na costa a leste da vila ({coord:32172,32197,7}). Pelo caminho podes encontrar {creature:Bug|Bugs}, {creature:Spider|Spiders}, {creature:Wolf|Wolves} e sobretudo {creature:Poison Spider|Poison Spiders}.",
+          "coords": [
+            {
+              "x": 32172,
+              "y": 32197,
+              "z": 7,
+              "label": "Doca com o baú"
+            }
+          ]
+        },
+        {
+          "title": "Abrir o baú",
+          "text": "**Usa** o baú na doca para receberes um livro preto (o caderno da Amber). Depois volta a pé pelo mesmo caminho, para **oeste**, até à vila.",
+          "reward": "Caderno da Amber (livro preto)"
+        }
+      ]
+    },
+    {
+      "title": "2. Devolver o caderno à Amber",
+      "steps": [
+        {
+          "title": "Ir à Academia",
+          "text": "Volta à {wiki:Rookgaard Academy}, o edifício mesmo a **norte** do templo de Rookgaard. Desce as escadas até ao piso subterrâneo (1 andar abaixo, onde fica o banco do {npc:Paulie}): a {npc:Amber} está aí, na sala de descanso por baixo da Academia.",
+          "npc": "Amber",
+          "coords": [
+            {
+              "x": 32103,
+              "y": 32183,
+              "z": 8,
+              "label": "Amber, por baixo da Academia"
+            }
+          ],
+          "images": [
+            {
+              "file": "Rookgaard Academy map.png",
+              "caption": "A Rookgaard Academy, a norte do templo"
+            }
+          ]
+        },
+        {
+          "title": "Trocar o caderno",
+          "text": "Diz à {npc:Amber} {key:hi}, {key:book} e {key:yes}. Ela fica com o caderno e dá-te uma {item:Short Sword}.",
+          "npc": "Amber",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Oh hello, nice to see you Player. Are you here to hear some stories of my adventures or do you need help?"
+            },
+            {
+              "you": "book"
+            },
+            {
+              "npc": "Do you bring me my notebook?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Excellent. Here, take this short sword as a reward."
+            }
+          ],
+          "reward": "Short Sword",
+          "warning": "Só serve o livro que apanhaste no baú da doca, não outro livro qualquer.",
+          "tip": "Para sair, sobe pelas mesmas escadas até ao rés-do-chão da Academia; o templo fica logo a sul."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se encontrares livros pretos que outros jogadores deitaram ao chão, podes trocá-los com a Amber por mais {item:Short Sword|Short Swords}. Dá jeito porque o {npc:Obi} paga algum dinheiro por elas."
+  ]
+}

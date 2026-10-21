@@ -1,0 +1,29 @@
+{
+  "title": "Asura Citadel",
+  "type": "dungeon",
+  "near": "Marapur",
+  "summary": "Cidadela dos Asuri numa gruta escondida a sudeste dos Emerald Gardens de {wiki:Marapur}; é uma das zonas da {wiki:Shards of a Broken Moon Quest}, com criaturas de nível muito alto.",
+  "entrance": {"x": 33894, "y": 32714, "z": 7, "label": "Pedras de acesso à gruta escondida (Marapur)"},
+  "requirements": [
+    "Conta **Premium**; a {wiki:Shards of a Broken Moon Quest} pede a {wiki:Within the Tides Quest} concluída.",
+    "A {npc:Sharai} tem de te dar acesso à gruta escondida ({key:hi}, {key:moon}) antes de as pedras te transportarem."
+  ],
+  "arrive": [
+    "Vai às {wiki:Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, e entra no portal no alto da montanha (piso +5, {coord:33037,32738,2}): és teletransportado para {wiki:Marapur}.",
+    "Em Marapur vai para **nordeste** dos Emerald Gardens até à {npc:Sharai} ({coord:33875,32660,5}) e diz {key:hi}, {key:moon}.",
+    "Usa as **pedras** a **sudeste** ({coord:33894,32714,7}) para seres transportado para a gruta escondida e para a Asura Citadel."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída: volta pelo caminho por onde entraste até ao ponto onde as pedras te deixaram e regressa a Marapur.",
+    "Para voltares ao continente, vai ao tapete mágico de **Moonfall** e fala com o {npc:Ziyad} ({coord:33804,32769,2}): diz {key:hi} e pergunta-lhe pelos destinos (por exemplo **Ankrahmun**)."
+  ],
+  "coords": [
+    {"x": 33037, "y": 32738, "z": 2, "label": "Portal para Marapur (Kha'zeel Mountains)"},
+    {"x": 33875, "y": 32660, "z": 5, "label": "Sharai"},
+    {"x": 33894, "y": 32714, "z": 7, "label": "Pedras de acesso à gruta escondida"},
+    {"x": 33804, "y": 32769, "z": 2, "label": "Ziyad — tapete mágico de Moonfall"}
+  ],
+  "warnings": [
+    "Criaturas com 4000 a 9500 HP ({creature:True Midnight Asura}, {creature:True Frost Flower Asura}, {creature:Winged Jaracal}, {creature:Silverfrost Sentinel}): zona para nível muito alto (a quest recomenda 400+)."
+  ]
+}

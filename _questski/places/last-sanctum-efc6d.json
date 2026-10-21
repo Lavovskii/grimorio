@@ -1,0 +1,31 @@
+{
+  "title": "Last Sanctum",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Esconderijo de were-criaturas ligado às Ley Lines, numa dungeon a **leste da vila de Cormaya** (perto de Edron), atrás de uma {item:Mystic Flame}.",
+  "entrance": {"x": 33353, "y": 32000, "z": 7, "label": "Dungeon com a Mystic Flame (entrada do Last Sanctum)"},
+  "requirements": [
+    "Só entras depois de fazeres o ritual no Moonshadow Temple de Grimvale (parte The Curse Spreads da {wiki:Grimvale Quest}).",
+    "Nível recomendado: 100+."
+  ],
+  "arrive": [
+    "Vai a **Edron** e, no porto, apanha o barco do {npc:Captain Seahorse} para Cormaya: {key:hi}, {key:cormaya}, {key:yes}.",
+    "Em Cormaya, vai para **leste** da vila até à dungeon com a {item:Mystic Flame} ({coord:33353,32000,7}) e atravessa a chama.",
+    "Lá dentro segue a gruta para **sudoeste** e desce pela rampa ({coord:33353,32093,9})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe a rampa, segue a gruta para **nordeste** até à {item:Mystic Flame} e sai na dungeon a **leste** da vila de Cormaya.",
+    "Para voltares a Edron, fala com o {npc:Pemaret} no porto norte de Cormaya ({coord:33287,31956,6}): {key:hi}, {key:edron}, {key:yes}.",
+    "Depois de acabares The Curse Spreads, podes usar o {item:Death Portal} do Last Sanctum ({coord:33429,32083,9}) para ires diretamente à gruta dos licantropos de Edron."
+  ],
+  "coords": [
+    {"x": 33353, "y": 32093, "z": 9, "label": "Rampa (subsolo)"},
+    {"x": 33429, "y": 32083, "z": 9, "label": "Death Portal no Last Sanctum"},
+    {"x": 33064, "y": 31977, "z": 9, "label": "Death Portal na gruta de Edron"},
+    {"x": 33305, "y": 31966, "z": 7, "label": "Yoem (centro da vila de Cormaya)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (barco para Edron)"}
+  ],
+  "warnings": [
+    "Está cheio de were-criaturas: {creature:Werefox|Werefoxes}, {creature:Werebadger|Werebadgers}, {creature:Werewolf|Werewolves}, {creature:Wereboar|Wereboars} e {creature:Werebear|Werebears}."
+  ]
+}

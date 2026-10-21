@@ -1,0 +1,33 @@
+{
+  "title": "Kazordoon Minotaurs",
+  "type": "zona",
+  "near": "Kazordoon",
+  "summary": "Território dos minotauros a **oeste de Kazordoon**, logo fora das {wiki:Dwarf Mines}: uma torre à superfície e grutas subterrâneas (pisos -1 e -2), comandadas pelo {creature:The Horned Fox}.",
+  "entrance": {"x": 32448, "y": 31993, "z": 7, "label": "Monte de pedras soltas (descida para as grutas)"},
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Chega a **Kazordoon**: de {wiki:Steamship} a partir de {wiki:Cormaya} ou de Farmine ({key:hi}, {key:kazordoon}, {key:yes}), ou a pé (por exemplo de Thais pela passagem do {wiki:Mount Sternum}). Sai da montanha pela **entrada principal** ({coord:32614,31923,7}).",
+    "Da entrada principal, segue a linha branca do mapa até um buraco com sítio para a {item:Rope}, onde há alguns {creature:Spider|Spiders}. Vai para **norte** e sai por uma rampa para o nível do chão (há {creature:Poison Spider|Poison Spiders} e alguns {creature:Dwarf|Dwarves}).",
+    "Continua a seguir a linha branca para **sul**, atravessa **duas pontes** e passa por outras entradas das minas.",
+    "A **oeste de Kazordoon** encontras o monte de pedras soltas ({coord:32448,31993,7}): usa a {item:Shovel} na {item:Loose Stone Pile} e desce para o piso -1 das grutas dos minotauros."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao buraco por onde desceste e usa a {item:Rope} para subires à superfície, a oeste de Kazordoon.",
+    "No piso -1, as saídas para cima levam (de norte para sul) a um beco sem saída com 3 {creature:Bear|Bears}, à zona de relva à volta da torre, ao interior da torre e à península a sul das minas.",
+    "Depois refaz o caminho da linha branca (duas pontes, a rampa e o buraco da corda) até à entrada principal de Kazordoon."
+  ],
+  "coords": [
+    {"x": 32614, "y": 31923, "z": 7, "label": "Kazordoon (entrada principal)"},
+    {"x": 32448, "y": 31993, "z": 7, "label": "Loose Stone Pile — descida para as grutas"},
+    {"x": 32489, "y": 31965, "z": 7, "label": "Loose Stone Pile atrás da Plum Tree (Steel Helmet Quest)"}
+  ],
+  "images": [
+    {"file": "Way to Minotaur Tower.png", "caption": "Caminho desde a entrada principal de Kazordoon até aos minotauros (linha branca)"},
+    {"file": "Kazordoon Minotaurs (-1).png", "caption": "Grutas dos minotauros, piso -1 (o X vermelho é a saída para as Dwarf Mines)"},
+    {"file": "Kazordoon Minotaurs (-2).png", "caption": "Grutas dos minotauros, piso -2 (teleporte para a sala do The Horned Fox no extremo sul)"}
+  ],
+  "warnings": [
+    "Pelo caminho podes encontrar {creature:Snake|Snakes}, {creature:Poison Spider|Poison Spiders}, {creature:Wolf|Wolves} e {creature:Bear|Bears}; nas grutas há muitos {creature:Minotaur Archer|Minotaur Archers}.",
+    "A wiki recomenda nível 15–20 para a zona e 30–35 para a torre ({creature:Minotaur Guard|Minotaur Guards} e {creature:Minotaur Mage|Minotaur Mages})."
+  ]
+}

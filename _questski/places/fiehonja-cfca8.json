@@ -1,0 +1,32 @@
+{
+  "title": "Fiehonja",
+  "type": "zona",
+  "near": "Gray Beach",
+  "summary": "Zona subaquática dos {creature:Deepling|Deeplings} por baixo da {wiki:Gray Beach} de {wiki:Quirefang}, com criaturas marinhas únicas como o {creature:Manta Ray}.",
+  "entrance": {"x": 33514, "y": 31323, "z": 7, "label": "Buraco a sudeste de Gray Beach (para Fiehonja)"},
+  "requirements": [
+    "O acesso é dado pela {wiki:Liquid Black Quest}: para andares debaixo de água precisas dos melhoramentos do {npc:Spectulus} (primeira parte da quest).",
+    "A área aberta depende do estágio da {wiki:Deeplings World Change}: no estágio 1 quase nada está acessível; no estágio 3 tens acesso a tudo."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para a {wiki:Gray Island} (por exemplo o {npc:Captain Fearless} em Venore): {key:hi}, {key:gray island}, {key:yes} (150 gp).",
+    "Na Gray Island entra no buraco a **sul** do {npc:Scrutinon}, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}.",
+    "Do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até Gray Beach ({coord:33471,31304,7}).",
+    "Entra no buraco mais a **sudeste** de Gray Beach ({coord:33514,31323,7}) e desce a escadaria gigante; no fundo segue a gruta para **sul** até uma rampa e segue o caminho de sentido único até à parte principal de Fiehonja.",
+    "Atalho: depois de fazeres uma vez o atalho da Liquid Black Quest, o teleporte de Gray Beach deixa-te junto à estátua de {wiki:Qjell}."
+  ],
+  "leave": [
+    "Volta à zona protegida da estátua de Qjell e usa o teleporte do atalho para Gray Beach (lá tens depot e templo).",
+    "Nenhum barco atraca em Quirefang: desce à entrada a **sul** da vila de Gray Beach e faz a passagem subterrânea ao contrário até à Gray Island.",
+    "Fala com o {npc:Scrutinon}: {key:hi}, {key:passage} e o nome da cidade ({key:ab'dendriel}, {key:darashia}, {key:edron} ou {key:venore}). A viagem é **grátis**."
+  ],
+  "coords": [
+    {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island)"},
+    {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach"}
+  ],
+  "warnings": [
+    "O caminho pela escadaria gigante é de sentido único: para sair usa o teleporte junto à estátua de Qjell.",
+    "Zona para nível 120+ ({creature:Deepling|Deeplings} e outras criaturas marinhas)."
+  ]
+}

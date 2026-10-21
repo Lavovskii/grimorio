@@ -1,0 +1,35 @@
+{
+  "title": "Sunken Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Bairro de Yalahar, a **leste do centro da cidade**, que se partiu e afundou no mar; ainda há terra acima da água, mas a maior parte (cheia de quara) fica debaixo de água.",
+  "entrance": {"x": 32949, "y": 31182, "z": 7, "label": "Sunken Quarter (parte acima da água)"},
+  "requirements": [
+    "Para ires para debaixo de água precisas de um {item:Helmet of the Deep} ou de uma {item:Depth Galea} equipado.",
+    "O mecanismo do portão do centro só funciona depois de o {npc:Yalahari (NPC)} te dar acesso (missão 7 da {wiki:In Service of Yalahar Quest})."
+  ],
+  "items": ["Helmet of the Deep"],
+  "arrive": [
+    "Apanha um barco para **Yalahar** (por exemplo em Venore: {key:hi}, {key:yalahar}, {key:yes}).",
+    "Vai ao portão do centro da cidade para o Sunken Quarter, a **leste**, e usa o mecanismo para passares. Em alternativa, a partir do Factory Quarter, fala com o guarda {npc:Oliver} ({key:pass} e o destino).",
+    "Ainda há terra acima da água, por isso chegas a pé ao {npc:Tarak} ({coord:32917,31199,7}).",
+    "Para ires para debaixo de água, pede ao {npc:Tarak} uma {key:trip}, equipa o {item:Helmet of the Deep} (ou a {item:Depth Galea}) e salta para a água.",
+    "Debaixo de água desce em {coord:32940,31182,10} e depois em {coord:32964,31182,11}; para o fundo usa {spell:Levitate} em {coord:32950,31205,12}."
+  ],
+  "leave": [
+    "Nada de volta pelo mesmo caminho até à superfície: usa {spell:Levitate} para subir em {coord:32950,31205,12} e sobe nos pontos {coord:32964,31182,11} e {coord:32940,31182,10}. **Não tires o capacete** enquanto estiveres debaixo de água.",
+    "Já em terra, regressa ao portão do Sunken Quarter e usa o mecanismo outra vez para voltares ao centro de Yalahar (ou passa pelo {npc:Oliver} para o Factory Quarter)."
+  ],
+  "coords": [
+    {"x": 32917, "y": 31199, "z": 7, "label": "Tarak (viagem para debaixo de água)"},
+    {"x": 32895, "y": 31229, "z": 7, "label": "Oliver (passagem Factory / Sunken Quarter)"},
+    {"x": 32905, "y": 31167, "z": 13, "label": "Maritima (debaixo de água)"},
+    {"x": 32940, "y": 31182, "z": 10, "label": "Primeira descida debaixo de água"},
+    {"x": 32964, "y": 31182, "z": 11, "label": "Segunda descida"},
+    {"x": 32950, "y": 31205, "z": 12, "label": "Ponto de Levitate (fundo)"}
+  ],
+  "warnings": [
+    "Nos primeiros níveis há {creature:Quara Constrictor|Quara Constrictors} e {creature:Quara Mantassin|Quara Mantassins}; nos mais fundos aparecem {creature:Quara Hydromancer|Quara Hydromancers}, {creature:Quara Pincher|Quara Pinchers} e {creature:Quara Predator|Quara Predators}. Cuidado com a borda **leste**, onde podes ser cercado por até 12 Predators e Pinchers.",
+    "Leva toda a comida de que precisas: debaixo de água há pouca."
+  ]
+}

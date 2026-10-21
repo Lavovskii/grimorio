@@ -1,0 +1,30 @@
+{
+  "title": "Nibelor",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Pequena ilha gelada a **nordeste de Svargrond**, onde vivem os xamãs guardiães ({npc:Hjaern}, {npc:Siflind}, {npc:Nilsor}); a sul tem dois buracos para a {wiki:Nibelor Ice Cave}.",
+  "entrance": {"x": 32353, "y": 31053, "z": 7, "label": "Ilha de Nibelor"},
+  "requirements": [
+    "O {npc:Iskan} só te leva depois de fazeres a {wiki:Barbarian Test Quest} e a primeira missão da {wiki:The Ice Islands Quest}."
+  ],
+  "arrive": [
+    "Vai a **Svargrond** de barco (de Carlin, Thais ou Venore: {key:hi}, {key:svargrond}, {key:yes}); chegas junto à {npc:Captain Breezelda}, na parte **leste** da cidade.",
+    "Vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}, o dono do trenó de cães ({coord:32301,31083,7}): {key:hi}, {key:passage}. Ele leva-te a Nibelor.",
+    "Na ilha, o {npc:Hjaern} está numa gruta a **norte** ({coord:32349,31026,7}) e a {npc:Siflind} na montanha do norte, 1 andar acima ({coord:32361,31029,6})."
+  ],
+  "leave": [
+    "Fala com o {npc:Nilsor}, a **oeste** do círculo de pedras ({coord:32329,31044,7}): {key:hi}, {key:passage}. O trenó dele leva-te de volta a **Svargrond**.",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te de barco a Carlin, Thais ou Venore ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32301, "y": 31083, "z": 7, "label": "Iskan (trenó Svargrond → Nibelor)"},
+    {"x": 32329, "y": 31044, "z": 7, "label": "Nilsor (trenó Nibelor → Svargrond)"},
+    {"x": 32349, "y": 31026, "z": 7, "label": "Hjaern (gruta a norte)"},
+    {"x": 32361, "y": 31029, "z": 6, "label": "Siflind (montanha do norte, 1 andar acima)"},
+    {"x": 32356, "y": 31087, "z": 7, "label": "Buraco para a Nibelor Ice Cave"},
+    {"x": 32388, "y": 31075, "z": 7, "label": "Outro buraco para a Nibelor Ice Cave"}
+  ],
+  "warnings": [
+    "Logo a **leste** do sítio onde chegas há outro {wiki:Dog sled|trenó dos cães}: esse não volta a Svargrond, leva-te a **Inukaya** (ilha de Grimlund) e os cães comem um {item:Ham} por viagem."
+  ]
+}

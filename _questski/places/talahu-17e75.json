@@ -1,0 +1,31 @@
+{
+  "title": "Talahu",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "A \"ilha das Hydras\", a **oeste de Goroma** nas {wiki:Shattered Isles}, com 20–30 {creature:Hydra|Hydras} à superfície; é a segunda ilha da cadeia do {wiki:Teleportation Hub} e tem uma Mailbox no hub.",
+  "entrance": {"x": 31921, "y": 32658, "z": 7, "label": "Escadas do Teleportation Hub de Talahu"},
+  "requirements": [
+    "Precisas do acesso a Goroma (reparar o navio do {npc:Jack Fate}) e de ter desbloqueado Ramoa e Talahu na {wiki:The Shattered Isles Quest}; até lá, o teleporte de Ramoa para Talahu não funciona."
+  ],
+  "arrive": [
+    "Em **Liberty Bay**, fala com o {npc:Jack Fate} no porto: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas no **leste** de Goroma.",
+    "Vai às escadas do Teleportation Hub de Goroma ({coord:32038,32561,7}), desce e entra no teleporte da **direita**: chegas ao hub de Ramoa.",
+    "No hub de Ramoa entra outra vez no teleporte da **direita**: chegas ao hub de Talahu. Sobe as escadas ({coord:31921,32658,7}) para a superfície da ilha.",
+    "Primeira vez: o caminho é pela sala das quatro bacias em Ramoa, como descreve a secção \"Acesso a Talahu\" da {wiki:The Shattered Isles Quest}."
+  ],
+  "leave": [
+    "Desce ao hub de Talahu e usa o teleporte da **esquerda** (Ramoa); no hub de Ramoa, outra vez o da **esquerda** (Goroma).",
+    "Sobe as escadas do hub de Goroma e vai para **leste** até ao {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 31953, "y": 32660, "z": 7, "label": "Talahu"},
+    {"x": 31921, "y": 32658, "z": 7, "label": "Escadas do Teleportation Hub de Talahu"},
+    {"x": 32038, "y": 32561, "z": 7, "label": "Escadas do Teleportation Hub de Goroma"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"},
+    {"x": 31928, "y": 32633, "z": 10, "label": "Porta de nível do dungeon de Medusas e Serpent Spawns"}
+  ],
+  "warnings": [
+    "A superfície está cheia de {creature:Hydra|Hydras} (recomendado nível 60–80+); atravessar a ilha em grupo é complicado.",
+    "Por baixo da ilha há grutas com Quara Scouts e {creature:Bog Raider|Bog Raiders}; a norte do labirinto, uma porta de nível leva a {creature:Medusa|Medusas} e {creature:Serpent Spawn|Serpent Spawns}."
+  ]
+}

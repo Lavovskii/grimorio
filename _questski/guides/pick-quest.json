@@ -1,0 +1,187 @@
+{
+  "slug": "pick-quest",
+  "category": "troca",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "15–30 min",
+  "summary": "Em Rookgaard, o {npc:Al Dee} só troca uma {item:Pick} por um {item:Small Axe} de boa qualidade. Arranja um Small Axe numa das várias grutas da ilha (ou de um {creature:Goblin}) e leva-o ao Al Dee para receberes a tua picareta.",
+  "legend_pt": "Parece que um viajante morreu ao escolher o caminho errado, ao encontro de umas bestas imundas, em vez de atravessar o gás venenoso e encontrar o tesouro guardado por magia negra. — de um relatório encontrado em tempos (gruta da Katana Quest).",
+  "start": {
+    "x": 32063,
+    "y": 32182,
+    "z": 7,
+    "label": "Al Dee, em Rookgaard"
+  },
+  "requirements": [
+    "Não precisa de Premium (há caminhos Free e caminhos só para Premium).",
+    "Sem nível mínimo; recomendado nível 4."
+  ],
+  "items_needed": [
+    {
+      "item": "Shovel",
+      "note": "para abrir buracos/pilhas de pedras"
+    },
+    {
+      "item": "Rope",
+      "note": "para o caminho da gruta da Katana Quest"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Small Axe",
+      "note": "que trocas pela Pick"
+    },
+    {
+      "item": "Pick"
+    }
+  ],
+  "dangers": [
+    "Troll",
+    "Orc",
+    "Skeleton",
+    "Rotworm",
+    "Minotaur",
+    "Wolf",
+    "Goblin",
+    "Cave Rat",
+    "Poison Spider",
+    "Spider"
+  ],
+  "npcs": [
+    "Al Dee"
+  ],
+  "tips": [
+    "Escolhe **um** dos caminhos abaixo para arranjar o {item:Small Axe}. Os três primeiros são só para Premium.",
+    "Os {creature:Rotworm|Rotworms} são muito fortes para Rookgaard e não podem ser empurrados: não te deixes encurralar."
+  ],
+  "sections": [
+    {
+      "title": "1. Arranjar um Small Axe",
+      "intro": "Há seis formas de obter o {item:Small Axe}. Basta fazeres uma.",
+      "steps": [
+        {
+          "title": "Opção A – Skeleton Cave (Premium)",
+          "text": "Na zona Premium, no extremo **sudoeste**, para lá dos pântanos, há um buraco tapado por uma árvore. Abre-o com a {item:Shovel} e desce. Só há um caminho. No fundo há dois caixões guardados por dois {creature:Skeleton|Skeletons}: o caixão da **direita** tem um {item:Small Axe}. Dá para fazer até em nível 1. **Para sair:** volta pelo mesmo caminho (só há um) e usa a {item:Rope} no buraco por onde desceste para voltares à superfície.",
+          "images": [
+            {
+              "file": "Small_axe_2.jpg",
+              "caption": "Os dois caixões no fundo da Skeleton Cave (o da direita tem o Small Axe)"
+            }
+          ],
+          "warning": "Conta com cerca de 2 {creature:Cave Rat|Cave Rats} e 3 {creature:Skeleton|Skeletons} na gruta."
+        },
+        {
+          "title": "Opção B – Goblins (Premium)",
+          "text": "Os {creature:Goblin|Goblins} às vezes deixam cair {item:Small Axe|Small Axes}. Mata-os até te sair um."
+        },
+        {
+          "title": "Opção C – Main Premium Cave (Premium)",
+          "text": "Na gruta principal da zona Premium de Rookgaard há vários sítios onde aparecem {item:Small Axe|Small Axes}."
+        },
+        {
+          "title": "Opção D – Gruta da Katana Quest",
+          "text": "Sai pela saída **norte** da vila e vai para **nordeste** até uma {item:Loose Stone Pile}. Abre-a com a {item:Shovel} e desce. Mata o {creature:Poison Spider} e as {creature:Spider|Spiders} e segue a gruta até uma escada para baixo. Desce, mata os 3 {creature:Skeleton|Skeletons} e segue a gruta para **leste** até um buraco de corda. Usa a {item:Rope}, sobe e vai para **norte**. Revista o humano morto: tem um {item:Small Axe} (um por cada floor reset). **Para sair:** volta pelo mesmo caminho: desce pelo buraco por onde subiste com a corda, volta para **oeste** até à escada e sobe, e no fim usa a {item:Rope} no buraco da Loose Stone Pile para voltares à superfície. Daí regressa à vila pela saída norte.",
+          "warning": "Aqui há {creature:Rotworm|Rotworms}: são muito fortes para Rookgaard e não podem ser empurrados. Anda à volta da gruta para os afastar (são lentos) ou corre direto ao corpo. Não é recomendado matá-los. Se ficares encurralado, dificilmente sobrevives.",
+          "tip": "Este é também o caminho da {wiki:Katana Quest}, que podes fazer ao mesmo tempo.",
+          "images": [
+            {
+              "file": "Pick Quest Rotworms.png",
+              "caption": "Revista o corpo do humano para encontrares um Small Axe"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32151,
+              "y": 32151,
+              "z": 7,
+              "label": "Entrada da gruta da Katana Quest (campas a nordeste)"
+            }
+          ]
+        },
+        {
+          "title": "Opção E – Orc Cave",
+          "text": "Sai pela saída **norte** da vila, vai para **norte** e desce a escadaria subterrânea. Vai para **norte** e depois **leste** até uma escada para baixo. Desce, anda para **norte** e, quando o caminho se divide, segue para **oeste**. Desce na primeira escada que encontrares. Vai para **oeste**, mata os {creature:Orc|Orcs} da sala grande e procura na extensão **sul** da gruta: há 2 {item:Box|caixas} e um {item:Chest|baú}. A caixa de **leste** tem um {item:Small Axe} e 4 {item:Arrow|Arrows} depois de cada floor reset. **Para sair:** volta pelo mesmo caminho e sobe as escadas até à escadaria da gruta principal, a norte da vila.",
+          "images": [
+            {
+              "file": "Pick Quest Orcs.png",
+              "caption": "Abre a caixa para encontrares um Small Axe e 4 Arrows"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32094,
+              "y": 32137,
+              "z": 7,
+              "label": "Escadaria da gruta principal de Rookgaard"
+            }
+          ]
+        },
+        {
+          "title": "Opção F – Minotaur Hell",
+          "text": "Sai pela saída **norte**, vai para **norte** e desce a escadaria. Vai para **norte** e depois **leste** até uma escada para baixo. Desce, anda para **norte** e, na bifurcação, segue para **nordeste**; na bifurcação seguinte vai para **noroeste** até outra escada para baixo. Desce e anda para **norte** até à próxima escada (cheio de {creature:Wolf|Wolves} e alguns {creature:Orc|Orcs}). Desce outra vez e limpa a sala: há 2 {creature:Minotaur|Minotaurs} com muitos orcs e lobos. Na parte **sudeste** da sala, mesmo ao lado da escada para baixo, procura atrás de uma pedra grande: está lá um {item:Small Axe} escondido. **Para sair:** volta pelo mesmo caminho, subindo as escadas andar a andar até à escadaria da gruta principal, a norte da vila (vê também a {wiki:Minotaur Hell Quest|Minotaur Hell Quest}).",
+          "warning": "Os {creature:Minotaur|Minotaurs} são perigosos para níveis muito baixos.",
+          "images": [
+            {
+              "file": "Pick Quest Minotaurs.png",
+              "caption": "Procura atrás da pedra: há um Small Axe escondido"
+            },
+            {
+              "file": "Route Mino hell.jpg",
+              "caption": "Caminho até à Minotaur Hell"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32094,
+              "y": 32137,
+              "z": 7,
+              "label": "Escadaria da gruta principal (acesso à Minotaur Hell)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Trocar o Small Axe pela Pick",
+      "steps": [
+        {
+          "title": "Falar com o Al Dee",
+          "text": "Volta à vila de Rookgaard e leva o {item:Small Axe} à loja do {npc:Al Dee}. Diz {key:hi}, {key:pick} e {key:yes}. Recebes uma {item:Pick}.",
+          "npc": "Al Dee",
+          "coords": [
+            {
+              "x": 32063,
+              "y": 32182,
+              "z": 7,
+              "label": "Loja do Al Dee"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hello, hello, Player! Please come in, look, and buy!"
+            },
+            {
+              "you": "pick"
+            },
+            {
+              "npc": "Picks are hard to come by. I trade them only for high quality small axes. Do you want to trade?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Splendid! Here take your pickaxe."
+            }
+          ],
+          "reward": "Pick"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como Small Axe Quest."
+  ]
+}

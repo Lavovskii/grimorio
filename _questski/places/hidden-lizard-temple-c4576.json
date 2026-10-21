@@ -1,0 +1,28 @@
+{
+  "title": "Hidden Lizard Temple",
+  "type": "dungeon",
+  "near": "Thais",
+  "summary": "Pequena masmorra de lagartos para principiantes na ilha de {wiki:Targuna} (a ilha para onde vão os jogadores novos depois de {wiki:Newhaven}), por umas escadas no norte da ilha.",
+  "entrance": {"x": 31936, "y": 31863, "z": 7, "label": "Entrada do Hidden Lizard Temple (escadas, norte de Targuna)"},
+  "requirements": [
+    "Só em {wiki:Targuna}: chegas à ilha no fim do tutorial de {wiki:Newhaven}. A ilha é pensada para níveis 8 a 20."
+  ],
+  "arrive": [
+    "Em Targuna, fala com a {npc:Lizzie} no **sul** da ilha ({coord:31941,31920,7}) — {key:hi}, {key:save}, {key:yes} — e ela marca a entrada do templo no teu mapa.",
+    "Vai para **norte** e desce pelas escadas da entrada ({coord:31936,31863,7}).",
+    "O {creature:Lizard Commander} está **um andar** abaixo."
+  ],
+  "leave": [
+    "Depois de derrotares o {creature:Lizard Commander}, entra no portal: leva-te de volta a Targuna.",
+    "Se precisares de sair antes, sobe pelas mesmas escadas da entrada ({coord:31936,31863,7}).",
+    "Para saíres de Targuna, o {npc:Captain Indigo} ({coord:31973,31892,6}) leva-te a **Thais** ({key:hi}, {key:thais}, {key:yes}) se pagares 5000 gp ou tiveres um {item:Sail Pass}. A wiki não descreve um caminho de volta do continente para Targuna."
+  ],
+  "coords": [
+    {"x": 31941, "y": 31920, "z": 7, "label": "Lizzie (sul de Targuna)"},
+    {"x": 31936, "y": 31863, "z": 7, "label": "Entrada/saída do Hidden Lizard Temple"},
+    {"x": 31973, "y": 31892, "z": 6, "label": "Captain Indigo (barco para Thais)"}
+  ],
+  "warnings": [
+    "O {creature:Lizard Commander} (160 HP) é bem mais forte do que os outros lagartos; leva poções."
+  ]
+}

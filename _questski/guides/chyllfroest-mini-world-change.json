@@ -1,0 +1,81 @@
+{
+  "slug": "chyllfroest-mini-world-change",
+  "category": "world-change",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "Evento de 1 de abril a 1 de maio (caça livre)",
+  "summary": "Todos os anos, de 1 de abril a 1 de maio, uma ponte de gelo liga Svargrond à ilha gelada de {wiki:Chyllfroest}. A ilha está cheia de criaturas do frio e até de um ou outro {creature:Yeti}, e é a **única** forma de domar a montaria {wiki:Ursagrodon}.",
+  "start": {"x": 32068, "y": 31093, "z": 7, "label": "Ponte de gelo para Chyllfroest"},
+  "requirements": [
+    "Premium.",
+    "Sem nível mínimo; recomendado 25.",
+    "Só disponível entre 1 de abril e 1 de maio."
+  ],
+  "items_needed": [
+    {"text": "Equipamento e poções para caçar criaturas do gelo."}
+  ],
+  "rewards": [
+    {"text": "Possibilidade de domar um {wiki:Ursagrodon} (montaria)"}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Montaria {wiki:Ursagrodon}", "kind": "funcionalidade", "when": "Só enquanto a ponte de gelo para {wiki:Chyllfroest} está aberta (de 1 de abril a 1 de maio).", "note": "É a única forma de domar um Ursagrodon: procura o esqueleto preso no gelo, dentro da montanha da ilha."}
+  ],
+  "dangers": ["Badger", "Winter Wolf", "Polar Bear", "Mammoth", "Wyvern", "Yeti"],
+  "npcs": [],
+  "tips": [
+    "Este é um Mini World Change especial: não é aleatório, acontece **sempre** de 1 de abril a 1 de maio, todos os anos.",
+    "Aproveita o mês: é a única altura do ano em que podes domar o Ursagrodon."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se o evento está ativo",
+      "steps": [
+        {
+          "title": "Mensagens do evento",
+          "text": "As mensagens que anunciam este Mini World Change são: *\"An ice bridge now connects Svargrond to a frosty island, where monsters and a strange frozen creature have been sighted.\"* ou *\"An icy bridge reaches toward an isle of frost and hidden fire, with cold-hearted monsters grim and dire.\"*"
+        }
+      ]
+    },
+    {
+      "title": "2. Ir a Chyllfroest",
+      "steps": [
+        {
+          "title": "Chegar à ponte de gelo",
+          "text": "Sai de **Svargrond** e vai até à gruta dos {creature:Frost Troll|Frost Trolls} que fica no caminho do atalho para as {wiki:Formorgar Mines|Formorgar Mines}. Em vez de desceres para o atalho, segue para **oeste**, em direção à gruta dos Quara scouts. A \"ponte\" de gelo para {wiki:Chyllfroest} começa em {coord:32068,31093,7}.",
+          "coords": [
+            {"x": 32068, "y": 31093, "z": 7, "label": "Ponte de gelo para Chyllfroest"},
+            {"x": 32060, "y": 31034, "z": 7, "label": "Ilha de Chyllfroest (oeste de Svargrond)"}
+          ],
+          "images": [
+            {"file": "Chyllfroest Entrance.png", "caption": "A entrada de Chyllfroest"}
+          ]
+        },
+        {
+          "title": "Atravessar a ponte de gelo",
+          "text": "Em **Svargrond**, atravessa a ponte de gelo que liga a cidade à ilha de {wiki:Chyllfroest}.",
+          "warning": "A ilha tem uma grande variedade de criaturas: {creature:Badger|Badgers}, {creature:Winter Wolf|Winter Wolves}, {creature:Polar Bear|Polar Bears}, {creature:Mammoth|Mammoths}, {creature:Wyvern|Wyverns} e, às vezes, um {creature:Yeti}."
+        },
+        {
+          "title": "Procurar o Ursagrodon",
+          "text": "Explora a ilha e procura a \"estranha criatura congelada\" de que falam as mensagens: é aqui que tens a única oportunidade de domar um {wiki:Ursagrodon}.",
+          "reward": "Montaria Ursagrodon"
+        },
+        {
+          "title": "Onde está o Ursagrodon congelado",
+          "text": "O Ursagrodon não é uma criatura: é um esqueleto preso numa parede de gelo dentro da montanha de Chyllfroest. Há vários em vários andares, mas os mais fáceis de alcançar estão no **1.º andar subterrâneo, do lado leste** da montanha. Podes contornar a montanha pelo **sudeste**, por isso não precisas de passar pelos {creature:Frost Dragon|Frost Dragons} para lá chegar.",
+          "images": [
+            {"file": "Chyllfroest Ursagrodon.png", "caption": "O Ursagrodon congelado no gelo"}
+          ]
+        },
+        {
+          "title": "Sair de Chyllfroest",
+          "text": "Para saíres, volta pelo mesmo caminho: sobe de volta à superfície, atravessa a ponte de gelo em {coord:32068,31093,7} e regressa a **Svargrond**. Se desceres mais fundo na masmorra do leste, no **5.º andar subterrâneo** há um **Geyser**: pisa-o para seres levado de volta à superfície, ao sopé da montanha.",
+          "images": [
+            {"file": "Chyllfroest Surface Geyser.png", "caption": "O Geyser da superfície, onde chegas ao sair pelo Geyser subterrâneo"}
+          ]
+        }
+      ]
+    }
+  ]
+}

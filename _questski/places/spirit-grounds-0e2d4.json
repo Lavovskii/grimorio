@@ -1,0 +1,38 @@
+{
+  "title": "Spirit Grounds",
+  "type": "zona",
+  "near": "Darashia",
+  "summary": "Três zonas de caça de mortos-vivos debaixo do oceano, a oeste de Drefia; todos os dias abre **um** portal para lá, em Kha'Zeel (entre Darashia e Ankrahmun), em Vengoth ou nas Ghostlands.",
+  "requirements": [
+    "Conta **Premium** (mesmo pelo portal das Ghostlands, contas Free não entram).",
+    "Para o portal de Vengoth: ter começado a missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest}, para o {npc:Harlow} te levar a Vengoth."
+  ],
+  "arrive": [
+    "Descobre qual o portal aberto nesse dia: vê os três sítios, ouve o Towncryer ou lê o World Board no Adventurer's Guild. As entradas têm rampas até ao teleporte e soltam fumo fantasmagórico.",
+    "**Portal de Darama**: na montanha {wiki:Kha'zeel|Kha'Zeel}, 2 andares acima do chão ({coord:33161,32561,5}). Parte de **Darashia** para **sudoeste** pelo deserto até à montanha e sobe até ao portal.",
+    "**Portal das Ghostlands**: sai de **Carlin** para **oeste**, passa pela gruta de entrada das {wiki:Ghostlands} ({coord:32222,31767,7}) e segue até à costa **noroeste** ({coord:32176,31788,7}).",
+    "**Portal de Vengoth**: em Yalahar, nas docas do **Trade Quarter**, fala com o {npc:Harlow} ({key:hi}, {key:vengoth}, {key:yes}, 100 gp). Ele deixa-te no **oeste** de Vengoth; o portal fica na costa **sul** ({coord:32909,31540,7}).",
+    "Entra no portal aberto: chegas às Spirit Grounds, junto ao {npc:The Gate Keeper}."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída especial: volta à zona onde o teleporte te deixou (junto ao {npc:The Gate Keeper}) e sai pelo mesmo caminho por onde entraste.",
+    "Darama: desce a montanha Kha'Zeel e volta a pé para **nordeste** até Darashia (ou segue para Ankrahmun).",
+    "Ghostlands: volta para **leste** pela gruta de entrada ({coord:32222,31767,7}) até Carlin.",
+    "Vengoth: vai ao {npc:Harlow} no **oeste** de Vengoth ({coord:32857,31550,7}) e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp)."
+  ],
+  "coords": [
+    {"x": 33161, "y": 32561, "z": 5, "label": "Portal de Darama (Kha'Zeel)"},
+    {"x": 32176, "y": 31788, "z": 7, "label": "Portal das Ghostlands"},
+    {"x": 32222, "y": 31767, "z": 7, "label": "Gruta de entrada das Ghostlands"},
+    {"x": 32909, "y": 31540, "z": 7, "label": "Portal de Vengoth"},
+    {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth"}
+  ],
+  "images": [
+    {"file": "Ghostlands Map.jpg", "caption": "Mapa das Ghostlands, a oeste de Carlin"},
+    {"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"}
+  ],
+  "warnings": [
+    "O portal e a zona de caça não correspondem: qualquer portal pode levar a qualquer das três zonas — fácil (Ghosts, Ghouls, Bonelords, Mummies), intermédia (Nightstalkers, Banshees, Souleaters, Braindeaths) ou difícil ({creature:Nightmare|Nightmares}, {creature:Nightmare Scion|Nightmare Scions}, {creature:Spectre|Spectres}, {creature:Phantasm|Phantasms}). Vê o que está lá dentro antes de puxar muitos monstros.",
+    "Guarda poções para o regresso."
+  ]
+}

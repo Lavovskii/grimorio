@@ -1,0 +1,36 @@
+{
+  "title": "Gnarlhound Caves",
+  "type": "gruta",
+  "near": "Farmine",
+  "summary": "Três pequenas grutas de {creature:Gnarlhound|Gnarlhounds} espalhadas pela {wiki:Zao Steppe}, na {wiki:Zao Orc Land}, a leste da montanha de Farmine.",
+  "entrance": {"x": 33119, "y": 31457, "z": 7, "label": "Gnarlhound Cave (centro da estepe)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Zao}.",
+    "{spell:Levitate} (ou parcels/caixas) para descer a montanha entre o elevador de Farmine e a estepe."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya}. Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin} ({coord:33025,31553,14}).",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate}, até saíres para a Zao Steppe ({coord:33085,31532,7}).",
+    "As três grutas ficam a **nordeste** dessa saída: {coord:33119,31457,7}, {coord:33193,31473,7} e {coord:33101,31389,7} (esta última mais a **norte**)."
+  ],
+  "leave": [
+    "Sai da gruta pelo mesmo sítio e volta pela estepe para **sudoeste** até à passagem em {coord:33085,31532,7}.",
+    "Sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine.",
+    "Em Farmine fala com o {npc:Thorgrin} no Steamship: {key:hi}, {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33119, "y": 31457, "z": 7, "label": "Gnarlhound Cave 1"},
+    {"x": 33193, "y": 31473, "z": 7, "label": "Gnarlhound Cave 2"},
+    {"x": 33101, "y": 31389, "z": 7, "label": "Gnarlhound Cave 3"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da passagem de Farmine para a Zao Steppe"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"}
+  ],
+  "images": [
+    {"file": "Gnarlhound Caves0.png", "caption": "Gnarlhound Caves — superfície"},
+    {"file": "Gnarlhound Caves-1.png", "caption": "Gnarlhound Caves — piso -1"},
+    {"file": "Gnarlhound Caves-2.png", "caption": "Gnarlhound Caves — piso -2"}
+  ],
+  "warnings": [
+    "As entradas estão rodeadas de {creature:Gnarlhound|Gnarlhounds}, {creature:Orc Warrior|Orc Warriors}, {creature:Orc Spearman|Orc Spearmen}, {creature:Orc|Orcs} e {creature:Sandcrawler|Sandcrawlers}; os {creature:Orc Marauder|Orc Marauders} patrulham a estepe."
+  ]
+}

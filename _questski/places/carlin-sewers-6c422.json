@@ -1,0 +1,28 @@
+{
+  "title": "Carlin Sewers",
+  "type": "dungeon",
+  "near": "Carlin",
+  "summary": "Os esgotos por baixo da cidade de **Carlin**, com Bugs e Slimes para níveis baixos e o bar secreto dos rebeldes ({npc:Karl}, {npc:Toothless Tim}, {npc:William}); aqui decorrem a {wiki:The Exterminator Quest} e missões da Kissing a Pig e da Secret Service.",
+  "entrance": {"x": 32327, "y": 31816, "z": 7, "label": "Grade dos esgotos (a leste da guilda dos druidas)"},
+  "arrive": [
+    "Vai a **Carlin** de barco (por exemplo em Thais, {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}); chegas ao porto do {npc:Captain Greyhound} ({coord:32388,31822,6}).",
+    "Vai à grade dos esgotos, a **leste** da guilda dos druidas, mesmo em frente ao depot ({coord:32327,31816,7}), e desce.",
+    "No primeiro piso dos esgotos, caminha para **sul** até ao bar subterrâneo do {npc:Karl} ({coord:32318,31797,8}). Mais para sul há uma descida para outro andar, com mais {creature:Slime|Slimes}."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: sobe ao primeiro andar dos esgotos, caminha para **norte** até à entrada e sobe pela grade para as ruas de Carlin, mesmo a leste da guilda dos druidas.",
+    "No porto, o {npc:Captain Greyhound} leva-te a outras cidades ({key:hi}, o nome da cidade, por exemplo {key:thais}, e {key:yes})."
+  ],
+  "coords": [
+    {"x": 32301, "y": 31815, "z": 7, "label": "Padreia (guilda dos druidas)"},
+    {"x": 32318, "y": 31797, "z": 8, "label": "Karl (bar secreto dos esgotos)"},
+    {"x": 32320, "y": 31806, "z": 8, "label": "Toothless Tim (bar dos esgotos)"}
+  ],
+  "images": [
+    {"file": "Exterminator sewer entrance.png", "caption": "Entrada dos esgotos de Carlin"},
+    {"file": "Carlin Sewers Map.png", "caption": "Mapa dos esgotos de Carlin"}
+  ],
+  "warnings": [
+    "Na missão da {wiki:Secret Service Quest}, ao entrares no bar aparecem 2 {creature:Amazon|Amazons}."
+  ]
+}

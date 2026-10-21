@@ -1,0 +1,28 @@
+{
+  "title": "Iksupan",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "A \"cidade perdida do ouro\" dos Iks, hoje mortos-vivos, escondida por baixo da selva de **Tiquanda**, a sudeste de Port Hope; entra-se por uma passagem secreta numas ruínas.",
+  "entrance": {"x": 32727, "y": 32876, "z": 7, "label": "Passagem secreta para Iksupan (ruínas de Tiquanda)"},
+  "requirements": [
+    "O acesso obtém-se na {wiki:Adventures of Galthen Quest}: precisas de {item:The Key Intihuatac}.",
+    "Nível recomendado 150+."
+  ],
+  "items": ["The Key Intihuatac"],
+  "arrive": [
+    "Apanha um barco para **Port Hope** (por exemplo, com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:port hope}, {key:yes}).",
+    "Atravessa a selva de Tiquanda para **sudeste** até às ruínas onde começa a {wiki:Adventures of Galthen Quest} ({coord:32727,32876,7}).",
+    "Usa {item:The Key Intihuatac} nas inscrições: a passagem secreta leva-te para dentro de Iksupan."
+  ],
+  "leave": [
+    "Vai à sala com as **duas chamas azuis**, no terceiro andar de Iksupan (se estás no {wiki:Iksupan Last Stand}, volta primeiro pelo mesmo caminho até lá).",
+    "Usa a {item:Slab with a Skull}, logo a **leste** das chamas azuis: és teleportado para a entrada, nas ruínas de Tiquanda.",
+    "Volta a pé pela selva para **noroeste** até **Port Hope**, onde o {npc:Charles} te leva de barco."
+  ],
+  "coords": [
+    {"x": 32727, "y": 32876, "z": 7, "label": "Entrada/saída de Iksupan (ruínas de Tiquanda)"}
+  ],
+  "warnings": [
+    "Os Iks ({creature:Iks Aucar}, {creature:Iks Pututu}, {creature:Iks Ahpututu}) e os {creature:Cursed Ape|Cursed Apes} têm 1200 a 1700 HP cada: zona para nível 150+."
+  ]
+}

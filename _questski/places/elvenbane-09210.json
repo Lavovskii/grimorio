@@ -1,0 +1,32 @@
+{
+  "title": "Elvenbane",
+  "type": "edificio",
+  "near": "Ab'Dendriel",
+  "summary": "Antigo castelo-prisão da Red Legion, hoje ocupado por orcs, minotauros, trolls e elfos, numa **ilha logo a oeste de Ab'Dendriel**; só se entra por uma gruta subterrânea.",
+  "entrance": {"x": 32579, "y": 31680, "z": 7, "label": "Entrada de Elvenbane (buraco rodeado de quatro pedras)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Ab'Dendriel** (por exemplo de barco: no capitão da tua cidade diz {key:hi}, {key:ab'dendriel}, {key:yes}; chegas ao {npc:Captain Seagull}, {coord:32735,31668,6}).",
+    "Sai pelo portão de Ab'Dendriel e vai para **sul**, depois **oeste** e depois **norte** até à zona em frente à ilha de Elvenbane.",
+    "Desce pelo buraco rodeado de **quatro pedras** ({coord:32579,31680,7}): ficas na gruta por baixo da ilha.",
+    "Na gruta, corre para **norte** e depois para **oeste** até à abertura e contorna até à **torre central** do castelo ({coord:32590,31645,7})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: desce a torre central pelas mesmas escadas e atravessa a gruta de volta (para **leste** e depois para **sul**) até ao buraco por onde desceste.",
+    "Usa a {item:Rope} no buraco para subires à superfície ({coord:32579,31680,7}).",
+    "Regressa a Ab'Dendriel pelo caminho inverso (**sul**, **leste** e **norte** até ao portão). No porto, o {npc:Captain Seagull} leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32590, "y": 31645, "z": 7, "label": "Castelo de Elvenbane (ilha)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull — porto de Ab'Dendriel"}
+  ],
+  "images": [
+    {"file": "Elvenbane entrance.png", "caption": "Entrada de Elvenbane: o buraco rodeado de quatro pedras"},
+    {"file": "Elvenbane floor-1.png", "caption": "Gruta por baixo de Elvenbane (piso -1)"},
+    {"file": "Elvenbane ground.png", "caption": "Elvenbane, piso térreo"}
+  ],
+  "warnings": [
+    "Os corredores do castelo são tão estreitos que só passa uma pessoa de cada vez: cuidado com jogadores que te bloqueiam quando vem um {creature:Orc Berserker} ou um {creature:Minotaur Guard}.",
+    "Na torre central há um piso coberto de campos de veneno (leva {item:Destroy Field Rune|Destroy Field Runes}) e um {creature:Dragon} no piso de cima."
+  ]
+}

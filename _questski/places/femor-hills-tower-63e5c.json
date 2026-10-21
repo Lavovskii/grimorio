@@ -1,0 +1,29 @@
+{
+  "title": "Femor Hills Tower",
+  "type": "edificio",
+  "near": "Carlin",
+  "summary": "Torre escondida entre os picos das {wiki:Femor Hills} (entre Carlin, Ab'Dendriel e Kazordoon), com a entrada tapada por {item:Jungle Grass} encantada pelo druida Minz; no último andar está a {npc:Caramellia}.",
+  "entrance": {"x": 32569, "y": 31803, "z": 7, "label": "Femor Hills"},
+  "requirements": [
+    "Só podes cortar a erva da entrada depois de aprenderes a cortar relva (\"lawn mowing\") no quintal do {npc:Hoggle}, durante a {wiki:Kissing a Pig Quest}."
+  ],
+  "items": ["Machete", "Rope", "Shovel"],
+  "arrive": [
+    "Apanha um barco para **Carlin** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}); chegas junto ao {npc:Captain Greyhound}.",
+    "Segue a pé para **leste** até às Femor Hills ({coord:32569,31803,7}); leva uma {item:Rope} e, para alguns caminhos, uma {item:Shovel}.",
+    "Procura a torre bloqueada pela erva que cresce depressa, corta-a com a {item:Machete} e entra.",
+    "Sobe as escadas até ao último andar, onde está a {npc:Caramellia} ({coord:32588,31786,1})."
+  ],
+  "leave": [
+    "Desce a torre pelas mesmas escadas e volta a pé pelo mesmo caminho para **oeste** até Carlin (Ab'Dendriel e Kazordoon também ficam perto).",
+    "Em Carlin, o {npc:Captain Greyhound} leva-te a outras cidades ({key:hi}, por exemplo {key:thais}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32569, "y": 31803, "z": 7, "label": "Femor Hills"},
+    {"x": 32588, "y": 31786, "z": 1, "label": "Caramellia (último andar da torre)"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+  ],
+  "warnings": [
+    "A erva da entrada volta a crescer depressa e funciona como parede: corta-a de novo se fechar a passagem."
+  ]
+}

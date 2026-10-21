@@ -1,0 +1,113 @@
+{
+  "slug": "frost-dragon-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 3,
+  "duration": "30–60 min",
+  "summary": "Os {creature:Frost Dragon|Frost Dragons} de {wiki:Okolnir|Okolnir} guardam um pequeno tesouro no seu covil. Desce pelos buracos da ilha, mata os dragões e as crias pelo caminho e sobrevive à última sala, com cinco Frost Dragons, para abrires o baú com um {item:Shard}, uma {item:Bullseye Potion} e 10 {item:Platinum Coin|Platinum Coins}.",
+  "legend_pt": "Os Frost Dragons de Okolnir guardam um pequeno tesouro na sua casa.",
+  "start": {"x": 32254, "y": 31195, "z": 7, "label": "Buddel, barco a sul de Svargrond"},
+  "requirements": [
+    "Conta Premium.",
+    "Ter completado a {wiki:Barbarian Test Quest|Barbarian Test Quest}.",
+    "Sem nível mínimo, mas é recomendado nível 50+."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Energy Wall Rune", "note": "opcional, para bloquear os dragões na última sala"},
+    {"item": "Energy Bomb Rune", "note": "opcional, para o mesmo efeito"}
+  ],
+  "rewards": [
+    {"item": "Shard"},
+    {"item": "Bullseye Potion"},
+    {"item": "Platinum Coin", "qty": 10}
+  ],
+  "dangers": ["Frost Dragon", "Frost Dragon Hatchling"],
+  "npcs": ["Buddel"],
+  "tips": [
+    "Magos de nível baixo devem usar {spell:Mana Shield} na última sala.",
+    "Na última sala, usa {item:Energy Wall Rune|Energy Walls} e {item:Energy Bomb Rune|Energy Bombs} para impedir que muitos dragões te batam corpo a corpo ao mesmo tempo."
+  ],
+  "sections": [
+    {
+      "title": "1. Viajar até Okolnir",
+      "steps": [
+        {
+          "title": "Falar com o Buddel",
+          "text": "Se ainda não estás em **Svargrond**, apanha o barco para lá em **Carlin**, **Thais** ou **Venore** ({key:hi}, {key:svargrond}, {key:yes}). Vai ao barco a **sul** de Svargrond e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:okolnir}. A viagem custa 50 gp e só funciona depois da {wiki:Barbarian Test Quest|Barbarian Test Quest}.",
+          "npc": "Buddel",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "passage"},
+            {"you": "okolnir"}
+          ],
+          "warning": "Se tiveres um {item:Dwarven Ring} contigo, responde {key:no} à primeira pergunta dele."
+        },
+        {
+          "title": "Confirmar que estás na ilha certa",
+          "text": "Podes acabar numa ilha errada. Se isso acontecer, continua a pedir viagem para Okolnir até chegares ao local da imagem.",
+          "coords": [{"x": 32224, "y": 31382, "z": 7, "label": "Buddel em Okolnir (chegada)"}],
+          "images": [
+            {"file": "Frost Dragons Quest 1.png", "caption": "O local certo em Okolnir"},
+            {"file": "Map of Okolnir.jpg", "caption": "Mapa de Okolnir"}
+          ],
+          "tip": "O {npc:Buddel} anda sempre bêbedo e costuma enganar-se no destino. Se levares um {item:Dwarven Ring} na mochila (e lhe disseres que sim quando ele o pedir), ele leva-te ao sítio certo sem cobrar, mas ficas sem o anel."
+        }
+      ]
+    },
+    {
+      "title": "2. Descer até ao covil",
+      "steps": [
+        {
+          "title": "Subir a rampa",
+          "text": "Sobe a rampa. Vais encontrar entre um e três {creature:Frost Dragon|Frost Dragons}."
+        },
+        {
+          "title": "Seguir até ao próximo buraco",
+          "text": "Segue a seta vermelha da imagem até ao buraco seguinte e desce. Os pontos verdes são possíveis Frost Dragons e os roxos possíveis {creature:Frost Dragon Hatchling|Frost Dragon Hatchlings}.",
+          "images": [{"file": "Frost Dragons Quest 2.png", "caption": "Segue a seta vermelha (verde: Frost Dragons; roxo: Hatchlings)"}]
+        },
+        {
+          "title": "Andar seguinte",
+          "text": "Assim que desces, vês outro buraco. Aqui podes encontrar uma {creature:Frost Dragon Hatchling} e talvez um Frost Dragon puxado de outro lado. Desce pelo buraco.",
+          "images": [{"file": "Frost Dragons Quest 3.png", "caption": "Verde: Frost Dragons; roxo: Hatchlings"}]
+        }
+      ]
+    },
+    {
+      "title": "3. A parte mais difícil",
+      "steps": [
+        {
+          "title": "Limpar a chegada",
+          "text": "Ao desceres o buraco vais encontrar pelo menos um {creature:Frost Dragon}, provavelmente com pelo menos uma {creature:Frost Dragon Hatchling}, e talvez mais um ou dois Frost Dragons. Mata-os todos.",
+          "images": [{"file": "Frost Dragons Quest 4.png", "caption": "Preto: Frost Dragons; roxo: Hatchlings; azul: o baú da quest"}]
+        },
+        {
+          "title": "Ir para oeste e descer",
+          "text": "Anda para **oeste**, como mostra a imagem, e desce pelo buraco. Lá em baixo, anda para **oeste** até ao ponto de corda, onde está um Frost Dragon. Mata-o."
+        },
+        {
+          "title": "Subir para a última sala",
+          "text": "Usa a {item:Rope} no ponto de corda e sobe.",
+          "warning": "Esta última sala tem **cinco Frost Dragons**, e pelo menos 4 vão atacar-te assim que subires. Magos de nível baixo devem usar {spell:Mana Shield}. Usa {item:Energy Wall Rune|Energy Walls} e {item:Energy Bomb Rune|Energy Bombs} para evitar que muitos te batam corpo a corpo."
+        },
+        {
+          "title": "Abrir o baú",
+          "text": "Abre o baú a **noroeste** da sala para receberes a recompensa.",
+          "reward": "{item:Shard}, {item:Bullseye Potion} e 10 {item:Platinum Coin|Platinum Coins}"
+        },
+        {
+          "title": "Sair do covil",
+          "text": "Volta pelo mesmo caminho: desce pelo ponto de corda por onde subiste, anda para **leste** até ao buraco por onde chegaste e sobe com a {item:Rope}. Repete nos buracos seguintes (sempre com a Rope) até voltares à superfície de Okolnir e desce a rampa até ao barco.",
+          "warning": "Os Frost Dragons que deixaste para trás podem já ter renascido no caminho de volta."
+        },
+        {
+          "title": "Voltar a Svargrond",
+          "text": "No barco de Okolnir fala outra vez com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond} (50 gp). Como ele está bêbedo, podes ir parar a outra ilha; nesse caso pede de novo {key:svargrond} até chegares.",
+          "npc": "Buddel",
+          "coords": [{"x": 32224, "y": 31382, "z": 7, "label": "Buddel em Okolnir"}]
+        }
+      ]
+    }
+  ]
+}

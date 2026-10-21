@@ -1,0 +1,23 @@
+{
+  "title": "Frost Manor",
+  "type": "edificio",
+  "near": "Svargrond",
+  "summary": "Guildhall de gelo com três torres decoradas com presas de mamute, numa falésia no **nordeste de Svargrond**, 2 andares acima da cidade.",
+  "entrance": {"x": 32287, "y": 31106, "z": 5, "label": "Frost Manor (porta principal, 2 andares acima)"},
+  "arrive": [
+    "Vai a **Svargrond** de barco: o {npc:Captain Greyhound} em Carlin (110 gp), o {npc:Captain Fearless} em Venore (150 gp) ou o {npc:Captain Bluebear} em Thais (180 gp): {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.",
+    "Sai da cidade para **norte** e sobe **2 andares** pelas falésias, contornando-as pela **direita**, até à porta principal ({coord:32287,31106,5}); há uma caixa de correio mesmo à porta."
+  ],
+  "leave": [
+    "Desce pelas falésias pelo mesmo caminho até Svargrond.",
+    "No porto, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp): {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"}
+  ],
+  "images": [{"file": "Frost Manor (+1).png", "caption": "Planta da Frost Manor (piso +1 na wiki)"}],
+  "warnings": [
+    "Nas falésias à volta andam {creature:Wolf|Wolves} e {creature:Polar Bear|Polar Bears}.",
+    "É uma guildhall alugável: o interior só está acessível a quem tem acesso à casa."
+  ]
+}

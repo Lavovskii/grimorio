@@ -1,0 +1,124 @@
+{
+  "slug": "panpipe-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "No fundo do {wiki:Desert Dungeon}, no deserto de Jakundaf, há uma caixa guardada por um {creature:Fire Devil} com um saco que contém uma {item:Power Ring}, uma {item:Panpipes} e 2 {item:Small Amethyst|Small Amethysts}. Desce até ao fundo do dungeon e volta a subir por outro caminho até à porta trancada onde está o tesouro.",
+  "start": {"x": 32648, "y": 32094, "z": 7, "label": "Entrada do Desert Dungeon (Jakundaf Desert)"},
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 35+.",
+    "Não precisa de Premium.",
+    "Saber chegar ao portal de saída da {wiki:Vocation Quest}: é a única forma segura de sair do Desert Dungeon."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "ou {item:Elvenhair Rope} / feitiço {spell:Magic Rope}"},
+    {"item": "Shovel", "note": "ou {item:Light Shovel}"},
+    {"item": "Key 4055", "note": "obtida na pedra oca junto à entrada (passo 1)"}
+  ],
+  "rewards": [
+    {"item": "Power Ring"},
+    {"item": "Panpipes"},
+    {"item": "Small Amethyst", "qty": 2},
+    {"item": "Bag"}
+  ],
+  "dangers": ["Spider", "Bonelord", "Fire Devil"],
+  "npcs": ["Adrenius"],
+  "tips": [
+    "O Desert Dungeon é um sítio perigoso e pode haver criaturas atraídas por outros jogadores.",
+    "Não entres sem a {item:Key 4055}: sem ela não abres a porta do tesouro."
+  ],
+  "sections": [
+    {
+      "title": "1. Preparação à entrada",
+      "steps": [
+        {
+          "title": "Chegar ao Jakundaf Desert",
+          "text": "O {wiki:Desert Dungeon} fica por baixo do **Jakundaf Desert**, a **oeste** de Venore e a **sul** de Kazordoon (entre Venore e Thais). Vai a pé até ao deserto; a entrada do dungeon é uma {item:Loose Stone Pile} no meio do deserto, perto do templo do {npc:Adrenius}.",
+          "coords": [
+            {"x": 32633, "y": 32113, "z": 7, "label": "Jakundaf Desert"},
+            {"x": 32648, "y": 32094, "z": 7, "label": "Entrada do Desert Dungeon"}
+          ],
+          "images": [
+            {"file": "Jakundaf desert.png", "caption": "Mapa do Jakundaf Desert"},
+            {"file": "Desert dungeon entrance.jpg", "caption": "A entrada do Desert Dungeon"}
+          ]
+        },
+        {
+          "title": "Apanhar a Key 4055",
+          "text": "Junto à entrada do {wiki:Desert Dungeon}, **usa** a {item:Stone (Long)|pedra oca} para obteres a {item:Key 4055}.",
+          "coords": [{"x": 32652, "y": 32108, "z": 7, "label": "Pedra oca com a Key 4055"}],
+          "reward": "Key 4055"
+        },
+        {
+          "title": "Entrar no dungeon",
+          "text": "Volta à entrada do Desert Dungeon, usa a {item:Shovel} e entra.",
+          "coords": [{"x": 32648, "y": 32094, "z": 7, "label": "Entrada do Desert Dungeon"}],
+          "warning": "Não consegues sair pelo mesmo sítio por onde entraste. Antes de entrares, certifica-te de que sabes chegar ao portal de saída da {wiki:Vocation Quest}."
+        }
+      ]
+    },
+    {
+      "title": "2. Descer e voltar a subir",
+      "steps": [
+        {
+          "title": "Descer até ao fundo",
+          "text": "Desce **5 escadas** seguidas até ao fundo. Vais encontrar {creature:Spider|Spiders}."
+        },
+        {
+          "title": "Oeste e sul, sobe um andar",
+          "text": "Segue o caminho à volta para **oeste** e depois **sul** (podes encontrar um {creature:Bonelord}) e sobe um andar.",
+          "images": [{"file": "Panpipe Quest Map 01.jpg", "caption": "Caminho no fundo do dungeon até à subida"}]
+        },
+        {
+          "title": "Noroeste até ao buraco",
+          "text": "Segue o caminho para **noroeste** (mais umas {creature:Spider|Spiders}), passa pela {wiki:Desert Dungeon Library} e usa a {item:Rope} no buraco para subir.",
+          "images": [{"file": "Panpipe Quest Map 02.jpg", "caption": "Caminho para noroeste, passando pela biblioteca, até ao buraco de corda"}]
+        },
+        {
+          "title": "Subir mais um andar com a corda",
+          "text": "Usa a {item:Rope} outra vez para subires mais um andar."
+        },
+        {
+          "title": "Sul e sobe",
+          "text": "Neste andar segue o caminho para **sul** e sobe mais um andar.",
+          "images": [{"file": "Panpipe Quest Map 03.jpg", "caption": "Caminho para sul até à subida"}]
+        }
+      ]
+    },
+    {
+      "title": "3. O tesouro",
+      "steps": [
+        {
+          "title": "Porta trancada e Fire Devil",
+          "text": "Segue o caminho para **sudeste** até à porta trancada. Abre-a com a {item:Key 4055}. Lá dentro há um {creature:Fire Devil} — mata-o.",
+          "images": [{"file": "Panpipe Quest Map 04.jpg", "caption": "Caminho para sudeste até à porta e à caixa da quest"}],
+          "warning": "O {creature:Fire Devil} ataca com fogo; leva poções."
+        },
+        {
+          "title": "Abrir a caixa",
+          "text": "Abre a caixa da quest: tem um {item:Bag} com uma {item:Power Ring}, uma {item:Panpipes} e 2 {item:Small Amethyst|Small Amethysts}.",
+          "reward": "Power Ring, Panpipes e 2 Small Amethysts"
+        },
+        {
+          "title": "Voltar ao andar das aranhas",
+          "text": "Não podes sair pelo buraco por onde entraste. Volta pelo mesmo caminho até ao fundo do dungeon (o andar das {creature:Spider|Spiders}, onde chegaste depois das 5 descidas): desce os andares que subiste e desce pelos dois buracos onde usaste a {item:Rope}."
+        },
+        {
+          "title": "Sair do Desert Dungeon pelo teleporte",
+          "text": "A partir do andar das aranhas segue o caminho curto da {wiki:The Desert Dungeon Quest|Desert Dungeon Quest} (Vocation Quest) até ao {item:Gate of Expertise}:\n- Vai para **norte**, vira para **leste** assim que puderes e segue a gruta para **sul** até à escada; sobe.\n- Vai para **oeste** até outra escada e sobe (**não** desças o buraco a sul com a placa de aviso).\n- Vai para **sul** e sobe a escada seguinte.\n- Vai para **leste** e **norte** (há um buraco: **não** desças), depois **leste** e **norte** outra vez até à última escada; sobe.\nAo lado do Gate of Expertise está o **teleporte de saída**: entra nele e apareces junto ao {npc:Adrenius}, no templo do Jakundaf Desert. Daí sai para a superfície do deserto e volta a pé para Venore (a leste).",
+          "images": [
+            {"file": "DDQ map1.png", "caption": "Andar das aranhas: norte, leste e sul até à escada"},
+            {"file": "DDQ map 2.gif", "caption": "Sobe só a escada a oeste; não desças o buraco"},
+            {"file": "DDQ map 3.gif", "caption": "Segue a gruta para sul"},
+            {"file": "DDQ map 4.gif", "caption": "Segue para nordeste até à última escada e ao Gate of Expertise"}
+          ],
+          "warning": "No Desert Dungeon há buracos sem rope spot do outro lado: não desças por nenhum buraco que não esteja nestas instruções."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como Fire Devil Quest."
+  ]
+}

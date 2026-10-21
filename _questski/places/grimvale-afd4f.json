@@ -1,0 +1,31 @@
+{
+  "title": "Grimvale",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Pequena ilha a **nordeste de Stonehome e de Edron**, com uma vila amaldiçoada: perto da lua cheia (dias 12 a 14 de cada mês, pico no dia 13) os {creature:Bandit|Bandits} e {creature:Badger|Badgers} dão lugar a were-creatures.",
+  "entrance": {"x": 33341, "y": 31694, "z": 7, "label": "Cais do sul de Grimvale (Cornell)"},
+  "arrive": [
+    "Viaja até **Edron** (no capitão do porto da tua cidade: {key:hi}, {key:edron}, {key:yes}; de Thais é o {npc:Captain Bluebear}, 160 gp).",
+    "Em Edron caminha para **nordeste** até **Stonehome**. A norte de Stonehome está o pequeno barco do {npc:Cornell} ({coord:33305,31720,7}).",
+    "Diz {key:hi}, {key:sail} (ou {key:passage}) e {key:yes}: a viagem para Grimvale custa **100 gp**.",
+    "Desembarcas no cais do **sul** de Grimvale ({coord:33341,31694,7}), perto da vila."
+  ],
+  "leave": [
+    "Se estiveres na dungeon, volta pelo mesmo caminho até à superfície, subindo com a {item:Rope} pelos andares por onde desceste.",
+    "No cais do **sul** da ilha ({coord:33341,31694,7}) diz ao {npc:Cornell} {key:hi}, {key:sail} e {key:yes} (100 gp). Ele leva-te de volta a **Edron**, ao cais a norte de Stonehome.",
+    "Em Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te às outras cidades: {key:hi}, o destino (por exemplo {key:thais}) e {key:yes}."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 33305, "y": 31720, "z": 7, "label": "Cornell, a norte de Stonehome (Edron)"},
+    {"x": 33341, "y": 31694, "z": 7, "label": "Cornell, cais do sul de Grimvale"},
+    {"x": 33353, "y": 31671, "z": 7, "label": "Pitfall de entrada da dungeon (nordeste da ilha)"},
+    {"x": 33331, "y": 31686, "z": 7, "label": "Maeryn (casinha no sudoeste da vila)"},
+    {"x": 33348, "y": 31687, "z": 7, "label": "Gladys (casa no sudeste)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "Do server save do dia 12 ao do dia 15 de cada mês (lua cheia) a superfície enche-se de {creature:Werebadger|Werebadgers} e {creature:Wereboar|Wereboars}; nos andares de baixo há também {creature:Werebear|Werebears} e {creature:Werewolf|Werewolves}. O wiki indica nível 100 para caçar aqui.",
+    "A dungeon entra-se caindo pelo {item:Pitfall} no nordeste da ilha: leva uma {item:Rope} para conseguires voltar a subir."
+  ]
+}

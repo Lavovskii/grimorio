@@ -1,0 +1,30 @@
+{
+  "title": "Upper Roshamuul",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Zona de caça perigosa a **norte da muralha** que a separa do {wiki:Guzzlemaw Valley}, em Roshamuul, onde ficam o depot, o templo e a entrada da {wiki:Roshamuul Prison}.",
+  "entrance": {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"},
+  "requirements": [
+    "Só é acessível quando a muralha do servidor estiver aberta (a partir do estágio 3 da {wiki:Roshamuul Quest}).",
+    "Nível sugerido: 250+ (zona muito perigosa)."
+  ],
+  "arrive": [
+    "Em **Thais**, no porto, diz ao {npc:Captain Bluebear} {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca no acampamento do sul, em Lower Roshamuul, junto ao {npc:Captain Chelop}.",
+    "Atravessa o {wiki:Guzzlemaw Valley} para **nordeste** e passa pela muralha aberta ({coord:33632,32401,7}): estás em Upper Roshamuul.",
+    "A oeste da muralha fica a entrada da {wiki:Roshamuul Prison}; o **depot** e o **templo** ficam a **noroeste** da muralha.",
+    "Atalho: se fores cidadão de Roshamuul, podes ir diretamente para o templo de Upper Roshamuul (logo a oeste do depot), sem atravessar o vale."
+  ],
+  "leave": [
+    "Volta pela passagem na muralha e atravessa o Guzzlemaw Valley e a ponte para **sul**; desce a rampa de Lower Roshamuul até ao acampamento do sul.",
+    "Fala com o {npc:Captain Chelop}, junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento do sul, Lower Roshamuul)"},
+    {"x": 33624, "y": 32369, "z": 5, "label": "Eruaran (topo da montanha central, a leste do depot)"}
+  ],
+  "warnings": [
+    "A montanha central é a casa do {creature:Gaz'haragoth} e dos seus servos (até ele ser morto pela primeira vez); há também {creature:Feversleep}, {creature:Terrorsleep} e {creature:Shiversleep}.",
+    "As {wiki:Dark Grounds}, a norte do depot, só abrem quando o servidor completa 20 vezes a tarefa Soothing Bad Dreams."
+  ]
+}

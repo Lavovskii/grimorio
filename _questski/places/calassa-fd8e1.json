@@ -1,0 +1,37 @@
+{
+  "title": "Calassa",
+  "type": "zona",
+  "near": "Liberty Bay",
+  "summary": "Povoação subaquática de quaras a **noroeste de Nargor**, no fundo do mar a oeste de Liberty Bay; só se chega com o barco do {npc:Captain Max} e um capacete de mergulho.",
+  "entrance": {"x": 31914, "y": 32717, "z": 12, "label": "Fundo do mar onde cais, por baixo do barco do Captain Max"},
+  "requirements": [
+    "Conta **Premium**.",
+    "O {npc:Captain Max} só te leva a Calassa a partir da missão *Calassa Expedition* da {wiki:The Explorer Society Quest} (a {npc:Berenice} avisa-o; depois disso ficas com acesso) — a wiki refere o rank **Explorer**.",
+    "Precisas de um {item:Helmet of the Deep} (ou equivalente) para andar debaixo de água; o Captain Max aluga-te um com 5000 gp de depósito."
+  ],
+  "items": ["Helmet of the Deep"],
+  "arrive": [
+    "Em **Liberty Bay**, procura o {npc:Captain Max} num dos barcos do lado **leste** das docas ({coord:32298,32896,6}) e pede-lhe passagem para {key:calassa} (200 gp). Se não tens capacete, ele aluga-te um {item:Helmet of the Deep}.",
+    "Chegas ao barco dele por cima de Calassa ({coord:31915,32709,6}). Equipa o {item:Helmet of the Deep} e salta borda fora (sai da plataforma para **sul**).",
+    "Cais no fundo do mar ({coord:31914,32717,12}) e enfrentas logo muitas quaras pequenas ({creature:Quara Mantassin|Mantassins} e {creature:Quara Constrictor|Constrictors})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à zona onde caíste no fundo do mar, por baixo do barco do {npc:Captain Max} ({coord:31914,32717,12}).",
+    "Regressa ao barco dele ({coord:31915,32709,6}) e pede-lhe para te levar de volta a **Liberty Bay**. Se alugaste o capacete, diz-lhe {key:return} para o devolveres e recuperares os 5000 gp."
+  ],
+  "coords": [
+    {"x": 32298, "y": 32896, "z": 6, "label": "Captain Max (docas de Liberty Bay)"},
+    {"x": 31915, "y": 32709, "z": 6, "label": "Barco do Captain Max sobre Calassa"},
+    {"x": 31914, "y": 32717, "z": 12, "label": "Onde cais no fundo do mar"},
+    {"x": 31943, "y": 32773, "z": 12, "label": "Navio afundado (Explorer Society Quest)"},
+    {"x": 32085, "y": 32782, "z": 12, "label": "Teleporte do boss Thul"}
+  ],
+  "images": [
+    {"file": "Calassa.png", "caption": "Mapa de Calassa"},
+    {"file": "The Undersea kingdom.png", "caption": "The Undersea Kingdom — mapa"}
+  ],
+  "warnings": [
+    "**Nunca** tires o capacete debaixo de água, ou afogas-te.",
+    "Zona de nível alto (a wiki recomenda 90–100+): {creature:Quara Predator|Quara Predators}, {creature:Quara Pincher|Quara Pinchers}, {creature:Massive Water Elemental|Massive Water Elementals} e o {creature:Thul}."
+  ]
+}

@@ -1,0 +1,42 @@
+# PLACE: Oramond Fury Dungeon
+slug: oramond-fury-dungeon-696ca
+mentioned in 1 guides: dark-trails-quest
+
+## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
+32pxd This article is a stub. You can help TibiaWiki by expanding it . 
+## Oramond Fury Dungeon 
+## General Properties 
+## Near city 
+ Rathleton 
+## Location 
+ Rathleton, go through the door located here [COORD x=33666 y=31924 z=7] . 
+## Vocation(s) 
+ All vocations. 
+ Experience Loot | Good Good
+## Other Properties 
+## Version 
+ 10.50 July 7, 2014 Summer Update 2014 
+ See also: Hunting Places Help 
+The Oramond Fury Dungeon is a fearsome place north of Rathleton to which access is gained during the Dark Trails Quest .
+ Name Exp HP Max. Damage Loot | Spectre 2,100 1,350 400 mana drain and 600+ 1-301× Gold Coin (common) 1-2× Blank Rune (common) Wand of Cosmic Energy (uncommon) Lyre (uncommon) Demonic Essence (uncommon) Soul Orb (uncommon) 1-7× Platinum Coin (semi-rare) White Piece of Cloth (semi-rare) Shiny Stone (rare) Great Mana Potion (rare) Silver Brooch (rare) Relic Sword (rare) Death Ring (very rare) Stealth Ring (very rare) Demonbone Amulet (very rare) Shadow Sceptre (very rare) Stone Skin Amulet (very rare) | Nightmare 1,800 2,700 820 1-155× Gold Coin (common) Ham (common) Soul Orb (uncommon) 1-2× Flask of Demonic Blood (uncommon) Essence of a Bad Dream (uncommon) Demonic Essence (uncommon) Scythe Leg (uncommon) 1-3× Platinum Coin (semi-rare) Death Ring (semi-rare) 1-4× Power Bolt (rare) Ancient Shield (rare) Knight Legs (rare) Skeleton Decoration (very rare) Boots of Haste (very rare) War Axe (very rare) Mysterious Voodoo Skull (very rare) | Fury 4,000 4,100 2359 ( 809 , 300 , 950 , 300 ) 1-269× Gold Coin (common) 1-3× Flask of Demonic Blood (common) 1-4× Jalapeno Pepper (common) Demonic Essence (uncommon) Soul Orb (uncommon) Terra Rod (uncommon) Great Health Potion (uncommon) Slightly Rusted Legs (uncommon) 1-3× Small Amethyst (uncommon) Red Piece of Cloth (semi-rare) 1-4× Platinum Coin (semi-rare) Noble Axe (semi-rare) 1-4× Orichalcum Pearl (semi-rare) Steel Boots (rare) Assassin Dagger (rare) Crystal Ring (rare) Death Ring (very rare) Golden Legs (very rare) Assassin Star (very rare)
+ Name Exp HP Max. Damage Loot | Betrayed Wraith 3,500 4,200 455 1-200× Gold Coin (common) 1-8× Platinum Coin (common) 1-15× Power Bolt (common) Flask of Demonic Blood (common) 1-5× Assassin Star (uncommon) Demonic Essence (uncommon) 1-3× Great Mana Potion (uncommon) 1-2× Orichalcum Pearl (uncommon) 1-4× Small Diamond (uncommon) Soul Orb (uncommon) Ultimate Health Potion (uncommon) Unholy Bone (uncommon) Mercenary Sword (rare) Bloody Edge (very rare) Death Ring (very rare) Golden Figurine (very rare) Skull Helmet (very rare) Stone Skin Amulet (very rare) | Lost Soul 4,000 5,800 630 0-198× Gold Coin (common) 0-7× Platinum Coin (common) 0-3× Blank Rune (common) Unholy Bone (common) Soul Orb (uncommon) 0-2× Great Mana Potion (uncommon) 0-2× Great Health Potion (uncommon) 0-3× White Pearl (uncommon) 0-3× Black Pearl (uncommon) Demonic Essence (uncommon) Ruby Necklace (semi-rare) Red Gem (semi-rare) Silver Goblet (semi-rare) Death Ring (semi-rare) Skeleton Decoration (semi-rare) Titan Axe (semi-rare) Slightly Rusted Armor (semi-rare) Stone Skin Amulet (rare) Skull Staff (rare) Tower Shield (rare) Haunted Blade (rare) Skull Helmet (very rare) Rusted Armor | Dark Torturer 4,650 7,350 1300 2-200× Gold Coin (common) 1-2× Ham (common) 1-8× Platinum Coin (common) 1-3× Flask of Demonic Blood (common) Soul Orb (uncommon) 1-2× Great Mana Potion (uncommon) 1-2× Great Health Potion (uncommon) Demonic Essence (uncommon) Steel Boots (semi-rare) Saw (semi-rare) Gold Ingot (semi-rare) 1-2× Orichalcum Pearl (semi-rare) 1-5× Assassin Star (semi-rare) Death Ring (semi-rare) Cat's Paw (semi-rare) Jewelled Backpack (rare) Butcher's Axe (rare) Vile Axe (very rare) Golden Legs (very rare) | Undead Dragon 7,500 8,350 2750 ( 880 , 570 , 600 , 700 ) 10-198× Gold Coin (common) 1-5× Platinum Coin (common) Unholy Bone (common) 1-2× Small Sapphire (common) 1-5× Assassin Star (common) 1-3× Great Mana Potion (common) 1-3× Great Health Potion (common) 1-2× Black Pearl (uncommon) 1-15× Power Bolt (uncommon) Hardened Bone (uncommon) Demonic Essence (uncommon) Golden Mug (semi-rare) Knight Armor (semi-rare) Dragonbone Staff (semi-rare) Life Crystal (semi-rare) War Axe (semi-rare) Death Ring (semi-rare) Gold Ingot (semi-rare) Royal Helmet (rare) Dragon Slayer (rare) Golden Armor (rare) Spellweaver's Robe (rare) Blue Gem (rare) Divine Plate (rare) Stone Skin Amulet (rare) Skullcracker Armor (very rare)
+ Name Exp HP Max. Damage Loot | Betrayed Wraith 3,500 4,200 455 1-200× Gold Coin (common) 1-8× Platinum Coin (common) 1-15× Power Bolt (common) Flask of Demonic Blood (common) 1-5× Assassin Star (uncommon) Demonic Essence (uncommon) 1-3× Great Mana Potion (uncommon) 1-2× Orichalcum Pearl (uncommon) 1-4× Small Diamond (uncommon) Soul Orb (uncommon) Ultimate Health Potion (uncommon) Unholy Bone (uncommon) Mercenary Sword (rare) Bloody Edge (very rare) Death Ring (very rare) Golden Figurine (very rare) Skull Helmet (very rare) Stone Skin Amulet (very rare) | Fury 4,000 4,100 2359 ( 809 , 300 , 950 , 300 ) 1-269× Gold Coin (common) 1-3× Flask of Demonic Blood (common) 1-4× Jalapeno Pepper (common) Demonic Essence (uncommon) Soul Orb (uncommon) Terra Rod (uncommon) Great Health Potion (uncommon) Slightly Rusted Legs (uncommon) 1-3× Small Amethyst (uncommon) Red Piece of Cloth (semi-rare) 1-4× Platinum Coin (semi-rare) Noble Axe (semi-rare) 1-4× Orichalcum Pearl (semi-rare) Steel Boots (rare) Assassin Dagger (rare) Crystal Ring (rare) Death Ring (very rare) Golden Legs (very rare) Assassin Star (very rare) | Dark Torturer 4,650 7,350 1300 2-200× Gold Coin (common) 1-2× Ham (common) 1-8× Platinum Coin (common) 1-3× Flask of Demonic Blood (common) Soul Orb (uncommon) 1-2× Great Mana Potion (uncommon) 1-2× Great Health Potion (uncommon) Demonic Essence (uncommon) Steel Boots (semi-rare) Saw (semi-rare) Gold Ingot (semi-rare) 1-2× Orichalcum Pearl (semi-rare) 1-5× Assassin Star (semi-rare) Death Ring (semi-rare) Cat's Paw (semi-rare) Jewelled Backpack (rare) Butcher's Axe (rare) Vile Axe (very rare) Golden Legs (very rare) | Undead Dragon 7,500 8,350 2750 ( 880 , 570 , 600 , 700 ) 10-198× Gold Coin (common) 1-5× Platinum Coin (common) Unholy Bone (common) 1-2× Small Sapphire (common) 1-5× Assassin Star (common) 1-3× Great Mana Potion (common) 1-3× Great Health Potion (common) 1-2× Black Pearl (uncommon) 1-15× Power Bolt (uncommon) Hardened Bone (uncommon) Demonic Essence (uncommon) Golden Mug (semi-rare) Knight Armor (semi-rare) Dragonbone Staff (semi-rare) Life Crystal (semi-rare) War Axe (semi-rare) Death Ring (semi-rare) Gold Ingot (semi-rare) Royal Helmet (rare) Dragon Slayer (rare) Golden Armor (rare) Spellweaver's Robe (rare) Blue Gem (rare) Divine Plate (rare) Stone Skin Amulet (rare) Skullcracker Armor (very rare)
+
+## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[dark-trails-quest 7-1] Entrar na Oramond Fury Dungeon
+A porta da {wiki:Oramond Fury Dungeon} fica a **norte** da ponte leste de Oramond. Desce a rampa logo a norte da entrada (tens de contornar a montanha).
+coords: [{'x': 33666, 'y': 31924, 'z': 7, 'label': 'Porta da Oramond Fury Dungeon'}]
+
+## OTHER GUIDE STEPS MENTIONING IT (context)
+[measuring-tibia-quest 3-1] Lista das 20 áreas
+Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
+coords: []
+[oramond-quest 0-2] Escolher o que fazer
+Usa esta tabela para escolher as tarefas que te convêm. Todas dão votos (ou favores) que acabam no Rathleton Magistrate. As secções seguintes explicam cada uma passo a passo.
+coords: []
+[oramond-quest 7-0] Pedir a kill task
+Fala com o {npc:Terrence} e diz {key:hi}, {key:killing} e a palavra da tarefa que queres. A tarefa fica ativa no Quest Log.
+coords: [{'x': 33648, 'y': 31950, 'z': 7, 'label': 'Terrence'}]
+[oramond-quest 7-1] Caçar
+Mata as 100 criaturas em qualquer parte de Oramond. Os melhores sítios estão na tabela acima.
+coords: [{'x': 33563, 'y': 31960, 'z': 7, 'label': 'Rathleton Slum (Rot Elementals / Glooth Blobs)'}, {'x': 33631, 'y': 31957, 'z': 7, 'label': 'Rathleton Workshops (Rustheap Golems / Metal Gargoyles)'}, {'x': 33681, 'y': 31861, 'z': 6, 'label': 'Oramond Mountain Hideout (minotauros de elite)'}]

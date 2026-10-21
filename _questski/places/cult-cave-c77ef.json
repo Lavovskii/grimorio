@@ -1,0 +1,56 @@
+{
+  "title": "Cult Cave",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Gruta escondida dos cultistas do vudu na ilha de {wiki:Vandura}, a **nordeste de Liberty Bay**; a entrada é um buraco no pátio de um barracão, guardado por um {creature:Jungle Maw}.",
+  "entrance": {
+    "x": 32359,
+    "y": 32721,
+    "z": 7,
+    "label": "Entrada da Cult Cave (buraco no pátio do barracão)"
+  },
+  "items": [
+    "Rope"
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** (por exemplo de Venore, no {npc:Captain Fearless}: {key:hi}, {key:liberty bay}, {key:yes}). Chegas ao porto do {npc:Jack Fate}.",
+    "Sai da cidade para **nordeste**, pela ilha de Vandura, até aos barracões a nordeste de Liberty Bay.",
+    "A entrada é um buraco escondido no pátio de um desses barracões ({coord:32359,32721,7}), com um {creature:Jungle Maw} plantado ao lado. Desce pelo buraco: chegas ao piso -1 da gruta.",
+    "No piso -1, sobe pela escada (*Up the Ladder*) para o piso térreo da gruta, onde fica a sala redonda dos {creature:Black Sheep} (D no mapa); a gruta tem ainda um piso +1 e pisos mais fundos (-2 a -4)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao buraco da entrada, no piso -1.",
+    "Usa a {item:Rope} no buraco para subires ao pátio do barracão ({coord:32359,32721,7}) e regressa a pé para **sudoeste** até Liberty Bay.",
+    "Em Liberty Bay, o {npc:Jack Fate} ({coord:32161,32556,6}) leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {
+      "x": 32447,
+      "y": 32767,
+      "z": 7,
+      "label": "Sala dos Black Sheep (piso térreo da gruta)"
+    }
+  ],
+  "images": [
+    {
+      "file": "Cult Cave -1.png",
+      "caption": "Piso -1: onde apareces depois de desceres o buraco do barracão"
+    },
+    {
+      "file": "Cult Cave 0.png",
+      "caption": "Piso térreo da gruta (A = subida da escada; D = sala dos Black Sheep)"
+    },
+    {
+      "file": "Cult Cave -2.png",
+      "caption": "Piso -2"
+    },
+    {
+      "file": "Map vandura.jpg",
+      "caption": "Mapa de Vandura (Liberty Bay e arredores)"
+    }
+  ],
+  "warnings": [
+    "Os {creature:Bonelord|Bonelords} drenam mana: mages de nível baixo podem ficar sem mana para curar. Há também muitos {creature:Novice of the Cult|Novices of the Cult}, {creature:Witch|Witches}, {creature:Dark Monk|Dark Monks} e {creature:Tarantula|Tarantulas}.",
+    "Cuidado com o {creature:Jungle Maw} junto à entrada."
+  ]
+}

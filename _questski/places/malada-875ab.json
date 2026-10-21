@@ -1,0 +1,37 @@
+{
+  "title": "Malada",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "A ilha mais a sul das {wiki:Forbidden Islands}, a sudoeste de Goroma, com pântano à superfície ({creature:Giant Spider|Giant Spiders}, {creature:Tarantula|Tarantulas}, quaras) e um labirinto subterrâneo cheio de quaras; é a última paragem da cadeia de teleportes do {wiki:Teleportation Hub}.",
+  "entrance": {"x": 32018, "y": 32679, "z": 7, "label": "Escadas do Teleportation Hub de Malada"},
+  "requirements": [
+    "Precisas do barco do {npc:Jack Fate} para Goroma e de teres desbloqueado os teleportes Goroma → Ramoa → Talahu → Malada, tudo pela {wiki:The Shattered Isles Quest}."
+  ],
+  "arrive": [
+    "Em **Liberty Bay**, fala com o {npc:Jack Fate} no porto: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas no **leste** de Goroma.",
+    "Em Goroma vai às escadas do {wiki:Teleportation Hub} ({coord:32038,32561,7}), desce e entra no teleporte da **direita** (Ramoa).",
+    "No hub de Ramoa entra outra vez no teleporte da **direita** (Talahu) e, no hub de Talahu, no da **direita** (Malada).",
+    "Sobe as escadas do hub de Malada ({coord:32018,32679,7}) e estás à superfície da ilha.",
+    "Na primeira vez o teleporte para Malada ainda não funciona: tens de atravessar a pé desde Talahu (sobe à superfície, vai para **sudeste** e segue a rota da Shattered Isles Quest); ao chegares ao hub de Malada pelo teleporte da **esquerda** desbloqueias a viagem."
+  ],
+  "leave": [
+    "Desce ao Teleportation Hub de Malada ({coord:32018,32679,7}) e usa sempre os teleportes da **esquerda**: Malada → Talahu → Ramoa → Goroma.",
+    "Em Goroma sobe as escadas do hub e vai para **leste** até ao {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32038, "y": 32561, "z": 7, "label": "Escadas do Teleportation Hub de Goroma"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"},
+    {"x": 31921, "y": 32658, "z": 7, "label": "Escadas do Teleportation Hub de Talahu"}
+  ],
+  "images": [
+    {"file": "Malada Map.png", "caption": "Malada à superfície"},
+    {"file": "Maladamap2.jpg", "caption": "Malada — piso -1"},
+    {"file": "Maladamap3.jpg", "caption": "Malada — piso -2"},
+    {"file": "Maladamap4.jpg", "caption": "Malada — piso -3"}
+  ],
+  "warnings": [
+    "Zona para nível 60–70+: muitos {creature:Giant Spider|Giant Spiders}, {creature:Tarantula|Tarantulas}, {creature:Water Elemental|Water Elementals} e quaras; no subsolo também aparecem {creature:Hydra|Hydras}.",
+    "O buraco a sudeste da ilha é a única ligação a {wiki:Kharos} (Ferumbras Citadel) e só serve para descer.",
+    "No hub há uma Royal Mailbox: leva {item:Parcel} e {item:Label} se quiseres mandar loot para o depot."
+  ]
+}

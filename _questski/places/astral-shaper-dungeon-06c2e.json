@@ -1,0 +1,27 @@
+{
+  "title": "Astral Shaper Dungeon",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Masmorra muito abaixo de {wiki:Tiquanda}, com {creature:Twisted Shaper|Twisted Shapers} e {creature:Broken Shaper|Broken Shapers} e a {wiki:Time Machine}; chega-se pelo Holy Portal das {wiki:Halls of Hope}, a norte de Thais (faz parte da {wiki:Forgotten Knowledge Quest}).",
+  "entrance": {"x": 32780, "y": 32685, "z": 14, "label": "Chegada à Astral Shaper Dungeon (Holy Portal)"},
+  "requirements": [
+    "O templo das Halls of Hope tem de estar restaurado e tens de desbloquear o Holy Portal com o {npc:Albinius}: diz {key:holy portal} e entrega-lhe 50 {item:Incantation Notes}."
+  ],
+  "arrive": [
+    "Chega a **Thais** (de barco: {key:hi}, {key:thais}, {key:yes} ao capitão do porto).",
+    "Sai da cidade pela saída **norte** e continua para norte até às {wiki:Halls of Hope} ({coord:32326,32090,7}), onde está o {npc:Albinius} ({coord:32335,32091,7}).",
+    "Entra no **Holy Portal** (depois de o teres desbloqueado): apareces na Astral Shaper Dungeon ({coord:32780,32685,14}). A {wiki:Time Machine} fica para **leste** ({coord:32869,32722,14})."
+  ],
+  "leave": [
+    "Caminha para **oeste** pelo mesmo caminho até ao sítio onde chegaste ({coord:32780,32685,14}).",
+    "Entra no Holy Portal que lá está para voltares às Halls of Hope e daí vai a pé para **sul** até Thais."
+  ],
+  "coords": [
+    {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope (norte de Thais)"},
+    {"x": 32335, "y": 32091, "z": 7, "label": "Albinius"},
+    {"x": 32869, "y": 32722, "z": 14, "label": "Time Machine"}
+  ],
+  "warnings": [
+    "Zona para nível 120+."
+  ]
+}

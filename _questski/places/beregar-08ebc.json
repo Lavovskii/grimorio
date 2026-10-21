@@ -1,0 +1,36 @@
+{
+  "title": "Beregar",
+  "type": "cidade",
+  "near": "Yalahar",
+  "summary": "Cidade anã escondida por baixo das ilhas de {wiki:Fenrock} e {wiki:Mistrock}, perto de Yalahar, governada pelo {npc:Emperor Rehal}; chega-se lá por um longo caminho subterrâneo a partir de Fenrock.",
+  "entrance": {"x": 32607, "y": 31490, "z": 14, "label": "Beregar (junto ao Nokmir)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Yalahar}.",
+    "Da primeira vez tens de falar de Mistrock com o {npc:Maris} **em Mistrock** ({key:hi}, {key:mistrock}); sem isso a {item:Pick} não funciona na fenda de Fenrock."
+  ],
+  "items": ["Pick"],
+  "arrive": [
+    "Vai a **Yalahar** (por exemplo de Venore, no {npc:Captain Fearless}: {key:hi}, {key:yalahar}, {key:yes}) e sobe às docas do {wiki:Foreigner Quarter}, no canto **noroeste** do porto, 1 andar acima do chão.",
+    "Fala com o {npc:Maris} ({coord:32650,31293,6}): {key:hi}, {key:mistrock}, {key:yes} (100 gp). Já em Mistrock, diz-lhe {key:hi} e {key:mistrock} (obrigatório na primeira vez) e depois {key:hi}, {key:fenrock}, {key:yes} (50 gp). Nas visitas seguintes podes ir logo para Fenrock ({key:fenrock}, 100 gp a partir de Yalahar).",
+    "Em Fenrock, entra na montanha e desce **dois andares** até à gruta das {creature:Tortoise|Tortoises}. No canto **sudeste** há uma fenda no chão: usa a {item:Pick} nela ({coord:32564,31338,9}) e és teleportado para baixo.",
+    "Segue o caminho para baixo (só há {creature:Skeleton|Skeletons}, {creature:Goblin|Goblins} e {creature:Rotworm|Rotworms}) até ao anão {npc:Nokmir}, à entrada de Beregar.",
+    "Na primeira visita, anda um pouco para **sul** do Nokmir, sobe a rampa e usa o carrinho de minério no chão amarelo para o ativar. Nas visitas seguintes, o carrinho no início do caminho ({coord:32604,31339,11}) leva-te diretamente a Beregar."
+  ],
+  "leave": [
+    "Usa o carrinho de minério de Beregar ({coord:32607,31510,13}) para voltares ao início do caminho (depois de o teres ativado); senão, volta a pé pelo mesmo caminho.",
+    "Sobe pelas grutas de Fenrock até à superfície.",
+    "Na costa de Fenrock, o {npc:Maris} leva-te de volta a Yalahar: {key:hi}, {key:yalahar}, {key:yes} (100 gp)."
+  ],
+  "coords": [
+    {"x": 32650, "y": 31293, "z": 6, "label": "Maris (docas do Foreigner Quarter, Yalahar)"},
+    {"x": 32543, "y": 31290, "z": 7, "label": "Fenrock"},
+    {"x": 32564, "y": 31338, "z": 9, "label": "Fenda para usar a Pick (piso -2 de Fenrock)"},
+    {"x": 32604, "y": 31339, "z": 11, "label": "Carrinho de minério do lado de Fenrock"},
+    {"x": 32607, "y": 31510, "z": 13, "label": "Carrinho de minério de Beregar"},
+    {"x": 32607, "y": 31490, "z": 14, "label": "Beregar (Nokmir)"}
+  ],
+  "images": [{"file": "Beregars entrance.JPG", "caption": "Entrada de Beregar"}],
+  "warnings": [
+    "Se te desviares do caminho principal podes cair em zonas com {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords}, {creature:Diabolic Imp|Diabolic Imps} e {creature:Lich|Liches}: se os vires, volta para trás."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "plate-armor-quest",
+  "category": "tesouro",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "15–30 min (mais as viagens até o barco ser desviado)",
+  "summary": "Um navio fantasma assombra as águas entre Venore e Darashia. Viaja de barco nessa rota até seres sequestrado pelo {wiki:Ghostship}, atravessa para o barco do sul, mata os mortos-vivos do porão e abre o caixão para receberes uma {item:Plate Armor}. Sais por um portal mágico que te deixa no porto de Darashia.",
+  "legend_pt": "Há um navio fantasma que assombra as águas entre Venore e Darashia.",
+  "start": {"x": 32955, "y": 32022, "z": 6, "label": "Barco de Venore (Captain Fearless)"},
+  "requirements": [
+    "Conta Premium (viagem de barco Venore → Darashia).",
+    "Sem nível mínimo; recomendado nível 40."
+  ],
+  "items_needed": [
+    {"text": "Dinheiro para as viagens de barco (pode ser preciso viajar várias vezes até o barco ser desviado)"}
+  ],
+  "rewards": [
+    {"item": "Plate Armor"}
+  ],
+  "dangers": ["Skeleton", "Ghoul", "Ghost", "Vampire", "Demon Skeleton", "Captain Jones"],
+  "npcs": ["Captain Fearless"],
+  "tips": [
+    "Pode não acontecer à primeira: repete a viagem Venore → Darashia até seres desviado para o Ghostship.",
+    "Diz-se que à noite (hora de Tibia) é mais provável ir parar ao Ghostship (não confirmado)."
+  ],
+  "sections": [
+    {
+      "title": "1. Ir parar ao Ghostship",
+      "steps": [
+        {
+          "title": "Viajar de Venore para Darashia",
+          "text": "Vai ao barco de **Venore** e viaja para **Darashia** com o capitão ({npc:Captain Fearless}). Repete até o barco ser sequestrado pelo {wiki:Ghostship}. O NPC avisa-te da ameaça do navio fantasma.",
+          "npc": "Captain Fearless",
+          "images": [{"file": "Plate Armor Quest Warning.png", "caption": "O NPC avisa-te da ameaça do Ghostship"}]
+        }
+      ]
+    },
+    {
+      "title": "2. A Plate Armor",
+      "steps": [
+        {
+          "title": "Atravessar para o barco do sul",
+          "text": "Desce e abre caminho a combater pela prancha até ao barco do **sul**.",
+          "warning": "Há {creature:Skeleton|Skeletons}, {creature:Ghoul|Ghouls} e {creature:Ghost|Ghosts}; pode ainda aparecer o raro {creature:Captain Jones}."
+        },
+        {
+          "title": "Descer ao porão",
+          "text": "No barco do sul, desce pela escada **oeste** (a da recompensa). Lá em baixo estão 2 {creature:Vampire|Vampires}, 1 {creature:Demon Skeleton} e 1 {creature:Ghost}. Mata-os.",
+          "images": [{"file": "Plate Armor Quest Ghostship.png", "caption": "Desce pela escada oeste para a recompensa; sobe pela escada leste para sair"}],
+          "warning": "Quando desces aterras num campo de {item:Fire Field|fogo}. Afasta-te logo."
+        },
+        {
+          "title": "Abrir o caixão",
+          "text": "Usa o caixão do lado **leste** para receberes a tua {item:Plate Armor}.",
+          "images": [{"file": "Plate Armor Quest Rewards.png", "caption": "Procura no caixão a tua recompensa"}],
+          "reward": "Plate Armor"
+        }
+      ]
+    },
+    {
+      "title": "3. Sair",
+      "steps": [
+        {
+          "title": "Portal para Darashia",
+          "text": "Sobe outra vez e depois sobe pela escada **leste** (a da saída). Lá em cima está um {creature:Ghost} sozinho e um {item:Magic Forcefield}. Entra neste portal: apareces no barco de **Darashia**.",
+          "images": [{"file": "Plate Armor Quest Portal.png", "caption": "O portal para Darashia"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como Ghostship Quest."
+  ]
+}

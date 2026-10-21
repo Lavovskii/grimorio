@@ -1,0 +1,26 @@
+{
+  "title": "Castle Flats",
+  "type": "edificio",
+  "near": "Edron",
+  "summary": "Apartamentos e serviços dentro das muralhas do castelo, no **centro de Edron**: o porto e as arenas a norte, lojas e flats a leste, e o templo no subsolo.",
+  "entrance": {"x": 33190, "y": 31777, "z": 7, "label": "Portão norte do castelo de Edron (Falk)"},
+  "requirements": ["Conta **Premium** (Edron)."],
+  "arrive": [
+    "De barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais ou o {npc:Captain Fearless} em Venore, 40 gp). Chegas ao barco do {npc:Captain Seahorse}, no lado **norte** do castelo ({coord:33176,31764,6}).",
+    "De {wiki:Magic Carpet|tapete voador} (Darashia, Farmine, Femor Hills, Svargrond, Kazordoon ou Issavi): diz {key:hi}, {key:edron}, {key:yes}. Chegas ao tapete do {npc:Pino}, por cima do portão norte, no 4.º andar ({coord:33192,31783,3}).",
+    "Do porto, entra no castelo pelo portão **norte**: o {npc:Falk} está mesmo cá fora e um Edron Guardsman logo do lado de dentro. Os flats ficam nas muralhas; o templo da {npc:Amanda} fica no subsolo -1, no lado **leste**."
+  ],
+  "leave": [
+    "De barco: no porto norte, o {npc:Captain Seahorse} leva-te a Ab'Dendriel (70 gp), Ankrahmun (160), Carlin (110), Cormaya (20), Liberty Bay (170), Port Hope (150), Thais (160) ou Venore (40); Oramond (110) só com o rank *Citizen* da {wiki:Rathleton Quest}. Diz {key:hi}, o destino e {key:yes}.",
+    "De tapete voador: sobe ao tapete do {npc:Pino}, por cima do portão norte, e diz {key:hi}, o destino ({key:darashia}, {key:farmine}, {key:hills}, {key:svargrond}, {key:kazordoon} ou {key:issavi}) e {key:yes}.",
+    "A pé: sai do castelo pelo **sul** para o resto de Edron (por exemplo para **leste**, em direção a {wiki:Stonehome})."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — barco de Edron"},
+    {"x": 33181, "y": 31771, "z": 6, "label": "Guide Jonathan (no cais)"},
+    {"x": 33190, "y": 31777, "z": 7, "label": "Falk (fora do portão norte)"},
+    {"x": 33192, "y": 31783, "z": 3, "label": "Tapete voador do Pino (4.º andar)"},
+    {"x": 33191, "y": 31795, "z": 7, "label": "Daniel Steelsoul (dentro do castelo)"},
+    {"x": 33222, "y": 31814, "z": 8, "label": "Amanda — templo de Edron (subsolo -1)"}
+  ]
+}

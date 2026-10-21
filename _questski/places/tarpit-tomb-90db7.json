@@ -1,0 +1,31 @@
+{
+  "title": "Tarpit Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo por baixo do deserto de Kha'labal, a **nordeste de Ankrahmun**, com a entrada coberta de alcatrão; no fundo fica a arena do faraó {creature:Morguthis} ({wiki:The Ancient Tombs Quest}).",
+  "entrance": {"x": 33232, "y": 32704, "z": 7, "label": "Entrada da Tarpit Tomb (cava aqui)"},
+  "requirements": [
+    "Para passares da chama azul ({item:Mystic Flame}) para as partes profundas precisas de uma {item:Scarab Coin}, que pões no {item:Coal Basin}.",
+    "A arena de Morguthis fica atrás de uma porta de nível 75."
+  ],
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Apanha um barco para **Ankrahmun**: por exemplo o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para o deserto e caminha para **nordeste** até à entrada da tumba ({coord:33232,32704,7}).",
+    "Usa a {item:Shovel} na areia para abrires o buraco e desce.",
+    "Lá dentro, as rampas para descer veem-se logo em cada piso. Para continuares para lá da chama azul, pisa-a e põe uma {item:Scarab Coin} no {item:Coal Basin}."
+  ],
+  "leave": [
+    "Volta ao início da tumba pelo caminho por onde vieste (o {item:Magic Forcefield} da sala de Morguthis, usado **sem** o {item:Sword Hilt}, também te leva ao início).",
+    "Sobe as rampas até ao buraco que abriste na areia e usa a {item:Rope} para voltares à superfície.",
+    "Regressa a pé a **Ankrahmun** (para **sudoeste**). O {npc:Captain Sinbeard} leva-te a Darashia (100 gp), Edron (160), Liberty Bay (90), Port Hope (80), Venore (150) ou Yalahar (230): {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33233, "y": 32705, "z": 7, "label": "Tarpit Tomb"}
+  ],
+  "images": [{"file": "Tombtar.jpg", "caption": "Tarpit Tomb"}],
+  "warnings": [
+    "No primeiro piso há um {creature:Crypt Shambler} e um {creature:Bonelord} que convém evitar a níveis baixos; os pisos depois dos teleportes são para nível 50–90."
+  ]
+}

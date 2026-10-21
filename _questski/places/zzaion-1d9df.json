@@ -1,0 +1,30 @@
+{
+  "title": "Zzaion",
+  "type": "zona",
+  "near": "Farmine",
+  "summary": "A última fortaleza dos lagartos no **sul de Zao**: a norte há lagartos de classe baixa, no centro lagartos de classe alta e, na torre do sul, {creature:Draken|Draken} e {creature:Lizard Zaogun|Lizard Zaoguns}. Os portões só abrem durante o raid dos orcs.",
+  "entrance": {"x": 33316, "y": 31558, "z": 7, "label": "Zzaion"},
+  "requirements": [
+    "Os portões de Zzaion só abrem durante o {wiki:Zao Raids|raid dos orcs a Zzaion}; ficam abertos até ao Server Save seguinte. É a única oportunidade de entrar."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe} em {coord:33085,31532,7}.",
+    "Atravessa a estepe para **leste** até à fortaleza ({coord:33316,31558,7}) e espera que os portões estejam abertos pelo raid dos orcs."
+  ],
+  "leave": [
+    "Sai pelos portões e volta pela estepe para **oeste** até à passagem em {coord:33085,31532,7}.",
+    "Sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine.",
+    "No Steamship, o {npc:Thorgrin} leva-te a {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp): {key:hi}, o destino, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Steamship de Farmine (Thorgrin)"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"},
+    {"x": 33316, "y": 31558, "z": 7, "label": "Zzaion"}
+  ],
+  "warnings": [
+    "**Não podes fazer logout** dentro de Zzaion, para ninguém ficar preso quando os portões fecham: sai antes do Server Save.",
+    "Durante o raid andam orcs pela zona norte e aparecem bosses lagartos a defender a fortaleza. A torre do sul é para níveis muito altos (140+)."
+  ]
+}

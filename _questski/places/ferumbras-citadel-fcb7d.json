@@ -1,0 +1,38 @@
+{
+  "title": "Ferumbras Citadel",
+  "type": "dungeon",
+  "near": "Liberty Bay",
+  "summary": "A torre do {creature:Ferumbras}, na ilha proibida de {wiki:Kharos} (Shattered Isles, a oeste de Liberty Bay), cheia de {creature:Lich|Liches}, {creature:Behemoth|Behemoths}, {creature:Warlock|Warlocks}, {creature:Dragon Lord|Dragon Lords} e {creature:Demon|Demons}.",
+  "entrance": {"x": 32121, "y": 32688, "z": 7, "label": "Ferumbras Citadel (Kharos)"},
+  "requirements": [
+    "Acesso a Goroma e ao {wiki:Teleportation Hub} até Malada, da {wiki:The Shattered Isles Quest}.",
+    "Antes de entrar tens de **tentar pisar a barreira de energia** da cidadela e depois pedir autorização ao {npc:Zoltan} em Edron: {key:hi}, {key:Ferumbras}, {key:yes}, depois {key:permission} e {key:yes} (**500 gp**).",
+    "A autorização vale só para **uma** entrada: cada vez que quiseres voltar a entrar pagas outra vez 500 gp. Para confirmares, vê no Quest Log \"The Shattered Isles\" → \"Access to Ferumbras' Citadel\".",
+    "Nível recomendado: 140+ (cavaleiros e paladinos), 160+ (magos)."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Liberty Bay** (por exemplo de Edron, no {npc:Captain Seahorse}: {key:hi}, {key:liberty bay}, {key:yes}, 170 gp).",
+    "Em Liberty Bay, o {npc:Jack Fate} leva-te a Goroma: {key:hi}, {key:goroma}, {key:yes}.",
+    "Em Goroma desce ao {wiki:Teleportation Hub} e usa sempre o teleporte da **direita** (Goroma → Ramoa → Talahu → Malada). Em Malada sobe as escadas do hub.",
+    "Vai para **sul** de Malada até ao alçapão ({coord:32024,32734,7}) e desce: chegas ao subsolo de Kharos, onde fica a cidadela ({coord:32121,32688,7}).",
+    "Com a autorização do {npc:Zoltan}, atravessa a barreira de energia e entra na cidadela."
+  ],
+  "leave": [
+    "Depois de passares a barreira não consegues sair por ela. Vai para **leste**, desce um buraco, segue para **oeste** e sobe por um buraco de corda com a {item:Rope}.",
+    "Depois desce ao buraco a **leste** ({coord:32138,32697,7}), onde está o teleporte de sentido único que te leva a Goroma.",
+    "Em Goroma fala com o {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32024, "y": 32734, "z": 7, "label": "Alçapão para Kharos (sul de Malada)"},
+    {"x": 32138, "y": 32697, "z": 7, "label": "Buraco com o teleporte de regresso a Goroma"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"},
+    {"x": 33268, "y": 31849, "z": 4, "label": "Zoltan (Edron, autorização)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "O alçapão de Malada só serve para descer: a saída de Kharos é o teleporte de sentido único para Goroma.",
+    "Ao entrares na cidadela és recebido por vários {creature:Behemoth|Behemoths} e talvez {creature:Demon|Demons} e {creature:Dragon Lord|Dragon Lords} atraídos. Abaixo de ~nível 150, não te mexas e encosta-te à parede até tudo à tua volta estar morto; acima disso podes correr para **nordeste** até às escadas do subsolo.",
+    "Com umas {item:Boots of Homecoming} vais diretamente para a cidadela a partir de qualquer zona de proteção."
+  ]
+}

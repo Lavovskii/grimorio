@@ -1,0 +1,35 @@
+{
+  "title": "Medusa Cave",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Gruta de {creature:Medusa|Medusas} e {creature:Serpent Spawn|Serpent Spawns} por baixo de {wiki:Talahu} (a ilha das Hydras, nas Shattered Isles a oeste de Liberty Bay), atrás de uma porta de nível.",
+  "entrance": {"x": 31953, "y": 32660, "z": 7, "label": "Talahu (a gruta fica por baixo da ilha)"},
+  "requirements": [
+    "Acesso a Talahu pelo {wiki:Teleportation Hub}, desbloqueado na {wiki:The Shattered Isles Quest} (puzzle dos cogumelos em Ramoa).",
+    "Passar uma porta de nível (gate of expertise) no subsolo de Talahu.",
+    "Nível recomendado: 120+ (paladinos), 140+ (magos), 150+ (cavaleiros)."
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** (barco: {key:hi}, {key:liberty bay}, {key:yes}) e, nas docas, pede ao {npc:Jack Fate} para ir a Goroma: {key:hi}, {key:goroma}, {key:yes}.",
+    "Em Goroma desce ao {wiki:Teleportation Hub} e usa o teleporte da **direita** (para Ramoa) e, no hub de Ramoa, outra vez o da **direita** (para Talahu).",
+    "Sobe as escadas do hub de Talahu ({coord:31921,32658,7}). À superfície há 20–30 {creature:Hydra|Hydras}.",
+    "Desce ao labirinto de grutas por baixo de Talahu (cheio de {creature:Quara Scout|Quara Scouts} e {creature:Bog Raider|Bog Raiders}) e segue a rota do mapa. Dois pisos abaixo há um labirinto quadrado de Quara Scouts; a **norte** dele fica a porta de nível que dá para a Medusa Cave."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à superfície de Talahu e às escadas do Teleportation Hub ({coord:31921,32658,7}).",
+    "No hub usa o teleporte da **esquerda** (Ramoa) e, em Ramoa, outra vez o da **esquerda** (Goroma). Sobe as escadas do hub de Goroma e fala com o {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 31921, "y": 32658, "z": 7, "label": "Escadas do Teleportation Hub de Talahu"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"}
+  ],
+  "images": [
+    {"file": "Route Medusa Cave.png", "caption": "Rota até à Medusa Cave"},
+    {"file": "Medusa Cave Map.png", "caption": "Mapa da Medusa Cave"},
+    {"file": "Talahu Map.png", "caption": "Mapa de Talahu"}
+  ],
+  "warnings": [
+    "As Medusas e os Serpent Spawns batem muito forte e renascem depressa: não desças ao piso mais fundo se não aguentas o respawn completo do piso de cima.",
+    "No caminho há muitos {creature:Quara Scout|Quara Scouts} além das {creature:Hydra|Hydras} da superfície de Talahu."
+  ]
+}

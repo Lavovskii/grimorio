@@ -1,0 +1,29 @@
+{
+  "title": "Dark Grounds",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Pequena zona fechada em {wiki:Upper Roshamuul}, a **norte do depot**, com dois grupos de 3 {creature:Sight of Surrender|Sights of Surrender}; só abre de vez em quando, por um world change.",
+  "entrance": {"x": 33556, "y": 32329, "z": 7, "label": "Dark Grounds (norte do depot de Upper Roshamuul)"},
+  "requirements": [
+    "Só está acessível durante um world change sem aviso, que abre quando o servidor completa a tarefa *Soothing Bad Dreams* da {wiki:Roshamuul Quest} 20 vezes; raramente está aberta.",
+    "Upper Roshamuul só é alcançável depois de o servidor chegar ao **estágio 3** da Roshamuul Quest (muralha aberta). Conta Premium."
+  ],
+  "arrive": [
+    "Em **Thais**, diz ao {npc:Captain Bluebear} ({coord:32310,32210,6}) {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca no acampamento da Inquisition, em **Lower Roshamuul**.",
+    "Do acampamento sobe a rampa para Lower Roshamuul e atravessa a ponte para **norte** até {wiki:Guzzlemaw Valley}.",
+    "Atravessa Guzzlemaw Valley para **nordeste** e passa pela muralha aberta para Upper Roshamuul ({coord:33632,32401,7}). O depot fica a noroeste da muralha; se fores cidadão de Roshamuul, podes aparecer diretamente no templo de Upper Roshamuul, a oeste do depot.",
+    "Os Dark Grounds ficam a **norte** do depot ({coord:33556,32329,7})."
+  ],
+  "leave": [
+    "Volta ao depot e atravessa Guzzlemaw Valley para **sul** até à ponte; desce a rampa de Lower Roshamuul até ao acampamento da Inquisition, no sudoeste da ilha.",
+    "Fala com o {npc:Captain Chelop}, junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento da Inquisition)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"}
+  ],
+  "warnings": [
+    "Zona para nível 200–250+. Todas as criaturas de Roshamuul são muito fortes, incluindo as do caminho por Lower Roshamuul e Guzzlemaw Valley."
+  ]
+}

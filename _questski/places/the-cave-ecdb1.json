@@ -1,0 +1,37 @@
+{
+  "title": "The Cave",
+  "type": "gruta",
+  "near": "Carlin",
+  "summary": "Gruta escondida de contrabandistas e piratas na praia a **leste de Northport** (nordeste de Carlin), com a entrada tapada entre duas pedras com musgo; faz parte da {wiki:The Isle of Evil Quest}.",
+  "entrance": {"x": 32531, "y": 31628, "z": 7, "label": "Entrada de The Cave (praia, entre as duas pedras)"},
+  "requirements": [
+    "Só podes entrar depois de começares a **missão 5** da {wiki:The Isle of Evil Quest} (e por isso só com Premium). Um {item:Magic Forcefield} impede a entrada a ex-premium."
+  ],
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Northport**, a aldeia a **nordeste de Carlin** (e a oeste de Ab'Dendriel), onde está o {npc:Mortimer} ({coord:32499,31626,7}). De Thais, o {npc:Captain Bluebear} leva-te a Carlin ({key:hi}, {key:carlin}, {key:yes}).",
+    "Vai à praia a **leste** de Northport. A entrada está escondida na areia, entre **duas pedras com musgo** ({coord:32531,31628,7}): cava aí com a {item:Shovel} para a revelares.",
+    "Entra e desce mais um andar. A caixa do {item:Nautical Map} fica mais abaixo: vai à sala do **nordeste**, desce a escada e segue para **norte** ({coord:32576,31572,10})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe a escada da sala do nordeste e usa a {item:Rope} no sítio por onde desceste, até à praia a leste de Northport.",
+    "Regressa a pé para **sudoeste** até Carlin (barco do {npc:Captain Greyhound}, {coord:32388,31822,6}) ou para **leste** até Ab'Dendriel (barco do {npc:Captain Seagull})."
+  ],
+  "coords": [
+    {"x": 32499, "y": 31626, "z": 7, "label": "Mortimer em Northport"},
+    {"x": 32576, "y": 31572, "z": 10, "label": "Caixa com o Nautical Map"},
+    {"x": 32594, "y": 31615, "z": 10, "label": "A Bearded Woman"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+  ],
+  "images": [
+    {"file": "ScreenShot1047.jpg", "caption": "O sítio entre as duas pedras onde tens de cavar"},
+    {"file": "The Cave -1.png", "caption": "Mapa de The Cave, andar -1"},
+    {"file": "The Cave -2.png", "caption": "Mapa de The Cave, andar -2"},
+    {"file": "The Cave -3.png", "caption": "Mapa de The Cave, andar -3"},
+    {"file": "The Cave -4.png", "caption": "Mapa de The Cave, andar -4"},
+    {"file": "The Cave -5.png", "caption": "Mapa de The Cave, andar -5"}
+  ],
+  "warnings": [
+    "Há muitos inimigos: cerca de 26 {creature:Smuggler|Smugglers}, 25 {creature:Bandit|Bandits}, 22 {creature:Pirate Marauder|Pirate Marauders}, 6 {creature:Pirate Cutthroat|Cutthroats}, 3 {creature:Pirate Buccaneer|Buccaneers}, 14 {creature:Ghoul|Ghouls}, 9 {creature:Pirate Skeleton|Pirate Skeletons} e 1 {creature:Pirate Ghost}."
+  ]
+}

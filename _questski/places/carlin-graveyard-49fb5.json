@@ -1,0 +1,28 @@
+{
+  "title": "Carlin Graveyard",
+  "type": "gruta",
+  "near": "Carlin",
+  "summary": "O cemitério de **Carlin**, logo a **leste** da cidade, com uma cripta e grutas invadidas por {creature:Troll|Trolls}; é um bom sítio de caça para quem acaba de chegar de Rookgaard e tem a {wiki:Fanfare Quest}.",
+  "entrance": {"x": 32407, "y": 31784, "z": 7, "label": "Entrada do cemitério de Carlin"},
+  "requirements": [
+    "A porta da cripta pode estar trancada: abre-a com a {item:Key 3520}, que está numa caixa no edifício logo a **noroeste** do barco de Carlin ({coord:32375,31803,7})."
+  ],
+  "items": ["Rope", "Key 3520"],
+  "arrive": [
+    "Vai a **Carlin** (de barco: no capitão da tua cidade diz {key:hi}, {key:carlin}, {key:yes}).",
+    "Sai da cidade para **leste** até ao cemitério ({coord:32407,31784,7}).",
+    "A cripta fica no extremo **sul** do cemitério: desce as escadas. Lá dentro, a porta a **oeste** (Key 3520 se estiver fechada) leva a um buraco para as grutas dos Trolls."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao buraco por onde desceste e usa a {item:Rope} para subires à cripta.",
+    "Sobe as escadas no extremo **sul** do cemitério e estás outra vez a **leste** de Carlin."
+  ],
+  "coords": [
+    {"x": 32375, "y": 31803, "z": 7, "label": "Caixa com a Key 3520 (junto ao barco de Carlin)"},
+    {"x": 32407, "y": 31784, "z": 7, "label": "Entrada do cemitério"},
+    {"x": 32404, "y": 31790, "z": 7, "label": "Carlin Graveyard"}
+  ],
+  "warnings": [
+    "Um buraco na parte **sul** da gruta leva à secção dos {creature:Rotworm|Rotworms} da {wiki:Carlin Corym Cave}."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Candia",
+  "type": "ilha",
+  "near": "Feyrist",
+  "summary": "Reino feito de doces, nascido dos sonhos das crianças de Tibia; só se chega a ele a partir de {wiki:Feyrist}, passando pelo donut gigante.",
+  "entrance": {"x": 33574, "y": 32222, "z": 7, "label": "Donut gigante em Feyrist (entrada para Candia)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Feyrist} (selo fae do {npc:Alkestios}, na {wiki:Threatened Dreams Quest}).",
+    "A {item:Gingerbread Key (Moon Melon, Raspberry and Lemon)}, que cozes no forno de Feyrist durante a mesma quest."
+  ],
+  "items": ["Gingerbread Key (Moon Melon, Raspberry and Lemon)", "Small Sapphire", "Small Emerald", "Small Ruby", "Small Amethyst"],
+  "arrive": [
+    "Vai a {wiki:Feyrist}: em qualquer cidade, entra no corredor dos quatro arcos elementais, escolhe o arco do elemento da tua gema e **usa** a gema no santuário lá dentro ({item:Small Sapphire} = gelo, {item:Small Emerald} = terra, {item:Small Ruby} = fogo, {item:Small Amethyst} = energia). A gema gasta-se.",
+    "Em Feyrist, vai ao donut gigante na parte **leste** da ilha ({coord:33574,32222,7}).",
+    "Com a {item:Gingerbread Key (Moon Melon, Raspberry and Lemon)} contigo, passa por baixo do donut: ele leva-te a Candia."
+  ],
+  "leave": [
+    "Se estás nas {wiki:Chocolate Mines} ou nas {wiki:Dessert Dungeons}, sobe pelo mesmo caminho por onde desceste.",
+    "Volta a Feyrist pelo donut, o mesmo caminho por onde entraste.",
+    "Em Feyrist **usa** qualquer um dos quatro santuários (não precisas de gema) para voltares ao continente."
+  ],
+  "coords": [
+    {"x": 33574, "y": 32222, "z": 7, "label": "Donut gigante (entrada e saída de Candia)"},
+    {"x": 33430, "y": 32279, "z": 7, "label": "Ice Shrine de Feyrist (saída)"},
+    {"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine de Feyrist (saída)"},
+    {"x": 33587, "y": 32262, "z": 7, "label": "Fire Shrine de Feyrist (saída)"}
+  ],
+  "images": [{"file": "Map of Candia.jpg", "caption": "Mapa de Candia"}],
+  "warnings": [
+    "A superfície é pacífica, mas nas {wiki:Chocolate Mines} e nas {wiki:Dessert Dungeons} há criaturas com cerca de 2500 a 3800 HP ({creature:Nibblemaw|Nibblemaws}, {creature:Candy Horror|Candy Horrors}, {creature:Goggle Cake|Goggle Cakes})."
+  ]
+}

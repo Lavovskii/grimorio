@@ -1,0 +1,170 @@
+{
+  "slug": "nomads-land-quest",
+  "category": "historia",
+  "region": "Ankrahmun",
+  "difficulty": 2,
+  "duration": "30 minutos (mais as esperas de 5 min se fores apanhado)",
+  "summary": "Um bando de ladrões roubou um casket sagrado aos nómadas. O {npc:Muhad}, líder dos nómadas, pede-te para entrares às escondidas no esconderijo dos ladrões, por baixo de Ankrahmun, e recuperá-lo. É uma missão furtiva: não podes fazer barulho nem ser visto. Ganhas 50 {item:Platinum Coin|Platinum Coins}, uma {item:Jewel Case (Nomad)}, o pergaminho {item:The Sacred Casket (Book)} e 2 {item:Small Sapphire|Small Sapphires}.",
+  "legend_pt": "Uns ladrões roubaram algo muito valioso aos nómadas.",
+  "start": {"x": 33279, "y": 32526, "z": 9, "label": "Muhad, Nomad Cave"},
+  "requirements": ["Premium Account.", "Ter terminado a {wiki:Arito's Task Quest}.", "Sem nível mínimo (recomendado 15)."],
+  "items_needed": [{"item": "Rope", "note": "ou Magic Rope"}, {"item": "Shovel", "note": "ou Light Shovel"}],
+  "rewards": [
+    {"item": "Platinum Coin", "qty": 50},
+    {"item": "Jewel Case (Nomad)"},
+    {"item": "The Sacred Casket (Book)"},
+    {"item": "Small Sapphire", "qty": 2, "note": "numa caixa dentro do esconderijo"}
+  ],
+  "dangers": ["Nomad (Basic)", "Hyaena", "Scorpion", "Rotworm", "Thief (creature)"],
+  "npcs": ["Muhad", "Arito"],
+  "tips": [
+    "Antes de entregares a missão ao Muhad, tira o {item:Casket} da mochila (deixa-o no depot ou no chão ao teu lado). Assim recebes a recompensa e ficas com o casket.",
+    "Estuda bem o mapa do esconderijo antes de entrares: o caminho certo evita todos os sons e janelas."
+  ],
+  "sections": [
+    {
+      "title": "1. Falar com o Muhad",
+      "steps": [
+        {
+          "title": "Chegar à Nomad Cave",
+          "text": "A {wiki:Nomad Cave} fica por baixo das montanhas entre **Darashia** e **Ankrahmun**, logo a leste da passagem para Darashia. Como já fizeste a {wiki:Arito's Task Quest}, usa a entrada secreta: no deserto, perto da entrada oficial, cava o buraco escondido com a {item:Shovel} (às vezes é preciso cavar várias vezes no tile certo), desce e passa a porta lá dentro, que só abre a quem completou a Arito's Task.",
+          "coords": [
+            {"x": 33205, "y": 32544, "z": 7, "label": "Entrada oficial da Nomad Cave"},
+            {"x": 33214, "y": 32553, "z": 7, "label": "Buraco secreto (entrada das traseiras)"},
+            {"x": 33279, "y": 32526, "z": 9, "label": "Muhad"}
+          ]
+        },
+        {
+          "title": "Aceitar a missão",
+          "text": "Vai à **Nomad Cave** e fala com o {npc:Muhad}. Diz {key:hi}, {key:mission}, {key:arito}, {key:yes} e {key:yes}. Ele conta-te que os ladrões têm o esconderijo em Ankrahmun e que a entrada é um pilar com um mecanismo escondido: o símbolo do olho do falcão.",
+          "npc": "Muhad",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be greeted, foreigner under the sun of Darama."},
+            {"you": "mission"},
+            {"npc": "So who sent you to me?"},
+            {"you": "arito"},
+            {"npc": "[...] Why are you asking me about him? Did he send you to me?"},
+            {"you": "yes"},
+            {"npc": "[...] Maybe you could help us in this case. Are you willing to do that?"},
+            {"you": "yes"},
+            {
+              "npc": "[...] If you press the eye of the hawk symbol a secret passage will appear that leads to their hideout. Once inside you have to look for a small casket. [...] Take the path behind me and you will get out of our hideout unharmed."
+            }
+          ],
+          "tip": "Para sair da Nomad Cave, usa o caminho atrás do Muhad, como ele te diz, para não teres problemas com os nómadas."
+        },
+        {
+          "title": "Sair da Nomad Cave e ir a Ankrahmun",
+          "text": "Sobe pelas escadas atrás do {npc:Muhad} (a saída das traseiras) e usa a {item:Rope} para subires à superfície pelo buraco do deserto. Daí segue a pé para **sul**, pelo deserto, até **Ankrahmun**.",
+          "coords": [{"x": 33214, "y": 32553, "z": 7, "label": "Buraco das traseiras (saída)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Entrar no esconderijo dos ladrões",
+      "steps": [
+        {
+          "title": "Usar o pilar",
+          "text": "Em **Ankrahmun**, vai até ao {item:Sandstone Pillar (Quest)|pilar de arenito}, a **noroeste do templo**. Usa o pilar: cais para uma cave 2 andares abaixo do chão (ponto 1 do mapa).",
+          "coords": [{"x": 33185, "y": 32845, "z": 7, "label": "Sandstone Pillar (entrada)"}],
+          "images": [
+            {
+              "file": "Thievesmap.png",
+              "caption": "Mapa do esconderijo dos ladrões com os pontos numerados e o caminho verde"
+            }
+          ]
+        },
+        {
+          "title": "Regras da furtividade",
+          "text": "Dentro do esconderijo, segue o **caminho verde** do mapa e respeita estas regras:",
+          "table": {
+            "head": ["Nunca faças isto", "Som que ouves"],
+            "rows": [
+              ["Pisar poças de {item:Beer|cerveja}, água ou {item:Milk|leite}", "SPLASH"],
+              ["Pisar loiça partida", "CRUNCH"],
+              ["Pisar tábuas ou montes de madeira no chão ou encostados à parede", "TOCK"],
+              ["Passar em frente a uma janela ou demasiado perto dela", "-"],
+              ["Entrar em zonas com muita luz", "-"]
+            ]
+          },
+          "images": [
+            {"file": "Nomad land 001.jpg", "caption": "Interior do esconderijo dos ladrões (1/9)"},
+            {"file": "Nomad land 01.jpg", "caption": "Interior do esconderijo dos ladrões (2/9)"},
+            {"file": "Nomad land 2.jpg", "caption": "Interior do esconderijo dos ladrões (3/9)"},
+            {"file": "Nomad land 25.jpg", "caption": "Interior do esconderijo dos ladrões (4/9)"},
+            {"file": "Nomad land 3.jpg", "caption": "Interior do esconderijo dos ladrões (5/9)"},
+            {"file": "Nomad land 4.jpg", "caption": "Interior do esconderijo dos ladrões (6/9)"},
+            {"file": "Nomad land 251.jpg", "caption": "Interior do esconderijo dos ladrões (7/9)"},
+            {"file": "Nomad land 252.jpg", "caption": "Interior do esconderijo dos ladrões (8/9)"},
+            {"file": "Nomad land 253.jpg", "caption": "Interior do esconderijo dos ladrões (9/9)"}
+          ],
+          "warning": "Se fizeres asneira aparece um {creature:Thief (creature)|Thief} a dizer \"That was a BIG mistake!\" e, se andares, \"You are exposed, run for your life!\". És teleportado para o pilar com a mensagem \"You barely escaped the thieves...\" e tens de esperar **5 minutos** antes de voltar a entrar."
+        }
+      ]
+    },
+    {
+      "title": "3. Atravessar o esconderijo (pontos do mapa)",
+      "steps": [
+        {
+          "title": "Ponto 2: alavanca e tigre",
+          "text": "Segue o caminho verde até ao ponto **2**. Espera que o {creature:Tiger|tigre} passe para norte, para lá da parede (ponto 3), e só então puxa a alavanca. És teleportado para o outro lado da porta trancada.",
+          "warning": "Confirma que o tigre está mesmo na sala do ponto 3 antes de puxares a alavanca."
+        },
+        {"title": "Ponto 4: apagar a luz", "text": "No ponto **4**, apaga a luz que está na parede."},
+        {
+          "title": "Safiras (opcional)",
+          "text": "A **linha roxa** do mapa leva-te a uma caixa com 2 {item:Small Sapphire|Small Sapphires}. Vai buscá-las.",
+          "reward": "2 Small Sapphires"
+        },
+        {
+          "title": "Ponto 5: fechar as tapeçarias",
+          "text": "No ponto **5**, puxa a alavanca para fechar as tapeçarias por cima da cama do ladrão."
+        },
+        {
+          "title": "Ponto 6: tapar a janela",
+          "text": "Esta é a parte difícil. No mapa, o ponto preto na parede a **sul** é uma janela. Ao lado do ponto 6 há caixotes e uma ânfora grande. Põe **3 caixotes em linha** ao longo da linha preta e coloca a **ânfora grande em cima do caixote do meio** (o que fica em frente à janela). Se a ânfora não estiver lá, põe 3 parcels ou boxes no lugar dela. Depois continua pelo caminho.",
+          "images": [{"file": "Part_06.JPG", "caption": "A forma certa de colocar os caixotes e a ânfora"}]
+        },
+        {
+          "title": "Ponto 7: abrir a cómoda",
+          "text": "No ponto **7** está a cómoda com o item da quest. Abre as gavetas e apanha o {item:Bag|saco}: tem o {item:Casket} e um pergaminho ({item:The Sacred Casket (Book)}) com um texto sobre o casket.",
+          "reward": "Casket e The Sacred Casket (Book)"
+        },
+        {
+          "title": "Ponto 8: fugir pelo teleporte",
+          "text": "Corre o mais depressa possível até ao ponto **8**, para o teleporte que está junto a uma estante de bambu. Ele leva-te de volta a Ankrahmun.",
+          "coords": [{"x": 33226, "y": 32865, "z": 7, "label": "Saída do teleporte em Ankrahmun"}],
+          "warning": "Se demorares, nascem 3 {creature:Thief (creature)|Thieves} e és teleportado para fora."
+        }
+      ]
+    },
+    {
+      "title": "4. Receber a recompensa",
+      "steps": [
+        {
+          "title": "Guardar o casket (opcional)",
+          "text": "Se quiseres ficar com o {item:Casket}, deixa-o no depot ou no chão ao teu lado antes de falares com o Muhad. Ele dá-te a recompensa na mesma."
+        },
+        {
+          "title": "Falar com o Muhad",
+          "text": "Volta à Nomad Cave e diz ao {npc:Muhad} {key:hi} e {key:mission} (ou {key:casket}). Recebes a recompensa. Para lá chegares, cava outra vez o buraco secreto no deserto com a {item:Shovel} e entra pela porta das traseiras; no fim sai pelo mesmo caminho com a {item:Rope}.",
+          "npc": "Muhad",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Welcome back my friend."},
+            {"you": "mission"},
+            {
+              "npc": "I can't believe you made it!! I don't know how to thank you. Take this as a reward and know that I am deeply indebted to you. [...]"
+            }
+          ],
+          "reward": "50 Platinum Coins e Jewel Case (Nomad)"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se não tiveres o casket contigo, o Muhad diz que os nómadas te seguiram e o recuperaram, mas na verdade ficas com ele.",
+    "Esta quest faz parte das {wiki:Tibia Tales}."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Mawhawk's Lair",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Pequena área no **nordeste do Guzzlemaw Valley**, a leste da muralha de Roshamuul, onde vive o boss {creature:Mawhawk}; só abre como world change.",
+  "entrance": {"x": 33698, "y": 32461, "z": 7, "label": "Mawhawk's Lair"},
+  "requirements": [
+    "A entrada só aparece (world change) depois de a tarefa de profanar santuários (desecrating shrines) do Guzzlemaw Valley ter sido feita cerca de **500 vezes** desde a última vez que o covil fechou.",
+    "Tens de conseguir chegar ao {wiki:Guzzlemaw Valley} (ponte de Roshamuul reparada)."
+  ],
+  "arrive": [
+    "Em **Thais**, fala com o {npc:Captain Bluebear} no porto: {key:hi}, {key:roshamuul}, {key:yes} (210 gp). Desembarcas no acampamento do sul de Lower Roshamuul, junto ao {npc:Captain Chelop} ({coord:33493,32569,7}).",
+    "Sobe a rampa a partir do acampamento e atravessa a ponte para **norte** até ao {wiki:Guzzlemaw Valley}.",
+    "Atravessa o vale para **nordeste**, passa a muralha de Roshamuul ({coord:33632,32401,7}) pelo lado de fora e continua para **leste** até à entrada do covil ({coord:33698,32461,7}), se estiver aberta."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho para **oeste/sudoeste** através do Guzzlemaw Valley, atravessa a ponte para **sul** e desce a rampa até ao acampamento de Lower Roshamuul.",
+    "Fala com o {npc:Captain Chelop}: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 33698, "y": 32461, "z": 7, "label": "Entrada do Mawhawk's Lair"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Muralha de Roshamuul (passagem para Upper Roshamuul)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (barco)"}
+  ],
+  "warnings": [
+    "Zona para nível 140–180+: {creature:Frazzlemaw|Frazzlemaws}, {creature:Guzzlemaw|Guzzlemaws} e o boss {creature:Mawhawk} (45 000 HP). O caminho pelo Guzzlemaw Valley também é muito perigoso."
+  ]
+}

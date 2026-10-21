@@ -1,0 +1,89 @@
+{
+  "slug": "circle-room-quest",
+  "category": "tesouro",
+  "region": "Kazordoon",
+  "difficulty": 3,
+  "duration": "45–90 min",
+  "summary": "Uma guarnição de anões guarda um tesouro numa sala circular nas profundezas das minas a oeste de Kazordoon. Desce cinco andares cheios de anões, passa a porta de nível 32 e abre caminho até ao fundo da sala circular para receberes um {item:Dwarven Axe} e um {item:War Hammer}.",
+  "legend_pt": "Uma guarnição de anões guarda um tesouro valioso numa sala nas profundezas, muito abaixo da superfície.",
+  "start": {"x": 32495, "y": 31975, "z": 7, "label": "Entrada da mina a oeste de Kazordoon"},
+  "requirements": [
+    "Nível 32 para a {item:Door of Expertise} (recomendado 40+).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "tem-na à mão para fugires da sala final se for preciso"},
+    {"text": "Armas de distância ou runas para matar os Dwarf Geomancers depressa"},
+    {"text": "Poções de vida e mana"}
+  ],
+  "rewards": [
+    {"item": "Dwarven Axe"},
+    {"item": "War Hammer"}
+  ],
+  "dangers": ["Dwarf", "Dwarf Soldier", "Dwarf Guard", "Dwarf Geomancer", "Rotworm", "Poison Spider"],
+  "npcs": [],
+  "tips": [
+    "Não subestimes esta quest: a sala circular tem respawn rápido e os {creature:Dwarf Geomancer|Dwarf Geomancers}, {creature:Dwarf Guard|Dwarf Guards} e {creature:Dwarf Soldier|Dwarf Soldiers} vêm de todos os lados.",
+    "Os Dwarf Geomancers drenam mana (0–80) e curam-se depressa. Mata-os primeiro, à distância ou com runas."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer pelas minas",
+      "steps": [
+        {
+          "title": "Entrar na mina",
+          "text": "Vai a **Kazordoon** e entra na mina dos anões indicada, à superfície a **oeste** da cidade ({coord:32495,31975,7}). Estás numa gruta muito pequena com um ou dois {creature:Dwarf|Dwarves}. Desce um andar.",
+          "coords": [{"x": 32495, "y": 31975, "z": 7, "label": "Entrada da mina"}]
+        },
+        {
+          "title": "Andar 1: nordeste",
+          "text": "Segue o caminho para **nordeste**, como no mapa, e desce pelo buraco.",
+          "images": [{"file": "Circle Room Quest Map 01.jpg", "caption": "Caminho no 1.º andar"}]
+        },
+        {
+          "title": "Andar 2: norte e leste",
+          "text": "Segue o caminho para **norte** e depois **leste** e desce pelo buraco.",
+          "images": [{"file": "Circle Room Quest Map 02.jpg", "caption": "Caminho no 2.º andar"}]
+        },
+        {
+          "title": "Andar 3: sul, oeste e norte",
+          "text": "Segue o caminho para **sul**, **oeste** e depois **norte** e desce pelo buraco.",
+          "images": [{"file": "Circle Room Quest Map 03.jpg", "caption": "Caminho no 3.º andar"}],
+          "warning": "Cuidado com os grupos de {creature:Dwarf Soldier|Dwarf Soldiers}."
+        },
+        {
+          "title": "Andar 4: diretamente para sul",
+          "text": "Vai **diretamente para sul** e desce pelo buraco. É um caminho curto, mas há muitos pequenos grupos de {creature:Dwarf Guard|Dwarf Guards} que vêm dos dois lados.",
+          "images": [{"file": "Circle Room Quest Map 04.jpg", "caption": "Caminho no 4.º andar"}]
+        },
+        {
+          "title": "Andar 5: porta de nível 32",
+          "text": "Segue o caminho para **sul**, **oeste** e **norte** pelo meio dos {creature:Dwarf Guard|Dwarf Guards}. Passa a {item:Door of Expertise} de **nível 32**. Antes de desceres o buraco seguinte, prepara a {item:Rope} para uma saída rápida.",
+          "images": [{"file": "Circle Room Quest Map 05.jpg", "caption": "Caminho no 5.º andar até à porta de nível 32 e ao buraco"}],
+          "warning": "Lá em baixo vais ser atacado por muitos {creature:Dwarf Soldier|Dwarf Soldiers}, {creature:Dwarf Guard|Dwarf Guards} e {creature:Dwarf Geomancer|Dwarf Geomancers}."
+        }
+      ]
+    },
+    {
+      "title": "2. A sala circular",
+      "steps": [
+        {
+          "title": "Atravessar a sala pelo lado leste",
+          "text": "Desce para a sala circular. Abre caminho pelo meio dos anões até ao extremo **sul** da sala. Mantém-te do lado **leste**: assim evitas a maioria dos anões e poupas mana.",
+          "images": [{"file": "Circle Room Quest Map 06.jpg", "caption": "A sala circular e as caixas da quest no extremo sul"}],
+          "warning": "Mata os {creature:Dwarf Geomancer|Dwarf Geomancers} depressa, com armas de distância ou runas. Cuidado em corpo-a-corpo: curam-se depressa e podem atrair-te para um grupo de anões."
+        },
+        {
+          "title": "Abrir as caixas",
+          "text": "No extremo **sul** da sala estão as caixas da quest. Abre-as para receberes as recompensas.",
+          "reward": "Dwarven Axe e War Hammer"
+        },
+        {
+          "title": "Sair das minas",
+          "text": "Não há atalho: volta pelo mesmo caminho. Sai da sala circular pelo buraco por onde desceste usando a {item:Rope} (é a fuga rápida se a sala encher de anões) e repete os mapas ao contrário, subindo com a Rope em cada buraco: 5.º, 4.º, 3.º, 2.º e 1.º andar. No fim sobes à pequena gruta da entrada e sais à superfície em {coord:32495,31975,7}, a oeste de Kazordoon.",
+          "coords": [{"x": 32495, "y": 31975, "z": 7, "label": "Saída da mina (a oeste de Kazordoon)"}]
+        }
+      ]
+    }
+  ]
+}

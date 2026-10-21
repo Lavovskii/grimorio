@@ -1,0 +1,28 @@
+{
+  "title": "Bulltaur Lair",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Covil dos bulltauros perto das {wiki:Pits of Inferno}, por baixo do cemitério das {wiki:Plains of Havoc} (sudoeste de Venore); entra-se por um trashcan e é uma zona de nível muito alto.",
+  "entrance": {"x": 32799, "y": 32365, "z": 8, "label": "Trashcan para o Bulltaur Lair (1 andar abaixo do cemitério)"},
+  "requirements": [
+    "O acesso ao trashcan é dado pela {wiki:20 Years a Cook Quest} (missão *Bulltaur Lair*).",
+    "Zona de nível muito alto: a wiki recomenda nível 400+."
+  ],
+  "items": ["Shovel"],
+  "arrive": [
+    "Vai a **Venore** de barco ({key:hi}, {key:venore}, {key:yes}) e sai da cidade para **sudoeste** até às {wiki:Plains of Havoc} ({coord:32735,32297,7}).",
+    "Vai ao cemitério perto da {wiki:Necromant House} ({coord:32781,32330,7}) e usa a {item:Shovel} numa {item:Loose Stone Pile} para abrires a gruta por baixo do cemitério (é a mesma entrada da {wiki:The Pits of Inferno Quest}).",
+    "O trashcan fica **1 andar abaixo** do cemitério ({coord:32799,32365,8}). Usa-o para entrares no Bulltaur Lair.",
+    "Dentro do covil há 4 pisos: em cada um segue até à descida seguinte."
+  ],
+  "leave": [
+    "Volta pelos mesmos pisos até ao ponto onde chegaste pelo trashcan e sai pelo mesmo sítio por onde entraste.",
+    "Sobe para o cemitério e regressa a Venore pelas Plains of Havoc, para **nordeste**."
+  ],
+  "coords": [
+    {"x": 32735, "y": 32297, "z": 7, "label": "Plains of Havoc"},
+    {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House (cemitério)"},
+    {"x": 32799, "y": 32365, "z": 8, "label": "Trashcan para o Bulltaur Lair"},
+    {"x": 32883, "y": 32363, "z": 8, "label": "Bulltaur Lair (piso 1)"}
+  ]
+}

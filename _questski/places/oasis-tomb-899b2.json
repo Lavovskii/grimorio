@@ -1,0 +1,29 @@
+{
+  "title": "Oasis Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo debaixo do deserto, logo a **norte do oásis** perto de Ankrahmun; nas partes profundas fica o faraó {creature:Rahemos}.",
+  "entrance": {"x": 33132, "y": 32641, "z": 7, "label": "Entrada da Oasis Tomb (buraco a cavar)"},
+  "requirements": [
+    "Para as partes profundas precisas de uma {item:Scarab Coin} (para pôr no {item:Coal Basin}) e de passar uma porta de experiência de **nível 75**.",
+    "Níveis recomendados: 1.º piso a partir de nível 10–13; os pisos depois dos teleportes são para nível 50–90."
+  ],
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade).",
+    "Sai para o deserto e vai até ao oásis; a entrada do túmulo fica logo a **norte** dele ({coord:33132,32641,7}).",
+    "Cava com a {item:Shovel} para abrir o buraco e desce.",
+    "Para as partes profundas: desce até ao piso -4, segue até ao {item:Coal Basin}, pisa a {item:Mystic Flame} (chama azul) e põe uma {item:Scarab Coin} no Coal Basin."
+  ],
+  "leave": [
+    "Volta ao início do túmulo e sobe pelo buraco da entrada com a {item:Rope}.",
+    "Cá fora, volta para **sul** até Ankrahmun."
+  ],
+  "images": [
+    {"file": "Oasistomb.jpg", "caption": "Oasis Tomb"}
+  ],
+  "warnings": [
+    "Nos pisos de cima há {creature:Scarab|Scarabs}, {creature:Mummy|Mummies}, {creature:Ghoul|Ghouls}, {creature:Stalker|Stalkers} e {creature:Slime|Slimes}; no fundo, {creature:Demongoblin|Demongoblins}, {creature:Warlock|Warlocks} e o {creature:Rahemos}.",
+    "Sem a {item:Ancient Rune} no inventário, o {item:Magic Forcefield} da sala do Rahemos manda-te de volta ao início do túmulo."
+  ]
+}

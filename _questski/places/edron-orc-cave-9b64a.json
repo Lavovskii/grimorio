@@ -1,0 +1,39 @@
+{
+  "title": "Edron Orc Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta cheia de orcs numa península a **sudoeste do castelo de Edron**, a que se chega por um esgoto na cave dos {wiki:Edron Flats}; tem várias quests (Barbarian Axe, Dark Armor, Poison Daggers, Shaman Treasure, Against the Spider Cult, Cults of Tibia).",
+  "entrance": {"x": 33173, "y": 31900, "z": 7, "label": "Entrada da Edron Orc Cave (península a sudoeste do castelo)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Se não estás em **Edron**, apanha um barco (no capitão do porto da tua cidade diz {key:hi}, {key:edron}, {key:yes}); chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.",
+    "Vai aos {wiki:Edron Flats}, os apartamentos logo a **sul** do castelo de Edron, e desce à cave. Procura o {item:Sewer Grate}, entra e segue o esgoto até saíres à superfície do outro lado, na península dos orcs.",
+    "À superfície, vai para **sul** até à entrada da gruta ({coord:33173,31900,7}). Está escondida debaixo de uma montanha: se não a vires, usa o minimapa. Se estiver tapada, escava-a com a {item:Shovel} e desce.",
+    "No primeiro piso, se uma pedra te bloquear o caminho, puxa a alavanca para a tirar. Os pisos seguintes descem por buracos (mapas abaixo)."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: em cada andar regressa ao buraco por onde caíste e usa a {item:Rope} para subires (seguindo os mapas ao contrário). No primeiro piso volta para **norte** até à entrada e sai para a superfície ({coord:33173,31900,7}).",
+    "À superfície, vai para **norte** até ao sítio por onde saíste do esgoto e **escava-o com a {item:Shovel}** (para voltar a Edron tens sempre de escavar esta passagem). Segue o esgoto até à cave dos **Edron Flats**.",
+    "No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades: {key:hi}, o nome da cidade (por exemplo {key:thais}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"},
+    {"x": 33123, "y": 31919, "z": 9, "label": "Buraco para a zona dos Cultish Orcs (só nível 150+)"}
+  ],
+  "images": [
+    {"file": "Edron Orc Cave Sewer Grate.png", "caption": "O Sewer Grate na cave dos Edron Flats"},
+    {"file": "Edron Orc Cave Ramp.png", "caption": "A entrada da Edron Orc Cave, escondida debaixo da montanha"},
+    {"file": "Edron Orc Cave Lever.png", "caption": "A alavanca que tira a pedra do caminho no primeiro piso"},
+    {"file": "Edron Orc Cave 0.png", "caption": "Mapa da Edron Orc Cave (0)"},
+    {"file": "Edron Orc Cave 1.png", "caption": "Mapa da Edron Orc Cave (1)"},
+    {"file": "Edron Orc Cave 2.png", "caption": "Mapa da Edron Orc Cave (2)"},
+    {"file": "Orcs3.JPG", "caption": "Mapa da Edron Orc Cave (3)"},
+    {"file": "Orcs4.JPG", "caption": "Mapa da Edron Orc Cave (4)"},
+    {"file": "Edron Orc Cave 4a.png", "caption": "Mapa da Edron Orc Cave (4a)"},
+    {"file": "Edron Orc Cave 5.png", "caption": "Mapa da Edron Orc Cave (5)"}
+  ],
+  "warnings": [
+    "Sem {item:Shovel} não consegues voltar a Edron sozinho depois de saíres na península: a passagem do esgoto tem de ser sempre escavada.",
+    "Há orcs em todos os pisos, incluindo à superfície, e é fácil ficares cercado. Abaixo de nível 150 não entres no buraco em {coord:33123,31919,9}: dá acesso aos Cultish Orcs, muito mais fortes."
+  ]
+}

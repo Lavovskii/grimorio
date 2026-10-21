@@ -1,0 +1,144 @@
+{
+  "slug": "behemoth-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 4,
+  "duration": "1–2 horas",
+  "summary": "Desce às profundezas de {wiki:Cyclopolis}, a norte de Edron, atravessa cinco andares de ciclopes, elementais de fogo e dragões, e limpa uma sala final com 4 {creature:Behemoth|Behemoths}. Lá dentro esperam-te uma {item:Demon Shield}, uma {item:Golden Armor}, uma {item:Guardian Halberd}, um {item:Platinum Amulet}, um {item:Life Ring}, um {item:Crystal Ring} e pedras preciosas.",
+  "start": {"x": 33250, "y": 31698, "z": 7, "label": "Entrada de Cyclopolis, a norte de Edron"},
+  "requirements": [
+    "Premium.",
+    "Nível 80 (há uma {item:Door of Expertise} de nível 80 antes da sala final, e outra de nível 30 pelo caminho).",
+    "Saber o feitiço {spell:Levitate}."
+  ],
+  "items_needed": [
+    {"item": "Destroy Field Rune", "note": "pelo menos 1, mais recomendado"},
+    {"item": "Dwarven Ring", "note": "recomendado: os Cyclops Smiths podem deixar-te bêbado"},
+    {"item": "Rope"},
+    {"text": "Opcional: {item:Stealth Ring} ou {spell:Invisible} para passar pelos ciclopes"}
+  ],
+  "rewards": [
+    {"item": "Demon Shield"},
+    {"item": "Golden Armor"},
+    {"item": "Guardian Halberd"},
+    {"item": "Platinum Amulet"},
+    {"item": "Life Ring"},
+    {"item": "Crystal Ring"},
+    {"item": "Small Diamond", "qty": 3},
+    {"item": "Small Sapphire", "qty": 4}
+  ],
+  "dangers": ["Cyclops", "Cyclops Drone", "Cyclops Smith", "Dwarf Guard", "Dwarf Soldier", "Fire Elemental", "Dragon", "Dragon Lord", "Behemoth"],
+  "npcs": [],
+  "tips": [
+    "Com {item:Stealth Ring} ou {spell:Invisible} podes correr pelos ciclopes, mas os {creature:Fire Elemental|Fire Elementals} dos andares de baixo veem-te na mesma.",
+    "Se o teu nível for justo, pede ajuda a um jogador de nível mais alto para a sala final."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer por Cyclopolis",
+      "steps": [
+        {
+          "title": "Entrar em Cyclopolis",
+          "text": "Vai a **Edron** (de barco: no capitão da tua cidade diz {key:hi}, {key:edron}, {key:yes}) e caminha para **norte** da cidade até {wiki:Cyclopolis}. Entra.",
+          "coords": [
+            {"x": 33250, "y": 31698, "z": 7, "label": "Entrada de Cyclopolis"}
+          ]
+        },
+        {
+          "title": "Atravessar os andares -1 a -5",
+          "text": "Desce até ao **5.º andar subterrâneo** (o dos dragões), seguindo os mapas abaixo (um por andar). Pelo caminho há uma {item:Door of Expertise} de nível 30. Prepara-te para:",
+          "images": [
+            {"file": "Behemoth Quest Map 1.png", "caption": "Mapa 1: amarelo = início, verde = destino"},
+            {"file": "Behemoth Quest Map 2.png", "caption": "Mapa 2"},
+            {"file": "Behemoth Quest Map 3.png", "caption": "Mapa 3"},
+            {"file": "Behemoth Quest Map 4.png", "caption": "Mapa 4: vermelho = Door of Expertise de nível 30"},
+            {"file": "Behemoth Quest Map 5.png", "caption": "Mapa 5: vermelho = alavanca que remove as rochas (ver secção 3)"}
+          ],
+          "table": {
+            "head": ["Andar", "O que vais encontrar"],
+            "rows": [
+              ["-1", "Muitos {creature:Cyclops|Cyclopes}, {creature:Cyclops Drone|Cyclops Drones}, {creature:Dwarf Soldier|Dwarf Soldiers}, {creature:Dwarf Guard|Dwarf Guards} e, por vezes, um {creature:Orc Leader}, {creature:Orc Berserker}, {creature:Minotaur Mage} ou {creature:Elf Arcanist} atraídos por alguém."],
+              ["-2", "Muitos Cyclopes, Cyclops Drones, {creature:Cyclops Smith|Cyclops Smiths} e Dwarf Soldiers."],
+              ["-3", "Muitos Cyclopes, Cyclops Drones, Cyclops Smiths e um {creature:Fire Elemental}."],
+              ["-4", "Muitos Cyclopes, Cyclops Drones, Cyclops Smiths e {creature:Fire Elemental|Fire Elementals}."],
+              ["-5", "3 {creature:Dragon|Dragons}, 2 Fire Elementals e um {creature:Dragon Lord} (na caverna)."]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "2. Verificar as rochas",
+      "steps": [
+        {
+          "title": "Levitar até à plataforma pequena",
+          "text": "Desce mais um andar: vês o andar dos Behemoths lá em baixo. Vai para **norte**, por trás das escadas, e procura um sítio para usar {spell:Levitate} para baixo (*exani hur down*) e descer para uma pequena plataforma com 2 {creature:Cyclops|Cyclopes}.",
+          "coords": [{"x": 33296, "y": 31689, "z": 13, "label": "Plataforma pequena (aproximadamente)"}],
+          "images": [{"file": "Behemoth Quest Levitate.png", "caption": "Usa Levitate aqui para desceres à plataforma de baixo"}]
+        },
+        {
+          "title": "Olhar para norte",
+          "text": "Na plataforma, vai à borda **norte** e olha para norte à procura de **rochas grandes**. Se **não houver rochas**, salta a secção 3 e vai diretamente para a secção 4.",
+          "images": [{"file": "Behemoth Quest Rocks.png", "caption": "Se as rochas estiverem lá, tens de puxar a alavanca"}]
+        }
+      ]
+    },
+    {
+      "title": "3. Puxar a alavanca (só se houver rochas)",
+      "steps": [
+        {
+          "title": "Voltar à plataforma de cima",
+          "text": "Volta para **sul** e usa {spell:Levitate} para cima (*exani hur up*) para subir à plataforma de onde vieste."
+        },
+        {
+          "title": "Chegar ao Dragon Lord",
+          "text": "Vai para **leste** e desce as escadas. Vai todo para **oeste** e a meio caminho para **sul** até às escadas seguintes. Sobe, e segue qualquer um dos caminhos até às escadas do **sudeste**. Sobe e mata o {creature:Dragon Lord}."
+        },
+        {
+          "title": "Destruir o campo e puxar a alavanca",
+          "text": "Usa uma {item:Destroy Field Rune} no quadrado mais a **oeste** da fila do corredor **norte**: está lá a alavanca. Pode ser preciso mover corpos para a encontrares. Deixa a alavanca virada para a **direita**.",
+          "images": [{"file": "Behemoth Quest Lever.png", "caption": "Confirma que a alavanca fica virada para a direita"}],
+          "warning": "Confirma que a alavanca fica para a **direita**, senão as rochas não desaparecem."
+        },
+        {
+          "title": "Voltar às rochas",
+          "text": "Refaz o caminho até à zona das rochas para continuares."
+        }
+      ]
+    },
+    {
+      "title": "4. A sala dos Behemoths",
+      "steps": [
+        {
+          "title": "Descer ao andar dos Behemoths",
+          "text": "Desce as escadas da plataforma e mata os {creature:Behemoth|Behemoths}, {creature:Dwarf Soldier|Dwarf Soldiers} e {creature:Cyclops|Cyclopes} que aparecem junto às escadas."
+        },
+        {
+          "title": "Passar a porta de nível 80",
+          "text": "Vai para **norte** pela passagem estreita e sobe as escadas. Passa a {item:Door of Expertise} de **nível 80** e prepara-te para a sala final."
+        },
+        {
+          "title": "Limpar a sala final",
+          "text": "Na sala final há **4 {creature:Behemoth|Behemoths}, 2 {creature:Cyclops Smith|Cyclops Smiths} e 2 {creature:Dragon|Dragons}**. Estratégias possíveis:\n- **Druids:** magic shield e *stair hop* (subir e descer escadas) com {spell:Eternal Winter} e {spell:Avalanche} ou {item:Sudden Death Rune|Sudden Death Runes}.\n- **Sorcerers:** o mesmo, mas com {spell:Rage of the Skies}.\n- **Knights:** {spell:Berserk} ou {spell:Fierce Berserk}.\n- **Paladins:** {spell:Divine Caldera}, mas matá-los um a um com {item:Energy Wall Rune|Energy Wall Runes} é provavelmente mais eficiente.",
+          "warning": "Os Behemoths batem muito forte. Usa um {item:Dwarven Ring}: os Cyclops Smiths podem deixar-te bêbado."
+        },
+        {
+          "title": "Apanhar as recompensas",
+          "text": "Com a sala limpa, vai ao extremo **norte** da sala: lá estão as recompensas.",
+          "reward": "Demon Shield, Golden Armor, Guardian Halberd, Platinum Amulet, Life Ring, Crystal Ring, 3 Small Diamonds e 4 Small Sapphires"
+        },
+        {
+          "title": "Sair de Cyclopolis",
+          "text": "Volta pelo mesmo caminho: sai da sala final pela porta de nível 80, desce as escadas e regressa pela passagem estreita até às escadas da plataforma pequena. Sobe-as e, na borda **sul** da plataforma, usa {spell:Levitate} para cima (*exani hur up*) para voltares à plataforma de onde vieste. Daí sobe os 5 andares de Cyclopolis seguindo os mapas da secção 1 ao contrário, até à entrada a **norte de Edron**.",
+          "coords": [
+            {"x": 33250, "y": 31698, "z": 7, "label": "Entrada/saída de Cyclopolis"}
+          ],
+          "warning": "Sem {spell:Levitate} (ou parcels) não consegues sair da plataforma pequena: guarda mana para isso."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O nível exigido mudou de 60 para 80 no fim de 2004 ou início de 2005."
+  ]
+}

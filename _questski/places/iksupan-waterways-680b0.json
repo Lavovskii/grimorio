@@ -1,0 +1,35 @@
+{
+  "title": "Iksupan Waterways",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Sistema de tubagens e salas por baixo de Iksupan, a \"cidade perdida do ouro\" dos Iks mortos-vivos, escondida sob as ruínas de Tiquanda a sudeste de Port Hope.",
+  "entrance": {"x": 34077, "y": 31581, "z": 10, "label": "Teleporte de acesso às Iksupan Waterways"},
+  "requirements": [
+    "Acesso obtido na parte Galthen and the City of Gold Part II da {wiki:Adventures of Galthen Quest} (depois de derrotares o {creature:Ahau} e falares com o {npc:Ahau's Dead Chamberlain}).",
+    "Nível recomendado: 400+."
+  ],
+  "arrive": [
+    "Vai a **Port Hope** (barco: {key:hi}, {key:port hope}, {key:yes}) e segue a pé pela selva para **sudeste** até às ruínas de Tiquanda; usa {item:The Key Intihuatac} nas inscrições ({coord:32727,32876,7}) para entrares em Iksupan.",
+    "No terceiro andar de Iksupan, a sala das **duas chamas azuis** tem o {wiki:Spheric Teleporter|teleporte esférico} (só depois de falares com o {npc:Ahau's Dead Chamberlain}, {key:yes}) que te leva para perto da cidade subterrânea.",
+    "Segue o corredor, sobe as escadas até ao túmulo com abertura a **leste** e desce pelo buraco até ao Iksupan Last Stand.",
+    "Daí vai ao outro teleporte esférico ({coord:34077,31581,10}) que leva às Waterways: anda para **norte**, passa pela {wiki:Enormous Statue of Tukh} e segue para **leste**, ou usa {spell:Levitate} num atalho mais curto."
+  ],
+  "leave": [
+    "A wiki não descreve um atalho de saída a partir das Waterways: volta pelo caminho por onde vieste até à zona das **chamas azuis** no terceiro andar de Iksupan.",
+    "Usa a {item:Slab with a Skull}, logo a **leste** das chamas azuis, para seres teleportado para a entrada nas ruínas de Tiquanda.",
+    "Daí volta a pé pela selva para **noroeste** até Port Hope, onde apanhas um barco."
+  ],
+  "coords": [
+    {"x": 34072, "y": 31540, "z": 9, "label": "Iksupan Waterways"},
+    {"x": 32727, "y": 32876, "z": 7, "label": "Passagem secreta para Iksupan (ruínas de Tiquanda)"},
+    {"x": 34007, "y": 31617, "z": 10, "label": "Sala da Mitmah West Key"}
+  ],
+  "images": [
+    {"file": "iksupanwaterworks.png", "caption": "Caminho até ao teleporte das Waterways"},
+    {"file": "Galthen and the City of Gold Part II - Waterworks Area Hub.png", "caption": "Sala principal (hub) das Waterways"}
+  ],
+  "warnings": [
+    "Há {creature:Iks Yapunac|Iks Yapunacs}, {creature:Mitmah Scout|Mitmah Scouts}, {creature:Mitmah Seer|Mitmah Seers} e {creature:Cursed Ape|Cursed Apes}.",
+    "No caminho de volta, cuidado com as armadilhas de espinhos do corredor e com a lava do terceiro andar de Iksupan (tira vida proporcional à vida máxima): não andes por map-click."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Northport",
+  "type": "cidade",
+  "near": "Carlin",
+  "summary": "Pequena aldeia de pescadores a **nordeste de Carlin** e a oeste de Ab'Dendriel, com um posto da Explorer Society; um pouco a sul fica a gruta que leva ao {wiki:Maze of Lost Souls}.",
+  "entrance": {"x": 32488, "y": 31610, "z": 7, "label": "Northport"},
+  "arrive": [
+    "Vai a **Carlin** (se vens de barco, diz ao capitão da tua cidade {key:hi}, {key:carlin}, {key:yes}; chegas junto ao {npc:Captain Greyhound}).",
+    "Sai da cidade para **norte**, pelos {wiki:Fields of Glory} ({coord:32362,31683,7}), e segue para **nordeste** até Northport ({coord:32488,31610,7})."
+  ],
+  "leave": [
+    "Volta a pé para **sudoeste**, pelos Fields of Glory, até Carlin.",
+    "Em Carlin apanha o barco do {npc:Captain Greyhound} para a cidade que quiseres."
+  ],
+  "coords": [
+    {"x": 32362, "y": 31683, "z": 7, "label": "Fields of Glory (norte de Carlin)"},
+    {"x": 32499, "y": 31626, "z": 7, "label": "Mortimer (posto da Explorer Society, leste de Northport)"},
+    {"x": 32483, "y": 31624, "z": 7, "label": "Marlene (sul de Northport)"},
+    {"x": 32489, "y": 31622, "z": 7, "label": "Graubart (casa no sul de Northport)"},
+    {"x": 32415, "y": 31586, "z": 7, "label": "Ajax (oeste de Northport)"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+  ],
+  "warnings": [
+    "No caminho só há criaturas fracas ({creature:Wolf|Wolves}, {creature:Spider|Spiders}, {creature:Poison Spider|Poison Spiders}), mas as grutas a sul da aldeia são bem mais perigosas."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Okolnir",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Pequena ilha gelada a **sudeste de Hrodmir**, a única das ilhas geladas com géiseres à superfície; é terra de {creature:Frost Dragon|Frost Dragons} e {creature:Frost Dragon Hatchling|Frost Dragon Hatchlings}.",
+  "entrance": {"x": 32224, "y": 31382, "z": 7, "label": "Barco do Buddel em Okolnir (chegada)"},
+  "requirements": [
+    "O {npc:Buddel} só te leva depois da {wiki:Barbarian Test Quest}."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Svargrond** de barco (de Carlin, Thais ou Venore: {key:hi}, {key:svargrond}, {key:yes}).",
+    "Em Svargrond, vai para **sul** até ao barco do {npc:Buddel} ({coord:32254,31195,7}) e diz {key:hi}, {key:passage}, {key:okolnir}, {key:yes} (50 gp).",
+    "Como ele está bêbedo, podes acabar noutra ilha: nesse caso pede de novo {key:okolnir} até chegares ao barco dele em Okolnir ({coord:32224,31382,7}).",
+    "Para o interior da ilha, sobe a rampa logo a **oeste** do Buddel, segue a montanha para **leste** e desce pela rampa que volta à superfície ({coord:32284,31410,6})."
+  ],
+  "leave": [
+    "Se desceste aos covis, sobe pelos buracos por onde desceste com a {item:Rope} até à superfície.",
+    "Sobe outra vez à montanha pela rampa ({coord:32284,31410,6}), segue-a para **oeste** e desce a rampa junto ao barco do {npc:Buddel}.",
+    "Diz {key:hi}, {key:passage}, {key:svargrond} (50 gp). Se fores parar a outra ilha, pede de novo {key:svargrond}."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32224, "y": 31382, "z": 7, "label": "Buddel em Okolnir"},
+    {"x": 32284, "y": 31410, "z": 6, "label": "Rampa entre a montanha e a superfície"},
+    {"x": 32275, "y": 31366, "z": 4, "label": "Gelidrazah's Thirst (3 andares acima do Buddel)"}
+  ],
+  "warnings": [
+    "Os {creature:Frost Dragon|Frost Dragons} batem até 1160 de dano: diz-se que só a partir de nível 120 se tira lucro aqui.",
+    "Um {item:Dwarven Ring} na mochila faz o Buddel levar-te ao sítio certo de graça, mas ele fica com o anel."
+  ]
+}

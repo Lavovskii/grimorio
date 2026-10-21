@@ -1,0 +1,116 @@
+{
+  "slug": "noble-armor-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Numa gruta escondida debaixo do {wiki:Mt. Sternum}, a leste de Thais, o guardião {npc:Skjaar} só entrega a chave da cripta a quem prove ter conhecido o seu mestre, o mago Dago. Paga 1000 gp, responde ao quiz, passa a porta de nível 35 e abre os baús para receberes uma {item:Noble Armor} e um {item:Crown Helmet}.",
+  "start": {"x": 32450, "y": 32070, "z": 7, "label": "Entrada oeste do Mount Sternum"},
+  "requirements": [
+    "Nível 35 (Gate of Expertise).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Gold Coin", "qty": 1000, "note": "para pagar o teste do Skjaar e receber a Key 3142"}
+  ],
+  "rewards": [
+    {"item": "Noble Armor"},
+    {"item": "Crown Helmet"}
+  ],
+  "achievements": [],
+  "dangers": ["Cyclops", "Ghoul", "Skeleton", "Cyclops Smith", "Cyclops Drone"],
+  "npcs": ["Skjaar", "Hoggle", "Lubo"],
+  "tips": [
+    "**Antes** de pagares o teste ao Skjaar, vê se a porta da sala dos baús está destrancada. Se estiver aberta, podes desperdiçar 1000 gp à toa.",
+    "Em alternativa, podes ir pela {wiki:Mount Sternum Undead Cave}: assim só enfrentas {creature:Ghoul|Ghouls} e {creature:Skeleton|Skeletons}."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao Skjaar",
+      "steps": [
+        {
+          "title": "Entrar no Mount Sternum",
+          "text": "Entra pela **entrada oeste** do Mount Sternum e desce as escadas. O {wiki:Mount Sternum} é a montanha a **nordeste** de Thais (a caminho de Kazordoon): sai de Thais e segue para nordeste até à entrada oeste.",
+          "coords": [{"x": 32450, "y": 32070, "z": 7, "label": "Entrada oeste do Mount Sternum"}],
+          "images": [{"file": "Map Mountsternum.jpg", "caption": "Mapa do Mount Sternum"}]
+        },
+        {
+          "title": "Seguir o mapa",
+          "text": "Começa por ir para **oeste** e segue o caminho do mapa (começas nas estrelas e sobes/desces nas setas). No primeiro piso vais encontrar alguns {creature:Cyclops}. No piso -2 há {creature:Skeleton|Skeletons} e alguns {creature:Ghoul|Ghouls}.",
+          "images": [{"file": "NobArmQuest.jpg", "caption": "Rota até ao Skjaar: começas nas estrelas e sobes/desces nas setas"}],
+          "warning": "Dependendo do caminho, também podes encontrar {creature:Cyclops Smith|Cyclops Smiths} e {creature:Cyclops Drone|Cyclops Drones}."
+        }
+      ]
+    },
+    {
+      "title": "2. O quiz do Skjaar",
+      "intro": "O Skjaar só te deixa passar se provares que conheceste o mestre dele, o mago Dago. Respostas: {key:redips}, {key:7} e {key:black}.",
+      "steps": [
+        {
+          "title": "Verificar a porta",
+          "text": "Antes de falares com o Skjaar, vai ver se a porta da sala dos baús está destrancada. Se estiver, salta o quiz e poupa 1000 gp."
+        },
+        {
+          "title": "Fazer o teste e comprar a chave",
+          "text": "Fala com o {npc:Skjaar} e diz: {key:hi}, {key:key}, {key:yes}, {key:yes} (pagas 1000 gp), {key:redips}, {key:7}, {key:black} e {key:yes}. Recebes a {item:Key 3142}.",
+          "npc": "Skjaar",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "It's good to see somebody who has chosen the path of wisdom. What do you want?"},
+            {"you": "key"},
+            {"npc": "I will give the key to the crypt only to the closest followers of my master. Would you like me to test you?"},
+            {"you": "yes"},
+            {"npc": "Before we start I must ask you for a small donation of 1000 gold coins. Are you willing to pay 1000 gold coins for the test?"},
+            {"you": "yes"},
+            {"npc": "All right then. Here comes the first question. What was the name of Dago's favourite pet?"},
+            {"you": "redips"},
+            {"npc": "Perhaps you knew him after all. Tell me - how many fingers did he have when he died?"},
+            {"you": "7"},
+            {"npc": "Also true. But can you also tell me the colour of the deamons in which master specialized?"},
+            {"you": "black"},
+            {"npc": "It seems you are worthy after all. Do you want the key to the crypt?"},
+            {"you": "yes"},
+            {"npc": "Here you are."}
+          ],
+          "table": {
+            "head": ["Pergunta", "Resposta", "Porquê"],
+            "rows": [
+              ["Nome do animal preferido do Dago", "{key:redips}", "Uma campa no {wiki:Graveyard of the Doomed} diz que ali jaz a aranha preferida do maior mago. O {npc:Hoggle} ({key:pet names}) conta que o mago dava às criaturas o nome da espécie ao contrário: *spider* ao contrário é *redips*."],
+              ["Quantos dedos tinha quando morreu", "{key:7}", "Outra campa guarda o polegar do Dago, perdido numa batalha com um demónio. O {npc:Lubo} ({key:finger}) conta que ele perdeu mais dois dedos ao conjurar um dragão: 10 - 1 - 2 = 7."],
+              ["Cor dos demónios em que se especializou", "{key:black}", "O livro {item:How to Summon Black Demons (Book)|How to Summon Black Demons}, escrito pelo Dago, está na sala escondida dos Demon Skeletons debaixo do Mount Sternum. O Lubo ({key:magician}) diz que o estandarte dele era o olho negro."]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "3. A cripta e os baús",
+      "steps": [
+        {
+          "title": "Passar a porta de nível 35",
+          "text": "Passa o {wiki:Gate of Expertise} de nível 35 e usa a {item:Key 3142} para entrar na cripta."
+        },
+        {
+          "title": "Matar os Ghouls",
+          "text": "Dentro da sala da quest há 4 {creature:Ghoul|Ghouls}. Mata-os."
+        },
+        {
+          "title": "Abrir os baús",
+          "text": "Abre os {item:Chest (Quest)|baús} do **sul** para receberes a {item:Noble Armor} e o {item:Crown Helmet}.",
+          "reward": "Noble Armor e Crown Helmet"
+        },
+        {
+          "title": "Baú extra (opcional)",
+          "text": "A norte dos baús da quest há outro baú, em cima de fogo. Tem uma {item:Short Sword}, 8 {item:Poison Arrow|Poison Arrows}, 34 gp e uma {item:White Pearl}. Este baú renova-se todos os dias ({wiki:Daily Respawn|daily respawn}).",
+          "warning": "O baú está em cima de fogo: vais levar dano ao apanhá-lo."
+        },
+        {
+          "title": "Sair do Mount Sternum",
+          "text": "Volta pelo mesmo caminho do mapa, ao contrário: sobe os pisos por onde desceste (usa a {item:Rope} nos buracos onde for preciso) até à entrada oeste do Mount Sternum e regressa a Thais, a **sudoeste**.",
+          "coords": [{"x": 32450, "y": 32070, "z": 7, "label": "Entrada oeste do Mount Sternum"}]
+        }
+      ]
+    }
+  ]
+}

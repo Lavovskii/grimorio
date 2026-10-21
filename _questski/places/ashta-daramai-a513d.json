@@ -1,0 +1,30 @@
+{
+  "title": "Ashta'daramai",
+  "type": "edificio",
+  "near": "Ankrahmun",
+  "summary": "A fortaleza dos djinns azuis (Blue Djinn Fortress) de {npc:Gabel}, nas montanhas de {wiki:Kha'zeel} a **norte de Ankrahmun**.",
+  "entrance": {"x": 33101, "y": 32527, "z": 7, "label": "Ashta'daramai (Blue Djinn Fortress)"},
+  "requirements": [
+    "As portas da entrada só deixam passar jogadores de **nível 30** ou mais.",
+    "Para comerciar com o {npc:Nah'Bob} e o {npc:Haroun} tens de ter feito a {wiki:The Djinn War - Marid Faction|Blue Djinn Quest}."
+  ],
+  "arrive": [
+    "Viaja de barco até **Ankrahmun** (por exemplo de Venore com o {npc:Captain Fearless} ou de Edron com o {npc:Captain Seahorse}: {key:hi}, {key:ankrahmun}, {key:yes}).",
+    "Sai de Ankrahmun para **norte** e sobe a rampa para as montanhas ({coord:33120,32578,7}).",
+    "Segue o caminho pelas montanhas até à fortaleza ({coord:33101,32527,7}); cuidado com os {creature:Stone Golem|Stone Golems} que andam por ali.",
+    "O {npc:Umar} está à entrada, um andar acima ({coord:33102,32531,6})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sai da fortaleza, desce a rampa das montanhas para **sul** e regressa a Ankrahmun.",
+    "Em Ankrahmun apanha o barco no porto para a cidade que quiseres."
+  ],
+  "coords": [
+    {"x": 33120, "y": 32578, "z": 7, "label": "Rampa para as montanhas, a norte de Ankrahmun"},
+    {"x": 33102, "y": 32531, "z": 6, "label": "Umar (entrada, 1 andar acima)"},
+    {"x": 33068, "y": 32531, "z": 6, "label": "Casa do Jean Pierre, poucos passos a oeste da fortaleza"}
+  ],
+  "warnings": [
+    "No caminho podes encontrar {creature:Stone Golem|Stone Golems}, {creature:Hyaena|Hyaenas}, {creature:Larva|Larvas}, {creature:Scarab|Scarabs} e {creature:Scorpion|Scorpions}.",
+    "Dentro da fortaleza há {creature:Blue Djinn|Blue Djinns}, {creature:Marid|Marids} e {creature:Fire Elemental|Fire Elementals}; quanto mais sobes na torre, mais fortes são as criaturas."
+  ]
+}

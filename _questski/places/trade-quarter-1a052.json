@@ -1,0 +1,30 @@
+{
+  "title": "Trade Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Antigo bairro comercial de **Yalahar**, a **sul** do centro e junto ao porto, hoje ocupado por criminosos que roubam os mercadores que chegam de barco.",
+  "entrance": {"x": 32826, "y": 31325, "z": 7, "label": "Trade Quarter (Yalahar)"},
+  "arrive": [
+    "Viaja até **Yalahar**: em Liberty Bay fala com o {npc:Captain Max} ({key:hi}, {key:yalahar}; precisas do rank Novice no Explorer Society) ou, em Thais, com o {npc:Captain Bluebear} se compraste a palavra-passe ao {npc:Wyrdin's Apprentice}. Depois de desbloqueares as rotas do {npc:Karith} (In Service of Yalahar) há barco direto de várias cidades (por exemplo em Venore: {key:hi}, {key:yalahar}, {key:yes}).",
+    "Chegas ao porto de Yalahar, a **sul** do centro da cidade. O Trade Quarter fica logo ali, junto ao porto ({coord:32826,31325,7}); as docas do Trade Quarter (onde estão o {npc:Julius} e o barco do {npc:Harlow} para Vengoth) ficam a direito para **sul** a partir do portão principal.",
+    "Para entrares no interior do bairro a partir do centro, usa o {wiki:Mechanism (Teleporter)|mecanismo} ao lado do portão do Trade Quarter. Só funciona depois de o {npc:Yalahari (NPC)} te dar acesso (missão 4 (*Good to be Kingpin*) da {wiki:In Service of Yalahar Quest}); senão aparece *\"The gate mechanism won't move\"*.",
+    "Sem mecanismo, passa pelos guardas dos portões entre bairros (a cada um diz {key:pass} e o nome do bairro de destino). O {npc:Peter} guarda o portão entre o {wiki:Factory Quarter} e o Trade Quarter ({coord:32857,31302,7})."
+  ],
+  "leave": [
+    "Volta pelas mesmas portas até à rua e usa outra vez o mecanismo do Trade Quarter para regressares ao centro, ou sai pelo portão do {npc:Peter} ({key:pass}, {key:factory quarter}).",
+    "Para saíres de Yalahar, vai ao porto: o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou Thais ({key:thais}, 800 gp); com as rotas desbloqueadas, o {npc:Karith} ({coord:32818,31278,5}) leva-te a 8 cidades por menos dinheiro."
+  ],
+  "coords": [
+    {"x": 32830, "y": 31276, "z": 7, "label": "Julius (docas do Trade Quarter)"},
+    {"x": 32859, "y": 31325, "z": 7, "label": "Armenius (taberna do Trade Quarter)"},
+    {"x": 32857, "y": 31302, "z": 7, "label": "Peter — portão Trade / Factory Quarter"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar)"}
+  ],
+  "images": [
+    {"file": "Map yalahar.jpg", "caption": "Mapa de Yalahar"}
+  ],
+  "warnings": [
+    "O bairro está cheio de criminosos ({creature:Smuggler|Smugglers}, {creature:Bandit|Bandits} e afins): mantém-te nas ruas principais."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "slug": "stealth-ring-quest",
+  "category": "tesouro",
+  "region": "Darashia",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Uma quest nada complicada, mas perigosa: desce os vários andares da {wiki:Minotaur Pyramid|Minotaur Pyramid}, a nordeste de Darashia, abrindo caminho por entre minotauros de todos os tipos. No fundo, depois de matares uma {creature:Mummy}, abres dois caixões com um {item:Stealth Ring} e um {item:Protection Amulet}.",
+  "start": {
+    "x": 33312,
+    "y": 32282,
+    "z": 7,
+    "label": "Minotaur Pyramid, a nordeste de Darashia"
+  },
+  "requirements": [
+    "Premium.",
+    "Sem nível mínimo (recomendado 40)."
+  ],
+  "items_needed": [
+    {
+      "text": "Poções de vida suficientes para várias salas de minotauros"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Stealth Ring"
+    },
+    {
+      "item": "Protection Amulet"
+    }
+  ],
+  "dangers": [
+    "Minotaur",
+    "Minotaur Archer",
+    "Minotaur Guard",
+    "Minotaur Mage",
+    "Mummy"
+  ],
+  "npcs": [],
+  "tips": [
+    "Mata os minotauros andar a andar em vez de correres: no fundo vais precisar de espaço para enfrentar a Mummy.",
+    "Os {creature:Minotaur Mage|Minotaur Mages} do penúltimo andar fazem dano mágico à distância; trata deles primeiro."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer a pirâmide",
+      "steps": [
+        {
+          "title": "Chegar à pirâmide",
+          "text": "Viaja até **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}). Sai da cidade e segue para **nordeste** até à {wiki:Minotaur Pyramid|Minotaur Pyramid}. Ao nível do chão só encontras {creature:Minotaur|Minotaurs}.",
+          "coords": [
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Porto de Darashia (Petros)"
+            },
+            {
+              "x": 33270,
+              "y": 32439,
+              "z": 6,
+              "label": "Tapete de Darashia (Chemar)"
+            },
+            {
+              "x": 33312,
+              "y": 32282,
+              "z": 7,
+              "label": "Minotaur Pyramid"
+            }
+          ]
+        },
+        {
+          "title": "Primeira descida",
+          "text": "Desce as escadas. Lá em baixo há {creature:Minotaur|Minotaurs} e um ou dois {creature:Minotaur Guard|Minotaur Guards}."
+        },
+        {
+          "title": "Para sudoeste e descer",
+          "text": "Segue este caminho para **sudoeste** e desce outra escada.",
+          "images": [
+            {
+              "file": "Stealth Ring Quest Map 01.jpg",
+              "caption": "Mapa 1: caminho para sudoeste até à escada"
+            }
+          ]
+        },
+        {
+          "title": "Para leste/nordeste e descer",
+          "text": "Vai para **leste/nordeste**. Neste andar há vários {creature:Minotaur Guard|Minotaur Guards} e {creature:Minotaur Archer|Minotaur Archers}. Desce a escada seguinte.",
+          "images": [
+            {
+              "file": "Stealth Ring Quest Map 02.jpg",
+              "caption": "Mapa 2: caminho para leste/nordeste até à escada"
+            }
+          ],
+          "warning": "No andar de baixo há minotauros de todos os tipos, incluindo cerca de 4 {creature:Minotaur Mage|Minotaur Mages}."
+        },
+        {
+          "title": "Para norte e descer",
+          "text": "Neste andar, vai para **norte** e procura outra escada para baixo. No fundo espera-te uma {creature:Mummy}.",
+          "images": [
+            {
+              "file": "Stealth Ring Quest Map 03.jpg",
+              "caption": "Mapa 3: caminho para norte até à última escada"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Os caixões",
+      "steps": [
+        {
+          "title": "Matar a Mummy",
+          "text": "Mata a {creature:Mummy} que está na sala final."
+        },
+        {
+          "title": "Abrir os dois caixões",
+          "text": "Abre o caixão **sudeste** para receberes o {item:Stealth Ring} e o caixão **nordeste** para receberes o {item:Protection Amulet}.",
+          "images": [
+            {
+              "file": "Stealth Ring Quest Map 04.jpg",
+              "caption": "Mapa 4: os caixões com as recompensas"
+            }
+          ],
+          "reward": "Stealth Ring e Protection Amulet"
+        },
+        {
+          "title": "Sair da pirâmide",
+          "text": "Para sair, volta pelo **mesmo caminho**: sobe as escadas por onde desceste (segue os mapas 3, 2 e 1 ao contrário: **sul**, depois **oeste/sudoeste** e por fim **nordeste**) até ao rés-do-chão da pirâmide. Não precisas de nenhum item. Depois regressa a Darashia, para **sudoeste**.",
+          "coords": [
+            {
+              "x": 33312,
+              "y": 32282,
+              "z": 7,
+              "label": "Saída da Minotaur Pyramid"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

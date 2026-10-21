@@ -1,0 +1,40 @@
+{
+  "title": "Desert Dungeon",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Labirinto de grutas por baixo do **Jakundaf Desert**, a **oeste de Venore** e a **sul de Kazordoon** (entre Venore e Thais), onde se fazem a {wiki:The Desert Dungeon Quest} e a {wiki:Panpipe Quest}.",
+  "entrance": {"x": 32648, "y": 32094, "z": 7, "label": "Entrada do Desert Dungeon (Loose Stone Pile)"},
+  "requirements": [
+    "Antes de entrares, sabe o caminho até ao teleporte de saída junto ao {item:Gate of Expertise} da Desert Dungeon Quest: é a única forma segura de sair."
+  ],
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai a pé até ao **Jakundaf Desert**: de Venore segue para **oeste** (o deserto fica entre Venore e Thais, a sul de Kazordoon).",
+    "A entrada é uma {item:Loose Stone Pile} no meio do deserto, perto do templo do {npc:Adrenius} ({coord:32648,32094,7}).",
+    "Usa a {item:Shovel} na pilha de pedras e desce. Lá dentro, desce **5 escadas** seguidas até ao fundo (andar das {creature:Spider|Spiders})."
+  ],
+  "leave": [
+    "Não podes sair pelo buraco por onde entraste. Volta ao andar das aranhas (o fundo, depois das 5 descidas).",
+    "Daí vai para **norte**, vira para **leste** assim que puderes e segue a gruta para **sul** até à escada; sobe.",
+    "Vai para **oeste** até outra escada e sobe (**não** desças o buraco a sul com a placa de aviso). Vai para **sul** e sobe a escada seguinte.",
+    "Vai para **leste** e **norte** (há um buraco: **não** desças), depois **leste** e **norte** outra vez até à última escada; sobe. Chegas ao {item:Gate of Expertise}.",
+    "Ao lado do Gate of Expertise está o **teleporte de saída**: entra nele e apareces junto ao {npc:Adrenius}, no templo do Jakundaf Desert. Sai para a superfície e volta a pé para Venore (**leste**). Completar a Desert Dungeon Quest é a outra forma de sair."
+  ],
+  "coords": [
+    {"x": 32633, "y": 32113, "z": 7, "label": "Jakundaf Desert"},
+    {"x": 32652, "y": 32108, "z": 7, "label": "Pedra oca com a Key 4055 (junto à entrada)"},
+    {"x": 32619, "y": 32100, "z": 12, "label": "Sala inacessível com alavanca e teleporte (Banshee)"}
+  ],
+  "images": [
+    {"file": "Desert dungeon entrance.jpg", "caption": "Entrada do Desert Dungeon"},
+    {"file": "Desert Dungeon -1.png", "caption": "Mapa do Desert Dungeon, piso -1"},
+    {"file": "Desert Dungeon -2.png", "caption": "Mapa do Desert Dungeon, piso -2"},
+    {"file": "Desert Dungeon -3.png", "caption": "Mapa do Desert Dungeon, piso -3"},
+    {"file": "Desert Dungeon -4.png", "caption": "Mapa do Desert Dungeon, piso -4"},
+    {"file": "Desert Dungeon -5.png", "caption": "Mapa do Desert Dungeon, piso -5"}
+  ],
+  "warnings": [
+    "É um labirinto onde até jogadores experientes se perdem, e há buracos sem rope spot do outro lado: não desças por buracos que não conheças.",
+    "Há salas com criaturas perigosas para jogadores pouco preparados ({creature:Bonelord|Bonelords}, {creature:Fire Devil|Fire Devils}); recomendado nível 25–35+."
+  ]
+}

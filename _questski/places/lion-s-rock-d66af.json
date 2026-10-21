@@ -1,0 +1,29 @@
+{
+  "title": "Lion's Rock",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Formação rochosa a **noroeste de Darashia**, perto do portal da Gnomebase, com uma gruta de vários andares (Bonebeasts, {creature:Ancient Scarab|Ancient Scarabs} e {creature:Roaring Lion|Roaring Lions}); é aqui a {wiki:Lion's Rock Quest}.",
+  "entrance": {"x": 33138, "y": 32358, "z": 7, "label": "Entrada de Lion's Rock"},
+  "requirements": [
+    "Conta **Premium** (Darashia só se alcança de barco ou tapete)."
+  ],
+  "arrive": [
+    "Vai a **Darashia**, de barco (por exemplo, de Venore: {key:hi}, {key:darashia}, {key:yes}) ou de tapete mágico a partir de Edron com o {npc:Pino} ({coord:33192,31783,3}).",
+    "Sai da cidade para **oeste-noroeste** até ao Lion's Rock, uma formação rochosa perto do portal de Darashia para a Gnomebase ({coord:33138,32358,7}).",
+    "Por cima da entrada há rampas e escadas por fora da montanha (aí ficam o {item:Stump} com {item:Lion's Mane} e a fonte de água benta). A gruta desce a partir da entrada; perto do início está o {item:Dead Explorer} ({coord:33145,32342,8})."
+  ],
+  "leave": [
+    "A wiki não descreve um atalho de saída: volta pelo caminho por onde vieste até à zona da {item:Mystic Flame} no primeiro andar subterrâneo e sobe à superfície pelo caminho da gruta.",
+    "Regressa a Darashia para **leste-sudeste**. No porto, o {npc:Petros} ({coord:33289,32481,6}) leva-te a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar e outras cidades."
+  ],
+  "coords": [
+    {"x": 33138, "y": 32358, "z": 7, "label": "Entrada de Lion's Rock"},
+    {"x": 33136, "y": 32353, "z": 5, "label": "Stump com Lion's Mane (por cima da entrada)"},
+    {"x": 33145, "y": 32342, "z": 8, "label": "Dead Explorer (início da gruta)"},
+    {"x": 33128, "y": 32251, "z": 11, "label": "Lion Sanctum"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (porto de Darashia)"}
+  ],
+  "warnings": [
+    "Algumas criaturas daqui não se podem bloquear. Nos andares de baixo os {creature:Ancient Scarab|Ancient Scarabs} renascem depressa e podem paralisar-te e cercar-te. Recomendado nível 60-70+."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Newhaven",
+  "type": "ilha",
+  "near": "Thais",
+  "summary": "Ilha de principiantes (desde outubro de 2025), uma aldeia costeira pacífica a **leste de Bounac** onde as personagens novas começam, aprendem o básico e sobem até ao nível 8 antes de partirem para o continente.",
+  "entrance": {"x": 32552, "y": 32498, "z": 7, "label": "Docas de Newhaven (Anna)"},
+  "requirements": [
+    "Só personagens novas começam aqui; quem sai de Newhaven **nunca mais pode voltar**.",
+    "A saída **oeste** da aldeia é uma porta de nível que só abre a partir do **nível 8**."
+  ],
+  "arrive": [
+    "Não há viagem para Newhaven: as personagens novas começam aqui automaticamente, logo depois de escolherem a vocação, e recebem a missão *Welcome to Newhaven* da {wiki:Newhaven Quest}.",
+    "A zona de caça fica na saída **norte** da aldeia; as {wiki:Corrupted Mines} sobem-se pelas escadas na ponta **nordeste** ({coord:32598,32418,7})."
+  ],
+  "leave": [
+    "Ao chegares ao **nível 8**, sai da vila pela saída **oeste** (porta de nível 8) e vai às docas.",
+    "Fala com a {npc:Anna} ({coord:32552,32498,7}): {key:hi}, {key:passage}, {key:yes}. A viagem é **só de ida**: leva-te a {wiki:Targuna}, na península de Thais (os Monks vão para o Blue Valley)."
+  ],
+  "coords": [
+    {"x": 32552, "y": 32498, "z": 7, "label": "Anna (docas de Newhaven)"},
+    {"x": 32598, "y": 32418, "z": 7, "label": "Escadas para as Corrupted Mines (nordeste)"}
+  ]
+}

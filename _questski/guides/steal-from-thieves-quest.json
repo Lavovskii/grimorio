@@ -1,0 +1,87 @@
+{
+  "slug": "steal-from-thieves-quest",
+  "category": "historia",
+  "region": "Ankrahmun",
+  "difficulty": 1,
+  "duration": "15–30 min",
+  "summary": "O lojista {npc:Ahmet}, de Ankrahmun, foi roubado e os ladrões fugiram para o oásis a norte da cidade. Encontra o saco com os pertences dele escondido atrás de uma palmeira e devolve-lho em troca de 100 {item:Brown Mushroom|Brown Mushrooms} e 100 {item:Gold Coin|Gold Coins}.",
+  "start": {"x": 33126, "y": 32810, "z": 6, "label": "Ahmet, Ankrahmun"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo (recomendado 20).",
+    "**400 oz** de capacidade livre para carregar o saco do Ahmet."
+  ],
+  "items_needed": [
+    {"text": "400 oz de capacidade livre"}
+  ],
+  "rewards": [
+    {"item": "Brown Mushroom", "qty": 100},
+    {"item": "Gold Coin", "qty": 100}
+  ],
+  "achievements": [],
+  "dangers": ["Nomad (Basic)", "Hyaena"],
+  "npcs": ["Ahmet"],
+  "tips": [
+    "Podes ir buscar o saco ao oásis mesmo antes de falares com o Ahmet.",
+    "Liberta capacidade antes de saíres de Ankrahmun: o saco pesa 400 oz."
+  ],
+  "sections": [
+    {
+      "title": "1. O Ahmet foi roubado",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Se ainda não estás em **Ankrahmun**, apanha um barco para lá (por exemplo em Venore, Port Hope, Liberty Bay ou Darashia): diz {key:hi}, {key:ankrahmun} e {key:yes} ao capitão. Chegas ao porto, junto ao {npc:Captain Sinbeard}. Fala com o {npc:Ahmet} em **Ankrahmun** (1 andar acima do chão). Diz {key:hi}, {key:mission} e {key:yes}. Ele pede-te que recuperes as coisas que os ladrões lhe roubaram; viu-os fugir para norte, talvez para o oásis.",
+          "npc": "Ahmet",
+          "coords": [{"x": 33126, "y": 32810, "z": 6, "label": "Ahmet"}, {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be mourned pilgrim in flesh."},
+            {"you": "mission"},
+            {"npc": "What are you talking about?? I was robbed!!!! [...] YOU! Want to earn some quick money?"},
+            {"you": "yes"},
+            {"npc": "Of course you do! Go hunt down the thieves and bring back the stuff they have stolen from me. [...] I saw them running out of town and then to the north. Maybe they hide at the oasis."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. O saco escondido no oásis",
+      "steps": [
+        {
+          "title": "Encontrar a caixa",
+          "text": "Sai de **Ankrahmun** a pé e caminha para **norte** pelo deserto de {wiki:Darama}, até ao oásis (não precisas de barco nem de ferramentas). A caixa está escondida atrás de uma palmeira, a **sul** do oásis.",
+          "coords": [{"x": 33131, "y": 32662, "z": 7, "label": "Caixa escondida atrás da palmeira"}],
+          "images": [{"file": "Ahmets_Hidden_Bag.png", "caption": "A caixa escondida atrás da palmeira, a sul do oásis"}],
+          "warning": "No deserto há {creature:Nomad (Basic)|Nomads} e {creature:Hyaena|Hyaenas}."
+        },
+        {
+          "title": "Tirar o saco",
+          "text": "Abre a caixa e tira o {item:Bag (Ahmet)|saco do Ahmet} (*\"You see a bag. It weighs 400.00 oz. It contains Ahmet's stolen property.\"*).",
+          "warning": "Precisas de **400 oz** de capacidade livre para o apanhar."
+        }
+      ]
+    },
+    {
+      "title": "3. Devolver o saco",
+      "steps": [
+        {
+          "title": "Receber a recompensa",
+          "text": "Para saíres do oásis, volta pelo mesmo caminho: caminha para **sul** pelo deserto até **Ankrahmun** e sobe ao andar do {npc:Ahmet}. Fala com ele com o saco. Diz {key:hi}, {key:mission} (ou {key:quest}) e {key:yes}.",
+          "npc": "Ahmet",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "Did you find my stuff?"},
+            {"you": "yes"},
+            {"npc": "GREAT! If you ever need a job as my personal security guard, let me know. Here is the reward I promised you."}
+          ],
+          "reward": "100 Brown Mushrooms e 100 Gold Coins"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Esta quest faz parte do registo {wiki:Tibia Tales|Tibia Tales}."
+  ]
+}

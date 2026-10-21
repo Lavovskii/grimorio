@@ -1,0 +1,27 @@
+{
+  "title": "Tiquanda Laboratory",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Laboratório abandonado e tomado pela vegetação, debaixo de uma colina a **sudeste de Banuta**, na selva de {wiki:Tiquanda}; está cheio de {creature:Carniphila|Carniphilas} e {creature:Mutated Human|Mutated Humans}.",
+  "entrance": {"x": 32886, "y": 32590, "z": 7, "label": "Colina do Tiquanda Laboratory"},
+  "arrive": [
+    "Apanha um barco para **Port Hope** (diz ao capitão do porto {key:hi}, {key:port hope}, {key:yes}); chegas ao porto do {npc:Charles}.",
+    "Atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta} ({coord:32807,32542,7}). Se tiveres o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope, leva-te diretamente a Banuta por 30 gp.",
+    "De Banuta segue para **sudeste** até à colina onde fica a entrada do laboratório ({coord:32886,32590,7})."
+  ],
+  "leave": [
+    "O wiki não descreve outra saída: volta pelo mesmo caminho até à entrada na colina.",
+    "Regressa pela selva para **sudoeste** até Port Hope e apanha o barco do {npc:Charles} ({coord:32529,32785,6}): {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek (ferry para Banuta)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "TiquandaLaboratory.png", "caption": "Mapa do Tiquanda Laboratory"}
+  ],
+  "warnings": [
+    "Recomendado nível 30–40+. O caminho pela selva tem {creature:Terror Bird|Terror Birds}, {creature:Tarantula|Tarantulas} e outras criaturas de Tiquanda."
+  ]
+}

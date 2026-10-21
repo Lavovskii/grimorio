@@ -1,0 +1,37 @@
+{
+  "title": "Beregar Mines",
+  "type": "dungeon",
+  "near": "Yalahar",
+  "summary": "Minas dos anões **por baixo de Beregar**, a cidade escondida que se alcança por Fenrock (a oeste de Yalahar); as quatro partes da mina (norte, sul, leste e oeste) abrem-se durante a {wiki:The Hidden City of Beregar Quest}.",
+  "entrance": {"x": 32611, "y": 31501, "z": 14, "label": "Beregar Mines (entradas das minas)"},
+  "requirements": [
+    "Conta Premium e acesso a {wiki:Yalahar}.",
+    "Cada parte da mina abre-se com uma missão da {wiki:The Hidden City of Beregar Quest}: mina leste (elevador do {npc:Xorlosh}, missão Going Down), mina norte (porta do {npc:Nokmir}, Justice for All), mina oeste ({npc:Frafnar}, Sweet as Chocolate Cake) e mina sul ({npc:Grombur})."
+  ],
+  "items": ["Pick"],
+  "arrive": [
+    "Vai a **Yalahar** (por exemplo em Venore, {npc:Captain Fearless}: {key:hi}, {key:yalahar}, {key:yes}) e vai às docas do {wiki:Foreigner Quarter}, no canto **noroeste** do porto, 1 andar acima do chão.",
+    "Fala com o {npc:Maris} ({coord:32649,31293,6}): {key:hi}, {key:mistrock}, {key:yes} (100 gp). Em Mistrock pede-lhe {key:hi}, {key:fenrock}, {key:yes} (50 gp).",
+    "Em Fenrock entra na montanha e desce **dois andares** até à gruta das Tortoises e Crocodiles. No canto **sudeste** usa a {item:Pick} na fenda do chão ({coord:32564,31338,9}): és teleportado para baixo.",
+    "Segue o caminho para baixo até Beregar (depois de ativares o carrinho de minério, o carrinho do início do caminho, {coord:32604,31339,11}, leva-te diretamente). As entradas das minas ficam junto aos guardas anões, no piso {coord:32611,31501,14}."
+  ],
+  "leave": [
+    "Sai da mina pela entrada junto ao guarda e volta a Beregar.",
+    "Usa o carrinho de minério de Beregar ({coord:32607,31510,13}) até ao início do caminho e sobe pelas grutas de Fenrock até à superfície.",
+    "Na costa de Fenrock, o {npc:Maris} leva-te de volta a Yalahar: {key:hi}, {key:yalahar}, {key:yes} (100 gp)."
+  ],
+  "coords": [
+    {"x": 32543, "y": 31290, "z": 7, "label": "Fenrock"},
+    {"x": 32613, "y": 31499, "z": 14, "label": "Xorlosh (elevador para a mina leste)"},
+    {"x": 32607, "y": 31490, "z": 14, "label": "Nokmir (mina norte)"},
+    {"x": 32611, "y": 31515, "z": 14, "label": "Grombur (mina sul)"},
+    {"x": 32586, "y": 31500, "z": 14, "label": "Frafnar (mina oeste)"}
+  ],
+  "images": [
+    {"file": "Beregar Mines.png", "caption": "Mapa das Beregar Mines, 1.º andar"},
+    {"file": "Beregar Mines 2.png", "caption": "Mapa das Beregar Mines, 2.º andar"}
+  ],
+  "warnings": [
+    "Há {creature:Dwarf Guard|Dwarf Guards}, {creature:Dwarf Geomancer|Dwarf Geomancers}, {creature:Fire Devil|Fire Devils} e {creature:Stone Golem|Stone Golems}; o wiki recomenda nível 60+ para knights e paladins e 55+ para mages."
+  ]
+}

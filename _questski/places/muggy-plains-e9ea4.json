@@ -1,0 +1,33 @@
+{
+  "title": "Muggy Plains",
+  "type": "zona",
+  "near": "Farmine",
+  "summary": "Planícies de {wiki:Zao} dominadas por lagartos de classe alta, a **norte dos Dragonblaze Peaks**; só se chega pelo antigo teleporte lagarto da {wiki:Zao Steppe}.",
+  "entrance": {"x": 33270, "y": 31165, "z": 7, "label": "Muggy Plains"},
+  "requirements": [
+    "O teleporte lagarto da Zao Steppe só funciona depois de completares as **8 primeiras missões** da {wiki:The New Frontier Quest}."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch} no fundo de Kazordoon ({coord:32661,31957,15}) ou o {npc:Gurbasch} 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin} ({coord:33025,31553,14}).",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe} ({coord:33085,31532,7}).",
+    "No **norte** da estepe, a sul dos Dragonblaze Peaks, usa o antigo teleporte lagarto ({coord:33198,31350,7}): leva-te às Muggy Plains."
+  ],
+  "leave": [
+    "Volta ao teleporte lagarto pelo mesmo caminho e regressa à {wiki:Zao Steppe}.",
+    "Atravessa a estepe até à montanha, sobe com {spell:Levitate} onde desceste e apanha o elevador para Farmine.",
+    "No porto de Farmine, fala com o {npc:Thorgrin}: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"},
+    {"x": 33198, "y": 31350, "z": 7, "label": "Teleporte lagarto para as Muggy Plains (norte da Zao Steppe)"},
+    {"x": 33176, "y": 31199, "z": 7, "label": "Temple of Equilibrium"},
+    {"x": 33158, "y": 31225, "z": 7, "label": "Zurak — ferry para Chazorai"}
+  ],
+  "warnings": [
+    "Zona de lagartos fortes ({creature:Draptor|Draptors}, {creature:Dreadmaw} e, às vezes, {creature:Flamecaller Zazrak}): recomendada para níveis altos.",
+    "De vez em quando a zona enche-se de {creature:Lancer Beetle|Lancer Beetles}, que reduzem a skill de distância."
+  ]
+}

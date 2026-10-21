@@ -1,0 +1,27 @@
+{
+  "title": "Rookgaard Academy",
+  "type": "edificio",
+  "near": "Rookgaard",
+  "summary": "O edifício mesmo a **norte do templo de Rookgaard**, com o {npc:Vascalir} e o {npc:Seymour} no piso térreo, {npc:The Oracle} no 1.º andar e o banco do {npc:Paulie}, a {npc:Amber} e uma exposição no subsolo.",
+  "entrance": {"x": 32104, "y": 32195, "z": 7, "label": "Rookgaard Academy, piso térreo (Vascalir)"},
+  "arrive": [
+    "A Academia fica em **Rookgaard**, a ilha onde começam os jogadores novos. Do templo de Rookgaard, vai para **norte**: é o edifício logo ao lado.",
+    "No piso térreo estão o {npc:Vascalir} (missões da {wiki:The Rookie Guard Quest}) e o {npc:Seymour}. Sobe as escadas para o 1.º andar para chegares a {npc:The Oracle} ({coord:32104,32190,6}).",
+    "Desce as escadas para o piso subterrâneo (1 andar abaixo) para o banco do {npc:Paulie} ({coord:32117,32188,8}) e a sala de descanso da {npc:Amber} ({coord:32103,32183,8})."
+  ],
+  "leave": [
+    "Sai da Academia pelo piso térreo e vai para **sul**, até ao templo de Rookgaard.",
+    "Para saíres de Rookgaard: quando chegares ao **nível 8**, fala com {npc:The Oracle}, no 1.º andar da Academia; ele teleporta-te para a {wiki:Island of Destiny}."
+  ],
+  "coords": [
+    {"x": 32104, "y": 32190, "z": 7, "label": "Seymour (piso térreo)"},
+    {"x": 32104, "y": 32190, "z": 6, "label": "The Oracle (1.º andar)"},
+    {"x": 32117, "y": 32188, "z": 8, "label": "Paulie — banco (subsolo)"},
+    {"x": 32103, "y": 32183, "z": 8, "label": "Amber (subsolo)"}
+  ],
+  "images": [
+    {"file": "Rookgaard Academy map.png", "caption": "Mapa da Rookgaard Academy"},
+    {"file": "The Oracle.png", "caption": "The Oracle, no 1.º andar"},
+    {"file": "Rookgaard Bank.png", "caption": "O banco do Paulie, no subsolo"}
+  ]
+}

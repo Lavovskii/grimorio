@@ -1,0 +1,995 @@
+{
+  "slug": "hero-of-rathleton-quest",
+  "category": "historia",
+  "region": "Rathleton",
+  "difficulty": 4,
+  "duration": "≈1–2 horas por tentativa (com equipa)",
+  "summary": "Uma misteriosa voz, a {npc:Strange Pipe}, avisa que o velho inimigo de Rathleton, Jaccus Maxxen, voltou e ameaça a fábrica de glooth e toda a cidade. Com a tua equipa atravessas o {wiki:Jaccus Maxxen's Dungeon|Jaccus Maxxen's Dungeon}, ligando máquinas e derrotando o {creature:Deep Terror}, as {creature:Glooth Horror|Glooth Horrors}, a sala de lava e por fim o {creature:Professor Maxxen}. Recebes um saco com uma {item:Glooth Glider Blueprint}, acesso permanente a toda a masmorra e aos seus bosses, e o achievement **The Professor's Nut**.",
+  "legend_pt": "Um velho inimigo de Rathleton, Jaccus Maxxen, é uma ameaça para a cidade.",
+  "start": {
+    "x": 33531,
+    "y": 31950,
+    "z": 14,
+    "label": "Strange Pipe, no fundo do Underground Glooth Factory"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Posto de **Squire** na {wiki:Rathleton Quest}.",
+    "Sem nível mínimo conhecido, mas o nível **recomendado é 200+**.",
+    "Uma **equipa** de nível razoável: podes ir com quantos jogadores quiseres, mas com poucos dificilmente passas das primeiras salas."
+  ],
+  "items_needed": [
+    {
+      "text": "Muitas poções de vida e mana: há 10 minutos por sala de boss e ondas contínuas de criaturas."
+    },
+    {
+      "text": "Equipamento de proteção contra **energia** e/ou {spell:Magic Shield} para aguentar as explosões dos Glooth-Generators (5600 de dano) na luta final."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Bag",
+      "note": "contém os itens abaixo"
+    },
+    {
+      "item": "Glooth Glider Blueprint"
+    },
+    {
+      "item": "Glooth Bag",
+      "qty": 4
+    },
+    {
+      "item": "Platinum Coin",
+      "qty": 5
+    },
+    {
+      "item": "Walnut"
+    },
+    {
+      "text": "Acesso a todo o {wiki:Jaccus Maxxen's Dungeon|Jaccus Maxxen's Dungeon} e possibilidade de matar os bosses lá dentro"
+    },
+    {
+      "text": "Possibilidade de matar {creature:Raging Fire|Raging Fires} para 50 charm points"
+    },
+    {
+      "text": "Achievements **Go with da Lava Flow** e **The Professor's Nut**"
+    }
+  ],
+  "achievements": [
+    "Go with da Lava Flow",
+    "The Professor's Nut"
+  ],
+  "unlocks": [
+    {"what": "Todas as áreas do Jaccus Maxxen's Dungeon", "kind": "zona", "place": "Jaccus Maxxen's Dungeon", "when": "Ao completares a quest (depois de derrotares o {creature:Professor Maxxen}); os três {item:Magic Forcefield|Magic Forcefields} a leste da primeira sala permitem-te saltar puzzles e bosses e ir direto caçar ou matar um boss específico.", "note": "Precisas de Premium e do posto de Squire na {wiki:Rathleton Quest}."},
+    {"what": "Bosses do Jaccus Maxxen's Dungeon", "kind": "funcionalidade", "place": "Jaccus Maxxen's Dungeon", "when": "Ao completares a quest: podes voltar a matar os bosses lá dentro usando os atalhos da primeira sala."},
+    {"what": "Matar Raging Fires para charm points", "kind": "funcionalidade", "when": "Ao completares a quest.", "note": "Dão **50** charm points; antes de completares a quest não contam."}
+  ],
+  "dangers": [
+    "Blood Beast",
+    "Deep Terror",
+    "Tentacle of the Deep Terror",
+    "Devourer",
+    "Glooth Anemone",
+    "Glooth Blob",
+    "Glooth Golem",
+    "Feeble Glooth Horror",
+    "Weakened Glooth Horror",
+    "Glooth Horror",
+    "Strong Glooth Horror",
+    "Empowered Glooth Horror",
+    "Enslaved Dwarf",
+    "Lost Basher",
+    "Lost Berserker",
+    "Lost Husher",
+    "Lost Thrower",
+    "Metal Gargoyle",
+    "Rot Elemental",
+    "Rustheap Golem",
+    "War Golem",
+    "Hellfire Fighter",
+    "Massive Fire Elemental",
+    "Vulcongra",
+    "Raging Fire",
+    "Glooth-Generator",
+    "Energy Pulse",
+    "Glooth Masher",
+    "Glooth Slasher",
+    "Glooth Trasher",
+    "Walker",
+    "Professor Maxxen"
+  ],
+  "npcs": [
+    "Strange Pipe"
+  ],
+  "tips": [
+    "Em cada área há várias **Strange Machines** que têm de ser todas ligadas antes de o portal funcionar. Elas desligam-se ao fim de algum tempo: distribui a equipa para as ligarem quase ao mesmo tempo, de preferência num spawn acabado de limpar.",
+    "Fala sempre com a **Strange Pipe** de cada área antes de entrares no portal: é isso que te deixa avançar para a sala seguinte.",
+    "Em todas as salas de boss tens um limite de **10 minutos**.",
+    "Depois de terminares a quest podes usar os atalhos da primeira sala para ir diretamente a qualquer zona (ver secção final)."
+  ],
+  "sections": [
+    {
+      "title": "1. A voice in the darkness — Deep Terror",
+      "steps": [
+        {
+          "title": "Chegar a Rathleton",
+          "text": "Rathleton fica na ilha de **Oramond**. Como já tens o posto de Squire (acima de Citizen) na {wiki:Rathleton Quest}, há barco para Oramond a partir de Thais ({npc:Captain Bluebear}), Edron ({npc:Captain Seahorse}) ou Venore ({npc:Captain Fearless}): diz {key:hi}, {key:oramond}, {key:yes}. Desembarcas na jangada do {npc:Captain Gulliver}, a **oeste** de Oramond. Entra no {item:Slime Slide}: leva-te a um monte na ilha principal. Desce ao piso térreo e anda para **leste** até uns edifícios com um pequeno barco; o portal desse barco leva-te para o outro lado da água. Daí vai para **norte** até ao portão principal de Rathleton.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "oramond"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33479,
+              "y": 31986,
+              "z": 7,
+              "label": "Jangada do Captain Gulliver (chegada)"
+            },
+            {
+              "x": 33539,
+              "y": 32014,
+              "z": 7,
+              "label": "Monte onde o Slime Slide te deixa"
+            },
+            {
+              "x": 33628,
+              "y": 32005,
+              "z": 7,
+              "label": "Portal no pequeno barco"
+            },
+            {
+              "x": 33607,
+              "y": 31955,
+              "z": 7,
+              "label": "Rathleton"
+            }
+          ],
+          "images": [
+            {
+              "file": "Rathleton boat-to-town.png",
+              "caption": "Caminho do barco até Rathleton"
+            }
+          ]
+        },
+        {
+          "title": "Entrar no Underground Glooth Factory",
+          "text": "Em Rathleton, vai ao Workshop Quarter, ao edifício logo a **leste** das escadas para Upper Rathleton, e entra no {item:Slime Slide} (precisas pelo menos do posto de Citizen). Ele leva-te ao {wiki:Underground Glooth Factory|Underground Glooth Factory}. O {wiki:Jaccus Maxxen's Dungeon|Jaccus Maxxen's Dungeon} fica no fundo da fábrica.",
+          "coords": [
+            {
+              "x": 33651,
+              "y": 31942,
+              "z": 7,
+              "label": "Slime Slide para o Underground Glooth Factory"
+            }
+          ]
+        },
+        {
+          "title": "Encontrar a Strange Pipe",
+          "text": "Vai ao {wiki:Underground Glooth Factory|Underground Glooth Factory}, anda para **oeste** e desce até ao fundo do \"poço\". Encontra a {npc:Strange Pipe} no lado **oeste** e fala com ela: {key:hi}, {key:importance}, {key:madman}, {key:laboratory}, {key:years}, {key:way}, {key:allies}, {key:guardian}, {key:plan}, {key:enraged}.",
+          "npc": "Strange Pipe",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Greeting, adventurers. [...] I have to ask for your assistance in a matter of utmost importance."
+            },
+            {
+              "you": "importance"
+            },
+            {
+              "npc": "[...] the glooth plant and the whole town are in danger and we have to act to stop a madman and his schemes."
+            },
+            {
+              "you": "madman"
+            },
+            {
+              "you": "laboratory"
+            },
+            {
+              "you": "years"
+            },
+            {
+              "you": "way"
+            },
+            {
+              "npc": "You will have to leave the plant through the eastern door on the lowest level. [...] You have to turn them all on to proceed. [...] They will only work for a certain amount of time though, so you will have to hurry [...]"
+            },
+            {
+              "you": "allies"
+            },
+            {
+              "you": "guardian"
+            },
+            {
+              "you": "plan"
+            },
+            {
+              "you": "enraged"
+            },
+            {
+              "npc": "[...] If you manage though to kill all the tentacles it is using within a few heartbeats, it will become confused by its momentary helplessness and will probably attack with its main body. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Entrar no Jaccus Maxxen's Dungeon",
+          "text": "Sai da fábrica pela {item:Door (Sealed)|porta de quest} do lado **leste**, no nível mais baixo. Entras no {wiki:Jaccus Maxxen's Dungeon|Jaccus Maxxen's Dungeon}. Bem a **leste** há um {item:Magic Forcefield}.",
+          "warning": "Criaturas desta zona: {creature:Blood Beast}, {creature:Devourer}, {creature:Enslaved Dwarf}, {creature:Lost Basher}, {creature:Lost Berserker}, {creature:Lost Husher}, {creature:Metal Gargoyle}, {creature:Rot Elemental}, {creature:Rustheap Golem} e {creature:Glooth Golem}."
+        },
+        {
+          "title": "Ligar as 8 Strange Machines",
+          "text": "A caminho do forcefield há **8** {item:Strange Machine|Strange Machines}: 3 no lado norte, 3 no meio e 2 no lado sul. A equipa tem de as ligar todas e entrar no forcefield antes de elas se desligarem. Uma equipa de 2 consegue fazê-lo a correr por um spawn acabado de limpar.",
+          "map": {
+            "x": 33640,
+            "y": 31963,
+            "z": 14,
+            "marks": [
+              {
+                "x": 33598,
+                "y": 31929,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33598,
+                "y": 31960,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33614,
+                "y": 31989,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33635,
+                "y": 31958,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33661,
+                "y": 31937,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33674,
+                "y": 31989,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33693,
+                "y": 31929,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33711,
+                "y": 31961,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33726,
+                "y": 31953,
+                "label": "Ponto assinalado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Entrar no portal e sobreviver às Glooth Anemones",
+          "text": "Com as máquinas ligadas, entra no portal bem a **leste**. Ficas numa salinha com um teleporte a leste. A partir daqui tens **10 minutos** para matar todas as ondas **e** o boss. Espera um pouco e começam a aparecer {creature:Glooth Anemone|Glooth Anemones}: são cerca de 5–7 ondas e as novas aparecem mesmo antes de limpares a anterior."
+        },
+        {
+          "title": "Matar os 4 tentáculos ao mesmo tempo",
+          "text": "Depois aparecem 4 {creature:Tentacle of the Deep Terror|Tentacles of the Deep Terror}. Têm muita vida e recuam quando chegam a cerca de 1000–2000 de vida. Tens de os matar **todos ao mesmo tempo**: quando o primeiro morre, há uma janela de **10 segundos** antes de ele voltar com a vida toda. Se os matares todos dentro dessa janela, aparece o {creature:Deep Terror}.",
+          "tip": "Leva os quatro tentáculos a vida baixa e só depois mata-os um a seguir ao outro, dentro dos 10 segundos."
+        },
+        {
+          "title": "Matar o Deep Terror",
+          "text": "Mata o {creature:Deep Terror} para avançares."
+        }
+      ]
+    },
+    {
+      "title": "2. The plot thickens — Glooth Horrors",
+      "steps": [
+        {
+          "title": "Passar para a segunda sala",
+          "text": "Depois de derrotares o Deep Terror, entra no portal a **leste** da sala dele. És levado para outra grande sala com mais 8 Strange Machines."
+        },
+        {
+          "title": "Falar com a Strange Pipe",
+          "text": "**Antes de mais nada**, fala com a **Strange Pipe** desta sala ({key:hi}) para garantires que podes entrar na sala do boss seguinte.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Congratulations. Defeating that beast was no small feat. I think it is time to learn more about the enemy we are facing."
+            }
+          ]
+        },
+        {
+          "title": "Ligar as máquinas e entrar no portal",
+          "text": "Liga todas as Strange Machines e entra no teleporte, que fica bem a **oeste**.",
+          "map": {
+            "x": 33660,
+            "y": 31947,
+            "z": 15,
+            "marks": [
+              {
+                "x": 33704,
+                "y": 31963,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33679,
+                "y": 31949,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33675,
+                "y": 31931,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33650,
+                "y": 31945,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33641,
+                "y": 31964,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33636,
+                "y": 31932,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33606,
+                "y": 31935,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33582,
+                "y": 31960,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33570,
+                "y": 31949,
+                "label": "Ponto assinalado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Ondas iniciais",
+          "text": "Ao entrares aparecem algumas ondas de 1 {creature:Rot Elemental}, 1 {creature:Devourer} e 1 {creature:Glooth Blob}."
+        },
+        {
+          "title": "Como se multiplicam as Glooth Horrors",
+          "text": "Depois aparece uma única {creature:Feeble Glooth Horror}. Cada vez que matas uma, ela divide-se em duas da forma seguinte. Tens de matar todas as variantes (dentro dos 10 minutos) para ativar o portal a **oeste**.",
+          "table": {
+            "head": [
+              "Matas",
+              "Aparecem",
+              "Total dessa forma"
+            ],
+            "rows": [
+              [
+                "1 {creature:Feeble Glooth Horror}",
+                "2 {creature:Weakened Glooth Horror|Weakened Glooth Horrors}",
+                "2"
+              ],
+              [
+                "cada Weakened",
+                "2 {creature:Glooth Horror|Glooth Horrors}",
+                "4"
+              ],
+              [
+                "cada Glooth Horror",
+                "2 {creature:Strong Glooth Horror|Strong Glooth Horrors}",
+                "8"
+              ],
+              [
+                "cada Strong",
+                "2 {creature:Empowered Glooth Horror|Empowered Glooth Horrors}",
+                "16"
+              ],
+              [
+                "cada Empowered",
+                "—",
+                "—"
+              ]
+            ]
+          },
+          "warning": "Juntar todas as Horrors de uma vez é extremamente mortal sem uma equipa muito grande (a própria Strange Pipe desaconselha). Escolhe uma das estratégias abaixo."
+        },
+        {
+          "title": "Estratégia A — a mais segura (mas lenta)",
+          "text": "Mata sempre a mais forte primeiro, com ataques a alvo único. Entre parênteses fica o que sobra na sala depois de cada passo. Se a equipa não tiver dano a alvo único suficiente, é expulsa ao fim dos 10 minutos.",
+          "table": {
+            "head": [
+              "#",
+              "Mata",
+              "Fica na sala"
+            ],
+            "rows": [
+              [
+                "1",
+                "1 Feeble",
+                "2 Weakened"
+              ],
+              [
+                "2",
+                "1 Weakened",
+                "1 Weakened, 2 Glooth Horror"
+              ],
+              [
+                "3",
+                "1 Glooth Horror",
+                "1 Weakened, 1 Glooth Horror, 2 Strong"
+              ],
+              [
+                "4",
+                "1 Strong",
+                "**1 Weakened, 1 Glooth Horror, 1 Strong, 2 Empowered**"
+              ],
+              [
+                "5",
+                "2 Empowered",
+                "1 Weakened, 1 Glooth Horror, 1 Strong"
+              ],
+              [
+                "6",
+                "1 Strong",
+                "1 Weakened, 1 Glooth Horror, 2 Empowered"
+              ],
+              [
+                "7",
+                "2 Empowered",
+                "1 Weakened, 1 Glooth Horror"
+              ],
+              [
+                "8",
+                "1 Glooth Horror",
+                "1 Weakened, 2 Strong"
+              ],
+              [
+                "9",
+                "1 Strong",
+                "1 Weakened, 2 Empowered"
+              ],
+              [
+                "10",
+                "2 Empowered",
+                "1 Weakened"
+              ],
+              [
+                "11",
+                "1 Weakened",
+                "2 Glooth Horror"
+              ],
+              [
+                "12",
+                "1 Glooth Horror",
+                "1 Glooth Horror, 2 Strong"
+              ],
+              [
+                "13",
+                "1 Strong",
+                "1 Glooth Horror, 1 Strong, 2 Empowered"
+              ],
+              [
+                "14",
+                "2 Empowered",
+                "1 Glooth Horror, 1 Strong"
+              ],
+              [
+                "15",
+                "1 Strong",
+                "1 Glooth Horror"
+              ],
+              [
+                "16",
+                "1 Glooth Horror",
+                "2 Strong"
+              ],
+              [
+                "17",
+                "1 Strong",
+                "1 Strong, 2 Empowered"
+              ],
+              [
+                "18",
+                "2 Empowered",
+                "1 Strong"
+              ],
+              [
+                "19",
+                "1 Strong",
+                "2 Empowered"
+              ],
+              [
+                "20",
+                "2 Empowered",
+                "—"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Estratégia B — todas de uma vez (a habitual, mas difícil)",
+          "text": "Como a estratégia segura costuma não caber nos 10 minutos, o mais comum é matar cada geração toda de uma vez:",
+          "table": {
+            "head": [
+              "#",
+              "Mata",
+              "Aparecem"
+            ],
+            "rows": [
+              [
+                "1",
+                "1 Feeble",
+                "2 Weakened"
+              ],
+              [
+                "2",
+                "2 Weakened",
+                "4 Glooth Horror"
+              ],
+              [
+                "3",
+                "4 Glooth Horror",
+                "8 Strong"
+              ],
+              [
+                "4",
+                "8 Strong",
+                "**16 Empowered**"
+              ],
+              [
+                "5",
+                "16 Empowered",
+                "—"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Estratégia C — mista (recomendada)",
+          "text": "Mata as três primeiras gerações de uma vez com ataques em área e, a partir das 8 Strong, leva-as todas a vida baixa e mata **uma Strong de cada vez** seguida das **2 Empowered** que ela cria. Os blockers têm de aguentar, no pior caso, 7 Strong e 2 Empowered.",
+          "table": {
+            "head": [
+              "#",
+              "Mata",
+              "Fica na sala"
+            ],
+            "rows": [
+              [
+                "1",
+                "1 Feeble",
+                "2 Weakened"
+              ],
+              [
+                "2",
+                "2 Weakened",
+                "4 Glooth Horror"
+              ],
+              [
+                "3",
+                "4 Glooth Horror",
+                "8 Strong"
+              ],
+              [
+                "4",
+                "1 Strong",
+                "**7 Strong, 2 Empowered**"
+              ],
+              [
+                "5",
+                "2 Empowered",
+                "7 Strong"
+              ],
+              [
+                "6",
+                "1 Strong",
+                "6 Strong, 2 Empowered"
+              ],
+              [
+                "7",
+                "2 Empowered",
+                "6 Strong"
+              ],
+              [
+                "8",
+                "1 Strong",
+                "5 Strong, 2 Empowered"
+              ],
+              [
+                "9",
+                "2 Empowered",
+                "5 Strong"
+              ],
+              [
+                "10",
+                "1 Strong",
+                "4 Strong, 2 Empowered"
+              ],
+              [
+                "11",
+                "2 Empowered",
+                "4 Strong"
+              ],
+              [
+                "12",
+                "1 Strong",
+                "3 Strong, 2 Empowered"
+              ],
+              [
+                "13",
+                "2 Empowered",
+                "3 Strong"
+              ],
+              [
+                "14",
+                "1 Strong",
+                "2 Strong, 2 Empowered"
+              ],
+              [
+                "15",
+                "2 Empowered",
+                "2 Strong"
+              ],
+              [
+                "16",
+                "1 Strong",
+                "1 Strong, 2 Empowered"
+              ],
+              [
+                "17",
+                "2 Empowered",
+                "1 Strong"
+              ],
+              [
+                "18",
+                "1 Strong",
+                "2 Empowered"
+              ],
+              [
+                "19",
+                "2 Empowered",
+                "—"
+              ]
+            ]
+          },
+          "tip": "Usa ataques em área enquanto as Strong estão com vida alta, mantendo as Empowered afastadas; depois muda para alvo único."
+        },
+        {
+          "title": "Entrar no portal a oeste",
+          "text": "Quando todas as variantes de Glooth Horror estiverem mortas, o portal a **oeste** fica ativo. Entra nele."
+        }
+      ]
+    },
+    {
+      "title": "3. Into the fire — a sala de lava",
+      "steps": [
+        {
+          "title": "Falar com a Strange Pipe",
+          "text": "Apareces noutra grande sala com mais Strange Machines. Fala com a **Strange Pipe**, que está um pouco a **sul** de onde apareces ({key:hi}).",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "I'm impressed by your progress and I think it bought enough time so that I owe it you to introduce myself."
+            }
+          ],
+          "warning": "Criaturas desta zona: {creature:Enslaved Dwarf}, {creature:Glooth Golem}, {creature:Hellfire Fighter}, {creature:Lost Basher}, {creature:Lost Berserker}, {creature:Lost Husher}, {creature:Lost Thrower}, {creature:Massive Fire Elemental}, {creature:Metal Gargoyle}, {creature:Rustheap Golem} e {creature:Vulcongra}."
+        },
+        {
+          "title": "Ligar as máquinas e entrar no portal",
+          "text": "Abre caminho até ao portal bem a **oeste**, liga todas as Strange Machines para o ativar e entra. Chegas a uma grande sala com uma pequena borda de lava.",
+          "map": {
+            "x": 33461,
+            "y": 31955,
+            "z": 15,
+            "marks": [
+              {
+                "x": 33514,
+                "y": 31957,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33455,
+                "y": 31932,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33469,
+                "y": 31965,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33442,
+                "y": 31981,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33427,
+                "y": 31948,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33382,
+                "y": 31928,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33375,
+                "y": 31981,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33369,
+                "y": 31955,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33515,
+                "y": 31933,
+                "label": "Ponto assinalado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Matar os Raging Fires e alimentar o Crucible",
+          "text": "Passado pouco tempo a lava espalha-se e aparecem {creature:Raging Fire|Raging Fires}. Mata-os e usa os corpos deles ({item:Magma Chunk|Magma Chunks}) no {item:Crucible}, a **noroeste**, dentro do tempo limite de cada onda:",
+          "table": {
+            "head": [
+              "Onda",
+              "Tempo",
+              "Raging Fires a entregar"
+            ],
+            "rows": [
+              [
+                "1.ª",
+                "60 segundos",
+                "6"
+              ],
+              [
+                "2.ª",
+                "50 segundos",
+                "5"
+              ],
+              [
+                "3.ª",
+                "40 segundos",
+                "4"
+              ]
+            ]
+          },
+          "reward": "30 segundos depois da 3.ª onda és teleportado para a área seguinte e ganhas o achievement **Go with da Lava Flow**.",
+          "warning": "O número de Raging Fires que aparece é aleatório: pode não aparecerem suficientes. Se isso acontecer, ou se a equipa não usar corpos suficientes no Crucible a tempo, são todos enviados de volta ao teleporte oeste da área anterior e têm de voltar a ligar todas as Strange Machines desta área."
+        }
+      ]
+    },
+    {
+      "title": "4. The root of all evil — Professor Maxxen",
+      "steps": [
+        {
+          "title": "Falar com a Strange Pipe",
+          "text": "Fala com a **Strange Pipe**, que está muito perto do teleporte por onde chegaste ({key:hi}).",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "This is Maxxen's lair. You will have to face the evil genius soon."
+            }
+          ]
+        },
+        {
+          "title": "Ligar as máquinas e entrar no portal a leste",
+          "text": "Liga todas as Strange Machines da área e entra no portal a **leste**.",
+          "map": {
+            "x": 33640,
+            "y": 32065,
+            "z": 15,
+            "marks": [
+              {
+                "x": 33607,
+                "y": 32031,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33619,
+                "y": 32055,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33629,
+                "y": 32043,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33610,
+                "y": 32094,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33673,
+                "y": 32095,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33670,
+                "y": 32033,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33642,
+                "y": 32082,
+                "label": "Ponto assinalado"
+              },
+              {
+                "x": 33662,
+                "y": 32060,
+                "label": "Ponto assinalado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "A sala do boss",
+          "text": "Chegas a uma grande sala quadrada com 4 geradores de glooth afastados da parede, um em cada canto. Alguns segundos depois aparecem algumas ondas de {creature:Glooth Golem|Glooth Golems} e depois o boss final, o {creature:Professor Maxxen}. Ele invoca 2 {creature:Walker|Walkers} e luta ao lado de três cúmplices (não são invocações): {creature:Glooth Masher}, {creature:Glooth Slasher} e {creature:Glooth Trasher}. Durante a luta é teleportado algumas vezes para outra parte da sala."
+        },
+        {
+          "title": "Os Glooth-Generators",
+          "text": "Os quatro geradores transformam-se em {creature:Glooth-Generator|Glooth-Generators} por esta ordem:",
+          "table": {
+            "head": [
+              "Ordem",
+              "Canto",
+              "Quando aparece"
+            ],
+            "rows": [
+              [
+                "1.º",
+                "Sudoeste",
+                "Algum tempo depois de o Professor Maxxen aparecer"
+              ],
+              [
+                "2.º",
+                "Sudeste",
+                "35 segundos depois do 1.º"
+              ],
+              [
+                "3.º",
+                "Nordeste",
+                "30 segundos depois do 2.º"
+              ],
+              [
+                "4.º",
+                "Noroeste",
+                "25 segundos depois do 3.º"
+              ]
+            ]
+          },
+          "warning": "Quando um gerador aparece e há um jogador perto, ouve-se *\"THE GLOOTH GENERATOR CHARGES UP FOR A LETHAL EXPLOSION\"*. 14–15 segundos depois, se ainda estiver vivo, aparecem 4 {creature:Energy Pulse|Energy Pulses} nos geradores que explodem logo (*\"The fully charged generator explodes in a blast!\"*), causando **5600 de dano de energia** a todos num raio de 6 quadrados.",
+          "tip": "Estratégia recomendada: toda a equipa ataca o gerador assim que ele aparece. Mesmo assim, todos devem estar preparados para reduzir e absorver o dano (equipamento de proteção contra energia, {spell:Magic Shield}, etc.). Os geradores **não** carregam se não houver jogadores perto: ficar toda a equipa no lado sul da sala é uma opção, mas é arriscado — se um jogador entrar no alcance de um gerador ativo, os Energy Pulses aparecem e explodem de imediato."
+        },
+        {
+          "title": "Matar o Professor Maxxen",
+          "text": "Mata o {creature:Professor Maxxen} (e os cúmplices) controlando os geradores."
+        }
+      ]
+    },
+    {
+      "title": "5. Justice served — recompensa",
+      "steps": [
+        {
+          "title": "Falar com a Strange Pipe",
+          "text": "Depois de derrotares o Professor Maxxen, entra no portal a **leste** para a sala da recompensa e fala com a **Strange Pipe** ({key:hi}).",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Incredible! Maxxen is dead - by the look of it at least. If indeed that thing was Maxxen after all. I thank you dearly, and the whole city of Rathleton would be so grateful - if they ever knew."
+            }
+          ]
+        },
+        {
+          "title": "Abrir a caixa",
+          "text": "Abre a {item:Box} a **norte** para receberes um {item:Bag} com: {item:Glooth Glider Blueprint}, 4 {item:Glooth Bag|Glooth Bags}, 5 {item:Platinum Coin|Platinum Coins} e uma {item:Walnut}. Ganhas também o achievement **The Professor's Nut**.",
+          "reward": "Bag com Glooth Glider Blueprint, 4 Glooth Bags, 5 Platinum Coins e Walnut + achievement The Professor's Nut"
+        },
+        {
+          "title": "Sair",
+          "text": "Sai pelo {item:Slime Slide} a **leste**, que te leva de volta a Rathleton. Para voltares ao continente, usa o Slime Slide de Rathleton que leva ao barco (com o posto de Citizen) ou faz a pé o caminho da chegada ao contrário, e fala com o {npc:Captain Gulliver}: {key:hi}, o nome da cidade (por exemplo {key:thais}, {key:edron}, {key:venore} ou {key:port hope}) e {key:yes}.",
+          "coords": [
+            {
+              "x": 33479,
+              "y": 31986,
+              "z": 7,
+              "label": "Captain Gulliver (barco de Oramond)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Atalhos depois da quest",
+      "steps": [
+        {
+          "title": "Os três teleportes da primeira sala",
+          "text": "Depois de terminares a quest, podes usar os três {item:Magic Forcefield|Magic Forcefields} a **leste** da primeira sala para saltar puzzles e bosses e ir caçar ou matar um boss específico:",
+          "table": {
+            "head": [
+              "Teleporte",
+              "Leva-te a",
+              "Destino"
+            ],
+            "rows": [
+              [
+                "Oeste",
+                "Entrada da 2.ª sala (depois do Deep Terror)",
+                "{coord:33743,31941,15}"
+              ],
+              [
+                "Centro",
+                "Entrada da 3.ª sala (depois das Glooth Horrors)",
+                "{coord:33536,31956,15}"
+              ],
+              [
+                "Leste",
+                "Entrada da 4.ª sala (depois da sala de lava)",
+                "{coord:33610,32055,15}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 33716,
+              "y": 31932,
+              "z": 14,
+              "label": "Teleportes de atalho (primeira sala)"
+            },
+            {
+              "x": 33743,
+              "y": 31941,
+              "z": 15,
+              "label": "Destino: 2.ª sala"
+            },
+            {
+              "x": 33536,
+              "y": 31956,
+              "z": 15,
+              "label": "Destino: 3.ª sala"
+            },
+            {
+              "x": 33610,
+              "y": 32055,
+              "z": 15,
+              "label": "Destino: 4.ª sala"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os Raging Fires só podem ser mortos para charm points (50) depois de completares a quest.",
+    "Para repetir uma zona específica (caça ou boss), usa os atalhos da secção 6 em vez de fazeres tudo de novo."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Krailos",
+  "type": "zona",
+  "near": "Rathleton",
+  "summary": "Grande península de estepe **a norte de Oramond**, dominada por tribos de {creature:Ogre|Ogres}; a **Krailos Village** é a casa da tribo Bloody Skull e o centro da {wiki:Krailos Quest}. Só se chega por mar.",
+  "entrance": {"x": 33492, "y": 31710, "z": 6, "label": "Porto de Krailos (Captain Pelagia)"},
+  "arrive": [
+    "Apanha o barco para Krailos em **Venore** ({npc:Captain Fearless}, 100 gp), **Darashia** ({npc:Petros}, 110 gp), **Edron** ou **Oramond** (Rathleton): diz ao capitão {key:hi}, {key:krailos}, {key:yes}. De **Issavi**, o {npc:Captain Harava} também te leva ({key:hi}, {key:krailos}, {key:yes}, 80 gp).",
+    "Chegas ao barco da {npc:Captain Pelagia} ({coord:33492,31710,6}). Por causa dos recifes ela não chega à costa: desce do cais e nada até terra.",
+    "Caminha para **leste** pela estepe até à **Krailos Village** ({coord:33639,31656,7}), onde estão o {npc:Larek} e os outros NPCs."
+  ],
+  "leave": [
+    "Volta ao barco da {npc:Captain Pelagia}, a **oeste** da aldeia. Diz {key:hi}, {key:sail} e o destino: {key:venore} (110 gp), {key:edron} (100 gp), {key:darashia} (110 gp), {key:oramond} (60 gp) ou {key:issavi} (70 gp), e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33492, "y": 31710, "z": 6, "label": "Captain Pelagia (porto de Krailos)"},
+    {"x": 33639, "y": 31656, "z": 7, "label": "Krailos Village"},
+    {"x": 33580, "y": 31584, "z": 7, "label": "Entrada das Krailos Ruins (noroeste)"},
+    {"x": 33686, "y": 31744, "z": 7, "label": "Krailos Spider Lair"},
+    {"x": 33680, "y": 31630, "z": 7, "label": "Dark Stone Totem (nordeste da aldeia)"}
+  ],
+  "warnings": [
+    "A estepe tem {creature:Ogre|Ogres} agressivos fora da aldeia; só a tribo Bloody Skull, na Krailos Village, tolera humanos."
+  ]
+}

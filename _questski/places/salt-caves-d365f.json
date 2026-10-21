@@ -1,0 +1,26 @@
+{
+  "title": "Salt Caves",
+  "type": "gruta",
+  "near": "Issavi",
+  "summary": "Grutas de sal por baixo de {wiki:Kilmaresh}, a **sul de Issavi**, com {creature:Bashmu|Bashmus}; na {wiki:Kilmaresh Quest} é aqui que está a {item:Eye-Shaped Frame}.",
+  "entrance": {"x": 33968, "y": 31652, "z": 7, "label": "Entrada das Salt Caves"},
+  "arrive": [
+    "Vai a **Issavi**: há barco a partir de **Venore**, **Darashia**, **Krailos** e **Oramond** ({key:hi}, {key:issavi}, {key:yes}); chegas ao {npc:Captain Harava}, no porto a **norte** da cidade ({coord:33902,31462,6}). Em alternativa, vem de tapete voador e chegas ao {npc:Tanyt}.",
+    "Sai de Issavi para **sul** até à entrada das Salt Caves ({coord:33968,31652,7}).",
+    "A gruta fica **um andar abaixo** da entrada ({coord:33970,31653,8}).",
+    "Depois de completares todas as missões da {wiki:Kilmaresh Quest}, podes usar o atalho a **sul de Issavi** ({coord:33891,31568,7}), que te deixa junto às Salt Caves ({coord:33917,31656,7})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada a sul de Issavi e regressa à cidade para **norte**.",
+    "No porto de Issavi, o {npc:Captain Harava} leva-te a {key:darashia}, {key:venore}, {key:krailos} ou {key:oramond} ({key:hi}, destino, {key:yes}); também podes usar o tapete voador do {npc:Tanyt}."
+  ],
+  "coords": [
+    {"x": 33902, "y": 31462, "z": 6, "label": "Captain Harava — porto de Issavi"},
+    {"x": 33970, "y": 31653, "z": 8, "label": "Salt Caves (1 andar abaixo)"},
+    {"x": 33891, "y": 31568, "z": 7, "label": "Atalho a sul de Issavi (depois da Kilmaresh Quest)"},
+    {"x": 33917, "y": 31656, "z": 7, "label": "Saída do atalho nas Salt Caves"}
+  ],
+  "warnings": [
+    "Zona para níveis muito altos (recomendado **300+**): {creature:Bashmu|Bashmus} e {creature:Juvenile Bashmu|Juvenile Bashmus}."
+  ]
+}

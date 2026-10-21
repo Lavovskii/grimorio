@@ -1,0 +1,31 @@
+{
+  "title": "The Hive",
+  "type": "zona",
+  "near": "Gray Beach",
+  "summary": "Colmeia viva de insetos na parte **norte** da ilha de {wiki:Quirefang}, a norte de Gray Beach, onde decorre a {wiki:War Against the Hive Quest}.",
+  "requirements": [
+    "As torres do norte só abrem à medida que a colmeia enfraquece: a torre **leste** na fase 2 e a torre **oeste** (com o andar subterrâneo) na fase 3 da {wiki:Hive Born World Change|Hive Born}.",
+    "Para passar as {item:Hive Gate|Hive Gates} das torres precisas da feromona dos insetos (compra-se ao {npc:Orockle} com Favour)."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para a {wiki:Gray Island} em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): diz ao capitão {key:hi}, {key:gray island}, {key:yes}.",
+    "Na Gray Island desce pelo **único buraco** da ilha, a **sul** do {npc:Scrutinon}. No piso -1 segue a passagem subterrânea para **nordeste** e entra no {item:Water Vortex}.",
+    "Do outro lado usa a {item:Rope} no ponto do chão para subir e vai para **norte** até {wiki:Gray Beach} ({coord:33471,31304,7}), a pequena vila no sul de Quirefang (o {npc:Orockle} está lá).",
+    "De Gray Beach continua para **norte** até à Hive: a **sul** fica o grande habitat dos Crawlers, a **leste** o \"estômago\" da colmeia e a **norte** a estrutura maior, com as torres leste e oeste (7 andares cada)."
+  ],
+  "leave": [
+    "Desce as torres pelas mesmas escadas e volta para **sul** até **Gray Beach**. Não ficas preso atrás das {item:Hive Gate|Hive Gates}: é sempre possível sair dessas salas.",
+    "Para deixares a ilha, faz a passagem subterrânea ao contrário até à {wiki:Gray Island} e fala com o {npc:Scrutinon}: ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, o nome da cidade e {key:yes})."
+  ],
+  "coords": [
+    {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island)"},
+    {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach"},
+    {"x": 33448, "y": 31309, "z": 7, "label": "Orockle (Gray Beach)"},
+    {"x": 33588, "y": 31235, "z": 7, "label": "Parte leste do interior da Hive"}
+  ],
+  "warnings": [
+    "Zona de nível alto: a wiki recomenda nível 70–80 para o chão da Hive e 130–140 para as torres e o interior.",
+    "Há {creature:Crawler|Crawlers}, {creature:Waspoid|Waspoids} e {creature:Spitter|Spitters} logo no caminho a partir de Gray Beach."
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "slug": "summoner-outfits-quest",
+  "category": "outfit",
+  "region": "Vários",
+  "difficulty": 3,
+  "duration": "Muito variável (vários dias a juntar itens; a lotaria depende da sorte)",
+  "summary": "O Summoner Outfit está disponível para qualquer jogador Premium; esta quest dá-te os dois addons. Os homens ganham o Fluid Belt na lotaria de vials da {npc:Sandra} (Edron) e o segundo addon ajudando a {npc:Myra} em Port Hope. As mulheres ganham a Wand através do ritual da {npc:Lynda} (Thais) e o Hat entregando o {item:Ferumbras' Hat} ao {npc:Zoltan}. Com o outfit completo ganhas o achievement **Ritualist** (homem) ou **Alumni** (mulher).",
+  "legend_pt": "Ótimo para jovens magos e senhoras que adoram bruxaria. Se procuras addons, os cavalheiros devem dar um passeio por Port Hope, enquanto as senhoras devem explorar a Dark Cathedral.",
+  "start": {
+    "x": 32580,
+    "y": 32751,
+    "z": 6,
+    "label": "Myra, Port Hope (addon masculino)"
+  },
+  "requirements": [
+    "Premium Account (o outfit base é de todos os jogadores Premium; a quest só dá os addons).",
+    "Sem nível mínimo; recomendado 60–200 por causa das criaturas a caçar.",
+    "Os addons dependem do sexo da personagem: homens fazem Fluid Belt + addon da Myra; mulheres fazem Wand + Hat."
+  ],
+  "items_needed": [
+    {
+      "text": "**Fluid Belt (homem):** pelo menos 100 {item:Vial|vials vazios} por bilhete, ou um {item:Winning Lottery Ticket}"
+    },
+    {
+      "text": "**Addon da Myra (homem):** 70 {item:Bat Wing}, 20 {item:Red Piece of Cloth}, 40 {item:Ape Fur}, 35 {item:Holy Orchid}, 10 {item:Spool of Yarn}, 60 {item:Lizard Scale}, 40 {item:Red Dragon Scale}, 15 onças de {item:Magic Sulphur} e 30 onças de {item:Vampire Dust}"
+    },
+    {
+      "text": "**Wand (mulher):** as 5 wands e 5 rods antigas, 10 onças de {item:Magic Sulphur}, 1 {item:Soul Stone} e 20 {item:Ankh|Ankhs}"
+    },
+    {
+      "text": "**Hat (mulher):** {item:Ferumbras' Hat}"
+    },
+    {
+      "item": "Rope",
+      "note": "para saíres de Kharos (Hat)"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Addons do {wiki:Summoner Outfits|Summoner Outfit}"
+    },
+    {
+      "text": "Achievement **Ritualist** (homem) ou **Alumni** (mulher)"
+    }
+  ],
+  "achievements": [
+    "Ritualist",
+    "Alumni"
+  ],
+  "dangers": [
+    "Bat",
+    "Hero",
+    "Elf Arcanist",
+    "Giant Spider",
+    "Wasp",
+    "Bear",
+    "Dragon Lord",
+    "Infernalist",
+    "Vampire",
+    "Necropharus",
+    "Ferumbras"
+  ],
+  "npcs": [
+    "Sandra",
+    "Myra",
+    "Zoltan",
+    "Angelina",
+    "Lynda",
+    "Irmana",
+    "Marina"
+  ],
+  "tips": [
+    "Junta todos os itens da Myra **antes** de falares com ela: podes entregá-los todos de seguida.",
+    "A lotaria da Sandra é sorte pura: normalmente perdes. Vai guardando vials vazios enquanto caças.",
+    "Os addons do Mage e do Summoner estão trocados entre sexos. Se mudares o sexo da personagem, recebes o addon correspondente no outro outfit, **exceto** o Hat: não o consegues obter fazendo o Mage feminino ou o Summoner masculino e mudando de sexo."
+  ],
+  "sections": [
+    {
+      "title": "1. Fluid Belt (homem): lotaria da Sandra",
+      "intro": "A Sandra, em Edron, troca vials vazios por bilhetes de lotaria. Cada bilhete custa 100 vials vazios e alguns dão o addon do cinto.",
+      "steps": [
+        {
+          "title": "Juntar-te ao sistema de bónus",
+          "text": "Vai à loja da {npc:Sandra} em Edron com pelo menos 100 {item:Vial|vials vazios}. Diz {key:hi}, {key:vial}, {key:yes} e outra vez {key:yes} para te inscreveres no sistema de bónus. (Se já recusaste antes, diz só {key:bonus}.) A loja da Sandra fica nas Ivory Towers, na parte leste de Edron; se não estás em Edron, apanha um barco para lá ({key:hi}, {key:edron}, {key:yes}).",
+          "npc": "Sandra",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "vial"
+            },
+            {
+              "npc": "We have a special offer right now for depositing vials. Are you interested in hearing it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "The Edron academy has introduced a bonus system. Each time you deposit 100 vials without claiming the money for it, you will receive a lottery ticket. [...] Would you like to join the bonus system now?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Great! I've signed you up for our bonus system. From now on, you will have the chance to win the potion belt addon!"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Summoner Male Addon 1.gif",
+              "caption": "Summoner masculino com o Fluid Belt"
+            }
+          ]
+        },
+        {
+          "title": "Trocar vials por bilhetes",
+          "text": "Com 100 ou mais vials vazios, diz {key:vial} e {key:yes} para receberes um bilhete de lotaria em vez do depósito. O resultado é aleatório: na maioria das vezes perdes. Repete até ganhares.",
+          "npc": "Sandra",
+          "dialogue": [
+            {
+              "you": "vial"
+            },
+            {
+              "npc": "Would you like to get a lottery ticket instead of the deposit for your vials?"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Reclamar o prémio",
+          "text": "Com um {item:Winning Lottery Ticket}, diz {key:hi}, {key:prize} e {key:yes}. Recebes o addon do cinto. Se quiseres sair do sistema de bónus, diz {key:bonus} e {key:yes}.",
+          "npc": "Sandra",
+          "dialogue": [
+            {
+              "you": "prize"
+            },
+            {
+              "npc": "Are you here to claim a prize?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Congratulations! Here, from now on you can wear our lovely potion belt as accessory."
+            }
+          ],
+          "reward": "Addon Fluid Belt"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon da Myra (homem)",
+      "intro": "A Myra, em Port Hope, recebeu uma tiara da academia de Edron. Se lhe trouxeres muitos ingredientes mágicos, ela nomeia-te e o Zoltan dá-te o addon.",
+      "steps": [
+        {
+          "title": "Juntar os itens",
+          "text": "Junta tudo antes de começares. Esta é a lista, por ordem de entrega, e onde obter cada item:",
+          "table": {
+            "head": [
+              "Item",
+              "Qtd.",
+              "Onde obter"
+            ],
+            "rows": [
+              [
+                "{item:Bat Wing}",
+                "70",
+                "{creature:Bat|Bats} e {creature:Mutated Bat|Mutated Bats}"
+              ],
+              [
+                "{item:Red Piece of Cloth}",
+                "20",
+                "Troca {item:Red Robe|Red Robes} com a {npc:Irmana} em Venore, ou caça {creature:Hero|Heroes}, {wiki:Barbarians} e {creature:Infernalist|Infernalists}"
+              ],
+              [
+                "{item:Ape Fur}",
+                "40",
+                "{wiki:Apes}"
+              ],
+              [
+                "{item:Holy Orchid}",
+                "35",
+                "{creature:Elf Arcanist|Elf Arcanists}"
+              ],
+              [
+                "{item:Spool of Yarn}",
+                "10",
+                "Dá {item:Spider Silk} e 50 {item:Honeycomb|Honeycombs} à sereia {npc:Marina} em Meriana"
+              ],
+              [
+                "{item:Lizard Scale}",
+                "60",
+                "{wiki:Lizards}"
+              ],
+              [
+                "{item:Red Dragon Scale}",
+                "40",
+                "{creature:Dragon Lord|Dragon Lords}"
+              ],
+              [
+                "{item:Magic Sulphur}",
+                "15 onças",
+                "{creature:Brimstone Bug|Brimstone Bugs}, ou dando {item:Fire Sword|Fire Swords} aos Djinns lojistas de magia nas torres dos Djinns"
+              ],
+              [
+                "{item:Vampire Dust}",
+                "30 onças",
+                "{creature:Vampire|Vampires}"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Falar com a Myra",
+          "text": "Vai a **Port Hope** e fala com a {npc:Myra} (1 andar acima). Diz {key:hi}, {key:outfit}, {key:tiara}, {key:yes} e outra vez {key:yes} para aceitares a tarefa. Para ires a Port Hope, diz ao capitão do porto {key:hi}, {key:port hope}, {key:yes}.",
+          "npc": "Myra",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "outfit"
+            },
+            {
+              "npc": "This Tiara is an award by the academy of Edron in recognition of my service here."
+            },
+            {
+              "you": "tiara"
+            },
+            {
+              "npc": "Well... maybe, if you help me a little, I could convince the academy of Edron that you are a valuable help here and deserve an award too. How about it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Okay, great! You see, I need a few magical ingredients which I've run out of. First of all, please bring me 70 bat wings. [...] Did you understand everything I told you and are willing to handle this task?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Fine! Let's start with the 70 bat wings. [...]"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32580,
+              "y": 32753,
+              "z": 6,
+              "label": "Myra, Port Hope"
+            }
+          ]
+        },
+        {
+          "title": "Entregar os itens um a um",
+          "text": "Entrega cada item pela ordem, dizendo a palavra-chave e {key:yes}: {key:bat wings}, {key:red cloth}, {key:ape fur}, {key:holy orchids}, {key:spider silk yarn}, {key:lizard scales}, {key:red dragon scales}, {key:magic sulphur} e {key:vampire dust}. No fim, quando ela perguntar se queres a recompensa, diz {key:yes}.",
+          "npc": "Myra",
+          "dialogue": [
+            {
+              "you": "bat wings"
+            },
+            {
+              "npc": "Oh, did you bring the 70 bat wings for me?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "red cloth"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "ape fur"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "holy orchids"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "spider silk yarn"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "lizard scales"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "red dragon scales"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "magic sulphur"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "vampire dust"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Ah, great. [...] I guess, now you want your reward, don't you?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "I thought so. Go to the academy of Edron and tell Zoltan that I sent you. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Receber o addon do Zoltan",
+          "text": "Vai à academia de **Edron** e fala com o {npc:Zoltan} (3 andares acima do chão). Diz {key:hi} e {key:Myra}. Ele dá-te o addon.",
+          "npc": "Zoltan",
+          "coords": [
+            {
+              "x": 33268,
+              "y": 31847,
+              "z": 4,
+              "label": "Zoltan, academia de Edron"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Summoner Male Addon 2.gif",
+              "caption": "Summoner masculino com o addon da Myra"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "Myra"
+            },
+            {
+              "npc": "Bah, I know. I received some sort of 'nomination' from our outpost in Port Hope. [...] I hereby grant you the right to wear a special sign of honour, acknowledged by the academy of Edron. [...]"
+            }
+          ],
+          "reward": "2.º addon do Summoner masculino"
+        }
+      ]
+    },
+    {
+      "title": "3. Wand (mulher): o ritual da Lynda",
+      "steps": [
+        {
+          "title": "Chegar à Dark Cathedral",
+          "text": "A {wiki:Dark Cathedral} fica a **sul** do Outlaw Camp e a **oeste** das Plains of Havoc, a sul do pântano de Venore. Sai de Thais pela porta **leste** (ou de Venore pela porta oeste) e atravessa as planícies até lá (cuidado com {creature:Giant Spider|Giant Spiders} atraídas para o centro das planícies). Desce as escadas **2 andares**.",
+          "coords": [
+            {
+              "x": 32664,
+              "y": 32344,
+              "z": 7,
+              "label": "Dark Cathedral"
+            }
+          ]
+        },
+        {
+          "title": "Abrir o teleporte do 3.º andar",
+          "text": "No 2.º andar, a partir das escadas, vai sempre para **sul** até uma sala grande: o teleporte para o 3.º andar está ao fundo dela. Antes de entrares, puxa as **6 alavancas** das 5 salas à volta da sala grande e depois entra no teleporte.",
+          "warning": "Há um limite de tempo para puxar as alavancas (entre 30 segundos e 2,5 minutos, segundo a wiki). Faz uma volta para matar as criaturas e outra só para puxar as alavancas, ou divide-as pela equipa."
+        },
+        {
+          "title": "Libertar a Angelina",
+          "text": "Vai à **Dark Cathedral**. Junto ao teleporte que leva para fora dela encontras a {npc:Angelina}. Diz {key:hi} e {key:yes}: ela manda-te à amiga {npc:Lynda}, em Thais.",
+          "npc": "Angelina",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "The gods must be praised that I am finally saved. [...] please accept a small reward, do you?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "I will tell you a small secret now. My friend Lynda in Thais can create a blessed wand. Greet her from me, maybe she will aid you."
+            }
+          ],
+          "coords": [
+            {
+              "x": 32635,
+              "y": 32402,
+              "z": 10,
+              "label": "Angelina (3 andares abaixo)"
+            }
+          ],
+          "warning": "No caminho deste addon há {wiki:Monks}, o {creature:Necropharus} e, para o Hat, o {creature:Ferumbras}.",
+          "tip": "Se a porta da cela da Angelina estiver trancada, a {item:Key 5050} está numa caixa na sala a **oeste** da sala dela."
+        },
+        {
+          "title": "Sair da Dark Cathedral",
+          "text": "Entra no teleporte que está junto à {npc:Angelina}: leva-te para fora da Dark Cathedral. Depois volta a pé para **oeste**, pelas planícies, até Thais."
+        },
+        {
+          "title": "Falar com a Lynda",
+          "text": "Vai a **Thais** e fala com a {npc:Lynda}. Diz {key:hi}, {key:Angelina}, {key:yes} e {key:yes}. Ela pede-te os ingredientes para o feitiço de bênção.",
+          "npc": "Lynda",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "Angelina"
+            },
+            {
+              "npc": "Angelina had been imprisoned? [...] I fear I need some important ingredients for my blessing spell first. Will you gather them for me?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] First, I need a sample of five druid rods and five sorcerer wands. [...] Secondly, I need 10 ounces of magic sulphur. [...] Next, I will need a soul stone. [...] I will need about 20 ankhs. [...] Did you understand everything I told you and will help me with my blessing?"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Entregar as wands e rods",
+          "text": "Traz **todas de uma vez** as 5 rods e 5 wands e diz {key:wands} e {key:yes}.",
+          "npc": "Lynda",
+          "table": {
+            "head": [
+              "Rods (druid)",
+              "Wands (sorcerer)"
+            ],
+            "rows": [
+              [
+                "{item:Snakebite Rod}",
+                "{item:Wand of Vortex}"
+              ],
+              [
+                "{item:Moonlight Rod}",
+                "{item:Wand of Dragonbreath}"
+              ],
+              [
+                "{item:Necrotic Rod}",
+                "{item:Wand of Decay}"
+              ],
+              [
+                "{item:Terra Rod}",
+                "{item:Wand of Cosmic Energy}"
+              ],
+              [
+                "{item:Hailstorm Rod}",
+                "{item:Wand of Inferno}"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Entregar o Magic Sulphur",
+          "text": "Diz {key:magic sulphur} e {key:yes} para entregares 10 onças de {item:Magic Sulphur}.",
+          "npc": "Lynda"
+        },
+        {
+          "title": "Entregar a Soul Stone",
+          "text": "Diz {key:soul stone} e {key:yes} para entregares a {item:Soul Stone} (a Lynda chama-lhe \"the Necromancer's soul stone\").",
+          "npc": "Lynda"
+        },
+        {
+          "title": "Entregar os Ankhs",
+          "text": "Diz {key:ankhs} e {key:yes} para entregares 20 {item:Ankh|Ankhs}. A Lynda começa o ritual.",
+          "npc": "Lynda",
+          "dialogue": [
+            {
+              "you": "ankhs"
+            },
+            {
+              "npc": "Am I sensing enough holy energy from ankhs here?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "The ingredients for the ritual are complete! [...] Please come back later to hear how the ritual went."
+            }
+          ]
+        },
+        {
+          "title": "Esperar 3 horas e receber a wand",
+          "text": "Espera **3 horas** para o ritual fazer efeito. Depois volta e diz {key:ritual}. Se ainda não passou o tempo, ela responde \"Please let me focus for a while\".",
+          "npc": "Lynda",
+          "images": [
+            {
+              "file": "Outfit Summoner Female Addon 1.gif",
+              "caption": "Summoner feminino com a Wand"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "ritual"
+            },
+            {
+              "npc": "I'm glad to tell you that I have finished the ritual, player. Here is your new wand. [...]"
+            }
+          ],
+          "reward": "Addon Wand"
+        }
+      ]
+    },
+    {
+      "title": "4. Hat (mulher): o chapéu do Ferumbras",
+      "steps": [
+        {
+          "title": "Chegar à Ferumbras Citadel",
+          "text": "O {creature:Ferumbras} aparece na {wiki:Ferumbras Citadel|Ferumbras Citadel}, na ilha de {wiki:Kharos|Kharos}, a oeste de Liberty Bay. Precisas do acesso a Kharos da {wiki:The Shattered Isles Quest|The Shattered Isles Quest} e da autorização do {npc:Zoltan} em Edron ({key:permission}, 500 gp por cada entrada; antes tens de pisar a parede de energia da cidadela). Em Liberty Bay, o {npc:Jack Fate} leva-te a Goroma ({key:hi}, {key:goroma}, {key:yes}); usa o {wiki:Teleportation Hub|Teleportation Hub} até Malada e desce pelo alçapão a **sul**. O alçapão só serve para descer.",
+          "coords": [
+            {
+              "x": 32121,
+              "y": 32688,
+              "z": 7,
+              "label": "Ferumbras Citadel (Kharos)"
+            }
+          ],
+          "warning": "Ao entrares na cidadela és recebido por vários {creature:Behemoth|Behemoths} e talvez {creature:Demon|Demons} e {creature:Dragon Lord|Dragon Lords} atraídos. Abaixo de nível ~150, encosta-te à parede e não te mexas até tudo à tua volta morrer."
+        },
+        {
+          "title": "Obter o Ferumbras' Hat",
+          "text": "A **única** forma de conseguir este chapéu é matar o {creature:Ferumbras} e apanhar o {item:Ferumbras' Hat} dos restos dele."
+        },
+        {
+          "title": "Sair de Kharos",
+          "text": "Depois de passares a barreira não consegues sair por ela. Para saíres, vai para **leste**, desce um buraco, segue para **oeste** e sobe por um buraco de corda (precisas da {item:Rope}). Depois sai de Kharos pelo teleporte de sentido único para Goroma (no buraco a **leste**) e volta a Liberty Bay com o {npc:Jack Fate} ({key:hi}, {key:passage}, {key:yes})."
+        },
+        {
+          "title": "Entregar o chapéu ao Zoltan",
+          "text": "Vai à academia de Edron e fala com o {npc:Zoltan}. Diz {key:hi}, {key:proof} e {key:yes}.",
+          "npc": "Zoltan",
+          "images": [
+            {
+              "file": "Outfit Summoner Female Addon 2.gif",
+              "caption": "Summoner feminino com o Hat"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "proof"
+            },
+            {
+              "npc": "... I cannot believe my eyes. You retrieved this hat from Ferumbras' remains? [...] What do you say?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "I bow to you, player, and hereby grant you the right to wear Ferumbras' hat as accessory. Congratulations!"
+            }
+          ],
+          "reward": "Addon Hat"
+        },
+        {
+          "title": "Outfit completo",
+          "text": "Com os dois addons, ganhas o achievement **Ritualist** (homem) ou **Alumni** (mulher).",
+          "images": [
+            {
+              "file": "Outfit Summoner Male Addon 3.gif",
+              "caption": "Summoner masculino completo"
+            },
+            {
+              "file": "Outfit Summoner Female Addon 3.gif",
+              "caption": "Summoner feminino completo"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os addons do {wiki:Mage Outfits|Mage Outfit} e do Summoner estão invertidos entre sexos: a Wand e o Hat do Mage masculino correspondem ao Summoner feminino; o Fluid Belt e a Tiara são do Summoner masculino e do Mage feminino.",
+    "Se fizeres o Mage completo numa personagem feminina e mudares para masculino, ficas com o Summoner completo."
+  ]
+}

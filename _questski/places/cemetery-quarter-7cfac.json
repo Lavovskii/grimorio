@@ -1,0 +1,34 @@
+{
+  "title": "Cemetery Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Bairro do antigo cemitério de **Yalahar**, a **norte** do centro da cidade, tomado pelos mortos-vivos; os edifícios e criptas servem agora para rituais de necromancia.",
+  "entrance": {"x": 32761, "y": 31077, "z": 7, "label": "Cemetery Quarter"},
+  "requirements": [
+    "O mecanismo do portão do centro para o Cemetery Quarter só funciona depois de começares a missão 6 da {wiki:In Service of Yalahar Quest}. Sem isso, entra pelo Magician Quarter (que não tem mecanismo) e passa pelo guarda {npc:Reed}.",
+    "Para ires a Yalahar com o {npc:Captain Max} precisas do rank **Novice** da {wiki:Explorer Society}; em alternativa, compra a palavra-passe ao {npc:Wyrdin's Apprentice} (250 gp) para ires de Thais com o {npc:Captain Bluebear}."
+  ],
+  "arrive": [
+    "Vai a **Yalahar**: em Liberty Bay fala com o {npc:Captain Max} ({key:hi}, {key:yalahar}) ou, se pagaste a palavra-passe ao {npc:Wyrdin's Apprentice}, com o {npc:Captain Bluebear} em Thais. Chegas ao porto de Yalahar, a **sul** do centro ({coord:32804,31276,6}).",
+    "Atravessa o centro da cidade (Inner City) para **norte** até ao portão do Cemetery Quarter e usa o mecanismo do portão (só com a missão 6 da {wiki:In Service of Yalahar Quest} começada).",
+    "Sem acesso ao mecanismo: entra no **Magician Quarter** (nordeste, sem mecanismo) e vai ao guarda {npc:Reed} ({coord:32802,31103,7}), entre o Magician Quarter e o Cemetery Quarter. Diz {key:pass} e o bairro de destino para passares o portão dele.",
+    "Também se chega pelo **Alchemist Quarter**, através do guarda {npc:Bruce} ({coord:32741,31113,7}), da mesma forma ({key:pass} e o destino)."
+  ],
+  "leave": [
+    "Volta ao portão por onde entraste e usa outra vez o mecanismo para regressares ao centro de Yalahar; ou pede ao {npc:Reed} para passares ({key:pass} e o destino) para o Magician Quarter e sai daí para o centro.",
+    "No porto, a **sul** do centro, o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te ao continente: {key:hi}, {key:liberty bay} (400 gp) ou {key:thais} (800 gp), e {key:yes}.",
+    "Se fizeste a missão *Searoutes around Yalahar*, o {npc:Karith}, a leste do Captain Cookie ({coord:32818,31278,5}), leva-te mais barato a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore."
+  ],
+  "coords": [
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie — porto de Yalahar"},
+    {"x": 32802, "y": 31103, "z": 7, "label": "Reed — guarda entre o Cemetery e o Magician Quarter"},
+    {"x": 32741, "y": 31113, "z": 7, "label": "Bruce — guarda entre o Alchemist e o Cemetery Quarter"}
+  ],
+  "images": [
+    {"file": "Cemetary Quarter.png", "caption": "Mapa do Cemetery Quarter"}
+  ],
+  "warnings": [
+    "Normalmente não há criaturas na estrada principal nem no rés-do-chão do edifício grande, mas os {creature:Nightmare|Nightmares} conseguem atacar-te por cima da vedação e às vezes aparecem {creature:Tormented Ghost|Tormented Ghosts} no edifício.",
+    "Dentro das criptas há {creature:Necromancer|Necromancers}, {creature:Lich|Liches}, {creature:Banshee|Banshees} e {creature:Bonebeast|Bonebeasts}: zona para níveis médios e altos."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Zao Palace Antechambers",
+  "type": "dungeon",
+  "near": "Farmine",
+  "summary": "Antecâmaras dos lagartos por baixo das {wiki:Dragonblaze Peaks}, em Zao, que dão acesso ao {wiki:Zao Palace} e a uma torre; aqui passam-se missões da {wiki:The New Frontier Quest} e da {wiki:Uneasy Alliance Quest}.",
+  "entrance": {"x": 33175, "y": 31305, "z": 7, "label": "Acesso às Antechambers (sobe aqui)"},
+  "requirements": [
+    "O acesso às {wiki:Dragonblaze Peaks} depende da {wiki:The New Frontier Quest}: a parte sul abre logo que começas a primeira missão, a parte norte numa missão posterior.",
+    "As duas portas para o {wiki:Zao Palace} e a entrada da torre só abrem durante/depois de certas quests (uma delas exige ajudar o {npc:Cael} na {wiki:Tomes of Knowledge Quest}).",
+    "Nível recomendado: 90+ (magos e paladinos), 100+ (cavaleiros)."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship} ({npc:Brodrosch} em Kazordoon ou {npc:Gurbasch} em Cormaya: {key:hi}, {key:farmine}, {key:yes}).",
+    "Sai de Farmine para a estepe de Zao e segue para **norte**, até às {wiki:Dragonblaze Peaks}.",
+    "O acesso às Antechambers faz-se subindo no ponto {coord:33175,31305,7}; as antecâmaras propriamente ditas ficam no subsolo ({coord:33163,31280,9})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao ponto de acesso ({coord:33175,31305,7}) e regressa para **sul**, pela estepe de Zao, até Farmine.",
+    "Em Farmine apanha o Steamship do {npc:Thorgrin} ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33163, "y": 31280, "z": 9, "label": "Zao Palace Antechambers"},
+    {"x": 33170, "y": 31260, "z": 10, "label": "Entrada do Zao Palace (só durante a quest)"},
+    {"x": 33161, "y": 31263, "z": 10, "label": "Porta selada do Zao Palace (depois da quest e do Cael)"},
+    {"x": 33162, "y": 31290, "z": 10, "label": "Entrada da torre (missão de outra quest)"},
+    {"x": 33162, "y": 31256, "z": 10, "label": "Tome of Knowledge"},
+    {"x": 33154, "y": 31297, "z": 3, "label": "Tome of Knowledge (torre)"},
+    {"x": 33173, "y": 31282, "z": 7, "label": "Antecâmara separada (vazia, sem saída)"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin (Steamship de Farmine)"}
+  ],
+  "images": [
+    {"file": "Zao Palace Antechambers 0.png", "caption": "Antechambers — piso 0"},
+    {"file": "Zao Palace Antechambers -1.png", "caption": "Antechambers — piso -1"},
+    {"file": "Zao Palace Antechambers -2.png", "caption": "Antechambers — piso -2"},
+    {"file": "Zao Palace Antechambers -3.png", "caption": "Antechambers — piso -3"}
+  ],
+  "warnings": [
+    "Há {creature:Lizard Legionnaire|Lizard Legionnaires}, {creature:Lizard High Guard|Lizard High Guards} e {creature:Lizard Dragon Priest|Lizard Dragon Priests}; nas Dragonblaze Peaks, pelo caminho, há {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords} e {creature:Frost Dragon|Frost Dragons}."
+  ]
+}

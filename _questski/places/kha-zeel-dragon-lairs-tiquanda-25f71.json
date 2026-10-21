@@ -1,0 +1,33 @@
+{
+  "title": "Kha'zeel Dragon Lairs/Tiquanda",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Dois conjuntos de covis de dragões nas montanhas de {wiki:Kha'zeel}, com entrada pelo lado de {wiki:Tiquanda} (a selva de Port Hope), a norte do {wiki:Kha'zeel Pass}; é o local da {wiki:The Great Dragon Hunt Quest}.",
+  "entrance": {"x": 32983, "y": 32646, "z": 7, "label": "Entrada dos covis do sul"},
+  "requirements": ["Conta **Premium** (Port Hope e Ankrahmun)."],
+  "items": ["Rope"],
+  "arrive": [
+    "De **Port Hope**: apanha o barco para Port Hope ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto da tua cidade). Atravessa a selva de {wiki:Tiquanda} para **leste** até às montanhas de Kha'zeel.",
+    "De **Ankrahmun**: apanha o barco para Ankrahmun ({key:hi}, {key:ankrahmun}, {key:yes}). Sai da cidade para **oeste**, sobe as montanhas (com {creature:Hyaena|Hyaenas}), atravessa a ponte no topo (com um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce até à escada: estás no lado de Tiquanda do {wiki:Kha'zeel Pass}. Daí segue para **norte**.",
+    "Os covis do **norte** (3 grutas, mais fáceis) entram em {coord:33009,32604,7}; os do **sul** (4 grutas, com muitos {creature:Dragon Lord|Dragon Lords}) entram em {coord:32983,32646,7}. Desce pela passagem subterrânea."
+  ],
+  "leave": [
+    "Volta pela mesma passagem subterrânea até à entrada por onde desceste e sobe à superfície (leva {item:Rope} para os buracos).",
+    "Regressa a **Port Hope** pela selva (para **oeste**) e apanha o barco do {npc:Charles} ({key:hi}, nome da cidade, {key:yes}), ou vai a **Ankrahmun** pelo {wiki:Kha'zeel Pass} (para **sul** e depois **leste**, pelo caminho da ida)."
+  ],
+  "coords": [
+    {"x": 33009, "y": 32604, "z": 7, "label": "Entrada dos covis do norte"},
+    {"x": 32983, "y": 32646, "z": 7, "label": "Entrada dos covis do sul"},
+    {"x": 33072, "y": 32656, "z": 6, "label": "Ponto da Cartography 101 Quest (Dragon Caves)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — barco de Port Hope"}
+  ],
+  "images": [
+    {"file": "Ank PH Route1.png", "caption": "Kha'zeel Pass a partir de Ankrahmun (1)"},
+    {"file": "Ank PH Route2.png", "caption": "Kha'zeel Pass a partir de Ankrahmun (2)"},
+    {"file": "Ank PH Route3.png", "caption": "Kha'zeel Pass a partir de Ankrahmun (3)"}
+  ],
+  "warnings": [
+    "Na selva há {creature:Tarantula|Tarantulas}, {creature:Crocodile|Crocodiles}, {creature:Elephant|Elephants}, {creature:Spit Nettle|Spit Nettles} e, às vezes, {creature:Hydra|Hydras} atraídas por outros jogadores.",
+    "Os covis do sul têm 21 {creature:Dragon|Dragons} e 9 {creature:Dragon Lord|Dragon Lords}: a wiki recomenda nível 40–50+."
+  ]
+}

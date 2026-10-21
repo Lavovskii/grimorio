@@ -1,0 +1,33 @@
+{
+  "title": "Farmine",
+  "type": "cidade",
+  "near": "Farmine",
+  "summary": "Base dos anões no subsolo das montanhas de {wiki:Zao}, a **leste de Yalahar** e a **norte de Edron**, ligada ao resto do mundo pelo {wiki:Steamship} subterrâneo.",
+  "entrance": {"x": 33025, "y": 31553, "z": 14, "label": "Porto do Steamship de Farmine (Thorgrin)"},
+  "requirements": [
+    "O depot, a taberna, o banco, as lojas e a cidadania de Farmine só abrem à medida que fazes as missões da {wiki:The New Frontier Quest}.",
+    "O tapete voador de Farmine só fica acessível depois de completares a {wiki:The New Frontier Quest} (e os tapetes são só para contas Premium)."
+  ],
+  "arrive": [
+    "De **Kazordoon**: desce até ao porto subterrâneo do {wiki:Steamship} e fala com o {npc:Brodrosch} ({coord:32661,31957,15}): {key:hi}, {key:farmine}, {key:yes}.",
+    "De **Cormaya** (ao lado de Edron): fala com o {npc:Gurbasch} no Steamship ({coord:33313,31989,15}): {key:hi}, {key:farmine}, {key:yes}.",
+    "Chegas ao porto de Farmine, junto ao {npc:Thorgrin} ({coord:33025,31553,14}). O {npc:Ongulf} está perto do steamship.",
+    "Depois de completares a {wiki:The New Frontier Quest} podes vir de {wiki:Magic Carpet|tapete voador} de Darashia, Edron, Femor Hills, Svargrond, Kazordoon ou Issavi: diz {key:hi}, {key:farmine} (ou {key:zao}) e {key:yes} ao gestor do tapete. Chegas ao tapete do {npc:Melian}, no alto das montanhas por cima de Farmine ({coord:32984,31540,1})."
+  ],
+  "leave": [
+    "Desce até ao steamship e fala com o {npc:Thorgrin}: {key:hi}, {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp), e {key:yes}. De Cormaya apanhas o barco para Edron e daí barcos para as outras cidades.",
+    "Com a {wiki:The New Frontier Quest} completa, o tapete do {npc:Melian} ({coord:32984,31540,1}) leva-te a Darashia (60 gp), Edron (60), Femor Hills (60), Svargrond (60), Kazordoon (70) ou Issavi (100): {key:hi}, o destino e {key:yes}.",
+    "Para a {wiki:Zao Steppe}: vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**; o elevador leva-te à superfície da montanha. Segue para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a estepe em {coord:33085,31532,7}. Para voltar faz o caminho ao contrário (sobe com Levitate e vai para **oeste** até ao elevador)."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship de Cormaya"},
+    {"x": 32984, "y": 31540, "z": 1, "label": "Tapete voador de Farmine (Melian)"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"},
+    {"x": 33028, "y": 31513, "z": 10, "label": "Cael"}
+  ],
+  "warnings": [
+    "Se pagares o tapete com moedas grandes (por exemplo uma Crystal Coin), leva espaço e capacidade para o troco: se não couber, viajas na mesma mas o troco fica no tapete de partida."
+  ]
+}

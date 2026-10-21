@@ -1,0 +1,30 @@
+{
+  "title": "Ramoa",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "Segunda maior das {wiki:Forbidden Islands}, a **noroeste de Goroma**: ilha seca e cheia de mortos-vivos ({creature:Bonebeast|Bonebeasts}), com o {wiki:Lich Hell} e uma passagem subterrânea para {wiki:Talahu}.",
+  "entrance": {"x": 31946, "y": 32557, "z": 7, "label": "Escadas do Teleportation Hub de Ramoa"},
+  "requirements": [
+    "Só chegas a Ramoa através da {wiki:The Shattered Isles Quest}: tens de ter, no mínimo, entregado ao {npc:Chondur} o {item:Spellbook of Dragha}, encontrado em Goroma.",
+    "O {npc:Jack Fate} só te leva a Goroma depois da parte *Access to Goroma* da mesma quest."
+  ],
+  "arrive": [
+    "No porto de **Liberty Bay**, fala com o {npc:Jack Fate} no barco dele: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas na costa **leste** de Goroma ({coord:32161,32558,6}).",
+    "Em Goroma, vai para **oeste** até às escadas do Teleportation Hub ({coord:32038,32561,7}) e desce-as.",
+    "No hub de Goroma entra no teleporte (o único que lá há, à direita): apareces no hub de Ramoa. Sobe as escadas para saíres à superfície da ilha.",
+    "Da primeira vez ainda não há atalho: chegas a Ramoa pelo vulcão de Goroma, seguindo a {wiki:The Shattered Isles Quest} (sobes por um buraco e o hub fica a **nordeste** desse buraco)."
+  ],
+  "leave": [
+    "Em Ramoa, desce as escadas do Teleportation Hub ({coord:31946,32557,7}) e entra no teleporte da **esquerda**: apareces no hub de **Goroma**, debaixo do chão.",
+    "Sobe as escadas e vai para **leste** até ao navio do {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a **Liberty Bay**."
+  ],
+  "coords": [
+    {"x": 31931, "y": 32567, "z": 7, "label": "Ramoa"},
+    {"x": 31946, "y": 32557, "z": 7, "label": "Escadas do Teleportation Hub de Ramoa"},
+    {"x": 32038, "y": 32561, "z": 7, "label": "Escadas do Teleportation Hub de Goroma"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"}
+  ],
+  "warnings": [
+    "A ilha está cheia de {creature:Bonebeast|Bonebeasts} e outros mortos-vivos com ataque corpo-a-corpo forte; há uma {creature:Giant Spider} logo a sul das escadas do hub e {creature:Water Elemental|Water Elementals} mais a sudoeste. Um passo em falso e ficas cercado."
+  ]
+}

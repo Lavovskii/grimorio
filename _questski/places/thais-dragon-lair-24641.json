@@ -1,0 +1,42 @@
+{
+  "title": "Thais Dragon Lair",
+  "type": "gruta",
+  "near": "Thais",
+  "summary": "Covil de dragões a **norte de Thais**, 3 andares abaixo do chão, com {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords} e o raro {creature:Demodras}; é aqui que fica a {wiki:Naginata Quest}.",
+  "entrance": {"x": 32349, "y": 32112, "z": 10, "label": "Entrada do Thais Dragon Lair (piso -3)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Sai de **Thais** a pé e segue para **nordeste** até ao {wiki:Alatar Lake} ({coord:32393,32118,7}). A entrada da gruta fica a **norte** do lago ({coord:32357,32085,7}).",
+    "Na gruta, segue a passagem para **sudeste** e desce mais um andar.",
+    "Continua para **sul** e depois para **leste** e sobe a escada.",
+    "Segue a passagem curta para **sudoeste** e desce **dois** andares.",
+    "Segue a passagem contornando para **sul** e sobe.",
+    "Vai diretamente para **oeste** e desce um andar; depois segue para **norte** e desce outra vez.",
+    "Nessa sala, sobe um andar: estás no dragon lair ({coord:32349,32112,10}). Pelo caminho só costuma haver {creature:Troll|Trolls}, {creature:Rotworm|Rotworms}, {creature:Snake|Snakes} e {creature:Carrion Worm|Carrion Worms}."
+  ],
+  "leave": [
+    "Não há atalho de saída: volta pelo mesmo caminho (se desceste aos buracos da Naginata Quest, sobe com a {item:Rope}).",
+    "Faz o percurso ao contrário até à gruta a norte do Alatar Lake ({coord:32357,32085,7}) e volta a pé para **sudoeste** até Thais.",
+    "Quem é dono da casa **Dark Mansion** tem acesso fácil ao lair pela cave da casa."
+  ],
+  "coords": [
+    {"x": 32393, "y": 32118, "z": 7, "label": "Alatar Lake"},
+    {"x": 32357, "y": 32085, "z": 7, "label": "Entrada/saída da gruta (norte do Alatar Lake)"},
+    {"x": 32349, "y": 32112, "z": 10, "label": "Entrada do Thais Dragon Lair"}
+  ],
+  "images": [
+    {"file": "Map Alatar Lake.png", "caption": "Entrada da gruta a norte do Alatar Lake"},
+    {"file": "Naginata Quest Map 1.png", "caption": "Rota 1: para sudeste e descer"},
+    {"file": "Naginata Quest Map 2.png", "caption": "Rota 2: sul, leste e subir"},
+    {"file": "Naginata Quest Map 3a.png", "caption": "Rota 3: sudoeste e descer dois andares"},
+    {"file": "Naginata Quest Map 4.png", "caption": "Rota 4: contornar para sul e subir"},
+    {"file": "Naginata Quest Map 5.png", "caption": "Rota 5: oeste e descer"},
+    {"file": "Naginata Quest Map 6a.png", "caption": "Rota 6: norte e descer"},
+    {"file": "Naginata Quest Map 6b.png", "caption": "Rota 7: subir para o dragon lair"},
+    {"file": "Thais dragon lair.jpg", "caption": "Thais Dragon Lair"}
+  ],
+  "warnings": [
+    "Há 3 {creature:Dragon Lord|Dragon Lords} (o do centro renasce muito depressa), {creature:Dragon Lord Hatchling|Dragon Lord Hatchlings}, {creature:Dragon|Dragons} e {creature:Dragon Hatchling|Dragon Hatchlings}: não deixes que te cerquem. Recomendado nível 40-60+.",
+    "O boss {creature:Demodras} pode aparecer raramente."
+  ]
+}

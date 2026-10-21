@@ -1,0 +1,69 @@
+{
+  "slug": "scale-armor-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "15–20 min",
+  "summary": "Uma quest curta perto de Thais. Entra numa gruta a oeste da entrada do Ancient Temple, segue até uma sala com um poço, desce pelo poço e abre os baús guardados por escorpiões para receberes uma {item:Scale Armor}.",
+  "start": {"x": 32337, "y": 32172, "z": 7, "label": "Buraco a oeste da entrada do Ancient Temple (Thais)"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 10).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Shovel", "note": "para abrir o buraco da entrada"},
+    {"item": "Rope"},
+    {"item": "Antidote Rune", "note": "ou {item:Antidote} / {item:Silver Amulet}, recomendado contra o veneno dos Scorpions"}
+  ],
+  "rewards": [
+    {"item": "Scale Armor"}
+  ],
+  "achievements": [],
+  "dangers": ["Rat", "Cave Rat", "Troll", "Scorpion"],
+  "npcs": [],
+  "tips": [
+    "Os {creature:Scorpion|Scorpions} envenenam: leva um {item:Antidote}, uma {item:Antidote Rune} ou um {item:Silver Amulet}."
+  ],
+  "sections": [
+    {
+      "title": "1. Entrar na gruta",
+      "steps": [
+        {
+          "title": "Chegar ao Ancient Temple",
+          "text": "Parte do templo ou do depot de **Thais** e sai da cidade pela porta **norte**. O {wiki:Ancient Temple} fica logo a **noroeste** da porta norte, a norte de Thais ({coord:32356,32170,7}). Vai até à entrada do Ancient Temple.",
+          "coords": [{"x": 32356, "y": 32170, "z": 7, "label": "Entrada do Ancient Temple (norte de Thais)"}]
+        },
+        {
+          "title": "Abrir o buraco",
+          "text": "Vai à gruta que fica **imediatamente a oeste** da entrada do {wiki:Ancient Temple}, perto de Thais. Usa a {item:Shovel} para abrir o buraco e desce.",
+          "coords": [{"x": 32337, "y": 32172, "z": 7, "label": "Buraco da entrada"}]
+        },
+        {
+          "title": "Seguir até à sala do poço",
+          "text": "Segue o caminho para **norte** e depois para **leste** até encontrares uma sala com um poço. Pelo caminho podes encontrar {creature:Rat|Rats}, {creature:Cave Rat|Cave Rats} e {creature:Troll|Trolls}.",
+          "images": [{"file": "Scale Armor Quest Map.jpg", "caption": "Caminho desde a entrada até à sala do poço"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Descer pelo poço e abrir os baús",
+      "steps": [
+        {
+          "title": "Usar o poço",
+          "text": "\"Usa\" o **canto inferior direito** (sudeste) do poço para desceres por ele.",
+          "warning": "Lá em baixo há um ou mais {creature:Scorpion|Scorpions}. Prepara a cura de veneno."
+        },
+        {
+          "title": "Abrir os baús",
+          "text": "Mata os escorpiões e abre os baús para receberes a {item:Scale Armor}.",
+          "reward": "Scale Armor"
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Para sair, volta pelo **mesmo caminho**: regressa à sala do poço e faz o percurso do mapa ao contrário (para **oeste** e depois **sul**) até ao buraco da entrada. A {item:Rope} (equipamento obrigatório da quest) serve para subires pelos buracos até à superfície, ao lado do {wiki:Ancient Temple}. Daí segue para **sul** até à porta norte de Thais.",
+          "coords": [{"x": 32337, "y": 32172, "z": 7, "label": "Buraco da entrada (saída com Rope)"}]
+        }
+      ]
+    }
+  ]
+}

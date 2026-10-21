@@ -1,0 +1,206 @@
+{
+  "slug": "hidden-threats-quest",
+  "category": "historia",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "20–40 min",
+  "summary": "Uma Tibia Tale nas {wiki:Corym Mines|Corym Mines}, por baixo da gruta dos Coryms de Venore. O capataz {npc:Corym Ratter} quer saber porque é que a produção está a cair, mas os trabalhadores preparam uma revolta: forjas uma chave, libertas os coryms presos e juntas {item:Rare Earth} para as armas deles. Recebes 2 {item:Gold Nugget|Gold Nuggets} e três pedras preciosas pequenas, mas à saída espera-te uma surpresa: o miniboss {creature:Cave Spider}.",
+  "legend_pt": "O capataz das Corym Mines quer que descubras o que está por trás da queda dos seus lucros, mas os trabalhadores dele têm outros planos...",
+  "start": {"x": 33035, "y": 32069, "z": 12, "label": "Corym Ratter, à entrada das Corym Mines"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 50).",
+    "Free account: não precisa de Premium.",
+    "Tens de conseguir matar sozinho uma criatura do nível de uma {creature:Giant Spider} (o teleporte final é individual)."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "ou equivalente"}
+  ],
+  "rewards": [
+    {"item": "Gold Nugget", "qty": 2},
+    {"item": "Small Ruby", "note": "opcional, do primeiro trabalhador da sala noroeste"},
+    {"item": "Small Emerald", "note": "opcional, do primeiro trabalhador da sala nordeste"},
+    {"item": "Small Amethyst", "note": "opcional, do primeiro trabalhador da sala sudoeste"}
+  ],
+  "unlocks": [
+    {"what": "Corym Mines (portas seladas)", "kind": "zona", "place": "Corym Mines", "when": "No início da quest: o {npc:Corym Ratter} abre-te a mina ({key:help}, {key:yes}) e o {npc:Corym Servant} dá-te acesso ao piso de baixo."},
+    {"what": "Parte das Corym Mines da missão *The Curse Spreads* (Grimvale Quest)", "kind": "missao", "place": "Grimvale Quest", "when": "Precisas do acesso ao interior das Corym Mines que esta quest dá (podes começá-la lá mesmo)."}
+  ],
+  "dangers": ["Stonerefiner", "Tarantula", "Cave Spider"],
+  "npcs": ["Corym Ratter", "Corym Servant", "Corym Worker"],
+  "tips": [
+    "Mata os {creature:Stonerefiner|Stonerefiners} pelo caminho em vez de fugires deles: vais precisar de 20 {item:Rare Earth} que eles deixam cair.",
+    "Podes sair da mina a meio da quest sem enfrentar a Cave Spider: o teleporte de saída só te leva à sala da aranha quando a quest está terminada."
+  ],
+  "sections": [
+    {
+      "title": "1. Entrar nas Corym Mines",
+      "steps": [
+        {
+          "title": "Chegar à Venore Corym Cave",
+          "text": "A {wiki:Venore Corym Cave} fica no pântano a **leste** de Venore. Sai da cidade pela entrada **leste** e segue pelo pântano até um edifício: sobe as escadas desse edifício e depois desce pelas escadas de mão (ladders) até à gruta. Assim não precisas de usar a corda.",
+          "coords": [
+            {"x": 33002, "y": 32096, "z": 7, "label": "Entrada leste de Venore"},
+            {"x": 33073, "y": 32085, "z": 7, "label": "Edifício de entrada da Venore Corym Cave"}
+          ]
+        },
+        {
+          "title": "Chegar ao teleporte",
+          "text": "Desce até ao andar mais fundo da {wiki:Venore Corym Cave|Venore Corym Cave} e segue para a zona **noroeste**. Anda ao longo da parede **norte** até encontrares uma passagem nova com um teleporte. Entra nele: estás nas Corym Mines.",
+          "warning": "A gruta tem vários tipos de {wiki:Corym|Coryms}."
+        },
+        {
+          "title": "Falar com o Corym Ratter",
+          "text": "Fala com o {npc:Corym Ratter}: {key:hi}, {key:help} e {key:yes}. Ele abre-te a mina.",
+          "npc": "Corym Ratter",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Welcome stranger! [...] But the yield is getting worse and here I need your help."},
+            {"you": "help"},
+            {"npc": "Recently the amount of delivered ores is decreasing. Could you find out the reason, why the situation has become worse?"},
+            {"you": "yes"},
+            {"npc": "Nice! I have opened the mine for you. But take care of you! The monsters of depth won't spare you."}
+          ]
+        },
+        {
+          "title": "Falar com o Corym Servant",
+          "text": "Passa pela {wiki:Sealed Door|Sealed Door} a **leste** e segue sempre para **norte** até ao {npc:Corym Servant}. Diz {key:hi}, {key:decreasing resources} e {key:defy}. Ele quer que libertes os coryms presos e dá-te acesso ao piso de baixo.",
+          "npc": "Corym Servant",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "[...] He misses the courage to visit us and find the reason for decreasing resources? [...]"},
+            {"you": "decreasing resources"},
+            {"npc": "[...] That's the point to defy the authority."},
+            {"you": "defy"},
+            {"npc": "[...] The first thing I would like you to do is to liberate the jailed coryms. There are three areas with locked doors. [...] For this reason I will give you access to the second floor. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Forjar a chave",
+      "steps": [
+        {
+          "title": "Apanhar o Metal File",
+          "text": "Desce as escadas para a zona dos {creature:Stonerefiner|Stonerefiners}. Vai para **nordeste** e entra na sala de fogo. Abre a {wiki:Box (Quest)|caixa} para receberes um {item:Metal File}.",
+          "coords": [{"x": 33080, "y": 31979, "z": 13, "label": "Caixa com o Metal File"}],
+          "tip": "Mata os Stonerefiners: precisas de 20 {item:Rare Earth} no fim.",
+          "images": [
+            {"file": "Hidden Threats Metal File.png", "caption": "A caixa com o Metal File, na sala de fogo"}
+          ]
+        },
+        {
+          "title": "Apanhar a cabeça da chave",
+          "text": "Vai para **sul** e entra na primeira passagem à **direita**. Nesta sala há uma caixa escondida atrás de um {wiki:Item Pile|monte de itens}. Abre-a para receberes o {item:Rusted Key Fragment (Head)}.",
+          "coords": [{"x": 33080, "y": 32014, "z": 13, "label": "Caixa com o Rusted Key Fragment (Head)"}],
+          "images": [
+            {"file": "Hidden Threats Key 1.png", "caption": "Primeiro fragmento da chave: a cabeça"}
+          ]
+        },
+        {
+          "title": "Apanhar o cabo da chave",
+          "text": "Continua pela passagem até ao fim e abre a caixa para receberes o {item:Rusted Key Fragment (Handle)}.",
+          "coords": [{"x": 33031, "y": 32051, "z": 13, "label": "Caixa com o Rusted Key Fragment (Handle)"}],
+          "images": [
+            {"file": "Hidden Threats Key 2.png", "caption": "Segundo fragmento da chave: o cabo, no fim da passagem"}
+          ]
+        },
+        {
+          "title": "Limar os fragmentos",
+          "text": "Usa o {item:Metal File} em cada fragmento. Ficas com o {item:Polished Key Fragment (Head)} e o {item:Polished Key Fragment (Handle)}."
+        },
+        {
+          "title": "Aquecer, juntar, bater e arrefecer",
+          "text": "Vai à **sala grande** por onde passaste a caminho da primeira caixa e segue a sequência da tabela, usando os objetos da forja.",
+          "coords": [{"x": 33054, "y": 31999, "z": 13, "label": "Sala grande da forja"}],
+          "images": [{"file": "Hidden Threats Forging.png", "caption": "Os objetos a usar para forjar a Forged Key"}],
+          "table": {
+            "head": ["Passo", "Usa", "Em", "Resultado"],
+            "rows": [
+              ["1", "{item:Polished Key Fragment (Head)}", "{item:Steaming Hot Lava (Bottom)|Steaming Hot Lava} que sai do Crucible", "{item:Glowing Key Fragment (Head)}"],
+              ["2", "{item:Polished Key Fragment (Handle)}", "{item:Steaming Hot Lava (Bottom)|Steaming Hot Lava}", "{item:Glowing Key Fragment (Handle)}"],
+              ["3", "{item:Glowing Key Fragment (Handle)}", "{item:Glowing Key Fragment (Head)}", "{item:Intermediate State}"],
+              ["4", "{item:Intermediate State}", "{item:Anvil (Small)|Anvil}", "{item:Forged Glowing Key}"],
+              ["5", "{item:Forged Glowing Key}", "{item:Water (Tile)|quadrado de água}", "{item:Forged Key}"]
+            ]
+          },
+          "reward": "Forged Key"
+        }
+      ]
+    },
+    {
+      "title": "3. Libertar os coryms",
+      "steps": [
+        {
+          "title": "Ponto seguro para parar",
+          "text": "Se precisares de sair, **pára aqui** (ou antes). Enquanto a quest não estiver terminada, o teleporte de saída leva-te de volta à gruta dos Coryms por onde entraste, sem enfrentares a Cave Spider. Podes voltar mais tarde para acabar."
+        },
+        {
+          "title": "Abrir as três portas",
+          "text": "Sobe outra vez e anda pela mina até usares a {item:Forged Key} nas **três** {wiki:Sealed Door|Sealed Doors} trancadas.",
+          "images": [{"file": "Hidden Threats Door.png", "caption": "Usa a Forged Key nas três portas"}]
+        },
+        {
+          "title": "(Opcional) Falar com os trabalhadores",
+          "text": "Entra em cada sala e diz {key:hi} ao primeiro {npc:Corym Worker} que encontrares. Cada um dá-te uma pedra preciosa.",
+          "table": {
+            "head": ["Sala", "Recompensa"],
+            "rows": [
+              ["Noroeste", "{item:Small Ruby}"],
+              ["Nordeste", "{item:Small Emerald}"],
+              ["Sudoeste", "{item:Small Amethyst}"]
+            ]
+          },
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "My hero! A friend of mine sent you to liberate me? A true friend! I am poor but nevertheless I give you this as a little reward."}
+          ]
+        },
+        {
+          "title": "Reportar ao Corym Servant",
+          "text": "Volta ao {npc:Corym Servant} e diz {key:hi}. Agora ele quer **20** {item:Rare Earth} para fazer armas resistentes ao calor.",
+          "npc": "Corym Servant",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Well done! The riot progesses! [...] But this can only be found in the stomaches of stonerefiners. 20 of these should be enough."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Rare Earth e a surpresa final",
+      "steps": [
+        {
+          "title": "Juntar 20 Rare Earth",
+          "text": "Desce ao piso de baixo e mata {creature:Stonerefiner|Stonerefiners} até teres **20** {item:Rare Earth}."
+        },
+        {
+          "title": "Entregar ao Corym Servant",
+          "text": "Volta ao {npc:Corym Servant} e diz {key:hi} e {key:yes}. Recebes 2 {item:Gold Nugget|Gold Nuggets}. Ele avisa que há rumores de um guardião desconhecido.",
+          "npc": "Corym Servant",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello again. I see you have collected enough of the rare earth. Would you like to give it to me?"},
+            {"you": "yes"},
+            {"npc": "Thank you very much! [...] there are rumours that this dungeon can only be entered alive. [...]"}
+          ],
+          "reward": "2 Gold Nuggets"
+        },
+        {
+          "title": "Matar a Cave Spider",
+          "text": "Usa o teleporte de saída da mina. Vais parar a uma sala separada com **três** {creature:Tarantula|Tarantulas} e o miniboss {creature:Cave Spider}, que se comporta como uma {creature:Giant Spider}. Mata-a e sai da sala para terminares oficialmente a quest.",
+          "warning": "Entras **sozinho** no teleporte e tens **5 minutos** para matar a Cave Spider; se não conseguires, és mandado de volta para a mina. Leva poções e cura de veneno.",
+          "images": [{"file": "Hidden Threats Cave Spider.png", "caption": "Tens 5 minutos para matar a Cave Spider; senão és mandado de volta para a mina"}]
+        },
+        {
+          "title": "Sair das Corym Mines",
+          "text": "Depois de saíres da sala da Cave Spider, volta pelos andares da Venore Corym Cave, subindo pelas mesmas escadas e escadas de mão por onde desceste, até ao edifício no pântano. Daí regressa a Venore pela entrada **leste**.",
+          "coords": [{"x": 33002, "y": 32096, "z": 7, "label": "Entrada leste de Venore"}],
+          "tip": "Se saíres antes de acabares a quest, o teleporte de saída da mina deixa-te no sítio da gruta dos Coryms por onde entraste."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A quest faz parte das Tibia Tales e aparece nessa secção do Quest Log."
+  ]
+}

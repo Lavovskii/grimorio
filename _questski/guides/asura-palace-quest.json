@@ -1,0 +1,137 @@
+{
+  "slug": "asura-palace-quest",
+  "category": "tesouro",
+  "region": "Port Hope",
+  "difficulty": 4,
+  "duration": "≈30 min",
+  "summary": "No topo do {wiki:Asura Palace}, em Tiquanda, há portas seladas que só se abrem depois de matares grupos de criaturas escondidos em salas secretas por toda a torre. Abre caminho até aos três bosses — {creature:The Moonlight Aster}, {creature:The Flaming Orchid} e {creature:The Winter Bloom} — e aproveita para abrir os dois baús do último andar, com 3 {item:Small Ruby|Small Rubies} e 3 {item:Small Sapphire|Small Sapphires}.",
+  "legend_pt": "Uma porta misteriosa num palácio misterioso...",
+  "start": {"x": 32953, "y": 32685, "z": 7, "label": "Entrada do Asura Palace (Tiquanda)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo; nível **recomendado 200+**.",
+    "Para o achievement **Lost Palace Raider** tens de ter concluído antes a {wiki:The Lost Brother Quest}."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "por precaução, para as salas por baixo dos buracos"},
+    {"text": "Supplies para enfrentar Asuri, Hellspawns e os bosses"}
+  ],
+  "rewards": [
+    {"item": "Small Ruby", "qty": 3, "note": "sarcófago do lado leste do último andar"},
+    {"item": "Small Sapphire", "qty": 3, "note": "baú do lado oeste do último andar"},
+    {"text": "Loot dos bosses {creature:The Moonlight Aster}, {creature:The Flaming Orchid} e {creature:The Winter Bloom}"},
+    {"text": "Achievement **Lost Palace Raider** (ao matar The Flaming Orchid, se já fizeste a The Lost Brother Quest)"}
+  ],
+  "achievements": ["Lost Palace Raider"],
+  "unlocks": [
+    {"what": "Threatened Dreams Quest (parte Sweet Dreams)", "kind": "missao", "place": "Threatened Dreams Quest", "when": "Ao abrires a sala do {creature:The Flaming Orchid}, no último andar.", "note": "*Sweet Dreams* pede acesso a este boss."}
+  ],
+  "dangers": ["Hellspawn", "Dawnfire Asura", "Midnight Asura", "Frost Flower Asura", "Vicious Lich", "Solitary Frost Dragon", "Cave Hydra", "Greater Energy Elemental", "Vile Destroyer", "Greater Fire Elemental", "The Moonlight Aster", "The Flaming Orchid", "The Winter Bloom"],
+  "npcs": [],
+  "tips": [
+    "Aceita primeiro a missão da {wiki:The Lost Brother Quest} junto do NPC dela: assim fazes as duas quests ao mesmo tempo e poupas tempo.",
+    "As kills que abrem as portas são **individuais**. Em equipa, os outros podem bloquear e curar-te, mas **não podem atacar** as criaturas (tal como na {wiki:Nightmare Teddy Quest}).",
+    "As kills ficam guardadas: podes sair do palácio e voltar mais tarde sem as perder."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao Asura Palace",
+      "steps": [
+        {
+          "title": "Ir ao palácio",
+          "text": "Vai ao {wiki:Asura Palace}, em {wiki:Tiquanda} (perto de Port Hope), junto ao {wiki:Kha'zeel Pass|Kha'zeel Pass}: fica a **norte** do {npc:Tarun}, o mercador que está perto da ponte de madeira do pass. O caminho mais simples é a partir de **Ankrahmun**: sai da cidade para **oeste** e sobe as montanhas ({creature:Hyaena|Hyaenas}), atravessa a ponte lá em cima (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce até chegares a uma escada que te leva para o lado da selva. Também podes vir a pé de **Port Hope**, para leste através da selva de Tiquanda.",
+          "coords": [
+            {"x": 32976, "y": 32715, "z": 7, "label": "Tarun (o palácio fica a norte)"},
+            {"x": 32953, "y": 32685, "z": 7, "label": "Asura Palace"}
+          ],
+          "images": [
+            {"file": "Ank PH Route1.png", "caption": "Rota de Ankrahmun pelo Kha'zeel Pass (1)"},
+            {"file": "Ank PH Route2.png", "caption": "Rota de Ankrahmun pelo Kha'zeel Pass (2)"},
+            {"file": "Ank PH Route3.png", "caption": "Rota de Ankrahmun pelo Kha'zeel Pass (3)"}
+          ],
+          "warning": "O palácio está cheio de {creature:Dawnfire Asura|Dawnfire Asuri}, {creature:Midnight Asura|Midnight Asuri}, {creature:Frost Flower Asura|Frost Flower Asuri} e {creature:Hellspawn|Hellspawns}."
+        },
+        {
+          "title": "O que abre cada boss",
+          "text": "Há 3 bosses atrás de portas seladas ({item:Sealed Door}). Cada um só se abre depois de matares os seus grupos de criaturas, escondidos em salas secretas por baixo de buracos espalhados pela torre:",
+          "table": {
+            "head": ["Boss", "Onde", "Criaturas a matar"],
+            "rows": [
+              ["{creature:The Moonlight Aster}", "Último andar (+5), sala da esquerda (oeste)", "2 {creature:Vicious Lich|Vicious Liches} + 2 {creature:Vile Destroyer|Vile Destroyers}"],
+              ["{creature:The Flaming Orchid}", "Último andar (+5), sala da direita (leste)", "3 {creature:Cave Hydra|Cave Hydras} + 2 {creature:Greater Fire Elemental|Greater Fire Elementals}"],
+              ["{creature:The Winter Bloom}", "Cave (-1), a mesma dos Liches", "1 {creature:Solitary Frost Dragon} + 2 {creature:Greater Energy Elemental|Greater Energy Elementals}"]
+            ]
+          },
+          "tip": "Se tentares abrir a porta antes do tempo vês: *\"You see the images of liches, fire and energy elementals, hydras and destroyers over the doorframe. They're dark and faint.\"*"
+        }
+      ]
+    },
+    {
+      "title": "2. Matar as criaturas escondidas (rota recomendada)",
+      "intro": "A forma mais rápida é começar pela cave (-1) e ir subindo. Depois de cada sala, volta a subir.",
+      "steps": [
+        {
+          "title": "Cave (-1): Liches e Frost Dragon",
+          "text": "No rés-do-chão, vai à parte mais a **oeste** e pisa as {item:Some Cracks (Hole)|rachas no chão}. Lá em baixo mata **2** {creature:Vicious Lich|Vicious Liches} e **1** {creature:Solitary Frost Dragon}. Volta a subir.",
+          "coords": [{"x": 32925, "y": 32678, "z": 7, "label": "Rachas para a sala dos Liches/Frost Dragon"}]
+        },
+        {
+          "title": "Rés-do-chão: 3 Hydras",
+          "text": "Vai ao pequeno canteiro de **relva** do rés-do-chão e cai no {item:Pitfall}. Mata as **3** {creature:Cave Hydra|Cave Hydras} e volta a subir.",
+          "coords": [{"x": 32942, "y": 32677, "z": 7, "label": "Pitfall no canteiro de relva"}]
+        },
+        {
+          "title": "1.º andar: 2 Energy Elementals",
+          "text": "Sobe **1 andar** e vai à parte mais a **nordeste** (à direita). Cai pelas rachas e mata os **2** {creature:Greater Energy Elemental|Greater Energy Elementals}. Volta a subir.",
+          "coords": [{"x": 32964, "y": 32672, "z": 6, "label": "Rachas (1.º andar, nordeste)"}]
+        },
+        {
+          "title": "3.º andar: 2 Destroyers",
+          "text": "Sobe até ao **3.º andar** e cai pelas rachas a **sudoeste** do canteiro de relva (à esquerda). Mata os **2** {creature:Vile Destroyer|Vile Destroyers} e volta a subir.",
+          "coords": [{"x": 32936, "y": 32684, "z": 4, "label": "Rachas (3.º andar, sudoeste da relva)"}]
+        },
+        {
+          "title": "4.º andar: 2 Fire Elementals",
+          "text": "Sobe ao **4.º andar** e cai pelas rachas na parte mais a **nordeste** (à direita). Mata os **2** {creature:Greater Fire Elemental|Greater Fire Elementals} e volta a subir.",
+          "coords": [{"x": 32959, "y": 32675, "z": 3, "label": "Rachas (4.º andar, nordeste)"}]
+        }
+      ]
+    },
+    {
+      "title": "3. Os bosses e os baús",
+      "steps": [
+        {
+          "title": "Último andar: The Moonlight Aster e The Flaming Orchid",
+          "text": "Sobe ao **último andar** (+5). Há duas salas de boss atrás de {item:Sealed Door|portas seladas}: a da **esquerda** é a do {creature:The Moonlight Aster} e a da **direita** a do {creature:The Flaming Orchid}. Entra e mata os dois.",
+          "reward": "Loot dos bosses; achievement **Lost Palace Raider** ao matar The Flaming Orchid, se já completaste a The Lost Brother Quest"
+        },
+        {
+          "title": "Baú das safiras (oeste)",
+          "text": "No andar mais alto da parte **oeste** da torre há um baú: abre-o.",
+          "reward": "3 {item:Small Sapphire|Small Sapphires}"
+        },
+        {
+          "title": "Sarcófago dos rubis (leste)",
+          "text": "No andar mais alto da parte **leste** da torre há um {item:Sarcophagus (Quest)|sarcófago}: abre-o.",
+          "reward": "3 {item:Small Ruby|Small Rubies}"
+        },
+        {
+          "title": "Cave: The Winter Bloom",
+          "text": "Desce até ao início (o buraco a oeste do rés-do-chão, sala dos Liches e do Frost Dragon) para chegares à sala do boss {creature:The Winter Bloom} e mata-o.",
+          "coords": [{"x": 32925, "y": 32678, "z": 7, "label": "Rachas para a cave (Winter Bloom)"}],
+          "reward": "Loot do The Winter Bloom"
+        },
+        {
+          "title": "Sair do palácio",
+          "text": "Sobe da cave pelo mesmo sítio por onde caíste (usa a {item:Rope} se for preciso) e sai do palácio pela entrada do rés-do-chão. Volta para **sul** até ao {npc:Tarun} e daí segue o Kha'zeel Pass até **Ankrahmun** (o caminho de chegada ao contrário) ou volta pela selva até Port Hope.",
+          "coords": [{"x": 32953, "y": 32685, "z": 7, "label": "Entrada/saída do Asura Palace"}],
+          "tip": "As kills ficam guardadas: podes sair a meio e voltar mais tarde."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Para poupar tempo na próxima vez: depois de matares o The Winter Bloom, mata logo o Frost Dragon, os Liches, as Hydras e os Energy Elementals e sai do palácio. As kills continuam válidas quando voltares: da próxima vez basta subir, matar os Destroyers e os Fire Elementals, fazer os 2 bosses do topo e descer ao boss da cave.",
+    "Tempo indicativo: cerca de 30 minutos."
+  ]
+}

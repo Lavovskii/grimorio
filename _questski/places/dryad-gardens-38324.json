@@ -1,0 +1,25 @@
+{
+  "title": "Dryad Gardens",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Masmorra de jardins encantados na ilha de {wiki:Cormaya}, a **sudoeste do barco**, onde se entra usando um lago de pedra; está cheia de golems de folhas, forest furies e treelings.",
+  "entrance": {"x": 33264, "y": 32014, "z": 7, "label": "Stony Pond (entrada dos Dryad Gardens)"},
+  "arrive": [
+    "Vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes}); chegas junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Diz ao {npc:Captain Seahorse} {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret} ({coord:33287,31956,6}).",
+    "Vai para **sudoeste** do barco até ao {item:Stony Pond}, junto a uma placa de aviso ({coord:33264,32014,7}), e **usa** o lago para entrares nos Dryad Gardens."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada (a wiki não descreve outra saída).",
+    "Já em Cormaya, vai ao porto norte e fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp) para regressares a Edron."
+  ],
+  "coords": [
+    {"x": 33264, "y": 32014, "z": 7, "label": "Stony Pond (entrada)"},
+    {"x": 33226, "y": 32012, "z": 9, "label": "Topo da colina central (Earth Elemental)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "Nas colinas há {creature:Haunted Treeling|Haunted Treelings}, {creature:Elder Forest Fury|Elder Forest Furies} e {creature:Earth Elemental|Earth Elementals}: recomendado nível 40-50+."
+  ]
+}

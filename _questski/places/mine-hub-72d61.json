@@ -1,0 +1,31 @@
+{
+  "title": "Mine Hub",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Sala três andares abaixo do chão nas {wiki:Dwarf Mines} de fora de Kazordoon, onde se ligam quatro túneis das minas; tem três caixas de correio reais e é guardada pelos únicos Dwarf Guards desse piso.",
+  "requirements": [
+    "Pode ser preciso a {item:Key 3802} para abrir a sala (obtém-se na {wiki:Emperor's Cookies Quest})."
+  ],
+  "items": ["Key 3802", "Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de {wiki:Cormaya} ({npc:Gurbasch}) ou de Farmine ({npc:Thorgrin}), com {key:hi}, {key:kazordoon}, {key:yes} (chegas junto ao {npc:Brodrosch}); ou a pé pela entrada da montanha (leva {item:Rope} e {item:Shovel}).",
+    "As minas de fora da cidade ficam a **oeste** e por baixo de Kazordoon, fora da montanha, e têm 6 entradas (ver o mapa do piso térreo abaixo).",
+    "Entra num dos túneis que passam pelo Mine Hub — **A** (amarelo, Old Ore Mine), **B** (rosa, Splintered Stone Mine), **E** (verde, Pick 'N Shovel Mine) ou **F** (azul, Drunken Fellow Mine) — e desce até ao **3.º piso subterrâneo**, onde estes quatro túneis se juntam no Mine Hub."
+  ],
+  "leave": [
+    "Volta a subir pelo **mesmo túnel** por onde desceste até à superfície, a oeste de Kazordoon.",
+    "Para saíres da zona, volta a Kazordoon e apanha o {wiki:Steamship} do {npc:Brodrosch}, no fundo da cidade ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), ou sai a pé pela entrada da montanha."
+  ],
+  "coords": [
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch (Steamship de Kazordoon)"},
+    {"x": 32614, "y": 31923, "z": 7, "label": "Kazordoon"}
+  ],
+  "images": [
+    {"file": "Mine Hub.png", "caption": "O Mine Hub"},
+    {"file": "Dwarf Mines 0.png", "caption": "Dwarf Mines, piso térreo: as 6 entradas"},
+    {"file": "Dwarf Mines -3.png", "caption": "Dwarf Mines, 3.º piso subterrâneo: túneis A, B, E e F ligados pelo Mine Hub"}
+  ],
+  "warnings": [
+    "Os {creature:Dwarf Guard|Dwarf Guards} da sala batem forte para níveis baixos: fecha as portas depois de passares, para não os soltares sobre outros jogadores."
+  ]
+}

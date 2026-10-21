@@ -1,0 +1,36 @@
+{
+  "title": "Larva Caves",
+  "type": "gruta",
+  "near": "Ankrahmun",
+  "summary": "Cinco grutas escondidas debaixo das areias do {wiki:Kha'labal}, à volta de **Ankrahmun**, com Larvae, Scarabs e, nos pisos mais fundos de algumas, Ancient Scarabs; abrem-se escavando a areia com uma pá.",
+  "entrance": {"x": 33072, "y": 32760, "z": 7, "label": "Larva Cave junto à saída oeste de Ankrahmun (a maior)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Apanha o barco para **Ankrahmun** (no capitão do porto da tua cidade: {key:hi}, {key:ankrahmun}, {key:yes}); chegas junto ao {npc:Captain Sinbeard}.",
+    "Escolhe uma das 5 grutas: junto à **saída oeste** da cidade ({coord:33072,32760,7}); a **norte da saída norte** ({coord:33153,32686,7}); a **oeste do Stone Tomb** ({coord:33257,32743,7}); entre os poços de alcatrão e as ruínas antigas ({coord:33219,32640,7}); ou a **nordeste do oásis** ({coord:33161,32598,7}).",
+    "No sítio da entrada, usa a {item:Shovel} na areia. Pode não abrir à primeira: continua a tentar até aparecer o buraco, e desce.",
+    "Para os {creature:Ancient Scarab|Ancient Scarabs}: na gruta da saída oeste desce em {coord:33096,32749,9} e depois em {coord:33053,32776,10}; na do Stone Tomb, em {coord:33217,32772,9} e {coord:33251,32812,10}; na da saída norte, em {coord:33117,32676,9} e {coord:33063,32651,10}."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: sobe as escadas e usa a {item:Rope} no buraco por onde entraste para voltares à superfície do deserto.",
+    "Regressa a **Ankrahmun**; no porto, o {npc:Captain Sinbeard} leva-te a outras cidades ({key:hi}, o nome da cidade e {key:yes})."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33045, "y": 32794, "z": 11, "label": "Covil do Fleshcrawler (fim da gruta da saída oeste)"}
+  ],
+  "images": [
+    {"file": "Larva Cave 1.png", "caption": "Larva Cave 1 (mapa)"},
+    {"file": "Scarab Cave 1.png", "caption": "Scarab Cave 1 (mapa)"},
+    {"file": "Larva Cave 2.png", "caption": "Larva Cave 2 (mapa)"},
+    {"file": "Scarab Cave 2.png", "caption": "Scarab Cave 2 (mapa)"},
+    {"file": "Larva Cave 3.png", "caption": "Larva Cave 3 (mapa)"},
+    {"file": "Scarab Cave 3.png", "caption": "Scarab Cave 3 (mapa)"},
+    {"file": "Larva Cave 4.png", "caption": "Larva Cave 4 (mapa)"},
+    {"file": "Larva Cave 5.png", "caption": "Larva Cave 5 (mapa)"}
+  ],
+  "warnings": [
+    "Não te deixes cercar por {creature:Larva|Larvae} e {creature:Scarab|Scarabs}: em grupo fazem muito dano (veneno).",
+    "A gruta da saída oeste é a maior e a mais difícil, perigosa para paladins e mages de nível baixo. Na da saída norte há só um espaço entre as escadas e a parede, e uma Larva invocada pode bloquear-te."
+  ]
+}

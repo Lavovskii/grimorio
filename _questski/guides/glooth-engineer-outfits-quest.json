@@ -1,0 +1,170 @@
+{
+  "slug": "glooth-engineer-outfits-quest",
+  "category": "outfit",
+  "region": "Rathleton",
+  "difficulty": 3,
+  "duration": "Base: imediata após a Dark Trails Quest; addons: dias ou semanas (depende dos votos acumulados)",
+  "summary": "O magistrado de Rathleton recompensa quem se dedica à cidade. Depois de terminares a {wiki:Dark Trails Quest}, a {npc:Ezebeth} dá-te o outfit **Glooth Engineer**; os dois addons ganham-se votando nos atalhos, dungeons e bosses da {wiki:Rathleton Quest} com os votos obtidos na {wiki:Oramond Quest}. Recebes também o achievement **Glooth Engineer**.",
+  "legend_pt": "O magistrado de Rathleton pode recompensar com um outfit e os seus addons as pessoas dedicadas à cidade.",
+  "start": {
+    "x": 33675,
+    "y": 31883,
+    "z": 5,
+    "label": "Ezebeth, em Rathleton"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 200** (por causa da Dark Trails Quest).",
+    "Outfit base: {wiki:Dark Trails Quest} concluída.",
+    "Addon 1: outfit base, posto **Inhabitant** na {wiki:Rathleton Quest} e pelo menos 1 voto em **cada atalho (shortcut)** e em **cada dungeon** disponíveis.",
+    "Addon 2: outfit base, addon 1, posto **Inhabitant** e pelo menos 1 voto em **cada boss** disponível. Só podes votar em bosses depois de já teres lançado **150 votos** no total."
+  ],
+  "items_needed": [
+    {
+      "text": "Votos para a {wiki:Rathleton Quest}, ganhos na {wiki:Oramond Quest}"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Outfit **Glooth Engineer** (base)"
+    },
+    {
+      "text": "Addon 1 e addon 2 do Glooth Engineer"
+    },
+    {
+      "text": "Achievement **Glooth Engineer**"
+    }
+  ],
+  "achievements": [
+    "Glooth Engineer"
+  ],
+  "npcs": [
+    "Ezebeth"
+  ],
+  "tips": [
+    "Os perigos são os da {wiki:Dark Trails Quest}; depois disso, o resto é só votar e falar com a Ezebeth.",
+    "Planeia os votos: precisas de votar pelo menos uma vez em cada atalho e cada dungeon (addon 1) e em cada boss (addon 2), e só podes votar em bosses depois de 150 votos lançados."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "steps": [
+        {
+          "title": "Terminar a Dark Trails Quest",
+          "text": "Completa a {wiki:Dark Trails Quest} (nível recomendado 200). Enfrentas todas as criaturas dessa quest."
+        },
+        {
+          "title": "Pedir o outfit à Ezebeth",
+          "text": "Em **Rathleton** (Oramond), fala com a {npc:Ezebeth}: {key:hi}, {key:outfit}. Recebes o outfit **Glooth Engineer**.",
+          "npc": "Ezebeth",
+          "images": [
+            {
+              "file": "Outfit Glooth Engineer Male.gif",
+              "caption": "Glooth Engineer (masculino), sem addons"
+            },
+            {
+              "file": "Outfit Glooth Engineer Female.gif",
+              "caption": "Glooth Engineer (feminino), sem addons"
+            }
+          ],
+          "reward": "Outfit Glooth Engineer",
+          "tip": "Para chegares a Rathleton: em Thais diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Desembarcas na jangada do {npc:Captain Gulliver}, a oeste de Oramond; entra no {item:Slime Slide}, desce ao piso térreo, anda para **leste** até ao pequeno barco e usa o portal dele; depois segue para **norte** até ao portão principal e para **oeste** até à rampa da cidade alta. Para voltares, faz o caminho inverso até ao {npc:Captain Gulliver} ({key:hi}, {key:thais}, {key:yes})."
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1",
+      "steps": [
+        {
+          "title": "Chegar a Inhabitant",
+          "text": "Sobe o teu estatuto na {wiki:Rathleton Quest} até ao posto **Inhabitant**."
+        },
+        {
+          "title": "Votar em atalhos e dungeons",
+          "text": "Com os votos ganhos na {wiki:Oramond Quest}, lança **pelo menos um voto em cada atalho (shortcut)** e **pelo menos um voto em cada dungeon** disponíveis na Rathleton Quest."
+        },
+        {
+          "title": "Pedir o addon",
+          "text": "Fala com a {npc:Ezebeth}: {key:hi}, {key:addon}. Se ainda não cumpriste os votos, ela só te explica as condições.",
+          "npc": "Ezebeth",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hello! You achieved the first addon."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "Receive the first addon."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Glooth Engineer Male Addon 1.gif",
+              "caption": "Glooth Engineer (masculino) com o addon 1"
+            },
+            {
+              "file": "Outfit Glooth Engineer Female Addon 1.gif",
+              "caption": "Glooth Engineer (feminino) com o addon 1"
+            }
+          ],
+          "reward": "Addon 1"
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2",
+      "steps": [
+        {
+          "title": "Votar nos bosses",
+          "text": "Mantendo o posto **Inhabitant**, lança **pelo menos um voto em cada boss** disponível na {wiki:Rathleton Quest}.",
+          "warning": "Só podes votar em bosses depois de já teres lançado um total de **150 votos**."
+        },
+        {
+          "title": "Pedir o segundo addon",
+          "text": "Fala com a {npc:Ezebeth}: {key:hi}, {key:addon}. Recebes o segundo addon e o achievement **Glooth Engineer**.",
+          "npc": "Ezebeth",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hello! You achieved the second addon."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "Receive the second addon."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Glooth Engineer Male Addon 2.gif",
+              "caption": "Glooth Engineer (masculino) com o addon 2"
+            },
+            {
+              "file": "Outfit Glooth Engineer Female Addon 2.gif",
+              "caption": "Glooth Engineer (feminino) com o addon 2"
+            },
+            {
+              "file": "Outfit Glooth Engineer Male Addon 3.gif",
+              "caption": "Glooth Engineer (masculino) completo"
+            },
+            {
+              "file": "Outfit Glooth Engineer Female Addon 3.gif",
+              "caption": "Glooth Engineer (feminino) completo"
+            }
+          ],
+          "reward": "Addon 2 e achievement **Glooth Engineer**"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se perguntares por {key:addon} antes de cumprires os votos, a Ezebeth explica: o primeiro addon é para quem votou em cada atalho e cada dungeon pelo menos uma vez; o segundo para quem votou em cada boss pelo menos uma vez."
+  ]
+}

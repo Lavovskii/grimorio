@@ -1,0 +1,342 @@
+{
+  "slug": "rise-of-devovorga",
+  "category": "evento",
+  "region": "Vários",
+  "difficulty": 3,
+  "duration": "Evento anual de 1 a 7 de setembro (cada fase dura horas; recompensas até 30 de setembro)",
+  "summary": "World quest anual: uma arma ancestral, {creature:Devovorga}, acorda debaixo de Vengoth e abre portais por todo o continente para as suas cinco incarnações. Todo o servidor tem de cooperar para matar as incarnações ao mesmo tempo, destruir o casulo e por fim a própria Devovorga. Se o mundo conseguir, ganha +50% de regeneração de vida e mana e +15% de experiência em criaturas Extra Dimensional até ao fim de setembro; quem contribuiu acede a uma sala de recompensas.",
+  "legend_pt": "Uma poderosa arma ancestral, destinada a dormir para sempre, acordou nas profundezas de Vengoth. Portais por todo o mundo levam a fragmentos da sua alma despedaçada. Com sede de vingança e uma raiva ardente, ela vai destruir o mundo — a não ser que lhe faças frente.",
+  "start": {"x": 32948, "y": 31521, "z": 7, "label": "Portão de energia em Vengoth (covil da Devovorga)"},
+  "requirements": [
+    "Só durante o evento: de 1 de setembro (após o server save) até ao server save de 7 de setembro.",
+    "Nível 20+ (cada incarnação tem a sua faixa de níveis recomendada).",
+    "Conta Premium parcial: Vengoth e algumas zonas exigem Premium.",
+    "Trabalho de equipa com o resto do servidor."
+  ],
+  "items_needed": [
+    {"text": "Supplies de caça (poções, runas)"},
+    {"item": "Stone Skin Amulet", "note": "recomendado contra o Phrodomo"},
+    {"item": "Might Ring", "note": "recomendado contra o Phrodomo"},
+    {
+      "text": "Capacidade livre para as recompensas: 60,99 oz (nível 20+), 101,79 oz (nível 40+), 227,19 oz (nível 70+)"
+    },
+    {"item": "Rope", "note": "para alguns caminhos (por exemplo, subir as montanhas até Drefia)"}
+  ],
+  "rewards": [
+    {
+      "text": "Recompensa do mundo: +50% de regeneração de vida e mana e +15% de experiência em criaturas Extra Dimensional até ao fim de setembro"
+    },
+    {"item": "Devovorga Statue", "note": "nível 20+"},
+    {"item": "Stone of Insight", "note": "nível 20+"},
+    {"item": "Demon Backpack", "qty": 3, "note": "uma por escalão de nível (20+, 40+, 70+), com itens dentro"},
+    {"item": "Tentacle Piece", "qty": 11},
+    {"item": "Berserk Potion"},
+    {"item": "Mastermind Potion"},
+    {"item": "Bullseye Potion"},
+    {"item": "Red Gem"},
+    {"item": "Small Emerald", "qty": 6},
+    {"item": "Soul Orb"},
+    {"item": "Solitude Charm"},
+    {"item": "Giant Shimmering Pearl", "qty": 3},
+    {"item": "Gold Ingot", "qty": 5},
+    {"text": "Vários achievements (ver tabela no fim)"}
+  ],
+  "achievements": [
+    "Teamplayer",
+    "Daring Trespasser",
+    "I Did My Part",
+    "Slayer of Anmothra",
+    "Slayer of Chikhaton",
+    "Slayer of Irahsae",
+    "Slayer of Phrodomo",
+    "Slayer of Teneshpar",
+    "Cocoon of Doom",
+    "Devovorga's Nemesis"
+  ],
+  "dangers": [
+    "Anmothra",
+    "Irahsae",
+    "Teneshpar",
+    "Chikhaton",
+    "Phrodomo",
+    "Bloom of Doom",
+    "Cocoon",
+    "Vulnerable Cocoon",
+    "Spawn of Devovorga",
+    "Devovorga"
+  ],
+  "npcs": ["A Beautiful Girl", "Dread Guardian"],
+  "tips": [
+    "Vai para a incarnação adequada ao teu nível (ver tabela da fase 1). Só recebes recompensa se causares dano suficiente a uma incarnação ou à Devovorga **no último minuto** da luta.",
+    "Vê o Quest Log de *Rise of Devovorga*: indica se já contribuíste o suficiente para teres direito às recompensas.",
+    "As mensagens de servidor ao fazeres login dizem-te em que fase está o teu mundo (ver tabela no fim).",
+    "Ganhar o achievement de um boss não garante que tenhas direito às recompensas."
+  ],
+  "sections": [
+    {
+      "title": "1. Fase 1: acordar a Devovorga",
+      "steps": [
+        {
+          "title": "Chegar a Vengoth",
+          "text": "Apanha um barco para **Yalahar** (por exemplo em Thais, Darashia ou Ankrahmun). Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}. Daí anda para **leste** até à montanha onde está o portão de energia.",
+          "coords": [
+            {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (chegada)"},
+            {"x": 32948, "y": 31521, "z": 7, "label": "Portão de energia"}
+          ],
+          "images": [{"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"}],
+          "warning": "O {npc:Harlow} só te leva a Vengoth se já tiveres começado a missão 4 da {wiki:Blood Brothers Quest}."
+        },
+        {
+          "title": "Entrar no covil da Devovorga",
+          "text": "Depois do server save de **1 de setembro**, viaja até **Vengoth** e entra no portão de energia à superfície, junto à montanha a **leste**. Chegas ao covil da {creature:Devovorga}.",
+          "coords": [{"x": 32948, "y": 31521, "z": 7, "label": "Portão de energia em Vengoth"}],
+          "reward": "Achievement Daring Trespasser (ao entrares no esconderijo da Devovorga)"
+        },
+        {
+          "title": "Falar com A Beautiful Girl",
+          "text": "No covil está a NPC {npc:A Beautiful Girl}: é a Devovorga na sua forma humana. Para a acordar, fala com ela ({key:hi}) um número incerto de vezes, com intervalos incertos entre elas. Vários jogadores a tentar ajudam.",
+          "npc": "A Beautiful Girl"
+        },
+        {
+          "title": "Devovorga acorda",
+          "text": "Quando a rapariga acorda, a {creature:Devovorga} aparece no covil. Nesta forma pode ser ferida, mas não morre. 30 minutos depois aparece a mensagem *“Something is rumbling deep underground all over the world.”*: a Devovorga fica imune e os 5 portais espalhados pelo continente passam a funcionar, levando aos covis das incarnações.",
+          "table": {
+            "head": ["Incarnação", "Boss", "Níveis", "Local", "Notas"],
+            "rows": [
+              [
+                "Soul",
+                "{creature:Anmothra}",
+                "20–40",
+                "Plains of Havoc (oeste) {coord:32635,32330,7}",
+                "Muito dano de fogo; um summon {creature:Demon Skeleton} é bom blocker."
+              ],
+              [
+                "Fury",
+                "{creature:Irahsae}",
+                "40–80",
+                "Drefia (norte, costa oeste) {coord:32974,32429,7}",
+                "Faz muito dano; precisas de um knight perto do nível 60 a bloquear."
+              ],
+              [
+                "Dark Knowledge",
+                "{creature:Teneshpar}",
+                "40–160",
+                "Folda (lado oeste) {coord:31965,31584,7}",
+                "Imune a dano físico e causa embriaguez; leva magos."
+              ],
+              [
+                "Power",
+                "{creature:Chikhaton}",
+                "160+",
+                "Edron, a norte de Stonehome {coord:33325,31743,7}",
+                "Lento e fraco, mas cura-se: não o faças sozinho."
+              ],
+              [
+                "Hatred",
+                "{creature:Phrodomo}",
+                "160+",
+                "Ghostlands (lado oeste, junto à costa) {coord:32174,31827,7}",
+                "Ataques físicos quase não o arranham e bate 1500+. Leva {item:Stone Skin Amulet|Stone Skin Amulets}, {item:Might Ring|Might Rings} e usa {spell:Magic Shield} se puderes."
+              ]
+            ]
+          },
+          "tip": "Entrar em qualquer covil de incarnação dá o achievement **Teamplayer**."
+        },
+        {
+          "title": "Sair do covil e de Vengoth",
+          "text": "Para saíres, volta pelo mesmo caminho até ao portão de energia e à superfície de Vengoth. Anda para **oeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares a Yalahar.",
+          "coords": [{"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (regresso a Yalahar)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Fase 2: matar as cinco incarnações ao mesmo tempo",
+      "steps": [
+        {
+          "title": "Início da fase 2",
+          "text": "A fase 2 começa com a mensagem *“Devovorga has awoken.”*. A versão imortal da {creature:Devovorga (Invincible)|Devovorga} aparece logo e as cinco incarnações aparecem **exatamente 30 minutos depois**, cada uma no seu covil."
+        },
+        {
+          "title": "Ir ao portal da tua incarnação",
+          "text": "Vai ao portal adequado ao teu nível e junta-te aos outros jogadores. Como chegar a cada portal:\n- **Soul (Plains of Havoc)**: a oeste das {wiki:Plains of Havoc}, a sudoeste de Venore; vai a pé desde Thais ou Venore.\n- **Fury (Drefia)**: parte **norte** de {wiki:Drefia}, na costa oeste. Drefia fica a oeste de Darashia, atrás das montanhas: podes subir com a {item:Rope} em {coord:33048,32429,7} ou vir pela passagem entre Darashia e Ankrahmun.\n- **Dark Knowledge (Folda)**: lado **oeste** de {wiki:Folda}, a ilha de gelo a oeste de Carlin. O ferryman {npc:Nielson}, a noroeste de Carlin, leva-te por 20 gp ({key:folda}); para voltar, o {npc:Svenson} no cais de Folda leva-te de graça ao continente.\n- **Power (Edron)**: a **norte** de Stonehome, na ilha de Edron.\n- **Hatred (Ghostlands)**: lado **oeste** das {wiki:Ghostlands}, junto à costa, a oeste de Carlin.\nDepois da luta, sai do covil pelo mesmo caminho por onde entraste.",
+          "coords": [
+            {"x": 32635, "y": 32330, "z": 7, "label": "Soul — Anmothra (20–40), Plains of Havoc"},
+            {"x": 32974, "y": 32429, "z": 7, "label": "Fury — Irahsae (40–80), Drefia"},
+            {"x": 31965, "y": 31584, "z": 7, "label": "Dark Knowledge — Teneshpar (40–160), Folda"},
+            {"x": 33325, "y": 31743, "z": 7, "label": "Power — Chikhaton (160+), Edron"},
+            {"x": 32174, "y": 31827, "z": 7, "label": "Hatred — Phrodomo (160+), Ghostlands"},
+            {"x": 33048, "y": 32429, "z": 7, "label": "Subida com Rope para Drefia"},
+            {"x": 32235, "y": 31675, "z": 7, "label": "Nielson (ferry para Folda)"},
+            {"x": 32045, "y": 31580, "z": 7, "label": "Svenson (cais de Folda, regresso)"}
+          ]
+        },
+        {
+          "title": "Matar todas as incarnações na mesma janela",
+          "text": "O servidor tem de matar as cinco incarnações **dentro do mesmo intervalo** e sair da sala. Cada incarnação reaparece 5 minutos depois de morrer, por isso o mundo tem 5 minutos para as matar todas. Coordena com os outros grupos. Quando conseguirem, aparece *“The incarnations of Devovorga have been thrown back into their abyss! The threat ain't over yet. Watch out!”* e a fase 2 está concluída.",
+          "tip": "Isto pode acontecer logo no primeiro dia, mas o mundo só passa à fase 3 depois do server save seguinte, para mais jogadores poderem matar incarnações e ganhar recompensas.",
+          "warning": "Se o mundo não conseguir matar as cinco ao mesmo tempo durante todo o dia, a fase 2 não fica concluída: no server save volta à fase 1 e é preciso acordar outra vez A Beautiful Girl."
+        }
+      ]
+    },
+    {
+      "title": "3. Fase 3: casulo e Devovorga",
+      "intro": "A fase 3 começa entre 8 e 14 horas depois do server save seguinte à conclusão da fase 2 (no mínimo a 2 de setembro, 8 horas após o server save), com a mensagem *“The mutation of Devovorga goes on! Fight her back!”*.",
+      "steps": [
+        {
+          "title": "Matar os Blooms of Doom",
+          "text": "Aparecem {creature:Bloom of Doom|Blooms of Doom} no covil da Devovorga, debaixo de Vengoth. Mata-os com ataques à distância.",
+          "coords": [{"x": 32948, "y": 31521, "z": 7, "label": "Portão de energia para o covil"}],
+          "warning": "Os Blooms of Doom têm dano corpo-a-corpo altíssimo (9500+). Não fiques ao lado deles."
+        },
+        {
+          "title": "Matar os Spawns of Devovorga",
+          "text": "Quando os Blooms morrem aparecem {creature:Spawn of Devovorga|Spawns of Devovorga}. Mata-os: todos na zona são teleportados para a área anterior. Desce outra vez pelo buraco e mata os Spawns of Devovorga mais uma vez. Aparece *“The mutation of Devovorga has been stopped - but her essence was shattered once again and formed incarnations!”*."
+        },
+        {
+          "title": "Matar outra vez as cinco incarnações",
+          "text": "As cinco incarnações voltam a aparecer nos seus covis. Tal como na fase 2, o mundo tem de as matar **ao mesmo tempo**. Por cada incarnação morta aparece um novo {creature:Spawn of Devovorga} no covil da Devovorga. Quando conseguirem, aparece *“The incarnations of Devovorga have been thrown back into their abyss!”*."
+        },
+        {
+          "title": "Destruir o casulo",
+          "text": "Todos os jogadores no covil da Devovorga são teleportados para a área de cima. Volta lá e, passados 5 minutos, mata os Blooms of Doom e o {creature:Vulnerable Cocoon}. Aparece *“You destroyed Devovorga's cocoon - but not in time to stop her transformation. Kill her - or the world as you know it will end.”*",
+          "reward": "Achievement Cocoon of Doom (se causares dano suficiente a um Bloom of Doom no último minuto)"
+        },
+        {
+          "title": "Matar a Devovorga",
+          "text": "A {creature:Devovorga} aparece na forma vulnerável. Concentra todo o dano nela até morrer.",
+          "reward": "Achievement Devovorga's Nemesis (se causares dano suficiente no último minuto); bónus de regeneração e experiência para todo o mundo"
+        }
+      ]
+    },
+    {
+      "title": "4. Sala de recompensas",
+      "steps": [
+        {
+          "title": "Entrar na sala de recompensas",
+          "text": "Depois de a Devovorga morrer, o portão de energia do covil e todos os portais das incarnações levam à sala de recompensas, mas só para quem contribuiu o suficiente (dano a uma incarnação ou à Devovorga no último minuto da luta). Entra no portal onde mataste a incarnação ou a Devovorga.",
+          "images": [{"file": "Reward_room.jpg", "caption": "Interior da sala de recompensas"}],
+          "warning": "A sala de recompensas só está acessível até ao server save de **30 de setembro**.",
+          "reward": "Achievement I Did My Part"
+        },
+        {
+          "title": "Abrir os baús",
+          "text": "Na sala só há {item:Treasure Chest (Blue)|baús}. Abre os que corresponderem ao teu nível. Garante que tens capacidade suficiente. Quando acabares, sai pelo mesmo caminho por onde entraste e volta à cidade mais próxima do portal que usaste.",
+          "table": {
+            "head": ["Nível", "Recompensa", "Capacidade"],
+            "rows": [
+              [
+                "20+",
+                "{item:Devovorga Statue}, {item:Stone of Insight} e {item:Demon Backpack} com 2 {item:Tentacle Piece|Tentacle Pieces}, {item:Berserk Potion}, {item:Mastermind Potion}, {item:Bullseye Potion} e {item:Red Gem}",
+                "60,99 oz"
+              ],
+              [
+                "40+",
+                "{item:Demon Backpack} com 4 {item:Tentacle Piece|Tentacle Pieces}, 6 {item:Small Emerald|Small Emeralds}, {item:Soul Orb} e {item:Solitude Charm}",
+                "40,80 oz (101,79 oz no total)"
+              ],
+              [
+                "70+",
+                "{item:Demon Backpack} com 5 {item:Tentacle Piece|Tentacle Pieces}, 3 {item:Giant Shimmering Pearl|Giant Shimmering Pearls} azuis e 5 {item:Gold Ingot|Gold Ingots}",
+                "125,40 oz (227,19 oz no total)"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Trocar Tentacle Pieces (opcional)",
+          "text": "O {npc:Dread Guardian} de Vengoth troca 55 {item:Tentacle Piece|Tentacle Pieces} pela {item:Bursa Obscura}, um contentor de um só espaço para o slot da mochila, com apenas 1,50 oz. Para ires a Vengoth, usa outra vez o barco do {npc:Harlow} em Yalahar.",
+          "npc": "Dread Guardian",
+          "coords": [{"x": 32888, "y": 31534, "z": 10, "label": "Dread Guardian (debaixo de Vengoth)"}]
+        }
+      ]
+    },
+    {
+      "title": "5. Referência: achievements e mensagens",
+      "steps": [
+        {
+          "title": "Achievements",
+          "text": "Desde 2014, causar dano suficiente a uma incarnação no último minuto da luta dá o achievement *Slayer of...* correspondente.",
+          "table": {
+            "head": ["Achievement", "Como obter"],
+            "rows": [
+              ["Teamplayer", "Entrar em qualquer covil de incarnação"],
+              ["Daring Trespasser", "Entrar no covil da Devovorga"],
+              ["Cocoon of Doom", "Dano suficiente a um Bloom of Doom no último minuto"],
+              ["Devovorga's Nemesis", "Dano suficiente à Devovorga no último minuto"],
+              ["Slayer of Anmothra", "Dano suficiente ao Anmothra no último minuto"],
+              ["Slayer of Irahsae", "Dano suficiente ao Irahsae no último minuto"],
+              ["Slayer of Teneshpar", "Dano suficiente ao Teneshpar no último minuto"],
+              ["Slayer of Chikhaton", "Dano suficiente ao Chikhaton no último minuto"],
+              ["Slayer of Phrodomo", "Dano suficiente ao Phrodomo no último minuto"],
+              ["I Did My Part", "Entrar na sala de recompensas"]
+            ]
+          },
+          "tip": "Os achievements *Slayer of...* também se podem obter no {wiki:Devovorga's Essence Mini World Change|Devovorga's Essence Mini World Change}."
+        },
+        {
+          "title": "Mensagens ao fazer login (em que fase está o mundo)",
+          "text": "Estas mensagens aparecem no Server Log quando entras no jogo:",
+          "table": {
+            "head": ["Mensagem", "Significado"],
+            "rows": [
+              [
+                "Something is rumbling deep underground all over the world.",
+                "A quest começou e a Devovorga apareceu."
+              ],
+              [
+                "An unknown evil is dwelling deep under Vengoth and strange portals have appeared all over the world...",
+                "As incarnações estão a aparecer (primeiro dia)."
+              ],
+              [
+                "You might still be able to stop the evil entity that has awoken deep under Vengoth - but there is not much time left!",
+                "As incarnações estão a aparecer (a partir do segundo dia)."
+              ],
+              [
+                "The shattered incarnations of Devovorga reassemble step by step. They will rise again sooner or later. Be prepared!",
+                "A fase 3 começa hoje ou já começou."
+              ],
+              [
+                "Thanks to the mighty and fearless Tibians who drove Devovorga back into her abyss, [...]",
+                "O mundo derrotou a Devovorga."
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Mensagens durante o evento",
+          "text": "Estas mensagens são anunciadas a todo o mundo:",
+          "table": {
+            "head": ["Mensagem", "Significado"],
+            "rows": [
+              ["Devovorga has awoken.", "Fase 2: Devovorga imortal aparece; incarnações em 30 minutos."],
+              ["The soul of Devovorga has risen again.", "Anmothra reapareceu (Plains of Havoc)."],
+              ["The fury of Devovorga has risen again.", "Irahsae reapareceu (Drefia)."],
+              ["The dark Knowledge of Devovorga has risen again.", "Teneshpar reapareceu (Folda)."],
+              ["The power of Devovorga has risen again.", "Chikhaton reapareceu (Edron)."],
+              ["The hatred of Devovorga has risen again.", "Phrodomo reapareceu (Ghostlands)."],
+              [
+                "The incarnations of Devovorga have been thrown back into their abyss! The threat ain't over yet. Watch out!",
+                "Fase 2 concluída."
+              ],
+              ["The mutation of Devovorga goes on! Fight her back!", "Fase 3 começou."],
+              [
+                "The mutation of Devovorga has been stopped - but her essence was shattered once again and formed incarnations!",
+                "Spawns mortos; incarnações voltam."
+              ],
+              [
+                "The incarnations of Devovorga have been thrown back into their abyss!",
+                "Incarnações mortas outra vez na fase 3."
+              ],
+              ["You destroyed Devovorga's cocoon [...]", "Casulo destruído; a Devovorga aparece."],
+              ["Devovorga is raging!", "Luta final em curso."]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Desde a revisão de agosto de 2024: depois de as incarnações serem derrotadas pela segunda vez, o casulo aparece com 5 minutos de atraso para todos poderem participar; a Devovorga tem mais resistência inicial; algumas incarnações têm mais vida e experiência; e as faixas de nível foram ajustadas (Irahsae 40–80, Teneshpar 40–160, Chikhaton e Phrodomo 160+).",
+    "A recompensa do mundo dura até ao fim de setembro."
+  ]
+}

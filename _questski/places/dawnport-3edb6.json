@@ -1,0 +1,30 @@
+{
+  "title": "Dawnport",
+  "type": "ilha",
+  "near": "Carlin",
+  "summary": "Antiga ilha de principiantes a **sudoeste das {wiki:Ghostlands}**, onde as personagens novas experimentavam as vocações antes de irem para o continente; a wiki indica que foi entretanto **retirada do jogo**.",
+  "entrance": {"x": 32069, "y": 31901, "z": 6, "label": "Chegada a Dawnport (gruta por baixo do Adventurer's Outpost)"},
+  "requirements": [
+    "Só personagens novas: não havia forma de lá chegar a partir do continente.",
+    "Podias sair a partir do nível 8 e eras obrigado a sair ao nível 20."
+  ],
+  "arrive": [
+    "Não há barco nem caminho para Dawnport: a personagem nova aparecia lá automaticamente ao entrar pela primeira vez (depois do {wiki:Tutorial}, se o tivesses ativado).",
+    "No fim do tutorial, o {item:Crystal Teleporter} levava-te a uma pequena gruta mesmo por baixo do {wiki:Adventurer's Outpost} ({coord:32069,31901,6})."
+  ],
+  "leave": [
+    "A partir do nível 8, vai ao templo de Dawnport e fala com a {npc:Oressa} ({key:hi}): é ela que te deixa escolher a vocação definitiva e sair para o continente.",
+    "Sai do Adventurer's Outpost pela porta da tua vocação: nessa altura ficas com os feitiços básicos da vocação escolhida e perdes os que experimentaste com o {npc:Garamond} e o {npc:Ser Tybald}.",
+    "Ao nível 20 és teleportado automaticamente para o templo, por baixo da zona inicial, ao fim de 5 minutos, e já não podes voltar às lojas: trata das compras e vendas antes de chegares ao 20.",
+    "Para ir para {wiki:Rookgaard} (só personagens que não sejam a primeira da conta, até ao nível 9), fala com o {npc:Inigo} no Adventurer's Outpost."
+  ],
+  "coords": [
+    {"x": 32064, "y": 31892, "z": 6, "label": "Oressa (templo de Dawnport)"},
+    {"x": 32062, "y": 31895, "z": 7, "label": "Dawnport (ilha)"}
+  ],
+  "images": [{"file": "Dawnport map.jpg", "caption": "Mapa de Dawnport"}],
+  "warnings": [
+    "Só podias levar 2000 gp para o continente (1500 no banco e 500 na mochila); o resto tinha de ser deitado fora ou doado. Os itens exclusivos de Dawnport não passam para Rookgaard.",
+    "Até ao nível 8 não perdias itens ao morrer; a partir do nível 8 aplicava-se a penalização normal de morte."
+  ]
+}

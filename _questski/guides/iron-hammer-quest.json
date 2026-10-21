@@ -1,0 +1,71 @@
+{
+  "slug": "iron-hammer-quest",
+  "category": "tesouro",
+  "region": "Kazordoon",
+  "difficulty": 2,
+  "duration": "15–30 min",
+  "summary": "Um grupo de guerreiros ciclopes de elite perdeu o seu valioso martelo durante uma guerra contra os Minotaurs. Desce às grutas dos Minotaurs a oeste de Kazordoon e encontra o baú escondido entre umas camas para receberes um {item:Iron Hammer}.",
+  "legend_pt": "Um grupo de elite de guerreiros ciclopes perdeu o seu valioso martelo durante uma guerra contra os Minotaurs.",
+  "start": {"x": 32448, "y": 31993, "z": 7, "label": "Monte de pedras soltas a oeste de Kazordoon"},
+  "requirements": [
+    "Não precisa de Premium nem de nível mínimo (recomendado 30+)."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"}
+  ],
+  "rewards": [
+    {"item": "Iron Hammer"}
+  ],
+  "achievements": [],
+  "dangers": ["Dwarf", "Dwarf Soldier", "Minotaur", "Minotaur Archer", "Bat", "Bug"],
+  "npcs": [],
+  "tips": [
+    "Leva a {item:Rope} para conseguires sair da gruta depois de desceres pelo buraco."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer às grutas dos Minotaurs",
+      "steps": [
+        {
+          "title": "Sair de Kazordoon para oeste",
+          "text": "Sai pela **entrada principal** de {wiki:Kazordoon} e segue a linha branca do mapa abaixo até um buraco com sítio para a {item:Rope}, onde há alguns {creature:Spider|Spiders}. Vai para **norte** e sai por uma rampa para o nível do chão (há {creature:Poison Spider|Poison Spiders} e alguns {creature:Dwarf|Dwarves}). Continua a seguir a linha branca para **sul**, atravessa **duas pontes** e passa por outras entradas das minas até ao monte de pedras soltas.",
+          "images": [{"file": "Way to Minotaur Tower.png", "caption": "Caminho desde a entrada principal de Kazordoon até às grutas dos Minotaurs (linha branca)"}],
+          "warning": "Pelo caminho podes encontrar {creature:Snake|Snakes}, {creature:Poison Spider|Poison Spiders}, {creature:Wolf|Wolves} e {creature:Bear|Bears}."
+        },
+        {
+          "title": "Encontrar o monte de pedras",
+          "text": "Vai a **oeste de Kazordoon** e procura o monte de pedras soltas.",
+          "coords": [{"x": 32448, "y": 31993, "z": 7, "label": "Monte de pedras soltas"}],
+          "warning": "À superfície vais encontrar {creature:Dwarf|Dwarves}, {creature:Dwarf Soldier|Dwarf Soldiers}, {creature:Minotaur|Minotaurs} e {creature:Minotaur Archer|Minotaur Archers}."
+        },
+        {
+          "title": "Cavar e descer",
+          "text": "Usa a {item:Shovel} no monte de pedras e desce pelo buraco."
+        }
+      ]
+    },
+    {
+      "title": "2. O baú do Iron Hammer",
+      "steps": [
+        {
+          "title": "Seguir para noroeste",
+          "text": "Lá em baixo, segue a passagem para **noroeste** até encontrares uma sala com camas.",
+          "images": [{"file": "Iron Hammer Quest Map.jpg", "caption": "Mapa da gruta com a sala das camas e o baú"}],
+          "warning": "Na gruta há {creature:Minotaur|Minotaurs} e {creature:Minotaur Archer|Minotaur Archers}."
+        },
+        {
+          "title": "Abrir o baú",
+          "text": "O baú da quest está entre umas camas. Abre-o para receberes o {item:Iron Hammer}.",
+          "reward": "Iron Hammer"
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Volta pelo mesmo caminho até ao buraco por onde desceste e usa a {item:Rope} para subires de novo à superfície, a oeste de Kazordoon. Depois refaz o caminho da linha branca (duas pontes, a rampa e o buraco da corda) até à entrada principal de Kazordoon.",
+          "images": [{"file": "Kazordoon Minotaurs (-1).png", "caption": "Mapa do 1.º andar subterrâneo das grutas dos Minotaurs"}],
+          "tip": "Neste andar há outras saídas para cima (as setas do mapa): uma delas leva à zona de relva à volta da Minotaur Tower e o X vermelho é o caminho para as Dwarf Mines."
+        }
+      ]
+    }
+  ]
+}

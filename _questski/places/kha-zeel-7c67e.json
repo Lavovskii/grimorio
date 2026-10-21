@@ -1,0 +1,33 @@
+{
+  "title": "Kha'zeel",
+  "type": "montanha",
+  "near": "Ankrahmun",
+  "summary": "Cordilheira que separa o Kha'labal (o deserto de **Ankrahmun**), a selva de {wiki:Tiquanda} (Port Hope) e o deserto de Darashia; tem muitas grutas mas poucas passagens, e do lado do deserto ficam as fortalezas dos djinns.",
+  "entrance": {"x": 33031, "y": 32677, "z": 7, "label": "Kha'zeel"},
+  "arrive": [
+    "**Do lado de Ankrahmun:** apanha um barco para **Ankrahmun** ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto) e sai da cidade para **oeste**, subindo as montanhas ({creature:Hyaena|Hyaenas}).",
+    "Para atravessares pelo {wiki:Kha'zeel Pass}: no topo da montanha passa a ponte (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce, sem monstros, até uma escada de mão que te leva para o lado da selva, perto do mercador {npc:Tarun} ({coord:32976,32715,7}).",
+    "Para as fortalezas dos djinns: {wiki:Ashta'daramai} pela rampa para as montanhas a **norte** de Ankrahmun ({coord:33120,32578,7}); {wiki:Mal'ouquah} pela passagem junto ao oásis ({coord:33101,32657,7}).",
+    "**Do lado de Tiquanda:** de **Port Hope** vai a pé para **leste** através da selva até ao sopé das montanhas. Também há uma passagem subterrânea, a {wiki:Darama Terramite Cave}."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: para leste, pela ponte do Kha'zeel Pass, até **Ankrahmun**, onde o {npc:Captain Sinbeard} ({coord:33094,32884,6}) tem barco ({key:hi}, o nome da cidade, {key:yes}).",
+    "Ou desce para o lado da selva e segue para **oeste** até **Port Hope** (o caminho mais a sul é mais fácil e seguro), onde o {npc:Charles} tem barco."
+  ],
+  "coords": [
+    {"x": 32976, "y": 32715, "z": 7, "label": "Tarun, junto à ponte do Kha'zeel Pass (lado da selva)"},
+    {"x": 33120, "y": 32578, "z": 7, "label": "Rampa para Ashta'daramai"},
+    {"x": 33101, "y": 32657, "z": 7, "label": "Passagem para Mal'ouquah"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Ank PH Route1.png", "caption": "Kha'zeel Pass — subida a partir de Ankrahmun"},
+    {"file": "Ank PH Route2.png", "caption": "Kha'zeel Pass — a ponte no topo"},
+    {"file": "Ank PH Route3.png", "caption": "Kha'zeel Pass — descida até à escada"},
+    {"file": "Ank PH Route4.png", "caption": "Kha'zeel Pass — lado da selva"}
+  ],
+  "warnings": [
+    "O lado do deserto tem muitos {creature:Dragon|Dragons} e {creature:Dragon Lord|Dragon Lords}, além de {creature:Stone Golem|Stone Golems} e {creature:Energy Elemental|Energy Elementals}; o lado da selva tem {creature:Hydra|Hydras} e {creature:Stone Golem|Stone Golems}.",
+    "Na selva, a seguir ao pass, cuidado com {creature:Hydra|Hydras} trazidas por outros jogadores."
+  ]
+}

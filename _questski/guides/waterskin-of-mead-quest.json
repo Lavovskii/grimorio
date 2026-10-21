@@ -1,0 +1,80 @@
+{
+  "slug": "waterskin-of-mead-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Um pequeno tesouro escondido nas {wiki:Formorgar Mines|Formorgar Mines}, na ilha de Svargrond. Segue o caminho pelas minas até uma sala com um barril: lá dentro há um saco de pelo com uma {item:Berserk Potion}, 82 gp e um {item:Waterskin} de {item:Mead}.",
+  "start": {"x": 32145, "y": 31123, "z": 7, "label": "Escadas de entrada das Formorgar Mines"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 40+).",
+    "Acesso às Formorgar Mines: ganha-se ao aceitar a missão 9 da {wiki:Ice Islands Quest|Ice Islands Quest}.",
+    "Feitiço {spell:Levitate} para subir/descer no caminho de Svargrond até às minas."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"}
+  ],
+  "rewards": [
+    {"item": "Berserk Potion"},
+    {"text": "82 gp"},
+    {"item": "Waterskin", "note": "com {item:Mead}"}
+  ],
+  "dangers": ["Ice Golem", "Mammoth", "Novice of the Cult", "Acolyte of the Cult", "Adept of the Cult", "Crystal Spider"],
+  "tips": [
+    "No piso com os {creature:Acolyte of the Cult|Acolytes} e {creature:Adept of the Cult|Adepts} pode haver uma {creature:Crystal Spider} trazida por outros jogadores."
+  ],
+  "sections": [
+    {
+      "title": "1. Entrar nas Formorgar Mines",
+      "steps": [
+        {
+          "title": "Desbloquear o acesso",
+          "text": "Aceita a missão 9 da {wiki:Ice Islands Quest|Ice Islands Quest} para ganhares acesso às {wiki:Formorgar Mines|Formorgar Mines}."
+        },
+        {
+          "title": "Chegar a Svargrond",
+          "text": "Apanha o barco para **Svargrond** em **Carlin**, **Thais** ou **Venore** (diz ao capitão {key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.",
+          "coords": [{"x": 32347, "y": 31108, "z": 6, "label": "Barco de Svargrond (Captain Breezelda)"}]
+        },
+        {
+          "title": "Chegar às minas",
+          "text": "Segue o mapa até à entrada das minas: a partir de **Svargrond** vai para **oeste**, usa {spell:Levitate} para subir e segue o caminho até às {wiki:Formorgar Mines|Formorgar Mines}. No fim do caminho, desce as escadas em {coord:32145,31123,7} para entrar nas minas.",
+          "coords": [
+            {"x": 32145, "y": 31123, "z": 7, "label": "Escadas de entrada das Formorgar Mines"},
+            {"x": 32146, "y": 31120, "z": 9, "label": "Formorgar Mines"}
+          ],
+          "images": [
+            {"file": "Svargrond_mines.jpg", "caption": "Caminho até às Formorgar Mines"},
+            {"file": "Route to Formorgar Mines.jpg", "caption": "Rota numerada de Svargrond até às Formorgar Mines"}
+          ],
+          "tip": "Atalho: sobe ao glaciar e desce pelo buraco em {coord:32105,31115,5} (mas nessa sala há 2 {creature:Frost Dragon|Frost Dragons} e 3 {creature:Crystal Spider|Crystal Spiders}). Alternativa: o Ice Portal de Thais ({wiki:Forgotten Knowledge Quest|Forgotten Knowledge Quest}) deixa-te perto do ponto 11 da rota."
+        }
+      ]
+    },
+    {
+      "title": "2. O barril com a recompensa",
+      "steps": [
+        {
+          "title": "Atravessar as minas",
+          "text": "Dentro das minas, segue o caminho indicado nos dois mapas.",
+          "images": [
+            {"file": "Waterskin_Quest.gif", "caption": "Caminho dentro das minas (1)"},
+            {"file": "Waterskin_Quest2.gif", "caption": "Caminho dentro das minas (2) até à sala do barril"}
+          ],
+          "warning": "Vais encontrar {creature:Ice Golem|Ice Golems}, {creature:Mammoth|Mammoths}, {creature:Novice of the Cult|Novices}, {creature:Acolyte of the Cult|Acolytes} e {creature:Adept of the Cult|Adepts of the Cult}."
+        },
+        {
+          "title": "Abrir o barril",
+          "text": "Na sala final, abre o {item:Barrel}: lá dentro há um {item:Bag|saco} de pelo com as recompensas.",
+          "reward": "Berserk Potion, 82 gp e Waterskin of Mead"
+        },
+        {
+          "title": "Sair das minas",
+          "text": "Não há saída rápida: volta pelo mesmo caminho dos mapas até às escadas de entrada ({coord:32145,31123,7}) e sobe. Depois refaz a rota até **Svargrond**, usando {spell:Levitate} para descer onde subiste. Em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin, Thais ou Venore."
+        }
+      ]
+    }
+  ]
+}

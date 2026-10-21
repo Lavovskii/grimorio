@@ -1,0 +1,76 @@
+{
+  "slug": "formorgar-mines-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 3,
+  "duration": "30–60 min",
+  "summary": "Um aventureiro que explorava as minas geladas de Formorgar, perto de Svargrond, foi mais fundo do que as suas forças permitiam. Segue o mapa até às Formorgar Mines e encontra o esqueleto dele junto às escadas: lá dentro estão um {item:Shard}, 100 gp, uma {item:Bullseye Potion}, uma {item:Crossbow} e 20 {item:Power Bolt|Power Bolts}.",
+  "legend_pt": "Um aventureiro que explorava as minas geladas aventurou-se mais fundo do que os seus poderes lhe permitiam...",
+  "start": {"x": 32145, "y": 31123, "z": 7, "label": "Escadas de entrada das Formorgar Mines"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível recomendado é **120**.",
+    "Acesso às {wiki:Formorgar Mines|Formorgar Mines} (através da {wiki:The Ice Islands Quest|The Ice Islands Quest})."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"text": "O feitiço {spell:Levitate} (para subir no caminho a oeste de Svargrond e voltar a descer)"},
+    {"text": "Poções suficientes: há muitas criaturas perigosas pelo caminho"}
+  ],
+  "rewards": [
+    {"item": "Shard"},
+    {"item": "Gold Coin", "qty": 100},
+    {"item": "Bullseye Potion"},
+    {"item": "Crossbow"},
+    {"item": "Power Bolt", "qty": 20}
+  ],
+  "dangers": ["Novice of the Cult", "Acolyte of the Cult", "Adept of the Cult", "Enlightened of the Cult", "Crystal Spider", "Ice Golem", "Lost Soul", "Nightmare", "Plaguesmith", "Demon", "Destroyer"],
+  "npcs": ["Captain Breezelda"],
+  "tips": [
+    "Há muitas criaturas perigosas no caminho: é boa ideia fazer esta quest ao mesmo tempo que a última missão da {wiki:The Ice Islands Quest|The Ice Islands Quest}.",
+    "Podem aparecer {creature:Demon|Demons} e/ou {creature:Destroyer|Destroyers} trazidos por outros jogadores."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar às Formorgar Mines",
+      "steps": [
+        {
+          "title": "Chegar a Svargrond",
+          "text": "Se ainda não estás em **Svargrond**, apanha um barco até lá (por exemplo em Carlin ou com o {npc:Captain Bluebear} em Thais): fala com o capitão do porto e diz {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.",
+          "coords": [{"x": 32347, "y": 31108, "z": 6, "label": "Barco da Captain Breezelda (Svargrond)"}]
+        },
+        {
+          "title": "Seguir o mapa até às minas",
+          "text": "Sai de **Svargrond** para **oeste**, usa {spell:Levitate} para subir e segue o caminho do mapa até à entrada das {wiki:Formorgar Mines|Formorgar Mines}. No fim do caminho desce as escadas para entrares nas minas.",
+          "coords": [
+            {"x": 32145, "y": 31123, "z": 7, "label": "Escadas de entrada das Formorgar Mines"},
+            {"x": 32146, "y": 31120, "z": 9, "label": "Formorgar Mines, primeiro andar"}
+          ],
+          "images": [
+            {"file": "Minas1.jpg", "caption": "Caminho até às Formorgar Mines"},
+            {"file": "Route to Formorgar Mines.jpg", "caption": "Rota numerada de Svargrond até às Formorgar Mines"},
+            {"file": "Formorgar Mines floor 1.png", "caption": "Primeiro andar das minas: o círculo amarelo é a rampa para sair; os círculos cor-de-rosa são as escadas para o andar 2"}
+          ],
+          "warning": "Pelo caminho e nas minas há cultistas voodoo ({creature:Novice of the Cult|Novices}, {creature:Acolyte of the Cult|Acolytes}, {creature:Adept of the Cult|Adepts} e {creature:Enlightened of the Cult|Enlightened of the Cult}), {creature:Crystal Spider|Crystal Spiders}, {creature:Ice Golem|Ice Golems}, uma {creature:Lost Soul}, {creature:Nightmare|Nightmares} e um {creature:Plaguesmith}."
+        }
+      ]
+    },
+    {
+      "title": "2. O esqueleto do aventureiro",
+      "steps": [
+        {
+          "title": "Abrir o esqueleto junto às escadas",
+          "text": "Já dentro das Formorgar Mines, segue o segundo mapa até às escadas. Perto delas está o corpo de um esqueleto: abre-o para receberes as recompensas.",
+          "images": [{"file": "Minas2.jpg", "caption": "Caminho dentro das minas até ao esqueleto junto às escadas"}],
+          "reward": "Shard, 100 gp, Bullseye Potion, Crossbow e 20 Power Bolts"
+        },
+        {
+          "title": "Sair das Formorgar Mines",
+          "text": "Não há saída rápida: volta pelo mesmo caminho do segundo mapa até ao primeiro andar e sobe pela rampa de saída (círculo amarelo no mapa do primeiro andar). Lá fora refaz a rota do primeiro mapa até **Svargrond**; usa {spell:Levitate} para desceres onde subiste. Para saíres da ilha, apanha o barco da {npc:Captain Breezelda} ({key:hi}, {key:carlin}/{key:thais}/{key:venore}, {key:yes}).",
+          "coords": [{"x": 32347, "y": 31108, "z": 6, "label": "Barco da Captain Breezelda (Svargrond)"}],
+          "images": [{"file": "Formorgar Mines floor 1.png", "caption": "Primeiro andar: o círculo amarelo marca a rampa para fora das minas"}]
+        }
+      ]
+    }
+  ]
+}

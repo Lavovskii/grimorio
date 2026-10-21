@@ -1,0 +1,29 @@
+{
+  "title": "Venore Orc Cave",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Pequena gruta de orcs fracos no pântano a **leste de Venore**, boa para níveis baixos; aqui fica a {wiki:Orc Shaman Quest}.",
+  "entrance": {"x": 33056, "y": 32030, "z": 7, "label": "Entrada da Venore Orc Cave (buraco para abrir com a pá)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Venore** (de barco: no capitão da tua cidade diz {key:hi}, {key:venore}, {key:yes}; chegas ao {npc:Captain Fearless}).",
+    "Sai pela porta **sul** da cidade e vai para **leste**, atravessando o pântano até uma pequena gruta ({coord:33056,32030,7}).",
+    "Usa a {item:Shovel} para abrir o buraco e desce por ele."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: em cada andar regressa ao sítio por onde desceste e sobe (usa a {item:Rope} nos buracos).",
+    "No piso de entrada vai para **oeste** até ao buraco por onde entraste e sobe com a {item:Rope} até ao pântano.",
+    "Volta para **oeste** até à porta sul de Venore. No porto, o {npc:Captain Fearless} leva-te de barco a outras cidades."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless — porto de Venore"}
+  ],
+  "images": [
+    {"file": "VOC0.jpg", "caption": "Venore Orc Cave — superfície"},
+    {"file": "VOC-1.jpg", "caption": "Venore Orc Cave — piso -1"},
+    {"file": "VOC-2.jpg", "caption": "Venore Orc Cave — piso -2"}
+  ],
+  "warnings": [
+    "Lá dentro há {creature:Snake|Snakes}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e, mais abaixo, um {creature:Orc Shaman}."
+  ]
+}

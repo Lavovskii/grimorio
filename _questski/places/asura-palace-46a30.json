@@ -1,0 +1,29 @@
+{
+  "title": "Asura Palace",
+  "type": "edificio",
+  "near": "Port Hope",
+  "summary": "Palácio opulento das asuras em {wiki:Tiquanda}, junto ao lado da selva do {wiki:Kha'zeel Pass}, entre **Port Hope** e **Ankrahmun**.",
+  "entrance": {"x": 32953, "y": 32685, "z": 7, "label": "Entrada do Asura Palace"},
+  "requirements": [
+    "A cave secreta (asuras na forma verdadeira) só está aberta a jogadores de nível 250+."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "O caminho mais simples é a partir de **Ankrahmun**: sai da cidade para **oeste** e sobe as montanhas ({creature:Hyaena|Hyaenas}).",
+    "Atravessa a ponte lá em cima (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce até uma escada que te leva para o lado da selva do {wiki:Kha'zeel Pass}.",
+    "Aí encontras o mercador {npc:Tarun}, perto da ponte de madeira do pass ({coord:32976,32715,7}). Caminha para **norte** até à entrada do palácio ({coord:32953,32685,7}).",
+    "Alternativa: vem a pé de **Port Hope**, para **leste** através da selva de Tiquanda."
+  ],
+  "leave": [
+    "Se caíste para uma das salas escondidas ou para a cave, sobe pelo mesmo sítio por onde caíste (usa a {item:Rope} se for preciso) e desce a torre até ao rés-do-chão.",
+    "Sai pela entrada do palácio e volta para **sul** até ao {npc:Tarun}.",
+    "Daí segue o Kha'zeel Pass para **leste** até **Ankrahmun** (o caminho de chegada ao contrário) ou volta pela selva para **oeste** até Port Hope."
+  ],
+  "coords": [
+    {"x": 32976, "y": 32715, "z": 7, "label": "Tarun (o palácio fica a norte)"}
+  ],
+  "warnings": [
+    "Zona para nível 200+ ({creature:Dawnfire Asura|Dawnfire}, {creature:Midnight Asura|Midnight} e {creature:Frost Flower Asura|Frost Flower Asuri}, {creature:Hellspawn|Hellspawns}).",
+    "No extremo **oeste** do rés-do-chão há fendas ({item:Some Cracks (Hole)}) e no canteiro de relva há um {item:Pitfall}: fazem-te cair para salas com {creature:Lich|Liches} e {creature:Hydra|Hydras}. Outras fendas nos andares de cima levam a elementais de fogo e energia e a {creature:Destroyer|Destroyers}."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Edron Rotworm Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta de {creature:Rotworm|Rotworms} e {creature:Carrion Worm|Carrion Worms} a **sul de Edron**, com várias entradas à superfície, que liga por baixo da terra a {wiki:Cormaya}; boa para quem chega de Rookgaard.",
+  "entrance": {"x": 33213, "y": 31890, "z": 7, "label": "Entrada da Edron Rotworm Cave (sul de Edron)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Edron**: de barco (no capitão da tua cidade diz {key:hi}, {key:edron}, {key:yes}; chegas ao {npc:Captain Seahorse}, {coord:33176,31764,6}) ou de tapete voador (chegas ao {npc:Pino}).",
+    "Sai da cidade para **sul**. Há três entradas à superfície: {coord:33213,31890,7}, {coord:33218,31911,7} e {coord:33238,31902,7}.",
+    "A gruta também tem entradas em {wiki:Cormaya} (a ilha a sul de Edron; o {npc:Captain Seahorse} leva-te lá com {key:hi}, {key:cormaya}, {key:yes}, 20 gp)."
+  ],
+  "leave": [
+    "Sai por uma das entradas a sul de Edron (usa a {item:Rope} se desceste por um buraco) e volta a pé para **norte** até à cidade.",
+    "Também podes atravessar a gruta a pé até **Cormaya**: em Cormaya, o Steamship do {npc:Gurbasch}, 8 andares abaixo do chão ({coord:33313,31989,15}), leva-te a Kazordoon ({key:hi}, {key:kazordoon}, {key:yes}) e o {npc:Pemaret}, no porto norte, leva-te a Edron."
+  ],
+  "coords": [
+    {"x": 33218, "y": 31911, "z": 7, "label": "Outra entrada da Edron Rotworm Cave"},
+    {"x": 33238, "y": 31902, "z": 7, "label": "Outra entrada da Edron Rotworm Cave"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship de Cormaya"}
+  ],
+  "images": [
+    {"file": "Edron Rotworm Cave 1.png", "caption": "Mapa da Edron Rotworm Cave"},
+    {"file": "Edron Rotworm Cave 2.png", "caption": "Mapa da Edron Rotworm Cave (continuação)"}
+  ],
+  "warnings": [
+    "Além dos Rotworms e Carrion Worms pode aparecer a {creature:Rotworm Queen}, que invoca ajudantes."
+  ]
+}

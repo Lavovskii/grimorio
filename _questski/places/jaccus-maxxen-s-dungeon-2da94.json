@@ -1,0 +1,34 @@
+{
+  "title": "Jaccus Maxxen's Dungeon",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Laboratório e masmorra do louco Professor Maxxen, muito fundo **por baixo do {wiki:Underground Glooth Factory}** de Rathleton, com 4 grandes salas de caça; é onde decorre a {wiki:Hero of Rathleton Quest}.",
+  "entrance": {"x": 33567, "y": 31950, "z": 14, "label": "Porta de entrada do dungeon (fundo do Underground Glooth Factory)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Para usar o {item:Slime Slide} do Underground Glooth Factory precisas pelo menos do posto **Citizen** na {wiki:Rathleton Quest}; a Hero of Rathleton Quest pede o posto **Squire**.",
+    "Nível recomendado 200+ e um {item:Dwarven Ring} (essencial nas três primeiras salas, mesmo só a passar)."
+  ],
+  "items": ["Dwarven Ring"],
+  "arrive": [
+    "Chega a **Rathleton**: com o posto Squire há barco para Oramond em Thais ({npc:Captain Bluebear}), Edron ({npc:Captain Seahorse}) e Venore ({npc:Captain Fearless}): {key:hi}, {key:oramond}, {key:yes}. Desembarcas na jangada do {npc:Captain Gulliver} ({coord:33479,31986,7}); o Slime Slide aí leva-te à cidade (com o posto Citizen vai diretamente).",
+    "Em Rathleton, vai ao Workshop Quarter, ao edifício logo a **leste** das escadas para Upper Rathleton, e entra no {item:Slime Slide} ({coord:33651,31942,7}): leva-te ao Underground Glooth Factory.",
+    "No Underground Glooth Factory, anda para **oeste** e desce até ao fundo do \"poço\" (a {npc:Strange Pipe} está no lado **oeste**).",
+    "No nível mais baixo, sai da fábrica pela {item:Door (Sealed)|porta de quest} do lado **leste** ({coord:33567,31950,14}): estás no Jaccus Maxxen's Dungeon."
+  ],
+  "leave": [
+    "Depois do Professor Maxxen, sai pelo {item:Slime Slide} a **leste** da sala da recompensa: leva-te de volta a Rathleton.",
+    "Se não chegaste ao fim, volta a pé pelo mesmo caminho até à porta da fábrica (não há atalho de regresso: tens de passar outra vez pelas criaturas).",
+    "Para deixares Oramond, fala com o {npc:Captain Gulliver} na jangada: {key:hi}, o nome da cidade (por exemplo {key:thais}, {key:edron}, {key:venore} ou {key:port hope}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33651, "y": 31942, "z": 7, "label": "Slime Slide para o Underground Glooth Factory"},
+    {"x": 33567, "y": 31950, "z": 14, "label": "Porta de entrada do dungeon"},
+    {"x": 33716, "y": 31932, "z": 14, "label": "Teleportes de atalho (a leste da primeira sala)"},
+    {"x": 33479, "y": 31986, "z": 7, "label": "Captain Gulliver (jangada de Oramond)"}
+  ],
+  "warnings": [
+    "Criaturas: {creature:Blood Beast}, {creature:Devourer}, {creature:Enslaved Dwarf}, {creature:Lost Basher}, {creature:Lost Berserker}, {creature:Lost Husher}, {creature:Metal Gargoyle}, {creature:Rot Elemental}, {creature:Rustheap Golem} e {creature:Glooth Golem}.",
+    "Quem já completou a Hero of Rathleton Quest pode usar os 3 teleportes a leste da primeira sala para ir direto à 2.ª, 3.ª ou 4.ª sala (da esquerda para a direita), mas não há atalho de volta."
+  ]
+}

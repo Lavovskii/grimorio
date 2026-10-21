@@ -1,0 +1,110 @@
+{
+  "slug": "soil-guardian-outfits-quest",
+  "category": "outfit",
+  "region": "Kazordoon",
+  "difficulty": 2,
+  "duration": "Rápido se comprares os itens; semanas se juntares os tokens na Bigfoot's Burden Quest",
+  "summary": "O outfit **Soil Guardian** e os seus dois addons obtêm-se usando três vouchers gnómicos: o do outfit base e o do primeiro addon trocam-se por {item:Major Crystalline Token|Major} e {item:Minor Crystalline Token|Minor Crystalline Tokens} com a {npc:Gnomally} em Gnomegate; o do segundo addon sai, com pouca sorte, das {item:Gnomish Supply Package|Gnomish Supply Packages}. Ganhas também o achievement **Funghitastic**.",
+  "start": {"x": 32794, "y": 31746, "z": 10, "label": "Gnomally, em Gnomegate"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 120** (para fazeres as missões da {wiki:Bigfoot's Burden Quest} que dão os tokens).",
+    "Os tokens e os pacotes vêm da {wiki:Bigfoot's Burden Quest}, mas **podes comprá-los a outros jogadores**: o efeito é o mesmo.",
+    "Autorização para usar o {wiki:GCTS|Gnomish Crystal Teleport System}, dada pelo {npc:Xelvar} em Kazordoon no início da {wiki:Bigfoot's Burden Quest} (é a única forma de chegar a Gnomegate)."
+  ],
+  "items_needed": [
+    {"item": "Major Crystalline Token", "qty": 20, "note": "para o Gnomish Voucher Type MB (outfit base)"},
+    {"item": "Minor Crystalline Token", "qty": 70, "note": "para o Gnomish Voucher Type MA1 (addon 1)"},
+    {"item": "Gnomish Supply Package", "note": "quantas forem precisas até sair o Gnomish Voucher Type MA2 (addon 2)"},
+    {"item": "Teleport Crystal", "qty": 2, "note": "um para entrar e outro para sair do GCTS em cada visita a Gnomegate"}
+  ],
+  "rewards": [
+    {"text": "Outfit **Soil Guardian** (base)"},
+    {"text": "Addon 1 (capa) e addon 2 (escudo)"},
+    {"text": "Achievement **Funghitastic**"}
+  ],
+  "achievements": ["Funghitastic"],
+  "npcs": ["Gnomally"],
+  "tips": [
+    "Se não quiseres fazer as missões da Bigfoot's Burden, compra os vouchers, tokens ou pacotes a outros jogadores — funciona exatamente igual.",
+    "Os perigos são apenas as criaturas da {wiki:Bigfoot's Burden Quest}, e só se fores tu a juntar os tokens."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "steps": [
+        {
+          "title": "Chegar a Gnomegate",
+          "text": "{wiki:Gnomegate|Gnomegate} só se alcança pelo {wiki:GCTS|GCTS}. Em **Kazordoon**, entra no teleporte que está a **leste** do {npc:Xelvar}, junto ao blesser do norte (gastas um {item:Teleport Crystal}). Apareces no GCTS, por cima da Gnomebase: desce para a Gnomegate. A {npc:Gnomally} está no **norte** da Gnomegate. Também há teleportes do GCTS em Thais (Ancient Temple), Darashia, Edron, Liberty Bay e Svargrond.",
+          "coords": [
+            {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon"},
+            {"x": 32799, "y": 31765, "z": 9, "label": "GCTS, por cima da Gnomebase"}
+          ]
+        },
+        {
+          "title": "Trocar 20 Major Crystalline Tokens",
+          "text": "Junta 20 {item:Major Crystalline Token|Major Crystalline Tokens} (missões da {wiki:Bigfoot's Burden Quest}) e troca-os com a {npc:Gnomally}, em **Gnomegate**, por um {item:Gnomish Voucher Type MB} (abre a troca com {key:hi} e {key:trade}).",
+          "npc": "Gnomally"
+        },
+        {
+          "title": "Usar o voucher",
+          "text": "Usa o {item:Gnomish Voucher Type MB} para receberes o outfit **Soil Guardian**.",
+          "images": [
+            {"file": "Outfit Soil Guardian Male.gif", "caption": "Soil Guardian (masculino), sem addons"},
+            {"file": "Outfit Soil Guardian Female.gif", "caption": "Soil Guardian (feminino), sem addons"}
+          ],
+          "reward": "Outfit Soil Guardian"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1 (capa)",
+      "steps": [
+        {
+          "title": "Trocar 70 Minor Crystalline Tokens",
+          "text": "Junta 70 {item:Minor Crystalline Token|Minor Crystalline Tokens} e troca-os com a {npc:Gnomally} por um {item:Gnomish Voucher Type MA1}.",
+          "npc": "Gnomally"
+        },
+        {
+          "title": "Sair de Gnomegate",
+          "text": "Para saíres, sobe ao GCTS (a sala de teletransporte por cima da Gnomebase, onde está a {npc:Gnomette}) e entra no teleporte da cidade para onde queres ir: **Thais** (Ancient Temple), **Darashia** (montanha a noroeste da cidade), **Edron** (esgotos), **Kazordoon** (junto ao blesser do norte), **Liberty Bay** (montanhas a sudeste) ou **Svargrond** (buraco junto à saída oeste). Gastas um {item:Teleport Crystal}. Se tiveres de voltar à Gnomally noutro dia, repete o passo «Chegar a Gnomegate».",
+          "coords": [
+            {"x": 32799, "y": 31765, "z": 9, "label": "GCTS, por cima da Gnomebase (Gnomette)"},
+            {"x": 32628, "y": 31863, "z": 11, "label": "GCTS em Kazordoon"},
+            {"x": 32331, "y": 32173, "z": 9, "label": "GCTS em Thais (Ancient Temple)"}
+          ]
+        },
+        {
+          "title": "Usar o voucher",
+          "text": "Usa o {item:Gnomish Voucher Type MA1} para receberes o primeiro addon (capa).",
+          "images": [
+            {"file": "Outfit Soil Guardian Male Addon 1.gif", "caption": "Soil Guardian (masculino) com o addon 1 (capa)"},
+            {"file": "Outfit Soil Guardian Female Addon 1.gif", "caption": "Soil Guardian (feminino) com o addon 1 (capa)"}
+          ],
+          "reward": "Addon 1 (capa)"
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2 (escudo)",
+      "steps": [
+        {
+          "title": "Abrir Gnomish Supply Packages",
+          "text": "Usa {item:Gnomish Supply Package|Gnomish Supply Packages} (também da Bigfoot's Burden Quest). Cada pacote tem uma **pequena probabilidade** de dar o {item:Gnomish Voucher Type MA2}.",
+          "tip": "Como a probabilidade é baixa, pode compensar comprar o voucher diretamente a outro jogador."
+        },
+        {
+          "title": "Usar o voucher",
+          "text": "Usa o {item:Gnomish Voucher Type MA2} para receberes o segundo addon (escudo).",
+          "images": [
+            {"file": "Outfit Soil Guardian Male Addon 2.gif", "caption": "Soil Guardian (masculino) com o addon 2 (escudo)"},
+            {"file": "Outfit Soil Guardian Female Addon 2.gif", "caption": "Soil Guardian (feminino) com o addon 2 (escudo)"},
+            {"file": "Outfit Soil Guardian Male Addon 3.gif", "caption": "Soil Guardian (masculino) completo"},
+            {"file": "Outfit Soil Guardian Female Addon 3.gif", "caption": "Soil Guardian (feminino) completo"}
+          ],
+          "reward": "Addon 2 (escudo)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "tutorial",
+  "category": "tutorial",
+  "region": "Dawnport",
+  "difficulty": 1,
+  "duration": "5 min",
+  "summary": "O tutorial opcional para personagens novas, jogado numa gruta de cristais e lava por baixo de {wiki:Dawnport|Dawnport}. Aprendes a andar, apanhar itens, atacar, lootear, comer e falar com NPCs, e no fim és teleportado para Dawnport com uma {item:Backpack}, uma {item:Rope}, uma {item:Torch} e 3 {item:Gold Coin|Gold Coins}.",
+  "start": {
+    "x": 32076,
+    "y": 31846,
+    "z": 13,
+    "label": "Gruta do tutorial (Menesto), por baixo de Dawnport"
+  },
+  "requirements": [
+    "Personagem nova: ao criares a personagem tens de marcar a caixa *\"Do you want to play the tutorial?\"*.",
+    "Não precisa de Premium nem de nível."
+  ],
+  "items_needed": [],
+  "rewards": [
+    {
+      "item": "Backpack"
+    },
+    {
+      "item": "Rope"
+    },
+    {
+      "item": "Torch"
+    },
+    {
+      "item": "Gold Coin",
+      "qty": 3
+    }
+  ],
+  "dangers": [
+    "Wounded Cave Draptor"
+  ],
+  "npcs": [
+    "Menesto"
+  ],
+  "tips": [
+    "Durante o tutorial quase não há ligação ao servidor: não vês outros jogadores nem mensagens de chat, e as ações são limitadas. É normal."
+  ],
+  "sections": [
+    {
+      "title": "1. Na gruta de cristais",
+      "steps": [
+        {
+          "title": "Andar até ao quadrado assinalado",
+          "text": "Não há caminho para esta gruta (por baixo de Dawnport): apareces lá automaticamente quando entras pela primeira vez com a personagem nova, se marcaste a caixa do tutorial. Quando o cliente acabar de carregar, apareces numa gruta rodeada de cristais e lava. Clica no quadrado destacado para andares até lá."
+        },
+        {
+          "title": "Apanhar o punhal",
+          "text": "Apanha o {item:Dagger} do chão e põe-no no teu {wiki:Inventory|inventário}."
+        },
+        {
+          "title": "Matar o Wounded Cave Draptor",
+          "text": "Clica no {creature:Wounded Cave Draptor} que apareceu para o atacares. Quando morrer, lootea o corpo.",
+          "images": [
+            {
+              "file": "Flash Client Tutorial 1.png",
+              "caption": "O início do tutorial na gruta de cristais (1)"
+            },
+            {
+              "file": "Flash Client Tutorial 2.png",
+              "caption": "O início do tutorial na gruta de cristais (2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. O Menesto",
+      "steps": [
+        {
+          "title": "Falar com o Menesto",
+          "text": "Fala com o {npc:Menesto}. Ele fica com o punhal dele e dá-te um pedaço de {item:Meat}.",
+          "npc": "Menesto"
+        },
+        {
+          "title": "Comer e responder",
+          "text": "Come a {item:Meat}. Depois clica na palavra-chave destacada no canal do NPC.",
+          "npc": "Menesto",
+          "reward": "Rope"
+        }
+      ]
+    },
+    {
+      "title": "3. Sair para Dawnport",
+      "steps": [
+        {
+          "title": "Subir com a corda",
+          "text": "Com a {item:Rope}, usa a escada a **oeste**, sobe pelo buraco usando a corda e entra no {item:Crystal Teleporter}.",
+          "images": [
+            {
+              "file": "Flash Client Tutorial 3.png",
+              "caption": "A caminho do Crystal Teleporter (1)"
+            },
+            {
+              "file": "Flash Client Tutorial 4.png",
+              "caption": "A caminho do Crystal Teleporter (2)"
+            }
+          ]
+        },
+        {
+          "title": "Chegar a Dawnport",
+          "text": "O ecrã de carregamento aparece outra vez e a tua personagem é teleportada para uma pequena gruta mesmo por baixo do {wiki:Adventurer's Outpost|Adventurer's Outpost}, em {wiki:Dawnport|Dawnport}. A partir daqui estás totalmente ligado ao servidor e podes interagir com outros jogadores.",
+          "coords": [
+            {
+              "x": 32069,
+              "y": 31901,
+              "z": 6,
+              "label": "Chegada a Dawnport"
+            }
+          ],
+          "reward": "Backpack, Rope, Torch e 3 Gold Coins"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Este tutorial começou por ser exclusivo do {wiki:Flash Client|Flash Client} (jogava-se ao entrar pela primeira vez com a primeira personagem da conta). Depois passou para o Tibia 11 e hoje pode ser jogado por qualquer personagem nova."
+  ]
+}

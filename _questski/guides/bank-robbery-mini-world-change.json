@@ -1,0 +1,131 @@
+{
+  "slug": "bank-robbery-mini-world-change",
+  "category": "world-change",
+  "region": "Vários",
+  "difficulty": 1,
+  "duration": "15 min",
+  "summary": "De vez em quando, ladrões assaltam o banco de Thais, Carlin, Ab'Dendriel ou Venore e o banqueiro deixa de funcionar. Encontra o ladrão escondido perto da cidade, mata-o, apanha o {item:Bag With Stolen Gold} e devolve-o ao banqueiro antes do Server Save. Recebes 10 {item:Platinum Coin|Platinum Coins} e o achievement **Honest Finder** (e **Goldhunter** ao fim de cinco sacos).",
+  "legend_pt": "Um banco do Tibia é assaltado e não pode funcionar até o dinheiro roubado ser devolvido.",
+  "start": {"x": 32342, "y": 32229, "z": 7, "label": "Banqueiro da cidade assaltada (ex.: Naji, Thais)"},
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo (recomendado 25+).",
+    "O Mini World Change tem de estar ativo (pode acontecer de hora a hora, a contar do arranque do servidor)."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"},
+    {"item": "Machete", "note": "recomendada para o pântano a caminho de Shadowthorn (Venore)"}
+  ],
+  "rewards": [
+    {"item": "Platinum Coin", "qty": 10, "note": "por cada saco devolvido"},
+    {"text": "Achievement **Honest Finder** (ao devolver um saco)"},
+    {"text": "Achievement **Goldhunter** (ao devolver cinco sacos)"}
+  ],
+  "achievements": ["Honest Finder", "Goldhunter"],
+  "dangers": ["Jesse the Wicked", "Elvira Hammerthrust", "Robby the Reckless", "Mornenion", "Orc", "Orc Spearman", "Orc Warrior", "Snake", "Poison Spider", "Wolf", "Rotworm", "Dwarf", "Dwarf Soldier", "Dwarf Guard", "Rat", "Cave Rat", "Skeleton", "Scorpion", "Ghoul", "Marsh Stalker", "Swampling", "Elf", "Elf Scout", "Firestarter"],
+  "npcs": ["Naji", "Suzy", "Eva", "Finarfin", "Rokyn"],
+  "tips": [
+    "Devolve o saco **antes do próximo Server Save**: depois disso o evento termina e o saco desaparece do teu inventário.",
+    "Enquanto o saco não for devolvido, os serviços do banco da cidade assaltada ficam indisponíveis."
+  ],
+  "sections": [
+    {
+      "title": "1. Descobrir que banco foi assaltado",
+      "steps": [
+        {
+          "title": "Ver se o evento está ativo",
+          "text": "Quando o evento começa aparece uma destas mensagens: *\"Several banks in major coastal towns are being robbed! The thieves are still on the loose!\"* O {wiki:Towncryer} anuncia o assalto e o Adventurer's Board no {wiki:Adventurers' Guild} também o menciona. Se nenhum deles fala do assalto, o evento ainda não aconteceu ou o ouro já foi devolvido."
+        },
+        {
+          "title": "Confirmar a cidade",
+          "text": "Fala com os banqueiros das quatro cidades possíveis. O banqueiro assaltado não te atende e diz para onde fugiu o ladrão:",
+          "table": {
+            "head": ["Cidade", "Banqueiro", "Para onde fugiu o ladrão"],
+            "rows": [
+              ["Thais", "{npc:Naji} / {npc:Suzy}", "Para o Ancient Temple"],
+              ["Carlin", "{npc:Eva}", "Para as Ghostlands"],
+              ["Ab'Dendriel", "{npc:Finarfin}", "Anões que fugiram para as minas (Dwarf Mines)"],
+              ["Venore", "{npc:Rokyn}", "Elfos de Shadowthorn"]
+            ]
+          },
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "HELP! We have been robbed! I can't give you any gold until the robber has been brought to justice [...] I think the robbers ran towards the Ancient Temple."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Matar o ladrão",
+      "intro": "Cada cidade tem o seu ladrão num esconderijo fixo. Vai ao local da cidade assaltada.",
+      "steps": [
+        {
+          "title": "Thais — Jesse the Wicked",
+          "text": "Vai ao {wiki:Ancient Temple}, logo a noroeste da porta norte de Thais, e desce pelas escadas e buracos do templo até ao ponto indicado (piso -4). Para saíres, volta pelo mesmo caminho e sobe pelos buracos com a {item:Rope}. Mata o {creature:Jesse the Wicked}. Pelo caminho há {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors}.",
+          "coords": [
+            {"x": 32356, "y": 32170, "z": 7, "label": "Entrada do Ancient Temple"},
+            {"x": 32373, "y": 32221, "z": 11, "label": "Esconderijo do Jesse the Wicked (Ancient Temple)"}
+          ]
+        },
+        {
+          "title": "Ab'Dendriel — Elvira Hammerthrust",
+          "text": "A ladra fugiu para as minas de Kazordoon. As {wiki:Dwarf Mines} ficam a oeste e por baixo de Kazordoon e têm 6 entradas à superfície; entra e desce até ao ponto indicado (piso -4). Mata a {creature:Elvira Hammerthrust}. Para saíres, volta pelo mesmo caminho até à entrada por onde entraste (leva {item:Rope} e {item:Shovel}). Pelo caminho há {creature:Snake|Snakes}, {creature:Poison Spider|Poison Spiders}, {creature:Wolf|Wolves}, {creature:Rotworm|Rotworms}, {creature:Dwarf|Dwarves}, {creature:Dwarf Soldier|Dwarf Soldiers} e {creature:Dwarf Guard|Dwarf Guards}.",
+          "coords": [{"x": 32511, "y": 31910, "z": 11, "label": "Esconderijo da Elvira Hammerthrust (Dwarf Mines)"}]
+        },
+        {
+          "title": "Carlin — Robby the Reckless",
+          "text": "As {wiki:Ghostlands} ficam a **oeste** de Carlin. Na superfície há vários buracos que descem para as grutas; desce até ao ponto indicado (piso -2) e mata o {creature:Robby the Reckless}. Para saíres, sobe pelo buraco por onde desceste com a {item:Rope}. Pelo caminho há {creature:Rat|Rats}, {creature:Cave Rat|Cave Rats}, {creature:Poison Spider|Poison Spiders}, {creature:Skeleton|Skeletons}, {creature:Scorpion|Scorpions} e {creature:Ghoul|Ghouls}.",
+          "coords": [
+            {"x": 32202, "y": 31822, "z": 7, "label": "Ghostlands (oeste de Carlin)"},
+            {"x": 32222, "y": 31767, "z": 7, "label": "Gruta de entrada das Ghostlands"},
+            {"x": 32199, "y": 31809, "z": 9, "label": "Esconderijo do Robby the Reckless (Ghostlands)"}
+          ],
+          "warning": "Numa das grutas das Ghostlands há umas escadas que descem para uma sala com uma {creature:Giant Spider} e que fecham atrás de ti: aí o buraco é a única saída. Não desças por lá."
+        },
+        {
+          "title": "Venore — Mornenion",
+          "text": "{wiki:Shadowthorn} é um acampamento de elfos a **sudeste** de Venore. Sai de Venore pela **saída leste** e atravessa o pântano seguindo a rota da imagem ({item:Machete} e {item:Shovel} ajudam, mas não são obrigatórios). Mata o {creature:Mornenion}. Para voltares, faz o mesmo caminho ao contrário até Venore. Pelo caminho há {creature:Snake|Snakes}, {creature:Marsh Stalker|Marsh Stalkers}, {creature:Swampling|Swamplings}, {creature:Elf|Elves}, {creature:Elf Scout|Elf Scouts} e {creature:Firestarter|Firestarters}.",
+          "coords": [
+            {"x": 33075, "y": 32170, "z": 7, "label": "Edifício principal de Shadowthorn"},
+            {"x": 33087, "y": 32157, "z": 7, "label": "Esconderijo do Mornenion (Shadowthorn)"}
+          ],
+          "images": [{"file": "Shadowthorn Route.png", "caption": "Caminho mais rápido de Venore até Shadowthorn"}]
+        },
+        {
+          "title": "Apanhar o saco",
+          "text": "Abre o corpo do ladrão e tira o {item:Bag With Stolen Gold}.",
+          "tip": "Durante {wiki:Double Loot Events} ou com uma poção {item:Wealth Duplex} podes lootar mais do que um saco.",
+          "reward": "Bag With Stolen Gold"
+        }
+      ]
+    },
+    {
+      "title": "3. Devolver o ouro",
+      "steps": [
+        {
+          "title": "Falar com o banqueiro",
+          "text": "Volta ao banqueiro da cidade assaltada com o saco no inventário. Diz {key:hi} e {key:yes}. Recebes 10 {item:Platinum Coin|Platinum Coins}, o achievement **Honest Finder** e o banco volta a funcionar.",
+          "npc": "Naji",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "I'm sorry, but we have been robb- hey, what's that bag? Have you hunted down the bank robbers?"},
+            {"you": "yes"},
+            {"npc": "Hey, awesome. Good job. Here's some gold for all your work. Thanks to you we can open the bank again."}
+          ],
+          "warning": "Tens de devolver o saco antes do próximo Server Save, senão o saco desaparece e perdes a recompensa.",
+          "reward": "10 Platinum Coins + achievement Honest Finder"
+        },
+        {
+          "title": "Vários sacos no mesmo evento",
+          "text": "Se foram lootados dois ou mais sacos no mesmo evento, vários jogadores podem devolvê-los ao banqueiro, mas têm de o fazer **ao mesmo tempo**: sincronizem as mensagens ao NPC. Assim o progresso do achievement avança um para cada jogador.",
+          "tip": "Devolve cinco sacos (em eventos diferentes) para ganhares o achievement **Goldhunter**."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Não se sabe ao certo com que frequência o evento acontece; sabe-se que tem uma hipótese de acontecer de hora a hora, a partir da hora de arranque do servidor.",
+    "Depois de o ouro ser devolvido, o banqueiro volta a atender normalmente (ex.: a {npc:Eva} diz que o ladrão foi apanhado)."
+  ]
+}

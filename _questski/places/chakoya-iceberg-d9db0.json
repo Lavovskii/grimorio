@@ -1,0 +1,25 @@
+{
+  "title": "Chakoya Iceberg",
+  "type": "ilha",
+  "near": "Port Hope",
+  "summary": "Iceberg à deriva habitado por Chakoyas (e uma Frost Giantess no topo) que às vezes encalha na costa do **noroeste de Tiquanda**, a norte de Port Hope; só é acessível enquanto o mini world change está ativo.",
+  "entrance": {"x": 32624, "y": 32586, "z": 7, "label": "Chakoya Iceberg (costa a norte de Port Hope)"},
+  "requirements": [
+    "Só acessível durante o {wiki:Chakoya Iceberg Mini World Change}. Quando está ativo aparecem mensagens como *\"A big iceberg has been washed up at the coast north of Port Hope.\"*"
+  ],
+  "arrive": [
+    "Se ainda não estás em **Port Hope**, apanha um barco para lá (por exemplo em Thais, Venore, Ankrahmun ou Liberty Bay): diz ao capitão {key:hi}, {key:port hope}, {key:yes}. Chegas ao porto junto ao {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai de Port Hope a pé e caminha para **norte**, pelo **noroeste de Tiquanda**, até à costa onde o iceberg encalhou ({coord:32624,32586,7}). Não precisas de barco nem de corda.",
+    "No iceberg, sobe as escadas; a **nordeste** há um iglu que te teleporta para baixo, para os pisos interiores."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: se desceste pelos buracos dentro do iceberg, sobe com a {item:Rope} pelos buracos por onde desceste (as fontes não descrevem outra saída do piso do iglu).",
+    "Sai do iceberg para a costa de Tiquanda e caminha para **sul** até **Port Hope**, onde o {npc:Charles} te leva de barco a outra cidade."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "warnings": [
+    "Pelo caminho de Port Hope ao iceberg podes encontrar {creature:Snake|Snakes}, {creature:Swamp Troll|Swamp Trolls}, {creature:Slime|Slimes} e {creature:Terror Bird|Terror Birds}. No topo do iceberg vive uma {creature:Frost Giantess}."
+  ]
+}

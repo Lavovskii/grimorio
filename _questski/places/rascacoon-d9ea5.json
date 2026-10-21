@@ -1,0 +1,34 @@
+{
+  "title": "Rascacoon",
+  "type": "ilha",
+  "near": "Issavi",
+  "summary": "Pequena ilha a **norte de Kilmaresh**, casa dos Rascoohan (guaxinins vindos de Washingstone) e constantemente atacada pelos Pirats; é o centro da {wiki:A Pirate's Tail Quest}.",
+  "entrance": {"x": 33788, "y": 31336, "z": 8, "label": "Saída da gruta para a ilha (vindo de Issavi)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "O acesso obtém-se na {wiki:A Pirate's Tail Quest}: junta **1500 pontos** de confiança com o {npc:Eustacio} (raids dos Pirats) para ele te falar da passagem secreta."
+  ],
+  "arrive": [
+    "**Primeira visita:** viaja até **Issavi**, na ilha de Kilmaresh (há barco a partir de Venore, Darashia, Krailos ou Oramond: {key:hi}, {key:issavi}, {key:yes}; também há tapete mágico).",
+    "Em Issavi, usa a pequena concha a **norte do depot** ({coord:33919,31471,7}).",
+    "Na gruta, desce no primeiro ponto ({coord:33877,31401,8}), sobe no segundo ({coord:33862,31363,9}) e volta a subir no terceiro ({coord:33788,31336,8}) até saíres à superfície da ilha.",
+    "Na ilha, procura o {npc:Tik'hi Tak'he} a **oeste** ({coord:33729,31343,7}) e oferece-lhe {key:help}.",
+    "**Visitas seguintes:** depois de falares com o Tik'hi Tak'he, pede {key:shortcut} ao {npc:Eustacio} no porto de **Venore** ({coord:32937,32031,7}) para ires direto para a ilha."
+  ],
+  "leave": [
+    "Usa o pequeno barco no cais onde chegas pelo atalho do Eustacio: leva-te de volta a **Venore**.",
+    "Em alternativa, volta pela gruta até Issavi, fazendo o caminho ao contrário."
+  ],
+  "coords": [
+    {"x": 33919, "y": 31471, "z": 7, "label": "Concha a norte do depot de Issavi"},
+    {"x": 33877, "y": 31401, "z": 8, "label": "Gruta: desce aqui"},
+    {"x": 33862, "y": 31363, "z": 9, "label": "Gruta: sobe aqui"},
+    {"x": 33788, "y": 31336, "z": 8, "label": "Gruta: sobe aqui (saída para a ilha)"},
+    {"x": 33729, "y": 31343, "z": 7, "label": "Tik'hi Tak'he"},
+    {"x": 32937, "y": 32031, "z": 7, "label": "Eustacio (porto de Venore)"}
+  ],
+  "images": [{"file": "Rascacoon map.png", "caption": "Mapa de Rascacoon"}],
+  "warnings": [
+    "Perto da concha de Issavi, a norte do templo, há um buraco-armadilha: se passares por cima dele cais junto a um grupo de {creature:Burning Gladiator|Burning Gladiators}."
+  ]
+}

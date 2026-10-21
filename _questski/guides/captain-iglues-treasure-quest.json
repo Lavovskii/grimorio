@@ -1,0 +1,96 @@
+{
+  "slug": "captain-iglues-treasure-quest",
+  "category": "tesouro",
+  "region": "Rookgaard",
+  "difficulty": 1,
+  "duration": "20 min",
+  "summary": "Um velho capitão escondeu alguns dos seus bens mais preciosos nas profundezas de Rookgaard. Desce pela torre das {creature:Poison Spider|Poison Spiders}, atravessa os gases venenosos, enfrenta dois {creature:Skeleton|Skeletons} e abre os baús para receberes salmão e o livro {item:Treasure of Captain Iglue (Book)}. O salmão pode ser trocado com a {npc:Amber} por informação sobre a língua dos orcs.",
+  "legend_pt": "Um velho capitão escondeu alguns dos seus bens mais preciosos nas profundezas da ilha de Rookgaard.",
+  "start": {"x": 32058, "y": 32091, "z": 7, "label": "Torre das Poison Spiders, norte de Rookgaard"},
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 5.",
+    "Feita em Rookgaard (não precisa de Premium)."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Antidote Potion", "qty": 2, "note": "recomendado para os Poison Gases; ou Small Health Potions suficientes para aguentar o veneno"}
+  ],
+  "rewards": [
+    {"item": "Treasure of Captain Iglue (Book)"},
+    {"item": "Salmon", "qty": 2, "note": "no baú da quest"},
+    {"text": "Opcional: 12 {item:Salmon} e uma {item:Stamped Letter} no baú da esquerda (renasce diariamente)."}
+  ],
+  "achievements": [],
+  "dangers": ["Spider", "Poison Spider", "Skeleton"],
+  "npcs": ["Amber"],
+  "tips": [
+    "As grutas de Rookgaard estão quase todas ligadas: há vários caminhos para esta quest. Este é o mais direto, não necessariamente o mais seguro.",
+    "Há {item:Poison Field|Poison Fields} e {item:Poison Gas|Poison Gases} pelo caminho. Uma {item:Antidote Potion} cura o veneno; {item:Small Health Potion|Small Health Potions} são mais económicas."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer pela torre das Poison Spiders",
+      "steps": [
+        {
+          "title": "Entrar na torre",
+          "text": "Sai da vila de **Rookgaard** e vai para **norte** até à torre das Poison Spiders (no ponto indicado). Entra e desce um andar.",
+          "coords": [{"x": 32058, "y": 32091, "z": 7, "label": "Torre das Poison Spiders"}]
+        },
+        {
+          "title": "Buraco, subida e buraco",
+          "text": "Vai para **sul** e desce pelo primeiro buraco que encontrares. Depois sobe no ponto a **leste** de ti e vai para **norte** até ao buraco seguinte.",
+          "images": [{"file": "Captain Iglues Treasure Quest Map 2.png", "caption": "Caminho até ao buraco seguinte"}]
+        },
+        {
+          "title": "Atravessar os gases venenosos",
+          "text": "Neste andar há muitas {creature:Poison Spider|Poison Spiders} e 2 {item:Poison Gas|Poison Gases}. Segue o caminho para **noroeste**, passando pelos gases.",
+          "images": [{"file": "Captain Iglues Treasure Quest Map 3.png", "caption": "Caminho para noroeste pelos Poison Gases"}],
+          "tip": "Usa uma {item:Antidote Potion} depois de passares pelos gases, ou aguenta o veneno com {item:Small Health Potion|Small Health Potions}."
+        },
+        {
+          "title": "Descer mais um andar",
+          "text": "Desce mais um andar. Aqui há 3 Poison Spiders.",
+          "images": [{"file": "Captain Iglues Treasure Quest Map 4.png", "caption": "Andar com 3 Poison Spiders"}]
+        },
+        {
+          "title": "Seguir a passagem",
+          "text": "Segue esta passagem e desce mais um andar. Aqui não há criaturas.",
+          "images": [{"file": "Captain Iglues Treasure Quest Map 5.png", "caption": "Passagem sem criaturas"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Os baús do capitão",
+      "steps": [
+        {
+          "title": "Descer as escadas brancas",
+          "text": "Chegas a uma zona com paredes de pedra. Desce as {item:Stairs (White)|escadas}: encontras dois baús.",
+          "images": [{"file": "Captain Iglues Treasure Quest Map 6.png", "caption": "Zona dos dois baús"}],
+          "warning": "Os baús estão guardados por dois {creature:Skeleton|Skeletons}."
+        },
+        {
+          "title": "Abrir os baús",
+          "text": "Mata os esqueletos e abre os baús. O baú da **direita** é o {item:Chest (Quest)|baú da quest} e tem 2 {item:Salmon}. O baú da **esquerda** tem 12 Salmon e uma {item:Stamped Letter}, mas é um {wiki:Daily Respawns|respawn diário}.",
+          "images": [{"file": "Captain Iglues quest rewards.png", "caption": "As recompensas dos baús"}],
+          "reward": "{item:Salmon} e {item:Treasure of Captain Iglue (Book)}"
+        },
+        {
+          "title": "Sair das grutas",
+          "text": "Para saíres, volta pelo mesmo caminho: sobe as escadas brancas e os andares por onde desceste, usando a {item:Rope} nos buracos, e passa outra vez pelos {item:Poison Gas|Poison Gases} até à torre das Poison Spiders, no norte da ilha. Daí regressa à vila, para **sul**.",
+          "coords": [{"x": 32058, "y": 32091, "z": 7, "label": "Saída: torre das Poison Spiders"}],
+          "tip": "Guarda uma {item:Antidote Potion} (ou Small Health Potions) para os gases do caminho de volta."
+        }
+      ]
+    },
+    {
+      "title": "3. Língua dos orcs (opcional)",
+      "steps": [
+        {
+          "title": "Levar o salmão à Amber",
+          "text": "Leva o {item:Salmon} à {npc:Amber}, na {wiki:Rookgaard Academy}. Ela troca-o por informação sobre a {wiki:Orc Language|língua dos orcs}.",
+          "npc": "Amber"
+        }
+      ]
+    }
+  ]
+}

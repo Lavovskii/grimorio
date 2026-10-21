@@ -1,0 +1,109 @@
+{
+  "slug": "treasure-island-quest",
+  "category": "acesso",
+  "region": "Liberty Bay",
+  "difficulty": 2,
+  "duration": "30–60 min",
+  "summary": "Em Treasure Island, perto de Liberty Bay, podes usar {item:Treasure Map (Pirate)|Pirate Treasure Maps} para escavar buracos escondidos que levam a grutas subterrâneas cheias de mortos-vivos e caranguejos. Não há recompensa nem quest conhecida: é uma exploração das grutas da ilha.",
+  "start": {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider, sudeste de Liberty Bay"},
+  "requirements": [
+    "Premium Account.",
+    "Sem nível mínimo (recomendado 40)."
+  ],
+  "items_needed": [
+    {"item": "Shovel"},
+    {"item": "Rope"},
+    {"text": "250 gp para viagens (200 gp para ir a Treasure Island e 50 gp para voltar)"},
+    {"item": "Treasure Map (Pirate)", "note": "um por cada buraco; NÃO serve o Treasure Map que se compra na ilha"}
+  ],
+  "rewards": [
+    {"text": "Nenhuma recompensa conhecida: apenas acesso às grutas subterrâneas da ilha"}
+  ],
+  "unlocks": [
+    {"what": "Grutas subterrâneas de Treasure Island", "kind": "zona", "place": "Treasure Island", "when": "Ao escavares um dos pontos da ilha com um {item:Treasure Map (Pirate)|Pirate Treasure Map} na mochila.", "note": "Não é permanente: cada buraco aberto gasta um Pirate Treasure Map."}
+  ],
+  "dangers": ["Skeleton", "Ghoul", "Pirate Skeleton", "Pirate Ghost", "Crab", "Blood Crab", "Scorpion"],
+  "npcs": ["Captain Waverider"],
+  "tips": [
+    "Leva vários Pirate Treasure Maps se quiseres abrir mais de um buraco: cada buraco gasta um.",
+    "Ao desceres enfrentas todos os inimigos de uma vez. Prepara-te antes de entrar."
+  ],
+  "sections": [
+    {
+      "title": "1. Viajar até Treasure Island",
+      "steps": [
+        {
+          "title": "Chegar a Liberty Bay",
+          "text": "Se ainda não estás em **Liberty Bay**, apanha um barco até lá (por exemplo com o {npc:Captain Bluebear} em Thais): fala com o capitão do porto e diz {key:hi}, {key:liberty bay}, {key:yes}."
+        },
+        {
+          "title": "Falar com o Captain Waverider",
+          "text": "Vai à pequena cabana a **sudeste de Liberty Bay** e fala com o {npc:Captain Waverider}. Diz {key:hi} e pede para ir a {key:treasure island} (200 gp); confirma com {key:yes}.",
+          "npc": "Captain Waverider",
+          "coords": [{"x": 32344, "y": 32855, "z": 7, "label": "Captain Waverider em Liberty Bay"}]
+        },
+        {
+          "title": "Chegar a Treasure Island",
+          "text": "Desembarcas no cais de {wiki:Treasure Island}, uma pequena ilha a sudoeste de Liberty Bay. O {npc:Captain Waverider} também está neste cais: é com ele que voltas. Cuidado com os buracos e entulho espalhados pela ilha.",
+          "coords": [{"x": 32132, "y": 32913, "z": 7, "label": "Captain Waverider em Treasure Island (cais)"}],
+          "images": [{"file": "Treasure island map.png", "caption": "Mapa de Treasure Island"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Escavar os buracos",
+      "steps": [
+        {
+          "title": "Encontrar os pontos de escavação",
+          "text": "Na ilha há pontos específicos onde podes escavar com a {item:Shovel} para abrir buracos escondidos que descem para o subsolo. Usa o mapa para os encontrares.",
+          "images": [{"file": "Treasure Island Holes.gif", "caption": "Os pontos de Treasure Island onde podes escavar"}]
+        },
+        {
+          "title": "Escavar com um Pirate Treasure Map",
+          "text": "Com um {item:Treasure Map (Pirate)|Pirate Treasure Map} na mochila, escava num desses pontos. Cada buraco aberto gasta **um** Pirate Treasure Map. Sem mapa, aparece a mensagem \"Sorry, not possible.\".",
+          "warning": "Os buracos têm armadilhas e podem fazer aparecer {creature:Scorpion|Scorpions} ao início. Continua a escavar até o buraco abrir."
+        }
+      ]
+    },
+    {
+      "title": "3. O que há em cada buraco",
+      "steps": [
+        {
+          "title": "Buraco de cima à esquerda",
+          "text": "Leva a uma sala circular aberta com muitos inimigos. Recomenda-se {item:Great Fireball Rune|GFB}. Descendo mais um andar há mais inimigos, o que parece ser um cemitério e uma placa a condenar um navegador horrível.",
+          "warning": "Enfrentas todos os inimigos de uma vez quando desces."
+        },
+        {
+          "title": "Buraco de cima à direita",
+          "text": "Leva a {creature:Crab|Crabs} e {creature:Blood Crab|Blood Crabs}. Daqui consegues ver, mas não alcançar, 2 baús de tesouro no andar -2."
+        },
+        {
+          "title": "Restantes buracos",
+          "text": "Todos os outros buracos levam a uma grande gruta de mortos-vivos interligada ({creature:Skeleton|Skeletons}, {creature:Ghoul|Ghouls}, {creature:Pirate Skeleton|Pirate Skeletons}, {creature:Pirate Ghost|Pirate Ghosts})."
+        },
+        {
+          "title": "Voltar",
+          "text": "Usa a {item:Rope} para saíres dos buracos e paga 50 gp para regressares de Treasure Island."
+        }
+      ]
+    },
+    {
+      "title": "4. Sair de Treasure Island",
+      "steps": [
+        {
+          "title": "Subir à superfície",
+          "text": "Volta ao buraco por onde desceste e usa a {item:Rope} para subires até à superfície da ilha."
+        },
+        {
+          "title": "Voltar a Liberty Bay",
+          "text": "Vai ao cais da ilha e fala com o {npc:Captain Waverider}: diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp). Voltas à cabana a sudeste de Liberty Bay. Guarda os 50 gp da viagem de volta antes de gastares dinheiro na ilha.",
+          "npc": "Captain Waverider",
+          "coords": [{"x": 32132, "y": 32913, "z": 7, "label": "Captain Waverider em Treasure Island"}, {"x": 32344, "y": 32855, "z": 7, "label": "Chegada a Liberty Bay"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Não há recompensa nem quest conhecida em Treasure Island: os baús visíveis no buraco de cima à direita não são acessíveis."
+  ]
+}

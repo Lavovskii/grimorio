@@ -1,0 +1,32 @@
+{
+  "title": "Isle of Evil",
+  "type": "ilha",
+  "near": "Kazordoon",
+  "summary": "Ilha a **leste de Mistrock** onde o {creature:Evil Mastermind} tem o seu castelo; é o palco final da {wiki:The Isle of Evil Quest} e só se chega lá no barco submarino do {npc:Rapanaio}, em Kazordoon.",
+  "entrance": {"x": 32741, "y": 31492, "z": 7, "label": "Escadas para o castelo da Isle of Evil"},
+  "requirements": [
+    "Só podes ir à ilha durante a {wiki:The Isle of Evil Quest}, depois de acabares as missões 1 a 6 do {npc:Rapanaio}.",
+    "O caminho até ao barco passa por um {item:Gate of Expertise} de **nível 35**."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**. O mais fácil é de Steamship: em {wiki:Cormaya} (com o {npc:Gurbasch}) ou em **Farmine** (com o {npc:Thorgrin}) diz {key:hi}, {key:kazordoon}, {key:yes}; chegas ao porto subterrâneo, junto ao {npc:Brodrosch}.",
+    "Sobe **um andar**: aí está o {npc:Rapanaio} ({coord:32684,31986,14}).",
+    "Passa o {item:Gate of Expertise} de nível 35 a **sul** e desce as escadas ({coord:32681,31994,14}). O Rapanaio espera-te junto ao barco submarino.",
+    "Diz-lhe {key:hi}, {key:mission} e responde {key:yes} a todas as perguntas (8 confirmações) até ele dizer *\"So be it!\"*. Ele leva-te à Isle of Evil.",
+    "Na ilha, abre caminho até às escadas do castelo ({coord:32741,31492,7}) e sobe."
+  ],
+  "leave": [
+    "Volta ao {npc:Rapanaio}, junto ao barco na ilha, e diz {key:hi}, {key:back} e {key:yes}. Ele leva-te de volta a **Kazordoon**, junto ao Steamship.",
+    "Em Kazordoon apanha o Steamship (por exemplo no {npc:Brodrosch}) ou sai a pé pela entrada da montanha."
+  ],
+  "coords": [
+    {"x": 32684, "y": 31986, "z": 14, "label": "Rapanaio (um andar acima do Steamship de Kazordoon)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Steamship de Kazordoon (Brodrosch)"},
+    {"x": 32681, "y": 31994, "z": 14, "label": "Escadas para o barco (atrás do Gate of Expertise)"},
+    {"x": 32741, "y": 31492, "z": 7, "label": "Escadas para o castelo"}
+  ],
+  "warnings": [
+    "A ilha e o castelo estão cheios de criaturas \"malvadas\" ({creature:Killer Rabbit|Killer Rabbits}, {creature:Evil Sheep|Evil Sheep}, {creature:Vampire Pig|Vampire Pigs}, {creature:Demon Parrot|Demon Parrots}...) e um boss por andar: leva poções e runas suficientes.",
+    "Há uma caixa de correio ({item:Mailbox}) gratuita à porta da torre."
+  ]
+}

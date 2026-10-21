@@ -1,0 +1,31 @@
+{
+  "title": "Truffels Garden",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Gruta subterrânea dos gnomos, ligada à **Gnomegate** (a Gnomebase por baixo do continente) por um {item:Large Crystal Teleporter}; aqui decorrem as tarefas Mushroom Digger e Exterminators da {wiki:Bigfoot's Burden Quest}.",
+  "entrance": {"x": 32868, "y": 31835, "z": 13, "label": "Truffels Garden"},
+  "requirements": [
+    "Precisas de te juntar aos gnomos com o {npc:Xelvar} em Kazordoon ({wiki:Bigfoot's Burden Quest}) para usares o {wiki:Gnomish Crystal Teleport System} (cada viagem gasta um {item:Teleport Crystal}). A quest pede nível 80."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Vai a **Kazordoon** (de {wiki:Steamship} a partir de Cormaya ou Farmine com {key:kazordoon}, de {wiki:Magic Carpet} ou a pé pela montanha) e procura o {npc:Xelvar}, na parte norte da rua do Templo, perto do blesser do norte.",
+    "Se ainda não tens acesso, diz-lhe {key:hi}, {key:adventures}, {key:recruiting}, {key:partners}, {key:gnomes}, {key:help} e {key:join}: recebes autorização e 4 Teleport Crystals.",
+    "Entra no teleporte do GCTS a **leste** do Xelvar ({coord:32628,31863,11}). Também há entradas do GCTS em Thais (Ancient Temple), Darashia, Edron, Liberty Bay e Svargrond. Apareces na sala de teletransporte por cima da Gnomebase ({coord:32799,31765,9}); desce para a Gnomegate.",
+    "Na Gnomegate entra no Large Crystal Teleporter do **norte** ({coord:32803,31745,10}): chegas ao Truffels Garden."
+  ],
+  "leave": [
+    "Sai pelo teleporte por onde entraste: voltas à Gnomegate.",
+    "Sobe à sala do GCTS (onde está a {npc:Gnomette}) e entra no teleporte da cidade para onde queres ir: Thais (Ancient Temple), Darashia (montanha a noroeste), Edron (esgotos), Kazordoon (junto ao blesser do norte), Liberty Bay (montanhas a sudeste) ou Svargrond (buraco junto à saída oeste). Gastas um Teleport Crystal."
+  ],
+  "coords": [
+    {"x": 32628, "y": 31863, "z": 11, "label": "GCTS em Kazordoon (junto ao blesser do norte)"},
+    {"x": 32799, "y": 31765, "z": 9, "label": "GCTS por cima da Gnomebase (Gnomette)"},
+    {"x": 32803, "y": 31745, "z": 10, "label": "Teleporte para o Truffels Garden (Gnomegate)"},
+    {"x": 32331, "y": 32173, "z": 9, "label": "GCTS em Thais (Ancient Temple)"},
+    {"x": 33154, "y": 31835, "z": 10, "label": "GCTS em Edron (esgotos)"}
+  ],
+  "warnings": [
+    "Há {creature:Wiggler|Wigglers}, {creature:Massive Earth Elemental|Massive Earth Elementals} e {creature:Wyvern|Wyverns}; os {creature:Mushroom Sniffer|Mushroom Sniffers} são inofensivos. O wiki recomenda nível 80+."
+  ]
+}

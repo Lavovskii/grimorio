@@ -1,0 +1,31 @@
+{
+  "title": "Mushroom Gardens",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Jardins de cogumelos dos gnomos nos pisos inferiores de {wiki:Gnomebase Alpha}, por baixo da Gnomegate, onde se faz a missão Spore Gathering da {wiki:Bigfoot's Burden Quest}.",
+  "entrance": {"x": 32991, "y": 31885, "z": 10, "label": "Mushroom Corkscrew Stairs (descida para os Mushroom Gardens)"},
+  "requirements": [
+    "Acesso ao {wiki:GCTS|Gnomish Crystal Teleport System}: **nível 80** e autorização do {npc:Xelvar} em Kazordoon (início da {wiki:Bigfoot's Burden Quest}: {key:hi}, {key:adventures}, {key:recruiting}, {key:partners}, {key:gnomes}, {key:help}, {key:join}).",
+    "O teleporte para Gnomebase Alpha só funciona com o **rank II** da Bigfoot's Burden Quest (mais de 120 pontos de reputação) e Premium Account.",
+    "Um {item:Teleport Crystal} (150 gp) por cada entrada e saída do GCTS."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Em **Kazordoon**, entra no teleporte do GCTS a **leste** do {npc:Xelvar}, perto do blesser do norte ({coord:32628,31863,11}). Também há teleportes do GCTS em Thais (Ancient Temple), Edron (esgotos), Darashia (montanha a noroeste), Liberty Bay (montanhas a sudeste) e Svargrond (buraco junto à saída oeste).",
+    "Apareces no hub do GCTS, por cima da Gnomegate; desce para a Gnomegate.",
+    "Na Gnomegate, entra no {item:Large Crystal Teleporter} que leva a {wiki:Gnomebase Alpha} ({coord:32796,31780,10}).",
+    "Em Gnomebase Alpha, caminha para **sul** e desce a rampa ({coord:32997,31901,9}).",
+    "Anda uns passos para **norte** e desce as escadas em caracol de cogumelo (Mushroom Corkscrew Stairs, {coord:32991,31885,10}). Estás nos Mushroom Gardens."
+  ],
+  "leave": [
+    "Sobe pelas mesmas escadas em caracol e pela rampa até Gnomebase Alpha.",
+    "Usa o teleporte junto à {npc:Gnomincia} ({coord:32979,31868,9}) para voltares à Gnomegate.",
+    "Sobe ao hub do GCTS e entra no teleporte da cidade para onde queres ir (Kazordoon, Thais, Edron, Darashia, Liberty Bay ou Svargrond). Gastas mais um {item:Teleport Crystal}: leva sempre pelo menos dois."
+  ],
+  "coords": [
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon"},
+    {"x": 32796, "y": 31780, "z": 10, "label": "Teleporte de Gnomegate para Gnomebase Alpha"},
+    {"x": 32990, "y": 31878, "z": 11, "label": "Mushroom Gardens, 1.º piso"},
+    {"x": 32971, "y": 31854, "z": 12, "label": "Mushroom Gardens, 2.º piso"}
+  ]
+}

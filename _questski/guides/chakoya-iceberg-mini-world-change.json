@@ -1,0 +1,64 @@
+{
+  "slug": "chakoya-iceberg-mini-world-change",
+  "category": "world-change",
+  "region": "Port Hope",
+  "difficulty": 1,
+  "duration": "10–30 min (enquanto estiver ativo)",
+  "summary": "Um mini world change em que um grande {wiki:Chakoya Iceberg|iceberg} encalha na costa norte de {wiki:Tiquanda}, a norte de Port Hope, trazendo consigo uma tribo de {wiki:Chakoyas}. Não dá recompensa própria, mas é um bom sítio para caçar Chakoyas e juntar {item:Fireproof Horn|Fireproof Horns}, e é um dos locais da {wiki:Cartography 101 Quest}.",
+  "legend_pt": "De repente apareceu um iceberg no norte de Tiquanda.",
+  "start": {"x": 32624, "y": 32586, "z": 7, "label": "Iceberg encalhado no norte de Tiquanda"},
+  "requirements": [
+    "Premium (Tiquanda/Port Hope).",
+    "Sem nível mínimo; recomendado nível 15.",
+    "O mini world change tem de estar ativo no teu servidor nesse dia."
+  ],
+  "items_needed": [
+    {"text": "Nada de especial: leva poções e uma arma para os Chakoyas."}
+  ],
+  "rewards": [
+    {"text": "Nenhuma recompensa própria. Podes lootar {item:Fireproof Horn|Fireproof Horns} dos Chakoyas."}
+  ],
+  "dangers": ["Snake", "Swamp Troll", "Slime", "Terror Bird", "Chakoya Toolshaper", "Chakoya Tribewarden", "Chakoya Windcaller"],
+  "npcs": ["Charles"],
+  "tips": [
+    "Se estás a fazer a {wiki:Cartography 101 Quest}, aproveita os dias em que o iceberg está ativo: é um dos locais dessa quest."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se o iceberg está ativo",
+      "steps": [
+        {
+          "title": "Mensagens do mini world change",
+          "text": "Este mini world change não está sempre ativo. Quando acontece, aparecem mensagens como estas no jogo:\n- *\"A big iceberg has been washed up at the coast north of Port Hope. It seems to be inhabited by strange white furballs.\"*\n- *\"A floating vessel of ice is not at all nice when it brings unbidden friends to Port Hope's lands.\"*"
+        }
+      ]
+    },
+    {
+      "title": "2. Visitar o iceberg",
+      "steps": [
+        {
+          "title": "Chegar a Port Hope",
+          "text": "Se ainda não estás em **Port Hope**, apanha um barco para lá (por exemplo em Thais, Venore, Ankrahmun ou Liberty Bay): fala com o capitão e diz {key:hi}, {key:port hope} e {key:yes}. Chegas ao porto de Port Hope, junto ao {npc:Charles}.",
+          "npc": "Charles",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Captain Charles (porto de Port Hope)"}]
+        },
+        {
+          "title": "Chegar ao iceberg (norte de Tiquanda)",
+          "text": "Sai de **Port Hope** a pé e caminha para **norte**, pelo **noroeste de Tiquanda**, até à costa onde o iceberg encalhou ({coord:32624,32586,7}). Não precisas de barco nem de corda: o iceberg só fica acessível por terra enquanto o mini world change estiver ativo. Pelo caminho podes encontrar {creature:Snake|Snakes}, {creature:Swamp Troll|Swamp Trolls}, {creature:Slime|Slimes} e {creature:Terror Bird|Terror Birds}.",
+          "coords": [{"x": 32624, "y": 32586, "z": 7, "label": "Chakoya Iceberg"}]
+        },
+        {
+          "title": "Caçar os Chakoyas",
+          "text": "O iceberg está habitado por {creature:Chakoya Toolshaper|Chakoya Toolshapers}, {creature:Chakoya Tribewarden|Chakoya Tribewardens} e {creature:Chakoya Windcaller|Chakoya Windcallers}. Caça-os para juntares {item:Fireproof Horn|Fireproof Horns}.",
+          "reward": "Loot dos Chakoyas (incluindo Fireproof Horns)"
+        },
+        {
+          "title": "Sair do iceberg",
+          "text": "Para saíres, volta pelo mesmo caminho: sai do iceberg para a costa de Tiquanda e caminha para **sul** até **Port Hope**. Lá podes apanhar o barco do {npc:Charles} no porto para voltares a outra cidade.",
+          "npc": "Charles",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Captain Charles (porto de Port Hope)"}]
+        }
+      ]
+    }
+  ]
+}

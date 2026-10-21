@@ -1,0 +1,31 @@
+{
+  "title": "Crystal Grounds",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Grutas de cristal dos gnomos, acessíveis por um {item:Large Crystal Teleporter} na **Gnomegate** (a Gnomebase da {wiki:Bigfoot's Burden Quest}), com {creature:Crystalcrusher|Crystalcrushers}, {creature:Earth Elemental|Earth Elementals} e {creature:Wyvern|Wyverns}.",
+  "entrance": {"x": 32795, "y": 31761, "z": 10, "label": "Teleporte para os Crystal Grounds (Gnomegate)"},
+  "requirements": [
+    "Precisas de acesso ao GCTS (o sistema de teletransporte dos gnomos) pela {wiki:Bigfoot's Burden Quest}; cada vez que entras ou sais do GCTS gastas um {item:Teleport Crystal} (vende-os o {npc:Xelvar} com {key:trade}, a {npc:Gnomette} e a {npc:Gnomincia})."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Vai a **Kazordoon** e procura o {npc:Xelvar}, na parte norte da rua do Templo, perto do NPC de blessing do norte.",
+    "Entra no teleporte a **leste** do Xelvar ({coord:32628,31863,11}): apareces no GCTS, por cima da Gnomebase ({coord:32799,31765,9}). Também há teleportes do GCTS em Thais (Ancient Temple), Darashia (montanha a noroeste), Edron (esgotos), Liberty Bay (montanhas a sudeste) e Svargrond (buraco junto à saída oeste).",
+    "Desce para a Gnomebase (Gnomegate) e entra no {item:Large Crystal Teleporter} dos Crystal Grounds ({coord:32795,31761,10}), a norte, cerca de 20 sqm a sul do {npc:Gnomally}.",
+    "Se estás em {wiki:Gnomebase Alpha}, volta primeiro à Gnomegate pelo teleporte junto à {npc:Gnomincia}."
+  ],
+  "leave": [
+    "Volta ao teleporte por onde entraste: leva-te de volta à Gnomegate.",
+    "Sobe ao GCTS (a sala por cima da Gnomebase, onde está a {npc:Gnomette}) e entra no teleporte da cidade para onde queres ir: Thais, Darashia, Edron, Kazordoon, Liberty Bay ou Svargrond. Gastas um {item:Teleport Crystal}."
+  ],
+  "coords": [
+    {"x": 33002, "y": 31868, "z": 13, "label": "Crystal Grounds"},
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon (junto ao blesser do norte)"},
+    {"x": 32799, "y": 31765, "z": 9, "label": "GCTS, por cima da Gnomebase (Gnomette)"},
+    {"x": 32331, "y": 32173, "z": 9, "label": "GCTS em Thais (Ancient Temple)"},
+    {"x": 33154, "y": 31835, "z": 10, "label": "GCTS em Edron (esgotos)"}
+  ],
+  "warnings": [
+    "Zona para nível 80+: {creature:Crystalcrusher|Crystalcrushers}, {creature:Earth Elemental|Earth Elementals} e {creature:Wyvern|Wyverns}."
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "slug": "goblin-merchant-quest",
+  "category": "tarefas",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "1–2 horas (as 6 tarefas de uma vez)",
+  "summary": "O {npc:Rafzan}, um goblin comerciante \"pobre e honesto\" no pântano de Venore, precisa de ajuda com 6 pequenas tarefas: espalhar publicidade, criar perfume para os ratmen, \"recrutar\" guardas, irritar e sabotar os ratmen e matar Marsh Stalkers. Cada tarefa dá experiência e ouro (5200 exp e 1100 gp no total) e pode ser repetida a cada 20 horas. Ao fim de 500 tarefas ganhas o achievement **Task Manager**.",
+  "legend_pt": "O Rafzan dá sempre jeito a uma ajuda extra.",
+  "start": {"x": 33051, "y": 32099, "z": 7, "label": "Elevador para a casa do Rafzan"},
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 35 (as tarefas nas grutas dos Corym são perigosas para níveis baixos).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "ou equivalente"},
+    {"item": "Shovel", "note": "ou equivalente"},
+    {"item": "Mouldy Cheese", "note": "para a tarefa Perfume; podes arranjá-lo antes"},
+    {"text": "Dados pelo Rafzan (se os perderes tens de lhos comprar): 3 {item:Advertisement Sign|Advertisement Signs}, {item:Perfume Gatherer}, {item:Guardcatcher}, {item:Bottle with Rat Urine}, {item:Trunkhammer}."}
+  ],
+  "rewards": [
+    {"text": "5200 de experiência e 1100 gp por ronda completa das 6 tarefas"},
+    {"text": "Achievement **Task Manager** ao fim de 500 tarefas"}
+  ],
+  "achievements": ["Task Manager"],
+  "dangers": ["Snake", "Marsh Stalker", "Swampling", "Corym Charlatan", "Corym Skirmisher", "Corym Vanguard", "Angry Adventurer", "Slug", "Rotworm"],
+  "npcs": ["Rafzan"],
+  "tips": [
+    "Aceita **todas** as tarefas de uma vez: podem ser feitas em simultâneo e poupas muitas viagens.",
+    "As tarefas **destroy** e **busy** levam-te ambas à {wiki:Venore Corym Cave}: faz as duas na mesma ida.",
+    "As tarefas **guards**, **kill** e **advertising** fazem-se à superfície do pântano. Em vez de andares ao calhas, faz também a {wiki:Venore Daily Tasks Quest}: dá-te rumo pelo pântano e vais encontrar alvos suficientes pelo caminho.",
+    "Se repetes muito, compra {item:Perfume Gatherer|Perfume Gatherers} ao Rafzan e enche-os todos de uma vez na gruta das {creature:Slug|Slugs} (27–28 slugs com o spawn cheio). Só precisas de comprar o stock inicial: cada vez que aceitas a tarefa recebes outro vazio.",
+    "Se fores ao estaleiro de obras do norte, considera cavar por um {item:Leech} (uma vez por semana)."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao Rafzan",
+      "steps": [
+        {
+          "title": "Sair de Venore pelo leste",
+          "text": "Se não estás em **Venore**, apanha um barco e diz ao capitão {key:hi}, {key:venore}, {key:yes}. Sai de **Venore** pela saída leste: desce em {coord:33004,32095,6}. Sai do edifício e anda uns passos para leste até encontrares uma escada e/ou rampa. É o estaleiro central da {wiki:Venore Daily Tasks Quest}.",
+          "coords": [{"x": 33004, "y": 32095, "z": 6, "label": "Desce aqui (saída leste de Venore)"}]
+        },
+        {
+          "title": "Até ao edifício do goblin",
+          "text": "Vai à plataforma **nordeste** do estaleiro e desce a escada. Anda para **leste** até veres um edifício chique."
+        },
+        {
+          "title": "Subir de elevador",
+          "text": "No lado **sul** do edifício há um elevador. Se o elevador estiver lá em cima, usa o {item:Pulley} para o fazer descer. Põe-te em cima do elevador e usa o pulley para subir. Para saíres da casa do Rafzan, põe-te outra vez em cima do elevador e usa o {item:Pulley} para desceres ao pântano. Para voltares a Venore, faz o caminho ao contrário até à saída leste ({coord:33004,32095,6}).",
+          "coords": [{"x": 33051, "y": 32099, "z": 7, "label": "Elevador"}]
+        },
+        {
+          "title": "Aceitar as tarefas",
+          "text": "Fala com o {npc:Rafzan}: {key:hi}, {key:help} (ou {key:tasks}), {key:get} e depois a palavra da tarefa ({key:advertising}, {key:perfume}, {key:guards}, {key:busy}, {key:destroy}, {key:kill}). Responde {key:yes} a cada uma. Para entregar diz {key:report} e a palavra da tarefa. Com o tempo nem precisas de dizer help/tasks/get/report: basta a palavra da tarefa.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello, hello. Me peaceful, poor and honest goblin. Are you lookin' for trade or want to help me?"},
+            {"you": "tasks"},
+            {"npc": "Are you here to get a task or to report you finished task?"},
+            {"you": "get"},
+            {"npc": "So much to be done! Me desperately need advertising. Me have to create new ratmen perfume. Me in need of guards to keep me safe when trading. [...] Me looking for someone to keep ratmen busy, me need hero to destroy some ratmen stuff, and me need someone to kill evil marsh stalker."}
+          ],
+          "table": {
+            "head": ["Tarefa", "Palavra", "Recompensa"],
+            "rows": [
+              ["Goblin Advertisement", "{key:advertising}", "600 exp, 100 gp (1 {item:Platinum Coin})"],
+              ["Rattraction", "{key:perfume}", "1000 exp, 200 gp (2 Platinum Coins)"],
+              ["Guardian Angel - Kind Of", "{key:guards}", "600 exp, 100 gp (1 Platinum Coin)"],
+              ["To Piss Off Some Rats", "{key:busy}", "1200 exp, 300 gp (3 Platinum Coins)"],
+              ["Business Opportunities", "{key:destroy}", "1200 exp, 300 gp (3 Platinum Coins)"],
+              ["Hungry Birds", "{key:kill}", "600 exp, 100 gp (1 Platinum Coin)"],
+              ["**Total**", "", "**5200 exp, 1100 gp**"]
+            ]
+          },
+          "tip": "Cada tarefa pode ser repetida a cada **20 horas**."
+        }
+      ]
+    },
+    {
+      "title": "2. Goblin Advertisement (advertising)",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:advertising} e {key:yes} ao {npc:Rafzan}. Recebes 3 {item:Advertisement Sign|Advertisement Signs}.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "advertising"},
+            {"npc": "Me need to get well known all over the swamp. [...] Me need you to place some advertisement signs in the swamp. Are you helping poor me?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Pôr os cartazes",
+          "text": "Usa os cartazes em {item:Cracked Stone|Cracked Stones} espalhadas pelo pântano. Cada pedra só pode ser usada uma vez durante um certo tempo. Há três perto do Rafzan.",
+          "coords": [
+            {"x": 33054, "y": 32093, "z": 7, "label": "Cracked Stone 1"},
+            {"x": 33033, "y": 32086, "z": 7, "label": "Cracked Stone 2"},
+            {"x": 33025, "y": 32090, "z": 7, "label": "Cracked Stone 3"}
+          ],
+          "images": [{"file": "Goblin Merchant Quest Sign.png", "caption": "Um Advertisement Sign colocado numa Cracked Stone"}]
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Rafzan} e diz {key:report} e {key:advertising}.",
+          "npc": "Rafzan",
+          "reward": "600 exp e 1 Platinum Coin"
+        }
+      ]
+    },
+    {
+      "title": "3. Rattraction (perfume)",
+      "intro": "Tens de juntar 4 cheiros no {item:Perfume Gatherer}, **por esta ordem**.",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:perfume} e {key:yes} ao {npc:Rafzan}. Recebes o {item:Perfume Gatherer}.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "perfume"},
+            {"npc": "[...] I need you to create more of it. Are you helping poor me?"},
+            {"you": "yes"},
+            {"npc": "Oh, so thankful me be! Use this container in the correct order on the following: [...]"}
+          ]
+        },
+        {
+          "title": "1.º cheiro: baba de lesma",
+          "text": "Vai à **Slug Cave** de Venore. Mata uma {creature:Slug}, espera **10 segundos** e usa o {item:Perfume Gatherer} no corpo. Aparece a mensagem *\"You gather the first part of the rat perfume!\"*. Sai da gruta pelo mesmo caminho por onde entraste.",
+          "coords": [{"x": 32967, "y": 32144, "z": 7, "label": "Slug Cave"}],
+          "images": [{"file": "Goblin Merchant Quest Slug Cave.png", "caption": "Slug Cave: usar o Perfume Gatherer no corpo de uma Slug"}]
+        },
+        {
+          "title": "2.º cheiro: gás do pântano",
+          "text": "Procura {item:Black Swamp Gas} (parece fumo ou {item:Poison Gas} cinzento) no pântano e usa o Perfume Gatherer nele. Aparece *\"You gather the second part of the rat perfume!\"*.",
+          "coords": [
+            {"x": 33096, "y": 32064, "z": 7, "label": "Black Swamp Gas"},
+            {"x": 33065, "y": 32120, "z": 7, "label": "Black Swamp Gas"}
+          ],
+          "images": [{"file": "Goblin Merchant Quest Swamp Gas.png", "caption": "Black Swamp Gas no pântano"}]
+        },
+        {
+          "title": "3.º cheiro: pum de rotworm",
+          "text": "Vai a uma gruta com {creature:Rotworm|Rotworms} e usa o Perfume Gatherer num rotworm **vivo**, repetidamente, até apanhares o pum. Se falhar: *\"Darn! It didn't fart!\"*. Se conseguires: *\"You gather the third part of the rat perfume!\"*. Em média são precisas cerca de 3,85 tentativas; o rotworm não desaparece.",
+          "coords": [{"x": 33028, "y": 32088, "z": 7, "label": "Gruta com Rotworms"}],
+          "images": [{"file": "Goblin Merchant Quest Rotworm Fart.png", "caption": "Apanhar o pum de um Rotworm vivo"}]
+        },
+        {
+          "title": "4.º cheiro: queijo bolorento",
+          "text": "Usa o Perfume Gatherer num {item:Mouldy Cheese}. Podes arranjar o queijo com os {creature:Swamp Troll|Swamp Trolls} de Venore, {creature:Goblin|Goblins} (raro), nas {wiki:Corym Caves} e em muitos outros sítios (reaparece diariamente).",
+          "coords": [{"x": 32934, "y": 32217, "z": 7, "label": "Swamp Trolls de Venore"}],
+          "images": [{"file": "2020-06-13 114047540 Ric Nexus Hotkey.png", "caption": "Exemplo de uso do Perfume Gatherer (4.º cheiro)"}]
+        },
+        {
+          "title": "Entregar",
+          "text": "Quando o Perfume Gatherer tiver a descrição *\"It is filled with smelley goo.\"*, volta ao {npc:Rafzan} e diz {key:report} e {key:perfume}.",
+          "npc": "Rafzan",
+          "reward": "1000 exp e 2 Platinum Coins"
+        }
+      ]
+    },
+    {
+      "title": "4. Guardian Angel - Kind Of (guards)",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:guards} e {key:yes} ao {npc:Rafzan}. Recebes o {item:Guardcatcher} (parece um arco).",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "guards"},
+            {"npc": "Me little, me weak. Me need strong guys to protect me. [...] Are you helping poor me?"},
+            {"you": "yes"},
+            {"npc": "Oh, so thankful me be! Take this bow and secretly shoot them with it. [...]"}
+          ]
+        },
+        {
+          "title": "Acertar em 3 aventureiros",
+          "text": "Procura {creature:Adventurer|Adventurers} pelo pântano e usa o Guardcatcher em pelo menos **três**. Ou o aventureiro desaparece (*\"Arrrgh! Not my knee!\"*), ou fica um {creature:Angry Adventurer} (*\"You fiend! I will get you, servant of evil!\"*). Quando acertares no terceiro, o arco parte-se com a mensagem *\"Luckily the makeshift bow breaks as you hit the last adventurer you needed and not earlier!\"*.",
+          "images": [
+            {"file": "Goblin Merchant Quest Adventurer Success.png", "caption": "Acertaste no aventureiro (desaparece)"},
+            {"file": "Goblin Merchant Quest Adventurer Fail.png", "caption": "O aventureiro fica zangado (Angry Adventurer)"}
+          ],
+          "warning": "Os Angry Adventurers atacam-te."
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Rafzan} e diz {key:report} e {key:guards}.",
+          "npc": "Rafzan",
+          "reward": "600 exp e 1 Platinum Coin"
+        }
+      ]
+    },
+    {
+      "title": "5. Hungry Birds (kill)",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:kill} e {key:yes} ao {npc:Rafzan}.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "kill"},
+            {"npc": "Mean marsh stalkers are threatening me little shop. [...] Are you helping poor me?"},
+            {"you": "yes"},
+            {"npc": "Oh, so thankful me be! You must kill five of this horrible goblin hut gnawers to teach them a lesson! [...]"}
+          ]
+        },
+        {
+          "title": "Matar 5 Marsh Stalkers",
+          "text": "Mata **5** {creature:Marsh Stalker|Marsh Stalkers} em qualquer ponto do pântano."
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Rafzan} e diz {key:report} e {key:killing} (ou {key:kill}).",
+          "npc": "Rafzan",
+          "reward": "600 exp e 1 Platinum Coin"
+        }
+      ]
+    },
+    {
+      "title": "6. To Piss Off Some Rats (busy)",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:busy} e {key:yes} ao {npc:Rafzan}. Recebes a {item:Bottle with Rat Urine}.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "busy"},
+            {"npc": "[...] But ratmen are STRONG and DANGEROUS!!! (Not recommended for levels below 35) Better not go alone when you are inexperienced. Are you helping poor me?"},
+            {"you": "yes"},
+            {"npc": "Oh, so thankful me be! Take bottle of urine [...] Sneak into their pond cave and use this urine on the pond."}
+          ]
+        },
+        {
+          "title": "Entrar na gruta dos Corym",
+          "text": "Vai à {wiki:Venore Corym Cave}, a nordeste do edifício do Rafzan, entrando por uma casa: **sobe** as escadas dentro da casa e depois **desce** pelas escadas de mão (ladders).",
+          "coords": [{"x": 33072, "y": 32089, "z": 7, "label": "Casa com a entrada da Corym Cave"}]
+        },
+        {
+          "title": "Usar a urina no lago",
+          "text": "Dentro da gruta vai para **leste** e desce pelo buraco. Depois vai bem para **leste** até um lago. **Usa** a garrafa no centro do lago, à distância (como se fosse uma cana de pesca). Aparece *\"The keen noses of the ratmen will smell the mark of their rivals!\"*.\n\nPara saíres, volta para **oeste** até ao buraco e sobe com a {item:Rope}; depois sobe as escadas de mão e desce as escadas da casa ({coord:33072,32089,7}).",
+          "coords": [{"x": 33137, "y": 32094, "z": 10, "label": "Lago dos ratmen"}],
+          "images": [{"file": "Goblin Merchant Quest Rat Urine.png", "caption": "Usar a Bottle with Rat Urine no centro do lago"}],
+          "warning": "Os ratmen (Corym) são perigosos: a gruta não é recomendada abaixo do nível 35. Não vás sozinho se fores inexperiente."
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Rafzan} e diz {key:report} e {key:busy}.",
+          "npc": "Rafzan",
+          "reward": "1200 exp e 3 Platinum Coins"
+        }
+      ]
+    },
+    {
+      "title": "7. Business Opportunities (destroy)",
+      "steps": [
+        {
+          "title": "Aceitar",
+          "text": "Diz {key:destroy} e {key:yes} ao {npc:Rafzan}. Recebes o {item:Trunkhammer}.",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "destroy"},
+            {"npc": "[...] I need you to destroy stuff they bought from me. [...] Are you helping poor me?"},
+            {"you": "yes"},
+            {"npc": "Oh, so thankful me be! Take this hammer and use it on the crates they got from me. [...] you find it in some storage area."}
+          ]
+        },
+        {
+          "title": "Partir 3 baús",
+          "text": "Na {wiki:Venore Corym Cave} (entrada pela casa a nordeste do Rafzan), procura {item:Junk Trunk|Junk Trunks} (parecem {item:Large Trunk|Large Trunks}) e usa o {item:Trunkhammer} em **3** deles. Ficam {item:Smashed Trunk|Smashed Trunks}. No fim o martelo desaparece. Entra como na tarefa busy (sobe as escadas da casa e desce pelas escadas de mão) e sai pelo mesmo caminho: sobe com a {item:Rope} os buracos por onde desceste, sobe as escadas de mão e desce as escadas da casa.",
+          "coords": [{"x": 33072, "y": 32089, "z": 7, "label": "Casa com a entrada da Corym Cave"}],
+          "images": [{"file": "Goblin Merchant Quest Trunk.png", "caption": "Um Junk Trunk na Corym Cave"}],
+          "tip": "É das tarefas mais difíceis, porque tens de explorar as grutas. Faz em conjunto com a tarefa busy."
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Rafzan} e diz {key:report} e {key:destroyed} (ou {key:destroy}).",
+          "npc": "Rafzan",
+          "dialogue": [
+            {"you": "destroy"},
+            {"npc": "You did not too bad me guess. Though me children will starve, I give you biggest reward, don't tell others. [...]"}
+          ],
+          "reward": "1200 exp e 3 Platinum Coins"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se perderes um dos itens das tarefas antes de a acabares, tens de comprar outro ao Rafzan.",
+    "Podes repetir cada tarefa a cada 20 horas. O achievement **Task Manager** chega ao fim de 500 tarefas entregues."
+  ]
+}

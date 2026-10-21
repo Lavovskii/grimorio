@@ -1,0 +1,24 @@
+{
+  "title": "Krailos Ruins",
+  "type": "dungeon",
+  "near": "Rathleton",
+  "summary": "Ruínas no **noroeste da ilha de Krailos** (continente de Oramond), com uma gruta de {creature:Nightmare Scion|Nightmare Scions}; zona de caça para nível 110+.",
+  "entrance": {"x": 33580, "y": 31584, "z": 7, "label": "Entrada das Krailos Ruins"},
+  "arrive": [
+    "Apanha um barco para **Krailos**: em **Venore** ({npc:Captain Fearless}: {key:hi}, {key:krailos}, {key:yes}, 100 gp), **Darashia** ({npc:Petros}, 110 gp), **Edron**, **Oramond** (Rathleton) ou **Issavi** ({npc:Captain Harava}, 80 gp).",
+    "Desembarcas no porto de Krailos, junto à {npc:Captain Pelagia} ({coord:33492,31710,6}).",
+    "Vai para o **noroeste** da ilha até à entrada das ruínas ({coord:33580,31584,7})."
+  ],
+  "leave": [
+    "Sobe pelo mesmo caminho até à entrada das ruínas ({coord:33580,31584,7}).",
+    "Volta ao porto e fala com a {npc:Captain Pelagia}: {key:hi}, o destino ({key:edron}, {key:venore}, {key:darashia}, {key:oramond} ou {key:issavi}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33492, "y": 31710, "z": 6, "label": "Captain Pelagia (porto de Krailos)"},
+    {"x": 33545, "y": 31555, "z": 9, "label": "Sarcófago com a Red Gem (2.º andar abaixo)"}
+  ],
+  "warnings": [
+    "Zona para nível 110+ ({creature:Nightmare Scion|Nightmare Scions}).",
+    "Segundo a {npc:Narsai}, há também um túnel secreto nas Ruins of Nuur (Issavi) que liga a Krailos, com uma porta selada que se abre desenhando um símbolo do sol na porta."
+  ]
+}

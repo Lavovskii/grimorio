@@ -1,0 +1,27 @@
+{
+  "title": "Quara Grotto",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Grande gruta de quaras na ilha de {wiki:Vandura}, a **sudoeste de Liberty Bay**, com vários pisos subaquáticos ligados por canais de água e géiseres.",
+  "entrance": {"x": 32208, "y": 32887, "z": 7, "label": "Rampa de entrada da Quara Grotto"},
+  "requirements": [
+    "Conta **Premium** (Liberty Bay).",
+    "Para descer pelos {item:Water Channel|Water Channels} aos pisos de baixo precisas de um capacete de mergulho (por exemplo o {item:Helmet of the Deep})."
+  ],
+  "arrive": [
+    "Apanha um barco para **Liberty Bay** (no porto da tua cidade: {key:hi}, {key:liberty bay}, {key:yes}).",
+    "Do porto de Liberty Bay vai para **oeste** até encontrares destroços e uma rampa ({coord:32208,32887,7}). Junto à entrada há uma placa de aviso (*\"DANGER. Quara sighted below.\"*).",
+    "Desce a rampa: chegas ao primeiro piso da gruta (piso -1). Aí há três sítios onde podes saltar para a água e nadar sem equipamento de mergulho; os {item:Water Channel|Water Channels} puxam-te para baixo."
+  ],
+  "leave": [
+    "Nos pisos subaquáticos, sobe entrando nos {item:Hot Geyser|Hot Geysers}, que te empurram para cima.",
+    "No primeiro piso, sobe a mesma rampa por onde entraste e volta para **leste** até ao porto de Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32208, "y": 32887, "z": 7, "label": "Rampa para a Quara Grotto"},
+    {"x": 32163, "y": 32838, "z": 7, "label": "Rampa para o Hive Outpost (a noroeste da grotto)"}
+  ],
+  "warnings": [
+    "A placa avisa para não entrares num Water Channel sem estares preparado: os pisos de baixo têm quaras fortes ({creature:Quara Predator|Quara Predators}, {creature:Quara Pincher|Quara Pinchers}); a wiki recomenda nível 40+ no primeiro piso e 80+ no segundo."
+  ]
+}

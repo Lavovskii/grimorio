@@ -1,0 +1,30 @@
+{
+  "title": "Quirefang",
+  "type": "ilha",
+  "near": "Gray Beach",
+  "summary": "Grande ilha a leste de Zao onde duas raças lutam pelo domínio: a vila de **Gray Beach** (depot e templo) no sul, a Hive dos insetoides no norte e {wiki:Fiehonja}, dos Deeplings, nas profundezas. Nenhum barco atraca lá: chega-se pela {wiki:Gray Island}.",
+  "entrance": {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach (vila de Quirefang)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para a {wiki:Gray Island} em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron**: {key:hi}, {key:gray island}, {key:yes} (150 gp).",
+    "Na Gray Island desce pelo **único buraco** da ilha, a **sul** do {npc:Scrutinon} ({coord:33189,31982,7}).",
+    "No piso -1 segue para **nordeste** e entra no {item:Water Vortex}.",
+    "Do outro lado usa a {item:Rope} no ponto do chão para subires e vai para **norte** até **Gray Beach** ({coord:33471,31304,7}). A Hive fica a **norte** de Gray Beach."
+  ],
+  "leave": [
+    "Volta a Gray Beach (se fizeste o atalho da {wiki:Liquid Black Quest}, o teleporte junto à estátua de Qjell em Fiehonja leva-te lá).",
+    "Desce à entrada de Gray Beach, a **sul** da vila, e faz a passagem subterrânea ao contrário até à {wiki:Gray Island}.",
+    "Fala com o {npc:Scrutinon} ({coord:33189,31982,7}): {key:hi}, o nome da cidade e {key:yes}. Ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore."
+  ],
+  "coords": [
+    {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island)"},
+    {"x": 33514, "y": 31323, "z": 7, "label": "Buraco a sudeste de Gray Beach (descida para Fiehonja)"},
+    {"x": 33492, "y": 31317, "z": 7, "label": "Ominous Trashcan em Quirefang"}
+  ],
+  "images": [
+    {"file": "Gray Island.png", "caption": "Gray Island, por onde se entra para Quirefang"}
+  ],
+  "warnings": [
+    "Gray Beach tem depot e templo, mas fora da vila estás em território dos insetoides da Hive (a norte) e dos Deeplings (por baixo): zona para níveis altos."
+  ]
+}

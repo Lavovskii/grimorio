@@ -1,0 +1,25 @@
+{
+  "title": "Greenshore",
+  "type": "zona",
+  "near": "Thais",
+  "summary": "Pequena aldeia calma numa península **a norte de Thais**, a que se chega por uma passagem na montanha; tem o navio *The Tibianic*, a Greenshore Villa e, perto da passagem, um buraco para as grutas dos orcs por baixo de Thais.",
+  "entrance": {"x": 32304, "y": 32119, "z": 7, "label": "Rampa de entrada de Greenshore"},
+  "arrive": [
+    "Vai a **Thais** (de barco: {key:hi}, {key:thais}, {key:yes}; chegas ao porto do {npc:Captain Bluebear}).",
+    "Sai de Thais e segue o caminho de terra para **norte**, pela passagem na montanha, até à aldeia ({coord:32262,32074,7}).",
+    "Entra na aldeia pela rampa ({coord:32304,32119,7}). Para oeste, uma pequena ponte leva à zona onde aparecem os {creature:Insectoid Scout|Insectoid Scouts} durante a {wiki:Insectoid Invasion World Change}.",
+    "Para as grutas dos orcs: depois de atravessares a ponte, há um buraco escondido atrás de uma árvore, uns passos a **norte** das rampas ({coord:32300,32097,7})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: atravessa a ponte para **leste**, sai da aldeia pela rampa ({coord:32304,32119,7}) e segue o caminho de terra para **sul** até Thais.",
+    "Se desceste às grutas, sobe pelos mesmos buracos (com a {item:Rope}) até ao buraco escondido atrás da árvore."
+  ],
+  "coords": [
+    {"x": 32262, "y": 32074, "z": 7, "label": "Greenshore"},
+    {"x": 32304, "y": 32119, "z": 7, "label": "Rampa de entrada da aldeia"},
+    {"x": 32300, "y": 32097, "z": 7, "label": "Buraco escondido atrás da árvore (grutas dos orcs)"}
+  ],
+  "warnings": [
+    "À superfície só há criaturas fracas; no buraco escondido há {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors}."
+  ]
+}

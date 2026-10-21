@@ -1,0 +1,119 @@
+{
+  "slug": "to-outfox-a-fox-quest",
+  "category": "tesouro",
+  "region": "Kazordoon",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "O capataz {npc:Budrik} foi roubado pelo gangue de {creature:The Horned Fox}: levaram-lhe o capacete de mineiro com 600 anos que era do pai e do avô. Recupera-o numa torre de minotauros perto das Dwarf Mines e o Budrik dá-te o seu capacete de reserva, um {item:Mining Helmet}. Também desbloqueia a task Turmoil of War.",
+  "legend_pt": "O Budrik foi roubado pelo The Horned Fox e desta vez é pessoal!",
+  "start": {"x": 32524, "y": 31906, "z": 8, "label": "Budrik, nas minas de Kazordoon"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 35+).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Shovel"},
+    {"item": "Rope"}
+  ],
+  "rewards": [
+    {"item": "Mining Helmet"},
+    {"text": "Poder começar a task Turmoil of War da {wiki:Killing in the Name of... Quest|Killing in the Name of... Quest}"}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Task Turmoil of War", "kind": "missao", "place": "Killing in the Name of... Quest", "when": "Ao devolveres o capacete ao {npc:Budrik}: passas a poder começar esta task da {wiki:Killing in the Name of... Quest}."}
+  ],
+  "dangers": ["Spider", "Snake", "Poison Spider", "Wolf", "Bear", "Dwarf", "Bat", "Minotaur", "Minotaur Archer", "Minotaur Guard", "Minotaur Mage"],
+  "npcs": ["Budrik"],
+  "tips": [
+    "A {wiki:Steel Helmet Quest|Steel Helmet Quest} fica na mesma torre: guarda espaço e capacidade para essa recompensa também.",
+    "Os {creature:Minotaur Archer|Minotaur Archers} e {creature:Minotaur Mage|Minotaur Mages} atacam à distância: puxa-os aos poucos nos andares de cima."
+  ],
+  "sections": [
+    {
+      "title": "1. Encontrar o Budrik",
+      "steps": [
+        {
+          "title": "Ir até à mina do Budrik",
+          "text": "Se ainda não estás em **Kazordoon**, chega lá pelo {wiki:Steamship} (de Cormaya com o {npc:Gurbasch} ou de Farmine com o {npc:Thorgrin}: {key:hi}, {key:kazordoon}, {key:yes}) ou a pé pela entrada da montanha. Sai pela entrada principal de Kazordoon e segue a linha branca do mapa (desde o X vermelho no canto superior direito) até um buraco de corda, onde há algumas {creature:Spider|Spiders}. Vai para **norte** e sai por uma rampa para baixo, onde há {creature:Poison Spider|Poison Spiders} e alguns {creature:Dwarf|Dwarves} ao nível do chão. A **segunda** mina, marcada com a seta para baixo num círculo vermelho, é a do Budrik (a gruta a norte e mais perto do rio).",
+          "images": [{"file": "Way to Minotaur Tower.png", "caption": "Caminho desde Kazordoon até à mina do Budrik e à torre dos minotauros"}]
+        },
+        {
+          "title": "Pedir a missão",
+          "text": "O {npc:Budrik} está um andar abaixo do chão, dentro da mina. Diz {key:hi}, {key:mission} e {key:yes}. Para saíres da mina, volta a subir por onde desceste.",
+          "npc": "Budrik",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hiho, hiho. Why do you disturb me?"},
+            {"you": "mission"},
+            {"npc": "Funny that you are asking me for a mission! [...] Ever heard of The Horned Fox? Yesterday his gang stole my mining helmet during a raid. [...] Are you willing to help me?"},
+            {"you": "yes"},
+            {"npc": "I knew you had the guts for that task! We presume the hideout of the Horned Fox somewhere in the southwest near the coast. Good luck!"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Chegar à torre dos minotauros",
+      "steps": [
+        {
+          "title": "Seguir para sul",
+          "text": "Continua a seguir a linha branca do mapa para **sul**, atravessando duas pontes e passando por outras entradas de minas. Podes encontrar {creature:Snake|Snakes}, {creature:Poison Spider|Poison Spiders}, {creature:Wolf|Wolves} e {creature:Bear|Bears}. No fim, usa a {item:Shovel} na {item:Loose Stone Pile} para desceres."
+        },
+        {
+          "title": "Atravessar o subterrâneo",
+          "text": "Depois de desceres pelo buraco, vai para **oeste** e sobe pelo primeiro buraco de corda. Segue a linha branca do mapa desde o X vermelho até à seta verde para cima. Debaixo do chão vais encontrar {creature:Bat|Bats}, {creature:Minotaur|Minotaurs} e {creature:Minotaur Archer|Minotaur Archers}.",
+          "images": [{"file": "Kazordoon Minotaurs (-1).png", "caption": "Caminho subterrâneo (andar -1) até à torre"}]
+        },
+        {
+          "title": "Subir a torre",
+          "text": "Sobe a torre dos minotauros. Criaturas por andar:",
+          "table": {
+            "head": ["Andar", "Criaturas"],
+            "rows": [
+              ["Chão", "2 {creature:Minotaur Guard|Minotaur Guards}, 2 {creature:Minotaur Archer|Minotaur Archers}"],
+              ["Segundo", "4 Minotaur Guards, 4 Minotaur Archers"],
+              ["Terceiro", "2 Minotaur Guards em cada sala (norte e sul)"],
+              ["Quarto", "Norte: 2 Minotaur Guards e 4 Minotaur Archers. Sul: 2 {creature:Minotaur Mage|Minotaur Mages} e 4 Minotaur Archers"],
+              ["Quinto", "Norte: 4 Minotaur Archers. Sul: 1 Minotaur Mage e 3 Minotaur Archers"]
+            ]
+          },
+          "images": [
+            {"file": "Kazordoon Minotaurs (+1).png", "caption": "Torre dos minotauros: andar +1"},
+            {"file": "Kazordoon Minotaurs (+2).png", "caption": "Torre dos minotauros: andar +2"}
+          ]
+        },
+        {
+          "title": "Apanhar o capacete do Budrik",
+          "text": "O capacete de mineiro está atrás de uma porta selada no **segundo andar** da torre. Entra e apanha-o.",
+          "coords": [{"x": 32467, "y": 31971, "z": 5, "label": "Porta selada com o capacete"}]
+        },
+        {
+          "title": "Sair da torre",
+          "text": "Desce a torre pelo mesmo caminho até ao rés-do-chão, desce pelo buraco de corda por onde subiste e, já no subterrâneo, volta para **leste** até debaixo do buraco da {item:Loose Stone Pile}. Sobe com a {item:Rope}. Depois segue a linha branca do mapa para **norte**, pelas duas pontes, até à mina do Budrik.",
+          "images": [{"file": "Kazordoon Minotaurs (-1).png", "caption": "Caminho subterrâneo (andar -1): faz o caminho ao contrário até ao buraco por onde desceste"}]
+        }
+      ]
+    },
+    {
+      "title": "3. Devolver o capacete",
+      "steps": [
+        {
+          "title": "Falar com o Budrik",
+          "text": "Volta ao {npc:Budrik} e diz {key:hi} e {key:mission}. Ele fica com o capacete antigo e dá-te o seu capacete de reserva. Para voltares a Kazordoon, sai da mina e segue a linha branca do mapa até à entrada principal da cidade.",
+          "npc": "Budrik",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "As I was just saying to the others, 'this brave fellow will bring me my mining helmet back' and here you are with it!! Here take my spare helmet, I don't need it anymore!"}
+          ],
+          "reward": "{item:Mining Helmet}"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Faz parte das {wiki:Tibia Tales|Tibia Tales}.",
+    "Completar esta quest permite começar a task Turmoil of War da {wiki:Killing in the Name of... Quest|Killing in the Name of... Quest}."
+  ]
+}

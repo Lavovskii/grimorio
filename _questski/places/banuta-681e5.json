@@ -1,0 +1,40 @@
+{
+  "title": "Banuta",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Antiga cidade dos lagartos, hoje em ruínas e tomada pelos macacos, no **norte da selva de Tiquanda**, a nordeste de **Port Hope**; por baixo ficam as masmorras e {wiki:Deeper Banuta}.",
+  "entrance": {"x": 32807, "y": 32542, "z": 7, "label": "Banuta (superfície)"},
+  "requirements": [
+    "Para usares o ferry do {npc:Lorek} precisas do rank **Ranger** na {wiki:Paw and Fur Society}; sem isso vais a pé pela selva.",
+    "{wiki:Deeper Banuta} (abaixo do piso -2) faz parte da {wiki:The Ape City Quest}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope**: diz {key:hi}, {key:port hope}, {key:yes} ao capitão do porto (por exemplo o {npc:Captain Bluebear} em Thais ou o {npc:Captain Seahorse} em Edron). Chegas ao porto do {npc:Charles} ({coord:32529,32785,6}).",
+    "De Port Hope atravessa a selva de Tiquanda para **nordeste** até Banuta ({coord:32807,32542,7}).",
+    "Atalho: se tiveres o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope ({coord:32679,32775,7}), leva-te diretamente a Banuta por **30 gp**.",
+    "O templo do {npc:Hairycles} fica no **sudeste** da cidade; as escadas mais a **sul** ({coord:32826,32576,7}) descem para a masmorra (piso -1)."
+  ],
+  "leave": [
+    "Se estás na masmorra, volta pelo mesmo caminho: no piso -2 regressa para **norte** e depois **leste** até às escadas e sobe; no piso -1 vai para **leste** e depois **sul** até às escadas e sobe à superfície, no lado **sul** de Banuta ({coord:32826,32576,7}).",
+    "Se estás em {wiki:Deeper Banuta}, sai pelo portal do início do andar: leva-te ao **piso -2 de Banuta**; daí sobe as escadas até à superfície.",
+    "Da superfície atravessa a selva para **sudoeste** até Port Hope.",
+    "No porto de Port Hope o {npc:Charles} ({coord:32529,32785,6}) leva-te de barco a outras cidades: {key:hi}, o nome do destino (por exemplo {key:thais}, {key:edron} ou {key:liberty bay}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — porto de Port Hope"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek — ferry para Banuta (rank Ranger)"},
+    {"x": 32827, "y": 32577, "z": 7, "label": "Templo do Hairycles (sudeste de Banuta)"},
+    {"x": 32826, "y": 32576, "z": 7, "label": "Escadas mais a sul — descida para a masmorra"},
+    {"x": 32802, "y": 32546, "z": 8, "label": "Escadas para o piso -2"},
+    {"x": 32839, "y": 32533, "z": 9, "label": "Magic Forcefield para Deeper Banuta (piso -2)"}
+  ],
+  "images": [
+    {"file": "Banuta 0.png", "caption": "Mapa da superfície de Banuta"},
+    {"file": "Banuta -1.png", "caption": "Piso -1: círculos brancos = 4 escadas para a superfície; círculo preto = escadas para o piso -2"},
+    {"file": "Banuta -2.png", "caption": "Piso -2: círculo verde = escadas para o piso -1; círculo azul = teleporte para Deeper Banuta"}
+  ],
+  "warnings": [
+    "Os macacos ({creature:Sibang}, {creature:Kongra}, {creature:Merlkin}) usam haste e atacam em grupo: não os persigas e leva poções de vida.",
+    "À superfície, na selva à volta de Banuta, há {creature:Carniphila}, {creature:Terror Bird} e {creature:Tarantula}; em {wiki:Deeper Banuta} há {creature:Hydra}, {creature:Serpent Spawn} e {creature:Medusa}."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "slug": "fury-gates-mini-world-change",
+  "category": "world-change",
+  "region": "Vários",
+  "difficulty": 3,
+  "duration": "Enquanto o portão estiver aberto (caça ao teu ritmo)",
+  "summary": "Mini world change aleatório: perto de uma das grandes cidades do Tibia abre-se uma {wiki:Fury Gate|Fury Gate}, um portal de fogo que leva a uma {wiki:Fury Dungeon|dungeon} cheia de criaturas de fogo, incluindo {creature:Fury|Furies}, {creature:Hellhound|Hellhounds} e a {creature:Furyosa}. Descobre em que cidade abriu, entra pelo portão e caça lá dentro.",
+  "start": {
+    "x": 32268,
+    "y": 32164,
+    "z": 7,
+    "label": "Um dos 10 locais possíveis (exemplo: Thais)"
+  },
+  "requirements": [
+    "Conta Premium.",
+    "Nível mínimo 60 (recomendado 140+).",
+    "Personagem **promovida**: a {wiki:Fury Gate|Fury Gate} só teleporta jogadores premium promovidos de nível 60 ou mais.",
+    "O mini world change tem de estar ativo no teu servidor nesse dia."
+  ],
+  "items_needed": [
+    {
+      "text": "Supplies de caça (poções, runas); proteção contra fogo ajuda bastante"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Acesso à Fury Dungeon enquanto o portão estiver aberto (experiência e loot das criaturas)"
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Massive Fire Elemental",
+    "Dragon Lord",
+    "Dragonling",
+    "Diabolic Imp",
+    "Hellfire Fighter",
+    "Infernalist",
+    "Fury",
+    "Hellhound",
+    "Furyosa"
+  ],
+  "npcs": [],
+  "tips": [
+    "O portão só aparece numa cidade de cada vez. Lê as mensagens do servidor ao fazeres login e vai verificar os locais da tabela.",
+    "As criaturas lá dentro são quase todas de fogo: equipa proteção contra fogo."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se o world change está ativo",
+      "steps": [
+        {
+          "title": "Ver as mensagens",
+          "text": "Quando este mini world change está ativo, vês uma destas mensagens: *“A fiery fury gate has opened near one of the major cities somewhere in Tibia.”* ou *“Hear ye! Hear ye! A fiery gate has opened, threatening a city! Guard the people frightened, their death would be a pity!”*"
+        }
+      ]
+    },
+    {
+      "title": "2. Encontrar a Fury Gate",
+      "steps": [
+        {
+          "title": "Procurar o portão nas cidades",
+          "text": "A {wiki:Fury Gate|Fury Gate} pode aparecer logo fora dos limites de qualquer uma destas cidades. Viaja até à cidade (barco, tapete ou a pé), sai pelo lado indicado na tabela e vai às coordenadas. Verifica os locais até encontrares o portão aberto.",
+          "table": {
+            "head": [
+              "Cidade",
+              "Lado da cidade",
+              "Local do portão"
+            ],
+            "rows": [
+              [
+                "Ab'Dendriel",
+                "sudeste",
+                "{coord:32679,31722,7}"
+              ],
+              [
+                "Ankrahmun",
+                "leste",
+                "{coord:33263,32840,7}"
+              ],
+              [
+                "Carlin",
+                "sudoeste",
+                "{coord:32262,31844,7}"
+              ],
+              [
+                "Darashia",
+                "nordeste",
+                "{coord:33302,32371,7}"
+              ],
+              [
+                "Edron",
+                "sul",
+                "{coord:33220,31921,7}"
+              ],
+              [
+                "Kazordoon",
+                "sul",
+                "{coord:32574,31978,7}"
+              ],
+              [
+                "Liberty Bay",
+                "norte",
+                "{coord:32349,32697,7}"
+              ],
+              [
+                "Port Hope",
+                "noroeste",
+                "{coord:32531,32714,7}"
+              ],
+              [
+                "Thais",
+                "noroeste",
+                "{coord:32268,32164,7}"
+              ],
+              [
+                "Venore",
+                "oeste",
+                "{coord:32832,32083,7}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 32679,
+              "y": 31722,
+              "z": 7,
+              "label": "Ab'Dendriel"
+            },
+            {
+              "x": 33263,
+              "y": 32840,
+              "z": 7,
+              "label": "Ankrahmun"
+            },
+            {
+              "x": 32262,
+              "y": 31844,
+              "z": 7,
+              "label": "Carlin"
+            },
+            {
+              "x": 33302,
+              "y": 32371,
+              "z": 7,
+              "label": "Darashia"
+            },
+            {
+              "x": 33220,
+              "y": 31921,
+              "z": 7,
+              "label": "Edron"
+            },
+            {
+              "x": 32574,
+              "y": 31978,
+              "z": 7,
+              "label": "Kazordoon"
+            },
+            {
+              "x": 32349,
+              "y": 32697,
+              "z": 7,
+              "label": "Liberty Bay"
+            },
+            {
+              "x": 32531,
+              "y": 32714,
+              "z": 7,
+              "label": "Port Hope"
+            },
+            {
+              "x": 32268,
+              "y": 32164,
+              "z": 7,
+              "label": "Thais"
+            },
+            {
+              "x": 32832,
+              "y": 32083,
+              "z": 7,
+              "label": "Venore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Entrar na Fury Dungeon",
+      "steps": [
+        {
+          "title": "Atravessar o portão e caçar",
+          "text": "Entra na Fury Gate. Ela leva-te a uma {wiki:Fury Dungeon|dungeon} completamente cheia de criaturas de fogo: {creature:Massive Fire Elemental|Massive Fire Elementals}, {creature:Dragon Lord|Dragon Lords}, {creature:Dragonling|Dragonlings}, {creature:Diabolic Imp|Diabolic Imps}, {creature:Hellfire Fighter|Hellfire Fighters}, {creature:Infernalist|Infernalists}, {creature:Fury|Furies}, {creature:Hellhound|Hellhounds} e a {creature:Furyosa}.",
+          "warning": "Há criaturas muito perigosas como Hellhounds e Furies: não entres abaixo do nível recomendado sem uma equipa."
+        },
+        {
+          "title": "Sair da Fury Dungeon",
+          "text": "A {wiki:Fury Dungeon|Fury Dungeon} fica bem fundo por baixo de **Edron** ({coord:33303,31829,14}), seja qual for a cidade onde a Fury Gate abriu. A wiki não descreve uma saída própria da dungeon: para saíres, volta pelo **mesmo caminho** até ao ponto onde a Fury Gate te deixou. Guarda supplies para o regresso.",
+          "coords": [
+            {
+              "x": 33303,
+              "y": 31829,
+              "z": 14,
+              "label": "Fury Dungeon (por baixo de Edron)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "É um mini world change: aparece aleatoriamente em alguns dias e numa só cidade de cada vez."
+  ]
+}

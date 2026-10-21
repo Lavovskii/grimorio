@@ -1,0 +1,208 @@
+{
+  "slug": "griffin-shield-quest",
+  "category": "tesouro",
+  "region": "Carlin",
+  "difficulty": 3,
+  "duration": "1–2 horas (o caminho de ida e volta é longo)",
+  "summary": "Um grupo de exploradores tentou chegar a Demona e morreu pelo caminho. Atravessa as grutas a partir de Northport, abre a entrada do Maze of Lost Souls com uma alavanca escondida e segue o caminho seguro até à sala final, às portas de Demona. Lá encontras um {item:Griffin Shield}, um {item:Dwarven Axe} e uma {item:Obsidian Lance}.",
+  "legend_pt": "Um grupo de exploradores tentou entrar em Demona e morreu pelo caminho.",
+  "start": {
+    "x": 32488,
+    "y": 31610,
+    "z": 7,
+    "label": "Gruta perto de Northport"
+  },
+  "requirements": [
+    "Nível mínimo 30 (recomendado 50+).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {
+      "item": "Shovel"
+    },
+    {
+      "text": "Comida suficiente: o caminho de ida e volta é muito longo"
+    },
+    {
+      "item": "Rope",
+      "note": "recomendado, para subir pelos buracos ao voltar"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Griffin Shield"
+    },
+    {
+      "item": "Dwarven Axe"
+    },
+    {
+      "item": "Obsidian Lance"
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Snake",
+    "Spider",
+    "Poison Spider",
+    "Wolf",
+    "Troll",
+    "Bear",
+    "Goblin",
+    "Skeleton",
+    "Orc Spearman",
+    "Orc Warrior",
+    "Cyclops",
+    "Minotaur Guard",
+    "Dwarf Guard",
+    "Minotaur Archer",
+    "Orc Berserker",
+    "Orc Shaman",
+    "Minotaur Mage",
+    "Stone Golem",
+    "Hunter",
+    "Mummy",
+    "Bonelord",
+    "Elf Arcanist",
+    "Orc Leader",
+    "Giant Spider",
+    "Dragon",
+    "Dragon Lord"
+  ],
+  "npcs": [],
+  "tips": [
+    "Explorar o {wiki:Maze of Lost Souls|Maze of Lost Souls} sem mapa é muito perigoso: segue as imagens deste guia passo a passo.",
+    "Não saias do caminho se não conseguires enfrentar {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords} e {creature:Giant Spider|Giant Spiders}."
+  ],
+  "sections": [
+    {
+      "title": "1. De Northport até à alavanca",
+      "steps": [
+        {
+          "title": "Ir à gruta perto de Northport",
+          "text": "A quest começa numa gruta perto de **Northport**, uma pequena aldeia a **norte** de **Carlin**, nos {wiki:Fields of Glory|Fields of Glory}. Sai de Carlin para norte até à gruta, um pouco a sul de Northport.",
+          "coords": [
+            {
+              "x": 32488,
+              "y": 31610,
+              "z": 7,
+              "label": "Gruta perto de Northport"
+            }
+          ]
+        },
+        {
+          "title": "Abrir o primeiro buraco",
+          "text": "Usa a {item:Shovel} para abrires um buraco no ponto indicado e entra nele. Segue a linha **azul** do mapa até ao buraco seguinte.",
+          "coords": [
+            {
+              "x": 32512,
+              "y": 31624,
+              "z": 7,
+              "label": "Buraco para abrir com a pá"
+            }
+          ],
+          "images": [
+            {
+              "file": "Route Demona.png",
+              "caption": "Primeira parte do caminho (linha azul)"
+            }
+          ]
+        },
+        {
+          "title": "Rodar a alavanca na floresta subterrânea",
+          "text": "Continua a seguir a linha azul até uma pequena floresta dentro da gruta. No ponto vermelho, atrás da árvore do meio, há um buraco. Lá dentro está uma {item:Lever|alavanca} que tens de rodar para a **direita** para abrires a entrada do Maze of Lost Souls. Ao lado há uma placa: *“Greetings fellow brother! Turn the switch to the right and follow the blue sunshine to get to Demona. You know the rest of the way. Zhandramon”*.",
+          "images": [
+            {
+              "file": "Route Demona (2).png",
+              "caption": "Floresta subterrânea: o buraco com a alavanca (ponto vermelho)"
+            }
+          ],
+          "tip": "Se a alavanca já estiver virada para a direita, vira-a para a esquerda e outra vez para a direita."
+        }
+      ]
+    },
+    {
+      "title": "2. Atravessar o Maze of Lost Souls",
+      "steps": [
+        {
+          "title": "Chegar à entrada do labirinto",
+          "text": "Sai do buraco e segue este caminho até à entrada do Maze of Lost Souls.",
+          "images": [
+            {
+              "file": "Route Demona (3).png",
+              "caption": "Caminho até à entrada do Maze of Lost Souls"
+            }
+          ]
+        },
+        {
+          "title": "Seguir o caminho seguro",
+          "text": "Dentro do labirinto, segue o mapa passo a passo. Pelo caminho vais enfrentar todas as criaturas da lista de perigos, de {creature:Rat|Rats} a {creature:Orc Leader|Orc Leaders}.",
+          "warning": "Se te desviares do caminho podes dar com {creature:Dragon|Dragons}, {creature:Dragon Lord|Dragon Lords} e {creature:Giant Spider|Giant Spiders}."
+        }
+      ]
+    },
+    {
+      "title": "3. A sala final",
+      "steps": [
+        {
+          "title": "Limpar a sala",
+          "text": "Na sala final há 2 {creature:Dwarf Guard|Dwarf Guards}, 2 {creature:Minotaur Guard|Minotaur Guards}, 2 {creature:Stone Golem|Stone Golems} e 3 {creature:Elf Arcanist|Elf Arcanists}. Mata-os.",
+          "images": [
+            {
+              "file": "Mols5.jpg",
+              "caption": "A sala final com as recompensas"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar as recompensas",
+          "text": "As recompensas estão dentro de duas {item:Pile of Bones (Quest)|pilhas de ossos} e de um corpo. Abre os três e apanha o {item:Griffin Shield}, o {item:Dwarven Axe} e a {item:Obsidian Lance}.",
+          "reward": "{item:Griffin Shield}, {item:Dwarven Axe} e {item:Obsidian Lance}"
+        }
+      ]
+    },
+    {
+      "title": "4. Sair do labirinto",
+      "steps": [
+        {
+          "title": "Sair do Maze of Lost Souls",
+          "text": "Tens de sair do Maze of Lost Souls. Segue o caminho deste mapa: há outras saídas, mas esta é a mais segura e mais curta.",
+          "images": [
+            {
+              "file": "Route Demona (4).png",
+              "caption": "Caminho de saída do Maze of Lost Souls"
+            }
+          ],
+          "tip": "Se fores nível 60+, já que estás às portas de Demona, podes aproveitar para fazer a {wiki:Double SD Quest|Double SD Quest}."
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Depois de saíres do labirinto, volta pelo **mesmo caminho por onde entraste**: passa outra vez pela zona da alavanca e pelos buracos (sobe com a {item:Rope} nos buracos por onde desceste) até voltares à superfície, a sul de Northport. Daí regressa a pé para **sul**, até **Carlin**.",
+          "coords": [
+            {
+              "x": 32512,
+              "y": 31624,
+              "z": 7,
+              "label": "Buraco de entrada (aberto com a pá)"
+            },
+            {
+              "x": 32488,
+              "y": 31610,
+              "z": 7,
+              "label": "Gruta a sul de Northport"
+            }
+          ]
+        },
+        {
+          "title": "Alternativa para nível 60+: sair por Demona",
+          "text": "Se tens nível 60+ e passas o **Gate of Expertise**, também podes sair da zona atravessando {wiki:Demona|Demona}, pelo caminho desta imagem. Vais encontrar muitos dos monstros da zona, como {creature:Warlock|Warlocks}; só vale a pena se aguentares Demona.",
+          "images": [
+            {
+              "file": "Mols-exit through demona.jpg",
+              "caption": "Saída da zona através de Demona"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

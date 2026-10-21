@@ -1,0 +1,31 @@
+{
+  "title": "Magician Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Bairro dos magos no **nordeste de Yalahar**, menos degradado que os outros mas cheio de feiticeiros malignos; está dividido em seis zonas (Marid, Efreet, Research Centre, Restricted Area, Residential Area e Academy of Magic) e numa delas o chão abriu-se para criaturas do inferno.",
+  "entrance": {"x": 32887, "y": 31094, "z": 7, "label": "Magician Quarter (Yalahar)"},
+  "arrive": [
+    "Viaja até **Yalahar**: em Liberty Bay fala com o {npc:Captain Max} ({key:hi}, {key:yalahar}, {key:yes}; precisas do rank Novice no Explorer Society) ou, em Thais, com o {npc:Captain Bluebear} se compraste a palavra-passe ao {npc:Wyrdin's Apprentice}. Com as rotas da In Service of Yalahar há barco direto de Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore. Chegas ao porto, a **sul** do centro.",
+    "Do centro da cidade vai para **nordeste**: o Magician Quarter não tem mecanismo no portão, por isso entras diretamente a partir do centro.",
+    "Em alternativa, a partir do porto passa de bairro em bairro pelos guardas dos portões, dizendo a cada um {key:pass} e o destino: {npc:Peter} (Trade → Factory Quarter), {npc:Oliver} (Factory → Sunken Quarter) e {npc:Barry} (Sunken → Magician Quarter)."
+  ],
+  "leave": [
+    "Volta ao centro de Yalahar pelo mesmo portão (ou pelo {npc:Reed}, para o {wiki:Cemetery Quarter}, ou pelo {npc:Barry}, para o {wiki:Sunken Quarter}: {key:pass} e o destino).",
+    "No porto, o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou Thais (800 gp); com as rotas desbloqueadas, o {npc:Karith} leva-te a 8 cidades."
+  ],
+  "coords": [
+    {"x": 32884, "y": 31160, "z": 7, "label": "Barry — portão Sunken / Magician Quarter"},
+    {"x": 32802, "y": 31103, "z": 7, "label": "Reed — portão Cemetery / Magician Quarter"},
+    {"x": 32895, "y": 31229, "z": 7, "label": "Oliver — portão Factory / Sunken Quarter"},
+    {"x": 32857, "y": 31302, "z": 7, "label": "Peter — portão Trade / Factory Quarter"},
+    {"x": 32826, "y": 31082, "z": 7, "label": "Research Centre"},
+    {"x": 32905, "y": 31018, "z": 7, "label": "Subida para o Tamoril"}
+  ],
+  "images": [
+    {"file": "Magician Quarter.png", "caption": "Mapa do Magician Quarter"}
+  ],
+  "warnings": [
+    "As zonas de caça estão separadas da estrada principal por muros, mas lá dentro há {creature:Hellspawn|Hellspawns}, {creature:Plaguesmith|Plaguesmiths}, djinns e demónios: recomendado nível 40–45+.",
+    "Algumas entradas (como o Research Centre) têm {item:Gate of Expertise|Gates of Expertise} com nível mínimo."
+  ]
+}

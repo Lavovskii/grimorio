@@ -1,0 +1,339 @@
+{
+  "slug": "the-hunt-for-the-sea-serpent-quest",
+  "category": "acesso",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "30 min – 2 horas (depende muito da sorte)",
+  "summary": "O {npc:Captain Haba}, em Svargrond, anda à caça de uma serpente marinha nos mares do norte. Leva-lhe peixe para fazer isco, sai com ele para alto mar e usa o telescópio para lhe dizer onde está a criatura. Quando a encontras, ganhas acesso às grutas subaquáticas com {creature:Sea Serpent|Sea Serpents}.",
+  "legend_pt": "Há rumores de Sea Serpents que vagueiam pelos mares do norte e atacam navios.",
+  "start": {
+    "x": 32355,
+    "y": 31125,
+    "z": 6,
+    "label": "Captain Haba, navio em Svargrond"
+  },
+  "requirements": [
+    "Nível 61.",
+    "Premium Account.",
+    "{item:Helmet of the Deep} para explorar debaixo de água no fim."
+  ],
+  "items_needed": [
+    {
+      "item": "Fish",
+      "qty": 5
+    },
+    {
+      "item": "Northern Pike",
+      "qty": 5
+    },
+    {
+      "item": "Green Perch",
+      "qty": 5
+    },
+    {
+      "item": "Rainbow Trout",
+      "qty": 5
+    },
+    {
+      "item": "Bait",
+      "qty": 10,
+      "note": "50 gp cada, comprados ao Captain Haba em alto mar; podes precisar de muitos mais (até 220)"
+    },
+    {
+      "item": "Helmet of the Deep"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Acesso aos spawns de {creature:Sea Serpent|Sea Serpents} (Sea Serpent Area)"
+    }
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Sea Serpent Area (grutas subaquáticas das Sea Serpents)", "kind": "zona", "place": "Sea Serpent Area", "when": "Quando encontras a serpente com o telescópio e pedes {key:caves} ao {npc:Captain Haba}.", "note": "Precisas de um {item:Helmet of the Deep} para descer debaixo de água."}
+  ],
+  "dangers": [
+    "Deepsea Blood Crab",
+    "Young Sea Serpent",
+    "Sea Serpent"
+  ],
+  "npcs": [
+    "Captain Haba"
+  ],
+  "tips": [
+    "Leva bastante dinheiro para os {item:Bait|iscos}: cada um custa 50 gp e o número necessário depende da sorte (10 é o mínimo, pode chegar a 220).",
+    "Lê sempre a mensagem mais recente no **Server Log**: a mensagem no ecrã pode estar desatualizada depois de clicares várias vezes no telescópio.",
+    "Quanto mais depressa disseres a posição ao capitão, melhor: as mensagens \"huge shadow\" seguidas aumentam a probabilidade de terminar."
+  ],
+  "sections": [
+    {
+      "title": "1. Juntar o peixe para o isco",
+      "steps": [
+        {
+          "title": "Chegar a Svargrond",
+          "text": "Apanha o barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda}; o navio do {npc:Captain Haba} é o que está logo a **sul** dele.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "svargrond"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32347,
+              "y": 31108,
+              "z": 6,
+              "label": "Captain Breezelda (barco de passageiros)"
+            },
+            {
+              "x": 32355,
+              "y": 31125,
+              "z": 6,
+              "label": "Captain Haba"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Captain Haba",
+          "text": "Em **Svargrond**, encontra o {npc:Captain Haba} no primeiro andar do navio que está a sul do barco que transporta pessoas entre cidades. Diz {key:hi}, {key:mission} e {key:yes}.",
+          "npc": "Captain Haba",
+          "images": [
+            {
+              "file": "The_hunt_for_the_sea_serpent_quest_1.png",
+              "caption": "O navio do Captain Haba em Svargrond"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Harrr, landlubber wha'd ya want? Askin' for a passage?"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "Ya wanna join the hunt fo' the sea serpent? Be warned ya may pay with ya life! Are ya in to it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] Your first task is to bring me 5 fish they are easy to catch. When you got them ask me for the bait again."
+            }
+          ],
+          "coords": [
+            {
+              "x": 32355,
+              "y": 31125,
+              "z": 6,
+              "label": "Captain Haba"
+            }
+          ]
+        },
+        {
+          "title": "Entregar os peixes",
+          "text": "Entrega os peixes pela ordem pedida, dizendo {key:bait} de cada vez: 5 {item:Fish}, depois 5 {item:Northern Pike|Northern Pikes}, depois 5 {item:Green Perch|Green Perches} e por fim 5 {item:Rainbow Trout|Rainbow Trouts}.",
+          "npc": "Captain Haba",
+          "dialogue": [
+            {
+              "you": "bait"
+            },
+            {
+              "npc": "Excellent, now bring me 5 northern pike."
+            },
+            {
+              "you": "bait"
+            },
+            {
+              "npc": "Excellent, now bring me 5 green perch."
+            },
+            {
+              "you": "bait"
+            },
+            {
+              "npc": "Excellent, now bring me 5 rainbow trout."
+            },
+            {
+              "you": "bait"
+            },
+            {
+              "npc": "Excellent, that should be enough fish to make the bait. Tell me when ya're ready fo' the hunt."
+            }
+          ]
+        },
+        {
+          "title": "Sair para alto mar",
+          "text": "Diz {key:hunt} e {key:yes}. O capitão leva-te para alto mar (o navio é diferente, mas o capitão é o mesmo).",
+          "npc": "Captain Haba",
+          "dialogue": [
+            {
+              "you": "hunt"
+            },
+            {
+              "npc": "A'right, wanna put out to sea?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Let's go fo' a hunt and bring the beast down!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A caça à serpente",
+      "steps": [
+        {
+          "title": "Comprar iscos",
+          "text": "No navio em alto mar, diz ao Captain Haba {key:hi} e {key:trade} e compra pelo menos 10 {item:Bait|Baits} (50 gp cada). Se quiseres ouvir as instruções, diz {key:instructions}. Para voltar a Svargrond, diz {key:Svargrond}.",
+          "npc": "Captain Haba",
+          "dialogue": [
+            {
+              "you": "instructions"
+            },
+            {
+              "npc": "A'right, first of all you need a bait which isn't for free, though. I sell them for 50 gold each. Use the bait on the crane over there when you see something in the telescope. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Usar o isco na grua",
+          "text": "Vai ao lado **esquerdo** do barco e usa um {item:Bait} na {item:Crane|grua}.",
+          "images": [
+            {
+              "file": "The_hunt_for_the_sea_serpent_quest_2.png",
+              "caption": "A grua no lado esquerdo do barco"
+            }
+          ]
+        },
+        {
+          "title": "Subir ao mastro",
+          "text": "Desce ao piso -1 do barco e entra no teleporte. Ele leva-te ao topo do mastro, onde está um {item:Telescope}.",
+          "images": [
+            {
+              "file": "The_hunt_for_the_sea_serpent_quest_3.png",
+              "caption": "O teleporte no piso -1 do barco"
+            }
+          ]
+        },
+        {
+          "title": "Usar o telescópio duas vezes",
+          "text": "Usa o telescópio. Depois da primeira mensagem, usa-o outra vez. Lê a segunda mensagem (no Server Log) para saberes onde está a serpente.",
+          "images": [
+            {
+              "file": "The_hunt_for_the_sea_serpent_quest_5.png",
+              "caption": "Primeira mensagem do telescópio"
+            }
+          ]
+        },
+        {
+          "title": "Dizer a posição ao capitão",
+          "text": "Volta ao {npc:Captain Haba} e diz a palavra certa conforme a mensagem (vê a tabela). Depois usa um novo isco na grua, sobe ao mastro e volta a usar o telescópio. Repete até aparecer a mensagem final.",
+          "npc": "Captain Haba",
+          "table": {
+            "head": [
+              "Mensagem do telescópio",
+              "O que fazer"
+            ],
+            "rows": [
+              [
+                "*You see water as far as the eye can reach. No sea serpent in sight.*",
+                "Não vás ao capitão: usa o telescópio outra vez."
+              ],
+              [
+                "*You see a small dot/a dot/a shadow/a huge shadow under the surface straight ahead of you.*",
+                "Diz {key:straight}"
+              ],
+              [
+                "*... under the surface. It is to the starboard side.*",
+                "Diz {key:starboard}"
+              ],
+              [
+                "*... under the surface. It is on the larboard side.*",
+                "Diz {key:larboard}"
+              ],
+              [
+                "*It's getting away! You should tell the captain to gain speed!*",
+                "Diz {key:speed}"
+              ],
+              [
+                "*Oops! You lost it.*",
+                "Disseste a posição errada. Na próxima vez vês a mensagem \"water as far as the eye can reach\"."
+              ],
+              [
+                "*There are multiple shadows under the surface. This has to be the right location.*",
+                "Terminaste! Podes ir para debaixo de água."
+              ]
+            ]
+          },
+          "tip": "O \"small dot\" significa que a serpente está longe; a \"huge shadow\" significa que está muito perto. Podes voltar a receber dots/shadows mesmo depois de huge shadows: depende sobretudo da sorte."
+        }
+      ]
+    },
+    {
+      "title": "3. Explorar as grutas da serpente",
+      "steps": [
+        {
+          "title": "Falar com o capitão",
+          "text": "Quando encontrares o local, diz ao {npc:Captain Haba} {key:hi} e {key:caves}.",
+          "npc": "Captain Haba",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "You found the spot!! Grab yourself a helmet of the deep and go explore the caves down there."
+            },
+            {
+              "you": "caves"
+            },
+            {
+              "npc": "I'd go by myself and tear that beast's heart out if I were younger. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Descer com o Helmet of the Deep",
+          "text": "Equipa o {item:Helmet of the Deep} e entra no teleporte para ires para debaixo de água. Lá encontras {creature:Deepsea Blood Crab|Deepsea Blood Crabs} e {creature:Young Sea Serpent|Young Sea Serpents}. Debaixo de água podes tirar o capacete, mas sem proteção total contra afogamento levas dano: mantém-no posto.",
+          "images": [
+            {
+              "file": "The_hunt_for_the_sea_serpent_quest_6.png",
+              "caption": "O local da serpente encontrado"
+            }
+          ],
+          "warning": "Não entres sem o Helmet of the Deep posto."
+        },
+        {
+          "title": "Chegar às Sea Serpents",
+          "text": "Para encontrares as {creature:Sea Serpent|Sea Serpents} tens de descer usando {spell:Levitate} ou parcels. {item:Pot|Pots} e {item:Ice Cube|Ice Cubes} funcionam melhor, porque os monstros não os conseguem empurrar.",
+          "reward": "Acesso aos spawns de Sea Serpents"
+        },
+        {
+          "title": "Sair das grutas da serpente",
+          "text": "Para voltares, sobe com {spell:Levitate} (ou parcels/pots/ice cubes) nos sítios onde desceste e regressa ao ponto onde chegaste debaixo de água; as fontes não descrevem outra saída. De volta ao barco em alto mar, diz ao {npc:Captain Haba} {key:hi} e {key:svargrond} para regressares ao porto de Svargrond. Daí, a {npc:Captain Breezelda} leva-te a Carlin, Thais ou Venore.",
+          "npc": "Captain Haba",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "svargrond"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A quest aparece no Quest Log em *Tibia Tales*."
+  ]
+}

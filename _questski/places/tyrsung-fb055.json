@@ -1,0 +1,30 @@
+{
+  "title": "Tyrsung",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Ilha gelada a **sudeste de Hrodmir** (a sul de Svargrond), com a montanha {wiki:Jotunar} dos Frost Giants no centro e uma aldeia de contrabandistas e caçadores de peles no sul.",
+  "entrance": {"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung"},
+  "requirements": [
+    "Para o {npc:Buddel} te levar a Tyrsung precisas da {wiki:Barbarian Test Quest} e de ter pelo menos começado a missão *Nibelor 2: Ecological Terrorism* da {wiki:The Ice Islands Quest}."
+  ],
+  "arrive": [
+    "Vai a **Svargrond** de barco (por exemplo de Venore, {npc:Captain Fearless}: {key:hi}, {key:svargrond}, {key:yes}).",
+    "Vai ao barco a **sul** da cidade e fala com o {npc:Buddel} ({coord:32254,31195,7}): {key:hi}, {key:passage}, {key:tyrsung}. Quando ele pedir um {item:Dwarven Ring}, diz {key:no} e paga **50 gp**.",
+    "Desembarcas no cais de Tyrsung ({coord:32332,31230,7}). O Buddel está bêbedo e às vezes deixa-te na ilha errada: se isso acontecer, pede outra vez."
+  ],
+  "leave": [
+    "Volta ao sítio onde o Buddel te deixou (o cais, no **norte** da ilha) e diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:svargrond}; quando ele pedir o {item:Dwarven Ring} diz {key:no} e paga 50 gp.",
+    "Chegas ao cais a **sul** de Svargrond. Se te deixar na ilha errada, pede outra vez."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel, a sul de Svargrond"},
+    {"x": 32374, "y": 31311, "z": 7, "label": "Tyrsung (centro da ilha)"},
+    {"x": 32366, "y": 31372, "z": 6, "label": "Barco dos caçadores (sul da ilha)"}
+  ],
+  "images": [
+    {"file": "Map tyrsung.jpg", "caption": "Mapa de Tyrsung"}
+  ],
+  "warnings": [
+    "No sul da ilha há uma aldeia cheia de {creature:Smuggler|Smugglers}, e a montanha do centro tem {creature:Frost Giant|Frost Giants} (boa caça para nível 40–60)."
+  ]
+}

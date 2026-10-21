@@ -1,0 +1,28 @@
+{
+  "title": "Shadow Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo escondido de tema de fogo (oficialmente Mahrdis' Cauldron), por baixo do deserto de Kha'labal, a **sudeste de Ankrahmun**, à sombra da torre sudeste da cidade.",
+  "entrance": {"x": 33255, "y": 32833, "z": 7, "label": "Entrada da Shadow Tomb (escava com a Shovel)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Viaja até **Ankrahmun** de barco: diz ao capitão do porto {key:hi}, {key:ankrahmun}, {key:yes}.",
+    "Sai da cidade pela rampa **nordeste** e segue as muralhas da cidade para **sul** até à parte sudeste de {wiki:Darama}.",
+    "Usa a {item:Shovel} no sítio da entrada ({coord:33255,32833,7}) para escavares o buraco e desce."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe os pisos do túmulo até à entrada.",
+    "Usa a {item:Rope} no buraco que escavaste para saíres para o deserto ({coord:33255,32833,7}).",
+    "Regressa a **Ankrahmun** pela rampa **nordeste** da cidade e apanha lá o barco."
+  ],
+  "coords": [
+    {"x": 33235, "y": 32808, "z": 12, "label": "Porta de quest no 5.º piso (A Father's Burden)"}
+  ],
+  "images": [
+    {"file": "Tombsoutheast.jpg", "caption": "Zona da Shadow Tomb, a sudeste de Ankrahmun"}
+  ],
+  "warnings": [
+    "Há criaturas que ficam invisíveis: leva runas de área ou o feitiço de cancelar invisibilidade.",
+    "Os pisos de baixo (depois dos teleportes) são para níveis mais altos (60–90): muitas criaturas de fogo, como {creature:Fire Devil|Fire Devils} e {creature:Fire Elemental|Fire Elementals}."
+  ]
+}

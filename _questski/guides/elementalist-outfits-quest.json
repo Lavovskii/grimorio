@@ -1,0 +1,383 @@
+{
+  "slug": "elementalist-outfits-quest",
+  "category": "outfit",
+  "region": "Edron",
+  "difficulty": 3,
+  "duration": "1–2 horas por tentativa (25 vagas) + sorte com os drops",
+  "summary": "Uma torre mágica apareceu do nada a leste de Edron, criada por um mago louco. Ajuda os seus servos a limpar o fungo de lodo, sobrevive a 25 vagas de servos mecânicos e leva 20 {item:Slime Mould|Slime Moulds} ao {npc:Broken Servant Sentry} em Farmine para receberes o {wiki:Elementalist Outfits|Elementalist Outfit}. Os addons vêm do {item:Mage's Cap} do {creature:Mad Mage} e dos {item:Elemental Spikes} do {creature:Raging Mage}.",
+  "legend_pt": "Uma torre mágica apareceu do nada a leste de Edron. Um mago louco, sem qualquer ligação à Academia, criou este edifício e realizou lá várias experiências — algumas das quais falharam de forma terrível.",
+  "start": {
+    "x": 33311,
+    "y": 31837,
+    "z": 7,
+    "label": "Servant Sentry, torre a sul da casa do Telas (Edron)"
+  },
+  "requirements": [
+    "Nível mínimo 8 (recomendado 70+).",
+    "Conta Premium.",
+    "O fungo de lodo tem de estar ativo: se já foi limpo, o Servant Sentry não te dá o Slime Gobbler e tens de esperar que volte a aparecer."
+  ],
+  "items_needed": [
+    {
+      "item": "Slime Gobbler",
+      "note": "dado pelo Servant Sentry"
+    },
+    {
+      "item": "Slime Mould",
+      "qty": 20,
+      "note": "outfit; drop raro durante as vagas, ou compra a jogadores (10.000–35.000 gp cada, conforme o mundo)"
+    },
+    {
+      "item": "Mage's Cap",
+      "note": "addon do capuz; cai do Mad Mage na última vaga"
+    },
+    {
+      "item": "Elemental Spikes",
+      "note": "addon do bordão; cai do Raging Mage"
+    },
+    {
+      "item": "Rope",
+      "note": "addon do bordão"
+    },
+    {
+      "item": "Shovel",
+      "note": "addon do bordão (e/ou o feitiço {spell:Levitate})"
+    },
+    {
+      "text": "Poções de vida e de mana em quantidade"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Elementalist Outfits|Elementalist Outfit} base"
+    },
+    {
+      "text": "Addon 1: capuz (cape addon)"
+    },
+    {
+      "text": "Addon 2: bordão de espinhos (spiky staff)"
+    },
+    {
+      "text": "Achievement **Mystic Fabric Magic**"
+    }
+  ],
+  "achievements": [
+    "Mystic Fabric Magic"
+  ],
+  "dangers": [
+    "Insect Swarm",
+    "Sandcrawler",
+    "Terror Bird",
+    "Gnarlhound",
+    "Death Blob",
+    "Iron Servant",
+    "Golden Servant",
+    "Diamond Servant",
+    "Mad Mage",
+    "Raging Mage"
+  ],
+  "npcs": [
+    "Servant Sentry",
+    "Broken Servant Sentry",
+    "Telas"
+  ],
+  "tips": [
+    "As {item:Slime Mould|Slime Moulds} são um drop raro. Muitos jogadores preferem comprá-las.",
+    "Não podes fazer logout dentro do dungeon da torre, por isso não dá para trocar de personagem para limpar o fungo mais depressa.",
+    "Esta quest está ligada ao world change {wiki:Their Master's Voice World Change|Their Master's Voice}."
+  ],
+  "sections": [
+    {
+      "title": "1. Limpar o fungo de lodo",
+      "steps": [
+        {
+          "title": "Ir à torre",
+          "text": "Vai à torre a **sul** da casa do {npc:Telas}, a leste de Edron. Para lá chegares, viaja até **Edron** (em qualquer cidade com barco diz {key:hi}, {key:edron} e {key:yes} ao capitão) e sai da cidade a pé para **leste**/**nordeste**, na direção de {wiki:Stonehome|Stonehome}; a torre em ruínas fica a **sul** de Stonehome. Atravessa a ponte para chegares ao Servant Sentry.",
+          "coords": [
+            {
+              "x": 33311,
+              "y": 31837,
+              "z": 7,
+              "label": "Servant Sentry (torre)"
+            },
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse (porto de Edron)"
+            },
+            {
+              "x": 33303,
+              "y": 31773,
+              "z": 7,
+              "label": "Stonehome"
+            }
+          ],
+          "images": [
+            {
+              "file": "Servants_1.png",
+              "caption": "Localização da torre a sul da casa do Telas"
+            }
+          ]
+        },
+        {
+          "title": "Receber o Slime Gobbler",
+          "text": "Fala com o {npc:Servant Sentry}: {key:hi}, {key:slime}, {key:yes}. Recebes um {item:Slime Gobbler}.",
+          "npc": "Servant Sentry",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "The. Slime. Has. Entered. Our. Master. Has. Left! We. Must. Help."
+            },
+            {
+              "you": "slime"
+            },
+            {
+              "npc": "Defeat. Slime. We. Will. Why. Did. You. Kill. Us? Do. You. Want. To. Rectify. And. Help?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Then. Take. This. Gobbler. Always. Hungry. Eats. Slime. Fungus. Go."
+            }
+          ],
+          "warning": "Se o fungo já tiver sido limpo, o Servant Sentry não te dá o Slime Gobbler. Espera que o fungo volte a aparecer."
+        },
+        {
+          "title": "Limpar todo o fungo",
+          "text": "Desce à zona por baixo da torre e usa o {item:Slime Gobbler} em **todo** o fungo de lodo, incluindo o que está nas paredes. O Slime Gobbler tem um exhaust de 5 segundos. A área principal fica **2 andares** abaixo da torre.",
+          "images": [
+            {
+              "file": "Servants_6.png",
+              "caption": "O fungo de lodo a limpar no dungeon"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33312,
+              "y": 31853,
+              "z": 9,
+              "label": "Área principal do dungeon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. As 25 vagas de servos",
+      "steps": [
+        {
+          "title": "Sobreviver às vagas",
+          "text": "Depois de limpares o dungeon **inteiro**, começam a aparecer {creature:Iron Servant|Iron Servants}, {creature:Golden Servant|Golden Servants} e {creature:Diamond Servant|Diamond Servants}. São 25 vagas no total e cada uma traz mais inimigos.",
+          "images": [
+            {
+              "file": "Servants_3.png",
+              "caption": "As vagas de servos"
+            }
+          ],
+          "tip": "Deixa um ou dois monstros vivos na parte **sul** do dungeon e volta a eles quando tiveres morto os outros. Assim evitas ficar no meio de uma vaga nova e encurralado.",
+          "warning": "Tem muito cuidado perto do fim. Na última vaga pode aparecer o poderoso {creature:Mad Mage}."
+        },
+        {
+          "title": "Juntar 20 Slime Moulds",
+          "text": "Com sorte, os servos deixam cair {item:Slime Mould}. Precisas de **20** para o outfit. Como é um drop raro, podes comprá-las a outros jogadores (10.000 a 35.000 gp, conforme o mundo)."
+        },
+        {
+          "title": "Sair do dungeon",
+          "text": "Para saíres, volta pelo mesmo caminho: sobe os **2 andares** até à torre em ruínas, atravessa a ponte e regressa a pé para **oeste** até **Edron**, onde o barco do {npc:Captain Seahorse} te leva a outras cidades.",
+          "coords": [
+            {
+              "x": 33314,
+              "y": 31837,
+              "z": 7,
+              "label": "Torre em ruínas (entrada/saída)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Outfit base (Broken Servant Sentry, Farmine)",
+      "steps": [
+        {
+          "title": "Entregar as Slime Moulds",
+          "text": "Com 20 {item:Slime Mould|Slime Moulds}, vai a Farmine e fala com o {npc:Broken Servant Sentry}, mesmo ao lado do {wiki:Steamboat|Steamboat}: {key:hi}, {key:slime}, {key:yes}, {key:yes}. Quando ele disser que tem material suficiente, recebes o outfit. Para chegares a Farmine usa o {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}. Para voltares, diz ao Thorgrin {key:hi}, {key:kazordoon} (ou {key:cormaya}), {key:yes}.",
+          "npc": "Broken Servant Sentry",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Be Greeted. Greeted. Greeted. On. Be-Be-Behalf. Of. The. The. The. Master. [...] Entering. His. Lair. Is. Forbidden."
+            },
+            {
+              "you": "slime"
+            },
+            {
+              "npc": "If. You. Bring. Slime. Fungus. Samples. [...] From. Other. Tower. You. Must. Be. The. Master. Are. You. There. Master?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "I. Greet. You. Ma-Ma-Ma-ster! Did. You. Bring. More. Samples. For. Me. To. Analyse?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Please. Wait. I. Can. Not. Handle. [...] This. Is. Enough. Material. [...]"
+            },
+            {
+              "npc": "I. Have. Also. Cleaned. Your. Clothes. Master. It. Is. Now. Free. Of. Sample. Stains."
+            }
+          ],
+          "images": [
+            {
+              "file": "Servants_2.png",
+              "caption": "O Broken Servant Sentry junto ao Steamboat em Farmine"
+            },
+            {
+              "file": "Outfit Elementalist Male.gif",
+              "caption": "Elementalist Outfit masculino"
+            },
+            {
+              "file": "Outfit Elementalist Female.gif",
+              "caption": "Elementalist Outfit feminino"
+            }
+          ],
+          "reward": "Elementalist Outfit",
+          "coords": [
+            {
+              "x": 33025,
+              "y": 31553,
+              "z": 14,
+              "label": "Steamship de Farmine (Thorgrin)"
+            },
+            {
+              "x": 33012,
+              "y": 31544,
+              "z": 10,
+              "label": "Broken Servant Sentry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Addon do capuz (Mage's Cap)",
+      "steps": [
+        {
+          "title": "Lootar o Mage's Cap",
+          "text": "Na última das 25 vagas (na mesma corrida em que juntas as Slime Moulds ou numa nova) aparece o {creature:Mad Mage}: mata-o e loota o {item:Mage's Cap}. Vê também o {wiki:Their Master's Voice World Change|Their Master's Voice World Change}.",
+          "images": [
+            {
+              "file": "TMVMAP2.png",
+              "caption": "Mapa da zona do Their Master's Voice"
+            }
+          ]
+        },
+        {
+          "title": "Entregar o Mage's Cap",
+          "text": "Leva o {item:Mage's Cap} ao {npc:Broken Servant Sentry} em Farmine: {key:hi}, {key:cap}.",
+          "npc": "Broken Servant Sentry",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "cap"
+            },
+            {
+              "npc": "Your. Cap. Is. Slimed. I. Can. Clean. It. [...]"
+            },
+            {
+              "npc": "Here. You. Are."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Elementalist Male Addon 1.gif",
+              "caption": "Elementalist masculino com o addon do capuz"
+            },
+            {
+              "file": "Outfit Elementalist Female Addon 1.gif",
+              "caption": "Elementalist feminino com o addon do capuz"
+            }
+          ],
+          "reward": "Addon do capuz"
+        }
+      ]
+    },
+    {
+      "title": "5. Addon do bordão (Elemental Spikes)",
+      "steps": [
+        {
+          "title": "Lootar os Elemental Spikes",
+          "text": "Mata o {creature:Raging Mage} e loota os {item:Elemental Spikes}. Leva {item:Rope} e {item:Shovel} e/ou o feitiço {spell:Levitate}. Para saberes quando ele aparece e como o matar, consulta a página do {creature:Raging Mage}. O Raging Mage está no topo de uma torre no **sudoeste** da {wiki:Zao Steppe} (ver {wiki:The Mage's Tower World Change}; precisas da missão 2 da {wiki:The New Frontier Quest}). De Farmine, sobe à superfície da montanha pelo elevador, segue a passagem para **leste** (desce com {spell:Levitate}) até à estepe e vai à rampa da torre; sobe-a até ao último andar. Para saíres, desce pelas mesmas rampas e regressa a Farmine pela passagem da montanha (sobe com {spell:Levitate}) e pelo elevador.",
+          "images": [
+            {
+              "file": "Servants_5.png",
+              "caption": "Zona do Raging Mage"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33085,
+              "y": 31532,
+              "z": 7,
+              "label": "Saída da montanha de Farmine para a Zao Steppe"
+            },
+            {
+              "x": 33133,
+              "y": 31511,
+              "z": 7,
+              "label": "Rampa da torre do Raging Mage"
+            }
+          ]
+        },
+        {
+          "title": "Entregar os Elemental Spikes",
+          "text": "Leva os {item:Elemental Spikes} ao {npc:Broken Servant Sentry} em Farmine: {key:hi}, {key:staff}.",
+          "npc": "Broken Servant Sentry",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "The Master is-is-is-is de-ad. Please. Be. In. Mourning."
+            },
+            {
+              "you": "staff"
+            },
+            {
+              "npc": "Here. You. Are."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Elementalist Male Addon 2.gif",
+              "caption": "Elementalist masculino com o bordão"
+            },
+            {
+              "file": "Outfit Elementalist Female Addon 2.gif",
+              "caption": "Elementalist feminino com o bordão"
+            },
+            {
+              "file": "Outfit Elementalist Male Addon 3.gif",
+              "caption": "Elementalist masculino com os dois addons"
+            },
+            {
+              "file": "Outfit Elementalist Female Addon 3.gif",
+              "caption": "Elementalist feminino com os dois addons"
+            }
+          ],
+          "reward": "Addon do bordão"
+        }
+      ]
+    }
+  ]
+}

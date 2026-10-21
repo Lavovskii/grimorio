@@ -1,0 +1,36 @@
+{
+  "title": "Chyllfroest",
+  "type": "ilha",
+  "near": "Svargrond",
+  "summary": "Ilha gelada a **oeste de Svargrond**, só acessível entre **1 de abril e 1 de maio**, com iglus de Chakoyas, a montanha de Chyllfroest (Frost Dragons, Tinder Box) e o Ursagrodon congelado.",
+  "entrance": {"x": 32068, "y": 31093, "z": 7, "label": "Ponte de gelo para Chyllfroest"},
+  "requirements": [
+    "Só está acessível de **1 de abril a 1 de maio** (mini world change); fora dessas datas a ponte de gelo não existe."
+  ],
+  "arrive": [
+    "Vai a **Svargrond** (de barco, no capitão do porto da tua cidade: {key:hi}, {key:svargrond}, {key:yes}).",
+    "Sai de Svargrond e vai até à gruta dos {creature:Frost Troll|Frost Trolls} que fica no caminho para o atalho das {wiki:Formorgar Mines}.",
+    "Em vez de desceres e seguires o atalho, segue para **oeste**, em direção à gruta dos Quara Scouts.",
+    "A \"ponte\" de gelo para a ilha começa em {coord:32068,31093,7}: atravessa-a para chegares a Chyllfroest ({coord:32060,31034,7}). Pelo caminho há {wiki:Chakoyas}, {creature:Frost Giant|Frost Giants} e {creature:Frost Giantess|Frost Giantesses}."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: regressa à superfície, atravessa a ponte de gelo em {coord:32068,31093,7} para **leste**, de volta à gruta dos Frost Trolls e a **Svargrond**.",
+    "Se estiveres no fundo da masmorra do leste, no **5.º andar subterrâneo** há um **Geyser**: pisa-o e és levado de volta à superfície, ao sopé da montanha.",
+    "Se estiveres no topo da montanha, usa {spell:Levitate} no lado **leste** para desceres do 6.º para o 5.º andar e desce pelas mesmas escadas e rampas até ao chão."
+  ],
+  "coords": [
+    {"x": 32060, "y": 31034, "z": 7, "label": "Ilha de Chyllfroest"},
+    {"x": 32049, "y": 31052, "z": 7, "label": "Montanha de Chyllfroest"},
+    {"x": 32009, "y": 31077, "z": 8, "label": "Chakoya Dungeon (por baixo dos iglus)"}
+  ],
+  "images": [
+    {"file": "Chyllfroest Entrance.png", "caption": "A entrada de Chyllfroest"},
+    {"file": "Chyllfroest Dungeon Geyser.png", "caption": "O Geyser da masmorra que leva à superfície"},
+    {"file": "Chyllfroest Surface Geyser.png", "caption": "O sítio onde o Geyser te deixa à superfície"},
+    {"file": "Chyllfroest Tinderbox Levitate.png", "caption": "Onde usar Levitate no topo da montanha"}
+  ],
+  "warnings": [
+    "Na montanha, do andar +1 ao -1 há muitos {creature:Frost Dragon|Frost Dragons}: para chegares ao Ursagrodon (1.º andar subterrâneo, lado leste) contorna a montanha pelo **sudeste** e evitas os dragões.",
+    "O andar -2 da montanha é uma zona de nível muito alto, e o 5.º andar tem {creature:Hellhound|Hellhounds} e {creature:Demon|Demons}."
+  ]
+}

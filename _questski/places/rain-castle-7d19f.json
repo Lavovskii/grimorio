@@ -1,0 +1,29 @@
+{
+  "title": "Rain Castle",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "O castelo do {npc:King Tibianus}, numa ilhota no fim da Royal Avenue, no **noroeste de Thais** (a oeste da porta norte, a norte do porto e a nordeste do depot).",
+  "entrance": {"x": 32318, "y": 32189, "z": 7, "label": "Rain Castle (portão guardado pelo Baxter)"},
+  "arrive": [
+    "Chega a **Thais** (de barco: diz ao capitão do porto {key:hi}, {key:thais}, {key:yes}); desembarcas junto ao {npc:Captain Bluebear} ({coord:32310,32210,6}).",
+    "Do porto vai para **norte** até à Royal Avenue: o castelo fica numa ilhota no fim da avenida.",
+    "Atravessa a ponte e entra pelo portão guardado pelo {npc:Baxter} ({coord:32322,32188,7}): chegas ao pátio, onde está o {npc:Bozo}.",
+    "A sala do trono do {npc:King Tibianus} fica 1 andar acima, a **norte** do pátio ({coord:32311,32171,6}); a cozinha real fica na zona norte do rés-do-chão e a cave (com o Treasure Vault fechado) desce-se pelas escadas junto à sala oeste."
+  ],
+  "leave": [
+    "Sai pelo portão do pátio e pela ponte para a Royal Avenue.",
+    "Vai para **sul** até ao porto de Thais, onde o {npc:Captain Bluebear} tem barco para outras cidades ({key:hi}, o nome da cidade, {key:yes}), ou ao depot, a sudoeste do castelo."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 32322, "y": 32188, "z": 7, "label": "Baxter (portão do castelo)"},
+    {"x": 32311, "y": 32171, "z": 6, "label": "King Tibianus (sala do trono, 1 andar acima)"},
+    {"x": 32307, "y": 32185, "z": 5, "label": "Trimegis (2 andares acima)"}
+  ],
+  "images": [
+    {"file": "Rain Castle -1.png", "caption": "Rain Castle — cave"},
+    {"file": "Rain Castle 0.png", "caption": "Rain Castle — rés-do-chão"},
+    {"file": "Rain Castle 1.png", "caption": "Rain Castle — 1.º andar (sala do trono)"},
+    {"file": "Rain Castle 2.png", "caption": "Rain Castle — 2.º andar"}
+  ]
+}

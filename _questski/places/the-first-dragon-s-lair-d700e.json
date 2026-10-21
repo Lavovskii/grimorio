@@ -1,0 +1,34 @@
+{
+  "title": "The First Dragon's Lair",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Covil do {creature:The First Dragon}, escondido atrás de uma porta nas montanhas de {wiki:Kha'zeel Mountains|Kha'zeel}, perto de Ankrahmun; só se alcança com a {wiki:The First Dragon Quest} ativa.",
+  "entrance": {"x": 33050, "y": 32721, "z": 4, "label": "Porta do First Dragon Lair (montanhas de Kha'zeel)"},
+  "requirements": [
+    "Só acessível durante a {wiki:The First Dragon Quest}.",
+    "Para abrir a porta precisas dos quatro troféus dos bosses: {item:Tooth of Tazhadur}, {item:Horn of Kalyassa}, {item:Scale of Gelidrazah} e {item:Bones of Zorvorax}. Depois de os usares, o acesso fica **permanente**.",
+    "{spell:Levitate} para subir a montanha."
+  ],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes}; chegas junto ao {npc:Captain Sinbeard}).",
+    "Atravessa o deserto até ao ponto indicado nas montanhas de Kha'zeel ({coord:33049,32758,7}).",
+    "Usa {spell:Levitate} para cima **3 vezes** e depois sobe a rampa para **norte** até à porta ({coord:33050,32721,4}).",
+    "Usa os quatro troféus no quadrado em frente ao **centro da porta** e depois usa o quadrado para entrares no covil."
+  ],
+  "leave": [
+    "A wiki não descreve a saída da sala das recompensas. Se não encontrares um teleporte de saída, volta pelo covil até à porta nas montanhas de Kha'zeel.",
+    "Desce do monte pelo mesmo caminho (rampa para **sul** e {spell:Levitate} para baixo 3 vezes) até ao deserto e regressa a **Ankrahmun**, onde o {npc:Captain Sinbeard} te leva a outras cidades."
+  ],
+  "coords": [
+    {"x": 33049, "y": 32758, "z": 7, "label": "Ponto de partida no deserto (levitate para cima)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "First Dragon Kizar room.png", "caption": "A sala do NPC Kizar, no fundo do covil"},
+    {"file": "First Dragon Lever Room.png", "caption": "A sala da alavanca"},
+    {"file": "First Dragon Reward Room.png", "caption": "A sala das recompensas"}
+  ],
+  "warnings": [
+    "Dentro do covil tens de abrir caminho a combater até ao último piso, onde uma {item:Mystic Flame} te leva à sala do {npc:Kizar}."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Golem Workshop",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Oficina dos golems de cristal dos gnomos, ligada à parte **sul** da {wiki:Gnomebase Alpha}, com {creature:Damaged Crystal Golem|Damaged Crystal Golems} e {creature:Enraged Crystal Golem|Enraged Crystal Golems}; é aqui a tarefa *The Tinker's Bell* da {wiki:Bigfoot's Burden Quest}.",
+  "entrance": {"x": 32943, "y": 31953, "z": 10, "label": "Golem Workshop"},
+  "requirements": [
+    "Precisas de acesso ao {wiki:GCTS|Gnomish Crystal Teleport System}: **nível 80** e autorização do {npc:Xelvar} em Kazordoon (início da {wiki:Bigfoot's Burden Quest}).",
+    "O teleporte para a Gnomebase Alpha só funciona a partir do **Rank II** da Bigfoot's Burden Quest e com **Premium Account**.",
+    "Cada viagem pelo GCTS gasta um {item:Teleport Crystal} (150 gp)."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Em **Kazordoon**, entra no teleporte do GCTS a **leste** do {npc:Xelvar}, junto ao blesser do norte ({coord:32628,31863,11}). Também há teleportes do GCTS em Thais (Ancient Temple), Edron (esgotos), Darashia, Liberty Bay e Svargrond.",
+    "Apareces no hub do GCTS, por cima de Gnomegate: desce para a Gnomegate.",
+    "Na Gnomegate, entra no {item:Large Crystal Teleporter} que leva à {wiki:Gnomebase Alpha} ({coord:32797,31779,10}).",
+    "Na Gnomebase Alpha, entra no teleporte de cristal mais a **sul**: leva-te ao Golem Workshop ({coord:32943,31953,10})."
+  ],
+  "leave": [
+    "Sai pelo teleporte por onde entraste: voltas à Gnomebase Alpha (o {npc:Gnomeral} está na parte **oeste**).",
+    "Usa o teleporte junto à {npc:Gnomincia} ({coord:32979,31868,9}) para voltares à Gnomegate.",
+    "Sobe ao hub do GCTS (onde está a {npc:Gnomette}) e entra no teleporte da cidade para onde queres ir, gastando mais um {item:Teleport Crystal}."
+  ],
+  "coords": [
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon"},
+    {"x": 32797, "y": 31779, "z": 10, "label": "Acesso a Gnomebase Alpha (Gnomegate)"},
+    {"x": 32979, "y": 31868, "z": 9, "label": "Gnomincia, junto ao teleporte de volta à Gnomegate"},
+    {"x": 32943, "y": 31953, "z": 10, "label": "Golem Workshop"}
+  ]
+}

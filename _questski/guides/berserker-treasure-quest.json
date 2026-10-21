@@ -1,0 +1,164 @@
+{
+  "slug": "berserker-treasure-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 3,
+  "duration": "45–60 min",
+  "summary": "Os orcs de Edron guardam um pequeno tesouro na sua gruta. Desce quatro andares da Edron Orc Cave, enfrenta grupos de {creature:Orc Berserker|Orc Berserkers} e {creature:Orc Leader|Orc Leaders} e abre a caixa no fim do último andar para receberes 3 {item:White Pearl|White Pearls} e 175 gp.",
+  "legend_pt": "Os orcs de Edron guardam um pequeno tesouro na sua gruta.",
+  "start": {
+    "x": 33173,
+    "y": 31900,
+    "z": 7,
+    "label": "Entrada da Edron Orc Cave, a sudoeste do castelo"
+  },
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 40+)."
+  ],
+  "items_needed": [
+    {
+      "item": "Rope",
+      "note": "para voltares a subir"
+    },
+    {
+      "text": "Runas ou feitiços de área (por exemplo {item:Stoneshower Rune|Stoneshower Runes}, {spell:Berserk} ou {spell:Groundshaker})"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "White Pearl",
+      "qty": 3
+    },
+    {
+      "item": "Gold Coin",
+      "qty": 175
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Orc",
+    "Orc Spearman",
+    "Poison Spider",
+    "Orc Warrior",
+    "Orc Berserker",
+    "Orc Leader"
+  ],
+  "npcs": [],
+  "tips": [
+    "Os {creature:Orc Berserker|Orc Berserkers} aparecem em grupo: usa runas ou feitiços de área sempre que possível.",
+    "Esta gruta tem outras quests (por exemplo a {wiki:Dark Armor Quest|Dark Armor Quest}): vale a pena fazê-las na mesma viagem."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer até ao andar -3",
+      "steps": [
+        {
+          "title": "Chegar a Edron",
+          "text": "Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.",
+          "coords": [
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse, porto de Edron"
+            }
+          ]
+        },
+        {
+          "title": "Entrar na Edron Orc Cave",
+          "text": "Entra na **Edron Orc Cave**, a sudoeste do castelo de Edron. Também podes chegar lá por um esgoto na cave dos {wiki:Edron Flats} (os apartamentos logo a sul do castelo).",
+          "coords": [
+            {
+              "x": 33173,
+              "y": 31900,
+              "z": 7,
+              "label": "Entrada da Edron Orc Cave"
+            }
+          ]
+        },
+        {
+          "title": "Andar -1",
+          "text": "No primeiro andar subterrâneo só encontras {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen}, {creature:Poison Spider|Poison Spiders} e {creature:Orc Warrior|Orc Warriors}. Vai até ao extremo **sul** do andar e desce para o -2.",
+          "images": [
+            {
+              "file": "Dark Armor Quest Map 01.jpg",
+              "caption": "Andar -1: caminho até ao extremo sul"
+            }
+          ]
+        },
+        {
+          "title": "Andar -2",
+          "text": "Aqui há {creature:Poison Spider|Poison Spiders}, {creature:Orc Spearman|Orc Spearmen}, {creature:Orc Warrior|Orc Warriors} e talvez um ou dois {creature:Orc Berserker|Orc Berserkers} puxados por outros jogadores. Vai até ao cruzamento e desce depressa para o -3, evitando lutas desnecessárias.",
+          "images": [
+            {
+              "file": "Barbarian Axe Quest Map 2.jpg",
+              "caption": "Andar -2: caminho até ao buraco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Andar -3",
+      "steps": [
+        {
+          "title": "Aguentar a emboscada",
+          "text": "Mal desces és atacado por vários {creature:Orc Warrior|Orc Warriors}, {creature:Poison Spider|Poison Spiders} e um ou dois {creature:Orc Berserker|Orc Berserkers}. Usa ataques de área: {spell:Berserk} ou {spell:Groundshaker} se fores knight, {item:Stoneshower Rune|Stoneshower Runes} se fores mago ou paladin.",
+          "images": [
+            {
+              "file": "Barbarian Axe Quest Map 3.jpg",
+              "caption": "Andar -3: caminho para leste até ao buraco"
+            }
+          ]
+        },
+        {
+          "title": "Descer para o -4",
+          "text": "Depois de te livrares do ataque, anda para **leste** e desce por outro buraco."
+        }
+      ]
+    },
+    {
+      "title": "3. Andar -4 e o tesouro",
+      "steps": [
+        {
+          "title": "Enfrentar os Orc Berserkers",
+          "text": "Ao fundo do buraco encontras até 6 {creature:Orc Berserker|Orc Berserkers}. Usa runas ou feitiços de área. Avança devagar para o extremo **leste** do andar, enfrentando mais Orc Berserkers e 1 a 4 {creature:Orc Leader|Orc Leaders}.",
+          "images": [
+            {
+              "file": "Berserker Treasure Quest Map 4.jpg",
+              "caption": "Andar -4: caminho até à caixa do tesouro"
+            }
+          ],
+          "warning": "A sala de baixo, mesmo antes da sala das White Pearls, tem vários Orc Berserkers e Orc Warriors."
+        },
+        {
+          "title": "Abrir a caixa",
+          "text": "O tesouro está numa caixa no fim do andar, como mostra o mapa. Abre-a.",
+          "reward": "3 {item:White Pearl|White Pearls} e 175 gp"
+        },
+        {
+          "title": "Sair da Edron Orc Cave",
+          "text": "Volta pelo mesmo caminho: em cada andar regressa ao buraco por onde caíste e usa a {item:Rope} para subires (seguindo os mesmos mapas ao contrário). No primeiro andar volta para **norte** até à entrada e sai para a superfície, a sudoeste do castelo. No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades.",
+          "coords": [
+            {
+              "x": 33173,
+              "y": 31900,
+              "z": 7,
+              "label": "Entrada/saída da Edron Orc Cave"
+            },
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse, porto de Edron"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Por baixo da sala que fica antes da sala das White Pearls há mais duas caixas, onde também podes encontrar um {item:Barbarian Axe} e uma {item:Scimitar}."
+  ]
+}

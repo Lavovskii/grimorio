@@ -1,0 +1,34 @@
+{
+  "title": "Hot Spot",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Zona de caça de lava ligada à {wiki:Gnomebase Alpha}, a mais perigosa das cinco zonas normais da {wiki:Gnomegate}, com {creature:Massive Fire Elemental|Massive Fire Elementals}, {creature:Dragon Lord|Dragon Lords} e {creature:Vulcongra|Vulcongras}; é aqui a *Grindstone Hunt* da {wiki:Bigfoot's Burden Quest}.",
+  "entrance": {"x": 32869, "y": 31908, "z": 13, "label": "Hot Spot"},
+  "requirements": [
+    "Precisas de acesso ao {wiki:GCTS|Gnomish Crystal Teleport System}: **nível 80** e autorização do {npc:Xelvar} em Kazordoon (início da {wiki:Bigfoot's Burden Quest}).",
+    "O teleporte para a Gnomebase Alpha só funciona a partir do **Rank II** da Bigfoot's Burden Quest e com **Premium Account**.",
+    "Cada viagem pelo GCTS gasta um {item:Teleport Crystal} (150 gp): leva pelo menos dois."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Em **Kazordoon**, entra no teleporte do GCTS a **leste** do {npc:Xelvar}, junto ao blesser do norte ({coord:32628,31863,11}). Também há teleportes do GCTS em Thais (Ancient Temple), Edron (esgotos), Darashia, Liberty Bay e Svargrond.",
+    "Apareces no hub do GCTS, por cima de Gnomegate: desce para a Gnomegate.",
+    "Na Gnomegate, entra no {item:Large Crystal Teleporter} que leva à {wiki:Gnomebase Alpha} ({coord:32797,31779,10}).",
+    "Na Gnomebase Alpha, entra no teleporte de cristal do **sudoeste** da base (fica a **sudeste** do {npc:Gnomeral}): leva-te ao Hot Spot."
+  ],
+  "leave": [
+    "Sai do Hot Spot pelo teleporte por onde entraste: voltas à Gnomebase Alpha.",
+    "Usa o teleporte junto à {npc:Gnomincia} ({coord:32979,31868,9}) para voltares à Gnomegate.",
+    "Sobe ao hub do GCTS (onde está a {npc:Gnomette}) e entra no teleporte da cidade para onde queres ir (Kazordoon, Thais, Edron, Darashia, Liberty Bay ou Svargrond), gastando mais um {item:Teleport Crystal}."
+  ],
+  "coords": [
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon"},
+    {"x": 32797, "y": 31779, "z": 10, "label": "Acesso a Gnomebase Alpha (Gnomegate)"},
+    {"x": 32964, "y": 31878, "z": 9, "label": "Gnomeral (Gnomebase Alpha)"},
+    {"x": 32979, "y": 31868, "z": 9, "label": "Gnomincia, junto ao teleporte de volta à Gnomegate"},
+    {"x": 32869, "y": 31908, "z": 13, "label": "Hot Spot"}
+  ],
+  "warnings": [
+    "Os raios dos {creature:Vulcongra|Vulcongras} e dos {creature:Dragon Lord|Dragon Lords} fazem muito dano: não puxes mais de 3 ou 4 monstros de cada vez e vai acompanhado se puderes."
+  ]
+}

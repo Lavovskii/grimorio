@@ -1,0 +1,24 @@
+{
+  "title": "Mill Avenue",
+  "type": "zona",
+  "near": "Thais",
+  "summary": "Rua no **nordeste de Thais**, entre a Temple Street (oeste) e a muralha da cidade (leste), com o moinho, a loja de móveis do {npc:Gamon} e as lojas da {npc:Topsy} e do {npc:Turvy}.",
+  "entrance": {"x": 32408, "y": 32172, "z": 7, "label": "Loja do Gamon (Mill Avenue)"},
+  "arrive": [
+    "Viaja até **Thais**: de barco, no porto da tua cidade diz {key:hi}, {key:thais}, {key:yes}; chegas ao porto de Thais, junto ao {npc:Captain Bluebear} ({coord:32310,32210,6}).",
+    "Atravessa a cidade para **nordeste** até à Mill Avenue. Começa a oeste, junto ao portão norte (guarda {npc:Grof, The Guard}), e segue para leste até à muralha.",
+    "De oeste para leste: o moinho, as lojas Mill Avenue 1 e 2, o armazém da filial de Venore, a loja de móveis do {npc:Gamon} ({coord:32408,32170,7}), a loja de magia da {npc:Topsy}, a loja de armaduras do {npc:Turvy} e, no posto do nordeste (3.º andar), o guarda {npc:Miles, The Guard}."
+  ],
+  "leave": [
+    "Volta ao porto de Thais e fala com o {npc:Captain Bluebear}: {key:hi}, o destino e {key:yes} — por exemplo Ab'Dendriel (130 gp), Carlin (110), Edron (160), Liberty Bay (180), Port Hope (160), Svargrond (180), Venore (170) ou Yalahar (200).",
+    "A pé, sai de Thais pelo portão **norte**, no início da Mill Avenue."
+  ],
+  "coords": [
+    {"x": 32373, "y": 32184, "z": 7, "label": "Grof, The Guard (portão norte)"},
+    {"x": 32408, "y": 32170, "z": 7, "label": "Gamon (loja de móveis)"},
+    {"x": 32415, "y": 32170, "z": 7, "label": "Topsy (loja de magia)"},
+    {"x": 32414, "y": 32177, "z": 7, "label": "Turvy (loja de armaduras)"},
+    {"x": 32431, "y": 32172, "z": 5, "label": "Miles, The Guard (posto do nordeste)"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear — porto de Thais"}
+  ]
+}

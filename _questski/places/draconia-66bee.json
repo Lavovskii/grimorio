@@ -1,0 +1,46 @@
+{
+  "title": "Draconia",
+  "type": "ilha",
+  "near": "Ab'Dendriel",
+  "summary": "Ilha sem habitantes ao largo da costa **nordeste de Ab'Dendriel**, considerada um cemitério de dragões, com uma pirâmide cheia de mortos-vivos e covis de {creature:Dragon|Dragons} no subsolo.",
+  "entrance": {"x": 32802, "y": 31589, "z": 7, "label": "Ilha de Draconia"},
+  "requirements": [
+    "Para entrares no {wiki:Hellgate} precisas da {item:Key 3012} (o guarda {npc:Elathriel}, junto à porta, vende-a por 5000 gp)."
+  ],
+  "items": ["Key 3012", "Rope", "White Mushroom"],
+  "arrive": [
+    "Não há barco: o único acesso é um túnel por baixo do mar que passa pelo {wiki:Hellgate} e sobe pelo {wiki:Redbone Castle}.",
+    "Em **Ab'Dendriel** desce às {wiki:Shadow Caves}, no subsolo a **noroeste** do depot ({coord:32655,31670,8}).",
+    "Desce mais 2 andares e segue para **sul** e **leste** até à porta do Hellgate ({coord:32676,31671,10}); abre-a com a {item:Key 3012}.",
+    "Entra no teleporte **norte** e segue a rota até ao {wiki:Redbone Castle} ({coord:32666,31672,15}). Daí em diante o caminho é de **sentido único** e leva-te até à superfície de Draconia. O caminho completo, com mapas, está na {wiki:Draconia Quest}."
+  ],
+  "leave": [
+    "**Com um Dragonfetish (mais rápido):** leva um {item:White Mushroom} ao {npc:An Old Dragonlord}, no topo da montanha do norte da ilha ({coord:32796,31557,2}), e cumprimenta-o ({key:hi}): ele troca-o por um {item:Dragonfetish}.",
+    "Sacrifica o {item:Dragonfetish} na sala do teleporte de saída, no covil de dragões por baixo do **sudeste** da ilha: és teleportado para **Ab'Dendriel**.",
+    "**A pé:** desce até ao Redbone Castle e sai pela rota normal do Hellgate ({wiki:Route:Hellgate}), com {item:Rope} e {spell:Levitate} (ou 6 {item:Parcel|Parcels}) para subires 2 andares. Sais à superfície perto de Ab'Dendriel ({coord:32603,31705,7}).",
+    "Também podes sair terminando a {wiki:Draconia Quest} (o portal do 7.º andar da pirâmide só abre com as chaves da quest)."
+  ],
+  "coords": [
+    {"x": 32655, "y": 31670, "z": 8, "label": "Shadow Caves (Ab'Dendriel)"},
+    {"x": 32684, "y": 31671, "z": 9, "label": "Elathriel (vende a Key 3012)"},
+    {"x": 32676, "y": 31671, "z": 10, "label": "Porta do Hellgate"},
+    {"x": 32666, "y": 31672, "z": 15, "label": "Redbone Castle"},
+    {"x": 32796, "y": 31557, "z": 2, "label": "An Old Dragonlord (troca o White Mushroom)"},
+    {"x": 32603, "y": 31705, "z": 7, "label": "Saída do Hellgate (perto de Ab'Dendriel)"}
+  ],
+  "images": [
+    {"file": "Draconia Map.png", "caption": "Mapa de Draconia"},
+    {"file": "RouteHellgate1.png", "caption": "Rota de saída do Hellgate — 1"},
+    {"file": "RouteHellgate2.png", "caption": "Rota de saída do Hellgate — 2"},
+    {"file": "RouteHellgate3.png", "caption": "Rota de saída do Hellgate — 3"},
+    {"file": "RouteHellgate4&5.png", "caption": "Rota de saída do Hellgate — 4 e 5"},
+    {"file": "RouteHellgate7.png", "caption": "Rota de saída do Hellgate — 7"},
+    {"file": "RouteHellgate8.png", "caption": "Rota de saída do Hellgate — 8"},
+    {"file": "RouteHellgate9.png", "caption": "Rota de saída do Hellgate — 9"}
+  ],
+  "warnings": [
+    "O caminho do Redbone Castle até Draconia é de **sentido único**: não contes voltar por ele sem saberes a rota do Hellgate.",
+    "O {npc:An Old Dragonlord} só te dá **um** Dragonfetish; se lhe voltares a falar manda-te sair da ilha.",
+    "Desde 2010 os {creature:Dragon|Dragons} já não podem ser puxados com corda para a superfície. Na rota do Hellgate há {creature:Ghoul|Ghouls}, {creature:Bonelord|Bonelords} e às vezes {creature:Demon Skeleton|Demon Skeletons} e {creature:Elder Bonelord|Elder Bonelords} trazidos por outros jogadores."
+  ]
+}

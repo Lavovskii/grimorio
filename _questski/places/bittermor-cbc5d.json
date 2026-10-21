@@ -1,0 +1,34 @@
+{
+  "title": "Bittermor",
+  "type": "gruta",
+  "near": "Svargrond",
+  "summary": "Acampamento glaciar da tribo bárbara Norsir, debaixo do {wiki:Formorgar Glacier}, a **sudoeste de Svargrond**; bom sítio de caça para níveis baixos e médios.",
+  "entrance": {"x": 32003, "y": 31228, "z": 7, "label": "Bittermor"},
+  "requirements": [
+    "Para usares o barco do {npc:Buddel} até aos acampamentos dos bárbaros precisas de ter feito a {wiki:Barbarian Test Quest}; a pé não há requisitos."
+  ],
+  "arrive": [
+    "Vai a **Svargrond**: apanha o barco em **Carlin**, **Thais** ou **Venore** (diz ao capitão {key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda} ({coord:32347,31108,6}), na parte **leste** da cidade.",
+    "**De barco (mais rápido):** a **sul** de Svargrond fala com o {npc:Buddel} ({coord:32254,31195,7}): {key:hi}, {key:passage}, {key:camp}, {key:yes} (50 gp). Ele deixa-te junto aos acampamentos dos bárbaros ({coord:32020,31294,7}), a sul de Bittermor.",
+    "**A pé:** sai de Svargrond para **oeste**, passa por cima da montanha, desce as escadas e continua para oeste pelo glaciar até ao acampamento dos raiders.",
+    "Dos acampamentos segue para **norte** pela fina camada de gelo até à entrada de Bittermor."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: atravessa o gelo para **sul** até ao acampamento dos raiders.",
+    "Fala com o {npc:Buddel} junto aos acampamentos ({coord:32020,31294,7}): {key:hi}, {key:passage}, {key:svargrond}. Ou segue a pé para **leste** pela montanha até Svargrond.",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te de barco à cidade que quiseres."
+  ],
+  "coords": [
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (barco de Svargrond)"},
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (a sul de Svargrond)"},
+    {"x": 32020, "y": 31294, "z": 7, "label": "Buddel nos acampamentos dos bárbaros"},
+    {"x": 31987, "y": 31226, "z": 7, "label": "Porta de quest em Bittermor (A Father's Burden)"}
+  ],
+  "images": [
+    {"file": "Bittermor.png", "caption": "Mapa de Bittermor"}
+  ],
+  "warnings": [
+    "Há uma pequena hipótese de o {npc:Buddel} te levar a outra ilha em vez do acampamento.",
+    "Na sala central há 3 {creature:Barbarian Brutetamer|Barbarian Brutetamers} e muitos {creature:Barbarian Headsplitter|Headsplitters} e {creature:Barbarian Skullhunter|Skullhunters}: não corras na direção dos brutetamers, ou ficas cercado. O respawn é muito rápido."
+  ]
+}

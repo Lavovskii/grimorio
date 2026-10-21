@@ -1,0 +1,35 @@
+{
+  "title": "Deeper Banuta",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "As masmorras fundas por baixo da cidade dos macacos {wiki:Banuta}, em Tiquanda (a nordeste de Port Hope), cheias de {creature:Hydra|Hydras}, {creature:Serpent Spawn|Serpent Spawns} e {creature:Medusa|Medusas}.",
+  "entrance": {"x": 32839, "y": 32533, "z": 9, "label": "Magic Forcefield para Deeper Banuta (piso -2 de Banuta)"},
+  "requirements": [
+    "O acesso ganha-se na {wiki:The Ape City Quest}.",
+    "Os quatro andares mais fundos só abrem com a {wiki:Wrath of the Emperor Quest}.",
+    "O túnel secreto a partir de Tiquanda só se abre com um {item:Egg of the Many}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope** ({key:hi}, {key:port hope}, {key:yes}) e atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta} ({coord:32807,32542,7}). Com o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek} leva-te lá diretamente por 30 gp.",
+    "No templo do {npc:Hairycles} (sudeste da cidade, {coord:32827,32575,7}) desce **duas vezes**.",
+    "Vai para **norte** pelo corredor até ao salão cheio de macacos, vira para **oeste** e desce as escadas do fundo ({coord:32802,32546,8}).",
+    "No piso -2 entra no {wiki:Magic Forcefield} ({coord:32839,32533,9}): apareces no primeiro andar de Deeper Banuta."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao primeiro andar de Deeper Banuta e sai pelo portal do início do andar. Se a parede voltou e estás do lado de dentro, usa a alavanca junto à parede para a abrir.",
+    "O portal leva-te ao **segundo andar de Banuta** (com macacos), não ao andar de onde vieste. Sobe as escadas até à superfície, junto ao templo do {npc:Hairycles} ({coord:32826,32576,7}).",
+    "Atravessa a selva para **sudoeste** até Port Hope, onde o {npc:Charles} ({coord:32529,32785,6}) te leva de barco para outras cidades."
+  ],
+  "coords": [
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+    {"x": 32827, "y": 32575, "z": 7, "label": "Templo do Hairycles (escadas para descer)"},
+    {"x": 32802, "y": 32546, "z": 8, "label": "Escadas para o piso -2"},
+    {"x": 32839, "y": 32533, "z": 9, "label": "Magic Forcefield para Deeper Banuta"},
+    {"x": 32853, "y": 32669, "z": 7, "label": "Túnel secreto de Tiquanda (precisa de Egg of the Many)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (barco de Port Hope)"}
+  ],
+  "warnings": [
+    "Zona para nível alto (knights 120+, paladins 90+, mages 95+): {creature:Hydra|Hydras}, {creature:Serpent Spawn|Serpent Spawns}, {creature:Medusa|Medusas} e {creature:Bonebeast|Bonebeasts}.",
+    "Na própria Banuta há muitos macacos e outras criaturas pelo caminho até ao Magic Forcefield."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Arena and Zoo Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Antiga zona de lazer dos Yalahari, junto ao portão **oeste** de **Yalahar**: um zoo com os recintos destruídos e animais à solta, e uma arena com gladiadores e vários andares.",
+  "entrance": {"x": 32677, "y": 31231, "z": 7, "label": "Arena and Zoo Quarter (portão oeste de Yalahar)"},
+  "arrive": [
+    "Viaja até **Yalahar**: em Liberty Bay fala com o {npc:Captain Max} ({key:hi}, {key:yalahar}; precisas do rank Novice no Explorer Society) ou, em Thais, com o {npc:Captain Bluebear} se compraste a palavra-passe ao {npc:Wyrdin's Apprentice}. Com as rotas do {npc:Karith} desbloqueadas há barco direto de várias cidades (por exemplo em Venore: {key:hi}, {key:yalahar}, {key:yes}). Chegas ao porto, a **sul** do centro.",
+    "**Pelo guarda (sem quest):** vai ao {wiki:Foreigner Quarter} (entra-se diretamente a partir do centro) e, no portão entre o Foreigner Quarter e o Arena and Zoo Quarter, diz ao guarda {npc:Tony} {key:pass} e o destino ({key:arena quarter}).",
+    "**Pelo mecanismo:** vai ao portão **oeste** do centro da cidade e usa o {wiki:Mechanism (Teleporter)|mecanismo} do Arena Quarter. Só funciona depois de o {npc:Yalahari (NPC)} te dar acesso (missão 5 (*Food or Fight*) da {wiki:In Service of Yalahar Quest})."
+  ],
+  "leave": [
+    "Volta ao portão por onde entraste: usa outra vez o mecanismo para regressares ao centro, ou passa pelo {npc:Tony} ({key:pass}, {key:foreigner quarter}) para o Foreigner Quarter.",
+    "No Arena and Zoo Quarter também há o guarda {npc:Hal}, que te deixa passar para o {wiki:Alchemist Quarter} ({key:pass} e o destino).",
+    "Para saíres de Yalahar, vai ao porto: o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou Thais (800 gp); com as rotas desbloqueadas, o {npc:Karith} leva-te a 8 cidades."
+  ],
+  "coords": [
+    {"x": 32695, "y": 31257, "z": 7, "label": "Tony — portão Foreigner / Arena and Zoo Quarter"},
+    {"x": 32688, "y": 31191, "z": 7, "label": "Hal — portão Arena and Zoo / Alchemist Quarter"},
+    {"x": 32659, "y": 31213, "z": 8, "label": "Tamerin (1 andar abaixo)"},
+    {"x": 32739, "y": 31187, "z": 7, "label": "Rampa do Arena Quarter"}
+  ],
+  "images": [
+    {"file": "Arena and Zoo Quarter.png", "caption": "Mapa do Arena and Zoo Quarter (zonas A–H)"},
+    {"file": "Arena and Zoo Quarter ground.png", "caption": "Rés-do-chão do Arena and Zoo Quarter"}
+  ],
+  "warnings": [
+    "Os animais andam à solta: perto da entrada há um {creature:Massive Earth Elemental}, um {creature:Giant Spider} e um {creature:Wyrm}, e na zona leste um {creature:Dragon Lord} e uma {creature:Hydra}.",
+    "Os andares de cima da arena são para níveis 50–60+ (gladiadores mortos-vivos junto às escadas, com pouco espaço para fugir)."
+  ]
+}

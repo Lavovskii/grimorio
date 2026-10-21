@@ -1,0 +1,32 @@
+{
+  "title": "Zao Wailing Widow Cave",
+  "type": "gruta",
+  "near": "Farmine",
+  "summary": "Gruta da {wiki:Zao Steppe} a **leste do Curos** e a sul dos {wiki:Dragonblaze Peaks}, habitada por Wailing Widows e Lancer Beetles e cheia de teias de aranha; tem dois pisos de caça e uma sala de quest no terceiro.",
+  "entrance": {"x": 33223, "y": 31397, "z": 7, "label": "Entrada da Zao Wailing Widow Cave"},
+  "items": ["Firebug"],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe} em {coord:33085,31532,7}.",
+    "Vai para **nordeste** até ao acampamento orc central ({npc:Curos}, {coord:33173,31395,7}). A entrada da gruta fica a **leste** do Curos, um pouco a leste da {wiki:Zao Orc Land} ({coord:33223,31397,7}).",
+    "Lá dentro há teias de aranha em toda a gruta: parte-as com uma arma corpo-a-corpo ou com o {item:Firebug} e desce pelas rampas."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: sobe as rampas (se as teias tiverem voltado, parte-as outra vez) até à saída ({coord:33223,31397,7}).",
+    "Na estepe regressa à passagem em {coord:33085,31532,7}, sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine.",
+    "Em Farmine fala com o {npc:Thorgrin}: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Steamship de Farmine (Thorgrin)"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da montanha para a Zao Steppe"},
+    {"x": 33173, "y": 31395, "z": 7, "label": "Curos (acampamento orc central)"}
+  ],
+  "images": [
+    {"file": "Zao Wailing Widow Cave Entrance.png", "caption": "A entrada da Zao Wailing Widow Cave"},
+    {"file": "Zao Wailing Widow Cave -1.png", "caption": "Mapa do primeiro piso subterrâneo"}
+  ],
+  "warnings": [
+    "Sem arma corpo-a-corpo nem {item:Firebug} não consegues partir as teias e ficas preso. A gruta é para níveis médios (a wiki recomenda 50–60+), comparável aos pisos de Ancient Scarabs das Larva Caves."
+  ]
+}

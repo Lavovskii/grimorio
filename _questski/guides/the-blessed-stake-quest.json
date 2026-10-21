@@ -1,0 +1,253 @@
+{
+  "slug": "the-blessed-stake-quest",
+  "category": "troca",
+  "region": "Vários",
+  "difficulty": 1,
+  "duration": "20–30 min (podes parar e continuar)",
+  "summary": "Para abençoar uma estaca de madeira é preciso uma oração antiga dita por dez sacerdotes, cada um numa cidade diferente. Compras uma {item:Wooden Stake} ao {npc:Gamon} em Thais e levas a estaca de templo em templo pelo continente, recebendo uma linha da oração em cada um. No fim recebes a {item:Blessed Wooden Stake} e, se fores ao {npc:Chondur}, o achievement **Blessed!** e a possibilidade de abençoar mais estacas.",
+  "legend_pt": "Segundo um mito, é possível extrair a essência de uma criatura profana usando um artefacto abençoado.",
+  "start": {"x": 32369, "y": 32238, "z": 7, "label": "Templo de Thais (Quentin)"},
+  "requirements": [
+    "Premium (as primeiras 5 linhas da oração podem ser feitas em conta Free, mas depois a quest manda-te para Edron).",
+    "Sem nível mínimo; recomendado 15+.",
+    "{wiki:Meriana Quest} — só é precisa para o achievement Blessed! e para o Chondur abençoar estacas extra; não é precisa para a Blessed Wooden Stake."
+  ],
+  "items_needed": [
+    {"text": "5000 gp para a {item:Wooden Stake} (mais 5000 gp se quiseres comprar uma segunda)."},
+    {"text": "Pelo menos 1100 gp para viagens."}
+  ],
+  "rewards": [
+    {"item": "Blessed Wooden Stake"},
+    {"text": "Achievement **Blessed!** (ao falar com o Chondur no fim; precisa da Meriana Quest)"},
+    {"text": "O {npc:Chondur} passa a abençoar uma {item:Wooden Stake} tua por semana"}
+  ],
+  "achievements": ["Blessed!"],
+  "unlocks": [
+    {"what": "Bênção de estacas pelo {npc:Chondur}", "kind": "npc", "when": "No fim da quest, ao falares com o Chondur em Meriana ({key:wooden stake}).", "note": "Abençoa uma {item:Wooden Stake} tua por semana (tempo real). Precisas da {wiki:Meriana Quest}."}
+  ],
+  "dangers": [],
+  "npcs": ["Quentin", "Gamon", "Tibra", "Maealil", "Yberius", "Isimov", "Amanda", "Kasmir", "Rahkem", "Brewster", "Tyrias", "Chondur"],
+  "tips": [
+    "**Compra logo duas estacas** ao Gamon: da primeira vez podes abençoar duas no mesmo dia (uma com o Tyrias, outra com o Chondur). Ficas com uma e vendes a outra.",
+    "Cada passo fica registado no {wiki:Quest Log} (\"Friends and Traders\"), por isso podes parar e continuar mais tarde.",
+    "Com todos os sacerdotes a frase é sempre a mesma: {key:hi}, {key:wooden stake}, {key:yes}."
+  ],
+  "sections": [
+    {
+      "title": "1. Thais: arranjar a estaca",
+      "steps": [
+        {
+          "title": "Pedir a estaca ao Quentin",
+          "text": "Vai ao templo de **Thais** e fala com o {npc:Quentin}: {key:hi}, {key:wooden stake}, {key:yes}. Ele manda-te arranjar uma estaca com o Gamon.",
+          "npc": "Quentin",
+          "coords": [{"x": 32369, "y": 32238, "z": 7, "label": "Templo de Thais"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "wooden stake"},
+            {"npc": "A blessed stake to defeat evil spirits? [...] this prayer needs the combined energy of ten priests. Each of them has to say one line of the prayer. [...] Is this stake really important enough to you so that you are willing to take this burden?"},
+            {"you": "yes"},
+            {"npc": "Alright, I guess you need a stake first. Maybe Gamon can help you, the leg of a chair or something could just do. [...]"}
+          ]
+        },
+        {
+          "title": "Comprar a estaca ao Gamon",
+          "text": "Vai à loja do canto nordeste da {wiki:Mill Avenue} e fala com o {npc:Gamon}: {key:hi}, {key:wooden stake}, {key:yes}. Pagas **5000 gp** e recebes a {item:Wooden Stake}.",
+          "npc": "Gamon",
+          "coords": [{"x": 32408, "y": 32172, "z": 7, "label": "Loja do Gamon (Mill Avenue)"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "wooden stake"},
+            {"npc": "Making a stake from a chair? Are you insane??! [...] it will cost 5000 gold pieces. Okay?"},
+            {"you": "yes"},
+            {"npc": "Argh... my heart aches! Alright... a promise is a promise. Here - take this wooden stake, and now get lost."}
+          ],
+          "reward": "Wooden Stake",
+          "tip": "Compra já a segunda, se quiseres (mais 5000 gp)."
+        },
+        {
+          "title": "1.ª linha: Quentin",
+          "text": "Volta ao {npc:Quentin} com a estaca: {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Quentin",
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"npc": "Ah, I see you brought a stake with you. Are you ready to receive my line of the prayer then?"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Light shall be near - and darkness afar'. Now, bring your stake to Tibra in the Carlin church [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A volta dos templos",
+      "intro": "Rota sugerida, com o transporte e o custo de cada viagem.",
+      "steps": [
+        {
+          "title": "Rota completa",
+          "text": "Segue esta ordem. Em cada sacerdote diz {key:hi}, {key:wooden stake} e {key:yes}.",
+          "table": {
+            "head": ["De", "Para", "Transporte (custo)", "NPC"],
+            "rows": [
+              ["Thais", "Carlin", "Barco (110 gp)", "{npc:Tibra}"],
+              ["Carlin", "Ab'Dendriel", "Barco (80 gp)", "{npc:Maealil}"],
+              ["Ab'Dendriel", "Venore", "Barco (90 gp)", "{npc:Yberius}"],
+              ["Venore", "Kazordoon", "Barco (→Edron, 40 gp), Magic Carpet (80 gp) ou Ore Wagon (250 gp)", "{npc:Isimov}"],
+              ["Kazordoon", "Edron", "Magic Carpet (80 gp)", "{npc:Amanda}"],
+              ["Edron", "Darashia", "Magic Carpet (40 gp)", "{npc:Kasmir}"],
+              ["Darashia", "Ankrahmun", "Barco (100 gp)", "{npc:Rahkem}"],
+              ["Ankrahmun", "Port Hope", "Barco (80 gp)", "{npc:Brewster}"],
+              ["Port Hope", "Liberty Bay", "Barco (50 gp)", "{npc:Tyrias}"],
+              ["Liberty Bay", "Meriana", "Barco (50 gp)", "{npc:Chondur}"]
+            ]
+          }
+        },
+        {
+          "title": "2.ª linha: Tibra (Carlin)",
+          "text": "Apanha o barco para **Carlin**. A {npc:Tibra} está a oeste do depot. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Tibra",
+          "coords": [{"x": 32314, "y": 31784, "z": 7, "label": "Tibra, Carlin"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"npc": "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Hope may fill your heart - doubt shall be banned'. Now, bring your stake to Maealil in the elven settlement [...]"}
+          ]
+        },
+        {
+          "title": "3.ª linha: Maealil (Ab'Dendriel)",
+          "text": "Apanha o barco para **Ab'Dendriel**. O {npc:Maealil} está no templo. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Maealil",
+          "coords": [{"x": 32732, "y": 31634, "z": 7, "label": "Templo de Ab'Dendriel"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Peace may fill your soul - evil shall be cleansed'. Now, bring your stake to Yberius in the Venore temple [...]"}
+          ]
+        },
+        {
+          "title": "4.ª linha: Yberius (Venore)",
+          "text": "Apanha o barco para **Venore**. O {npc:Yberius} está no templo, a leste do depot central. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Yberius",
+          "coords": [{"x": 32954, "y": 32078, "z": 7, "label": "Templo de Venore"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Protection will be granted - from dangers at hand'. Now, bring your stake to Isimov in the dwarven settlement [...]"}
+          ]
+        },
+        {
+          "title": "5.ª linha: Isimov (Kazordoon)",
+          "text": "Vai a **Kazordoon**, a cidade dos anões dentro da montanha The Big Old One ({coord:32614,31923,7}). Podes lá chegar a pé pela entrada da montanha (leva {item:Rope} e {item:Shovel}: há sítios de corda e buracos escondidos) ou pelo {wiki:Steamship} a partir de Cormaya (perto de Edron, com o {npc:Gurbasch}: {key:hi}, {key:kazordoon}, {key:yes}). O {npc:Isimov} está no templo, quatro andares abaixo do chão. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Isimov",
+          "coords": [{"x": 32649, "y": 31926, "z": 11, "label": "Templo de Kazordoon"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Unclean spirits shall be repelled'. Now, bring your stake to Amanda in Edron [...]"}
+          ],
+          "warning": "A partir daqui precisas de **Premium** (Edron)."
+        },
+        {
+          "title": "6.ª linha: Amanda (Edron)",
+          "text": "Apanha o Magic Carpet para **Edron**. A {npc:Amanda} está no templo. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Amanda",
+          "coords": [{"x": 33210, "y": 31814, "z": 7, "label": "Templo de Edron"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Wicked curses shall be broken'. Now, bring your stake to Kasmir in Darashia [...]"}
+          ]
+        },
+        {
+          "title": "7.ª linha: Kasmir (Darashia)",
+          "text": "Apanha o Magic Carpet para **Darashia**. O {npc:Kasmir} está no templo, 6 andares acima do depot. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Kasmir",
+          "coords": [{"x": 33213, "y": 32455, "z": 7, "label": "Templo de Darashia (sobe 6 andares)"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Let there be honour and humility'. Now, bring your stake to Rahkem in Ankrahmun [...]"}
+          ]
+        },
+        {
+          "title": "8.ª linha: Rahkem (Ankrahmun)",
+          "text": "Apanha o barco para **Ankrahmun**. O {npc:Rahkem} está no templo da cidadania. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Rahkem",
+          "coords": [{"x": 33194, "y": 32852, "z": 7, "label": "Templo de Ankrahmun"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Let there be power and compassion'. Now, bring your stake to Brewster in Port Hope [...]"}
+          ]
+        },
+        {
+          "title": "9.ª linha: Brewster (Port Hope)",
+          "text": "Apanha o barco para **Port Hope**. O {npc:Brewster} está no templo, a oeste do depot. Diz {key:hi}, {key:wooden stake}, {key:yes}.",
+          "npc": "Brewster",
+          "coords": [{"x": 32595, "y": 32745, "z": 7, "label": "Templo de Port Hope"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"npc": "Yes, I have been informed and haven't yet drunk enough to forget, so you can count yourself lucky. Are you prepared to <hicks> receive my line of the prayer?"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Your hand shall be guided - your feet shall walk in <hicks> harmony'. Now, bring your stake to Tyrias in <hicks> Liberty Bay [...]"}
+          ]
+        },
+        {
+          "title": "10.ª linha: Tyrias (Liberty Bay)",
+          "text": "Apanha o barco para **Liberty Bay**. O {npc:Tyrias} está no templo, a noroeste do depot. Diz {key:hi}, {key:wooden stake}, {key:yes}. A estaca transforma-se na {item:Blessed Wooden Stake}.",
+          "npc": "Tyrias",
+          "coords": [{"x": 32316, "y": 32824, "z": 7, "label": "Templo de Liberty Bay"}],
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"npc": "Brewster sent me a strange message about some strange hocus-pocus. [...] Are you ready?"},
+            {"you": "yes"},
+            {"npc": "So receive my prayer: 'Your mind shall be a vessel for joy, light and wisdom' - uh, wow, something happened. Well, I guess that's it, but next time if you need some mumbo jumbo rather go to Chondur."}
+          ],
+          "reward": "Blessed Wooden Stake"
+        }
+      ]
+    },
+    {
+      "title": "3. Chondur (Meriana): achievement e estacas extra",
+      "steps": [
+        {
+          "title": "Falar com o Chondur",
+          "text": "Em Liberty Bay, vai à pequena península a **sudeste** do depot e fala com o {npc:Captain Waverider}: {key:hi}, {key:peg leg}, {key:yes} (50 gp). Ele leva-te a **Sabrehaven**, na ilha de **Meriana**. Vai à parte nordeste da ilha, a norte de Sabrehaven. Fala com o {npc:Chondur}: {key:hi}, {key:wooden stake}. Ganhas o achievement **Blessed!**.",
+          "npc": "Chondur",
+          "coords": [
+            {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay)"},
+            {"x": 32361, "y": 32550, "z": 7, "label": "Chondur (nordeste de Meriana)"}
+          ],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be greeted, child."},
+            {"you": "wooden stake"},
+            {"npc": "Ten prayers for a blessed stake? Don't tell me they made you travel whole Tibia for it! Listen, child, if you bring me a wooden stake, I'll bless it for you. <chuckles>"}
+          ],
+          "reward": "Achievement Blessed!",
+          "warning": "Precisas de ter feito a {wiki:Meriana Quest} para isto. O {npc:Captain Waverider} só te leva a Meriana depois da missão de acesso a Meriana da {wiki:The Shattered Isles Quest|Shattered Isles Quest}."
+        },
+        {
+          "title": "Abençoar a segunda estaca",
+          "text": "Se trouxeste uma segunda {item:Wooden Stake}, diz outra vez {key:wooden stake} e {key:yes}. O Chondur abençoa-a logo (isto inicia o tempo de espera de uma semana).",
+          "npc": "Chondur",
+          "dialogue": [
+            {"you": "wooden stake"},
+            {"npc": "Would you like to receive a spiritual prayer to bless your stake?"},
+            {"you": "yes"},
+            {"npc": "<mumbles> Sha Kesh Mar!"}
+          ],
+          "reward": "Blessed Wooden Stake extra"
+        },
+        {
+          "title": "Sair de Meriana",
+          "text": "Para voltares a **Liberty Bay**, vai a **sul** de Sabrehaven e fala com o {npc:Sebastian}: {key:hi}, {key:liberty bay}, {key:yes} (50 gp).",
+          "npc": "Sebastian"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Depois da quest, podes levar uma {item:Wooden Stake} diretamente ao {npc:Chondur} e ele abençoa-a, quantas vezes quiseres, mas só **uma vez por semana** (tempo real).",
+    "Se ainda não passou uma semana, o Chondur responde: *\"sorry I'm still exhausted from the last ritual. come back later and try again.\"*"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "mintwallin-cyclops-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Desce pelo {wiki:Ancient Temple}, a norte de Thais, atravessa campos de veneno e a cidade dos minotauros de Mintwallin até uma sala com Cyclops. Puxa o interruptor (ficas preso com os ciclopes), apanha a recompensa e sai por um buraco. Recebes um {item:Small Diamond}, duas {item:Strong Health Potion|Strong Health Potions}, um {item:Hatchet}, um {item:Chain Helmet} e uma {item:Chain Armor}.",
+  "start": {
+    "x": 32356,
+    "y": 32171,
+    "z": 7,
+    "label": "Ancient Temple, norte de Thais"
+  },
+  "requirements": [
+    "Sem nível mínimo (recomendado 25+).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {
+      "item": "Rope"
+    },
+    {
+      "text": "Recomendado: {wiki:Antidote}, {item:Antidote Rune} ou {wiki:Destroy Field} para os {item:Poison Field|campos de veneno}"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Small Diamond"
+    },
+    {
+      "item": "Strong Health Potion",
+      "qty": 2
+    },
+    {
+      "item": "Hatchet"
+    },
+    {
+      "item": "Chain Helmet"
+    },
+    {
+      "item": "Chain Armor"
+    }
+  ],
+  "dangers": [
+    "Poison Spider",
+    "Rotworm",
+    "Orc",
+    "Fire Devil",
+    "Minotaur",
+    "Minotaur Archer",
+    "Minotaur Mage",
+    "Minotaur Guard",
+    "Cyclops"
+  ],
+  "tips": [
+    "Leva poções de vida: a sala dos minotauros e a dos Cyclops podem ser perigosas para níveis baixos.",
+    "Quando puxares o interruptor ficas fechado com os Cyclops: limpa a sala antes ou prepara-te para os enfrentar."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer pelo Ancient Temple",
+      "steps": [
+        {
+          "title": "Entrar no Ancient Temple",
+          "text": "Sai de **Thais** pela porta **norte**: o {wiki:Ancient Temple} fica logo a noroeste dessa porta ({coord:32356,32171,7}). Entra no templo.",
+          "coords": [
+            {
+              "x": 32356,
+              "y": 32171,
+              "z": 7,
+              "label": "Ancient Temple"
+            }
+          ],
+          "warning": "No caminho há {creature:Poison Spider|Poison Spiders}, {creature:Rotworm|Rotworms}, alguns {creature:Orc|Orcs} e possivelmente um {creature:Fire Devil} atraído por alguém."
+        },
+        {
+          "title": "Descer dois andares e ir para norte",
+          "text": "Desce **dois andares** e segue o mais para **norte** que conseguires."
+        },
+        {
+          "title": "Andar dos Rotworms",
+          "text": "Desce até ao andar com os {creature:Rotworm|Rotworms}. Segue o caminho da imagem para **leste** e depois **sul**, e desce pela escada.",
+          "images": [
+            {
+              "file": "Route Mintwallin 1.png",
+              "caption": "Caminho no andar dos Rotworms até à escada"
+            }
+          ]
+        },
+        {
+          "title": "Atravessar os campos de veneno",
+          "text": "Neste andar há muitos {item:Poison Field|campos de veneno}. Podes atravessá-los a correr e depois curar-te com um antídoto, ou usar {wiki:Destroy Field} para abrir caminho. Depois desce mais um andar."
+        }
+      ]
+    },
+    {
+      "title": "2. Mintwallin e os Cyclops",
+      "steps": [
+        {
+          "title": "Seguir até ao buraco",
+          "text": "Segue o caminho da imagem para **leste** e **norte**. Cuidado com os {creature:Minotaur|Minotaurs}. Desce pelo buraco assinalado com um círculo no mapa. Lá em baixo encontras alguns {creature:Cyclops}.",
+          "images": [
+            {
+              "file": "Route Mintwallin 2.png",
+              "caption": "Caminho até ao buraco assinalado"
+            }
+          ]
+        },
+        {
+          "title": "Ir para norte e descer",
+          "text": "Segue o caminho todo para **norte** e desce um andar.",
+          "images": [
+            {
+              "file": "Mintwallin Cyclops Quest 1.png",
+              "caption": "Caminho para norte até à descida"
+            }
+          ]
+        },
+        {
+          "title": "Atravessar a sala dos minotauros",
+          "text": "Esta sala tem muitos {creature:Minotaur|Minotaurs}, {creature:Minotaur Archer|Minotaur Archers}, um {creature:Minotaur Mage} e um {creature:Minotaur Guard}. Abre caminho até ao **sul** da sala e sobe um andar.",
+          "images": [
+            {
+              "file": "Mintwallin Cyclops Quest 2.png",
+              "caption": "Sala dos minotauros e subida a sul"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. A sala da recompensa",
+      "steps": [
+        {
+          "title": "Encontrar o interruptor",
+          "text": "Entras na sala pelo canto **noroeste** (1 no mapa). Segue a passagem até encontrares o interruptor.",
+          "images": [
+            {
+              "file": "Mintwallin Cyclops Quest 3.jpg",
+              "caption": "Sala da recompensa: (1) entrada, (2) interruptor, (3) recompensa, (4) saída"
+            }
+          ]
+        },
+        {
+          "title": "Puxar o interruptor",
+          "text": "Puxa o interruptor (2). A parede move-se e ficas basicamente preso com os {creature:Cyclops}.",
+          "warning": "Depois de puxares o interruptor estás fechado com os Cyclops: só sais pelo buraco a norte."
+        },
+        {
+          "title": "Apanhar a recompensa",
+          "text": "Vai buscar a recompensa (3).",
+          "reward": "{item:Small Diamond}, 2 {item:Strong Health Potion|Strong Health Potions}, {item:Hatchet}, {item:Chain Helmet} e {item:Chain Armor}"
+        },
+        {
+          "title": "Sair da sala da recompensa",
+          "text": "Para saíres, vai ao buraco no fim da passagem a **norte** (4). É uma descida sem volta: leva-te de novo à sala dos minotauros."
+        },
+        {
+          "title": "Voltar a Thais",
+          "text": "Da sala dos minotauros volta pelo mesmo caminho por onde vieste: sobe pela escada por onde desceste para esta sala, segue o caminho todo para **sul** até ao buraco dos {creature:Cyclops} e usa a {item:Rope} para subir. Depois refaz o caminho da imagem ao contrário (para **sul** e **oeste**), atravessa outra vez os {item:Poison Field|campos de veneno}, sobe a escada até ao andar dos {creature:Rotworm|Rotworms} e daí sobe os dois andares até ao {wiki:Ancient Temple}. Sais a norte de Thais ({coord:32356,32171,7}).",
+          "images": [
+            {
+              "file": "Route Mintwallin 2.png",
+              "caption": "O mesmo caminho, agora no sentido inverso (do buraco de volta à escada)"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32356,
+              "y": 32171,
+              "z": 7,
+              "label": "Saída do Ancient Temple, a norte de Thais"
+            }
+          ],
+          "warning": "Sem {item:Rope} não consegues voltar a subir pelo buraco dos Cyclops."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se a parede já estiver movida e não conseguires abrir a porta, espera pelo próximo {wiki:Floor Reset} ou server save, ou usa a {item:Key 3667} para destrancar a porta."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Dark Pyramid",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "A pirâmide dos minotauros (também chamada *Minotaur Pyramid*) no deserto **a nordeste de Darashia**, com vários andares acima e abaixo do chão; aqui ficam a {wiki:Stealth Ring Quest} e partes da {wiki:The Explorer Society Quest}, da {wiki:Koshei the Deathless Quest} e da {wiki:Cults of Tibia Quest}.",
+  "entrance": {"x": 33307, "y": 32286, "z": 7, "label": "Dark Pyramid (nordeste de Darashia)"},
+  "arrive": [
+    "Viaja até **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Sai da cidade e segue para **nordeste** pelo deserto até à pirâmide ({coord:33307,32286,7}). Ao nível do chão só há {creature:Minotaur|Minotaurs}.",
+    "Para os pisos de baixo: desce as escadas; segue para **sudoeste** e desce outra escada; vai para **leste/nordeste** e desce; no andar seguinte vai para **norte** e desce de novo. No último andar, a sala **sudoeste** tem um buraco ({coord:33293,32291,11}) que leva ao {npc:Angelo} e à Caverna Exanima."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe as escadas por onde desceste (**sul**, depois **oeste/sudoeste** e por fim **nordeste**) até ao rés-do-chão da pirâmide. Não precisas de nenhum item.",
+    "Regressa a **Darashia** para **sudoeste** e apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Porto de Darashia (Petros)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Tapete de Darashia (Chemar)"},
+    {"x": 33307, "y": 32286, "z": 7, "label": "Entrada da Dark Pyramid"},
+    {"x": 33293, "y": 32291, "z": 11, "label": "Buraco no fundo da pirâmide (para o Angelo)"}
+  ],
+  "warnings": [
+    "Quanto mais desces, mais fortes são os minotauros: {creature:Minotaur Guard|Minotaur Guards}, {creature:Minotaur Archer|Minotaur Archers} e salas cheias de {creature:Minotaur Mage|Minotaur Mages}; no fundo há uma {creature:Mummy}."
+  ]
+}

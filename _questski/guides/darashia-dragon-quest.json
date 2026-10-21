@@ -1,0 +1,128 @@
+{
+  "slug": "darashia-dragon-quest",
+  "category": "tesouro",
+  "region": "Darashia",
+  "difficulty": 3,
+  "duration": "30–60 min",
+  "summary": "No fundo do Darashia Dragon Lair, a norte de Darashia, há um dragão morto com um {item:Life Ring} lá dentro. Atravessa os três níveis de caça do covil, enfrentando {creature:Dragon|Dragons} e {creature:Dragon Lord|Dragon Lords}, e recolhe o anel.",
+  "start": {
+    "x": 33264,
+    "y": 32277,
+    "z": 7,
+    "label": "Entrada do Darashia Dragon Lair (norte de Darashia)"
+  },
+  "requirements": [
+    "Premium Account.",
+    "Nível 40 para passar o {wiki:Gate of Expertise} da entrada (recomendado 60+)."
+  ],
+  "items_needed": [
+    {
+      "text": "Poções e supplies para enfrentar Dragons e até 7 Dragon Lords."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Life Ring"
+    }
+  ],
+  "dangers": [
+    "Dragon",
+    "Dragon Hatchling",
+    "Dragon Lord"
+  ],
+  "npcs": [],
+  "tips": [
+    "Os Dragon Lords do 2.º nível aparecem um a um no caminho: mata-os separadamente em vez de os juntares."
+  ],
+  "sections": [
+    {
+      "title": "1. Entrar no covil",
+      "steps": [
+        {
+          "title": "Chegar a Darashia",
+          "text": "Viaja até **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).",
+          "npc": "Petros"
+        },
+        {
+          "title": "Passar o portão de nível 40",
+          "text": "Sai de Darashia para **norte**, pelo deserto, até à entrada do {wiki:Darashia Dragon Lair} ({coord:33264,32277,7}). Entra pelo {wiki:Gate of Expertise} de nível 40 e desce para o primeiro nível de caça.",
+          "images": [
+            {
+              "file": "Darashia_Dragons.png",
+              "caption": "A entrada do Darashia Dragon Lair"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33264,
+              "y": 32277,
+              "z": 7,
+              "label": "Entrada do Darashia Dragon Lair"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Descer os níveis de caça",
+      "steps": [
+        {
+          "title": "Primeiro nível",
+          "text": "Aqui só há {creature:Dragon|Dragons} e {creature:Dragon Hatchling|Dragon Hatchlings}. Vai para **sul** até às escadas que descem para o segundo nível. Neste caminho encontras no máximo 2 Dragons."
+        },
+        {
+          "title": "Segundo nível",
+          "text": "Aqui há Dragons e {creature:Dragon Lord|Dragon Lords}. Vai para **noroeste** até às escadas que levam ao terceiro nível. Pelo caminho enfrentas 1 a 3 Dragon Lords, um de cada vez.",
+          "warning": "Os Dragon Lords causam muito dano de fogo. Não avances sem vida e mana cheias."
+        },
+        {
+          "title": "Terceiro nível: o Life Ring",
+          "text": "O terceiro nível tem **4 Dragon Lords**. Procura o **dragão morto** e abre o corpo: lá dentro está o {item:Life Ring}.",
+          "reward": "Life Ring",
+          "images": [
+            {
+              "file": "Darashia Dragon Lair Map.png",
+              "caption": "Mapa do Darashia Dragon Lair"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Sair do covil",
+      "steps": [
+        {
+          "title": "Voltar à superfície",
+          "text": "O covil não tem teleporte de saída: volta pelo mesmo caminho. Do terceiro nível sobe as escadas para o segundo (Dragon Lords), atravessa-o até às escadas para o primeiro e sobe outra vez até à entrada, a norte de Darashia. Os Dragons e Dragon Lords que deixaste para trás podem ter voltado a aparecer, por isso não subas sem vida e mana cheias.",
+          "coords": [
+            {
+              "x": 33264,
+              "y": 32277,
+              "z": 7,
+              "label": "Saída do Darashia Dragon Lair"
+            }
+          ],
+          "images": [
+            {
+              "file": "Darashia Dragon Lair Map 1.png",
+              "caption": "Mapa do Darashia Dragon Lair (1/3)"
+            },
+            {
+              "file": "Darashia Dragon Lair Map 2.png",
+              "caption": "Mapa do Darashia Dragon Lair (2/3)"
+            },
+            {
+              "file": "Darashia Dragon Lair Map 3.png",
+              "caption": "Mapa do Darashia Dragon Lair (3/3)"
+            }
+          ]
+        },
+        {
+          "title": "Regressar a Darashia",
+          "text": "Já cá fora, segue para **sul** pelo deserto até Darashia. Daí podes apanhar o barco do {npc:Petros} ou o tapete voador do {npc:Chemar} para voltares à tua cidade.",
+          "npc": "Petros"
+        }
+      ]
+    }
+  ]
+}

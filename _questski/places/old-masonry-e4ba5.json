@@ -1,0 +1,28 @@
+{
+  "title": "Old Masonry",
+  "type": "dungeon",
+  "near": "Ab'Dendriel",
+  "summary": "Antiga propriedade do Black Sphinx (*Black Sphinx Estate*), abaixo do nível do mar a **norte de Ulderek's Rock**; só se entra pelo **Death Portal** das {wiki:Halls of Hope} e faz parte da {wiki:Forgotten Knowledge Quest}.",
+  "entrance": {"x": 32806, "y": 31657, "z": 8, "label": "Chegada pelo Death Portal (portal de volta)"},
+  "requirements": [
+    "Templo das {wiki:Halls of Hope} restaurado e o Death Portal pago: diz {key:death portal} ao {npc:Albinius} e entrega-lhe 50 {item:Pelvis Bone|Pelvis Bones}."
+  ],
+  "arrive": [
+    "Vai às {wiki:Halls of Hope}, a **norte de Thais**: sai da cidade pela saída norte e continua para norte até ao templo ({coord:32326,32090,7}).",
+    "Fala com o {npc:Albinius} ({key:hi}, {key:death portal}) e entrega os 50 {item:Pelvis Bone|Pelvis Bones}, se ainda não pagaste.",
+    "Entra no **Death Portal**: apareces na Old Masonry ({coord:32806,31657,8}). Daí caminha para **sudeste** e desce neste ponto ({coord:32849,31697,8}) para os pisos de baixo."
+  ],
+  "leave": [
+    "Faz o caminho inverso pelos pisos da Old Masonry (desce e sobe pelos mesmos sítios) até ao ponto de chegada ({coord:32806,31657,8}).",
+    "Se estás na zona do boss, acende a {item:Ghostsilver Lantern} e usa a parede a **norte** da sala pré-boss ({coord:32902,31626,14}) para saíres.",
+    "Entra no Death Portal do ponto de chegada: leva-te de volta às Halls of Hope, de onde voltas a pé para **sul** até Thais."
+  ],
+  "coords": [
+    {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope (Death Portal)"},
+    {"x": 32849, "y": 31697, "z": 8, "label": "Descida para o piso seguinte"},
+    {"x": 32902, "y": 31626, "z": 14, "label": "Sala pré-boss (parede a norte = saída)"}
+  ],
+  "warnings": [
+    "Nos pisos de cima há {creature:Necromancer|Necromancers}, {creature:Renegade Knight|Renegade Knights} e {creature:Vicious Squire|Vicious Squires}; nos de baixo, Astral Shapers ({creature:Broken Shaper}, {creature:Twisted Shaper}, {creature:Shaper Matriarch}). Recomendado **nível 120+**."
+  ]
+}

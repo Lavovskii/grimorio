@@ -1,0 +1,31 @@
+{
+  "title": "Isle of the Kings",
+  "type": "ilha",
+  "near": "Carlin",
+  "summary": "Ilha dos monges a **sudoeste de Carlin** (a sul das {wiki:Ghostlands}), com um mosteiro, a biblioteca e catacumbas profundas onde estão sepultados os antigos reis de Thais.",
+  "entrance": {"x": 32173, "y": 31938, "z": 7, "label": "Isle of the Kings (mosteiro e entrada das catacumbas)"},
+  "requirements": [
+    "O {npc:Dalbrect} só te leva depois de lhe entregares o {item:Family Brooch} — é a primeira missão da {wiki:The White Raven Monastery Quest}.",
+    "Se entrares na zona restrita do 3.º andar do mosteiro e não pagares a multa ao {npc:Costello} ({key:crime} ou {key:absolution}), o Dalbrect deixa de te transportar."
+  ],
+  "arrive": [
+    "Viaja até **Carlin** (por exemplo de Venore, no {npc:Captain Fearless}: {key:hi}, {key:carlin}, {key:yes}).",
+    "Sai de Carlin para **norte/oeste** até à cabana e ao barco do {npc:Dalbrect}, no porto a norte das {wiki:Ghostlands} ({coord:32211,31755,6}).",
+    "Diz {key:hi}, {key:passage} e {key:yes}: ele leva-te à ilha por **10 gp**.",
+    "Na ilha, a entrada das catacumbas fica dentro do edifício grande dos monges; o {npc:Costello} está no 1.º andar desse edifício."
+  ],
+  "leave": [
+    "Se estás nas catacumbas, volta a subir pelo mesmo caminho até ao mosteiro (usa a {item:Rope} nos buracos por onde desceste).",
+    "Vai ao barco atracado na ilha e fala com o {npc:Captain Jack} ({coord:32189,31957,6}): {key:hi} e {key:tibia}. Ele leva-te de volta ao continente, para o lado de Carlin.",
+    "Em alternativa, o {npc:Dalbrect} também te leva de volta: {key:hi}, {key:passage}, {key:yes}."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 32211, "y": 31755, "z": 6, "label": "Dalbrect — barco para a ilha (norte de Carlin)"},
+    {"x": 32189, "y": 31957, "z": 6, "label": "Captain Jack — barco de regresso"},
+    {"x": 32172, "y": 31922, "z": 8, "label": "Porta selada do King Zelos (subsolo -1)"}
+  ],
+  "warnings": [
+    "Também se chega às catacumbas (piso -7) pelo caminho da {wiki:The Queen of the Banshees Quest}, mas é longo e perigoso."
+  ]
+}

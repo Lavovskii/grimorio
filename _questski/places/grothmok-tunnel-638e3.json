@@ -1,0 +1,25 @@
+{
+  "title": "Grothmok Tunnel",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Túneis selados no fundo das {wiki:Dwarf Mines}, a **oeste de Kazordoon**, fechados depois de um desabamento que matou o famoso beijoqueiro anão Shearton Softbeard; hoje estão cheios de {creature:Ghost|Ghosts}.",
+  "entrance": {"x": 32531, "y": 31914, "z": 7, "label": "Entrada das Dwarf Mines (caminho para o Grothmok)"},
+  "requirements": [
+    "A porta selada do túnel só abre com autorização do {npc:Budrik}: dá-lhe 5 {item:Pick|Picks} ({key:hi}, {key:pick}, {key:yes}) na {wiki:Kissing a Pig Quest}."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a pé até às {wiki:Dwarf Mines}, a **oeste** de Kazordoon (a nordeste de Thais), e entra pela entrada à superfície ({coord:32531,31914,7}).",
+    "Anda um pouco para **norte** e desce pelo buraco: estás no primeiro andar subterrâneo, onde está o {npc:Budrik} ({coord:32524,31906,8}).",
+    "Vai para **oeste**, segue pela passagem de baixo e desce outro buraco; desce logo pelo buraco mais próximo (a 2 quadrados).",
+    "Vai para **oeste** (há {creature:Dwarf Soldier|Dwarf Soldiers} e {creature:Poison Spider|Poison Spiders}) e desce mais um buraco.",
+    "Passa por 3–4 {creature:Dwarf Guard|Dwarf Guards}, anda um pouco para **sul**: a **oeste** está a porta selada do Grothmok Tunnel. O {npc:A Dwarven Ghost} está ao fundo ({coord:32410,31918,12})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho, subindo com a {item:Rope} por todos os buracos por onde desceste até ao andar do Budrik.",
+    "Sobe para a superfície pela entrada das Dwarf Mines e regressa a pé para **leste** até Kazordoon (ou para **sudoeste** até Thais)."
+  ],
+  "warnings": [
+    "No túnel há 5 {creature:Ghost|Ghosts}; pelo caminho encontras {creature:Dwarf Soldier|Dwarf Soldiers}, {creature:Dwarf Guard|Dwarf Guards} e {creature:Poison Spider|Poison Spiders}."
+  ]
+}

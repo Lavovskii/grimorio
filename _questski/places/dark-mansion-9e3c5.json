@@ -1,0 +1,32 @@
+{
+  "title": "Dark Mansion",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Guildhall logo a **nordeste de Thais**, junto ao caminho que sai da porta norte (Thaian-Venorean Road); a cave mais funda tem uma porta para as grutas do Ancient Temple, com acesso ao {wiki:Thais Dragon Lair}, a uma gruta de rotworms e a uma de cyclops.",
+  "entrance": {"x": 32397, "y": 32155, "z": 7, "label": "Dark Mansion"},
+  "requirements": [
+    "É uma guildhall (casa alugada): normalmente só os moradores e os convidados da casa podem entrar."
+  ],
+  "arrive": [
+    "Chega a **Thais** (de barco: diz ao capitão do porto {key:hi}, {key:thais}, {key:yes}).",
+    "Sai pela porta **norte** da cidade e segue o caminho para **nordeste**: a Dark Mansion fica logo ao lado do caminho ({coord:32397,32155,7}).",
+    "Lá dentro, as escadas descem à cave (piso -1) e ao piso -2, onde uma porta dá para as grutas do {wiki:Ancient Temple}."
+  ],
+  "leave": [
+    "Sai pela porta do rés-do-chão para o caminho e volta para **sudoeste** até à porta norte de Thais.",
+    "Pela cave: a porta do piso -2 leva às grutas do Ancient Temple, ligadas ao Thais Dragon Lair e às grutas de rotworms e cyclops."
+  ],
+  "coords": [
+    {"x": 32349, "y": 32112, "z": 10, "label": "Entrada do Thais Dragon Lair"},
+    {"x": 32357, "y": 32085, "z": 7, "label": "Entrada da gruta a norte do Alatar Lake"}
+  ],
+  "images": [
+    {"file": "Dark Mansion (ground).png", "caption": "Dark Mansion — rés-do-chão"},
+    {"file": "Dark Mansion (first).png", "caption": "Dark Mansion — 1.º andar"},
+    {"file": "Dark Mansion (-1).png", "caption": "Dark Mansion — cave (piso -1)"},
+    {"file": "Dark Mansion (-2).png", "caption": "Dark Mansion — piso -2 (porta para as grutas)"}
+  ],
+  "warnings": [
+    "As grutas por baixo da casa levam ao {wiki:Thais Dragon Lair}: cuidado com os {creature:Dragon|Dragons}."
+  ]
+}

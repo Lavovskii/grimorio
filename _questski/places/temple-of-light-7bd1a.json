@@ -1,0 +1,25 @@
+{
+  "title": "Temple of Light",
+  "type": "ilha",
+  "near": "Rookgaard",
+  "summary": "Ilha de evento a **noroeste de Rookgaard** e a oeste da Island of Destiny, com o templo do {npc:Lucius}; só é acessível em novembro, durante o evento {wiki:The Lightbearer}.",
+  "entrance": {"x": 31971, "y": 32045, "z": 7, "label": "Temple of Light"},
+  "requirements": [
+    "Só durante o evento {wiki:The Lightbearer}, em novembro."
+  ],
+  "arrive": [
+    "Apanha um barco para **Yalahar** (por exemplo em Venore: {key:hi}, {key:yalahar}, {key:yes}).",
+    "Vai ao **Magician Quarter** de Yalahar, na zona nordeste da cidade, e fala com o {npc:Lucius}, a sul do Ethan ({coord:32892,31094,7}): diz {key:hi} e {key:yes}.",
+    "Ele leva-te ao Temple of Light. Lá dentro, sobe as escadas para encontrares outra vez o Lucius ({coord:31971,32045,6})."
+  ],
+  "leave": [
+    "As fontes não descrevem o regresso em pormenor: fala outra vez com o {npc:Lucius} no templo ou procura a saída da ilha para voltares ao continente."
+  ],
+  "coords": [
+    {"x": 31971, "y": 32045, "z": 6, "label": "Lucius no Temple of Light"},
+    {"x": 32892, "y": 31094, "z": 7, "label": "Lucius em Yalahar (Magician Quarter)"}
+  ],
+  "warnings": [
+    "A ilha divide-se num lado bom e num lado mau. Se o mundo falhar o evento, o lado mau é invadido por {creature:Eclipse Knight|Eclipse Knights}, {creature:Gloombringer|Gloombringers}, {creature:Harbinger of Darkness|Harbingers of Darkness} e {creature:Spawn of Despair}."
+  ]
+}

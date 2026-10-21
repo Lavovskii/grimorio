@@ -1,0 +1,66 @@
+{
+  "slug": "lone-medusa-quest",
+  "category": "tesouro",
+  "region": "Liberty Bay",
+  "difficulty": 3,
+  "duration": "30–45 min",
+  "summary": "No topo da {wiki:Vandura Mountain|Vandura Mountain}, a nordeste de Liberty Bay, uma {creature:Medusa} solitária guarda o seu tesouro. Sobe a montanha entre {creature:Wyrm|Wyrms} e {creature:Energy Elemental|Energy Elementals}, mata a Medusa e revista a pilha de ossos para levares 4 {item:Black Pearl|Black Pearls}.",
+  "legend_pt": "Uma medusa solitária guarda o seu tesouro.",
+  "start": {"x": 32415, "y": 32776, "z": 7, "label": "Vandura Mountain (nordeste de Liberty Bay)"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 70+)."
+  ],
+  "items_needed": [
+    {"text": "Poções de vida e, de preferência, proteção contra energia (Wyrms e Energy Elementals)"}
+  ],
+  "rewards": [
+    {"item": "Black Pearl", "qty": 4}
+  ],
+  "dangers": ["Poison Spider", "Wasp", "Energy Elemental", "Wyrm", "Medusa"],
+  "npcs": [],
+  "tips": [
+    "A {creature:Medusa} pode paralisar-te; leva poções e não deixes a vida baixar demasiado.",
+    "Pelo caminho também há {creature:Poison Spider|Poison Spiders} e {creature:Wasp|Wasps}."
+  ],
+  "sections": [
+    {
+      "title": "1. Subir a Vandura Mountain",
+      "steps": [
+        {
+          "title": "Ir à montanha",
+          "text": "Vai à {wiki:Vandura Mountain|Vandura Mountain}, a **nordeste** de {wiki:Liberty Bay|Liberty Bay}, e começa a subir. A montanha fica na mesma ilha que Liberty Bay ({wiki:Vandura}), por isso vais a pé: sai da cidade e caminha para nordeste até à montanha ({coord:32415,32776,7}).",
+          "coords": [{"x": 32415, "y": 32776, "z": 7, "label": "Vandura Mountain"}],
+          "images": [{"file": "Map vandura.jpg", "caption": "Mapa da ilha de Vandura, com Liberty Bay e a montanha a nordeste"}],
+          "warning": "Vais enfrentar vários {creature:Wyrm|Wyrms} e alguns {creature:Energy Elemental|Energy Elementals}."
+        },
+        {
+          "title": "Entrar na gruta do 4.º andar",
+          "text": "No **quarto andar**, entra na gruta e sobe a rampa **sul**."
+        }
+      ]
+    },
+    {
+      "title": "2. A Medusa e o tesouro",
+      "steps": [
+        {
+          "title": "Matar a Medusa",
+          "text": "Lá em cima está uma única {creature:Medusa}. Mata-a."
+        },
+        {
+          "title": "Revistar a pilha de ossos",
+          "text": "Revista a pilha de ossos no **canto noroeste** da sala para receberes a recompensa.",
+          "reward": "4 Black Pearls"
+        },
+        {
+          "title": "Sair da Vandura Mountain",
+          "text": "Não há atalho de saída: volta pelo mesmo caminho. Desce a rampa **sul**, sai da gruta do 4.º andar e desce a montanha andar a andar até ao chão. Depois caminha para **sudoeste** até {wiki:Liberty Bay|Liberty Bay}.",
+          "warning": "Os {creature:Wyrm|Wyrms} e {creature:Energy Elemental|Energy Elementals} podem ter renascido entretanto; guarda poções para a descida."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como *Black Pearls Quest*."
+  ]
+}

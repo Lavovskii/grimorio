@@ -1,0 +1,92 @@
+{
+  "slug": "dark-armor-quest",
+  "category": "tesouro",
+  "region": "Edron",
+  "difficulty": 2,
+  "duration": "30–45 min",
+  "summary": "Um guerreiro foi morto por uma {creature:Giant Spider} nas profundezas da Edron Orc Cave. Desce os vários andares da gruta, passa pelos orcs e pelos shamans e encontra o corpo dele no fosso da aranha, com uma {item:Dark Armor} lá dentro.",
+  "legend_pt": "Um guerreiro foi morto por uma Giant Spider nas profundezas da Edron Orc Cave.",
+  "start": {"x": 33173, "y": 31900, "z": 7, "label": "Entrada da Edron Orc Cave, a sudoeste do castelo"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 40+)."
+  ],
+  "items_needed": [
+    {"item": "Shovel"},
+    {"item": "Rope"}
+  ],
+  "rewards": [
+    {"item": "Dark Armor"}
+  ],
+  "achievements": [],
+  "dangers": ["Poison Spider", "Orc", "Orc Spearman", "Orc Warrior", "Orc Shaman", "Orc Berserker", "Orc Leader", "Giant Spider"],
+  "npcs": [],
+  "tips": [
+    "Para níveis 8–40 esta gruta tem criaturas difíceis e as recompensas não são muito boas. Junta uma equipa e faz todas as quests desta gruta de uma vez, em vez de várias viagens.",
+    "A energia não funciona contra {creature:Orc Shaman|Orc Shamans}: leva {item:Great Fireball Rune|Great Fireball Runes}."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer na Edron Orc Cave",
+      "steps": [
+        {
+          "title": "Entrar na gruta",
+          "text": "Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}; chegas ao porto de Edron, junto ao {npc:Captain Seahorse}. Desce à **Edron Orc Cave**: a entrada é um buraco a **sudoeste** do castelo de Edron (se estiver tapado, abre-o com a {item:Shovel}). Também podes chegar lá por um esgoto na cave dos Edron Flats, logo a sul do castelo.",
+          "coords": [
+            {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse, porto de Edron"},
+            {"x": 33173, "y": 31900, "z": 7, "label": "Entrada da Edron Orc Cave"}
+          ]
+        },
+        {
+          "title": "Primeiro andar",
+          "text": "No buraco só encontras {creature:Poison Spider|Poison Spiders}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors}. Segue a gruta para **oeste** e depois para **sul**. Há algumas salas laterais, mas basicamente só há um caminho.",
+          "images": [{"file": "Dark Armor Quest Map 01.jpg", "caption": "Caminho no primeiro andar"}]
+        },
+        {
+          "title": "Segundo andar",
+          "text": "Aqui enfrentas {creature:Poison Spider|Poison Spiders}, {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen}, {creature:Orc Warrior|Orc Warriors} e talvez um ou dois {creature:Orc Berserker|Orc Berserkers} puxados por outros. Vai para **oeste** e segue a passagem para **norte**. Entra na **primeira sala a leste** e desce pelo buraco.",
+          "images": [{"file": "Dark Armor Quest Map 02.jpg", "caption": "Caminho no segundo andar até ao buraco"}]
+        }
+      ]
+    },
+    {
+      "title": "2. A sala dos Orc Shamans",
+      "steps": [
+        {
+          "title": "Limpar os shamans",
+          "text": "Assim que cais pelo buraco ficas rodeado de {creature:Orc Shaman|Orc Shamans}. Usa {item:Great Fireball Rune|Great Fireball Runes} para limpar a sala.",
+          "warning": "Ataques de energia não funcionam contra os Orc Shamans. As cobras que eles invocam dificultam a pontaria e impedem os knights de chegar aos Shamans."
+        },
+        {
+          "title": "Seguir para norte",
+          "text": "Neste andar vai para **norte**, enfrentando mais Orc Shamans e um ou dois {creature:Orc Berserker|Orc Berserkers}. Vais passar por uma zona com chão de ladrilhos: isso quer dizer que estás no caminho certo.",
+          "images": [{"file": "Dark Armor Quest Map 03.jpg", "caption": "Caminho no andar dos Orc Shamans"}]
+        }
+      ]
+    },
+    {
+      "title": "3. O fosso da Giant Spider",
+      "steps": [
+        {
+          "title": "Chegar ao fosso",
+          "text": "No andar seguinte há {creature:Poison Spider|Poison Spiders}, vários {creature:Orc Leader|Orc Leaders}, {creature:Orc Shaman|Orc Shamans} e talvez um ou dois Orc Berserkers. Vai para **norte** até veres um grande fosso com uma {creature:Giant Spider} lá dentro. O buraco para descer fica no lado **nordeste** do fosso.",
+          "images": [{"file": "Dark Armor Quest Map 04.jpg", "caption": "O fosso da Giant Spider e o buraco a nordeste"}]
+        },
+        {
+          "title": "Apanhar a Dark Armor",
+          "text": "Desce pelo buraco e mata a {creature:Giant Spider}. A {item:Dark Armor} está dentro de um corpo no chão.",
+          "tip": "Em vez de matares a aranha, podes pôr o modo {wiki:Defensive Fighting|Defensive Fighting}, correr até ao corpo, tirar o loot e voltar.",
+          "reward": "{item:Dark Armor}"
+        },
+        {
+          "title": "Sair da Edron Orc Cave",
+          "text": "Volta pelo mesmo caminho: sobe com a {item:Rope} pelo buraco do fosso da Giant Spider, atravessa o andar dos Orc Shamans para **sul** e sobe com a Rope pelo buraco onde caíste; no segundo andar volta para **sul** e **leste** e, no primeiro, segue para **norte** e **leste** até ao buraco da entrada, onde sobes outra vez com a Rope. Cá fora, vai para **norte** até Edron e ao porto do {npc:Captain Seahorse}.",
+          "coords": [
+            {"x": 33173, "y": 31900, "z": 7, "label": "Entrada/saída da Edron Orc Cave"},
+            {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse, porto de Edron"}
+          ]
+        }
+      ]
+    }
+  ]
+}

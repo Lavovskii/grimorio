@@ -1,0 +1,33 @@
+{
+  "title": "Grotto of the Lost",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Gruta de lava **muito abaixo das {wiki:Ice Islands}**, a segunda zona da {wiki:Too Hot to Handle Quest}; chega-se lá pelo teleporte do hub do {npc:Gnomevisor}, por baixo da cripta de Kazordoon.",
+  "entrance": {"x": 32143, "y": 31446, "z": 14, "label": "Grotto of the Lost"},
+  "requirements": [
+    "Conta Premium e a missão **Recruitment** da {wiki:Bigfoot's Burden Quest}.",
+    "Precisas do **escudo de cristal nível 2** da {wiki:Too Hot to Handle Quest}: com 20 splinters diz {key:shield} ao {npc:Gnomevisor}."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**. O mais simples é o {wiki:Steamship}: em Edron, o {npc:Captain Seahorse} leva-te a Cormaya ({key:hi}, {key:cormaya}, {key:yes}); em Cormaya desce 8 andares até ao {npc:Gurbasch} e diz {key:hi}, {key:kazordoon}, {key:yes}. Também há steamship a partir de Farmine ({npc:Thorgrin}).",
+    "Desce à cripta de Kazordoon (piso 9, 2 andares abaixo do nível do chão), onde estão o {npc:Gnomystery} ({coord:32610,31878,9}) e o {npc:Brodraem Orcbeard}.",
+    "Caminha para **norte** na cripta até à grande fenda ({coord:32603,31845,9}) e anda em direção a ela até caíres para o piso de baixo; passa o teleporte e chegas ao hub do {npc:Gnomevisor} ({coord:32661,31825,10}).",
+    "Entra no teleporte do Grotto of the Lost (escudo nível 2 ou mais). Para as tarefas, desce pelas escadas (ou levita) e vai para **noroeste** até à rampa ({coord:32176,31417,15}); os teleportes das tarefas estão por cima."
+  ],
+  "leave": [
+    "Volta ao teleporte por onde entraste: leva-te ao hub do {npc:Gnomevisor}.",
+    "Do hub, volta à cripta de Kazordoon e sobe à cidade (a wiki não descreve esta subida em pormenor). No porto subterrâneo, o {npc:Brodrosch} leva-te de steamship a Cormaya ou Farmine."
+  ],
+  "coords": [
+    {"x": 32610, "y": 31878, "z": 9, "label": "Gnomystery (cripta de Kazordoon)"},
+    {"x": 32603, "y": 31845, "z": 9, "label": "Grande fenda na cripta"},
+    {"x": 32661, "y": 31825, "z": 10, "label": "Gnomevisor (hub)"},
+    {"x": 32176, "y": 31417, "z": 15, "label": "Rampa para a sala das tarefas"},
+    {"x": 32181, "y": 31409, "z": 14, "label": "Teleporte norte (Gnomish Explorer)"},
+    {"x": 32188, "y": 31422, "z": 14, "label": "Teleporte sul (Wax Research)"}
+  ],
+  "warnings": [
+    "Zona para **nível 350+** com criaturas de fogo: {creature:Lavafungus}, {creature:Lavaworm} e {creature:Streaked Devourer}.",
+    "O escudo desce 1 ponto a cada 5 segundos dentro das criptas: sai antes de chegar a zero."
+  ]
+}

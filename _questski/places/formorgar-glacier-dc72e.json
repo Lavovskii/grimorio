@@ -1,0 +1,26 @@
+{
+  "title": "Formorgar Glacier",
+  "type": "zona",
+  "near": "Svargrond",
+  "summary": "Glaciar gelado a **oeste de Svargrond**, na ilha de {wiki:Hrodmir}, que se estende até às povoações Norsir do sul; nos picos há Ice Golems e lá dentro ficam as {wiki:Formorgar Mines}.",
+  "entrance": {"x": 32102, "y": 31144, "z": 7, "label": "Formorgar Glacier"},
+  "arrive": [
+    "Vai a **Svargrond** de barco (por exemplo em Carlin ou com o {npc:Captain Bluebear} em Thais): diz ao capitão {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.",
+    "Sai de Svargrond para **oeste** e usa {spell:Levitate} para subir para o glaciar.",
+    "Segue para **oeste** pelo glaciar ({coord:32102,31144,7}). A entrada das {wiki:Formorgar Mines} são as escadas em {coord:32145,31123,7}."
+  ],
+  "leave": [
+    "Volta para **leste** pelo mesmo caminho e desce com {spell:Levitate} no sítio onde subiste, já perto de Svargrond.",
+    "Em Svargrond apanha o barco da {npc:Captain Breezelda}: {key:hi}, {key:carlin} (ou {key:thais}/{key:venore}), {key:yes}.",
+    "Se estiveres nas Formorgar Mines, o Hoist ({coord:32155,31126,11}) também te traz de volta ao glaciar."
+  ],
+  "coords": [
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"},
+    {"x": 32145, "y": 31123, "z": 7, "label": "Escadas de entrada das Formorgar Mines"},
+    {"x": 32155, "y": 31126, "z": 11, "label": "Hoist das Formorgar Mines"}
+  ],
+  "warnings": [
+    "Precisas de saber {spell:Levitate} para subir e descer do glaciar.",
+    "Nos picos há {creature:Ice Golem|Ice Golems} e {creature:Ice Witch|Ice Witches}; também aparecem {creature:Frost Giant|Frost Giants}, {creature:Mammoth|Mammoths}, {creature:Wyvern|Wyverns} e, nas zonas próprias, {creature:Crystal Spider|Crystal Spiders} (recomendado nível 30+)."
+  ]
+}

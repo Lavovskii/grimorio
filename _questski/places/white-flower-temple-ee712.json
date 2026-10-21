@@ -1,0 +1,33 @@
+{
+  "title": "White Flower Temple",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Pequeno templo a **sul de Thais**, onde estão o {npc:Norf} (bênção *Spiritual Shielding*) e o {npc:Edowir}; a superfície é zona de proteção, mas por baixo há uma masmorra com mortos-vivos.",
+  "entrance": {"x": 32346, "y": 32364, "z": 7, "label": "White Flower Temple"},
+  "items": ["Pick", "Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Thais** (de barco, chegas ao {npc:Captain Bluebear}).",
+    "Sai pelo portão **sul** de Thais e continua para **sul**, seguindo as flores brancas, até chegares a um rio. Contorna o rio e segue ainda mais para sul até ao pequeno edifício: é o White Flower Temple ({coord:32346,32364,7}).",
+    "O {npc:Norf} está **1 andar acima** dentro do templo ({coord:32346,32363,6}); o {npc:Edowir} está no rés-do-chão ({coord:32343,32363,7}).",
+    "Para entrares na masmorra, desce as escadas e usa a {item:Pick} ou a {item:Shovel} no sítio indicado nas imagens. Mais abaixo há uma {item:Gate of Expertise} de **nível 25**."
+  ],
+  "leave": [
+    "Se estás na masmorra, volta pelo mesmo caminho até ao buraco por onde desceste e usa a {item:Rope} para subires ao templo.",
+    "Do templo, volta a pé para **norte**, contornando o rio, até ao portão sul de Thais."
+  ],
+  "coords": [
+    {"x": 32346, "y": 32363, "z": 6, "label": "Norf (1 andar acima)"},
+    {"x": 32343, "y": 32363, "z": 7, "label": "Edowir"},
+    {"x": 32378, "y": 32370, "z": 9, "label": "Por baixo do White Flower Temple"}
+  ],
+  "images": [
+    {"file": "Wft PickHole.JPG", "caption": "Sítio onde usas a Pick para abrir a passagem"},
+    {"file": "Wft DigHole.JPG", "caption": "Sítio onde usas a Shovel"},
+    {"file": "Wft door.JPG", "caption": "Gate of Expertise (nível 25) na masmorra"},
+    {"file": "White Flower Temple 0.png", "caption": "Mapa do White Flower Temple"}
+  ],
+  "warnings": [
+    "Depois da porta de nível 25 há 2 {creature:Ghoul|Ghouls} e, mais abaixo, uma {creature:Banshee}. Também há {creature:Demon Skeleton|Demon Skeletons} e {creature:Stalker|Stalkers} na masmorra.",
+    "Há outra entrada para a sala da Banshee pela {wiki:Stalker Cave}."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Streets of Yalahar",
+  "type": "cidade",
+  "near": "Yalahar",
+  "summary": "As ruas da Inner City de **Yalahar**, com uma única rua quase circular à volta do edifício central dos Yalahari; aqui ficam o porto, o templo, o depot, a torre de lojas (Shopping Tower), o banco e os correios.",
+  "entrance": {"x": 32805, "y": 31234, "z": 7, "label": "Centro de Yalahar (Inner City)"},
+  "requirements": [
+    "Para ires a Yalahar com o {npc:Captain Max} (Liberty Bay) precisas do rank **Novice** da {wiki:The Explorer Society Quest}. Em alternativa, paga 250 gp ao {npc:Wyrdin's Apprentice} (a oeste de Kazordoon) pela palavra-passe ({key:whizzkid}) e viaja de Thais com o {npc:Captain Bluebear}."
+  ],
+  "arrive": [
+    "Em **Liberty Bay**, fala com o {npc:Captain Max} num dos barcos a **leste** do porto: {key:hi}, {key:yalahar}, {key:yes} (400 gp). Com a palavra-passe, o {npc:Captain Bluebear} em Thais também te leva ({key:hi}, {key:yalahar}, {key:yes}).",
+    "Se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, há barcos diretos de Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore (por exemplo, em Venore, {npc:Captain Fearless}: {key:hi}, {key:yalahar}, {key:yes}).",
+    "Chegas ao porto de Yalahar, a **sul** do centro da cidade. A rua principal dá a volta à Inner City: o depot e a Shopping Tower ficam do lado **oeste**, o banco e os correios do lado **leste**."
+  ],
+  "leave": [
+    "No porto, o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te a **Liberty Bay** ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou a **Thais** ({key:thais}, 800 gp).",
+    "Se já desbloqueaste as rotas da In Service of Yalahar, o {npc:Karith} ({coord:32818,31278,5}), a leste do Captain Cookie, leva-te a Ab'Dendriel, Darashia, Venore, Ankrahmun, Port Hope, Thais, Liberty Bay e Carlin ({key:hi}, {key:passage}).",
+    "Para os bairros à volta: o Foreigner Quarter (sudoeste) e o Magician Quarter (nordeste) não têm mecanismo no portão e entras a partir do centro; nos outros, os guardas entre bairros deixam-te passar ({key:pass} e o nome do bairro de destino)."
+  ],
+  "coords": [
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie — porto de Yalahar"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith — barco do porto (3.º piso do barco)"},
+    {"x": 32802, "y": 31223, "z": 7, "label": "Palimuth — entrada do edifício central"},
+    {"x": 32789, "y": 31238, "z": 3, "label": "Vincent — topo da Shopping Tower"},
+    {"x": 32830, "y": 31276, "z": 7, "label": "Julius (Trade Quarter, junto ao portão)"}
+  ],
+  "images": [
+    {"file": "Yalahar Street.png", "caption": "Mapa das ruas de Yalahar"}
+  ]
+}

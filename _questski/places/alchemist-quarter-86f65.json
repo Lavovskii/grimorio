@@ -1,0 +1,34 @@
+{
+  "title": "Alchemist Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Antigo bairro dos alquimistas de **Yalahar**, a **noroeste** do centro da cidade, destruído por uma explosão e cheio de criaturas mutantes e blobs.",
+  "entrance": {"x": 32677, "y": 31132, "z": 7, "label": "Alchemist Quarter"},
+  "requirements": [
+    "O mecanismo do portão só funciona depois de receberes a missão do Alchemist Quarter na {wiki:In Service of Yalahar Quest} (pede {key:mission} ao {npc:Yalahari (NPC)}). Se aparecer *\"The gate mechanism won't move\"*, ainda não tens acesso.",
+    "Para ir a Yalahar com o {npc:Captain Max} (Liberty Bay) precisas do rank **Novice** na {wiki:Tibian Explorer Society}; com o {npc:Captain Bluebear} (Thais) precisas da palavra-passe do {npc:Wyrdin's Apprentice}."
+  ],
+  "arrive": [
+    "Vai a **Yalahar**: o {npc:Captain Max} em Liberty Bay ({key:hi}, {key:yalahar}), o {npc:Captain Greyhound} em Carlin (185 gp), o {npc:Captain Sinbeard} em Ankrahmun (230 gp), o {npc:Captain Seagull} em Ab'Dendriel (160 gp, depois de uma missão da In Service of Yalahar Quest) ou o {npc:Captain Bluebear} em Thais (com a palavra-passe). Chegas ao porto, a **sul** do centro da cidade.",
+    "Vai ao centro da cidade e depois ao portão do Alchemist Quarter, a **noroeste**.",
+    "Usa o {wiki:Mechanism (Teleporter)|mecanismo} ao lado do portão para passares para o bairro ({coord:32677,31132,7})."
+  ],
+  "leave": [
+    "Se desceste a algum subsolo (por exemplo ao {creature:Diseased Dan}), sobe pelas mesmas escadas até à superfície do bairro.",
+    "Volta ao portão por onde entraste e usa outra vez o mecanismo para regressares ao centro de Yalahar.",
+    "No porto, a **sul** do centro: o {npc:Karith} ({key:hi}, {key:passage}) leva-te a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore depois de lhe desbloqueares as rotas; senão o {npc:Captain Cookie} leva-te a {key:liberty bay} (400 gp) ou {key:thais} (800 gp) com {key:hi}, o destino, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"},
+    {"x": 32707, "y": 31189, "z": 8, "label": "Diseased Dan (1 andar abaixo)"}
+  ],
+  "images": [
+    {"file": "Former Alchemist Quarter.jpg", "caption": "O antigo Alchemist Quarter"},
+    {"file": "Alchemist Quarter 1.png", "caption": "Mapa do Alchemist Quarter"}
+  ],
+  "warnings": [
+    "Zona para nível 35–40+: {creature:Mutated Human|Mutated Humans}, {creature:Mutated Rat|Mutated Rats}, blobs ({creature:Death Blob|Death}, {creature:Acid Blob|Acid}, {creature:Mercury Blob|Mercury}); nas torres e a oeste, atrás das colinas, há {creature:Mutated Bat|Mutated Bats}, {creature:Mutated Tiger|Mutated Tigers} e {creature:Bog Raider|Bog Raiders}.",
+    "No andar de cima só um {creature:Mutated Rat} te consegue alcançar se seguires junto à parede do lado esquerdo depois das escadas."
+  ]
+}

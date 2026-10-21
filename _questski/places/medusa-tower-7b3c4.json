@@ -1,0 +1,31 @@
+{
+  "title": "Medusa Tower",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Torre de estilo lagarto no **sudoeste da selva de Tiquanda**, a leste de Port Hope e logo a sul do acampamento dos Hunters/Dworcs; as criaturas ficam mais fortes a cada andar que sobes.",
+  "entrance": {"x": 32860, "y": 32829, "z": 7, "label": "Medusa Tower"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Port Hope** de barco ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Charles}.",
+    "Sai de Port Hope e atravessa a selva de Tiquanda para **leste** até ao acampamento dos Hunters/Dworcs ({coord:32900,32792,7}).",
+    "Logo a **sul** do acampamento fica a torre. Não se entra pela porta: desce pelo **buraco a norte da torre** e segue o túnel até à cave (basement).",
+    "Da cave sobe as escadas para o rés-do-chão ({coord:32865,32830,7}) e para os andares de cima."
+  ],
+  "leave": [
+    "Desce os andares até à cave e volta pelo túnel até ao buraco por onde entraste.",
+    "Usa a {item:Rope} no buraco para subires à superfície e regressa a pé para **oeste**, pela selva, até Port Hope (o {npc:Charles} leva-te de barco a outras cidades)."
+  ],
+  "coords": [
+    {"x": 32865, "y": 32830, "z": 7, "label": "Rés-do-chão da torre"},
+    {"x": 32900, "y": 32792, "z": 7, "label": "Acampamento Hunter/Dworc (a norte da torre)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "Ground Floor Monster Crossfire-0.png", "caption": "Rés-do-chão: linhas de ataque à distância junto às escadas"},
+    {"file": "Ground Floor - Save Place to Fight From.png", "caption": "Rés-do-chão: sítio seguro para lutar"}
+  ],
+  "warnings": [
+    "Zona recomendada para **nível 200+**: a partir do 1.º andar há {creature:Behemoth|Behemoths}, e mais acima Serpent Spawns e Demon Skeletons.",
+    "No rés-do-chão e no 1.º andar és atacado à distância por cima da parede logo ao chegares das escadas: vai para o lado **sul** das escadas e protege-te com {item:Fire Bomb Rune|Fire Bomb Runes}; leva {item:Energy Bomb Rune|Energy Bomb Runes} para os Behemoths."
+  ]
+}

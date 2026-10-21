@@ -1,0 +1,29 @@
+{
+  "title": "Hellgorge",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Gruta profunda por baixo da ilha de {wiki:Goroma}, a **noroeste de Liberty Bay**, cheia de cultistas de Ghazbaran, criaturas de fogo e, no fundo, {creature:Demon|Demons} e {creature:Hellhound|Hellhounds}.",
+  "entrance": {"x": 32097, "y": 32631, "z": 7, "label": "Entrada da Hellgorge (Goroma)"},
+  "requirements": [
+    "O {npc:Jack Fate} só te leva a Goroma depois de completares *Access to Goroma* na {wiki:The Shattered Isles Quest}."
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** de barco (por exemplo o {npc:Captain Bluebear} em Thais, o {npc:Captain Seahorse} em Edron ou o {npc:Captain Sinbeard} em Ankrahmun: {key:hi}, {key:liberty bay}, {key:yes}).",
+    "No porto de Liberty Bay, fala com o {npc:Jack Fate} no barco dele: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas no **leste** de Goroma ({coord:32161,32556,6}).",
+    "Atravessa a ilha para **sudoeste** até à entrada da gruta ({coord:32097,32631,7}) e desce."
+  ],
+  "leave": [
+    "Sobe pelo mesmo caminho até à superfície de Goroma.",
+    "Volta ao barco do {npc:Jack Fate}, no **leste** da ilha, e diz {key:hi}, {key:liberty bay}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32161, "y": 32556, "z": 6, "label": "Barco do Jack Fate no leste de Goroma (chegada e regresso)"},
+    {"x": 32095, "y": 32583, "z": 7, "label": "Goroma"},
+    {"x": 32044, "y": 32547, "z": 14, "label": "Teleporte do boss Kerberos (Killing in the Name of)"}
+  ],
+  "warnings": [
+    "Na superfície de Goroma podes encontrar {creature:Crab|Crabs}, {creature:Island Troll|Island Trolls}, {creature:Pirate Skeleton|Pirate Skeletons} e {creature:Pirate Ghost|Pirate Ghosts}.",
+    "Zona para nível 80–100+: {creature:Fire Devil|Fire Devils} e {creature:Fire Elemental|Fire Elementals} logo no piso -1; no piso -3 há dezenas de {creature:Acolyte of the Cult|Acolytes} e {creature:Adept of the Cult|Adepts of the Cult}, {creature:Witch|Witches} e {creature:Elder Bonelord|Elder Bonelords}; mais abaixo há Demons.",
+    "Esta gruta **não** leva à ilha proibida de Ramoa: a única ligação é o vulcão de Goroma."
+  ]
+}

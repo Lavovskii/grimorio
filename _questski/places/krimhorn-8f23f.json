@@ -1,0 +1,32 @@
+{
+  "title": "Krimhorn",
+  "type": "zona",
+  "near": "Svargrond",
+  "summary": "O maior dos acampamentos dos bárbaros Norsir, numa península a **sudoeste de Svargrond** (ilha de {wiki:Hrodmir}), com a Ice Witch Tower onde vive a {npc:Freezhild}.",
+  "entrance": {"x": 32028, "y": 31397, "z": 7, "label": "Krimhorn"},
+  "requirements": [
+    "Conta **Premium** (Svargrond).",
+    "O barco do {npc:Buddel} só te leva depois da {wiki:Barbarian Test Quest}; a pé não há requisitos."
+  ],
+  "arrive": [
+    "Vai a **Svargrond** de barco (por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:svargrond}, {key:yes}).",
+    "De barco: vai para **sul** de Svargrond até ao barco do {npc:Buddel} ({coord:32254,31195,7}) e diz {key:hi}, {key:passage}, {key:camp}, {key:yes} (50 gp). Desembarcas no barco dele nos acampamentos bárbaros ({coord:32020,31294,7}); daí segue para **sul** até à península de Krimhorn.",
+    "A pé (mais rápido e de graça): sai de Svargrond para **oeste**, passa por cima da montanha e pelo glaciar ({wiki:Formorgar Glacier|Formorgar}) e atravessa a pequena ponte a oeste; a wiki indica também o acesso pela montanha a **leste** de Krimhorn, cheia de {creature:Mammoth|Mammoths}."
+  ],
+  "leave": [
+    "Volta para **norte** até ao barco do {npc:Buddel} nos acampamentos ({coord:32020,31294,7}) e diz {key:hi}, {key:passage}, {key:svargrond}, {key:yes} (50 gp).",
+    "Ou regressa a pé pelo glaciar e pela montanha até Svargrond, para **nordeste**."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32020, "y": 31294, "z": 7, "label": "Barco do Buddel nos acampamentos bárbaros"},
+    {"x": 32028, "y": 31397, "z": 7, "label": "Krimhorn"},
+    {"x": 32136, "y": 31334, "z": 7, "label": "Ragnir (outro acampamento bárbaro)"},
+    {"x": 31996, "y": 31233, "z": 7, "label": "Bittermor (outro acampamento bárbaro)"},
+    {"x": 32081, "y": 31375, "z": 8, "label": "Gruta de Stone Golems de Ragnir"}
+  ],
+  "warnings": [
+    "O {npc:Buddel} anda sempre bêbedo e às vezes leva-te para o sítio errado: pede outra vez até chegares.",
+    "No glaciar há {creature:Mammoth|Mammoths}, {creature:Polar Bear|Polar Bears}, {creature:Ice Golem|Ice Golems} e {creature:Crystal Spider|Crystal Spiders}. A wiki recomenda nível 35–45 para Krimhorn e 70–80 para a Ice Witch Tower."
+  ]
+}

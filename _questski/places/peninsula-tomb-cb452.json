@@ -1,0 +1,30 @@
+{
+  "title": "Peninsula Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo escondido por baixo do deserto de Kha'labal, na **península a sudoeste de Ankrahmun**, perto da cidade; no fundo fica o faraó {creature:Omruc} ({wiki:The Ancient Tombs Quest}).",
+  "entrance": {"x": 33027, "y": 32870, "z": 7, "label": "Entrada escondida da Peninsula Tomb (cava aqui)"},
+  "requirements": [
+    "Para usares o teleporte para as partes profundas tens de pôr uma {item:Scarab Coin} no {item:Coal Basin} vazio ao lado da chama mágica."
+  ],
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Apanha um barco para **Ankrahmun**: por exemplo o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para **oeste/sudoeste**, até à península onde fica a entrada ({coord:33027,32870,7}).",
+    "A entrada está escondida: usa a {item:Shovel} no sítio indicado (pode ser preciso cavar várias vezes até o buraco abrir) e desce.",
+    "Para as partes profundas, pisa a chama azul ({item:Mystic Flame}) e põe uma {item:Scarab Coin} no {item:Coal Basin}."
+  ],
+  "leave": [
+    "Volta ao início do túmulo pelo caminho por onde vieste (o {item:Magic Forcefield} da sala de Omruc, usado **sem** o item de passe, também te leva ao início).",
+    "Sobe até ao buraco que abriste na areia e usa a {item:Rope} para voltares à superfície.",
+    "Regressa a pé a **Ankrahmun** (para **leste**). O {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar: {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33109, "y": 32803, "z": 13, "label": "Teleporte do boss Ribstride (Killing in the Name of)"}
+  ],
+  "images": [{"file": "Tombpeninsula.jpg", "caption": "Peninsula Tomb"}],
+  "warnings": [
+    "Quanto mais desces, mais fortes são as criaturas: nos pisos fundos há dezenas de {creature:Stalker|Stalkers} (leva runas de área) e {creature:Vampire|Vampires}."
+  ]
+}

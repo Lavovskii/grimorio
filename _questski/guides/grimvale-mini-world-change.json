@@ -1,0 +1,195 @@
+{
+  "slug": "grimvale-mini-world-change",
+  "category": "world-change",
+  "region": "Edron",
+  "difficulty": 4,
+  "duration": "Dias 12 a 15 de cada mês",
+  "summary": "Todos os meses, entre o dia 12 e o dia 15, a lua cheia nasce sobre a ilha de Grimvale e os pacíficos {creature:Bandit|Bandits} transformam-se em temíveis {wiki:Were-Creatures|were-creatures}. É nesses dias que podes fazer a {wiki:Grimvale Quest} e, no dia 13, enfrentar a boss {creature:Feroxa}.",
+  "legend_pt": "É lua cheia em Grimvale, cuidado!",
+  "start": {
+    "x": 33331,
+    "y": 31686,
+    "z": 7,
+    "label": "Maeryn, em Grimvale"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo (recomendado 100+)."
+  ],
+  "items_needed": [
+    {
+      "item": "Purple Nightshade Blossoms",
+      "qty": 3,
+      "note": "a entregar à Maeryn antes de cada luta com a Feroxa"
+    },
+    {
+      "item": "Rope",
+      "note": "para voltares à superfície depois de desceres à dungeon de Grimvale"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Poder fazer a {wiki:Grimvale Quest} (só é possível durante a lua cheia)"
+    }
+  ],
+  "unlocks": [
+    {"what": "Grimvale Quest", "kind": "missao", "place": "Grimvale Quest", "when": "Só durante a lua cheia, entre os dias 12 e 15 de cada mês.", "note": "No dia 13 podes também enfrentar a boss {creature:Feroxa}."}
+  ],
+  "dangers": [
+    "Werewolf",
+    "Werebear",
+    "Wereboar",
+    "Werebadger",
+    "Werefox",
+    "Feroxa"
+  ],
+  "npcs": [
+    "Maeryn"
+  ],
+  "tips": [
+    "Marca no calendário: a lua cheia começa no **server save do dia 12** e termina no **server save do dia 15** de cada mês.",
+    "A {creature:Feroxa} aparece **sempre no dia 13**. Chega cedo e cumpre os pré-requisitos antes da primeira mensagem."
+  ],
+  "sections": [
+    {
+      "title": "1. Quando e o que muda",
+      "steps": [
+        {
+          "title": "A lua cheia",
+          "text": "Do server save do dia **12** ao server save do dia **15** de cada mês, a lua cheia nasce sobre **Grimvale**. Os {creature:Bandit|Bandits} da ilha transformam-se em {wiki:Were-Creatures|were-creatures} (todo o tipo de {wiki:Lycanthropes|licantropos}). Aproveita para fazer a {wiki:Grimvale Quest} e livrar a ilha da maldição.",
+          "dialogue": [
+            {
+              "npc": "The full moon has a strange impact on the island of Grimvale. The small forest there seems darker, filled with nightly howls."
+            },
+            {
+              "npc": "The full moon pale has risen over Grimvale. Help lift the curse, you won't be off worse!"
+            }
+          ],
+          "warning": "Durante a lua cheia a ilha fica cheia de licantropos agressivos. Não vás com nível baixo."
+        },
+        {
+          "title": "Chegar a Grimvale",
+          "text": "Viaja até **Edron** (no capitão do porto da tua cidade: {key:hi}, {key:edron}, {key:yes}) e caminha até **Stonehome**, a nordeste da cidade. A norte de Stonehome está o ferry do {npc:Cornell}: diz {key:hi}, {key:passage} e confirma com {key:yes} (100 gp). Desembarcas no cais do **sul** de Grimvale, perto da vila.",
+          "npc": "Cornell",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33304,
+              "y": 31720,
+              "z": 7,
+              "label": "Cornell, a norte de Stonehome"
+            },
+            {
+              "x": 33341,
+              "y": 31694,
+              "z": 7,
+              "label": "Chegada: cais do sul de Grimvale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A Feroxa (dia 13)",
+      "steps": [
+        {
+          "title": "Cumprir os pré-requisitos",
+          "text": "**Sempre** antes de enfrentares a Feroxa tens de entregar 3 {item:Purple Nightshade Blossoms} à {npc:Maeryn} e matar 50 were-creatures, como explicado na parte *The Curse of the Full Moon* da {wiki:Grimvale Quest}.",
+          "npc": "Maeryn"
+        },
+        {
+          "title": "Chegar à antecâmara da Feroxa",
+          "text": "Entra na dungeon de Grimvale caindo pelo {item:Pitfall} no **nordeste** da ilha e desce até ao andar mais fundo (o andar das ruínas). A antecâmara da {creature:Feroxa} fica atrás de um **teleporte** nesse andar.",
+          "coords": [
+            {
+              "x": 33353,
+              "y": 31671,
+              "z": 7,
+              "label": "Pitfall: descida para a dungeon de Grimvale"
+            },
+            {
+              "x": 33457,
+              "y": 31530,
+              "z": 11,
+              "label": "Teleporte para o covil da Feroxa"
+            }
+          ]
+        },
+        {
+          "title": "Acompanhar as mensagens",
+          "text": "No dia 13 aparecem estas mensagens de servidor. Entra na antecâmara da Feroxa antes da última fase: todos os que lá estiverem são teleportados e a luta começa.",
+          "table": {
+            "head": [
+              "#",
+              "Mensagem",
+              "Quando"
+            ],
+            "rows": [
+              [
+                "1",
+                "*Grimvale drowns in werecreatures as the full moon reaches its apex and ancient evil returns.*",
+                "Início"
+              ],
+              [
+                "2",
+                "*Half of the current full moon is visible now, there are still a lot of clouds in front of it.*",
+                "16 a 18 minutos depois da 1.ª"
+              ],
+              [
+                "3",
+                "*The full moon is completely exposed: Feroxa awaits!*",
+                "Exatamente 4 minutos depois da 2.ª"
+              ],
+              [
+                "4",
+                "Todos os jogadores na antecâmara da Feroxa são teleportados e a luta começa.",
+                "Exatamente 10 minutos depois da 3.ª"
+              ]
+            ]
+          },
+          "warning": "A {creature:Feroxa} é uma boss: vai em equipa e bem preparado."
+        },
+        {
+          "title": "Sair de Grimvale",
+          "text": "Depois da luta, volta pelo mesmo caminho até à superfície, subindo com a {item:Rope} pelos andares por onde desceste. No cais do **sul** da ilha diz {key:hi}, {key:sail} e {key:yes} ao {npc:Cornell} (100 gp): ele leva-te de volta a **Edron**, ao cais a norte de Stonehome.",
+          "npc": "Cornell",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "sail"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33341,
+              "y": 31694,
+              "z": 7,
+              "label": "Cornell em Grimvale"
+            },
+            {
+              "x": 33304,
+              "y": 31720,
+              "z": 7,
+              "label": "Chegada: norte de Stonehome (Edron)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

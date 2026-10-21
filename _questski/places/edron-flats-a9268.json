@@ -1,0 +1,23 @@
+{
+  "title": "Edron Flats",
+  "type": "edificio",
+  "near": "Edron",
+  "summary": "Prédio de apartamentos no centro de **Edron**, logo a **sul do castelo**; na cave há um {item:Sewer Grate} que leva pelo esgoto até à península da {wiki:Edron Orc Cave} e às grutas a sudoeste da cidade.",
+  "items": ["Shovel"],
+  "arrive": [
+    "Apanha um barco para **Edron** (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}); chegas ao porto junto ao {npc:Captain Seahorse}.",
+    "Vai até ao castelo, no centro da cidade: os Edron Flats ficam logo a **sul** dele (fazem fronteira com a Castle Street a noroeste, os Castle Flats a norte e o Central Circle a leste).",
+    "Para ires para o outro lado (península dos orcs), desce à cave do prédio, entra no {item:Sewer Grate} e segue o esgoto até saíres à superfície do outro lado."
+  ],
+  "leave": [
+    "Se vieste da península dos orcs: volta à entrada do esgoto e, se estiver tapada, **escava-a com a {item:Shovel}**; segue o esgoto até à cave dos Edron Flats e sobe para a rua.",
+    "No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33173, "y": 31900, "z": 7, "label": "Entrada da Edron Orc Cave (do outro lado do esgoto)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "Do outro lado do esgoto já há {creature:Poison Spider|Poison Spiders} e {creature:Orc|Orcs} à superfície."
+  ]
+}

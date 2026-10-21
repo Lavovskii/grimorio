@@ -1,0 +1,35 @@
+{
+  "title": "Ice Islands",
+  "type": "zona",
+  "near": "Carlin",
+  "summary": "Dois grupos de ilhas geladas no Mar Nórdico, a **norte do continente**: as Southern Ice Islands (Folda, Senja, Vega), a noroeste de Carlin e abertas a contas grátis, e as Northern Ice Islands (Premium), a norte de Carlin, com a cidade de Svargrond.",
+  "entrance": {"x": 32235, "y": 31675, "z": 7, "label": "Nielson — ferry para as Southern Ice Islands (noroeste de Carlin)"},
+  "requirements": [
+    "As Northern Ice Islands (Svargrond, Hrodmir, Nibelor, Grimlund, Okolnir, Tyrsung, Helheim) são só para contas **Premium**.",
+    "O {npc:Buddel} só viaja contigo depois da {wiki:Barbarian Test Quest}; o trenó do {npc:Iskan} para Nibelor pede também a primeira missão da {wiki:The Ice Islands Quest}."
+  ],
+  "arrive": [
+    "**Southern Ice Islands**: sai de Carlin para **noroeste** até ao ferry do {npc:Nielson} ({coord:32235,31675,7}). Ele leva-te a {wiki:Folda}, {wiki:Senja} ou {wiki:Vega} por 20 gp (diz {key:hi} e o nome da ilha, por exemplo {key:folda}). Entre ilhas a viagem custa 10 gp, com os ferrymen {npc:Svenson} (Folda), {npc:Anderson} (oeste de Senja) e {npc:Carlson} (leste de Vega).",
+    "**Northern Ice Islands**: apanha o barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); chegas ao barco da {npc:Captain Breezelda} ({coord:32347,31108,6}). Svargrond tem também um {wiki:Magic Carpet|tapete voador} ({coord:32252,31098,4}) de/para Darashia, Edron, Farmine, Femor Hills, Kazordoon e Issavi.",
+    "De Svargrond para as outras ilhas do norte: o {npc:Buddel}, no barco a **sul** da cidade ({coord:32254,31195,7}), leva-te aos acampamentos bárbaros ({key:camp}), a {wiki:Tyrsung} ({key:tyrsung}) ou a {wiki:Okolnir} ({key:okolnir}): {key:hi}, {key:passage}, destino (50 gp). Para {wiki:Nibelor}, fala com o {npc:Iskan} no gelo a **norte/nordeste** da cidade ({key:hi}, {key:passage})."
+  ],
+  "leave": [
+    "Das Southern Ice Islands: pede ao ferryman da ilha a passagem de volta ao continente, que é **grátis**; chegas ao ferry do {npc:Nielson}, a noroeste de Carlin.",
+    "De Svargrond: a {npc:Captain Breezelda} leva-te a Carlin, Thais ou Venore ({key:hi}, nome da cidade, {key:yes}).",
+    "Das outras ilhas do norte: volta a Svargrond com o {npc:Buddel} ({key:hi}, {key:passage}, {key:svargrond}) ou, em Nibelor, com o trenó do {npc:Nilsor} ({key:hi}, {key:passage})."
+  ],
+  "coords": [
+    {"x": 32235, "y": 31675, "z": 7, "label": "Nielson (ferry, noroeste de Carlin)"},
+    {"x": 32023, "y": 31579, "z": 7, "label": "Folda"},
+    {"x": 32163, "y": 31656, "z": 7, "label": "Senja"},
+    {"x": 31991, "y": 31700, "z": 7, "label": "Vega"},
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (barco de Svargrond)"},
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32301, "y": 31083, "z": 7, "label": "Iskan (trenó Svargrond → Nibelor)"},
+    {"x": 32252, "y": 31098, "z": 4, "label": "Tapete voador de Svargrond"}
+  ],
+  "warnings": [
+    "A {wiki:Arctic Faun's Island} não tem ferry: só lá vais parar por acaso, num naufrágio aleatório no atalho do {npc:Charles} de Port Hope.",
+    "O {npc:Buddel} anda bêbedo e às vezes leva-te ao sítio errado: pede outra vez até chegares."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Edron Vampire Crypt",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Cripta de vampiros a **norte/noroeste de Edron** (perto do {wiki:Edron Dragon Lair}), com cinco pisos de mortos-vivos e vampiros; no último piso fica o acesso ao covil do {creature:Zorvorax}.",
+  "entrance": {"x": 33109, "y": 31722, "z": 7, "label": "Entrada da Edron Vampire Crypt (pequena gruta)"},
+  "arrive": [
+    "Vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Seahorse}.",
+    "Sai da cidade para **norte/noroeste**, para lá das montanhas, até à pequena gruta da entrada ({coord:33109,31722,7}), na zona do Edron Dragon Lair.",
+    "Entra na gruta e desce os pisos. A sala com poças de sangue fica no **piso -4** ({coord:32999,31611,11})."
+  ],
+  "leave": [
+    "No último piso usa o teleporte de saída ({coord:33019,31605,11}): leva-te aos Stone Blocks junto à entrada da gruta ({coord:33052,31698,8}).",
+    "Daí sobe pelo caminho da entrada até à superfície e regressa para **sul** até Edron; no porto, o {npc:Captain Seahorse} leva-te a outras cidades."
+  ],
+  "coords": [
+    {"x": 33109, "y": 31722, "z": 7, "label": "Entrada da cripta"},
+    {"x": 33019, "y": 31605, "z": 11, "label": "Teleporte de saída (último piso)"},
+    {"x": 33052, "y": 31698, "z": 8, "label": "Stone Blocks junto à entrada (chegada do teleporte)"},
+    {"x": 33004, "y": 31593, "z": 11, "label": "Large Glowing Amethyst (covil do Zorvorax)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "Recomendada para nível 50–60+: a partir do 3.º piso há {creature:Vampire|Vampires}, {creature:Bonebeast|Bonebeasts} e {creature:Necromancer|Necromancers}; nos pisos 4 e 5, {creature:Vampire Viscount|Vampire Viscounts} e {creature:Vampire Bride|Vampire Brides}."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "slug": "annual-autumn-vintage",
+  "category": "evento",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "15–30 min por dia durante o evento",
+  "summary": "Todos os outubros, a Combined Magical Winterberry Society pede aos jogadores que apanhem {item:Bunch of Winterberries|Bunches of Winterberries} e as pisem numa cuba para fazer o sumo mágico usado nas poções. É uma quest de mundo: se o servidor pisar 40 cargas (4 000 cachos), as {wiki:Health Potions|Health Potions} e {wiki:Mana Potions|Mana Potions} ficam 33% mais fortes durante 7 dias. Participar 3 anos dá o achievement **Berry Picker**.",
+  "legend_pt": "Agora há winterberries por toda a Tibia! A Combined Magical Winterberry Society quer que TU ajudes a apanhá-las e, claro, a processá-las para criar o sumo que mantém a magia do mundo a fluir. Boas pisadelas!",
+  "start": {"x": 32358, "y": 32183, "z": 7, "label": "Emilie, a oeste do portão norte de Thais"},
+  "requirements": [
+    "Free account: não precisa de Premium.",
+    "Sem nível mínimo (recomendado 8+).",
+    "O evento decorre de **1 a 8 de outubro** e de **17 a 24 de outubro** (mais 7 dias de recompensas).",
+    "Precisas de ter pelo menos **3** {item:Bunch of Winterberries|Bunches of Winterberries} contigo para a Emilie te deixar entrar."
+  ],
+  "items_needed": [
+    {"item": "Bunch of Winterberries", "qty": 10, "note": "por personagem a cada 24 horas (mínimo 3 para entrar)"},
+    {"item": "Bucket", "note": "para levar água para a cuba"}
+  ],
+  "rewards": [
+    {"text": "Se o mundo completar o evento: efeito das {wiki:Health Potions|Health Potions} e {wiki:Mana Potions|Mana Potions} aumentado em 33% durante 7 dias"},
+    {"text": "Achievement **Berry Picker** (contribuir em 3 anos diferentes)"}
+  ],
+  "achievements": ["Berry Picker"],
+  "dangers": ["Berrypest"],
+  "npcs": ["Emilie", "Gruffy"],
+  "tips": [
+    "Os cachos de winterberries caem de várias criaturas durante o evento: caça normalmente e guarda-os.",
+    "Leva um {item:Bucket} vazio: vais precisar dele quando a cuba pedir água.",
+    "A fase de pisar precisa de várias pessoas ao mesmo tempo. Vai quando houver gente na cave.",
+    "Podes perguntar {key:status} à Emilie ou ao Gruffy para saberes quantas cargas o teu mundo já processou."
+  ],
+  "sections": [
+    {
+      "title": "1. Entrar na Winterberry Cellar",
+      "steps": [
+        {
+          "title": "Falar com a Emilie",
+          "text": "Vai a **Thais** e fala com a {npc:Emilie}, logo a **oeste do portão norte**. Com pelo menos 3 cachos de winterberries no inventário, diz {key:hi}, {key:mission}, {key:yes} e {key:yes} outra vez. Ela teletransporta-te para a Winterberry Cellar.",
+          "npc": "Emilie",
+          "coords": [{"x": 32358, "y": 32183, "z": 7, "label": "Emilie (Thais)"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"},
+            {"npc": "[...] Are you ready to join us and do you have at least 3 bunches of winterberries with you?"},
+            {"you": "yes"},
+            {"npc": "Good! Then I'm officially allowed and encouraged to transport you to one of our cellars. Are you prepared to leave?"},
+            {"you": "yes"},
+            {"npc": "Just perfect! Have a safe journey! And good treading..."}
+          ],
+          "warning": "Se não tiveres pelo menos 3 cachos, ela não te deixa entrar."
+        },
+        {
+          "title": "Ouvir o Gruffy",
+          "text": "Na cave está o {npc:Gruffy}. Diz {key:hi} e {key:mission} para ele te explicar o evento.",
+          "npc": "Gruffy",
+          "coords": [{"x": 32583, "y": 31575, "z": 8, "label": "Winterberry Cellar"}],
+          "images": [{"file": "WinterberryCellar.png", "caption": "A Winterberry Cellar"}],
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Alright, first thing is - you deliver your berries and put them into one of the moulds over there. [...] When enough winterberries have been put into the moulds, the vat is full and the treading starts. [...]"},
+            {"npc": "[...] Whenever you want to return to Thais, simply ask me to transport you back. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. As fases do evento",
+      "intro": "O evento tem várias etapas que se repetem. Mensagens laranja no ecrã dizem-te o que é preciso em cada momento. Quando todas as fases acabam, começa a etapa seguinte ou o evento termina com sucesso.",
+      "steps": [
+        {
+          "title": "Fase 1: pôr as bagas nos moldes",
+          "text": "Vai ao extremo **norte** da cave e usa um {item:Bunch of Winterberries} num dos {item:Mould|moldes}. Aparece *\"Squish!\"*. Cada personagem pode entregar **10 cachos por dia**; quando chegares ao limite aparece *\"You already delivered all of your winterberries for today.\"*. São precisos **100** cachos no total para passar à fase seguinte.",
+          "images": [{"file": "Annual Autumn Vintage AddBerries.png", "caption": "Usar as winterberries nos moldes"}]
+        },
+        {
+          "title": "Fase 2: pisar as bagas",
+          "text": "Entra na cuba e anda por cima das {item:Winterberries}. Cada quadrado fica mais liso à medida que o pisas, mas se ninguém o pisar durante algum tempo volta a um estado anterior. Por isso é preciso **várias pessoas** a pisar ao mesmo tempo.",
+          "images": [
+            {"file": "Annual Autumn Vintage Treading.png", "caption": "Jogadores a pisar as bagas na cuba"},
+            {"file": "Pressed Winterberries2.gif", "caption": "Os estados das bagas pisadas"}
+          ]
+        },
+        {
+          "title": "Fase 3a: acrescentar açúcar",
+          "text": "Quando for pedido açúcar, vai ao lado **leste** da cuba, onde está a zona do açúcar. Usa o açúcar (botão direito → Use) e depois usa-o na cuba.",
+          "images": [{"file": "Annual Autumn Vintage Sugar.png", "caption": "Zona do açúcar, a leste da cuba"}]
+        },
+        {
+          "title": "Fase 3b: acrescentar água",
+          "text": "Quando for pedida água, vai ao lado **oeste** da cuba, onde estão as fontes. Usa o {item:Bucket} nas fontes e depois usa o balde na cuba.",
+          "images": [{"file": "Annual Autumn Vintage Water.png", "caption": "Fontes de água, a oeste da cuba"}]
+        },
+        {
+          "title": "Fase 3c: matar as Berrypests",
+          "text": "Quando aparecerem {creature:Berrypest|Berrypests} na cuba, mata-as todas antes que comam as bagas. Enquanto houver pragas, não se pode continuar a pisar."
+        },
+        {
+          "title": "Repetir até ao fim",
+          "text": "Depois destas fases, uma mensagem laranja pode pedir mais bagas: repete as fases 1 a 3. Não se sabe quantas vezes se repetem, mas no fim aparece uma mensagem a dizer que o evento terminou. O evento tem sucesso assim que o mundo pisar **40 cargas (4 000 cachos)**.",
+          "tip": "A **tina de bagas** no extremo norte da cave mostra em que etapa estão: no fim deve parecer o último estado das {item:Pressed Winterberries}.",
+          "images": [
+            {"file": "Annual Autumn Vintage Tub.png", "caption": "A tina de bagas que mostra o progresso"},
+            {"file": "Pressed Winterberries.gif", "caption": "Último estado das bagas pisadas"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Sair e recompensas",
+      "steps": [
+        {
+          "title": "Voltar a Thais",
+          "text": "Para saíres da cave, diz ao {npc:Gruffy} {key:hi}, {key:Thais} (ou {key:transport}) e {key:yes}.",
+          "npc": "Gruffy",
+          "dialogue": [
+            {"you": "Thais"},
+            {"npc": "Alright, so you want to return to Thais. Are you ready to leave?"},
+            {"you": "yes"},
+            {"npc": "Goodbye and have a safe trip!"}
+          ]
+        },
+        {
+          "title": "Recompensas",
+          "text": "Se o teu mundo completar o evento, as Health Potions e Mana Potions ficam **33% mais fortes durante 7 dias**. Se contribuíres com pelo menos um {item:Bunch of Winterberries} num dos eventos de cada ano, durante **3 anos**, recebes o achievement **Berry Picker**.",
+          "reward": "Poções 33% mais fortes (mundo) e achievement Berry Picker"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Problemas antigos (corrigidos a 5 de outubro de 2011): o açúcar não era reconhecido e jogadores eram teletransportados para a Emilie 24 horas depois do fim do evento."
+  ]
+}

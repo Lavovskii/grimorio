@@ -1,0 +1,33 @@
+{
+  "title": "Shadow Caves",
+  "type": "gruta",
+  "near": "Ab'Dendriel",
+  "summary": "Grutas de {creature:Troll|Trolls} e um bairro de casas no **subsolo de Ab'Dendriel**, a noroeste do depot; daqui também se desce para o {wiki:Hellgate}.",
+  "entrance": {"x": 32655, "y": 31670, "z": 8, "label": "Shadow Caves (subsolo de Ab'Dendriel)"},
+  "requirements": [
+    "As duas portas à entrada da zona dos monstros abrem-se com a {item:Key 3033}, que o {npc:Shirith} vende (está a norte dos apartamentos subterrâneos). Em alternativa, entra pela gruta dos slimes/mortos-vivos com {item:Machete} e {item:Shovel}."
+  ],
+  "items": ["Key 3033"],
+  "arrive": [
+    "Vai a **Ab'Dendriel**: de barco, no capitão da tua cidade diz {key:hi}, {key:ab'dendriel}, {key:yes}; chegas ao {npc:Captain Seagull} ({coord:32735,31668,6}).",
+    "Na cidade, vai ao subsolo a **noroeste** do depot: desce ao piso das lojas e depois desce outra vez junto às casinhas. Chegas à rua das Shadow Caves ({coord:32655,31670,8}).",
+    "Para a zona dos trolls, passa as portas com a {item:Key 3033} (o {npc:Shirith} está em {coord:32646,31655,9}).",
+    "Para o {wiki:Hellgate}: desce mais 2 andares e segue para **sul** e **leste** até à porta ({coord:32676,31671,10}), que se abre com a {item:Key 3012}."
+  ],
+  "leave": [
+    "Volta pelas portas da entrada (com a {item:Key 3033}) e sobe as escadas até ao piso das lojas e à superfície de Ab'Dendriel.",
+    "No porto, o {npc:Captain Seagull} leva-te às outras cidades: {key:hi}, o destino (por exemplo {key:thais}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32646, "y": 31655, "z": 9, "label": "Shirith (vende a Key 3033)"},
+    {"x": 32676, "y": 31671, "z": 10, "label": "Porta do Hellgate (Key 3012)"},
+    {"x": 32684, "y": 31671, "z": 9, "label": "Elathriel (vende a Key 3012)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (porto de Ab'Dendriel)"}
+  ],
+  "images": [
+    {"file": "Shadow Troll Caves -2.jpg", "caption": "Mapa das grutas dos trolls (andar -2)"}
+  ],
+  "warnings": [
+    "Zona para níveis baixos (nível 8+): só {creature:Troll|Trolls} e {creature:Troll Champion|Troll Champions}. Há uma passagem secreta para a gruta dos slimes e mortos-vivos."
+  ]
+}

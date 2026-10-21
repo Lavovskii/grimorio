@@ -1,0 +1,25 @@
+{
+  "title": "Dworc Camp",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Acampamento dos Dworcs, uma área quadrada rodeada de cercas de bambu na selva de **Tiquanda**, a **leste de Port Hope** e mesmo a **norte da {wiki:Medusa Tower}**; só existe quando os Dworcs dominam a {wiki:Jungle Camp Mini World Change}.",
+  "entrance": {"x": 32900, "y": 32792, "z": 7, "label": "Dworc Camp / Hunter Camp (terrenos sagrados)"},
+  "requirements": [
+    "O acampamento alterna com o Hunter Camp ({wiki:Jungle Camp Mini World Change}): a mensagem do dia diz qual dos lados domina os terrenos sagrados."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope** ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto); chegas ao porto do {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai de Port Hope e atravessa a selva de Tiquanda para **leste** até aos terrenos sagrados ({coord:32900,32792,7}), mesmo a **norte** da {wiki:Medusa Tower} ({coord:32860,32829,7})."
+  ],
+  "leave": [
+    "Volta pela selva para **oeste** até Port Hope.",
+    "No porto, o {npc:Charles} leva-te de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — porto de Port Hope"},
+    {"x": 32860, "y": 32829, "z": 7, "label": "Medusa Tower (a sul do acampamento)"}
+  ],
+  "warnings": [
+    "No acampamento há {creature:Dworc Fleshhunter|Dworc Fleshhunters}, {creature:Dworc Venomsniper|Dworc Venomsnipers} e {creature:Dworc Voodoomaster|Dworc Voodoomasters}; às vezes aparece o boss {creature:Oodok Witchmaster}."
+  ]
+}

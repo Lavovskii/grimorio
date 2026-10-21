@@ -1,0 +1,98 @@
+{
+  "slug": "afflicted-outfits-quest",
+  "category": "outfit",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "Depende dos raids da Swamp Fever e da sorte com os drops",
+  "summary": "Durante os raids da {wiki:Swamp Fever|Swamp Fever}, os {creature:Feverish Citizen|Feverish Citizens} vagueiam pelas ruas de Venore e deixam cair seis peças de pano diferentes: junta as seis para desbloqueares os {wiki:Afflicted Outfits|Afflicted Outfits}. Os addons (sino e máscara de médico da peste) vêm das {item:Belongings of a Deceased}, que o {npc:Ottokar} te dá em troca de {item:Medicine Pouch|Medicine Pouches} dos {creature:Swamp Troll|Swamp Trolls}.",
+  "legend_pt": "Sentes-te próximo das vítimas do surto de febre. As tuas roupas fazem de ti uma delas, uma pobre alma entre os inúmeros afligidos.",
+  "start": {"x": 32884, "y": 32113, "z": 6, "label": "Ottokar, Venore"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo; recomendado 25+.",
+    "Pode depender da world change {wiki:Swamp Fever|Swamp Fever} (raids de Feverish Citizens em Venore)."
+  ],
+  "items_needed": [
+    {"item": "Luminous Piece of Cloth"},
+    {"item": "Obvious Piece of Cloth"},
+    {"item": "Dubious Piece of Cloth"},
+    {"item": "Voluminous Piece of Cloth"},
+    {"item": "Ominous Piece of Cloth"},
+    {"item": "Ludicrous Piece of Cloth"},
+    {"item": "Plague Bell", "note": "addon"},
+    {"item": "Plague Mask", "note": "addon"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Afflicted Outfits|Afflicted Outfits} (outfit base)"},
+    {"text": "Addons Plague Bell e Plague Mask"},
+    {"text": "Achievement **Beak Doctor**"}
+  ],
+  "achievements": ["Beak Doctor"],
+  "dangers": ["Feverish Citizen", "Swamp Troll", "Rotworm", "Bat", "Snake", "Slime", "Centipede", "Larva"],
+  "npcs": ["Ottokar"],
+  "tips": [
+    "Não precisas de lootar nada tu mesmo: podes **comprar** as peças de pano, o Plague Bell e a Plague Mask a outros jogadores e simplesmente usá-los.",
+    "Os itens têm de estar no **inventário** (não no depot) quando os usas."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "steps": [
+        {
+          "title": "Juntar as seis peças de pano",
+          "text": "Durante os raids especiais da {wiki:Swamp Fever|Swamp Fever}, mata os {creature:Feverish Citizen|Feverish Citizens} que andam pelas {wiki:Streets of Venore|ruas de Venore} e loota as seis peças de pano diferentes:",
+          "table": {
+            "head": ["Peça de pano"],
+            "rows": [
+              ["{item:Luminous Piece of Cloth}"],
+              ["{item:Obvious Piece of Cloth}"],
+              ["{item:Dubious Piece of Cloth}"],
+              ["{item:Voluminous Piece of Cloth}"],
+              ["{item:Ominous Piece of Cloth}"],
+              ["{item:Ludicrous Piece of Cloth}"]
+            ]
+          }
+        },
+        {
+          "title": "Usar uma das peças",
+          "text": "Com as **seis** peças no inventário, usa uma delas. Desbloqueias o outfit base.",
+          "images": [
+            {"file": "Outfit Afflicted Male.gif", "caption": "Afflicted masculino (base)"},
+            {"file": "Outfit Afflicted Female.gif", "caption": "Afflicted feminino (base)"}
+          ],
+          "warning": "As peças têm de estar no inventário. Se estiverem no depot não funciona.",
+          "reward": "Afflicted Outfit"
+        }
+      ]
+    },
+    {
+      "title": "2. Addons Bell e Mask",
+      "steps": [
+        {
+          "title": "Lootar Medicine Pouches",
+          "text": "Mata {creature:Swamp Troll|Swamp Trolls} e loota {item:Medicine Pouch|Medicine Pouches}. Há Swamp Trolls na Venore Swamp Troll Cave, num pequeno spawn a **noroeste de Venore**, por toda a zona norte de Port Hope e numa gruta a **sudeste de Thais**. Para voltares, faz o caminho inverso até Venore, onde está o {npc:Ottokar}.",
+          "coords": [{"x": 32463, "y": 32328, "z": 7, "label": "Gruta de Swamp Trolls a sudeste de Thais"}]
+        },
+        {
+          "title": "Trocar com o Ottokar",
+          "text": "Leva as Medicine Pouches ao {npc:Ottokar}, em Venore, e troca-as por {item:Belongings of a Deceased}.",
+          "npc": "Ottokar"
+        },
+        {
+          "title": "Abrir os Belongings of a Deceased",
+          "text": "Usa os {item:Belongings of a Deceased}: cada uso tem uma hipótese de dar uma {item:Plague Mask} ou um {item:Plague Bell}. Repete até teres os dois.",
+          "tip": "Também podes comprar a Plague Mask e o Plague Bell a outros jogadores."
+        },
+        {
+          "title": "Usar os itens dos addons",
+          "text": "Usa o {item:Plague Bell} para receberes o addon do sino e a {item:Plague Mask} para receberes o addon da máscara. Com os dois addons ganhas o achievement **Beak Doctor**.",
+          "images": [
+            {"file": "Outfit Afflicted Male Addon 3.gif", "caption": "Afflicted masculino com os dois addons"},
+            {"file": "Outfit Afflicted Female Addon 3.gif", "caption": "Afflicted feminino com os dois addons"}
+          ],
+          "reward": "Addons Plague Bell e Plague Mask + achievement Beak Doctor"
+        }
+      ]
+    }
+  ]
+}

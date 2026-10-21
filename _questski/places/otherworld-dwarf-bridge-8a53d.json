@@ -1,0 +1,26 @@
+{
+  "title": "Otherworld (Dwarf Bridge)",
+  "type": "dungeon",
+  "near": "Thais",
+  "summary": "Um dos dungeons do *Otherworld*, muito abaixo da planície a **sudeste de Thais**, a que se chega por um {item:Glowing Vortex} numa gruta junto à {wiki:Dwarf Bridge}, entre Thais e Kazordoon.",
+  "entrance": {"x": 32520, "y": 32021, "z": 8, "label": "Glowing Vortex (entrada do Otherworld)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a pé até à {wiki:Dwarf Bridge}, na planície entre Thais e Kazordoon (a nordeste de Thais).",
+    "A entrada da gruta fica a **sudoeste** da ponte ({coord:32540,32020,7}); desce para a gruta (1 andar abaixo).",
+    "Na gruta, mata **10 criaturas** e entra no {item:Glowing Vortex} ({coord:32519,32019,8}): chegas ao Otherworld."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída rápida a partir do fundo do Otherworld: sobe pelos buracos por onde desceste (usa a {item:Rope}).",
+    "Refaz o caminho para **norte** até ao sítio do {item:Glowing Vortex} por onde chegaste e daí sobe até à entrada da gruta, a sudoeste da Dwarf Bridge.",
+    "Cá fora, volta a pé para Thais (**sudoeste**) ou segue para Kazordoon/Venore."
+  ],
+  "coords": [
+    {"x": 32540, "y": 32020, "z": 7, "label": "Entrada da gruta (sudoeste da Dwarf Bridge)"},
+    {"x": 32455, "y": 32426, "z": 10, "label": "Strange Stone (Opticording Sphere Quest)"}
+  ],
+  "warnings": [
+    "O vórtice de entrada nem sempre está lá: às vezes desaparece e volta passados alguns minutos (ou horas).",
+    "Criaturas fortes ({creature:Burster|Bursters}, {creature:Instable Breach Brood|Instable Breach Broods}, {creature:Instable Sparkion|Instable Sparkions}): nível 90+ recomendado (knights 100+)."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Hrodmir Stone Golem Caves",
+  "type": "gruta",
+  "near": "Svargrond",
+  "summary": "Duas grutas de {creature:Stone Golem|Stone Golems} e {creature:Gargoyle|Gargoyles} na ilha de {wiki:Hrodmir} (a ilha de Svargrond), criadas para as tasks da {wiki:Killing in the Name of... Quest}.",
+  "entrance": {"x": 32065, "y": 31194, "z": 7, "label": "Gruta 1 (oeste de Svargrond)"},
+  "requirements": [
+    "Conta **Premium** (Svargrond só se alcança de barco, tapete ou GCTS)."
+  ],
+  "arrive": [
+    "Apanha o barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); chegas junto à {npc:Captain Breezelda} ({coord:32347,31108,6}).",
+    "**Gruta 1** (tem dois pisos): fica a **oeste** de Svargrond, em {coord:32065,31194,7}. A wiki só dá as coordenadas: sai da cidade para oeste, atravessa a pequena ponte e segue até lá.",
+    "**Gruta 2**: fica em {coord:32081,31375,8}, a **oeste** do acampamento dos raiders. Para lá chegares mais depressa, no sul de Svargrond fala com o {npc:Buddel} ({coord:32255,31197,7}): {key:hi} e {key:camp}; se ele pedir o {item:Dwarven Ring} diz {key:no} e paga 50 gp. Ele deixa-te em {coord:32153,31375,7}."
+  ],
+  "leave": [
+    "Sai da gruta pelo mesmo sítio por onde entraste e volta a pé para **leste** até Svargrond (do acampamento dos raiders, o {npc:Buddel} também te leva: {key:hi}, {key:svargrond}).",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp): {key:hi}, nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32065, "y": 31194, "z": 7, "label": "Gruta 1 (oeste de Svargrond)"},
+    {"x": 32081, "y": 31375, "z": 8, "label": "Gruta 2 (sudoeste)"},
+    {"x": 32255, "y": 31197, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32153, "y": 31375, "z": 7, "label": "Chegada do Buddel (acampamento dos raiders)"},
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"}
+  ],
+  "images": [{"file": "Hrodmir.png", "caption": "Mapa de Hrodmir"}],
+  "warnings": [
+    "Recomendado nível 15-20+: os {creature:Stone Golem|Stone Golems} (270 HP) e as {creature:Gargoyle|Gargoyles} (250 HP) aguentam bastante."
+  ]
+}

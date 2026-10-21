@@ -1,0 +1,39 @@
+{
+  "title": "Ankrahmun Tombs",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Conjunto de túmulos de faraós escondidos debaixo do deserto de {wiki:Kha'labal}, à volta de **Ankrahmun** (e um debaixo da própria cidade); quase todos se abrem cavando na areia com uma pá.",
+  "entrance": {"x": 33094, "y": 32884, "z": 6, "label": "Porto de Ankrahmun (Captain Sinbeard)"},
+  "requirements": [
+    "Conta **Premium** (Ankrahmun).",
+    "Para passar o teleporte que há na maioria dos túmulos tens de sacrificar uma {item:Scarab Coin}."
+  ],
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Apanha um barco para **Ankrahmun**: por exemplo o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard}.",
+    "Vai a pé até à entrada do túmulo que procuras (lista nas coordenadas abaixo) e cava com a {item:Shovel} no sítio certo para abrir o buraco. Na {wiki:Peninsula Tomb} podes ter de cavar várias vezes até o buraco aparecer.",
+    "Exemplo — {wiki:Shadow Tomb}: sai de Ankrahmun pela rampa **nordeste** e segue as muralhas da cidade para **sul** até à parte sudeste de {wiki:Darama}; cava em {coord:33255,32833,7}.",
+    "A {wiki:Horestis Tomb} é diferente: não se cava, entra-se 1 andar acima do spawn de dragões a noroeste da cidade ({coord:33062,32731,6})."
+  ],
+  "leave": [
+    "O {item:Magic Forcefield} da sala de cada faraó, usado **sem** o item de passe no inventário, leva-te ao início do túmulo. Na {wiki:Ancient Ruins Tomb} há um teleporte de saída que te deixa à entrada; nos outros, se não vires teleporte de saída, volta pelo caminho por onde vieste.",
+    "Do início do túmulo sobe as rampas/escadas até ao buraco que abriste na areia e usa a {item:Rope} para voltares à superfície.",
+    "Para saíres de Ankrahmun, o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33207, "y": 32592, "z": 7, "label": "Ancient Ruins Tomb (Vashresamun)"},
+    {"x": 33132, "y": 32641, "z": 7, "label": "Oasis Tomb (Rahemos)"},
+    {"x": 33132, "y": 32568, "z": 7, "label": "Mountain Tomb (Dipthrah)"},
+    {"x": 33027, "y": 32870, "z": 7, "label": "Peninsula Tomb (Omruc) — entrada escondida"},
+    {"x": 33282, "y": 32743, "z": 7, "label": "Stone Tomb (Thalas)"},
+    {"x": 33255, "y": 32833, "z": 7, "label": "Shadow Tomb (Mahrdis)"},
+    {"x": 33232, "y": 32704, "z": 7, "label": "Tarpit Tomb (Morguthis)"},
+    {"x": 33159, "y": 32836, "z": 7, "label": "Ankrahmun Library Tomb (Ashmunrah)"},
+    {"x": 33062, "y": 32731, "z": 6, "label": "Horestis Tomb"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard — porto de Ankrahmun"}
+  ],
+  "warnings": [
+    "Leva o feitiço de antídoto ou curas de veneno: há escorpiões e outras criaturas venenosas em todos os túmulos.",
+    "Depois do teleporte da maioria dos túmulos aparecem mais monstros ao mesmo tempo do que no resto do túmulo: avalia bem o que consegues aguentar."
+  ]
+}

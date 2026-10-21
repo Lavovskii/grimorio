@@ -1,0 +1,29 @@
+{
+  "title": "Oskayaat",
+  "type": "ilha",
+  "near": "Ankrahmun",
+  "summary": "Ilha a **sul de Chor e de Ankrahmun**, com selva a oeste, estepe a leste e a cidade de Oska nas montanhas do centro; é o santuário dos homens-fera ({creature:Weretiger|weretigers}, {creature:Werepanther|werepanthers} e {creature:Werecrocodile|werecrocodiles}).",
+  "entrance": {"x": 33067, "y": 32918, "z": 7, "label": "Barco do Tonar em Oskayaat (chegada e partida)"},
+  "requirements": [
+    "O barqueiro {npc:Tonar} só te leva depois de lhe devolveres a {item:Ocarina} roubada — é a parte *Paradise Lost* da {wiki:Grimvale Quest} (começa no {npc:Domizian}, em Darashia).",
+    "A Ocarina está no {wiki:Mother of Scarabs Lair}, a norte de Ankrahmun: desce **dois andares** e usa o sarcófago um pouco a **norte** nesse andar."
+  ],
+  "arrive": [
+    "Vai a **Ankrahmun** (por exemplo de Darashia, no barco do {npc:Petros}: {key:hi}, {key:ankrahmun}, {key:yes}, 100 gp).",
+    "Em Ankrahmun encontra o barqueiro {npc:Tonar} ({coord:33182,32883,7}) e pede-lhe {key:passage}.",
+    "Desembarcas no barco do {npc:Tonar} em Oskayaat ({coord:33067,32918,7}); é lá que voltas sempre que quiseres sair da ilha."
+  ],
+  "leave": [
+    "Se estás nas grutas, volta pelo mesmo caminho (pelo {item:Fog Portal} e pela gruta dos Weretigers) até à superfície.",
+    "Vai ao barco do {npc:Tonar} em Oskayaat ({coord:33067,32918,7}): ele leva-te de volta a **Ankrahmun**.",
+    "Em Ankrahmun, o {npc:Captain Sinbeard} ({coord:33094,32884,6}) tem barcos para Darashia ({key:darashia}, 100 gp), Venore, Edron, Port Hope, Liberty Bay e Yalahar."
+  ],
+  "coords": [
+    {"x": 33182, "y": 32883, "z": 7, "label": "Tonar em Ankrahmun (ida)"},
+    {"x": 33067, "y": 32918, "z": 7, "label": "Tonar em Oskayaat (chegada e regresso)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "warnings": [
+    "As criaturas da ilha e das grutas ({creature:Werepanther|Werepanthers}, {creature:Weretiger|Weretigers}, {creature:Werecrocodile|Werecrocodiles}) têm 4000 a 6400 HP: zona para nível alto."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Kazordoon",
+  "type": "cidade",
+  "near": "Kazordoon",
+  "summary": "Cidade dos anões escavada dentro da montanha **The Big Old One**, no meio do continente, com vários andares acima do chão e uma grande parte subterrânea (minas, depot, templo e porto do {wiki:Steamship}).",
+  "entrance": {"x": 32614, "y": 31923, "z": 7, "label": "Kazordoon"},
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "**De Steamship (o mais simples):** em {wiki:Cormaya} fala com o {npc:Gurbasch} (no fundo da ilha, 8 andares abaixo do porto) ou em **Farmine** com o {npc:Thorgrin} e diz {key:hi}, {key:kazordoon}, {key:yes}. Chegas ao porto subterrâneo de Kazordoon, junto ao {npc:Brodrosch} ({coord:32661,31957,15}).",
+    "Para chegares a Cormaya: vai primeiro a Edron (de Venore, barco do {npc:Captain Fearless}: {key:hi}, {key:edron}, {key:yes}) e, no porto de Edron, o {npc:Captain Seahorse} leva-te a Cormaya ({key:hi}, {key:cormaya}, {key:yes}).",
+    "**De tapete voador:** no tapete de Edron, fala com o {npc:Pino} ({coord:33192,31783,3}) e diz {key:hi}, {key:kazordoon}, {key:yes}. Chegas ao tapete do {npc:Gewen}, no topo da montanha de Kazordoon ({coord:32587,31941,0}); desce as escadas até à cidade.",
+    "**A pé:** vai até à entrada principal na montanha (vê as imagens das rotas abaixo). Leva {item:Rope} e {item:Shovel}: no caminho há sítios de corda e buracos escondidos.",
+    "Dentro da cidade podes usar as {wiki:Ore Wagon|Ore Wagons} para ires à entrada, ao depot, ao templo, ao Steamship e às lojas; precisas de uma licença de **250 gp** comprada ao {npc:Lokur} (o carteiro de Kazordoon)."
+  ],
+  "leave": [
+    "**Steamship:** desce até ao porto subterrâneo e fala com o {npc:Brodrosch} ({coord:32661,31957,15}): {key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}. De Cormaya, o {npc:Pemaret} no porto norte leva-te a Edron ({key:hi}, {key:edron}, {key:yes}).",
+    "**Tapete voador:** sobe ao topo da montanha e fala com o {npc:Gewen} ({coord:32587,31941,0}): {key:hi}, {key:edron}, {key:yes}. Em Edron, o {npc:Captain Seahorse} leva-te de barco a Venore ({key:hi}, {key:venore}, {key:yes}).",
+    "**A pé:** sai pela entrada principal da montanha pelo mesmo caminho por onde entraste; Venore fica a **leste**. Usa a {item:Rope} nos sítios de corda."
+  ],
+  "coords": [
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 32587, "y": 31941, "z": 0, "label": "Gewen — tapete voador no topo da montanha"},
+    {"x": 33192, "y": 31783, "z": 3, "label": "Pino — tapete voador de Edron"},
+    {"x": 32624, "y": 31868, "z": 11, "label": "Entrada do Gnome Deep Hub"}
+  ],
+  "images": [
+    {"file": "Route Kazordoon.gif", "caption": "Rotas à volta e através de Kazordoon"},
+    {"file": "Kazordoon entrance.gif", "caption": "Caminho até à entrada de Kazordoon"},
+    {"file": "Route Kazordoon Hidden hole.gif", "caption": "A = sítio de corda, B = buraco escondido"},
+    {"file": "Route Kazordoon Dwarf Mines.gif", "caption": "Saídas pelas Dwarf Mines"},
+    {"file": "Map Kazordoon.jpg", "caption": "Mapa de Kazordoon"}
+  ],
+  "warnings": [
+    "No caminho a pé há buracos escondidos: leva sempre {item:Rope} e {item:Shovel}.",
+    "Pelo caminho encontras {creature:Poison Spider|Poison Spiders}, {creature:Spider|Spiders}, {creature:Rotworm|Rotworms}, {creature:Wolf|Wolves}, {creature:Dwarf|Dwarves} e {creature:Dwarf Soldier|Dwarf Soldiers} na {wiki:Dwarf Bridge}."
+  ]
+}

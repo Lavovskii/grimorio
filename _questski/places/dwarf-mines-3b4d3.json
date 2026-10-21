@@ -1,0 +1,34 @@
+{
+  "title": "Dwarf Mines",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Conjunto de minas dos anões a **oeste e por baixo de Kazordoon**: 6 minas com entrada à superfície, a oeste da montanha, e outras que só se alcançam por dentro da cidade.",
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Magic Carpet|tapete voador} ({key:hi}, {key:kazordoon}, {key:yes} ao gestor do tapete; chegas ao topo da montanha, junto ao {npc:Gewen}) ou de {wiki:Steamship} (de Cormaya com o {npc:Gurbasch} ou de Farmine com o {npc:Thorgrin}; chegas ao porto subterrâneo, junto ao {npc:Brodrosch}).",
+    "Sai da montanha de Kazordoon pela entrada da cidade (vê {wiki:Route: Kazordoon|o caminho de Kazordoon}) e vai a pé para **oeste**, pela superfície. À volta da montanha há **6 entradas** de minas, cada uma para uma mina diferente.",
+    "A entrada mais a **norte** é a mina amarela (A, *Old Ore Mine*, da {wiki:Iron Ore Quest}). A entrada que leva ao {npc:Budrik} e ao {wiki:Grothmok Tunnel} fica aqui: {coord:32531,31914,7} (lá dentro, anda para **norte** e desce pelo buraco).",
+    "A entrada **sul** ({coord:32550,31989,7}) é a da *Pick 'N Shovel Mine* (verde, E), que também leva às {wiki:Sunken Mines}.",
+    "No 3.º piso abaixo, as minas A, B, E e F ligam-se pelo {wiki:Mine Hub}. As minas a que só se chega por dentro de Kazordoon partem da zona central por baixo da cidade ({coord:32622,31938,13})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: em cada andar regressa ao buraco por onde desceste e usa a {item:Rope} para subir, até à entrada da mina à superfície.",
+    "Kazordoon fica logo a **leste** das entradas: entra pela entrada principal da montanha. Daí sai de tapete (no topo, com o {npc:Gewen}) ou de Steamship (no fundo, com o {npc:Brodrosch})."
+  ],
+  "coords": [
+    {"x": 32531, "y": 31914, "z": 7, "label": "Entrada das Dwarf Mines (caminho para o Budrik e o Grothmok Tunnel)"},
+    {"x": 32524, "y": 31906, "z": 8, "label": "Budrik (1.º piso abaixo)"},
+    {"x": 32550, "y": 31989, "z": 7, "label": "Entrada sul — Pick 'N Shovel Mine"},
+    {"x": 32614, "y": 31923, "z": 7, "label": "Kazordoon"},
+    {"x": 32622, "y": 31938, "z": 13, "label": "Zona central das minas por baixo de Kazordoon"}
+  ],
+  "images": [
+    {"file": "Dwarf Mines 0.png", "caption": "Superfície: as 6 entradas das minas a oeste de Kazordoon"},
+    {"file": "Dwarf Mines -3.png", "caption": "3.º piso abaixo: as minas A, B, E e F ligam-se pelo Mine Hub"},
+    {"file": "Route Kazordoon Dwarf Mines.gif", "caption": "Caminhos de saída das Dwarf Mines"}
+  ],
+  "warnings": [
+    "Há buracos escondidos nos caminhos à volta de Kazordoon: leva {item:Shovel} e {item:Rope}.",
+    "Para desceres mais na mina azul (F) passas uma {item:Gate of Expertise} de **nível 32**; na mina verde (E) a porta é de **nível 35**. Nos pisos mais fundos há {creature:Dwarf Guard|Dwarf Guards} e acesso às {wiki:Caves of the Lost}, com anões bem mais fortes."
+  ]
+}

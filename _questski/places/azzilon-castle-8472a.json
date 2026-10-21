@@ -1,0 +1,25 @@
+{
+  "title": "Azzilon Castle",
+  "type": "edificio",
+  "near": "Edron",
+  "summary": "Castelo e zona de caça a que se chega por um teleporte no subsolo de **Edron**; o acesso é dado pela {wiki:No Rest for the Wicked Quest}. Aqui vive a {npc:Lai}.",
+  "entrance": {"x": 33281, "y": 31848, "z": 8, "label": "Teleporte para o Azzilon Castle (Edron, subsolo -1)"},
+  "requirements": [
+    "Conta **Premium** (Edron).",
+    "O teleporte só funciona se tiveres acesso pela {wiki:No Rest for the Wicked Quest}."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Vai ao teleporte para o Azzilon Castle, 1 andar abaixo do chão em Edron ({coord:33281,31848,8}), e entra nele. A wiki só indica a posição do teleporte, não o caminho pela cidade até lá.",
+    "No castelo, a {npc:Lai} está num dos andares de cima ({coord:33834,32352,4})."
+  ],
+  "leave": [
+    "Sai do castelo pelo mesmo caminho por onde entraste: volta ao teleporte de chegada para regressares a Edron.",
+    "Em Edron, o {npc:Captain Seahorse} leva-te a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33281, "y": 31848, "z": 8, "label": "Teleporte para o Azzilon Castle (Edron)"},
+    {"x": 33834, "y": 32352, "z": 4, "label": "Lai (Azzilon Castle)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"}
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "slug": "dark-trails-quest",
+  "category": "outfit",
+  "region": "Rathleton",
+  "difficulty": 4,
+  "duration": "Várias sessões (≈6–10 h, sem contar as tarefas da Oramond Quest)",
+  "summary": "Os mendigos de Rathleton andam estranhos e a magistrada {npc:Ezebeth} quer saber porquê. Segues o rasto do Beggar King até aos esgotos abandonados, descobres ruínas antigas, derrotas o boss {creature:The Ravager}, investigas a morte do transportador Quandon numa sessão espírita e acabas com o {creature:Death Priest Shargon}. No fim recebes os {wiki:Glooth Engineer Outfits|Glooth Engineer Outfits}, vários itens e acesso à {wiki:Oramond Fury Dungeon}.",
+  "legend_pt": "Os cidadãos de Rathleton precisam de ajuda para investigar o comportamento estranho dos mendigos da cidade.",
+  "start": {"x": 33675, "y": 31883, "z": 5, "label": "Ezebeth, Rathleton Magistrate"},
+  "requirements": ["Conta **Premium**.", "Sem nível mínimo conhecido; nível **recomendado 150+**. Para atravessar a gruta dos Demons e Grim Reapers nos Abandoned Sewers recomenda-se uma equipa de pelo menos 2 jogadores de nível **220+**.", "Equipa de **4 ou 5 jogadores** para os dois bosses (a alavanca do Ravager precisa de 4; o Shargon só aceita 4 ou 5).", "Rank **Commoner** em Rathleton (ver {wiki:Rathleton Quest}) para as duas últimas missões.", "Pelo menos **um voto livre** no magistrado de Rathleton.", "Tarefas da {wiki:Oramond Quest} que vais precisar (podes fazê-las antes): Taking The Rot Out (para o {npc:Chavis}, opcional), The Ancient Sewers (para o {npc:Jacob}/{npc:Elliott}), Probing (para o {npc:Doubleday}), The Powder of the Stars (para o {npc:Barnabas Dee} — guarda pelo menos 15 pollen no Quest Log) e Rathleton Turnip Party ou Sabotage (para o {npc:Terrence})."],
+  "items_needed": [
+    {"item": "Rope", "note": "ou Magic Rope / equivalente, útil nos esgotos"},
+    {"item": "Necrometer", "note": "dado pelo Jondrin a meio da quest"},
+    {"item": "Blue Pollen", "qty": 15, "note": "apanhado por ti na gruta das hydras (não serve pollen de outro jogador)"},
+    {"item": "Juicy Roots", "qty": 5, "note": "opcional, para o Chavis"},
+    {"item": "Great Fireball Rune", "note": "ou outros ataques de área, para os minions do Shargon"},
+    {"text": "Muitos supplies: tens de voltar a pé pelo mesmo caminho na gruta dos Demons"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Glooth Engineer Outfits|Glooth Engineer Outfit} (base) — dado pela Ezebeth"},
+    {"item": "Glooth Bag", "qty": 15},
+    {"item": "Giant Shimmering Pearl (Green)"},
+    {"item": "Crystal Coin", "qty": 2},
+    {"item": "Green Gem"},
+    {"item": "Gold Ingot"},
+    {"item": "Skull Staff"},
+    {"item": "Wand of Voodoo"},
+    {"item": "Belongings of a Deceased (The Ravager)"},
+    {"item": "Belongings of a Deceased (Death Priest Shargon)"},
+    {"text": "Acesso à {wiki:Oramond Fury Dungeon}"}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Abandoned Sewers", "kind": "zona", "place": "Abandoned Sewers", "when": "Parte 3: depois de reparares 20 válvulas, o {npc:Jacob} ou o {npc:Elliott} dão-te a autorização ({key:abandoned sewers}, {key:mission}, {key:ok}, {key:abandoned sewers})."},
+    {"what": "Oramond Fury Dungeon", "kind": "zona", "place": "Oramond Fury Dungeon", "when": "Parte 8: o {npc:Terrence} ({key:manway}, {key:effort}) deixa-te entrar depois de fazeres uma missão contra os minotauros da {wiki:Oramond Quest}. Depois da quest o acesso fica permanente."},
+    {"what": "Glooth Engineer Outfits Quest (addons)", "kind": "missao", "place": "Glooth Engineer Outfits Quest", "when": "Com a quest concluída: a {npc:Ezebeth} dá-te o outfit base, necessário para os addons."}
+  ],
+  "dangers": ["Demon", "Grim Reaper", "Metal Gargoyle", "The Ravager", "Elder Mummy", "Greater Canopic Jar", "Canopic Jar", "Murderous Ghost", "Fury", "Nightmare", "Spectre", "Betrayed Wraith", "Lost Soul", "Dark Torturer", "Undead Dragon", "Death Priest Shargon", "Lesser Death Minion", "Greater Death Minion", "Superior Death Minion", "Necromantic Energy", "Death Reaper"],
+  "npcs": ["Ezebeth", "A Beggar", "Chavis", "The Beggar King", "Jacob", "Elliott", "Barazbaz", "Marvin", "Jondrin", "Doubleday", "Sholley", "Roswitha", "Barnabas Dee", "Quandons Ghost", "Terrence"],
+  "tips": ["Faz antes as tarefas da Oramond Quest indicadas nos requisitos: poupas várias idas e voltas.", "Não entregues o Blue Pollen da The Powder of the Stars todo: precisas de ter **15 pollen** contados no Quest Log para o Barnabas Dee.", "Contra o Death Priest Shargon **nunca** uses runas que criam campos no chão, Magic Wall, Wild Growth nem Sudden Death."],
+  "sections": [
+    {
+      "title": "1. Investigar os mendigos",
+      "steps": [
+        {
+          "title": "Chegar a Rathleton",
+          "text": "Rathleton fica na ilha de **Oramond**. Em **Thais**, diz ao {npc:Captain Bluebear} {key:hi}, {key:oramond}, {key:yes} (150 gp). Desembarcas na jangada do {npc:Captain Gulliver}, numa ilhota a **oeste** de Oramond. Entra no {item:Slime Slide}: leva-te a um monte na ilha principal (com minotauros). Desce ao piso térreo e anda para **leste** até uns edifícios com um pequeno barco: o portal desse barco leva-te para o outro lado da água, perto da cidade. Daí vai para **norte** até ao portão principal e depois para **oeste** até à rampa da cidade alta (Upper Rathleton).",
+          "coords": [
+            {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver (chegada a Oramond)"},
+            {"x": 33539, "y": 32014, "z": 7, "label": "Monte onde o Slime Slide te deixa"},
+            {"x": 33628, "y": 32005, "z": 7, "label": "Portal no pequeno barco"},
+            {"x": 33635, "y": 31943, "z": 7, "label": "Rampa para Upper Rathleton"}
+          ],
+          "images": [
+            {"file": "Rathleton boat-to-town.png", "caption": "Caminho do barco até Rathleton"}
+          ]
+        },
+        {
+          "title": "Falar com a Ezebeth",
+          "text": "Vai ao {wiki:Rathleton Magistrate} (na Rathleton Magistrate Plaza, piso 5) e fala com a {npc:Ezebeth}: {key:hi}, {key:mission}, {key:assistance}, {key:strange}. Ela pede-te para investigares o que os mendigos andam a tramar.",
+          "npc": "Ezebeth",
+          "images": [
+            {"file": "Dark Trails Ezebeth.png", "caption": "Onde encontrar a Ezebeth no Rathleton Magistrate"}
+          ],
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Well, there is little where we need help beyond the normal tasks you can do for the city. However, there is one thing out of the ordinary where some assistance would be appreciated."},
+            {"you": "assistance"},
+            {"npc": "[...] It concerns the towns beggars that have started to behave strange lately."},
+            {"you": "strange"},
+            {"npc": "[...] I ask you to investigate what they are up to. If necessary, you may scare them away a bit."}
+          ]
+        },
+        {
+          "title": "Falar com A Beggar",
+          "text": "Sai de Upper Rathleton pelas escadas do sul e anda sempre para **oeste**. Junto às escadas ocidentais do {wiki:Rathleton Workshop Quarter}, perto do rio de lodo, está {npc:A Beggar}. Diz {key:hi}, {key:want}, {key:yes} e {key:palace}. Ele manda-te ajudar o Chavis e diz que o rei vive nas caves do quintal da sucata.",
+          "npc": "A Beggar",
+          "coords": [
+            {"x": 33595, "y": 31957, "z": 7, "label": "A Beggar (Workshop Quarter)"}
+          ],
+          "images": [
+            {"file": "Dark Trails A Beggar.png", "caption": "A Beggar junto ao rio de lodo, a oeste do Rathleton Workshop Quarter"}
+          ],
+          "dialogue": [
+            {"you": "want"},
+            {"npc": "The guys from the magistrate sent you here, didn't they?"},
+            {"you": "yes"},
+            {"npc": "Thought so. You'll have to talk to the king though. The beggar king that is. [...] Go and help Chavis at the poor house. [...]"},
+            {"you": "palace"},
+            {"npc": "The king resides in the cellars in a backyard of the junk yard."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Chegar ao Beggar King",
+      "steps": [
+        {
+          "title": "Chavis (opcional)",
+          "text": "O {npc:Chavis} está no poorhouse, diretamente a **oeste** do A Beggar, perto do portão oeste. Diz {key:hi}, {key:food}, {key:roots}. Em teoria pede-te 5 {item:Juicy Roots} apanhadas por ti nos arredores oeste da cidade (entregas com {key:food}), mas **podes saltar esta parte**: o Quest Log não muda e podes ir diretamente ao Beggar King.",
+          "npc": "Chavis",
+          "coords": [
+            {"x": 33546, "y": 31948, "z": 7, "label": "Poorhouse (Chavis)"}
+          ],
+          "images": [
+            {"file": "Chavis position.png", "caption": "Chavis no sudoeste, no \"!\" vermelho; o \"^\" verde em cima leva à cidade e o \"^\" à direita é a ponte dos mendigos"}
+          ],
+          "tip": "Se entregares raízes, têm de ser apanhadas por ti; cada molho de 5 dá-te um voto no magistrado."
+        },
+        {
+          "title": "Entrar no \"palácio\"",
+          "text": "Vai ao quintal da sucata (junk yard), um pouco a **sudeste** do Chavis e a oés-sudoeste do A Beggar. Passa a porta de quest e desce um andar. A entrada e o poorhouse estão marcados no teu mapa com um ponto de exclamação vermelho.",
+          "coords": [
+            {"x": 33575, "y": 31984, "z": 7, "label": "Junk yard (entrada do Beggar King)"}
+          ]
+        },
+        {
+          "title": "Falar com o Beggar King",
+          "text": "Fala com o {npc:The Beggar King}: {key:hi}, {key:mission}, {key:yes}, {key:something}, {key:traces}, {key:abandoned sewers}. Ele conta que algo anda a caçar os mendigos nos esgotos e manda-te falar com os Glooth Brothers.",
+          "npc": "The Beggar King",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So I guess you are the one that the magistrate is sending to look after us, eh?"},
+            {"you": "yes"},
+            {"npc": "[...] There is something in the sewers. And it is hunting us."},
+            {"you": "something"},
+            {"npc": "[...] sometimes there are traces of blood or someone heard a scream [...]"},
+            {"you": "traces"},
+            {"npc": "[...] they always lost the trail close to the abandoned sewers, in the east of the sewer system."},
+            {"you": "abandoned sewers"},
+            {"npc": "[...] you will have to talk to one of the Glooth Brothers who are responsible for the sewer system's maintenance. You'll find them somewhere down there."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Autorização para os esgotos abandonados",
+      "steps": [
+        {
+          "title": "Ir até ao Jacob",
+          "text": "Os Glooth Brothers são o {npc:Jacob} e o {npc:Elliott}, ambos nos {wiki:Rathleton Sewers}; o Jacob é o mais fácil. A partir do palácio do Beggar King (piso térreo), vai para **oeste** até à muralha e sobe a escada para cima da muralha. Segue a muralha para **sul** até ela virar para leste; na saída seguinte há uma grelha de esgoto. Desce pela grelha e depois desce as escadas um pouco a norte. O Jacob está na sala a leste.",
+          "npc": "Jacob",
+          "coords": [
+            {"x": 33572, "y": 31983, "z": 9, "label": "Jacob"}
+          ],
+          "images": [
+            {"file": "Jacob from south wall.png", "caption": "Do palácio: oeste até à muralha, sobe a escada, segue para sul e desce a escada seguinte; vai para leste e desce a grelha"},
+            {"file": "Dark Trails Route to Jacob Sewer Grate.png", "caption": "Segue a muralha até chegares a esta grelha de esgoto"}
+          ]
+        },
+        {
+          "title": "Aceitar a reparação dos esgotos",
+          "text": "Diz ao Jacob {key:hi}, {key:mission}, {key:yes}. Tens de reparar pelo menos **20** tubos e válvulas de geradores soltos (reconhecem-se pelo **fumo negro**).",
+          "npc": "Jacob",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "We're not on a mission, this is just stupid convict labour. The sewers need repair. You in?"},
+            {"you": "yes"},
+            {"npc": "Good. Loose pipe and generator valves, there's smoke evading. [...] Need about, oh, twenty of them at least shut to have a decent flow. Report to me or Elliott."}
+          ]
+        },
+        {
+          "title": "Reparar 20 válvulas",
+          "text": "Explora os esgotos e **usa** 20 tubos/geradores que deitem fumo negro.",
+          "images": [
+            {"file": "Dark Trails valves and generators near Jacob.png", "caption": "Há muitas válvulas e geradores perto do Jacob e no andar abaixo dele"}
+          ]
+        },
+        {
+          "title": "Reportar e pedir acesso",
+          "text": "Volta ao Jacob ou ao Elliott (qualquer um, seja quem for que te deu a tarefa). Diz {key:abandoned sewers}, {key:mission}, {key:ok} e depois outra vez {key:abandoned sewers} para receberes a autorização. Tens de dizer exatamente *abandoned sewers* (ele não responde a *abandoned sewer*). Para voltares à superfície, faz o caminho ao contrário: sobe as escadas e sai pela grelha para cima da muralha.",
+          "npc": "Jacob",
+          "dialogue": [
+            {"you": "abandoned sewers"},
+            {"npc": "You want to enter the abandoned sewers? [...] I'll let you into the abandoned sewers if you help me with our mission."},
+            {"you": "mission"},
+            {"npc": "[...] You fixed some of those loose valves then? Let me check, ok?"},
+            {"you": "ok"},
+            {"npc": "Good. Thanks, man. That's one vote you got for helping us with this."},
+            {"you": "abandoned sewers"},
+            {"npc": "[...] I hereby grant you the permission to enter the abandoned part of the sewers. Take care, man! [...]"}
+          ],
+          "reward": "1 voto no magistrado + acesso aos Abandoned Sewers"
+        }
+      ]
+    },
+    {
+      "title": "4. Investigar os Abandoned Sewers",
+      "steps": [
+        {
+          "title": "Entrar nos Abandoned Sewers",
+          "text": "A entrada fica marcada no teu mapa: um pouco a **oeste** do Jacob e um andar abaixo. Anda para oeste a partir do Jacob, desce um andar e passa a porta de quest. Em alternativa, segue a rota da imagem a partir de Rathleton.",
+          "coords": [
+            {"x": 33542, "y": 31979, "z": 9, "label": "Porta de quest dos Abandoned Sewers"}
+          ],
+          "images": [
+            {"file": "Abandoned Sewers Route.png", "caption": "Segue o caminho em direção aos X para chegar aos Abandoned Sewers"}
+          ]
+        },
+        {
+          "title": "Atravessar a gruta de jade",
+          "text": "Encontras uma ligação para uma gruta com chão de jade cheia de {creature:Demon|Demons} e {creature:Grim Reaper|Grim Reapers}. Atravessa-a até ao fim e pisa a gravura estranha (strange carving).",
+          "coords": [
+            {"x": 33418, "y": 32108, "z": 10, "label": "Strange carving (fim da gruta)"}
+          ],
+          "warning": "Costumam aparecer 2 Demons juntos com alguns Grim Reapers e {creature:Metal Gargoyle|Metal Gargoyles}. Vai pelo menos em equipa de 2, nível 220+, bem abastecido: tens de fazer o caminho todo de volta para sair."
+        },
+        {
+          "title": "Sair dos Abandoned Sewers",
+          "text": "Volta pelo mesmo caminho: atravessa outra vez a gruta de jade (os Demons e Grim Reapers podem ter renascido), passa a porta de quest e regressa aos esgotos do {npc:Jacob}. Conforme as votações da {wiki:Rathleton Quest}, pode haver um {item:Slime Slide} na parte **sudoeste** da masmorra, que te leva de volta a {wiki:Upper Rathleton}; a pequena sala a sudeste desse Slime Slide serve de sítio seguro.",
+          "coords": [
+            {"x": 33392, "y": 32086, "z": 10, "label": "Slime Slide (se estiver ativo)"},
+            {"x": 33542, "y": 31979, "z": 9, "label": "Porta de quest dos Abandoned Sewers"}
+          ]
+        },
+        {
+          "title": "Reportar ao Jacob",
+          "text": "Volta a um dos Glooth Brothers e diz {key:abandoned sewers} e {key:report}. Ele manda-te falar com o historiador Barazbaz.",
+          "npc": "Jacob",
+          "dialogue": [
+            {"you": "abandoned sewers"},
+            {"npc": "I'm glad to see you back alive and healthy. Did you find anything interesting that you want to report?"},
+            {"you": "report"},
+            {"npc": "A sacrificial site? [...] You'd better see the local historian about that, man. [...] His name is Barazbaz. He should be in the magistrate building."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Barazbaz, Marvin e Jondrin",
+      "steps": [
+        {
+          "title": "Falar com o Barazbaz",
+          "text": "Volta ao edifício do magistrado. O {npc:Barazbaz} está a **oeste** da entrada. Diz {key:hi} e {key:abandoned sewers}. Ele pede-te um voto para financiar os arquivos.",
+          "npc": "Barazbaz",
+          "dialogue": [
+            {"you": "abandoned sewers"},
+            {"npc": "Ancient structures in the sewers you say? [...] Just go to Marvin in the magistrate and vote for a greater funding of the archives. [...]"}
+          ]
+        },
+        {
+          "title": "Votar com o Marvin",
+          "text": "O {npc:Marvin} está uns passos a **leste**. Diz {key:hi}, {key:funding}, {key:archives}, {key:1} e {key:yes} para pores **UM** voto no financiamento dos arquivos históricos.",
+          "npc": "Marvin",
+          "dialogue": [
+            {"you": "funding"},
+            {"npc": "So far you earned 3 votes. [...] in topic B you have the possibility to vote for the funding of the archives, import of bug milk or street repairs."},
+            {"you": "archives"},
+            {"npc": "How many of your 3 votes do you want to cast?"},
+            {"you": "1"},
+            {"npc": "Did I get that right: You want to cast 1 of your votes on funding for the archives?"},
+            {"you": "yes"},
+            {"npc": "Thanks, you successfully cast your vote. [...]"}
+          ]
+        },
+        {
+          "title": "Voltar ao Barazbaz",
+          "text": "Pergunta outra vez ao {npc:Barazbaz} por {key:abandoned sewers}. Ele fala-te das catacumbas e manda-te buscar um necrometer ao magistrado Jondrin, no andar de cima.",
+          "npc": "Barazbaz",
+          "dialogue": [
+            {"you": "abandoned sewers"},
+            {"npc": "Excellent! [...] get a necrometer from magistrate Jondrin upstairs and investigate the ruins thoroughly."}
+          ]
+        },
+        {
+          "title": "Obter o Necrometer",
+          "text": "Sobe um andar e fala com o {npc:Jondrin}: {key:hi}, {key:necrometer}, {key:yes}. Se ainda não fizeste a tarefa **Probing** do {npc:Doubleday} (ver {wiki:Oramond Quest}), ele manda-te fazê-la primeiro.",
+          "npc": "Jondrin",
+          "dialogue": [
+            {"you": "necrometer"},
+            {"npc": "A necrometer? [...] Did you do any measuring task for Doubleday lately?"},
+            {"you": "yes"},
+            {"npc": "Indeed I heard you did a good job out there. <sigh> I guess that means I can hand you one of our necrometers. Handle it with care."}
+          ],
+          "reward": "{item:Necrometer}"
+        }
+      ]
+    },
+    {
+      "title": "6. Derrotar o The Ravager",
+      "steps": [
+        {"title": "Passar os tiles mágicos", "text": "Volta ao fim dos Abandoned Sewers (gruta dos Demons). Com o {item:Necrometer} já consegues teletransportar-te pelos tiles mágicos. Para entrar na sala seguinte é preciso uma equipa de **4 jogadores** para puxar a alavanca. Entras na sala do primeiro boss, {creature:The Ravager}."},
+        {"title": "Fase 1: destruir os 4 Greater Canopic Jars", "text": "Ao entrar nascem 4 {creature:Greater Canopic Jar|Greater Canopic Jars} no centro, que curam os aliados à volta. O **knight** puxa o Ravager pelos cantos da sala. Os outros 3 jogadores bloqueiam as {creature:Elder Mummy|Elder Mummies} para não pisarem os tiles de lagarto, enquanto destroem os 4 Greater Canopic Jars um a um.", "warning": "Se uma Elder Mummy pisar um tile de lagarto, cura-se a si e aos aliados. O Ravager também invoca 8 {creature:Canopic Jar|Canopic Jars}, que curam os aliados próximos e desaparecem se o Ravager estiver longe."},
+        {"title": "Fase 2: matar o Ravager", "text": "Com os 4 Greater Canopic Jars destruídos, foca o boss. O knight vai para um dos cantos, espera que o Ravager invoque o máximo de Canopic Jars (evitando uma armadilha) e depois puxa-o para uma zona **sem tiles de lagarto**. Também podes usar {item:Wild Growth Rune|Wild Growth Runes} e {item:Magic Wall Rune|Magic Wall Runes} para o impedir de pisar esses tiles. Usa todo o dano no Ravager.", "warning": "Cada segundo que o Ravager passa num tile de lagarto recupera vida. Não o puxes tão longe que os Canopic Jars dele desapareçam."},
+        {"title": "Recompensa e livro", "text": "Depois de o matares, entra no teleporte **norte** (o do sul leva-te para trás). Abre a caixa de **sudeste** para a tua recompensa. Depois pisa o switch a **noroeste** e abre a caixa para obteres um livro (o caderno). Sai pelo {item:Magic Forcefield} no canto **nordeste**: voltas aos 4 tiles.", "reward": "Recompensa do Ravager + caderno (notebook)"},
+        {"title": "Sair dos esgotos", "text": "Sai dos Abandoned Sewers pelo caminho normal, ou segue o dungeon para **oeste** e depois **norte** até um {item:Slime Slide}, que te leva de volta a {wiki:Upper Rathleton}."},
+        {
+          "title": "Entregar o caderno ao Barazbaz",
+          "text": "Fala com o {npc:Barazbaz} e diz {key:notebook}. Ele reconhece a letra de um viajante amigo da magistrada Sholley.",
+          "npc": "Barazbaz",
+          "dialogue": [
+            {"you": "notebook"},
+            {"npc": "I know that handwriting you describe! It belongs to a traveller from far away. Magistrate Sholley introduced him to me [...]"},
+            {"npc": "[...] You should ask Sholley about her friend to learn about his whereabouts."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Investigar a morte do Quandon",
+      "steps": [
+        {
+          "title": "Falar com a Sholley",
+          "text": "A {npc:Sholley} está **dois andares acima** do Barazbaz. Precisas do rank **Commoner**. Diz {key:hi} e {key:friend}: o amigo dela chama-se Harsin e vivia na pousada (bed and breakfast).",
+          "npc": "Sholley",
+          "dialogue": [
+            {"you": "friend"},
+            {"npc": "[...] So Harsin is probably not the person he appeared to be. [...] He was resident in the local bed and breakfast hotel. [...]"}
+          ]
+        },
+        {
+          "title": "Perguntar à Roswitha",
+          "text": "Vai à pousada logo a **oeste** da cidade e pergunta à {npc:Roswitha} por {key:harsin}. Ela diz que ele se mudou com a ajuda de um tal Quandon.",
+          "npc": "Roswitha",
+          "dialogue": [
+            {"you": "harsin"},
+            {"npc": "I'm sorry, but Harsin no longer lives here. He ordered a local named Quandon to transport all his stuff somewhere. [...]"}
+          ]
+        },
+        {"title": "Encontrar o Quandon", "text": "A casa do Quandon fica logo a **sudoeste** da pousada, depois de uma porta de quest. Sobe as escadas: só encontras o corpo dele."},
+        {
+          "title": "Voltar à Sholley",
+          "text": "Fala outra vez com a {npc:Sholley} sobre {key:quandon}. Ela marca no teu mapa a casa do médium Barnabas.",
+          "npc": "Sholley",
+          "dialogue": [
+            {"you": "quandon"},
+            {"npc": "A transporter dead? [...] A local medium, Barnabas, has truly the gift to speak to the dead. [...] I'll mark his home on your map."}
+          ]
+        },
+        {
+          "title": "Pedir a sessão espírita",
+          "text": "O {npc:Barnabas Dee} está dois andares acima do {npc:Flint}, logo a oeste das escadas que sobem para o Rathleton Magistrate. Diz {key:hi}, {key:seance}, {key:prepared}, {key:source} e {key:mission}. Ele precisa de 15 pollen.",
+          "npc": "Barnabas Dee",
+          "dialogue": [
+            {"you": "seance"},
+            {"npc": "[...] sadly you find me ill prepared for such an endeavour."},
+            {"you": "prepared"},
+            {"npc": "[...] I need some source of spiritual energy to empower my call."},
+            {"you": "source"},
+            {"npc": "Actually, I use the same peppermoon bell powder that the city uses for various projects. [...] I hope you will accept this mission."},
+            {"you": "mission"},
+            {"npc": "[...] It only blooms underground in a cavern to the northwest. I will need 15 units of pollen. [...]"}
+          ]
+        },
+        {
+          "title": "Apanhar 15 Blue Pollen",
+          "text": "Apanha **15** {item:Blue Pollen} na gruta das hydras a **noroeste** da cidade (detalhes na tarefa The Powder of the Stars da {wiki:Oramond Quest}). Tens de ser tu a apanhá-los: pollen de outro jogador não serve. A gruta ({wiki:Oramond Hydra/Bog Raider Cave|Oramond Hydra/Bog Raider Cave}) fica no **oeste** de Oramond: desce pelo buraco no ponto indicado. Para saíres, sobe pelo mesmo buraco com a {item:Rope} e volta a Rathleton para **leste**.",
+          "coords": [
+            {"x": 33517, "y": 31906, "z": 7, "label": "Buraco para a gruta das hydras"}
+          ],
+          "warning": "O caminho até à gruta e de volta pode ser perigoso por causa das raids de Quaras à superfície."
+        },
+        {
+          "title": "Fazer a sessão espírita",
+          "text": "Volta ao {npc:Barnabas Dee} e diz {key:mission} e depois {key:yes} a todas as perguntas (5 vezes). Ele teletransporta-te para uma gruta.",
+          "npc": "Barnabas Dee",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Ah! Did you bring me the peppermoon bell pollen I asked for?"},
+            {"you": "yes"},
+            {"npc": "Ah! Well done! Now we shall proceed with the seance, yes?"},
+            {"you": "yes"},
+            {"npc": "[...] Are you ready, too?"},
+            {"you": "yes"},
+            {"npc": "So let us begin. Please concentrate with me. Concentrate! [...] Do you feel something?"},
+            {"you": "yes"},
+            {"npc": "Yes, take care, the gate is opening! Can you see a bright light?"},
+            {"you": "yes"},
+            {"npc": "Ahhhhhhhh!"}
+          ]
+        },
+        {
+          "title": "Falar com o fantasma do Quandon",
+          "text": "Na gruta passa pelos {creature:Murderous Ghost|Murderous Ghosts} e entra no teleporte seguinte. Fala com o {npc:Quandons Ghost} ({key:hi}): ele conta que foi morto pelo Death Priest Shargon e marca o esconderijo no teu mapa. Para lá chegares precisas da autorização do {npc:Terrence}, a sul da cidade.",
+          "npc": "Quandons Ghost",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "He murdered me. I shouldn't have trusted him! [...] To the east I brought his stuff. [...]"},
+            {"npc": "His ... his true name is Shargon and he is a priest of some kind. [...]"},
+            {"npc": "We brought his stuff to a hideout, I'll mark it on your map! [...]"}
+          ],
+          "tip": "A TibiaWiki não descreve como sair desta gruta (fica por baixo de Oramond). Leva um meio de voltar ao templo, por exemplo uma {item:Temple Teleport Scroll}, caso não encontres o caminho de volta."
+        }
+      ]
+    },
+    {
+      "title": "8. Derrotar o Death Priest Shargon",
+      "steps": [
+        {
+          "title": "Autorização do Terrence",
+          "text": "Fala com o {npc:Terrence}, a sul da cidade: {key:hi}, {key:manway}, {key:effort}. Se ainda não lutaste contra os minotauros, faz pelo menos uma missão com minotauros ({key:mission}): Rathleton Turnip Party ou Sabotage (ver {wiki:Oramond Quest}). Depois volta e diz {key:effort} outra vez.",
+          "npc": "Terrence",
+          "dialogue": [
+            {"you": "manway"},
+            {"npc": "Sorry, but I'm not allowed to let just anyone pass. This is a war area. If you have not proven your willingness and effort [...]"},
+            {"you": "effort"},
+            {"npc": "You fought hard enough against the minotaurs. Since you've shown so much effort in our war, I'll let you pass through the gate."}
+          ],
+          "coords": [
+            {"x": 33714, "y": 31963, "z": 5, "label": "Supply crate (Turnip Party rápida)"}
+          ],
+          "tip": "A Rathleton Turnip Party faz-se muito depressa: apanha a supply crate neste ponto e usa-a no andar de baixo, a leste."
+        },
+        {
+          "title": "Entrar na Oramond Fury Dungeon",
+          "text": "A porta da {wiki:Oramond Fury Dungeon} fica a **norte** da ponte leste de Oramond. Desce a rampa logo a norte da entrada (tens de contornar a montanha).",
+          "coords": [
+            {"x": 33666, "y": 31924, "z": 7, "label": "Porta da Oramond Fury Dungeon"}
+          ],
+          "warning": "Lá dentro há {creature:Fury|Furies}, {creature:Nightmare|Nightmares}, {creature:Spectre|Spectres}, {creature:Betrayed Wraith|Betrayed Wraiths}, {creature:Lost Soul|Lost Souls}, {creature:Dark Torturer|Dark Torturers} e {creature:Undead Dragon|Undead Dragons}."
+        },
+        {
+          "title": "Chegar à sala da alavanca",
+          "text": "Abre caminho até ao outro lado da sala, onde há uma pequena sala com **5 tiles especiais** e uma alavanca. A equipa (4 ou 5 jogadores) põe-se nos tiles e puxa a alavanca.",
+          "coords": [
+            {"x": 33589, "y": 31849, "z": 10, "label": "Sala dos 5 tiles e alavanca"}
+          ],
+          "warning": "Só dá com 4 ou 5 jogadores. Se a equipa tiver mais de 5, os restantes podem repetir a luta logo a seguir."
+        },
+        {"title": "Lutar contra o Shargon", "text": "Fiquem perto do teleporte onde chegam. O {creature:Death Priest Shargon} invoca {creature:Lesser Death Minion|Lesser Death Minions} (parecem {creature:Skeleton|Skeletons}): matem-nos **muito depressa** com ataques de área, por exemplo {item:Great Fireball Rune|Great Fireball Runes} em todos os turnos. Se não os matarem, evoluem para {creature:Greater Death Minion}, depois {creature:Superior Death Minion} e por fim {creature:Necromantic Energy}, muito mais fortes.", "warning": "**Não uses** runas que criem campos no chão (paredes e bombas elementais), {item:Magic Wall Rune}, {item:Wild Growth Rune} nem {item:Sudden Death Rune}. Se o fizeres, o boss desaparece e nascem vários {creature:Death Reaper|Death Reapers} (parecidos com Grim Reapers) que atacam também os shooters. Se isso acontecer, saiam da sala e tentem de novo logo."},
+        {"title": "Abrir o baú", "text": "Depois de o matarem, sai pelo teleporte **norte**. Abre o {item:Treasure Chest (Ornamented)|Treasure Chest} no centro da sala e sai pelo mesmo caminho por onde entraste. Ou seja: atravessa outra vez a sala grande até à rampa e sai pela porta a norte da ponte leste de Oramond ({coord:33666,31924,7}).", "reward": "Recompensa do Shargon"}
+      ]
+    },
+    {
+      "title": "9. Receber o outfit",
+      "steps": [
+        {
+          "title": "Falar com a Ezebeth",
+          "text": "Volta à {npc:Ezebeth}, na ala leste do Rathleton Magistrate, e diz {key:hi} e {key:outfit}.",
+          "npc": "Ezebeth",
+          "dialogue": [
+            {"you": "outfit"},
+            {"npc": "You followed the dark trails and faced evil mights. Take this outfit as a sign of esteem."}
+          ],
+          "reward": "{wiki:Glooth Engineer Outfits|Glooth Engineer Outfit}"
+        },
+        {
+          "title": "Sair de Oramond",
+          "text": "Para saíres da ilha, volta pelo mesmo caminho até à jangada do {npc:Captain Gulliver} e diz {key:hi}, {key:thais}, {key:yes} (150 gp).",
+          "npc": "Captain Gulliver",
+          "coords": [
+            {"x": 33479, "y": 31988, "z": 7, "label": "Captain Gulliver"}
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": ["Também conhecida como **Glooth Engineer Outfit Quest**.", "Depois da quest ficas com acesso permanente à {wiki:Oramond Fury Dungeon}."]
+}

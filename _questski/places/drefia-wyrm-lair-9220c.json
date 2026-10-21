@@ -1,0 +1,40 @@
+{
+  "title": "Drefia Wyrm Lair",
+  "type": "gruta",
+  "near": "Darashia",
+  "summary": "Covil de {creature:Wyrm|Wyrms} no fundo do dungeon de {wiki:Drefia}, a **oeste de Darashia**, para lá da sala da {wiki:Medusa Shield Quest} e do portão de nível 60.",
+  "entrance": {"x": 32996, "y": 32413, "z": 7, "label": "Entrada do dungeon principal de Drefia"},
+  "requirements": [
+    "Conta **Premium** (Darashia).",
+    "Nível **60** para passar o {item:Gate of Expertise} que dá acesso ao covil."
+  ],
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de {wiki:Magic Carpet|tapete voador} (chegas ao {npc:Chemar}).",
+    "{wiki:Drefia} fica a **oeste** de Darashia ({coord:33018,32443,7}), do outro lado das montanhas. Por exemplo, usa a {item:Rope} para subires a montanha em {coord:33048,32429,7}, ou vem pela passagem entre Darashia e Ankrahmun.",
+    "Entra no dungeon principal de Drefia ({coord:32996,32413,7}); convém lançar {spell:Invisible} antes. Segue as linhas verdes do mapa até ao **3.º piso**.",
+    "No 3.º piso anda para **norte** cerca de 18 passos: à tua **esquerda** há um buraco; abre-o com a {item:Shovel} e desce.",
+    "Vai para **leste** e passa o {item:Gate of Expertise} de nível 60. Atravessa a sala do altar (Star Room) com {creature:Necromancer|Necromancers} e {creature:Priestess|Priestesses}: para lá dela fica o Wyrm Lair ({coord:33070,32396,13})."
+  ],
+  "leave": [
+    "Não há atalho de saída: volta pelo mesmo caminho. Passa outra vez o {item:Gate of Expertise}, volta ao buraco que abriste com a {item:Shovel} e usa a {item:Rope} para subires ao 3.º piso.",
+    "Sobe os pisos do dungeon principal até à entrada ({coord:32996,32413,7}) e atravessa a montanha de volta para **Darashia**."
+  ],
+  "coords": [
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda para subir para Drefia"},
+    {"x": 33018, "y": 32443, "z": 7, "label": "Drefia"},
+    {"x": 32996, "y": 32413, "z": 7, "label": "Entrada/saída do dungeon principal"},
+    {"x": 33070, "y": 32396, "z": 13, "label": "Drefia Wyrm Lair"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — porto de Darashia"}
+  ],
+  "images": [
+    {"file": "Drefia Map.gif", "caption": "Mapa de Drefia"},
+    {"file": "Drefia Main Dungeon Entrance.png", "caption": "Linhas verdes até ao 3.º piso do dungeon principal"},
+    {"file": "Drefia Medusa Shield Quest Path.png", "caption": "Caminho pelos portões de nível 60"}
+  ],
+  "warnings": [
+    "Na montanha há muitos {creature:Scorpion|Scorpions}: guarda mana para {spell:Cure Poison} (ou leva {item:Antidote|Antidotes}).",
+    "Depois do portão há um exército de mortos-vivos que renasce: mantém o {spell:Invisible} ativo também no regresso.",
+    "No covil há cerca de 20 Wyrms, quase sempre aos pares, e um {creature:Grim Reaper} num túmulo junto à parede leste. A wiki recomenda nível 80–90+."
+  ]
+}

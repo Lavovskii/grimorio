@@ -1,0 +1,36 @@
+{
+  "title": "Gnomegate",
+  "type": "cidade",
+  "near": "Kazordoon",
+  "summary": "Cidade subterrânea dos gnomos e base da Bigfoot Company, escondida por baixo de Ferngrims Gate e do mar entre Venore e Edron; só se chega pelo {wiki:GCTS|Gnomish Crystal Teleport System} (GCTS).",
+  "entrance": {"x": 32799, "y": 31765, "z": 9, "label": "Hub do GCTS, por cima de Gnomegate (Gnomette)"},
+  "requirements": [
+    "**Nível 80** e autorização do {npc:Xelvar} em Kazordoon — é o início da {wiki:Bigfoot's Burden Quest}: {key:hi}, {key:adventures}, {key:recruiting}, {key:partners}, {key:gnomes}, {key:help}, {key:join}.",
+    "Um {item:Teleport Crystal} (150 gp) por cada entrada e cada saída do GCTS."
+  ],
+  "items": ["Teleport Crystal"],
+  "arrive": [
+    "Vai a **Kazordoon** e procura o {npc:Xelvar} ({coord:32622,31861,11}). Se ainda não tens acesso, pede-lhe autorização (ver requisitos).",
+    "Entra no teleporte do GCTS que fica a **leste** do Xelvar, perto do blesser do norte ({coord:32628,31863,11}). Gastas um {item:Teleport Crystal}.",
+    "Também há teleportes do GCTS em **Thais** (Ancient Temple, {coord:32331,32173,9}), **Edron** (esgotos, {coord:33154,31835,10}), **Darashia** (montanha a noroeste, {coord:33186,32384,8}), **Liberty Bay** (montanhas a sudeste, {coord:32403,32817,6}) e **Svargrond** (buraco junto à saída oeste, {coord:32196,31183,8}).",
+    "Apareces no hub do GCTS, por cima da Gnomebase, onde está a {npc:Gnomette} ({coord:32799,31765,9}). Desce para Gnomegate; a {npc:Gnomally} fica na parte **norte** ({coord:32794,31746,10})."
+  ],
+  "leave": [
+    "Sobe de Gnomegate para o hub do GCTS (a sala de teletransporte onde está a {npc:Gnomette}).",
+    "Entra no teleporte da cidade para onde queres ir: **Kazordoon** (junto ao blesser do norte), **Thais** (Ancient Temple), **Edron** (esgotos), **Darashia** (montanha a noroeste), **Liberty Bay** (montanhas a sudeste) ou **Svargrond** (buraco junto à saída oeste). Gastas mais um {item:Teleport Crystal}."
+  ],
+  "coords": [
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte do GCTS em Kazordoon"},
+    {"x": 32331, "y": 32173, "z": 9, "label": "Teleporte do GCTS em Thais (Ancient Temple)"},
+    {"x": 33154, "y": 31835, "z": 10, "label": "Teleporte do GCTS em Edron (esgotos)"},
+    {"x": 33186, "y": 32384, "z": 8, "label": "Teleporte do GCTS em Darashia"},
+    {"x": 32403, "y": 32817, "z": 6, "label": "Teleporte do GCTS em Liberty Bay"},
+    {"x": 32196, "y": 31183, "z": 8, "label": "Teleporte do GCTS em Svargrond"},
+    {"x": 32797, "y": 31779, "z": 10, "label": "Teleporte para Gnomebase Alpha"},
+    {"x": 32795, "y": 31761, "z": 10, "label": "Teleporte para os Crystal Grounds"},
+    {"x": 32803, "y": 31745, "z": 10, "label": "Teleporte para o Truffels Garden"}
+  ],
+  "warnings": [
+    "Leva sempre pelo menos **dois** {item:Teleport Crystal|Teleport Crystals} (ida e volta). Podes comprá-los ao {npc:Xelvar} ({key:trade}), à {npc:Gnomette}, à {npc:Gnomincia} (Gnomebase Alpha) ou no Market."
+  ]
+}

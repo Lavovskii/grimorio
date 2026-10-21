@@ -1,0 +1,26 @@
+{
+  "title": "Fenrock",
+  "type": "ilha",
+  "near": "Yalahar",
+  "summary": "Ilha a **oeste/sudoeste de Yalahar**, perto de {wiki:Mistrock} e {wiki:Vengoth}, com bárbaros à superfície e grutas de {creature:Tortoise|Tortoises}; por baixo dela fica a cidade escondida de {wiki:Beregar}.",
+  "entrance": {"x": 32543, "y": 31290, "z": 7, "label": "Fenrock"},
+  "arrive": [
+    "Vai a **Yalahar** (por exemplo com o {npc:Captain Max} em Liberty Bay, ou com os capitães de Carlin, Ab'Dendriel, Ankrahmun ou Thais que fazem essa rota).",
+    "Em Yalahar vai às docas do {wiki:Foreigner Quarter}, todo a **noroeste**, 1 andar acima do chão, e fala com o {npc:Maris} ({coord:32649,31293,6}).",
+    "Diz {key:hi}, {key:fenrock} e {key:yes} (100 gp; 50 gp se partires de Mistrock)."
+  ],
+  "leave": [
+    "Se estás nas grutas, sobe até à superfície pelo mesmo caminho por onde desceste.",
+    "No cais de Fenrock fala outra vez com o {npc:Maris}: {key:hi}, {key:yalahar}, {key:yes} (100 gp). Ele também te leva a {wiki:Mistrock}, onde há uma caixa de correio."
+  ],
+  "coords": [
+    {"x": 32649, "y": 31293, "z": 6, "label": "Maris (docas do Foreigner Quarter, Yalahar)"},
+    {"x": 32550, "y": 31275, "z": 9, "label": "Teleporte no norte da zona dos Tortoises (piso -2)"},
+    {"x": 32564, "y": 31338, "z": 9, "label": "Fenda no chão (usa a Pick) para descer para Beregar"}
+  ],
+  "images": [{"file": "Fenrock.png", "caption": "Fenrock"}],
+  "warnings": [
+    "À superfície há {creature:Barbarian Headsplitter|Barbarian Headsplitters}, {creature:Barbarian Skullhunter|Skullhunters} e {creature:Barbarian Brutetamer|Brutetamers}; no piso -2 há {creature:Tortoise|Tortoises} e {creature:Crocodile|Crocodiles}.",
+    "Não há caixa de correio à superfície de Fenrock: a mais próxima fica em Mistrock."
+  ]
+}

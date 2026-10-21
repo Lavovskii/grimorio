@@ -1,0 +1,29 @@
+{
+  "title": "Cormaya",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Pequena ilha a **sul de Edron**, com casas, um porto de pesca a norte, uma estação subterrânea do {wiki:Steamship} e duas zonas de caça (a {wiki:Cormaya Dwarf Cave} e as {wiki:Dryad Gardens}).",
+  "entrance": {"x": 33287, "y": 31956, "z": 6, "label": "Porto norte de Cormaya (Pemaret)"},
+  "arrive": [
+    "De **Edron**: no barco a **norte** da cidade fala com o {npc:Captain Seahorse} ({coord:33176,31764,6}) e diz {key:hi}, {key:cormaya}, {key:yes} (20 gp).",
+    "Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}, na Cormaya Street ({coord:33287,31956,6}).",
+    "De {wiki:Steamship}: em **Kazordoon** fala com o {npc:Brodrosch} no porto subterrâneo ({coord:32661,31957,15}) ou em **Farmine** com o {npc:Thorgrin} ({coord:33025,31553,14}) e diz {key:hi}, {key:cormaya}, {key:yes}. Chegas 8 andares abaixo de Cormaya, junto ao {npc:Gurbasch}; sobe as escadas (saem por baixo do jardim de Cormaya, a sul do barco).",
+    "Também se chega a pé pelos túneis da {wiki:Edron Rotworm Cave}, a partir de Edron."
+  ],
+  "leave": [
+    "Para **Edron**: no porto norte fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp).",
+    "Para **Kazordoon** ou **Farmine**: desce 8 andares até ao {wiki:Steamship}, no fim da Cormaya Street, e fala com o {npc:Gurbasch} ({coord:33313,31989,15}): {key:hi}, {key:kazordoon} (160 gp) ou {key:farmine} (110 gp; 60 gp depois da missão 2 da {wiki:The New Frontier Quest}) e {key:yes}.",
+    "O {npc:Pemaret} também te leva de graça à ilha do sábio {npc:Eremo} ({wiki:Eremo's Island})."
+  ],
+  "coords": [
+    {"x": 33307, "y": 31999, "z": 7, "label": "Cormaya (centro da ilha)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — barco de Edron para Cormaya"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret — porto norte (Edron, Eremo)"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship (Kazordoon, Farmine)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"}
+  ],
+  "warnings": [
+    "Grupos de {creature:Dwarf Soldier|Dwarf Soldiers} vindos de Kazordoon aparecem por vezes na parte **leste** da ilha."
+  ]
+}

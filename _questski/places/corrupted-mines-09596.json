@@ -1,0 +1,25 @@
+{
+  "title": "Corrupted Mines",
+  "type": "gruta",
+  "near": "Newhaven",
+  "summary": "Antiga mina de carvão abandonada no **nordeste da ilha de Newhaven**, assombrada pelas almas de mineiros soterrados; zona de caça para principiantes depois do clã goblin Muglex.",
+  "entrance": {"x": 32596, "y": 32458, "z": 7, "label": "Corrupted Mines (nordeste de Newhaven)"},
+  "items": ["Rope"],
+  "arrive": [
+    "As Corrupted Mines ficam na própria ilha de Newhaven (a ilha onde começam os jogadores novos). Sai da vila pela saída **norte** e vai até à ponta **nordeste** da ilha ({coord:32596,32458,7}).",
+    "Na ponta nordeste, sobe as escadas ({coord:32598,32418,7}) para o segundo piso das minas.",
+    "Para as partes mais altas, vai para **sudoeste** e sobe pelo buraco com a {item:Rope} (ou {spell:Magic Rope}) em {coord:32580,32445,6}."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho**: desce pelo buraco do rope spot por onde subiste (não precisas de corda para descer), segue para **nordeste** no segundo piso e desce as escadas até ao nordeste de Newhaven.",
+    "Regressa à vila. Para saíres da ilha tens de ter **nível 8**: sai pela saída **oeste** da vila (porta de nível) e fala com a {npc:Anna} nas docas ({coord:32552,32498,7}): {key:hi}, {key:passage}, {key:yes}. Ela leva-te a {wiki:Targuna}."
+  ],
+  "coords": [
+    {"x": 32598, "y": 32418, "z": 7, "label": "Escadas para as Corrupted Mines"},
+    {"x": 32580, "y": 32445, "z": 6, "label": "Rope spot (2.º piso)"},
+    {"x": 32552, "y": 32498, "z": 7, "label": "Anna (docas de Newhaven, barco para Targuna)"}
+  ],
+  "warnings": [
+    "No extremo da gruta da {wiki:Newhaven Legion Helmet Quest} há uma parede de {item:Poison Gas}; o {item:Magic Forcefield} junto ao corpo leva-te de volta ao extremo **oeste** da gruta."
+  ]
+}

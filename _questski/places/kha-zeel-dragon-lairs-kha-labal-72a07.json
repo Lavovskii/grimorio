@@ -1,0 +1,28 @@
+{
+  "title": "Kha'zeel Dragon Lairs/Kha'labal",
+  "type": "gruta",
+  "near": "Ankrahmun",
+  "summary": "Três covis de dragões nas montanhas de {wiki:Kha'zeel}, com entrada pelo deserto de {wiki:Kha'labal}, a **norte de Ankrahmun**: o do sul é o mais fácil e o do norte (\"Ank 9\") o mais difícil.",
+  "entrance": {"x": 33060, "y": 32736, "z": 7, "label": "Covil do sul (o mais fácil)"},
+  "requirements": ["Conta **Premium** (Ankrahmun)."],
+  "items": ["Rope"],
+  "arrive": [
+    "Viaja até **Ankrahmun** de barco: no porto da tua cidade diz {key:hi}, {key:ankrahmun} e {key:yes}. Chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Sai da cidade a pé para **norte**, pelo deserto de {wiki:Kha'labal}, até às montanhas de Kha'zeel.",
+    "Escolhe o covil: **sul** ({coord:33060,32736,7}, o mais fácil, 3 pisos com poucos dragões), **meio** ({coord:33095,32690,7}, o \"Ank 3x\", com {creature:Dragon Lord|Dragon Lords}) ou **norte** ({coord:33116,32606,7}, o \"Ank 9\", o mais difícil, com {creature:Fire Elemental|Fire Elementals} no 4.º piso)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada do covil (a wiki não descreve outras saídas).",
+    "Regressa a pé para **sul**, pelo deserto, até **Ankrahmun**, onde o {npc:Captain Sinbeard} tem barcos para outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33060, "y": 32736, "z": 7, "label": "Covil do sul (fácil)"},
+    {"x": 33095, "y": 32690, "z": 7, "label": "Covil do meio (Ank 3x)"},
+    {"x": 33116, "y": 32606, "z": 7, "label": "Covil do norte (Ank 9, o mais difícil)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard — porto de Ankrahmun"}
+  ],
+  "warnings": [
+    "Dragões e Dragon Lords cospem fogo: a wiki recomenda nível 25–40+ e, para magos de nível baixo, usar invocações como bloqueadores.",
+    "O covil do norte tem 4 Dragon Lords no 2.º piso e 8 Fire Elementals no 4.º."
+  ]
+}

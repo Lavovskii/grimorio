@@ -1,0 +1,29 @@
+{
+  "title": "Hunter Camp",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Acampamento de caçadores rodeado de paredes de bambu na selva de **Tiquanda**, mesmo a norte da {wiki:Medusa Tower}; só existe quando os Hunters dominam a {wiki:Jungle Camp Mini World Change} (senão está lá um Dworc Camp).",
+  "entrance": {"x": 32900, "y": 32792, "z": 7, "label": "Hunter Camp / Dworc Camp (terrenos sagrados)"},
+  "requirements": [
+    "Conta **Premium** (para ir de barco a Port Hope).",
+    "O acampamento só é o Hunter Camp quando os Hunters dominam o world change; noutros dias está lá o {wiki:Dworc Camp}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope** (por exemplo, com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:port hope}, {key:yes}). Chegas ao cais do {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai de Port Hope e atravessa a selva de Tiquanda para **leste** até ao acampamento quadrado com paredes de bambu ({coord:32900,32792,7}).",
+    "Se chegares à {wiki:Medusa Tower} ({coord:32860,32829,7}), o acampamento fica logo a **norte** dela."
+  ],
+  "leave": [
+    "O acampamento é à superfície: faz o mesmo caminho pela selva para **oeste** até Port Hope.",
+    "Em Port Hope apanha o barco do {npc:Charles} ({key:hi}, nome da cidade, {key:yes}) para onde quiseres."
+  ],
+  "coords": [
+    {"x": 32900, "y": 32792, "z": 7, "label": "Hunter Camp"},
+    {"x": 32860, "y": 32829, "z": 7, "label": "Medusa Tower (a sul do acampamento)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (barco de Port Hope)"}
+  ],
+  "warnings": [
+    "Os {creature:Hunter|Hunters} e {creature:Poacher|Poachers} do acampamento atacam quem entra; às vezes aparece o boss {creature:Arthom the Hunter}.",
+    "A selva de Tiquanda tem criaturas perigosas pelo caminho."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Foreigner Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Bairro dos imigrantes no **sudoeste de Yalahar**, onde vivem orcs, elfos, minotauros e humanos; tem o cais do {npc:Maris} (barcos para Fenrock e Mistrock) e a guilda dos knights do {npc:Zarak}.",
+  "entrance": {"x": 32709, "y": 31308, "z": 7, "label": "Foreigner Quarter (Yalahar)"},
+  "requirements": [
+    "Para ires a Yalahar com o {npc:Captain Max} (Liberty Bay) precisas do rank **Novice** da {wiki:The Explorer Society Quest}. Em alternativa, paga 250 gp ao {npc:Wyrdin's Apprentice} (a oeste de Kazordoon) pela palavra-passe ({key:whizzkid}) e viaja de Thais com o {npc:Captain Bluebear}. Com a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest} há barcos diretos de várias cidades."
+  ],
+  "arrive": [
+    "Vai a **Yalahar**: em **Liberty Bay**, fala com o {npc:Captain Max} num dos barcos a **leste** do porto ({key:hi}, {key:yalahar}, {key:yes}, 400 gp). Se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, há barcos diretos de Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore.",
+    "Chegas ao porto de Yalahar, a **sul** do centro da cidade (Inner City).",
+    "Do centro, vai para **sudoeste** até ao portão do Foreigner Quarter: este bairro **não tem mecanismo no portão**, por isso entras diretamente a partir do centro.",
+    "Se vens do Arena and Zoo Quarter, o guarda {npc:Tony} ({coord:32695,31257,7}) deixa-te passar: diz {key:hi}, {key:pass} e o nome do bairro de destino.",
+    "O cais do {npc:Maris} fica no extremo **noroeste** do bairro, 1 andar acima do chão ({coord:32649,31293,6})."
+  ],
+  "leave": [
+    "Volta ao centro de Yalahar pelo mesmo portão e vai ao porto, a **sul** do centro.",
+    "No porto, o {npc:Captain Cookie} leva-te a **Liberty Bay** ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou a **Thais** ({key:thais}, 800 gp). Se já desbloqueaste as rotas da In Service of Yalahar, o {npc:Karith}, ao lado, leva-te a 8 cidades ({key:hi}, {key:passage}).",
+    "Para ir para as ilhas, o {npc:Maris} no cais do noroeste leva-te a **Fenrock** ({key:hi}, {key:fenrock}, {key:yes}) ou a **Mistrock** ({key:hi}, {key:mistrock}, {key:yes}), por 100 gp."
+  ],
+  "coords": [
+    {"x": 32649, "y": 31293, "z": 6, "label": "Maris — cais do Foreigner Quarter (1 andar acima)"},
+    {"x": 32695, "y": 31257, "z": 7, "label": "Tony — portão para o Arena and Zoo Quarter"},
+    {"x": 32721, "y": 31287, "z": 7, "label": "Zarak — Knight Guild"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie — porto de Yalahar"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith — barco do porto de Yalahar"}
+  ],
+  "warnings": [
+    "O piso térreo perto da entrada é seguro a partir do nível 20, mas fora do piso térreo o bairro fica muito perigoso depressa ({creature:Orc Berserker|Orc Berserkers}, {creature:Minotaur Guard|Minotaur Guards}, e {creature:Hydra|Hydras} e {creature:Serpent Spawn|Serpent Spawns} no campo dos elfos). Um {item:Stealth Ring} ou o feitiço {spell:Invisible} ajudam muito aqui."
+  ]
+}

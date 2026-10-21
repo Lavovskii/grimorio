@@ -1,0 +1,69 @@
+{
+  "slug": "elephant-tusk-quest",
+  "category": "tesouro",
+  "region": "Port Hope",
+  "difficulty": 2,
+  "duration": "20–30 min",
+  "summary": "A leste de Port Hope, na selva de {wiki:Tiquanda}, há um acampamento de caçadores furtivos. A caixa que lá está, à superfície, guarda 2 {item:Elephant Tusk|Elephant Tusks}.",
+  "start": {"x": 32925, "y": 32754, "z": 7, "label": "Acampamento dos caçadores furtivos"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo; recomendado nível 28+."
+  ],
+  "items_needed": [
+    {"text": "Não precisas de equipamento especial"}
+  ],
+  "rewards": [
+    {"item": "Elephant Tusk", "qty": 2}
+  ],
+  "dangers": ["Centipede", "Wasp", "Tarantula", "Hunter", "Elephant", "Hydra", "Carniphilia", "Spit Nettle"],
+  "npcs": [],
+  "tips": [
+    "Anda sempre perto do rio para evitares as {creature:Carniphilia|Carniphilias} e a maioria das {creature:Spit Nettle|Spit Nettles}."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao acampamento",
+      "steps": [
+        {
+          "title": "Opção A: a partir de Port Hope",
+          "text": "Chega a **Port Hope** de barco: em Thais, Venore, Darashia, Ankrahmun, Liberty Bay ou Edron fala com o capitão do porto e diz {key:hi}, {key:port hope}, {key:yes}. Sai de **Port Hope** e segue o rio pelo lado **sul** até chegares ao acampamento dos caçadores furtivos.",
+          "coords": [{"x": 32925, "y": 32754, "z": 7, "label": "Acampamento dos caçadores furtivos"}],
+          "images": [{"file": "Elephant tusk quest.PNG", "caption": "Localização do acampamento e da caixa"}]
+        },
+        {
+          "title": "Opção B: a partir de Ankrahmun (mais rápido)",
+          "text": "Em **Ankrahmun**, vai para **sudoeste** da cidade até encontrares a ponte que liga aos spawns de {creature:Hydra|Hydras}. Segue para **sudoeste** a partir da escada que fica logo a nordeste das Hydras. É o caminho por cima das montanhas, o {wiki:Route:Ankrahmun to Port Hope|Kha'zeel Pass}: sobe as montanhas a oeste de Ankrahmun, atravessa a ponte e desce até à escada.",
+          "images": [
+            {"file": "Ank PH Route1.png", "caption": "Kha'zeel Pass a partir de Ankrahmun (1.ª parte)"},
+            {"file": "Ank PH Route2.png", "caption": "Kha'zeel Pass (2.ª parte)"},
+            {"file": "Ank PH Route3.png", "caption": "Kha'zeel Pass (3.ª parte)"}
+          ],
+          "warning": "Cuidado com as {creature:Hydra|Hydras} por este caminho."
+        },
+        {
+          "title": "Aproximar-te com cuidado",
+          "text": "O spawn de {creature:Hydra|Hydras} fica a **norte** do acampamento. Aproxima-te devagar.",
+          "coords": [{"x": 32952, "y": 32730, "z": 7, "label": "Spawn de Hydras a norte do acampamento"}],
+          "warning": "Pode haver uma {creature:Hydra} atraída por outro jogador à tua espera junto ao acampamento."
+        }
+      ]
+    },
+    {
+      "title": "2. Abrir a caixa",
+      "steps": [
+        {
+          "title": "Abrir a caixa da quest",
+          "text": "A caixa da quest está à superfície, no acampamento. Abre-a para receberes 2 {item:Elephant Tusk|Elephant Tusks}.",
+          "coords": [{"x": 32925, "y": 32754, "z": 7, "label": "Caixa da quest"}],
+          "reward": "2 Elephant Tusks"
+        },
+        {
+          "title": "Sair do acampamento",
+          "text": "Não há atalho de volta: regressa pelo mesmo caminho, a pé. Ou segues o rio para **oeste** até **Port Hope** e apanhas o barco do {npc:Charles} no porto, ou voltas para **nordeste** pela escada e pela ponte do Kha'zeel Pass até **Ankrahmun**. Mantém-te junto ao rio para fugires das {creature:Carniphilia|Carniphilias}.",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Charles, barco de Port Hope"}]
+        }
+      ]
+    }
+  ]
+}

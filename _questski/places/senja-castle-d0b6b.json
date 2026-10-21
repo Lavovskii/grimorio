@@ -1,0 +1,29 @@
+{
+  "title": "Senja Castle",
+  "type": "edificio",
+  "near": "Carlin",
+  "summary": "Castelo no **nordeste da ilha gelada de Senja**, a norte de Carlin, onde vivia o feiticeiro Alawar; por baixo está o {wiki:Alawar's Vault}, guardado por minotauros e por uma sala de campos de fogo, veneno e energia.",
+  "entrance": {"x": 32191, "y": 31633, "z": 7, "label": "Entrada da cave do Senja Castle"},
+  "arrive": [
+    "Vai a **Carlin** (de barco, por exemplo de Thais com o {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}).",
+    "Vai à jangada a **norte de Carlin** e fala com o barqueiro {npc:Nielson} ({coord:32235,31675,7}): {key:hi}, {key:senja}, {key:yes} (20 gp).",
+    "Desembarcas na jangada do {npc:Anderson}, no **oeste** de Senja ({coord:32127,31660,7}). Atravessa a ilha para **nordeste** até ao castelo ({coord:32187,31633,7}) e entra na cave ({coord:32191,31633,7})."
+  ],
+  "leave": [
+    "Sai do castelo pelo mesmo caminho (se usaste o teleporte do {wiki:Alawar's Vault}, ele deixa-te no topo do castelo: desce até à saída).",
+    "Vai à jangada do {npc:Anderson}, no **oeste** de Senja, e diz {key:hi}, {key:tibia}, {key:yes} (a viagem de volta é grátis). Chegas à jangada a norte de Carlin."
+  ],
+  "coords": [
+    {"x": 32234, "y": 31677, "z": 7, "label": "Jangada a norte de Carlin (Nielson)"},
+    {"x": 32127, "y": 31660, "z": 7, "label": "Anderson (jangada de Senja)"}
+  ],
+  "images": [
+    {"file": "Senja Castle 0.png", "caption": "Senja Castle, piso térreo"},
+    {"file": "Senja Castle -1.png", "caption": "Senja Castle, cave"},
+    {"file": "Alawars Vault Lever.gif", "caption": "A alavanca escondida debaixo do fogo, na cave"},
+    {"file": "Alawars Vault Portal.png", "caption": "O teleporte para o Alawar's Vault"}
+  ],
+  "warnings": [
+    "Na cave há campos de fogo, veneno e energia; para chegares ao cofre precisas de uma {item:Destroy Field Rune} para revelar a alavanca. Do lado do cofre há {creature:Minotaur|Minotaurs} e um {creature:Minotaur Mage} que conseguem chegar até ti se a porta não estiver trancada."
+  ]
+}

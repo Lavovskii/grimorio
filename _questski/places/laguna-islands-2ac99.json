@@ -1,0 +1,33 @@
+{
+  "title": "Laguna Islands",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "Três pequenas ilhas tropicais a **sudeste de Liberty Bay** (a sudeste das {wiki:Shattered Isles}), sem porto, cheias de sapos, tartarugas e com uma pequena aldeia de amazonas.",
+  "entrance": {"x": 32466, "y": 32939, "z": 7, "label": "Laguna Islands"},
+  "requirements": [
+    "Conta **Premium** (Liberty Bay e Meriana).",
+    "Só podes usar as {wiki:Sea Turtle|tartarugas marinhas} depois de a sereia {npc:Marina} te dar autorização, na parte *Access to Meriana* da {wiki:The Shattered Isles Quest} (diz-lhe {key:hi}, {key:date} na segunda vez)."
+  ],
+  "arrive": [
+    "Em **Liberty Bay**, vai à pequena península a **sudeste** do depot e fala com o {npc:Captain Waverider}: {key:hi}, {key:peg leg}, {key:yes} (50 gp). Ele leva-te a Sabrehaven, na ilha de {wiki:Meriana}.",
+    "Em Meriana, vai à costa onde estão as tartarugas e pisa uma: ela leva-te para as Laguna Islands.",
+    "Usa as tartarugas para passar de ilha em ilha (por exemplo até à ilha do **nordeste**, onde está o {npc:Erayo}, 1 piso abaixo)."
+  ],
+  "leave": [
+    "Pisa uma tartaruga na margem para voltares de ilha em ilha até **Meriana**.",
+    "Em Meriana, vai a **sul** de Sabrehaven e fala com o {npc:Sebastian}: {key:hi}, {key:liberty bay}, {key:yes} (50 gp)."
+  ],
+  "coords": [
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay → Meriana)"},
+    {"x": 32329, "y": 32528, "z": 7, "label": "Marina (costa norte de Meriana)"},
+    {"x": 32347, "y": 32623, "z": 7, "label": "Sebastian (Meriana → Liberty Bay)"},
+    {"x": 32519, "y": 32910, "z": 8, "label": "Erayo (ilha do nordeste, 1 piso abaixo)"}
+  ],
+  "images": [
+    {"file": "Seaturtle.jpg", "caption": "Tartaruga marinha usada como transporte entre as ilhas"}
+  ],
+  "warnings": [
+    "As tartarugas são zona de proteção, mas não aceitam sacos de loot: para enviar itens usa a caixa de correio real das Laguna Islands.",
+    "Há {creature:Toad|Toads}, {creature:Tortoise|Tortoises}, {creature:Thornback Tortoise|Thornback Tortoises}, {creature:Blood Crab|Blood Crabs} e {creature:Amazon|Amazons}; a wiki recomenda nível 27–30+."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Vengoth/Werewolf Cave",
+  "type": "gruta",
+  "near": "Yalahar",
+  "summary": "Gruta na montanha da ilha de {wiki:Vengoth}, a sul de Yalahar, com cerca de 15 Werewolves; é um dos sítios mais rápidos para a task de Werewolves.",
+  "entrance": {"x": 32980, "y": 31497, "z": 7, "label": "Rampa de acesso à Werewolf Cave (montanha de Vengoth)"},
+  "requirements": [
+    "Para ires a Yalahar com o {npc:Captain Max} (Liberty Bay) precisas do rank **Novice** da {wiki:The Explorer Society Quest}. Em alternativa, paga 250 gp ao {npc:Wyrdin's Apprentice} (a oeste de Kazordoon) pela palavra-passe ({key:whizzkid}) e viaja de Thais com o {npc:Captain Bluebear}. Com a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest} há barcos diretos de várias cidades.",
+    "O {npc:Harlow} só te leva a Vengoth a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest}."
+  ],
+  "arrive": [
+    "Apanha um barco para **Yalahar** (por exemplo em Liberty Bay, {npc:Captain Max}: {key:hi}, {key:yalahar}, {key:yes}; ou, com as rotas da In Service of Yalahar, de Venore e outras cidades).",
+    "Em Yalahar, vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp).",
+    "Ele deixa-te no **oeste** de Vengoth ({coord:32856,31548,7}). Atravessa a ilha para **leste/nordeste** até à rampa de acesso à gruta, na montanha ({coord:32980,31497,7})."
+  ],
+  "leave": [
+    "Sai da gruta pela mesma rampa e regressa a pé para **oeste** até ao {npc:Harlow}.",
+    "Diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): ele leva-te de volta às docas do Trade Quarter de Yalahar."
+  ],
+  "coords": [
+    {"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32992, "y": 31443, "z": 7, "label": "Teleporte do boss Hemming (Killing in the Name of)"}
+  ],
+  "warnings": [
+    "Os {creature:Werewolf|Werewolves} invocam ajudantes; atrai-os um a um para as partes estreitas da gruta. A wiki recomenda nível 80+ (knights e paladins) e 90+ (mages)."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "stampede-mini-world-change",
+  "category": "world-change",
+  "region": "Port Hope",
+  "difficulty": 1,
+  "duration": "20 min",
+  "summary": "Mini world change de um dia na selva de Tiquanda: o Ape God assustou os elefantes, e numa pequena clareira a sul de Banuta aparecem {creature:Terrified Elephant|Terrified Elephants}. Eles deixam cair {item:Elephant Tusk|Elephant Tusks} com mais frequência do que os elefantes normais, e matar 5 dá o achievement **Trail of the Ape God**.",
+  "legend_pt": "Algo deixou um grupo de Elephants aterrorizados na selva.",
+  "start": {"x": 32856, "y": 32673, "z": 7, "label": "Clareira na selva de Tiquanda, a sul de Banuta"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo; recomendado 30+.",
+    "A mini world change tem de estar ativa no teu servidor (dura um dia)."
+  ],
+  "rewards": [
+    {"text": "Maior probabilidade de lootar {item:Elephant Tusk|Elephant Tusks}"},
+    {"text": "Achievement **Trail of the Ape God** (matar 5 Terrified Elephants)"}
+  ],
+  "achievements": ["Trail of the Ape God"],
+  "dangers": ["Wasp", "Centipede", "Crocodile", "Tarantula", "Carniphila", "Terrified Elephant"],
+  "npcs": [],
+  "tips": [
+    "Fica atento às mensagens do dia: se vires uma das frases da secção 1, a mini world change está ativa.",
+    "Leva antídotos ou o feitiço {spell:Cure Poison}: na selva há várias criaturas venenosas.",
+    "Leva uma {item:Machete}: na selva de Tiquanda dá jeito para cortar a vegetação (jungle grass) que tapa alguns caminhos."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se está ativa",
+      "steps": [
+        {
+          "title": "Mensagens da mini world change",
+          "text": "Quando a Stampede está ativa, aparecem estas mensagens no jogo:",
+          "table": {"head": ["Mensagem"], "rows": [
+            ["Stampede! The Ape God has stirred up Tiquanda's elephants again!"],
+            ["Hear ye! Hear ye! Tiquanda's elephants are terrified, the Ape God's footsteps are a scary sight. So hunt for their tusks while they are filled with fright!"]
+          ]}
+        }
+      ]
+    },
+    {
+      "title": "2. Caçar os Terrified Elephants",
+      "steps": [
+        {
+          "title": "Chegar a Port Hope",
+          "text": "Apanha o barco para **Port Hope** (há barcos a partir de Thais, Venore, Darashia, Ankrahmun, Liberty Bay e Edron): fala com o capitão do porto e diz {key:hi}, {key:port hope}, {key:yes}. Chegas ao cais do {npc:Charles}, em Port Hope.",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Barco de Port Hope (Charles)"}]
+        },
+        {
+          "title": "Ir à clareira",
+          "text": "Sai de Port Hope e atravessa a selva de **Tiquanda** para **leste**, até à zona a **sul de Banuta** (Banuta fica a norte da clareira, em {coord:32807,32542,7}). A zona onde os elefantes aparecem é pequena e quase sem vegetação, com até **16** {creature:Terrified Elephant|Terrified Elephants}.",
+          "coords": [{"x": 32856, "y": 32673, "z": 7, "label": "Zona dos Terrified Elephants"}],
+          "warning": "Pelo caminho podes encontrar {creature:Wasp|Wasps}, {creature:Centipede|Centipedes}, {creature:Crocodile|Crocodiles}, {creature:Tarantula|Tarantulas} e {creature:Carniphila|Carniphilas}."
+        },
+        {
+          "title": "Matar 5 elefantes",
+          "text": "Mata pelo menos **5** {creature:Terrified Elephant|Terrified Elephants} para ganhares o achievement **Trail of the Ape God**. Continua a caçar se quiseres mais {item:Elephant Tusk|Elephant Tusks}: estes elefantes deixam-nos cair mais vezes do que os {creature:Elephant|Elephants} normais.",
+          "reward": "Achievement Trail of the Ape God e Elephant Tusks"
+        },
+        {
+          "title": "Sair da selva",
+          "text": "Quando acabares, volta a **Port Hope** pelo mesmo caminho, para **oeste** através da selva. Lá podes apanhar o barco do {npc:Charles} para a tua cidade (diz {key:hi} e o nome da cidade, por exemplo {key:thais}, e {key:yes}).",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Barco de Port Hope (Charles)"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A mini world change dura **um dia**."
+  ]
+}

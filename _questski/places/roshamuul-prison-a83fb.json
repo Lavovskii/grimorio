@@ -1,0 +1,35 @@
+{
+  "title": "Roshamuul Prison",
+  "type": "dungeon",
+  "near": "Roshamuul",
+  "summary": "Prisão demoníaca de {wiki:Upper Roshamuul}, a **sul do depot** e a oeste da passagem na muralha, com 3 pisos principais de caça para nível 250+ e os bosses (como {creature:Gaz'haragoth}) mais abaixo.",
+  "requirements": [
+    "Conta **Premium**.",
+    "{wiki:Upper Roshamuul} só fica acessível quando o teu servidor chega ao **estágio 3** da {wiki:Roshamuul Quest} (muralha aberta). Os cidadãos de Roshamuul podem ir diretamente ao templo de Upper Roshamuul."
+  ],
+  "arrive": [
+    "Em **Thais**, no porto, diz ao {npc:Captain Bluebear} ({coord:32310,32210,6}) {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca em Lower Roshamuul, junto ao acampamento do {npc:Captain Chelop}.",
+    "Sobe de Lower Roshamuul, atravessa a ponte para norte e segue por {wiki:Guzzlemaw Valley} para **nordeste** até à muralha aberta ({coord:33632,32401,7}).",
+    "Passa a muralha para {wiki:Upper Roshamuul}: a entrada da prisão fica a **oeste** da muralha, a **sul** do depot (o depot e o templo ficam a noroeste da muralha).",
+    "Se fores cidadão de Roshamuul, faz logout/teleporta-te para o templo de Upper Roshamuul (a oeste do depot) e evita o vale."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à superfície de Upper Roshamuul.",
+    "Atravessa outra vez a muralha e {wiki:Guzzlemaw Valley} para **sul**, passa a ponte e desce a rampa até ao acampamento da Inquisition, no sudoeste da ilha.",
+    "Fala com o {npc:Captain Chelop} junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento de Lower Roshamuul)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"}
+  ],
+  "images": [
+    {"file": "Roshamuul Prison Map 1.png", "caption": "Mapa da prisão — piso -1"},
+    {"file": "Roshamuul Prison Map 2.png", "caption": "Mapa da prisão — piso -2"},
+    {"file": "Roshamuul Prison Map 3.png", "caption": "Mapa da prisão — piso -3"}
+  ],
+  "warnings": [
+    "Nível recomendado 250+, idealmente em equipa de 4. Os {creature:Hellhound|Hellhounds} são as criaturas mais perigosas: as ondas deles atingem quem está atrás do bloqueador.",
+    "Toda a ilha de Roshamuul é muito perigosa: o caminho por {wiki:Guzzlemaw Valley} tem criaturas fortes."
+  ]
+}

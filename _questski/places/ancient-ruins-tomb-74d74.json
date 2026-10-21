@@ -1,0 +1,30 @@
+{
+  "title": "Ancient Ruins Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo debaixo do deserto de Kha'labal, a **norte/nordeste de Ankrahmun**, com a entrada escondida sob umas ruínas antigas; é o túmulo do faraó {creature:Vashresamun}.",
+  "entrance": {"x": 33207, "y": 32592, "z": 7, "label": "Entrada da Ancient Ruins Tomb (escava aqui)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão do porto da tua cidade); chegas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade pela saída **norte** ({coord:33182,32773,7}) e atravessa o deserto de Kha'labal para **norte/nordeste** até às ruínas antigas ({coord:33207,32592,7}).",
+    "Usa a {item:Shovel} no sítio da entrada para abrires o buraco e desce. Logo a seguir tens de atravessar vários **campos de fogo** para entrares no túmulo."
+  ],
+  "leave": [
+    "No túmulo de Vashresamun, a sala do sarcófago tem um teleporte de saída que te deixa à entrada do túmulo; o {item:Magic Forcefield} da sala do faraó, usado **sem** o item de passe, também te leva ao início do túmulo.",
+    "Do início do túmulo volta a atravessar os campos de fogo e usa a {item:Rope} no buraco que abriste para saíres à superfície.",
+    "Regressa a pé para **sul/sudoeste** até Ankrahmun; no porto, o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33207, "y": 32592, "z": 7, "label": "Entrada (escava com a Shovel)"},
+    {"x": 33182, "y": 32773, "z": 7, "label": "Saída norte de Ankrahmun"},
+    {"x": 33128, "y": 32656, "z": 15, "label": "Sala de Vashresamun"}
+  ],
+  "images": [
+    {"file": "Tombruines.jpg", "caption": "As ruínas que escondem a entrada do túmulo"}
+  ],
+  "warnings": [
+    "Os campos de fogo da entrada magoam: abaixo de nível 20 leva uma ou duas poções só para entrar.",
+    "Quanto mais desces, mais fortes são as criaturas: no 2.º piso há {creature:Vampire|Vampires} e {creature:Fire Elemental|Fire Elementals}; os pisos depois dos teleportes são para nível 50–80+."
+  ]
+}

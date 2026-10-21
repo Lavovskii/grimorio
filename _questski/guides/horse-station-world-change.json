@@ -1,0 +1,93 @@
+{
+  "slug": "horse-station-world-change",
+  "category": "world-change",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "Contínua (o estado muda conforme os jogadores alugam cavalos)",
+  "summary": "Também conhecida como Horse Taming Quest. Os cavalos dos estábulos podem ser alugados, mas às vezes fogem para andar com os cavalos selvagens e têm de ser reunidos de novo. Enquanto os cavalos estão à solta, aparecem {creature:Wild Horse|Wild Horses} à volta da {wiki:Horse Station} de Thais, que podes domar com {item:Sugar Oat} para obteres a montaria {wiki:War Horse}. Quando estão no estábulo, todo o servidor (incluindo contas Free) pode alugar cavalos.",
+  "legend_pt": "Os cavalos do estábulo podem ser alugados, mas às vezes fogem para andar com os cavalos selvagens e têm de ser reunidos.",
+  "start": {"x": 32442, "y": 32230, "z": 7, "label": "Horse Station de Thais"},
+  "requirements": [
+    "Sem nível mínimo (recomendado nível 8).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Sugar Oat", "note": "muitos, para domar um Wild Horse"}
+  ],
+  "rewards": [
+    {"text": "Possibilidade de alugar cavalos ({wiki:Rented Horse}) — vale para todo o servidor, incluindo contas Free."},
+    {"text": "Durante o world change podes domar um Wild Horse e obter a montaria {wiki:War Horse}."}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Alugar cavalos (Rented Horse)", "kind": "funcionalidade", "place": "Rented Horse", "when": "Quando os cavalos estão fechados no estábulo (jogadores suficientes alugaram cavalos ou os cavalos à solta foram reunidos no curral da {wiki:Horse Station}).", "note": "Vale para todo o servidor, incluindo contas Free; deixa de estar disponível quando os cavalos fogem."},
+    {"what": "Montaria War Horse", "kind": "funcionalidade", "place": "War Horse", "when": "Enquanto os cavalos andam à solta: doma um {creature:Wild Horse} perto da Horse Station de Thais com {item:Sugar Oat}."}
+  ],
+  "dangers": ["Snake", "Wolf", "Troll", "Poison Spider"],
+  "npcs": ["Palomino", "Appaloosa"],
+  "tips": [
+    "Só os {creature:Wild Horse|Wild Horses} podem ser domados. Os {creature:Horse|Horses} normais **não** se domam.",
+    "Os Wild Horses aparecem de 3 em 3 horas a contar do server save, em grupos de 0 a 3 — podem não aparecer de todo. Leva {item:Sugar Oat} em abundância."
+  ],
+  "sections": [
+    {
+      "title": "1. Como funciona",
+      "intro": "A {wiki:Horse Station} fica a leste de Thais, a oeste de Venore. O world change alterna entre dois estados.",
+      "steps": [
+        {
+          "title": "Os dois estados",
+          "text": "Conforme o estado atual, há coisas diferentes a fazer:",
+          "table": {
+            "head": ["Estado", "Quando acontece", "O que podes fazer"],
+            "rows": [
+              ["1. Cavalos fechados no estábulo", "Quando jogadores suficientes alugaram cavalos num dos estábulos.", "Alugar cavalos ({wiki:Rented Horse}). Não aparecem cavalos à solta, por isso não podes domar Wild Horses."],
+              ["2. Cavalos à solta", "Caso contrário (não se alugaram cavalos suficientes).", "Aparecem {creature:Horse|Horses} e {creature:Wild Horse|Wild Horses} à volta da Horse Station de Thais: podes domar um Wild Horse."]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "2. Domar um Wild Horse (estado 2)",
+      "steps": [
+        {
+          "title": "Impedir o aluguer de cavalos",
+          "text": "Para haver Wild Horses, os cavalos têm de estar à solta: enquanto o estado 1 estiver ativo os cavalos não aparecem fora do estábulo, por isso é preciso **evitar** que se aluguem cavalos."
+        },
+        {
+          "title": "Esperar pelos Wild Horses",
+          "text": "Com os cavalos à solta, vai aos arredores da {wiki:Horse Station}, a leste de Thais. Vais a pé: sai de Thais para **leste** até à Horse Station ({coord:32442,32230,7}), onde está o {npc:Palomino}. Os {creature:Wild Horse|Wild Horses} aparecem **de 3 em 3 horas** a contar do server save, em grupos de 0 a 3 (pode não aparecer nenhum).",
+          "coords": [
+            {"x": 32442, "y": 32230, "z": 7, "label": "Horse Station de Thais"},
+            {"x": 32848, "y": 32120, "z": 7, "label": "Horse Station de Venore"}
+          ],
+          "warning": "Na zona há {creature:Snake|Snakes}, {creature:Wolf|Wolves}, {creature:Troll|Trolls} e {creature:Poison Spider|Poison Spiders}."
+        },
+        {
+          "title": "Usar Sugar Oat no Wild Horse",
+          "text": "Usa {item:Sugar Oat} no Wild Horse até o domares. Leva bastantes.",
+          "reward": "Montaria War Horse",
+          "tip": "Só funciona em Wild Horses; em cavalos normais não."
+        }
+      ]
+    },
+    {
+      "title": "3. Voltar a pôr os cavalos no estábulo",
+      "steps": [
+        {
+          "title": "Atrair os cavalos para o curral",
+          "text": "O estado volta a 1 (cavalos no estábulo e aluguer disponível) quando forem atraídos de volta ao curral cavalos domésticos suficientes. Atrai os {creature:Horse|Horses} que andam à solta até ao curral da Horse Station.",
+          "tip": "Se ninguém devolver cavalos, o estado também volta sozinho, mas só ao fim de quatro ou mais dias."
+        },
+        {
+          "title": "Voltar à cidade",
+          "text": "A Horse Station fica ao ar livre, sem nada que te prenda: quando acabares, volta a pé para **oeste** até Thais. A Horse Station de Thais e a de Venore ({coord:32848,32120,7}, com o {npc:Appaloosa}) estão ligadas por um serviço de coche entre as duas cidades, mas este **pára** enquanto os cavalos estão à solta (estado 2).",
+          "coords": [
+            {"x": 32442, "y": 32230, "z": 7, "label": "Horse Station de Thais (Palomino)"},
+            {"x": 32848, "y": 32120, "z": 7, "label": "Horse Station de Venore (Appaloosa)"}
+          ]
+        }
+      ]
+    }
+  ]
+}

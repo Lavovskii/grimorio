@@ -1,0 +1,1112 @@
+{
+  "slug": "spike-tasks-quest",
+  "category": "tarefas",
+  "region": "Kazordoon",
+  "difficulty": 3,
+  "duration": "30–60 min por dia; mínimo 25 dias para o outfit completo",
+  "summary": "Os gnomos de {wiki:The Spike|The Spike} precisam de ajuda para combater os inimigos à volta da sua base. Conforme o teu nível fazes 4 tarefas diárias na Upper, Middle ou Lower Spike; cada uma dá experiência e 1 ponto de fama. Com a fama acumulada compras os {wiki:Cave Explorer Outfits|Cave Explorer Outfits} e os seus addons.",
+  "legend_pt": "Ajuda os Gnomos a combater os seus inimigos à volta de The Spike.",
+  "start": {
+    "x": 32623,
+    "y": 31857,
+    "z": 11,
+    "label": "Teleporte norte junto ao Xelvar (templo de Kazordoon)"
+  },
+  "requirements": [
+    "Premium.",
+    "Nível 25 ou mais (recomendado 25+). O nível decide a divisão: 25–49 Upper Spike, 50–79 Middle Spike, 80+ Lower Spike.",
+    "Não precisas de {item:Teleport Crystal|Teleport Crystals} para chegar a The Spike."
+  ],
+  "items_needed": [
+    {
+      "text": "Os itens das tarefas são dados pelos gnomos ao aceitares cada missão. Se os perderes, o {npc:Gnomux} vende tudo o que é preciso."
+    },
+    {
+      "text": "Poções e equipamento adequados à divisão (na Middle Spike, {item:Terra Set} e ataques de fogo para mages)."
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Upper Spike: 1.000 de experiência + 1 ponto de fama por tarefa."
+    },
+    {
+      "text": "Middle Spike: 2.000 de experiência + 1 ponto de fama por tarefa."
+    },
+    {
+      "text": "Lower Spike: 3.500 de experiência + 1 ponto de fama por tarefa."
+    },
+    {
+      "text": "{wiki:Cave Explorer Outfits|Cave Explorer Outfit} e addons, comprados com fama (outfit 1.000 gp, 1.º addon 2.000 gp, 2.º addon 3.000 gp). São precisos 100 de fama para o outfit completo."
+    },
+    {
+      "text": "Achievement **Cave Completionist**."
+    }
+  ],
+  "achievements": [
+    "Cave Completionist"
+  ],
+  "unlocks": [
+    {
+      "what": "Cave Explorer Outfit e os dois addons",
+      "kind": "missao",
+      "place": "Cave Explorer Outfits",
+      "when": "Comprados ao {npc:Gnommander} com pontos de fama das tarefas ({key:reward}, {key:worthy}): são precisos 100 de fama para o outfit completo.",
+      "note": "Custam ainda 1.000 gp (outfit), 2.000 gp (1.º addon) e 3.000 gp (2.º addon)."
+    }
+  ],
+  "dangers": [
+    "Ghost",
+    "Mummy",
+    "Gargoyle",
+    "Crypt Shambler",
+    "Demon Skeleton",
+    "Zombie",
+    "Corym Skirmisher",
+    "Corym Charlatan",
+    "Corym Vanguard",
+    "Enraged Soul",
+    "Clay Guardian",
+    "Earth Elemental",
+    "Mutated Rat",
+    "Mutated Bat",
+    "Crystalcrusher",
+    "Bonebeast",
+    "Nightmare Scion",
+    "Drillworm",
+    "Vulcongra",
+    "Enslaved Dwarf",
+    "Lost Basher",
+    "Lost Husher",
+    "Lost Thrower",
+    "Dragon Lord",
+    "Behemoth",
+    "Massive Earth Elemental",
+    "Wyrm"
+  ],
+  "npcs": [
+    "Xelvar",
+    "Gnommander",
+    "Gnomux",
+    "Gnomilly",
+    "Gnombold",
+    "Gnomargery",
+    "Gnome Trooper",
+    "A Vulcongra"
+  ],
+  "tips": [
+    "Cada divisão tem **4 tarefas diárias**, com **20 horas** de cooldown. Pede todas as missões de uma vez antes de saíres da zona segura.",
+    "Para veres a tua fama atual, pergunta ao {npc:Gnommander} por {key:reward} e depois consulta o Quest Log.",
+    "Por serem difíceis, é recomendado ir em equipa na Upper e na Middle Spike, ou na Lower Spike se estiveres perto do nível mínimo.",
+    "Se perderes um item de tarefa, o {npc:Gnomux} vende todos os itens necessários."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a The Spike",
+      "steps": [
+        {
+          "title": "Teleporte em Kazordoon",
+          "text": "Vai a **Kazordoon** (a cidade dos anões, dentro da montanha; podes chegar a pé ou pelo {wiki:Steamship|steamship} de Cormaya ou Farmine). Na zona do templo, entra no teleporte **norte**, perto do {npc:Xelvar} (é um {item:Large Crystal Teleporter (Berg)|large crystal teleporter}, que não precisa de {item:Teleport Crystal|Teleport Crystals}). Chegas a {wiki:The Spike}.",
+          "coords": [
+            {
+              "x": 32623,
+              "y": 31857,
+              "z": 11,
+              "label": "Teleporte para The Spike"
+            }
+          ],
+          "images": [
+            {
+              "file": "Summer 2013 Spike 1.png",
+              "caption": "The Spike"
+            }
+          ]
+        },
+        {
+          "title": "Escolher a divisão",
+          "text": "Conforme o teu nível, fala com o gnomo responsável pela tua divisão:",
+          "table": {
+            "head": [
+              "Nível",
+              "Divisão",
+              "NPC das tarefas",
+              "Andar da Spike"
+            ],
+            "rows": [
+              [
+                "25–49",
+                "{wiki:Upper Spike}",
+                "{npc:Gnomilly}",
+                "2.º andar"
+              ],
+              [
+                "50–79",
+                "{wiki:Middle Spike}",
+                "{npc:Gnombold}",
+                "4.º andar"
+              ],
+              [
+                "80+",
+                "{wiki:Lower Spike}",
+                "{npc:Gnomargery}",
+                "-7.º andar"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Sair de The Spike",
+          "text": "Quando acabares as tarefas do dia, volta à zona segura da tua divisão, regressa à zona onde chegaste à Spike e usa o teleporte de cristal de volta para a zona do templo de **Kazordoon**. Só podes entrar na divisão do teu nível.",
+          "coords": [
+            {
+              "x": 32623,
+              "y": 31857,
+              "z": 11,
+              "label": "Teleporte da Spike (templo de Kazordoon)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Upper Spike (nível 25–49)",
+      "intro": "Recompensa de cada tarefa: 1.000 de experiência e 1 ponto de fama. As tarefas fazem-se nos 3 primeiros andares da Spike.",
+      "steps": [
+        {
+          "title": "Pedir as 4 missões",
+          "text": "Fala com o {npc:Gnomilly} no 2.º andar da Spike e pede {key:missions}. Aceita as quatro, respondendo {key:yes} a cada uma: {key:pacifiers}, {key:release}, {key:track} e {key:kill}. Depois sai da zona segura pelo {item:Large Crystal Teleporter (Berg)|large crystal teleporter}.",
+          "npc": "Gnomilly",
+          "dialogue": [
+            {
+              "you": "pacifiers"
+            },
+            {
+              "npc": "We need you to recharge our ghost pacifiers. [...] Your mission would be to charge seven of them. [...] Are you willing to accept this mission?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "release"
+            },
+            {
+              "npc": "Your task would be to use a spirit shovel to release some spirit's anger from graves [...] Are you willing to accept this mission?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "track"
+            },
+            {
+              "npc": "You'd be given the highly important task to track down an enormously malevolent spiritual presence in the cave system. [...]"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "kill"
+            },
+            {
+              "npc": "We need someone to reduce the steadily growing number of demon skeletons in the caves. [...]"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Ghost Pacifiers: andar 1",
+          "text": "Usa o {item:Tuning Fork} (o \"resonance charger\") em {item:Ghost Pacifier|Ghost Pacifiers} até completares **7** cargas. Cada pacificador só pode ser usado uma vez a cada **2 minutos**. Posições no andar 1:",
+          "map": {
+            "x": 32248,
+            "y": 32594,
+            "z": 8,
+            "marks": [
+              {
+                "x": 32298,
+                "y": 32555,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32354,
+                "y": 32641,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32279,
+                "y": 32637,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32229,
+                "y": 32663,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32183,
+                "y": 32669,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32180,
+                "y": 32577,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32240,
+                "y": 32526,
+                "z": 8,
+                "label": "Ghost Pacifier"
+              }
+            ]
+          },
+          "images": [
+            {
+              "file": "Ghostpacif.png",
+              "caption": "Ghost Pacifier"
+            }
+          ]
+        },
+        {
+          "title": "Ghost Pacifiers: andar 2",
+          "text": "Pacificadores no andar 2:",
+          "map": {
+            "x": 32238,
+            "y": 32603,
+            "z": 9,
+            "marks": [
+              {
+                "x": 32246,
+                "y": 32538,
+                "z": 9,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32342,
+                "y": 32558,
+                "z": 9,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32305,
+                "y": 32643,
+                "z": 9,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32275,
+                "y": 32679,
+                "z": 9,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32139,
+                "y": 32653,
+                "z": 9,
+                "label": "Ghost Pacifier"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Ghost Pacifiers: andar 3",
+          "text": "Pacificadores no andar 3:",
+          "map": {
+            "x": 32244,
+            "y": 32599,
+            "z": 10,
+            "marks": [
+              {
+                "x": 32062,
+                "y": 32729,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32204,
+                "y": 32532,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32276,
+                "y": 32539,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32352,
+                "y": 32584,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32298,
+                "y": 32706,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              },
+              {
+                "x": 32107,
+                "y": 32660,
+                "z": 10,
+                "label": "Ghost Pacifier"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Angry Spirits: como funciona",
+          "text": "Procura {item:Ominous Mound|Ominous Mounds} nos 3 primeiros andares. Usa a {item:Spirit Shovel} num monte até aparecer uma {creature:Enraged Soul} e mata-a. O Gnomilly pede **4** campas. Cada monte pode voltar a ser usado ao fim de **2 minutos**. Se falhares, recebes uma destas mensagens:",
+          "table": {
+            "head": [
+              "Mensagem",
+              "O que acontece"
+            ],
+            "rows": [
+              [
+                "*You've found nothing special*",
+                "Nada."
+              ],
+              [
+                "*You unearthed some not-so-death creature*",
+                "Aparece um {creature:Zombie} ou um {creature:Demon Skeleton}."
+              ],
+              [
+                "*Your crude digging has angered some ancient ghost*",
+                "Aparece um {creature:Ghost}."
+              ]
+            ]
+          },
+          "images": [
+            {
+              "file": "Ominousmound.png",
+              "caption": "Ominous Mound"
+            },
+            {
+              "file": "Enragedsoulquest.png",
+              "caption": "Enraged Soul a sair do monte"
+            }
+          ]
+        },
+        {
+          "title": "Angry Spirits: andar 1",
+          "text": "Ominous Mounds no andar 1:",
+          "map": {
+            "x": 32263,
+            "y": 32598,
+            "z": 8,
+            "marks": [
+              {
+                "x": 32193,
+                "y": 32523,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32219,
+                "y": 32524,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32240,
+                "y": 32527,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32293,
+                "y": 32521,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32333,
+                "y": 32585,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32325,
+                "y": 32649,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32252,
+                "y": 32656,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32161,
+                "y": 32647,
+                "z": 8,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32197,
+                "y": 32587,
+                "z": 8,
+                "label": "Ominous Mound"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Angry Spirits: andar 2",
+          "text": "Ominous Mounds no andar 2:",
+          "map": {
+            "x": 32251,
+            "y": 32598,
+            "z": 9,
+            "marks": [
+              {
+                "x": 32213,
+                "y": 32527,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32258,
+                "y": 32557,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32288,
+                "y": 32546,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32312,
+                "y": 32600,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32126,
+                "y": 32710,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32200,
+                "y": 32675,
+                "z": 9,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32259,
+                "y": 32641,
+                "z": 9,
+                "label": "Ominous Mound"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Angry Spirits: andar 3",
+          "text": "Ominous Mounds no andar 3:",
+          "map": {
+            "x": 32243,
+            "y": 32595,
+            "z": 10,
+            "marks": [
+              {
+                "x": 32237,
+                "y": 32653,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32161,
+                "y": 32704,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32189,
+                "y": 32525,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32251,
+                "y": 32547,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32327,
+                "y": 32532,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32353,
+                "y": 32629,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32306,
+                "y": 32693,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32118,
+                "y": 32653,
+                "z": 10,
+                "label": "Ominous Mound"
+              },
+              {
+                "x": 32189,
+                "y": 32587,
+                "z": 10,
+                "label": "Ominous Mound"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Malevolent Presence: usar o detector",
+          "text": "Usa o {item:Ghost Detector} nos 3 andares: ele indica-te a direção a seguir (só diz **nordeste, noroeste, sudeste ou sudoeste**). Segue as indicações e, quando estiveres no sítio certo, usa o detector outra vez para completar. O local pode ser diferente para cada jogador.",
+          "images": [
+            {
+              "file": "Ghostdetector.png",
+              "caption": "Ghost Detector"
+            }
+          ]
+        },
+        {
+          "title": "Malevolent Presence: locais possíveis no andar 1",
+          "text": "Locais aproximados onde a presença pode estar no andar 1:",
+          "map": {
+            "x": 32246,
+            "y": 32601,
+            "z": 8,
+            "marks": [
+              {
+                "x": 32197,
+                "y": 32527,
+                "z": 8,
+                "label": "Local possível"
+              },
+              {
+                "x": 32327,
+                "y": 32572,
+                "z": 8,
+                "label": "Local possível"
+              },
+              {
+                "x": 32217,
+                "y": 32661,
+                "z": 8,
+                "label": "Local possível"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Malevolent Presence: locais possíveis no andar 2",
+          "text": "Locais aproximados no andar 2:",
+          "map": {
+            "x": 32243,
+            "y": 32603,
+            "z": 9,
+            "marks": [
+              {
+                "x": 32277,
+                "y": 32586,
+                "z": 9,
+                "label": "Local possível"
+              },
+              {
+                "x": 32171,
+                "y": 32669,
+                "z": 9,
+                "label": "Local possível"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Malevolent Presence: locais possíveis no andar 3",
+          "text": "Locais aproximados no andar 3:",
+          "map": {
+            "x": 32199,
+            "y": 32637,
+            "z": 10,
+            "marks": [
+              {
+                "x": 32280,
+                "y": 32582,
+                "z": 10,
+                "label": "Local possível"
+              },
+              {
+                "x": 32305,
+                "y": 32527,
+                "z": 10,
+                "label": "Local possível"
+              },
+              {
+                "x": 32096,
+                "y": 32737,
+                "z": 10,
+                "label": "Local possível"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Matar 7 Demon Skeletons",
+          "text": "Nas grutas, mata **7** {creature:Demon Skeleton|Demon Skeletons}."
+        },
+        {
+          "title": "Entregar as tarefas",
+          "text": "Volta das grutas à zona segura e entrega ao {npc:Gnomilly} cada tarefa terminada (tal como na Lower Spike, diz {key:report} e o nome da missão).",
+          "npc": "Gnomilly",
+          "reward": "1.000 de experiência e 1 ponto de fama por tarefa"
+        }
+      ]
+    },
+    {
+      "title": "3. Middle Spike (nível 50–79)",
+      "intro": "Recompensa de cada tarefa: 2.000 de experiência e 1 ponto de fama. Todos os monstros desta divisão dão dano de terra e a maioria é fraca a fogo. Mages são a melhor vocação; knights e paladins sozinhos sofrem, porque há muitos monstros ao mesmo tempo e alguns resistem a dano físico.",
+      "steps": [
+        {
+          "title": "Pedir as 4 missões",
+          "text": "Fala com o {npc:Gnombold} no 4.º andar da Spike e aceita as quatro missões: {key:nests}, {key:fertilise}, as cargas geomânticas (Geomantic Charges) e {key:kill}.",
+          "npc": "Gnombold",
+          "tip": "Mages: leva um {item:Terra Set} e usa ataques de {wiki:Fire Damage|fogo}."
+        },
+        {
+          "title": "Mapa do 1.º andar da Middle Spike",
+          "text": "Neste andar estão os ninhos, os cogumelos e os monólitos. No mapa original, os ninhos estão marcados com ponto de exclamação vermelho, os cogumelos com estrela laranja e o monólito com ponto de interrogação azul.",
+          "map": {
+            "x": 32242,
+            "y": 32604,
+            "z": 11,
+            "marks": [
+              {
+                "x": 32232,
+                "y": 32636,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32115,
+                "y": 32663,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32165,
+                "y": 32709,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32167,
+                "y": 32714,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32307,
+                "y": 32620,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32346,
+                "y": 32586,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32322,
+                "y": 32545,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32253,
+                "y": 32538,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32180,
+                "y": 32558,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32250,
+                "y": 32559,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32167,
+                "y": 32519,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              },
+              {
+                "x": 32159,
+                "y": 32569,
+                "z": 11,
+                "label": "Ninho / cogumelo / monólito"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Destroy Nests: disfarçar-te",
+          "text": "Vai ao lado **sul** da Spike interior (zona segura) e passa entre as estruturas de cristal para ficares disfarçado de {creature:Mutated Bat}."
+        },
+        {
+          "title": "Destroy Nests: destruir 8 ninhos",
+          "text": "Ainda disfarçado, entra na gruta e usa os ninhos. Tens de destruir **8**. Só podes usar ninhos enquanto estás disfarçado. Um ninho \"repara-se\" ao fim de 1 a 2 minutos e pode voltar a ser usado."
+        },
+        {
+          "title": "Fertilising Mushrooms",
+          "text": "Procura cogumelos grandes nas grutas e usa o fertilizante neles. Tens de o fazer em **4 cogumelos diferentes**: não dá para fertilizar o mesmo duas vezes. Conta por jogador, por isso tu e um amigo podem fertilizar o mesmo cogumelo."
+        },
+        {
+          "title": "Geomantic Charges",
+          "text": "Encontra monólitos magnéticos carregados e usa a {item:Lodestone} neles. Primeira vez: {item:Partially Charged Lodestone}. Segunda: {item:Highly Charged Lodestone}. Terceira: recebes *\"You have charged you body with geomantic energy and can report about it.\"* Os monólitos recarregam em 1 a 2 minutos.",
+          "warning": "Ao usar um monólito podes ser **teletransportado para um sítio aleatório** da gruta."
+        },
+        {
+          "title": "Matar 7 Crystalcrushers",
+          "text": "Mata **7** {creature:Crystalcrusher|Crystalcrushers}. São os monstros mais perigosos desta divisão, por isso tem cuidado."
+        },
+        {
+          "title": "Entregar as tarefas",
+          "text": "Volta das grutas à zona segura e entrega ao {npc:Gnombold} cada tarefa terminada (como na Lower Spike, {key:report} e o nome da missão).",
+          "npc": "Gnombold",
+          "reward": "2.000 de experiência e 1 ponto de fama por tarefa"
+        }
+      ]
+    },
+    {
+      "title": "4. Lower Spike (nível 80+)",
+      "intro": "Recompensa de cada tarefa: 3.500 de experiência e 1 ponto de fama. As tarefas fazem-se nos andares 6, 7 e 8 da Spike.",
+      "steps": [
+        {
+          "title": "Pedir as 4 missões",
+          "text": "Fala com a {npc:Gnomargery} no -7.º andar: {key:hi}, {key:mission}. Aceita cada missão com {key:yes}: {key:deliver}, {key:undercover}, {key:temperature} e {key:kill}.",
+          "npc": "Gnomargery",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "I can offer you several missions: to deliver parcels to our boys and girls in the battlefield, to get reports from our undercover gnomes, to do some temperature measuring and to kill some drillworms."
+            },
+            {
+              "you": "deliver"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "undercover"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "temperature"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "kill"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Parcel Delivery: como entregar",
+          "text": "Recebes 4 {item:Gnomish Supplies}. Encontra 4 dos 5 postos avançados e entrega um pacote a cada {npc:Gnome Trooper}: quando ele perguntar se tens algo para entregar, diz {key:something}.",
+          "dialogue": [
+            {
+              "npc": "Do you have something to deliver?"
+            },
+            {
+              "you": "something"
+            },
+            {
+              "npc": "Ah, a letter from home! Oh - I had no idea she felt that way! This is most interesting!"
+            }
+          ]
+        },
+        {
+          "title": "Parcel Delivery: postos no andar 6",
+          "text": "Gnome Troopers no andar 6:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 13,
+            "marks": [
+              {
+                "x": 32170,
+                "y": 32650,
+                "z": 13,
+                "label": "Gnome Trooper"
+              },
+              {
+                "x": 32327,
+                "y": 32593,
+                "z": 13,
+                "label": "Gnome Trooper"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Parcel Delivery: postos no andar 7",
+          "text": "Gnome Troopers no andar 7:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 14,
+            "marks": [
+              {
+                "x": 32293,
+                "y": 32511,
+                "z": 14,
+                "label": "Gnome Trooper"
+              },
+              {
+                "x": 32175,
+                "y": 32662,
+                "z": 14,
+                "label": "Gnome Trooper"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Parcel Delivery: posto no andar 8",
+          "text": "Gnome Trooper no andar 8:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 15,
+            "marks": [
+              {
+                "x": 32157,
+                "y": 32523,
+                "z": 15,
+                "label": "Gnome Trooper"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Undercover Contacts: como funciona",
+          "text": "Encontra pelo menos **3** dos 9 agentes gnomos disfarçados de monstros, com nomes como {npc:A Vulcongra} ou \"A Nightmare Scion\". Diz {key:hi} a cada um para receberes o relatório. Procura monstros que se comportam de forma estranha e te piscam o olho.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Pssst! Keep it down! <gives you an elaborate report on monster activity>"
+            }
+          ]
+        },
+        {
+          "title": "Undercover Contacts: andar 6",
+          "text": "Agentes no andar 6:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 13,
+            "marks": [
+              {
+                "x": 32339,
+                "y": 32531,
+                "z": 13,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32131,
+                "y": 32563,
+                "z": 13,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32233,
+                "y": 32689,
+                "z": 13,
+                "label": "Agente disfarçado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Undercover Contacts: andar 7",
+          "text": "Agentes no andar 7:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 14,
+            "marks": [
+              {
+                "x": 32309,
+                "y": 32545,
+                "z": 14,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32276,
+                "y": 32637,
+                "z": 14,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32155,
+                "y": 32617,
+                "z": 14,
+                "label": "Agente disfarçado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Undercover Contacts: andar 8",
+          "text": "Agentes no andar 8:",
+          "map": {
+            "x": 32242,
+            "y": 32587,
+            "z": 15,
+            "marks": [
+              {
+                "x": 32209,
+                "y": 32530,
+                "z": 15,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32174,
+                "y": 32603,
+                "z": 15,
+                "label": "Agente disfarçado"
+              },
+              {
+                "x": 32312,
+                "y": 32583,
+                "z": 15,
+                "label": "Agente disfarçado"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Temperature Gauging",
+          "text": "Procura as **9 poças de lava** nos 3 andares da Lower Spike e usa o {item:Thermometer} junto delas. Se não for o sítio certo recebes *\"This is not the hot spot!\"*. Quando acertares recebes *\"Whew! That was that hot, it melted the thermometer! At least you've found the hot spot!\"*",
+          "tip": "O ponto quente é o mesmo para todos os jogadores, mas muda todos os dias no {wiki:Server Save} e pode estar em qualquer um dos 3 andares."
+        },
+        {
+          "title": "Matar 7 Drillworms",
+          "text": "Mata **7** {creature:Drillworm|Drillworms} nas grutas. Também podes fazê-lo nas {wiki:Drillworm Caves}, fora de The Spike."
+        },
+        {
+          "title": "Entregar as tarefas",
+          "text": "Volta das grutas à zona segura, fala com a {npc:Gnomargery}, diz {key:report} e depois o nome da tarefa: {key:delivery}, {key:undercover}, {key:temperature} ou {key:kill}.",
+          "npc": "Gnomargery",
+          "dialogue": [
+            {
+              "you": "report"
+            },
+            {
+              "npc": "What mission do you want to report about: the delivery of parcels, the undercover reports, the temperature measuring or kill of drillworms?"
+            },
+            {
+              "you": "delivery"
+            },
+            {
+              "npc": "You have done well. Here, take your reward."
+            }
+          ],
+          "reward": "3.500 de experiência e 1 ponto de fama por tarefa"
+        }
+      ]
+    },
+    {
+      "title": "5. Comprar o Cave Explorer Outfit",
+      "steps": [
+        {
+          "title": "Falar com o Gnommander",
+          "text": "Com fama suficiente, fala com o {npc:Gnommander}: {key:reward}, {key:worthy} e escolhe {key:basic}, {key:first} ou {key:second}. São precisos 100 de fama para o outfit completo (mínimo de 25 dias, por causa do cooldown de 20 horas).",
+          "npc": "Gnommander",
+          "dialogue": [
+            {
+              "you": "reward"
+            },
+            {
+              "npc": "I can sell special outfit parts. If your fame is high enough, you might be worthy of such a reward."
+            },
+            {
+              "you": "worthy"
+            },
+            {
+              "npc": "You can acquire the basic outfit for 1000 Gold, the first addon for 2000 gold and the second addon for 3000 gold. Which do you want to buy?"
+            }
+          ],
+          "table": {
+            "head": [
+              "Palavra-chave",
+              "Compra",
+              "Preço"
+            ],
+            "rows": [
+              [
+                "{key:basic}",
+                "Cave Explorer Outfit",
+                "1.000 gp"
+              ],
+              [
+                "{key:first}",
+                "1.º addon",
+                "2.000 gp"
+              ],
+              [
+                "{key:second}",
+                "2.º addon",
+                "3.000 gp"
+              ]
+            ]
+          },
+          "reward": "{wiki:Cave Explorer Outfits|Cave Explorer Outfit} e addons"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Mais detalhes sobre o outfit em {wiki:Cave Explorer Outfits Quest}.",
+    "Na Upper Spike podem aparecer, raramente, {creature:Corym Skirmisher|Corym Skirmishers}, {creature:Corym Charlatan|Corym Charlatans} e {creature:Corym Vanguard|Corym Vanguards}."
+  ]
+}

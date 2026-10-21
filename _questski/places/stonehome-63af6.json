@@ -1,0 +1,27 @@
+{
+  "title": "Stonehome",
+  "type": "cidade",
+  "near": "Edron",
+  "summary": "Pequena vila a **nordeste de Edron**, com cemitério, uma gruta de {creature:Rotworm|Rotworms} junto às Stonehome Flats e o barco do {npc:Cornell} para Grimvale.",
+  "entrance": {"x": 33303, "y": 31773, "z": 7, "label": "Stonehome"},
+  "arrive": [
+    "Viaja até **Edron**: no capitão do porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais). Chegas junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Sai do {wiki:Edron Castle} pelo **sul** e segue o caminho a pé para **leste**/**nordeste** até Stonehome ({coord:33303,31773,7})."
+  ],
+  "leave": [
+    "Volta a pé para **oeste**/**sudoeste** até Edron e apanha um barco no porto, junto ao {npc:Captain Seahorse} ({key:hi}, o nome da cidade, {key:yes}).",
+    "No norte de Stonehome, o {npc:Cornell} ({coord:33304,31720,7}) leva-te a Grimvale ({key:passage})."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33304, "y": 31720, "z": 7, "label": "Cornell (barco para Grimvale)"},
+    {"x": 33314, "y": 31737, "z": 7, "label": "Cemitério de Stonehome"},
+    {"x": 33311, "y": 31837, "z": 7, "label": "Torre em ruínas a sul de Stonehome (Servant Sentry)"}
+  ],
+  "images": [
+    {"file": "Stonehome map.png", "caption": "Mapa de Stonehome"}
+  ],
+  "warnings": [
+    "Zona tranquila, mas há {creature:Wolf|Wolves}, {creature:Bear|Bears} e {creature:Snake|Snakes} a norte, e um {creature:Wyvern} no topo de uma colina a norte da vila."
+  ]
+}

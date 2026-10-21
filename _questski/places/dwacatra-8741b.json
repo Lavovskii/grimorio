@@ -1,0 +1,32 @@
+{
+  "title": "Dwacatra",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "A ilha-prisão dos anões, nas profundezas **por baixo de Kazordoon** (também chamada Kazordoon Prison), com dwarves, orcs, minotauros e cyclopes.",
+  "entrance": {"x": 32597, "y": 31930, "z": 14, "label": "Buraco no centro da prisão"},
+  "requirements": [
+    "A porta da prisão abre-se com a {item:Key 3802} (Kazordoon Prison Key), que é recompensa da {wiki:Emperor's Cookies Quest}."
+  ],
+  "items": ["Key 3802", "Shovel", "Rope"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de Cormaya ou Farmine ({key:hi}, {key:kazordoon}, {key:yes}), de {wiki:Magic Carpet} (Premium) ou a pé pela montanha.",
+    "Vai ao **portão principal** de Kazordoon (podes apanhar os wagons até \"Main Gate\").",
+    "Desce as escadas que ficam bem a **leste** dos wagons e continua sempre a descer até chegares à porta de Dwacatra; abre-a com a {item:Key 3802}.",
+    "Dentro da prisão há buracos pequenos que se abrem com a {item:Shovel} e buracos abertos com criaturas: não vás sem pá nem corda. O buraco do centro ({coord:32597,31930,14}) leva à sala com a porta selada da {wiki:The Explorer Society Quest}."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe com a {item:Rope} (ou {spell:Magic Rope}) pelos buracos por onde desceste e pelas escadas até ao portão principal de Kazordoon.",
+    "Em Kazordoon, apanha o {wiki:Steamship} do {npc:Brodrosch} (muito abaixo da cidade) para Cormaya ou Farmine, ou o {wiki:Magic Carpet} no topo da montanha ({coord:32587,31941,0})."
+  ],
+  "coords": [
+    {"x": 32599, "y": 31899, "z": 14, "label": "Bacia da The Lightbearer (extremo norte da prisão)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch (Steamship de Kazordoon)"},
+    {"x": 32587, "y": 31941, "z": 0, "label": "Magic Carpet de Kazordoon"}
+  ],
+  "images": [
+    {"file": "Dwacarta Map.png", "caption": "Mapa de Dwacatra"}
+  ],
+  "warnings": [
+    "Há {creature:Orc Berserker|Orc Berserkers}, {creature:Minotaur Guard|Minotaur Guards}, {creature:Minotaur Mage|Minotaur Mages}, {creature:Cyclops} e {creature:Dwarf Guard|Dwarf Guards}. O wiki recomenda nível 30+ para knights e paladins e 27+ para mages."
+  ]
+}

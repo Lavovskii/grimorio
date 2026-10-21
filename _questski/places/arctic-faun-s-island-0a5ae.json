@@ -1,0 +1,31 @@
+{
+  "title": "Arctic Faun's Island",
+  "type": "ilha",
+  "near": "Carlin",
+  "summary": "Pequena ilha gelada das {wiki:Ice Islands} do sul, entre o continente (noroeste de Carlin) e as ilhas de Senja e Vega, habitada por {creature:Arctic Faun|Arctic Fauns}; só se chega lá naufragando num atalho do {npc:Charles}.",
+  "entrance": {"x": 32113, "y": 31742, "z": 7, "label": "Arctic Faun's Island"},
+  "requirements": [
+    "Não há viagem direta: só chegas aqui por **naufrágio** aleatório ao pedires um atalho ({key:shortcut}) ao {npc:Charles} em Port Hope. Depois de naufragares num dos destinos possíveis, não podes voltar a usar o atalho durante **20 horas**."
+  ],
+  "arrive": [
+    "Vai a **Port Hope** e põe-te junto ao {npc:Charles}, no barco do lado **oeste** da cidade ({coord:32529,32785,6}).",
+    "Diz {key:hi}, {key:shortcut}, {key:yes} e escolhe {key:edron} (atalho a 90 gp). Se chegares a Edron sem naufragar, diz ao {npc:Captain Seahorse} {key:hi}, {key:port hope}, {key:yes} e repete.",
+    "Repete até naufragares. O naufrágio pode levar-te a uma de várias ilhas; esta é a ilha gelada com Arctic Fauns ({coord:32113,31742,7}). Se calhares noutra, espera 20 horas para tentar de novo."
+  ],
+  "leave": [
+    "Usa o {wiki:Ice Portal} da ilha: leva-te a Vega, ao norte de Carlin, ao norte de Thais, a Fibula ou à costa sul de Ragnir."
+  ],
+  "coords": [
+    {"x": 32113, "y": 31742, "z": 7, "label": "Arctic Faun's Island"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (barco de Port Hope)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "images": [
+    {"file": "Arctic Faun's Island.png", "caption": "Arctic Faun's Island"},
+    {"file": "Arctic Faun's Island - Below Ground.png", "caption": "A gruta subterrânea dos Arctic Fauns"}
+  ],
+  "warnings": [
+    "Os {creature:Arctic Faun|Arctic Fauns} têm 300 HP e batem até ~240; há cerca de 10 na ilha.",
+    "Um barril na ilha dá dois {item:Small Enchanted Sapphire|Small Enchanted Sapphires} e talvez outro loot menor."
+  ]
+}

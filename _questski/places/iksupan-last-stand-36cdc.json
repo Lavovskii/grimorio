@@ -1,0 +1,31 @@
+{
+  "title": "Iksupan Last Stand",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Última zona da cidade perdida do ouro, **Iksupan**, por baixo de Tiquanda (a sudeste de Port Hope), habitada pelos Iks mortos-vivos e pelos Mitmah; chega-se por um teleporte junto à sala da alavanca do {creature:Ahau}.",
+  "entrance": {"x": 34062, "y": 31706, "z": 9, "label": "Iksupan Last Stand"},
+  "requirements": [
+    "O acesso obtém-se na missão *Galthen and the City of Gold Part II* da {wiki:Adventures of Galthen Quest}: tens de derrotar o {creature:Ahau} e aceitar a ajuda do {npc:Ahau's Dead Chamberlain}.",
+    "Para entrares em Iksupan precisas de {item:The Key Intihuatac}."
+  ],
+  "items": ["The Key Intihuatac"],
+  "arrive": [
+    "De **Port Hope**, segue pela selva para **sudeste** até às ruínas de Tiquanda e usa {item:The Key Intihuatac} nas inscrições ({coord:32727,32876,7}): entras na cidade secreta do ouro, Iksupan.",
+    "Encontra o caminho até ao **terceiro andar** de Iksupan e vai sempre para **norte**, passando a zona de lava, até à sala com **duas chamas azuis**; a do **norte** leva à sala da alavanca do Ahau.",
+    "Depois de derrotares o Ahau, fala com o {npc:Ahau's Dead Chamberlain}, fora da sala da alavanca, e diz {key:yes}. Passas a poder usar o {wiki:Spheric Teleporter|teleporte esférico} dessa sala, que te leva para perto da cidade subterrânea.",
+    "Segue o corredor e sobe as escadas até um túmulo com uma abertura a **leste**; desce pelo buraco e chegas ao Iksupan Last Stand."
+  ],
+  "leave": [
+    "A wiki não descreve um atalho de saída a partir do fundo da zona: volta pelo caminho por onde vieste até à zona das **chamas azuis** no terceiro andar de Iksupan.",
+    "Usa a {item:Slab with a Skull}, logo a **leste** das chamas azuis: teleporta-te para a entrada nas ruínas de Tiquanda.",
+    "Daí volta a pé pela selva para **noroeste** até Port Hope, onde podes apanhar um barco."
+  ],
+  "coords": [
+    {"x": 32727, "y": 32876, "z": 7, "label": "Passagem secreta para Iksupan (ruínas de Tiquanda)"},
+    {"x": 34008, "y": 31591, "z": 10, "label": "Atab"}
+  ],
+  "warnings": [
+    "Zona para nível 400+ ({creature:Iks Yapunac|Iks Yapunacs}, {creature:Mitmah Scout|Mitmah Scouts}, {creature:Mitmah Seer|Mitmah Seers}).",
+    "Há muitas armadilhas de espinhos que tiram uma percentagem da vida atual; no corredor das armadilhas, se o contador chegar a zero, voltas ao início."
+  ]
+}

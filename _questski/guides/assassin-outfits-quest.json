@@ -1,0 +1,545 @@
+{
+  "slug": "assassin-outfits-quest",
+  "category": "outfit",
+  "region": "Port Hope",
+  "difficulty": 4,
+  "duration": "Muitas horas (sobretudo a recolher itens)",
+  "summary": "Três assassinos escondidos no sul do mundo podem dar-te o seu equipamento. O bêbedo {npc:Vescu} dá-te o outfit de Assassin se o ajudares a fazer uma poção para ficar sóbrio; o {npc:Erayo} dá-te o primeiro addon (a cabeça) em troca de muito pano e fio; e o {npc:Atrad} dá-te o segundo addon (a katana) por uma {item:Behemoth Claw} e um {item:Nose Ring}.",
+  "legend_pt": "Misteriosos e letais, os assassinos são difíceis de encontrar e quase impossíveis de tornar amigos.",
+  "start": {
+    "x": 32565,
+    "y": 32654,
+    "z": 7,
+    "label": "Vescu, cabana a norte de Port Hope"
+  },
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo, mas é recomendado nível 100+ para recolher os itens.",
+    "Para o addon da katana, tens de ter primeiro o addon da cabeça (Erayo).",
+    "Estar **bêbedo** para falar com o Vescu, **invisível** para entrar na cabana do Erayo e **em chamas** para falar com o Atrad.",
+    "Para chegar ao Erayo e ao Atrad: partes *Access to Meriana* (tartarugas para as Laguna Islands), *Access to Goroma* e *The Counterspell* (parede de energia de Goroma) da {wiki:The Shattered Isles Quest|The Shattered Isles Quest}."
+  ],
+  "items_needed": [
+    {
+      "item": "Machete",
+      "note": "ou Heavy Machete, para entrar na cabana do Vescu"
+    },
+    {
+      "item": "Beer",
+      "note": "ou Mead, Wine ou Rum, para ficares bêbedo"
+    },
+    {
+      "item": "Bonelord Eye",
+      "qty": 30
+    },
+    {
+      "item": "Red Dragon Scale",
+      "qty": 10
+    },
+    {
+      "item": "Lizard Scale",
+      "qty": 30
+    },
+    {
+      "item": "Fish Fin",
+      "qty": 20
+    },
+    {
+      "item": "Vampire Dust",
+      "qty": 20
+    },
+    {
+      "item": "Demon Dust",
+      "qty": 10
+    },
+    {
+      "item": "Flask of Warrior's Sweat",
+      "qty": 1
+    },
+    {
+      "item": "Blue Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Green Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Red Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Brown Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Yellow Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "White Piece of Cloth",
+      "qty": 50,
+      "note": "addon 1"
+    },
+    {
+      "item": "Spider Silk Yarn",
+      "qty": 10,
+      "note": "addon 1 (= 100 Spider Silks)"
+    },
+    {
+      "item": "Stealth Ring",
+      "note": "ou o feitiço Invisible, para entrar na cabana do Erayo"
+    },
+    {
+      "item": "Behemoth Claw",
+      "qty": 1,
+      "note": "addon 2"
+    },
+    {
+      "item": "Nose Ring",
+      "qty": 1,
+      "note": "addon 2"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Outfit **Assassin** (masculino e feminino)"
+    },
+    {
+      "text": "Addon 1: cabeça de assassino (Erayo)"
+    },
+    {
+      "text": "Addon 2: katana de assassino (Atrad)"
+    },
+    {
+      "text": "Achievement **Swift Death**"
+    }
+  ],
+  "achievements": [
+    "Swift Death"
+  ],
+  "dangers": [
+    "Bonelord",
+    "Dragon Lord",
+    "Vampire",
+    "Hero",
+    "Ghoul",
+    "Ghost",
+    "Mummy",
+    "Giant Spider",
+    "Demon",
+    "Behemoth",
+    "The Horned Fox"
+  ],
+  "npcs": [
+    "Vescu",
+    "Erayo",
+    "Atrad",
+    "Irmana"
+  ],
+  "tips": [
+    "Recolhe **todos** os itens antes de falares com os NPCs: poupas muito tempo.",
+    "Onde apanhar os itens do outfit: {item:Bonelord Eye|Bonelord Eyes} de {creature:Bonelord|Bonelords} ou {creature:Braindeath|Braindeaths}; {item:Red Dragon Scale|Red Dragon Scales} de {creature:Dragon Lord|Dragon Lords}; {item:Lizard Scale|Lizard Scales} de lagartos; {item:Fish Fin|Fish Fins} de Quaras ou Deeplings; {item:Vampire Dust} de {creature:Vampire|Vampires}; {item:Demon Dust} de {creature:Demon|Demons}.",
+    "O {item:Flask of Warrior's Sweat} obtém-se trocando 4 {item:Warrior Helmet|Warrior Helmets} com os djinns que vendem itens mágicos nas torres dos djinns, ou como loot de {creature:Undead Gladiator|Undead Gladiators}.",
+    "Onde apanhar os panos: azul de {creature:Blue Djinn|Blue Djinns} e {creature:Marid|Marids}; verde de {creature:Green Djinn|Green Djinns} e {creature:Efreet|Efreets} (ou compra {item:Green Tunic|Green Tunics} e troca-as com a {npc:Irmana}); vermelho de {creature:Hero|Heroes}, {creature:Fury|Furies} e {creature:Barbarian Bloodwalker|Barbarian Bloodwalkers}; castanho de {creature:Ghoul|Ghouls} e {creature:Barbarian Headsplitter|Barbarian Headsplitters}; amarelo de {creature:Mummy|Mummies}; branco de {creature:Ghost|Ghosts} e {creature:Spectre|Spectres}. A {item:Spider Silk} vem de {creature:Giant Spider|Giant Spiders} e {creature:Crystal Spider|Crystal Spiders}."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit: o Vescu e a poção da sobriedade",
+      "steps": [
+        {
+          "title": "Ir até ao Vescu",
+          "text": "O assassino {npc:Vescu} vive numa cabana nas *scrublands* a **norte** de Port Hope: sai da cidade e caminha para norte até à cabana. Precisas de um {item:Machete} (ou {item:Heavy Machete}) para entrar na cabana, mas também consegues falar com ele de fora. Para voltares, faz o mesmo caminho a pé para **sul** até Port Hope.",
+          "coords": [
+            {
+              "x": 32565,
+              "y": 32654,
+              "z": 7,
+              "label": "Cabana do Vescu"
+            }
+          ]
+        },
+        {
+          "title": "Ficar bêbedo",
+          "text": "O Vescu só te responde se estiveres **bêbedo**. Bebe {item:Beer}, {item:Mead}, {item:Wine} ou {item:Rum} até ficares embriagado, e só depois fala com ele.",
+          "warning": "Não uses um {item:Dwarven Ring} nesta altura: precisas de estar bêbedo."
+        },
+        {
+          "title": "Aceitar fazer a poção",
+          "text": "Diz {key:hi}, {key:sober}, {key:potion} e {key:yes}. Ele lê a receita da avó e pergunta se o ajudas a juntar os 30 olhos de bonelord: diz {key:yes}.",
+          "npc": "Vescu",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hey t-there, you look like someone who enjoys a good booze."
+            },
+            {
+              "you": "sober"
+            },
+            {
+              "npc": "I wish there was like a potion which makes you sober in an instant. Dwarven rings wear off so fast. <hicks>"
+            },
+            {
+              "you": "potion"
+            },
+            {
+              "npc": "[...] C-could you help me to brew such a potion?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] It says... 30 bonelord eyes... 10 red dragon scales. [...] Then 30 lizard scales... 20 fish fins [...] Add 20 ounces of vampire dust, 10 ounces of demon dust and mix well with one flask of warrior's sweat. [...] Will you help me gathering 30 bonelord eyes?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "G-good. Go get them, I'll have a beer in the meantime."
+            }
+          ]
+        },
+        {
+          "title": "Entregar os ingredientes",
+          "text": "Com todos os itens no inventário (e bêbedo), entrega-os um a um, dizendo o nome de cada ingrediente e confirmando com {key:yes}:",
+          "npc": "Vescu",
+          "table": {
+            "head": [
+              "Diz",
+              "Entregas"
+            ],
+            "rows": [
+              [
+                "{key:bonelord eye} → {key:yes}",
+                "30 {item:Bonelord Eye|Bonelord Eyes}"
+              ],
+              [
+                "{key:red dragon scale} → {key:yes}",
+                "10 {item:Red Dragon Scale|Red Dragon Scales}"
+              ],
+              [
+                "{key:lizard scale} → {key:yes}",
+                "30 {item:Lizard Scale|Lizard Scales}"
+              ],
+              [
+                "{key:fish fin} → {key:yes}",
+                "20 {item:Fish Fin|Fish Fins}"
+              ],
+              [
+                "{key:vampire dust} → {key:yes}",
+                "20 {item:Vampire Dust}"
+              ],
+              [
+                "{key:demon dust} → {key:yes}",
+                "10 {item:Demon Dust}"
+              ],
+              [
+                "{key:warrior's sweat} → {key:yes}",
+                "1 {item:Flask of Warrior's Sweat}"
+              ]
+            ]
+          },
+          "dialogue": [
+            {
+              "you": "bonelord eye"
+            },
+            {
+              "npc": "Have you really managed to bring me 30 bonelord eyes? <hicks>"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Aw-awsome! <hicks> Squishy! Now, please bring me 10 red dragon scales."
+            },
+            {
+              "you": "warrior's sweat"
+            },
+            {
+              "npc": "This s-smells even worse than the fish fins. Is that warrior's sweat?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Yahaha! Here we g-go. [...] I'll teach you something fun, remind me to tell you a secret sometime."
+            }
+          ]
+        },
+        {
+          "title": "Pedir o segredo",
+          "text": "Depois do último ingrediente, diz {key:secret}. O Vescu dá-te o seu velho fato de assassino (sem a parte da cabeça).",
+          "npc": "Vescu",
+          "dialogue": [
+            {
+              "you": "secret"
+            },
+            {
+              "npc": "Right. <hicks> Since you helped me to b-brew that potion [...] I'll give you my old assassin costume. It lacks the head part, but it's almost like new. Don't pretend to be me though, 'kay? <hicks>"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Assassin Male.gif",
+              "caption": "Outfit Assassin (masculino)"
+            },
+            {
+              "file": "Outfit Assassin Female.gif",
+              "caption": "Outfit Assassin (feminino)"
+            }
+          ],
+          "reward": "Outfit Assassin"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1: a cabeça de assassino (Erayo)",
+      "steps": [
+        {
+          "title": "Chegar às Laguna Islands",
+          "text": "As {wiki:Laguna Islands|Laguna Islands} não têm porto: só lá chegas montado nas {wiki:Sea Turtle|Sea Turtles} da sereia {npc:Marina}, e para isso precisas de ter feito a parte *Access to Meriana* da {wiki:The Shattered Isles Quest|The Shattered Isles Quest} (é ela que te dá autorização para usar as tartarugas). Em **Liberty Bay**, fala com o {npc:Captain Waverider}, na pequena península a sudeste do depot, e diz {key:hi}, {key:peg leg} e {key:yes} (50 gp) para ires para {wiki:Meriana|Meriana}. Aí, vai à costa onde estão as tartarugas e pisa uma: leva-te para as Laguna Islands. Usa as tartarugas para passar de ilha em ilha até à ilha do **nordeste**.",
+          "npc": "Captain Waverider",
+          "coords": [
+            {
+              "x": 32347,
+              "y": 32859,
+              "z": 7,
+              "label": "Captain Waverider (Liberty Bay)"
+            },
+            {
+              "x": 32329,
+              "y": 32528,
+              "z": 7,
+              "label": "Marina (costa norte de Meriana)"
+            },
+            {
+              "x": 32466,
+              "y": 32939,
+              "z": 7,
+              "label": "Laguna Islands"
+            }
+          ],
+          "tip": "Para voltares, faz o caminho ao contrário: pisa as Sea Turtles até Meriana e apanha o barco do Captain Waverider de volta a Liberty Bay ({key:liberty bay})."
+        },
+        {
+          "title": "Entrar na cabana do Erayo",
+          "text": "O {npc:Erayo} vive numa pequena cabana nas {wiki:Laguna Islands|Laguna Islands} do **nordeste**, deitado numa rede um piso abaixo. Para entrares na cabana tens de estar **invisível**: usa o feitiço {spell:Invisible} ou um {item:Stealth Ring}.",
+          "coords": [
+            {
+              "x": 32519,
+              "y": 32910,
+              "z": 8,
+              "label": "Erayo"
+            }
+          ]
+        },
+        {
+          "title": "Pedir o addon",
+          "text": "Diz {key:hi}, {key:addon}, {key:yes} e de novo {key:yes}. Ele precisa de muito pano para cobrir o castelo de Thais.",
+          "npc": "Erayo",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "What the... I mean, of course I sensed you."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "Vescu gave you an assassin outfit? Haha. Noticed it lacks the head piece? You look a bit silly. Want my old head piece?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] Bring me 50 pieces of blue cloth, 50 pieces of green cloth, 50 pieces of red cloth, 50 pieces of brown cloth, 50 pieces of yellow cloth and 50 pieces of white cloth. [...] Besides, gonna need 10 spools of yarn. Understood?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Good. Start with the blue cloth. I'll wait."
+            }
+          ]
+        },
+        {
+          "title": "Entregar os panos e o fio",
+          "text": "Entrega tudo por esta ordem, dizendo a palavra e confirmando com {key:yes}:",
+          "npc": "Erayo",
+          "table": {
+            "head": [
+              "Diz",
+              "Entregas"
+            ],
+            "rows": [
+              [
+                "{key:blue cloth} → {key:yes}",
+                "50 {item:Blue Piece of Cloth|Blue Pieces of Cloth}"
+              ],
+              [
+                "{key:green cloth} → {key:yes}",
+                "50 {item:Green Piece of Cloth|Green Pieces of Cloth}"
+              ],
+              [
+                "{key:red cloth} → {key:yes}",
+                "50 {item:Red Piece of Cloth|Red Pieces of Cloth}"
+              ],
+              [
+                "{key:brown cloth} → {key:yes}",
+                "50 {item:Brown Piece of Cloth|Brown Pieces of Cloth}"
+              ],
+              [
+                "{key:yellow cloth} → {key:yes}",
+                "50 {item:Yellow Piece of Cloth|Yellow Pieces of Cloth}"
+              ],
+              [
+                "{key:white cloth} → {key:yes}",
+                "50 {item:White Piece of Cloth|White Pieces of Cloth}"
+              ],
+              [
+                "{key:yarn} → {key:yes}",
+                "10 {item:Spider Silk Yarn|Spider Silk Yarns}"
+              ]
+            ]
+          },
+          "dialogue": [
+            {
+              "you": "yarn"
+            },
+            {
+              "npc": "Brought the 10 spools of yarn?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Thanks. That's it, you're done. Good job, Player. I keep my promise. Here's my old assassin head piece."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Assassin Male Addon 1.gif",
+              "caption": "Assassin com o addon 1 (masculino)"
+            },
+            {
+              "file": "Outfit Assassin Female Addon 1.gif",
+              "caption": "Assassin com o addon 1 (feminino)"
+            }
+          ],
+          "reward": "Addon 1 do Assassin (cabeça)"
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2: a katana de assassino (Atrad)",
+      "steps": [
+        {
+          "title": "Arranjar os dois itens",
+          "text": "Junta 1 {item:Behemoth Claw} (loot de {creature:Behemoth|Behemoths}) e 1 {item:Nose Ring} (loot do {creature:The Horned Fox})."
+        },
+        {
+          "title": "Chegar a Goroma",
+          "text": "O {npc:Atrad} está em {wiki:Goroma|Goroma}. Em **Liberty Bay**, fala com o {npc:Jack Fate} no barco dele, no porto, e diz {key:hi}, {key:goroma} e {key:yes} (500 gp). Só te leva a Goroma depois de fazeres a parte *Access to Goroma* da {wiki:The Shattered Isles Quest|The Shattered Isles Quest}. A cabana do Atrad fica no **norte** de Goroma, para lá da parede de energia: só a passas depois da missão *The Counterspell* da mesma quest.",
+          "coords": [
+            {
+              "x": 32161,
+              "y": 32558,
+              "z": 6,
+              "label": "Jack Fate (leste de Goroma)"
+            },
+            {
+              "x": 32077,
+              "y": 32533,
+              "z": 9,
+              "label": "Atrad"
+            }
+          ],
+          "tip": "Para voltares, regressa ao barco do {npc:Jack Fate} no **leste** de Goroma e diz {key:hi}, {key:liberty bay}, {key:yes}."
+        },
+        {
+          "title": "Pegar fogo a ti próprio",
+          "text": "O {npc:Atrad} está em {wiki:Goroma|Goroma}, para lá da parede de energia, numa cabana subterrânea. Só fala contigo se estiveres **em chamas**: há campos de fogo na superfície de Goroma, e o mais próximo fica **diretamente a sul** da entrada para a cabana do Atrad. Pisa-o e desce logo para falar com ele.",
+          "warning": "O campo de fogo tira-te vida enquanto ardes. Tem a vida cheia antes de o pisares."
+        },
+        {
+          "title": "Pedir o addon",
+          "text": "Ainda em chamas, diz {key:hi}, {key:addon}, {key:yes} e {key:yes}.",
+          "npc": "Atrad",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hehe. That's a good show, Player. With all the pyrotechnical effects, you got my attention - for a minute at least."
+            },
+            {
+              "you": "addon"
+            },
+            {
+              "npc": "You managed to deceive Erayo? Impressive. [...] I might as well give you a task, too, eh?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Okay, listen. I don't have a list of stupid objects, I just want two things. A behemoth claw and a nose ring. Got that?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Good. Come back when you have BOTH. [...] There's a horned fox who wears a nose ring. Good luck."
+            }
+          ]
+        },
+        {
+          "title": "Entregar os itens",
+          "text": "Volta a pegar fogo, fala com o Atrad ({key:hi}) e diz {key:ring}. Ele fica com os dois itens e dá-te a katana.",
+          "npc": "Atrad",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hehe. That's a good show, Player. [...]"
+            },
+            {
+              "you": "ring"
+            },
+            {
+              "npc": "I see you brought my stuff. Good. I'll keep my promise: Here's a katana in return.."
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Assassin Male Addon 2.gif",
+              "caption": "Assassin com o addon 2 (masculino)"
+            },
+            {
+              "file": "Outfit Assassin Female Addon 2.gif",
+              "caption": "Assassin com o addon 2 (feminino)"
+            },
+            {
+              "file": "Outfit Assassin Male Addon 3.gif",
+              "caption": "Assassin completo, com os dois addons (masculino)"
+            },
+            {
+              "file": "Outfit Assassin Female Addon 3.gif",
+              "caption": "Assassin completo, com os dois addons (feminino)"
+            }
+          ],
+          "reward": "Addon 2 do Assassin (katana)"
+        }
+      ]
+    }
+  ]
+}

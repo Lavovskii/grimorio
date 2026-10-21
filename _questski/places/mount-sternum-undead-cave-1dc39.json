@@ -1,0 +1,37 @@
+{
+  "title": "Mount Sternum/Undead Cave",
+  "type": "gruta",
+  "near": "Thais",
+  "summary": "Gruta de mortos-vivos com vários pisos por baixo de {wiki:Mount Sternum}, a **norte de Thais** e a sudoeste de Kazordoon; os monstros ficam mais fortes a cada piso que desces.",
+  "entrance": {"x": 32418, "y": 32017, "z": 7, "label": "Entrada à superfície, junto à torre da bruxa a sul de Kazordoon"},
+  "items": ["Rope", "Pick"],
+  "arrive": [
+    "Chega a **Thais** (de barco: diz ao capitão {key:hi}, {key:thais}, {key:yes}) e sai da cidade a pé para **nordeste**, em direção a {wiki:Mount Sternum} ({coord:32494,32072,7}), a caminho de Kazordoon.",
+    "**Entrada norte (mais direta):** continua até à entrada à superfície em {coord:32418,32017,7}, perto da torre da bruxa a sul de Kazordoon, e desce.",
+    "**Pela gruta dos Cyclops:** desce na entrada oeste de Mount Sternum ({coord:32450,32070,7}), anda para **noroeste** pela gruta dos {creature:Cyclops} e desce em {coord:32418,32041,8}: chegas à Undead Cave, com {creature:Skeleton|Skeletons}.",
+    "Daí, cada buraco leva-te um piso mais abaixo (vê os mapas dos pisos abaixo)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe os pisos por onde desceste e usa a {item:Rope} em cada buraco.",
+    "Sai pela entrada norte ({coord:32418,32017,7}), junto à torre da bruxa, ou pela gruta dos Cyclops até à entrada oeste de Mount Sternum.",
+    "Da montanha regressa a pé para **sudoeste** até Thais (ou para **norte** até Kazordoon)."
+  ],
+  "coords": [
+    {"x": 32494, "y": 32072, "z": 7, "label": "Mount Sternum"},
+    {"x": 32450, "y": 32070, "z": 7, "label": "Entrada oeste de Mount Sternum (gruta dos Cyclops)"},
+    {"x": 32418, "y": 32041, "z": 8, "label": "Descida da gruta dos Cyclops para a Undead Cave"},
+    {"x": 32416, "y": 32024, "z": 9, "label": "Buraco na Undead Cave (piso -2)"},
+    {"x": 32441, "y": 32008, "z": 13, "label": "Escadas do centro de Mount Sternum"}
+  ],
+  "images": [
+    {"file": "Mount Sternum Undead Cave Floor1.jpg", "caption": "Undead Cave — piso 1"},
+    {"file": "Mount Sternum Undead Cave Floor2.jpg", "caption": "Undead Cave — piso 2"},
+    {"file": "Mount Sternum Undead Cave Floor3.jpg", "caption": "Undead Cave — piso 3"},
+    {"file": "Undead Cave -4.png", "caption": "Undead Cave — piso -4"},
+    {"file": "Undead Cave -5.png", "caption": "Undead Cave — piso -5"}
+  ],
+  "warnings": [
+    "Precisas de uma {item:Pick} para chegar a partes do 5.º piso e abaixo.",
+    "Fica longe das cidades e é um sítio habitual de PKs em mundos PvP."
+  ]
+}

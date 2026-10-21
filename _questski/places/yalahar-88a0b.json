@@ -1,0 +1,35 @@
+{
+  "title": "Yalahar",
+  "type": "cidade",
+  "near": "Yalahar",
+  "summary": "Cidade fundada pelos Yalahari nas ilhas do **norte**, perto de {wiki:Mistrock} e {wiki:Fenrock} (e única porta de acesso a {wiki:Vengoth}): uma Inner City segura rodeada de bairros em ruínas, ligados por portões com guardas.",
+  "entrance": {"x": 32805, "y": 31234, "z": 7, "label": "Yalahar (centro da cidade)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Para o {npc:Captain Max} (Liberty Bay) te levar precisas de ter começado a {wiki:In Service of Yalahar Quest} e do rank **Novice** da {wiki:Tibian Explorer Society|Explorer Society} (sem isso ele não fala contigo).",
+    "Os barcos diretos de/para 8 cidades (com o {npc:Karith}) só ficam disponíveis depois da missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}."
+  ],
+  "arrive": [
+    "De **Liberty Bay**: fala com o {npc:Captain Max}, num dos barcos a **leste** do porto ({coord:32298,32896,6}). Diz {key:hi}, {key:yalahar} e {key:yes} (400 gp).",
+    "De **Thais**: se pagaste 250 gp ao {npc:Wyrdin's Apprentice} (a oeste de Kazordoon) pela palavra-passe {key:whizzkid}, o {npc:Captain Bluebear} também te leva a Yalahar ({key:hi}, {key:yalahar}).",
+    "Depois da missão *Searoutes around Yalahar* há barcos diretos para Yalahar a partir de Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore (por exemplo, em Venore, o {npc:Captain Fearless}: {key:hi}, {key:yalahar}, {key:yes}). De Edron, apanha primeiro o {npc:Captain Seahorse} para Venore.",
+    "Chegas ao porto de Yalahar, a **sul** do centro da cidade, junto ao {wiki:Trade Quarter}.",
+    "Dentro da cidade, para passar de um bairro para outro fala com o guarda do portão: {key:pass} e o nome do bairro de destino (por exemplo {npc:Peter} entre Trade e Factory Quarter). Se já desbloqueaste os mecanismos dos portões, podes usá-los."
+  ],
+  "leave": [
+    "Vai ao porto, a **sul** do centro, e sobe ao barco do {npc:Karith} (1 andar acima do cais, {coord:32818,31278,5}). Com as rotas da In Service of Yalahar Quest, ele leva-te a Ab'Dendriel (160 gp), Ankrahmun (230 gp), Carlin (185 gp), Darashia (210 gp), Liberty Bay (275 gp), Port Hope (260 gp), Thais (200 gp) ou Venore (185 gp): {key:hi}, o nome da cidade (por exemplo {key:venore}) e {key:yes}.",
+    "Sem essas rotas, usa o {npc:Captain Cookie}, no barco à esquerda do do Karith ({coord:32804,31276,6}): {key:hi}, {key:liberty bay} (400 gp) ou {key:thais} (800 gp), e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith — barco para 8 cidades"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie — barco para Liberty Bay / Thais"},
+    {"x": 32298, "y": 32896, "z": 6, "label": "Captain Max — barco em Liberty Bay"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear — barco em Thais"},
+    {"x": 32857, "y": 31302, "z": 7, "label": "Guarda Peter (Trade / Factory Quarter)"},
+    {"x": 32895, "y": 31229, "z": 7, "label": "Guarda Oliver (Factory / Sunken Quarter)"},
+    {"x": 32884, "y": 31160, "z": 7, "label": "Guarda Barry (Sunken / Magician Quarter)"}
+  ],
+  "warnings": [
+    "Só a Inner City (ao nível do chão) é segura. Nos bairros à volta fica nas ruas principais: há criaturas perigosas fora delas."
+  ]
+}

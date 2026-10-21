@@ -1,0 +1,37 @@
+{
+  "title": "Hoist",
+  "type": "outro",
+  "near": "Svargrond",
+  "summary": "Elevador que os mineiros de Carlin instalaram nas {wiki:Formorgar Mines}, perto de **Svargrond**, para levar cargas entre os andares; volta a funcionar depois de recuperares a planta das minas e as instruções ({wiki:Formorgar Mines Hoist Quest}).",
+  "entrance": {"x": 32155, "y": 31126, "z": 11, "label": "Hoist (Formorgar Mines)"},
+  "requirements": [
+    "Acesso às Formorgar Mines: ter feito a {wiki:The Ice Islands Quest} até à missão *Formorgar Mines 1: The Mission*. Conta Premium.",
+    "Com a {item:Floor Plan of the Formorgar Mines (Book)|planta das minas} podes ir do andar 2 para o 3; com as {item:Instructions to the Formorgar Mines Hoist (Book)|instruções} podes ir do 3 para o 2, do 2 para o 3 e do 2 para o 1. Sem a planta **não** consegues ir do andar 1 para o 2."
+  ],
+  "arrive": [
+    "Vai a **Svargrond** (de barco em Carlin, Thais ou Venore: {key:hi}, {key:svargrond}, {key:yes}); chegas ao barco da {npc:Captain Breezelda} ({coord:32347,31108,6}), na parte **leste** da cidade.",
+    "Sai de Svargrond para **oeste**, usa {spell:Levitate} para subir e segue a rota pelo {wiki:Formorgar Glacier} até à entrada das minas ({coord:32145,31123,7}).",
+    "Desce as escadas: estás no primeiro andar das Formorgar Mines ({coord:32146,31120,9}). O Hoist fica perto da rampa de entrada (círculo amarelo no mapa do primeiro andar).",
+    "Em alternativa, se desbloqueaste o {item:Ice Portal} das {wiki:Halls of Hope} (norte de Thais), ele leva-te diretamente a um túnel das minas ({coord:32206,31027,10})."
+  ],
+  "leave": [
+    "Com as instruções, usa o Hoist para subir do andar 2 para o 1; no primeiro andar, a rampa de saída das minas fica perto do Hoist.",
+    "Lá fora refaz a rota do Formorgar Glacier até **Svargrond** (desce com {spell:Levitate} onde subiste) e apanha o barco da {npc:Captain Breezelda} ({key:hi}, {key:carlin}, {key:thais} ou {key:venore}, {key:yes}).",
+    "Ou volta pelo Ice Portal ({coord:32206,31027,10}; sobe antes pelo buraco a nordeste do portal com a {item:Rope}) até às Halls of Hope."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 32145, "y": 31123, "z": 7, "label": "Entrada/saída das Formorgar Mines (superfície)"},
+    {"x": 32206, "y": 31027, "z": 10, "label": "Ice Portal de volta às Halls of Hope"},
+    {"x": 32220, "y": 31016, "z": 10, "label": "Buraco junto ao Ice Portal (sobe com a Rope)"},
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (barco de Svargrond)"}
+  ],
+  "images": [
+    {"file": "Mines entrace.jpg", "caption": "Entrada das Formorgar Mines e localização do Hoist"},
+    {"file": "Route to Formorgar Mines.jpg", "caption": "Rota de Svargrond até às Formorgar Mines"},
+    {"file": "Formorgar Mines floor 1.png", "caption": "Primeiro andar das minas (o círculo amarelo é a rampa de saída)"}
+  ],
+  "warnings": [
+    "Os andares de baixo das minas têm {creature:Enlightened of the Cult|Enlightened of the Cult}, {creature:Crystal Spider|Crystal Spiders}, {creature:Nightmare|Nightmares} e até um {creature:Destroyer}: recomendado nível 120."
+  ]
+}

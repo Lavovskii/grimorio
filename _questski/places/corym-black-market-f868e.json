@@ -1,0 +1,24 @@
+{
+  "title": "Corym Black Market",
+  "type": "dungeon",
+  "near": "Liberty Bay",
+  "summary": "Dungeon de vários pisos **por baixo de Liberty Bay** onde os Corym e outros comerciantes negoceiam e apostam em lutas de criaturas; entra-se por uma grade de esgoto na cidade.",
+  "entrance": {"x": 32268, "y": 32835, "z": 7, "label": "Entrada do Corym Black Market (Sewer Grate)"},
+  "arrive": [
+    "Viaja até **Liberty Bay**: no porto da tua cidade diz ao capitão {key:hi}, {key:liberty bay}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais ou o {npc:Captain Fearless} em Venore).",
+    "Na cidade, vai à grade de esgoto ({item:Sewer Grate}) em {coord:32268,32835,7} e entra por ela.",
+    "Desce os pisos da dungeon até ao que precisas (por exemplo, a {npc:A Captive Forest Fury} e a marca da {wiki:Cartography 101 Quest} estão no **piso -4**)."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe todos os pisos até à grade de esgoto e sais às ruas de Liberty Bay.",
+    "No porto de Liberty Bay apanha o barco para a tua cidade (por exemplo o {npc:Jack Fate} para Venore: {key:hi}, {key:venore}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32268, "y": 32835, "z": 7, "label": "Sewer Grate (entrada)"},
+    {"x": 32290, "y": 32812, "z": 11, "label": "Piso -4 (marca da Cartography 101 Quest)"},
+    {"x": 32296, "y": 32837, "z": 11, "label": "A Captive Forest Fury (piso -4)"}
+  ],
+  "warnings": [
+    "Do piso -2 para baixo há {creature:Corym Skirmisher|Corym Skirmishers} e, no -4 e -5, {creature:Corym Vanguard|Corym Vanguards}, {creature:Orc Berserker|Orc Berserkers}, {creature:Forest Fury|Forest Furies} e outras criaturas das jaulas das lutas."
+  ]
+}

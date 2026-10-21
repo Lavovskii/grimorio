@@ -1,0 +1,216 @@
+{
+  "slug": "knight-outfits-quest",
+  "category": "outfit",
+  "region": "Vários",
+  "difficulty": 3,
+  "duration": "1–2 horas (se já tiveres os itens) + 2 h de espera pelo capacete",
+  "summary": "O {wiki:Knight Outfits|Knight Outfit} pode ser usado por qualquer jogador; esta quest dá os dois addons. A espada é forjada pelo {npc:Morgan}, em Sabrehaven, em troca de minério de ferro. O capacete adornado é atribuído pelo {npc:Gregor}, líder da guilda dos knights em Thais, depois de lhe provares o teu valor com quatro tarefas; o {npc:Sam} acaba o capacete. Ganhas também o achievement **In Shining Armor**.",
+  "legend_pt": "Se passas o tempo a lutar contra monstros e precisas de uma proteção extra, este outfit bem blindado é ótimo para ti. Os addons costumam ser atribuídos pelas guildas de knights.",
+  "start": {"x": 32407, "y": 32202, "z": 6, "label": "Gregor, guilda dos knights em Thais"},
+  "requirements": [
+    "Conta Premium.",
+    "Sem nível mínimo (recomendado 60+ para ires ao quarto final de Banuta).",
+    "Tens de falar com o Gregor sobre o capacete **antes** de ires a Banuta, senão não consegues abrir a porta.",
+    "Para chegares ao {npc:Morgan}: acesso a Meriana, dado pela missão *Access to Meriana* da {wiki:The Shattered Isles Quest|The Shattered Isles Quest}.",
+    "Para o capacete de Ramsay: acesso a {wiki:Deeper Banuta|Deeper Banuta}, dado na última missão da {wiki:The Ape City Quest|The Ape City Quest}.",
+    "Para trocar itens com o {npc:A Sweaty Cyclops}: ter feito a {wiki:The Sweaty Cyclops Quest|The Sweaty Cyclops Quest}."
+  ],
+  "items_needed": [
+    {"item": "Iron Ore", "qty": 100, "note": "espada; cai de Dwarves e de Geo-Elementals como Stone Golems"},
+    {"item": "Huge Chunk of Crude Iron", "note": "espada; troca uma {item:Giant Sword} com o A Sweaty Cyclops"},
+    {"item": "Perfect Behemoth Fang", "qty": 100, "note": "capacete; loot ou skinning de Behemoths"},
+    {"item": "Damaged Steel Helmet", "note": "capacete; o capacete de Ramsay the Reckless, em Banuta (só depois de falares com o Gregor)"},
+    {"item": "Flask of Warrior's Sweat", "note": "capacete; troca 4 {item:Warrior Helmet|Warrior Helmets} com os Djinns ou loot de Undead Gladiators"},
+    {"item": "Piece of Royal Steel", "note": "capacete; troca uma {item:Crown Armor} com o A Sweaty Cyclops ou loot de Plaguesmiths"},
+    {"item": "Rope", "note": "por precaução, para os andares subterrâneos de Banuta"}
+  ],
+  "rewards": [
+    {"text": "Addon 1 do Knight Outfit: espada"},
+    {"text": "Addon 2 do Knight Outfit: capacete adornado"},
+    {"text": "Achievement **In Shining Armor**"}
+  ],
+  "achievements": ["In Shining Armor"],
+  "dangers": ["Giant Spider", "Serpent Spawn", "Hydra", "Behemoth"],
+  "npcs": ["Morgan", "Gregor", "Sam", "A Sweaty Cyclops"],
+  "tips": [
+    "Junta todos os itens antes de falares com os NPCs (exceto o {item:Damaged Steel Helmet}, que só podes apanhar depois de aceitares a tarefa do Gregor).",
+    "Comprar os itens a outros jogadores costuma ser mais fácil do que caçá-los."
+  ],
+  "sections": [
+    {
+      "title": "1. Addon da espada (Morgan, Sabrehaven)",
+      "steps": [
+        {
+          "title": "Arranjar o minério",
+          "text": "Junta 100 {item:Iron Ore}: cai de todo o tipo de {wiki:Dwarves|Dwarves} e de alguns {wiki:Geo-Elementals|Geo-Elementals}, como {creature:Stone Golem|Stone Golems}."
+        },
+        {
+          "title": "Trocar a Giant Sword por Crude Iron",
+          "text": "Vai a **Ab'Dendriel** e troca uma {item:Giant Sword} com o {npc:A Sweaty Cyclops} por um {item:Huge Chunk of Crude Iron}. Ele vive no 4.º andar de uma torre a **nordeste** do depot: entra na pequena gruta de {creature:Rotworm|Rotworms} por baixo do campo de trigo a leste do depot, atravessa-a até à torre e sobe até ao último andar. Para sair, faz o mesmo caminho ao contrário.",
+          "npc": "A Sweaty Cyclops",
+          "coords": [{"x": 32697, "y": 31674, "z": 3, "label": "A Sweaty Cyclops (4.º andar da torre)"}]
+        },
+        {
+          "title": "Chegar a Sabrehaven",
+          "text": "Sabrehaven é o acampamento rebelde da ilha de Meriana. Vai a **Liberty Bay** e, na pequena península a **sudeste** do depot, fala com o {npc:Captain Waverider}: {key:hi}, {key:peg leg} e {key:yes} (50 gp).",
+          "npc": "Captain Waverider",
+          "coords": [
+            {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay)"},
+            {"x": 32323, "y": 32599, "z": 7, "label": "Morgan (Sabrehaven)"}
+          ]
+        },
+        {
+          "title": "Pedir a espada ao Morgan",
+          "text": "Vai a Sabrehaven e fala com o {npc:Morgan}: {key:hi}, {key:weapons} (ou {key:forge}) e escolhe {key:knights sword}.",
+          "npc": "Morgan",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello there."},
+            {"you": "weapons"},
+            {"npc": "Would you rather be interested in a knight's sword or in a warrior's sword?"},
+            {"you": "knights sword"},
+            {"npc": "Great! Simply bring me 100 Iron Ore and one Crude Iron and I will happily forge it for you."}
+          ]
+        },
+        {
+          "title": "Entregar os materiais",
+          "text": "Com os 100 Iron Ore e o Huge Chunk of Crude Iron no inventário, diz {key:hi}, {key:forge weapon} e {key:knights sword}.",
+          "npc": "Morgan",
+          "dialogue": [
+            {"you": "forge weapon"},
+            {"npc": "What would you like me to forge for you? A knight's sword or a warrior's sword?"},
+            {"you": "knights sword"},
+            {"npc": "Alright! As a matter of fact, I have one in store. Here you go!"}
+          ],
+          "images": [
+            {"file": "Outfit Knight Male Addon 1.gif", "caption": "Knight masculino com a espada"},
+            {"file": "Outfit Knight Female Addon 1.gif", "caption": "Knight feminino com a espada"}
+          ],
+          "reward": "Addon da espada"
+        },
+        {
+          "title": "Sair de Sabrehaven",
+          "text": "Para voltares a **Liberty Bay**, vai ao {npc:Sebastian}, a **sul** de Sabrehaven, e diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp).",
+          "npc": "Sebastian",
+          "coords": [{"x": 32347, "y": 32623, "z": 7, "label": "Sebastian (barco para Liberty Bay)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Addon do capacete (Gregor, Thais)",
+      "steps": [
+        {
+          "title": "Aceitar a tarefa do Gregor",
+          "text": "Fala com o {npc:Gregor} na guilda dos knights de Thais: {key:hi}, {key:outfit}, {key:task}, {key:yes}, {key:yes}.",
+          "npc": "Gregor",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings. What do you want?"},
+            {"you": "outfit"},
+            {"npc": "Only the bravest warriors may wear adorned helmets. They are traditionally awarded after having completed a difficult task for our guild."},
+            {"you": "task"},
+            {"npc": "You mean, you would like to prove that you deserve to wear such a helmet?"},
+            {"you": "yes"},
+            {"npc": "[...] bringing me 100 perfect behemoth fangs. [...] retrieve a helmet [...] Ramsay the Reckless wore it when exploring an ape settlement. [...] a new flask of warrior's sweat. [...] royal steel [...] Did you understand everything I told you and are willing to handle this task?"},
+            {"you": "yes"},
+            {"npc": "Alright then. Come back to me once you have collected 100 perfect behemoth fangs."}
+          ]
+        },
+        {
+          "title": "Entregar 100 Perfect Behemoth Fangs",
+          "text": "Junta 100 {item:Perfect Behemoth Fang|Perfect Behemoth Fangs}, lootando e/ou fazendo {wiki:Skinning|skinning} a {creature:Behemoth|Behemoths}. Entrega-as ao Gregor: {key:behemoth fangs}, {key:yes}.",
+          "npc": "Gregor",
+          "dialogue": [
+            {"you": "behemoth fangs"},
+            {"npc": "Have you really managed to fulfil the task and brought me 100 perfect behemoth fangs?"},
+            {"you": "yes"},
+            {"npc": "I'm deeply impressed. [...] Now, please retrieve Ramsay's helmet."}
+          ]
+        },
+        {
+          "title": "Chegar ao quarto final de Banuta",
+          "text": "Apanha um barco para **Port Hope** ({key:hi}, {key:port hope}, {key:yes}) e atravessa a selva de Tiquanda para **nordeste** até Banuta. No templo do {npc:Hairycles} (sudeste da cidade) desce **duas vezes**; vai para **norte** pelo corredor até ao salão cheio de macacos, vira para **oeste** e desce as escadas do fundo. No piso -2 entra no {wiki:Magic Forcefield} indicado para ires ao primeiro andar de Deeper Banuta. Aí parte os **4** {item:Canopic Jar (Object)|Canopic Jars} e entra no Magic Forcefield do **centro**. No andar seguinte puxa as **7 alavancas** todas para a **direita** (a última tem de ser a que está junto à parede): a parede do norte desaparece e entras na sala da estátua.",
+          "coords": [
+            {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+            {"x": 32827, "y": 32575, "z": 7, "label": "Templo do Hairycles (escadas para descer)"},
+            {"x": 32802, "y": 32546, "z": 8, "label": "Escadas para o piso -2"},
+            {"x": 32839, "y": 32533, "z": 9, "label": "Magic Forcefield para Deeper Banuta"}
+          ],
+          "warning": "Os Canopic Jars recuperam passado algum tempo e as alavancas têm tempo limitado: vai em equipa."
+        },
+        {
+          "title": "Ir buscar o capacete de Ramsay a Banuta",
+          "text": "O {item:Damaged Steel Helmet} (capacete de Ramsay the Reckless) está atrás de uma porta selada no quarto final da quest de {wiki:Banuta|Banuta}, a sala da estátua do deus serpente em {wiki:Deeper Banuta|Deeper Banuta}: o capacete fica a **norte** nessa sala.",
+          "coords": [{"x": 32862, "y": 32522, "z": 11, "label": "Porta selada com o capacete de Ramsay (Banuta)"}],
+          "warning": "Se não falaste com o Gregor sobre o capacete antes, a porta não abre. No caminho para o último quarto da {wiki:The Ape City Quest|The Ape City Quest} há {creature:Giant Spider|Giant Spiders}, {creature:Serpent Spawn|Serpent Spawns}, {creature:Hydra|Hydras} e mais."
+        },
+        {
+          "title": "Sair de Banuta",
+          "text": "Sai pelo portal do início do andar de Deeper Banuta (se a parede voltar e estiveres do lado de dentro, usa a alavanca junto à parede para a abrir). O portal leva-te ao **segundo andar de Banuta**; daí sobe as escadas até à superfície e volta pela selva para **sudoeste** até Port Hope, onde o {npc:Charles} te leva de barco a **Thais** ({key:hi}, {key:thais}, {key:yes}).",
+          "coords": [{"x": 32529, "y": 32785, "z": 6, "label": "Charles (barco de Port Hope)"}]
+        },
+        {
+          "title": "Entregar o capacete",
+          "text": "Volta ao {npc:Gregor}: {key:Ramsay the Reckless Helmet}, {key:yes}.",
+          "npc": "Gregor",
+          "dialogue": [
+            {"you": "Ramsay the Reckless Helmet"},
+            {"npc": "Did you recover the helmet of Ramsay the Reckless?"},
+            {"you": "yes"},
+            {"npc": "Good work! Even though it is damaged, it has a lot of sentimental value. Now, please bring me warrior's sweat."}
+          ]
+        },
+        {
+          "title": "Entregar o Warrior's Sweat",
+          "text": "Arranja um {item:Flask of Warrior's Sweat}: troca 4 {item:Warrior Helmet|Warrior Helmets} com os {wiki:Shopkeeper NPCs|Djinns vendedores de magia} das torres dos {wiki:Djinn|Djinns} (o {npc:Haroun} em Ashta'daramai ou o {npc:Yaman} em Mal'ouquah, nas montanhas junto a Ankrahmun; portas de nível 30), ou loota-o de {creature:Undead Gladiator|Undead Gladiators}. Entrega-o ao Gregor: {key:warrior's sweat}, {key:yes}.",
+          "npc": "Gregor",
+          "dialogue": [
+            {"you": "warrior's sweat"},
+            {"npc": "Were you able to get hold of a flask with pure warrior's sweat?"},
+            {"you": "yes"},
+            {"npc": "Now that is a pleasant surprise! There is only one task left now: Obtain royal steel to have your helmet refined."}
+          ]
+        },
+        {
+          "title": "Entregar o Royal Steel",
+          "text": "Arranja uma {item:Piece of Royal Steel}: troca uma {item:Crown Armor} com o {npc:A Sweaty Cyclops} em Ab'Dendriel (na torre a nordeste do depot, ver addon da espada), ou loota-a de {creature:Plaguesmith|Plaguesmiths}. Entrega-a ao Gregor: {key:royal steel}, {key:yes}.",
+          "npc": "Gregor",
+          "dialogue": [
+            {"you": "royal steel"},
+            {"npc": "Ah, have you brought the royal steel?"},
+            {"you": "yes"},
+            {"npc": "You truly deserve to wear an adorned helmet. Please talk to Sam and tell him I sent you. I'm sure he will be glad to refine your helmet."}
+          ]
+        },
+        {
+          "title": "Pedir ao Sam para adornar o capacete",
+          "text": "Vai à loja do {npc:Sam} em Thais e diz {key:adorned helmet}.",
+          "npc": "Sam",
+          "dialogue": [
+            {"you": "adorned helmet"},
+            {"npc": "Oh, Gregor sent you? I see. It will be my pleasure to adorn your helmet. Please give me some time to finish it."}
+          ]
+        },
+        {
+          "title": "Receber o capacete (2 h depois)",
+          "text": "Espera **2 horas** e volta ao {npc:Sam}: diz outra vez {key:adorned helmet}.",
+          "npc": "Sam",
+          "dialogue": [
+            {"you": "adorned helmet"},
+            {"npc": "Just in time. Your helmet is finished, I hope you like it."}
+          ],
+          "images": [
+            {"file": "Outfit Knight Male Addon 2.gif", "caption": "Knight masculino com o capacete"},
+            {"file": "Outfit Knight Female Addon 2.gif", "caption": "Knight feminino com o capacete"},
+            {"file": "Outfit Knight Male Addon 3.gif", "caption": "Knight masculino com os dois addons"},
+            {"file": "Outfit Knight Female Addon 3.gif", "caption": "Knight feminino com os dois addons"}
+          ],
+          "reward": "Addon do capacete"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O Knight Outfit base pode ser escolhido por qualquer jogador; a quest só dá os addons."
+  ]
+}

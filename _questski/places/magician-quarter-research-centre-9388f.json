@@ -1,0 +1,29 @@
+{
+  "title": "Magician Quarter/Research Centre",
+  "type": "edificio",
+  "near": "Yalahar",
+  "summary": "Centro de investigação no {wiki:Magician Quarter} de **Yalahar** (nordeste da cidade), tomado por membros de um culto; tem Gates of Expertise de nível 30 e 40 e desce até ao piso -4.",
+  "entrance": {"x": 32826, "y": 31082, "z": 7, "label": "Research Centre (Magician Quarter)"},
+  "requirements": [
+    "Para ires a Yalahar com o {npc:Captain Max} (Liberty Bay) precisas do rank **Novice** da {wiki:The Explorer Society Quest}. Em alternativa, paga 250 gp ao {npc:Wyrdin's Apprentice} (a oeste de Kazordoon) pela palavra-passe ({key:whizzkid}) e viaja de Thais com o {npc:Captain Bluebear}. Com a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest} há barcos diretos de várias cidades.",
+    "**Nível 30** para o {item:Gate of Expertise} da entrada do edifício e **nível 40** para o do piso -1."
+  ],
+  "arrive": [
+    "Vai a **Yalahar**: em **Liberty Bay**, o {npc:Captain Max} leva-te lá ({key:hi}, {key:yalahar}, {key:yes}, 400 gp); o {npc:Captain Bluebear} em Thais também te leva, se tiveres a palavra-passe. Se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, há barcos diretos de várias cidades. Chegas ao porto, a **sul** do centro da cidade.",
+    "Do centro da cidade, entra no {wiki:Magician Quarter}, a **nordeste**: este bairro não tem mecanismo no portão, entras diretamente a partir do centro.",
+    "Vai ao edifício do Research Centre ({coord:32826,31082,7}). Cá fora há uns 15 {creature:Novice of the Cult|Novices of the Cult}.",
+    "Entra pelo {item:Gate of Expertise} de nível 30. Para desceres mais, no piso -1 passa por um dos {item:Gate of Expertise|Gates of Expertise} de nível 40 e continua até ao piso -4."
+  ],
+  "leave": [
+    "Sobe pelos mesmos andares e volta a passar pelos dois {item:Gate of Expertise|Gates of Expertise} até à rua.",
+    "Volta ao centro de Yalahar pelo portão do Magician Quarter e vai ao porto, a **sul** do centro: o {npc:Captain Cookie} leva-te a **Liberty Bay** ({key:hi}, {key:liberty bay}, {key:yes}, 400 gp) ou a **Thais** ({key:thais}, 800 gp); com as rotas da In Service of Yalahar, o {npc:Karith} leva-te a 8 cidades."
+  ],
+  "coords": [
+    {"x": 32776, "y": 31105, "z": 10, "label": "Baú do Blood Crystal (piso -3, Blood Brothers Quest)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie — porto de Yalahar"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith — barco do porto de Yalahar"}
+  ],
+  "warnings": [
+    "Dentro há {creature:Novice of the Cult|Novices} e {creature:Acolyte of the Cult|Acolytes of the Cult}; nos pisos mais fundos (até -4) aparecem cultistas mais fortes e uma {creature:Serpent Spawn}."
+  ]
+}

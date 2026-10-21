@@ -1,0 +1,35 @@
+{
+  "title": "Astral Shaper Ruins",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "A Astral Shaper Boss Dungeon, bem **por baixo de Tiquanda**, onde se luta contra {creature:The Last Lore Keeper} no fim da {wiki:Forgotten Knowledge Quest}; chega-se por um {wiki:Energy Gate} nas Halls of Hope, a norte de Thais.",
+  "entrance": {"x": 32905, "y": 32847, "z": 13, "label": "Ponto de chegada pelo Energy Gate"},
+  "requirements": [
+    "Conta Premium.",
+    "Só podes entrar no Energy Gate das Halls of Hope depois de matares os **seis bosses** dos portais elementais da {wiki:Forgotten Knowledge Quest}.",
+    "Equipa de 1 a 15 jogadores para o boss final (nível recomendado 200)."
+  ],
+  "items": [
+    "Rope"
+  ],
+  "arrive": [
+    "Vai a **Thais** e sai pela saída **norte**; continua para norte até às **Halls of Hope**, o templo dos Astral Shapers onde estão o {npc:Albinius} e a {npc:Ivalisse} ({coord:32326,32090,7}).",
+    "Nas Halls of Hope entra no {wiki:Energy Gate}: chegas à Astral Shaper Boss Dungeon ({coord:32905,32847,13}).",
+    "Caminha para **sul** e desce pelo buraco ({coord:32935,32940,13}); depois para **noroeste** e desce as escadas ({coord:32835,32868,14}).",
+    "Vai para **leste** até aos {creature:Stone Rhino|Stone Rhinos} e entra na {wiki:Mystic Flame} ({coord:32934,32854,15}); o teleporte seguinte leva à sala das 15 tiles e alavanca da luta final."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída própria desta zona. Volta pelo mesmo caminho: a Mystic Flame dos Stone Rhinos, as escadas (sobe) e o buraco (sobe com a {item:Rope}) até ao sítio onde chegaste pelo Energy Gate ({coord:32905,32847,13}).",
+    "A wiki também não descreve como se volta do ponto de chegada às Halls of Hope. Das Halls of Hope, Thais fica a pé para **sul**."
+  ],
+  "coords": [
+    {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope (norte de Thais)"},
+    {"x": 32335, "y": 32091, "z": 7, "label": "Albinius"},
+    {"x": 32935, "y": 32940, "z": 13, "label": "Buraco (desce / sobe com a Rope)"},
+    {"x": 32835, "y": 32868, "z": 14, "label": "Escadas"},
+    {"x": 32934, "y": 32854, "z": 15, "label": "Mystic Flame dos Stone Rhinos"}
+  ],
+  "warnings": [
+    "Pelo caminho há {creature:Shaper Matriarch|Shaper Matriarchs}, {creature:Broken Shaper|Broken Shapers}, {creature:Twisted Shaper|Twisted Shapers} e {creature:Stone Rhino|Stone Rhinos}. O wiki recomenda nível 130+."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Silencer Plateau",
+  "type": "montanha",
+  "near": "Roshamuul",
+  "summary": "Planalto no **sudeste de Roshamuul** (no sudeste do {wiki:Guzzlemaw Valley}) onde, usando {item:Silencer Resonating Chamber|Silencer Resonating Chambers}, fazes aparecer vagas de {creature:Silencer|Silencers} e, no fim, {creature:Sight of Surrender|Sights of Surrender}.",
+  "entrance": {"x": 33655, "y": 32522, "z": 7, "label": "Sobe aqui duas vezes"},
+  "requirements": [
+    "Tens de conseguir chegar ao {wiki:Guzzlemaw Valley} (ponte de Roshamuul reparada; ver {wiki:Roshamuul Quest})."
+  ],
+  "arrive": [
+    "Em **Thais**, fala com o {npc:Captain Bluebear} no porto: {key:hi}, {key:roshamuul}, {key:yes} (210 gp). Desembarcas no acampamento do sul de Lower Roshamuul, junto ao {npc:Captain Chelop} ({coord:33493,32569,7}).",
+    "Sobe a rampa a partir do acampamento e atravessa a ponte para **norte** até ao Guzzlemaw Valley.",
+    "Vai para **sudeste** do vale até ao ponto {coord:33655,32522,7} e **sobe duas vezes**: estás no planalto, no piso +2 ({coord:33650,32525,5})."
+  ],
+  "leave": [
+    "Desce os dois níveis pelo mesmo sítio e volta para **oeste** pelo Guzzlemaw Valley até à ponte; atravessa-a para **sul** e desce a rampa até ao acampamento.",
+    "Fala com o {npc:Captain Chelop}: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 33655, "y": 32522, "z": 7, "label": "Subir aqui duas vezes"},
+    {"x": 33650, "y": 32525, "z": 5, "label": "Silencer Plateau"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (barco)"}
+  ],
+  "warnings": [
+    "As vagas são de 8, 11, 11 e 15 {creature:Silencer|Silencers}; a 5.ª traz 3–5 {creature:Sight of Surrender|Sights of Surrender} ao mesmo tempo. Vai em equipa organizada, com pelo menos um blocker de nível alto.",
+    "O caminho atravessa o Guzzlemaw Valley, zona para nível 200+."
+  ]
+}

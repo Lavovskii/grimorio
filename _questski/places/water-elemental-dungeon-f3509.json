@@ -1,0 +1,31 @@
+{
+  "title": "Water Elemental Dungeon",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Gruta quase toda inundada no sul de Tiquanda, a **sul de Port Hope**, com {creature:Water Elemental|Water Elementals} no piso principal e canais de água que levam a zonas mais fundas com {creature:Massive Water Elemental|Massive Water Elementals}.",
+  "entrance": {"x": 32679, "y": 32964, "z": 7, "label": "Entrada do Water Elemental Dungeon"},
+  "items": ["Diving Helmet", "Helmet of the Deep"],
+  "requirements": [
+    "Para entrar nos 5 Water Channels que levam às zonas fundas precisas de equipamento de mergulho ({wiki:Diving Equipment})."
+  ],
+  "arrive": [
+    "Apanha o barco para **Port Hope** (por exemplo, o {npc:Captain Bluebear} no porto de Thais: {key:hi}, {key:port hope}, {key:yes}). Chegas ao porto da cidade, junto ao {npc:Charles}.",
+    "Sai de Port Hope para **sul**, pela selva de Tiquanda, até à entrada da gruta ({coord:32679,32964,7}).",
+    "Desce para o piso principal ({coord:32679,32964,8}), logo a seguir à entrada."
+  ],
+  "leave": [
+    "Sobe pelo mesmo sítio por onde desceste e volta a pé para **norte** até Port Hope.",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te de volta: {key:hi}, o destino (por exemplo {key:thais} ou {key:edron}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32679, "y": 32964, "z": 8, "label": "Piso principal, perto da entrada"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "Water elemental.png", "caption": "Water Elemental Dungeon"}
+  ],
+  "warnings": [
+    "Os Water Elementals fazem dano de afogamento forte: um {item:Helmet of the Deep} ajuda. São resistentes a dano físico, por isso os knights têm dificuldade aqui.",
+    "No piso principal há também {creature:Quara Hydromancer Scout|Quara Scouts}; nas zonas fundas, Massive Water Elementals. O wiki recomenda nível 70+ para knights, 60+ para paladins e 55+ para mages."
+  ]
+}

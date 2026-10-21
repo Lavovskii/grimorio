@@ -1,0 +1,36 @@
+{
+  "title": "Razachai",
+  "type": "zona",
+  "near": "Farmine",
+  "summary": "A grande cidade dos lagartos no **norte de Zao** (Northern Zao), com as Draken Walls, o palácio e o Inner Sanctum; o acesso ganha-se com a {wiki:Wrath of the Emperor Quest}.",
+  "entrance": {"x": 33083, "y": 31219, "z": 7, "label": "Edifício verde do Zlak, no interior de Razachai"},
+  "requirements": [
+    "O caminho até ao esconderijo dos rebeldes e à cidade abre-se com a {wiki:Wrath of the Emperor Quest} (missão 1 para chegar ao norte, missão 2 para a ligação rápida pela chama azul, missão 5 para entrar na cidade).",
+    "Precisas de {spell:Levitate} (ou parcels/caixas) para passares a montanha entre Farmine e a Zao Steppe."
+  ],
+  "arrive": [
+    "Apanha o {wiki:Steamship} para **Farmine**: o {npc:Brodrosch} (porto subterrâneo de Kazordoon) ou o {npc:Gurbasch} (8 andares abaixo de Cormaya), com {key:hi}, {key:farmine}, {key:yes}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo a montanha com {spell:Levitate}, até saíres na {wiki:Zao Steppe} ({coord:33085,31532,7}).",
+    "No norte da Zao Steppe entra no teleporte para as {wiki:Muggy Plains} ({coord:33198,31350,7}).",
+    "Nas Muggy Plains usa a ligação que reativaste na missão 2 da quest (a chama azul do {npc:Chartan}) para chegares ao esconderijo dos rebeldes, no norte de Zao ({coord:33171,31078,7}).",
+    "Do esconderijo sai para a estrada cinzenta e segue-a para **sudoeste** até ao portão da cidade; dentro de Razachai anda para **oeste** até ao grande edifício verde do {npc:Zlak}."
+  ],
+  "leave": [
+    "Na cave por baixo do {npc:Zlak} entra no teleporte que leva à sala do {npc:Chartan} ({coord:33078,31219,8}).",
+    "Pisa a chama azul a **sul** do Chartan: leva-te às {wiki:Muggy Plains}.",
+    "Nas Muggy Plains volta à Zao Steppe pelo teleporte por onde lá chegaste e segue para **sudoeste** até à passagem pela montanha.",
+    "Sobe-a com {spell:Levitate} e vai para **oeste** até ao elevador de Farmine. No Steamship de Farmine, o {npc:Thorgrin} leva-te a Kazordoon ou Cormaya ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Saída da passagem pela montanha (Zao Steppe)"},
+    {"x": 33198, "y": 31350, "z": 7, "label": "Teleporte para as Muggy Plains"},
+    {"x": 33171, "y": 31078, "z": 7, "label": "Esconderijo dos rebeldes (Chartan)"},
+    {"x": 33078, "y": 31219, "z": 8, "label": "Teleporte por baixo do Zlak (para o Chartan)"}
+  ],
+  "warnings": [
+    "Zona para níveis altos (150+): pelo caminho do esconderijo até à cidade há {creature:Brimstone Bug|Brimstone Bugs}, {creature:Souleater|Souleaters}, {creature:Lizard Legionnaire|Lizard Legionnaires} e {creature:Lancer Beetle|Lancer Beetles}.",
+    "Depois de acabares a quest podes usar os teleportes entre Razachai, o Rebel Camp e o Inner Sanctum."
+  ]
+}

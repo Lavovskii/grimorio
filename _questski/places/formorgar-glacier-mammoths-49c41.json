@@ -1,0 +1,39 @@
+{
+  "title": "Formorgar Glacier/Mammoths",
+  "type": "zona",
+  "near": "Svargrond",
+  "summary": "Duas zonas de caça a {creature:Mammoth|Mammoths} no glaciar de Formorgar, nas {wiki:Ice Islands}: uma pequena a **oeste de Svargrond** (perto do covil de The Bloodtusks) e uma maior a **sudoeste** da cidade.",
+  "entrance": {"x": 32152, "y": 31277, "z": 6, "label": "Zona grande de Mammoths (sudoeste de Svargrond)"},
+  "requirements": [
+    "Conta **Premium** (Svargrond só se alcança de barco)."
+  ],
+  "arrive": [
+    "Apanha o barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); chegas junto à {npc:Captain Breezelda} ({coord:32347,31108,6}).",
+    "**Zona grande (mais Mammoths), caminho mais rápido:** sai de Svargrond para **oeste**, atravessa uma pequena ponte e sobe a rampa em {coord:32180,31230,7}.",
+    "**Zona grande, alternativa:** no **sul** de Svargrond fala com o {npc:Buddel} ({coord:32255,31197,7}): {key:hi} e {key:camp} (acampamento dos raiders); se ele pedir o {item:Dwarven Ring} diz {key:no} e paga 50 gp (se te deixar na ilha errada, pede outra vez). Ele deixa-te em {coord:32153,31375,7}; daí anda para **norte** e sobe a rampa em {coord:32158,31355,7}.",
+    "**Zona pequena:** sai para **oeste**, atravessa a pequena ponte e sobe 5 vezes com {spell:Levitate} em {coord:32172,31161,7}; ou sai para **norte** pelas duas rampas ({coord:32245,31112,7}), anda para **oeste** até à cascata gelada ({coord:32148,31080,5}) e sobe 3 vezes com {spell:Levitate}."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até Svargrond (desce as rampas ou usa {spell:Levitate} para baixo nos sítios por onde subiste).",
+    "Do acampamento dos raiders, o {npc:Buddel} também te leva de volta: {key:hi} e {key:svargrond}; quando ele pedir o {item:Dwarven Ring} diz {key:no} e paga 50 gp.",
+    "Em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin (110 gp), Thais (180 gp) ou Venore (150 gp)."
+  ],
+  "coords": [
+    {"x": 32152, "y": 31277, "z": 6, "label": "Zona grande de Mammoths"},
+    {"x": 32111, "y": 31150, "z": 2, "label": "Zona pequena de Mammoths"},
+    {"x": 32180, "y": 31230, "z": 7, "label": "Rampa para a zona grande (caminho rápido)"},
+    {"x": 32255, "y": 31197, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32153, "y": 31375, "z": 7, "label": "Chegada do Buddel (acampamento dos raiders)"},
+    {"x": 32158, "y": 31355, "z": 7, "label": "Rampa a norte do acampamento"},
+    {"x": 32172, "y": 31161, "z": 7, "label": "Levitate 5 vezes (zona pequena)"},
+    {"x": 32148, "y": 31080, "z": 5, "label": "Cascata gelada: Levitate 3 vezes (zona pequena)"},
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda (porto de Svargrond)"}
+  ],
+  "images": [
+    {"file": "Formorgar Glacier Mammoths 1.png", "caption": "Zona de Mammoths"},
+    {"file": "Formorgar Glacier Mammoths 2.png", "caption": "Zona de Mammoths"}
+  ],
+  "warnings": [
+    "Além dos {creature:Mammoth|Mammoths} há {creature:Barbarian Brutetamer|Barbarian Brutetamers}, {creature:Frost Troll|Frost Trolls} e por vezes {creature:Wyvern|Wyverns}; recomendado nível 28-30+."
+  ]
+}

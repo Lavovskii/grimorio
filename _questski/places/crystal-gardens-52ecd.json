@@ -1,0 +1,32 @@
+{
+  "title": "Crystal Gardens",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Grutas por baixo da ilha pirata de {wiki:Nargor}, a oeste de Liberty Bay, cheias de cristais que os piratas extraem e moem; é aqui a {wiki:The Cursed Crystal Quest}.",
+  "entrance": {"x": 32020, "y": 32888, "z": 6, "label": "Entrada dos Crystal Gardens (junto à One-Eyed Joe, Nargor)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Acesso a Nargor: {wiki:Eleonore Quest} concluída e {wiki:Meriana Quest} feita até à *Ray's Mission 1*; para ires a Meriana precisas da missão *Access to Meriana* da {wiki:The Shattered Isles Quest}."
+  ],
+  "arrive": [
+    "Em **Liberty Bay**, fala com o {npc:Captain Waverider} no cais ({coord:32347,32859,7}): {key:hi}, {key:peg leg}, {key:yes} (50 gp) para ires a **Meriana**.",
+    "Em Meriana, a **sul** de Sabrehaven, fala com o {npc:Sebastian} ({coord:32347,32623,7}): {key:hi}, {key:nargor}, {key:yes} (50 gp).",
+    "Em Nargor ({coord:32024,32815,7}) vai para **sul**, a leste dos dois navios, até à {npc:One-Eyed Joe} ({coord:32025,32885,6}).",
+    "Desce a escada ao lado dela ({coord:32020,32888,6}): estás nos Crystal Gardens. Os pisos de baixo descem por escadas, rampas e teleportes de cristal."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à escada que sobe para junto da {npc:One-Eyed Joe} (dos pisos mais fundos, os {item:Large Crystal Teleporter (Berg)|teleportes de cristal} e a rampa em {coord:32041,32909,9} levam-te de volta para cima).",
+    "Volta para **norte** até ao {npc:Sebastian} ({coord:32024,32815,7}) e diz {key:hi}, {key:liberty bay}, {key:yes} (100 gp) para voltares diretamente a Liberty Bay (ou {key:meriana} por 50 gp)."
+  ],
+  "coords": [
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay)"},
+    {"x": 32347, "y": 32623, "z": 7, "label": "Sebastian em Meriana"},
+    {"x": 32024, "y": 32815, "z": 7, "label": "Sebastian em Nargor (chegada e regresso)"},
+    {"x": 32025, "y": 32885, "z": 6, "label": "One-Eyed Joe"},
+    {"x": 32020, "y": 32888, "z": 6, "label": "Escada para os Crystal Gardens"},
+    {"x": 32041, "y": 32909, "z": 9, "label": "Rampa para cima (regresso dos pisos fundos)"}
+  ],
+  "warnings": [
+    "Recomendado nível 70-80+. Junto ao teleporte de cristal do piso -3 há uma bandeira pirata a avisar: *Beware! Dangerous monsters down here!*"
+  ]
+}

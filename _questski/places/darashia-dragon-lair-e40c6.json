@@ -1,0 +1,33 @@
+{
+  "title": "Darashia Dragon Lair",
+  "type": "gruta",
+  "near": "Darashia",
+  "summary": "Covil de dragões no deserto a **norte de Darashia**, com {creature:Dragon|Dragons}, {creature:Dragon Hatchling|Hatchlings} e {creature:Dragon Lord|Dragon Lords}, e o boss {creature:Demodras} no nível mais fundo.",
+  "entrance": {"x": 33264, "y": 32277, "z": 7, "label": "Entrada do Darashia Dragon Lair"},
+  "requirements": [
+    "Darashia é zona Premium.",
+    "A entrada tem um {wiki:Gate of Expertise} que só deixa passar jogadores de **nível 40** ou mais."
+  ],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de {wiki:Magic Carpet} (chegas ao tapete do {npc:Chemar}).",
+    "Sai de Darashia para **norte**, pelo deserto, até à entrada do covil ({coord:33264,32277,7}).",
+    "Passa a porta de nível 40 e desce as escadas para o primeiro nível de caça (Dragons e Hatchlings). O segundo nível tem Dragon Lords e Dragons; o terceiro, Dragon Lords e Demodras."
+  ],
+  "leave": [
+    "O covil não tem teleporte de saída: volta pelo mesmo caminho, subindo as escadas nível a nível até à entrada, a norte de Darashia.",
+    "Em Darashia, apanha o barco do {npc:Petros} ({coord:33289,32481,6}) ou o tapete voador do {npc:Chemar} ({coord:33270,32439,6}): {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (porto de Darashia)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete voador de Darashia)"}
+  ],
+  "images": [
+    {"file": "Darashia Dragon Lair Map 1.png", "caption": "Mapa do 1.º nível do covil"},
+    {"file": "Darashia Dragon Lair Map 2.png", "caption": "Mapa do 2.º nível do covil"},
+    {"file": "Darashia Dragon Lair Map 3.png", "caption": "Mapa do 3.º nível do covil"}
+  ],
+  "warnings": [
+    "Com os spawns cheios, o número de dragões pode surpreender quem não está habituado: entra com cuidado.",
+    "Na subida, os Dragons e Dragon Lords que deixaste para trás podem ter voltado a aparecer — não subas sem vida e mana cheias."
+  ]
+}

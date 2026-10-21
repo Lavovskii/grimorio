@@ -1,0 +1,199 @@
+{
+  "slug": "venore-daily-tasks-quest",
+  "category": "tarefas",
+  "region": "Venore",
+  "difficulty": 1,
+  "duration": "30–60 min por dia (as 3 tarefas)",
+  "summary": "O {npc:Norman The Foreman}, capataz das obras no pântano a leste de Venore, precisa sempre de uma mão extra. Ele tem três tarefas diárias — **Maintenance** (olear máquinas), **Pathfinder** (entregar mantimentos) e **Sabotage** (matar ratos corym) — que dão experiência e ouro. Se fizeres as três em menos de 20 horas recebes ainda um bónus: no total 1000 XP e 1000 gp por dia.",
+  "legend_pt": "O Norman The Foreman precisa sempre de uma mão extra para ajudar.",
+  "start": {"x": 33016, "y": 32100, "z": 6, "label": "Norman The Foreman, obra central a leste de Venore"},
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo; recomendado nível 15."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"}
+  ],
+  "rewards": [
+    {"text": "Maintenance: 250 XP, 2 {item:Platinum Coin|Platinum Coins} e 50 {item:Gold Coin|Gold Coins}"},
+    {"text": "Pathfinder: 250 XP, 2 {item:Platinum Coin|Platinum Coins} e 50 {item:Gold Coin|Gold Coins}"},
+    {"text": "Sabotage: 250 XP, 2 {item:Platinum Coin|Platinum Coins} e 50 {item:Gold Coin|Gold Coins}"},
+    {"text": "Bónus (as 3 em menos de 20 h): 250 XP e 250 gp"},
+    {"text": "Total diário: 1000 XP e 1000 gp"}
+  ],
+  "dangers": ["Snake", "Marsh Stalker", "Swampling", "Little Corym Charlatan"],
+  "npcs": ["Norman The Foreman", "Scott The Scout", "Frank The Plank"],
+  "tips": [
+    "Aceita as três tarefas de uma vez: a Maintenance leva-te às três obras e podes fazer as outras duas pelo caminho.",
+    "Cada tarefa pode ser repetida 20 horas depois de a entregares.",
+    "Faz ao mesmo tempo a {wiki:Goblin Merchant Quest}: as tarefas *Advertisement*, *Guards* e *Kill* encaixam facilmente nesta rota."
+  ],
+  "sections": [
+    {
+      "title": "1. Falar com o Norman",
+      "steps": [
+        {
+          "title": "Sair de Venore pelo leste",
+          "text": "Se não estás em **Venore**, apanha um barco e diz ao capitão {key:hi}, {key:venore}, {key:yes}. Sai de **Venore** pela saída **leste** (desce no ponto indicado). Sai do edifício e anda uns passos para **leste** até encontrares uma escada e/ou rampa. Sobe e encontras o {npc:Norman The Foreman} lá em cima.",
+          "coords": [{"x": 33004, "y": 32095, "z": 6, "label": "Descer aqui (saída leste de Venore)"}]
+        },
+        {
+          "title": "Pedir as tarefas",
+          "text": "Diz {key:hi} e {key:job}. Depois aceita cada tarefa: {key:maintenance} + {key:yes}, {key:pathfinder} + {key:yes} e {key:sabotage} + {key:yes}.",
+          "npc": "Norman The Foreman",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello friend. You lookin' for a job? I could use a hand here."},
+            {"you": "job"},
+            {"npc": "We need people for some action in the fields of sabotage, maintenance or pathfinder assistance. [...] Plus, do all three tasks in a day and there's even a bonus in it for you."},
+            {"you": "maintenance"},
+            {"you": "yes"},
+            {"npc": "Very good. Here, take this can of oil and lubricate either the wooden treadmills, the saws or the cranes in each of the three production sites. [...]"},
+            {"you": "pathfinder"},
+            {"you": "yes"},
+            {"you": "sabotage"},
+            {"you": "yes"}
+          ],
+          "reward": "Can of Oil, Grind Stone e Pathfinder Kit"
+        }
+      ]
+    },
+    {
+      "title": "2. Maintenance – olear as 9 máquinas",
+      "intro": "Com a {item:Can of Oil} que o Norman te deu, tens de olear **3 máquinas em cada uma das 3 obras** (norte, centro e sul): uma {item:Saw (Object)|serra}, uma {item:Wooden Treadmill} e uma {item:Crane|grua}. Podes fazê-las por qualquer ordem. Usa a lata de óleo em cada máquina.",
+      "steps": [
+        {
+          "title": "Obra central",
+          "text": "Na obra central (onde está o Norman): a {item:Wooden Treadmill} fica junto ao Norman, a {item:Crane} a **noroeste** dele e a {item:Saw (Object)|serra} na plataforma **nordeste**.",
+          "images": [
+            {"file": "Venore Daily Tasks Quest Saw.png", "caption": "Oleia 1 serra (Saw) em cada obra"},
+            {"file": "Venore Daily Tasks Quest Treadmill.png", "caption": "Oleia 1 Wooden Treadmill em cada obra"},
+            {"file": "Venore Daily Tasks Quest Crane.png", "caption": "Oleia 1 grua (Crane) em cada obra"}
+          ],
+          "map": {"x": 33024, "y": 32103, "z": 6, "marks": [{"x": 33013, "y": 32095, "z": 6, "label": "Máquina"}, {"x": 33016, "y": 32098, "z": 6, "label": "Máquina"}, {"x": 33030, "y": 32099, "z": 6, "label": "Máquina"}]},
+          "table": {
+            "head": ["Máquina", "Mensagem de sucesso"],
+            "rows": [
+              ["{item:Saw (Object)|Saw}", "*You sucessfully maintained the saw. It's humming smoothly again.*"],
+              ["{item:Wooden Treadmill}", "*You sucessfully maintained the treadmill. It smoothly rotates on and on.*"],
+              ["{item:Crane}", "*You sucessfully maintained the crane. It's working without a hitch.*"]
+            ]
+          }
+        },
+        {
+          "title": "Obra norte",
+          "text": "Vai à obra do **norte**. A {item:Wooden Treadmill} e a {item:Saw (Object)|serra} estão na plataforma **norte**; a {item:Crane} está na plataforma **sudoeste**.",
+          "coords": [
+            {"x": 33022, "y": 32013, "z": 7, "label": "Obra norte"},
+            {"x": 33042, "y": 32021, "z": 7, "label": "Quadrado de pântano para cavar a Leech (opcional)"}
+          ],
+          "map": {"x": 33021, "y": 32032, "z": 6, "marks": [{"x": 33017, "y": 32041, "z": 6, "label": "Máquina"}, {"x": 33016, "y": 32026, "z": 6, "label": "Máquina"}, {"x": 33015, "y": 32022, "z": 6, "label": "Máquina"}]},
+          "tip": "Aproveita para sair pela rampa norte desta obra e entregar a {item:Grind Stone} ao Scott The Scout (tarefa Pathfinder). Se não tentaste nos últimos 7 dias, podes também tentar cavar uma {item:Leech} num quadrado de pântano por aqui."
+        },
+        {
+          "title": "Obra sul",
+          "text": "Vai à obra do **sul**. A {item:Wooden Treadmill} e a {item:Saw (Object)|serra} estão na plataforma **sudoeste**; a {item:Crane} está na ponte **sul**.",
+          "coords": [{"x": 33018, "y": 32141, "z": 7, "label": "Obra sul"}],
+          "map": {"x": 33022, "y": 32147, "z": 6, "marks": [{"x": 33015, "y": 32139, "z": 6, "label": "Máquina"}, {"x": 33016, "y": 32142, "z": 6, "label": "Máquina"}, {"x": 33022, "y": 32147, "z": 6, "label": "Máquina"}]},
+          "tip": "Aqui perto fazes também a parte sul da Pathfinder (Frank The Plank) e a Sabotage (buraco no edifício nordeste)."
+        },
+        {
+          "title": "Entregar",
+          "text": "Depois de oleares as 9 máquinas, volta ao {npc:Norman The Foreman} e diz {key:maintenance}.",
+          "npc": "Norman The Foreman",
+          "reward": "250 XP, 2 Platinum Coins e 50 Gold Coins"
+        }
+      ]
+    },
+    {
+      "title": "3. Pathfinder – entregar mantimentos",
+      "steps": [
+        {
+          "title": "Grind Stone para o Scott",
+          "text": "Leva a {item:Grind Stone} ao {npc:Scott The Scout}, na margem logo a seguir à rampa **norte** da obra do norte. Diz {key:hi} e {key:yes}.",
+          "npc": "Scott The Scout",
+          "coords": [{"x": 33038, "y": 32003, "z": 7, "label": "Scott The Scout"}],
+          "images": [{"file": "Venore Daily Tasks Quest Grind Stone.png", "caption": "Entrega da Grind Stone ao Scott The Scout"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello. Norman told me a young adventurer would visit. Do you have that grind stone with you?"},
+            {"you": "yes"},
+            {"npc": "Aaah, finally a new grind stone. [...] Come on boys, back to work!"}
+          ]
+        },
+        {
+          "title": "Pathfinder Kit para o Frank",
+          "text": "Leva o {item:Pathfinder Kit} ao {npc:Frank The Plank}, à superfície junto à obra do **sul** (ver coordenada). Diz {key:hi} e {key:yes}.",
+          "npc": "Frank The Plank",
+          "coords": [{"x": 33046, "y": 32134, "z": 7, "label": "Frank The Plank"}],
+          "images": [{"file": "Venore Daily Tasks Quest Pathfinder.png", "caption": "Entrega do Pathfinder Kit ao Frank The Plank"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello, friend! Norman told me someone would bring us supplies. Do you have a pathfinder kit with you?"},
+            {"you": "yes"},
+            {"npc": "Ah, finally some food! I could really murder a sandwich. Thanks a lot and see you around."}
+          ]
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Norman The Foreman} e diz {key:pathfinder}.",
+          "npc": "Norman The Foreman",
+          "reward": "250 XP, 2 Platinum Coins e 50 Gold Coins"
+        }
+      ]
+    },
+    {
+      "title": "4. Sabotage – matar 5 Little Corym Charlatans",
+      "steps": [
+        {
+          "title": "Descer o buraco na obra sul",
+          "text": "Na obra do **sul**, entra no edifício **nordeste** e desce o buraco. Lá em baixo vês o *rope spot* por onde os coryms subiram da lama: é por ali que voltas a subir com a {item:Rope}. A entrada da toca fica mesmo ao lado.",
+          "coords": [{"x": 33029, "y": 32140, "z": 6, "label": "Buraco no edifício nordeste"}]
+        },
+        {
+          "title": "Entrar na toca dos coryms",
+          "text": "Anda **um quadrado para sul**, para o quadrado indicado: és teleportado para uma gruta por baixo com exatamente 5 {creature:Little Corym Charlatan|Little Corym Charlatans}.",
+          "coords": [{"x": 33029, "y": 32141, "z": 7, "label": "Quadrado que te teleporta para a gruta"}],
+          "images": [{"file": "Venore Daily Tasks Quest Sabotage.png", "caption": "Anda 1 quadrado para sul daqui para seres teleportado para a gruta por baixo"}]
+        },
+        {
+          "title": "Matar os 5 coryms",
+          "text": "Mata os 5 {creature:Little Corym Charlatan|Little Corym Charlatans} e sai da gruta: volta pelo mesmo caminho até à entrada e usa a {item:Rope} no *rope spot* ao lado dela para subires de novo ao edifício nordeste da obra sul. Se os coryms já estiverem mortos, sai e espera pelo respawn — podes voltar a entrar enquanto não tiveres matado os 5.",
+          "coords": [{"x": 33029, "y": 32140, "z": 6, "label": "Edifício nordeste da obra sul (onde voltas a sair)"}]
+        },
+        {
+          "title": "Entregar",
+          "text": "Volta ao {npc:Norman The Foreman} e diz {key:sabotage}.",
+          "npc": "Norman The Foreman",
+          "reward": "250 XP, 2 Platinum Coins e 50 Gold Coins"
+        }
+      ]
+    },
+    {
+      "title": "5. Bónus",
+      "steps": [
+        {
+          "title": "Pedir o bónus",
+          "text": "Se entregaste as **três** tarefas em menos de 20 horas, diz {key:bonus} e {key:yes} ao {npc:Norman The Foreman}.",
+          "npc": "Norman The Foreman",
+          "dialogue": [
+            {"you": "bonus"},
+            {"npc": "Well, if you help us in all three tasks in twenty hours' time, you'll get extra gold and experience. [...] Shall we check for your bonus? Yes or no."},
+            {"you": "yes"},
+            {"npc": "Lemme see... yep, lookin' good. You went and did all three tasks in less than twenty hours. Nice job. Here's your bonus, as promised."}
+          ],
+          "reward": "250 XP e 250 gp"
+        },
+        {
+          "title": "Voltar a Venore",
+          "text": "As três obras ficam no pântano a leste da cidade. Para voltares, regressa à obra central, desce pela escada/rampa por onde subiste e entra no edifício da saída **leste** de Venore; sobe no ponto por onde desceste ({coord:33004,32095,6}).",
+          "coords": [{"x": 33004, "y": 32095, "z": 6, "label": "Saída/entrada leste de Venore"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Cada tarefa reinicia 20 horas depois de a entregares: podes repeti-las todos os dias."
+  ]
+}

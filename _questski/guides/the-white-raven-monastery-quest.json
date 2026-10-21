@@ -1,0 +1,187 @@
+{
+  "slug": "the-white-raven-monastery-quest",
+  "category": "historia",
+  "region": "Carlin",
+  "difficulty": 3,
+  "duration": "1–2 horas",
+  "summary": "Na ilha dos monges da White Raven Monastery, um irmão desapareceu nas Ghostlands. Primeiro encontras nas Ghostlands a {item:Family Brooch} do pescador {npc:Dalbrect}, que passa a levar-te à {wiki:Isle of the Kings}. Depois o abade {npc:Costello} pede-te para investigares o desaparecimento do irmão Fugio: recuperas o {item:Monk's Diary} e recebes um {item:Blessed Ankh}.",
+  "legend_pt": "Existe uma ilha habitada por uma ordem de monges; um desses monges desapareceu nas Ghostlands.",
+  "start": {"x": 32219, "y": 31768, "z": 7, "label": "Buraco sob a muralha para as Ghostlands (oeste de Carlin)"},
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo (recomendado 45+)."
+  ],
+  "items_needed": [
+    {"item": "Rope"},
+    {"item": "Shovel"},
+    {"text": "Feitiço ou poções de velocidade ({spell:Haste}) para voltares a correr às paredes mágicas"},
+    {"text": "Runas de ataque em área (por exemplo {item:Great Fireball Rune|GFB}) para os mortos-vivos"}
+  ],
+  "rewards": [
+    {"text": "Acesso à {wiki:Isle of the Kings} (o Dalbrect leva-te por 10 gp)"},
+    {"item": "Blessed Ankh"}
+  ],
+  "unlocks": [
+    {"what": "Barco do {npc:Dalbrect} para a Isle of the Kings", "kind": "transporte", "place": "Isle of the Kings", "when": "Missão 1: ao entregares a {item:Family Brooch} ao Dalbrect ({key:brooch}).", "note": "10 gp por viagem ({key:passage}). Se entrares na zona restrita do 3.º andar do mosteiro e não pagares a multa ao {npc:Costello}, o Dalbrect deixa de te levar."},
+    {"what": "Portas protegidas das catacumbas da Isle of the Kings", "kind": "zona", "place": "Isle of the Kings", "when": "Missão 2 (*The Investigation*): ao falares com o {npc:Costello} sobre o {key:Fugio}."},
+    {"what": "{wiki:A Father's Burden Quest}", "kind": "missao", "when": "Exige a missão 1 concluída (acesso à Isle of the Kings, para o {item:Spectral Cloth})."},
+    {"what": "{wiki:Rest in Hallowed Ground Quest}", "kind": "missao", "when": "Exige esta quest concluída (acesso à Isle of the Kings)."},
+    {"what": "{wiki:Secret Service Quest} (ramos AVIN e CGB)", "kind": "missao", "when": "Precisas da missão 1 (para chegares à Isle of the Kings): é requisito no ramo AVIN; no CGB podes fazê-la antes ou durante a missão 6."}
+  ],
+  "dangers": ["Ghoul", "Stalker", "Demon Skeleton", "Wild Warrior", "Scorpion", "Bonelord", "Giant Spider", "Ghost", "Mummy"],
+  "npcs": ["Dalbrect", "Costello"],
+  "tips": [
+    "A parte da investigação inclui paredes mágicas que só baixam temporariamente com alavancas; é mais fácil com uma equipa e com {spell:Haste}.",
+    "Os {creature:Stalker|Stalkers} ficam invisíveis: leva algo para atacar à volta (runas de área)."
+  ],
+  "sections": [
+    {
+      "title": "1. A Family Brooch (acesso à Isle of the Kings)",
+      "steps": [
+        {
+          "title": "Entrar nas Ghostlands",
+          "text": "Vai a **Carlin** (de barco: {key:hi}, {key:carlin}, {key:yes} ao capitão do porto da tua cidade; chegas junto ao {npc:Captain Greyhound}). A oeste da cidade, entra nas {wiki:Ghostlands} passando por baixo da muralha através deste buraco.",
+          "coords": [
+            {"x": 32219, "y": 31768, "z": 7, "label": "Buraco sob a muralha"},
+            {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+          ]
+        },
+        {
+          "title": "Descer na casa abandonada",
+          "text": "Nas Ghostlands, vai à casa abandonada a **sul** e desce dentro dela.",
+          "coords": [{"x": 32246, "y": 31837, "z": 7, "label": "Casa abandonada"}],
+          "warning": "Na cave da casa podes encontrar um {creature:Demon Skeleton} e um ou dois {creature:Ghoul|Ghouls}."
+        },
+        {
+          "title": "Seguir para sul e descer",
+          "text": "Na cave, segue o corredor para **sul** e desce as escadas.",
+          "images": [{"file": "Family Brooch Quest Map 01.jpg", "caption": "Caminho na cave da casa abandonada"}]
+        },
+        {
+          "title": "Ir para leste",
+          "text": "Neste nível, vai para **leste** até ao fim da passagem e depois dá a volta até à sala **sul**. Sobe as escadas dessa sala.",
+          "images": [{"file": "Family Brooch Quest Map 02.jpg", "caption": "Caminho até à sala sul"}],
+          "warning": "Na entrada podem estar 1–2 {creature:Stalker|Stalkers}. Se fores para norte arriscas encontrar mais Stalkers, vários {creature:Demon Skeleton|Demon Skeletons} e um {creature:Wild Warrior} disfarçado de Knight Statue. Na sala final há cerca de 2 Demon Skeletons, 2 Stalkers e 2–4 Ghouls."
+        },
+        {
+          "title": "Apanhar a Family Brooch",
+          "text": "Usa a **cabeça do caixão de cima** para encontrares a {item:Family Brooch}.",
+          "images": [{"file": "Brooch.png", "caption": "Usa a cabeça do caixão de cima"}],
+          "reward": "Family Brooch"
+        },
+        {
+          "title": "Sair da cripta da brooch",
+          "text": "Volta pelo mesmo caminho: desce as escadas da sala sul, volta pela passagem para **oeste**, sobe as escadas do corredor até à cave e sai da casa abandonada. Depois vai para **norte** até ao buraco sob a muralha e volta a Carlin.",
+          "coords": [
+            {"x": 32246, "y": 31837, "z": 7, "label": "Casa abandonada"},
+            {"x": 32219, "y": 31768, "z": 7, "label": "Buraco sob a muralha (volta a Carlin)"}
+          ]
+        },
+        {
+          "title": "Entregar a brooch ao Dalbrect",
+          "text": "Leva a brooch ao {npc:Dalbrect} e diz {key:hi}, {key:brooch}, {key:yes}, {key:yes}. Ele passa a considerar-te amigo e leva-te à Isle of the Kings. Ele está na cabana junto ao seu barco, no porto a **norte e oeste** de Carlin (a norte das Ghostlands).",
+          "npc": "Dalbrect",
+          "dialogue": [
+            {"you": "brooch"},
+            {"npc": "What? You want me to examine a brooch?"},
+            {"you": "yes"},
+            {"npc": "Can it be? I recognise my family's arms! [...] please ... give that brooch to me."},
+            {"you": "yes"},
+            {"npc": "Thank you! I shall consider you my friend from now on! Just let me know if you need something!"}
+          ],
+          "reward": "Acesso à Isle of the Kings",
+          "coords": [{"x": 32211, "y": 31755, "z": 6, "label": "Dalbrect (barco para a Isle of the Kings)"}]
+        },
+        {
+          "title": "Viajar para a Isle of the Kings",
+          "text": "Sempre que quiseres, diz ao {npc:Dalbrect} {key:passage} e {key:yes}: ele leva-te à Isle of the Kings por 10 gp.",
+          "npc": "Dalbrect",
+          "dialogue": [
+            {"you": "passage"},
+            {"npc": "Since you are my friend now I will sail you to the isle of the kings for 10 gold. Is that okay for you?"},
+            {"you": "yes"},
+            {"npc": "Have a nice trip!"}
+          ],
+          "coords": [{"x": 32173, "y": 31938, "z": 7, "label": "Isle of the Kings"}]
+        }
+      ]
+    },
+    {
+      "title": "2. The Investigation (Monk's Diary)",
+      "steps": [
+        {
+          "title": "Falar com o Costello",
+          "text": "Na Isle of the Kings, fala com o abade {npc:Costello} (no edifício do lado leste). Diz {key:hi}, {key:Fugio} e {key:yes}. Passas a poder abrir as portas protegidas das catacumbas.",
+          "npc": "Costello",
+          "dialogue": [
+            {"you": "Fugio"},
+            {"npc": "To be honest, I fear the omen in my dreams may be true. [...] Perhaps ... you are willing to investigate this matter?"},
+            {"you": "yes"},
+            {"npc": "Thank you very much! From now on you may open the warded doors to the catacombs."}
+          ],
+          "tip": "Nas grutas por baixo do mosteiro há um buraco (pick hole) que leva à zona da Banshee Quest, mas o diário está nas Ghostlands."
+        },
+        {
+          "title": "Sair da Isle of the Kings",
+          "text": "Para voltares ao continente, vai ao barco atracado na ilha e fala com o {npc:Captain Jack}, amigo do Dalbrect: diz {key:hi} e {key:tibia}. Ele leva-te de volta ao continente, para o lado de Carlin.",
+          "npc": "Captain Jack",
+          "coords": [{"x": 32189, "y": 31957, "z": 6, "label": "Captain Jack (barco de regresso)"}],
+          "warning": "Não entres no 3.º andar do mosteiro (área restrita dos monges): se o fizeres, o Captain Jack não te leva de volta até pagares a multa ao {npc:Costello} ({key:absolution})."
+        },
+        {
+          "title": "Ir à gruta nas Ghostlands",
+          "text": "Volta às Ghostlands (pelo buraco sob a muralha, a oeste de Carlin) e vai até esta gruta.",
+          "coords": [{"x": 32223, "y": 31861, "z": 7, "label": "Gruta do Monk's Diary"}],
+          "images": [{"file": "Way to Brother Fugio 01.gif", "caption": "Caminho até à gruta (A)"}]
+        },
+        {
+          "title": "Primeira alavanca (A)",
+          "text": "Desce à gruta marcada com **A** (tem vários {creature:Scorpion|Scorpions}). Vai até ao fim da gruta: numa estrutura encontras mortos-vivos — {creature:Demon Skeleton|Demon Skeletons}, {creature:Stalker|Stalkers} e um {creature:Bonelord}. Derrota alguns com {item:Great Fireball Rune|GFB} ou outro ataque forte, **puxa a alavanca** e volta a correr (com haste) até onde estavam as duas paredes mágicas.",
+          "images": [{"file": "Way to Brother Fugio 02.gif", "caption": "A alavanca no fim da gruta A"}]
+        },
+        {
+          "title": "Segunda alavanca (B)",
+          "text": "Desce **três níveis** até à grande gruta. A passagem mais à **direita**, marcada com **B**, leva a uma {creature:Giant Spider} que guarda uma alavanca que baixa uma das paredes mágicas. Mata a Giant Spider, **puxa a alavanca** e volta com {spell:Haste} até às paredes mágicas.",
+          "images": [{"file": "Way to Brother Fugio 03.gif", "caption": "A passagem B com a Giant Spider e a alavanca"}]
+        },
+        {
+          "title": "Passar as paredes (C)",
+          "text": "Passa **com toda a equipa ao mesmo tempo** pelo sítio das paredes mágicas, marcado com **C**. Mantém o grupo junto: antes do buraco há um ponto que repõe as paredes. Desce o buraco e segue a passagem para **norte**.",
+          "images": [{"file": "Way to Brother Fugio 04.gif", "caption": "As paredes mágicas (C) e o caminho até ao corpo"}],
+          "warning": "Nesta passagem há {creature:Demon Skeleton|Demon Skeletons}, {creature:Ghost|Ghosts}, {creature:Stalker|Stalkers}, {creature:Ghoul|Ghouls} e uma {creature:Mummy}."
+        },
+        {
+          "title": "Usar o corpo do monge",
+          "text": "Mais à frente encontras um {item:Dead Human (Quest)}. Usa o corpo para receberes uma {item:Backpack} com um livro ({item:They Are Coming (Book)}) e outras coisas. Esse livro é o {item:Monk's Diary}.",
+          "reward": "Monk's Diary"
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Volta pela passagem e usa o portal para sair da gruta. Depois sobe pelos buracos por onde desceste (usa a {item:Rope}) até à superfície das Ghostlands e volta a Carlin pelo buraco sob a muralha."
+        },
+        {
+          "title": "Entregar o diário",
+          "text": "Leva o livro à Isle of the Kings (o {npc:Dalbrect} leva-te: {key:hi}, {key:passage}, {key:yes}) e fala com o {npc:Costello}: {key:hi}, {key:diary}, {key:yes}. Ele examina-o e dá-te um {item:Blessed Ankh}.",
+          "npc": "Costello",
+          "dialogue": [
+            {"you": "diary"},
+            {"npc": "Do you want me to inspect a diary?"},
+            {"you": "yes"},
+            {"npc": "By the gods! This is brother Fugio's handwriting and what I read is horrible indeed! [...] Take this blessed Ankh. May it protect you in even your darkest hours."}
+          ],
+          "reward": "Blessed Ankh"
+        },
+        {
+          "title": "Fechar a quest no Quest Log",
+          "text": "Para a quest aparecer como concluída no Quest Log, fala outra vez com o {npc:Costello} e diz {key:diary}. Ele agradece e a quest fica completa.",
+          "npc": "Costello"
+        },
+        {
+          "title": "Voltar ao continente",
+          "text": "Para saíres da ilha, fala outra vez com o {npc:Captain Jack} no barco atracado: {key:hi} e {key:tibia}. Ele leva-te para o lado de Carlin.",
+          "npc": "Captain Jack"
+        }
+      ]
+    }
+  ]
+}

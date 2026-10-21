@@ -1,0 +1,563 @@
+{
+  "slug": "the-ancient-tombs-quest",
+  "category": "tesouro",
+  "region": "Ankrahmun",
+  "difficulty": 5,
+  "duration": "Vários dias (8 túmulos, uma ou mais sessões por túmulo)",
+  "summary": "Sete conselheiros do Faraó guardam, cada um no seu túmulo debaixo do deserto de Ankrahmun, uma peça de uma antiga máscara. Vais descer aos 8 {wiki:Ankrahmun Tombs|túmulos}, matar todos os {wiki:Pharaohs|faraós}, recolher as 7 peças e juntá-las na sala do tesouro de {creature:Ashmunrah} para receberes o {item:Helmet of the Ancients}.",
+  "legend_pt": "Sete conselheiros do Faraó foram \"encarregados\" do segredo de forjar parte de uma antiga e poderosa máscara, e vão lutar por toda a eternidade para o guardar.",
+  "start": {"x": 33207, "y": 32592, "z": 7, "label": "Ancient Ruins Tomb (Vashresamun), o primeiro faraó recomendado"},
+  "requirements": [
+    "Premium.",
+    "Nível mínimo 75 para as portas de experiência (recomendado 120+).",
+    "Equipa forte: cerca de 5 jogadores de nível 75+ ou 3 jogadores de nível 150+.",
+    "Pelo menos 8 {item:Scarab Coin|Scarab Coins} (uma por túmulo; leva extra).",
+    "Para Thalas: mais 6 pessoas de fora da equipa para carregar nos interruptores ao mesmo tempo.",
+    "Para Morguthis: pelo menos um knight (dois no passo 33) para bloquear e empurrar Deathslicers."
+  ],
+  "items_needed": [
+    {"item": "Scarab Coin", "qty": 8, "note": "uma por túmulo, por jogador que passa a chama; leva extra"},
+    {"item": "Shovel", "note": "para abrir os buracos no deserto"},
+    {"item": "Rope", "note": "muitos buracos de corda, sobretudo no labirinto de Morguthis"},
+    {"item": "Dwarven Ring", "note": "importante para Dipthrah"},
+    {"item": "Magic Wall Rune", "note": "útil no último passo de Morguthis"},
+    {"item": "Small Ruby", "note": "opcional, para encantar o capacete no fim"}
+  ],
+  "rewards": [
+    {"item": "Helmet of the Ancients"}
+  ],
+  "achievements": [],
+  "dangers": ["Vashresamun", "Rahemos", "Dipthrah", "Omruc", "Thalas", "Mahrdis", "Morguthis", "Ashmunrah", "Magicthrower", "Shredderthrower", "Plaguethrower", "Flamethrower", "Stalker", "Banshee", "Bonelord", "Priestess", "Necromancer", "Slime", "Dragon", "Dragon Lord", "Deathslicer", "Demongoblin", "Demon", "Warlock", "Behemoth", "Ghost", "Green Djinn", "Ancient Scarab", "Lich", "Giant Spider", "Vampire"],
+  "npcs": ["Cobra (NPC)"],
+  "tips": [
+    "Cada faraó (exceto Ashmunrah) deixa cair um **item de passe** sempre que morre. Com esse item no inventário, o {item:Magic Forcefield} da sala do faraó leva-te à sala do {item:Sarcophagus}, onde apanhas a peça do capacete. Sem ele, o forcefield manda-te para o início do túmulo.",
+    "Cada peça só se apanha **uma vez por personagem**, e cada jogador precisa do seu item de passe: a equipa tem de matar cada faraó **pelo menos uma vez por cada pessoa** que precisa da peça.",
+    "Ashmunrah não tem peça nem item de passe e só tem de ser morto uma vez, mas tem de ser o **último**.",
+    "A ordem dos outros faraós não importa. Do mais fácil para o mais difícil: Vashresamun, Rahemos, Dipthrah, Omruc, Thalas, Mahrdis, Morguthis, Ashmunrah.",
+    "Em todos os túmulos, para chegares às partes profundas tens de pisar a {item:Mystic Flame} (chama azul) e pôr uma {item:Scarab Coin} no {item:Coal Basin} vazio. As Scarab Coins obtêm-se a cavar em certos pontos da areia a norte de Ankrahmun ou como loot de várias criaturas."
+  ],
+  "sections": [
+    {
+      "title": "Resumo: faraós, itens de passe e peças",
+      "steps": [
+        {
+          "title": "O que cada faraó dá",
+          "text": "Guarda esta tabela: diz-te que item de passe precisas para chegar a cada peça do capacete.",
+          "table": {
+            "head": ["Túmulo", "Faraó", "Item de passe", "Peça do capacete"],
+            "rows": [
+              ["{wiki:Peninsula Tomb|Peninsula}", "{creature:Omruc}", "{item:Crystal Arrow}", "{item:Helmet Adornment}"],
+              ["{wiki:Stone Tomb|Stone}", "{creature:Thalas}", "{item:Cobrafang Dagger}", "{item:Gem Holder}"],
+              ["{wiki:Mountain Tomb|Mountain}", "{creature:Dipthrah}", "{item:Ornamented Ankh}", "{item:Damaged Helmet}"],
+              ["{wiki:Shadow Tomb|Shadow}", "{creature:Mahrdis}", "{item:Burning Heart}", "{item:Helmet Ornament}"],
+              ["{wiki:Ancient Ruins Tomb|Ancient Ruins}", "{creature:Vashresamun}", "{item:Blue Note}", "{item:Left Horn}"],
+              ["{wiki:Tarpit Tomb|Tarpit}", "{creature:Morguthis}", "{item:Sword Hilt}", "{item:Right Horn}"],
+              ["{wiki:Oasis Tomb|Oasis}", "{creature:Rahemos}", "{item:Ancient Rune}", "{item:Helmet Piece}"],
+              ["{wiki:Ankrahmun Library Tomb|Ankrahmun Library}", "{creature:Ashmunrah}", "—", "— (aqui monta-se o capacete)"]
+            ]
+          }
+        },
+        {
+          "title": "Como apanhar cada peça",
+          "text": "Depois de matares um faraó, apanha o item de passe do corpo. Com ele no inventário, entra no {item:Magic Forcefield} da sala do faraó: em vez de ires para o início do túmulo, apareces numa pequena sala com o {item:Sarcophagus} do faraó. Usa o sarcófago para receberes a peça do capacete.",
+          "warning": "Cada jogador precisa do **seu próprio** item de passe. Se a equipa tem 5 pessoas a fazer a quest, o faraó tem de morrer 5 vezes."
+        },
+        {
+          "title": "Chegar a Ankrahmun e aos túmulos",
+          "text": "Todos os túmulos ficam debaixo do deserto de Kha'labal, à volta de **Ankrahmun** (o de Ashmunrah fica debaixo da própria cidade). Para chegares a Ankrahmun apanha um barco: por exemplo o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard}. Cada secção abaixo indica as coordenadas da entrada do túmulo: vai lá a pé e cava com a {item:Shovel} no sítio certo.",
+          "coords": [{"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}]
+        },
+        {
+          "title": "Sair de um túmulo",
+          "text": "O {item:Magic Forcefield} da sala de cada faraó, usado **sem** o item de passe no inventário, leva-te ao **início do túmulo**. No túmulo de Vashresamun, a sala do sarcófago tem um teleporte de saída que te deixa à entrada do túmulo. Noutros túmulos, se não vires um teleporte de saída, volta pelo caminho por onde vieste. Do início do túmulo sobe as rampas/escadas até ao buraco que abriste na areia e usa a {item:Rope} para voltares à superfície. Para saíres de Ankrahmun, o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes}).",
+          "npc": "Captain Sinbeard"
+        }
+      ]
+    },
+    {
+      "title": "1. Vashresamun (Ancient Ruins Tomb)",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Ancient Ruins Tomb} e cava com a {item:Shovel} para abrir o buraco.",
+          "coords": [{"x": 33207, "y": 32592, "z": 7, "label": "Entrada da Ancient Ruins Tomb"}],
+          "images": [{"file": "Vash Located.JPG", "caption": "Localização da Ancient Ruins Tomb"}]
+        },
+        {
+          "title": "Pagar a Scarab Coin",
+          "text": "Desce até ao **7.º andar** do túmulo, onde está o {item:Coal Basin}. Pisa a chama azul e põe uma {item:Scarab Coin} no Coal Basin. És teleportado para a parte profunda do túmulo."
+        },
+        {
+          "title": "Até ao piso seguinte",
+          "text": "Segue o mapa para chegares ao piso seguinte.",
+          "images": [{"file": "Vash map1.JPG", "caption": "Caminho até ao piso seguinte"}]
+        },
+        {
+          "title": "Até ao teleporte",
+          "text": "Segue o mapa até ao próximo teleporte e entra nele.",
+          "images": [{"file": "Vash map2.JPG", "caption": "Caminho até ao teleporte"}]
+        },
+        {
+          "title": "Puzzle dos instrumentos",
+          "text": "Passa a porta de experiência de nível 75. Clica em cada instrumento musical **pela ordem mostrada na imagem** para abrir a porta seguinte.",
+          "coords": [{"x": 33189, "y": 32664, "z": 15, "label": "Porta de nível 75"}],
+          "images": [{"file": "Vashresamun puzzle.jpg", "caption": "Ordem dos instrumentos musicais"}]
+        },
+        {
+          "title": "Matar Vashresamun",
+          "text": "Depois da porta há um teleporte. Entra: apareces na sala de {creature:Vashresamun} com 2–4 {creature:Banshee|Banshees}, 4 {creature:Magicthrower|Magicthrowers} e 2 {creature:Shredderthrower|Shredderthrowers}. Mata o faraó e apanha a {item:Blue Note}.",
+          "coords": [{"x": 33128, "y": 32656, "z": 15, "label": "Sala de Vashresamun"}],
+          "tip": "Se não te mexeres depois de entrar, só és atacado por 2 throwers, 2 banshees e o faraó."
+        },
+        {
+          "title": "Apanhar o Left Horn",
+          "text": "Com a {item:Blue Note}, anda para **oeste** e entra no teleporte. Apareces na sala do tesouro de Vashresamun. Usa o {item:Sarcophagus} para receberes o {item:Left Horn}.",
+          "coords": [{"x": 33144, "y": 32665, "z": 15, "label": "Sala do tesouro de Vashresamun"}],
+          "reward": "Left Horn"
+        },
+        {
+          "title": "Sair",
+          "text": "Entra no teleporte de saída: apareces na entrada do túmulo, 1 andar abaixo da areia. Sobe com a {item:Rope} pelo buraco por onde entraste e volta a Ankrahmun.",
+          "coords": [{"x": 33207, "y": 32591, "z": 8, "label": "Saída (entrada do túmulo)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Rahemos (Oasis Tomb)",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Oasis Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33132, "y": 32641, "z": 7, "label": "Entrada da Oasis Tomb"}],
+          "images": [{"file": "Oasistomb.jpg", "caption": "Localização da Oasis Tomb"}]
+        },
+        {
+          "title": "Piso -4",
+          "text": "Desce até ao piso -4 e segue o mapa até ao piso seguinte.",
+          "images": [{"file": "Rahemos Map1.JPG", "caption": "Caminho no piso -4"}]
+        },
+        {
+          "title": "Até ao Coal Basin",
+          "text": "Segue o mapa até ao {item:Coal Basin}. Pisa a chama azul e põe uma {item:Scarab Coin} no Coal Basin.",
+          "images": [{"file": "Rahemos Map2.JPG", "caption": "Caminho até ao Coal Basin"}]
+        },
+        {
+          "title": "Descer e seguir o mapa",
+          "text": "Desce as escadas e segue o mapa.",
+          "images": [{"file": "Rahemos Map3.JPG", "caption": "Caminho depois da chama"}]
+        },
+        {
+          "title": "Até ao teleporte",
+          "text": "Segue o mapa seguinte até ao teleporte e entra. Depois passa a porta de experiência de nível 75.",
+          "images": [{"file": "Rahemos Map4.JPG", "caption": "Caminho até ao teleporte"}]
+        },
+        {
+          "title": "Jogo dos chapéus",
+          "text": "**Cada** membro da equipa tem de encontrar a {item:Carrot} debaixo de um dos três chapéus para poder passar a porta.",
+          "images": [{"file": "Rahemospart1.JPG", "caption": "Os três chapéus"}],
+          "warning": "Se errares perdes 200 de vida."
+        },
+        {
+          "title": "Labirinto",
+          "text": "Ignora os interruptores e segue o caminho da imagem.",
+          "images": [{"file": "Rahemos maze1.JPG", "caption": "Caminho no labirinto"}]
+        },
+        {
+          "title": "Atravessar a lava",
+          "text": "Ignora outra vez os interruptores e segue o caminho de moedas por cima da lava.",
+          "images": [{"file": "Lava walking.JPG", "caption": "Caminho de moedas sobre a lava"}]
+        },
+        {
+          "title": "Demongoblins",
+          "text": "Depois da lava desce as escadas e mata os 9 {creature:Demongoblin|Demongoblins}."
+        },
+        {
+          "title": "Matar Rahemos",
+          "text": "Entra no teleporte: levas-te a {creature:Rahemos}, 0–1 {creature:Demon}, 1 {creature:Warlock} e 1 {creature:Magicthrower}. Mata-o e apanha a {item:Ancient Rune}."
+        },
+        {
+          "title": "Apanhar a Helmet Piece",
+          "text": "Com a {item:Ancient Rune} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes a {item:Helmet Piece}.",
+          "reward": "Helmet Piece"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Oasis Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33132, "y": 32641, "z": 7, "label": "Entrada da Oasis Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "3. Dipthrah (Mountain Tomb)",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Mountain Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33132, "y": 32568, "z": 7, "label": "Entrada da Mountain Tomb"}],
+          "images": [{"file": "Dipthrah Located.JPG", "caption": "Localização da Mountain Tomb"}]
+        },
+        {
+          "title": "Pagar a Scarab Coin",
+          "text": "Desce até ao piso -6, onde está o {item:Coal Basin}. Pisa a chama azul e põe uma {item:Scarab Coin} no Coal Basin. És teleportado para a parte profunda."
+        },
+        {
+          "title": "Interruptores para a direita",
+          "text": "**Ignora** o teleporte e carrega nos interruptores marcados no mapa até ficarem **todos virados para a direita**. Podes fazê-lo por qualquer ordem e sem limite de tempo.",
+          "images": [{"file": "Dip Pic02.JPG", "caption": "Interruptores a virar para a direita"}]
+        },
+        {
+          "title": "Teleporte para o piso seguinte",
+          "text": "Com todos os interruptores à direita, volta ao teleporte e entra: vais para o 7.º andar."
+        },
+        {
+          "title": "Até ao próximo teleporte",
+          "text": "Vai para **sul** e segue o mapa até ao teleporte seguinte. Entra, vai para sul e passa a porta de experiência de nível 75.",
+          "images": [{"file": "Dipthrah map 0202.JPG", "caption": "Caminho até ao teleporte"}]
+        },
+        {
+          "title": "Portas pela ordem certa",
+          "text": "Passa pelas portas por esta ordem: **endless**, **pale-faced**, **deceased**, **unholy**, **doomed**, **righteous**, **sharpened**, **mortal**.",
+          "tip": "Esta sequência vem num {wiki:Ancient Tombs (Book)|livro}. Não precisas de o encontrar para a quest, mas é recomendado se quiseres o achievement **Poet Laureate**."
+        },
+        {
+          "title": "Matar Dipthrah",
+          "text": "O teleporte seguinte leva-te a {creature:Dipthrah}, 9 {creature:Magicthrower|Magicthrowers}, 5 {creature:Bonelord|Bonelords} e 0–4 {creature:Priestess|Priestesses}. Mata-o e apanha o {item:Ornamented Ankh}.",
+          "warning": "Dipthrah é **imune a dano físico e de morte**. Usa outros elementos. Leva um {item:Dwarven Ring}."
+        },
+        {
+          "title": "Apanhar o Damaged Helmet",
+          "text": "Com o {item:Ornamented Ankh} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes o {item:Damaged Helmet}.",
+          "reward": "Damaged Helmet"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Mountain Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33132, "y": 32568, "z": 7, "label": "Entrada da Mountain Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "4. Omruc (Peninsula Tomb)",
+      "steps": [
+        {
+          "title": "Encontrar o buraco escondido",
+          "text": "Vai à {wiki:Peninsula Tomb}, que está escondida, e cava no local indicado.",
+          "coords": [{"x": 33027, "y": 32870, "z": 7, "label": "Entrada escondida da Peninsula Tomb"}],
+          "images": [{"file": "Omruc Location.png", "caption": "Localização da Peninsula Tomb"}],
+          "tip": "Podes ter de cavar várias vezes até o buraco aparecer."
+        },
+        {
+          "title": "Até ao Empty Coal Basin",
+          "text": "Desce até ao piso -5 e segue o mapa até ao {item:Empty Coal Basin}.",
+          "images": [{"file": "Omruc Map 1.png", "caption": "Caminho no piso -5 até ao Coal Basin"}]
+        },
+        {
+          "title": "Pagar a Scarab Coin",
+          "text": "Pisa a {item:Mystic Flame} e põe uma {item:Scarab Coin} no {item:Empty Coal Basin}. Depois segue o mapa seguinte.",
+          "images": [
+            {"file": "Omruc Mystic Flame.png", "caption": "Mystic Flame e Coal Basin"},
+            {"file": "Omruc Map 2.png", "caption": "Caminho depois da chama"}
+          ]
+        },
+        {
+          "title": "Até ao teleporte do labirinto",
+          "text": "Segue o mapa até ao teleporte do labirinto e entra.",
+          "images": [{"file": "Omruc Map 3.png", "caption": "Caminho até ao teleporte do labirinto"}]
+        },
+        {
+          "title": "Labirinto de paredes invisíveis",
+          "text": "Agora estás num labirinto de paredes invisíveis. Segue **exatamente** as setas da imagem: há outras casas onde podes pisar, mas este é o único caminho que leva ao fim.",
+          "images": [{"file": "Omruc Invisible Wall Route.png", "caption": "Caminho certo no labirinto invisível (setas)"}]
+        },
+        {
+          "title": "Matar Omruc",
+          "text": "Entra no teleporte a **sul**: vais ter com {creature:Omruc}, 2 {creature:Stalker|Stalkers}, 6 {creature:Magicthrower|Magicthrowers} e 6 {creature:Shredderthrower|Shredderthrowers}. Mata-o e apanha a {item:Crystal Arrow}."
+        },
+        {
+          "title": "Apanhar a Helmet Adornment",
+          "text": "Com a {item:Crystal Arrow} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes a {item:Helmet Adornment}.",
+          "reward": "Helmet Adornment"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Peninsula Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33027, "y": 32870, "z": 7, "label": "Entrada da Peninsula Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "5. Thalas (Stone Tomb)",
+      "intro": "Precisas de 6 pessoas de fora da equipa para esta parte (ou de uma equipa grande).",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Stone Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33282, "y": 32743, "z": 7, "label": "Entrada da Stone Tomb"}],
+          "images": [{"file": "Thalas Location.png", "caption": "Localização da Stone Tomb"}]
+        },
+        {
+          "title": "Pagar a Scarab Coin",
+          "text": "Desce até ao piso -6, onde está o {item:Coal Basin}. Pisa a chama azul, põe uma {item:Scarab Coin} no Coal Basin e segue o mapa.",
+          "images": [{"file": "Thalas Map1.JPG", "caption": "Caminho depois da chama"}]
+        },
+        {
+          "title": "Posicionar as pessoas nos interruptores",
+          "text": "No último piso tens de ativar **todos** os interruptores. Põe as 6 pessoas extra nos 6 pontos **amarelos** e 2 jogadores da equipa nos 2 pontos **azuis**. Todos os outros ficam no teleporte, no ponto **vermelho**.",
+          "images": [{"file": "Thalas map2.JPG", "caption": "Pontos amarelos, azuis e vermelho dos interruptores"}],
+          "warning": "Depois do primeiro interruptor tens cerca de **4 minutos** para entrar no teleporte."
+        },
+        {
+          "title": "Carregar nos interruptores ao mesmo tempo",
+          "text": "Todos carregam nos interruptores **ao mesmo tempo**. Os 2 jogadores dos pontos azuis voltam logo para junto do grupo no teleporte."
+        },
+        {
+          "title": "Envenenar-te e falar com a Cobra",
+          "text": "Cada jogador pisa o interruptor para ficar **envenenado**. Envenenado, diz {key:hi} à {npc:Cobra (NPC)} a **sul**. És teleportado para a sala de {creature:Thalas}, com 12 {creature:Plaguethrower|Plaguethrowers}, 4 {creature:Necromancer|Necromancers} e 0–8 {creature:Slime|Slimes}.",
+          "npc": "Cobra (NPC)",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Venture the path of decay!"}
+          ],
+          "warning": "Se não fores rápido, a Cobra responde *\"Begone! Hissssss! You bear not the mark of the cobra!\"* e não te teleporta."
+        },
+        {
+          "title": "Matar Thalas",
+          "text": "Mata {creature:Thalas} e apanha o {item:Cobrafang Dagger}."
+        },
+        {
+          "title": "Apanhar o Gem Holder",
+          "text": "Com o {item:Cobrafang Dagger} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes o {item:Gem Holder}.",
+          "reward": "Gem Holder"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Stone Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33282, "y": 32743, "z": 7, "label": "Entrada da Stone Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "6. Mahrdis (Shadow Tomb)",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Shadow Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33255, "y": 32833, "z": 7, "label": "Entrada da Shadow Tomb"}],
+          "images": [{"file": "Mahrdis Map1.JPG", "caption": "Localização da Shadow Tomb"}]
+        },
+        {
+          "title": "Descer ao piso -6",
+          "text": "Desce até ao piso -5 e anda um pouco para **oeste** para chegares ao piso -6."
+        },
+        {
+          "title": "Pagar a Scarab Coin",
+          "text": "Anda para **sul** até à chama azul e ao {item:Coal Basin}. Pisa a chama e põe uma {item:Scarab Coin} no Coal Basin. És teleportado para a parte profunda."
+        },
+        {
+          "title": "Até ao teleporte",
+          "text": "Anda para **oeste** para chegares ao piso de baixo. Depois segue o mapa até ao teleporte.",
+          "images": [{"file": "Mahrdis map2.JPG", "caption": "Caminho até ao teleporte"}]
+        },
+        {
+          "title": "Torre em espiral",
+          "text": "Sobe a torre em espiral (porta de experiência de nível 75) e continua em frente."
+        },
+        {
+          "title": "Sala do fogo roxo",
+          "text": "Chegas a uma sala com {item:Purple Fire} no chão. Pisa **só** as casas \"frias\" (sem fogo). Se o fogo aparecer debaixo de ti quando já estás numa casa fria, não perdes vida, por isso não te apresses.",
+          "images": [{"file": "Mahrdis Fire.JPG", "caption": "Sala com Purple Fire"}],
+          "warning": "Pisar o Purple Fire tira-te 300 de vida."
+        },
+        {
+          "title": "Matar Mahrdis",
+          "text": "Entra no teleporte para lutar contra {creature:Mahrdis}, 4 {creature:Flamethrower|Flamethrowers}, 2 {creature:Dragon|Dragons} e 1 {creature:Dragon Lord}. Mata-o e apanha o {item:Burning Heart}."
+        },
+        {
+          "title": "Apanhar o Helmet Ornament",
+          "text": "Com o {item:Burning Heart} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes o {item:Helmet Ornament}.",
+          "reward": "Helmet Ornament"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Shadow Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33255, "y": 32833, "z": 7, "label": "Entrada da Shadow Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "7. Morguthis (Tarpit Tomb)",
+      "intro": "O túmulo mais complicado: um labirinto com {creature:Deathslicer|Deathslicers} que não morrem (mas podem ser empurrados). Precisas de pelo menos um knight para bloquear.",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Tarpit Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33232, "y": 32704, "z": 7, "label": "Entrada da Tarpit Tomb"}],
+          "images": [{"file": "Tombtar.jpg", "caption": "Localização da Tarpit Tomb"}]
+        },
+        {
+          "title": "Descer e pagar a Scarab Coin",
+          "text": "Desce até à chama-teleporte. Em cada piso as rampas para descer veem-se logo. Entra na chama e põe uma {item:Scarab Coin} no Coal Basin."
+        },
+        {
+          "title": "Até ao último piso de caça",
+          "text": "Depois da chama, segue os mapas até ao último piso de caça e a outro teleporte.",
+          "images": [
+            {"file": "Morguthis Map 1.jpg", "caption": "Mapa 1 até ao último piso"},
+            {"file": "Morguthis Map 2.jpg", "caption": "Mapa 2 até ao último piso"}
+          ]
+        },
+        {
+          "title": "Como funciona a arena",
+          "text": "Passa a porta de nível 75 e chegas à arena de Morguthis. Para chegar ao faraó tens de pisar **todas as chamas azuis** do labirinto, o que obriga a entrar em todas as grutas. Os alçapões levam a grutas que dão para partes diferentes do labirinto. Cada teleporte de gruta leva-te para cima de um \"sandstone switch tile\" próximo, num sítio seguro. Só enfrentas Deathslicers quando atravessas a parte de arenito para entrar noutro alçapão.",
+          "warning": "Todas as chamas, teleportes e alçapões são seguros, **exceto** o teleporte final (o único que não está dentro de uma gruta, leva a Morguthis) e o primeiro teleporte (antes das portas de nível 75)."
+        },
+        {
+          "title": "Rota rápida: passos 1–8",
+          "text": "Esta é a rota mais rápida (podes pisar as chamas por outra ordem, desde que pises todas). Segue a imagem e a tabela.",
+          "images": [{"file": "morguthis.jpg", "caption": "Rota de Morguthis, passos 1–8"}],
+          "table": {
+            "head": ["Passo", "Ação"],
+            "rows": [
+              ["1", "Um knight passa a porta de nível da **direita** e bloqueia o Deathslicer; o resto da equipa passa a porta da **esquerda** e entra no alçapão."],
+              ["2", "Desce pelo buraco, **não** pelo teleporte."],
+              ["3", "Passa pela chama azul e depois sobe com a corda a norte."],
+              ["4", "Sobe outra vez com a corda."],
+              ["5", "Anda para norte e desce pelo buraco."],
+              ["6", "Anda para leste e entra no teleporte."],
+              ["7", "O knight vai para nordeste e bloqueia o Deathslicer; a equipa vai para oeste, depois norte, e entra no alçapão."],
+              ["8", "Anda para oeste e sobe com a corda."]
+            ]
+          }
+        },
+        {
+          "title": "Rota rápida: passos 9–29",
+          "text": "Continua a rota seguindo a segunda imagem.",
+          "images": [{"file": "morguthis1.jpg", "caption": "Rota de Morguthis, passos 9–29"}],
+          "table": {
+            "head": ["Passo", "Ação"],
+            "rows": [
+              ["9", "Anda para sul e desce pelo buraco."],
+              ["10", "Vai para norte e desce outra vez pelo buraco."],
+              ["11", "Segue o caminho para leste e sobe com a corda."],
+              ["12", "Passa pela chama azul a norte e desce pelo buraco."],
+              ["13", "Anda para norte e sobe com a corda."],
+              ["14", "Entra no teleporte."],
+              ["15", "O knight bloqueia o Deathslicer a oeste; a equipa vai para leste e depois norte, para o alçapão."],
+              ["16", "Anda para sul e passa pela chama azul. Continua para sul e entra no teleporte."],
+              ["17", "O knight vai para sul e bloqueia o Deathslicer (pode ter de o empurrar para sul); a equipa vai para sul e entra no corredor oeste."],
+              ["18", "Vai para sul, para o buraco, **não** para o teleporte."],
+              ["19", "Segue para leste e sobe com a corda."],
+              ["20", "Anda para norte até à chama azul. Continua para norte e entra no teleporte."],
+              ["21", "O knight vai para a esquerda (**não** entra no teleporte, é o de Morguthis) e bloqueia o Deathslicer, empurrando-o se for preciso; a equipa vai para sul e entra no alçapão."],
+              ["22", "Vai para norte e desce pelo buraco (**não** entres no teleporte)."],
+              ["23", "Vai para sul e sobe pelo buraco de corda."],
+              ["24", "Vai para a esquerda e passa pela chama azul; continua para norte e desce pelo buraco."],
+              ["25", "Vai para sudoeste e sobe pelo buraco de corda."],
+              ["26", "Vai para oeste e sobe pelo buraco de corda."],
+              ["27", "Vai para sul e desce pelo buraco."],
+              ["28", "Vai para sul e entra no teleporte."],
+              ["29", "O knight vai para a direita e pode ter de empurrar o Deathslicer para sul e para a direita, para a equipa passar e entrar no alçapão."]
+            ]
+          }
+        },
+        {
+          "title": "Rota rápida: passos 30–43",
+          "text": "Termina a rota seguindo a terceira imagem.",
+          "images": [{"file": "morguthis2.jpg", "caption": "Rota de Morguthis, passos 30–43"}],
+          "table": {
+            "head": ["Passo", "Ação"],
+            "rows": [
+              ["30", "Vai para oeste e desce pelo buraco (**não** entres no teleporte!)."],
+              ["31", "Vai para norte, passa pela chama azul e sobe pelo buraco de corda."],
+              ["32", "Vai para norte e entra no teleporte."],
+              ["33", "Aqui são precisos **dois knights**: um vai para a direita e bloqueia o primeiro Deathslicer, o outro vai para sul e bloqueia o segundo. Podem ter de os empurrar para a equipa passar e entrar no alçapão."],
+              ["34", "Vai para norte e desce pelo buraco (não entres no teleporte)."],
+              ["35", "Segue o corredor para nordeste, depois sudeste, passa pela chama azul, continua o caminho e sobe pelo buraco de corda."],
+              ["36", "Vai para leste e entra no teleporte."],
+              ["37", "O knight vai para a direita e empurra o Deathslicer para baixo, para a equipa ir para norte e entrar no alçapão (o da porta **norte**, não o de noroeste)."],
+              ["38", "Vai para sudeste (não entres no teleporte!), passa pela chama azul, continua o caminho e desta vez entra no teleporte."],
+              ["39", "Vai para sul (não vás para a esquerda); o knight empurra o Deathslicer para toda a equipa passar pelo **segundo** corredor da esquerda e entrar no alçapão."],
+              ["40", "Vai para leste e desce pelo buraco (não pelo teleporte!)."],
+              ["41", "Segue para leste e sobe com a corda."],
+              ["42", "Anda para norte até à chama azul. Continua para norte e entra no teleporte."],
+              ["43", "O knight vai para a esquerda e bloqueia o Deathslicer (ou usa {item:Magic Wall Rune|Magic Wall}) para a equipa entrar no teleporte a norte."]
+            ]
+          },
+          "warning": "Depois do teleporte do passo 43, {creature:Morguthis} e os seus summons estão à tua espera."
+        },
+        {
+          "title": "Matar Morguthis",
+          "text": "Mata {creature:Morguthis} e apanha o {item:Sword Hilt}."
+        },
+        {
+          "title": "Apanhar o Right Horn",
+          "text": "Com o {item:Sword Hilt} no inventário, entra no {item:Magic Forcefield} da sala e usa o {item:Sarcophagus} para receberes o {item:Right Horn}.",
+          "reward": "Right Horn"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Tarpit Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33232, "y": 32704, "z": 7, "label": "Entrada da Tarpit Tomb"}]
+        }
+      ]
+    },
+    {
+      "title": "8. Ashmunrah (Ankrahmun Library Tomb) e o capacete",
+      "intro": "Só venhas aqui quando tiveres **as 7 peças** do capacete.",
+      "steps": [
+        {
+          "title": "Entrar no túmulo",
+          "text": "Vai à entrada da {wiki:Ankrahmun Library Tomb} e cava para abrir o buraco.",
+          "coords": [{"x": 33159, "y": 32836, "z": 7, "label": "Entrada da Ankrahmun Library Tomb"}],
+          "images": [{"file": "Ash 01.JPG", "caption": "Localização da Ankrahmun Library Tomb"}]
+        },
+        {
+          "title": "Até ao Coal Basin",
+          "text": "Segue o mapa até ao {item:Coal Basin}. Pisa a chama azul e põe uma {item:Scarab Coin} no Coal Basin.",
+          "images": [{"file": "Ash map1.JPG", "caption": "Caminho até ao Coal Basin"}]
+        },
+        {
+          "title": "Até ao teleporte",
+          "text": "Segue o mapa até ao teleporte e entra.",
+          "images": [{"file": "Ash map2.JPG", "caption": "Caminho até ao teleporte"}]
+        },
+        {
+          "title": "Primeira sala",
+          "text": "Segue o caminho da imagem até à sala seguinte.",
+          "images": [{"file": "Ash1.JPG", "caption": "Caminho na primeira sala"}],
+          "warning": "Vais ser atacado por muitos {creature:Shredderthrower|Shredderthrowers}, {creature:Plaguethrower|Plaguethrowers}, {creature:Magicthrower|Magicthrowers} e {creature:Flamethrower|Flamethrowers}."
+        },
+        {
+          "title": "Sala do fogo roxo",
+          "text": "Espera que o {item:Purple Fire} se apague e corre para a sala seguinte.",
+          "images": [{"file": "Ash2.JPG", "caption": "Sala com Purple Fire"}],
+          "warning": "Mais uma vez, muitos Shredderthrowers, Plaguethrowers, Magicthrowers e Flamethrowers."
+        },
+        {
+          "title": "Matar Ashmunrah",
+          "text": "Na sala seguinte há um teleporte para {creature:Ashmunrah}, 4 {creature:Magicthrower|Magicthrowers}, 1 {creature:Behemoth}, 4 {creature:Ghost|Ghosts}, 0–3 {creature:Green Djinn|Green Djinns} e 0–2 {creature:Ancient Scarab|Ancient Scarabs}. Ashmunrah só precisa de morrer uma vez.",
+          "images": [{"file": "Ash Mian Room.JPG", "caption": "Sala principal de Ashmunrah"}]
+        },
+        {
+          "title": "Interruptores para a sala do tesouro",
+          "text": "Para o teleporte da sala do tesouro funcionar, **todos os interruptores** têm de estar virados para a **direita**. Isto tem de ser feito **uma vez para cada membro** da equipa."
+        },
+        {
+          "title": "Montar o capacete",
+          "text": "Na sala do tesouro, põe as 7 peças ({item:Left Horn}, {item:Right Horn}, {item:Helmet Piece}, {item:Damaged Helmet}, {item:Helmet Adornment}, {item:Gem Holder}, {item:Helmet Ornament}) na pequena mesa de pedra a **norte**. Recebes o {item:Helmet of the Ancients}.",
+          "images": [{"file": "Helmet.JPG", "caption": "Mesa de pedra onde montas o capacete"}],
+          "reward": "Helmet of the Ancients"
+        },
+        {
+          "title": "Sair do túmulo",
+          "text": "Para voltares à superfície, segue as indicações de **Sair de um túmulo** (no início do guia): volta ao início da {wiki:Ankrahmun Library Tomb} e sobe pelo buraco da entrada com a {item:Rope}.",
+          "coords": [{"x": 33159, "y": 32836, "z": 7, "label": "Entrada da Ankrahmun Library Tomb"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Para transformar o capacete num {item:Helmet of the Ancients (Enchanted)}, põe um {item:Small Ruby} no capacete. Cada rubi só dura 30 minutos; há rumores de que um Soul Ruby duraria para sempre.",
+    "Os túmulos têm muitos mais monstros pelo caminho ({creature:Lich|Liches}, {creature:Giant Spider|Giant Spiders}, {creature:Vampire|Vampires}, escorpiões, esqueletos...). Leva poções suficientes para cada túmulo."
+  ]
+}

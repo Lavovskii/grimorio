@@ -1,0 +1,30 @@
+{
+  "title": "Sunken Mines",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Minas inundadas a **oeste de Kazordoon**, fora da montanha, que servem de posto da rota de Steamship entre Kazordoon e Thais; só abrem com a {wiki:Awash World Change}.",
+  "entrance": {"x": 32548, "y": 31989, "z": 7, "label": "Entrada das Sunken Mines (entrada sul das Dwarf Mines)"},
+  "requirements": [
+    "A zona de caça e o Steamship do {npc:Junkar} só ficam acessíveis quando a {wiki:Awash World Change} está ativa (as bombas de água funcionam com {item:Coal} e as minas abrem no server save seguinte). O {npc:Dronk} está sempre acessível."
+  ],
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de {wiki:Cormaya} ({npc:Gurbasch}) ou de Farmine ({npc:Thorgrin}) com {key:hi}, {key:kazordoon}, {key:yes}, ou a pé pela entrada da montanha.",
+    "Sai da montanha de Kazordoon e caminha para **oeste** até à entrada sul das {wiki:Dwarf Mines} ({coord:32548,31989,7}).",
+    "Lá dentro segue o caminho para a **direita** e desce pelo buraco; o {npc:Dronk} está **dois andares abaixo** da entrada ({coord:32567,32022,9}).",
+    "Com as minas abertas, também chegas de Steamship: o {npc:Junkar} no porto do Steamship de Thais ({coord:32524,32038,14}) leva-te às minas ({key:hi}, {key:passage})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe os dois andares até à entrada (usa a {item:Rope} no buraco) e regressa a Kazordoon para **leste**.",
+    "Com as minas abertas, também podes sair pelo Steamship do {npc:Junkar}: {key:hi} e {key:passage}; leva-te a **Thais**, a **Kazordoon** ou a {wiki:Robson's Isle}."
+  ],
+  "coords": [
+    {"x": 32567, "y": 32022, "z": 9, "label": "Dronk (2 andares abaixo da entrada)"},
+    {"x": 32524, "y": 32038, "z": 14, "label": "Junkar — Steamship de Thais"},
+    {"x": 32593, "y": 32013, "z": 9, "label": "Sala bloqueada da Opticorder Forge"}
+  ],
+  "warnings": [
+    "As minas abertas estão cheias de {creature:Deepling Scout|Deepling Scouts} (cerca de 50) e pode aparecer o {creature:Groam}.",
+    "Quando as minas estão inundadas, a opção {key:mines} do Junkar não funciona."
+  ]
+}

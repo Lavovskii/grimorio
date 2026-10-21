@@ -1,0 +1,34 @@
+{
+  "title": "Warzone 4",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Zona de guerra subterrânea a **leste do {wiki:Gnome Deep Hub}**, muito abaixo do mar a leste de Kazordoon; aqui está o boss {creature:The Baron from Below} da {wiki:Dangerous Depths Quest} (fação dos gnomos do {npc:Gnomus}).",
+  "entrance": {"x": 33827, "y": 32172, "z": 14, "label": "Entrada da Warzone 4 (leste do Gnome Deep Hub)"},
+  "requirements": [
+    "**Premium** e acesso ao {wiki:Gnome Deep Hub}.",
+    "15 pontos de tarefa com a fação dos gnomos ({npc:Gnomus}) — só 10 se já derrotaste os bosses das Warzones 1, 2 e 3 da {wiki:Bigfoot's Burden Quest}. Gastas os pontos ao destruir um {item:Fragile Lava Funnel}, o que te dá **8 horas** de acesso."
+  ],
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} de {wiki:Cormaya} ({npc:Gurbasch}) ou de Farmine ({npc:Thorgrin}) com {key:hi}, {key:kazordoon}, {key:yes} (chegas junto ao {npc:Brodrosch}), ou a pé pela entrada da montanha (leva {item:Rope} e {item:Shovel}).",
+    "Em Kazordoon, vai à entrada do Gnome Deep Hub, perto do blesser do **norte** da cidade, 4 andares abaixo do chão ({coord:32624,31868,11}), e entra. Com nível 80+ e acesso do {npc:Xelvar}, também podes usar o teleporte de cristal mesmo ao lado ({coord:32628,31863,11}, gasta um {item:Teleport Crystal}).",
+    "Chegas ao Gnome Deep Hub ({coord:33752,32190,14}); o {npc:Gnomus} está logo a **norte** ({coord:33749,32166,14}).",
+    "Com os pontos feitos, entra no portal de energia perto da zona das tarefas dos gnomos e destrói um {item:Fragile Lava Funnel}. A entrada da Warzone 4 fica a **leste** do hub ({coord:33827,32172,14})."
+  ],
+  "leave": [
+    "Depois do boss, sai pelo teleporte para a sala da Lava Pump e volta pelo mesmo caminho da Warzone até ao Gnome Deep Hub.",
+    "Do hub, sai pela entrada para **Kazordoon** ({coord:32624,31868,11}).",
+    "Para saíres de Kazordoon apanha o Steamship do {npc:Brodrosch} ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), usa o teleporte de cristal ao lado da entrada do hub, ou sai a pé pela entrada da montanha."
+  ],
+  "coords": [
+    {"x": 32624, "y": 31868, "z": 11, "label": "Entrada do Gnome Deep Hub (Kazordoon)"},
+    {"x": 33752, "y": 32190, "z": 14, "label": "Gnome Deep Hub"},
+    {"x": 33749, "y": 32166, "z": 14, "label": "Gnomus (norte do hub)"},
+    {"x": 33461, "y": 32268, "z": 15, "label": "Hollow Geode da Warzone 4 (teleporte do boss)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"}
+  ],
+  "warnings": [
+    "Se as 8 horas de acesso acabarem enquanto estás lá dentro não és expulso, mas se saíres só voltas a entrar destruindo outro funnel (e gastando mais pontos).",
+    "Criaturas fortes: {creature:Drillworm|Drillworms}, {creature:Elder Wyrm|Elder Wyrms}, {creature:Lava Lurker|Lava Lurkers} e {creature:Chasm Spawn|Chasm Spawns}."
+  ]
+}

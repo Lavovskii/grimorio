@@ -1,0 +1,33 @@
+{
+  "title": "Temple Complex",
+  "type": "dungeon",
+  "near": "Farmine",
+  "summary": "Complexo de templos dos lagartos e draken no **norte de {wiki:Zao}**, junto às {wiki:Muggy Plains}; faz parte da {wiki:Forgotten Knowledge Quest} (boss Soul of Dragonking Zyrtarch).",
+  "entrance": {"x": 33344, "y": 31167, "z": 7, "label": "Entrada do Temple Complex (norte de Zao)"},
+  "requirements": [
+    "Pelo **Fire Portal** das {wiki:Halls of Hope}: só passa quem tiver feito toda a {wiki:The New Frontier Quest}.",
+    "Pela Zao Steppe: o teleporte lagarto para as {wiki:Muggy Plains} só funciona depois das 8 primeiras missões da {wiki:The New Frontier Quest}."
+  ],
+  "arrive": [
+    "Caminho rápido: vai às {wiki:Halls of Hope}, a **norte de Thais** (sai pela saída norte da cidade e continua para norte até ao templo, {coord:32326,32090,7}), e entra no **Fire Portal**.",
+    "Apareces no norte de Zao, nas {wiki:Muggy Plains}, junto ao Fire Portal de volta ({coord:33339,31168,7}).",
+    "Caminho longo: vai a Farmine de {wiki:Steamship} ({key:hi}, {key:farmine}, {key:yes} ao {npc:Brodrosch} em Kazordoon ou ao {npc:Gurbasch} em Cormaya), sai para a {wiki:Zao Steppe} e usa o teleporte lagarto no norte da estepe ({coord:33198,31350,7}) para as Muggy Plains; depois segue para **leste** até à entrada ({coord:33344,31167,7}).",
+    "A **leste** do edifício junto ao portal, sobe por uma escada, caminha para **norte** por cima de uma ponte e entra no Temple Complex ({coord:33334,31151,5})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho através do Temple Complex até à ponte e às escadas da entrada ({coord:33334,31151,5}).",
+    "Desce até ao sítio onde chegaste a Zao e entra no **Fire Portal** ({coord:33339,31168,7}): leva-te de volta às {wiki:Halls of Hope}, a norte de Thais.",
+    "Se vieste a pé, regressa pelas Muggy Plains ao teleporte lagarto, atravessa a Zao Steppe até Farmine e apanha o Steamship do {npc:Thorgrin} ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope (Fire Portal), norte de Thais"},
+    {"x": 33339, "y": 31168, "z": 7, "label": "Chegada a Zao / Fire Portal de volta às Halls of Hope"},
+    {"x": 33334, "y": 31151, "z": 5, "label": "Entrada do Temple Complex (depois da ponte)"},
+    {"x": 33198, "y": 31350, "z": 7, "label": "Teleporte lagarto para as Muggy Plains (Zao Steppe)"},
+    {"x": 33419, "y": 31126, "z": 9, "label": "Sala de A Strange Chalice"}
+  ],
+  "warnings": [
+    "Zona para níveis altos (recomendado **150+**): {creature:Mutated Bat|Mutated Bats}, {creature:Mutated Tiger|Mutated Tigers}, lagartos de classe alta ({creature:Lizard Chosen}, {creature:Lizard High Guard}) e, mais abaixo, {creature:Draken Warmaster|Draken Warmasters} e {creature:Draken Spellweaver|Draken Spellweavers}.",
+    "O teleporte para a parte de baixo do complexo só funciona dizendo a palavra-passe {key:zzubaran}, que aprendes com {npc:A Strange Chalice}."
+  ]
+}

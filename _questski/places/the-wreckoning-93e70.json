@@ -1,0 +1,31 @@
+{
+  "title": "The Wreckoning",
+  "type": "ilha",
+  "near": "Issavi",
+  "summary": "Ilha a **norte de Kilmaresh** que serve de esconderijo aos Pirats; só se chega lá no navio do {npc:Captain Jack Rat}, a partir de {wiki:Rascacoon}, durante a {wiki:A Pirate's Tail Quest}.",
+  "entrance": {"x": 33882, "y": 31221, "z": 7, "label": "The Wreckoning (chegada do navio)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Ter **1200 Trust Points** com o {npc:Tik'hi Tak'he} em Rascacoon e derrotar o {creature:Tentugly's Head|Tentugly} na primeira viagem (ver a {wiki:A Pirate's Tail Quest}). Nível recomendado 150-250+."
+  ],
+  "arrive": [
+    "Vai a {wiki:Rascacoon}: em **Venore**, pede {key:shortcut} ao {npc:Eustacio} no porto ({coord:32937,32031,7}) — só depois da primeira visita à ilha; da primeira vez entra pela concha a norte do depot de **Issavi** ({coord:33919,31471,7}) e atravessa a gruta.",
+    "Em Rascacoon, entra no teleporte no **sudeste** da ilha ({coord:33800,31359,7}) e sobe **um andar** até ao navio do {npc:Captain Jack Rat} ({coord:33792,31384,6}).",
+    "Na primeira vez, puxa a alavanca: a viagem inclui a luta contra o {creature:Tentugly's Head|Tentugly} (até 5 jogadores, 8 minutos). Depois disso basta dizeres ao Captain Jack Rat {key:sail}, {key:safe}, {key:yes}.",
+    "Ao sair do barco estás em The Wreckoning ({coord:33882,31221,7})."
+  ],
+  "leave": [
+    "Sai da ilha pelo teleporte de saída de The Wreckoning. A wiki não indica o destino exato; nas guias, depois do Ratmiral, volta-se por aí a Rascacoon.",
+    "Se não fores parar a Rascacoon, vai a Venore e pede {key:shortcut} ao {npc:Eustacio}; em Rascacoon, o pequeno barco no cais onde chegas de Venore leva-te de volta a Venore."
+  ],
+  "coords": [
+    {"x": 33882, "y": 31221, "z": 7, "label": "The Wreckoning"},
+    {"x": 33892, "y": 31197, "z": 7, "label": "Teleporte para o boss Ratmiral"},
+    {"x": 33800, "y": 31359, "z": 7, "label": "Teleporte no sudeste de Rascacoon"},
+    {"x": 33792, "y": 31384, "z": 6, "label": "Captain Jack Rat (um andar acima)"},
+    {"x": 32937, "y": 32031, "z": 7, "label": "Eustacio (porto de Venore)"}
+  ],
+  "warnings": [
+    "Os Pirats da ilha ({creature:Pirat Scoundrel}, {creature:Pirat Bombardier}, {creature:Pirat Cutthroat}, {creature:Pirat Mate}) têm 2200 a 3200 HP: zona para nível 150+."
+  ]
+}

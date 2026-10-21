@@ -1,0 +1,26 @@
+{
+  "title": "Targuna",
+  "type": "ilha",
+  "near": "Thais",
+  "summary": "Ilha para onde vão os jogadores novos depois de saírem de {wiki:Newhaven}, pensada para os **níveis 8 a 20**; dá acesso ao {wiki:Hidden Lizard Temple}, à Crimson Court e a {wiki:Aragonia}.",
+  "entrance": {"x": 31973, "y": 31892, "z": 6, "label": "Barco de Targuna (Captain Indigo)"},
+  "requirements": [
+    "Chegas a Targuna no fim do tutorial de {wiki:Newhaven}: a saída **oeste** da vila de Newhaven é uma porta de nível que só abre a partir do **nível 8**."
+  ],
+  "arrive": [
+    "Em {wiki:Newhaven}, quando chegares ao **nível 8**, sai da vila pela saída **oeste** e vai às docas.",
+    "Fala com a {npc:Anna} ({coord:32552,32498,7}): {key:hi}, {key:passage} e {key:yes}. Ela leva-te a Targuna.",
+    "A wiki não descreve nenhum barco do continente para Targuna: o caminho documentado é só a partir de Newhaven."
+  ],
+  "leave": [
+    "Fala com o {npc:Captain Indigo} no barco de Targuna ({coord:31973,31892,6}): {key:hi}, {key:thais} e {key:yes}.",
+    "Ele só te leva a **Thais**, e a viagem custa **5000 gp** ou um {item:Sail Pass} (que cai de vários piratas e lagartos da ilha)."
+  ],
+  "coords": [
+    {"x": 32552, "y": 32498, "z": 7, "label": "Anna — docas de Newhaven (barco para Targuna)"},
+    {"x": 31973, "y": 31892, "z": 6, "label": "Captain Indigo — barco de Targuna para Thais"}
+  ],
+  "warnings": [
+    "As saídas da ilha para as zonas de caça: o {wiki:Hidden Lizard Temple} fica numas escadas a **norte**, a Crimson Court é pelo portal na casa da {npc:Emiliana} e {wiki:Aragonia} é pela tartaruga marinha na costa **oeste**."
+  ]
+}

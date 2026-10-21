@@ -1,0 +1,25 @@
+{
+  "title": "Adventurers' Guild",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Sede da guilda que ajuda os aventureiros novos, numa ilha a **leste de Calcanea e a oeste do farol de Thais**; não tem barco: chega-se com uma {item:Adventurer's Stone} usada no templo de qualquer cidade.",
+  "entrance": {"x": 32200, "y": 32300, "z": 7, "label": "Ilha do Adventurers' Guild"},
+  "items": ["Adventurer's Stone"],
+  "arrive": [
+    "Vai ao **templo** de qualquer cidade e usa uma {item:Adventurer's Stone}: és teleportado para a guilda.",
+    "Se não tiveres nenhuma, pede outra a um NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}. (A primeira pedra também se recebe no barco da Island of Destiny.)"
+  ],
+  "leave": [
+    "Pisa o teleporte de saída da guilda: leva-te de volta ao templo da cidade de onde vieste.",
+    "Se preferires aparecer noutra cidade, o {npc:Charos} ({coord:32210,32296,6}) pode mudar o destino do teleporte: diz {key:hi} e {key:service}."
+  ],
+  "coords": [
+    {"x": 32209, "y": 32297, "z": 7, "label": "Rotem Valos"},
+    {"x": 32210, "y": 32296, "z": 6, "label": "Charos (muda o destino do teleporte, 1 andar acima)"},
+    {"x": 32190, "y": 32292, "z": 7, "label": "Cledwyn, junto ao Reward Chest"}
+  ],
+  "images": [
+    {"file": "Adventurers Guild (0).png", "caption": "Adventurers' Guild, piso térreo"},
+    {"file": "Adventurers Guild (+1).png", "caption": "Adventurers' Guild, 1.º andar"}
+  ]
+}

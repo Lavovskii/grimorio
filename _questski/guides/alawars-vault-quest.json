@@ -1,0 +1,136 @@
+{
+  "slug": "alawars-vault-quest",
+  "category": "tesouro",
+  "region": "Carlin",
+  "difficulty": 2,
+  "duration": "30 min (caminho curto) a 1–2 horas (caminho longo)",
+  "summary": "O Alawar escondeu o seu tesouro num cofre guardado por minotauros e campos mágicos, por baixo da ilha de Senja, a norte de Carlin. Há dois caminhos: o curto, pelo castelo de Senja, dá 3 {item:White Pearl|White Pearls} e uma {item:Broadsword}; o longo, pelas grutas de Folda, dá todas as recompensas, incluindo um {item:Dark Helmet} e três chaves.",
+  "legend_pt": "O Alawar escondeu o seu tesouro, guardado pelos seus ferozes minotauros e por perigosos campos mágicos.",
+  "start": {"x": 32234, "y": 31677, "z": 7, "label": "Jangada a norte de Carlin"},
+  "requirements": [
+    "Não precisa de Premium nem de nível mínimo (recomendado 25).",
+    "Para as recompensas completas pelo caminho curto: ter já a {item:Key 4502}."
+  ],
+  "items_needed": [
+    {"text": "Pelo menos 20 gp para a viagem"},
+    {"item": "Pick", "note": "ou equivalente (caminho longo)"},
+    {"item": "Destroy Field Rune", "qty": 1, "note": "caminho curto"},
+    {"item": "Key 4503", "note": "se já a tiveres (caminho longo)"},
+    {"item": "Key 4502", "note": "se já a tiveres, ou no caminho curto para as recompensas completas"}
+  ],
+  "rewards": [
+    {"item": "White Pearl", "qty": 3},
+    {"item": "Broadsword"},
+    {"item": "Dark Helmet"},
+    {"item": "Throwing Knife", "qty": 4},
+    {"item": "Blank Rune"},
+    {"item": "Gold Coin", "qty": 33},
+    {"item": "Key 4501"},
+    {"item": "Key 4502"},
+    {"item": "Key 4503"}
+  ],
+  "dangers": ["Frost Troll", "Spider", "Bug", "Slime", "Scorpion", "Minotaur", "Minotaur Archer", "Minotaur Guard", "Minotaur Mage", "Bonelord"],
+  "npcs": [],
+  "tips": [
+    "Caminho curto (Senja): só 3 White Pearls e a Broadsword, a não ser que já tenhas a Key 4502.",
+    "Caminho longo (Folda): dá todas as recompensas, incluindo a Key 4503. Não precisa da Key 4502, mas se já a tiveres leva-a, senão podes ficar preso."
+  ],
+  "sections": [
+    {
+      "title": "1. Caminho curto (Senja)",
+      "intro": "Recompensas: 3 {item:White Pearl|White Pearls} e uma {item:Broadsword}. Com a {item:Key 4502} podes ainda fazer o caminho longo ao contrário para o resto das recompensas.",
+      "steps": [
+        {
+          "title": "Viajar até Senja",
+          "text": "Apanha a jangada a **norte de Carlin** até **Senja** (20 gp). Fala com o barqueiro {npc:Nielson}: {key:hi}, {key:senja}, {key:yes}. Desembarcas na jangada do {npc:Anderson}, no **oeste** de Senja.",
+          "coords": [{"x": 32234, "y": 31677, "z": 7, "label": "Jangada a norte de Carlin"}]
+        },
+        {
+          "title": "Entrar na cave do castelo",
+          "text": "Entra na cave do {wiki:Senja Castle}.",
+          "coords": [{"x": 32191, "y": 31633, "z": 7, "label": "Entrada da cave do Senja Castle"}]
+        },
+        {
+          "title": "Revelar a alavanca",
+          "text": "Atravessa os campos até ao extremo **oeste**. Lá há uma alavanca escondida por baixo de fogo. Usa uma {item:Destroy Field Rune} no fogo para revelares a {item:Lever|alavanca}.",
+          "images": [{"file": "Alawars Vault Lever.gif", "caption": "A alavanca escondida debaixo do fogo"}]
+        },
+        {
+          "title": "Puxar a alavanca",
+          "text": "Puxa a alavanca: ela desaparece e as magic walls a **norte** também desaparecem."
+        },
+        {
+          "title": "Entrar no cofre",
+          "text": "Entra no {item:Magic Forcefield} para chegares ao {wiki:Alawar's Vault}.",
+          "images": [{"file": "Alawars Vault Portal.png", "caption": "O teleporte para o Alawar's Vault"}],
+          "warning": "Cuidado com os {creature:Minotaur|Minotaurs} e um {creature:Minotaur Mage}: se a porta não estiver trancada, conseguem chegar até ti."
+        },
+        {
+          "title": "Abrir os baús",
+          "text": "Abre os **2 baús** junto ao teleporte para receberes a recompensa.",
+          "images": [{"file": "Alawars Vault Reward Room.png", "caption": "O Alawar's Vault: abre os baús junto ao teleporte para receberes a recompensa"}],
+          "reward": "3 White Pearls e Broadsword"
+        },
+        {
+          "title": "Sair",
+          "text": "Volta a passar no teleporte: apareces no topo do castelo. Se trouxeste a {item:Key 4502}, em vez disso faz o caminho longo (abaixo) ao contrário para receberes o resto das recompensas ({item:Dark Helmet}, 4 {item:Throwing Knife|Throwing Knives}, {item:Blank Rune}, 33 gp e a {item:Key 4502}). Para voltares ao continente, desce do castelo e vai à jangada do {npc:Anderson}, no **oeste** de Senja: {key:hi}, {key:tibia}, {key:yes} (a viagem de volta é grátis). Chegas à jangada a norte de Carlin.",
+          "coords": [{"x": 32127, "y": 31660, "z": 7, "label": "Anderson (jangada de Senja)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Caminho longo (Folda)",
+      "intro": "Dá todas as recompensas, incluindo a {item:Key 4503}. Há várias rotas; esta é a mais rápida.",
+      "steps": [
+        {
+          "title": "Viajar até Folda",
+          "text": "Apanha o barco a **norte de Carlin** até **Folda** (20 gp) e entra nas grutas de Folda. Fala com o barqueiro {npc:Nielson}: {key:hi}, {key:folda}, {key:yes}. Desembarcas na doca de Folda, junto ao {npc:Svenson}.",
+          "coords": [{"x": 31999, "y": 31571, "z": 7, "label": "Entrada das grutas de Folda"}]
+        },
+        {
+          "title": "Ir até à sala dos minotauros",
+          "text": "Desde o início da gruta, segue para **sudoeste** até chegares a uma sala com {creature:Minotaur|Minotaurs}. Sempre que não der para ir para sudoeste, vai para **sudeste**. Em alternativa, segue o mapa.",
+          "images": [{"file": "Alawars Vault Route.png", "caption": "Rota mais rápida: segue as linhas verde-escuras até ao baú com a Key 4503, volta à linha verde-clara e segue-a até à área protegida (abre com a Key 4503); no fim da linha usa a Pick no fogo"}]
+        },
+        {
+          "title": "Apanhar a Key 4503",
+          "text": "Vai para **oeste** e abre o baú na sala ocidental para obteres a {item:Key 4503}.",
+          "reward": "Key 4503"
+        },
+        {
+          "title": "Entrar na área protegida",
+          "text": "Volta para trás e encontra a *área protegida* (porta trancada). Abre-a com a {item:Key 4503} e segue até aos campos de fogo."
+        },
+        {
+          "title": "Abrir o buraco com a Pick",
+          "text": "Usa a {item:Pick} no campo de fogo encostado à parede, **entre os montes de pedras**. Abre-se um buraco."
+        },
+        {
+          "title": "Descer pelo buraco",
+          "text": "Desce pelo buraco. Cais **dois andares**; o segundo é só 1 sqm com outro buraco.",
+          "warning": "Não há volta! A única forma de sair daqui é completar a quest.",
+          "images": [{"file": "Alawars Vault Hole.gif", "caption": "A entrada da gruta do Alawar (o buraco)"}]
+        },
+        {
+          "title": "Apanhar as Keys 4501 e 4502",
+          "text": "Segue o caminho para obteres a {item:Key 4501} e a {item:Key 4502} e continua até ao {wiki:Alawar's Vault}. As restantes recompensas ({item:Dark Helmet}, 4 {item:Throwing Knife|Throwing Knives}, uma {item:Blank Rune} e 33 gp) ficam neste percurso: é por isso que, pelo caminho curto, só as consegues se já tiveres a Key 4502.",
+          "images": [
+            {"file": "Alawar's Quest Route.png", "caption": "Segue a linha verde para apanhares a Key 4501 e a Key 4502 e continua até ao Alawar's Vault"},
+            {"file": "Alawars Vault Key 4501.png", "caption": "Onde está a Key 4501"},
+            {"file": "Alawars Vault Key 4502.png", "caption": "Onde está a Key 4502"}
+          ],
+          "reward": "Key 4501, Key 4502, Dark Helmet, 4 Throwing Knives, Blank Rune e 33 gp"
+        },
+        {
+          "title": "Abrir os baús do cofre",
+          "text": "No cofre, abre os **2 baús** junto ao teleporte (3 {item:White Pearl|White Pearls} e {item:Broadsword}). Sai pelo teleporte, que te deixa no topo do castelo de Senja. Para voltares ao continente, desce do castelo e fala com o {npc:Anderson}, na jangada do **oeste** de Senja: {key:hi}, {key:tibia}, {key:yes} (grátis).",
+          "coords": [{"x": 32127, "y": 31660, "z": 7, "label": "Anderson (jangada de Senja)"}],
+          "reward": "3 White Pearls e Broadsword"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Perigos ao longo da quest: {creature:Frost Troll|Frost Trolls}, {creature:Spider|Spiders}, {creature:Bug|Bugs}, {creature:Slime|Slimes}, {creature:Scorpion|Scorpions}, {creature:Bonelord|Bonelords} e minotauros de todos os tipos ({creature:Minotaur Archer|Archers}, {creature:Minotaur Guard|Guards}, {creature:Minotaur Mage|Mages})."
+  ]
+}

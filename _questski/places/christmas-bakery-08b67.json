@@ -1,0 +1,33 @@
+{
+  "title": "Christmas Bakery",
+  "type": "edificio",
+  "near": "Carlin",
+  "summary": "Pequena padaria de Natal escondida debaixo do gelo da ilha de {wiki:Vega} (Southern Ice Islands, a noroeste de Carlin), logo a sul da casa do Pai Natal; é o único sítio onde se coze um {item:Gingerbreadman}.",
+  "entrance": {"x": 31944, "y": 31721, "z": 7, "label": "Loose ice pile (descida para a padaria)"},
+  "requirements": [
+    "Para cozer o {item:Gingerbreadman} a partir de um {item:Lump of Cake Dough} tens de já ter aprendido a Gingerbread Recipe."
+  ],
+  "items": ["Shovel"],
+  "arrive": [
+    "Sai de **Carlin** para **noroeste** até ao ferry do {npc:Nielson} ({coord:32235,31675,7}) e pede passagem para {wiki:Vega} ({key:hi}, {key:vega}; 20 gp). Chegas à jangada do {npc:Carlson}, no **leste** de Vega.",
+    "Atravessa Vega para **oeste** até à casa do Pai Natal. Passa pelo {npc:Ruprecht} e vai um pouco para **sul** da casa: encontras uma pilha de gelo solto ({coord:31944,31721,7}).",
+    "Usa a {item:Shovel} na pilha de gelo para abrir a passagem e desce. Segue o caminho curto até à padaria: não há monstros."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho curto até ao buraco por onde desceste e sobe para a superfície de Vega (leva {item:Rope} por precaução; a wiki não descreve a subida).",
+    "Volta à jangada do {npc:Carlson}, no leste de Vega, e pede a passagem de volta ao continente: é **grátis** e chegas ao ferry do Nielson, a noroeste de Carlin."
+  ],
+  "coords": [
+    {"x": 32235, "y": 31675, "z": 7, "label": "Nielson (ferry, noroeste de Carlin)"},
+    {"x": 32023, "y": 31692, "z": 7, "label": "Carlson (jangada no leste de Vega)"},
+    {"x": 31951, "y": 31720, "z": 7, "label": "Ruprecht (junto à casa do Pai Natal)"},
+    {"x": 31944, "y": 31721, "z": 7, "label": "Pilha de gelo solto (usa a Shovel)"}
+  ],
+  "images": [
+    {"file": "Vega loosepile.jpg", "caption": "A pilha de gelo solto em Vega"},
+    {"file": "Christmas Bakery.jpg", "caption": "A Christmas Bakery"}
+  ],
+  "warnings": [
+    "Para cozer usa o {item:Lump of Cake Dough} em qualquer forno da padaria, como se fizesses um bolo."
+  ]
+}

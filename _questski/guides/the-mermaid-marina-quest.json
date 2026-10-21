@@ -1,0 +1,103 @@
+{
+  "slug": "the-mermaid-marina-quest",
+  "category": "troca",
+  "region": "Liberty Bay",
+  "difficulty": 1,
+  "duration": "Depende da caça aos honeycombs (1–2 horas)",
+  "summary": "A sereia {npc:Marina}, da ilha de {wiki:Meriana|Meriana}, sabe transformar seda de aranha em fio, mas detesta tocar em coisas pegajosas. Elogia a beleza dela e leva-lhe 50 {item:Honeycomb|Honeycombs}: a partir daí, troca-te 10 {item:Spider Silk} por um {item:Spool of Yarn} sempre que quiseres.",
+  "start": {"x": 32329, "y": 32528, "z": 7, "label": "Marina, em Meriana"},
+  "requirements": [
+    "Premium.",
+    "Sem nível mínimo (recomendado 10+).",
+    "Acesso a {wiki:Meriana|Meriana}: missão *Access to Meriana* da {wiki:The Shattered Isles Quest|The Shattered Isles Quest} (dá-te a palavra secreta {key:peg leg} para o barco)."
+  ],
+  "items_needed": [
+    {"item": "Honeycomb", "qty": 50, "note": "caçando Wasps e Bears"},
+    {"item": "Spider Silk", "qty": 10, "note": "por cada Spool of Yarn que quiseres depois"}
+  ],
+  "rewards": [
+    {"text": "Poder trocar 10 {item:Spider Silk} por 1 {item:Spool of Yarn} com a Marina, sempre que quiseres"}
+  ],
+  "unlocks": [
+    {"what": "Troca de Spider Silk por Spool of Yarn com a Marina", "kind": "loja", "when": "Ao entregares 50 {item:Honeycomb|Honeycombs} à {npc:Marina}, em Meriana.", "note": "10 {item:Spider Silk} por 1 {item:Spool of Yarn}, sempre que quiseres ({key:silk yarn})."}
+  ],
+  "dangers": ["Wasp", "Bear", "Cobra", "Crab", "Crimson Frog", "Poison Spider", "Rat"],
+  "npcs": ["Marina"],
+  "tips": [
+    "Responde sempre **yes** quando a Marina perguntar se ela é bonita: é isso que ela quer ouvir.",
+    "Junta os 50 honeycombs antes de ires a Meriana para fazeres tudo numa só viagem."
+  ],
+  "sections": [
+    {
+      "title": "1. Ganhar a confiança da Marina",
+      "steps": [
+        {
+          "title": "Juntar 50 Honeycombs",
+          "text": "Caça {creature:Wasp|Wasps} e {creature:Bear|Bears} até teres **50** {item:Honeycomb|Honeycombs}."
+        },
+        {
+          "title": "Chegar a Meriana",
+          "text": "Em **Liberty Bay**, vai à pequena península a **sudeste** do depot e fala com o {npc:Captain Waverider}. Diz {key:hi}, {key:peg leg} e {key:yes}: ele leva-te a **Sabrehaven**, em {wiki:Meriana|Meriana}, por 50 gp. A {npc:Marina} está junto à costa **norte** da ilha, a norte de Sabrehaven.",
+          "coords": [
+            {"x": 32346, "y": 32860, "z": 7, "label": "Captain Waverider (Liberty Bay)"},
+            {"x": 32329, "y": 32528, "z": 7, "label": "Marina (costa norte de Meriana)"}
+          ],
+          "dialogue": [
+            {"you": "peg leg"},
+            {"npc": "Ohhhh. So... <lowers his voice> 'you know who' sent you so I sail you to 'you know where'. <wink> <wink> It will cost 50 gold to cover my expenses. Is it that what you wish?"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Falar com a Marina",
+          "text": "Vai a {wiki:Meriana|Meriana} e fala com a sereia {npc:Marina}. Diz {key:hi}, {key:silk yarn}, {key:yes} (ela é bonita) e {key:yes} outra vez (é o ser mais deslumbrante que já viste). Ela pede-te 50 honeycombs.",
+          "npc": "Marina",
+          "dialogue": [
+            {"you": "silk yarn"},
+            {"npc": "Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?"},
+            {"you": "yes"},
+            {"npc": "Well, everyone would say that in your position. Do you think that I'm really, absolutely the most stunning being that you have ever seen?"},
+            {"you": "yes"},
+            {"npc": "[...] I love honey and I haven't eaten it in a while, so bring me 50 honeycombs and worship my beauty a little more, then we will see."}
+          ],
+          "warning": "Pelo caminho e em Meriana podes encontrar {creature:Cobra|Cobras}, {creature:Crab|Crabs}, {creature:Crimson Frog|Crimson Frogs}, {creature:Poison Spider|Poison Spiders} e {creature:Rat|Rats}."
+        },
+        {
+          "title": "Entregar os Honeycombs",
+          "text": "Com os 50 honeycombs no inventário, diz {key:50 honeycombs} e {key:yes}.",
+          "npc": "Marina",
+          "dialogue": [
+            {"you": "50 honeycombs"},
+            {"npc": "Did you bring me the 50 honeycombs I requested and do you absolutely admire my beauty?"},
+            {"you": "yes"},
+            {"npc": "Oh goodie! Thank you! [...] From now on, if you bring me 10 pieces of spider silk, I will create one spool of yarn."}
+          ],
+          "reward": "Acesso à troca de Spider Silk por Spool of Yarn"
+        },
+        {
+          "title": "Sair de Meriana",
+          "text": "Para voltares a **Liberty Bay**, vai ao {npc:Sebastian}, a **sul** de Sabrehaven, e diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp).",
+          "npc": "Sebastian",
+          "coords": [{"x": 32347, "y": 32623, "z": 7, "label": "Sebastian (sul de Sabrehaven)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Trocar seda por fio",
+      "steps": [
+        {
+          "title": "Pedir um Spool of Yarn",
+          "text": "Sempre que tiveres **10** {item:Spider Silk}, fala com a {npc:Marina} e diz {key:hi}, {key:silk yarn} e {key:yes}. Recebes um {item:Spool of Yarn}. Ida e volta como antes: {npc:Captain Waverider} ({key:peg leg}) de Liberty Bay para Meriana e {npc:Sebastian} ({key:liberty bay}) de volta.",
+          "npc": "Marina",
+          "dialogue": [
+            {"you": "silk yarn"},
+            {"npc": "Okay... a deal is a deal, would you like me to create a spool of yarn from 10 pieces of spider silk?"},
+            {"you": "yes"},
+            {"npc": "Ew... gooey... there you go."}
+          ],
+          "reward": "Spool of Yarn"
+        }
+      ]
+    }
+  ]
+}

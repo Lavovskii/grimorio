@@ -1,0 +1,38 @@
+{
+  "title": "Redbone Castle",
+  "type": "edificio",
+  "near": "Ab'Dendriel",
+  "summary": "Castelo numa ilha no meio de um lago de lava, no fim do {wiki:Hellgate} (subsolo de Ab'Dendriel); marca a entrada para {wiki:Draconia}.",
+  "entrance": {"x": 32666, "y": 31672, "z": 15, "label": "Redbone Castle (fim da rota do Hellgate)"},
+  "requirements": [
+    "A porta do Hellgate abre-se com a {item:Key 3012} (o {npc:Elathriel} vende-a por 5000 gp)."
+  ],
+  "items": ["Key 3012", "Rope"],
+  "arrive": [
+    "Vai a **Ab'Dendriel** (de barco: diz ao capitão da tua cidade {key:hi}, {key:ab'dendriel}, {key:yes}; chegas ao {npc:Captain Seagull}).",
+    "Na cidade, vai às {wiki:Shadow Caves}, no subsolo a **noroeste** do depot: desce ao piso das lojas e depois desce outra vez junto às casinhas ({coord:32655,31670,8}).",
+    "Desce mais 2 andares e segue a gruta para **sul** e depois para **leste** até à porta do Hellgate ({coord:32676,31671,10}); abre-a com a {item:Key 3012}. Se não a tiveres, compra-a ao {npc:Elathriel}, ali perto ({coord:32684,31671,9}).",
+    "Entra no teleporte **norte** e segue a rota do mapa pelo Hellgate: acaba no Redbone Castle ({coord:32666,31672,15})."
+  ],
+  "leave": [
+    "Do castelo, o caminho em frente é de **sentido único** para cima, até à ilha de {wiki:Draconia}.",
+    "Para voltares a Ab'Dendriel a pé, sai pela rota normal do {wiki:Hellgate}: sobe a escada da plataforma, segue o corredor para **oeste** e desce os buracos indicados, usa a {item:Rope} nos sítios de corda, atravessa a sala grande dos {creature:Ghoul|Ghouls} e {creature:Bonelord|Bonelords} encostado à parede **sul**, desce, vai para **noroeste** e sobe 2 andares com 6 {item:Parcel|Parcels} ou {spell:Levitate} e a escada.",
+    "Depois vai para **sudoeste**, sobe pelo buraco, puxa a alavanca da ponte se estiver fechada e segue o único caminho para cima (muitas {creature:Wasp|Wasps}). Sais à superfície perto de Ab'Dendriel ({coord:32603,31705,7})."
+  ],
+  "coords": [
+    {"x": 32735, "y": 31668, "z": 6, "label": "Porto de Ab'Dendriel (Captain Seagull)"},
+    {"x": 32603, "y": 31705, "z": 7, "label": "Saída do Hellgate (perto de Ab'Dendriel)"},
+    {"x": 32802, "y": 31589, "z": 7, "label": "Ilha de Draconia"}
+  ],
+  "images": [
+    {"file": "Way to Hellgate1.png", "caption": "Caminho para o Hellgate — 1"},
+    {"file": "Way to Hellgate2.png", "caption": "Caminho para o Hellgate — 2"},
+    {"file": "Way to Hellgate3.png", "caption": "Caminho para o Hellgate — 3"},
+    {"file": "Draconia Route.png", "caption": "Rota pelo Hellgate até ao Redbone Castle"},
+    {"file": "New hellgate.jpg", "caption": "Redbone Castle"}
+  ],
+  "warnings": [
+    "Um {creature:Demon Skeleton} guarda as portas do castelo (já não precisas de o matar). Pelo caminho há {creature:Skeleton|Skeletons}, {creature:Ghoul|Ghouls}, {creature:Bonelord|Bonelords}, {creature:Slime|Slimes}, {creature:Carrion Worm|Carrion Worms} e às vezes {creature:Elder Bonelord|Elder Bonelords}.",
+    "Se encontrares criaturas diferentes destas no Hellgate, enganaste-te no caminho."
+  ]
+}

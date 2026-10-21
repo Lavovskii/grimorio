@@ -1,0 +1,29 @@
+{
+  "title": "Corym Mines",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Minas onde os coryms são obrigados a trabalhar pelo {npc:Corym Ratter}, atrás de um teleporte no fundo da {wiki:Venore Corym Cave}, a **leste de Venore**.",
+  "entrance": {"x": 33055, "y": 32012, "z": 11, "label": "Teleporte para as Corym Mines (fundo da Venore Corym Cave)"},
+  "requirements": [
+    "Para passares as portas seladas das minas precisas da autorização dos locais, que se ganha na {wiki:Hidden Threats Quest}."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Venore** (de barco: {key:hi}, {key:venore}, {key:yes} ao capitão da tua cidade; chegas ao {npc:Captain Fearless}).",
+    "Sai de Venore pela saída **leste** ({coord:33002,32096,7}) e entra na {wiki:Venore Corym Cave}, no edifício do pântano ({coord:33073,32085,7}).",
+    "Lá dentro desce pelo buraco a **nordeste**, depois pelo buraco seguinte, vai para **sul** e desce outra vez: no total são **4 andares** abaixo.",
+    "No andar mais fundo vai para o lado **noroeste**, segue a parede **norte** até à passagem com o teleporte ({coord:33055,32012,11}) e entra: estás nas Corym Mines."
+  ],
+  "leave": [
+    "Volta ao teleporte por onde entraste: leva-te de volta à Venore Corym Cave ({coord:33054,32008,11}).",
+    "Sobe pelos mesmos buracos (com a {item:Rope}) e escadas de mão até ao edifício no pântano.",
+    "Regressa a Venore pela entrada **leste**. No porto, o {npc:Captain Fearless} leva-te a outras cidades (por exemplo {key:hi}, {key:edron}, {key:yes}, 40 gp)."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "No caminho pela Corym Cave há {creature:Corym Charlatan|Corym Charlatans}, {creature:Corym Skirmisher|Skirmishers} e {creature:Corym Vanguard|Vanguards}.",
+    "Se já avançaste o suficiente na Hidden Threats Quest, na primeira vez que sais pelo teleporte tens de enfrentar o miniboss {creature:Cave Spider}."
+  ]
+}

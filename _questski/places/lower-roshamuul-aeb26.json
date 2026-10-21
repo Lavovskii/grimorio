@@ -1,0 +1,29 @@
+{
+  "title": "Lower Roshamuul",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Zona de caça de **Roshamuul** entre o acampamento base da Inquisition (onde atraca o barco) e a ponte para Guzzlemaw Valley, com grutas subterrâneas no piso térreo a leste; perigosa (nível sugerido 200).",
+  "entrance": {"x": 33493, "y": 32569, "z": 7, "label": "Acampamento do sul (barco do Captain Chelop)"},
+  "arrive": [
+    "Em **Thais**, vai ao porto e diz ao {npc:Captain Bluebear} ({coord:32310,32210,6}): {key:hi}, {key:roshamuul}, {key:yes} (210 gp).",
+    "O barco atraca no acampamento base da Inquisition, no sul de Roshamuul, junto ao {npc:Captain Chelop} ({coord:33493,32569,7}) e ao {npc:Sandomo}.",
+    "Sobe a rampa do acampamento: Lower Roshamuul começa logo aí e estende-se para **oeste** e **leste**. A **leste** há mais rampas que descem ao piso térreo, montanhoso, com acesso às grutas subterrâneas."
+  ],
+  "leave": [
+    "Volta ao acampamento do sul descendo a rampa de Lower Roshamuul (se estiveres em Upper Roshamuul, atravessa Guzzlemaw Valley e a ponte para **sul** primeiro).",
+    "Fala com o {npc:Captain Chelop}, junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino.",
+    "Se ficares preso na gruta dos Lava Holes, entra no {item:Instable Vortex} no extremo **esquerdo** (oeste) para escapares."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33506, "y": 32553, "z": 7, "label": "Sandomo (acampamento da Inquisition)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"}
+  ],
+  "images": [
+    {"file": "Roshamuul Legend.png", "caption": "Mapa de Roshamuul com as zonas assinaladas"}
+  ],
+  "warnings": [
+    "Zona perigosa: a wiki sugere nível 200 (mínimo 130–150).",
+    "O piso térreo pode estar cheio de monstros; as grutas ajudam, mas nem sempre saem onde entraste. Numa delas há Lava Holes que te atacam."
+  ]
+}

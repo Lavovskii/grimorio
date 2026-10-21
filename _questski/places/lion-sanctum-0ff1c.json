@@ -1,0 +1,31 @@
+{
+  "title": "Lion Sanctum",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Santuário dos werelions por baixo de {wiki:Lion's Rock}, a **noroeste de Darashia**; o acesso abre-se durante a missão An Ancient Feud da {wiki:Grimvale Quest}.",
+  "entrance": {"x": 33138, "y": 32358, "z": 7, "label": "Entrada de Lion's Rock (noroeste de Darashia)"},
+  "requirements": [
+    "Acesso obtido na missão An Ancient Feud da {wiki:Grimvale Quest} (com o {npc:Domizian}, em Darashia).",
+    "Se a porta pedir, diz a frase: *The sun guides our hearts. The moon guards our dreams*.",
+    "Para a parte inferior do santuário precisas do {item:Lion Ring} que o {npc:Domizian} te dá.",
+    "Nível recomendado: 250+."
+  ],
+  "arrive": [
+    "Viaja até **Darashia** (de barco: {key:hi}, {key:darashia}, {key:yes} ao capitão do porto da tua cidade).",
+    "Sai da cidade para **noroeste** até à entrada de {wiki:Lion's Rock} ({coord:33138,32358,7}).",
+    "Dentro de Lion's Rock desce até ao **3.º piso**, onde estão as escadas que levam ao Lion Sanctum (se a porta pedir, diz a frase acima).",
+    "Desce as escadas: estás no Lion Sanctum ({coord:33128,32251,11})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe as escadas do Sanctum até ao 3.º piso de Lion's Rock e continua a subir até à entrada, a noroeste de Darashia.",
+    "Daí regressa a **Darashia** (sudeste), onde apanhas o barco ou o tapete."
+  ],
+  "coords": [
+    {"x": 33128, "y": 32251, "z": 11, "label": "Lion Sanctum"},
+    {"x": 33261, "y": 32465, "z": 6, "label": "Domizian (Darashia, 1.º andar do edifício a oeste do barco)"},
+    {"x": 33212, "y": 32359, "z": 8, "label": "Hyaena Lairs (a norte de Darashia)"}
+  ],
+  "warnings": [
+    "Está cheio de {creature:White Lion|White Lions}, {creature:Werelion|Werelions} e {creature:Werelioness|Werelionesses}, que batem forte."
+  ]
+}

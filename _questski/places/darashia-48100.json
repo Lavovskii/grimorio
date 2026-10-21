@@ -1,0 +1,29 @@
+{
+  "title": "Darashia",
+  "type": "cidade",
+  "near": "Darashia",
+  "summary": "Cidade de inspiração árabe no **norte da ilha de Darama**, rodeada pelo deserto Devourer, com Drefia a oeste, a Dark Pyramid a nordeste e o Plague Spike a sul; só para Premium.",
+  "entrance": {"x": 33236, "y": 32432, "z": 7, "label": "Darashia (centro)"},
+  "requirements": [
+    "Só personagens com **Premium Account** podem viajar para Darashia."
+  ],
+  "arrive": [
+    "**De barco:** em Venore, Ankrahmun, Port Hope ou Liberty Bay, diz ao capitão do porto {key:hi}, {key:darashia}, {key:yes} (por exemplo, de Venore com o {npc:Captain Fearless}, 60 gp). Chegas ao porto de Darashia, junto ao {npc:Petros} ({coord:33289,32481,6}).",
+    "De Edron, apanha primeiro o barco do {npc:Captain Seahorse} para **Venore** ({key:hi}, {key:venore}, {key:yes}) e aí o do {npc:Captain Fearless} para Darashia.",
+    "**De tapete voador** ({wiki:Magic Carpet}): de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi, diz ao gestor do tapete {key:hi}, {key:darashia}, {key:yes}. Chegas ao tapete de Darashia, junto ao {npc:Chemar} ({coord:33270,32439,6}).",
+    "Da {wiki:Gray Island}, o {npc:Scrutinon} leva-te de graça ({key:hi}, {key:darashia}, {key:yes})."
+  ],
+  "leave": [
+    "**Barco:** fala com o {npc:Petros} no porto ({coord:33289,32481,6}): {key:hi}, o nome da cidade (por exemplo {key:venore} ou {key:ankrahmun}; Ankrahmun custa 100 gp) e {key:yes}. Também te leva a **Krailos** ({key:krailos}, 110 gp).",
+    "**Tapete voador:** fala com o {npc:Chemar} ({coord:33270,32439,6}): {key:hi}, o destino (por exemplo {key:edron} ou {key:kazordoon}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — porto de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"},
+    {"x": 33308, "y": 32285, "z": 7, "label": "Dark Pyramid (nordeste)"},
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda para Drefia (oeste)"}
+  ],
+  "images": [
+    {"file": "Map darashia.jpg", "caption": "Mapa de Darashia"}
+  ]
+}

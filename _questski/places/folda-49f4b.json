@@ -1,0 +1,35 @@
+{
+  "title": "Folda",
+  "type": "ilha",
+  "near": "Carlin",
+  "summary": "A maior das três {wiki:Ice Islands}, a **oeste/noroeste de Carlin**, com Winter Wolves, Polar Bears e Frost Trolls à superfície e grutas grandes por baixo (Minotaurs, Orcs, Slimes e Water Elementals no fundo).",
+  "entrance": {"x": 32045, "y": 31580, "z": 7, "label": "Doca de Folda (Svenson)"},
+  "arrive": [
+    "Vai a **Carlin** (de barco: {key:hi}, {key:carlin}, {key:yes} ao capitão do porto da tua cidade).",
+    "Vai ao barqueiro {npc:Nielson}, a **noroeste** de Carlin ({coord:32235,31675,7}), e diz {key:hi}, {key:folda}, {key:yes} (20 gp).",
+    "Desembarcas na doca de Folda, junto ao {npc:Svenson} ({coord:32045,31580,7}).",
+    "Para as grutas: a entrada principal fica **dentro da montanha** ({coord:31999,31571,7}); também se desce pelo buraco no gelo a **sul** da montanha."
+  ],
+  "leave": [
+    "Se estás nas grutas, sobe pelo mesmo caminho por onde desceste (usa a {item:Rope} nos buracos) até à superfície.",
+    "Volta à doca e fala com o {npc:Svenson}: {key:hi}, {key:tibia}, {key:yes}. A viagem de volta ao continente é **gratuita** e deixa-te perto de Carlin."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 32235, "y": 31675, "z": 7, "label": "Nielson — barco para Folda (noroeste de Carlin)"},
+    {"x": 32045, "y": 31580, "z": 7, "label": "Svenson — doca de Folda"},
+    {"x": 31999, "y": 31571, "z": 7, "label": "Entrada das grutas de Folda"},
+    {"x": 32020, "y": 31572, "z": 7, "label": "Folda (centro da ilha)"}
+  ],
+  "images": [
+    {"file": "Folda.JPG", "caption": "Ilha de Folda"},
+    {"file": "Folda Floor -1.jpg", "caption": "Grutas de Folda — piso -1"},
+    {"file": "Folda Floor -2 (west).jpg", "caption": "Grutas de Folda — piso -2 (oeste)"},
+    {"file": "Folda Floor -2 (east).jpg", "caption": "Grutas de Folda — piso -2 (leste)"}
+  ],
+  "warnings": [
+    "À superfície pode aparecer um {creature:Yeti}: se o vires, foge.",
+    "Os andares superiores da montanha têm {creature:Wyvern|Wyverns}; jogadores de nível baixo devem evitá-los.",
+    "No 1.º piso subterrâneo, a sul da entrada principal, pode haver um {creature:Minotaur Archer} atraído até lá."
+  ]
+}

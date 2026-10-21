@@ -1,0 +1,28 @@
+{
+  "title": "Forbidden Temple",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Templo enterrado debaixo das areias do {wiki:Kha'labal}, a **nordeste de Ankrahmun**, habitado por Low Class Lizards e membros de um culto que adora um deus lagarto; tem quatro pisos subterrâneos.",
+  "entrance": {"x": 33315, "y": 32675, "z": 7, "label": "Entrada do Forbidden Temple (escondida por uma árvore; cava com a Shovel)"},
+  "items": ["Shovel", "Rope"],
+  "arrive": [
+    "Apanha o barco para **Ankrahmun** (no capitão do porto da tua cidade: {key:hi}, {key:ankrahmun}, {key:yes}); chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Sai da cidade e atravessa o deserto do {wiki:Kha'labal} para **nordeste** até à entrada do templo ({coord:33315,32675,7}), escondida por uma árvore.",
+    "Usa a {item:Shovel} no chão da entrada: pode ser preciso cavar algumas vezes até abrir. Desce."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho** até à entrada (leva {item:Rope} para os buracos) e sai para o deserto.",
+    "Regressa a **Ankrahmun** para **sudoeste**; no porto, o {npc:Captain Sinbeard} leva-te a outras cidades ({key:hi}, o nome da cidade, por exemplo {key:venore}, e {key:yes})."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33344, "y": 32688, "z": 10, "label": "Último piso (livro Incompetent Idiots)"}
+  ],
+  "images": [
+    {"file": "Forbidden Temple Entrance.png", "caption": "A entrada do Forbidden Temple, escondida pela árvore"}
+  ],
+  "warnings": [
+    "O 3.º piso subterrâneo tem muitos {creature:Voodoo Cultist|Voodoo Cultists} e {creature:Low Class Lizard|Low Class Lizards} e é fácil ficares cercado; no 4.º há {creature:Enlightened of the Cult}, {creature:Adept of the Cult|Adepts of the Cult}, um {creature:Lizard Snakecharmer} e às vezes o boss {creature:Tzumrah the Dazzler}. Quase tudo ataca à distância.",
+    "Não confundas com o templo da {wiki:Cults of Tibia Quest} a que se chega pelo {item:Gate of Deathstruction}: essa é outra zona, perto de Carlin."
+  ]
+}

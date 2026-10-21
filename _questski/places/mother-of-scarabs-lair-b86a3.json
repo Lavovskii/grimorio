@@ -1,0 +1,30 @@
+{
+  "title": "Mother of Scarabs Lair",
+  "type": "gruta",
+  "near": "Ankrahmun",
+  "summary": "Grande covil por baixo das areias do Kha'labal, o deserto **a norte de Ankrahmun**, com {creature:Larva|Larvae}, {creature:Scarab|Scarabs}, {creature:Ancient Scarab|Ancient Scarabs}, {creature:Mummy|Mummies}, {creature:Bonebeast|Bonebeasts} e {creature:Necromancer|Necromancers}.",
+  "entrance": {"x": 33236, "y": 32577, "z": 7, "label": "Entrada norte do Mother of Scarabs Lair"},
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Apanha um barco para **Ankrahmun** (diz ao capitão do porto {key:hi}, {key:ankrahmun}, {key:yes}); desembarcas junto ao {npc:Captain Sinbeard}.",
+    "Sai da cidade para o deserto a **norte** de Ankrahmun.",
+    "**Entrada norte:** em {coord:33236,32577,7}.",
+    "**Entrada sul:** em {coord:33290,32603,7}; aqui podes ter de cavar algumas vezes com a {item:Shovel} para abrir o buraco."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada por onde desceste (usa a {item:Rope} nos buracos).",
+    "Regressa a pé a Ankrahmun. O {npc:Captain Sinbeard} ({coord:33094,32884,6}) leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33290, "y": 32603, "z": 7, "label": "Entrada sul (cava com a Shovel)"},
+    {"x": 33311, "y": 32566, "z": 9, "label": "Sarcófago com a Ocarina (2 andares abaixo)"},
+    {"x": 33321, "y": 32637, "z": 12, "label": "Altar no piso -5"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "Mother of Scarabs Lair 1.png", "caption": "Mother of Scarabs Lair"}
+  ],
+  "warnings": [
+    "Recomendado nível 55–60+: há muitas múmias, alguns {creature:Bonebeast|Bonebeasts} e cerca de 2 {creature:Necromancer|Necromancers}."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Replica Dungeon",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Masmorra muito abaixo de {wiki:Tiquanda}, cheia de {creature:Iron Servant Replica|Iron Servant Replicas}; não tem entrada à superfície: chega-se pelo Energy Portal das {wiki:Halls of Hope}, a norte de Thais (faz parte da {wiki:Forgotten Knowledge Quest}).",
+  "entrance": {"x": 32786, "y": 32818, "z": 13, "label": "Chegada à Replica Dungeon (Energy Portal)"},
+  "requirements": [
+    "O templo das Halls of Hope tem de estar restaurado e tens de desbloquear o Energy Portal com o {npc:Albinius}: diz {key:energy portal} e entrega-lhe 50 {item:Marsh Stalker Feather|Marsh Stalker Feathers}."
+  ],
+  "arrive": [
+    "Chega a **Thais** (de barco: {key:hi}, {key:thais}, {key:yes} ao capitão do porto).",
+    "Sai da cidade pela saída **norte** e continua para norte até às {wiki:Halls of Hope}, o templo dos Astral Shapers ({coord:32326,32090,7}), onde está o {npc:Albinius} ({coord:32335,32091,7}).",
+    "Entra no **Energy Portal** (depois de o teres desbloqueado): apareces na Replica Dungeon ({coord:32786,32818,13})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao sítio onde chegaste à Replica Dungeon ({coord:32786,32818,13}).",
+    "Entra no Energy Portal que lá está: leva-te de volta às Halls of Hope. Daí vai a pé para **sul** até Thais."
+  ],
+  "coords": [
+    {"x": 32326, "y": 32090, "z": 7, "label": "Halls of Hope (norte de Thais)"},
+    {"x": 32335, "y": 32091, "z": 7, "label": "Albinius"}
+  ],
+  "warnings": [
+    "Zona para nível 110+."
+  ]
+}

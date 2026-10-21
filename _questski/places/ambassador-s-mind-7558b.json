@@ -1,0 +1,30 @@
+{
+  "title": "Ambassador's Mind",
+  "type": "outro",
+  "near": "Issavi",
+  "summary": "A mente do Embaixador de Rathleton, uma zona onírica **por baixo de Kilmaresh** a que só se acede durante a {wiki:Kilmaresh Quest}, bebendo um alucinogénio com o anel carregado no templo de Bastesh, em Issavi.",
+  "entrance": {"x": 33909, "y": 31640, "z": 9, "label": "Ambassador's Mind (por baixo de Kilmaresh)"},
+  "requirements": [
+    "Conta Premium e a missão do Embaixador da {wiki:Kilmaresh Quest} em curso.",
+    "Precisas do {item:Ring of Secret Thoughts (Charged)} equipado e de um {item:Flask of Hallucinogen} (pede {key:hallucinogen} ao {npc:Faloriel}). Depois de concluíres a quest, só consegues outro frasco se alguém com a missão aberta to comprar."
+  ],
+  "items": ["Ring of Secret Thoughts (Charged)", "Flask of Hallucinogen"],
+  "arrive": [
+    "Vai a **Issavi**: de barco a partir de Venore, Darashia, Krailos ou Oramond ({key:hi}, {key:issavi}, {key:yes}), chegando ao {npc:Captain Harava}; ou de {wiki:Magic Carpet}, chegando ao {npc:Tanyt}.",
+    "Compra o {item:Flask of Hallucinogen} ao {npc:Faloriel} ({coord:33910,31514,7}), o vendedor de poções.",
+    "Vai ao **templo de Bastesh**, o edifício a sul no lado **oeste** da cidade ({coord:33864,31527,7}).",
+    "**Equipa** o {item:Ring of Secret Thoughts (Charged)} e usa o {item:Flask of Hallucinogen} em ti próprio: és enviado para o Ambassador's Mind."
+  ],
+  "leave": [
+    "Volta ao **teleporte de saída** da mente e entra nele: regressas a Kilmaresh.",
+    "Não há outro caminho para dentro: para voltares a entrar precisas sempre de um novo frasco e do anel carregado."
+  ],
+  "coords": [
+    {"x": 33864, "y": 31527, "z": 7, "label": "Templo de Bastesh (Issavi)"},
+    {"x": 33910, "y": 31514, "z": 7, "label": "Faloriel (vende o Flask of Hallucinogen)"},
+    {"x": 33902, "y": 31462, "z": 6, "label": "Captain Harava (barco de Issavi)"}
+  ],
+  "warnings": [
+    "Não é zona de caça: só há {creature:Earworm|Earworms}, com força parecida com as outras criaturas de Kilmaresh (o wiki aponta nível 350)."
+  ]
+}

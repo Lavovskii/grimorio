@@ -1,0 +1,24 @@
+{
+  "title": "Spider Caves",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Sistema de grutas em ruínas antigas (parecidas com Banuta) no **sudeste de Tiquanda**, a leste de Port Hope, com três pisos de {creature:Tarantula|Tarantulas} e {creature:Giant Spider|Giant Spiders}.",
+  "entrance": {"x": 32844, "y": 32871, "z": 7, "label": "Entrada das Spider Caves (sudeste de Tiquanda)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha um barco para **Port Hope** ({key:hi}, {key:port hope}, {key:yes} ao capitão do porto); chegas ao porto do {npc:Charles} ({coord:32529,32785,6}).",
+    "Sai de Port Hope e atravessa a selva de Tiquanda para **leste**, até ao **sudeste** de Tiquanda, onde fica a entrada das grutas ({coord:32844,32871,7}).",
+    "Lá dentro há três pisos; os mais fundos são os das Giant Spiders."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada (usa a {item:Rope} nos buracos por onde desceste).",
+    "Atravessa a selva para **oeste** até Port Hope, onde o {npc:Charles} te leva de barco a outras cidades ({key:hi}, nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — porto de Port Hope"},
+    {"x": 32880, "y": 32909, "z": 9, "label": "Sala com Muddy Water e Lizard Statue (2 andares abaixo)"}
+  ],
+  "warnings": [
+    "Nos pisos de baixo há {creature:Giant Spider|Giant Spiders} (recomendado nível 60–70+); no primeiro piso há sobretudo {creature:Poison Spider|Poison Spiders} e {creature:Tarantula|Tarantulas}."
+  ]
+}

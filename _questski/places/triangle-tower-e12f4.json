@@ -1,0 +1,26 @@
+{
+  "title": "Triangle Tower",
+  "type": "edificio",
+  "near": "Thais",
+  "summary": "Torre sinistra a **leste de Thais**, a sul de Kazordoon e a noroeste do Desert Dungeon, governada no topo por um {creature:Dwarf Geomancer}, uma {creature:Witch} e um {creature:Monk (Creature)|Monk}.",
+  "entrance": {"x": 32561, "y": 32118, "z": 7, "label": "Entrada da Triangle Tower"},
+  "requirements": [
+    "Nível recomendado: 40+ (magos e paladinos), 45+ (cavaleiros)."
+  ],
+  "arrive": [
+    "Sai de **Thais** para **leste** e segue até à torre ({coord:32561,32118,7}).",
+    "Se a entrada estiver fechada, puxa a alavanca escondida debaixo de entulho no deserto, **do outro lado do rio** ({coord:32573,32121,7}). É uma caminhada longa até lá, por isso confirma primeiro se a torre já está aberta.",
+    "Entra e sobe os andares: o topo (3 andares acima) é onde estão os mestres da torre."
+  ],
+  "leave": [
+    "Desce os andares pelo mesmo caminho e sai pela entrada.",
+    "Se a torre se fechar enquanto estás lá dentro, desce à **cave** e usa o teleporte, que te leva para fora (cuidado com o {creature:Bonelord} que lá está).",
+    "Depois volta a Thais, a **oeste**."
+  ],
+  "coords": [
+    {"x": 32573, "y": 32121, "z": 7, "label": "Alavanca que abre a torre (debaixo de entulho)"}
+  ],
+  "warnings": [
+    "Pelo caminho há {creature:Skeleton|Skeletons}, {creature:Ghoul|Ghouls}, {creature:Demon Skeleton|Demon Skeletons} e {creature:Stalker|Stalkers} (invisíveis); no topo, {creature:Witch}, {creature:Monk (Creature)|Monk} e {creature:Dwarf Geomancer}."
+  ]
+}

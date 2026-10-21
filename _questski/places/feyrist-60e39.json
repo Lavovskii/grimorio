@@ -1,0 +1,34 @@
+{
+  "title": "Feyrist",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Península dos Fae a **noroeste de Roshamuul**, com uma aldeia no centro (a {npc:Maelyrra} e o {npc:Gerimor}); só se chega lá pelos {wiki:Holy Shrine|Holy Shrines} elementais das cidades.",
+  "entrance": {"x": 33485, "y": 32237, "z": 7, "label": "Aldeia de Feyrist (Maelyrra)"},
+  "requirements": [
+    "Precisas do selo fae da {wiki:Threatened Dreams Quest}: o {npc:Alkestios}, em Ab'Dendriel, marca-te com ele ({key:hi}, {key:mission}) e a partir daí podes usar os santuários."
+  ],
+  "items": ["Small Amethyst", "Small Emerald", "Small Ruby", "Small Sapphire"],
+  "arrive": [
+    "Arranja uma gema pequena: {item:Small Amethyst}, {item:Small Emerald}, {item:Small Ruby} ou {item:Small Sapphire} (uma por viagem; a gema gasta-se).",
+    "Cada cidade tem um corredor com quatro arcos (gelo, terra, fogo e energia) que levam aos {wiki:Holy Shrine|Holy Shrines}. Entra no arco do elemento da tua gema e **usa** a gema no santuário que está lá dentro.",
+    "Cada santuário deixa-te num sítio diferente de Feyrist: o {wiki:Ice Shrine} numa praia ({coord:33430,32279,7}), o Earth Shrine em {coord:33540,32208,7}, o Fire Shrine em {coord:33587,32262,7} e o Energy Shrine no alto da montanha ({coord:33528,32300,4}).",
+    "A aldeia fica no centro da península: a {npc:Maelyrra} está em {coord:33485,32237,7} e o {npc:Gerimor} um pouco a oeste ({coord:33450,32246,7})."
+  ],
+  "leave": [
+    "**Usa** qualquer um dos quatro santuários de Feyrist (não importa por qual entraste) e és teleportado de volta ao continente. Para sair **não precisas de gema**.",
+    "Para {wiki:Candia}: com a {item:Gingerbread Key (Moon Melon, Raspberry and Lemon)}, passa por baixo do donut gigante na parte **leste** de Feyrist ({coord:33574,32222,7})."
+  ],
+  "coords": [
+    {"x": 33430, "y": 32279, "z": 7, "label": "Ice Shrine de Feyrist (praia)"},
+    {"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine de Feyrist"},
+    {"x": 33587, "y": 32262, "z": 7, "label": "Fire Shrine de Feyrist"},
+    {"x": 33528, "y": 32300, "z": 4, "label": "Energy Shrine de Feyrist (na montanha)"},
+    {"x": 33574, "y": 32222, "z": 7, "label": "Donut gigante (entrada para Candia)"}
+  ],
+  "images": [
+    {"file": "Fae Village.png", "caption": "A aldeia dos Fae em Feyrist"}
+  ],
+  "warnings": [
+    "As grutas de Feyrist e o covil do {creature:Kroazur} têm criaturas de pesadelo; à superfície a zona é tranquila."
+  ]
+}

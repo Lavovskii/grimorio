@@ -1,0 +1,26 @@
+{
+  "title": "Hyaena Lairs",
+  "type": "gruta",
+  "near": "Darashia",
+  "summary": "Covis subterrâneos dos {creature:Werehyaena|Werehyaenas} por baixo do deserto a **norte de Darashia**, onde se passa a parte *An Ancient Feud* da {wiki:Grimvale Quest}.",
+  "entrance": {"x": 33212, "y": 32359, "z": 8, "label": "Hyaena Lairs (primeiro andar subterrâneo)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Darashia**: por exemplo o {npc:Captain Fearless} em Venore ({key:hi}, {key:darashia}, {key:yes}, 60 gp) ou o tapete voador. Chegas ao porto do {npc:Petros}.",
+    "Sai da cidade para **norte**, pelo deserto, até à entrada junto a uma grande pedra em pé.",
+    "Desce por ela para o primeiro andar subterrâneo ({coord:33212,32359,8})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe pelos rope spots com a {item:Rope} até à entrada junto à grande pedra.",
+    "Regressa a Darashia para **sul**. No porto, o {npc:Petros} leva-te a Venore (60 gp), Ankrahmun (100), Liberty Bay (200), Port Hope (180), Yalahar (210), Gray Island (150), Issavi (130) ou Krailos (110): {key:hi}, o destino, {key:yes}. O {npc:Chemar} tem o tapete voador."
+  ],
+  "coords": [
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (barco de Darashia)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete de Darashia)"},
+    {"x": 33261, "y": 32465, "z": 6, "label": "Domizian (Grimvale Quest), a oeste do barco"},
+    {"x": 33162, "y": 32397, "z": 11, "label": "Fogueira nos Hyaena Lairs"}
+  ],
+  "warnings": [
+    "Zona para nível 200+: {creature:Werehyaena|Werehyaenas}, {creature:Werehyaena Shaman|Werehyaena Shamans} e {creature:Lich|Liches}."
+  ]
+}

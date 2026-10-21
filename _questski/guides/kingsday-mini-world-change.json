@@ -1,0 +1,97 @@
+{
+  "slug": "kingsday-mini-world-change",
+  "category": "world-change",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "Um dia (o evento dura até ao server save)",
+  "summary": "No **Kingsday**, Thais é decorada para celebrar o {npc:King Tibianus}. Durante o dia os NPCs de Thais falam de forma diferente, há raids de hora a hora na arena da Knights' Guild e quem cumprimentar o rei ganha o achievement **Loyal Subject**. Cuidado: quem insultar o rei vai parar à prisão de Thais.",
+  "legend_pt": "A capital de Tibia transforma-se por completo para as festividades do Kingsday.",
+  "start": {"x": 32395, "y": 32193, "z": 7, "label": "Arena da Knights' Guild, Thais"},
+  "requirements": [
+    "Não há nível mínimo para o evento; nível 8 para participar nas raids.",
+    "Não precisa de Premium.",
+    "Só acontece quando o mini world change Kingsday está ativo no teu servidor."
+  ],
+  "rewards": [
+    {"text": "Achievement **Loyal Subject** (por cumprimentar o rei)"},
+    {"text": "Raids na arena da Knights' Guild, onde podes lootar {item:Party Lampions}, {item:Party Wall Tinsel|Party Wall Tinsels} e {item:Party Wall Snake|Party Wall Snakes}"},
+    {"text": "Se for domingo: entrada gratuita na {wiki:Tibian Prize Exhibition}"}
+  ],
+  "achievements": ["Loyal Subject"],
+  "dangers": ["Dragon", "Dragon Lord", "Frost Dragon", "Wyvern", "Minotaur Guard", "Orc Leader", "Dworc Voodoomaster", "Fire Elemental"],
+  "npcs": ["King Tibianus"],
+  "tips": [
+    "Os monstros das raids variam muito: de {creature:Goblin|Goblins} a {creature:Dragon Lord|Dragon Lords} e {creature:Frost Dragon|Frost Dragons}. Não entres na arena sem ver primeiro que raid saiu.",
+    "Nunca insultes o rei durante o Kingsday: não há forma de sair da prisão antes da raid seguinte e não podes fazer logout lá dentro."
+  ],
+  "sections": [
+    {
+      "title": "1. Como saber que é Kingsday",
+      "steps": [
+        {
+          "title": "Mensagens do evento",
+          "text": "Quando o Kingsday começa aparecem mensagens como *\"Hail to the King! It's Kingsday in Thais, join the celebration!\"* e *\"Hear ye! Hear ye! It is Kingsday, people, let us celebrate and sing! [...] Come to the arena to hear the swords cling. Let us rejoice! Hail to the King!\"*"
+        },
+        {
+          "title": "O que muda em Thais",
+          "text": "Durante o dia: Thais fica decorada (como no {wiki:Tibia's 15th Anniversary|15.º aniversário de Tibia}); os NPCs de Thais falam de outra forma; se for domingo, entras de graça na {wiki:Tibian Prize Exhibition}; e há raids na arena da Knights' Guild de hora a hora.",
+          "images": [{"file": "Kingsday Tibia.jpg", "caption": "Kingsday em Thais (jogador a insultar o rei)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Ganhar o achievement Loyal Subject",
+      "steps": [
+        {
+          "title": "Cumprimentar o rei",
+          "text": "Se não estás em **Thais**, apanha um barco para lá (diz {key:hi}, {key:thais} e {key:yes} ao capitão; chegas ao porto, junto ao {npc:Captain Bluebear}). Sobe ao castelo de Thais (1 andar acima do chão) e cumprimenta o {npc:King Tibianus} (por exemplo com {key:hail to the king}). Recebes o achievement **Loyal Subject**.",
+          "npc": "King Tibianus",
+          "coords": [
+            {"x": 32311, "y": 32171, "z": 6, "label": "King Tibianus (castelo de Thais)"},
+            {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"}
+          ],
+          "reward": "Achievement Loyal Subject",
+          "warning": "Se insultares o rei és enviado para a {wiki:Thaian Jail} e ficas lá até à próxima raid na arena. **Não podes fazer logout na prisão** e não há outra forma de sair."
+        },
+        {
+          "title": "Sair da prisão (se insultaste o rei)",
+          "text": "A prisão de Thais fica no **sul** da cidade, na Harbour Street. Não há forma de sair por ti: espera pela raid seguinte na arena (de hora a hora). Quando ela começa, és teleportado para junto das **escadas que saem da prisão**; usa-as para saíres da prisão e voltares às ruas de Thais.",
+          "coords": [{"x": 32328, "y": 32276, "z": 7, "label": "Prisão de Thais (Harbour Street)"}],
+          "images": [{"file": "Kingsday Jail time.png", "caption": "Jogador preso na prisão de Thais durante o Kingsday"}]
+        }
+      ]
+    },
+    {
+      "title": "3. As raids da arena",
+      "steps": [
+        {
+          "title": "Ir à arena da Knights' Guild",
+          "text": "As raids acontecem na arena da Knights' Guild **de hora a hora**, cerca de 2 a 20 minutos depois da hora certa, em **2 vagas**: a segunda vaga aparece 2 minutos depois da primeira. Os monstros que não forem mortos desaparecem 30 minutos depois de aparecerem.",
+          "coords": [{"x": 32395, "y": 32193, "z": 7, "label": "Arena da Knights' Guild"}],
+          "tip": "Os monstros das raids podem deixar cair {item:Party Lampions}, {item:Party Wall Tinsel|Party Wall Tinsels} e {item:Party Wall Snake|Party Wall Snakes}."
+        },
+        {
+          "title": "Possíveis raids",
+          "text": "Cada raid é anunciada com uma mensagem do servidor *\"The King's mages have summoned some ... in the knight's arena for your enjoyment.\"*. Possíveis raids:",
+          "table": {
+            "head": ["Mensagem (summoned some...)", "Criaturas"],
+            "rows": [
+              ["creatures from the tombs", "{creature:Larva|Larvae}, {creature:Scarab|Scarabs}, {creature:Ghoul|Ghouls}, {creature:Mummy|Mummies}, {creature:Crypt Shambler|Crypt Shamblers}, {creature:Gargoyle|Gargoyles}"],
+              ["goblins", "{creature:Goblin|Goblins}, {creature:Goblin Scavenger|Goblin Scavengers}, {creature:Goblin Assassin|Goblin Assassins}, {creature:Goblin Leader|Goblin Leaders}"],
+              ["creatures from the Tiquanda jungle", "{creature:Terramite|Terramites}, {creature:Wasp|Wasps}, {creature:Centipede|Centipedes}, {creature:Carniphila|Carniphilas}, {creature:Slime|Slimes}"],
+              ["dragons", "{creature:Dragon|Dragons}, {creature:Dragon Hatchling|Dragon Hatchlings}"],
+              ["dragon lords", "{creature:Dragon Lord|Dragon Lords}, {creature:Dragon Lord Hatchling|Dragon Lord Hatchlings}"],
+              ["frost dragons", "{creature:Frost Dragon|Frost Dragons}, {creature:Frost Dragon Hatchling|Frost Dragon Hatchlings}"],
+              ["lizards", "{creature:Lizard Sentinel|Lizard Sentinels}, {creature:Lizard Snakecharmer|Lizard Snakecharmers}, {creature:Lizard Templar|Lizard Templars} e {creature:Wyvern|Wyverns}"],
+              ["minotaurs", "{creature:Minotaur|Minotaurs}, {creature:Minotaur Archer|Minotaur Archers}, {creature:Minotaur Mage|Minotaur Mages}, {creature:Minotaur Guard|Minotaur Guards}"],
+              ["trolls", "{creature:Frost Troll|Frost Trolls}, {creature:Swamp Troll|Swamp Trolls}, {creature:Troll Champion|Troll Champions}, {creature:Troll Legionnaire|Troll Legionnaires}, {creature:Troll Guard|Troll Guards}, {creature:Furious Troll|Furious Trolls}, {creature:Mechanical Fighter|Mechanical Fighters}"],
+              ["orcs", "{creature:Orc|Orcs}, {creature:Orc Spearman}, {creature:Orc Shaman|Orc Shamans}, {creature:Orc Warrior|Orc Warriors}, {creature:Orc Rider|Orc Riders}, {creature:Orc Berserker|Orc Berserkers}, {creature:Orc Leader|Orc Leaders}"],
+              ["elementals", "{creature:Earth Elemental|Earth Elementals}, {creature:Energy Elemental|Energy Elementals}, {creature:Fire Elemental|Fire Elementals}, {creature:Water Elemental|Water Elementals}"],
+              ["dworcs", "{creature:Dworc Venomsniper|Dworc Venomsnipers}, {creature:Dworc Fleshhunter|Dworc Fleshhunters}, {creature:Dworc Voodoomaster|Dworc Voodoomasters}"]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

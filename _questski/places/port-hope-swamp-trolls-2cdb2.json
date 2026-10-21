@@ -1,0 +1,32 @@
+{
+  "title": "Port Hope Swamp Trolls",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Gruta de {creature:Swamp Troll|Swamp Trolls} na selva de Tiquanda, a **norte de Port Hope**, boa para níveis 8 a 20, com o Holy Crab e um spawn de {creature:Bonelord|Bonelords} nos andares de baixo.",
+  "entrance": {"x": 32662, "y": 32742, "z": 7, "label": "Buraco de entrada (sul, perto de Port Hope)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Apanha o barco para **Port Hope** (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:port hope}, {key:yes}). Chegas ao porto, junto ao {npc:Charles}.",
+    "Sai da cidade para **norte**, pela selva. A gruta tem dois buracos de entrada: {coord:32662,32742,7} (o mais perto da cidade) e {coord:32678,32611,7} (mais a norte).",
+    "A gruta mais a sul (ratos, bugs e aranhas) também liga às {wiki:Tiquanda Bandit Caves}, pelo buraco em {coord:32555,32679,7}."
+  ],
+  "leave": [
+    "Volta a um dos buracos de entrada e sobe com a {item:Rope}; uma das salas cheias de Swamp Trolls tem também uma saída para a superfície.",
+    "Regressa a pé para **sul** até Port Hope e apanha o barco do {npc:Charles} ({coord:32529,32785,6}): {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32678, "y": 32611, "z": 7, "label": "Buraco de entrada (norte)"},
+    {"x": 32555, "y": 32679, "z": 7, "label": "Buraco das Tiquanda Bandit Caves (ligado à gruta sul)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "PH Swamp Troll 1a.png", "caption": "1.º andar: cave rats, bugs e aranhas"},
+    {"file": "PH Swamp Troll 1b.png", "caption": "Sala com muitos Swamp Trolls e saída para a superfície"},
+    {"file": "PH Swamp Troll 2a.png", "caption": "2.º andar: Swamp Trolls e Poison Spiders"},
+    {"file": "PH Swamp Troll 2b.png", "caption": "Andar principal: vermelho = buraco dos Bonelords, azul = Holy Crab"},
+    {"file": "PH Swamp Troll 3.png", "caption": "3.º andar: Bonelords (nordeste) e gruta do Holy Crab (noroeste)"}
+  ],
+  "warnings": [
+    "Cuidado com o spawn de {creature:Bonelord|Bonelords} no 3.º andar (gruta do nordeste) se tiveres nível baixo."
+  ]
+}

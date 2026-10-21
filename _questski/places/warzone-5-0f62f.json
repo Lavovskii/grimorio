@@ -1,0 +1,33 @@
+{
+  "title": "Warzone 5",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Zona de guerra selada a **sul do Gnome Deep Hub**, supervisionada pelo {npc:Klom Stonecutter} (fação dos anões) na {wiki:Dangerous Depths Quest}, onde está o boss {creature:The Count of the Core}.",
+  "entrance": {"x": 33777, "y": 32192, "z": 14, "label": "Entrada da Warzone 5 (sul do hub)"},
+  "requirements": [
+    "Conta Premium e acesso ao {wiki:Gnome Deep Hub} (a quest pede nível 100, recomendado 200).",
+    "**15 pontos** de tarefa com o {npc:Klom Stonecutter} (só 10 se já derrotaste os bosses das Warzones 1, 2 e 3 da {wiki:Bigfoot's Burden Quest}).",
+    "Cada jogador tem de destruir um {item:Fragile Lava Funnel} para ganhar **8 horas** de acesso (os pontos são descontados)."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de Cormaya ({npc:Gurbasch}) ou Farmine ({npc:Thorgrin}) com {key:hi}, {key:kazordoon}, {key:yes} (chegas junto ao {npc:Brodrosch}), ou a pé pela entrada da montanha.",
+    "Em Kazordoon, vai à entrada do Gnome Deep Hub, perto do blesser do **norte** da cidade, 4 andares abaixo do chão ({coord:32624,31868,11}), e entra. Com nível 80+ podes usar o {wiki:Gnomish Crystal Teleport System} (acesso pelo {npc:Xelvar}, 1 {item:Teleport Crystal} por viagem).",
+    "Com os pontos feitos, entra no portal de energia perto da zona de tarefas dos anões e destrói um dos três Fragile Lava Funnels.",
+    "Vai à entrada da Warzone 5, a **sul** do hub ({coord:33777,32192,14}), junto ao {npc:Klom Stonecutter}, e passa o teleporte."
+  ],
+  "leave": [
+    "Depois do boss, sai pelo teleporte para a sala da Lava Pump e volta pelo caminho da Warzone até ao Gnome Deep Hub. Enquanto durarem as 8 horas podes sair e voltar a entrar.",
+    "Do hub, sai pela entrada para **Kazordoon** ({coord:32624,31868,11}). Depois apanha o Steamship do {npc:Brodrosch} ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes}), usa o teleporte de cristal ao lado da entrada do hub ou sai a pé pela montanha."
+  ],
+  "coords": [
+    {"x": 33776, "y": 32203, "z": 14, "label": "Klom Stonecutter"},
+    {"x": 33752, "y": 32190, "z": 14, "label": "Gnome Deep Hub"},
+    {"x": 33324, "y": 32109, "z": 15, "label": "Hollow Geode da Warzone 5 (teleporte do boss)"},
+    {"x": 32628, "y": 31863, "z": 11, "label": "Teleporte de cristal de Kazordoon"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Steamship de Kazordoon (Brodrosch)"}
+  ],
+  "warnings": [
+    "Criaturas: {creature:High Voltage Elemental|High Voltage Elementals}, {creature:Cave Devourer|Cave Devourers}, {creature:Tunnel Tyrant|Tunnel Tyrants} e {creature:Ember Beast|Ember Beasts}. Vai em equipa.",
+    "Se as 8 horas de acesso acabarem e saíres, só voltas a entrar destruindo outro funnel e gastando mais pontos."
+  ]
+}

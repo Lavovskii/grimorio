@@ -1,0 +1,29 @@
+{
+  "title": "Wasp Tower",
+  "type": "edificio",
+  "near": "Rookgaard",
+  "summary": "Torres cheias de {creature:Wasp|Wasps}, boa fonte de {item:Honeycomb|Honeycombs}: há uma em **Rookgaard**, a oeste da vila, e várias à volta de **Darashia**.",
+  "entrance": {"x": 32000, "y": 32139, "z": 7, "label": "Wasp Tower de Rookgaard"},
+  "arrive": [
+    "**Rookgaard:** a partir da vila (por exemplo do {npc:Vascalir}), sai pela ponte a **norte**, vai para a parte **a oeste do rio** e desce pela rampa a **sul**.",
+    "Segue a estrada para **oeste** até veres a torre ({coord:32000,32139,7}). Tem 5 níveis: 1 vespa no rés-do-chão e mais uma por cada andar acima; no último fica o canteiro de flores de mel ({item:Honey Flower}).",
+    "**Darashia:** vai a Darashia de barco ({key:hi}, {key:darashia}, {key:yes}; chegas ao {npc:Petros}) ou de tapete voador ({npc:Chemar}) e sai para o deserto. A torre principal, a mais perto da cidade, fica em {coord:33210,32385,7}; as outras estão nas coordenadas abaixo."
+  ],
+  "leave": [
+    "As torres ficam à superfície: desce as escadas até ao rés-do-chão.",
+    "Em Rookgaard volta à vila pelo mesmo caminho: estrada para **leste**, sobe a rampa e atravessa a ponte a **norte**.",
+    "Em Darashia regressa a pé à cidade e apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}."
+  ],
+  "coords": [
+    {"x": 32104, "y": 32195, "z": 7, "label": "Vascalir (vila de Rookgaard)"},
+    {"x": 33210, "y": 32385, "z": 7, "label": "Torre principal de Darashia (mais perto da cidade)"},
+    {"x": 33201, "y": 32311, "z": 7, "label": "Torre de vespas (Darashia)"},
+    {"x": 33104, "y": 32347, "z": 7, "label": "Torre de vespas (Darashia)"},
+    {"x": 33124, "y": 32453, "z": 7, "label": "Torre de vespas (Darashia)"},
+    {"x": 33308, "y": 32342, "z": 7, "label": "Torre de vespas (Darashia)"}
+  ],
+  "warnings": [
+    "As vespas envenenam: leva cura para o veneno (na {wiki:The Rookie Guard Quest} o Vascalir dá-te um {item:Silver Amulet} que te protege).",
+    "Na torre principal de Darashia há 10 vespas logo no 1.º andar acima do chão."
+  ]
+}

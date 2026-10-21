@@ -1,0 +1,37 @@
+{
+  "title": "Frozen Trench",
+  "type": "gruta",
+  "near": "Svargrond",
+  "summary": "Fossa submarina gelada um pouco a **sul da ilha de Tyrsung**, cheia de Quaras e Massive Water Elementals; entra-se a mergulhar com o {item:Helmet of the Deep} a partir do barco dos caçadores.",
+  "entrance": {"x": 32366, "y": 31372, "z": 6, "label": "Pranchas a sul do barco dos caçadores (sítio onde mergulhas)"},
+  "requirements": [
+    "Precisas de ter feito a parte *Undersea Kingdom* (Calassa) da {wiki:The Explorer Society Quest}; a missão *Frozen Trench* exige também *Formorgar Mines 3* da {wiki:The Ice Islands Quest}.",
+    "Para ires a Tyrsung com o {npc:Buddel} precisas da {wiki:Barbarian Test Quest} e de ter começado a missão *Nibelor 2* da Ice Islands Quest."
+  ],
+  "items": ["Helmet of the Deep"],
+  "arrive": [
+    "Em **Svargrond**, vai ao barco a **sul** da cidade e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} (50 gp; se ele pedir um {item:Dwarven Ring}, diz {key:no}). Desembarcas no cais de Tyrsung ({coord:32332,31230,7}).",
+    "Em Tyrsung, segue muito para **sul**, passa por um acampamento de contrabandistas e chega a um barco atracado. Sobe ao barco (na missão da Explorer Society tens de matar os 3 {creature:Smuggler|Smugglers} e o {creature:Pirate Cutthroat}).",
+    "Equipa o {item:Helmet of the Deep} e salta para a água a partir das pranchas do lado **sul** do barco ({coord:32366,31372,6}).",
+    "Debaixo de água, vai para **sul** até uma falésia e desce com {spell:Levitate} ({coord:32385,31423,11}). Para os poços mais fundos usa Levitate ou parcels/caixas."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho** até à falésia ({coord:32385,31423,11}), sobe-a com {spell:Levitate} e regressa para **norte** até à zona onde saltaste para a água, junto ao barco dos caçadores.",
+    "Atravessa Tyrsung para **norte** até ao cais do {npc:Buddel} e diz {key:hi}, {key:passage}, {key:svargrond} para voltares a Svargrond."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32332, "y": 31230, "z": 7, "label": "Buddel em Tyrsung"},
+    {"x": 32357, "y": 31393, "z": 12, "label": "Frozen Human (missão da Explorer Society)"}
+  ],
+  "images": [
+    {"file": "Trench.jpg", "caption": "A Frozen Trench"},
+    {"file": "Frozen Trench 1.png", "caption": "Mapa da Frozen Trench (1)"},
+    {"file": "Frozen Trench 2.png", "caption": "Mapa da Frozen Trench (2)"},
+    {"file": "Frozen Trench 3.png", "caption": "Mapa da Frozen Trench (3)"}
+  ],
+  "warnings": [
+    "Não tires o {item:Helmet of the Deep} enquanto estiveres debaixo de água.",
+    "Há muitos {creature:Quara Constrictor|Quara Constrictors}, {creature:Quara Mantassin|Mantassins}, {creature:Quara Predator|Predators}, {creature:Quara Hydromancer|Hydromancers} e {creature:Massive Water Elemental|Massive Water Elementals}. A wiki recomenda nível 40–70+."
+  ]
+}

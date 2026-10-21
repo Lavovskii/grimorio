@@ -1,0 +1,35 @@
+{
+  "title": "Femor Hills",
+  "type": "zona",
+  "near": "Carlin",
+  "summary": "Colinas cheias de {creature:Goblin|Goblins} entre **Carlin**, **Ab'Dendriel** e **Kazordoon** (a leste de Carlin, sudoeste de Ab'Dendriel e norte de Kazordoon), com a torre da erva da selva, a Whitewatch Tower e um tapete voador no topo.",
+  "entrance": {"x": 32569, "y": 31803, "z": 7, "label": "Femor Hills (centro)"},
+  "items": ["Rope", "Shovel", "Machete"],
+  "arrive": [
+    "**Com Premium (mais rápido):** apanha um {wiki:Magic Carpet} em Darashia, Edron, Farmine, Svargrond, Kazordoon ou Issavi e diz ao gestor {key:hi}, {key:femor hills} (ou {key:hills}) e {key:yes}.",
+    "O tapete aterra no topo de um monte no **sudoeste** das colinas, **3 andares acima do chão** ({coord:32535,31837,4}), junto ao {npc:Uzon}. Desce os andares até ao chão para explorares.",
+    "**A pé:** de **Carlin** segue para **leste** (de Thais apanhas o barco do {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}). Também chegas a pé de **Ab'Dendriel** (para sudoeste) ou de **Kazordoon** (para norte).",
+    "Leva uma {item:Rope}; em alguns caminhos precisas também de {item:Shovel} e {item:Machete} (a erva da torre cresce depressa e tens de a cortar)."
+  ],
+  "leave": [
+    "**Com Premium:** sobe outra vez ao tapete no topo do monte ({coord:32535,31837,4}) e diz ao {npc:Uzon} {key:hi}, o destino (por exemplo {key:kazordoon}, {key:edron} ou {key:darashia}) e {key:yes}.",
+    "**A pé:** volta para **oeste** até Carlin, para **nordeste** até Ab'Dendriel ou para **sul** até Kazordoon.",
+    "Em Carlin, o {npc:Captain Greyhound} ({coord:32388,31822,6}) leva-te de volta a Thais: {key:hi}, {key:thais}, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32535, "y": 31837, "z": 4, "label": "Magic Carpet das Femor Hills (Uzon)"},
+    {"x": 32588, "y": 31786, "z": 1, "label": "Caramellia (último andar da torre da erva)"},
+    {"x": 32535, "y": 31773, "z": 1, "label": "Thanita (Whitewatch Tower, norte das colinas)"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Captain Greyhound (porto de Carlin)"}
+  ],
+  "images": [
+    {"file": "Femor Hills Ground.gif", "caption": "Mapa das Femor Hills ao nível do chão"},
+    {"file": "Femor Hills 1 up.gif", "caption": "Mapa das Femor Hills, 1 andar acima"},
+    {"file": "Femor Hills top.gif", "caption": "Mapa do topo das Femor Hills"},
+    {"file": "Femor Hills Underground.gif", "caption": "Mapa do subsolo das Femor Hills"}
+  ],
+  "warnings": [
+    "Além dos goblins há {creature:Hunter|Hunters}, {creature:Cyclops} e um {creature:Demon Skeleton} no subsolo do centro das colinas — perigosos para níveis baixos.",
+    "De vez em quando há invasões de orcs perto da Whitewatch Tower, com {creature:Orc Berserker|Orc Berserkers}, {creature:Orc Shaman|Orc Shamans} e orcs mais fortes."
+  ]
+}

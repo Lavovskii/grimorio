@@ -1,0 +1,71 @@
+{
+  "slug": "insectoid-invasion-world-change",
+  "category": "world-change",
+  "region": "Thais",
+  "difficulty": 1,
+  "duration": "15–30 min",
+  "summary": "De vez em quando aparecem insetoides estranhos a oeste de {wiki:Greenshore}, a norte de Thais. Se ninguém os matar, comem as folhas e a relva e deixam para trás um deserto insetoide. Mata {creature:Insectoid Scout|Insectoid Scouts} suficientes para travar a invasão e deixar a terra voltar a ficar verde; enquanto a invasão dura podes matá-los e somar charm points no Bestiary.",
+  "legend_pt": "Os insetoides invadem Greenshore e vão destruir a terra se não forem mortos.",
+  "start": {"x": 32304, "y": 32119, "z": 7, "label": "Rampa de entrada de Greenshore"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 20).",
+    "Não precisa de Premium.",
+    "Só é possível quando este World Change está ativo no teu mundo."
+  ],
+  "items_needed": [
+    {"item": "Rope", "note": "conselho geral, para sair do buraco dos Rotworms"}
+  ],
+  "rewards": [
+    {"text": "Oportunidade de matar {creature:Insectoid Scout|Insectoid Scouts}, que valem 15 charm points no {wiki:Bestiary}"},
+    {"text": "Travar a invasão e devolver o verde à zona a oeste de Greenshore"}
+  ],
+  "achievements": [],
+  "dangers": ["Insectoid Scout", "Spider", "Bug", "Wolf", "Rotworm"],
+  "npcs": [],
+  "tips": [
+    "Se os jogadores não matarem insetoides suficientes, a zona transforma-se num deserto insetoide. Ajuda a matá-los até a terra voltar a ficar verde."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a Greenshore",
+      "steps": [
+        {
+          "title": "Ir para norte de Thais",
+          "text": "Vai a {wiki:Greenshore}, a **norte** de Thais. Vais a pé: sai de Thais e segue o caminho de terra para **norte**, pela passagem na montanha, até à aldeia.",
+          "coords": [{"x": 32262, "y": 32074, "z": 7, "label": "Greenshore"}],
+          "images": [{"file": "Greenshore.gif", "caption": "Mapa de Greenshore e do caminho para Thais"}],
+          "warning": "Pelo caminho há {creature:Wolf|Wolves}, {creature:Spider|Spiders} e {creature:Bug|Bugs}."
+        },
+        {
+          "title": "Entrar na aldeia",
+          "text": "Entra na aldeia pela rampa e segue para dentro da vila.",
+          "coords": [{"x": 32304, "y": 32119, "z": 7, "label": "Rampa de entrada da aldeia"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Travar a invasão",
+      "steps": [
+        {
+          "title": "Atravessar a ponte para oeste",
+          "text": "Segue o primeiro caminho para **oeste** até uma pequena ponte e atravessa-a. Os {creature:Insectoid Scout|Insectoid Scouts} podem estar por toda esta zona."
+        },
+        {
+          "title": "Procurar também no buraco dos Rotworms",
+          "text": "Também podes encontrar Insectoid Scouts no buraco onde aparecem 2 {creature:Rotworm|Rotworms}. Às vezes é possível atraí-los até à aldeia.",
+          "tip": "Para saíres do buraco, usa a {item:Rope} no sítio da corda e voltas à superfície."
+        },
+        {
+          "title": "Matar os Insectoid Scouts",
+          "text": "Mata Insectoid Scouts suficientes para parar a invasão. Esta criatura só aparece durante o World Change e vale **15 charm points** no {wiki:Bestiary}.",
+          "reward": "Progresso no Bestiary do Insectoid Scout (15 charm points)"
+        },
+        {
+          "title": "Voltar a Thais",
+          "text": "Quando acabares, volta pelo mesmo caminho: atravessa a ponte para **leste**, sai da aldeia pela rampa ({coord:32304,32119,7}) e segue o caminho de terra para **sul** até Thais.",
+          "coords": [{"x": 32304, "y": 32119, "z": 7, "label": "Rampa de saída da aldeia"}]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "slug": "royal-costume-outfits-quest",
+  "category": "outfit",
+  "region": "Carlin",
+  "difficulty": 1,
+  "duration": "5 min por parte (depois de teres os tokens)",
+  "summary": "Os artistas {npc:Percybald} (Carlin) e {npc:Alyxo} (Issavi) dão-te os {wiki:Royal Costume Outfits|Royal Costume Outfits} e os seus addons em troca de doações de {item:Silver Token|Silver Tokens} e {item:Gold Token|Gold Tokens}. O outfit completo custa 30.000 Silver Tokens e 25.000 Gold Tokens, e o teu nome passa a constar nos {wiki:Memorial|Memoriais}.",
+  "start": {
+    "x": 32380,
+    "y": 31786,
+    "z": 7,
+    "label": "Percybald, Carlin"
+  },
+  "requirements": [
+    "Não precisa de Premium nem de nível mínimo (recomendado 8).",
+    "Ter os tokens necessários para cada parte."
+  ],
+  "items_needed": [
+    {
+      "item": "Silver Token",
+      "qty": 30000,
+      "note": "15.000 para o outfit + 7.500 por cada addon"
+    },
+    {
+      "item": "Gold Token",
+      "qty": 25000,
+      "note": "12.500 para o outfit + 6.250 por cada addon"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Royal Costume Outfits|Royal Costume Outfits} (armadura vermelha)"
+    },
+    {
+      "text": "Addon 1: bastão e escudo"
+    },
+    {
+      "text": "Addon 2: coroa"
+    },
+    {
+      "text": "O nome da tua personagem fica listado nos {wiki:Memorial|Memoriais}"
+    }
+  ],
+  "achievements": [],
+  "dangers": [],
+  "npcs": [
+    "Percybald",
+    "Alyxo"
+  ],
+  "tips": [
+    "Podes falar com qualquer um dos dois NPCs: o {npc:Percybald} em Carlin ou o {npc:Alyxo} em Issavi. O diálogo é igual.",
+    "Em cada visita escolhes uma parte: {key:armor} (outfit), {key:shield} (addon 1) ou {key:crown} (addon 2)."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base (armadura)",
+      "steps": [
+        {
+          "title": "Ir ao NPC",
+          "text": "Vai ao {npc:Percybald} em **Carlin** ou ao {npc:Alyxo} em **Issavi** com **15.000 {item:Silver Token|Silver Tokens}** e **12.500 {item:Gold Token|Gold Tokens}**.",
+          "coords": [
+            {
+              "x": 32380,
+              "y": 31786,
+              "z": 7,
+              "label": "Percybald (Carlin)"
+            },
+            {
+              "x": 33941,
+              "y": 31464,
+              "z": 7,
+              "label": "Alyxo (Issavi)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Royal Costume Male.gif",
+              "caption": "Royal Costume masculino (outfit base)"
+            },
+            {
+              "file": "Outfit Royal Costume Female.gif",
+              "caption": "Royal Costume feminino (outfit base)"
+            }
+          ]
+        },
+        {
+          "title": "Doar pela armadura",
+          "text": "Diz {key:hi}, {key:outfit} (ou {key:addon}) e {key:yes}. Depois diz {key:armor} e confirma com {key:yes}.",
+          "npc": "Alyxo",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Greetings, dear art lover! Welcome to the Seaside Theatre!"
+            },
+            {
+              "you": "outfit"
+            },
+            {
+              "npc": "In exchange for a truly generous donation of gold and silver tokens, I will offer a special outfit. Do you want to make a donation?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] You will be entitled to wear the armor for 15,000 silver tokens and 12,500 gold tokens, and the shield and the crown for additional 7,500 silver tokens and 6,250 gold tokens each. [...] What will it be?"
+            },
+            {
+              "you": "armor"
+            },
+            {
+              "npc": "So you would like to donate 15,000 silver tokens and 12,500 gold tokens, which in return will entitle you to wear a unique red armor?"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "reward": "Royal Costume Outfit"
+        }
+      ]
+    },
+    {
+      "title": "2. Addon do bastão e escudo",
+      "steps": [
+        {
+          "title": "Doar pelo escudo",
+          "text": "Com **7.500 {item:Silver Token|Silver Tokens}** e **6.250 {item:Gold Token|Gold Tokens}**, diz ao NPC {key:hi}, {key:outfit} (ou {key:addon}) e {key:yes}. Depois diz {key:shield} e {key:yes}.",
+          "npc": "Alyxo",
+          "images": [
+            {
+              "file": "Outfit Royal Costume Male Addon 1.gif",
+              "caption": "Royal Costume masculino com o addon 1"
+            },
+            {
+              "file": "Outfit Royal Costume Female Addon 1.gif",
+              "caption": "Royal Costume feminino com o addon 1"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "shield"
+            },
+            {
+              "npc": "So you would like to donate 7,500 silver tokens and 6,250 gold tokens, which in return will entitle you to wear unique shield?"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "reward": "Addon 1 (bastão e escudo)"
+        }
+      ]
+    },
+    {
+      "title": "3. Addon da coroa",
+      "steps": [
+        {
+          "title": "Doar pela coroa",
+          "text": "Com mais **7.500 {item:Silver Token|Silver Tokens}** e **6.250 {item:Gold Token|Gold Tokens}**, diz ao NPC {key:hi}, {key:outfit} (ou {key:addon}) e {key:yes}. Depois diz {key:crown} e {key:yes}.",
+          "npc": "Alyxo",
+          "images": [
+            {
+              "file": "Outfit Royal Costume Male Addon 2.gif",
+              "caption": "Royal Costume masculino com o addon 2"
+            },
+            {
+              "file": "Outfit Royal Costume Female Addon 2.gif",
+              "caption": "Royal Costume feminino com o addon 2"
+            },
+            {
+              "file": "Outfit Royal Costume Male Addon 3.gif",
+              "caption": "Royal Costume masculino completo"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "crown"
+            },
+            {
+              "npc": "So you would like to donate 7,500 silver tokens and 6,250 gold tokens, which in return will entitle you to wear a crown?"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "reward": "Addon 2 (coroa)"
+        }
+      ]
+    }
+  ]
+}

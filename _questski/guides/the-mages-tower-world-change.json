@@ -1,0 +1,106 @@
+{
+  "slug": "the-mages-tower-world-change",
+  "category": "world-change",
+  "region": "Farmine",
+  "difficulty": 4,
+  "duration": "Vários dias (depende do servidor matar 2000 Yielothax)",
+  "summary": "No sudoeste da {wiki:Zao Steppe}, um {creature:Raging Mage} abriu um portal para outra dimensão no topo de uma torre. Enquanto ele estiver vivo, podes atravessar o portal e caçar {creature:Yielothax} (loot raro) e talvez domar um {wiki:Uniwheel (Mount)|Uniwheel}. Quando o mundo inteiro matar 2000 Yielothax, o mago enfraquece e pode ser morto, deixando o seu loot único.",
+  "legend_pt": "Um mago em Zao criou um portal para outra dimensão, que só pode ficar aberto enquanto ele estiver vivo.",
+  "start": {"x": 33133, "y": 31511, "z": 7, "label": "Rampa da torre do mago (Zao Steppe)"},
+  "requirements": [
+    "Premium.",
+    "Missão 2 da {wiki:The New Frontier Quest} completa (para acederes à torre).",
+    "Sem nível mínimo; recomendado 100.",
+    "Para lutar contra o Raging Mage: teres matado pelo menos **250** {creature:Yielothax}.",
+    "{spell:Levitate} (ou parcels/caixas) para descer e voltar a subir a montanha entre Farmine e a Zao Steppe."
+  ],
+  "items_needed": [
+    {"text": "Poções e equipamento para caçar Yielothax e Death Blobs."}
+  ],
+  "rewards": [
+    {"text": "Loot dos {creature:Yielothax} (raro)"},
+    {"text": "Loot único do {creature:Raging Mage}"},
+    {"text": "Possibilidade de domar o {wiki:Uniwheel (Mount)|Uniwheel} (montaria)"}
+  ],
+  "achievements": [],
+  "unlocks": [
+    {"what": "Domar a montaria Uniwheel", "kind": "funcionalidade", "place": "Uniwheel (Mount)", "when": "Na {wiki:Yielothax Dimension|outra dimensão}, depois de atravessares o portal no topo da torre.", "note": "Só enquanto o {creature:Raging Mage} está na torre (world change ativo). Precisas de Premium e da Missão 2 da {wiki:The New Frontier Quest}."}
+  ],
+  "dangers": ["Death Blob", "Energized Raging Mage", "Raging Mage", "Yielothax", "Sandcrawler", "Insect Swarm", "Gnarlhound", "Terror Bird"],
+  "npcs": [],
+  "tips": [
+    "O portal abre a uma hora aleatória depois do {wiki:Server Save}. Pergunta a um {wiki:Guide NPCs|NPC guia} por {key:mage tower} antes de viajares.",
+    "Na Zao Steppe podes encontrar {creature:Sandcrawler|Sandcrawlers}, {creature:Insect Swarm|Insect Swarms}, {creature:Gnarlhound|Gnarlhounds}, {creature:Terror Bird|Terror Birds} e possivelmente orcs pelo caminho."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber se o mago está ativo",
+      "steps": [
+        {
+          "title": "Perguntar a um guia",
+          "text": "Fala com um {wiki:Guide NPCs|NPC guia} de qualquer cidade e pergunta por {key:mage tower}. Se o **Raging Mage** estiver na torre, podes avançar. Também podes ir verificar à própria torre."
+        }
+      ]
+    },
+    {
+      "title": "2. Subir a torre",
+      "steps": [
+        {
+          "title": "Chegar à Zao Steppe",
+          "text": "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}. Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe}.",
+          "coords": [{"x": 33085, "y": 31532, "z": 7, "label": "Saída da passagem de Farmine para a Zao Steppe"}]
+        },
+        {
+          "title": "Ir à rampa",
+          "text": "Viaja até à {wiki:Zao Steppe} e vai à rampa da torre, no sudoeste. A partir da saída da passagem de Farmine, a torre fica a **leste**.",
+          "coords": [{"x": 33133, "y": 31511, "z": 7, "label": "Rampa da torre"}]
+        },
+        {
+          "title": "Subir até ao topo",
+          "text": "Sobe a rampa até ao último andar. Em todos os andares, exceto o último, há {creature:Death Blob|Death Blobs}. No topo estão o mago e os portais."
+        },
+        {
+          "title": "O Energized Raging Mage",
+          "text": "No topo está o {creature:Energized Raging Mage}. Podes matá-lo, mas não dá loot e **ressuscita imediatamente** enquanto o seu poder não for enfraquecido. Podes ignorá-lo."
+        }
+      ]
+    },
+    {
+      "title": "3. Caçar na outra dimensão",
+      "steps": [
+        {
+          "title": "Entrar no portal",
+          "text": "Atravessa o portal para a {wiki:Yielothax Dimension|outra dimensão}. Lá encontras {creature:Yielothax}, criaturas fortes e estranhas com loot raro, e podes encontrar um {wiki:Uniwheel (Mount)|Uniwheel} para domar."
+        },
+        {
+          "title": "Matar Yielothax",
+          "text": "Mata **pelo menos 250** {creature:Yielothax}: é o mínimo para poderes depois lutar contra o Raging Mage. Ao mesmo tempo, cada Yielothax morto enfraquece o mago: quando o **mundo inteiro** tiver matado **2000**, o mago fica vulnerável.",
+          "warning": "Se tentares entrar na torre com o Raging Mage ativo sem as 250 mortes, recebes a mensagem *\"You have not proven worthy in the dimensional struggle against the yielothax.\"*"
+        }
+      ]
+    },
+    {
+      "title": "4. Matar o Raging Mage",
+      "steps": [
+        {
+          "title": "Matar o mago enfraquecido",
+          "text": "Depois das 2000 mortes do mundo, mata o {creature:Energized Raging Mage}. Ele grita *\"GNAAAAAHRRRG!! WHAT? WHAT DID YOU DO TO ME!! [...]\"* e ressuscita **uma última vez** como {creature:Raging Mage}, mais fraco."
+        },
+        {
+          "title": "Lootear o Raging Mage",
+          "text": "Mata o {creature:Raging Mage}. Ao morrer diz *\"I WILL RETURN!! [...]\"*. Apanha o seu loot único.",
+          "reward": "Loot do Raging Mage",
+          "warning": "Depois da morte do mago, o portal fica instável e **fecha em 5 minutos**, até ao próximo Server Save. Sai da outra dimensão a tempo."
+        },
+        {
+          "title": "Sair da torre e voltar a Farmine",
+          "text": "Sai da outra dimensão antes de o portal fechar (a wiki não descreve o portal de regresso em pormenor), desce a rampa da torre e regressa à passagem em {coord:33085,31532,7}. Sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine. Aí fala com o {npc:Thorgrin} no Steamship: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Se acertares no Raging Mage, as tuas 250 mortes de Yielothax voltam a zero e tens de as fazer outra vez para a próxima vez. Se não lhe acertares, manténs as mortes e continuas com acesso quando ele voltar.",
+    "Antes da atualização 9.2 bastava matar 300 Yielothax (em vez de 2000) para o mago aparecer."
+  ]
+}

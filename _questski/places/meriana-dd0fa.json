@@ -1,0 +1,32 @@
+{
+  "title": "Meriana",
+  "type": "ilha",
+  "near": "Liberty Bay",
+  "summary": "Pequena ilha das {wiki:Shattered Isles}, a **norte de Vandura** (perto de Liberty Bay), onde os rebeldes fundaram a vila de **Sabrehaven**, escondida atrás das montanhas da costa sul.",
+  "requirements": [
+    "O {npc:Captain Waverider} só te leva se souberes a senha {key:peg leg}, que recebes na parte *Access to Meriana* da {wiki:The Shattered Isles Quest} (depois de ganhares a confiança da Eleonore)."
+  ],
+  "arrive": [
+    "Vai a **Liberty Bay** (por exemplo de Venore, no {npc:Captain Fearless}, ou de Edron, no {npc:Captain Seahorse}: {key:hi}, {key:liberty bay}, {key:yes}).",
+    "Em Liberty Bay, vai à pequena península a **sudeste** do depot e fala com o {npc:Captain Waverider} ({coord:32347,32859,7}).",
+    "Diz {key:hi}, {key:peg leg} e {key:yes}: ele leva-te a **Sabrehaven**, a vila dos rebeldes em Meriana, por **50 gp**.",
+    "Em Meriana, a sereia {npc:Marina} está na costa **norte**, a norte de Sabrehaven ({coord:32329,32528,7}); o {npc:Sebastian} está a **sul** de Sabrehaven."
+  ],
+  "leave": [
+    "Vai ao {npc:Sebastian}, a **sul** de Sabrehaven ({coord:32347,32623,7}), e diz {key:hi}, {key:liberty bay} e {key:yes}: leva-te de volta a **Liberty Bay** por **50 gp**.",
+    "Em Liberty Bay, o {npc:Jack Fate} ({coord:32161,32556,6}) leva-te de barco a outras cidades (por exemplo {key:hi}, {key:venore}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider — barco para Meriana (Liberty Bay)"},
+    {"x": 32347, "y": 32623, "z": 7, "label": "Sebastian — regresso a Liberty Bay (sul de Sabrehaven)"},
+    {"x": 32329, "y": 32528, "z": 7, "label": "Marina (costa norte de Meriana)"},
+    {"x": 32389, "y": 32604, "z": 7, "label": "Entrada da Meriana Gargoyle Cave"},
+    {"x": 32161, "y": 32556, "z": 6, "label": "Jack Fate — porto de Liberty Bay"}
+  ],
+  "images": [
+    {"file": "Map meriana.jpg", "caption": "Mapa de Meriana"}
+  ],
+  "warnings": [
+    "A ilha é bastante segura (rãs, caranguejos, vespas), mas nas montanhas há aranhas, {creature:Tarantula|Tarantulas} e um {creature:Tiger}; a {wiki:Meriana Gargoyle Cave} tem {creature:Gargoyle|Gargoyles} e {creature:Stone Golem|Stone Golems}."
+  ]
+}

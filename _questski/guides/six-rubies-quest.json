@@ -1,0 +1,153 @@
+{
+  "slug": "six-rubies-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 2,
+  "duration": "20–30 min",
+  "summary": "Debaixo do {wiki:Ancient Temple} de Thais, dois {creature:Dragon|Dragons} guardam o seu tesouro numa ilha rodeada de lava. Atravessa os pisos cheios de orcs, mata os dragões, apaga o fogo que tapa um buraco e usa-o para receberes 6 {item:Small Ruby|Small Rubies}.",
+  "legend_pt": "Alguns dragões ferozes guardam o seu tesouro com fogo.",
+  "start": {
+    "x": 32356,
+    "y": 32171,
+    "z": 7,
+    "label": "Ancient Temple de Thais"
+  },
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 50.",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {
+      "item": "Rope",
+      "note": "para saíres da ilha dos dragões e voltares a subir pelo buraco do piso -2"
+    },
+    {
+      "item": "Destroy Field",
+      "note": "pelo menos 1 carga, para apagar o fogo em cima do buraco"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Small Ruby",
+      "qty": 6
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Orc",
+    "Orc Spearman",
+    "Orc Warrior",
+    "Dragon",
+    "Bonelord",
+    "Fire Devil",
+    "Orc Berserker"
+  ],
+  "npcs": [],
+  "tips": [
+    "Se não fores de nível alto, atrai os dragões um de cada vez até ao ponto da corda e mata-os lá.",
+    "Às vezes há criaturas atraídas por outros jogadores ({creature:Bonelord}, {creature:Fire Devil}, {creature:Orc Berserker}). Vai com atenção."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer pelo Ancient Temple",
+      "steps": [
+        {
+          "title": "Entrar no templo",
+          "text": "Sai de **Thais** pela porta norte: o {wiki:Ancient Temple} fica logo a **noroeste** dessa porta. Entra e desce os dois lanços de escadas.",
+          "coords": [
+            {
+              "x": 32356,
+              "y": 32171,
+              "z": 7,
+              "label": "Escadas do Ancient Temple"
+            }
+          ]
+        },
+        {
+          "title": "Piso -2",
+          "text": "Segue a linha rosa de A para B: vai para **sul** pela primeira porta, depois para **oeste** pelo corredor até uma segunda porta virada a sul. Passa-a e continua para **sul** pelo primeiro cruzamento. No segundo cruzamento vai para **leste**. Segue para **sul**: há um ou dois {creature:Orc Warrior|Orc Warriors}. Desce pelo buraco do lado **leste**.",
+          "images": [
+            {
+              "file": "Six Rubies Quest -2.png",
+              "caption": "Caminho no piso -2 (de A para B)"
+            }
+          ]
+        },
+        {
+          "title": "Piso -3",
+          "text": "Ao desceres, prepara-te para vários {creature:Orc|Orcs}, {creature:Orc Spearman|Orc Spearmen} e {creature:Orc Warrior|Orc Warriors} (às vezes até sete). Segue a rota de A para B: **sul** e depois **noroeste**, até veres escadas para baixo com fogo por baixo. Lá em baixo não há monstros: desce.",
+          "images": [
+            {
+              "file": "Six Rubies Quest -3.png",
+              "caption": "Caminho no piso -3 (de A para B)"
+            }
+          ]
+        },
+        {
+          "title": "Piso -4",
+          "text": "Segue a linha. Não precisas de pisar os campos de fogo: contorna-os. Continua para **sul** até veres um buraco.",
+          "images": [
+            {
+              "file": "Six Rubies Quest -4.png",
+              "caption": "Caminho no piso -4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. A ilha dos dragões",
+      "steps": [
+        {
+          "title": "Matar os dois dragões",
+          "text": "Por baixo do buraco há 2 {creature:Dragon|Dragons} numa ilha rodeada de {item:Lava}, com campos de fogo. Atrai-os até ao ponto da corda e mata-os um de cada vez. Se fores de nível alto ou estiveres com amigos, podes simplesmente matá-los na ilha.",
+          "images": [
+            {
+              "file": "Six Rubies Quest -5.png",
+              "caption": "Ilha dos dragões (piso -5)"
+            }
+          ],
+          "warning": "Os dragões cospem fogo e batem forte em níveis baixos. Usa a corda para fugir se for preciso."
+        },
+        {
+          "title": "Apagar o fogo do buraco",
+          "text": "Desce à ilha coberta de fogo. No lado **leste** da ilha há um fogo a tapar um buraco (o buraco aparece como ponto amarelo no minimapa). Usa a runa {item:Destroy Field} nesse fogo para deixar só o buraco.",
+          "images": [
+            {
+              "file": "Six Rubies Quest Reward.png",
+              "caption": "Buraco tapado pelo fogo no lado leste da ilha"
+            }
+          ]
+        },
+        {
+          "title": "Usar o buraco",
+          "text": "**Usa** o buraco (clica com \"Use\"): não é para desceres por ele. Recebes 6 {item:Small Ruby|Small Rubies}.",
+          "reward": "6 Small Rubies"
+        }
+      ]
+    },
+    {
+      "title": "3. Sair do Ancient Temple",
+      "steps": [
+        {
+          "title": "Sair da ilha dos dragões",
+          "text": "Volta ao ponto da corda (o sítio por baixo do buraco por onde desceste para a ilha) e usa a {item:Rope} para subires ao piso -4.",
+          "warning": "Sem {item:Rope} ficas preso na ilha dos dragões."
+        },
+        {
+          "title": "Voltar à superfície",
+          "text": "Faz o caminho ao contrário: no piso -4 volta para **norte** até às escadas e sobe ao -3; no -3 volta até ao buraco por onde caíste e usa a {item:Rope} para subires ao -2; no -2 regressa às escadas e sobe os dois lanços até à entrada do templo. Usa as imagens da secção 1 ao contrário (de B para A).",
+          "coords": [
+            {
+              "x": 32356,
+              "y": 32171,
+              "z": 7,
+              "label": "Entrada do Ancient Temple"
+            }
+          ],
+          "tip": "Cá fora estás logo a noroeste da porta norte de Thais."
+        }
+      ]
+    }
+  ]
+}

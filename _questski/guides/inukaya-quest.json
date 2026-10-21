@@ -1,0 +1,147 @@
+{
+  "slug": "inukaya-quest",
+  "category": "tesouro",
+  "region": "Svargrond",
+  "difficulty": 2,
+  "duration": "15–30 min",
+  "summary": "Pequena quest de tesouro em {wiki:Inukaya|Inukaya}, o acampamento dos Chakoyas perto de Svargrond. Viaja de trenó puxado por cães desde Nibelor, entra num iglu da aldeia e revista um barril para encontrares um saco de pele com um {item:Shard}, 48 gold e 3 {item:Rainbow Trout|Rainbow Trouts}.",
+  "start": {
+    "x": 32482,
+    "y": 31108,
+    "z": 7,
+    "label": "Iglu na aldeia dos Chakoyas (Inukaya)"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo; recomendado 35+.",
+    "{wiki:The Ice Islands Quest|The Ice Islands Quest} feita pelo menos até à missão **Nibelor 5: Cure the Dogs** (as cinco primeiras missões), para poderes usar o trenó."
+  ],
+  "items_needed": [
+    {
+      "item": "Ham",
+      "qty": 2,
+      "note": "um por cada viagem de trenó (ida e volta)"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Shard"
+    },
+    {
+      "item": "Gold Coin",
+      "qty": 48
+    },
+    {
+      "item": "Rainbow Trout",
+      "qty": 3
+    }
+  ],
+  "dangers": [
+    "Chakoya Toolshaper",
+    "Chakoya Tribewarden",
+    "Chakoya Windcaller",
+    "Polar Bear",
+    "Rat",
+    "Winter Wolf"
+  ],
+  "npcs": [
+    "Iskan",
+    "Nilsor"
+  ],
+  "tips": [
+    "Leva **um {item:Ham} por cada viagem**: sem ele os cães não te levam, nem para ir nem para voltar.",
+    "Ida e volta: Svargrond → {npc:Iskan} ({key:passage}) → Nibelor → trenó dos cães → Inukaya; regresso pelo trenó até Nibelor e depois {npc:Nilsor} ({key:passage}) até Svargrond."
+  ],
+  "sections": [
+    {
+      "title": "1. Viajar até Inukaya",
+      "steps": [
+        {
+          "title": "Chegar a Nibelor",
+          "text": "Em **Svargrond**, vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}, o dono do trenó de cães: {key:hi}, {key:passage}. Ele leva-te à ilha de {wiki:Nibelor|Nibelor} (só aceita depois de teres feito o {wiki:Barbarian Test Quest|Barbarian Test Quest} e a primeira missão da Ice Islands Quest).",
+          "npc": "Iskan",
+          "coords": [
+            {
+              "x": 32301,
+              "y": 31083,
+              "z": 7,
+              "label": "Iskan (trenó Svargrond → Nibelor)"
+            },
+            {
+              "x": 32353,
+              "y": 31053,
+              "z": 7,
+              "label": "Ilha de Nibelor"
+            }
+          ],
+          "images": [
+            {
+              "file": "Map nibelor.jpg",
+              "caption": "Mapa de Nibelor"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar o trenó em Nibelor",
+          "text": "Em **Nibelor**, entra no {wiki:Dog sled|trenó dos cães} que está logo a **leste** do sítio onde chegas vindo de Svargrond. Os cães comem um {item:Ham} e levam-te até **Inukaya**, no acampamento dos Chakoyas na ilha de **Grimlund**, a leste de Nibelor.",
+          "warning": "Precisas de ter um {item:Ham} contigo e de ter feito as cinco primeiras missões da Ice Islands Quest; caso contrário os cães não te levam.",
+          "images": [
+            {
+              "file": "Dog sleds.JPG",
+              "caption": "Trenó de cães"
+            },
+            {
+              "file": "Map grimlund.jpg",
+              "caption": "Mapa de Grimlund, onde fica Inukaya"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. O tesouro",
+      "steps": [
+        {
+          "title": "Entrar no iglu",
+          "text": "Caminha até à aldeia dos Chakoyas e entra no iglu indicado no mapa.",
+          "map": {
+            "x": 32482,
+            "y": 31108,
+            "z": 7,
+            "marks": []
+          },
+          "warning": "Na aldeia há {creature:Chakoya Toolshaper|Chakoya Toolshapers}, {creature:Chakoya Tribewarden|Chakoya Tribewardens} e {creature:Chakoya Windcaller|Chakoya Windcallers}."
+        },
+        {
+          "title": "Revistar o barril",
+          "text": "Revista o barril assinalado na imagem: tem um saco de pele com as recompensas.",
+          "images": [
+            {
+              "file": "Chakoya2.gif",
+              "caption": "O barril com o saco de pele dentro do iglu"
+            }
+          ],
+          "reward": "Shard, 48 gold e 3 Rainbow Trouts"
+        },
+        {
+          "title": "Sair de Inukaya",
+          "text": "Para saíres de Inukaya usa o mesmo {wiki:Dog sled|trenó dos cães} por onde chegaste: volta a ele e entra outra vez (os cães comem mais um {item:Ham}) para regressares a **Nibelor**.",
+          "warning": "Se ficares sem {item:Ham} em Inukaya, os cães não te levam de volta. Leva sempre um extra."
+        },
+        {
+          "title": "Voltar a Svargrond",
+          "text": "Em Nibelor, vai para oeste do círculo de pedras e fala com o {npc:Nilsor}: {key:hi}, {key:passage}. Ele leva-te de volta a **Svargrond**.",
+          "npc": "Nilsor",
+          "coords": [
+            {
+              "x": 32329,
+              "y": 31044,
+              "z": 7,
+              "label": "Nilsor (trenó Nibelor → Svargrond)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

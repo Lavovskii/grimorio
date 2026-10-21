@@ -1,0 +1,24 @@
+{
+  "title": "Lair of the Treeling Witch",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Pequena gruta no **nordeste de {wiki:Cormaya}** (a ilha junto a Edron), governada por uma bruxa que dá vida às árvores; tem {creature:Swampling|Swamplings}, {creature:Leaf Golem|Leaf Golems} e {creature:Haunted Treeling|Haunted Treelings}.",
+  "entrance": {"x": 33338, "y": 31972, "z": 7, "label": "Entrada da Lair of the Treeling Witch"},
+  "arrive": [
+    "Apanha o barco para **Edron** ({key:hi}, {key:edron}, {key:yes} ao capitão da tua cidade); chegas junto ao {npc:Captain Seahorse}.",
+    "Diz ao {npc:Captain Seahorse} {key:hi}, {key:cormaya}, {key:yes} (20 gp) para ires a {wiki:Cormaya}.",
+    "Em Cormaya vai para o **nordeste** da ilha até à entrada da gruta ({coord:33338,31972,7}); há {item:Starlight Buttercup|Starlight Buttercups} junto à entrada. Desce para o piso -1."
+  ],
+  "leave": [
+    "Sobe pelo mesmo sítio por onde desceste.",
+    "Volta ao porto norte de Cormaya e fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp) para regressares a Edron."
+  ],
+  "coords": [
+    {"x": 33321, "y": 31950, "z": 8, "label": "Caldeirão da bruxa (piso -1)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "Recomendado nível 30+: no piso -2 há {creature:Haunted Treeling|Haunted Treelings} e {creature:Wilting Leaf Golem|Wilting Leaf Golems}, e a {creature:Witch} anda no piso -1."
+  ]
+}

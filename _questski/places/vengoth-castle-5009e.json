@@ -1,0 +1,36 @@
+{
+  "title": "Vengoth/Castle",
+  "type": "edificio",
+  "near": "Yalahar",
+  "summary": "Castelo em ruínas dos irmãos vampiros na montanha do **nordeste** da ilha de {wiki:Vengoth}, a sudeste de Yalahar; é o centro da {wiki:Blood Brothers Quest}.",
+  "entrance": {"x": 32953, "y": 31488, "z": 6, "label": "Entrada do castelo (na montanha)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Yalahar}.",
+    "O {npc:Harlow} só te leva a Vengoth a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest}.",
+    "A primeira entrada no castelo é na missão 5 da {wiki:Blood Brothers Quest}: 4 jogadores com {item:Blood Crystal (Charged)|Blood Crystals carregados} pisam as 4 {item:Strange Carving (Tile)|Strange Carvings} à volta do castelo e são teleportados para dentro. Nas missões seguintes entras pela entrada do castelo."
+  ],
+  "arrive": [
+    "Em **Yalahar**, vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de Vengoth ({coord:32857,31550,7}).",
+    "Em Vengoth, sobe a montanha do **sudeste** e segue-a, entrando nos {item:Strange Whirl|Strange Whirls}.",
+    "Atravessa a ponte sobre o abismo, que liga esta montanha à do castelo, até à entrada ({coord:32953,31488,6}). O jardim do castelo, guardado por {creature:Gargoyle|Gargoyles}, fica logo ao lado ({coord:32964,31497,6})."
+  ],
+  "leave": [
+    "Sai do castelo, atravessa a ponte e desce a montanha pelos mesmos {item:Strange Whirl|Strange Whirls}.",
+    "No **oeste** de Vengoth diz ao {npc:Harlow} {key:hi}, {key:yalahar}, {key:yes} (50 gp): ele leva-te de volta às docas do Trade Quarter de Yalahar."
+  ],
+  "coords": [
+    {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32933, "y": 31563, "z": 4, "label": "Old shrine (montanha do sudeste)"},
+    {"x": 32964, "y": 31497, "z": 6, "label": "Jardim do castelo"},
+    {"x": 32953, "y": 31488, "z": 6, "label": "Entrada do castelo"}
+  ],
+  "images": [
+    {"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"},
+    {"file": "Vampire Castle.jpg", "caption": "O castelo de Vengoth"},
+    {"file": "Puntos 3.jpg", "caption": "As Strange Carvings à volta do castelo"}
+  ],
+  "warnings": [
+    "O caminho pela montanha tem monstros ({creature:Werewolf|Werewolves}, {creature:Vampire Bride|Vampire Brides}, {creature:Hellspawn|Hellspawns}); a wiki recomenda nível 90+.",
+    "Um abismo sem fundo separa as duas montanhas: atravessa sempre pela ponte."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Factory Quarter",
+  "type": "zona",
+  "near": "Yalahar",
+  "summary": "Bairro industrial de **Yalahar**, a **sudeste** do centro da cidade, cheio de máquinas antigas dos Yalahari e de golems ({creature:Worker Golem|Worker Golems}, {creature:War Golem|War Golems}) e {creature:Mad Scientist|Mad Scientists}.",
+  "entrance": {"x": 32857, "y": 31302, "z": 7, "label": "Portão do Peter (Trade Quarter / Factory Quarter)"},
+  "arrive": [
+    "Vai de barco a **Yalahar**: o {npc:Captain Max}, em Liberty Bay, leva-te lá ({key:hi}, {key:yalahar}, {key:yes}, 400 gp; precisas de ter começado a {wiki:In Service of Yalahar Quest}). Se já tens as rotas dessa quest, há barco direto de Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore.",
+    "Chegas ao porto, no {wiki:Trade Quarter}. Vai ao portão entre o Trade Quarter e o Factory Quarter, guardado pelo {npc:Peter} ({coord:32857,31302,7}).",
+    "Diz-lhe {key:hi}, {key:pass} e o destino (o Factory Quarter) para passares.",
+    "Alternativa: se já tens acesso aos mecanismos dos portões (pela In Service of Yalahar Quest), vai ao portão do centro da cidade para o Factory Quarter e usa o mecanismo."
+  ],
+  "leave": [
+    "Se desceste aos pisos subterrâneos, volta à superfície pelo mesmo caminho (usa a {item:Rope} nos buracos).",
+    "Sai pelo portão do {npc:Peter} ({key:pass} e o destino, o Trade Quarter) ou pelo mecanismo do portão para o centro.",
+    "No porto, o {npc:Captain Cookie} leva-te a Liberty Bay (400 gp) ou Thais (800 gp); o {npc:Karith} leva-te às cidades das rotas da In Service of Yalahar (por exemplo Venore)."
+  ],
+  "coords": [
+    {"x": 32924, "y": 31283, "z": 7, "label": "Factory Quarter"},
+    {"x": 32857, "y": 31302, "z": 7, "label": "Peter (portão para o Trade Quarter)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar)"}
+  ],
+  "images": [
+    {"file": "Factory Quarter.png", "caption": "Mapa do Factory Quarter"}
+  ],
+  "warnings": [
+    "É fácil ficares cercado: usa feitiços de área para os monstros pequenos. Se não aguentares, foge pelo portão para o Sunken Quarter, sobe a rampa para a Inner City ou desce ao subsolo (costuma haver só 1–2 Damaged Worker Golems).",
+    "Os {creature:War Golem|War Golems} batem forte; recomendado nível 30–35+."
+  ]
+}

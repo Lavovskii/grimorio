@@ -1,0 +1,229 @@
+{
+  "slug": "dream-warden-outfits-quest",
+  "category": "outfit",
+  "region": "Roshamuul",
+  "difficulty": 4,
+  "duration": "Variável: depende de já teres feito as missões da Roshamuul Quest e da sorte com os drops dos bosses",
+  "summary": "Ganha o outfit **Dream Warden** e os seus dois addons com o NPC {npc:Eruaran}, em Roshamuul. O outfit base exige quatro missões da {wiki:Roshamuul Quest|Roshamuul Quest}; o addon 1 pede uma {item:Dream Warden Mask} dos bosses da Roshamuul Prison e o addon 2 uma {item:Dream Warden Claw}. No fim recebes também o achievement **Dream Warden**.",
+  "start": {
+    "x": 33624,
+    "y": 32369,
+    "z": 5,
+    "label": "Eruaran, Roshamuul"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Sem nível mínimo, mas o nível **recomendado é 250**: vais lidar com as criaturas de Roshamuul e com os bosses da Roshamuul Prison.",
+    "Acesso ao {npc:Eruaran}: o teu servidor tem de ter matado o {creature:Gaz'haragoth} na montanha central de Roshamuul.",
+    "Outfit base: missões **A Cup of Tea**, **Ancient Dreams** e **Waters of Life** (do {npc:Morax}) e **Mend What's Broken** (do {npc:Dream Butterfly}) da {wiki:Roshamuul Quest|Roshamuul Quest}.",
+    "Addon 2 (garra): precisas de ter primeiro o addon 1 (máscara)."
+  ],
+  "items_needed": [
+    {
+      "item": "Dream Warden Mask",
+      "note": "para o addon 1 (máscara)"
+    },
+    {
+      "item": "Dream Warden Claw",
+      "note": "para o addon 2 (garra); obtém-se em Unrealized Dreams ou no Gaz'haragoth"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Dream Warden Outfits|Dream Warden Outfits} (base)"
+    },
+    {
+      "text": "Addon 1 (máscara) e addon 2 (garra)"
+    },
+    {
+      "text": "Achievement **Dream Warden**"
+    }
+  ],
+  "achievements": [
+    "Dream Warden"
+  ],
+  "dangers": [
+    "Gaz'haragoth",
+    "Horadron",
+    "Prince Drazzak",
+    "Terofar",
+    "Zavarash"
+  ],
+  "npcs": [
+    "Eruaran",
+    "Morax",
+    "Dream Butterfly"
+  ],
+  "tips": [
+    "Antes de mais, confirma que o {npc:Eruaran} já está disponível no teu servidor (só aparece depois de o servidor ter derrotado o {creature:Gaz'haragoth} na montanha central).",
+    "O {creature:Gaz'haragoth} pode dar tanto a {item:Dream Warden Mask} como a {item:Dream Warden Claw}."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base",
+      "intro": "O outfit base é dado pelo {npc:Eruaran} depois de completares quatro missões da {wiki:Roshamuul Quest|Roshamuul Quest}.",
+      "steps": [
+        {
+          "title": "Missões do Morax",
+          "text": "Completa as missões **A Cup of Tea**, **Ancient Dreams** e **Waters of Life** do {npc:Morax} (ver o guia da {wiki:Roshamuul Quest|Roshamuul Quest}).",
+          "npc": "Morax"
+        },
+        {
+          "title": "Missão do Dream Butterfly",
+          "text": "Completa a missão **Mend What's Broken** do {npc:Dream Butterfly} (também faz parte da Roshamuul Quest).",
+          "npc": "Dream Butterfly"
+        },
+        {
+          "title": "Chegar ao Eruaran",
+          "text": "Viaja para **Roshamuul** a partir de **Thais**: no porto, diz ao {npc:Captain Bluebear} {key:hi}, {key:roshamuul}, {key:yes} (210 gp). O barco atraca no acampamento do sul, em Lower Roshamuul, junto ao {npc:Captain Chelop}. Atravessa Guzzlemaw Valley para **nordeste** e passa pela muralha aberta para {wiki:Upper Roshamuul} (se fores cidadão de Roshamuul, podes ir diretamente para o templo de Upper Roshamuul). O {npc:Eruaran} está no topo da montanha central, a **leste** do depot.",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "roshamuul"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 32310,
+              "y": 32210,
+              "z": 6,
+              "label": "Captain Bluebear (porto de Thais)"
+            },
+            {
+              "x": 33493,
+              "y": 32569,
+              "z": 7,
+              "label": "Captain Chelop (acampamento do sul)"
+            },
+            {
+              "x": 33632,
+              "y": 32401,
+              "z": 7,
+              "label": "Passagem na muralha para Upper Roshamuul"
+            },
+            {
+              "x": 33624,
+              "y": 32369,
+              "z": 5,
+              "label": "Eruaran (topo da montanha central)"
+            }
+          ]
+        },
+        {
+          "title": "Receber o outfit",
+          "text": "Com as quatro missões feitas, vai ter com o {npc:Eruaran} para receberes o outfit **Dream Warden**.",
+          "npc": "Eruaran",
+          "images": [
+            {
+              "file": "Outfit Dream Warden Male.gif",
+              "caption": "Dream Warden base (masculino)"
+            },
+            {
+              "file": "Outfit Dream Warden Female.gif",
+              "caption": "Dream Warden base (feminino)"
+            }
+          ],
+          "reward": "Outfit Dream Warden (base)."
+        }
+      ]
+    },
+    {
+      "title": "2. Addon 1 (máscara)",
+      "steps": [
+        {
+          "title": "Obter a Dream Warden Mask",
+          "text": "Consegue uma {item:Dream Warden Mask}. Cai dos bosses da {wiki:Roshamuul Prison|Roshamuul Prison}: {creature:Gaz'haragoth}, {creature:Horadron}, {creature:Prince Drazzak}, {creature:Terofar} e {creature:Zavarash}. A entrada da {wiki:Roshamuul Prison|Roshamuul Prison} fica a **sul** do depot de Upper Roshamuul, a oeste da passagem na muralha; a prisão tem 3 pisos principais e os bosses ficam mais abaixo. Para sair, volta pelo mesmo caminho até à superfície.",
+          "warning": "Os bosses da Roshamuul Prison são muito fortes: vai em equipa e bem preparado.",
+          "images": [
+            {
+              "file": "Roshamuul Prison Map 1.png",
+              "caption": "Mapa do 1.º piso da Roshamuul Prison"
+            }
+          ]
+        },
+        {
+          "title": "Entregar a máscara",
+          "text": "Leva a {item:Dream Warden Mask} ao {npc:Eruaran} para receberes o primeiro addon.",
+          "npc": "Eruaran",
+          "images": [
+            {
+              "file": "Outfit Dream Warden Male Addon 1.gif",
+              "caption": "Dream Warden com o addon 1 (masculino)"
+            },
+            {
+              "file": "Outfit Dream Warden Female Addon 1.gif",
+              "caption": "Dream Warden com o addon 1 (feminino)"
+            }
+          ],
+          "reward": "Addon 1 (máscara)."
+        }
+      ]
+    },
+    {
+      "title": "3. Addon 2 (garra)",
+      "intro": "Só podes receber este addon depois de teres o addon 1.",
+      "steps": [
+        {
+          "title": "Obter a Dream Warden Claw",
+          "text": "Consegue uma {item:Dream Warden Claw}. Podes obtê-la em {item:Unrealized Dream|Unrealized Dreams} ou como drop do {creature:Gaz'haragoth}."
+        },
+        {
+          "title": "Entregar a garra",
+          "text": "Leva a {item:Dream Warden Claw} ao {npc:Eruaran} para receberes o segundo addon. Com o outfit completo ganhas também o achievement **Dream Warden**.",
+          "npc": "Eruaran",
+          "images": [
+            {
+              "file": "Outfit Dream Warden Male Addon 2.gif",
+              "caption": "Dream Warden com o addon 2 (masculino)"
+            },
+            {
+              "file": "Outfit Dream Warden Female Addon 2.gif",
+              "caption": "Dream Warden com o addon 2 (feminino)"
+            },
+            {
+              "file": "Outfit Dream Warden Male Addon 3.gif",
+              "caption": "Dream Warden completo, com os dois addons (masculino)"
+            },
+            {
+              "file": "Outfit Dream Warden Female Addon 3.gif",
+              "caption": "Dream Warden completo, com os dois addons (feminino)"
+            }
+          ],
+          "reward": "Addon 2 (garra) e achievement **Dream Warden**."
+        },
+        {
+          "title": "Sair de Roshamuul",
+          "text": "Volta ao acampamento do sul (de Upper Roshamuul atravessa Guzzlemaw Valley e a ponte para **sul** e desce a rampa de Lower Roshamuul). Fala com o {npc:Captain Chelop}, junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino.",
+          "npc": "Captain Chelop",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "sail"
+            },
+            {
+              "you": "thais"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33493,
+              "y": 32569,
+              "z": 7,
+              "label": "Captain Chelop"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+# PLACE: Gray Beach
+slug: gray-beach-29b5f
+mentioned in 5 guides: deeplings-world-change, hive-born-world-change, liquid-black-quest, opticording-sphere-quest, war-against-the-hive-quest
+
+## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
+## Gray Beach 
+## General Properties 
+## Ruled by 
+ Old Rock Boy 
+## Population 
+ 7 
+## Organizations 
+ None 
+## Nearby places 
+ Quirefang 
+ Hunting Places Quests | Ancient Ancestorial Grounds Fiehonja Hive Ground Floor Percht Island 20 Years a Cook Quest Insectoid Outfits Quest Liquid Black Quest War Against the Hive Quest
+## Other Properties 
+## Version 
+ 9.40 December 14, 2011 Winter Update 2011 
+ Streets Buildings Towns
+ See also: Locations Help 
+ Gray Beach is a small city on the island of Quirefang that was implemented at the Winter Update 2011 . It is located in the eastern seas east of Zao in line with the Dragonblaze Peaks , here [COORD x=33471 y=31304 z=7] . The only known way to access Gray Beach is by first traveling to Gray Island from Ab'Dendriel , Edron , Venore , or Darashia (for 150 gp ) and going through the hole there.
+ There are no buildings but an underground depot and temple . All the NPCs on the ground level can tell you about the two races on the island, the Deeplings and the Hive Born, and will ask you for help. There is only one trader NPC up one level who buys and sells many different things. There are no houses . The machine named Eighty , inside the depot, acts as a bank . 
+## Hunting Places 
+ Gray Beach has two primary hunting places and creatures in those places: the Hive Born which occupy the Hive to the north and the Deeplings which occupy Fiehonja below ground to the south-east.
+## NPCs 
+ Name Job Buy/Sell Location | Alternative Rock Guard ✗ South on Gray Beach | Eighty Banker ✗ Gray Beach Depot | Navigator Monarch ✗ Fiehonja , in his room accessed only via the giant Golden Anchor . | Old Rock Boy Tribe Leader ✗ Southern Gray Beach | Orockle Guard ✓ South-western Gray Beach | Rock in a Hard Place Guard ✓ Central Gray Beach , on a mountain | Rock Steady Guard ✗ Southern Gray Beach | Rock With A Soft Spot Cleric ✗ Gray Beach temple
+## Creatures 
+ Name Exp HP Max. Damage Loot | Crawler 1,000 1,450 326+? 2-190× Gold Coin (always) Platinum Coin (common) Compound Eye (uncommon) Crawler Head Plating (uncommon) Great Health Potion (uncommon) Great Mana Potion (uncommon) 1-2× Small Topaz (uncommon) War Hammer (semi-rare) Springsprout Rod (rare) Yellow Gem (rare) Grasshopper Legs (very rare) | Kollos 2,400 3,800 565~ 1-200× Gold Coin (common) 1-3× Platinum Coin (common) Compound Eye (uncommon) 1-4× Great Mana Potion (uncommon) Kollos Shell (uncommon) 1-2× Small Ruby (uncommon) 1-5× Tarsal Arrow (uncommon) Gold Ingot (semi-rare) Giant Shimmering Pearl (Brown) (semi-rare) Ring of Healing (semi-rare) 1-3× Ultimate Health Potion (semi-rare) Hive Scythe (rare) Buggy Backpack (very rare) Calopteryx Cape (very rare) Carapace Shield (very rare) Steel Boots (very rare) | Ladybug 70 255 45 1-40× Gold Coin (common) | Spidris 2,600 3,700 610 1-200× Gold Coin (common) 1-4× Platinum Coin (common) Compound Eye (uncommon) 1-2× Great Mana Potion (uncommon) Spidris Mandible (uncommon) 1-5× Small Ruby (uncommon) 1-2× Ultimate Health Potion (uncommon) Death Ring (semi-rare) Giant Shimmering Pearl (Green) (semi-rare) Carapace Shield (rare) Hive Scythe (rare) Titan Axe (rare) Violet Gem (rare) Calopteryx Cape (very rare) | Spitter 1,100 1,500 150 0-190× Gold Coin Platinum Coin 0-3× Brown Mushroom Compound Eye Great Health Potion Great Mana Potion 0-2× Small Amethyst Spitter Nose Time Ring (semi-rare) Crystal Sword (rare) Calopteryx Cape (very rare) Crusader Helmet (very rare) Grasshopper Legs (very rare) Green Gem (very rare) Mastermind Potion (very rare) Platinum Amulet (very rare) | Swarmer 350 460 142+? 1-75× Gold Coin (always) Compound Eye (uncommon) Swarmer Antenna (uncommon) Small Emerald (rare) Epee (very rare) | Waspoid 830 1,100 400~ 0-135× Gold Coin Platinum Coin Compound Eye Waspoid Claw Waspoid Wing Black Pearl (semi-rare) Emerald Bangle (rare) Yellow Gem (rare) Carapace Shield (very rare) Grasshopper Legs (very rare) Hive Scythe (very rare) | Insectoid Worker 650 950 110+ 2-90× Gold Coin (always) Compound Eye Dung Ball Health Potion (semi-rare) Small Emerald (semi-rare) Epee (rare)
+ Name Exp HP Max. Damage Loot | Calamary 0 75 0 0-2× Shrimp (uncommon) | Deepling Guard 2,100 1,900 750 2-180× Gold Coin (always) 1-2× Platinum Coin (common) 1-3× Great Mana Potion (uncommon) 1-3× Great Health Potion (uncommon) Eye of a Deepling (uncommon) Deepling Guard Belt Buckle (uncommon) Deepling Breaktime Snack (uncommon) Deepling Claw (uncommon) 1-3× Small Sapphire (semi-rare) Heavy Trident (semi-rare) Guardian Axe (rare) Deepling Squelcher (rare) Ornate Crossbow (very rare) Deepling Backpack (very rare) Foxtail (very rare) | Deepling Spellsinger 1,000 850 630 ( 150 , 480 ) + 140 Platinum Coin (common) 0-60× Gold Coin (common) Spellsinger's Seal (uncommon) Deepling Filet (uncommon) Key to the Drowned Library (uncommon) Fish (semi-rare) Small Sapphire (semi-rare) Eye of a Deepling (semi-rare) Life Ring (semi-rare) Deepling Staff (semi-rare) Necklace of the Deep (rare) Fish Fin (rare) Ornate Crossbow (very rare) | Deepling Warrior 1,500 1,600 550 2-180× Gold Coin (always) Great Mana Potion (uncommon) Great Health Potion (uncommon) Deepling Warts (uncommon) Deeptags (uncommon) Deepling Ridge (uncommon) Deepling Filet (uncommon) Small Emerald (semi-rare) Life Ring (semi-rare) 0-5× Vortex Bolt (semi-rare) Fish Fin (rare) Heavy Trident (rare) Eye of a Deepling (rare) Warrior's Axe (rare) Warrior's Shield (rare) | Deepling Worker 130 190 150 0-25× Gold Coin (common) Deepling Scales (uncommon) 0-3× Fish (uncommon) Heavy Trident (rare) Eye of a Deepling (very rare) Fish Fin (very rare) Small Emerald (very rare) | Fish (Creature) 0 25 0 This creature drops no loot. | Jaul 30,000 90,000 4000 Ornate Shield Deepling Axe Depth Galea Depth Lorica (rare) Ornate Chestplate (rare) Ornate Mace (rare) Depth Calcei (very rare) Ornate Legs (very rare) | Jellyfish 0 55 13 1-2× Shrimp (uncommon) | Manta Ray 125 680 375 1-40× Gold Coin (common) | Northern Pike (Creature) 0 95 0 This creature drops no loot. | Obujos 20,000 35,000 5618 ( 1200 , 1300 , 818 , 800 , 1500 ) + 600 Deepling Axe Depth Scutum Ornate Legs | Shark 700 1,200 190 1-138× Gold Coin (common) 1-4× Fish (common) Deepling Scales (uncommon) Eye of a Deepling (rare) Small Sapphire (rare) Giant Shimmering Pearl (Brown) (very rare) Fish Fin (very rare) | Tanjis 15,000 30,000 1875 ( 900 , 400 , 200 , 375 ) + 450 Depth Ocrea Ornate Mace Ornate Shield
+## Quests 
+ Name Min Level Rec Level Prem Location Reward | Liquid Black Quest 0 130+ ✓ Gray Beach , Fiehonja , Edron . Access to deeper parts of Fiehonja including Manta Rays and Deepling Guardians , a few random items such as: True Heart of the Sea , 10 Platinum Coins , Necklace of the Deep , Deepling Backpack , Heavy Trident , Deepling Staff and others, achievements Gem Cutter , Navigational Error , Spolium Profundis and contribution to the achievements Invader of the Deep , Death Song , Depth Dwellers , Guardian Downfall ; also Deepling Outfit and addons: | War Against the Hive Quest 
+
+## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[hive-born-world-change 5-0] Voltar a Gray Beach
+Da Hive, regressa para **sul** até Gray Beach pelo mesmo caminho. Lá tens depot e templo para te reabasteceres.
+coords: []
+[insectoid-outfits-quest 0-0] Chegar a Gray Beach
+Gray Beach fica na ilha de {wiki:Quirefang}, que só se alcança através da {wiki:Gray Island}. Apanha um barco para a Gray Island em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): fala com o capitão do porto e diz {key:hi}, {key:gray island}, {key:yes}. Na Gray Island desce pelo **único buraco** da ilha: uma passagem subterrânea leva-te a Quirefang. **Gray Beach** é a pequena vila no sul da ilha, com depot e templo no subsolo.
+coords: [{'x': 33189, 'y': 31985, 'z': 7, 'label': 'Gray Island'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
+[liquid-black-quest 0-8] Voltar a Gray Beach
+Estás em **Edron**. Vai ao porto e apanha o barco para a Gray Island ({key:hi}, {key:gray island}, {key:yes}; o Spectulus deu-te os 150 gp). Depois repete o caminho dos passos anteriores: buraco a **sul** do {npc:Scrutinon}, {item:Water Vortex} no piso -1 e {item:Rope} no ponto do chão até Gray Beach.
+coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
+[opticording-sphere-quest 1-6] Chegar a Gray Beach
+Apanha um barco para a {wiki:Gray Island} em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): diz ao capitão {key:hi}, {key:gray island}, {key:yes}. Na ilha entra no **único buraco** (a sul do {npc:Scrutinon}). No piso -1 segue a passagem subterrânea para **nordeste** e entra no {item:Water Vortex}. Do outro lado usa a {item:Rope} no ponto do chão para subir e vai para **norte** até {wiki:Gray Beach} (tem depot e templo a noroeste).
+coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
+[opticording-sphere-quest 9-3] Sair da forja de Gray Beach
+O wiki não descreve uma saída própria desta forja: volta pelo mesmo caminho até Gray Beach. Para deixares a ilha, faz a passagem subterrânea ao contrário até à Gray Island e fala com o {npc:Scrutinon}: ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, o nome da cidade e {key:yes}).
+coords: []
+[war-against-the-hive-quest 0-0] Chegar a Gray Beach
+Gray Beach fica na ilha de {wiki:Quirefang}, que só se alcança através da {wiki:Gray Island}. Apanha um barco para a Gray Island em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): diz ao capitão {key:hi}, {key:gray island}, {key:yes}. Na Gray Island desce pelo **único buraco**, a **sul** do {npc:Scrutinon}. No piso -1 segue para **nordeste** pela passagem subterrânea e entra no {item:Water Vortex}. Do outro lado, usa a {item:Rope} no ponto do chão para subir e vai para **norte** até **Gray Beach**, a pequena vila no sul da ilha (depot e templo no subsolo, a noroeste).
+coords: [{'x': 33189, 'y': 31985, 'z': 7, 'label': 'Gray Island'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
+
+## OTHER GUIDE STEPS MENTIONING IT (context)
+[20-years-a-cook-quest 7-0] O trashcan de Quirefang
+Viaja até {wiki:Quirefang}: apanha um barco para a {wiki:Gray Island} em Ab'Dendriel, Venore, Darashia ou Edron ({key:hi}, {key:gray island}, {key:yes}, 150 gp) e desce pelo **único buraco** da ilha; uma passagem subterrânea leva-te a Quirefang, perto de **Gray Beach**. Lá, usa o {item:Ominous Trashcan} para chegares ao cientista, o **Professor Rudebert Evul**. Ele pede-te para provares o teu valor limpando a cave dele: são **3 pisos**.
+coords: [{'x': 33492, 'y': 31317, 'z': 7, 'label': 'Ominous Trashcan em Quirefang'}, {'x': 33189, 'y': 31985, 'z': 7, 'label': 'Gray Island'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
+[20-years-a-cook-quest 7-5] Sair de Quirefang
+Sai da cave do professor pelo mesmo sítio por onde entraste, volta a Gray Beach e faz a passagem subterrânea ao contrário até à {wiki:Gray Island}. Fala com o {npc:Scrutinon}: ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, {key:venore}, {key:yes}).
+coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}]
+[deeplings-world-change 1-0] Chegar a Fiehonja
+Vai a {wiki:Gray Island|Gray Island} (só tem barco a partir de Ab'Dendriel, Venore, Darashia e Edron). Lá podes falar com o {npc:Scrutinon} sobre Quirefang. Segue depois a primeira parte do guia da {wiki:Liquid Black Quest|Liquid Black Quest} (The First Visitor) para chegares a {wiki:Gray Beach|Gray Beach} e receberes o equipamento que te deixa entrar debaixo de água em Fiehonja.
+Resumo do caminho: no porto diz {key:hi}, {key:gray island}, {key:yes} (150 gp); na Gray Island entra no buraco a **sul** do Scrutinon, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}; do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até Gray Beach. Para Fiehonja, entra no buraco mais a **sudeste** de Gray Beach e desce a escadaria gigante (ou, depois de teres feito o atalho da Liquid Black Quest, usa o teleporte de Gray Beach, que te deixa junto à estátua de Qjell).
+coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}, {'x': 33514, 'y': 31323, 'z': 7, 'label': 'Buraco a sudeste de Gray Beach (para Fiehonja)'}]
+[hive-born-world-change 0-2] Subir para Gray Beach
+Apareces do outro lado da gruta, na entrada de Gray Beach. Usa a {item:Rope} no ponto do chão para subir e vai para **norte** até {wiki:Gray Beach|Gray Beach}. A **noroeste** há um depot e um templo (subterrâneos). O {npc:Orockle} está no **sudoeste** de Gray Beach.
+coords: [{'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}, {'x': 33448, 'y': 31309, 'z': 7, 'label': 'Orockle'}]

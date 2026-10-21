@@ -1,0 +1,24 @@
+{
+  "title": "Meriana Gargoyle Cave",
+  "type": "gruta",
+  "near": "Liberty Bay",
+  "summary": "Gruta por baixo da ilha de {wiki:Meriana}, com entrada pelo jardim de Meriana, cheia de {creature:Gargoyle|Gargoyles}, {creature:Stone Golem|Stone Golems}, {creature:Tarantula|Tarantulas} e {creature:Thornback Tortoise|Thornback Tortoises}.",
+  "entrance": {"x": 32389, "y": 32604, "z": 7, "label": "Entrada pelo jardim de Meriana"},
+  "requirements": ["Conta **Premium** (Liberty Bay e Meriana)."],
+  "arrive": [
+    "Em **Liberty Bay**, vai à pequena península a **sudeste** do depot e fala com o {npc:Captain Waverider}: {key:hi}, {key:peg leg}, {key:yes} (50 gp). Ele leva-te a Sabrehaven, na ilha de {wiki:Meriana}.",
+    "Em Meriana, vai ao jardim da ilha ({coord:32389,32604,7}): é aí que fica a entrada da gruta. Lá dentro há 4 pisos."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao jardim de Meriana (a wiki não descreve outra saída).",
+    "Para voltares a **Liberty Bay**, vai a **sul** de Sabrehaven e fala com o {npc:Sebastian}: {key:hi}, {key:liberty bay}, {key:yes} (50 gp)."
+  ],
+  "coords": [
+    {"x": 32389, "y": 32604, "z": 7, "label": "Entrada da gruta (jardim de Meriana)"},
+    {"x": 32347, "y": 32859, "z": 7, "label": "Captain Waverider (Liberty Bay → Meriana)"},
+    {"x": 32347, "y": 32623, "z": 7, "label": "Sebastian (Meriana → Liberty Bay)"}
+  ],
+  "warnings": [
+    "A wiki recomenda nível 30–35+. Os {creature:Blood Crab|Blood Crabs} e as Tarantulas envenenam: leva poções."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Fields of Glory",
+  "type": "zona",
+  "near": "Carlin",
+  "summary": "A zona a **norte de Carlin**, antigo campo de batalha entre humanos e orcs; por baixo tem um labirinto de túneis com criaturas fracas e a entrada escondida para o {wiki:Maze of Lost Souls}.",
+  "entrance": {"x": 32362, "y": 31683, "z": 7, "label": "Fields of Glory (norte de Carlin)"},
+  "items": ["Rope", "Shovel"],
+  "arrive": [
+    "Vai a **Carlin** (se vens de barco, diz ao capitão da tua cidade {key:hi}, {key:carlin}, {key:yes}; chegas ao {npc:Captain Greyhound}, {coord:32388,31822,6}).",
+    "Sai da cidade para **norte**: os Fields of Glory começam logo ali ({coord:32362,31683,7} é o centro).",
+    "Para **nordeste** fica {wiki:Northport} e a cabana do {npc:Bron} ({coord:32364,31626,7}); o blesser {npc:Humphrey} está nos Fields of Glory, 1 andar acima do chão ({coord:32359,31683,6})."
+  ],
+  "leave": [
+    "Volta a pé para **sul** até Carlin.",
+    "Se estás nos túneis por baixo, sobe pelo mesmo caminho por onde desceste (usa a {item:Rope} nos buracos).",
+    "Quem está em {wiki:Demona} tem um teleporte no fim de um túnel a oeste da Star Room ({coord:32400,31657,15}) que leva de volta aos Fields of Glory."
+  ],
+  "coords": [
+    {"x": 32362, "y": 31683, "z": 7, "label": "Fields of Glory (centro)"},
+    {"x": 32359, "y": 31683, "z": 6, "label": "Humphrey (blesser, 1 andar acima)"},
+    {"x": 32364, "y": 31626, "z": 7, "label": "Cabana do Bron"},
+    {"x": 32488, "y": 31610, "z": 7, "label": "Gruta a sul de Northport (caminho para Demona)"},
+    {"x": 32400, "y": 31657, "z": 15, "label": "Teleporte de Demona para os Fields of Glory"}
+  ],
+  "images": [
+    {"file": "Fields of Glory 0.png", "caption": "Fields of Glory — superfície"},
+    {"file": "Fields of glory-1.PNG", "caption": "Fields of Glory — piso -1"},
+    {"file": "Fields of glory-2.PNG", "caption": "Fields of Glory — piso -2"}
+  ],
+  "warnings": [
+    "Na torre a sul aparece uma {creature:Witch}: em mundos non-PvP é sítio habitual de PKers.",
+    "Há {creature:Amazon|Amazons}, {creature:Valkyrie|Valkyries} e {creature:Poacher|Poachers} à superfície; cuidado se tens nível muito baixo."
+  ]
+}

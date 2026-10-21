@@ -1,0 +1,37 @@
+{
+  "title": "Pits of Inferno Dragon Lair",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "O maior covil de dragões do Tibia, cheio de {creature:Dragon Lord|Dragon Lords}, por baixo das {wiki:Plains of Havoc} (sudoeste de Venore), no caminho para as {wiki:Pits of Inferno}.",
+  "entrance": {"x": 32788, "y": 32335, "z": 12, "label": "Pits of Inferno Dragon Lair"},
+  "requirements": [
+    "Só se chega lá pelo caminho das primeiras partes da {wiki:The Pits of Inferno Quest}: precisas da {item:Holy Tible} para passar o Shrine of Wonders e de conta **Premium**.",
+    "Nível recomendado: 80+ (magos), 100+ (cavaleiros e paladinos)."
+  ],
+  "items": ["Shovel", "Pick", "Rope", "Blood", "Oil", "Holy Tible"],
+  "arrive": [
+    "Sai de **Venore** e caminha para **sudoeste** até às {wiki:Plains of Havoc} e ao cemitério perto da {wiki:Necromant House} ({coord:32781,32330,7}).",
+    "Usa a {item:Shovel} numa {item:Loose Stone Pile} do cemitério (todas levam à mesma gruta estreita).",
+    "Na parte **leste** da gruta há uma sala de 3x4: usa o {item:Pick} no **canto noroeste** ({coord:32775,32344,7}) e desce pelo buraco.",
+    "A campa de Goshnar fica logo a **oeste**: põe-te 1 sqm a **sul** da lápide e usa {item:Blood} na lápide para seres levado às catacumbas.",
+    "Vai para **norte** e pisa o tile com inscrições antes do {item:Magic Wall} com a {item:Holy Tible} na mochila (Shrine of Wonders).",
+    "A **leste**, desce pelo buraco da placa *\"To the Pits of Inferno\"* e segue para **sul** até à ponte. Se estiver partida, usa {item:Oil} na alavanca a sul da ponte, do lado oeste, e puxa-a.",
+    "Se houver lava, usa o {item:Pick} na pedra junto a ela para a arrefecer. Depois encontras **3 buracos**, que levam todos ao Dragon Lair."
+  ],
+  "leave": [
+    "Para continuar para as Pits of Inferno: desce pelo buraco **norte** do lair e, a **leste**, sobe pelo rope hole com a {item:Rope} até ao Hall of the Five Ways ({coord:32834,32333,11}).",
+    "Para sair: se a ponte se desfez contigo do outro lado, a única forma de voltar é pelo Dragon Lair. A wiki não descreve a saída do lair passo a passo; o caminho normal é voltar pelo mesmo trajeto até à campa de Goshnar e à gruta do cemitério, e daí subir à superfície e caminhar para **nordeste** até Venore."
+  ],
+  "coords": [
+    {"x": 32781, "y": 32330, "z": 7, "label": "Necromant House / cemitério (entrada)"},
+    {"x": 32775, "y": 32344, "z": 7, "label": "Canto noroeste da sala: usar a Pick"},
+    {"x": 32834, "y": 32333, "z": 11, "label": "Hall of the Five Ways (depois do lair)"}
+  ],
+  "images": [
+    {"file": "Pits of Inferno Dragon Lair.png", "caption": "Mapa do Pits of Inferno Dragon Lair"}
+  ],
+  "warnings": [
+    "Há muitos {creature:Dragon Lord|Dragon Lords} ao mesmo tempo, além de {creature:Dragon|Dragons} e {creature:Dragon Hatchling|Dragon Hatchlings}: não vás sozinho se não aguentas mais de 3 Dragon Lords de uma vez.",
+    "Depois do server save boa parte do chão está coberta de fogo; umas {item:Firewalker Boots} ajudam muito. Se houver campos de fogo em cima de buracos ou rope holes, usa uma {item:Destroy Field Rune}."
+  ]
+}

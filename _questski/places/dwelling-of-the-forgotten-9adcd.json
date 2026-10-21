@@ -1,0 +1,33 @@
+{
+  "title": "Dwelling of the Forgotten",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Cripta de vários andares **muito abaixo das {wiki:Ice Islands}**, a terceira zona da {wiki:Too Hot to Handle Quest}; chega-se lá pelo teleporte do hub do {npc:Gnomevisor}, por baixo da cripta de Kazordoon.",
+  "entrance": {"x": 32062, "y": 31462, "z": 11, "label": "Dwelling of the Forgotten"},
+  "requirements": [
+    "Conta Premium e a missão **Recruitment** da {wiki:Bigfoot's Burden Quest}.",
+    "Precisas do **escudo de cristal nível 3** da {wiki:Too Hot to Handle Quest} (40 splinters); os andares mais fundos exigem os níveis 4, 5 e 6."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**. O mais simples é o {wiki:Steamship}: em Edron, o {npc:Captain Seahorse} leva-te a Cormaya ({key:hi}, {key:cormaya}, {key:yes}); em Cormaya desce 8 andares até ao {npc:Gurbasch} e diz {key:hi}, {key:kazordoon}, {key:yes}. Também há steamship a partir de Farmine ({npc:Thorgrin}).",
+    "Desce à cripta de Kazordoon (piso 9, 2 andares abaixo do nível do chão), onde estão o {npc:Gnomystery} ({coord:32610,31878,9}) e o {npc:Brodraem Orcbeard}.",
+    "Caminha para **norte** na cripta até à grande fenda ({coord:32603,31845,9}) e anda em direção a ela até caíres para o piso de baixo; passa o teleporte e chegas ao hub do {npc:Gnomevisor} ({coord:32661,31825,10}).",
+    "No hub, entra no teleporte do Dwelling of the Forgotten (o escudo tem de estar no nível 3 ou mais)."
+  ],
+  "leave": [
+    "Volta pelos andares do Dwelling of the Forgotten até ao teleporte por onde entraste: leva-te de volta ao hub do {npc:Gnomevisor}. A wiki não descreve a saída da sala do boss nem a subida a partir do último andar.",
+    "Do hub, volta à cripta de Kazordoon e sobe à cidade (a wiki não descreve esta subida em pormenor). No porto subterrâneo, o {npc:Brodrosch} leva-te de steamship a Cormaya ou Farmine."
+  ],
+  "coords": [
+    {"x": 32610, "y": 31878, "z": 9, "label": "Gnomystery (cripta de Kazordoon)"},
+    {"x": 32603, "y": 31845, "z": 9, "label": "Grande fenda na cripta"},
+    {"x": 32661, "y": 31825, "z": 10, "label": "Gnomevisor (hub)"},
+    {"x": 32083, "y": 31466, "z": 12, "label": "Teleporte vermelho (Fishing in Lava Pools, 2.º andar)"},
+    {"x": 32067, "y": 31480, "z": 13, "label": "Teleporte laranja (The Lost Structure)"},
+    {"x": 32054, "y": 31462, "z": 15, "label": "Teleporte para a sala das alavancas (último andar)"}
+  ],
+  "warnings": [
+    "Zona para **nível 350+**: {creature:Cave Chimera|Cave Chimeras}, {creature:Varnished Diremaw|Varnished Diremaws} e {creature:Tremendous Tyrant|Tremendous Tyrants}.",
+    "O escudo desce 1 ponto a cada 5 segundos dentro das criptas: sai antes de chegar a zero. O calor também sobe — usa as máquinas da zona para o baixar."
+  ]
+}

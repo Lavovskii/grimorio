@@ -1,0 +1,28 @@
+{
+  "title": "Cake Keep Isle",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Pequena ilha a **sul de Cormaya** (perto de Edron), ligada por uma ponte, que só está acessível alguns dias por ano durante a quest mundial {wiki:A Piece of Cake}; aí fica o bolo gigante e o {npc:Brutus The Baker}.",
+  "entrance": {"x": 33308, "y": 32083, "z": 7, "label": "Cake Keep Isle"},
+  "requirements": [
+    "Só podes lá ir durante a quest mundial {wiki:A Piece of Cake}, depois de a ponte ser construída."
+  ],
+  "arrive": [
+    "Vai a **Edron** (de barco: {key:hi}, {key:edron}, {key:yes} ao capitão do porto).",
+    "No porto de Edron fala com o {npc:Captain Seahorse} ({coord:33176,31764,6}): {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}.",
+    "Atravessa {wiki:Cormaya} a pé para **sul** até à ponte do extremo sul da ilha ({coord:33303,32050,7}), onde está o bolo enorme.",
+    "Atravessa a ponte para a Cake Keep Isle; o {npc:Brutus The Baker} está em {coord:33304,32063,7}."
+  ],
+  "leave": [
+    "Volta pela ponte e atravessa Cormaya a pé para **norte** até ao porto norte.",
+    "Fala com o {npc:Pemaret} ({coord:33287,31956,6}): {key:hi}, {key:edron}, {key:yes}. Em Edron apanhas o barco para a cidade que quiseres."
+  ],
+  "coords": [
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33303, "y": 32050, "z": 7, "label": "Ponte e bolo gigante, sul de Cormaya"},
+    {"x": 33304, "y": 32063, "z": 7, "label": "Brutus The Baker"}
+  ],
+  "images": [
+    {"file": "Cake Keep Isle.png", "caption": "A Cake Keep Isle"}
+  ]
+}

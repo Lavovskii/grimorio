@@ -1,0 +1,79 @@
+{
+  "slug": "fanfare-quest",
+  "category": "tesouro",
+  "region": "Carlin",
+  "difficulty": 1,
+  "duration": "15–20 min",
+  "summary": "Uns {creature:Troll|Trolls} roubaram uma {item:Fanfare} e esconderam-na debaixo do cemitério de Carlin. Apanha a {item:Key 3520} junto ao porto, desce à cripta do cemitério, encontra o buraco e segue o caminho até ao baú com a Fanfare. Uma quest simples, ótima para personagens de nível baixo.",
+  "legend_pt": "Uns Trolls roubaram uma fanfarra.",
+  "start": {"x": 32375, "y": 31803, "z": 7, "label": "Caixa com a Key 3520, perto do barco de Carlin"},
+  "requirements": [
+    "Sem nível mínimo (recomendado 8).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Key 3520", "note": "para a porta da cripta (pode já estar aberta)"},
+    {"item": "Rope"}
+  ],
+  "rewards": [
+    {"item": "Fanfare"}
+  ],
+  "dangers": ["Troll"],
+  "npcs": [],
+  "tips": [
+    "A cripta fica perto da cidade e é muito movimentada, por isso a porta pode já estar aberta e talvez nem precises da chave. Ainda assim, apanhar a chave é rápido."
+  ],
+  "sections": [
+    {
+      "title": "1. Apanhar a Key 3520",
+      "steps": [
+        {
+          "title": "Abrir a caixa junto ao barco",
+          "text": "Em **Carlin**, entra no edifício logo a **noroeste** do barco e abre a caixa para apanhares a {item:Key 3520}.",
+          "coords": [{"x": 32375, "y": 31803, "z": 7, "label": "Caixa com a Key 3520"}],
+          "images": [{"file": "Fanfare Chest Key.png", "caption": "A caixa com a Key 3520, no edifício a noroeste do barco"}],
+          "reward": "Key 3520"
+        }
+      ]
+    },
+    {
+      "title": "2. A cripta do cemitério",
+      "steps": [
+        {
+          "title": "Descer à cripta",
+          "text": "Entra no {wiki:Carlin Graveyard|cemitério de Carlin}, logo a **leste** da cidade, e desce à cripta que fica no extremo **sul** do cemitério.",
+          "coords": [{"x": 32407, "y": 31784, "z": 7, "label": "Entrada do cemitério de Carlin"}],
+          "images": [{"file": "Fanfare Cemetery Entrance.png", "caption": "A entrada da cripta, no extremo sul do cemitério"}]
+        },
+        {
+          "title": "Encontrar o buraco",
+          "text": "Abre a porta a **oeste** (com a Key 3520, se estiver fechada) e procura um buraco no chão. Desce por ele.",
+          "images": [{"file": "Fanfare Hole Entrance.png", "caption": "O buraco depois da porta a oeste"}]
+        },
+        {
+          "title": "Seguir o caminho dos Trolls",
+          "text": "Lá em baixo segue o caminho do mapa abaixo pela gruta, matando os {creature:Troll|Trolls} que encontrares, até chegares ao baú.",
+          "images": [{"file": "Fanfare Minimap.PNG", "caption": "O caminho na gruta dos Trolls até ao baú"}],
+          "tip": "Leva uma {item:Rope} para conseguires voltar a subir."
+        },
+        {
+          "title": "Abrir o baú",
+          "text": "Usa o baú para receberes a {item:Fanfare}.",
+          "images": [
+            {"file": "Fanfare Chest.png", "caption": "O baú da Fanfare"},
+            {"file": "Fanfare Quest Box.jpg", "caption": "O baú da quest"}
+          ],
+          "reward": "Fanfare"
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Volta pelo mesmo caminho do mapa até ao buraco por onde desceste e usa a {item:Rope} para subir de novo à cripta. Sai da cripta pelas escadas no extremo **sul** do cemitério e estás outra vez a **leste** de **Carlin** ({coord:32407,31784,7}).",
+          "coords": [{"x": 32407, "y": 31784, "z": 7, "label": "Entrada do cemitério de Carlin"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Também conhecida como *Carlin Troll Quest*."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Oramond Hydra/Bog Raider Cave",
+  "type": "gruta",
+  "near": "Rathleton",
+  "summary": "Gruta de {creature:Hydra|Hydras} e {creature:Bog Raider|Bog Raiders} no **oeste de Oramond**, a noroeste de Rathleton, onde crescem os {item:Peppermoon Bells}.",
+  "entrance": {"x": 33517, "y": 31906, "z": 7, "label": "Buraco de entrada da gruta"},
+  "requirements": [
+    "Os barcos de Venore e Edron para Oramond exigem o rank **Citizen** na {wiki:Rathleton Quest}; o de Thais não."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Rathleton** (Oramond) de barco: o {npc:Captain Bluebear} em Thais ({key:hi}, {key:oramond}, {key:yes}, 150 gp), ou, com o rank Citizen, o {npc:Captain Fearless} em Venore ou o {npc:Captain Seahorse} em Edron. Chegas à jangada do {npc:Captain Gulliver} ({coord:33479,31986,7}).",
+    "Sai de Rathleton para **oeste/noroeste** até ao buraco da entrada ({coord:33517,31906,7}) e desce."
+  ],
+  "leave": [
+    "Volta ao buraco por onde desceste e sobe com a {item:Rope}.",
+    "Regressa a Rathleton para **leste**. Na jangada do {npc:Captain Gulliver} diz {key:hi}, {key:thais}, {key:yes} (150 gp); com o rank Citizen ele também te leva a Edron, Venore, Port Hope e Krailos, e Issavi está sempre disponível."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31986, "z": 7, "label": "Jangada do Captain Gulliver (Rathleton)"}
+  ],
+  "warnings": [
+    "O caminho até à gruta (e de volta) pode ser muito perigoso por causa dos raids frequentes de quaras à superfície de Oramond.",
+    "Zona para nível 100–120+: {creature:Hydra|Hydras} e {creature:Bog Raider|Bog Raiders}."
+  ]
+}

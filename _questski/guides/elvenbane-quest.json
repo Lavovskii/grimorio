@@ -1,0 +1,99 @@
+{
+  "slug": "elvenbane-quest",
+  "category": "tesouro",
+  "region": "Ab'Dendriel",
+  "difficulty": 2,
+  "duration": "30–60 min",
+  "summary": "Um {creature:Elf Arcanist} guarda um tesouro no topo da torre central do castelo fortificado de Elvenbane, perto de Ab'Dendriel. Atravessa a cave cheia de orcs e minotauros, sobe a torre passando por campos de veneno, um {creature:Dragon} e magos, e derrota a equipa final para abrires dois baús e duas gavetas com uma {item:Morning Star}, um {item:Dwarven Shield}, um {item:Spellbook} e mais.",
+  "legend_pt": "Um Elf Arcanist acumula tesouros no seu castelo fortemente fortificado.",
+  "start": {"x": 32579, "y": 31680, "z": 7, "label": "Entrada de Elvenbane (buraco)"},
+  "requirements": [
+    "Não precisa de Premium nem de nível mínimo.",
+    "Recomendado nível 35+ (há um Dragon na torre)."
+  ],
+  "items_needed": [
+    {"item": "Destroy Field Rune", "note": "útil para limpar os campos de veneno"},
+    {"item": "Antidote Rune", "note": "ou o feitiço Antidote/Cure Poison"},
+    {"item": "Rope", "note": "para saíres da cave pelo buraco da entrada"}
+  ],
+  "rewards": [
+    {"item": "Morning Star"},
+    {"item": "Dwarven Shield"},
+    {"item": "Strong Mana Potion"},
+    {"item": "Blank Rune"},
+    {"item": "Spellbook"},
+    {"item": "Small Diamond", "qty": 2},
+    {"item": "Gold Coin", "qty": 100}
+  ],
+  "dangers": ["Orc", "Orc Warrior", "Orc Berserker", "Orc Spearman", "Minotaur", "Minotaur Guard", "Dragon", "Orc Shaman", "Minotaur Mage", "Demon Skeleton", "Elf Arcanist"],
+  "npcs": [],
+  "tips": [
+    "Leva {item:Destroy Field Rune|Destroy Field Runes} e algo para curar veneno: o primeiro piso da torre está coberto de campos de veneno.",
+    "Há outra quest em Elvenbane, a {wiki:To Blind the Enemy Quest|To Blind the Enemy Quest}, mas para essa tens de falar primeiro com o {npc:Eroth}."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar à cave do castelo",
+      "steps": [
+        {
+          "title": "Sair de Ab'Dendriel",
+          "text": "Começa no portão de **Ab'Dendriel**. Vai para **sul**, depois **oeste** e depois **norte** até ao castelo de Elvenbane, que fica numa ilha a oeste da cidade e só tem entrada por uma gruta subterrânea.",
+          "coords": [{"x": 32590, "y": 31645, "z": 7, "label": "Castelo de Elvenbane"}]
+        },
+        {
+          "title": "Descer pelo buraco",
+          "text": "Desce pelo buraco rodeado por **quatro pedras**. Ficas na cave de Elvenbane.",
+          "coords": [{"x": 32579, "y": 31680, "z": 7, "label": "Entrada de Elvenbane (buraco)"}],
+          "images": [{"file": "Elvenbane Entrance.png", "caption": "O buraco rodeado de quatro pedras, entrada da cave"}]
+        },
+        {
+          "title": "Atravessar a cave",
+          "text": "Corre para **norte** e depois **oeste** até à abertura. Aqui podes encontrar um {creature:Orc Berserker} e um {creature:Minotaur Guard}, alguns {creature:Minotaur|Minotaurs} e um {creature:Orc Spearman}. Contorna e entra na **torre do meio**.",
+          "images": [{"file": "Elvenbane1Floor.jpg", "caption": "Caminho pela cave até à torre do meio"}],
+          "warning": "O {creature:Orc Spearman} pode partir-te o escudo."
+        }
+      ]
+    },
+    {
+      "title": "2. Subir a torre",
+      "steps": [
+        {
+          "title": "Piso dos campos de veneno",
+          "text": "O primeiro piso da torre está todo coberto de campos de veneno. Atravessa-os a andar ou usa {item:Destroy Field Rune|Destroy Field Runes} para os apagar. Prepara-te para o dragão no piso de cima.",
+          "images": [{"file": "Elvenbane2Floor.JPG", "caption": "Piso coberto de campos de veneno"}]
+        },
+        {
+          "title": "Piso do Dragon",
+          "text": "Neste piso há um {creature:Dragon}. Não há espaço para fugir à volta dele, por isso os sorcerers devem lançar 1 ou 2 {spell:Energy Wave|Energy Waves} rápidas. Mata o dragão ou passa por ele a correr até à escada.",
+          "images": [{"file": "Elvenbane3Floor.JPG", "caption": "Piso do Dragon"}],
+          "warning": "O Dragon cospe fogo em área: não fiques na frente dele se fores fraco."
+        },
+        {
+          "title": "Piso dos magos",
+          "text": "Aqui há um {creature:Orc Shaman} e um {creature:Minotaur Mage}. Mata-os e continua a subir as escadas.",
+          "images": [{"file": "Elvenbane4Floor.JPG", "caption": "Piso do Orc Shaman e do Minotaur Mage"}]
+        }
+      ]
+    },
+    {
+      "title": "3. O tesouro",
+      "steps": [
+        {
+          "title": "Derrotar a equipa final",
+          "text": "No último piso estão 2 {creature:Demon Skeleton|Demon Skeletons} e um {creature:Elf Arcanist}, a chamada \"playerhunter team\". Mata-os.",
+          "images": [{"file": "Elvenbane5Floor.JPG", "caption": "Último piso com os baús e as gavetas"}]
+        },
+        {
+          "title": "Abrir os baús e as gavetas",
+          "text": "Abre os **2 baús** e as **2 gavetas** de quest para receberes as recompensas: {item:Morning Star}, {item:Dwarven Shield}, {item:Strong Mana Potion}, {item:Blank Rune}, {item:Spellbook}, 2 {item:Small Diamond|Small Diamonds} e 100 gold.",
+          "reward": "Morning Star, Dwarven Shield, Strong Mana Potion, Blank Rune, Spellbook, 2 Small Diamonds e 100 gold"
+        },
+        {
+          "title": "Sair de Elvenbane",
+          "text": "Volta pelo mesmo caminho: desce a torre central pelas mesmas escadas (cuidado outra vez com o {creature:Dragon} e os campos de veneno), atravessa a cave de volta (para **leste** e depois para **sul**) até ao buraco por onde caíste e usa a {item:Rope} para subir. Depois regressa a Ab'Dendriel (**sul**, **leste** e **norte** até ao portão).",
+          "coords": [{"x": 32579, "y": 31680, "z": 7, "label": "Saída: buraco da entrada (usa a Rope)"}]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Gray Island",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Ilhota a **sul de Edron** e a oeste de Cormaya, com um relógio de sol, o barqueiro {npc:Scrutinon} e um único buraco que dá acesso à passagem subterrânea para {wiki:Quirefang} e {wiki:Gray Beach}.",
+  "entrance": {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island)"},
+  "arrive": [
+    "Só há barco para a ilha a partir de **Ab'Dendriel**, **Venore**, **Darashia** e **Edron** (150 gp): no porto diz ao capitão {key:hi}, {key:gray island}, {key:yes} (em Edron, o {npc:Captain Seahorse}; em Venore, o {npc:Captain Fearless}).",
+    "Desembarcas junto ao {npc:Scrutinon} ({coord:33189,31982,7})."
+  ],
+  "leave": [
+    "Fala com o {npc:Scrutinon}: leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore, seja qual for a cidade de onde vieste ({key:hi}, nome da cidade, por exemplo {key:venore}, e {key:yes}).",
+    "Para Quirefang/Gray Beach: entra no buraco a **sul** do Scrutinon, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}; do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até Gray Beach ({coord:33471,31304,7})."
+  ],
+  "items": ["Rope"],
+  "coords": [
+    {"x": 33189, "y": 31985, "z": 7, "label": "Gray Island"},
+    {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach (fim da passagem subterrânea)"}
+  ],
+  "images": [
+    {"file": "Gray Island.png", "caption": "Gray Island"}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Ankrahmun Library Tomb",
+  "type": "dungeon",
+  "near": "Ankrahmun",
+  "summary": "Túmulo por baixo da biblioteca de **Ankrahmun**, logo a leste do depot, com vários andares cada vez mais perigosos; no fundo fica o faraó {creature:Ashmunrah} da {wiki:The Ancient Tombs Quest}.",
+  "entrance": {"x": 33142, "y": 32838, "z": 7, "label": "Ankrahmun Library Tomb (por baixo da biblioteca)"},
+  "requirements": [
+    "Para passares o teleporte para os andares de baixo precisas de uma {item:Scarab Coin} por passagem."
+  ],
+  "items": ["Shovel", "Rope", "Scarab Coin"],
+  "arrive": [
+    "Vai a **Ankrahmun** de barco, por exemplo com o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}, 160 gp) ou com os capitães de Port Hope, Liberty Bay, Darashia, Venore e Yalahar. Desembarcas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Vai à biblioteca de Ankrahmun, logo a **leste** do depot. A entrada do túmulo fica por baixo dela ({coord:33142,32838,7}).",
+    "Usa a {item:Shovel} no sítio da entrada ({coord:33159,32836,7}) para abrir o buraco e desce.",
+    "Para chegares aos andares fundos (3.º e 4.º), pisa a {wiki:Mystic Flame} (chama azul) e põe uma {item:Scarab Coin} na {wiki:Empty Coal Basin}: és teleportado para o outro lado."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao início do túmulo. Na sala do faraó, o {item:Magic Forcefield} usado **sem** o item de passe também te leva ao início do túmulo.",
+    "Sobe pelo buraco da entrada com a {item:Rope} e estás outra vez em Ankrahmun.",
+    "Para saíres da cidade, o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33142, "y": 32838, "z": 7, "label": "Biblioteca de Ankrahmun (por cima do túmulo)"},
+    {"x": 33159, "y": 32836, "z": 7, "label": "Entrada do túmulo (cava com a Shovel; sobe com Rope)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [{"file": "Ankrahmun Library Tomb.jpg", "caption": "Ankrahmun Library Tomb"}],
+  "warnings": [
+    "Quando apareces do outro lado do teleporte da Mystic Flame, as criaturas que estiverem junto à chama atacam-te logo.",
+    "Quanto mais desces, mais fortes são as criaturas: o 3.º andar tem 4 {creature:Vampire|Vampires} e o 4.º tem {creature:Necromancer|Necromancers}, {creature:Ancient Scarab|Ancient Scarabs} e {creature:Lich|Liches}."
+  ]
+}

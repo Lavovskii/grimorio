@@ -1,0 +1,29 @@
+{
+  "title": "Svargrond Arena",
+  "type": "edificio",
+  "near": "Svargrond",
+  "summary": "Arena dos bárbaros no **norte de Svargrond**, onde enfrentas 10 combates seguidos contra monstros em três dificuldades (Greenhorn, Scrapper e Warlord) — é a {wiki:Barbarian Arena Quest}.",
+  "entrance": {"x": 32230, "y": 31095, "z": 7, "label": "Halvar — entrada da arena (norte de Svargrond)"},
+  "requirements": [
+    "**Premium** e a {wiki:Barbarian Test Quest} completa.",
+    "Taxa de entrada paga ao {npc:Halvar}: **1.000 gp** (Greenhorn), **5.000 gp** (Scrapper) ou **10.000 gp** (Warlord); cada dificuldade só abre depois de fazeres a anterior."
+  ],
+  "arrive": [
+    "Vai a **Svargrond**: apanha o barco em **Carlin**, **Thais** ou **Venore** ({key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade ({coord:32347,31108,6}).",
+    "Atravessa a cidade até à arena, no **norte** de Svargrond, e fala com o {npc:Halvar} ({coord:32230,31095,7}).",
+    "Para pagares: {key:fight}, o nome da dificuldade ({key:greenhorn}, {key:scrapper} ou {key:warlord}) e {key:yes}.",
+    "Depois de pagares, passa a porta junto ao Halvar para a sala à direita dele e entra num dos teleportes (qualquer um): começa o primeiro combate."
+  ],
+  "leave": [
+    "Depois de ganhares os 10 combates, o teleporte da parede **oeste** da última sala leva-te às salas de prémios; vai para **norte** até à sala da tua dificuldade. A saída fica a **sul** das salas de prémios.",
+    "Para desistires a meio, entra no teleporte da parede **sul** da sala de combate (ficas transformado em galinha durante uns segundos) e és levado para fora da arena.",
+    "Para saíres de Svargrond, fala com a {npc:Captain Breezelda}: {key:hi}, {key:carlin}, {key:thais} ou {key:venore}, e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32347, "y": 31108, "z": 6, "label": "Captain Breezelda — porto de Svargrond"}
+  ],
+  "warnings": [
+    "Tens **6 minutos** por combate (vê a chama roxa no canto superior esquerdo da sala). Se o tempo acabar, morreres ou desistires, perdes a taxa e voltas ao início.",
+    "Se morreres na arena não recuperas os itens: a sala é limpa sempre que alguém entra. Leva todos os supplies de que precisas, não há forma de reabastecer lá dentro."
+  ]
+}

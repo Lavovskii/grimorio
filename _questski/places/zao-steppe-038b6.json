@@ -1,0 +1,32 @@
+{
+  "title": "Zao Steppe",
+  "type": "zona",
+  "near": "Farmine",
+  "summary": "Estepe seca do continente de {wiki:Zao}, a **leste da montanha de Farmine** e a sul dos {wiki:Dragonblaze Peaks}, dominada por acampamentos orc e com a fortaleza lagarto de Zzaion a sudeste.",
+  "entrance": {"x": 33085, "y": 31532, "z": 7, "label": "Saída da passagem de Farmine para a Zao Steppe"},
+  "requirements": [
+    "Para desceres a montanha entre o elevador de Farmine e a estepe precisas do feitiço {spell:Levitate} (ou de parcels/caixas empilhadas para subir e descer)."
+  ],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin} ({coord:33025,31553,14}).",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe} em {coord:33085,31532,7}.",
+    "Daí, o acampamento orc central (onde está o {npc:Curos}) fica a **nordeste** ({coord:33173,31395,7}) e o {npc:Zalamon} no extremo **leste**, 1 andar abaixo do chão ({coord:33356,31411,8})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: regressa à passagem em {coord:33085,31532,7}, sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva de volta a Farmine.",
+    "Em Farmine fala com o {npc:Thorgrin} no Steamship: {key:hi}, {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp) e {key:yes}.",
+    "Depois das 8 primeiras missões da {wiki:The New Frontier Quest}, o antigo teleporte lagarto no **norte** da estepe leva-te às {wiki:Muggy Plains}."
+  ],
+  "coords": [
+    {"x": 33025, "y": 31553, "z": 14, "label": "Thorgrin — Steamship de Farmine"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Entrada/saída da estepe (passagem da montanha)"},
+    {"x": 33173, "y": 31395, "z": 7, "label": "Curos (acampamento orc central)"},
+    {"x": 33356, "y": 31411, "z": 8, "label": "Zalamon (extremo leste, subsolo -1)"}
+  ],
+  "warnings": [
+    "Os {creature:Orc Marauder|Orc Marauders} patrulham os acampamentos de cerco e perseguem jogadores por toda a estepe.",
+    "Cerca de uma vez por semana os orcs rompem o portão de {wiki:Zzaion} e os lagartos contra-atacam com um dos seus líderes: evita a zona sudeste durante esse ataque.",
+    "Alguns dragões dos {wiki:Dragonblaze Peaks} vivem ao nível do chão e podem descer à estepe."
+  ]
+}

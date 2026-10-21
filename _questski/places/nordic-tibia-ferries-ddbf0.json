@@ -1,0 +1,23 @@
+{
+  "title": "Nordic Tibia Ferries",
+  "type": "outro",
+  "near": "Carlin",
+  "summary": "As jangadas que ligam o continente, a **noroeste de Carlin**, às ilhas geladas de {wiki:Folda}, {wiki:Senja} e {wiki:Vega}: 20 gp do continente para uma ilha, 10 gp entre ilhas e grátis de uma ilha para o continente.",
+  "entrance": {"x": 32235, "y": 31675, "z": 7, "label": "Nielson — jangada a noroeste de Carlin"},
+  "arrive": [
+    "Chega a **Carlin** (de barco: diz ao capitão do porto {key:hi}, {key:carlin}, {key:yes}; por exemplo o {npc:Captain Seahorse} em Edron).",
+    "Vai para **noroeste** da cidade até à jangada do {npc:Nielson} ({coord:32235,31675,7}).",
+    "Diz {key:hi}, o nome da ilha ({key:folda}, {key:senja} ou {key:vega}) e {key:yes} (20 gp).",
+    "Desembarcas em **Folda** junto ao {npc:Svenson}, no **oeste** de **Senja** junto ao {npc:Anderson}, ou no **leste** de **Vega** junto ao {npc:Carlson}."
+  ],
+  "leave": [
+    "Para voltares ao continente (grátis): em Folda fala com o {npc:Svenson} e em Senja com o {npc:Anderson} ({key:hi}, {key:tibia}, {key:yes}); em Vega com o {npc:Carlson} ({key:hi}, {key:carlin}, {key:yes}).",
+    "Ficas a noroeste de Carlin, junto ao {npc:Nielson}; daí vai a pé para a cidade. Entre ilhas a viagem custa 10 gp."
+  ],
+  "coords": [
+    {"x": 32045, "y": 31580, "z": 7, "label": "Svenson — docas de Folda"},
+    {"x": 32127, "y": 31660, "z": 7, "label": "Anderson — jangada do oeste de Senja"},
+    {"x": 32023, "y": 31692, "z": 7, "label": "Carlson — jangada do leste de Vega"},
+    {"x": 32388, "y": 31822, "z": 6, "label": "Porto de Carlin (Captain Greyhound)"}
+  ]
+}

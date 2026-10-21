@@ -1,0 +1,28 @@
+{
+  "title": "Gardens of Night",
+  "type": "gruta",
+  "near": "Darashia",
+  "summary": "Jardins subterrâneos das sacerdotisas negras em **Drefia**, a oeste de Darashia, a **leste das Necromancer Halls**: areia escura e branca, árvores secas, santuários estranhos e {creature:Priestess|Priestesses}; fazem parte da {wiki:The Gravedigger of Drefia Quest}.",
+  "entrance": {"x": 33037, "y": 32357, "z": 10, "label": "Entrada dos Gardens of Night (quadro \"Apothecary and Holy Grounds...\")"},
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).",
+    "Atravessa as montanhas para **oeste** até {wiki:Drefia} ({coord:33018,32443,7}): por exemplo, sobe com a {item:Rope} em {coord:33048,32429,7}, ou vem pela passagem entre Darashia e Ankrahmun.",
+    "Entra no dungeon principal de Drefia ({coord:32996,32413,7}) e desce **3 andares**.",
+    "Vai para **nordeste** até ao poço dos ciclopes. Segue diretamente para **norte** através de 2 salas e vira para **leste**; anda para leste até passares um bar e vira para **norte**. Estás nos Gardens of Night ({coord:33037,32357,10})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: para **sul**, **oeste** até ao poço dos ciclopes e sobe os 3 andares até à entrada do dungeon principal ({coord:32996,32413,7}).",
+    "Atravessa a montanha de volta para **Darashia** (pelo sítio de corda {coord:33048,32429,7} ou pela passagem entre Darashia e Ankrahmun). Em Darashia apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}."
+  ],
+  "coords": [
+    {"x": 33018, "y": 32443, "z": 7, "label": "Drefia"},
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda entre Darashia e Drefia"},
+    {"x": 32996, "y": 32413, "z": 7, "label": "Entrada do dungeon principal de Drefia"},
+    {"x": 33037, "y": 32357, "z": 10, "label": "Entrada dos Gardens of Night"},
+    {"x": 33056, "y": 32346, "z": 10, "label": "Gardens of Night"}
+  ],
+  "warnings": [
+    "Nos jardins há {creature:Priestess|Priestesses}, {creature:Shadow Pupil|Shadow Pupils} e {creature:Demon Skeleton|Demon Skeletons}; na montanha a caminho de Drefia há muitos {creature:Scorpion|Scorpions} (guarda mana para curar o veneno)."
+  ]
+}

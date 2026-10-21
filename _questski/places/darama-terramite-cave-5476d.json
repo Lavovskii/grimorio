@@ -1,0 +1,29 @@
+{
+  "title": "Darama Terramite Cave",
+  "type": "gruta",
+  "near": "Ankrahmun",
+  "summary": "Gruta de {creature:Terramite|Terramites} por baixo das {wiki:Kha'zeel Mountains} que liga o deserto de Kha'labal (lado de Ankrahmun) à selva de Tiquanda (lado de Port Hope); serve também de atalho para atravessar a montanha.",
+  "entrance": {"x": 33104, "y": 32697, "z": 7, "label": "Entrada do lado do deserto de Kha'labal"},
+  "arrive": [
+    "**Do lado de Ankrahmun:** viaja até Ankrahmun (de barco, {key:hi}, {key:ankrahmun}, {key:yes} ao capitão da tua cidade; chegas ao {npc:Captain Sinbeard}) e atravessa o deserto de Kha'labal para **noroeste** até à entrada da gruta ({coord:33104,32697,7}).",
+    "**Do lado de Port Hope:** viaja até Port Hope ({key:hi}, {key:port hope}, {key:yes}; chegas ao {npc:Charles}) e atravessa a selva de Tiquanda para **leste** até à entrada ({coord:32976,32686,7}).",
+    "A gruta tem duas câmaras de Terramites separadas por uma pequena zona vazia dentro da montanha, onde podes descansar. Com uma {item:Pick} chegas a pelo menos uma gruta mais funda (usa-a em {coord:33027,32708,8})."
+  ],
+  "leave": [
+    "Sai por qualquer uma das duas entradas: a do deserto ({coord:33104,32697,7}) leva-te para o lado de Ankrahmun, a da selva ({coord:32976,32686,7}) para o lado de Port Hope.",
+    "Regressa a pé à cidade e apanha o barco: {npc:Captain Sinbeard} em Ankrahmun ({coord:33094,32884,6}) ou {npc:Charles} em Port Hope ({coord:32529,32785,6}), com {key:hi}, o destino e {key:yes}.",
+    "Se só queres atravessar a montanha, também podes ir por cima, pelo {wiki:Kha'zeel Pass}."
+  ],
+  "coords": [
+    {"x": 32976, "y": 32686, "z": 7, "label": "Entrada do lado da selva de Tiquanda"},
+    {"x": 33027, "y": 32708, "z": 8, "label": "Sítio da Pick para a gruta mais funda"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"}
+  ],
+  "images": [
+    {"file": "DaramaTerramiteCave.png", "caption": "Mapa da Darama Terramite Cave"}
+  ],
+  "warnings": [
+    "Leva comida (por exemplo carne de elefantes da selva): os {item:Terramite Eggs} valem dinheiro e não convém comê-los. O wiki recomenda nível 30+."
+  ]
+}

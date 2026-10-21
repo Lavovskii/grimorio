@@ -1,0 +1,255 @@
+{
+  "slug": "the-djinn-war-marid-faction",
+  "category": "historia",
+  "region": "Ankrahmun",
+  "difficulty": 3,
+  "duration": "2–3 horas",
+  "summary": "Os Marid (djinns azuis) e os Efreet (djinns verdes) estão em guerra no deserto. Alia-te aos Marid de {wiki:Ashta'daramai|Ashta'daramai}: arranja um livro de receitas para o cozinheiro, vai buscar o relatório de um espião à fortaleza inimiga e troca a lâmpada do líder Efreet, {npc:Malor}, por outra amaldiçoada. No fim podes negociar com {npc:Haroun} e {npc:Nah'Bob}, recebes 3 {item:Small Sapphire|Small Sapphires} e podes caçar Efreets e Green Djinns.",
+  "legend_pt": "Alia-te aos Marid, uma antiga raça de djinns, para aniquilar os seus rivais, os temíveis Efreet, e ganhar a confiança eterna destas criaturas poderosas.",
+  "start": {"x": 33192, "y": 32820, "z": 7, "label": "Melchior, nas ruas de Ankrahmun"},
+  "requirements": [
+    "Premium.",
+    "Nível 40 (recomendado 50+); a porta da fortaleza azul é uma {item:Door of Expertise} de nível 30 e a sala do Orc King exige nível 40.",
+    "**Só podes escolher uma fação**: depois de te aliares aos Marid já não podes fazer a {wiki:The Djinn War - Efreet Faction|Efreet Faction}."
+  ],
+  "items_needed": [
+    {"item": "Cheese", "note": "para o rato espião Rata'mari"},
+    {"item": "Cookbook", "note": "compra à Maryza em Kazordoon por 150 gp"},
+    {"item": "Poison Bomb", "note": "recomendado para a lâmpada do Orc King"},
+    {"item": "Dwarven Ring", "note": "vários, recomendado na fortaleza verde"}
+  ],
+  "rewards": [
+    {"item": "Small Sapphire", "qty": 3},
+    {"item": "Gemmed Lamp", "note": "usada na missão 3"},
+    {"text": "Poder negociar com {npc:Haroun} e {npc:Nah'Bob}"},
+    {"text": "Poder caçar {creature:Efreet|Efreets} e {creature:Green Djinn|Green Djinns} em Ankrahmun e Yalahar"},
+    {"text": "Poder começar a task de caça a Green Djinns ({wiki:Killing in the Name of... Quest|Killing in the Name of...}) com o {npc:Gabel}"}
+  ],
+  "unlocks": [
+    {"what": "Comércio com Haroun e Nah'Bob", "kind": "npc", "place": "Ashta'daramai", "when": "Ao reportares a missão 3 (a lâmpada do Malor) ao {npc:Gabel}.", "note": "Só podes escolher uma fação: depois disto já não podes fazer a {wiki:The Djinn War - Efreet Faction|Efreet Faction}."},
+    {"what": "Task de caça a Green Djinns (Killing in the Name of...)", "kind": "funcionalidade", "place": "Killing in the Name of... Quest", "when": "No fim da quest: diz {key:task} ao {npc:Gabel}."},
+    {"what": "Caçar Efreets e Green Djinns em Ankrahmun e Yalahar", "kind": "funcionalidade", "when": "No fim da quest."}
+  ],
+  "dangers": ["Green Djinn", "Efreet", "Gargoyle", "Dragon", "Orc Warlord", "Orc Leader", "Orc Berserker", "Orc Warrior", "Stone Golem", "Stalker", "Wyvern", "Lion", "Hyaena", "Cobra", "Scorpion"],
+  "npcs": ["Melchior", "Umar", "Bo'Ques", "Maryza", "Fa'Hradin", "Rata'Mari", "Gabel", "The Orc King", "Haroun", "Nah'Bob"],
+  "tips": [
+    "Faz primeiro a {wiki:To Appease the Mighty Quest|To Appease the Mighty Quest}: só pode ser feita **antes** de começares The Djinn War e dá 20 {item:Platinum Coin|Platinum Coins}.",
+    "Leva o {item:Cheese} logo na missão 2, para não teres de voltar à fortaleza verde.",
+    "Para a missão 3 vai com amigos fortes (bloqueadores e atiradores): a fortaleza verde tem cada vez mais Green Djinns, Efreets e Gargoyles à medida que sobes."
+  ],
+  "sections": [
+    {
+      "title": "1. Aprender a palavra de saudação e entrar na fortaleza",
+      "steps": [
+        {
+          "title": "Falar com o Melchior",
+          "text": "Em **Ankrahmun**, procura o {npc:Melchior}, que anda pelas ruas. Diz {key:hi} e {key:word of greeting}. Ele ensina-te a palavra **DJANNI'HAH**, que te deixa entrar em qualquer uma das fortalezas. Para ires a Ankrahmun, diz ao capitão do porto {key:hi}, {key:ankrahmun}, {key:yes}.",
+          "npc": "Melchior",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "word of greeting"},
+            {"npc": "[...] I can tell you the word of greeting if you're interested. It is DJANNI'HAH. [...]"},
+            {"npc": "And keep in mind that you must choose sides in this conflict. You can only follow the Efreet or the Marid - once you have made your choice there is no way back. [...]"}
+          ],
+          "coords": [{"x": 33192, "y": 32820, "z": 7, "label": "Melchior (anda pelas ruas)"}]
+        },
+        {
+          "title": "Ir até à fortaleza azul",
+          "text": "A norte de Ankrahmun, sobe a rampa a **oeste** da colina das Giant Spiders. Segue para **noroeste** até encontrares a {item:Door of Expertise} de nível 30 e entra. Para voltares a Ankrahmun, faz o mesmo caminho ao contrário: desce a rampa e segue para **sul**.",
+          "coords": [{"x": 33120, "y": 32578, "z": 7, "label": "Rampa para Ashta'daramai"}]
+        },
+        {
+          "title": "Pedir passagem ao Umar",
+          "text": "Fala com o {npc:Umar} começando por {key:DJANNI'HAH} (em vez de hi). Depois diz {key:passage}, {key:yes} e {key:yes} outra vez para jurares lealdade ao rei Gabel. A partir daqui, nas visitas seguintes, basta dizer {key:hi}.",
+          "npc": "Umar",
+          "dialogue": [
+            {"you": "DJANNI'HAH"},
+            {"npc": "Whoa? You know the word! Amazing! [...] Well. Why are you here anyway?"},
+            {"you": "passage"},
+            {"npc": "If you want to enter our fortress you have to become one of us and fight the Efreet. [...] So, are you willing to do so?"},
+            {"you": "yes"},
+            {"npc": "Are you sure? You pledge loyalty to king Gabel [...]? Yes?"},
+            {"you": "yes"},
+            {"npc": "Oh. Ok. Welcome then. You may pass. [...]"}
+          ],
+          "warning": "Ao aceitares, escolhes a fação Marid para sempre."
+        }
+      ]
+    },
+    {
+      "title": "2. Missão 1: o Cookbook",
+      "steps": [
+        {
+          "title": "Falar com o Bo'Ques",
+          "text": "Sobe ao andar de cima e fala com o cozinheiro {npc:Bo'Ques}: {key:hi}, {key:mission} e {key:yes}. Ele quer um livro de receitas da cozinha anã.",
+          "npc": "Bo'Ques",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] There is something you could help me with. Are you interested?"},
+            {"you": "yes"},
+            {"npc": "[...] So, if you could bring me a cookbook of the dwarven kitchen I will reward you well."}
+          ]
+        },
+        {
+          "title": "Comprar o Cookbook à Maryza",
+          "text": "Se ainda não tens o livro, vai a **Kazordoon** e fala com a {npc:Maryza} na taberna (perto do depot), dizendo {key:hi Maryza}. Compra o {item:Cookbook} por **150 gp**. Ela só vende um exemplar por jogador. Chegas a Kazordoon a pé ou de {wiki:Steamship} (por exemplo a partir de Cormaya, com o {npc:Gurbasch}); para voltares a Ankrahmun, apanha um barco num porto (por exemplo Venore ou Thais) com {key:ankrahmun}.",
+          "npc": "Maryza"
+        },
+        {
+          "title": "Entregar o livro",
+          "text": "Volta ao {npc:Bo'Ques} e diz {key:hi}, {key:cookbook} e {key:yes}. Recebes 3 {item:Small Sapphire|Small Sapphires} e ele diz-te para falares com o {npc:Fa'Hradin}.",
+          "npc": "Bo'Ques",
+          "dialogue": [
+            {"you": "cookbook"},
+            {"npc": "Do you have the cookbook of the dwarven kitchen with you? Can I have it?"},
+            {"you": "yes"},
+            {"npc": "The book! You have it! [...] Here is your well-deserved reward. [...] I think he might have some work for you."}
+          ],
+          "reward": "3 Small Sapphires"
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 2: o relatório do espião",
+      "steps": [
+        {
+          "title": "Falar com o Fa'Hradin",
+          "text": "O {npc:Fa'Hradin} está na varanda, no mesmo andar do Bo'Ques. Diz {key:hi} e {key:mission}. Ele pede-te para ires buscar o relatório do espião que têm na fortaleza verde (Mal'ouquah) e dá-te a senha **PIEDPIPER**.",
+          "npc": "Fa'Hradin",
+          "coords": [{"x": 33106, "y": 32541, "z": 5, "label": "Fa'Hradin (varanda)"}],
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] I need you to infiltrate Mal'ouqhah, contact our man there and get his latest spyreport. The password is PIEDPIPER. Remember it well! [...]"}
+          ],
+          "warning": "Só consegues entrar pela porta das traseiras da fortaleza verde **depois** de teres esta missão."
+        },
+        {
+          "title": "Subir a rampa junto ao oásis",
+          "text": "Com o {item:Cheese} na mochila, sobe a rampa a **oeste** do oásis.",
+          "coords": [{"x": 33101, "y": 32657, "z": 7, "label": "Rampa a oeste do oásis"}]
+        },
+        {
+          "title": "Contornar a fortaleza verde pelo norte",
+          "text": "Em vez de ires para oeste até à porta da frente da fortaleza verde, segue o caminho para **norte** e contorna até às traseiras. Vais subir e descer algumas rampas e encontrar {creature:Lion|Lions}, {creature:Hyaena|Hyaenas}, {creature:Cobra|Cobras}, {creature:Scorpion|Scorpions} e um {creature:Wyvern}.",
+          "coords": [
+            {"x": 33060, "y": 32594, "z": 6, "label": "Caminho para norte"},
+            {"x": 33033, "y": 32620, "z": 6, "label": "Entrada secreta (porta das traseiras)"}
+          ]
+        },
+        {
+          "title": "Entrar e descer",
+          "text": "Entra pela porta das traseiras. Mata as {creature:Hyaena|Hyaenas} e o {creature:Green Djinn} e desce as escadas. Lá em baixo há **3** {creature:Green Djinn|Green Djinns}: mata-os todos.",
+          "warning": "Os Green Djinns lançam magias fortes. Leva poções e cura-te com tempo."
+        },
+        {
+          "title": "Falar com o Rata'Mari",
+          "text": "Fala com o rato {npc:Rata'Mari} dizendo {key:PIEDPIPER} **em vez de** hi. Depois diz {key:spy report}; ele pede queijo. Diz {key:spy report} outra vez e {key:yes} para lhe dares o {item:Cheese}. Recebes o {item:Spy Report}.",
+          "npc": "Rata'Mari",
+          "dialogue": [
+            {"you": "PIEDPIPER"},
+            {"npc": "Meep? I mean - hello! [...] Being a rat has kind of grown on me."},
+            {"you": "spy report"},
+            {"npc": "[...] I need some cheese! I need it now! [...] Meep!"},
+            {"you": "spy report"},
+            {"npc": "Ok, have you brought me the cheese, I've asked for?"},
+            {"you": "yes"},
+            {"npc": "Meep! Meep! Great! Here is the spyreport for you!"}
+          ],
+          "reward": "Spy Report"
+        },
+        {
+          "title": "Sair da fortaleza verde",
+          "text": "Volta pelo mesmo caminho: sobe as escadas, sai pela porta das traseiras e contorna a fortaleza pelo **norte** até à rampa a oeste do oásis. Daí regressa à fortaleza azul."
+        },
+        {
+          "title": "Entregar o relatório",
+          "text": "Volta ao {npc:Fa'Hradin} na fortaleza azul e diz {key:hi}, {key:mission} e {key:yes}. Ele manda-te falar com o {npc:Gabel}, lá em cima.",
+          "npc": "Fa'Hradin",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Did you already retrieve the spyreport?"},
+            {"you": "yes"},
+            {"npc": "You really have made it? [...] I think I need to talk to Gabel about this. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 3: a lâmpada do Malor",
+      "steps": [
+        {
+          "title": "Falar com o Gabel",
+          "text": "Sobe até ao {npc:Gabel} e diz {key:hi}, {key:mission} e {key:yes}. Ele quer que vás buscar a lâmpada do Fa'Hradin ao Orc King e que a troques pela lâmpada onde o {npc:Malor} dorme.",
+          "npc": "Gabel",
+          "coords": [{"x": 33102, "y": 32520, "z": 1, "label": "Gabel"}],
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Are you prepared to do us that final favour?"},
+            {"you": "yes"},
+            {"npc": "[...] the lamp is still in the Orc King's possession! [...] Sneak into Malor's personal chambers and exchange his sleeping lamp with Fa'hradin's lamp! [...]"}
+          ]
+        },
+        {
+          "title": "Ir até ao Orc King",
+          "text": "Vai a {wiki:Ulderek's Rock|Ulderek's Rock} (Orc Fortress) e desce até à sala do {npc:The Orc King}. Para entrares na câmara precisas de **nível 40**. Ulderek's Rock fica a **norte** de Venore e a **leste** de Ab'Dendriel: de Ankrahmun apanha o barco para Venore ({key:venore}) e segue a pé para **norte**. O Orc King está 2 andares abaixo do nível do chão.",
+          "coords": [
+            {"x": 32874, "y": 31772, "z": 7, "label": "Ulderek's Rock"},
+            {"x": 32982, "y": 31736, "z": 9, "label": "The Orc King"}
+          ],
+          "warning": "Se nunca falaste com o Orc King, ao dizeres hi ele invoca {creature:Orc Warlord|Orc Warlords}, {creature:Orc Leader|Orc Leaders}, {creature:Orc Berserker|Orc Berserkers} e talvez mais."
+        },
+        {
+          "title": "Pedir a lâmpada",
+          "text": "Diz {key:hi} (aparecem os orcs) e {key:hi} outra vez. Depois diz {key:lamp} e, quando ele perguntar quem queres prender, responde {key:Malor}. Recebes a {item:Gemmed Lamp}.",
+          "npc": "The Orc King",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Arrrrgh! A dirty paleskin! To me my children! Kill them my guards!"},
+            {"you": "hi"},
+            {"you": "lamp"},
+            {"npc": "[...] Who do you want to trap in this cursed lamp?"},
+            {"you": "Malor"},
+            {"npc": "I was waiting for this day! Take the lamp and let Malor feel my wrath!"}
+          ],
+          "tip": "Forma mais segura: lança uma {item:Poison Bomb} debaixo do Orc King, cumprimenta-o duas vezes, pede a lâmpada e foge.",
+          "reward": "Gemmed Lamp"
+        },
+        {
+          "title": "Sair de Ulderek's Rock",
+          "text": "Foge da sala do Orc King e volta pelo mesmo caminho: sobe os 2 andares até à superfície e regressa a Venore, onde o capitão do porto te leva a Ankrahmun ({key:hi}, {key:ankrahmun}, {key:yes})."
+        },
+        {
+          "title": "Subir a fortaleza verde",
+          "text": "Volta à fortaleza verde pela **entrada secreta** (a mesma da missão 2) e sobe até ao último andar, onde fica o quarto do {npc:Malor}. Quanto mais sobes, mais {creature:Green Djinn|Green Djinns}, {creature:Efreet|Efreets} e {creature:Gargoyle|Gargoyles} encontras.",
+          "coords": [{"x": 33033, "y": 32620, "z": 6, "label": "Entrada secreta da fortaleza verde"}],
+          "warning": "Já não dá para fugir com stairhop. Vai com amigos fortes, usa sempre um {item:Dwarven Ring} e considera {spell:Magic Shield|mana shield}. Knights podem usar exori mas, paladins exevo mas san e mages runas."
+        },
+        {
+          "title": "Trocar a lâmpada",
+          "text": "No quarto do Malor, põe-te em frente da lâmpada que está **no balcão, ao lado da cama**, e usa a tua {item:Gemmed Lamp} nela **uma vez**. Confirma no Quest Log (terceira missão) que aparece *\"You successfully changed...\"*.",
+          "coords": [{"x": 33044, "y": 32621, "z": 1, "label": "Quarto do Malor"}]
+        },
+        {
+          "title": "Descer e sair da fortaleza verde",
+          "text": "Desce pelo mesmo caminho até à entrada secreta (as criaturas continuam lá: não contes com fugir por stairhop), sai e volta pela rampa a oeste do oásis. Depois sobe à fortaleza azul para falares com o {npc:Gabel}."
+        },
+        {
+          "title": "Reportar ao Gabel",
+          "text": "Volta ao {npc:Gabel} e diz {key:hi}, {key:mission} e {key:yes}. A partir de agora podes negociar com o {npc:Haroun} e o {npc:Nah'Bob}. Podes também dizer {key:task} ao Gabel para começares a task de caça aos Green Djinns.",
+          "npc": "Gabel",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Have you found Fa'hradin's lamp and placed it in Malor's personal chambers?"},
+            {"you": "yes"},
+            {"npc": "[...] Know, that from now on you are considered one of us and are welcome to trade with Haroun and Nah'bob whenever you want to!"}
+          ],
+          "reward": "Acesso ao comércio com Haroun e Nah'Bob"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O {npc:Nah'Bob} e o {npc:Haroun} compram e vendem equipamento forte a bons preços — é a principal razão para fazer esta quest.",
+    "Se preferires a fação verde, vê a {wiki:The Djinn War - Efreet Faction|The Djinn War - Efreet Faction}. Não podes fazer as duas."
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "slug": "in-service-of-yalahar-quest",
+  "category": "historia",
+  "region": "Yalahar",
+  "difficulty": 4,
+  "duration": "10–20 horas (vários dias)",
+  "summary": "A grande quest de Yalahar: começas por ir buscar as notas de pesquisa do Explorer Society à recém-descoberta cidade e acabas envolvido na luta pelo poder entre o {npc:Palimuth} e o Yalahari Azerus. Ao longo de 10 missões ganhas acesso aos mecanismos de todos os bairros, escolhes um lado (com achievement próprio) e enfrentas o {creature:Azerus} numa batalha final. No fim recebes o {wiki:Yalaharian Outfits|Yalaharian Outfit} e escolhes uma peça Yalahari.",
+  "legend_pt": "A recém-descoberta ilha de Yalahar precisa de ser investigada a fundo.",
+  "start": {"x": 33268, "y": 31838, "z": 6, "label": "Wyrdin, nas Ivory Towers (Edron)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível 80 para as missões finais: o requisito só se aplica a partir da missão 9 (as recompensas de item e outfit exigem nível 80). Recomendado nível 120+.",
+    "Membro do {wiki:Tibian Explorer Society|Explorer Society} com rank **Novice** ou superior (sem isso o {npc:Captain Max} não fala contigo).",
+    "Ter concluído os 3 testes da {wiki:Barbarian Test Quest}.",
+    "Missão 5: ter feito (ou levar um amigo que tenha feito) a primeira missão da {wiki:Ice Islands Quest} (Nibelor: Breaking the Ice), para teres acesso a Nibelor.",
+    "Missão 7: {item:Helmet of the Deep} ou {item:Depth Galea} para andar debaixo de água."
+  ],
+  "items_needed": [
+    {"item": "Crowbar", "note": "missão 1 (ou {item:Whacking Driller of Fate})"},
+    {"item": "Helmet of the Deep", "note": "missão 7 (ou {item:Depth Galea})"},
+    {"text": "5 dos 8 itens de cidade para o {npc:Karith} (ver tabela na secção 2) — opcional mas muito recomendado"},
+    {"item": "Animal Cure", "note": "missão 5, comprada ao {npc:Siflind} em Nibelor"},
+    {"text": "Dinheiro para viagens"},
+    {"item": "Rope"},
+    {"item": "Shovel"}
+  ],
+  "rewards": [
+    {"item": "Platinum Coin", "qty": 5, "note": "500 gp do Wyrdin ao concluir 'The Way to Yalahar'"},
+    {"text": "Rotas de barco de/para Yalahar com o {npc:Karith} (Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore)"},
+    {"text": "Acesso aos mecanismos dos bairros: Alchemist, Trade, Arena, Cemetery, Sunken e Factory Quarter"},
+    {"text": "{wiki:Yalaharian Outfits|Yalaharian Outfit} (base)"},
+    {"text": "Uma peça à escolha: {item:Yalahari Armor}, {item:Yalahari Leg Piece}, {item:Yalahari Mask} ou {item:Yalahari Footwraps}"},
+    {"text": "Um de três achievements: **Follower of Palimuth**, **Follower of Azerus** ou **Turncoat**"}
+  ],
+  "achievements": ["Follower of Palimuth", "Follower of Azerus", "Turncoat"],
+  "unlocks": [
+    {"what": "Barco para Yalahar com o {npc:Captain Max} (Liberty Bay)", "kind": "transporte", "place": "Yalahar", "when": "Ao começares a quest com o {npc:Wyrdin} (missão *The Way to Yalahar*).", "note": "Precisas também do rank **Novice** da Explorer Society. Em alternativa, a palavra-passe {key:whizzkid} do {npc:Wyrdin's Apprentice} (250 gp) deixa-te ir de Thais com o {npc:Captain Bluebear}."},
+    {"what": "Barcos diretos entre Yalahar e 8 cidades ({npc:Karith})", "kind": "transporte", "place": "Yalahar", "when": "Missão opcional *Searoutes around Yalahar*: entrega ao Karith 5 dos 8 itens de cidade.", "note": "Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore."},
+    {"what": "Mecanismo do portão do Alchemist Quarter", "kind": "zona", "place": "Alchemist Quarter", "when": "Missão 03 (*Death to the Deathbringer*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "Mecanismo do portão do Trade Quarter", "kind": "zona", "place": "Trade Quarter", "when": "Missão 04 (*Good to be Kingpin*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "Mecanismo do portão do Arena Quarter", "kind": "zona", "place": "Arena and Zoo Quarter", "when": "Missão 05 (*Food or Fight*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "Mecanismo do portão do Cemetery Quarter", "kind": "zona", "place": "Cemetery Quarter", "when": "Missão 06 (*Frightening Fuel*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "Mecanismo do portão do Sunken Quarter", "kind": "zona", "place": "Sunken Quarter", "when": "Missão 07 (*A Fishy Mission*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "Mecanismo do portão do Factory Quarter", "kind": "zona", "place": "Factory Quarter", "when": "Missão 08 (*Dangerous Machinations*): ao receberes a missão do {npc:Yalahari (NPC)}."},
+    {"what": "{wiki:Shadows of Yalahar Quest}", "kind": "missao", "when": "Exige pelo menos a Missão 03 desta quest iniciada (para entrar no centro de Yalahar)."},
+    {"what": "Addon do Yalaharian Outfit ({wiki:Yalaharian Outfits Quest})", "kind": "missao", "when": "Exige esta quest concluída; o lado que escolhes na Missão 09 decide se recebes o addon Sage ou o Villain.", "note": "O addon pede também a {wiki:Blood Brothers Quest}."}
+  ],
+  "dangers": ["Diseased Dan", "Diseased Bill", "Diseased Fred", "Death Blob", "Mutated Human", "Mutated Rat", "Acid Blob", "Slime", "Mutated Tiger", "Bog Raider", "Tarantula", "Centipede", "Bandit", "Smuggler", "Mad Scientist", "Gladiator", "Gang Member", "Morik the Gladiator", "Tormented Ghost", "Quara Constrictor", "Quara Mantassin", "Quara Hydromancer", "Quara Pincher", "Quara Predator", "Inky", "Splasher", "Sharptooth", "Damaged Worker Golem", "Worker Golem", "Azerus", "Rift Worm", "Rift Brood", "Rift Scythe", "War Golem"],
+  "npcs": ["Wyrdin", "Wyrdin's Apprentice", "Captain Max", "Captain Bluebear", "Timothy", "Karith", "Palimuth", "Yalahari (NPC)", "Mr. West", "Tamerin", "Siflind", "Maritima", "Tarak", "Guide Edna", "Gamon", "Rodney", "Livielle", "Brasith", "Florentine", "Lyonel", "Omur", "Mehkesh"],
+  "tips": [
+    "Compra 5 dos itens de cidade **antes** de ires para Yalahar: ao entregá-los ao {npc:Karith} desbloqueias barcos diretos para 8 cidades e poupas muito tempo e dinheiro.",
+    "A partir da missão 3 escolhes, missão a missão, entre o lado bom ({npc:Palimuth}) e o lado mau (Yalahari/Azerus). Mesmo que não queiras ajudar o Palimuth, pergunta-lhe sempre {key:mission} quando o Yalahari te dá uma nova missão — caso contrário as portas seladas não abrem.",
+    "Se quiseres o achievement **Follower of Palimuth** ou **Follower of Azerus**, faz **todas** as missões do mesmo lado e escolhe esse mesmo lado na missão 9.",
+    "Nas missões com bosses (missão 3 e lado mau da missão 7) só conta para quem fizer mais dano/experiência a cada boss. Em equipa, cada um tem de 'ganhar' o seu boss.",
+    "A batalha final (missão 10) é dura e tem limite de tempo de cerca de 12 minutos: leva amigos ou ajudantes mais fortes se o teu nível for baixo."
+  ],
+  "sections": [
+    {
+      "title": "0. Preparação: itens de cidade para o Karith",
+      "intro": "Opcional, mas recomendado. Na secção 2 vais entregar **5 de 8** itens especiais ao capitão {npc:Karith} para abrir rotas de barco. Compra-os já, enquanto passas pelas cidades.",
+      "steps": [
+        {
+          "title": "Comprar 5 dos 8 itens",
+          "text": "Compra **cinco** dos itens da tabela (não interessa quais — as 8 rotas ficam todas desbloqueadas na mesma). Clica nas coordenadas para ver onde está cada vendedor.",
+          "table": {
+            "head": ["Cidade", "Onde", "Item", "Preço"],
+            "rows": [
+              ["Thais", "{npc:Gamon} ({coord:32408,32170,7})", "{item:Piece of Royal Satin}", "200 gp"],
+              ["Venore", "{npc:Rodney} ou {npc:Livielle} ({coord:32975,32038,6})", "{item:Sample of Venorean Spice}", "200 gp"],
+              ["Ab'Dendriel", "{npc:Brasith} ({coord:32692,31589,7})", "{item:Bottle of Bug Milk}", "200 gp"],
+              ["Carlin", "{npc:Florentine} ({coord:32362,31796,7})", "{item:Bowl of Evergreen Flowers}", "150 gp"],
+              ["Liberty Bay", "{npc:Lyonel} ({coord:32297,32831,7})", "{item:Rum Flask} (com rum)", "150 gp (pode ser feito)"],
+              ["Port Hope", "{creature:Elephant|Elephants} (loot)", "{item:Tusk}", "—"],
+              ["Darashia", "{npc:Omur} ({coord:33228,32416,7})", "{item:Sample of Sand Wasp Honey}", "200 gp"],
+              ["Ankrahmun", "{npc:Mehkesh} ({coord:33130,32811,5})", "{item:Jug of Embalming Fluid}", "200 gp"]
+            ]
+          },
+          "coords": [
+            {"x": 32408, "y": 32170, "z": 7, "label": "Gamon (Thais) — Piece of Royal Satin"},
+            {"x": 32975, "y": 32038, "z": 6, "label": "Rodney / Livielle (Venore) — Sample of Venorean Spice"},
+            {"x": 32692, "y": 31589, "z": 7, "label": "Brasith (Ab'Dendriel) — Bottle of Bug Milk"},
+            {"x": 32362, "y": 31796, "z": 7, "label": "Florentine (Carlin) — Bowl of Evergreen Flowers"},
+            {"x": 32297, "y": 32831, "z": 7, "label": "Lyonel (Liberty Bay) — Rum Flask"},
+            {"x": 33228, "y": 32416, "z": 7, "label": "Omur (Darashia) — Sample of Sand Wasp Honey"},
+            {"x": 33130, "y": 32811, "z": 5, "label": "Mehkesh (Ankrahmun) — Jug of Embalming Fluid"}
+          ],
+          "tip": "A {item:Rum Flask} vazia pode ser lootada de piratas ou encontrada como respawn diário (por exemplo num dos navios piratas do Foreigner Quarter). O {npc:Armenius} vende canecas de rum que podes despejar no frasco."
+        }
+      ]
+    },
+    {
+      "title": "1. The Way to Yalahar",
+      "intro": "Missão de introdução do Explorer Society. Concluí-la não é obrigatório para continuar, mas dá 500 gp.",
+      "steps": [
+        {
+          "title": "Falar com o Wyrdin (Edron)",
+          "text": "Vai às **Ivory Towers**, em Edron, e fala com o {npc:Wyrdin} no centro. Diz {key:hi} e {key:mission}. Ele pede-te para ires a Yalahar buscar as notas de pesquisa do representante do Explorer Society e diz-te que o {npc:Captain Max}, em Liberty Bay, te leva lá. As Ivory Towers ficam na parte **leste** de Edron; o Wyrdin está na torre do meio (a quarta), 1 andar acima do rés-do-chão. Se ainda não estás em Edron, apanha um barco para lá ({key:hi}, {key:edron}, {key:yes} ao capitão do porto).",
+          "npc": "Wyrdin",
+          "dialogue": [
+            {"you": "hello"},
+            {"npc": "Hello, what brings you here?"},
+            {"you": "mission"},
+            {"npc": "There is indeed something that needs our attention. In the far north, a new city named Yalahar has been discovered. [...]"},
+            {"npc": "Please look for the Explorer Society's captain Maximilian in Liberty Bay. Ask him for passage to Yalahar. Once there, visit Timothy of the Explorer Society and get his research notes. [...]"}
+          ],
+          "coords": [
+            {"x": 33267, "y": 31849, "z": 7, "label": "Ivory Towers (Edron)"},
+            {"x": 33268, "y": 31838, "z": 6, "label": "Wyrdin (1 andar acima)"}
+          ]
+        },
+        {
+          "title": "Alternativa: Wyrdin's Apprentice",
+          "text": "Em alternativa, fala com o {npc:Wyrdin's Apprentice}, a oeste de Kazordoon, sobre {key:Yalahar}. Paga-lhe **250 gold** pela palavra-passe ({key:whizzkid}) e passas a poder viajar de Thais para Yalahar com o {npc:Captain Bluebear}, no barco de Thais.",
+          "npc": "Wyrdin's Apprentice",
+          "coords": [{"x": 32433, "y": 31982, "z": 7, "label": "Wyrdin's Apprentice (oeste de Kazordoon)"}]
+        },
+        {
+          "title": "Viajar para Yalahar",
+          "text": "Vai a **Liberty Bay** e fala com o {npc:Captain Max}. Pede passagem para Yalahar ({key:hi}, {key:Yalahar}). Lembra-te: precisas do rank **Novice** do Explorer Society para ele falar contigo. Chegas ao porto de Yalahar, a **sul** do centro da cidade. Se pagaste a palavra-passe ao {npc:Wyrdin's Apprentice}, também podes ir de Thais com o {npc:Captain Bluebear}.",
+          "npc": "Captain Max"
+        },
+        {
+          "title": "Pedir as notas ao Timothy",
+          "text": "Em Yalahar, procura o {npc:Timothy} logo a norte do depot. Diz {key:hi}, {key:research notes} e responde {key:yes} quando ele perguntar se queres ajudar o amigo dele, o {npc:Palimuth}. Recebes as {item:Research Notes}.",
+          "npc": "Timothy",
+          "dialogue": [
+            {"you": "hello"},
+            {"npc": "Oh, hello! It's a pleasure to see a visitor from the continent."},
+            {"you": "research notes"},
+            {"npc": "Oh, you are the contact person of the academy? Here are the notes that contain everything I have found out so far. [...] Maybe you are interested in this job?"},
+            {"you": "yes"},
+            {"npc": "Excellent! You will find Palimuth near the entrance of the city centre. Just ask him if you can assist him in a few missions."}
+          ],
+          "warning": "Não percas as notas: o Wyrdin precisa delas para te pagar."
+        },
+        {
+          "title": "Sair de Yalahar",
+          "text": "Para voltares ao continente, vai ao porto de Yalahar (a **sul** do centro) e fala com o {npc:Captain Cookie}: {key:hi}, {key:liberty bay} (400 gp) ou {key:thais} (800 gp), e {key:yes}. Depois de fazeres a secção 2, o {npc:Karith} leva-te a 8 cidades por menos dinheiro. Para regressares a Yalahar usa outra vez o {npc:Captain Max} em Liberty Bay (ou o {npc:Captain Bluebear} em Thais, se tiveres a palavra-passe).",
+          "npc": "Captain Cookie"
+        },
+        {
+          "title": "Entregar as notas (opcional)",
+          "text": "Quando te der jeito, volta ao {npc:Wyrdin} (ou ao {npc:Wyrdin's Apprentice}), diz {key:mission} e {key:yes}. Ele dá-te **500 gold**. Este passo não é necessário para continuares a quest.",
+          "npc": "Wyrdin",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Did you bring the papers I asked you for?"},
+            {"you": "yes"},
+            {"npc": "Oh marvellous, please excuse me. I need to read this text immediately. Here, take this small reward of 500 gold pieces for your efforts."}
+          ],
+          "reward": "500 gold (5 Platinum Coins)"
+        }
+      ]
+    },
+    {
+      "title": "2. Searoutes around Yalahar (opcional)",
+      "intro": "Não é obrigatório, mas desbloqueia barcos de Yalahar para 8 cidades, em vez de dependeres só de Liberty Bay.",
+      "steps": [
+        {
+          "title": "Pedir passagem ao Karith",
+          "text": "Fala com o capitão {npc:Karith}, a leste do {npc:Captain Cookie}, em Yalahar. Diz {key:hi} e {key:passage}. Ele recusa-se a abrir rotas até lhe provares que pelo menos 5 cidades valem a pena.",
+          "npc": "Karith",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello! Tell me what's on your mind. Time is money."},
+            {"you": "passage"},
+            {"npc": "[...] If you can prove that at least five of your so-called 'cities' are not worthless, I might reconsider my position. [...] Bring me something SPECIAL!"}
+          ]
+        },
+        {
+          "title": "Entregar os 5 itens",
+          "text": "Para cada item, diz o **nome da cidade** de onde ele vem (por exemplo {key:darashia}, {key:thais}, {key:carlin}, {key:ab'dendriel}, {key:venore}, {key:liberty bay}, {key:port hope} ou {key:ankrahmun}) e responde {key:yes}. Entrega **apenas cinco**. Não precisas de entregar todos de uma vez, mas é mais rápido.",
+          "npc": "Karith",
+          "dialogue": [
+            {"you": "darashia"},
+            {"npc": "From all what I have heard, it is an unremarkable pile of huts in the desert. Or did you find something interesting there?"},
+            {"you": "yes"},
+            {"npc": "Sand wasp honey? Hm, interesting at least!"},
+            {"you": "thais"},
+            {"you": "yes"},
+            {"npc": "This royal satin is indeed of acceptable quality."}
+          ]
+        },
+        {
+          "title": "Rotas desbloqueadas",
+          "text": "Diz {key:passage} outra vez: o Karith já te leva a **Ab'Dendriel, Darashia, Venore, Ankrahmun, Port Hope, Thais, Liberty Bay e Carlin**. Quem concluiu a {wiki:The Postman Missions Quest} paga menos 10 gp por viagem.",
+          "npc": "Karith",
+          "reward": "Rotas de barco do Karith para 8 cidades"
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 01: Something Rotten",
+      "steps": [
+        {
+          "title": "Aceitar a missão do Palimuth",
+          "text": "Fala com o {npc:Palimuth}, a leste do {npc:Timothy}, à entrada do centro da cidade. Diz {key:hi}, {key:mission}, {key:yes} e depois {key:mission} outra vez. Ele marca no teu mapa os 4 pontos do esgoto que tens de reparar.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "hello"},
+            {"npc": "Greetings."},
+            {"you": "mission"},
+            {"npc": "[...] Would you like to assist us in re-establishing order in our city?"},
+            {"you": "yes"},
+            {"npc": "[...] you can ask me for a mission any time, be it night or day."},
+            {"you": "mission"},
+            {"npc": "[...] Get yourself a crowbar, loosen the controls and clean the garbage from the pipes. [...] We were able to locate the 4 worst spots in the sewers. I will mark them for you on your map [...]"}
+          ]
+        },
+        {
+          "title": "Entrar no esgoto",
+          "text": "Leva um {item:Crowbar} (ou {item:Whacking Driller of Fate}). A maioria dos pontos é acessível pela {item:Sewer Grate|grelha de esgoto} logo a **leste do depot**. Um deles só é acessível pela grelha muito a **noroeste**, perto das escadas do Alchemist Quarter (a {npc:Guide Edna} marca-ta no mapa se lhe pedires). Usa a grelha para desceres 1 andar até ao esgoto.",
+          "map": {"x": 32804, "y": 31201, "z": 7, "marks": [
+            {"x": 32836, "y": 31256, "z": 7, "label": "Ponto marcado (superfície)"},
+            {"x": 32845, "y": 31170, "z": 7, "label": "Ponto marcado (superfície)"},
+            {"x": 32757, "y": 31173, "z": 7, "label": "Ponto marcado (superfície)"},
+            {"x": 32802, "y": 31240, "z": 7, "label": "Ponto marcado (superfície)"}
+          ]}
+        },
+        {
+          "title": "Reparar os 4 pontos",
+          "text": "Vai a cada um dos 4 pontos assinalados no esgoto (1 andar abaixo) e usa o {item:Crowbar} nos controlos/canos para os soltar e limpar o lixo. Faz isto nos quatro.",
+          "map": {"x": 32804, "y": 31201, "z": 8, "marks": [
+            {"x": 32824, "y": 31164, "z": 8, "label": "Ponto do esgoto"},
+            {"x": 32793, "y": 31152, "z": 8, "label": "Ponto do esgoto"},
+            {"x": 32843, "y": 31251, "z": 8, "label": "Ponto do esgoto"},
+            {"x": 32797, "y": 31193, "z": 8, "label": "Ponto do esgoto"}
+          ]},
+          "images": [
+            {"file": "Yalahar Quest Spot 1.jpg", "caption": "Ponto do esgoto 1"},
+            {"file": "Yalahar Quest Spot 2.jpg", "caption": "Ponto do esgoto 2"},
+            {"file": "Yalahar Quest Spot 3.jpg", "caption": "Ponto do esgoto 3"},
+            {"file": "Yalahar Quest Spot 4.jpg", "caption": "Ponto do esgoto 4"}
+          ]
+        },
+        {
+          "title": "Sair do esgoto",
+          "text": "Quando tiveres reparado os quatro pontos, volta pelo mesmo caminho até à grelha por onde desceste e sobe de novo para a rua (piso 7). O {npc:Palimuth} está a leste do {npc:Timothy}, perto do depot."
+        },
+        {
+          "title": "Reportar ao Palimuth",
+          "text": "Volta ao {npc:Palimuth}, diz {key:mission} e {key:yes}.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So are you done with your work?"},
+            {"you": "yes"},
+            {"npc": "Thank you very much. You have no idea how hard it was to find someone volunteering for that job. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 02: Watching the Watchmen",
+      "intro": "Tens de recolher o relatório dos 7 guardas que estão nas muralhas entre os bairros. É uma boa ocasião para conhecer os {wiki:Quarters|bairros} de Yalahar.",
+      "steps": [
+        {
+          "title": "Aceitar a missão",
+          "text": "Diz ao {npc:Palimuth} {key:mission} e depois {key:yes}.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] I need someone to travel to our garrisons to get the reports from the guards. Are you willing to do that?"},
+            {"you": "yes"},
+            {"npc": "[...] You'll find our seven guards at the gates of each quarter. Just ask them for their report and they will tell you all you need to know."}
+          ],
+          "warning": "Os bairros estão cheios de criaturas. Mantém-te nas estradas principais sempre que possível."
+        },
+        {
+          "title": "Falar com os 7 guardas",
+          "text": "Os guardas estão dentro das muralhas entre bairros (assinalados no mapa). A cada um diz {key:hi} e {key:report}; depois de te dar o relatório deixa-te passar para o bairro seguinte. É mais rápido começar pelo **Foreigner Quarter** (sudoeste), mas também podes começar pelo Magician Quarter (nordeste). Ordem recomendada: **Foreigner > Arena > Alchemist > Cemetery > Magician > Sunken > Factory > Trade**. Para passares de um bairro para o seguinte, diz ao guarda {key:pass} e depois o nome do bairro de destino. O Foreigner Quarter e o Magician Quarter não têm mecanismo no portão, por isso entras neles diretamente a partir do centro.",
+          "map": {"x": 32792, "y": 31196, "z": 7, "marks": [
+            {"x": 32695, "y": 31257, "z": 7, "label": "Guarda"},
+            {"x": 32688, "y": 31192, "z": 7, "label": "Guarda"},
+            {"x": 32741, "y": 31114, "z": 7, "label": "Guarda"},
+            {"x": 32802, "y": 31103, "z": 7, "label": "Guarda"},
+            {"x": 32883, "y": 31158, "z": 7, "label": "Guarda"},
+            {"x": 32896, "y": 31231, "z": 7, "label": "Guarda"},
+            {"x": 32854, "y": 31302, "z": 7, "label": "Guarda"}
+          ]}
+        },
+        {
+          "title": "Reportar ao Palimuth",
+          "text": "Com os 7 relatórios, volta ao {npc:Palimuth}. Podes sair pelo **Magician Quarter**, cujo portão não tem mecanismo. Diz {key:mission} e {key:yes}.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Did you get all the reports my superiors asked for?"},
+            {"you": "yes"},
+            {"npc": "Excellent! My superiors will be pleased to get these reports. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 03: Death to the Deathbringer",
+      "intro": "A partir daqui podes seguir o {npc:Palimuth} (lado bom) ou o Yalahari Azerus (lado mau). A dificuldade é igual; mudam os achievements: todas as missões do lado do Palimuth = **Follower of Palimuth**; todas do lado do Azerus = **Follower of Azerus**; pelo menos uma do lado oposto = **Turncoat**. O addon que podes obter mais tarde é decidido na missão 9.",
+      "steps": [
+        {
+          "title": "Ler as notas do Palimuth",
+          "text": "Diz ao {npc:Palimuth} {key:mission}. Ele diz que deixou notas na **salinha à esquerda**. Vai lá, apanha as duas notas ({item:History of the Augur I (Book)|History of the Augur}) e lê-as.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "I did my best to impress my superiors with your accomplishments [...] I left some notes in the small room there. Get them and read them. Talk to me again when you've read the notes."}
+          ]
+        },
+        {
+          "title": "Voltar a falar com o Palimuth",
+          "text": "Depois de leres as notas, diz {key:mission} ao Palimuth. Ele manda-te falar com o superior dele, o Azerus, no centro da cidade, e pede-te que voltes a falar com ele sempre que o Azerus te der uma missão.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Now leave and talk to my superior Azerus in the city centre to get your next mission. I urge you, though, to talk to me whenever he sends you on a new mission. [...]"}
+          ]
+        },
+        {
+          "title": "Ler o manifesto do Yalahari",
+          "text": "Vai ao centro da cidade e fala com o {npc:Yalahari (NPC)} (o Azerus). Diz {key:hi} e {key:mission}. Ele manda-te ler o manifesto na **sala atrás dele**: apanha as duas notas ({item:Manifest of the Yalahari I (Book)|Manifest of the Yalahari}) e lê-as.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] So we have written a manifesto. Grab a copy from the room behind me. Let's talk about your further career in our ranks once you've read it."}
+          ]
+        },
+        {
+          "title": "Receber a missão do Alchemist Quarter",
+          "text": "Diz {key:mission} duas vezes ao Yalahari. Ele pede-te para matares os **três portadores da peste** no Alchemist Quarter e trazeres as últimas notas de pesquisa dos alquimistas ({item:The Alchemists' Formulas}). Ganhas acesso ao mecanismo do **Alchemist Quarter**.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "I'm mildly impressed by your previous deeds in our service. [...] So if you are up for a challenge, ask me for a mission."},
+            {"you": "mission"},
+            {"npc": "[...] Enter the alchemist quarter and kill the three plague carriers [...] So please bring us these research notes. [...] Just use the gate mechanism to pass."}
+          ],
+          "reward": "Acesso ao mecanismo do Alchemist Quarter"
+        },
+        {
+          "title": "Ouvir o Palimuth",
+          "text": "Volta ao {npc:Palimuth} e diz {key:mission}. Ele teme que as notas sejam usadas para transformar a peste numa arma e pede-te que as **queimes num forno** e digas ao Azerus que não as encontraste.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] I beg you to destroy these notes. Just put them into some burning oven to get rid of them and report that you did not find the notes."}
+          ]
+        },
+        {
+          "title": "Chegar ao Alchemist Quarter",
+          "text": "O Alchemist Quarter fica a **noroeste** do centro da cidade. Vai ao portão do centro para o Alchemist Quarter e usa o {wiki:Mechanism (Teleporter)|mecanismo} ao lado do portão para passares. Se aparecer a mensagem *\"The gate mechanism won't move\"*, ainda não tens acesso: pede primeiro a missão ao {npc:Yalahari (NPC)}.",
+          "coords": [{"x": 32677, "y": 31132, "z": 7, "label": "Alchemist Quarter"}]
+        },
+        {
+          "title": "Matar os três Diseased",
+          "text": "Usa o mecanismo do Alchemist Quarter e mata os três bosses: {creature:Diseased Dan} (1 andar abaixo), {creature:Diseased Bill} e {creature:Diseased Fred}. Pelo caminho encontras {creature:Death Blob|Death Blobs}, {creature:Mutated Human|Mutated Humans}, {creature:Mutated Rat|Mutated Rats}, {creature:Acid Blob|Acid Blobs}, {creature:Slime|Slimes}, {creature:Mutated Tiger|Mutated Tigers} e {creature:Bog Raider|Bog Raiders}. Desde 2012 os bosses têm menos vida e dano, e há um atalho para o Diseased Fred.",
+          "coords": [
+            {"x": 32707, "y": 31189, "z": 8, "label": "Diseased Dan"},
+            {"x": 32671, "y": 31123, "z": 7, "label": "Diseased Bill"},
+            {"x": 32704, "y": 31124, "z": 7, "label": "Diseased Fred"}
+          ],
+          "images": [
+            {"file": "Diseased1.png", "caption": "Alchemist Quarter: localização dos Diseased (imagem 1)"},
+            {"file": "Diseased2.png", "caption": "Alchemist Quarter: localização dos Diseased (imagem 2)"},
+            {"file": "Diseased3.png", "caption": "Alchemist Quarter: localização dos Diseased (imagem 3)"},
+            {"file": "Diseased99.png", "caption": "Alchemist Quarter: localização dos Diseased (imagem 4)"}
+          ],
+          "warning": "Só conta para o jogador que ganhar mais experiência em cada boss. Em equipa, cada membro tem de 'ganhar' cada um dos três bosses (matando-os várias vezes)."
+        },
+        {
+          "title": "Apanhar as fórmulas",
+          "text": "Desce as escadas a **nordeste** do Diseased Bill e do Diseased Fred e segue para **noroeste** até ao edifício onde estão os papéis. Apanha {item:The Alchemists' Formulas} da caixa. Cuidado com {creature:Bog Raider|Bog Raiders} e {creature:Mutated Tiger|Mutated Tigers}.",
+          "coords": [{"x": 32700, "y": 31083, "z": 8, "label": "Edifício com as fórmulas"}]
+        },
+        {
+          "title": "Decidir: queimar ou entregar",
+          "text": "**Lado bom:** usa as fórmulas num {item:Oven|forno} para as queimar — há um forno logo a **oeste da caixa**. **Lado mau:** guarda-as para as entregares ao Yalahari.",
+          "tip": "Se vais pelo lado bom, queima-as já no forno ao lado da caixa."
+        },
+        {
+          "title": "Sair do Alchemist Quarter",
+          "text": "Sobe pelas mesmas escadas por onde desceste até à superfície do Alchemist Quarter e volta ao portão por onde entraste. Usa outra vez o mecanismo para regressares ao centro da cidade, onde estão o {npc:Yalahari (NPC)} e o {npc:Palimuth}."
+        },
+        {
+          "title": "Reportar ao Yalahari",
+          "text": "Volta ao {npc:Yalahari (NPC)} e diz {key:mission}. Quando ele perguntar se recuperaste os papéis, responde {key:yes} (lado mau, entregas as fórmulas) ou {key:no} (lado bom, se as queimaste).",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So you have killed the plague carriers. Have you also retrieved the research papers?"},
+            {"you": "yes / no"},
+            {"npc": "(yes) Impressive indeed! [...] / (no) Hm, no sign of any notes you say? That's odd - odd and a bit suspicious. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Missão 04: Good to be Kingpin",
+      "intro": "Tens de ir ao Trade Quarter falar com o {npc:Mr. West}, o chefe do submundo — negociando (lado bom) ou ameaçando-o (lado mau).",
+      "steps": [
+        {
+          "title": "Receber a missão (Yalahari + Palimuth)",
+          "text": "Diz {key:mission} ao {npc:Yalahari (NPC)}: ele quer que atravesses os capangas do Mr. West à força e lhe mostres quem manda. Ganhas acesso ao mecanismo do **Trade Quarter**. Depois diz {key:mission} ao {npc:Palimuth}: ele sugere que chegues ao Mr. West **pelo esgoto, sem matar ninguém**.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Yalahari) [...] I expect you to fight your way through his minions [...] Talk to him after killing some of his henchmen. [...]"},
+            {"you": "mission"},
+            {"npc": "(Palimuth) [...] If you were able to reach him without killing his henchmen, you could probably convince him that you mean no harm to him. [...] Perhaps you could use the way through the sewers to avoid his men."}
+          ],
+          "reward": "Acesso ao mecanismo do Trade Quarter"
+        },
+        {
+          "title": "Lado bom: pelo esgoto",
+          "text": "Não uses o mecanismo. Entra no esgoto a **noroeste do depot**, vai para **sul** e segue a passagem até encontrares uma porta. Passa a porta e segue o túnel até ao fim. Encontras o {npc:Mr. West}: diz {key:hi} e {key:mission}. Não mates nenhum dos homens dele. Para voltares, faz o caminho inverso: regressa pelo túnel e pela porta até ao esgoto e sai pela mesma entrada, a noroeste do depot.",
+          "npc": "Mr. West",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Wh .. What? How did you get here? Where are all the guards? You .. you could have killed me but yet you chose to talk? What a relief! [...]"},
+            {"you": "mission"},
+            {"npc": "Indeed, I can see the benefits of a mutual agreement. I will later read the details and send a letter to your superior."}
+          ],
+          "coords": [{"x": 32772, "y": 31241, "z": 7, "label": "Entrada do esgoto (noroeste do depot)"}],
+          "map": {"x": 32781, "y": 31302, "z": 8, "marks": [
+            {"x": 32786, "y": 31287, "z": 8, "label": "Caminho pelo esgoto"},
+            {"x": 32771, "y": 31359, "z": 8, "label": "Fim do túnel (Mr. West)"}
+          ]},
+          "warning": "No esgoto há {creature:Tarantula|Tarantulas}, {creature:Slime|Slimes} e {creature:Centipede|Centipedes}."
+        },
+        {
+          "title": "Lado mau: pelo Trade Quarter",
+          "text": "Usa o mecanismo do Trade Quarter e vai para **sudoeste** até encontrares uma porta de quest. Sobe até ao topo do edifício e **mata pelo menos um** dos capangas do Mr. West (por exemplo um {creature:Smuggler} ou um {creature:Bandit}). Passa outra porta para **sul**, onde está o {npc:Mr. West}, e diz {key:hi} e {key:mission}. O Trade Quarter fica a **sul** do centro, junto ao porto. Para saíres, volta pelas mesmas portas até à rua e usa outra vez o mecanismo do Trade Quarter para regressares ao centro.",
+          "npc": "Mr. West",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Murderer! But .. I give in, you won! [...] What do you want?"},
+            {"you": "mission"},
+            {"npc": "Yes, for the sake of my life I'll accept those terms. [...] Tell your master I will comply with his orders."}
+          ],
+          "coords": [{"x": 32826, "y": 31325, "z": 7, "label": "Trade Quarter"}],
+          "map": {"x": 32819, "y": 31300, "z": 7, "marks": [
+            {"x": 32835, "y": 31273, "z": 7, "label": "Mecanismo do Trade Quarter"},
+            {"x": 32793, "y": 31320, "z": 7, "label": "Edifício do Mr. West"}
+          ]},
+          "warning": "Perigos: {creature:Bandit|Bandits}, {creature:Smuggler|Smugglers}, {creature:Mad Scientist|Mad Scientists}, {creature:Gladiator|Gladiators} e {creature:Gang Member|Gang Members}."
+        },
+        {
+          "title": "Reportar",
+          "text": "**Lado bom:** diz {key:mission} ao {npc:Palimuth} e depois ao {npc:Yalahari (NPC)} (que fica desagradado). **Lado mau:** diz {key:mission} ao Yalahari.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) You did quite well in gaining a new friend who will work together with us. [...]"},
+            {"you": "mission"},
+            {"npc": "(Yalahari) So he has been too uncooperative for you? [...] / (lado mau) I hope you gave this criminal a real scare! [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Missão 05: Food or Fight",
+      "intro": "Tens de convencer o druida {npc:Tamerin}, no Arena Quarter, a criar animais: **warbeasts** para o Yalahari ou **cattle** (gado) para o Palimuth. Antes disso, ele pede-te dois favores.",
+      "steps": [
+        {
+          "title": "Receber a missão (Yalahari + Palimuth)",
+          "text": "Diz {key:mission} ao {npc:Yalahari (NPC)} (quer warbeasts) — ganhas acesso ao mecanismo do **Arena Quarter**. Depois diz {key:mission} ao {npc:Palimuth} (quer cattle para alimentar o povo).",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Yalahari) [...] If he bred us some guards and warbeasts, we could strengthen our position considerably. [...] Travel to the arena quarter and gain his assistance for us. [...]"},
+            {"you": "mission"},
+            {"npc": "(Palimuth) Warbeasts? Is this true? People are already starving. [...] this druid should breed cattle to feed our people. Please I beg you, convince him to do that!"}
+          ],
+          "reward": "Acesso ao mecanismo do Arena Quarter"
+        },
+        {
+          "title": "Falar com o Tamerin",
+          "text": "Usa o mecanismo do Arena Quarter e procura o {npc:Tamerin} (1 andar abaixo). Diz {key:hi}, {key:mission} e {key:yes}. Ele pede-te duas coisas: um **Animal Cure** e livrares-te do gladiador **Morik**. O Arena and Zoo Quarter fica no portão **oeste** da cidade. Para voltares ao centro, regressa ao mesmo portão e usa o mecanismo outra vez.",
+          "npc": "Tamerin",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] If you help me to solve my problems, I will help you with your mission. Do you accept?"},
+            {"you": "yes"},
+            {"npc": "I ask you for two things! For one thing, I need an animal cure and for another thing, I ask you to get rid of the gladiator Morik for me."}
+          ],
+          "coords": [
+            {"x": 32659, "y": 31213, "z": 8, "label": "Tamerin"},
+            {"x": 32677, "y": 31231, "z": 7, "label": "Arena and Zoo Quarter"}
+          ],
+          "images": [{"file": "Yalahar Quest Tamerin.jpg", "caption": "O Tamerin"}]
+        },
+        {
+          "title": "Chegar a Nibelor",
+          "text": "Vai a **Svargrond**: de Yalahar viaja primeiro para Thais, Carlin ou Venore (com o {npc:Karith}, se fizeste a secção 2, ou com o {npc:Captain Cookie} para Thais) e aí apanha o barco para Svargrond ({key:hi}, {key:svargrond}, {key:yes}). Em Svargrond, vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}: {key:hi}, {key:passage}. Ele leva-te à ilha de **Nibelor**. A {npc:Siflind} está na montanha do norte da ilha, 1 andar acima.",
+          "npc": "Iskan",
+          "coords": [
+            {"x": 32353, "y": 31053, "z": 7, "label": "Nibelor"},
+            {"x": 32361, "y": 31029, "z": 6, "label": "Siflind (montanha do norte, 1 andar acima)"}
+          ]
+        },
+        {
+          "title": "Comprar o Animal Cure",
+          "text": "Vai a **Nibelor** (Ice Islands) e compra um {item:Animal Cure} ao {npc:Siflind}. Só o consegues comprar com esta missão já iniciada e com acesso a Nibelor (primeira missão da {wiki:Ice Islands Quest}). Se não tiveres acesso, pede a alguém que esteja nesta mesma missão e tenha acesso para o comprar por ti.",
+          "npc": "Siflind"
+        },
+        {
+          "title": "Sair de Nibelor",
+          "text": "Para voltares, fala com o {npc:Nilsor}, a **oeste** do círculo de pedras de Nibelor: {key:hi}, {key:passage}. Ele leva-te de volta a **Svargrond**. Daí apanha o barco para Thais, Carlin ou Venore e regressa a Yalahar como da primeira vez ({npc:Captain Max} em Liberty Bay, ou {npc:Captain Bluebear} em Thais com a palavra-passe).",
+          "npc": "Nilsor"
+        },
+        {
+          "title": "Matar o Morik the Gladiator",
+          "text": "No Arena Quarter, mata o {creature:Morik the Gladiator}. Ele está na **última sala**, dando a volta no sentido dos ponteiros do relógio, no primeiro andar. Apanha o {item:Helmet (Morik)|capacete do Morik} como prova.",
+          "coords": [{"x": 32685, "y": 31242, "z": 6, "label": "Morik the Gladiator"}],
+          "images": [{"file": "Yalahar Quest Morik.jpg", "caption": "Morik the Gladiator"}]
+        },
+        {
+          "title": "Entregar ao Tamerin e escolher",
+          "text": "Volta ao {npc:Tamerin}. Diz {key:animal cure} e {key:morik} para entregares as duas coisas, depois {key:mission}. Escolhe: {key:cattle} (lado bom, Palimuth) ou {key:warbeasts} (lado mau, Yalahari).",
+          "npc": "Tamerin",
+          "dialogue": [
+            {"you": "animal cure"},
+            {"npc": "Thank you very much. [...]"},
+            {"you": "morik"},
+            {"npc": "So he finally got what he deserved. [...]"},
+            {"you": "mission"},
+            {"npc": "You have kept your promise. [...] What kind of animals shall I raise? Warbeasts or cattle?"},
+            {"you": "cattle / warbeasts"},
+            {"npc": "So be it!"}
+          ]
+        },
+        {
+          "title": "Reportar",
+          "text": "**Cattle:** diz {key:mission} ao {npc:Palimuth} e depois ao {npc:Yalahari (NPC)}. **Warbeasts:** diz {key:mission} ao Yalahari.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) These are great news indeed. The people of Yalahar will be grateful. [...]"},
+            {"you": "mission"},
+            {"npc": "(Yalahari) This druid dares to affront us? [...] / (warbeasts) So have you won us a new ally? Excellent. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Missão 06: Frightening Fuel",
+      "intro": "O Yalahari quer carregar um {item:Ghost Charm} com as almas atormentadas do Cemetery Quarter para servir de fonte de energia; o Palimuth quer o amuleto carregado para libertar essas almas.",
+      "steps": [
+        {
+          "title": "Receber a missão (Yalahari + Palimuth)",
+          "text": "Diz {key:mission} ao {npc:Yalahari (NPC)}: recebes um {item:Ghost Charm} e acesso ao mecanismo do **Cemetery Quarter**. Depois diz {key:mission} ao {npc:Palimuth}.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Yalahari) [...] Take this ghost charm and place it on the strange carving in the cemetery. [...] Then use the residues of the ghosts on the charm to capture the essence. [...]"},
+            {"you": "mission"},
+            {"npc": "(Palimuth) [...] Please capture the souls as you have been instructed and then bring the charm to me. [...]"}
+          ],
+          "reward": "Acesso ao mecanismo do Cemetery Quarter"
+        },
+        {
+          "title": "Usar o charm na Strange Carving",
+          "text": "Vai ao **grande edifício** do Cemetery Quarter. Ao fundo da sala está a {item:Strange Carving}: usa o {item:Ghost Charm} nela. O Cemetery Quarter fica a **norte** do centro: entra pelo mecanismo do portão do centro para o Cemetery Quarter.",
+          "coords": [{"x": 32761, "y": 31077, "z": 7, "label": "Cemetery Quarter"}],
+          "images": [{"file": "Cemetery.png", "caption": "Cemetery Quarter"}]
+        },
+        {
+          "title": "Carregar o charm",
+          "text": "Mata os {creature:Tormented Ghost|Tormented Ghosts} que aparecem e usa o {item:Ghost Residue} que deixam no charm. Repete **três vezes** (cada uso faz aparecer mais 2 Tormented Ghosts). No fim, o Ghost Charm transforma-se em {item:Charged Ghost Charm}. Depois volta ao portão por onde entraste e usa o mecanismo outra vez para regressares ao centro.",
+          "images": [{"file": "Yalahar Quest Mission 6.jpg", "caption": "A sala da Strange Carving no Cemetery Quarter"}]
+        },
+        {
+          "title": "Entregar o charm",
+          "text": "**Lado bom:** diz {key:mission} ao {npc:Palimuth} e entrega-lhe o charm; depois diz {key:mission} ao Yalahari (ele não acredita que o charm foi destruído). **Lado mau:** diz {key:mission} ao {npc:Yalahari (NPC)} e devolve-lho.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) I thank you also in the name of these poor lost souls. [...] Tell the Yalahari that the charm was destroyed by the energy it contained."},
+            {"you": "mission"},
+            {"npc": "(Yalahari) Destroyed you say? That's impossible! [...] / (lado mau) Ah, what an unexpected sight. I can almost feel the energy of the charm. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Missão 07: A Fishy Mission",
+      "intro": "Os quara do Sunken Quarter atacam os pescadores. O Yalahari quer os três líderes mortos; o Palimuth quer saber porque estão tão agressivos. Precisas de {item:Helmet of the Deep} ou {item:Depth Galea}.",
+      "steps": [
+        {
+          "title": "Receber a missão (Yalahari + Palimuth)",
+          "text": "Diz {key:mission} ao {npc:Yalahari (NPC)} — ganhas acesso ao mecanismo do **Sunken Quarter** — e depois {key:mission} ao {npc:Palimuth}.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Yalahari) [...] I ask you to enter the sunken quarter and slay all their leaders. [...] We believe that there are three leaders in this area. [...]"},
+            {"you": "mission"},
+            {"npc": "(Palimuth) [...] It would be much more useful to find out what the quara are so upset about. Better avoid slaying their leaders [...]"}
+          ],
+          "reward": "Acesso ao mecanismo do Sunken Quarter"
+        },
+        {
+          "title": "Chegar ao Sunken Quarter",
+          "text": "O Sunken Quarter fica a **leste** do centro da cidade. Vai ao portão do centro para o Sunken Quarter e usa o mecanismo para passares. Ainda há terra acima da água, por isso chegas a pé ao {npc:Tarak}.",
+          "coords": [
+            {"x": 32949, "y": 31182, "z": 7, "label": "Sunken Quarter"},
+            {"x": 32917, "y": 31199, "z": 7, "label": "Tarak"}
+          ]
+        },
+        {
+          "title": "Ir para debaixo de água",
+          "text": "Fala com o {npc:Tarak} e pede-lhe uma {key:trip}. Equipa o {item:Helmet of the Deep} (ou {item:Depth Galea}) e salta para a água.",
+          "npc": "Tarak",
+          "coords": [{"x": 32917, "y": 31199, "z": 7, "label": "Tarak"}],
+          "images": [
+            {"file": "In Service of Yalahar mission 7 Map 1 -4.png", "caption": "Mapa subaquático 1 (4 andares abaixo)"},
+            {"file": "In Service of Yalahar mission 7 Map 2 -5.png", "caption": "Mapa subaquático 2 (5 andares abaixo)"},
+            {"file": "In Service of Yalahar mission 7 Map 3 -6.png", "caption": "Mapa subaquático 3 (6 andares abaixo, último nível)"}
+          ],
+          "warning": "Até ao 2.º nível só há {creature:Quara Constrictor|Quara Constrictors} e {creature:Quara Mantassin|Quara Mantassins}. No último nível aparecem também {creature:Quara Hydromancer|Quara Hydromancers}, {creature:Quara Pincher|Quara Pinchers} e {creature:Quara Predator|Quara Predators}."
+        },
+        {
+          "title": "Lado bom: falar com a Maritima",
+          "text": "Desce até à {npc:Maritima} e diz {key:quara}. Ela explica que os quara estão furiosos porque a zona deles está a ser inundada com esgoto tóxico da cidade.",
+          "npc": "Maritima",
+          "coords": [{"x": 32905, "y": 31167, "z": 13, "label": "Maritima"}],
+          "dialogue": [
+            {"you": "quara"},
+            {"npc": "[...] recently the quara got mad because their area is flooded with toxic sewage from the city. If you could inform someone about it, they might stop the sewage [...]"}
+          ]
+        },
+        {
+          "title": "Lado mau: matar os três líderes quara",
+          "text": "Mata os três líderes quara: {creature:Inky}, {creature:Splasher} e {creature:Sharptooth}. Estes bosses podem fazer bastante dano.",
+          "warning": "Leva poções suficientes: os líderes quara batem forte e estás rodeado de quara."
+        },
+        {
+          "title": "Sair do Sunken Quarter",
+          "text": "Para voltares, nada de volta pelo mesmo caminho até à superfície (mantém o {item:Helmet of the Deep} ou a {item:Depth Galea} equipado até saíres da água). Depois regressa ao portão do Sunken Quarter e usa o mecanismo outra vez para voltares ao centro."
+        },
+        {
+          "title": "Reportar",
+          "text": "**Lado bom:** diz {key:mission} ao {npc:Palimuth} e depois ao Yalahari. **Lado mau:** diz {key:mission} ao {npc:Yalahari (NPC)}.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) Oh no! So that's the reason for the quara attacks! I will do my best to close these sewage pipes. [...]"},
+            {"you": "mission"},
+            {"npc": "(Yalahari) Those cowards have evaded your efforts? [...] / (lado mau) This will teach these fishmen who is the ruler of that area. [...]"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10. Missão 08: Dangerous Machinations",
+      "intro": "Numa fábrica do Factory Quarter tens de pôr um cristal de padrão na máquina de controlo: o {item:Weapon Matrix Crystal} (armas, Yalahari) ou o {item:Food Matrix Crystal} (comida, Palimuth).",
+      "steps": [
+        {
+          "title": "Receber a missão (Yalahari + Palimuth)",
+          "text": "Diz {key:mission} ao {npc:Yalahari (NPC)} — ganhas acesso ao mecanismo do **Factory Quarter** — e depois {key:mission} ao {npc:Palimuth}.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Yalahari) [...] Go to the factory district and look for a pattern crystal used for weapon production. Use it on the factory controller. [...]"},
+            {"you": "mission"},
+            {"npc": "(Palimuth) [...] Somewhere in the factory you might find an old pattern crystal for the production of food. [...]"}
+          ],
+          "reward": "Acesso ao mecanismo do Factory Quarter"
+        },
+        {
+          "title": "Chegar ao Factory Quarter",
+          "text": "O Factory Quarter fica a **sudeste** do centro da cidade. Vai ao portão do centro para o Factory Quarter e usa o mecanismo para entrares. Todos os buracos desta missão estão neste bairro.",
+          "coords": [{"x": 32924, "y": 31283, "z": 7, "label": "Factory Quarter"}]
+        },
+        {
+          "title": "Lado bom: Food Matrix Crystal",
+          "text": "Desce o buraco em {coord:32877,31268,7}, desce outra vez em {coord:32884,31267,8} e de novo em {coord:32887,31278,9}. Anda para **norte**, vira à **esquerda** e segue outra vez para **norte**. O {item:Food Matrix Crystal} está atrás de uma porta de quest. Depois de apanhares o cristal, volta à superfície pelo mesmo caminho (leva uma {item:Rope} para subires nos buracos).",
+          "coords": [
+            {"x": 32877, "y": 31268, "z": 7, "label": "Buraco 1"},
+            {"x": 32884, "y": 31267, "z": 8, "label": "Descida 2"},
+            {"x": 32887, "y": 31278, "z": 9, "label": "Descida 3"},
+            {"x": 32869, "y": 31265, "z": 10, "label": "Food Matrix Crystal (porta de quest)"}
+          ],
+          "images": [{"file": "In Service of Yalahar Mission 8 Good.png", "caption": "Caminho até ao Food Matrix Crystal"}],
+          "warning": "{creature:Damaged Worker Golem|Damaged Worker Golems} e {creature:Worker Golem|Worker Golems}."
+        },
+        {
+          "title": "Lado mau: Weapon Matrix Crystal",
+          "text": "Desce o buraco em {coord:32936,31257,7}, desce outra vez em {coord:32935,31247,8} e anda para **leste** até ao {item:Weapon Matrix Crystal}. Depois de apanhares o cristal, volta à superfície pelo mesmo caminho (leva uma {item:Rope} para subires nos buracos).",
+          "coords": [
+            {"x": 32936, "y": 31257, "z": 7, "label": "Buraco"},
+            {"x": 32935, "y": 31247, "z": 8, "label": "Descida"},
+            {"x": 32940, "y": 31246, "z": 9, "label": "Weapon Matrix Crystal"}
+          ],
+          "images": [{"file": "In Service of Yalahar Mission 8 Bad.png", "caption": "Caminho até ao Weapon Matrix Crystal"}],
+          "warning": "{creature:Worker Golem|Worker Golems}."
+        },
+        {
+          "title": "Ativar a Mysterious Machine",
+          "text": "Para ambos os lados: desce o buraco em {coord:32879,31268,7}, anda para **norte** e passa a porta de quest. Vai até à {item:Mysterious Machine} a **norte** e usa-a para a ativar. Depois usa o cristal escolhido ({item:Food Matrix Crystal} ou {item:Weapon Matrix Crystal}) na máquina.",
+          "coords": [{"x": 32879, "y": 31268, "z": 7, "label": "Buraco para a Mysterious Machine"}],
+          "images": [{"file": "In Service of Yalahar Mission 8 Both.png", "caption": "Caminho até à Mysterious Machine"}],
+          "warning": "A escolha é definitiva: o cristal que usares decide o lado desta missão."
+        },
+        {
+          "title": "Sair do Factory Quarter",
+          "text": "Volta à superfície pelo mesmo buraco (usa a {item:Rope}), regressa ao portão do Factory Quarter e usa o mecanismo outra vez para voltares ao centro, onde está o {npc:Yalahari (NPC)}."
+        },
+        {
+          "title": "Reportar ao Yalahari",
+          "text": "Volta ao {npc:Yalahari (NPC)} e diz {key:mission}. Se usaste o Food Matrix, ele fica furioso; diz {key:mission} outra vez e ele pede-te que repenses a tua lealdade.",
+          "npc": "Yalahari (NPC)",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Food) Your failure is an outrage! [...] / (Weapon) Excellent! This weapons are vital for our cause! [...]"},
+            {"you": "mission"},
+            {"npc": "(Food) I'm quite aware of your connection to this manipulative Palimuth. [...] Come back if you have decided to which side you want to belong."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11. Missão 09: Decision",
+      "intro": "Chegou a hora de escolher de vez entre o {npc:Palimuth} e o Yalahari. A partir daqui precisas de **nível 80**.",
+      "steps": [
+        {
+          "title": "Falar com os dois",
+          "text": "Diz {key:mission} ao {npc:Palimuth} e ao {npc:Yalahari (NPC)}. Ambos te dizem que tens de decidir entre eles.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) Well, what can I say? You have to make a decision. You've seen the differences between my goals and those of Azerus. Make up your mind, but choose wisely!"}
+          ]
+        },
+        {
+          "title": "Escolher o lado",
+          "text": "Vai a quem queres apoiar e diz {key:mission} outra vez. Quando ele perguntar se te queres juntar a ele, responde {key:yes}. A missão 9 fica concluída e recebes o achievement correspondente.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So do you want to side with me?"},
+            {"you": "yes"},
+            {"npc": "(Palimuth) You have no idea how much I hoped to hear that, my friend! But I have an urgent mission for you! / (Yalahari) I knew that you were smart enough to make the right decision! Your next mission will be a special one!"}
+          ],
+          "table": {
+            "head": ["Missões anteriores", "Lado escolhido aqui", "Achievement"],
+            "rows": [
+              ["Todas do lado bom", "Palimuth", "**Follower of Palimuth**"],
+              ["Todas do lado mau", "Yalahari (Azerus)", "**Follower of Azerus**"],
+              ["Mistura de lado bom e mau", "Qualquer", "**Turncoat**"],
+              ["Todas de um lado", "O lado oposto", "Nenhum"]
+            ]
+          },
+          "warning": "Esta escolha é definitiva e decide também o addon que podes obter mais tarde."
+        }
+      ]
+    },
+    {
+      "title": "12. Missão 10: The Final Battle",
+      "intro": "Uma batalha dura contra o {creature:Azerus}. Jogadores de nível baixo sofrem com o dano e o dreno de mana: leva equipa ou ajudantes mais fortes. Há um **limite de cerca de 12 minutos** para matar o Azerus.",
+      "steps": [
+        {
+          "title": "Receber a última missão",
+          "text": "Diz {key:mission} a quem escolheste. O **Palimuth** conta que um círculo de Yalahari quer abrir um portal para demónios e que a entrada do santuário interior foi aberta para ti. O **Yalahari** convida-te para uma 'cerimónia' no centro da cidade interior e diz que podes passar todas as portas até ao salão.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "(Palimuth) [...] The entrance to their inner sanctum has been opened for you. Please hurry and stop them before it's too late. Be prepared for a HARD battle! Better gather some friends to assist you."},
+            {"npc": "(Yalahari) [...] Meet us in the inner city's centre. [...] As our most trusted ally, you may pass all doors to reach the festivity hall. [...]"}
+          ]
+        },
+        {
+          "title": "Chegar à sala do Azerus",
+          "text": "A sala da batalha fica no edifício central de Yalahar (o do {npc:Yalahari (NPC)}), **3 andares abaixo**. Com esta missão ativa, as portas até ao salão já estão abertas para ti: desce até lá com a equipa."
+        },
+        {
+          "title": "Iniciar a luta",
+          "text": "Entra na sala. Alguém que **ainda não tenha feito a quest** tem de clicar na máquina no centro da sala para começar a luta.",
+          "warning": "Limite de tempo de cerca de 12 minutos para matar o Azerus."
+        },
+        {
+          "title": "Fase 1: Rift Worms",
+          "text": "O {creature:Azerus} aparece com {creature:Rift Worm|Rift Worms}. Mata os Rift Worms e **ignora o Azerus** — nesta fase é extremamente difícil de matar.",
+          "images": [{"file": "Yalahar Quest Mission 10 a.jpg", "caption": "A batalha contra o Azerus — repara no dano sofrido pelo jogador à esquerda"}]
+        },
+        {
+          "title": "Fase 2: Rift Broods",
+          "text": "O Azerus teleporta-se para outro ponto da sala e invoca {creature:Rift Brood|Rift Broods}. Usa **dano de terra** (Earth) neles e continua a ignorar o Azerus."
+        },
+        {
+          "title": "Fase 3: Rift Scythes",
+          "text": "O Azerus invoca {creature:Rift Scythe|Rift Scythes}. Usa **dano de fogo** (Fire) neles."
+        },
+        {
+          "title": "Fase 4: War Golems e matar o Azerus",
+          "text": "O Azerus invoca {creature:War Golem|War Golems}. Agora o Azerus fica muito mais fácil de ferir: **foca o Azerus** e ignora os golems até ele morrer."
+        },
+        {
+          "title": "Entrar no forcefield",
+          "text": "Quando o Azerus morre, o corpo transforma-se num {item:Magic Forcefield}. **Todos os jogadores** têm de entrar no forcefield para serem teleportados para uma sala de onde se vê, lá em cima, um exército de monstros rift. Aparece a mensagem *\"You have a very bad feeling about this...\"*.",
+          "images": [{"file": "Yalahar Quest Mission 10 b.jpg", "caption": "Depois de entrares no Magic Forcefield"}]
+        },
+        {
+          "title": "Ir ao ponto mais a norte",
+          "text": "Caminha até ao **ponto mais a norte** dessa sala. A quest fica concluída para a tua personagem quando aparecer a mensagem *\"It seems by defeating Azerus you have stopped this army from entering your world! Better leave this ghastly place forever.\"*."
+        },
+        {
+          "title": "Sair da sala",
+          "text": "A wiki não documenta como se sai desta sala depois da mensagem final. Procura a saída da sala e regressa ao centro de Yalahar para falares com o {npc:Palimuth}."
+        }
+      ]
+    },
+    {
+      "title": "13. Recompensas",
+      "steps": [
+        {
+          "title": "Falar com o Palimuth",
+          "text": "Volta ao {npc:Palimuth} e diz {key:mission}. Recebes o {wiki:Yalaharian Outfits|Yalaharian Outfit} e acesso à **sala do tesouro**.",
+          "npc": "Palimuth",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "So the Yalahari that opposed us are dead or fled from the city. [...] I allow you to enter the Yalaharian treasure room. [...] Choose one chest, but think before taking one! [...] Also, take this Yalaharian outfit. [...]"}
+          ],
+          "images": [
+            {"file": "Outfit_Yalaharian_Male.gif", "caption": "Yalaharian Outfit (masculino)"},
+            {"file": "Outfit_Yalaharian_Female.gif", "caption": "Yalaharian Outfit (feminino)"}
+          ],
+          "reward": "Yalaharian Outfit (base)"
+        },
+        {
+          "title": "Escolher um baú",
+          "text": "Vai à sala do tesouro e abre **apenas um** baú. A partir do baú mais a **norte**, a ordem é a da tabela.",
+          "coords": [{"x": 32780, "y": 31206, "z": 7, "label": "Sala do tesouro"}],
+          "images": [{"file": "In Service Of Yalahar Rewards.png", "caption": "Os baús de recompensa, por ordem"}],
+          "table": {
+            "head": ["Baú (de norte para sul)", "Item", "Vocação"],
+            "rows": [
+              ["1.º", "{item:Yalahari Armor}", "Knight"],
+              ["2.º", "{item:Yalahari Leg Piece}", "Paladin"],
+              ["3.º", "{item:Yalahari Mask}", "Sorcerer e Druid"],
+              ["4.º", "{item:Yalahari Footwraps}", "Monk"]
+            ]
+          },
+          "warning": "Só podes escolher um baú. Escolhe o item da tua vocação.",
+          "reward": "Uma peça Yalahari à escolha"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O addon do {wiki:Yalaharian Outfits|Yalaharian Outfit} obtém-se na {wiki:Blood Brothers Quest}; o lado escolhido na missão 9 decide qual addon podes obter.",
+    "Os acessos aos mecanismos dos bairros ganham-se ao longo da quest (ao iniciar as missões 3 a 8), mesmo antes de teres nível 80.",
+    "A wiki não documenta o diálogo final do lado do Yalahari; segundo a wiki, as recompensas são entregues pelo Palimuth."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Lich Hell",
+  "type": "dungeon",
+  "near": "Liberty Bay",
+  "summary": "Um andar da dungeon de {wiki:Ramoa}, nas {wiki:Forbidden Islands}, cheio de mortos-vivos, {creature:Priestess|Priestesses}, {creature:Necromancer|Necromancers} e {creature:Lich|Liches}; a parte longa e opcional da {wiki:The Shattered Isles Quest} manda-te aqui buscar um livro.",
+  "entrance": {"x": 31946, "y": 32557, "z": 7, "label": "Escadas do Teleportation Hub de Ramoa"},
+  "requirements": [
+    "Convém teres feito a parte de Ramoa da {wiki:The Shattered Isles Quest}: só assim podes usar o teleporte de Goroma para Ramoa.",
+    "O {npc:Jack Fate} só te leva a Goroma depois da parte *Access to Goroma* da mesma quest."
+  ],
+  "items": ["Pick", "Rope"],
+  "arrive": [
+    "No porto de **Liberty Bay**, fala com o {npc:Jack Fate}: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas na costa **leste** de Goroma.",
+    "Em Goroma, vai para **oeste** até às escadas do Teleportation Hub ({coord:32038,32561,7}), desce e entra no teleporte da **direita**: chegas a Ramoa.",
+    "Segue os mapas: entras no círculo vermelho e vais até ao círculo azul (duas vezes, em pisos diferentes).",
+    "Junto ao círculo azul do último mapa, usa a {item:Pick} na terra para abrires o buraco para o Lich Hell e desce."
+  ],
+  "leave": [
+    "O wiki não descreve a saída: volta pelo mesmo caminho até ao buraco que abriste com a Pick (leva uma {item:Rope} para subires) e refaz os mapas ao contrário até ao Teleportation Hub de Ramoa ({coord:31946,32557,7}).",
+    "No hub de Ramoa, entra no teleporte da **esquerda**: apareces no hub de **Goroma**. Sobe as escadas e vai para **leste** até ao navio do {npc:Jack Fate} ({coord:32161,32558,6}): {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay."
+  ],
+  "coords": [
+    {"x": 32038, "y": 32561, "z": 7, "label": "Escadas do Teleportation Hub de Goroma"},
+    {"x": 31946, "y": 32557, "z": 7, "label": "Escadas do Teleportation Hub de Ramoa"},
+    {"x": 32161, "y": 32558, "z": 6, "label": "Jack Fate em Goroma (barco para Liberty Bay)"}
+  ],
+  "images": [
+    {"file": "Waytolichhell1.png", "caption": "Caminho para o Lich Hell, 1.º mapa: do círculo vermelho ao azul"},
+    {"file": "Waytolichhell2.png", "caption": "Caminho para o Lich Hell, 2.º mapa: do círculo vermelho ao azul"},
+    {"file": "Waytolichhell3.png", "caption": "Usa a Pick na terra junto ao círculo azul para abrires o buraco"},
+    {"file": "Lich Hell map.jpg", "caption": "Mapa do Lich Hell"}
+  ],
+  "warnings": [
+    "Não é sítio para knights de nível baixo: as criaturas invocam muitos lacaios, as Priestesses drenam mana e há alguns {creature:Ghost|Ghosts} (leva uma arma elemental ou runas). De vez em quando aparecem {creature:Undead Cavebear|Undead Cavebears}."
+  ]
+}

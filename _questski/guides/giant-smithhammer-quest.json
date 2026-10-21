@@ -1,0 +1,102 @@
+{
+  "slug": "giant-smithhammer-quest",
+  "category": "tesouro",
+  "region": "Thais",
+  "difficulty": 3,
+  "duration": "15–30 min",
+  "summary": "Os ciclopes são grandes ferreiros e usam um martelo gigante num dos seus acampamentos. No acampamento de ciclopes e minotauros das Plains of Havoc, por baixo da estrutura norte, uma caixa de quest guarda o {item:Giant Smithhammer}, um {item:Talon} e 100 gp — mas a sala está cheia de monstros.",
+  "legend_pt": "Os ciclopes são grandes ferreiros e usam um martelo de forja gigante num dos seus acampamentos.",
+  "start": {
+    "x": 32779,
+    "y": 32235,
+    "z": 7,
+    "label": "Escadas na estrutura norte do acampamento (Plains of Havoc)"
+  },
+  "requirements": [
+    "Sem nível mínimo (recomendado 40).",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {
+      "text": "Feitiço {spell:Invisible} (ou outra forma de ficar invisível) é muito recomendado para descer as escadas."
+    },
+    {
+      "text": "Poções de vida."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Giant Smithhammer"
+    },
+    {
+      "item": "Talon"
+    },
+    {
+      "item": "Gold Coin",
+      "qty": 100
+    }
+  ],
+  "achievements": [],
+  "dangers": [
+    "Cyclops",
+    "Minotaur",
+    "Minotaur Guard",
+    "Minotaur Mage",
+    "Orc",
+    "Orc Spearman"
+  ],
+  "npcs": [],
+  "tips": [
+    "Mesmo um jogador de nível 30 perde mais de metade da vida logo ao descer se não estiver invisível. Vai invisível ou acompanhado."
+  ],
+  "sections": [
+    {
+      "title": "1. Ir buscar o Giant Smithhammer",
+      "steps": [
+        {
+          "title": "Ir ao acampamento dos ciclopes",
+          "text": "Vai ao acampamento de {creature:Cyclops|ciclopes} e {wiki:Minotaurs|minotauros} nas **Plains of Havoc**. As {wiki:Plains of Havoc} ficam no sul do continente, a **sudoeste de Venore** ({coord:32747,32258,7}); a partir de Venore vai a pé para sudoeste. Prepara-te para enfrentar muitos Cyclopes e vários tipos de minotauros.",
+          "warning": "Há {creature:Cyclops|Cyclopes}, {creature:Minotaur|Minotaurs}, {creature:Minotaur Guard|Minotaur Guards}, {creature:Minotaur Mage|Minotaur Mages}, {creature:Orc|Orcs} e {creature:Orc Spearman|Orc Spearmen}.",
+          "coords": [
+            {
+              "x": 32747,
+              "y": 32258,
+              "z": 7,
+              "label": "Plains of Havoc"
+            }
+          ]
+        },
+        {
+          "title": "Descer as escadas da estrutura norte",
+          "text": "Desce as escadas da estrutura **norte** do acampamento. Lá em baixo esperam-te **muitos** Cyclopes, Minotaurs, Minotaur Guards, Minotaur Mages e até alguns Orcs.",
+          "coords": [
+            {
+              "x": 32779,
+              "y": 32235,
+              "z": 7,
+              "label": "Escadas da estrutura norte"
+            }
+          ],
+          "warning": "Até um nível 30 perde mais de metade da vida de imediato se descer sem estar invisível."
+        },
+        {
+          "title": "Abrir a caixa de quest",
+          "text": "A caixa de quest fica na sala **imediatamente a sul** das escadas. Abre-a para receberes a recompensa.",
+          "reward": "Giant Smithhammer, Talon e 100 gp"
+        },
+        {
+          "title": "Sair do acampamento",
+          "text": "Volta pelo mesmo caminho: regressa às escadas da estrutura norte, sobe-as até à superfície ({coord:32779,32235,7}) e volta a pé até **Venore** (a nordeste). Os monstros lá em baixo continuam a atacar enquanto regressas, por isso não percas tempo.",
+          "coords": [
+            {
+              "x": 32779,
+              "y": 32235,
+              "z": 7,
+              "label": "Saída: escadas da estrutura norte"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

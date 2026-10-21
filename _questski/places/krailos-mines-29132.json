@@ -1,0 +1,31 @@
+{
+  "title": "Krailos Mines",
+  "type": "dungeon",
+  "near": "Krailos",
+  "summary": "Minas por baixo da ilha de **Krailos**, onde os ogres põem goblins escravos a extrair {item:Opal|Opals} e {item:Onyx Chip|Onyx Chips} sob as ordens do {npc:Grubokk}; a entrada fica no sudoeste da Krailos Steppe.",
+  "entrance": {"x": 33693, "y": 31775, "z": 7, "label": "Escadas para as montanhas a sul (entrada)"},
+  "requirements": [
+    "Conta Premium.",
+    "O portão das minas abre-se com a {item:Key 0555} (Goblin Bone Key), que se encontra no {item:Draw Well|poço} ao lado do {npc:Grubokk} ({wiki:Krailos Quest})."
+  ],
+  "items": ["Key 0555", "Rope"],
+  "arrive": [
+    "Apanha o barco para **Krailos** em Edron, Darashia, Venore ou Oramond (Rathleton): {key:hi}, {key:krailos}, {key:yes}. Chegas ao porto, junto à {npc:Captain Pelagia} ({coord:33492,31710,6}).",
+    "Caminha para **leste** pela estepe até à Krailos Village ({coord:33639,31656,7}) e depois para a cordilheira a **sul** da aldeia.",
+    "Sobe as escadas em {coord:33693,31775,7} e segue o único caminho (várias vezes para cima e para baixo) até ao {npc:Grubokk} ({coord:33683,31792,6}). Usa o poço ao lado dele para obteres a {item:Key 0555}.",
+    "Desce pelo buraco à **esquerda** do Grubokk. Na gruta, vai para **oeste** entre as pedras até ao portão ({coord:33671,31795,7}) e abre-o com a chave. Desce, desce de novo pela rampa, vai para **nordeste** e desce pelo buraco ({coord:33625,31747,9}): estás nas minas."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: sobe pelos buracos com a {item:Rope}, sobe a rampa e passa o portão até à gruta por baixo do Grubokk; sobe com a corda pelo buraco junto a ele.",
+    "Desce das montanhas pelo mesmo caminho até às escadas de {coord:33693,31775,7}, volta à aldeia e ao porto, e diz à {npc:Captain Pelagia} {key:hi}, o destino e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33639, "y": 31656, "z": 7, "label": "Krailos Village"},
+    {"x": 33683, "y": 31792, "z": 6, "label": "Grubokk"},
+    {"x": 33631, "y": 31715, "z": 10, "label": "An Imprisoned Goblin (nas minas)"},
+    {"x": 33492, "y": 31710, "z": 6, "label": "Captain Pelagia (porto de Krailos)"}
+  ],
+  "warnings": [
+    "Às vezes há raids não anunciados de {creature:Crystalcrusher|Crystalcrushers} e {creature:Drillworm|Drillworms} nas minas."
+  ]
+}

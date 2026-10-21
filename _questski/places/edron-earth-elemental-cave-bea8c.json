@@ -1,0 +1,23 @@
+{
+  "title": "Edron Earth Elemental Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta de {creature:Earth Elemental|Earth Elementals} a **norte de Edron**; boa para magos, menos indicada para knights e paladins porque os elementais resistem a ataques físicos.",
+  "entrance": {"x": 33158, "y": 31719, "z": 7, "label": "Entrada da Edron Earth Elemental Cave"},
+  "items": ["Rope"],
+  "arrive": [
+    "Chega a **Edron** (de barco: diz ao capitão do porto {key:hi}, {key:edron}, {key:yes}); desembarcas junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Sai da cidade a pé para **norte** até à entrada da gruta ({coord:33158,31719,7})."
+  ],
+  "leave": [
+    "O wiki não descreve outra saída: volta pelo mesmo caminho até à entrada (usa a {item:Rope} nos buracos por onde desceste).",
+    "Regressa a pé para **sul** até Edron e apanha o barco no porto ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"}
+  ],
+  "warnings": [
+    "No caminho até à entrada encontras {creature:Bat|Bats}, {creature:Wolf|Wolves}, {creature:Poacher|Poachers} e às vezes um {creature:Hunter} ou um {creature:Wyvern} trazido por outros jogadores.",
+    "Os {creature:Earth Elemental|Earth Elementals} são fortes contra dano físico: knights e paladins devem usar armas ou flechas encantadas."
+  ]
+}

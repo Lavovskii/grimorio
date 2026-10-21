@@ -1,0 +1,218 @@
+{
+  "slug": "thornfire-world-change",
+  "category": "world-change",
+  "region": "Venore",
+  "difficulty": 2,
+  "duration": "1–2 horas (libertar) + o tempo que quiseres a apagar fogos",
+  "summary": "Em Shadowthorn, os elfos que recusaram adorar o bog god pegaram fogo à vila e foram presos em três prisões subterrâneas. Se matares os guardas e todos os elfos, as prisões abrem e, no dia seguinte, Shadowthorn está em chamas. Apagas os fogos com água do pântano do templo do bog god: 500 fogos dão o achievement **Firefighter** e, com sorte, aparece um Thornfire Wolf que podes transformar no mount {item:Crystal Wolf (Mount)|Crystal Wolf}.",
+  "legend_pt": "Quando o bog god surgiu em Shadowthorn, houve conflito entre os seus seguidores e os que não o queriam seguir. Estes revoltaram-se e pegaram fogo à vila. Depois de serem contidos a vila ficou segura, mas só enquanto eles não se conseguirem libertar.",
+  "start": {
+    "x": 32954,
+    "y": 32095,
+    "z": 6,
+    "label": "Pyro Peter, em Venore (informa o estado de Shadowthorn)"
+  },
+  "requirements": [
+    "Não precisa de Premium.",
+    "Sem nível mínimo (recomendado 30+)."
+  ],
+  "items_needed": [
+    {
+      "item": "Bucket",
+      "note": "vários, em igual número aos Flasks"
+    },
+    {
+      "item": "Flask of Embalming Fluid",
+      "note": "um por balde"
+    },
+    {
+      "item": "Prepared Bucket",
+      "note": "alternativa aos dois itens acima (vê no Market, pode sair mais barato)"
+    },
+    {
+      "item": "Diapason",
+      "note": "só para domar o Crystal Wolf"
+    },
+    {
+      "item": "Machete",
+      "note": "recomendado para chegar a Shadowthorn"
+    },
+    {
+      "item": "Rope",
+      "note": "recomendado"
+    },
+    {
+      "item": "Shovel",
+      "note": "recomendado"
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Crystal Wolf (Mount)",
+      "note": "se domares um Crystal Wolf"
+    },
+    {
+      "text": "Achievement **Firefighter** (apagar 500 thornfires)"
+    },
+    {
+      "text": "Loot dos {creature:Firestarter|Firestarters}: {item:Coal} e {item:Flintstone}"
+    }
+  ],
+  "achievements": [
+    "Firefighter"
+  ],
+  "unlocks": [
+    {"what": "Montada Crystal Wolf", "kind": "funcionalidade", "place": "Crystal Wolf (Mount)", "when": "Com Shadowthorn em chamas, cada fogo apagado tem uma pequena hipótese de fazer aparecer um {creature:Thornfire Wolf}: atrai-o à {item:Bog Water} do templo do bog god para se transformar num {creature:Crystal Wolf} e doma-o com o {item:Diapason}."}
+  ],
+  "dangers": [
+    "Elf",
+    "Elf Scout",
+    "Firestarter",
+    "Elf Overseer",
+    "Toad",
+    "Thornfire Wolf",
+    "Crystal Wolf",
+    "Snake",
+    "Rotworm",
+    "Centipede",
+    "Slime"
+  ],
+  "npcs": [
+    "Pyro Peter"
+  ],
+  "tips": [
+    "Para saberes em que fase está Shadowthorn, pergunta {key:Shadowthorn} ao {npc:Pyro Peter} em Venore, ou {key:thornfire} a qualquer {wiki:Guide NPCs|Guide NPC}.",
+    "Faz vários {item:Prepared Bucket|Prepared Buckets} de uma vez: cada balde só apaga um fogo antes de teres de o encher outra vez.",
+    "Se queres o mount, **não mates** os Thornfire Wolves e leva um {item:Diapason}."
+  ],
+  "sections": [
+    {
+      "title": "1. Saber o estado de Shadowthorn",
+      "steps": [
+        {
+          "title": "Perguntar ao Pyro Peter",
+          "text": "Vai a **Venore** e fala com o {npc:Pyro Peter}, que anda pela zona indicada. Diz {key:hi} e {key:Shadowthorn} para saberes se os firestarters estão presos ou se a vila está a arder. Em alternativa, pergunta {key:thornfire} a um Guide NPC.",
+          "npc": "Pyro Peter",
+          "coords": [
+            {
+              "x": 32954,
+              "y": 32095,
+              "z": 6,
+              "label": "Zona onde anda o Pyro Peter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Libertar os firestarters",
+      "intro": "Faz esta parte quando Shadowthorn **não** está a arder. Os firestarters estão em três prisões subterrâneas, cada uma guardada por um {creature:Elf Overseer}. As grades de madeira estão cobertas de musgo pela magia do bog god.",
+      "steps": [
+        {
+          "title": "Chegar a Shadowthorn",
+          "text": "Sai de **Venore** pela **saída leste** da cidade e atravessa o pântano para **sudeste** até ao acampamento dos elfos, {wiki:Shadowthorn}. O mapa mostra o caminho mais rápido (há outros). Uma {item:Machete} e uma {item:Shovel} não são obrigatórias, mas ajudam a atravessar o pântano.",
+          "coords": [{"x": 33075, "y": 32170, "z": 7, "label": "Shadowthorn"}],
+          "images": [{"file": "Shadowthorn Route.png", "caption": "Caminho mais rápido de Venore até Shadowthorn"}],
+          "warning": "Pelo caminho há {creature:Snake|Snakes} e talvez {creature:Rotworm|Rotworms}, {creature:Centipede|Centipedes} e {creature:Slime|Slimes}."
+        },
+        {
+          "title": "Descer às prisões",
+          "text": "Vai até à entrada de {wiki:Shadowthorn} (bandeira azul no mapa). Vai logo para **leste** e desce as escadas da torre. As três prisões estão marcadas com X vermelhos no mapa.",
+          "images": [
+            {
+              "file": "Thornfire.png",
+              "caption": "Mapa de Shadowthorn: entrada (bandeira azul), três prisões (X vermelhos) e templo do bog god (cruz)"
+            }
+          ]
+        },
+        {
+          "title": "Matar os três Elf Overseers",
+          "text": "Mata **os três** {creature:Elf Overseer|Elf Overseers}, um em cada prisão. Só voltam a aparecer da próxima vez que Shadowthorn deixar de arder."
+        },
+        {
+          "title": "Matar todos os elfos",
+          "text": "Mata **todos os elfos** de Shadowthorn pelo menos uma vez ({creature:Elf|Elves}, {creature:Elf Scout|Elf Scouts}, etc.). Eles fazem respawn, mas basta matar cada um uma vez. À medida que os seguidores morrem, o poder do bog god enfraquece e o musgo das grades desaparece.",
+          "warning": "Tens de matar **mesmo todos** os elfos, senão o musgo não sai das grades."
+        },
+        {
+          "title": "Partir as grades",
+          "text": "Quando o musgo desaparecer, parte as {item:Wooden Bars} das três prisões com qualquer arma para libertar os {creature:Firestarter|Firestarters}. As grades voltam a formar-se e podem ser partidas outra vez; o importante é o musgo ter desaparecido. Depois sobe pelas escadas da torre por onde desceste para voltares à superfície da vila.",
+          "reward": "No dia seguinte (depois do Server Save) Shadowthorn estará em chamas"
+        }
+      ]
+    },
+    {
+      "title": "3. Apagar os fogos",
+      "intro": "Quando os firestarters escapam, pegam fogo à vila. As chamas são mágicas: só a água do pântano do templo do bog god as apaga.",
+      "steps": [
+        {
+          "title": "Preparar os baldes",
+          "text": "Usa um {item:Flask of Embalming Fluid} num {item:Bucket} normal para fazeres um {item:Prepared Bucket}. Um balde normal não segura a água escorregadia do pântano. Faz vários de uma vez.",
+          "tip": "Vê o Market: às vezes os Prepared Buckets saem mais baratos do que comprar o Embalming Fluid."
+        },
+        {
+          "title": "Encher com água do pântano",
+          "text": "Vai ao templo do bog god, a **leste** da entrada de Shadowthorn (cruz no mapa). Usa o {item:Prepared Bucket} na {item:Bog Water} para obteres um {item:Bucket of Bog Water}.",
+          "coords": [
+            {
+              "x": 33125,
+              "y": 32147,
+              "z": 7,
+              "label": "Templo do bog god (Bog Water)"
+            }
+          ],
+          "tip": "Ao pisares a água aparece: *\"The water of the bog seems slippery and tries to escape even your clothes.\"*"
+        },
+        {
+          "title": "Apagar os thornfires",
+          "text": "Anda por Shadowthorn e usa o {item:Bucket of Bog Water} nas chamas. Depois de cada uso tens de voltar a encher o balde. Ao apagares **500 thornfires** ganhas o achievement **Firefighter**.",
+          "reward": "Achievement Firefighter (500 fogos)"
+        }
+      ]
+    },
+    {
+      "title": "4. Thornfire Wolf e Crystal Wolf (mount)",
+      "steps": [
+        {
+          "title": "Esperar pelo Thornfire Wolf",
+          "text": "Cada vez que apagas um fogo há uma hipótese **pequena** (0,1–1%) de aparecer um {creature:Thornfire Wolf}. Esteja onde estiver o fogo, o lobo aparece sempre a **oeste do lago**. Aparece uma mensagem laranja em toda a vila: *\"Unleash the flaming wolves and burn the house of the enemy!\"*",
+          "coords": [
+            {
+              "x": 33095,
+              "y": 32159,
+              "z": 7,
+              "label": "Spawn do Thornfire Wolf (oeste do lago)"
+            }
+          ]
+        },
+        {
+          "title": "Transformar e domar",
+          "text": "**Não mates** o Thornfire Wolf. Atrai-o até ao templo do bog god: assim que pisar a {item:Bog Water}, transforma-se num {creature:Crystal Wolf}. Usa o {item:Diapason} no Crystal Wolf para o domares.",
+          "coords": [
+            {
+              "x": 33125,
+              "y": 32147,
+              "z": 7,
+              "label": "Templo do bog god (Bog Water)"
+            }
+          ],
+          "reward": "Mount Crystal Wolf"
+        },
+        {
+          "title": "Truque para o Bestiary",
+          "text": "Se queres matar os dois lobos para o {wiki:Bestiary}: ataca o Thornfire Wolf com ataques fracos até ficar com vida vermelha, atrai-o para a água e, no instante em que o Crystal Wolf aparece, dá o golpe final no Thornfire Wolf. O Thornfire Wolf conta para o Bestiary e o Crystal Wolf aparece na mesma, por isso podes matar os dois.",
+          "tip": "Usa uma runa ou feitiço de ataque para o golpe final: os ataques corpo-a-corpo podem ter atraso."
+        },
+        {
+          "title": "Sair de Shadowthorn",
+          "text": "Quando acabares (fogos e, se quiseres, o mount), volta pelo mesmo caminho: sai de Shadowthorn e atravessa o pântano para **noroeste** até à saída leste de **Venore**."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Depois de apagados fogos suficientes, os firestarters voltam a ser presos e a vila volta ao normal no Server Save seguinte.",
+    "O fogo é reposto duas vezes por dia, 8 e 16 horas depois do Server Save, para dar a outros jogadores a hipótese de apagar fogos e enfrentar as criaturas exclusivas deste World Change.",
+    "Este World Change foi introduzido no Summer Update 2011."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "The Spike",
+  "type": "dungeon",
+  "near": "Kazordoon",
+  "summary": "Estrutura de cristal criada pelos gnomos que se afunda na terra, com três divisões por nível (Upper 25–49, Middle 50–79, Lower 80+) e tarefas diárias; chega-se por um teleporte de cristal na zona do templo de **Kazordoon**.",
+  "entrance": {"x": 32248, "y": 32604, "z": 8, "label": "Gnommander, nível -1 da Spike (zona de chegada)"},
+  "requirements": [
+    "Só podes entrar na divisão correspondente ao teu nível: Upper Spike (25–49), Middle Spike (50–79) ou Lower Spike (80+)."
+  ],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de Cormaya ({npc:Gurbasch}) ou Farmine ({npc:Thorgrin}) com {key:hi}, {key:kazordoon}, {key:yes}, ou a pé pela entrada da montanha.",
+    "Na zona do templo de Kazordoon entra no teleporte **norte**, perto do {npc:Xelvar} ({coord:32623,31857,11}). É um {item:Large Crystal Teleporter (Berg)|large crystal teleporter}: não precisa de {item:Teleport Crystal|Teleport Crystals}.",
+    "Chegas à Spike; o {npc:Gnommander} está no primeiro andar (nível -1, {coord:32248,32604,8})."
+  ],
+  "leave": [
+    "Volta à zona segura da tua divisão e regressa à zona onde chegaste à Spike.",
+    "Usa o teleporte de cristal de volta para a zona do templo de **Kazordoon**. Para saíres de Kazordoon, o {npc:Brodrosch} no porto subterrâneo leva-te de Steamship a Cormaya ou Farmine ({key:hi}, {key:cormaya} ou {key:farmine}, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32623, "y": 31857, "z": 11, "label": "Teleporte para The Spike (templo de Kazordoon)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"}
+  ],
+  "images": [
+    {"file": "Summer 2013 Spike 1.png", "caption": "The Spike — mapa 1"},
+    {"file": "Summer 2013 Spike 2.png", "caption": "The Spike — mapa 2"},
+    {"file": "Summer 2013 Spike 3.png", "caption": "The Spike — mapa 3"},
+    {"file": "Summer 2013 Spike 4.png", "caption": "The Spike — mapa 4"}
+  ],
+  "warnings": [
+    "A Upper Spike tem {creature:Ghost|Ghosts} e {creature:Zombie|Zombies}; a Middle Spike tem {creature:Crystalcrusher|Crystalcrushers} muito fortes para o nível; a Lower Spike é difícil até nível 150+."
+  ]
+}

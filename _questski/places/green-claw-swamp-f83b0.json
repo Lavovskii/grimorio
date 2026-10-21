@@ -1,0 +1,30 @@
+{
+  "title": "Green Claw Swamp",
+  "type": "zona",
+  "near": "Venore",
+  "summary": "Pântano perigoso entre **Kazordoon e Venore**, a oeste/noroeste de Venore, com amazonas, valkyries, bruxas e muitas criaturas venenosas; tem o Amazon Camp de Venore, a Villa Scapula, a gruta do clã de trolls de Dusalk e as Tainted Caves.",
+  "entrance": {"x": 32759, "y": 31989, "z": 7, "label": "Green Claw Swamp"},
+  "items": ["Machete", "Rope", "Shovel"],
+  "arrive": [
+    "Se não estás em **Venore**, apanha um barco (no capitão do porto da tua cidade: {key:hi}, {key:venore}, {key:yes}; chegas junto ao {npc:Captain Fearless}).",
+    "Atravessa o pântano a partir da saída **noroeste** de Venore; ou sai pela saída **sudoeste** e segue a estrada para **noroeste**, em direção à {wiki:Dwarf Bridge}.",
+    "Também podes vir de **oeste** (de Kazordoon) pela {wiki:Dwarf Bridge} e andar para **leste**.",
+    "Dentro do pântano usa a {item:Machete} na {item:Jungle Grass} que tapa os caminhos. Entradas úteis: Venore Rotworm Cave ({coord:32699,32018,7}, abre a {item:Loose Stone Pile} com a {item:Shovel}), Tainted Caves a **norte** ({coord:32711,31939,7}) e o buraco no lado norte do pântano ({coord:32737,31953,7})."
+  ],
+  "leave": [
+    "Se estás numa das grutas, volta pelo mesmo caminho até ao pântano (usa a {item:Rope} nos buracos por onde desceste).",
+    "Do pântano, volta para **sudeste** pela estrada até à saída sudoeste de **Venore**, ou para **leste** até à entrada noroeste da cidade. Em alternativa, segue para **oeste** até à {wiki:Dwarf Bridge}.",
+    "Em Venore, o {npc:Captain Fearless} leva-te de barco a outras cidades ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"},
+    {"x": 32853, "y": 31924, "z": 7, "label": "Amazon Camp de Venore"},
+    {"x": 32700, "y": 31992, "z": 7, "label": "Entrada da gruta da Silver Brooch (pitfall)"}
+  ],
+  "images": [
+    {"file": "Map greenclawswamp.jpg", "caption": "Mapa do Green Claw Swamp"}
+  ],
+  "warnings": [
+    "Leva {item:Antidote Potion|antídotos}: há {creature:Poison Spider|Poison Spiders}, {creature:Scorpion|Scorpions} e outras criaturas venenosas, além de {creature:Amazon|Amazons}, {creature:Valkyrie|Valkyries} e {creature:Witch|Witches}. Em alguns sítios aparece um {creature:Mummy}, um {creature:Black Knight} ou até uma {creature:Giant Spider}."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Guzzlemaw Valley",
+  "type": "zona",
+  "near": "Roshamuul",
+  "summary": "Vale rochoso cheio de ruínas em **Roshamuul**, entre a ponte de Lower Roshamuul e a muralha de {wiki:Upper Roshamuul}; zona de caça de nível muito alto (Frazzlemaws, Guzzlemaws, Silencers).",
+  "entrance": {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (acampamento do sul, Lower Roshamuul)"},
+  "requirements": [
+    "O vale só fica acessível depois de a **ponte** de Roshamuul estar reparada (depende do estágio do teu servidor na {wiki:Roshamuul Quest})."
+  ],
+  "arrive": [
+    "Em **Thais**, fala com o {npc:Captain Bluebear} no porto: {key:hi}, {key:roshamuul}, {key:yes} (210 gp).",
+    "O barco atraca no acampamento do sul, em {wiki:Lower Roshamuul}, junto ao {npc:Captain Chelop} ({coord:33493,32569,7}).",
+    "Sobe a rampa a partir do barco e do acampamento e atravessa a **ponte** para **norte**: do outro lado começa o Guzzlemaw Valley.",
+    "A parte **oeste** tem ruínas com escadas (abrigo temporário); a **leste/nordeste** fica a muralha para Upper Roshamuul ({coord:33632,32401,7}) e, a **sudeste**, o {wiki:Silencer Plateau}."
+  ],
+  "leave": [
+    "Volta para **sul** pela ponte e desce a rampa até ao acampamento de Lower Roshamuul.",
+    "Fala com o {npc:Captain Chelop}: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino."
+  ],
+  "coords": [
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (barco)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"}
+  ],
+  "images": [
+    {"file": "Roshamuul Legend.png", "caption": "Legenda do mapa de Roshamuul"}
+  ],
+  "warnings": [
+    "Zona para nível **200–250+**: {creature:Frazzlemaw|Frazzlemaws}, {creature:Guzzlemaw|Guzzlemaws}, {creature:Silencer|Silencers} e {creature:Shock Head|Shock Heads}. Leva proteção contra Life Drain.",
+    "Se tiverem sido feitas poucas tarefas de Blowing Horns no dia anterior, podem aparecer {creature:Sight of Surrender|Sights of Surrender} em qualquer ponto do vale."
+  ]
+}

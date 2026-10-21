@@ -1,0 +1,39 @@
+{
+  "title": "Zao Palace",
+  "type": "dungeon",
+  "near": "Farmine",
+  "summary": "Palácio dos lagartos bem fundo por baixo dos {wiki:Dragonblaze Peaks}, em Zao, a que se chega pelas {wiki:Zao Palace Antechambers}; zona de caça de nível alto cheia de Draken.",
+  "entrance": {"x": 33161, "y": 31263, "z": 10, "label": "Porta selada do Zao Palace (nas Antechambers)"},
+  "requirements": [
+    "Para entrares nas zonas de caça pela porta selada tens de ter terminado a {wiki:The New Frontier Quest} e entregue pelo menos **10 tomos** ao Cael na {wiki:Tomes of Knowledge Quest}.",
+    "A outra entrada ({coord:33170,31260,10}) só se usa durante a missão 8 da New Frontier Quest."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Vai a **Farmine** de {wiki:Steamship} ({npc:Brodrosch} em Kazordoon ou {npc:Gurbasch} em Cormaya: {key:hi}, {key:farmine}, {key:yes}). Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha.",
+    "Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até à {wiki:Zao Steppe} ({coord:33085,31532,7}), e atravessa a estepe para **norte** até aos Dragonblaze Peaks.",
+    "Vai para norte pelas pequenas fendas da montanha até ao único buraco de corda à superfície ({coord:33175,31306,7}) e sobe com a {item:Rope} **duas vezes**.",
+    "Vai para **sudeste** e segue a montanha até ao outro lado; desce a rampa e vai para **noroeste** até um {item:Large Hole}. Abre-o e desce às {wiki:Zao Palace Antechambers}, e continua a descer pelos buracos e escadas.",
+    "Atravessa as Antechambers até à porta selada do palácio ({coord:33161,31263,10}) e entra."
+  ],
+  "leave": [
+    "Volta pelo **mesmo caminho** até à porta selada e às Antechambers.",
+    "Sobe as escadas e usa a {item:Rope} nos buracos por onde desceste (incluindo o Large Hole) até à superfície dos Dragonblaze Peaks. Segue a montanha de volta para **noroeste** até ao buraco de corda, desce os dois andares e regressa para **sul** pela estepe.",
+    "Na passagem em {coord:33085,31532,7}, sobe a montanha com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador para Farmine. O {npc:Thorgrin} leva-te de Steamship a Kazordoon ou Cormaya."
+  ],
+  "coords": [
+    {"x": 33163, "y": 31280, "z": 9, "label": "Zao Palace Antechambers"},
+    {"x": 33154, "y": 31263, "z": 10, "label": "Início do Zao Palace"},
+    {"x": 33157, "y": 31229, "z": 15, "label": "Baú do Tome of Knowledge (Zao Palace)"}
+  ],
+  "images": [
+    {"file": "Zao Palace entrance.png", "caption": "A entrada do Zao Palace"},
+    {"file": "Zao Palace -4.png", "caption": "Zao Palace, piso -4"},
+    {"file": "Zao Palace -5.png", "caption": "Zao Palace, piso -5"},
+    {"file": "Zao Palace -6.png", "caption": "Zao Palace, piso -6"},
+    {"file": "Zao Palace -7.png", "caption": "Zao Palace, piso -7"}
+  ],
+  "warnings": [
+    "Pelo caminho há {wiki:High Class Lizards} fortes e, no palácio, hordas de {creature:Draken Warmaster|Draken Warmasters}. A wiki recomenda nível 120–130+."
+  ]
+}

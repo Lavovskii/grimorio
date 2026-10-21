@@ -1,0 +1,31 @@
+{
+  "title": "Alatar Lake",
+  "type": "zona",
+  "near": "Thais",
+  "summary": "Lago a **nordeste de Thais**, com uma pequena gruta por baixo (alguns {creature:Bonelord|Bonelords} e um {creature:Ghoul}) e sapos à volta, entre eles {npc:A Frog} e o boss {creature:The Frog Prince}.",
+  "entrance": {"x": 32393, "y": 32118, "z": 7, "label": "Alatar Lake"},
+  "arrive": [
+    "Sai de **Thais** a pé e segue para **nordeste** até ao lago ({coord:32393,32118,7}).",
+    "Junto ao lago estão {npc:A Frog} ({coord:32363,32120,7}) e a feiticeira {npc:Loria} ({coord:32385,32131,7}).",
+    "A gruta por baixo do lago (1 andar abaixo do chão) é onde está o {npc:Lugri} ({coord:32389,32118,8}); desce ali a partir do lago.",
+    "A entrada da outra gruta, a **norte** do lago ({coord:32357,32085,7}), é o caminho para o {wiki:Thais Dragon Lair}."
+  ],
+  "leave": [
+    "Se estás na gruta, sobe pelo mesmo sítio por onde desceste.",
+    "Volta a pé para **sudoeste** até Thais."
+  ],
+  "coords": [
+    {"x": 32393, "y": 32118, "z": 7, "label": "Alatar Lake"},
+    {"x": 32363, "y": 32120, "z": 7, "label": "A Frog"},
+    {"x": 32385, "y": 32131, "z": 7, "label": "Loria"},
+    {"x": 32389, "y": 32118, "z": 8, "label": "Lugri (gruta por baixo do lago)"},
+    {"x": 32357, "y": 32085, "z": 7, "label": "Gruta a norte do lago (caminho para o Thais Dragon Lair)"}
+  ],
+  "images": [
+    {"file": "Map Alatar Lake.png", "caption": "Mapa do Alatar Lake"},
+    {"file": "Map Alatar Lake2.png", "caption": "Mapa da gruta do Alatar Lake"}
+  ],
+  "warnings": [
+    "Na gruta há {creature:Bonelord|Bonelords} e um {creature:Ghoul}: perigosos para níveis muito baixos."
+  ]
+}

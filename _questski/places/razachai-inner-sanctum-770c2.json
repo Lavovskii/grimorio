@@ -1,0 +1,35 @@
+{
+  "title": "Razachai/Inner Sanctum",
+  "type": "dungeon",
+  "near": "Farmine",
+  "summary": "A parte mais funda do palácio de **Razachai**, no norte de Zao, para lá do teleporte junto ao {npc:Zizzle}: aqui o imperador guarda os melhores guardas e as quatro incarnações de si próprio (zona da missão 10 da {wiki:Wrath of the Emperor Quest}).",
+  "entrance": {"x": 33071, "y": 31103, "z": 14, "label": "Sala principal dos quatro teleportes"},
+  "requirements": [
+    "Precisas de ter feito a {wiki:Wrath of the Emperor Quest} até à **missão 10** (por isso a zona é às vezes chamada \"Mission 10\").",
+    "Depois de terminares a quest podes usar os teleportes entre Razachai, o Rebel Camp e o Inner Sanctum."
+  ],
+  "arrive": [
+    "Apanha o {wiki:Steamship} para **Farmine** (no {npc:Brodrosch}, muito abaixo de Kazordoon, ou no {npc:Gurbasch}, 8 andares abaixo de Cormaya): {key:hi}, {key:farmine}, {key:yes}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te no interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície. Segue a passagem para **leste**, descendo com {spell:Levitate}, até à {wiki:Zao Steppe}.",
+    "Chega ao palácio de Razachai como na quest: pelo esconderijo dos rebeldes ({npc:Chartan}) e pela cidade, ou — depois da missão 9 — pelo teleporte que liga o centro de Razachai à sala do {npc:Zizzle} (cada passagem para a sala do Zizzle custa uma {item:Scale of Corruption}).",
+    "Na sala do {npc:Zizzle} (andar -5, {coord:33103,31120,12}) entra no teleporte de **sudeste** até à sala do {npc:A Sleeping Dragon}; anda para **norte** do dragão até à porta grande: és teleportado para outra sala, e o teleporte seguinte leva à sala principal do Inner Sanctum ({coord:33071,31103,14})."
+  ],
+  "leave": [
+    "Volta pelos teleportes até à sala do {npc:Zizzle} e usa o teleporte do canto **inferior esquerdo**: leva-te ao edifício dos {creature:Lizard Magistratus} no centro de Razachai.",
+    "Na cave por baixo do {npc:Zlak} ({coord:33078,31219,8}) entra no teleporte para a sala do {npc:Chartan}; a chama azul a **sul** do Chartan leva-te às {wiki:Muggy Plains}.",
+    "Nas Muggy Plains volta à Zao Steppe pelo teleporte, segue para **sudoeste** até à passagem pela montanha ({coord:33085,31532,7}), sobe-a com {spell:Levitate} e vai para **oeste** até ao elevador de Farmine."
+  ],
+  "items": ["Scale of Corruption"],
+  "coords": [
+    {"x": 33103, "y": 31120, "z": 12, "label": "Zizzle (andar -5 do palácio)"},
+    {"x": 33243, "y": 31219, "z": 10, "label": "A Sleeping Dragon"},
+    {"x": 33078, "y": 31219, "z": 8, "label": "Teleporte por baixo do Zlak (para o Chartan)"},
+    {"x": 33214, "y": 31058, "z": 9, "label": "Chartan (esconderijo dos rebeldes)"},
+    {"x": 33025, "y": 31553, "z": 14, "label": "Steamship de Farmine"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Passagem pela montanha (entrada na Zao Steppe)"}
+  ],
+  "warnings": [
+    "Zona pensada para **paladins**: podes ter de enfrentar até 20 criaturas seguidas ({creature:Draken Abomination|Draken Abominations}, {creature:Draken Elite|Draken Elites}, {creature:Ghastly Dragon|Ghastly Dragons}, {creature:Undead Dragon|Undead Dragons}). Leva {item:Energy Wall Rune|Energy Wall} e {item:Bomb Rune|Bomb Runes} para cortar o caminho.",
+    "Às vezes aparece o boss {creature:Hatebreeder}."
+  ]
+}

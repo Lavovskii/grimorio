@@ -1,0 +1,29 @@
+{
+  "title": "Seacrest Grounds",
+  "type": "zona",
+  "near": "Rathleton",
+  "summary": "Zona de caça subaquática **muito abaixo de Oramond**, com a entrada a **oeste/noroeste de Rathleton**, junto ao pescador {npc:Mr Brandon}.",
+  "entrance": {"x": 33550, "y": 31869, "z": 7, "label": "Mr Brandon (entrada dos Seacrest Grounds)"},
+  "requirements": [
+    "A zona principal está aberta a todos; as subzonas abrem com a {wiki:Twenty Miles Beneath the Sea Quest}: missão 1 = Lost Mountains (teleporte oeste), missão 2 = Sunken City (teleporte leste), missão 3 = Birthing Grounds (teleporte norte).",
+    "Os barcos de Venore e Edron para Oramond exigem o rank **Citizen** na {wiki:Rathleton Quest}; o de Thais não."
+  ],
+  "items": ["Helmet of the Deep"],
+  "arrive": [
+    "Vai a **Rathleton** (Oramond) de barco: o {npc:Captain Bluebear} em Thais ({key:hi}, {key:oramond}, {key:yes}, 150 gp), ou, com o rank Citizen, o {npc:Captain Fearless} em Venore (130 gp) ou o {npc:Captain Seahorse} em Edron (110 gp). Chegas à jangada do {npc:Captain Gulliver} ({coord:33479,31986,7}).",
+    "Sai de Rathleton pelo lado **oeste** e segue para **noroeste** até ao {npc:Mr Brandon} ({coord:33550,31869,7}).",
+    "Entra no {item:Magic Forcefield} a **sul** dele, nada até ao lado **norte** da água e entra no {item:Maelstrom}: apareces nos Seacrest Grounds, perto do {npc:Guardian of the Deep Seas}."
+  ],
+  "leave": [
+    "Se estás numa das subzonas, entra no teleporte de volta para apareceres junto aos quatro teleportes.",
+    "Junto ao Guardian, sobe a rampa a **leste** e entra no {item:Magic Forcefield} **do sul**: leva-te de volta ao {npc:Mr Brandon}.",
+    "Segue a pé para **leste/sudeste** até Rathleton. Na jangada do {npc:Captain Gulliver} diz {key:hi}, {key:thais}, {key:yes} (150 gp); com o rank Citizen ele também te leva a Edron, Venore, Port Hope e Krailos, e Issavi está sempre disponível. Com o rank Citizen, o Slime Slide de Rathleton leva-te diretamente à jangada."
+  ],
+  "coords": [
+    {"x": 33479, "y": 31986, "z": 7, "label": "Jangada do Captain Gulliver (Rathleton)"}
+  ],
+  "warnings": [
+    "Sem um {item:Helmet of the Deep} sofres dano de afogamento debaixo de água (o capacete não é obrigatório para entrar).",
+    "Zona para nível 120+: {creature:Seacrest Serpent|Seacrest Serpents}, {creature:Sea Serpent|Sea Serpents} e quaras; durante a {wiki:The Fire-Feathered Serpent World Change} aparecem {creature:Renegade Quara|Renegade Quaras}."
+  ]
+}

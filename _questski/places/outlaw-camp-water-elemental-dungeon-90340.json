@@ -1,0 +1,28 @@
+{
+  "title": "Outlaw Camp/Water Elemental Dungeon",
+  "type": "gruta",
+  "near": "Kazordoon",
+  "summary": "Gruta de {creature:Water Elemental|Water Elementals} numa pequena ilha do rio a **sul do {wiki:Outlaw Camp}**, entre Thais e Venore; só é acessível quando o rio transborda com a {wiki:Down the Drain Mini World Change}.",
+  "entrance": {"x": 32590, "y": 32314, "z": 7, "label": "Entrada da gruta (na ilha, à superfície)"},
+  "requirements": [
+    "Só com a {wiki:Down the Drain Mini World Change} ativa. Mensagens: *\"The river south of the outlaw camp is flooding. A small island there should now be reachable safely.\"* ou *\"Hear ye! Hear ye! A river is flooding, south of the outlaw base. [...]\"*."
+  ],
+  "arrive": [
+    "Vai ao {wiki:Outlaw Camp}: sai de **Thais** pela porta leste (ou de **Venore** pela porta oeste) e segue a pé pela estrada até ao acampamento ({coord:32643,32222,7}).",
+    "Do Outlaw Camp vai para **sul**, até ao rio que transbordou, e passa para a pequena ilha ({coord:32589,32308,7}).",
+    "Na ilha, desce para a gruta ({coord:32590,32314,7}); chegas 1 andar abaixo ({coord:32590,32314,8})."
+  ],
+  "leave": [
+    "Sai pelo mesmo sítio por onde desceste ({coord:32590,32314,8}) e volta à ilha.",
+    "Regressa a pé para **norte** até ao Outlaw Camp e daí para Thais (**oeste**) ou Venore (**leste**). Faz isto antes de o world change acabar: a ilha só é acessível enquanto o rio está transbordado."
+  ],
+  "coords": [
+    {"x": 32643, "y": 32222, "z": 7, "label": "Outlaw Camp"},
+    {"x": 32589, "y": 32308, "z": 7, "label": "Ilha nova (acesso à gruta)"},
+    {"x": 32590, "y": 32314, "z": 8, "label": "Gruta dos Water Elementals (1 andar abaixo)"}
+  ],
+  "warnings": [
+    "Há 10 {creature:Water Elemental|Water Elementals} na gruta e 1 à superfície: quando desces podem vir todos ao mesmo tempo.",
+    "No caminho desde o Outlaw Camp podes encontrar {creature:Tarantula|Tarantulas}, {creature:Wild Warrior|Wild Warriors} e {creature:Bandit|Bandits}."
+  ]
+}

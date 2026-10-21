@@ -1,0 +1,34 @@
+{
+  "title": "Headquarters of the Planegazers",
+  "type": "edificio",
+  "near": "Kazordoon",
+  "summary": "Escritório secreto e prisão subterrânea dos Planegazers, algures no leste do mapa; só se entra pelo {item:Energy Gate} que se abre na forja do {wiki:Gnome Deep Hub} durante a {wiki:Opticording Sphere Quest}.",
+  "requirements": [
+    "Tens de ter feito os passos anteriores da {wiki:Opticording Sphere Quest} (óculos usados nas cinco forjas e a {item:Complete Opticording Sphere}).",
+    "Precisas de acesso à zona de tasks do {npc:Gnomus} no {wiki:Gnome Deep Hub}."
+  ],
+  "items": ["Opticorder Rectifier", "Complete Opticording Sphere"],
+  "arrive": [
+    "Vai a **Kazordoon**: de {wiki:Steamship} a partir de Cormaya ({npc:Gurbasch}) ou de Farmine ({npc:Thorgrin}), com {key:hi}, {key:kazordoon}, {key:yes}, ou a pé pela entrada da montanha.",
+    "A entrada do {wiki:Gnome Deep Hub} fica em Kazordoon, perto do blesser do **norte**, 4 andares abaixo do nível do chão ({coord:32624,31868,11}); o cristal do GCTS fica mesmo ao lado.",
+    "No hub, entra na zona de tasks do {npc:Gnomus}: vai à parte mais a **leste**, desce no ponto indicado ({coord:33838,32178,14}), sobe a rampa seguinte e segue pela gruta para **leste** até à **Lost Ruin** ({coord:33980,32177,14}).",
+    "Usa uma vez o {item:Skull Pillar (Stone)|Skull Pillar} e uma vez a {item:Pillar Vine}: és enviado para a forja.",
+    "Na forja, usa o {item:Opticorder Rectifier} com a {item:Complete Opticording Sphere} na mochila; aparece um portal do outro lado da sala. Entra no {item:Energy Gate}: estás no quartel-general."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída: volta pelo mesmo caminho até à forja do Gnome Deep Hub e regressa ao hub pela zona do {npc:Gnomus}.",
+    "Sai do hub pela entrada de **Kazordoon** ({coord:32624,31868,11}) ou usa o cristal do GCTS ao lado. No porto subterrâneo de Kazordoon, o {npc:Brodrosch} leva-te de steamship a Cormaya ou Farmine."
+  ],
+  "coords": [
+    {"x": 32624, "y": 31868, "z": 11, "label": "Entrada/saída do Gnome Deep Hub (Kazordoon)"},
+    {"x": 33838, "y": 32178, "z": 14, "label": "Descer aqui (zona do Gnomus)"},
+    {"x": 33980, "y": 32177, "z": 14, "label": "Lost Ruin"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Steamship de Kazordoon (Brodrosch)"}
+  ],
+  "images": [
+    {"file": "Planegazer headquarters.png", "caption": "O quartel-general dos Planegazers"}
+  ],
+  "warnings": [
+    "Lá dentro há {creature:Ghost of a Planegazer|Ghosts of a Planegazer} e um portal para a Chamber of Reflections, onde podes enfrentar reflexos de bosses e o {creature:Last Planegazer}."
+  ]
+}

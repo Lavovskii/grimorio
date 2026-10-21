@@ -1,0 +1,90 @@
+{
+  "slug": "spike-sword-quest",
+  "category": "tesouro",
+  "region": "Kazordoon",
+  "difficulty": 3,
+  "duration": "30–45 min",
+  "summary": "Um guerreiro aventurou-se demasiado fundo na terra. Desce pela pequena gruta a leste do {wiki:Mount Sternum}, perto da {wiki:Triangle Tower}, abre buracos com a picareta e atravessa salas cheias de {creature:Fire Devil|Fire Devils} até uma gruta rodeada de lava, onde está a {item:Spike Sword} dentro de um corpo escondido atrás de um pilar.",
+  "legend_pt": "Um guerreiro viajou demasiado fundo para dentro da terra.",
+  "start": {"x": 32593, "y": 32068, "z": 7, "label": "Pequena gruta a leste do Mount Sternum"},
+  "requirements": [
+    "Sem nível mínimo; recomendado nível 40+.",
+    "Não precisa de Premium."
+  ],
+  "items_needed": [
+    {"item": "Shovel"},
+    {"item": "Rope"},
+    {"item": "Pick", "note": "para abrir dois buracos"},
+    {"text": "Feitiço {spell:Invisible} ou {item:Stealth Ring|Stealth Rings}, por causa dos Fire Devils"}
+  ],
+  "rewards": [
+    {"item": "Spike Sword"}
+  ],
+  "dangers": ["Dwarf", "Fire Devil"],
+  "npcs": [],
+  "tips": [
+    "Os {creature:Fire Devil|Fire Devils} atacam com bolas de fogo à distância. Fica invisível ({spell:Invisible} ou {item:Stealth Ring}) a partir do 3.º andar.",
+    "Leva poções de vida: na última sala muitos Fire Devils conseguem acertar-te a partir das ilhas de lava."
+  ],
+  "sections": [
+    {
+      "title": "1. Descer até aos Fire Devils",
+      "steps": [
+        {
+          "title": "Chegar à gruta",
+          "text": "A gruta fica entre Thais e Kazordoon: a **leste** do {wiki:Mount Sternum} (que está a nordeste de Thais) e a **nordeste** da {wiki:Triangle Tower}. Vai a pé a partir de **Thais** (para nordeste) ou de **Kazordoon** (para sul) até às coordenadas da entrada.",
+          "coords": [{"x": 32593, "y": 32068, "z": 7, "label": "Entrada da gruta"}, {"x": 32494, "y": 32072, "z": 7, "label": "Mount Sternum (referência)"}, {"x": 32562, "y": 32120, "z": 7, "label": "Triangle Tower (referência)"}]
+        },
+        {
+          "title": "Entrar na gruta",
+          "text": "Vai à pequena gruta a **leste do {wiki:Mount Sternum}** e desce.",
+          "coords": [{"x": 32593, "y": 32068, "z": 7, "label": "Entrada da gruta"}]
+        },
+        {
+          "title": "Descer mais um andar",
+          "text": "Estás numa sala pequena. Desce mais um andar, como no mapa.",
+          "images": [{"file": "Spike Sword Quest Map 01.jpg", "caption": "1.º andar: a descida seguinte"}]
+        },
+        {
+          "title": "Picar o buraco a sudoeste",
+          "text": "Nesta sala, usa a {item:Pick} para abrir um buraco logo a **sudoeste**, como indica o mapa. Desce por ele.",
+          "images": [{"file": "Spike Sword Quest Map 02.jpg", "caption": "2.º andar: onde picar o buraco"}]
+        },
+        {
+          "title": "Contornar para oeste e descer",
+          "text": "Nesta sala há um {creature:Fire Devil}. Segue a passagem que dá a volta para **oeste** e desce mais um andar. É boa altura para usares {spell:Invisible} ou o {item:Stealth Ring}.",
+          "images": [{"file": "Spike Sword Quest Map 03.jpg", "caption": "3.º andar: a passagem para oeste"}]
+        },
+        {
+          "title": "Picar o buraco no canto sudoeste",
+          "text": "Neste andar há **5 {creature:Fire Devil|Fire Devils}**. Vai ao canto **sudoeste** da sala, abre outro buraco com a {item:Pick} e desce.",
+          "images": [{"file": "Spike Sword Quest Map 04.jpg", "caption": "4.º andar: o buraco no canto sudoeste"}]
+        }
+      ]
+    },
+    {
+      "title": "2. A gruta de lava",
+      "steps": [
+        {
+          "title": "Limpar a sala",
+          "text": "Estás rodeado de lava e de muitos {creature:Fire Devil|Fire Devils}: **4** podem ser alcançados e **10** estão em ilhas, mas continuam a acertar-te com bolas de fogo. O recomendado é alguém ficar {spell:Invisible} e limpar a sala.",
+          "images": [{"file": "Spike Sword Quest Map 05.jpg", "caption": "A gruta de lava e o pilar com o corpo"}],
+          "warning": "Os Fire Devils nas ilhas não podem ser alcançados em corpo-a-corpo mas acertam-te à distância."
+        },
+        {
+          "title": "Apanhar a Spike Sword",
+          "text": "A recompensa está dentro de um **corpo escondido atrás de um pilar** (ver mapa). Abre-o e tira a {item:Spike Sword}.",
+          "reward": "Spike Sword"
+        },
+        {
+          "title": "Sair da gruta",
+          "text": "Para sair, volta pelo mesmo caminho: usa a {item:Rope} nos dois buracos que abriste com a {item:Pick} (o da gruta de lava e o do andar dos 5 Fire Devils) e, nos outros andares, sobe pelos mesmos sítios por onde desceste até à entrada da gruta, a leste do Mount Sternum. Continua {spell:Invisible} ou com o {item:Stealth Ring} enquanto passas pelos Fire Devils.",
+          "coords": [{"x": 32593, "y": 32068, "z": 7, "label": "Saída da gruta"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Provavelmente vais ouvir o rugido de três {creature:Dragon|Dragons}. Estão enjaulados no extremo norte da sala; não se sabe como nem porque estão lá."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Edron Goblin Cave",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta de {creature:Goblin|Goblins}, {creature:Bug|Bugs} e {creature:Wasp|Wasps} no sul da {wiki:Edron Troll-Goblin Peninsula}, a oeste de **Edron**; bom sítio de caça para principiantes.",
+  "entrance": {"x": 33107, "y": 31848, "z": 7, "label": "Colina dos goblins (buraco de entrada)"},
+  "items": ["Rope"],
+  "arrive": [
+    "Chega a **Edron** (de barco: diz ao capitão do porto {key:hi}, {key:edron}, {key:yes}).",
+    "Do depot de Edron, desce pelo esgoto no canto **sudoeste** do castelo ({coord:33165,31828,7}).",
+    "Só há um caminho: segue a gruta até saíres numa zona de relva ({coord:33129,31811,7}), já na península dos trolls e goblins.",
+    "Vai para **sudoeste** até encontrares a colina dos goblins e desce pelo buraco ({coord:33107,31848,7})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: regressa aos buracos por onde desceste e usa a {item:Rope} em cada um para subir, até saíres na colina dos goblins ({coord:33107,31848,7}).",
+    "Vai para **nordeste** até à zona de relva ({coord:33129,31811,7}) e refaz a gruta até ao esgoto do castelo de **Edron** ({coord:33165,31828,7})."
+  ],
+  "coords": [
+    {"x": 33165, "y": 31828, "z": 7, "label": "Esgoto do castelo de Edron"},
+    {"x": 33129, "y": 31811, "z": 7, "label": "Saída na zona de relva (península)"},
+    {"x": 33103, "y": 31811, "z": 7, "label": "Entrada das Lost Mines (perto)"}
+  ],
+  "images": [
+    {"file": "Edron goblin.jpg", "caption": "Edron Goblin Cave — superfície"},
+    {"file": "Edron goblin -1.jpg", "caption": "Piso -1"},
+    {"file": "Edron goblin -2.jpg", "caption": "Piso -2"},
+    {"file": "Edron goblin -3.jpg", "caption": "Piso -3"}
+  ],
+  "warnings": [
+    "Zona fácil (nível 10+), mas na península também há a {wiki:Edron Troll Cave}, mais a norte."
+  ]
+}

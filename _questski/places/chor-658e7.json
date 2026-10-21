@@ -1,0 +1,31 @@
+{
+  "title": "Chor",
+  "type": "zona",
+  "near": "Port Hope",
+  "summary": "Aldeia dos lagartos num delta de rio no **sudeste de Tiquanda**, a sudeste de Port Hope e junto às montanhas do {wiki:Kha'zeel Pass}, com uma pirâmide ao estilo de Banuta no centro.",
+  "entrance": {"x": 32906, "y": 32855, "z": 7, "label": "Tronco de entrada em Chor (sudoeste)"},
+  "requirements": [
+    "O barco do {npc:Lorek} só te leva se tiveres o rank **Ranger** (ou superior) na {wiki:Paw and Fur Society}."
+  ],
+  "arrive": [
+    "De **Port Hope**: sai pela parte **sul** da cidade e anda sempre para **leste** (assim evitas a {creature:Hydra} e os elefantes do norte) até à ponte de troncos sobre o rio ({coord:32906,32850,7}).",
+    "Entra em Chor pelo tronco do **sudoeste** ({coord:32906,32855,7}); vai para **sul**, atravessa a ponte e vira para **leste** para chegares ao centro da aldeia.",
+    "De **Ankrahmun**, o caminho mais seguro é pelas montanhas do {wiki:Kha'zeel Pass} (só encontras alguns {creature:Nomad|Nomads} e {creature:Bandit|Bandits}); do lado da selva segue o rio do **sul** até encontrares uma árvore caída sobre o rio. Também se chega pela {wiki:Darama Terramite Cave}.",
+    "Com o rank Ranger na Paw and Fur Society, fala com o {npc:Lorek} no **leste** de Port Hope ({key:hi}) e pede a viagem para Chor: 30 gp, **só de ida**. Chegas a {coord:32968,32801,7}."
+  ],
+  "leave": [
+    "Volta a pé pelo mesmo caminho: sai pelo tronco do **sudoeste**, atravessa a ponte de troncos e segue para **oeste** pela metade sul de **Port Hope**.",
+    "Se vieste de Ankrahmun, volta pelas montanhas do {wiki:Kha'zeel Pass}.",
+    "O barco do {npc:Lorek} não faz a viagem de volta: não há barco a partir de Chor."
+  ],
+  "coords": [
+    {"x": 32952, "y": 32855, "z": 7, "label": "Chor (centro)"},
+    {"x": 32906, "y": 32850, "z": 7, "label": "Ponte de troncos (caminho para Port Hope)"},
+    {"x": 32968, "y": 32801, "z": 7, "label": "Chegada do barco do Lorek"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek (Port Hope)"}
+  ],
+  "warnings": [
+    "No caminho de Port Hope encontras {creature:Tarantula|Tarantulas}, {creature:Cobra|Cobras}, {creature:Spit Nettle|Spit Nettles} e {creature:Earth Elemental|Earth Elementals}; à entrada há {creature:Lizard Sentinel|Lizard Sentinels}, {creature:Lizard Templar|Lizard Templars} e {creature:Larva|Larvas}.",
+    "Dentro da aldeia há grupos de 6 ou mais {creature:Lizard Snakecharmer|Lizard Snakecharmers}: não persigas criaturas para longe, para não seres apanhado por um spawn maior."
+  ]
+}
