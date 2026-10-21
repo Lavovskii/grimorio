@@ -872,7 +872,7 @@
   "k": "p"
  },
  "Aplicar na roda": {
-  "c": "index.html: ugestão de onde os meter */ const sl=sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-o",
+  "c": "index.html: ath.max(a,w.p),0); const sl=sug&&sug.list.length&&!sug.to?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> A roda leva 4000 pontos, mas as builds da lista só vão até aos ${",
   "k": "x"
  },
  "Aplicar recomendados": {
@@ -2085,6 +2085,10 @@
  },
  "Demónios": {
   "c": "index.html: ary, da TibiaWiki) e eventos de XP */ const CLS_PT = {Demon:\"Demónios\",Undead:\"Mortos-vivo",
+  "k": "x"
+ },
+ "Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.": {
+  "c": "index.html: wsug-n\">+${n}</b></li>`; }).join(\"\")}</ul> ${sug.fill?`<p class=\"wsub\">Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.</p>`:\"\"}${sug.left>0?`<p",
   "k": "x"
  },
  "Desbloqueado na Wheel (perto do nível": {
@@ -6252,7 +6256,7 @@
   "k": "x"
  },
  "Sem guild": {
-  "c": "index.html: ow(\"Guild\",t.guild?`${esc(t.guild.r)} em ${esc(t.guild.n)}`:\"Sem guild\")}${row(\"Título\",esc",
+  "c": "index.html: ld\",t.guild?`${esc(t.guild.r)} em <b>${esc(t.guild.n)}</b>`:\"Sem guild\")}${row(\"Título\",esc",
   "k": "x"
  },
  "Sem hunts com XP medida para este nível.": {
@@ -6483,8 +6487,12 @@
   "c": "index.html: >${z===7?\"Zona à superfície\":z>7?`Desce ao subsolo −${z-7}`:`Sobe ao andar +${7-z}`}</li></ol>`; } /* r",
   "k": "p"
  },
+ "Sobram {0}: a roda já fica cheia (4000 pontos).": {
+  "c": "index.html: -n\">+${byD[d]}</b></li>`).join(\"\")}</ul> ${sug.left>0?`<p class=\"wsub\">Sobram ${sug.left}: a roda já fica cheia (4000 pontos).</p>`:\"\"}<button type=\"bu",
+  "k": "p"
+ },
  "Sobram {0}: podes pô-los onde quiseres.": {
-  "c": "index.html: ug-n\">+${n}</b></li>`; }).join(\"\")}</ul> ${sug.left>0?`<p class=\"wsub\">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:\"\"}<button type=\"bu",
+  "c": "index.html:  mais pontos, até aos 1000 de cada um.</p>`:\"\"}${sug.left>0?`<p class=\"wsub\">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:\"\"}<button type=\"bu",
   "k": "p"
  },
  "Solo ED \"Forked Glacier\" build": {
@@ -7128,7 +7136,7 @@
   "k": "x"
  },
  "Título": {
-  "c": "index.html: `${esc(t.guild.r)} em ${esc(t.guild.n)}`:\"Sem guild\")}${row(\"Título\",esc(t.title))} ",
+  "c": "index.html: t.guild.r)} em <b>${esc(t.guild.n)}</b>`:\"Sem guild\")}${row(\"Título\",esc(t.title))} ",
   "k": "x"
  },
  "UE Base Damage": {
@@ -10424,7 +10432,7 @@
   "k": "x"
  },
  "pontos livres": {
-  "c": "index.html: ug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançare",
+  "c": "index.html: ug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> A roda leva 4",
   "k": "x"
  },
  "pontos marcados": {
@@ -11947,6 +11955,10 @@
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "p"
  },
+ "{0} A roda leva 4000 pontos, mas as builds da lista só vão até aos {1}. Para não os desperdiçares, enche os domínios onde já tens mais pontos, cada um até aos 1000 (a revelação chega ao estágio 3):": {
+  "c": "index.html: ath.max(a,w.p),0); const sl=sug&&sug.list.length&&!sug.to?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> A roda leva 4000 pontos, mas as builds da lista só vão até aos ${",
+  "k": "p"
+ },
  "{0} Acessos": {
   "c": "quests/js/app.js:  Set(all.map((e) => e.q.slug)).size; view().innerHTML = ` <div class=\"toolbar\"><h1>${icon(\"key\")} Acessos</h1></div> <p class=\"muted\" style=\"margin-top:-6px\">Que quests desbloqueiam cada zona, transporte, NPC ou funciona",
   "k": "p"
@@ -11968,7 +11980,7 @@
   "k": "p"
  },
  "{0} Para avançares para {1} ({2} pontos), mete-os aqui:": {
-  "c": "index.html: ugestão de onde os meter */ const sl=sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-o",
+  "c": "index.html: \">Aplicar na roda</button></div>` :sug&&sug.list.length?`<div class=\"wsug-box\"><p class=\"wsub\"><b>${free} ${free===1?\"ponto livre\":\"pontos livres\"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-os ",
   "k": "p"
  },
  "{0} Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos). Tabela completa em «Gemas e fragments», por baixo da roda.": {
@@ -12121,10 +12133,6 @@
  },
  "{0} dust · {1}%": {
   "c": "index.html: el.toLowerCase())}</span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
-  "k": "p"
- },
- "{0} em": {
-  "c": "index.html: ${row(\"Residência\",esc(t.res))} ${row(\"Guild\",t.guild?`${esc(t.guild.r)} em ${esc(t.guild.n)}`:\"Sem guild\")}${row(",
   "k": "p"
  },
  "{0} em {1}": {
@@ -13046,6 +13054,14 @@
  "· Shift +25 · Ctrl −25": {
   "c": "index.html: sa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class=\"tiny whtip-h\">${x.full?\"Clica para esvaziar\":\"Clica para encher\"} · Shift +25 · Ctrl −25</div>`):\"\"; WHTIP.inne",
   "k": "x"
+ },
+ "· Stage": {
+  "c": "index.html: span class=\"tiny\">${WHDN[d]} · ${S2.dom[d]}/1000${S2.rev[d]?` · Stage ${S2.rev[d]}`:\"\"}</span></span><b",
+  "k": "x"
+ },
+ "· Stage {0}": {
+  "c": "index.html: span class=\"tiny\">${WHDN[d]} · ${S2.dom[d]}/1000${S2.rev[d]?` · Stage ${S2.rev[d]}`:\"\"}</span></span><b",
+  "k": "p"
  },
  "· Tibia Questski": {
   "c": "quests/js/app.js: \" || S.route.args[0] !== slug) return; document.title = `${d.name} · Tibia Questski`; const p = prog",

@@ -45056,12 +45056,20 @@ function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok
 // r7: caixa "Wheel points": quantos pontos tem a personagem (os do nível e os comprados)
 function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
   /* r7: o total escreve-se e confirma-se com Atualizar (ou Enter); os pontos livres têm sugestão de onde os meter */
-  const sl=sug&&sug.list.length?`<div class="wsug-box"><p class="wsub"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-os aqui:</p>
+  /* r13: só a encher domínios (passaste a build mais completa): o resumo é por domínio — quanto vai para cada um e a revelação que fica */
+  const V=WHD.voc[E.voc], byD={}; if(sug) sug.list.forEach(([i,n])=>{ const d=WHD.slots[i][0]; byD[d]=(byD[d]||0)+n; });
+  const S2=sug?whSum(E.voc,sug.pts):null, maxB=(G.wheel[E.voc]||[]).reduce((a,w)=>Math.max(a,w.p),0);
+  const sl=sug&&sug.list.length&&!sug.to?`<div class="wsug-box"><p class="wsub"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> A roda leva 4000 pontos, mas as builds da lista só vão até aos ${maxB}. Para não os desperdiçares, enche os domínios onde já tens mais pontos, cada um até aos 1000 (a revelação chega ao estágio 3):</p>
+      <ul class="wsug-l">${whFillOrder(d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?E.pts[i]||0:0),0)).filter(d=>byD[d]).map(d=>`<li><span>${whPkIco(E.voc,d,16)}<b>${esc(V.rev[d])}</b> <span class="tiny">${WHDN[d]} · ${S2.dom[d]}/1000${S2.rev[d]?` · Stage ${S2.rev[d]}`:""}</span></span><b class="wsug-n">+${byD[d]}</b></li>`).join("")}</ul>
+      ${sug.left>0?`<p class="wsub">Sobram ${sug.left}: a roda já fica cheia (4000 pontos).</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
+    :sug&&sug.list.length?`<div class="wsug-box"><p class="wsub"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-os aqui:</p>
       <ul class="wsug-l">${sug.list.map(([i,n])=>{ const [d,mx,,cv]=WHD.slots[i], nm=whConvName(E.voc,cv,d).replace(/^Augmented /,"Aug. ").replace(/^Vessel Resonance /,"VR "); return `<li><span><b>${esc(nm)}</b> <span class="tiny">${WHDN[d]} · ${mx}</span></span><b class="wsug-n">+${n}</b></li>`; }).join("")}</ul>
-      ${sug.left>0?`<p class="wsub">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
+      ${sug.fill?`<p class="wsub">Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.</p>`:""}${sug.left>0?`<p class="wsub">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
     :free>0?`<p class="wsub wsug-box"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> ${E.t?"Mete-os onde quiseres em «Distribuir pontos».":"Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos»."}</p>`:"";
   return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><div class="wpts-row"><input id="whBudget" type="number" inputmode="numeric" min="0" max="4000" value="${tot}"><button type="button" class="btn small" data-wpts-go="1">Atualizar</button></div>
     <p class="wsub">${tot>base?`Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?"":`<p class="wsub">Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>`}${sl}</div></section>`; }
+// r13: ordem para encher os domínios: os que já têm mais pontos; em empate, o do avatar (roxo), depois vermelho, azul e verde (Gift of Life)
+const whFillOrder = dom => ["purple","red","blue","green"].sort((a,b)=>dom(b)-dom(a)||["purple","red","blue","green"].indexOf(a)-["purple","red","blue","green"].indexOf(b));
 // r7: onde meter os pontos livres: o que as builds seguintes (por ordem) põem a mais, nas fatias que já se podem encher (ligação ao centro)
 function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((s,i)=>i).sort((a,b)=>WHD.slots[a][1]-WHD.slots[b][1]||a-b); let left=free, to=null;
   for(const w of next){ const T=WHD.b[w.c]; if(!T) continue; let moved=true;
@@ -45070,7 +45078,17 @@ function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((
         if(WHD.adj[i].length&&!WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1])) continue;
         const n=Math.min(need,left); P[i]+=n; left-=n; add[i]=(add[i]||0)+n; moved=true; if(!to) to=w; } }
     if(left<=0) break; }
-  return to?{pts:P, map:add, list:Object.entries(add).map(([i,n])=>[+i,n]).sort((a,b)=>b[1]-a[1]), left, to}:null; }
+  /* r13: depois da build mais completa da lista (as do TibiaPal acabam nos 1000–1175 pontos), a roda continua até aos 4000:
+     enchem-se primeiro os domínios onde já há mais pontos, cada um até aos 1000 (a revelação desse domínio chega ao estágio 3) */
+  let fill=false;
+  if(left>0){ const dom=d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?P[i]:0),0), order=whFillOrder(dom);
+    for(const d of order){ let moved=true;
+      while(left>0&&moved){ moved=false;
+        for(const i of ord){ if(left<=0) break; if(WHD.slots[i][0]!==d) continue; const need=WHD.slots[i][1]-P[i]; if(need<=0) continue;
+          if(WHD.adj[i].length&&!WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1])) continue;
+          const n=Math.min(need,left); P[i]+=n; left-=n; add[i]=(add[i]||0)+n; moved=true; fill=true; } }
+      if(left<=0) break; } }
+  return to||fill?{pts:P, map:add, list:Object.entries(add).map(([i,n])=>[+i,n]).sort((a,b)=>b[1]-a[1]), left, to, fill}:null; }
 // build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
 function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
   const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
