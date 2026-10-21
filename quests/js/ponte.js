@@ -9,7 +9,7 @@ window.QPonte = (() => {
   // o pouco CSS da ponte vem com ela (personagem no filtro, link para o Grimório na wiki)
   try { const st = document.createElement("style"); st.id = "ponteCss";
     st.textContent = ".gp-char{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:13px;padding:6px 9px;border-radius:9px;background:color-mix(in srgb,currentColor 7%,transparent)}"
-      + ".gp-char a{color:inherit;text-decoration:underline}.gp-voc{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:999px;border:1px solid currentColor;opacity:.75}"
+      + ".gp-char a{color:inherit;text-decoration:underline}.gp-voc{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:999px;border:1px solid currentColor}"
       + ".gp-nm{min-width:0}.gp-on{font-size:12px}.chip-grim[hidden]{display:none!important}";
     document.head.appendChild(st); } catch (e) { /* sem DOM */ }
   const LS = "grimorio-tibia-v4"; // estado do Grimório (versão 4: {v, active, chars:[{id,name,voc,level,done,...}]})

@@ -242,6 +242,11 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 4. **Telemóvel.** Testa sempre a 375 px: nada a sair para o lado (sem scroll horizontal), toques ≥ 44 px, `prefers-reduced-motion` respeitado.
    Grelhas de cartões com `minmax(min(Npx,100%),1fr)` (cabem a 320 px). Campos de texto, listas e áreas de texto ficam com 16 px em
    ecrãs de toque (regra `@media (pointer:coarse)` no fim do CSS): abaixo disso o iPhone faz zoom à página.
+   **Letra e contraste (r8).** Escala de letra sem meios píxeis e nada abaixo de 12 px: 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 26,
+   28, 30, 32, 36, 40 (o Questski também; exceção: o texto dentro do escudo de nível `.lvl-shield small`). Texto com contraste ≥ 4,5
+   (≥ 3 a partir de 24 px): no tema claro `--holy` #7E630C, `--gold`/`--paladin` #7D5D0A, `--accent` #26693C; não esbater texto com
+   `opacity` (esbate-se o ícone). Toque: o bloco `@media (pointer:coarse)` do fim do CSS dá 44 px aos botões pequenos e uma área de
+   44 px (`::after`) aos links soltos; uma regra nova com `min-height` menor precisa de lá entrar com a mesma especificidade.
 5. **Sem links externos** em conteúdo (só texto de crédito às fontes, sem `<a href="http...">`). Tudo o que é item/criatura/NPC/feitiço deve abrir uma página ou painel interno.
 6. **Texto** em PT-PT, curto e claro, sem jargão técnico para o jogador. Nunca mostres nomes de jogadores vindos do Hunt Analyser.
 7. **Não mexas** na configuração do Apache, do Windows, firewall ou serviços. Não instales pacotes nem executes código de terceiros descarregado.
