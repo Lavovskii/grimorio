@@ -137,12 +137,32 @@
     var by = {};
     for (var n = 0; n < best.slots.length; n++) {
       var cap = bm[n + 1], mk = /\{\d+\}/.test(cap), t = mk ? null : exact(cap);
+      // um valor que no dicionário só existe com o separador à frente (ex.: "podes usar" de "· podes usar")
+      // (ou com o separador já no valor: " · podes usar" em "{0} · nível {1}+{2}")
+      if (t == null && !mk) {
+        var pre = /^\s*(?:·\s*)?/.exec(cap)[0], core = cap.slice(pre.length), td = exact("· " + core);
+        if (td != null) td = td.replace(/^·\s*/, ""); else if (pre) td = exact(core);
+        if (td != null) t = pre + td;
+      }
       if (t == null) {
         // um valor nunca passa o fim de uma frase (ex.: "{0} por {1}" em "Compra na Loja por 870 Tibia Coins. Não tem addons."),
         // nem várias partes separadas por " · " (ex.: "Market de {0}" em "Market de Bona · média do mês · 36 vendidos"),
         // nem é uma frase portuguesa comprida (ex.: "… menos cooldown por cada alvo …" em "{0} por {1}"): o modelo não serve
         if (/[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
-        if (cap.indexOf(" · ") >= 0 && best.t.indexOf(" · ") < 0) return null;
+        if (cap.indexOf(" · ") >= 0) {
+          if (best.t.indexOf(" · ") < 0) return null;
+          // num modelo com " · ", um valor com várias partes só serve se cada parte tiver tradução ("80+ · podes usar")
+          var ps = cap.split(" · ").map(function (x, i) {
+            if (!/[A-Za-zÀ-ÖØ-öø-ÿ]{2}/.test(x)) return x;
+            var v = exact(x);
+            if (v == null && i > 0) { v = exact("· " + x); if (v == null && depth < 3) v = pattern("· " + x, depth + 1); if (v != null) v = v.replace(/^·\s*/, ""); }
+            if (v == null && depth < 3) v = pattern(x, depth + 1);
+            return v;
+          });
+          if (!ps.some(function (v) { return v == null; })) t = ps.join(" · ");
+        }
+      }
+      if (t == null) {
         // (num modelo comprido e específico — 40+ letras fixas — o valor pode ser uma frase, desde que se traduza por inteiro:
         // "; com mais 1 exalted core o risco desce para 50%" na frase da fusão da Forge)
         if (cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40) return null;
@@ -257,6 +277,11 @@
     // a frase inteira no dicionário do conteúdo vem antes dos modelos (um modelo curto como "{0} por {1}" estragava-a)
     var t = exact(k);
     if (t != null) return t;
+    // com maiúscula à frente de uma chave em minúsculas (ex.: "Dreno de mana" de "dreno de mana")
+    if (k.length <= 40 && /^[A-ZÀ-Ö]/.test(k)) {
+      t = exact(k.charAt(0).toLowerCase() + k.slice(1));
+      if (t != null) return t.charAt(0).toUpperCase() + t.slice(1);
+    }
     if (conts()) { var cf = cget(hkey(k)); if (cf != null) return cf; }
     t = ui(k);
     if (t != null) return t;

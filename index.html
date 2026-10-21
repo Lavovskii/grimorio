@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261021f" data-c></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261021j" data-c></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -44198,7 +44198,7 @@ function renderInicio(){
   const h = opts.find(x=>String(x.i)===String(c.hunt));
   const cur = expFor(L) + (expFor(L+1)-expFor(L))*c.pct/100, need = Math.max(0, expFor(c.target)-cur);
   const mult = parseFloat(c.bonus) + (c.prey?0.25:0);
-  if (h && need>0){ const hrs=need/(h.xp*mult); $("calcOut").textContent = hrs<1 ? Math.round(hrs*60)+" min" : hrs.toFixed(1).replace(".",",")+" h"; const ses=Math.ceil(hrs/3); $("calcSub").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?"sessão":"sessões"} de 3 horas.`; }
+  if (h && need>0){ const hrs=need/(h.xp*mult); $("calcOut").textContent = hrs<1 ? Math.round(hrs*60)+" min" : hrs.toFixed(1).replace(".",DECSEP)+" h"; const ses=Math.ceil(hrs/3); $("calcSub").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?"sessão":"sessões"} de 3 horas.`; }
   else { $("calcOut").textContent="—"; $("calcSub").textContent = opts.length ? "Escolhe um objetivo acima do teu nível." : "Sem hunts com XP medida para este nível."; }
   // timeline
   const all = milestones(), ev = all.filter(e=>e.l>=L-20 && e.l<=L+150).filter((e,i,arr)=>arr.findIndex(x=>x.l===e.l)>=0).slice(0,14);
@@ -45539,8 +45539,8 @@ function itemAdvHTML(key,w,d,info){ const W=esc(w), p=priceOf(key,w), np=p.npc?`
   return t+(age!=null&&age>=3?` <span class="tag warn">dados de há ${age} dias</span>`:""); }
 
 /* r4-t2 */ // separador 'Loot e lucro' da ficha (solo e grupo): <div class="lp" data-lootp="pid" data-xp data-lo data-how [data-g data-sb]> preenchido por initLoot
-function gpx(v){ v=+v||0; return v<=0 ? "—" : v<1 ? "< 1 gp" : v<10 ? `${v.toFixed(1).replace(/\.0$/,"").replace(".",",")} gp` : gp(v); }
-function ozTxt(r){ return r>=10 ? nf(r) : r>=0.1 ? r.toFixed(1).replace(".",",") : "< 0,1"; }
+function gpx(v){ v=+v||0; return v<=0 ? "—" : v<1 ? "< 1 gp" : v<10 ? `${v.toFixed(1).replace(/\.0$/,"").replace(".",DECSEP)} gp` : gp(v); }
+function ozTxt(r){ return r>=10 ? nf(r) : r>=0.1 ? r.toFixed(1).replace(".",DECSEP) : "< 0,1"; }
 function initLoot(root){ (root||document).querySelectorAll("[data-lootp]:not([data-lpok])").forEach(el=>{ el.dataset.lpok="1"; const c=C(), w=c&&c.world||"";
   el.innerHTML=`<div class="lp-sk" aria-hidden="true"><i></i><i></i><i></i></div><p class="small muted">A calcular os preços${w?` do Market de ${esc(w)}`:""}…</p>`;
   Promise.all([dsafe("items"),dsafe("creatures"),mktLoad(w),npcData().catch(()=>({})),linkIdxLoad()]).then(([items,crs,,np])=>{ if(!ITV&&items&&Object.keys(items).length) ITV=items; if(!el.isConnected) return;
@@ -45615,7 +45615,7 @@ function lpCalcRun(box){ const f=n=>box.querySelector(`[data-lpf="${n}"]`), hrs=
   box.querySelectorAll("[data-lpk]").forEach(r=>{ sup+=lpNum(r.querySelector('[data-lpf="q"]').value)*lpNum(r.querySelector('[data-lpf="p"]').value); });
   const fe=f("fee"), fee=fe&&fe.checked?(+box.dataset.fee||0):0, loot=lpNum(f("loot").value), pro=loot-sup-fee, ses=pro*hrs, o=box.querySelector(".lp-out");
   const put=(k,v,neg)=>{ const e=o.querySelector(`[data-lpo="${k}"]`); if(e){ e.textContent=v; if(neg!=null) e.classList.toggle("neg",neg); } };
-  put("sup",gp(sup)); put("fee",gp(fee)); put("pro",gp(pro),pro<0); put("ses",gp(ses),ses<0); put("hrs",String(hrs).replace(".",",")); o.classList.toggle("neg",pro<0);
+  put("sup",gp(sup)); put("fee",gp(fee)); put("pro",gp(pro),pro<0); put("ses",gp(ses),ses<0); put("hrs",String(hrs).replace(".",DECSEP)); o.classList.toggle("neg",pro<0);
   return {hrs,sup,fee,loot,pro,ses}; }
 // c.calc[pid] = {hrs, q:{chave:[quantidade, preço só quando o mudaste, nome do 'Outro']}, loot (só quando o mudaste), fee, t}; no máximo 50 hunts
 function lpCalcSave(box){ const c=C(); if(!c) return; const pid=box.dataset.hcalc, f=n=>box.querySelector(`[data-lpf="${n}"]`), val=e=>e&&e.value!==""&&isFinite(+e.value)?+e.value:null, q={};
@@ -45682,10 +45682,10 @@ function itemLookHTML(id){
     ${ab.length?`<div class="lk-pr">${ab.map(([e,v])=>`<div class="c-${e}${v<0?" neg":""}"><span>${esc(elName(e))}</span><i><u style="width:${Math.min(100,Math.abs(v))}%"></u></i><b>${v>0?"+":""}${v}%</b></div>`).join("")}</div>`:""}
     ${ex.length?`<ul class="lk-ex">${ex.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
     ${it&&it.is&&it.it&&it.it.length?`<p class="lk-imb">Imbuements possíveis: ${esc(imbOptions(it).map(x=>IMBL[x]||x).join(", "))}</p>`:""}
-    ${info.wt!=null?`<p class="lk-wt">Pesa ${Number(info.wt).toFixed(2).replace(".",",")} oz${info.stack?" · empilhável":""}</p>`:""}
+    ${info.wt!=null?`<p class="lk-wt">Pesa ${Number(info.wt).toFixed(2).replace(".",DECSEP)} oz${info.stack?" · empilhável":""}</p>`:""}
     <div class="lk-v"><div><span class="lk-vl">Melhor NPC</span>${sell?`<b>${gp(sell[1])}</b><small>${esc(sell[0])}</small>`:ITV?`<small>Nenhum NPC compra.</small>`:`<small class="tkload">A carregar…</small>`}</div><div><span class="lk-vl">Market${w?` · ${esc(w)}`:""}</span>${mkt}${age!=null&&age>=3?`<small class="lk-age">dados de há ${age} dias</small>`:""}</div></div>
     ${pb&&pb.best==="npc"&&pb.npc?`<p class="lk-best">Melhor: vende ${npcTo(pb.npc[0])} por ${gp(pb.npc[1])}</p>`:pb&&pb.best==="market"?`<p class="lk-best">Melhor: vende no Market de ${esc(w)} (≈ ${gp(pb.net)} depois da taxa)</p>`:""}
-    ${sc!=null?`<p class="lk-sc">Pontuação para ${esc(c.name||G.voc[c.voc].n)}: <b>${String(sc).replace(".",",")}</b> pts</p>`:""}`;
+    ${sc!=null?`<p class="lk-sc">Pontuação para ${esc(c.name||G.voc[c.voc].n)}: <b>${String(sc).replace(".",DECSEP)}</b> pts</p>`:""}`;
 }
 function lookPlace(t){ const el=LK.el, r=t.getBoundingClientRect(), W=el.offsetWidth, H=el.offsetHeight, vw=innerWidth, vh=innerHeight, m=10;
   let x = r.right+m+W<=vw ? r.right+m : r.left-m-W>=0 ? r.left-m-W : Math.max(8,Math.min(vw-W-8, r.left+r.width/2-W/2));
@@ -45730,7 +45730,7 @@ function pickList(){
   /* r4-t5, r5-t4 */ const wg=wGroup(c,slot), aw=wg?wg.b:"", now0=all.filter(x=>(x.it.l||0)<=L),
     now=aw?now0.filter(x=>x.it.b===aw):now0, oth=aw?now0.filter(x=>x.it.b!==aw):[];
   const up=all.filter(x=>(x.it.l||0)>L).sort((a,b)=>a.it.l-b.it.l);
-  const row=(x,dim)=>`<button type="button" role="option" class="pk-o${dim?" dim":""}" data-pk="${x.it.id}" data-look="${x.it.id}" aria-selected="${String(x.it.id)===String(cur)}">${sprOr(x.it,slot)}<span class="pk-n"><b>${esc(x.it.n)}</b><small>${esc(statLine(x.it)||"sem bónus")}</small></span><span class="pk-m">${x.s!=null?`<b>${String(x.s).replace(".",",")}</b><small>pts</small>`:"<b>—</b>"}<small>nível ${x.it.l||0}</small></span>${c.owned[x.it.id]?'<span class="pk-own" title="Marcado como teu" aria-label="tens este item">✓</span>':""}</button>`;
+  const row=(x,dim)=>`<button type="button" role="option" class="pk-o${dim?" dim":""}" data-pk="${x.it.id}" data-look="${x.it.id}" aria-selected="${String(x.it.id)===String(cur)}">${sprOr(x.it,slot)}<span class="pk-n"><b>${esc(x.it.n)}</b><small>${esc(statLine(x.it)||"sem bónus")}</small></span><span class="pk-m">${x.s!=null?`<b>${String(x.s).replace(".",DECSEP)}</b><small>pts</small>`:"<b>—</b>"}<small>nível ${x.it.l||0}</small></span>${c.owned[x.it.id]?'<span class="pk-own" title="Marcado como teu" aria-label="tens este item">✓</span>':""}</button>`;
   pop.querySelector(".pk-l").innerHTML = (now.length?now.slice(0,80).map(x=>row(x)).join(""):oth.length?"":`<p class="small muted" style="margin:10px">Nada encontrado${f?` com “${esc(PK.q)}”`:""}.</p>`)
     + (oth.length?`<div class="pk-g">${esc(wg.lab)}</div>${oth.slice(0,40).map(x=>row(x)).join("")}`:"")
     + (up.length?`<div class="pk-g">Acima do teu nível</div>${up.slice(0,20).map(x=>row(x,1)).join("")}`:"");
@@ -46247,7 +46247,7 @@ function renderDefesa(){
   const PT=[["Great Mana Potion",158,200,"Todas as vocações (nível 80) desde junho de 2026. A mais barata por 1000 de mana."],["Superior Mana Potion",254,300,"Todas menos knights (nível 100)."],["Ultimate Mana Potion",488,500,"Sorcerers e druids (nível 130). A que dá mais mana por poção: para quando precisas de muita mana depressa."]];
   const pnm=x=>String(x||"").split(" (")[0].trim(), pc=vd.pots.filter(p=>p.l<=L).pop(), mine=pc?pnm(pc.m):"", use=new Set(vd.pots.map(p=>pnm(p.m)));
   $("defPots").innerHTML = `<thead><tr><th>Poção</th><th>Custo</th><th>Quem usa</th></tr></thead><tbody>` + PT.map(([n,pr,mn,t])=>`<tr class="${n===mine?"now":use.has(n)?"":"dim"}"><td>${itemChip(n)}${n===mine?' <span class="tag ok">nas tuas hotkeys</span>':""}</td><td>~${nf(Math.round(pr/mn*1000))} gp</td><td>${t}</td></tr>`).join("") + `</tbody>`;
-  $("defFee").textContent = `${String(MKPCT).replace(".",",")} %`;
+  $("defFee").textContent = `${String(MKPCT).replace(".",DECSEP)} %`;
 }
 
 /* ---------- Tibia (TibiaData) ---------- */
@@ -46780,7 +46780,7 @@ const RAR = {"always":["sempre",100],"common":["comum",25],"uncommon":["incomum"
 const rarKey = r => String(r||"").toLowerCase().replace(/_/g," ").replace("semi rare","semi-rare").trim();
 const rarTxt = r => (RAR[rarKey(r)]||[r||"?"])[0];
 const rarVal = (r,p) => p!=null ? p : (RAR[rarKey(r)]||[0,0.3])[1];
-const pctTxt = v => v>=10 ? Math.round(v)+"%" : v>=1 ? v.toFixed(1).replace(".",",")+"%" : v.toFixed(2).replace(".",",")+"%";
+const pctTxt = v => v>=10 ? Math.round(v)+"%" : v>=1 ? v.toFixed(1).replace(".",DECSEP)+"%" : v.toFixed(2).replace(".",DECSEP)+"%";
 const gp = n => n==null ? "—" : nf(n)+" gp";
 const SLUGS = {};
 async function slugIndex(kind){
@@ -46863,11 +46863,11 @@ const dmgTxt = wd => `${wd[1]===wd[2]?wd[1]:wd[1]+"–"+wd[2]} ${ELN[wd[0]]||wd[
 function ipSpec(eq,info,cl,maxT){ const r=[];
   if(eq){ if(eq.arm) r.push(["Armadura",eq.arm]); if(eq.def) r.push(["Defesa",eq.def+(eq.edef?` ${eq.edef>0?"+":""}${eq.edef}`:"")]); if(eq.atk) r.push(["Ataque",eq.atk+(eq.wel&&eq.wel[1]?` + ${eq.wel[1]} ${ELN[eq.wel[0]]}`:"")]); if(eq.wd) r.push(["Dano",dmgTxt(eq.wd)]); if(eq.hit) r.push(["Precisão",`+${eq.hit}%`]);
     Object.entries(eq.sk||{}).forEach(([k,v])=>r.push([cap1(SKN[k]||k),`${v>0?"+":""}${v}`])); if(eq.mn) r.push(["Mantra","+"+eq.mn]); if(eq.spd) r.push(["Velocidade",(eq.spd>0?"+":"")+eq.spd]);
-    if(eq.rg) r.push(["Regeneração",`${String(eq.rg[0]).replace(".",",")} vida · ${String(eq.rg[1]).replace(".",",")} mana/s`]); if(eq.bond) r.push(["Ligação",cap1(ELN[eq.bond]||eq.bond)]);
+    if(eq.rg) r.push(["Regeneração",`${String(eq.rg[0]).replace(".",DECSEP)} vida · ${String(eq.rg[1]).replace(".",DECSEP)} mana/s`]); if(eq.bond) r.push(["Ligação",cap1(ELN[eq.bond]||eq.bond)]);
     if(eq.chg) r.push(["Cargas",eq.chg]); else if(eq.dur) r.push(["Duração",`${Math.round(eq.dur/60)} min`]); }
   const is=eq?eq.is:info.imb; if(is) r.push(["Imbuements",`${is} ${is===1?"slot":"slots"}`]);
   if(cl) r.push(["Forge",`classe ${cl}${maxT?` · até T${maxT}`:""}`]);
-  if(info.wt!=null) r.push(["Peso",String(info.wt).replace(".",",")+" oz"]);
+  if(info.wt!=null) r.push(["Peso",String(info.wt).replace(".",DECSEP)+" oz"]);
   return r.map(([k,v])=>[k,esc(String(v))]); }
 function ipAttrHTML(eq,info,c){
   if(!eq) return "";
@@ -46947,18 +46947,18 @@ async function renderItemPage(key){
   if(forge&&wld) mktLoad(wld).then(d=>{ const f=el.querySelector(".forge"); if(f&&f.isConnected) forgeFill(f,d,key,eq); });
 }
 /* ---------- Exaltation Forge na página do item: bónus por tier, custo de cada fusão e custo mínimo para chegar a cada tier ---------- */
-const kkk = n => n==null ? "—" : n>=1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace(".",",")+"kkk" : n>=1e6 ? (n/1e6).toFixed(n%1e6?1:0).replace(".",",")+"kk" : n>=1e3 ? Math.round(n/1e3)+"k" : String(n);
+const kkk = n => n==null ? "—" : n>=1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace(".",DECSEP)+"kkk" : n>=1e6 ? (n/1e6).toFixed(n%1e6?1:0).replace(".",DECSEP)+"kk" : n>=1e3 ? Math.round(n/1e3)+"k" : String(n);
 // custo mínimo para fazer o tier t a partir de itens tier 0 (todas as fusões com sucesso): 2^t itens e Σ 2^(t-k)·gold(k)
 function forgeMin(costs,t){ let gold=0, cores=0; for(let k=1;k<=t;k++){ const c=costs&&costs[String(k)]; if(!c) return null; const n=2**(t-k); gold+=n*(c.gold||0); cores+=n*(c.cores||0); } return {items:2**t, gold, cores}; }
 function forgeHTML(cl,eq,info){
   const F=FORGE, mx=F.maxTier[String(cl)]; if(!mx) return "";
   const bk=(F.slotMap||{})[info.slot], B=bk&&F.bonus[bk], fu=(F.fusion.cost||{})[String(cl)]||{}, cv=F.convergence&&F.convergence.classes&&F.convergence.classes.includes(+cl) ? (F.convergence.cost||{})[String(cl)]||{} : null;
-  const n2=v=>String(v).replace(".",","), rows=[];
+  const n2=v=>String(v).replace(".",DECSEP), rows=[];
   for(let t=1;t<=mx;t++){ const f=fu[String(t)], m=forgeMin(fu,t), v=cv&&cv[String(t)];
-    rows.push(`<tr><th scope="row">T${t}</th>${B?`<td class="num"><b>${n2(B.v[t-1])}${B.unit||""}</b>${B.extra?`<span class="pt-s">${n2(B.extra.v[t-1])}${B.extra.unit||""} ${esc(B.extra.label.toLowerCase())}</span>`:""}</td>`:""}<td class="num">${f?`${kkk(f.gold)} gp<span class="pt-s">${f.dust||0} dust · ${F.fusion.chance}%</span>`:"—"}</td>${cv?`<td class="num">${v?`${kkk(v.gold)} gp<span class="pt-s">${v.dust||0} dust · 100%</span>`:"—"}</td>`:""}<td class="num">${m?`${m.items} itens + ${kkk(m.gold)} gp<span class="pt-s fz-est" data-ft="${t}" data-fi="${m.items}" data-fg="${m.gold}"></span>`:"—"}</td></tr>`); }
+    rows.push(`<tr><th scope="row">T${t}</th>${B?`<td class="num"><b>${n2(B.v[t-1])}${B.unit||""}</b>${B.extra?`<span class="pt-s">${n2(B.extra.v[t-1])}${B.extra.unit||""} <span>${esc(B.extra.label)}</span></span>`:""}</td>`:""}<td class="num">${f?`${kkk(f.gold)} gp<span class="pt-s">${f.dust||0} dust · ${F.fusion.chance}%</span>`:"—"}</td>${cv?`<td class="num">${v?`${kkk(v.gold)} gp<span class="pt-s">${v.dust||0} dust · 100%</span>`:"—"}</td>`:""}<td class="num">${m?`${m.items} itens + ${kkk(m.gold)} gp<span class="pt-s fz-est" data-ft="${t}" data-fi="${m.items}" data-fg="${m.gold}"></span>`:"—"}</td></tr>`); }
   const r=F.resources||{}, cvn=(r.convert||[]).map(x=>`${x.n} ${x.from==="dust"?"dust":"slivers"} → ${x.get} ${x.to==="sliver"?"slivers":"exalted core"}`).join(" · "), co=F.fusion.coreOpts||{};
   return `<section class="card forge ip-wide"><h3>Exaltation Forge<span class="h3s">classe ${cl} · até tier ${mx}</span></h3>
-    ${B?`<p class="small fz-b"><b>${esc(B.name)}</b> (${esc(B.label.toLowerCase())}): ${esc(B.desc)}</p>`:`<p class="small muted fz-b">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`}
+    ${B?`<p class="small fz-b"><b>${esc(B.name)}</b> (<span>${esc(B.label)}</span>): <span>${esc(B.desc)}</span></p>`:`<p class="small muted fz-b">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`}
     <div class="tablewrap"><table class="pt fz-t"><thead><tr><th>Tier</th>${B?`<th class="num">${esc(B.name)}</th>`:""}<th class="num">Fusão (cada)</th>${cv?`<th class="num">Convergência (cada)</th>`:""}<th class="num">Mínimo para fazer</th></tr></thead><tbody>${rows.join("")}</tbody></table></div>
     <ul class="fz-notes small">
       <li><b>Fusão</b> 2 itens iguais com o mesmo tier dão +1 tier. ${F.fusion.chance}% de sucesso${co.chance?`, ${co.chance.to}% com ${co.chance.cores} exalted core`:""}. Se falhar, um dos itens desce 1 tier (ou desaparece se for tier 0)${co.protect?`; com mais ${co.protect.cores} exalted core o risco desce para ${co.protect.lossChance}%`:""}.</li>
@@ -46995,7 +46995,7 @@ async function renderMonPage(key){
   const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"",
     boss?`<span class="tag gold">boss${ci.boss?` · ${esc(ci.boss)}`:""}</span>`:"", ci.blvl||cr.blvl?`<span class="tag">Bestiary ${esc(ci.blvl||cr.blvl)}</span>`:"", ci.occ?`<span class="tag">${esc(ci.occ)}</span>`:""].join("");
   const runN=parseInt(ci.run,10);
-  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",","):null],["Dano máx./turno",ci.maxdmg?nf(+ci.maxdmg):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",",")+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
+  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",DECSEP):null],["Dano máx./turno",ci.maxdmg?nf(+ci.maxdmg):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",DECSEP)+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
   // fraquezas e resistências: uma faixa
   const els=RSORD.filter(e=>dmg[e]!=null||RSORD.indexOf(e)<7);
   const res=`<div class="rs">${els.map(e=>{ const v=dmg[e]??100; return `<div class="rs-c rs-${rsCls(v)}${e===best?" rs-best":""}"><span class="c-${e}">${elTx(e)}</span><b>${v}%</b></div>`; }).join("")}</div>
