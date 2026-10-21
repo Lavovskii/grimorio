@@ -567,6 +567,18 @@
   "c": "index.html: kk(mk[0])}–${kkk(mk[1])} gp`:gp(mk[0])):\"\"; if(wld) adv = `A ver o Market de ${wld}…`; else if(mkr && b",
   "k": "p"
  },
+ "A {0} cai sobretudo de bosses Archfoe com loot cooperativo e, às vezes, de criaturas fiendish. Também se compra no Market: até ser revelada é um item como os outros.": {
+  "c": "index.html: ket: até ser revelada é um item como os outros.` :t===2?`A ${nm} cai sobretudo de bosses Archfoe com loot cooperativo e, às vezes, de criaturas fiendish. Também se compra no Market: até ser revelada é um item como os out",
+  "k": "p"
+ },
+ "A {0} cai sobretudo de criaturas fiendish e, raramente, de bosses Archfoe com loot cooperativo. Também se compra no Market: até ser revelada é um item como os outros.": {
+  "c": "index.html: no Market: até ser revelada é um item como os outros.` :`A ${nm} cai sobretudo de criaturas fiendish e, raramente, de bosses Archfoe com loot cooperativo. Também se compra no Market: até ser revelada é um item como os ou",
+  "k": "p"
+ },
+ "A {0} cai sobretudo de criaturas influenced e, às vezes, de fiendish. Também se compra no Market: até ser revelada é um item como os outros.": {
+  "c": "index.html: \",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1?`A ${nm} cai sobretudo de criaturas influenced e, às vezes, de fiendish. Também se compra no Market: até ser revelada é um item como os outros.` :t===2?`A ${nm}",
+  "k": "p"
+ },
  "Ab'Dendriel": {
   "c": "index.html: 32369,32241],[\"Carlin\",32360,31782],[\"Venore\",32957,32076],[\"Ab'Dendriel\",32732,31634],[\"Kazo",
   "k": "x"
@@ -987,6 +999,10 @@
   "c": "index.html:  class=\"btn small ${on?\"\":\"ghost\"}\" data-use=\"${x.id}\">${on?\"Ativa\":\"Jogar\"}</button><b",
   "k": "x"
  },
+ "Ativar": {
+  "c": "index.html: omo as outras mudanças na Wheel, faz-se num templo.\"], [\"Ativar\",`Cada mod precisa d",
+  "k": "x"
+ },
  "Ativos ({0})": {
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "p"
@@ -1255,6 +1271,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Cada mod precisa de um Vessel Resonance cheio neste domínio (tens {0} de 3). Com tantos VR como mods, a gema dá ainda +{1} de Damage and Healing.": {
+  "c": "index.html: tras mudanças na Wheel, faz-se num templo.\"], [\"Ativar\",`Cada mod precisa de um Vessel Resonance cheio neste domínio (tens ${n} de 3). Com tantos VR como mods, a gema dá ainda +${t===3?2:1} de Damage and Healing.`], [\"Me",
+  "k": "p"
+ },
  "Cada personagem guarda nível, quests, charms, imbuements e equipamento. O nível, o mundo e as skills vêm do Tibia e atualizam-se sozinhos.": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -1455,6 +1475,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Colocar": {
+  "c": "index.html:  verde) por ${nf(GEMCOST.rot[t])} gold de cada vez.`], [\"Colocar\",\"No Gem Atelier esc",
+  "k": "x"
+ },
  "Com 3 VR (Greater gem) junta-se um supremo: {0}.": {
   "c": "index.html: up?P.sbis.map(g=>li(g,1)).join(\"\"):\"\"}</ul> ${G3.length?`<p class=\"wsel-d\">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:\"\"} ${P.alt.len",
   "k": "p"
@@ -1533,6 +1557,10 @@
  },
  "Como obter": {
   "c": "index.html: \"ach-ic\" aria-hidden=\"true\">${gsIcon(\"a\")}</span>`, tags) + ` <div class=\"ip-grid\"> <section class=\"card ip-wide\">${a.desc?`<blockquote class=\"ach-q\">${esc(a.desc)}</blockquote>`:\"\"}<h3>Como obter</h3><p style=\"margin:0\"",
+  "k": "x"
+ },
+ "Como obter e colocar": {
+  "c": "index.html: span>${esc(b)}</span></li>`).join(\"\")}</ol>`; return fold?`<details class=\"wguide\" style=\"--wc:${WHC[d][0]}\"><summary class=\"wsel-sec\">Como obter e colocar</summary>${ol}</details>`:`<div class=\"wguide",
   "k": "x"
  },
  "Como obter{0}": {
@@ -1766,6 +1794,10 @@
  "Copiar o código da build {0} ({1} pontos)": {
   "c": "index.html: cation\",\"d\",w.ded,([k,v])=>k+\" \"+v); const lab = w => esc(`Copiar o código da build ${w.t} (${w.p} pontos)`); const b0=cur?cu",
   "k": "p"
+ },
+ "Cor": {
+  "c": "index.html: só tua e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só entra no vessel",
+  "k": "x"
  },
  "Corpo a corpo": {
   "c": "index.html: head><tbody>${atk.map(([t,n,d,e,x])=>`<tr><td>${t===\"melee\"?\"Corpo a corpo\":esc(n)}${x?`<span c",
@@ -2743,6 +2775,10 @@
   "c": "index.html: nst SKLAB = {knight:\"Skill de arma\",paladin:\"Distance\",monk:\"Fist fighting\"}; function newDraft",
   "k": "x"
  },
+ "Fixo aqui: clica outra vez (ou fora da roda) para soltar.": {
+  "c": "index.html: tra vez ou fora da roda solta const whPinHTML = () => WHPIN?`<p class=\"wpin-n\">Fixo aqui: clica outra vez (ou fora da roda) para soltar.</p>`:\"\"; const WHTGT = \"",
+  "k": "x"
+ },
  "FoB Base Damage": {
   "c": "index.html: Wave Base Damage\":[\"Druid_StrongIceWave_DamageIncrease\"], \"FoB Base Damage\":[\"Monk_FlurryOfBlow",
   "k": "x"
@@ -2839,6 +2875,10 @@
   "c": "index.html: /^(teleport|portal) to /i,\"Teleporte: \"):\"Teleporte\",d:s[2]?\"Gasta 1 teleport crystal\":\"\"}; return {i:\"w",
   "k": "x"
  },
+ "Gem": {
+  "c": "index.html: 0000]}; function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1",
+  "k": "x"
+ },
  "Gemas": {
   "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As",
   "k": "x"
@@ -2895,6 +2935,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Greater": {
+  "c": "index.html: emGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"",
+  "k": "x"
+ },
  "Greater gem": {
   "c": "index.html: [i]||0),0)}; } const WHGEM = [\"\",\"Lesser gem\",\"Regular gem\",\"Greater gem\"]; const GEMPT = {\"H",
   "k": "x"
@@ -2937,6 +2981,10 @@
  },
  "Guardar nos meus sets": {
   "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
+  "k": "x"
+ },
+ "Guardian": {
+  "c": "index.html:  Atelier, Lesser/Regular/Greater Gem) const GEMVN = {knight:\"Guardian\", paladin:\"Marksman\"",
   "k": "x"
  },
  "Guia de Quests": {
@@ -3415,6 +3463,10 @@
   "c": "index.html: lioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\":\"Escudo\",\"Legs\":\"Calças\",\"Boots\":\"B",
   "k": "x"
  },
+ "Lesser": {
+  "c": "index.html:  function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}$",
+  "k": "x"
+ },
  "Lesser gem": {
   "c": "index.html: lots.reduce((a,s,i)=>a+(pts[i]||0),0)}; } const WHGEM = [\"\",\"Lesser gem\",\"Regular gem\",\"Grea",
   "k": "x"
@@ -3827,6 +3879,10 @@
   "c": "index.html: \"><thead><tr><th>Item</th><th>Chance</th><th>NPC</th>${mkOk?`<th title=\"Média do mês menos a taxa de 2 % do Market\">Market −2 %</th>`:\"\"}<th>gp por kill<",
   "k": "x"
  },
+ "Marksman": {
+  "c": "index.html: ular/Greater Gem) const GEMVN = {knight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", d",
+  "k": "x"
+ },
  "Mastery (revelation)": {
   "c": "index.html: }; const supPT = s => String(s).replace(/ Mastery Mastery$/,\" Mastery (revelation)\").replace(/^(.*) Bas",
   "k": "x"
@@ -3866,6 +3922,10 @@
  "Melhor: vende {0} por {1}": {
   "c": "index.html: </small>`:\"\"}</div></div> ${pb&&pb.best===\"npc\"&&pb.npc?`<p class=\"lk-best\">Melhor: vende ${npcTo(pb.npc[0])} por ${gp(pb.npc[1])}</p>`:pb&&pb.best===\"mark",
   "k": "p"
+ },
+ "Melhorar": {
+  "c": "index.html:  gema dá ainda +${t===3?2:1} de Damage and Healing.`], [\"Melhorar\",\"No Fragment Worksh",
+  "k": "x"
  },
  "Melhores até ao nível": {
   "c": "index.html:  role=\"tablist\" aria-label=\"Itens para este slot\">${[[\"top\",`Melhores até ao nível ${L}`,top.length],[\"mine\"",
@@ -4013,6 +4073,10 @@
  },
  "Munição": {
   "c": "index.html: w?`<p class=\"small\" style=\"margin:0\"><b>${h.voc===\"paladin\"?\"Munição\":h.voc===\"knight\"||h",
+  "k": "x"
+ },
+ "Mystic": {
+  "c": "index.html: ight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", druid:\"Mystic\", monk:\"Spiritualist",
   "k": "x"
  },
  "M{0}A{1} {2} 0 0 1": {
@@ -4234,6 +4298,14 @@
  "Nimmersatt's (Dragões) — {0}": {
   "c": "recolhida: /grimorio/#hunts · ex.: Nimmersatt's (Dragões) — 8.5kk/h ≈",
   "k": "p"
+ },
+ "No Fragment Workshop cada mod sobe do grau I ao IV (+50%) com fragments (desmonta as gemas que não usas) e gold. Cada mod no grau IV dá +1 wheel point.": {
+  "c": "index.html: nda +${t===3?2:1} de Damage and Healing.`], [\"Melhorar\",\"No Fragment Workshop cada mod sobe do grau I ao IV (+50%) com fragments (desmonta as gemas que não usas) e gold. Cada mod no grau IV dá +1 wheel point.\"]]; const o",
+  "k": "x"
+ },
+ "No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo.": {
+  "c": "index.html: r ${nf(GEMCOST.rot[t])} gold de cada vez.`], [\"Colocar\",\"No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo.\"], [\"Ativar\",`Ca",
+  "k": "x"
  },
  "No Market costuma valer mais do que nos NPCs.": {
   "c": "index.html: wld}…`; else if(mkr && bestNpc) adv = mk[0]>bestNpc*1.1 ? \"No Market costuma valer mais do que nos NPCs.\" : \"Os NPCs pagam pe",
@@ -4657,6 +4729,10 @@
  },
  "Objetivo": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Obter": {
+  "c": "index.html: : até ser revelada é um item como os outros.`; const st=[[\"Obter\",drop], [\"Revela",
   "k": "x"
  },
  "Ofensivo": {
@@ -5811,6 +5887,10 @@
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "x"
  },
+ "Revelar": {
+  "c": "index.html:  um item como os outros.`; const st=[[\"Obter\",drop], [\"Revelar\",`Wheel of Destiny →",
+  "k": "x"
+ },
  "Revelation": {
   "c": "index.html: => pk(\"Conviction\",\"c\",w.conv,([k,v])=>k+(v?\" \"+v:\"\")) + pk(\"Revelation\",\"r\",w.rev,([k,v])=>",
   "k": "x"
@@ -5905,6 +5985,10 @@
  },
  "SOB Mastery": {
   "c": "index.html: se\"], \"Ascetic Mastery\":[\"Monk_RevelationMastery_Ascetic\"], \"SOB Mastery\":[\"Monk_RevelationMa",
+  "k": "x"
+ },
+ "Sage": {
+  "c": "index.html: st GEMVN = {knight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", druid:\"Mystic\", mo",
   "k": "x"
  },
  "Sai para {0} (~{1} sqm)": {
@@ -6303,6 +6387,10 @@
   "c": "index.html: \"Tools\":\"Ferramenta\",\"Fist Fighting Weapons\":\"Arma de monk\",\"Spellbooks\":\"Spellbook\",\"Light ",
   "k": "x"
  },
+ "Spiritualist": {
+  "c": "index.html: , paladin:\"Marksman\", sorcerer:\"Sage\", druid:\"Mystic\", monk:\"Spiritualist\"}; const GEMCOST = {",
+  "k": "x"
+ },
  "Spoiler": {
   "c": "quests/js/app.js: ffect\": \"Efeito\", \"implemented\": \"Implementado\", \"spoiler\": \"Spoiler\", \"related achieveme",
   "k": "x"
@@ -6445,6 +6533,10 @@
  },
  "Só em equipa para {0}": {
   "c": "index.html:  \":\"\"}<span class=\"lk\">quest</span>`:\"\"}${g.hs.some(isTeam)?` · <span class=\"tag acc\" title=\"Só em equipa para ${esc(g.hs.filter(isTeam).map(h=>G.voc[h.voc].n).join(\", \"))}\">equipa</span>`:\"\"}<span class=\"dan",
+  "k": "p"
+ },
+ "Só entra no vessel da mesma cor: aqui, {0}. Se sair outra, «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde) por {1} gold de cada vez.": {
+  "c": "index.html:  e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só entra no vessel da mesma cor: aqui, ${WHDN[d]}. Se sair outra, «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde) por ${nf(GEMCOS",
   "k": "p"
  },
  "Só grátis": {
@@ -7244,7 +7336,11 @@
   "k": "x"
  },
  "Wheel of Destiny de {0}: {1} pontos": {
-  "c": "index.html: (\"g\")}\" stroke=\"#3B2A0C\"/>`).join(\"\"); const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`; return `<svg cla",
+  "c": "index.html: ).toFixed(1)}s\"/>`; }).join(\"\")}</g>`; const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`; return `<svg cla",
+  "k": "p"
+ },
+ "Wheel of Destiny → Gem Atelier → Reveal: {0} gold. A gema passa a ser só tua e mostra a cor e os mods, que saem ao acaso.": {
+  "c": "index.html: omo os outros.`; const st=[[\"Obter\",drop], [\"Revelar\",`Wheel of Destiny → Gem Atelier → Reveal: ${nf(GEMCOST.rev[t])} gold. A gema passa a ser só tua e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só en",
   "k": "p"
  },
  "Wheel of Destiny: {0}, {1} pontos": {
@@ -8452,7 +8548,7 @@
   "k": "x"
  },
  "edit": {
-  "c": "index.html: os`; return `<svg class=\"whs${o.size===\"sm\"?\" sm\":\"\"}${ed?\" edit\":\"\"}\" viewBox=\"-300 ",
+  "c": "index.html: S.tot} pontos`; return `<svg class=\"whs${sm?\" sm\":\"\"}${ed?\" edit\":\"\"}\" viewBox=\"-300 ",
   "k": "x"
  },
  "efeito desconhecido": {
@@ -9656,11 +9752,11 @@
   "k": "x"
  },
  "no vessel": {
-  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li><svg class=\"whp-gem\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.5l9 9.5-9 9.5-9-9.5z\" fill=\"${WHC[x][1]}\" stroke=\"${WHC[x][0]}\" stroke-width=\"2\"/>",
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,\"whp-gem\")}<span><span class=\"whp-n\"><b>${WHGEM[S.vr[x]]}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></span><span class=\"tin",
   "k": "x"
  },
  "no vessel {0}": {
-  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li><svg class=\"whp-gem\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.5l9 9.5-9 9.5-9-9.5z\" fill=\"${WHC[x][1]}\" stroke=\"${WHC[x][0]}\" stroke-width=\"2\"/>",
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,\"whp-gem\")}<span><span class=\"whp-n\"><b>${WHGEM[S.vr[x]]}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></span><span class=\"tin",
   "k": "p"
  },
  "noai": {
@@ -11579,6 +11675,22 @@
   "c": "index.html:  hunt */ const CHARM_EL={ice:\"freeze\",energy:\"zap\",physical:\"wound\",earth:\"poison\",fire",
   "k": "x"
  },
+ "wrn lit": {
+  "c": "index.html: n.has(a); (lt?lit:dim).push(whRune(gi++*7+3,x,y,a+90,.78,lt?\"wrn lit\":\"wrn\",lt?`--rc:${WH",
+  "k": "x"
+ },
+ "wrn wrn-g": {
+  "c": "index.html: 1.2\" fill=\"none\"/> ${sm?\"\":whRune(a/90*4+1,192,-9,90,.5,\"wrn wrn-g\")+whRune(a/90*4+6,19",
+  "k": "x"
+ },
+ "wrn wrn-k": {
+  "c": "index.html: whGemG(282,0,2,WHGOLD,6.5)}${whRune(a/90*3+2,282,-28,90,.55,\"wrn wrn-k\")}${whRune(a/90*3+9,",
+  "k": "x"
+ },
+ "wrn wrn-p": {
+  "c": "index.html: ${[0,1,2,3,4].map(k=>whRune(ai*7+si*5+k*3,74+k*15,-271,0,.6,\"wrn wrn-p\")).join(\"\")}<path cl",
+  "k": "x"
+ },
  "x, y, z (ex. 32369, 32241, 7)": {
   "c": "quests/js/app.js: ull; function renderMapPage(arg) { view().innerHTML = `<div class=\"map-page\"> <div class=\"toolbar\"><h1>Mapa do Tibia</h1> <form id=\"gotoForm\" class=\"map-toolbar\" style=\"margin:0\"> <input class=\"input\" id=\"gotoInput\" plac",
   "k": "x"
@@ -12593,6 +12705,10 @@
  },
  "{0}taxas do altar: {1} gp a cada 20 h": {
   "c": "index.html: .length?\", por isso \"+fr.join(\" e \"):\"\"}</span>`:\"\") +` <span class=\"tiny muted hs-fee\"><i class=\"hs-sep\">· </i>taxas do altar: ${nf(n*TFEE[imTier(c)])} gp a cada 20 h</span></p>`; }; const panes=H",
+  "k": "p"
+ },
+ "{0}{1} Gem": {
+  "c": "index.html: 0000]}; function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1",
   "k": "p"
  },
  "{0}{1} XP · {2} vida": {

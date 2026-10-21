@@ -107,7 +107,7 @@
 
   function exact(k) { var v = X.get(k); return v === undefined ? null : v; }
 
-  var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as)(?=\s)/g;
+  var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as|e|a|o|à|é|não|mais|só)(?=\s)/gi;
   function pattern(k) {
     var words = k.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
     if (!words) return null;
