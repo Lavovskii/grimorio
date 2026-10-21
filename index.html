@@ -1091,6 +1091,71 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 /* party: intervalo de níveis com XP partilhada */
 .pm-rng{margin:0 0 4px;flex-basis:100%}
 .pmadd .pm-out{opacity:.6}
+/* ======================= Wheel of Destiny desenhada (página da Wheel e ficha da hunt) ======================= */
+.whs{display:block;width:100%;height:auto;max-width:520px;margin:0 auto;overflow:visible;touch-action:manipulation}
+.whs.sm{max-width:240px}
+.whs .ws{cursor:pointer}
+.whs .wsb{fill-opacity:.2;stroke:#000;stroke-opacity:.7;stroke-width:1.6}
+.whs .ws.full .wsb{fill-opacity:.55}
+.whs .wsf{stroke:#000;stroke-opacity:.45;stroke-width:1}
+.whs .ws.full .wsf{stroke:#fff;stroke-opacity:.35;stroke-width:1.4}
+.whs .ws:hover .wsb,.whs .ws:hover .wsf{filter:brightness(1.4)}
+.whs .wsi{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:.3;pointer-events:none}
+.whs .ws.full .wsi{opacity:1}
+.whs .wsi-mleech{stroke:#8FCBFF} .whs .wsi-lleech{stroke:#FF9C9C} .whs .wsi-skill{stroke:#9BFF9B} .whs .wsi-inst{stroke:#FFDC73} .whs .wsi-vr{stroke:#EBDDFF}
+.whs .wring{fill:none;stroke:#8A6A2A;stroke-opacity:.6;stroke-width:1.2;pointer-events:none}
+.whs .wring.o{stroke:#C8973A;stroke-opacity:1;stroke-width:2}
+.whs .wpts{fill:#F6DC8C;font:700 16px var(--sans);text-anchor:middle}
+.whs .wmi{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.35}
+.whs .wmed.on .wmi{opacity:1}
+.whs .wpip{fill:#2A231A;stroke:#C8973A;stroke-width:1.2}
+.whs .wpip.on{fill:var(--wc)}
+.whtip{position:fixed;z-index:9999;max-width:300px;padding:9px 12px;border-radius:10px;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;gap:3px;justify-items:start;pointer-events:none;font-size:13px}
+.whtip[hidden]{display:none}
+/* página da Wheel: roda + painel como no jogo */
+.whx{display:grid;gap:14px;margin:14px 0}
+.whx-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start}
+.whx-h h3{margin:2px 0 6px;font-size:20px}
+.whx-a{display:flex;gap:8px;flex-wrap:wrap}
+.whx-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:start}
+.whx-w{display:grid;gap:8px}
+.whx-leg{margin:0;text-align:center}
+.whp{display:grid;gap:10px}
+.whp section{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface-2)}
+.whp h5{margin:0 0 8px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+.whp h5 .tiny{text-transform:none;letter-spacing:0}
+.whp-dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0}
+.whp-dl dt{font-size:11.5px;color:var(--muted)} .whp-dl dd{margin:0;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums}
+.whp-l{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.whp-l li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;align-items:start;font-size:13.5px}
+.whp-l li>span:last-child{display:grid;gap:1px;min-width:0;justify-items:start}
+.whp-n{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:center}
+.whp-l li.off{opacity:.55}
+.whp-ic{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--sunk);color:var(--gold);font-size:12px}
+.whp-gem,.whp-rv{width:22px;height:22px}
+.whp-rv path{fill:none;stroke:var(--wc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#wheelTable tr.sel td{background:var(--accent-soft)}
+#wheelTable .wh-btns{white-space:nowrap}
+@media (max-width:1100px){ .whx-g{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:520px){ .whp-dl{grid-template-columns:repeat(2,minmax(0,1fr))} }
+/* ficha da hunt: Wheel, gemas e charms */
+.hwh{display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:var(--r1);background:var(--surface)}
+.hwh-h{display:grid;gap:2px} .hwh-h h5{margin:0;font-size:16px}
+.hwh-g{display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px;align-items:start}
+.hwh-c{display:grid;gap:10px;min-width:0}
+.hwh-s h6{margin:0 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.hwh-s+.hwh-s{padding-top:10px;border-top:1px solid var(--line)}
+.hwh-t{margin:0;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.hwh-ks{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.hwh-k{font-size:12.5px;padding:1px 8px;border-radius:999px;border:1px solid color-mix(in srgb,var(--wc,var(--accent)) 50%,transparent);background:color-mix(in srgb,var(--wc,var(--accent)) 12%,transparent)}
+.hwh-a{margin:8px 0 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.hch{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.hch li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:9px;align-items:start;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2)}
+.hch-t{display:grid;gap:2px;min-width:0;font-size:13.5px}
+.hch-m{display:flex;align-items:center;gap:6px;font-size:13px}
+.chb{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:color-mix(in srgb,var(--cc) 16%,transparent);border:1px solid color-mix(in srgb,var(--cc) 45%,transparent)}
+.chb svg{width:18px;height:18px;fill:none;stroke:var(--cc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:620px){ .hwh-g{grid-template-columns:minmax(0,1fr)} .hwh-w{width:100%;max-width:250px;margin:0 auto} }
 /* ======================= páginas de item e de criatura: números no topo, cartões em duas colunas, tabelas alinhadas ======================= */
 .spec{display:flex;flex-wrap:wrap;gap:10px 30px;margin:0 0 14px;padding:12px 18px}
 .spec>div{min-width:0}
@@ -1605,6 +1670,19 @@ html[data-ui="modern"] .sltabs button[aria-selected="true"]{color:#fff;border-bo
 html[data-ui="modern"] .slpane{animation:mdFade .3s var(--e-out)}
 html[data-ui="modern"] #setSum{gap:12px}
 
+/* ======================= Modern: Wheel of Destiny desenhada ======================= */
+html[data-ui="modern"] .whs{filter:drop-shadow(0 0 28px rgba(139,92,246,.35))}
+html[data-ui="modern"] .whs .ws.full .wsf{filter:drop-shadow(0 0 5px rgba(255,255,255,.3))}
+html[data-ui="modern"] .whs .ws:hover .wsb,html[data-ui="modern"] .whs .ws:hover .wsf{filter:brightness(1.5) drop-shadow(0 0 8px rgba(255,255,255,.4))}
+html[data-ui="modern"] .whtip{background:rgba(20,16,48,.96);border-color:rgba(167,139,250,.4);color:#F1F0FF;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 20px rgba(139,92,246,.25)}
+html[data-ui="modern"] .whx-h h3,html[data-ui="modern"] .hwh-h h5{font-family:"Russo One",var(--sans);font-weight:400;letter-spacing:.02em}
+html[data-ui="modern"] .whp section,html[data-ui="modern"] .hch li{background:rgba(7,6,22,.45);border-color:rgba(167,139,250,.2)}
+html[data-ui="modern"] .whp h5,html[data-ui="modern"] .hwh-s h6{color:#9D93C8}
+html[data-ui="modern"] .whp-dl dd{font-family:"Russo One",var(--sans);font-weight:400;color:#fff;text-shadow:0 0 10px rgba(139,92,246,.5)}
+html[data-ui="modern"] .whp-ic{background:rgba(139,92,246,.15);color:#FDE68A}
+html[data-ui="modern"] .hwh{background:linear-gradient(180deg,rgba(32,27,70,.7),rgba(14,12,38,.7));border:1px solid rgba(167,139,250,.24);border-radius:18px;padding:16px}
+html[data-ui="modern"] .hwh-s+.hwh-s{border-top-color:rgba(167,139,250,.16)}
+html[data-ui="modern"] #wheelTable tr.sel td{background:rgba(139,92,246,.18)}
 /* ======================= Modern: páginas de item e de criatura ======================= */
 html[data-ui="modern"] .spec dt{color:#9D93C8}
 html[data-ui="modern"] .spec dd{font-family:"Russo One",var(--sans);font-weight:400;color:#fff;text-shadow:0 0 12px rgba(139,92,246,.55)}
@@ -2686,6 +2764,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <section class="panel" data-p="wheel">
       <div class="ph"><span class="eyebrow">Combate</span><h2>Wheel of Destiny</h2><p id="wheelLead"></p></div>
       <div class="callout" id="wheelNow"></div>
+      <div class="whx card" id="wheelX"></div>
       <div class="sec"><h3>Todas as builds, por pontos</h3><div class="scroll-x card wh-tw"><table id="wheelTable"></table></div><div class="grid2" id="gemBox"></div><p class="note">Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.</p></div>
     </section>
 
@@ -43548,6 +43627,7 @@ function huntSheet(h){
     ${haHTML(h.r.c,h.voc)}
     <div class="whatb"><h5>Setup para ${esc(G.voc[h.voc].n)} ${c.level}</h5>${setupHTML(h.voc,c.level,p,h)}<details><summary class="small">Dano de cada elemento</summary>${elemHTML(h.voc,p)}</details></div>
     ${h.r.c?hsetsHTML(h.r.c):""}
+    ${h.r.c?hwheelHTML(h.r.c,h.d):""}
     ${tabsUI([["rota","Como chegar",huntRoute(h.r.c)],
       ["mons","Monstros e loot",`${h.r.how?`<p class="small" style="margin:0"><b>${h.voc==="paladin"?"Munição":h.voc==="knight"||h.voc==="monk"?"Arma":"Rotação"}:</b> ${esc(h.r.how)}</p>`:""}${monsPanel((G.pm[h.r.c]||{}).h,(G.pm[h.r.c]||{}).r)}`,((G.pm[h.r.c]||{}).h||[]).length||0],
       ...(h.r.c?[["loot","Loot e lucro",`<div class="lp" data-lootp="${h.r.c}" data-xp="${h.xp0??""}"${(()=>{ const e=ST.ui.ev; return evOn()&&e.t==="mon"&&hasKey(G.mon,e.v)?` data-evk="${esc(e.v)}"`:""; })()} data-lo="${h.lo??""}" data-lsrc="${h.src==="hao"||h.src==="mx"?"est":h.src||""}" data-how="${esc(h.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
@@ -43876,20 +43956,6 @@ const SUIC=(()=>{ const sv=d=>`<svg viewBox="0 0 24 24" width="18" height="18" f
     safe:sv('<path d="M12 3l8 3v6c0 4.6-3.4 8.3-8 9-4.6-.7-8-4.4-8-9V6z"/><path d="m9 12 2 2 4-4"/>'), rot:sv('<path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/>'),
     sup:sv('<path d="M9 3h6M10 3v6l-5.2 9A2 2 0 0 0 6.5 21h11a2 2 0 0 0 1.7-3L14 9V3"/><path d="M7.4 15h9.2"/>')}; })();
 let SUPN=0;
-// linha 'Charm': um charm diferente para cada uma das 3 criaturas principais (pela parte do XP: xp × quantidade), porque no jogo um charm só
-// pode estar numa criatura de cada vez (TibiaWiki, Charm Expansion); ' ou X' quando o 2.º fica a menos de 5 %. Sem criaturas: média da zona.
-function suCharm(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" data-cfocus="${k}">${esc(G.charms[k].n)}</a>`, pid=h&&h.r&&h.r.c;
-  const note=`<span class="tiny muted su-note">Low Blow e Savage Blow somam dano crítico em qualquer criatura.</span>`;
-  const ms=new Set(((p&&p.mons)||[]).map(x=>String(x).trim().toLowerCase())), used=new Set(), out=[];
-  (pid?huntMons(pid):[]).filter(([k])=>ms.has(k)).sort((a,b)=>monW(b)-monW(a)).slice(0,3).forEach(([k])=>{
-    const o=charmFor(c,k), a=o.find(x=>!used.has(x.k)); if(!a) return; used.add(a.k); out.push({k, o, a}); });
-  // a alternativa nunca é um charm que já ficou noutra criatura da lista
-  out.forEach(x=>{ const b=x.o.find(y=>!used.has(y.k)); x.b=b&&b.dmg>=x.a.dmg*0.95?b:null; });
-  if(out.length) return out.map((x,i)=>`<span class="su-cm">${CL(x.a.k)}${x.b?` ou ${CL(x.b.k)}`:""} nos ${esc(G.mon[x.k][0])} (${nf(Math.round(x.a.dmg))}${i?"":" por ativação"})</span>`).join(`<span class="su-dot" aria-hidden="true">·</span>`)+note;
-  const e=p&&p.eff;
-  if(e){ const ce=Object.keys(CHARM_EL).filter(x=>e[x]!=null).sort((a,b)=>e[b]-e[a])[0], k0=ce&&e[ce]>=100?CHARM_EL[ce]:"wound", k=hasKey(G.charms,k0)?k0:"wound";
-    return `${CL(k)} <span class="tiny muted">${ce&&e[ce]>=100&&k===k0?`as criaturas levam ${e[ce]}% de ${ELN[ce]}`:"sem fraqueza clara: o físico é o mais seguro"}</span>`+note; }
-  return `${CL("wound")} <span class="tiny muted">sem dados das criaturas: o físico é o mais seguro</span>`+note; }
 // linha do how do TibiaPal: sorcerer = elementos em chips; druid = feitiços com link (GFB, SD e Stoneshower por extenso); knight e monk =
 // elementos da arma; paladin = a munição com link quando o item existe. Os magos levam 'ver rotação ›'.
 function suRot(voc,how){ const s=String(how||""), rot=` <a href="#rotacao" data-go="rotacao">ver rotação ›</a>`;
@@ -43918,7 +43984,6 @@ function setupHTML(voc,level,p,h){
   // a arma/munição/rotação do TibiaPal vem logo a seguir ao elemento (no Modern ficam lado a lado)
   if(how) rows.push(["rot",voc==="paladin"?"Munição":phys?"Arma":"Rotação", suRot(voc,how)]);
   const cc=Object.assign({},C()||{},{voc,level});
-  rows.push(["charm","Charm",suCharm(cc,p,h)]);
   if(p&&p.d>=3) rows.push(["safe","Segurança", `<span>Risco alto: leva <a href="#charms" data-go="charms">Dodge</a> como segundo charm e não puxes demasiado.</span>`]);
   // r4-t3: supplies com preço: o .then corre depois de o HTML entrar na página (a ficha) e preenche a linha pelo id
   const sr=supRows(cc,how), sid=sr.length?"su-sup-"+(++SUPN):"";
@@ -44242,10 +44307,6 @@ $("hotbar").addEventListener("scroll", hbNavSync, {passive:true});
 if("ResizeObserver" in window) new ResizeObserver(hbNavSync).observe($("hotbar")); else addEventListener("resize", hbNavSync, {passive:true});
 $("spFilter").addEventListener("click", e=>{ const b=e.target.closest("[data-spf]"); if(!b) return; spFilter=b.dataset.spf; renderRotation(); });
 
-/* r6-t5 */ // domínios da Wheel (mini-roda do Modern): {tl,tr,bl,br} = nível 0–3 do 'Vessel Resonance <Top|Bottom> <Left|Right>' (I/II/III) de w.conv
-function wheelDom(w){ const o={tl:0,tr:0,bl:0,br:0}, R={I:1,II:2,III:3};
-  ((w&&w.conv)||[]).forEach(([k,v])=>{ const m=/^Vessel Resonance (Top|Bottom) (Left|Right)$/.exec(String(k||"").trim()); if(!m) return; const q=(m[1][0]+m[2][0]).toLowerCase(); o[q]=Math.max(o[q],R[String(v||"").trim()]||0); });
-  return o; }
 // números do planner (em inglês) em pt-PT: 'Mana +1,050' → 'Mana +1050'; 'Mitigation Multiplier 11.25%' → '11,25%'
 function wnum(s){ return String(s==null?"":s).replace(/(\d),(?=\d{3}\b)/g,"$1").replace(/(\d)\.(\d)/g,"$1,$2"); }
 function renderWheel(){
@@ -44255,17 +44316,15 @@ function renderWheel(){
   const pk = (lab,wk,a,f) => a&&a.length?`<div data-wk="${wk}"><b>${lab}:</b> ${a.map(x=>`<span class="wpk">${esc(wnum(f(x)))}</span>`).join('<span class="wsep"> · </span>')}</div>`:"";
   const perk = w => pk("Conviction","c",w.conv,([k,v])=>k+(v?" "+v:"")) + pk("Revelation","r",w.rev,([k,v])=>k+" "+v) + pk("Dedication","d",w.ded,([k,v])=>k+" "+v);
   const lab = w => esc(`Copiar o código da build ${w.t} (${w.p} pontos)`);
-  const QD={tl:"M4.1 56.58A56 56 0 0 1 56.58 4.1L56.59 34.22A26 26 0 0 0 34.22 56.59Z",tr:"M63.42 4.1A56 56 0 0 1 115.9 56.58L85.78 56.59A26 26 0 0 0 63.41 34.22Z",
-    br:"M115.9 63.42A56 56 0 0 1 63.42 115.9L63.41 85.78A26 26 0 0 0 85.78 63.41Z",bl:"M56.58 115.9A56 56 0 0 1 4.1 63.42L34.22 63.41A26 26 0 0 0 56.59 85.78Z"};
-  const dm=wheelDom(cur), dom=`<div class="wh-dom md-only" aria-hidden="true"><svg viewBox="0 0 120 120">${["tl","tr","br","bl"].map(q=>`<path class="wq" data-q="${q}" data-l="${dm[q]}" d="${QD[q]}"/>`).join("")}<text class="wh-n" x="60" y="63">${pts}</text><text class="wh-t" x="60" y="77">pontos</text></svg></div>`;
   const b0=cur?cur.p:0, prog=nx?`<div class="wh-prog md-only"><i style="--p:${Math.round((pts-b0)/(nx.p-b0)*1000)/10}%"></i></div><p class="small wh-pl">${pts-b0} de ${nx.p-b0} pontos · faltam ${nx.p-pts} (nível ${nx.p+50})</p>`:"";
-  if (!cur) $("wheelNow").innerHTML = `${dom}<div class="wh-main"><h4>Ainda não chegas à primeira build</h4>${nx?`<p>Com ${nx.p} pontos (nível ${nx.p+50}): ${esc(nx.t)}.</p>`:""}${prog}</div>`;
-  else $("wheelNow").innerHTML = `${dom}<div class="wh-main"><h4>Agora: ${esc(cur.t)}${cur.note?` <span class="tag">${esc(cur.note)}</span>`:""}</h4><div class="small wpd">${perk(cur)}</div>${nx?`<p class="small">A seguir: <b>${esc(nx.t)}</b>, com ${nx.p} pontos.</p>${prog}`:`<p class="small">Build completa para os teus pontos.</p>`}<p><span class="code">${esc(cur.c)}</span> <button class="btn small ghost" data-copy="${esc(cur.c)}" data-copied="Código copiado" aria-label="${lab(cur)}">Copiar código</button></p></div>`;
+  if (!cur) $("wheelNow").innerHTML = `<div class="wh-main"><h4>Ainda não chegas à primeira build</h4>${nx?`<p>Com ${nx.p} pontos (nível ${nx.p+50}): ${esc(nx.t)}.</p>`:""}${prog}</div>`;
+  else $("wheelNow").innerHTML = `<div class="wh-main"><h4>Agora: ${esc(cur.t)}${cur.note?` <span class="tag">${esc(cur.note)}</span>`:""}</h4><div class="small wpd">${perk(cur)}</div>${nx?`<p class="small">A seguir: <b>${esc(nx.t)}</b>, com ${nx.p} pontos.</p>${prog}`:`<p class="small">Build completa para os teus pontos.</p>`}<p><span class="code">${esc(cur.c)}</span> <button class="btn small ghost" data-copy="${esc(cur.c)}" data-copied="Código copiado" aria-label="${lab(cur)}">Copiar código</button></p></div>`;
   const gm=G.gems[c.voc]||{}, gl=a=>`<span class="wgl">${(a||[]).map(x=>`<span class="wpk">${esc(x)}</span>`).join('<span class="wsep">, </span>')}</span>`,
     gi='<svg class="wh-gi md-only" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12z"/><path d="M12 7.5 16.5 12 12 16.5 7.5 12z"/></svg>';
   $("gemBox").innerHTML = `<div class="card"><h4>${gi}Lesser gems (a partir dos 100 pontos)</h4><p class="small">Por ordem: ${gl(gm.lesser_gems)}<span class="wsep">.</span> Revelar custa 125k no Gem Atelier; caem sobretudo de monstros influenced e fiendish. A gema só conta com o Vessel Resonance desse domínio ativo.</p></div><div class="card"><h4>${gi}Greater gems (mais tarde)</h4><p class="small">${gl(gm.greater_gems)}<span class="wsep">.</span></p></div>`;
-  $("wheelTable").innerHTML = `<thead><tr><th>Pontos</th><th>Nível</th><th>Build</th><th>Código</th></tr></thead><tbody>` + ws.map(w=>{ const now=cur===w, fl=w.p>pts?w.p+50-c.level:0;
-    return `<tr class="${now?"now":fl?"dim":""}"><td data-l="Pontos"><b>${w.p}</b></td><td data-l="Nível">${w.p+50}${fl>0?`<span class="tiny wfal">faltam ${fl} ${fl===1?"nível":"níveis"}</span>`:""}</td><td data-l="Build"><b>${esc(w.t)}</b>${w.note?` <span class="tag">${esc(w.note)}</span>`:""}${now?' <span class="tag ok">Estás aqui</span>':""}<div class="tiny muted wpd">${perk(w)}</div></td><td><button class="btn small ghost" data-copy="${esc(w.c)}" data-copied="Código copiado" aria-label="${lab(w)}">Copiar</button></td></tr>`; }).join("") + `</tbody>`;
+  $("wheelTable").innerHTML = `<thead><tr><th>Pontos</th><th>Nível</th><th>Build</th><th>Código</th></tr></thead><tbody>` + ws.map((w,i)=>{ const now=cur===w, fl=w.p>pts?w.p+50-c.level:0;
+    return `<tr data-wi="${i}" class="${now?"now":fl?"dim":""}"><td data-l="Pontos"><b>${w.p}</b></td><td data-l="Nível">${w.p+50}${fl>0?`<span class="tiny wfal">faltam ${fl} ${fl===1?"nível":"níveis"}</span>`:""}</td><td data-l="Build"><b>${esc(w.t)}</b>${w.note?` <span class="tag">${esc(w.note)}</span>`:""}${now?' <span class="tag ok">Estás aqui</span>':""}<div class="tiny muted wpd">${perk(w)}</div></td><td class="wh-btns"><button type="button" class="btn small ghost" data-wsel="${i}" aria-label="${esc(`Ver a build ${w.t} na roda`)}">Ver</button> <button class="btn small ghost" data-copy="${esc(w.c)}" data-copied="Código copiado" aria-label="${lab(w)}">Copiar</button></td></tr>`; }).join("") + `</tbody>`;
+  renderWheelX();
 }
 document.addEventListener("click", async e=>{ const b=e.target.closest("[data-copy]"); if(!b) return; const t=b.dataset.copy, old=b.textContent; let ok=false; try{ await navigator.clipboard.writeText(t); ok=true; }catch(err){}
   /* r6-t5 */ // sem a API da área de transferência (página em http fora do localhost) copia por um textarea; o foco volta ao botão
@@ -44273,6 +44332,146 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-co
   b.textContent = ok ? "Copiado ✓" : t; setTimeout(()=>{ b.textContent = old; }, 1800);
   // com data-copied, o leitor de ecrã ouve a confirmação (#copyLive, role=status); os outros [data-copy] ficam como estavam
   const lv=b.dataset.copied?$("copyLive"):null; if(lv){ lv.textContent=""; setTimeout(()=>{ lv.textContent = ok ? b.dataset.copied : "Não deu para copiar: o código ficou escrito no botão."; }, 80); } });
+
+/* ---------- Wheel of Destiny desenhada como no jogo ----------
+   36 fatias = grelha 6×6 do código de exportação (verde em cima à esquerda, vermelho em cima à direita, azul em baixo à esquerda,
+   roxo em baixo à direita); o que dá cada fatia e os pontos de cada build vêm de data/wheel.json (_dev/build_wheel.py). */
+let WHD=null, WHP=null, WHN=0, WSEL=null;
+const whLoad = () => WHP || (WHP = dsafe("wheel").then(d=>{ WHD = d&&d.slots ? d : null; return WHD; }));
+const WHC = {green:["#5BD16B","#1F7A2E"], red:["#FF6B5E","#A3241C"], blue:["#5EA8FF","#1D4FA3"], purple:["#C38BFF","#6A2FB0"]};
+const WHDN = {green:"verde", red:"vermelho", blue:"azul", purple:"roxo"};
+const WHVR = {green:"Top Left", red:"Top Right", blue:"Bottom Left", purple:"Bottom Right"};
+const WHDOM = ["green","red","blue","purple"];
+const WHR = [28,74,120,166,214]; // raios dos anéis: 50 · 75 · 100 · 150/200 pontos
+const WHSK = {knight:"skill de ataque", paladin:"distance", sorcerer:"magic level", druid:"magic level", monk:"fist fighting"};
+const WHIC = {vr:"M12 3l7 9-7 9-7-9z", skill:"M12 19V6M6 11.5l6-6 6 6", mleech:"M12 3.5s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z", lleech:"M12 3.5s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z",
+  sp:"M12 3l2.4 6.3L21 12l-6.6 2.7L12 21l-2.4-6.3L3 12l6.6-2.7z", inst:"M3.5 18.5h17M4.5 16l2-9 5.5 5 5.5-5 2 9z"};
+const WHRV = {green:"M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11z", red:"M14.5 17.5 3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2",
+  blue:"M12 21.5s8-4 8-10v-6.5l-8-3-8 3v6.5c0 6 8 10 8 10z", purple:"M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM5 21c.5-5.5 3.5-8.5 7-8.5s6.5 3 7 8.5"};
+const ROM = ["","I","II","III"];
+// geometria da fatia i: anel (0–3), ângulos de início e fim (graus do SVG: 0 = direita, 90 = baixo)
+function whGeo(i){ const [,mx]=WHD.slots[i], row=Math.floor(i/6), col=i%6, top=row<3, left=col<3;
+  const dx=left?2-col:col-3, dy=top?2-row:row-3, ring=mx===50?0:mx===75?1:mx===100?2:3, n=[1,2,3,3][ring], t=dx+dy?dy/(dx+dy):0;
+  const seg=ring===3?(t<0.45?0:t<0.55?1:2):Math.round(t*(n-1)), ah=left?180:(top?360:0), av=top?270:90;
+  return {ring, a1:ah+(av-ah)*seg/n, a2:ah+(av-ah)*(seg+1)/n}; }
+const whPt = (r,a) => { const t=a*Math.PI/180; return [r*Math.cos(t), r*Math.sin(t)]; };
+function whArc(r1,r2,a1,a2){ if(a2<a1) [a1,a2]=[a2,a1]; const f=([x,y])=>`${x.toFixed(1)} ${y.toFixed(1)}`, lg=a2-a1>180?1:0;
+  return `M${f(whPt(r1,a1))}L${f(whPt(r2,a1))}A${r2} ${r2} 0 ${lg} 1 ${f(whPt(r2,a2))}L${f(whPt(r1,a2))}A${r1} ${r1} 0 ${lg} 0 ${f(whPt(r1,a1))}Z`; }
+function whConvName(voc,cv,d){ const V=WHD.voc[voc]; return cv==="vr"?`Vessel Resonance ${WHVR[d]}`:cv==="skill"?V.skill:cv==="mleech"?"Mana Leech":cv==="lleech"?"Life Leech":cv.startsWith("inst:")?V.inst[cv.slice(5)]:`Augmented ${V.sp[cv.slice(3)]}`; }
+// totais de uma build: dedicação, convicção (com quantas vezes), pontos e ressonâncias por domínio, estágio da revelação de cada domínio
+function whSum(voc,pts){ const V=WHD.voc[voc]; let hp=0,mp=0,cap=0,mit=0; const conv={}, dom={}, vr={}, rev={}; WHDOM.forEach(d=>{ dom[d]=0; vr[d]=0; });
+  WHD.slots.forEach(([d,mx,ded,cv],i)=>{ const p=pts[i]||0; dom[d]+=p; if(ded==="hp"||ded==="hpmp") hp+=V.hp*p; if(ded==="mp"||ded==="hpmp") mp+=V.mp*p; if(ded==="cap") cap+=V.cap*p; if(ded==="mit") mit+=WHD.mit*p;
+    if(p>=mx){ const n=whConvName(voc,cv,d); conv[n]=(conv[n]||0)+1; if(cv==="vr") vr[d]++; } });
+  let dh=0, gem=0; WHDOM.forEach(d=>{ const st=dom[d]>=WHD.stage[2]?3:dom[d]>=WHD.stage[1]?2:dom[d]>=WHD.stage[0]?1:0; rev[d]=st; if(st) dh+=WHD.revdh[st-1]; if(vr[d]) gem+=vr[d]===3?2:1; });
+  return {hp,mp,cap,mit,conv,dom,vr,rev,dh,gem,tot:pts.reduce((a,b)=>a+(b||0),0)}; }
+const WHGEM = ["","Lesser gem","Regular gem","Greater gem"];
+const GEMPT = {"Hit Points":"Vida","Mitigation":"Mitigação","Mana":"Mana"};
+const supPT = s => String(s).replace(/ Mastery Mastery$/," Mastery (revelation)").replace(/^(.*) Base Damage$/,"$1: dano base").replace(/^(.*) CD Reduction$/,"$1: menos cooldown").replace(/^(.*) Healing$/,"$1: cura").replace(/^(.*) Mastery$/,"$1 Mastery");
+// mods a procurar numa gema com n ressonâncias ativas (1 = lesser, 2 = regular, 3 = greater); prof = dano que vais levar na hunt (huntProfile)
+function whGemMods(voc,n,prof,k){ if(!n) return []; const g=G.gems[voc]||{}, b=[];
+  const els=prof?Object.entries(prof).filter(([e,v])=>e!=="physical"&&ELN[e]&&v>=0.15).sort((x,y)=>y[1]-x[1]).map(([e])=>e):[];
+  els.slice(0,2).forEach(e=>b.push(`Resistência a ${ELN[e]}`));
+  (g.lesser_gems||["Hit Points","Mitigation"]).forEach(x=>{ if(x==="Any Elemental Resistance"){ if(!prof) b.push("Resistência ao elemento que mais te bate"); } else if(!b.includes(GEMPT[x]||x)) b.push(GEMPT[x]||x); });
+  const m=n===1?1:2, o=(k||0)%Math.max(1,b.length), out=[...b.slice(o),...b.slice(0,o)].slice(0,m); if(n===3&&(g.greater_gems||[]).length) out.push(supPT(g.greater_gems[(k||0)%g.greater_gems.length]));
+  return out; }
+// SVG da roda; o = {size:'sm'|'lg', vr:{dom:n} das gemas, label}
+function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), S=whSum(voc,pts), gold=`url(#${id}g)`;
+  const grad=WHDOM.map(d=>`<radialGradient id="${id}${d}" cx="0" cy="0" r="214" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${WHC[d][0]}"/><stop offset="1" stop-color="${WHC[d][1]}"/></radialGradient>`).join("");
+  const sl=WHD.slots.map(([d,mx,ded,cv],i)=>{ const g=whGeo(i), r1=WHR[g.ring], r2=WHR[g.ring+1], p=Math.min(pts[i]||0,mx), f=p/mx;
+    const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), ic=WHIC[cv.split(":")[0]]||WHIC.sp, s=g.ring===0?0.62:0.7;
+    return `<g class="ws${f>=1?" full":p?" part":""}" data-ws="${i}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][1]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="url(#${id}${d})"/>`:""}<path class="wsi wsi-${cv.split(":")[0]}" d="${ic}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s})"/></g>`; }).join("");
+  const axes=[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect x="28" y="-3.5" width="190" height="7" fill="${gold}"/><path d="M172 -17 L232 -25 L232 25 L172 17 Z" fill="${gold}" stroke="#3B2A0C" stroke-width="2"/><path d="M186 -9 L220 -13 L220 13 L186 9 Z" fill="#2A1E08" opacity=".55"/></g>`).join("");
+  const med=WHDOM.map(d=>{ const x=d==="green"||d==="blue"?-1:1, y=d==="green"||d==="red"?-1:1, st=S.rev[d], n=(o.vr||S.vr)[d]||0, [gx,gy]=[x*163,y*163], gs=[0,9,12,15][n];
+    const pips=[0,1,2].map(k=>`<circle cx="${x*198+(k-1)*11}" cy="${y*198+(y<0?25:-25)}" r="3.6" class="wpip${k<st?" on":""}" style="--wc:${WHC[d][0]}"/>`).join("");
+    return `<g class="wmed${st?" on":""}" data-wr="${d}"><circle cx="${x*198}" cy="${y*198}" r="36" fill="${gold}"/><circle cx="${x*198}" cy="${y*198}" r="29" fill="${st?`url(#${id}${d})`:"#1B1712"}"/><path d="${WHRV[d]}" transform="translate(${x*198-13} ${y*198-13}) scale(1.08)" class="wmi"/>${pips}</g>
+      <g class="wgem${n?" on":""}"><path d="M${gx} ${gy-(gs||8)}L${gx+(gs||8)} ${gy}L${gx} ${gy+(gs||8)}L${gx-(gs||8)} ${gy}Z" fill="${n?`url(#${id}${d})`:"#1B1712"}" stroke="${gold}" stroke-width="2.5"/></g>`; }).join("");
+  const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`;
+  return `<svg class="whs${o.size==="sm"?" sm":""}" viewBox="-270 -270 540 540" role="img" aria-label="${esc(lab)}" data-wv="${voc}" data-wp="${pts.join(",")}"><defs><linearGradient id="${id}g" x1="0" y1="-1" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#F6DC8C"/><stop offset=".5" stop-color="#C8973A"/><stop offset="1" stop-color="#7C5617"/></linearGradient>${grad}</defs>
+    <circle r="236" fill="${gold}"/><circle r="226" fill="#0E0B08"/><circle r="214" fill="#15110C"/>${sl}
+    ${[74,120,166].map(r=>`<circle r="${r}" class="wring"/>`).join("")}<circle r="214" class="wring o"/>${axes}
+    <circle r="30" fill="${gold}"/><circle r="23" fill="#120E09"/><text y="5" class="wpts">${S.tot}</text>${med}</svg>`; }
+// texto de uma fatia (tooltip e leitores de ecrã)
+function whSlotTxt(voc,pts,i){ const [d,mx,ded,cv]=WHD.slots[i], V=WHD.voc[voc], p=pts[i]||0;
+  const dv=x=>ded==="hp"?`+${nf(V.hp*x)} vida`:ded==="mp"?`+${nf(V.mp*x)} mana`:ded==="cap"?`+${nf(V.cap*x)} capacidade`:ded==="mit"?`+${String(Math.round(WHD.mit*x*100)/100).replace(".",",")}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`;
+  const n=whConvName(voc,cv,d), k=cv.split(":")[0], nm=n.replace(/^Augmented /,""), desc=k==="sp"?(WHD.aug[nm]||[]).map((x,j)=>`estágio ${j+1}: ${x}`).join("; "):k==="vr"?WHD.perk["Vessel Resonance"]:k==="skill"?`+1 de ${WHSK[voc]}.`:k==="mleech"?WHD.perk["Mana Leech"]:k==="lleech"?WHD.perk["Life Leech"]:(WHD.perk[n]||"");
+  return {t:`Fatia ${WHDN[d]} de ${mx}`, st:p>=mx?"cheia":p?`${p} de ${mx} pontos`:"vazia", ded:p?dv(p):dv(mx)+" (com a fatia cheia)", conv:n, desc, full:p>=mx}; }
+let WHTIP=null;
+function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]"); if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); }
+  if(!g||!WHD){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), x=whSlotTxt(sv.dataset.wv,pts,+g.dataset.ws);
+  WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}`;
+  WHTIP.hidden=false; const r=WHTIP.getBoundingClientRect(), px=e.clientX||0, py=e.clientY||0;
+  WHTIP.style.left=Math.max(8,Math.min(innerWidth-r.width-8,px+14))+"px"; WHTIP.style.top=Math.max(8,py+16+r.height>innerHeight?py-r.height-12:py+16)+"px"; }
+document.addEventListener("pointermove", e=>{ if(e.pointerType!=="touch") whTip(e); }, {passive:true});
+document.addEventListener("click", e=>{ if(e.target.closest&&e.target.closest(".whs [data-ws]")) whTip(e); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
+// painel ao lado da roda, como no jogo: dedicação, convicção, vessels (gemas) e revelação
+function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], cv=Object.entries(S.conv).filter(([n])=>!/^Vessel Resonance/.test(n));
+  const f2=v=>String(Math.round(v*100)/100).replace(".",",");
+  const ded=`<dl class="whp-dl"><div><dt>Vida</dt><dd>+${nf(S.hp)}</dd></div><div><dt>Mana</dt><dd>+${nf(S.mp)}</dd></div><div><dt>Capacidade</dt><dd>+${nf(S.cap)}</dd></div><div><dt>Mitigação</dt><dd>×${f2(S.mit)}%</dd></div></dl>`;
+  const cvl=cv.map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:(WHD.perk[n]||"");
+    return `<li><span class="whp-ic">${aug?"✦":n===V.skill?"▲":/Leech/.test(n)?"●":"♛"}</span><span><span class="whp-n"><b>${esc(nm)}</b>${aug?`<span class="tag acc">${ROM[Math.min(k,3)]}</span>`:""}</span><span class="tiny muted">${esc(desc)}</span></span></li>`; }).join("") || `<li class="muted small">Ainda nenhuma fatia cheia.</li>`;
+  let gk=0; const ves=WHDOM.map(d=>{ const n=S.vr[d], mods=whGemMods(voc,n,prof,n?gk++:0); return `<li class="${n?"":"off"}"><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${n?WHC[d][0]:"none"}" stroke="${WHC[d][0]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${n?WHGEM[n]:"Sem gema"}</b><span class="tiny muted">vessel ${WHDN[d]} · ${n} ${n===1?"ressonância":"ressonâncias"}</span></span>${n?`<span class="tiny">${esc(mods.join(" + "))}</span>`:""}</span></li>`; }).join("");
+  const rev=WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<li class="${st?"":"off"}" title="${esc(WHD.revd[nm]||"")}"><svg class="whp-rv" viewBox="0 0 24 24" aria-hidden="true" style="--wc:${WHC[d][0]}"><path d="${WHRV[d]}"/></svg><span><span class="whp-n"><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`estágio ${st}`:"bloqueado"}</span></span><span class="tiny muted">${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:""}</span></span></li>`; }).join("");
+  return `<div class="whp"><section><h5>Dedicação</h5>${ded}</section><section><h5>Convicção</h5><ul class="whp-l">${cvl}</ul></section>
+    <section><h5>Vessels e gemas <span class="tiny muted">+${S.gem} de dano e cura com as gemas certas</span></h5><ul class="whp-l">${ves}</ul></section>
+    <section><h5>Revelação <span class="tiny muted">+${S.dh} de dano e cura</span></h5><ul class="whp-l">${rev}</ul></section></div>`; }
+// build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
+function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
+  const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
+  const sc=w=>{ const n=String(w.note||"");
+    if(voc==="sorcerer"&&n){ const els=["energy","fire","death"].filter(e=>new RegExp(e,"i").test(n)); let v=Math.max(...els.map(e=>eff&&eff[e]!=null?eff[e]:100)); if(/\(TH\)/.test(n)) v-=3; return {v, why:eff&&els.length?els.sort((a,b)=>(eff[b]??100)-(eff[a]??100))[0]:null}; }
+    if(voc==="paladin"&&n){ if(/resistant/i.test(n)) return {v:eff&&eff.physical!=null&&eff.physical<90?300:0, why:"physical"}; if(/bossing/i.test(n)) return {v:-1}; if(/holy/i.test(n)) return {v:eff&&eff.holy!=null?eff.holy:100, why:"holy"}; if(/physical/i.test(n)) return {v:eff&&eff.physical!=null?eff.physical:100, why:"physical"}; }
+    if(voc==="knight") return {v:(dang>=3?/Combat Mastery/:/Executioner/).test(w.t)?1:0, why:dang>=3?"risk":"fast"};
+    return {v:0}; };
+  let best=null, bs=-1e9, bw=null; ws.filter(w=>w.p>=top-200).forEach(w=>{ const s=sc(w), x=s.v*1000+w.p; if(x>=bs){ bs=x; best=w; bw=s.why; } });
+  const e=eff&&bw&&ELN[bw]&&eff[bw]!=null?eff[bw]:null;
+  const why = bw==="risk"?"hunt de risco alto: Combat Mastery dá mais segurança":bw==="fast"&&/Executioner/.test(best.t)?"Executioner's Throw acaba as criaturas mais depressa":e!=null?`as criaturas levam ${e}% de ${ELN[bw]}`:"";
+  return {w:best, why}; }
+const WNOTE = {"Holy Build":"build holy","Physical Build":"build física","Base Bossing Build":"para bosses","Base Ranged Spawn Build":"hunts à distância","Physical Resistant Build, e.g. Rosh":"criaturas que resistem a físico (ex.: Rosh)",
+  "Energy":"energia","Fire/Death":"fogo e morte","Energy/Death":"energia e morte","Fire (TH)":"fogo, em team hunt","Fire (Solo)":"fogo, solo","Fire (Solo)/Death":"fogo (solo) e morte","Energy/Death/Fire (TH)":"energia, morte e fogo (team hunt)"};
+const wnote = n => n ? (WNOTE[n]||n) : "";
+// charms para a hunt: um charm de dano diferente em cada uma das 3 criaturas principais (no jogo cada charm só fica numa criatura)
+function charmPicks(c,p,h){ const pid=h&&h.r&&h.r.c, ms=new Set(((p&&p.mons)||[]).map(x=>String(x).trim().toLowerCase())), used=new Set(), out=[];
+  (pid?huntMons(pid):[]).filter(([k])=>ms.has(k)).sort((a,b)=>monW(b)-monW(a)).slice(0,3).forEach(([k])=>{ const o=charmFor(c,k), a=o.find(x=>!used.has(x.k)); if(!a) return; used.add(a.k); out.push({k,o,a}); });
+  out.forEach(x=>{ const b=x.o.find(y=>!used.has(y.k)); x.b=b&&b.dmg>=x.a.dmg*0.95?b:null; });
+  return out; }
+const charmBadge = k => { const m=G.charms[k]||{}, f=String(m.f||""), el=f.startsWith("el:")&&hasKey(CHARM_IC,f.slice(3))?f.slice(3):"", d=el?CHARM_IC[el]:hasKey(CHARM_IC,k)?CHARM_IC[k]:"M12 3l7 9-7 9-7-9z";
+  return `<span class="chb" style="--cc:${el?`var(--${el})`:m.t==="minor"?"var(--accent)":"var(--gold)"}" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="${d}"/></svg></span>`; };
+function hCharmsHTML(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" data-cfocus="${k}">${esc(G.charms[k].n)}</a>`, L=charmPicks(c,p,h), cards=[];
+  L.forEach((x,i)=>cards.push(`<li>${charmBadge(x.a.k)}<span class="hch-t"><span class="whp-n"><b>${CL(x.a.k)}</b>${x.b?`<span class="tiny muted">ou ${CL(x.b.k)}</span>`:""}</span><span class="hch-m">${crSpr(x.k,32)}<span>em ${mlink(x.k,esc(G.mon[x.k][0]))}</span></span><span class="tiny muted">≈ ${nf(Math.round(x.a.dmg))} de dano por ativação</span></span></li>`));
+  if(!L.length){ const e=p&&p.eff, ce=e?Object.keys(CHARM_EL).filter(x=>e[x]!=null).sort((a,b)=>e[b]-e[a])[0]:null, k0=ce&&e[ce]>=100?CHARM_EL[ce]:"wound", k=hasKey(G.charms,k0)?k0:"wound";
+    cards.push(`<li>${charmBadge(k)}<span class="hch-t"><b>${CL(k)}</b><span class="tiny muted">${ce&&e[ce]>=100&&k===k0?`as criaturas levam ${e[ce]}% de ${ELN[ce]}`:"sem fraqueza clara: o físico é o mais seguro"}</span></span></li>`); }
+  if(hasKey(G.charms,"lowblow")) cards.push(`<li class="hch-all">${charmBadge("lowblow")}<span class="hch-t"><b>${CL("lowblow")}</b><span class="tiny muted">crítico extra em qualquer criatura: o melhor para levar ao estágio 3</span></span></li>`);
+  if(p&&p.d>=3&&hasKey(G.charms,"dodge")) cards.push(`<li class="hch-all">${charmBadge("dodge")}<span class="hch-t"><b>${CL("dodge")}</b><span class="tiny muted">risco alto: evita ataques por completo</span></span></li>`);
+  return `<ul class="hch">${cards.join("")}</ul>`; }
+// bloco 'Wheel, gemas e charms' da ficha da hunt
+function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return ""; const ph=`<div class="hwh" data-hwheel="${pid}" data-hd="${d||0}"><p class="small muted" style="margin:0">A preparar a Wheel para esta hunt…</p></div>`;
+  if(!WHD||!CRDV){ Promise.all([whLoad(),crdLoad()]).then(()=>document.querySelectorAll("[data-hwheel]").forEach(x=>{ if(WHD) x.outerHTML=hwheelHTML(x.dataset.hwheel,+x.dataset.hd); })); return ph; }
+  const pts=wpts(c.level), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
+  const ch=`<div class="hwh-s"><h6>Charms</h6>${hCharmsHTML(Object.assign({},c),p,h)}</div>`;
+  if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms</h5></div><p class="small">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:""}</p>${ch}</div>`; }
+  const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
+  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
+    ...Object.entries(S.conv).filter(([n])=>/^Augmented /.test(n)).map(([n,k])=>`<span class="hwh-k">${esc(n.replace(/^Augmented /,""))} <b>${ROM[Math.min(k,3)]}</b></span>`)];
+  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${WHC[x][0]}" stroke="${WHC[x][1]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${WHGEM[S.vr[x]]}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
+  return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class="tiny muted">As resistências das gemas seguem o dano desta hunt.</span>`:""}</div>
+    <div class="hwh-g"><div class="hwh-w">${whSVG(c.voc,b,{size:"sm"})}</div>
+      <div class="hwh-c"><div class="hwh-s"><h6>Wheel</h6><p class="hwh-t"><b>${esc(w.t)}</b> <span class="tag">${w.p} pontos</span>${w.note?` <span class="tag acc">${esc(wnote(w.note))}</span>`:""}</p>${pk.why?`<p class="tiny muted" style="margin:2px 0 0">Porquê: ${esc(pk.why)}.</p>`:""}
+          ${keys.length?`<div class="hwh-ks">${keys.join("")}</div>`:""}<p class="hwh-a"><button class="btn small" data-copy="${esc(w.c)}" data-copied="Código copiado">Copiar código</button> <a href="#wheel" data-go="wheel" class="small">Ver a Wheel ›</a></p></div>
+        <div class="hwh-s"><h6>Gemas</h6>${gems?`<ul class="whp-l">${gems}</ul>`:`<p class="small muted" style="margin:0">Esta build ainda não ativa nenhum vessel.</p>`}</div>
+        ${ch}</div></div></div>`; }
+// página da Wheel: a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca) com o painel ao lado
+let WSELV=null;
+function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
+  if(!WHD){ box.innerHTML=`<p class="small muted" style="margin:0">A desenhar a Wheel…</p>`; whLoad().then(()=>{ if(WHD) renderWheelX(); }); return; }
+  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; }
+  const ws=G.wheel[c.voc]||[], pts=wpts(c.level), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0], b=w&&WHD.b[w.c];
+  if(!b){ box.hidden=true; return; } box.hidden=false;
+  box.innerHTML=`<div class="whx-h"><div><span class="eyebrow">${w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida"}</span><h3>${esc(w.t)}</h3><div class="pills"><span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">para o teu nível</span>':""}</div></div>
+    <div class="whx-a"><button class="btn small" data-copy="${esc(w.c)}" data-copied="Código copiado">Copiar código</button>${w!==cur&&cur?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div>
+    <div class="whx-g"><div class="whx-w">${whSVG(c.voc,b,{label:`Wheel of Destiny: ${w.t}, ${w.p} pontos`})}<p class="tiny muted whx-leg">Passa o rato (ou toca) numa fatia para ver o que dá. ✦ feitiço aumentado · ▲ skill · ● leech · ◆ vessel · ♛ perk especial. Nos cantos estão as revelações (os pontos são o estágio) e os losangos são as gemas.</p></div>${whPanelHTML(c.voc,b,null)}</div>`;
+  document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; renderWheelX();
+  const box=$("wheelX"); if(box&&b.closest("#wheelTable")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
 
 /* ---------- equipment ---------- */
 const DOLL = [["amulet","Amuleto"],["helmet","Capacete"],["bag","Mochila"],["weapon","Arma"],["armor","Armadura"],["shield","Escudo / livro"],["ring","Anel"],["legs","Calças"],["extra","Extra"],[null],["boots","Botas"],[null]];
