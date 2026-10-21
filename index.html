@@ -1137,7 +1137,7 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whs .wbg.full .wsi-mleech{stroke:#9AD1FF} .whs .wbg.full .wsi-lleech{stroke:#FFA3A3} .whs .wbg.full .wsi-skill{stroke:#A8FFA8} .whs .wbg.full .wsi-inst{stroke:#FFE083} .whs .wbg.full .wsi-vr{stroke:#F0E4FF}
 .whs .wpts{font:700 16px Georgia,"Times New Roman",serif;text-anchor:middle;paint-order:stroke;stroke:#140C04;stroke-width:2.6px;letter-spacing:.02em} .whs .wpts.k{font-size:13px}
 .whs .wmi{fill:none;stroke:var(--wc);stroke-opacity:.45;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.whs .wmed.on .wmi{stroke:#fff;stroke-opacity:1}
+.whs .wmed.on .wmi{stroke:#fff;stroke-opacity:1;filter:drop-shadow(0 0 2px rgba(0,0,0,.8)) drop-shadow(0 0 5px var(--wc))}
 .whs .wpip{fill:#2A1F12;stroke:#3B2A0C;stroke-width:1.2}
 .whs .wpip.on{fill:var(--wc);stroke:#fff;stroke-opacity:.7}
 .whs.edit .ws.av .wsb{stroke:#F6DC8C;stroke-width:2.2;stroke-dasharray:6 4}
@@ -1282,6 +1282,22 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whs .wtw{animation:wtw 3.6s ease-in-out infinite}
 @keyframes wtw{0%,100%{opacity:.15}50%{opacity:.95}}
 @media (prefers-reduced-motion:reduce){.whs .wmotes,.whs .waura,.whs .wtw{animation:none}}
+/* r10: ícones do cliente */
+.whs .wx-cv,.whs .wx-pk,.whs .wx-gm,.whs .wx-dd{pointer-events:none}
+.whs .wbg.cv.empty .wx-cv{filter:grayscale(.7) brightness(.78)}
+.whs .wbg.cv.part .wx-cv{filter:grayscale(.35) brightness(.88)}
+.whs .wbr-c{fill:none;stroke:#000;stroke-opacity:.6;stroke-width:1.3;pointer-events:none}
+.whs .wbg.cv.part .wbr-c{stroke:#A88B4A;stroke-opacity:.9}
+.whs .wbg.cv.full .wbr-c{stroke:var(--wc);stroke-opacity:1;stroke-width:1.8}
+.whs .wbg.cv.empty .wx-dd{filter:grayscale(.6) brightness(.7)}
+.whs .wmed:not(.on) .wx-pk{filter:grayscale(.85) brightness(.6)}
+.whs .wmed.on .wx-pk{filter:drop-shadow(0 0 4px var(--wc))}
+.whs .wx-gm{filter:drop-shadow(0 0 3px var(--wc))}
+.wico{display:inline-block;flex:none;vertical-align:middle;border-radius:50%}
+.wsel-ci{border-radius:50%;box-shadow:0 0 0 1px #000,0 0 10px -2px rgba(230,192,106,.5)}
+.wsel-gem .wico{border-radius:0}
+.wrow .wgi.wico,.wopt-g .wgi.wico,.whp-gem.wico{border-radius:0}
+.hwh-k .wico{margin-right:4px}
 /* r9: guia da gema (como obter e colocar) no painel Selection e no tooltip */
 .wguide{margin-top:4px;padding-top:6px;border-top:1px solid #333}
 .wg-l{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:6px;counter-reset:wg}
@@ -44525,7 +44541,16 @@ const SPG = {
   "elemental synthesis":"M12 3c.8 4.8 4.2 8.2 9 9-4.8.8-8.2 4.2-9 9-.8-4.8-4.2-8.2-9-9 4.8-.8 8.2-4.2 9-9z",
   "shared conservation":"M8 3.5c2.3 2.9 3.8 5 3.8 7a3.8 3.8 0 0 1-7.6 0c0-2 1.5-4.1 3.8-7zM16.5 10c2 2.4 3.3 4.2 3.3 5.9a3.3 3.3 0 0 1-6.6 0c0-1.7 1.3-3.5 3.3-5.9z",
   "nature's embrace":"M20 4C11 4 5 9 5 16c0 1.2.2 2.3.5 3.3 1.5.5 2.9.7 4.5.7 6.5 0 10-6 10-16zM4 21c3-4 6.5-7.5 11-10",
-  "divine defiance":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM7.5 14h9M9 14a3 3 0 0 1 6 0M12 6.8v1.2M15.8 10.2l.6-.6M8.2 10.2l-.6-.6"
+  "divine defiance":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM7.5 14h9M9 14a3 3 0 0 1 6 0M12 6.8v1.2M15.8 10.2l.6-.6M8.2 10.2l-.6-.6",
+  /* r9: revelações da Wheel sem sprite: coração com ankh (segunda vida), feixe com os vizinhos, coroa sobre chamas (senhor dos stances),
+     escudo com espada, árvore que cura, duas explosões, lótus */
+  "gift of life":"M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11zM12 12.2c-1.2 0-1.9-.9-1.9-2s.8-1.9 1.9-1.9 1.9.8 1.9 1.9-.7 2-1.9 2zM12 12.2v4.8M9.8 13.8h4.4",
+  "beam mastery":"M3.5 20.5 20.5 3.5M3.5 15.5 15.5 3.5M8.5 20.5l12-12M2.2 21.8l2.6-2.6M18 2.5l1 1.5 1.5 1 1.5-1",
+  "lord of destruction":"M4.5 10.5 6 4.5l3.5 3.5L12 3.5l2.5 4.5L18 4.5l1.5 6zM7 21c-1.6-2-1-4 .8-5.5 0 1.4.6 2 1.4 2.3-.2-2.2.6-4 2.8-5.3-.6 2.6.8 3.8 2.2 5 .3-1 .2-1.8-.2-2.6 2.2 1.4 3 4.2 1 6.1z",
+  "combat mastery":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM12 6.5v9M9.3 13.4h5.4M12 15.5v2.5",
+  "blessing of the grove":"M12 3.5a5 5 0 0 0-4.6 7A4 4 0 0 0 8 18h8a4 4 0 0 0 .6-7.5A5 5 0 0 0 12 3.5zM12 18v3M9.5 21h5M12 8.5v5M9.5 11h5",
+  "twin bursts":"M8 3.5l1.3 4L13 8.8l-3.7 1.3L8 14l-1.3-3.9L3 8.8l3.7-1.3zM16 10l1.3 4 3.7 1.3-3.7 1.3L16 20.5l-1.3-3.9-3.7-1.3 3.7-1.3z",
+  "ascetic":"M12 5c2 2.2 3 4.6 3 7.5 0 2.4-1.2 4.4-3 5.5-1.8-1.1-3-3.1-3-5.5 0-2.9 1-5.3 3-7.5zM12 18c-3.5 0-7-1.8-8.5-5.5 2.5-.6 5 0 7 1.6M12 18c3.5 0 7-1.8 8.5-5.5-2.5-.6-5 0-7 1.6M5 20.5h14"
 };
 function sicon(o){ // o: {k:[candidatos], name, el, cls, n}
   const i=spIdx(...(o.k||[])), sz=/\bsm\b/.test(o.cls||"")?30:(/\blg\b/.test(o.cls||"")?48:40), badge=o.n?`<span class="n">${o.n}</span>`:"";
@@ -44701,6 +44726,34 @@ function whSpIx(voc,cv){ const V=WHD.voc[voc], k=cv.split(":")[0]; return k==="s
 const WHDED = {hp:["#E5484D","M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11z"], mp:["#3D8BFF","M12 3.5s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"],
   cap:["#D9A441","M5 9h14l-1 11H6zM9 9V7a3 3 0 0 1 6 0v2"], mit:["#A8B3C2","M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6z"]};
 const whBadge = (t,x,y,r) => { const [c,d]=WHDED[t]; return `<g class="wded"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="#0B0805" stroke="${c}" stroke-width="1.1"/><path d="${d}" fill="${c}" transform="translate(${(x-r*.66).toFixed(1)} ${(y-r*.66).toFixed(1)}) scale(${(r*1.32/24).toFixed(3)})"/></g>`; };
+/* r10: ícones do próprio cliente (OTClient, modules/game_wheel: icons-skillwheel-largeperks / -mediumperks / -smallperks e
+   icons-gematelier-gemvariants64): wheelperks.png = 16 revelações (34 px; ordem por vocação em wheelclass.lua), wheelconv.png = 49 convicções
+   (30 px; o ícone de cada uma das 36 fatias por vocação vem de WheelIcons em icons.lua, na mesma ordem das fatias do código), wheelded.png =
+   13 dedicações (16 px), wheelgems.png = gemas (64 px: x = domínio × 192 + tamanho × 64, y = vocação × 64) */
+const WHIV = "?v=20261021";
+const WHS_PK = ["wheelperks.png"+WHIV,544,34], WHS_CV = ["wheelconv.png"+WHIV,1470,30], WHS_DD = ["wheelded.png"+WHIV,208,16], WHS_GM = ["wheelgems.png"+WHIV,768,320];
+const WHPKIX = {knight:[0,1,2,3], paladin:[0,4,5,6], sorcerer:[0,7,8,9], druid:[0,11,10,12], monk:[0,13,14,15]}; // verde, vermelho, azul, roxo
+const WHCVIX = Object.fromEntries(Object.entries({
+  knight:"8,5,37,7,38,12,37,13,6,38,14,5,11,7,37,10,6,38,39,5,12,40,7,13,6,14,39,5,11,40,10,39,7,40,6,9",
+  paladin:"17,5,37,15,38,22,37,21,6,38,20,5,19,15,37,18,6,38,39,5,22,40,15,21,6,20,39,5,19,40,18,39,15,40,6,16",
+  sorcerer:"35,5,37,34,38,27,37,36,6,38,26,5,25,34,37,24,6,38,39,5,27,40,34,36,6,26,39,5,25,40,24,39,34,40,6,27",
+  druid:"28,5,37,34,38,31,37,32,6,38,33,5,30,34,37,29,6,38,39,5,31,40,34,32,6,33,39,5,30,40,29,39,34,40,6,35",
+  monk:"42,5,37,43,38,47,37,45,6,38,46,5,48,43,37,44,6,38,39,5,47,40,43,45,6,46,39,5,48,40,44,39,43,40,6,41"}).map(([k,v])=>[k,v.split(",").map(Number)]));
+const WHDDIX = {hp:0, mp:1, hpmp:2, cap:3, mit:4};
+const WHVIX = {knight:0, paladin:1, sorcerer:2, druid:3, monk:4};
+// recorte de uma folha dentro do SVG da roda (centro cx,cy e raio r) e o mesmo em HTML (painéis), com a folha de fundo num <span>
+// (o filtro — brilho, cinzento — vai no <g> de fora: num <svg> encaixado o Chrome deixa de recortar)
+const whClip = (src,W,H,x,y,c,cx,cy,r,cls) => `<g class="${cls}"><svg x="${(cx-r).toFixed(1)}" y="${(cy-r).toFixed(1)}" width="${(2*r).toFixed(1)}" height="${(2*r).toFixed(1)}" viewBox="${x} ${y} ${c} ${c}" overflow="hidden"><image href="${src}" width="${W}" height="${H}"/></svg></g>`;
+const whClipH = (src,W,H,x,y,c,px,cls) => { const k=px/c; return `<span class="wico ${cls||""}" style="width:${px}px;height:${px}px;background:url(${src}) -${(x*k).toFixed(1)}px -${(y*k).toFixed(1)}px/${(W*k).toFixed(1)}px ${(H*k).toFixed(1)}px no-repeat" aria-hidden="true"></span>`; };
+const whPkIx = (voc,d) => (WHPKIX[voc]||[])[WHDOM.indexOf(d)];
+const whPkSvg = (voc,d,cx,cy,r) => { const ix=whPkIx(voc,d); return ix==null?"":whClip(...WHS_PK,ix*34,0,34,cx,cy,r,"wx-pk"); };
+const whPkIco = (voc,d,px,cls) => { const ix=whPkIx(voc,d); return ix==null?"":whClipH(...WHS_PK,ix*34,0,34,px,cls); };
+const whCvIco = (voc,i,px,cls) => { const ix=(WHCVIX[voc]||[])[i]; return ix==null?"":whClipH(...WHS_CV,ix*30,0,30,px,cls); };
+const whGemPos = (voc,d,n) => [WHDOM.indexOf(d)*192+(n-1)*64, (WHVIX[voc]||0)*64];
+const whGemSvg = (voc,d,n,cx,cy,r) => { if(WHVIX[voc]==null||!n) return ""; const [x,y]=whGemPos(voc,d,n); return whClip(...WHS_GM,x,y,64,cx,cy,r,"wx-gm"); };
+const whGemImg = (voc,d,n,px,cls) => { if(WHVIX[voc]==null||!n) return whGemIco(n,d,cls); const [x,y]=whGemPos(voc,d,n); return whClipH(...WHS_GM,x,y,64,px,cls); };
+// r10: o nome do item, como no jogo (Lesser Sage Gem, Sage Gem, Greater Sage Gem)
+const whGemName = (voc,n) => `${n===1?"Lesser ":n===3?"Greater ":""}${GEMVN[voc]||""} Gem`;
 // r9: runas gravadas (traços numa caixa de 6 × 10, centrada em 0,0): anel de fora, portões e frisos da moldura
 const WHRUNE = ["M-2 -5V5M-2 -5l4 2.5M-2 -1l4 2.5","M-2.5 5V-5l5 3V5","M-2 -5V5M-2 -2.5l3.5 2.5-3.5 2.5","M-2 5V-5l4 2.5-4 2.5 4 5","M2 -5l-4 5 4 5",
   "M-3 -5l6 10M3 -5l-6 10","M-2.5 -5V5M2.5 -5V5M-2.5 -1.5l5 3","M0 -5V5M-2.5 -1.5l5 3","M-1 -4l-2.5 2.5L-1 1M1 -1l2.5 2.5L1 4","M0 -5V5M0 -5l2.5 2.5M0 5l-2.5-2.5",
@@ -44746,9 +44799,12 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
     const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?15:14, s=br/18.5, ix=whSpIx(voc,cv), X=cx.toFixed(1), Y=cy.toFixed(1);
     /* r7: como no jogo: o ícone do feitiço (spells.png) ou o desenho, e o selo da dedicação em baixo (vida, mana, capacidade, mitigação) */
     const ico=ix>=0?whSpr(ix,cx,cy,br*0.74):`<path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/>`;
-    const bx=cx-br*0.74, by=cy+br*0.74, bad=ded==="hpmp"?whBadge("hp",bx,by,5.4)+whBadge("mp",cx+br*0.74,by,5.4):WHDED[ded]?whBadge(ded,bx,by,5.4):"";
+    const bx=cx-br*0.74, by=cy+br*0.74, ci=(WHCVIX[voc]||[])[i], di=WHDDIX[ded];
+    const bad=di!=null?whClip(...WHS_DD,di*16,0,16,bx,by,6.4,"wx-dd"):ded==="hpmp"?whBadge("hp",bx,by,5.4)+whBadge("mp",cx+br*0.74,by,5.4):WHDED[ded]?whBadge(ded,bx,by,5.4):"";
     /* r9: o selo da fatia é uma pedra engastada: fundo da cor do domínio, aro de ouro e, cheia, um halo da cor */
-    bd.push(`<g class="wbg ${st}${ix>=0?" spr":""}" style="--wc:${WHC[d][0]}">${st==="full"&&!sm?`<circle class="wbgl" cx="${X}" cy="${Y}" r="${br+2.6}"/>`:""}<circle class="wbd" cx="${X}" cy="${Y}" r="${br}" fill="${U(d+"b")}"/>${ico}<circle class="wbr" cx="${X}" cy="${Y}" r="${br}"/>${sm?"":`<circle class="wbr2" cx="${X}" cy="${Y}" r="${br+1.6}"/><path class="wshine" d="M${(cx+(br-2.6)*Math.cos(3.67)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(3.67)).toFixed(1)}A${br-2.6} ${br-2.6} 0 0 1 ${(cx+(br-2.6)*Math.cos(4.97)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(4.97)).toFixed(1)}"/>`}${bad}${sg?`<g class="wsug"><rect x="${(cx-13).toFixed(1)}" y="${(cy-br-13).toFixed(1)}" width="26" height="12" rx="6"/><text x="${X}" y="${(cy-br-4).toFixed(1)}">+${sg}</text></g>`:""}</g>`); });
+    /* r10: com o ícone do cliente (já traz o aro), só um fio por fora a dizer o estado */
+    if(ci!=null) bd.push(`<g class="wbg cv ${st}" style="--wc:${WHC[d][0]}">${st==="full"&&!sm?`<circle class="wbgl" cx="${X}" cy="${Y}" r="${br+2.6}"/>`:""}<circle cx="${X}" cy="${Y}" r="${br}" fill="#080604"/>${whClip(...WHS_CV,ci*30,0,30,cx,cy,br,"wx-cv")}<circle class="wbr-c" cx="${X}" cy="${Y}" r="${br+.9}"/>${bad}${sg?`<g class="wsug"><rect x="${(cx-13).toFixed(1)}" y="${(cy-br-13).toFixed(1)}" width="26" height="12" rx="6"/><text x="${X}" y="${(cy-br-4).toFixed(1)}">+${sg}</text></g>`:""}</g>`);
+    else bd.push(`<g class="wbg ${st}${ix>=0?" spr":""}" style="--wc:${WHC[d][0]}">${st==="full"&&!sm?`<circle class="wbgl" cx="${X}" cy="${Y}" r="${br+2.6}"/>`:""}<circle class="wbd" cx="${X}" cy="${Y}" r="${br}" fill="${U(d+"b")}"/>${ico}<circle class="wbr" cx="${X}" cy="${Y}" r="${br}"/>${sm?"":`<circle class="wbr2" cx="${X}" cy="${Y}" r="${br+1.6}"/><path class="wshine" d="M${(cx+(br-2.6)*Math.cos(3.67)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(3.67)).toFixed(1)}A${br-2.6} ${br-2.6} 0 0 1 ${(cx+(br-2.6)*Math.cos(4.97)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(4.97)).toFixed(1)}"/>`}${bad}${sg?`<g class="wsug"><rect x="${(cx-13).toFixed(1)}" y="${(cy-br-13).toFixed(1)}" width="26" height="12" rx="6"/><text x="${X}" y="${(cy-br-4).toFixed(1)}">+${sg}</text></g>`:""}</g>`); });
   /* r9: moldura de pedra (grão e manchas), aura da cor de cada domínio (mais forte com mais pontos), filigrana, runas e constelações nas margens */
   const aura=sm?"":`<g class="wdeco waura">${WHDOM.map(d=>{ const [x,y]=whPt(150,WHQ[d]+45), f=Math.min(1,S.dom[d]/1000); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="205" fill="${U(d+"a")}" opacity="${(0.18+0.55*f).toFixed(2)}"/>`; }).join("")}</g>`;
   const STARS=[[92,-238],[116,-246],[141,-233],[153,-214],[104,-226]];
@@ -44787,8 +44843,8 @@ function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})
     const rays=sm?"":`<g class="wdeco wrays${st?" on":""}" style="--wc:${WHC[d][0]}"><path d="${[...Array(24)].map((_,k)=>{ const a=k*15, [x1,y1]=whPt(49,a-1.7), [x2,y2]=whPt(k%2?56:62,a), [x3,y3]=whPt(49,a+1.7); return `M${(mx+x1).toFixed(1)} ${(my+y1).toFixed(1)}L${(mx+x2).toFixed(1)} ${(my+y2).toFixed(1)}L${(mx+x3).toFixed(1)} ${(my+y3).toFixed(1)}Z`; }).join("")}"/></g>${st?`<circle class="wdeco whalo" cx="${mx}" cy="${my}" r="44" fill="${WHC[d][1]}" filter="${U("bl")}"/>`:""}`;
     const beads=sm?"":`<g fill="${U("g")}">${[...Array(28)].map((_,k)=>{ const [bx,by]=whPt(51.4,k*360/28); return `<circle cx="${(mx+bx).toFixed(1)}" cy="${(my+by).toFixed(1)}" r="1.5"/>`; }).join("")}</g>`;
     const cracks=st||sm?"":`<path class="wcrack" d="M${mx-22} ${my-9}l8 4 5-6 9 5 4-3M${mx+3} ${my+16}l6-7 9 2M${mx-12} ${my+12}l5-4"/>`;
-    return `${rays}<g class="wmed${st?" on":""}${o.sel==="r:"+d?" sel":""}" data-wr="${d}"${o.big?` tabindex="0" aria-label="${esc(WHD.voc[voc].rev[d])}"`:""} style="--wc:${WHC[d][0]}">${beads}<circle cx="${mx}" cy="${my}" r="47.5" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${mx}" cy="${my}" r="44.6" fill="none" stroke="#FFF1B8" stroke-opacity=".45"/><circle cx="${mx}" cy="${my}" r="41" fill="#1A120A"/><circle cx="${mx}" cy="${my}" r="38.5" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34.5" fill="${st?U(d+"m"):"#141009"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34.5" fill="${WHC[d][2]}" fill-opacity=".38"/>`}${cracks}${ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`}${pips}<circle class="wmd-ring" cx="${mx}" cy="${my}" r="54"/></g>
-      <g class="wsock${n?" on":""}${o.sel==="g:"+d?" sel":""}" data-wg="${d}"${o.big?` tabindex="0" aria-label="Vessel ${WHVR[d]}"`:""} style="--wc:${WHC[d][0]}"><circle class="wsk-hit" cx="${gx}" cy="${gy}" r="27"/><circle cx="${gx}" cy="${gy}" r="20" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${gx}" cy="${gy}" r="16.5" fill="#0D0905"/>${n?`<circle class="wsk-glow" cx="${gx}" cy="${gy}" r="16.5" fill="${WHC[d][2]}"/>${whGemG(gx,gy,n,d)}`:`<path d="M${gx} ${gy-7}l7 7-7 7-7-7z" fill="none" stroke="#6B5226" stroke-width="1.5" stroke-dasharray="3 2.4"/>`}<circle class="wsk-ring" cx="${gx}" cy="${gy}" r="22.5"/>${vrp}</g>`; }).join("");
+    return `${rays}<g class="wmed${st?" on":""}${o.sel==="r:"+d?" sel":""}" data-wr="${d}"${o.big?` tabindex="0" aria-label="${esc(WHD.voc[voc].rev[d])}"`:""} style="--wc:${WHC[d][0]}">${beads}<circle cx="${mx}" cy="${my}" r="47.5" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${mx}" cy="${my}" r="44.6" fill="none" stroke="#FFF1B8" stroke-opacity=".45"/><circle cx="${mx}" cy="${my}" r="41" fill="#1A120A"/><circle cx="${mx}" cy="${my}" r="38.5" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34.5" fill="${st?U(d+"m"):"#141009"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34.5" fill="${WHC[d][2]}" fill-opacity=".38"/>`}${cracks}${whPkSvg(voc,d,mx,my,31)||(ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${SPG[spKey(WHD.voc[voc].rev[d])]||WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`)}${pips}<circle class="wmd-ring" cx="${mx}" cy="${my}" r="54"/></g>
+      <g class="wsock${n?" on":""}${o.sel==="g:"+d?" sel":""}" data-wg="${d}"${o.big?` tabindex="0" aria-label="Vessel ${WHVR[d]}"`:""} style="--wc:${WHC[d][0]}"><circle class="wsk-hit" cx="${gx}" cy="${gy}" r="27"/><circle cx="${gx}" cy="${gy}" r="20" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${gx}" cy="${gy}" r="16.5" fill="#0D0905"/>${n?`<circle class="wsk-glow" cx="${gx}" cy="${gy}" r="16.5" fill="${WHC[d][2]}"/>${whGemSvg(voc,d,n,gx,gy,15)||whGemG(gx,gy,n,d)}`:`<path d="M${gx} ${gy-7}l7 7-7 7-7-7z" fill="none" stroke="#6B5226" stroke-width="1.5" stroke-dasharray="3 2.4"/>`}<circle class="wsk-ring" cx="${gx}" cy="${gy}" r="22.5"/>${vrp}</g>`; }).join("");
   /* r9: centro de ouro com entalhes, contas e núcleo; partículas de luz que sobem à volta da roda */
   const hub=`${sm?"":`<circle class="wdeco wcglow" r="74" fill="${U("cg")}"/>`}<circle r="28" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/>${sm?"":`<path d="${whSeg(25.3,27.5,32)}" stroke="#4E340C" stroke-width=".9"/>`}<circle r="24.2" fill="#1A1209" stroke="#FFF1B8" stroke-opacity=".4" stroke-width=".8"/><circle r="22" fill="${U("co")}"/>${sm?"":`<g fill="#E6C06A" fill-opacity=".75">${[...Array(12)].map((_,k)=>{ const [x,y]=whPt(23.1,k*30+15); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r=".75"/>`; }).join("")}</g>`}<text y="5.5" class="wpts${S.tot>=1000?" k":""}" fill="${U("tg")}">${S.tot}</text>`;
   const motes=sm||!mo?"":`<g class="wdeco wmotes">${[...Array(16)].map((_,k)=>{ const [x,y]=whPt(250+(k*7)%26,k*22.5+11); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1+(k%3)*.45).toFixed(2)}" style="animation-delay:-${(k*1.7%9).toFixed(1)}s;animation-duration:${(7+(k%4)*1.6).toFixed(1)}s"/>`; }).join("")}</g>`;
@@ -44851,13 +44907,13 @@ function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v
   const ded=row("Hit Points","+"+nf(S.hp))+row("Mana","+"+nf(S.mp))+row("Capacity","+"+nf(S.cap))+row("Mitigation Mult.",f2(S.mit)+"%");
   const cvl=Object.entries(S.conv).map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, vr=/^Vessel Resonance /.test(n);
     const desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:vr?WHD.perk["Vessel Resonance"]:(WHD.perk[n]||"");
-    const ic=aug?sicon({k:[nm],name:nm,cls:"sm wic"}):"";
+    const si=WHD.slots.findIndex(([d0,,,c0])=>whConvName(voc,c0,d0)===n), ic=(si>=0?whCvIco(voc,si,18,"wic"):"")||(aug?sicon({k:[nm],name:nm,cls:"sm wic"}):"");
     return row(`${ic}${esc(vr?n.replace("Vessel Resonance","VR"):aug?"Aug. "+nm:nm)}`, aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join("") || `<p class="wnone">Ainda nenhuma fatia cheia.</p>`;
   /* r8: cada vessel e cada revelação é um botão: passar o rato, tocar ou Tab mostra tudo no painel Selection */
   let gk=0; const ves=row("Damage and Healing","+"+S.gem)+WHDOM.map(d=>{ const n=S.vr[d], mods=!n?[]:GEMD?whGemBis(voc,n,whGemK(S,d)):whGemMods(voc,n,prof,gk++);
-    return `<button type="button" class="wrow wrow-b${n?"":" off"}" data-wsk="g:${d}"><span class="wrn">${whGemIco(n,d)}${n?WHGEM[n]:"Sem gema"}</span><b>${esc(WHVR[d])}</b></button>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
+    return `<button type="button" class="wrow wrow-b${n?"":" off"}" data-wsk="g:${d}"><span class="wrn">${whGemImg(voc,d,n,18,"wgi")}${n?whGemName(voc,n):"Sem gema"}</span><b>${esc(WHVR[d])}</b></button>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
   const rev=row("Damage and Healing","+"+S.dh)+WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d];
-    return `<button type="button" class="wrow wrow-b${st?"":" off"}" data-wsk="r:${d}"><span class="wrn">${sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}</span><b>${st?`Stage ${st}`:"Locked"}</b></button>`; }).join("");
+    return `<button type="button" class="wrow wrow-b${st?"":" off"}" data-wsk="r:${d}"><span class="wrn">${whPkIco(voc,d,18,"wic")||sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}</span><b>${st?`Stage ${st}`:"Locked"}</b></button>`; }).join("");
   const box=(t,b)=>`<section class="wbox"><h5>${t}</h5><div class="wbox-b">${b}</div></section>`;
   return box("Dedication Perks",ded)+box("Conviction Perks",cvl)+box("Vessels",ves)+box("Revelation Perks",rev); }
 /* ---------- r8: gemas (data/gems.json, _dev/build_gems.py: valores do Canary no grau I) ---------- */
@@ -44913,7 +44969,7 @@ function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${["","Lesser ","","Greater
   return fold?`<details class="wguide" style="--wc:${WHC[d][0]}"><summary class="wsel-sec">Como obter e colocar</summary>${ol}</details>`:`<div class="wguide" style="--wc:${WHC[d][0]}"><p class="wsel-sec">Como obter e colocar</p>${ol}</div>`; }
 // r8: o painel Selection de um vessel: a gema, o que está ativo (best in slot) e as outras boas opções, com valores
 function whGemSelHTML(voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d];
-  const head=`<div class="wsel-h"><span class="wsel-gem" style="--wc:${WHC[d][0]}">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:"Sem gema"}</b><span class="tag${n?" ok":""}">Vessel ${esc(WHVR[d])}</span></div></div>
+  const head=`<div class="wsel-h"><span class="wsel-gem" style="--wc:${WHC[d][0]}">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):"Sem gema"}</b><span class="tag${n?" ok":""}">Vessel ${esc(WHVR[d])}</span></div></div>
     <p class="wsel-t">Vessel Resonance: ${n}/3 · ${n===3?"2 modificadores básicos e 1 supremo":n===2?"2 modificadores básicos":n===1?"1 modificador básico":"enche uma fatia Vessel Resonance deste domínio para abrir o vessel"}</p>`;
   if(!GEMD){ gemLoad().then(()=>{ const sl=$("whSel"); if(GEMD&&sl&&WHSELK==="g:"+d) sl.innerHTML=whSelHTML(voc,pts,WHSELK); }); return head+`<p class="wnone">A carregar as gemas…</p>`; }
   const P=whGemPlan(voc,n||3,whGemK(S,d)), li=(g,sup)=>`<li${sup?' class="sup"':""}><span><i class="wmk" aria-hidden="true"></i>${esc(gName(g))}</span><b>${g[0].fx.map(f=>gVal(f,voc)).join(" · ")}</b></li>`;
@@ -44924,7 +44980,7 @@ function whGemSelHTML(voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d];
     <p class="wsel-n">Valores no grau I: no Gem Atelier cada modificador sobe até ×1,5 (grau IV).</p>${whGemGuide(voc,d,n,WHWIDE.matches)}`; }
 // r8: o painel Selection de uma revelação: estágio, o que faz e quanto falta
 function whRevSelHTML(voc,pts,d){ const S=whSum(voc,pts), nm=WHD.voc[voc].rev[d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]);
-  return `<div class="wsel-h">${sicon({k:[nm],name:nm,cls:"lg"})}<div><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`Stage ${st}`:"Locked"}</span></div></div>
+  return `<div class="wsel-h">${whPkIco(voc,d,46,"wsel-ci")||sicon({k:[nm],name:nm,cls:"lg"})}<div><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`Stage ${st}`:"Locked"}</span></div></div>
     <p class="wsel-t">Revelation Perk · ${S.dom[d]} pontos no ${WHDN[d]}</p>${WHD.revd[nm]?`<p class="wsel-d">${esc(WHD.revd[nm])}</p>`:""}
     <ol class="wrev-st" style="--wc:${WHC[d][0]}">${WHD.stage.map((x,j)=>`<li class="${S.dom[d]>=x?"on":""}"><b>Stage ${j+1}</b><span>${x} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join("")}</ol>
     ${nx?`<p class="wsel-n">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:""}`; }
@@ -44932,7 +44988,7 @@ function whRevSelHTML(voc,pts,d){ const S=whSum(voc,pts), nm=WHD.voc[voc].rev[d]
 function whSelHTML(voc,pts,key){ const [t,v]=String(key==null?"":key).split(":"); if(t==="g") return whGemSelHTML(voc,pts,v); if(t==="r") return whRevSelHTML(voc,pts,v);
   const i=t==="s"?+v:null, ed=!!(WED&&WED.edit);
   if(i==null||!WHD.slots[i]) return `<p class="wnone">${ed?"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.":"Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá."}</p>${ed?"":`<p class="wsel-d">Nos cantos: as revelações (os losangos são o estágio) e as gemas.</p>`}`;
-  const x=whSlotTxt(voc,pts,i), cv=WHD.slots[i][3], k=cv.split(":")[0], nm=x.conv.replace(/^Augmented /,""), ic=k==="sp"||k==="inst"?sicon({k:[nm],name:nm,cls:"lg"}):`<span class="wsel-g wsi-${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${WHIC[k]||WHIC.sp}"/></svg></span>`;
+  const x=whSlotTxt(voc,pts,i), cv=WHD.slots[i][3], k=cv.split(":")[0], nm=x.conv.replace(/^Augmented /,""), ic=whCvIco(voc,i,46,"wsel-ci")||(k==="sp"||k==="inst"?sicon({k:[nm],name:nm,cls:"lg"}):`<span class="wsel-g wsi-${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${WHIC[k]||WHIC.sp}"/></svg></span>`);
   return `<div class="wsel-h">${ic}<div><b>${esc(x.conv)}</b><span class="tag${x.full?" ok":""}">${esc(x.st)}</span></div></div><p class="wsel-t">${esc(x.t)} · ${esc(x.ded)}</p>${x.desc?`<p class="wsel-d">${esc(x.desc)}</p>`:""}${x.full?"":`<p class="wsel-n">A convicção só conta com a fatia cheia.</p>`}${ed?`<p class="wsel-h2">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</p>`:""}`; }
 // r8: as boas opções para os teus pontos: a best in slot (a build mais completa que cabe nos pontos), as variantes perto dela e a seguinte
 function whOpts(voc,pts){ const ws=G.wheel[voc]||[], ok=ws.filter(w=>w.p<=pts), bis=ok[ok.length-1]||null, alt=[], seen=new Set([bis?bis.note||"":""]);
@@ -44943,8 +44999,8 @@ function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok
   if(!L.length) return "";
   return `<div class="whx-oh"><h3>Best in slot e outras boas opções</h3><p class="small muted">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.</p></div>
     <div class="wopt-l">${L.map(([x,lab,cls])=>{ const b=WHD.b[x.c]; if(!b) return ""; const S=whSum(c.voc,b), i=ws.indexOf(x);
-      const rv=WHDOM.filter(d=>S.rev[d]).map(d=>`<span class="hwh-k" style="--wc:${WHC[d][0]}">${esc(V.rev[d])} <b>${S.rev[d]}</b></span>`).join("");
-      const gm=WHDOM.filter(d=>S.vr[d]).map(d=>`<span>${whGemIco(S.vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join("");
+      const rv=WHDOM.filter(d=>S.rev[d]).map(d=>`<span class="hwh-k" style="--wc:${WHC[d][0]}">${whPkIco(c.voc,d,16)}${esc(V.rev[d])} <b>${S.rev[d]}</b></span>`).join("");
+      const gm=WHDOM.filter(d=>S.vr[d]).map(d=>`<span>${whGemImg(c.voc,d,S.vr[d],20,"wgi")}${whGemName(c.voc,S.vr[d])}</span>`).join("");
       return `<article class="wopt${x===w?" on":""}"><div class="wopt-w">${whSVG(c.voc,b,{size:"sm",label:`${x.t}: ${x.p} pontos`})}</div><div class="wopt-b"><span class="tag ${cls}">${esc(lab)}</span><h4>${esc(x.t)}</h4>
         <p class="pills"><span class="tag">${x.p} pontos · nível ${x.p+50}</span>${x.note?`<span class="tag acc">${esc(wnote(x.note))}</span>`:""}</p>${rv?`<div class="hwh-ks">${rv}</div>`:""}${gm?`<div class="wopt-g">${gm}</div>`:""}
         <div class="wopt-a">${x===w?`<span class="tag ok">Na roda</span>`:`<button type="button" class="btn small" data-wsel="${i}">Ver na roda</button>`}<button type="button" class="btn small ghost" data-copy="${esc(x.c)}" data-copied="Código copiado">Copiar código</button></div></div></article>`; }).join("")}</div>`; }
@@ -45002,9 +45058,9 @@ function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return "
   const ch=`<div class="hwh-s"><h6>Charms</h6>${hCharmsHTML(Object.assign({},c),p,h)}</div>`;
   if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms</h5></div><p class="small">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:""}</p>${ch}</div>`; }
   const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
-  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
+  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${whPkIco(c.voc,x,16)}${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
     ...Object.entries(S.conv).filter(([n])=>/^Augmented /.test(n)).map(([n,k])=>`<span class="hwh-k">${esc(n.replace(/^Augmented /,""))} <b>${ROM[Math.min(k,3)]}</b></span>`)];
-  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,"whp-gem")}<span><span class="whp-n"><b>${WHGEM[S.vr[x]]}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
+  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,"whp-gem")}<span><span class="whp-n"><b>${whGemName(c.voc,S.vr[x])}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
   return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class="tiny muted">As resistências das gemas seguem o dano desta hunt.</span>`:""}</div>
     <div class="hwh-g"><div class="hwh-w">${whSVG(c.voc,b,{size:"sm"})}</div>
       <div class="hwh-c"><div class="hwh-s"><h6>Wheel</h6><p class="hwh-t"><b>${esc(w.t)}</b> <span class="tag">${w.p} pontos</span>${w.note?` <span class="tag acc">${esc(wnote(w.note))}</span>`:""}</p>${pk.why?`<p class="tiny muted" style="margin:2px 0 0">Porquê: ${esc(pk.why)}.</p>`:""}

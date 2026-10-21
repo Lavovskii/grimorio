@@ -2876,7 +2876,7 @@
   "k": "x"
  },
  "Gem": {
-  "c": "index.html: 0000]}; function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1",
+  "c": "index.html: m, Sage Gem, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"}${GEMVN[voc]||\"\"} Gem`; // r9: runas grava",
   "k": "x"
  },
  "Gemas": {
@@ -2936,7 +2936,7 @@
   "k": "x"
  },
  "Greater": {
-  "c": "index.html: emGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"",
+  "c": "index.html:  Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"}${GEMVN[voc]||\"\"",
   "k": "x"
  },
  "Greater gem": {
@@ -3464,7 +3464,7 @@
   "k": "x"
  },
  "Lesser": {
-  "c": "index.html:  function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}$",
+  "c": "index.html: em, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"",
   "k": "x"
  },
  "Lesser gem": {
@@ -5896,11 +5896,11 @@
   "k": "x"
  },
  "Revelation Perk · {0} pontos no": {
-  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Locked\"}</span></div></div> <p c",
+  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
   "k": "p"
  },
  "Revelation Perk · {0} pontos no {1}": {
-  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Locked\"}</span></div></div> <p c",
+  "c": "index.html: d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<div class=\"wsel-h\">${whPkIco(voc,d,46,\"wsel-ci\")||sicon({k:[nm],name:nm,cls:\"lg\"})}<div><b>${esc(nm)}</b><span class=\"tag${st?\" ok\":\"\"}\">${st?`Stage ${st}`:\"Loc",
   "k": "p"
  },
  "Revelation Perks": {
@@ -6100,7 +6100,7 @@
   "k": "x"
  },
  "Sem gema": {
-  "c": "index.html: wsk=\"g:${d}\"><span class=\"wrn\">${whGemIco(n,d)}${n?WHGEM[n]:\"Sem gema\"}</span><b>${esc(WHV",
+  "c": "index.html: ass=\"wrn\">${whGemImg(voc,d,n,18,\"wgi\")}${n?whGemName(voc,n):\"Sem gema\"}</span><b>${esc(WHV",
   "k": "x"
  },
  "Sem guia ainda.": {
@@ -7200,7 +7200,7 @@
   "k": "p"
  },
  "Vessel": {
-  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):\"Sem gema\"}</b><s",
   "k": "x"
  },
  "Vessel Resonance": {
@@ -7212,15 +7212,15 @@
   "k": "p"
  },
  "Vessel Resonance: {0}/3 ·": {
-  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):\"Sem gema\"}</b><s",
   "k": "p"
  },
  "Vessel Resonance: {0}/3 · {1}": {
-  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):\"Sem gema\"}</b><s",
   "k": "p"
  },
  "Vessel {0}": {
-  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${whGemIco(n,d)}</span><div><b>${n?WHGEM[n]:\"Sem gema\"}</b><span class=\"tag${n?\" ok\":\"\"}\">Ve",
+  "c": "index.html: voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d]; const head=`<div class=\"wsel-h\"><span class=\"wsel-gem\" style=\"--wc:${WHC[d][0]}\">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):\"Sem gema\"}</b><s",
   "k": "p"
  },
  "Vessels": {
@@ -7679,6 +7679,10 @@
   "c": "index.html: ecutioner's Throw acaba as criaturas mais depressa\":e!=null?`as criaturas levam ${e}% de ${ELN[bw]}`:\"\"; return {w:bes",
   "k": "p"
  },
+ "ascetic": {
+  "c": "index.html: 1.3 4 3.7 1.3-3.7 1.3L16 20.5l-1.3-3.9-3.7-1.3 3.7-1.3z\", \"ascetic\":\"M12 5c2 2.2 3 4.6 ",
+  "k": "x"
+ },
  "ataque": {
   "c": "index.html: `<li>${esc(t)}</li>`).join(\"\")}</ul>`:\"\"}`; const KK={aoe:\"ataque\",target:\"ataque\",hea",
   "k": "x"
@@ -7771,6 +7775,10 @@
   "c": "index.html: )=>el.classList.remove(\"cfocus\"),2400); }); } const TIERS=[[\"basic\",\"Basic\"],[\"intricat",
   "k": "x"
  },
+ "beam mastery": {
+  "c": "index.html: -1.9 1.9.8 1.9 1.9-.7 2-1.9 2zM12 12.2v4.8M9.8 13.8h4.4\", \"beam mastery\":\"M3.5 20.5 20.5 3.5",
+  "k": "x"
+ },
  "behavior": {
   "c": "quests/js/app.js: , \"abilities\": \"Habilidades\", \"behaviour\": \"Comportamento\", \"behavior\": \"Comportamento\", ",
   "k": "x"
@@ -7781,6 +7789,10 @@
  },
  "best": {
   "c": "index.html: return `<ul class=\"elist\">${L.map(r=>`<li class=\"${r===best?\"best\":\"\"}\"><span class=\"c",
+  "k": "x"
+ },
+ "blessing of the grove": {
+  "c": "index.html: -1.7-7-5.4-7-9.8V5.6zM12 6.5v9M9.3 13.4h5.4M12 15.5v2.5\", \"blessing of the grove\":\"M12 3.5a5 5 0 0 0-",
   "k": "x"
  },
  "blocking": {
@@ -8077,6 +8089,10 @@
  },
  "combat": {
   "c": "index.html: sets da personagem */ function bisSet(c){ const p=pickSet(c,\"combat\",\"\"), slots={}; Obje",
+  "k": "x"
+ },
+ "combat mastery": {
+  "c": "index.html: 2.6.8 3.8 2.2 5 .3-1 .2-1.8-.2-2.6 2.2 1.4 3 4.2 1 6.1z\", \"combat mastery\":\"M12 3l7 2.6v5.6c0 ",
   "k": "x"
  },
  "combat properties": {
@@ -9007,6 +9023,10 @@
   "c": "quests/js/app.js: \", \"Preparação\", \"bag\"], [\"recompensas\", \"Recompensas\", \"gift\"], [\"mapa\", \"Map",
   "k": "x"
  },
+ "gift of life": {
+  "c": "index.html: udo com espada, árvore que cura, duas explosões, lótus */ \"gift of life\":\"M12 20.5s-8-5.2-8-",
+  "k": "x"
+ },
  "globe": {
   "c": "quests/js/app.js: swap\" }, \"world-change\": { label: \"World Change\", icon: \"globe\" }, evento: { la",
   "k": "x"
@@ -9431,6 +9451,10 @@
   "c": "index.html: }</div> <div class=\"sh-n\">${h.xp==null&&p&&(p.xs||p.ls)?`<div><b class=\"stars\">${stars(p.xs)||\"—\"}</b><span>XP (TibiaWiki)</span></div><div><b class=\"stars\">${stars(p.ls)||\"—\"}</b><span>loot (TibiaWiki)</span></div>`:`<d",
   "k": "x"
  },
+ "lord of destruction": {
+  "c": "index.html: .5 20.5l12-12M2.2 21.8l2.6-2.6M18 2.5l1 1.5 1.5 1 1.5-1\", \"lord of destruction\":\"M4.5 10.5 6 4.5l3.",
+  "k": "x"
+ },
  "lowblow": {
   "c": "index.html:  mais seguro\"}</span></span></li>`); } if(hasKey(G.charms,\"lowblow\")) cards.push(`<li c",
   "k": "x"
@@ -9752,11 +9776,11 @@
   "k": "x"
  },
  "no vessel": {
-  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,\"whp-gem\")}<span><span class=\"whp-n\"><b>${WHGEM[S.vr[x]]}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></span><span class=\"tin",
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,\"whp-gem\")}<span><span class=\"whp-n\"><b>${whGemName(c.voc,S.vr[x])}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></sp",
   "k": "x"
  },
  "no vessel {0}": {
-  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemIco(S.vr[x],x,\"whp-gem\")}<span><span class=\"whp-n\"><b>${WHGEM[S.vr[x]]}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></span><span class=\"tin",
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,\"whp-gem\")}<span><span class=\"whp-n\"><b>${whGemName(c.voc,S.vr[x])}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></sp",
   "k": "p"
  },
  "noai": {
@@ -10236,11 +10260,11 @@
   "k": "x"
  },
  "pontos · nível": {
-  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
+  "c": "index.html: ${whGemName(c.voc,S.vr[d])}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "x"
  },
  "pontos · nível {0}": {
-  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
+  "c": "index.html: ${whGemName(c.voc,S.vr[d])}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "pontos: {0}": {
@@ -10960,7 +10984,7 @@
   "k": "x"
  },
  "sm wic": {
-  "c": "index.html: HD.perk[n]||\"\"); const ic=aug?sicon({k:[nm],name:nm,cls:\"sm wic\"}):\"\"; return ro",
+  "c": "index.html: hCvIco(voc,si,18,\"wic\"):\"\")||(aug?sicon({k:[nm],name:nm,cls:\"sm wic\"}):\"\"); return r",
   "k": "x"
  },
  "small": {
@@ -11385,6 +11409,10 @@
  },
  "tutorial": {
   "c": "index.html: r[0])?1e4:0); }; return GUIAS.g.filter(r=>r[2]<=L&&r[5]!==\"tutorial\"&&r[6]!==\"Rookgaard\"",
+  "k": "x"
+ },
+ "twin bursts": {
+  "c": "index.html: .5A5 5 0 0 0 12 3.5zM12 18v3M9.5 21h5M12 8.5v5M9.5 11h5\", \"twin bursts\":\"M8 3.5l1.3 4L13 8.",
   "k": "x"
  },
  "type": {
@@ -12056,11 +12084,11 @@
   "k": "p"
  },
  "{0} pontos · nível": {
-  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
+  "c": "index.html: ${whGemName(c.voc,S.vr[d])}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "{0} pontos · nível {1}": {
-  "c": "index.html: .vr[d],d)}${WHGEM[S.vr[d]]}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
+  "c": "index.html: ${whGemName(c.voc,S.vr[d])}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
   "k": "p"
  },
  "{0} pontos:": {
@@ -12708,7 +12736,7 @@
   "k": "p"
  },
  "{0}{1} Gem": {
-  "c": "index.html: 0000]}; function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${[\"\",\"Lesser \",\"\",\"Greater \"][t]}${GEMVN[voc]||\"\"} Gem`; const drop=t===1",
+  "c": "index.html: m, Sage Gem, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"}${GEMVN[voc]||\"\"} Gem`; // r9: runas grava",
   "k": "p"
  },
  "{0}{1} XP · {2} vida": {
