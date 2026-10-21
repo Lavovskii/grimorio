@@ -43309,6 +43309,8 @@ function migrate(d){
   if (!d || typeof d!=="object" || d.v!==4 || !Array.isArray(d.chars)) return null;
   try { d = JSON.parse(JSON.stringify(d)); } catch(e){ return null; } // cópia editável (os dados da conta chegam só de leitura)
   const s = defaults(); s.chars = d.chars.map(c=>mkChar(c)).filter(c=>VOCS.includes(c.voc));
+  // r12: até 21/10/2026 o nível era cortado em 3000; quem ficou guardado assim recebe o nível que o Tibia deu na última atualização
+  s.chars.forEach(c=>{ if(c.level===3000 && c.tib && +c.tib.level>3000) c.level=Math.min(LVMAX,Math.round(+c.tib.level)); });
   s.active = s.chars.some(c=>c.id===d.active) ? d.active : (s.chars[0]?s.chars[0].id:null);
   s.custom = Array.isArray(d.custom)?d.custom.filter(x=>x&&x.id&&x.n):[];
   s.ui = Object.assign(s.ui, d.ui||{}); return s;
@@ -46245,7 +46247,7 @@ const snap = d => { const c=d.character, a=d.account_information||{};
 function applyTibia(c, d){
   const ch=d.character, v=vocKey(ch.vocation);
   if(v && v!==c.voc){ c.charms={}; c.imb={}; (c.sets||[]).forEach(s=>s.slots={}); c.voc=v; c.hs=null; c.wtype=WTYPES[v]?WTYPES[v][0][0]:""; }
-  if(!c.tib || c.tib.level!==ch.level){ const L=clampL(ch.level); if(L!==c.level){ c.level=L; c.pct=0; if(c.target<=L) c.target=0; } }
+  if(!c.tib || c.tib.level!==ch.level || (c.level===3000 && ch.level>3000)){ const L=clampL(ch.level); if(L!==c.level){ c.level=L; c.pct=0; if(c.target<=L) c.target=0; } }
   if(c.world && c.world!==ch.world) c.hs=null;
   c.name=ch.name; c.world=ch.world; c.tib=snap(d); c.syncedAt=Date.now(); delete c.syncErr;
 }
