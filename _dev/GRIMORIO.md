@@ -174,8 +174,9 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   e `ammoAtk(b,L)`; o `scoreItem` soma-a ao atk dos arcos e das bestas (o `setSumHTML` mostra 'Ataque N + munição'). Durações:
   anéis e amuletos com menos de 15 min ficam fora do `pickSet` (no botão direito continuam, com 'dura N min'); no `scoreItem` um
   item com dur pesa ×0,35 (< 15 min), ×0,6 (< 30), ×0,8 (< 60) ou ×0,9. Mantra do monk: `it.mn` × 2,5 (× 1,5 no ofensivo, × 0,7
-  r7: o `AMMO` tem o nome em 3.º lugar e mais Tarsal Arrow, Crystalline Arrow (90, 65), Vortex Bolt e Prismatic Bolt (90, 66); `AMMOA` =
-  flechas de área [nível, nome, elemento] (Shatterstorm 50, Firestorm/Froststorm 125, Diamond 150). `ammoBest(b,L)` (alvo único, sem a
+  r7: o `AMMO` tem o nome em 3.º lugar e mais Tarsal Arrow, Crystalline Arrow (90, 65), Vortex Bolt e Prismatic Bolt (90, 66); Infernal
+  Bolt 72 (era 65). `AMMOA` = flechas de área [nível, nome, elemento, ataque] (TibiaWiki 15.25: Shatterstorm 27 no 50; Firestorm,
+  Terrastorm, Froststorm e Thunderstorm 21 + elemento no 125; Diamond 37 no 150). `ammoBest(b,L)` (alvo único, sem a
   Diamond), `ammoArea(b,L)`, `ammoChips(b,L,eff)` (chips 'Alvo único'/'Área'; com eff, a % que as criaturas levam e 'usa esta'; link só
   com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem) e em cada set do `hsetsHTML` (`.hs-am`); `setTotals` dá
   `t.sb` (tipo do item da mão do escudo). Sem aljava (abaixo do 150 não há nenhuma com stats): `quivTip` no slot vazio e no chip 'Aljava'.

@@ -7034,7 +7034,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
      "why":"Sharpshooter ligado; troca para Divine Defiance se estiveres a levar demasiado."
     }
    ],
-   "weapon":"Arco + quiver (as munições vão no slot do escudo, no quiver). Desde junho os arcos aceitam imbuements elementais e há munições de área: Shatterstorm Arrow (nível 50) e Fire/Earth/Ice/Thunderstorm Arrow (nível 125).",
+   "weapon":"Arco + quiver (as munições vão no slot do escudo, no quiver). Desde junho os arcos aceitam imbuements elementais e há munições de área: Shatterstorm Arrow (nível 50, ataque 27) e Firestorm, Terrastorm, Froststorm e Thunderstorm Arrow (nível 125, ataque 21 + o elemento).",
    "pots":[
     {"l":8,"h":"Health Potion","m":"Mana Potion"},
     {"l":50,"h":"Strong Health Potion","m":"Strong Mana Potion"},
@@ -44689,23 +44689,25 @@ function relSkills(c){
 }
 /* r4-t5 */ // munição sem elemento por tipo de arma: [nível mínimo, ataque] (TibiaWiki). Flechas: Arrow 25, Sniper Arrow 28 (20),
 // Onyx Arrow 40 (40), Diamond Arrow 37 (150, em área). Bolts: Bolt 30, Piercing Bolt 33 (30), Power Bolt 40 (55), Drill Bolt 56 (70),
-// Infernal Bolt 65 (110), Spectral Bolt 78 (150). O scoreItem soma ao atk dos arcos e das bestas o da melhor munição até ao nível
+// Infernal Bolt 72 (110; r7: era 65), Spectral Bolt 78 (150). O scoreItem soma ao atk dos arcos e das bestas o da melhor munição até ao nível
 // (o atk do arco ou da besta é só o bónus; o dano vem da munição).
 /* r7 */ // 3.º valor = nome (página do item). Novas: Tarsal Arrow 33 (30), Crystalline Arrow 65 (90), Vortex Bolt 36 (40), Prismatic Bolt 66 (90).
 // Diamond Arrow é de área: conta no ammoAtk, mas o ammoBest (alvo único) não a escolhe.
 const AMMO={bow:[[0,25,"Arrow"],[20,28,"Sniper Arrow"],[30,33,"Tarsal Arrow"],[40,40,"Onyx Arrow"],[90,65,"Crystalline Arrow"],[150,37,"Diamond Arrow"]],
-  crossbow:[[0,30,"Bolt"],[30,33,"Piercing Bolt"],[40,36,"Vortex Bolt"],[55,40,"Power Bolt"],[70,56,"Drill Bolt"],[90,66,"Prismatic Bolt"],[110,65,"Infernal Bolt"],[150,78,"Spectral Bolt"]]};
+  crossbow:[[0,30,"Bolt"],[30,33,"Piercing Bolt"],[40,36,"Vortex Bolt"],[55,40,"Power Bolt"],[70,56,"Drill Bolt"],[90,66,"Prismatic Bolt"],[110,72,"Infernal Bolt"],[150,78,"Spectral Bolt"]]};
 const ammoAtk=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L).reduce((m,x)=>Math.max(m,x[1]),0);
-/* r7 */ // flechas de área por nível: [nível, nome, elemento] (junho de 2026: Shatterstorm 50 e as elementais 125; Diamond 150). As bestas não têm.
-const AMMOA={bow:[[50,"Shatterstorm Arrow","physical"],[125,"Firestorm Arrow","fire"],[125,"Froststorm Arrow","ice"],[150,"Diamond Arrow","physical"]]};
+/* r7 */ // flechas de área por nível: [nível, nome, elemento, ataque] (TibiaWiki, 15.25 de junho de 2026: Shatterstorm 27 no 50, as
+// elementais 21 + dano do elemento no 125; Diamond 37 no 150). As bestas não têm.
+const AMMOA={bow:[[50,"Shatterstorm Arrow","physical",27],[125,"Firestorm Arrow","fire",21],[125,"Froststorm Arrow","ice",21],[125,"Terrastorm Arrow","earth",21],
+  [125,"Thunderstorm Arrow","energy",21],[150,"Diamond Arrow","physical",37]]};
 const ammoBest=(b,L)=>(AMMO[b]||[]).filter(x=>x[0]<=L&&!/^Diamond/.test(x[2])).reduce((m,x)=>!m||x[1]>m[1]?x:m,null);
 const ammoArea=(b,L)=>(AMMOA[b]||[]).filter(x=>x[0]<=L);
 // chips 'Alvo único' e 'Área' (eff = G.places[pid].eff: o que as criaturas levam de cada elemento; a de área que rende mais leva 'usa esta')
 function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L), ln=n=>ITV&&hasKey(ITV,n.toLowerCase())?`<a href="${itemHref(n)}">${esc(n)}</a>`:esc(n); // só com página (items.json carregado e com o item) if(!st) return "";
   const ev=x=>eff&&eff[x[2]]!=null?Math.round(eff[x[2]]):null, top=eff&&ar.length?ar.reduce((m,x)=>(ev(x)||0)>(ev(m)||0)?x:m,ar[0]):null;
-  return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+ar.map(x=>`<span class="hs-sk">Área: ${ln(x[1])}${x[2]!=="physical"?` ${chip(x[2])}`:""}${ev(x)!=null?` <b>${ev(x)}%</b>`:""}${x===top&&ar.length>1?' <span class="tag ok">usa esta</span>':""}</span>`).join(""); }
+  return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+ar.map(x=>`<span class="hs-sk">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!=="physical"?` ${chip(x[2])}`:""}${ev(x)!=null?` <b>${ev(x)}%</b>`:""}${x===top&&ar.length>1?' <span class="tag ok">usa esta</span>':""}</span>`).join(""); }
 // sem aljava com arco ou besta (abaixo do 150 não há nenhuma com stats): as simples não têm nível nem bónus
-const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; leva as munições na mão do escudo)";
+const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)";
 /* pontuação de um item para a personagem. mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
    prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}) */
 /* r5-t4: eff (opcional) = G.places[pid].eff da hunt: a arma conta com o dano que as criaturas levam do elemento dela */
