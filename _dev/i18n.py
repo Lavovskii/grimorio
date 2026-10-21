@@ -650,7 +650,9 @@ def merge(kind, lang, path):
                 t = t.get('t') or t.get('tr') or ''
             if not isinstance(t, str) or not t:
                 continue
-            if sorted(re.findall(r'\{\d+\}', k)) != sorted(re.findall(r'\{\d+\}', t)):
+            # um valor escondido num comentário (ex.: o "s" do plural português) passa a {n!}: o browser não o mostra
+            t = re.sub(r'<!--\s*\{(\d+)\}\s*-->', lambda m: '{%s!}' % m.group(1), t)
+            if sorted(re.findall(r'\{(\d+)\}', k)) != sorted(re.findall(r'\{(\d+)!?\}', t)):
                 bad += 1
                 continue
             cur[k] = t

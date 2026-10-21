@@ -44620,7 +44620,7 @@ function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]");
 document.addEventListener("pointermove", e=>{ if(e.pointerType!=="touch") whTip(e); }, {passive:true});
 document.addEventListener("click", e=>{ if(e.target.closest&&e.target.closest(".whs:not(.edit) [data-ws]")) whTip(e); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
 // painéis ao lado da roda, como no jogo: Dedication, Conviction, Vessels e Revelation Perks (r7: nomes do jogo, linhas como no cliente)
-function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v=>String(Math.round(v*100)/100).replace(".",",");
+function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v=>String(Math.round(v*100)/100).replace(".",DECSEP);
   const row=(a,b,t,cls)=>`<div class="wrow${cls?" "+cls:""}"${t?` title="${esc(t)}"`:""}><span class="wrn">${a}</span><b>${b}</b></div>`;
   const ded=row("Hit Points","+"+nf(S.hp))+row("Mana","+"+nf(S.mp))+row("Capacity","+"+nf(S.cap))+row("Mitigation Mult.",f2(S.mit)+"%");
   const cvl=Object.entries(S.conv).map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, vr=/^Vessel Resonance /.test(n);

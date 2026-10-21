@@ -89,11 +89,8 @@
       PATS.push(p);
       var b = BUCKET.get(anchor); if (!b) BUCKET.set(anchor, b = []); b.push(p);
     });
-    var cm = window.I18N_C || {};
-    CONT = CLS.map(function (l) { return cm[l]; }).filter(Boolean);
-    if (!CONT.length) CONT = null;
     X.forEach(function (v) { OUT.add(norm(v)); });
-    if (CONT) CONT.forEach(function (m) { for (var h in m) OUT.add(m[h]); });
+    conts();
     return true;
   }
 
@@ -132,7 +129,7 @@
       var cap = bm[n + 1], t = /\{\d+\}/.test(cap) ? null : exact(cap);
       by[best.slots[n]] = t == null ? cap : t;
     }
-    return best.t.replace(MARK, function (m0, s) { return by[s] !== undefined ? by[s] : m0; });
+    return best.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
   }
 
   // interface: chave exata, depois modelos
@@ -141,9 +138,19 @@
   // conteúdo (só inglês): o texto inteiro, senão frase a frase (as frases que faltam ficam em PT-PT).
   // Devolve {t, map}: map = [início, fim] de cada frase na origem e na tradução (para voltar a pôr os ícones no sítio).
   function SENT(s) { return s.split(/(?<=[.!?…:;])\s+(?=\S)/); }
+  // dicionários de conteúdo: carregam depois do da interface (o observador pode arrancar entre os dois), por isso vê-se outra vez até chegarem
+  function conts() {
+    if (CONT || !CLS.length) return CONT;
+    var cm = window.I18N_C || {}, ms = CLS.map(function (l) { return cm[l]; }).filter(Boolean);
+    if (ms.length < CLS.length && document.readyState === "loading") return null;
+    if (!ms.length) return null;
+    CONT = ms;
+    CONT.forEach(function (m) { for (var h in m) OUT.add(m[h]); });
+    return CONT;
+  }
   function cget(h) { for (var i = 0; i < CONT.length; i++) { var v = CONT[i][h]; if (v != null) return v; } return null; }
   function content(p) {
-    if (!CONT) return null;
+    if (!conts()) return null;
     var t = cget(hkey(p));
     if (t != null) return { t: t, map: [[0, p.length, 0, t.length]] };
     var ss = SENT(p);
@@ -257,7 +264,7 @@
      2) o conteúdo com o texto dos elementos lá dentro (os elementos voltam a entrar onde aparece o seu texto;
         os ícones sem texto, no início ou no fim da frase onde estavam);
      3) cada pedaço de texto entre elementos, sozinho. */
-  function run(el, kids, a, z) {
+  function run(el, kids, a, z, inner) {
     while (a <= z && transparent(kids[a])) a++;
     while (z >= a && transparent(kids[z])) z--;
     if (a > z) return;
@@ -283,14 +290,20 @@
     plain = plain.trim();
     var t = ui(k), frag = document.createDocumentFragment(), used = [];
     if (t != null) {
-      var bits = t.split(/\{(\d+)\}/);
-      for (var j = 0; j < bits.length; j++) {
-        if (j % 2 === 0) { if (bits[j]) frag.appendChild(mkText(bits[j])); }
-        else { var e = els[+bits[j]]; if (e && !used[+bits[j]]) { frag.appendChild(e); used[+bits[j]] = 1; } }
+      // {n!} = elemento que esta língua não mostra (ex.: o "s" do plural português): sai da frase
+      var bits = t.split(/\{(\d+)(!?)\}/);
+      for (var j = 0; j < bits.length; j += 3) {
+        if (bits[j]) frag.appendChild(mkText(bits[j]));
+        if (j + 1 < bits.length) { var n0 = +bits[j + 1], e = els[n0]; if (e && !used[n0]) { used[n0] = 1; if (!bits[j + 2]) frag.appendChild(e); else e.remove(); } }
       }
     } else {
-      var ct = CONT ? content(plain) : null;
+      var ct = conts() ? content(plain) : null;
       if (!ct) {
+        // sem os elementos das pontas (ex.: uma descrição em <span> colada ao fim da frase): só o troço entre o 1.º e o último texto
+        if (!inner) {
+          var a2 = kids.indexOf(txt[0]), z2 = kids.indexOf(txt[txt.length - 1]);
+          if (a2 > a || z2 < z) { var tried0 = txt.map(function (n) { return n.data; }); run(el, kids, a2, z2, true); if (txt.some(function (n, x) { return !n.parentNode || n.data !== tried0[x]; })) return; }
+        }
         var any = false;
         for (var w = 0; w < txt.length; w++) if (textNode(txt[w], true)) any = true;
         if (!any) miss(k);
@@ -468,6 +481,8 @@
   }
 
   I18N.tr = tr; I18N.now = now; I18N.overlay = overlay; I18N.hkey = hkey; I18N.norm = norm;
+  // para quem traduz: de onde vem a tradução de um texto (na consola: I18N.why("…"))
+  I18N.why = function (s) { if (!ready()) return null; var k = norm(s); return { out: OUT.has(k), exact: exact(k), pattern: pattern(k), content: content(k), text: text(k) }; };
   if (!ON) { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountPickers); else mountPickers(); }
   start();
 })();
