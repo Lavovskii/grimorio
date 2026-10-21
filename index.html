@@ -2995,7 +2995,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
         <div class="card" style="display:grid;gap:10px">
           <h3 style="font-size:20px">Quanto tempo até ao próximo objetivo</h3>
           <div class="controls">
-            <label for="tgtIn">Objetivo <input id="tgtIn" type="number" min="9" max="3000" style="width:86px"></label>
+            <label for="tgtIn">Objetivo <input id="tgtIn" type="number" min="9" max="5000" style="width:86px"></label>
             <label for="bonusSel">Bónus <select id="bonusSel"><option value="1">Sem bónus</option><option value="1.5">Stamina verde ×1,5</option><option value="2">Stamina + XP Boost ×2</option></select></label>
             <label for="preyChk"><input id="preyChk" type="checkbox"> Prey de XP (+25%)</label>
           </div>
@@ -3188,7 +3188,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <div class="card lvcard" id="lvCard"><div class="lvc-h"><h3>Nível e skills de <span id="lvcName"></span></h3><p class="small muted">Vêm do Tibia e atualizam-se sozinhos. Só precisas de mexer aqui para simular outro nível ou se a personagem foi preenchida à mão.</p></div>
         <div class="lvctl">
           <div class="lvstep"><div class="pm"><button id="down" aria-label="Descer um nível">−</button><button id="up" aria-label="Subir um nível">+</button></div>
-          <label for="lvIn"><span>Nível</span> <input id="lvIn" type="number" min="8" max="3000"></label></div>
+          <label for="lvIn"><span>Nível</span> <input id="lvIn" type="number" min="8" max="5000"></label></div>
           <label for="pctIn"><span data-md="Progresso">%</span> <input id="pctIn" type="number" min="0" max="99" aria-label="Percentagem para o próximo nível"></label>
           <label for="mlIn" id="mlLab"><span>Magic level</span> <input id="mlIn" type="number" min="0" max="200"></label>
           <label for="skIn" id="skLab"><span>Skill</span> <input id="skIn" type="number" min="10" max="200"></label>
@@ -43211,6 +43211,8 @@ catch (err) {
 }
 const G = G0;
 const $ = id => document.getElementById(id);
+// r12: nível máximo aceite no site (os primeiros dos highscores já passam os 3100: o antigo teto de 3000 cortava-lhes o nível)
+const LVMAX = 5000;
 const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const hasKey=(o,k)=>o!=null&&Object.prototype.hasOwnProperty.call(o,k); // r2-t5: '#npc/toString', '#item/__proto__'... não são páginas (r5-t2: no topo, pode usar-se em qualquer função)
 const LOC = (window.I18N && I18N.locale) || "pt-PT"; // r7: a língua do rodapé (shared/i18n.js) decide o formato dos números e das datas
@@ -44144,7 +44146,7 @@ const STI = {hp:'<path d="M12 20s-7-4.4-9.2-8.7A5 5 0 0 1 12 6.6a5 5 0 0 1 9.2 4
 const TMI = {w:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5z"/>', g:'<path d="M6 3.5h12v15l-6-3.2-6 3.2z"/>',
   p:'<path d="m12 3.6 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/>', u:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>', s:'<path d="M19.5 11A7.5 7.5 0 0 0 6 6.6L4.5 8"/><path d="M4.5 4v4h4M4.5 13A7.5 7.5 0 0 0 18 17.4l1.5-1.4"/><path d="M19.5 20v-4h-4"/>'};
 const tmi = k => `<svg class="tmi" viewBox="0 0 24 24" aria-hidden="true">${TMI[k]}</svg>`;
-function setLevel(L){ const c=C(); L=Math.max(8,Math.min(3000,Math.round(L)||c.level)); c.level=L; if(c.target<=L) c.target=0; ST.ui.band=null; save(); renderAll(); }
+function setLevel(L){ const c=C(); L=Math.max(8,Math.min(LVMAX,Math.round(L)||c.level)); c.level=L; if(c.target<=L) c.target=0; ST.ui.band=null; save(); renderAll(); }
 $("up").onclick=()=>setLevel(C().level+1); $("down").onclick=()=>setLevel(C().level-1);
 $("lvIn").onchange=()=>setLevel(parseInt($("lvIn").value,10));
 $("pctIn").onchange=()=>{ C().pct=Math.max(0,Math.min(99,parseInt($("pctIn").value,10)||0)); save(); renderHero(); renderInicio(); };
@@ -44228,7 +44230,7 @@ function members(){
   const c=C(), out=[{id:"me", voc:c.voc, level:c.level, cid:c.id, name:c.name||G.voc[c.voc].n, me:true}];
   (ST.ui.party||[]).forEach(m=>{
     if(m.cid){ const x=ST.chars.find(y=>y.id===m.cid); if(x && x.id!==c.id) out.push({id:m.id, voc:x.voc, level:x.level, cid:x.id, name:x.name||G.voc[x.voc].n}); }
-    else if(VOCS.includes(m.voc)) out.push({id:m.id, voc:m.voc, level:Math.max(8,Math.min(3000,Math.round(+m.level)||c.level)), name:G.voc[m.voc].n});
+    else if(VOCS.includes(m.voc)) out.push({id:m.id, voc:m.voc, level:Math.max(8,Math.min(LVMAX,Math.round(+m.level)||c.level)), name:G.voc[m.voc].n});
   });
   return out;
 }
@@ -44527,7 +44529,7 @@ $("huntFilters").addEventListener("click", e=>{ const f=hfState(), c=C(); let b;
   else if(an==="data-hcls-all"&&ST.ui.hfAll) box.querySelectorAll(".hf-x").forEach(g=>g.classList.add("hf-in")); });
 $("huntFilters").addEventListener("change", e=>{
   const t=e.target;
-  if(t.dataset.pmvoc || t.dataset.pmlvl){ const m=(ST.ui.party||[]).find(x=>x.id===(t.dataset.pmvoc||t.dataset.pmlvl)); if(m){ if(t.dataset.pmvoc) m.voc=t.value; else m.level=Math.max(8,Math.min(3000,Math.round(+t.value)||m.level)); } save(); renderHunts(); return; }
+  if(t.dataset.pmvoc || t.dataset.pmlvl){ const m=(ST.ui.party||[]).find(x=>x.id===(t.dataset.pmvoc||t.dataset.pmlvl)); if(m){ if(t.dataset.pmvoc) m.voc=t.value; else m.level=Math.max(8,Math.min(LVMAX,Math.round(+t.value)||m.level)); } save(); renderHunts(); return; }
   /* r5-t2 */ if(t.matches("[data-hcity]")){ const f=hfState(); f.city=t.value||null; if(f.city&&(ST.ui.band==null||ST.ui.band==="me")) ST.ui.band="upto"; HFMISS=""; save(); renderHunts(); const s2=$("huntFilters").querySelector("[data-hcity]"); if(s2) s2.focus({preventScroll:true}); return; }
   const ev=ST.ui.ev||(ST.ui.ev={t:"cls",v:"",p:50,on:false});
   if(t.id==="evT"){ const v=t.value; ST.ui.evPick=v;
@@ -45056,7 +45058,7 @@ function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
       <ul class="wsug-l">${sug.list.map(([i,n])=>{ const [d,mx,,cv]=WHD.slots[i], nm=whConvName(E.voc,cv,d).replace(/^Augmented /,"Aug. ").replace(/^Vessel Resonance /,"VR "); return `<li><span><b>${esc(nm)}</b> <span class="tiny">${WHDN[d]} · ${mx}</span></span><b class="wsug-n">+${n}</b></li>`; }).join("")}</ul>
       ${sug.left>0?`<p class="wsub">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
     :free>0?`<p class="wsub wsug-box"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> ${E.t?"Mete-os onde quiseres em «Distribuir pontos».":"Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos»."}</p>`:"";
-  return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><div class="wpts-row"><input id="whBudget" type="number" inputmode="numeric" min="0" max="3000" value="${tot}"><button type="button" class="btn small" data-wpts-go="1">Atualizar</button></div>
+  return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><div class="wpts-row"><input id="whBudget" type="number" inputmode="numeric" min="0" max="4000" value="${tot}"><button type="button" class="btn small" data-wpts-go="1">Atualizar</button></div>
     <p class="wsub">${tot>base?`Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?"":`<p class="wsub">Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>`}${sl}</div></section>`; }
 // r7: onde meter os pontos livres: o que as builds seguintes (por ordem) põem a mais, nas fatias que já se podem encher (ligação ao centro)
 function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((s,i)=>i).sort((a,b)=>WHD.slots[a][1]-WHD.slots[b][1]||a-b); let left=free, to=null;
@@ -45178,7 +45180,7 @@ document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.close
   if(t.dataset.ws!=null){ WHPIN=null; WHSELK="s:"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); } });
 document.addEventListener("contextmenu", e=>{ const g=e.target.closest&&e.target.closest(".whs.edit [data-ws]"); if(!g) return; e.preventDefault(); whEdit(+g.dataset.ws,"empty"); });
 /* r7: o que passa do nível − 50 são pontos comprados (tasks, pergaminhos): ficam na personagem e contam em todo o site */
-function whSetPts(){ const c=C(), inp=$("whBudget"); if(!c||!inp) return; const v=Math.max(0,Math.min(3000,parseInt(inp.value,10)||0));
+function whSetPts(){ const c=C(), inp=$("whBudget"); if(!c||!inp) return; const v=Math.max(0,Math.min(4000,parseInt(inp.value,10)||0));
   c.wpx=Math.max(0,v-wpts(c.level)); save(); WSEL=null; WED=null; renderWheel(); const n=$("whBudget"); if(n) n.focus({preventScroll:true}); }
 document.addEventListener("change", e=>{ if(e.target.id==="whBudget") whSetPts(); });
 document.addEventListener("keydown", e=>{ if(e.key==="Enter"&&e.target.id==="whBudget"){ e.preventDefault(); whSetPts(); } });
@@ -46216,7 +46218,7 @@ function renderDefesa(){
 const API = "https://api.tibiadata.com/v4";
 const NAME_RE = /^[A-Za-z][A-Za-z' .\-]{1,29}$/;
 const vocKey = s => { s=String(s||"").toLowerCase(); return VOCS.find(v=>s.includes(v)) || null; };
-const clampL = L => Math.max(8, Math.min(3000, Math.round(L)||8));
+const clampL = L => Math.max(8, Math.min(LVMAX, Math.round(L)||8));
 const pctFrom = (xp,L) => Math.max(0, Math.min(99, Math.floor((xp-expFor(L))/(expFor(L+1)-expFor(L))*100)));
 const premium = s => s==="Premium Account" ? "Premium" : "Free";
 const RTF = new Intl.RelativeTimeFormat(LOC,{numeric:"auto"});
@@ -46330,7 +46332,7 @@ function profHTML(c){
   return `<div class="card" style="display:grid;gap:14px">
     <div class="controls" style="justify-content:space-between"><h3 style="font-size:20px">Perfil no Tibia: ${esc(c.name)}</h3></div>
     <dl class="dl">${row("Vocação",esc(t.voc))}${row("Nível",t.level)}${row("Mundo",esc(c.world))}${row("Residência",esc(t.res))}
-      ${row("Guild",t.guild?`${esc(t.guild.r)} em ${esc(t.guild.n)}`:"Sem guild")}${row("Título",esc(t.title))}
+      ${row("Guild",t.guild?`${esc(t.guild.r)} em <b>${esc(t.guild.n)}</b>`:"Sem guild")}${row("Título",esc(t.title))}
       ${row("Conta",esc([premium(t.status),t.loyalty,t.created?`criada em ${new Date(t.created).toLocaleDateString(LOC)}`:""].filter(Boolean).join(" · ")))}
       ${row("Conquistas",t.ach?`${nf(t.ach)} pontos`:"")}${row("Casas",t.houses.map(esc).join("<br>"))}${row("Nomes antigos",t.former.map(esc).join(", "))}
       ${row("Último login",t.last?`${new Date(t.last).toLocaleString(LOC,{dateStyle:"medium",timeStyle:"short"})} (${ago(t.last)})`:"")}${row("Skills",hsLine(c))}</dl>
@@ -46408,7 +46410,7 @@ function formHTML(cancel){
     <div style="display:grid;gap:6px"><span class="small muted">Vocação</span><div class="vocpick" role="radiogroup" aria-label="Vocação">${VOCS.map(v=>`<button type="button" role="radio" data-voc="${v}" aria-pressed="${d.voc===v}" aria-checked="${d.voc===v}" style="color:var(--${v})">${VI(v,"lg")}<span style="color:var(--ink)">${G.voc[v].n}</span></button>`).join("")}</div></div>
     <label class="fname" for="f-name">Nome da personagem<input id="f-name" type="text" maxlength="30" autocomplete="off" placeholder="Como aparece no jogo" value="${esc(d.name)}"></label>
     <div class="fgrid">
-      <label for="f-level">Nível<input id="f-level" type="number" inputmode="numeric" min="8" max="3000" placeholder="ex.: 120" value="${esc(d.level)}"></label>
+      <label for="f-level">Nível<input id="f-level" type="number" inputmode="numeric" min="8" max="${LVMAX}" placeholder="ex.: 120" value="${esc(d.level)}"></label>
       <label for="f-pct">% para o próximo<input id="f-pct" type="number" inputmode="numeric" min="0" max="99" placeholder="0" value="${esc(d.pct)}"></label>
       <label for="f-ml">Magic level<input id="f-ml" type="number" inputmode="numeric" min="0" max="200" placeholder="${mage?"ex.: 60":"ex.: 10"}" value="${esc(d.ml)}"></label>
       ${mage?"":`<label for="f-skill">${SKLAB[d.voc]}<input id="f-skill" type="number" inputmode="numeric" min="10" max="200" placeholder="ex.: 90" value="${esc(d.skill)}"></label>`}
@@ -46426,7 +46428,7 @@ function bindForm(host){
     const err=host.querySelector("#f-err"), name=draft.name.trim(), L=parseInt(draft.level,10);
     const fail=(m,f)=>{ err.textContent=m; err.hidden=false; const el=host.querySelector(f); if(el) el.focus(); };
     if(!name) return fail("Escreve o nome da personagem.","#f-name");
-    if(!(L>=8 && L<=3000)) return fail("O nível tem de estar entre 8 e 3000.","#f-level");
+    if(!(L>=8 && L<=LVMAX)) return fail(`O nível tem de estar entre 8 e ${LVMAX}.`,"#f-level");
     const num=(x,min,max,def)=>{ const n=parseInt(x,10); return isNaN(n)?def:Math.max(min,Math.min(max,n)); };
     const mage=draft.voc==="druid"||draft.voc==="sorcerer";
     const vals={name:name.slice(0,30),voc:draft.voc,level:L,pct:num(draft.pct,0,99,0),ml:num(draft.ml,0,200,0),skill:mage?10:num(draft.skill,10,200,10),wtype:WTYPES[draft.voc]?draft.wtype:""};

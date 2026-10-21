@@ -61,7 +61,7 @@
   function release() { root.classList.remove("i18n-hold"); }
 
   /* ---------------------------------------------------------------- dicionários */
-  var X = null, PATS = null, BUCKET = null, CONT = null, OUT = new Set();
+  var X = null, PATS = null, BUCKET = null, SHORT = [], CONT = null, OUT = new Set();
   var HAS_LETTER = /[A-Za-zÀ-ÖØ-öø-ÿ]/;
   var MARK = /\{(\d+)\}/g;
 
@@ -75,7 +75,7 @@
     X = new Map();
     var xs = d.x || {};
     for (var k in xs) if (Object.prototype.hasOwnProperty.call(xs, k)) X.set(k, xs[k]);
-    PATS = []; BUCKET = new Map();
+    PATS = []; BUCKET = new Map(); SHORT = [];
     (d.p || []).forEach(function (pt) {
       var src = pt[0], parts = src.split(/\{(\d+)\}/), re = "^", slots = [], stat = "";
       for (var i = 0; i < parts.length; i++) {
@@ -83,9 +83,10 @@
         else { re += reEsc(parts[i]); stat += parts[i]; }
       }
       var words = stat.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
-      if (!words) return;
-      var anchor = words.reduce(function (a, b) { return b.length > a.length ? b : a; });
       var p = { re: new RegExp(re + "$"), slots: slots, t: pt[1], len: stat.length };
+      // sem palavras de 3+ letras (ex.: "{0} em {1}" → "{0} in {1}"): vão para uma lista à parte, só para textos curtos
+      if (!words) { if (/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(stat)) SHORT.push(p); return; }
+      var anchor = words.reduce(function (a, b) { return b.length > a.length ? b : a; });
       PATS.push(p);
       var b = BUCKET.get(anchor); if (!b) BUCKET.set(anchor, b = []); b.push(p);
     });
@@ -136,8 +137,28 @@
     return best.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
   }
 
+  // modelos curtos (só palavras de 1–2 letras, ex.: "{0} em {1}"): só em textos curtos e com valores que não sejam frases
+  // portuguesas — um nome ("King"), um número, uma marca de elemento ({0}) ou algo com tradução exata
+  function short(k) {
+    if (k.length > 60) return null;
+    for (var i = 0; i < SHORT.length; i++) {
+      var p = SHORT[i], m = p.re.exec(k);
+      if (!m) continue;
+      var by = {}, ok = true;
+      for (var n = 0; n < p.slots.length && ok; n++) {
+        var cap = m[n + 1], t = /^\{\d+\}$/.test(cap) ? null : exact(cap);
+        if (t == null && !/^\{\d+\}$/.test(cap) && !/^[\d\s.,%+\-–×#]+$/.test(cap) && ((cap.match(PT_FN) || []).length || cap.length > 30 || /^[a-zà-ÿ]/.test(cap))) ok = false;
+        by[p.slots[n]] = t == null ? cap : t;
+      }
+      if (ok) return p.t.replace(/\{(\d+)(!?)\}/g, function (m0, s, hide) { return hide ? "" : by[s] !== undefined ? by[s] : m0; });
+    }
+    return null;
+  }
+
   // interface: chave exata, depois modelos
-  function ui(k) { var t = exact(k); return t != null ? t : pattern(k); }
+  // (os modelos curtos só entram em textos com marcas de elementos, ex.: "King em {0}" de "King em <b>Hill</b>"; num texto
+  // simples, "{0} de {1}" apanharia tudo — "Grimório de Tibia" passava a "Grimório of Tibia")
+  function ui(k) { var t = exact(k); if (t == null) t = pattern(k); if (t == null && /\{\d+\}/.test(k)) t = short(k); return t; }
 
   // conteúdo (só inglês): o texto inteiro, senão frase a frase (as frases que faltam ficam em PT-PT).
   // Devolve {t, map}: map = [início, fim] de cada frase na origem e na tradução (para voltar a pôr os ícones no sítio).

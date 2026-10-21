@@ -4811,9 +4811,9 @@
   "c": "index.html:  top 1000 de ${h.w}, escreve o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próx",
   "k": "x"
  },
- "O nível tem de estar entre 8 e 3000.": {
-  "c": "index.html: onagem.\",\"#f-name\"); if(!(L>=8 && L<=3000)) return fail(\"O nível tem de estar entre 8 e 3000.\",\"#f-level\"); co",
-  "k": "x"
+ "O nível tem de estar entre 8 e {0}.": {
+  "c": "index.html: nagem.\",\"#f-name\"); if(!(L>=8 && L<=LVMAX)) return fail(`O nível tem de estar entre 8 e ${LVMAX}.`,\"#f-level\"); co",
+  "k": "p"
  },
  "O número é quantas hunts desse tipo {0} fazer. Escolher um tipo mostra-as todas, até {1} nível.": {
   "c": "index.html: st.filter((k,i)=>i>=XN&&!f.cls.includes(k)).length, clsNote=`O número é quantas hunts desse tipo ${grp?\"podem\":\"podes\"} fazer. Escolher um tipo mostra-as todas, até ${grp?\"ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\")",
