@@ -6799,7 +6799,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":8028,"n":"Yol's bow","s":"weapon","l":60,"ix":1410,"b":"bow","v":"p","h2":1,"hit":7},
   {"id":10406,"n":"Zaoan halberd","s":"weapon","l":25,"ix":1411,"b":"axe","atk":37,"def":15,"is":3,"h2":1,"it":["strike","elem","vamp","void","s_axe"]},
   {"id":10390,"n":"Zaoan sword","s":"weapon","l":55,"ix":1412,"b":"sword","atk":43,"def":18,"edef":2,"is":2,"it":["strike","elem","vamp","void","s_sword"]},
-  {"id":900000,"n":"Flamingo Amulet of Nature","s":"amulet","l":270,"v":"d","ns":1,"tp":1,"ix":1413,"pe":["fire","physical"]},
+  {"id":900000,"n":"Flamingo Amulet of Nature","s":"amulet","l":270,"v":"d","tp":1,"ix":1413,"sk":{"ml":3,"ml_ice":1},"ab":{"physical":3,"fire":11},"arm":3,"dur":10800},
   {"id":900001,"n":"Enchanted Werewolf Helmet","s":"helmet","l":100,"v":"d","ns":1,"tp":1,"ix":-1,"pe":["physical"]},
   {"id":900002,"n":"Moonsilver Spirit Mask","s":"helmet","l":800,"v":"d","tp":1,"ix":1415,"arm":10,"sk":{"ml":4},"ab":{"physical":3,"energy":8},"is":2,"it":["void","s_ml"]},
   {
@@ -6826,13 +6826,13 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "tp":1,
    "ix":1417,
    "b":"rod",
-   "wd":["ice",6,6],
+   "wd":["ice",103,127],
    "sk":{"ml":6,"ml_ice":1,"ml_healing":2},
    "ab":{"earth":7},
    "is":2,
    "it":["strike","void","s_ml"]
   },
-  {"id":900005,"n":"Flamingo Amulet of Valor","s":"amulet","l":270,"v":"k","ns":1,"tp":1,"ix":1418,"pe":["fire","physical"]},
+  {"id":900005,"n":"Flamingo Amulet of Valor","s":"amulet","l":270,"v":"k","tp":1,"ix":1418,"sk":{"sword":4,"axe":4,"club":4,"shield":1},"ab":{"physical":7,"fire":12},"arm":4,"dur":10800},
   {
    "id":900006,
    "n":"Moonsilver Battle Visor",
@@ -7051,7 +7051,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "h2":1,
    "it":["strike","elem","vamp","void","s_sword"]
   },
-  {"id":900019,"n":"Flamingo Amulet of Precision","s":"amulet","l":270,"v":"p","ns":1,"tp":1,"ix":1432,"pe":["fire","physical"]},
+  {"id":900019,"n":"Flamingo Amulet of Precision","s":"amulet","l":270,"v":"p","tp":1,"ix":1432,"sk":{"dist":4,"ml_holy":1},"ab":{"physical":5,"fire":14},"arm":4,"dur":10800},
   {
    "id":900020,
    "n":"Moonsilver Trail Hood",
@@ -7118,7 +7118,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "h2":1,
    "it":["strike","elem","vamp","void","s_dist"]
   },
-  {"id":900025,"n":"Flamingo Amulet of Destruction","s":"amulet","l":270,"v":"s","ns":1,"tp":1,"ix":1438,"pe":["fire","physical"]},
+  {"id":900025,"n":"Flamingo Amulet of Destruction","s":"amulet","l":270,"v":"s","tp":1,"ix":1438,"sk":{"ml":3,"ml_energy":1},"ab":{"physical":3,"fire":11},"arm":3,"dur":10800},
   {"id":900026,"n":"Moonsilver Nimbus Hat","s":"helmet","l":800,"v":"s","tp":1,"ix":1439,"arm":10,"sk":{"ml":4},"ab":{"physical":3,"ice":8},"is":2,"it":["void","s_ml"]},
   {
    "id":900027,
@@ -7144,7 +7144,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "tp":1,
    "ix":1441,
    "b":"wand",
-   "wd":["death",6,6],
+   "wd":["death",103,133],
    "sk":{"ml":6,"ml_death":1},
    "ab":{"energy":7},
    "is":2,
@@ -43383,6 +43383,48 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   "w_monster_graveyard":{"s":0,"t":3,"v":{}},
   "hyaenas":{"s":1,"t":0,"v":{"druid":[1,467,467,2396188,null]}},
   "alchemist":{"s":1,"t":0,"v":{"monk":[1,94,94,419562,-17260]}}
+ },
+ "dpf":{
+  "knight":[
+   [99,{"physical":0.687,"earth":0.081,"lifedrain":0.066,"fire":0.066,"death":0.035,"ice":0.028,"energy":0.027,"manadrain":0.012}],
+   [199,{"physical":0.526,"earth":0.126,"fire":0.098,"lifedrain":0.075,"energy":0.067,"death":0.057,"manadrain":0.03,"ice":0.022}],
+   [299,{"physical":0.522,"energy":0.118,"earth":0.118,"death":0.097,"fire":0.063,"ice":0.047,"lifedrain":0.035}],
+   [399,{"physical":0.358,"earth":0.133,"fire":0.11,"death":0.106,"lifedrain":0.097,"ice":0.063,"holy":0.054,"energy":0.049,"manadrain":0.031}],
+   [599,{"physical":0.391,"death":0.108,"earth":0.101,"energy":0.098,"fire":0.097,"lifedrain":0.094,"ice":0.055,"manadrain":0.039,"holy":0.017}],
+   [99999,{"physical":0.343,"death":0.127,"fire":0.108,"lifedrain":0.107,"energy":0.085,"earth":0.076,"ice":0.068,"holy":0.056,"manadrain":0.029}]
+  ],
+  "paladin":[
+   [99,{"physical":0.672,"earth":0.081,"fire":0.068,"lifedrain":0.067,"death":0.036,"ice":0.027,"energy":0.026,"manadrain":0.012,"drown":0.011}],
+   [199,{"physical":0.508,"earth":0.138,"energy":0.086,"fire":0.081,"lifedrain":0.071,"death":0.055,"ice":0.034,"manadrain":0.027}],
+   [299,{"physical":0.467,"earth":0.148,"death":0.104,"fire":0.087,"lifedrain":0.068,"energy":0.046,"ice":0.031,"manadrain":0.025,"holy":0.025}],
+   [399,{"physical":0.359,"death":0.138,"ice":0.136,"energy":0.105,"lifedrain":0.103,"manadrain":0.06,"fire":0.042,"earth":0.03,"holy":0.026}],
+   [599,{"physical":0.381,"earth":0.135,"energy":0.123,"death":0.109,"lifedrain":0.085,"fire":0.066,"manadrain":0.057,"holy":0.024,"ice":0.02}],
+   [99999,{"physical":0.347,"death":0.132,"fire":0.112,"lifedrain":0.099,"energy":0.097,"earth":0.072,"ice":0.06,"holy":0.05,"manadrain":0.032}]
+  ],
+  "sorcerer":[
+   [99,{"physical":0.687,"earth":0.078,"fire":0.075,"lifedrain":0.064,"death":0.033,"energy":0.027,"ice":0.024,"manadrain":0.012}],
+   [199,{"physical":0.557,"earth":0.131,"fire":0.085,"lifedrain":0.06,"energy":0.059,"death":0.049,"ice":0.036,"manadrain":0.023}],
+   [299,{"physical":0.465,"earth":0.14,"death":0.094,"energy":0.088,"ice":0.084,"lifedrain":0.074,"fire":0.042,"manadrain":0.013}],
+   [399,{"physical":0.342,"death":0.153,"lifedrain":0.11,"fire":0.094,"earth":0.082,"energy":0.069,"ice":0.057,"holy":0.054,"manadrain":0.039}],
+   [599,{"physical":0.379,"earth":0.12,"death":0.117,"energy":0.106,"fire":0.094,"lifedrain":0.062,"ice":0.049,"manadrain":0.048,"holy":0.026}],
+   [99999,{"physical":0.358,"death":0.128,"energy":0.11,"lifedrain":0.105,"fire":0.088,"earth":0.069,"ice":0.065,"holy":0.051,"manadrain":0.026}]
+  ],
+  "druid":[
+   [99,{"physical":0.694,"earth":0.076,"fire":0.074,"lifedrain":0.064,"death":0.031,"energy":0.025,"ice":0.024,"manadrain":0.011}],
+   [199,{"physical":0.576,"earth":0.12,"lifedrain":0.068,"energy":0.065,"fire":0.065,"death":0.052,"ice":0.031,"manadrain":0.023}],
+   [299,{"physical":0.512,"earth":0.188,"death":0.09,"fire":0.063,"energy":0.053,"lifedrain":0.051,"ice":0.042}],
+   [399,{"physical":0.388,"death":0.144,"ice":0.098,"lifedrain":0.09,"earth":0.089,"energy":0.074,"fire":0.067,"manadrain":0.027,"holy":0.023}],
+   [599,{"physical":0.39,"death":0.132,"earth":0.117,"fire":0.108,"energy":0.097,"lifedrain":0.072,"manadrain":0.033,"ice":0.028,"holy":0.025}],
+   [99999,{"physical":0.332,"energy":0.141,"death":0.101,"lifedrain":0.091,"fire":0.086,"earth":0.077,"ice":0.076,"holy":0.068,"manadrain":0.029}]
+  ],
+  "monk":[
+   [99,{"physical":0.68,"earth":0.079,"fire":0.069,"lifedrain":0.066,"death":0.034,"ice":0.027,"energy":0.022,"drown":0.011,"manadrain":0.011}],
+   [199,{"physical":0.52,"earth":0.129,"fire":0.081,"lifedrain":0.077,"energy":0.072,"death":0.059,"manadrain":0.031,"ice":0.031}],
+   [299,{"physical":0.456,"earth":0.161,"energy":0.094,"death":0.094,"fire":0.073,"ice":0.05,"lifedrain":0.035,"manadrain":0.02,"holy":0.018}],
+   [399,{"physical":0.39,"lifedrain":0.136,"death":0.12,"energy":0.106,"ice":0.097,"fire":0.057,"earth":0.051,"holy":0.022,"manadrain":0.021}],
+   [599,{"physical":0.396,"earth":0.151,"death":0.139,"fire":0.089,"energy":0.076,"lifedrain":0.063,"ice":0.032,"holy":0.031,"manadrain":0.023}],
+   [99999,{"physical":0.343,"lifedrain":0.111,"energy":0.104,"death":0.104,"fire":0.097,"ice":0.084,"earth":0.065,"manadrain":0.047,"holy":0.045}]
+  ]
  }
 }
 </script>
@@ -45492,35 +45534,44 @@ function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L); if(!st) r
     +(!eff&&els.length?`<span class="hs-sk hs-wr" title="${esc(els.map(x=>x[1]).join(", "))}">Área elemental <b>+${els[0][3]}</b> ${els.map(x=>chip(x[2])).join(" ")}</span>`:""); }
 // sem aljava com arco ou besta (abaixo do 150 não há nenhuma com stats): as simples não têm nível nem bónus
 const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)";
-/* pontuação de um item para a personagem (r8: valor em %, ver em baixo). mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
-   prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}) */
-/* r5-t4: eff (opcional) = G.places[pid].eff da hunt: a arma conta com o dano que as criaturas levam do elemento dela */
-/* r8 */ // pontos v2: o valor de um item é o que ele muda no combate da personagem, em % (por isso dá para somar slots no pickSet):
-// D = dano a mais (skills e ML pelo skill e ML atuais; arma pela fórmula do dano), P = dano recebido a menos (proteções % pelo perfil
-// de dano da hunt ou o SCPF; armadura e defesa pelo golpe físico médio do nível, que cresce com ele), velocidade em % da velocidade
-// base e slots de imbuement pelo nível (0,15 % por slot até ao 100, sobe até 1,5 % no 300: valem quando se imbuem). Fórmulas aproximadas da TibiaWiki: golpe físico
-// ≈ 0,085 × ataque × skill + nível/5 (0,09 à distância); feitiços ≈ nível/5 + 4 × ML. Servem para comparar itens, não para prever o
-// dano. Os modos pesam D, P e a velocidade (SCMODE). O jogador vê a nota 0–100 do notaItem, não este valor.
+/* pontuação de um item para a personagem (r10: v3, valor em %). mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
+   prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}); eff (opcional) = G.places[pid].eff da hunt: a arma conta com o
+   dano que as criaturas levam do elemento dela */
+// r10: o valor de um item é o que ele muda no combate da personagem, em %: D = dano a mais, P = dano recebido a menos, velocidade em %
+// da velocidade base e X (slots de imbuement pelo nível, regeneração, leech). Fórmulas da TibiaWiki (página Formulae, 22/10/2026):
+// feitiços dos magos ≈ nível/5 + 9 × ML (média dos de área: Hell's Core 7–14 × ML, Eternal Winter 6–12, Rage of the Skies 5–12),
+// Fierce Berserk ≈ 2,05 × (skill + 2 × ataque) + nível/5 e golpe físico ≈ 0,085 × ataque × skill + nível/5 (0,09 à distância).
+// O dano recebido segue o perfil da hunt ou, sem hunt, o G.dpf (média das hunts da vocação na faixa de nível; _dev/build_dpf.py).
+// SCW = quanto vale o dano e a proteção em cada vocação, calibrado com as listas de equipamento do TibiaPal: a 1:1 um anel só de
+// proteção (Prismatic ring) ganhava aos anéis de classe do nível 400 em todos os magos e no paladino. Servem para comparar itens,
+// não para prever o dano. Os modos pesam D, P e a velocidade (SCMODE). O jogador vê a nota 0–100 do notaItem, não este valor.
 const SCMODE={combat:[1,1,1],bal:[1,1,1],off:[1.5,.5,1],def:[.6,1.6,1],speed:[.3,.3,10]};
+const SCW={knight:[1,1.1],monk:[1.5,.8],paladin:[1.5,.8],druid:[1.6,.8],sorcerer:[1.6,.8]}; // [dano, proteção] no modo
+const SCML=9; // multiplicador do ML nos feitiços (nível/5 + SCML × ML)
 const SCMLS={knight:.03,paladin:.3,monk:.15,druid:1,sorcerer:1}; // parte do dano que vem do ML (paladino: holy, Divine Barrage desde junho de 2026)
+const SCSPL={knight:.6,monk:.6,paladin:0}; // parte do dano físico que vem de feitiços com skill e ataque (o resto: ataques automáticos)
 const SCBLK={knight:.6,monk:.5,paladin:.25,druid:.2,sorcerer:.2}; // parte dos golpes físicos em que a defesa (escudo/arma) conta
 const SCSPD={knight:.15,monk:.2,paladin:.35,druid:.35,sorcerer:.35}; // quanto vale a velocidade (quem foge e ataca à distância precisa mais)
-const SCPV={knight:1.15,monk:1.05,paladin:1,druid:.9,sorcerer:.9}; // peso da proteção por vocação
 const SCEL={sorcerer:{fire:1/3,energy:1/3,death:1/3},druid:{ice:.5,earth:.5}}; // ML de um elemento: parte dos feitiços desse elemento
-const SCPF={physical:.45,fire:.12,earth:.12,energy:.1,ice:.08,death:.08,holy:.05,lifedrain:.02,manadrain:.01}; // dano recebido sem hunt
+const SCPF={physical:.45,fire:.12,earth:.12,energy:.1,ice:.08,death:.08,holy:.05,lifedrain:.02,manadrain:.01}; // sem G.dpf
+// dano recebido sem hunt: o G.dpf da vocação na faixa do nível da personagem
+function scPF(c){ const t=G.dpf&&G.dpf[c.voc]; if(!t||!t.length) return SCPF; const L=c.level||8; return (t.find(x=>L<=x[0])||t[t.length-1])[1]; }
 // skill e ML para as contas: os da personagem (Personagens ou highscores); se ficaram no valor por omissão, uma estimativa pelo nível
-function chStats(c){ const L=Math.max(8,c.level||8), v=c.voc, mage=isMage(c);
-  const sk = !mage&&(c.skill||0)>10 ? c.skill : Math.round(v==="paladin"?Math.min(130,70+L*.15):v==="knight"||v==="monk"?Math.min(125,60+L*.13):10);
-  const ml = (c.ml||0)>0 ? c.ml : Math.round(mage?Math.min(140,30+L*.22):v==="paladin"?Math.min(45,5+L*.08):v==="monk"?Math.min(40,5+L*.06):Math.min(15,3+L*.02));
+// (r10: curvas que crescem devagar, como nos highscores: ML de mago 70 no 100, 94 no 400, 109 no 1000, 128 no 3000; skill 90/114/130/149)
+function chStats(c){ const L=Math.max(8,c.level||8), v=c.voc, mage=isMage(c), lg=Math.log2(Math.max(1,L/100)), pal=v==="paladin";
+  const sk = !mage&&(c.skill||0)>10 ? c.skill : mage ? 10 : Math.round(L<=100 ? (pal?25:20)+.7*L : (pal?95:90)+12*lg);
+  const ml = (c.ml||0)>0 ? c.ml : Math.round(mage ? (L<=100 ? 4+.66*L : 70+17*Math.log(L/100)) : pal?Math.min(45,5+L*.08):v==="monk"?Math.min(40,5+L*.06):Math.min(15,3+L*.02));
   return {L,sk,ml}; }
-function scBase(c){ const {L,sk,ml}=chStats(c), v=c.voc, k=v==="paladin"?.09:.085;
-  const At = v==="paladin" ? (L<90?40:L<150?70:80) : Math.min(55,30+L*.04); // ataque típico (arma + munição) para o nível
-  return {L,sk,ml,k,At,phys:k*At*sk+L/5,mag:L/5+4*ml,H:60+2.2*L,mls:SCMLS[v]??0,mage:isMage(c)}; }
+function scBase(c){ const {L,sk,ml}=chStats(c), v=c.voc, k=v==="paladin"?.09:.085, spl=SCSPL[v]||0;
+  const At = v==="paladin" ? (L<90?40:L<150?70:80) : Math.min(60,30+L*.04); // ataque típico (arma + munição) para o nível
+  return {L,sk,ml,k,At,spl,aut:k*At*sk+L/5,spe:2.05*(sk+2*At)+L/5,mag:L/5+SCML*ml,H:60+2.2*L,mls:SCMLS[v]??0,mage:isMage(c)}; }
+// dano físico com um ataque A (arma + munição), em % do de uma arma típica do nível: feitiços (parte spl) e ataques automáticos
+const scPhys=(B,A)=>B.spl*(2.05*(B.sk+2*A)+B.L/5)/B.spe+(1-B.spl)*(B.k*A*B.sk+B.L/5)/B.aut;
 function scoreItem(c,it,mode,prot,eff){
   if(it.ns||it.cu) return null;
-  const B=scBase(c), v=c.voc, M=SCMODE[mode]||SCMODE.combat, rs=relSkills(c), speed=mode==="speed";
-  const pf = prot&&typeof prot==="object" ? prot : prot ? Object.assign({},SCPF,{[prot]:(SCPF[prot]||0)+.5}) : SCPF, ph=pf.physical||0;
-  const skv=n=>100*(1-B.mls)*B.k*B.At*n/B.phys, mlv=n=>100*4*n/B.mag;
+  const B=scBase(c), v=c.voc, M=SCMODE[mode]||SCMODE.combat, W=SCW[v]||[1,1], rs=relSkills(c), speed=mode==="speed", P0=scPF(c);
+  const pf = prot&&typeof prot==="object" ? prot : prot ? Object.assign({},P0,{[prot]:(P0[prot]||0)+.5}) : P0, ph=pf.physical||0;
+  const skv=n=>100*(1-B.mls)*n*(B.spl*2.05/B.spe+(1-B.spl)*B.k*B.At/B.aut), mlv=n=>100*SCML*n/B.mag;
   let D=0,P=0,S=0,X=0;
   for(const [x,n] of Object.entries(it.sk||{})){ if(!n) continue;
     if(x==="ml"||(x==="ml_holy"&&v==="paladin")) D+=B.mls*mlv(n);
@@ -45528,7 +45579,9 @@ function scoreItem(c,it,mode,prot,eff){
     else if(x.startsWith("ml_")) D+=B.mls*mlv(n)*((SCEL[v]||{})[x.slice(3)]||0);
     else if(x==="shield") P+=v==="knight"?.25*n:0;
     else if((rs[x]||0)>0) D+=skv(n); }
-  if(it.mn&&v==="monk") D+=.6*skv(it.mn);
+  // r10: mantra (só no monk) = proteção fixa contra fogo, gelo, energia e terra, como a armadura contra o físico (TibiaWiki: "Mantra");
+  // antes contava como dano
+  if(it.mn&&v==="monk") P+=100*((pf.fire||0)+(pf.ice||0)+(pf.energy||0)+(pf.earth||0))*.75*it.mn/B.H;
   for(const [e,n] of Object.entries(it.ab||{})) P+=n*(pf[e]||0);
   if(it.arm) P+=100*ph*.75*it.arm/B.H;
   if(it.def||it.edef) P+=100*ph*(SCBLK[v]||.2)*.75*((it.def||0)+(it.edef||0))/B.H;
@@ -45542,19 +45595,22 @@ function scoreItem(c,it,mode,prot,eff){
   if(it.crit) D+=.15*(it.crit[0]*(50*ir+it.crit[1])+10*ir*it.crit[1])/100;
   if(it.lch) X+=1.5*Math.max(.3,ir)*(it.lch[0]/25+it.lch[1]/8);
   for(const t of it.ex||[]){ let m;
-    if((m=/perfect shot \+?(\d+)/i.exec(t))) D+=.35*(B.mage?50*m[1]/B.mag:200*(1-B.mls)*m[1]/B.phys); // só nos ataques automáticos a essa distância (≈ 1/3)
+    if((m=/perfect shot \+?(\d+)/i.exec(t))) D+=.35*(B.mage?50*m[1]/B.mag:200*(1-B.mls)*m[1]/B.aut); // só nos ataques automáticos a essa distância (≈ 1/3)
     else if((m=/cleave (\d+)/i.exec(t))) D+=.35*m[1];
-    else if((m=/(\d+)%? damage reflection/i.exec(t))) D+=30*m[1]/B.phys;
-    else if((m=/magic shield capacity \+?(\d+) and (\d+)/i.exec(t))) P+=B.mage?.002*m[1]+.4*m[2]:0;
+    else if((m=/(\d+)%? damage reflection/i.exec(t))) D+=30*m[1]/B.aut;
+    // r10: a capacidade do Magic Shield não tira dano (passa-o da vida para a mana): vale pouco, mais no sorcerer, que o usa mais
+    else if((m=/magic shield capacity \+?(\d+) and (\d+)/i.exec(t))) P+=B.mage?.002*m[1]+(v==="sorcerer"?.12:.06)*m[2]:0;
     else if((m=/life leech \+?(\d+)/i.exec(t))) P+=.5*m[1]; }
   // r6-t3: no monk, o ataque das armas conta com o elemento da ligação (it.bond: 16 energia, 11 físico, 9 terra); sem eff, EF = 1
   if(it.s==="weapon"){ const EF=x=>{ if(!eff||!x) return 1; const m=eff.min&&eff.min[x]; if(m!=null&&m<0) return 0; const e=eff[x]; return e==null?1:Math.max(0,e)/100; };
     if(it.wd) D+=50*((it.wd[1]+it.wd[2])/2)*EF(it.wd[0])/B.mag; // wand/rod: o que soma aos feitiços de cada volta (2 s)
     else { const am=(it.b==="bow"||it.b==="crossbow")?ammoAtk(it.b,B.L):0, pe=(v==="monk"&&it.bond)?it.bond:"physical";
       const A=((it.atk||0)+am)*EF(pe)+(it.wel?it.wel[1]*EF(it.wel[0]):0);
-      D+=100*(1-B.mls)*(B.k*A*B.sk+B.L/5)/B.phys*(1+(it.hit||0)/200); } }
-  let s=D*M[0]+P*M[1]*(SCPV[v]||1)+S*M[2]+X;
-  if(it.chg) s*=0.15; else if(it.dur&&it.s!=="ring"&&it.s!=="amulet") s*=0.6; else if(it.dur) s*= it.dur<900?0.35 : it.dur<1800?0.6 : it.dur<3600?0.8 : 0.9;
+      D+=100*(1-B.mls)*scPhys(B,A)*(1+(it.hit||0)/200); } }
+  let s=D*M[0]*W[0]+P*M[1]*W[1]+S*M[2]+X;
+  // r10: duração dos anéis e amuletos: os de 3 h que se recarregam (Charged …, Flamingo, Swan) ficam quase sem desconto; os de 1 h e de
+  // 30 min gastam-se e custam a manter
+  if(it.chg) s*=0.15; else if(it.dur&&it.s!=="ring"&&it.s!=="amulet") s*=0.6; else if(it.dur) s*= it.dur<900?0.35 : it.dur<1800?0.6 : it.dur<3600?0.75 : it.dur<7200?0.85 : 0.95;
   return Math.round(s*100)/100;
 }
 /* r8 */ // nota 0–100 para o jogador: valor do item ÷ o do melhor item do mesmo slot que a personagem pode usar até ao nível (mesmo
@@ -45587,7 +45643,10 @@ function pickSet(c,mode,prot,g,eff){
     if(g&&kt&&!allItems().some(it=>it.s==="weapon"&&it.b===kt&&it.l<=c.level&&canUse(c,it)&&g(it))){ const ow=ranked(c,"weapon",mode,prot,it=>it.l<=c.level&&!it.ns&&g(it),{slots:{}},eff)[0]; if(ow&&["sword","axe","club"].includes(ow.it.b)) kt=ow.it.b; }
     if(kt) c=Object.assign({},c,{wtype:kt}); }
   const L=c.level, ok=k=>it=>it.l<=L && !it.ns && (k==="ring"||k==="amulet"?!it.chg&&!(it.dur&&it.dur<900):true) && (!g||g(it));
-  const best=(k,set,h)=>ranked(c,k,mode,prot,it=>ok(k)(it)&&(!h||h(it)),set,eff)[0];
+  // r10: entre os itens a menos de 4 % do melhor (1 % nas armas), o de nível mais alto: são quase iguais e só mudam no elemento
+  // que protegem, e sem hunt o mais recente é a escolha de quase todos (Flamingo 270 em vez do Theurgic 220)
+  const best=(k,set,h)=>{ const r=ranked(c,k,mode,prot,it=>ok(k)(it)&&(!h||h(it)),set,eff), t=r[0]&&r[0].s; if(!t||t<=0) return r[0];
+    const m=t*(k==="weapon"?.99:.96); return r.filter(x=>x.s!=null&&x.s>=m).sort((a,b)=>b.it.l-a.it.l||b.s-a.s)[0]; };
   const opt=w=>{ if(!w) return {s:-1}; const sh=c.voc==="monk"?null:best("shield",{slots:{weapon:{id:w.it.id}}}); return {w,sh,s:(w.s??0)+(sh?(sh.s??0):0)}; };
   const a=opt(best("weapon",{slots:{}})), w1=best("weapon",{slots:{}},it=>!it.h2), b=w1&&(!a.w||w1.it.id!==a.w.it.id)?opt(w1):{s:-1}, ch=b.s>a.s?b:a;
   const out={}; if(ch.w) out.weapon=ch.w.it; if(ch.sh) out.shield=ch.sh.it;
