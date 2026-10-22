@@ -1,6 +1,6 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261021k" data-c></script></head><body>
 <title>Grimório de Tibia</title>
-<script>(function(){try{if(localStorage.getItem("grimorio-ui")==="modern"){var d=document.documentElement;d.setAttribute("data-ui","modern");var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1128,18 +1128,19 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whs .wse{fill:none;stroke:var(--wc);stroke-width:2.6;stroke-linecap:round;pointer-events:none}
 .whs .ws:hover .wsb,.whs .ws:hover .wsf{filter:brightness(1.4)}
 .whs .wmz{pointer-events:none;opacity:.8}
-.whs .wring{fill:none;stroke:#8A6A2A;stroke-opacity:.35;stroke-width:1;pointer-events:none}
+.whs .wring{fill:none;stroke:#C8973A;stroke-opacity:.42;stroke-width:1;pointer-events:none}
+.whs .wring2{fill:none;stroke:#000;stroke-opacity:.45;stroke-width:1;pointer-events:none}
 .whs .wbg{pointer-events:none}
-.whs .wbd{fill:#0D0A06;stroke:#4A3A22;stroke-width:1.6}
+.whs .wbd{stroke:#5B4520;stroke-width:1.6}
 .whs .wbg.part .wbd{stroke:#8C7442}
-.whs .wbg.full .wbd{fill:#120D08;stroke:var(--wc);stroke-width:2}
+.whs .wbg.full .wbd{stroke:var(--wc);stroke-width:2}
 .whs .wsi{fill:none;stroke:#7D6C50;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
 .whs .wbg.part .wsi{stroke:#CDB88C}
 .whs .wbg.full .wsi{stroke:#fff}
 .whs .wbg.full .wsi-mleech{stroke:#9AD1FF} .whs .wbg.full .wsi-lleech{stroke:#FFA3A3} .whs .wbg.full .wsi-skill{stroke:#A8FFA8} .whs .wbg.full .wsi-inst{stroke:#FFE083} .whs .wbg.full .wsi-vr{stroke:#F0E4FF}
-.whs .wpts{fill:#F6DC8C;font:700 15px var(--sans);text-anchor:middle} .whs .wpts.k{font-size:13px}
+.whs .wpts{font:700 16px Georgia,"Times New Roman",serif;text-anchor:middle;paint-order:stroke;stroke:#140C04;stroke-width:2.6px;letter-spacing:.02em} .whs .wpts.k{font-size:13px}
 .whs .wmi{fill:none;stroke:var(--wc);stroke-opacity:.45;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.whs .wmed.on .wmi{stroke:#fff;stroke-opacity:1}
+.whs .wmed.on .wmi{stroke:#fff;stroke-opacity:1;filter:drop-shadow(0 0 2px rgba(0,0,0,.8)) drop-shadow(0 0 5px var(--wc))}
 .whs .wpip{fill:#2A1F12;stroke:#3B2A0C;stroke-width:1.2}
 .whs .wpip.on{fill:var(--wc);stroke:#fff;stroke-opacity:.7}
 .whs.edit .ws.av .wsb{stroke:#F6DC8C;stroke-width:2.2;stroke-dasharray:6 4}
@@ -1183,6 +1184,228 @@ html[data-ui="modern"] a.elink:not(.npcn):is(:hover,:focus-visible){text-decorat
 .whp-ic{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--sunk);color:var(--gold);font-size:12px}
 .whp-gem,.whp-rv{width:22px;height:22px}
 .whp-rv path{fill:none;stroke:var(--wc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* r7: Wheel como no jogo — janela do cliente, roda grande ao centro (até 74% da altura do ecrã), barras dos dois lados */
+.shell:has(.panel.on[data-p="wheel"]){max-width:none}
+.whx{container-type:inline-size;margin:8px 0 18px}
+/* r7: na página da Wheel o título fica compacto, para a janela caber no ecrã sem scroll */
+/* a janela já tem a barra "Wheel of Destiny": o título da página fica só para os leitores de ecrã */
+.panel[data-p="wheel"]>.ph{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0}
+.whx-win{position:relative;z-index:1;--wsd:250px;--wsz:min(75vh, calc(100svh - 262px), calc(100cqi - 2*var(--wsd) - 44px));background:#262626;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px);border:1px solid #0c0c0c;border-radius:6px;box-shadow:inset 0 0 0 1px #474747,0 14px 40px rgba(0,0,0,.45);padding:0 10px 10px;color:#C9C9C9;font:13px/1.45 Verdana,Tahoma,var(--sans)}
+.whx-title{margin:0 -10px 10px;padding:6px 10px;text-align:center;font:700 12.5px Verdana,Tahoma,sans-serif;color:#BDBDBD;background:linear-gradient(#4b4b4b,#303030);border-bottom:1px solid #0c0c0c;border-radius:6px 6px 0 0;text-shadow:0 1px 0 #000}
+.whx-stage{display:grid;grid-template-columns:var(--wsd) var(--wsz) var(--wsd);justify-content:center;gap:10px;height:var(--wsz)}
+.whx-w{display:grid;place-items:center;min-width:0;min-height:0}
+.whx-w .whs{width:var(--wsz);height:var(--wsz);max-width:none;filter:none}
+.whx-side{display:flex;flex-direction:column;gap:8px;min-height:0;min-width:0}
+.whx-r .wbox{flex:1 1 0}
+.whx-l .wbox-sel{flex:1 1 0;min-height:150px}
+.whx-l{overflow-y:auto;scrollbar-width:thin}
+.whx-l .wbox-pts,.whx-l .wbox-info{flex:none}
+.whx-l .wbox-pts .wbox-b,.whx-l .wbox-info .wbox-b{overflow:visible}
+.whx-foot .whx-a{align-items:center}
+.whx-foot .whx-seg{background:#0F0F0F;border-color:#4A4A4A}
+.whx-foot .whx-msg{flex-basis:100%}
+.wsel-h2{margin:2px 0 0;padding-top:4px;border-top:1px solid #333;color:#C8973A;font-size:12px}
+.whx-foot .whx-imp{position:relative}
+.whx-foot .whx-imp summary{list-style:none;cursor:pointer}
+.whx-foot .whx-imp summary::-webkit-details-marker{display:none}
+.whx-foot .whx-imp[open] summary{border-color:#C8973A;color:#F0E3B8}
+.whx-foot .whx-imp form{position:absolute;right:0;bottom:calc(100% + 8px);z-index:6;display:flex;gap:6px;width:min(380px,82vw);margin:0;padding:8px;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B,0 10px 28px rgba(0,0,0,.55)}
+.whx-foot .whx-imp input{flex:1;min-width:0;width:auto}
+.wbox{display:flex;flex-direction:column;min-height:0;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B}
+.wbox h5{margin:0;padding:3px 8px;text-align:center;font:700 12px Verdana,Tahoma,sans-serif;letter-spacing:0;text-transform:none;color:#A3A3A3;background:linear-gradient(#3C3C3C,#2A2A2A);border-bottom:1px solid #0b0b0b}
+.wbox-b{padding:6px 8px;overflow:auto;min-height:0;flex:1 1 auto;display:grid;align-content:start;gap:4px}
+.wbox-av{padding:6px 8px;border-top:1px solid #0b0b0b;text-align:center;display:grid;gap:2px;color:#A3A3A3}
+.wbox-av b{color:#EDEDED;font-weight:400} .wbox-av b.bad{color:#FF7A6B}
+.wrow{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0}
+.wrow .wrn{display:inline-flex;align-items:center;gap:6px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wrow b{font-weight:400;color:#EDEDED;font-variant-numeric:tabular-nums;white-space:nowrap}
+.wrow.off{opacity:.5}
+.wrow .si.wic{--s:18px;border-radius:3px;flex:none}
+.wrow .whp-gem{width:15px;height:15px;flex:none}
+.wsub{margin:0 0 2px;font-size:12px;color:#A3A3A3;line-height:1.4}
+.wnone{margin:0;color:#8A8A8A}
+.wpts-row{display:flex;gap:6px} .wpts-row input{flex:1;min-width:0} .wpts-row .btn{flex:none}
+.wsug-box{margin-top:4px;padding-top:6px;border-top:1px solid #333;display:grid;gap:5px}
+.wsug-l{list-style:none;margin:0;padding:0;display:grid;gap:3px;max-height:96px;overflow:auto}
+.wsug-l li{display:flex;justify-content:space-between;align-items:center;gap:6px} .wsug-l li>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wsug-n{color:#7CF08C;font-weight:700}
+.whs .ws.sug .wsb{stroke:#7CF08C;stroke-width:2.6;stroke-dasharray:7 4;animation:wsugDash 1.2s linear infinite}
+@keyframes wsugDash{to{stroke-dashoffset:-22}}
+@media (prefers-reduced-motion:reduce){.whs .ws.sug .wsb{animation:none}}
+.whs .wsug rect{fill:#0B1F0E;stroke:#7CF08C;stroke-width:1} .whs .wsug text{fill:#9BFFAA;font:700 9px Verdana,sans-serif;text-anchor:middle;pointer-events:none}
+.wbox-pts label{color:#A3A3A3} .wbox-pts input{width:100%;padding:5px 8px;font:inherit;font-size:14px;color:#F2F2F2;background:#0F0F0F;border:1px solid #4A4A4A;border-radius:3px}
+.wsel-h{display:flex;gap:8px;align-items:center} .wsel-h>div{display:grid;gap:3px;justify-items:start} .wsel-h b{color:#F0E3B8}
+.wsel-h .si.lg{--s:40px;border-radius:4px}
+.wsel-g{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:50%;background:#0D0A06;border:2px solid #8C7442}
+.wsel-g svg{width:24px;height:24px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wsel-t,.wsel-d,.wsel-n{margin:0} .wsel-d{color:#B0B0B0;font-size:12px} .wsel-n{color:#D9A441;font-size:12px}
+.wbox-info .whx-seg{justify-self:start;background:#0F0F0F;border-color:#4A4A4A}
+.wbox-info .whx-btn{display:flex;gap:6px;flex-wrap:wrap}
+.wbox-info .whx-imp input{width:100%}
+.whx-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 14px;margin-top:10px;padding:7px 10px;background:#1C1C1C;border:1px solid #0b0b0b;box-shadow:inset 0 0 0 1px #3B3B3B}
+.whx-cur{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px} .whx-cur b{color:#F0E3B8;font-weight:700} .whx-cur .eyebrow{color:#8D8D8D}
+/* ícones das fatias: o feitiço (spells.png), apagado até a fatia ter pontos; selos de dedicação; aro dourado por cima */
+.whs .wspr{image-rendering:pixelated;pointer-events:none}
+.whs .wbg.empty .wspr{opacity:.55;filter:grayscale(.55) brightness(.85)} .whs .wbg.part .wspr{opacity:.8}
+.whs .wbr{fill:none;stroke:#5B4520;stroke-width:1.8;pointer-events:none} .whs .wbg.part .wbr{stroke:#A88B4A} .whs .wbg.full .wbr{stroke:var(--wc);stroke-width:2.2}
+.whs .wbg.empty .wded{opacity:.45}
+.whs .wsi-skill{stroke:#5BE36B} .whs .wsi-mleech{stroke:#5AA7FF} .whs .wsi-lleech{stroke:#FF6B6B} .whs .wsi-inst{stroke:#FFD36B} .whs .wsi-vr{stroke:var(--wc)}
+.whs .wbg.empty .wsi{opacity:.45}
+.wsel-g.wsi-skill svg{stroke:#5BE36B} .wsel-g.wsi-mleech svg{stroke:#5AA7FF} .wsel-g.wsi-lleech svg{stroke:#FF6B6B} .wsel-g.wsi-inst svg{stroke:#FFD36B} .wsel-g.wsi-vr svg{stroke:#E2C0FF}
+.whs .wmed:not(.on) .wspr{opacity:.35;filter:grayscale(1)}
+.whs .wfig{pointer-events:none}
+/* r9: roda lendária — moldura de pedra, runas que acendem, aura de cada domínio, filigrana, constelações, partículas de luz */
+.whs .wdeco,.whs .wrunes,.whs .wfig{pointer-events:none}
+.whs .wrn{fill:none;stroke:#8A6A2A;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.whs .wrn.lit{stroke:var(--rc);opacity:1}
+.whs .wrn-p{stroke:#C8973A;opacity:.55}
+.whs .wrn-g{stroke:#F8E3A0;opacity:.5;stroke-width:1.4}
+.whs .wrn-k{stroke:#2A1C08;opacity:.9;stroke-width:1.7}
+.whs .wsep{fill:#6E5220}
+.whs .wfil path{fill:none;stroke:#C8973A;stroke-opacity:.55;stroke-width:1.3;stroke-linecap:round}
+.whs .wleaf{fill:#C8973A;fill-opacity:.38}
+.whs .wcon{fill:none;stroke:#E6C06A;stroke-opacity:.2;stroke-width:.7}
+.whs .wtw{fill:#FFF1B8;opacity:.6}
+.whs .wgeo{fill:none;stroke:#E6C06A;stroke-opacity:.075;stroke-width:1}
+.whs .wring3{fill:none;stroke:#E6C06A;stroke-opacity:.4;stroke-width:1.4;stroke-linecap:round}
+.whs .wring4{fill:none;stroke:#E6C06A;stroke-opacity:.12}
+.whs .wcglow{opacity:.6}
+.whs .wrays path{fill:#E6C06A;fill-opacity:.3}
+.whs .wrays.on path{fill:var(--wc);fill-opacity:.55}
+.whs .whalo{opacity:.5}
+.whs .wcrack{fill:none;stroke:#000;stroke-opacity:.55;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.whs .wbr2{fill:none;stroke:#C8973A;stroke-opacity:.28;stroke-width:.8;pointer-events:none}
+.whs .wshine{fill:none;stroke:#fff;stroke-opacity:.22;stroke-width:1.6;stroke-linecap:round;pointer-events:none}
+.whs .wbg.empty .wshine{stroke-opacity:.1}
+.whs .wbgl{fill:none;stroke:var(--wc);stroke-width:2.4;opacity:.55;filter:blur(1.6px);pointer-events:none}
+.whs .wmotes circle{fill:#FFE7A3;opacity:0;animation:wmote 8s ease-in-out infinite}
+@keyframes wmote{0%{opacity:0;transform:translateY(6px)}30%{opacity:.85}100%{opacity:0;transform:translateY(-26px)}}
+.whs .waura{animation:waura 7s ease-in-out infinite alternate}
+@keyframes waura{from{opacity:.72}to{opacity:1}}
+.whs .wtw{animation:wtw 3.6s ease-in-out infinite}
+@keyframes wtw{0%,100%{opacity:.15}50%{opacity:.95}}
+@media (prefers-reduced-motion:reduce){.whs .wmotes,.whs .waura,.whs .wtw{animation:none}}
+/* r11: secção «Gemas e fragments» */
+.wgf>h3{margin:0 0 10px}
+.wgf-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:14px;align-items:start}
+.wgf-g>.card:first-child{grid-column:1/-1}
+.wgf-x{overflow-x:auto;overflow-y:hidden;max-width:100%;padding-bottom:2px}
+.wgf-t thead th,.wgf-t td,.wgf-t tbody th{white-space:normal}
+html[data-ui] body .wgf-t tbody th,html[data-ui] body .wgf-t tbody th b{text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:inherit;font-family:inherit}
+html[data-ui] body .wgf-t tbody th b{font-weight:700}
+.wgf-g .card{display:grid;gap:10px;margin:0}
+.wgf-g h4{margin:0}
+.wgf-t{width:100%;border-collapse:collapse;font-size:13px}
+.wgf-t th,.wgf-t td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.wgf-t thead th{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.wgf-t td{font-variant-numeric:tabular-nums}
+.wgf-n{display:inline-flex;flex-wrap:wrap;align-items:center;gap:2px 3px} .wgf-n b{margin-left:4px;white-space:nowrap}
+.wgf-n .wico{border-radius:0}
+.wgf-l{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px;color:var(--ink-2,inherit)}
+/* r10: ícones do cliente */
+.whs .wx-cv,.whs .wx-pk,.whs .wx-gm,.whs .wx-dd{pointer-events:none}
+.whs .wbg.cv.empty .wx-cv{filter:brightness(.9)}
+.whs .wbg.cv.part .wx-cv{filter:none}
+.whs .wbr-c{fill:none;stroke:#000;stroke-opacity:.6;stroke-width:1.3;pointer-events:none}
+.whs .wbg.cv.part .wbr-c{stroke:#A88B4A;stroke-opacity:.9}
+.whs .wbg.cv.full .wbr-c{stroke:var(--wc);stroke-opacity:1;stroke-width:1.8}
+.whs .wbg.cv.empty .wx-dd{filter:none}
+.whs .wmed:not(.on) .wx-pk{filter:brightness(.85)}
+.whs .wmed.on .wx-pk{filter:drop-shadow(0 0 4px var(--wc))}
+.whs .wx-gm{filter:drop-shadow(0 0 3px var(--wc))}
+.wico{display:inline-block;flex:none;vertical-align:middle;border-radius:50%}
+.wsel-ci{border-radius:50%;box-shadow:0 0 0 1px #000,0 0 10px -2px rgba(230,192,106,.5)}
+.wsel-gem .wico{border-radius:0}
+.wrow .wgi.wico,.wopt-g .wgi.wico,.whp-gem.wico{border-radius:0}
+.hwh-k .wico{margin-right:4px}
+/* r9: guia da gema (como obter e colocar) no painel Selection e no tooltip */
+.wguide{margin-top:4px;padding-top:6px;border-top:1px solid #333}
+.wg-l{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:6px;counter-reset:wg}
+.wg-l li{display:grid;grid-template-columns:20px minmax(0,1fr);column-gap:7px;row-gap:1px;align-items:start;counter-increment:wg}
+.wg-l li::before{content:counter(wg);grid-row:span 2;width:18px;height:18px;display:grid;place-items:center;border-radius:50%;font:700 10.5px Verdana,sans-serif;color:#1A1209;background:radial-gradient(circle at 35% 30%,#FFF1B8,#C8973A 60%,#7A4E12)}
+.wg-l li b{color:var(--wc,#F0E3B8);font-size:12px} .wg-l li span{color:#B9B9B9;font-size:12px;line-height:1.45}
+.whtip.big{pointer-events:auto;max-height:min(72vh,560px);overflow:auto;overscroll-behavior:contain}
+.whtip .wguide{margin:0;padding:0;border:0}
+/* r9: os tooltips da roda com o ar da roda: pedra escura, fio de ouro */
+html[data-ui] body .whtip,.whtip{background:linear-gradient(180deg,#211910,#120D07);color:#D8CDB6;border:1px solid #6B5226;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(255,241,184,.08),0 12px 32px rgba(0,0,0,.6),0 0 18px -6px rgba(230,192,106,.45);font:12.5px/1.45 Verdana,Tahoma,var(--sans)}
+.whtip b{color:#F0E3B8} .whtip .muted,.whtip .tiny.muted{color:#A89C84}
+.whtip .wsel-sec{color:#E6C06A}
+details.wguide summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px}
+details.wguide summary::-webkit-details-marker{display:none}
+details.wguide summary::before{content:"";width:0;height:0;border-left:5px solid currentColor;border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}
+details.wguide[open] summary::before{transform:rotate(90deg)}
+.wpin-n{margin:0 0 4px;padding:3px 7px;border-radius:3px;background:#2A2412;border:1px solid #5B4520;color:#E6C06A;font-size:11.5px}
+/* r8: gemas lapidadas nos vessels, revelações e fatias com foco; o que está no painel Selection fica marcado */
+.whs .wsock,.whs .wmed,.whs .ws{outline:none}
+.whs .wsock,.whs .wmed{cursor:pointer}
+.whs .wsk-hit{fill:transparent}
+.whs .wsk-ring,.whs .wmd-ring{fill:none;stroke:var(--wc);stroke-width:2.6;opacity:0;transition:opacity .15s;pointer-events:none}
+.whs .wsock:hover .wsk-ring,.whs .wsock:focus-visible .wsk-ring,.whs .wsock.sel .wsk-ring,.whs .wmed:hover .wmd-ring,.whs .wmed:focus-visible .wmd-ring,.whs .wmed.sel .wmd-ring{opacity:1}
+.whs .wsock:focus-visible .wsk-ring,.whs .wmed:focus-visible .wmd-ring{stroke:#FFF3C4;stroke-dasharray:4 3}
+.whs .wsk-glow{opacity:.6}
+.whs .wsock.on .wgem{filter:drop-shadow(0 0 3px var(--wc))}
+.whs .wvp{fill:#1A130B;stroke:#5B4520;stroke-width:1}
+.whs .wvp.on{fill:var(--wc);stroke:#fff;stroke-opacity:.7}
+.whs .wgem-sp{animation:wgemSp 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes wgemSp{0%,100%{opacity:.15;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
+.whs .ws:focus-visible .wsb,.whs .ws.sel .wsb{stroke:#FFF3C4;stroke-width:3;stroke-dasharray:none;animation:none}
+.whs .ws.sel .wsb,.whs .ws.sel .wsf{filter:brightness(1.3)}
+.whs .ws:focus-visible .wsb{stroke-dasharray:6 3}
+@media (prefers-reduced-motion:reduce){.whs .wgem-sp{animation:none}}
+.wgi{width:18px;height:18px;flex:none;overflow:visible}
+.wrow .wgi{width:17px;height:17px}
+.wsel-gem{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#2A2010 0,#0D0A06 72%);border:2px solid #B08A3E;box-shadow:0 0 10px -2px var(--wc)}
+.wsel-gem .wgi{width:34px;height:34px}
+.wsel-sec{margin:6px 0 1px;font:700 11px Verdana,Tahoma,sans-serif;color:#8D8D8D;text-transform:uppercase;letter-spacing:.05em}
+.wsel-sec.bis{color:#7CF08C}
+.wmods{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.wmods li{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.wmods li>span{min-width:0;overflow-wrap:anywhere}
+.wbox-b>*{min-width:0} .wmods li b{color:#EDEDED;font-weight:400;white-space:nowrap;font-variant-numeric:tabular-nums}
+.wmods .wmk{display:inline-block;width:7px;height:7px;margin-right:7px;transform:rotate(45deg);background:var(--wc,#C8973A);vertical-align:1px}
+.wmods li.sup>span{color:#F0E3B8} .wmods li.sup .wmk{background:#F6DC8C;box-shadow:0 0 5px #F6DC8C}
+.wmods.alt li{color:#B9B9B9} .wmods.alt .wmk{background:#6B6B6B}
+.wrev-st{list-style:none;margin:2px 0;padding:0;display:grid;gap:3px}
+.wrev-st li{display:flex;justify-content:space-between;gap:8px;padding:2px 6px;border-left:3px solid #3A3A3A;color:#9A9A9A}
+.wrev-st li.on{border-color:var(--wc);color:#EDEDED} .wrev-st li b{font-weight:700}
+.wrow-b{appearance:none;font:inherit;color:inherit;text-align:left;width:calc(100% + 8px);background:none;border:0;cursor:pointer;padding:3px 4px;margin:0 -4px;border-radius:3px;min-height:26px}
+.wrow-b:hover,.wrow-b.on{background:#2C2C2C}
+.wrow-b.on{box-shadow:inset 2px 0 0 #C8973A}
+.wrow-b:focus-visible{outline:2px solid #C8973A;outline-offset:-2px}
+.whtip-sel{display:grid;gap:4px;max-width:300px;font-size:12.5px}
+.whx-alt{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.whx-alt>span{color:#8D8D8D}
+.whx-chip{appearance:none;font:inherit;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:3px 11px;border:1px solid #4A4A4A;border-radius:999px;background:#0F0F0F;color:#DADADA}
+.whx-chip .tiny{color:#8D8D8D}
+.whx-chip:hover,.whx-chip:focus-visible{border-color:#C8973A;color:#F0E3B8;outline:none}
+.whx-chip.calc{border-style:dashed}
+@media (pointer:coarse){ .whx-chip,.wrow-b{min-height:40px} }
+.whx-opts{display:grid;gap:12px;margin:0 0 18px}
+.whx-opts:empty{display:none}
+.whx-oh{display:grid;gap:2px} .whx-oh h3{margin:0;font-size:19px} .whx-oh p{margin:0}
+.wopt-l{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:12px}
+.wopt{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:var(--r1);background:var(--surface);transition:border-color .15s}
+.wopt:hover{border-color:var(--accent)}
+.wopt.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.wopt .whs.sm{max-width:120px}
+.wopt-b{display:grid;gap:7px;justify-items:start;min-width:0}
+.wopt-b h4{margin:0;font-size:15px;line-height:1.3}
+.wopt-b .pills{margin:0}
+.wopt-g{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--muted)} .wopt-g span{display:inline-flex;align-items:center;gap:5px}
+.wopt-a{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+@media (max-width:420px){ .wopt{grid-template-columns:minmax(0,1fr)} .wopt .whs.sm{max-width:170px;margin:0} }
+/* r8: na página da Wheel a roda precisa da largura toda: o anúncio lateral (ecrãs de 1600 px ou mais) não aparece aqui */
+body:has(.panel.on[data-p="wheel"]) .ad-slot.ad-side{display:none}
+/* janela estreita: a roda em cima, as barras por baixo (duas colunas, uma no telemóvel) */
+@container (max-width: 1040px){
+  .whx-win{--wsz:min(calc(100cqi - 22px), 82vh)}
+  .whx-stage{grid-template-columns:minmax(0,1fr);height:auto}
+  .whx-w{order:-1}
+  .whx-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));align-items:start}
+  .whx-r .wbox,.whx-l .wbox-sel{flex:none}
+  .wbox-b{max-height:none;overflow:visible}
+}
 #wheelTable tr.sel td{background:var(--accent-soft)}
 #wheelTable .wh-btns{white-space:nowrap}
 @media (max-width:1100px){ .whx-g{grid-template-columns:minmax(0,1fr)} }
@@ -2799,7 +3022,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
         <div class="card" style="display:grid;gap:10px">
           <h3 style="font-size:20px">Quanto tempo até ao próximo objetivo</h3>
           <div class="controls">
-            <label for="tgtIn">Objetivo <input id="tgtIn" type="number" min="9" max="3000" style="width:86px"></label>
+            <label for="tgtIn">Objetivo <input id="tgtIn" type="number" min="9" max="5000" style="width:86px"></label>
             <label for="bonusSel">Bónus <select id="bonusSel"><option value="1">Sem bónus</option><option value="1.5">Stamina verde ×1,5</option><option value="2">Stamina + XP Boost ×2</option></select></label>
             <label for="preyChk"><input id="preyChk" type="checkbox"> Prey de XP (+25%)</label>
           </div>
@@ -2863,8 +3086,10 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <!-- WHEEL -->
     <section class="panel" data-p="wheel">
       <div class="ph"><span class="eyebrow">Combate</span><h2>Wheel of Destiny</h2><p id="wheelLead"></p></div>
+      <div class="whx" id="wheelX"></div>
+      <div class="whx-opts" id="wheelOpts"></div>
+      <div class="sec wgf" id="wheelGF"></div>
       <div class="callout" id="wheelNow"></div>
-      <div class="whx card" id="wheelX"></div>
       <div class="sec"><h3>Todas as builds, por pontos</h3><div class="scroll-x card wh-tw"><table id="wheelTable"></table></div><div class="grid2" id="gemBox"></div><p class="note">Builds do TibiaPal (Kusnier), lidas no planner. Para usar um código no jogo: Wheel → Manage Presets → Import. Redistribuir pontos é grátis, mas só num templo. Pontos = nível − 50 (mais pergaminhos e a Way of the Monk). O código abre no planner do TibiaPal ou no do tibia.com.</p></div>
     </section>
 
@@ -2990,7 +3215,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <div class="card lvcard" id="lvCard"><div class="lvc-h"><h3>Nível e skills de <span id="lvcName"></span></h3><p class="small muted">Vêm do Tibia e atualizam-se sozinhos. Só precisas de mexer aqui para simular outro nível ou se a personagem foi preenchida à mão.</p></div>
         <div class="lvctl">
           <div class="lvstep"><div class="pm"><button id="down" aria-label="Descer um nível">−</button><button id="up" aria-label="Subir um nível">+</button></div>
-          <label for="lvIn"><span>Nível</span> <input id="lvIn" type="number" min="8" max="3000"></label></div>
+          <label for="lvIn"><span>Nível</span> <input id="lvIn" type="number" min="8" max="5000"></label></div>
           <label for="pctIn"><span data-md="Progresso">%</span> <input id="pctIn" type="number" min="0" max="99" aria-label="Percentagem para o próximo nível"></label>
           <label for="mlIn" id="mlLab"><span>Magic level</span> <input id="mlIn" type="number" min="0" max="200"></label>
           <label for="skIn" id="skLab"><span>Skill</span> <input id="skIn" type="number" min="10" max="200"></label>
@@ -3062,10 +3287,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <div class="ad-slot " data-ad-slot="rodape" role="complementary" aria-label="Publicidade"><span class="ad-lab">Publicidade</span><span class="ad-size">728 × 90 · 320 × 100</span></div>
       <div class="sf-in">
         <div class="sf-brand"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h15a5 5 0 0 1 5 5v17H11a5 5 0 0 1-5-5z"/><path d="M6 22a5 5 0 0 1 5-5h15"/><path d="M15 8l1.5 3 3 .4-2.2 2 .6 3-2.9-1.5-2.9 1.5.6-3-2.2-2 3-.4z" fill="currentColor" stroke="none"/></svg><div><b>Grimório de Tibia</b><p>Hunts, builds, itens e criaturas para Tibia, sempre pela tua vocação.</p></div></div>
-        <div class="sf-mode"><span id="uiLab">Visual</span><div class="seg" role="group" aria-labelledby="uiLab">
-          <button type="button" data-ui-set="original" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/></svg>Original</button>
-          <button type="button" data-ui-set="modern" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Modern</button>
-        </div></div>
+        <div class="sf-lang" data-lang-picker></div>
       </div>
       <p class="sf-legal">Dados de outubro de 2026. Tibia é uma marca da CipSoft GmbH; o Grimório é um site de fãs, sem ligação oficial.</p>
     </footer>
@@ -43180,11 +43402,15 @@ catch (err) {
 }
 const G = G0;
 const $ = id => document.getElementById(id);
+// r12: nível máximo aceite no site (os primeiros dos highscores já passam os 3100: o antigo teto de 3000 cortava-lhes o nível)
+const LVMAX = 5000;
 const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const hasKey=(o,k)=>o!=null&&Object.prototype.hasOwnProperty.call(o,k); // r2-t5: '#npc/toString', '#item/__proto__'... não são páginas (r5-t2: no topo, pode usar-se em qualquer função)
-const nf = n => Math.round(n).toLocaleString("pt-PT");
-const nfdec = n => (+n||0).toLocaleString("pt-PT",{maximumFractionDigits:2}); // r6-t3: com até 2 casas decimais ('0,2'), para a regeneração
-const fmt = n => n==null||!isFinite(n) ? "—" : Math.abs(n)<999.5 ? nf(n) : (Math.abs(n)>=999500 ? (n/1e6).toFixed(n%1e6===0?1:2).replace(/\.?0+$/,"").replace(".",",")+"kk" : Math.round(n/1e3)+"k"); // r5-t3: abaixo de 1000 o número inteiro (nunca '0k'); a partir de 999 500 'kk' (nunca '1000k')
+const LOC = (window.I18N && I18N.locale) || "pt-PT"; // r7: a língua do rodapé (shared/i18n.js) decide o formato dos números e das datas
+const DECSEP = (1.5).toLocaleString(LOC).charAt(1);
+const nf = n => Math.round(n).toLocaleString(LOC);
+const nfdec = n => (+n||0).toLocaleString(LOC,{maximumFractionDigits:2}); // r6-t3: com até 2 casas decimais ('0,2'), para a regeneração
+const fmt = n => n==null||!isFinite(n) ? "—" : Math.abs(n)<999.5 ? nf(n) : (Math.abs(n)>=999500 ? (n/1e6).toFixed(n%1e6===0?1:2).replace(/\.?0+$/,"").replace(".",DECSEP)+"kk" : Math.round(n/1e3)+"k"); // r5-t3: abaixo de 1000 o número inteiro (nunca '0k'); a partir de 999 500 'kk' (nunca '1000k')
 const VOCS = ["knight","paladin","sorcerer","druid","monk"];
 const ELN = {physical:"físico",fire:"fogo",ice:"gelo",earth:"terra",energy:"energia",holy:"holy",death:"morte",drown:"afogamento",lifedrain:"dreno de vida",manadrain:"dreno de mana"}; // r6-t3: dano de life/mana drain (o life leech é o 'roubo de vida')
 const chip = e => `<span class="chip c-${e}">${ELN[e]||e}</span>`;
@@ -43274,6 +43500,8 @@ function migrate(d){
   if (!d || typeof d!=="object" || d.v!==4 || !Array.isArray(d.chars)) return null;
   try { d = JSON.parse(JSON.stringify(d)); } catch(e){ return null; } // cópia editável (os dados da conta chegam só de leitura)
   const s = defaults(); s.chars = d.chars.map(c=>mkChar(c)).filter(c=>VOCS.includes(c.voc));
+  // r12: até 21/10/2026 o nível era cortado em 3000; quem ficou guardado assim recebe o nível que o Tibia deu na última atualização
+  s.chars.forEach(c=>{ if(c.level===3000 && c.tib && +c.tib.level>3000) c.level=Math.min(LVMAX,Math.round(+c.tib.level)); });
   s.active = s.chars.some(c=>c.id===d.active) ? d.active : (s.chars[0]?s.chars[0].id:null);
   s.custom = Array.isArray(d.custom)?d.custom.filter(x=>x&&x.id&&x.n):[];
   s.ui = Object.assign(s.ui, d.ui||{}); return s;
@@ -43298,6 +43526,8 @@ const capOf = (c) => 470 + G.voc[c.voc].cap*(c.level-8);
 const isMage = c => c.voc==="druid"||c.voc==="sorcerer";
 const shield = c => Math.round(7*c.ml + 7.6*c.level + Math.max(300, 0.4*c.level));
 const wpts = L => Math.max(0, L-50);
+// r7: pontos da Wheel de uma personagem = nível − 50 + os que comprou (Hunting Task Shop, pergaminhos): c.wpx, escrito na página da Wheel
+const wpOf = (c,L) => wpts(L==null ? c.level : L) + Math.max(0, Math.round(+(c&&c.wpx)||0));
 function seg(el, list, cur, cb){ el.innerHTML = list.map(([v,t])=>`<button data-v="${esc(v)}" aria-pressed="${String(cur)===String(v)}">${t}</button>`).join(""); el.onclick = e => { const b=e.target.closest("button[data-v]"); if(!b) return; cb(b.dataset.v); }; }
 
 /* ---------- quests ---------- */
@@ -44096,7 +44326,7 @@ function renderHero(){
   $("skLab").hidden = isMage(c); $("skLab").firstChild.textContent = vd.skill||"Skill";
   $("ringProg").setAttribute("stroke-dashoffset", (276.46*(1-c.pct/100)).toFixed(1));
   $("whoName").innerHTML = `<span class="vocglyph">${VI(c.voc,"lg")}</span>${esc(c.name||vd.n)} <span class="tag acc">${esc(vd.promo)}</span>`;
-  const st = [[nf(hpOf(c)),"vida","hp"],[nf(manaOf(c)),"mana","mp"],[nf(capOf(c)),"capacidade","cap"],[wpts(L),"pontos da Wheel","wh"]];
+  const st = [[nf(hpOf(c)),"vida","hp"],[nf(manaOf(c)),"mana","mp"],[nf(capOf(c)),"capacidade","cap"],[wpOf(c,L),"pontos da Wheel","wh"]];
   if (isMage(c)) st.splice(2,0,[nf(shield(c)),"Magic Shield","ms"]);
   $("stats").style.setProperty("--n", st.length);
   $("stats").innerHTML = st.map(([b,s,k])=>`<div class="stat" data-k="${k}"><i class="sti" aria-hidden="true"><svg viewBox="0 0 24 24">${STI[k]}</svg></i><b>${b}</b><span${k==="wh"?' data-md="Wheel"':""}>${s}</span></div>`).join("");
@@ -44109,7 +44339,7 @@ const STI = {hp:'<path d="M12 20s-7-4.4-9.2-8.7A5 5 0 0 1 12 6.6a5 5 0 0 1 9.2 4
 const TMI = {w:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5z"/>', g:'<path d="M6 3.5h12v15l-6-3.2-6 3.2z"/>',
   p:'<path d="m12 3.6 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/>', u:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>', s:'<path d="M19.5 11A7.5 7.5 0 0 0 6 6.6L4.5 8"/><path d="M4.5 4v4h4M4.5 13A7.5 7.5 0 0 0 18 17.4l1.5-1.4"/><path d="M19.5 20v-4h-4"/>'};
 const tmi = k => `<svg class="tmi" viewBox="0 0 24 24" aria-hidden="true">${TMI[k]}</svg>`;
-function setLevel(L){ const c=C(); L=Math.max(8,Math.min(3000,Math.round(L)||c.level)); c.level=L; if(c.target<=L) c.target=0; ST.ui.band=null; save(); renderAll(); }
+function setLevel(L){ const c=C(); L=Math.max(8,Math.min(LVMAX,Math.round(L)||c.level)); c.level=L; if(c.target<=L) c.target=0; ST.ui.band=null; save(); renderAll(); }
 $("up").onclick=()=>setLevel(C().level+1); $("down").onclick=()=>setLevel(C().level-1);
 $("lvIn").onchange=()=>setLevel(parseInt($("lvIn").value,10));
 $("pctIn").onchange=()=>{ C().pct=Math.max(0,Math.min(99,parseInt($("pctIn").value,10)||0)); save(); renderHero(); renderInicio(); };
@@ -44142,7 +44372,7 @@ function renderInicio(){
   const steps=[];
   const keyQ = cand.filter(h=>h.q && !qDone(c,h.q) && h.cmp.cls!=="bad").sort((a,b)=>(b.xp||0)-(a.xp||0))[0];
   if (keyQ){ const q=QBY[keyQ.q]; steps.push({q:keyQ.q,t:`Fazer <b>${esc(qName(keyQ.q))}</b>`,d:`Abre ${keyQ.p.n}${q?(q.s==="solo"?" — fazes sozinho.":q.s==="parcial"?" — sozinho até à luta final.":" — pede grupo."):""}`}); }
-  const ws=(G.wheel[c.voc]||[]), cw=ws.filter(w=>w.p<=wpts(L)).pop(), nw=ws.find(w=>w.p>wpts(L));
+  const ws=(G.wheel[c.voc]||[]), cw=ws.filter(w=>w.p<=wpOf(c,L)).pop(), nw=ws.find(w=>w.p>wpOf(c,L));
   if (cw) steps.push({t:`Wheel: <b>${esc(cw.t)}</b>`,d:nw?`Próxima build com ${nw.p} pontos (nível ${nw.p+50}).`:"Build completa para os teus pontos."}); else if(nw) steps.push({t:"Wheel: ainda sem pontos",d:`A primeira build chega com ${nw.p} pontos (nível ${nw.p+50}).`});
   const ch = vd.charms.find(k=>!c.charms[k]); if (ch){ const cm=G.charms[ch]; steps.push({t:`Charm seguinte: <b>${esc(cm.n)}</b> (${esc(cm.c.split(" / ")[0])} pontos)`,d:cm.d}); }
   const im = vd.imbs.findIndex((x,i)=>!c.imb["i"+i]); if (im>=0) steps.push({t:`Imbuement: <b>${esc(vd.imbs[im].s)}</b>`,d:vd.imbs[im].i});
@@ -44158,7 +44388,7 @@ function renderInicio(){
   const h = opts.find(x=>String(x.i)===String(c.hunt));
   const cur = expFor(L) + (expFor(L+1)-expFor(L))*c.pct/100, need = Math.max(0, expFor(c.target)-cur);
   const mult = parseFloat(c.bonus) + (c.prey?0.25:0);
-  if (h && need>0){ const hrs=need/(h.xp*mult); $("calcOut").textContent = hrs<1 ? Math.round(hrs*60)+" min" : hrs.toFixed(1).replace(".",",")+" h"; const ses=Math.ceil(hrs/3); $("calcSub").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?"sessão":"sessões"} de 3 horas.`; }
+  if (h && need>0){ const hrs=need/(h.xp*mult); $("calcOut").textContent = hrs<1 ? Math.round(hrs*60)+" min" : hrs.toFixed(1).replace(".",DECSEP)+" h"; const ses=Math.ceil(hrs/3); $("calcSub").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?"sessão":"sessões"} de 3 horas.`; }
   else { $("calcOut").textContent="—"; $("calcSub").textContent = opts.length ? "Escolhe um objetivo acima do teu nível." : "Sem hunts com XP medida para este nível."; }
   // timeline
   const all = milestones(), ev = all.filter(e=>e.l>=L-20 && e.l<=L+150).filter((e,i,arr)=>arr.findIndex(x=>x.l===e.l)>=0).slice(0,14);
@@ -44193,7 +44423,7 @@ function members(){
   const c=C(), out=[{id:"me", voc:c.voc, level:c.level, cid:c.id, name:c.name||G.voc[c.voc].n, me:true}];
   (ST.ui.party||[]).forEach(m=>{
     if(m.cid){ const x=ST.chars.find(y=>y.id===m.cid); if(x && x.id!==c.id) out.push({id:m.id, voc:x.voc, level:x.level, cid:x.id, name:x.name||G.voc[x.voc].n}); }
-    else if(VOCS.includes(m.voc)) out.push({id:m.id, voc:m.voc, level:Math.max(8,Math.min(3000,Math.round(+m.level)||c.level)), name:G.voc[m.voc].n});
+    else if(VOCS.includes(m.voc)) out.push({id:m.id, voc:m.voc, level:Math.max(8,Math.min(LVMAX,Math.round(+m.level)||c.level)), name:G.voc[m.voc].n});
   });
   return out;
 }
@@ -44459,7 +44689,7 @@ function renderHunts(){
   if((f.cls.length||f.city) && b!=="upto"){
     const byB={}; let n=0; filterHunts(allRows,f,c).forEach(h=>{ if(!doable(h,c) || inWin(h)) return; const i=bandOf(h.l); if(i>=0){ byB[i]=(byB[i]||0)+1; n++; } });
     const bs=Object.keys(byB).map(Number).sort((x,y)=>x-y);
-    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} ${n} ${n===1?"hunt":"hunts"} ${esc([f.cls.length?"de "+f.cls.map(k=>clsName(k).toLowerCase()).join(" ou "):"", f.city?"em "+f.city:""].filter(Boolean).join(" "))} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
+    if(bs.length) more=`<div class="hmore"><span class="small muted">${list.length?"Também há":"Há"} <span>${n}</span> ${n===1?"hunt":"hunts"}${f.cls.length?` de <span>${esc(f.cls.map(k=>clsName(k).toLowerCase()).join(", "))}</span>`:""}${f.city?` em <span>${esc(f.city)}</span>`:""} que já ${grp?"podem":"podes"} fazer noutras faixas:</span><button class="btn small" data-hband="upto">Ver todas até ${grp?"ao vosso":"ao teu"} nível</button>${bs.map(i=>`<button class="btn small ghost" data-hband="${i}">${bandLabel(BANDS[i])} · ${byB[i]}</button>`).join("")}</div>`;
   }
   const empty = grp && !allRows.length ? `Não há hunts recomendadas para ${ms.map(m=>G.voc[m.voc].n).join(" e ")} ao mesmo tempo.` : "Nada com estes filtros nesta faixa. Tira um filtro ou escolhe outra faixa de nível.";
   const cardsH = list.map(h=>grp?groupCard(h,catsOf(h)):huntCard(h,catsOf(h))); if(cardsH.length>8) cardsH.splice(6,0,adSlot("hunts","728 × 90 · 320 × 100","ad-feed"));
@@ -44492,7 +44722,7 @@ $("huntFilters").addEventListener("click", e=>{ const f=hfState(), c=C(); let b;
   else if(an==="data-hcls-all"&&ST.ui.hfAll) box.querySelectorAll(".hf-x").forEach(g=>g.classList.add("hf-in")); });
 $("huntFilters").addEventListener("change", e=>{
   const t=e.target;
-  if(t.dataset.pmvoc || t.dataset.pmlvl){ const m=(ST.ui.party||[]).find(x=>x.id===(t.dataset.pmvoc||t.dataset.pmlvl)); if(m){ if(t.dataset.pmvoc) m.voc=t.value; else m.level=Math.max(8,Math.min(3000,Math.round(+t.value)||m.level)); } save(); renderHunts(); return; }
+  if(t.dataset.pmvoc || t.dataset.pmlvl){ const m=(ST.ui.party||[]).find(x=>x.id===(t.dataset.pmvoc||t.dataset.pmlvl)); if(m){ if(t.dataset.pmvoc) m.voc=t.value; else m.level=Math.max(8,Math.min(LVMAX,Math.round(+t.value)||m.level)); } save(); renderHunts(); return; }
   /* r5-t2 */ if(t.matches("[data-hcity]")){ const f=hfState(); f.city=t.value||null; if(f.city&&(ST.ui.band==null||ST.ui.band==="me")) ST.ui.band="upto"; HFMISS=""; save(); renderHunts(); const s2=$("huntFilters").querySelector("[data-hcity]"); if(s2) s2.focus({preventScroll:true}); return; }
   const ev=ST.ui.ev||(ST.ui.ev={t:"cls",v:"",p:50,on:false});
   if(t.id==="evT"){ const v=t.value; ST.ui.evPick=v;
@@ -44524,7 +44754,16 @@ const SPG = {
   "elemental synthesis":"M12 3c.8 4.8 4.2 8.2 9 9-4.8.8-8.2 4.2-9 9-.8-4.8-4.2-8.2-9-9 4.8-.8 8.2-4.2 9-9z",
   "shared conservation":"M8 3.5c2.3 2.9 3.8 5 3.8 7a3.8 3.8 0 0 1-7.6 0c0-2 1.5-4.1 3.8-7zM16.5 10c2 2.4 3.3 4.2 3.3 5.9a3.3 3.3 0 0 1-6.6 0c0-1.7 1.3-3.5 3.3-5.9z",
   "nature's embrace":"M20 4C11 4 5 9 5 16c0 1.2.2 2.3.5 3.3 1.5.5 2.9.7 4.5.7 6.5 0 10-6 10-16zM4 21c3-4 6.5-7.5 11-10",
-  "divine defiance":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM7.5 14h9M9 14a3 3 0 0 1 6 0M12 6.8v1.2M15.8 10.2l.6-.6M8.2 10.2l-.6-.6"
+  "divine defiance":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM7.5 14h9M9 14a3 3 0 0 1 6 0M12 6.8v1.2M15.8 10.2l.6-.6M8.2 10.2l-.6-.6",
+  /* r9: revelações da Wheel sem sprite: coração com ankh (segunda vida), feixe com os vizinhos, coroa sobre chamas (senhor dos stances),
+     escudo com espada, árvore que cura, duas explosões, lótus */
+  "gift of life":"M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11zM12 12.2c-1.2 0-1.9-.9-1.9-2s.8-1.9 1.9-1.9 1.9.8 1.9 1.9-.7 2-1.9 2zM12 12.2v4.8M9.8 13.8h4.4",
+  "beam mastery":"M3.5 20.5 20.5 3.5M3.5 15.5 15.5 3.5M8.5 20.5l12-12M2.2 21.8l2.6-2.6M18 2.5l1 1.5 1.5 1 1.5-1",
+  "lord of destruction":"M4.5 10.5 6 4.5l3.5 3.5L12 3.5l2.5 4.5L18 4.5l1.5 6zM7 21c-1.6-2-1-4 .8-5.5 0 1.4.6 2 1.4 2.3-.2-2.2.6-4 2.8-5.3-.6 2.6.8 3.8 2.2 5 .3-1 .2-1.8-.2-2.6 2.2 1.4 3 4.2 1 6.1z",
+  "combat mastery":"M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6zM12 6.5v9M9.3 13.4h5.4M12 15.5v2.5",
+  "blessing of the grove":"M12 3.5a5 5 0 0 0-4.6 7A4 4 0 0 0 8 18h8a4 4 0 0 0 .6-7.5A5 5 0 0 0 12 3.5zM12 18v3M9.5 21h5M12 8.5v5M9.5 11h5",
+  "twin bursts":"M8 3.5l1.3 4L13 8.8l-3.7 1.3L8 14l-1.3-3.9L3 8.8l3.7-1.3zM16 10l1.3 4 3.7 1.3-3.7 1.3L16 20.5l-1.3-3.9-3.7-1.3 3.7-1.3z",
+  "ascetic":"M12 5c2 2.2 3 4.6 3 7.5 0 2.4-1.2 4.4-3 5.5-1.8-1.1-3-3.1-3-5.5 0-2.9 1-5.3 3-7.5zM12 18c-3.5 0-7-1.8-8.5-5.5 2.5-.6 5 0 7 1.6M12 18c3.5 0 7-1.8 8.5-5.5-2.5-.6-5 0-7 1.6M5 20.5h14"
 };
 function sicon(o){ // o: {k:[candidatos], name, el, cls, n}
   const i=spIdx(...(o.k||[])), sz=/\bsm\b/.test(o.cls||"")?30:(/\blg\b/.test(o.cls||"")?48:40), badge=o.n?`<span class="n">${o.n}</span>`:"";
@@ -44611,9 +44850,9 @@ if("ResizeObserver" in window) new ResizeObserver(hbNavSync).observe($("hotbar")
 $("spFilter").addEventListener("click", e=>{ const b=e.target.closest("[data-spf]"); if(!b) return; spFilter=b.dataset.spf; renderRotation(); });
 
 // números do planner (em inglês) em pt-PT: 'Mana +1,050' → 'Mana +1050'; 'Mitigation Multiplier 11.25%' → '11,25%'
-function wnum(s){ return String(s==null?"":s).replace(/(\d),(?=\d{3}\b)/g,"$1").replace(/(\d)\.(\d)/g,"$1,$2"); }
+function wnum(s){ if(/^en/.test(LOC)) return String(s==null?"":s); /* r7: em inglês os números do planner ficam como vêm */ return String(s==null?"":s).replace(/(\d),(?=\d{3}\b)/g,"$1").replace(/(\d)\.(\d)/g,"$1,$2"); }
 function renderWheel(){
-  const c=C(), ws=G.wheel[c.voc]||[], pts=wpts(c.level), cur=ws.filter(w=>w.p<=pts).pop(), nx=ws.find(w=>w.p>pts);
+  const c=C(), ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), nx=ws.find(w=>w.p>pts);
   $("wheelLead").textContent = `${pts} pontos de promoção`;
   /* r6-t5 */ // cada vantagem num .wpk (chips no Modern) e o separador num .wsep (no Original lê-se como antes); números com wnum
   const pk = (lab,wk,a,f) => a&&a.length?`<div data-wk="${wk}"><b>${lab}:</b> ${a.map(x=>`<span class="wpk">${esc(wnum(f(x)))}</span>`).join('<span class="wsep"> · </span>')}</div>`:"";
@@ -44642,6 +44881,19 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-co
    O que dá cada fatia, as regras de ligação e os pontos de cada build vêm de data/wheel.json (_dev/build_wheel.py). */
 let WHD=null, WHP=null, WHN=0, WSEL=null;
 const whLoad = () => WHP || (WHP = dsafe("wheel").then(d=>{ WHD = d&&d.slots ? d : null; return WHD; }));
+/* r13: roda calculada (data/wheelopt.json, feito por _dev/build_wheel_opt.py): um modelo aprendido com as builds do TibiaPal dá,
+   para cada foco da vocação (sorcerer: energia/fogo; paladin: holy/físico), a melhor roda para cada total de pontos (passos de 25) */
+let WOPT=null, WOPP=null;
+const woptLoad = () => WOPP || (WOPP = dsafe("wheelopt").then(d=>{ WOPT = d&&d.voc ? d : null; return WOPT; }));
+const WB36 = "0123456789abcdefghijklmnopqrstuvwxyzABCDE";
+function whCalc(voc,pts){ const F=WOPT&&WOPT.voc[voc]; if(!F||!WHD) return []; const st=WOPT.step||25, b=Math.max(0,Math.min(4000,pts|0)), i=Math.floor(b/st);
+  return F.map(f=>{ const row=f.a.slice(i*36,i*36+36); if(row.length<36) return null; const P=[...row].map(ch=>Math.max(0,WB36.indexOf(ch))*5);
+    whCalcRest(P,b-P.reduce((x,y)=>x+y,0));
+    return {t:f.n?`Calculada (${f.n})`:"Calculada", p:b, note:"", calc:f.k, pts:P, c:null}; }).filter(Boolean); }
+// os pontos que sobram do passo de 25 vão para as fatias abertas do domínio com mais pontos
+function whCalcRest(P,left){ if(left<=0) return; const full=i=>P[i]>=WHD.slots[i][1], dom=d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?P[i]:0),0);
+  const open=WHD.slots.map((sl,i)=>i).filter(i=>!full(i)&&(!WHD.adj[i].length||WHD.adj[i].some(full))).sort((a,b)=>dom(WHD.slots[b][0])-dom(WHD.slots[a][0]));
+  for(const i of open){ if(left<=0) break; const r=Math.min(left,WHD.slots[i][1]-1-P[i]); if(r>0){ P[i]+=r; left-=r; } } }
 const WHC = {green:["#9DF7A8","#33A949","#12521F"], red:["#FFA898","#DA3D30","#701410"], blue:["#A6D2FF","#3179DA","#11397A"], purple:["#E2C0FF","#9452DA","#45197C"]}; // claro, base, fundo
 const WHDN = {green:"verde", red:"vermelho", blue:"azul", purple:"roxo"};
 const WHVR = {green:"Top Left", red:"Top Right", blue:"Bottom Left", purple:"Bottom Right"};
@@ -44681,65 +44933,367 @@ function whGemMods(voc,n,prof,k){ if(!n) return []; const g=G.gems[voc]||{}, b=[
   (g.lesser_gems||["Hit Points","Mitigation"]).forEach(x=>{ if(x==="Any Elemental Resistance"){ if(!prof) b.push("Resistência ao elemento que mais te bate"); } else if(!b.includes(GEMPT[x]||x)) b.push(GEMPT[x]||x); });
   const m=n===1?1:2, o=(k||0)%Math.max(1,b.length), out=[...b.slice(o),...b.slice(0,o)].slice(0,m); if(n===3&&(g.greater_gems||[]).length) out.push(supPT(g.greater_gems[(k||0)%g.greater_gems.length]));
   return out; }
-// gema no vessel: losango pequeno (lesser), maior (regular) ou octógono lapidado (greater)
-function whGemShape(x,y,n,fill){ const r=[0,6.5,9,10.5][n], P=rr=>[...Array(8)].map((_,k)=>{ const [a,c]=whPt(rr,k*45+22.5); return `${(x+a).toFixed(1)},${(y+c).toFixed(1)}`; }).join(" ");
-  if(n<3) return `<path d="M${x} ${y-r}L${x+r} ${y}L${x} ${y+r}L${x-r} ${y}Z" fill="${fill}" stroke="#fff" stroke-opacity=".55" stroke-width="1"/><path d="M${x} ${y-r}L${(x-r*.45).toFixed(1)} ${(y-r*.1).toFixed(1)}L${x} ${(y+r*.15).toFixed(1)}Z" fill="#fff" fill-opacity=".45"/>`;
-  return `<polygon points="${P(r)}" fill="${fill}" stroke="#fff" stroke-opacity=".6" stroke-width="1"/><polygon points="${P(r*.5)}" fill="#fff" fill-opacity=".25"/>`; }
-// SVG da roda; o = {size:'sm', edit, budget, label}
-function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})`, S=whSum(voc,pts), ed=!!o.edit, free=ed?(o.budget||0)-S.tot:0;
+// r8: gema lapidada, como no jogo: lesser = losango, regular = hexágono, greater = octógono; facetas com a luz de cima à esquerda
+function whGemG(x,y,n,d,R){ if(!n) return ""; const C=Array.isArray(d)?d:WHC[d], N=[0,4,6,8][n], r=R||[0,9,11,13][n], a0=n===3?-112.5:-90, st=360/N;
+  const Q=(rr,a)=>{ const [p,q]=whPt(rr,a); return `${(x+p).toFixed(1)} ${(y+q).toFixed(1)}`; };
+  let f=""; for(let k=0;k<N;k++){ const a=a0+k*st, b=a+st, t=(1+Math.cos((a+st/2-225)*Math.PI/180))/2;
+    f+=`<path d="M${Q(r,a)}L${Q(r,b)}L${Q(r*.5,b)}L${Q(r*.5,a)}Z" fill="${t>.72?C[0]:t>.3?C[1]:C[2]}"/>`; }
+  const ring=rr=>[...Array(N)].map((_,k)=>Q(rr,a0+k*st)).join("L");
+  return `<g class="wgem">${f}<path d="M${ring(r*.5)}Z" fill="${C[1]}"/><path d="M${Q(r*.5,a0+st*(N===4?2:N/2))}L${Q(r*.5,a0+st*(N===4?3:N/2+1))}L${Q(r*.12,225)}Z" fill="#fff" fill-opacity=".45"/><path d="M${ring(r)}Z" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="1"/>${n===3?`<path class="wgem-sp" d="M${Q(r*.7,225)}m0 -4l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" fill="#fff"/>`:""}</g>`; }
+// a mesma gema num ícone pequeno (painéis e cartões); sem gema: o encaixe vazio
+const whGemIco = (n,d,cls) => `<svg class="${cls||"wgi"}" viewBox="-15 -15 30 30" aria-hidden="true">${n?whGemG(0,0,n,d,13.5):`<path d="M0 -9 9 0 0 9 -9 0Z" fill="none" stroke="${WHC[d][1]}" stroke-width="1.8" stroke-dasharray="3 2.2"/>`}</svg>`;
+const WHSP = "spells.png?v=20261018r2"; // r7: o mesmo ?v= do .si (CSS): quando o spells.png mudar, muda os dois
+// r7: ícone de spells.png (32×32, 16 por linha) dentro do SVG da roda, centrado em (cx,cy), lado 2·r
+function whSpr(ix,cx,cy,r){ const x=(ix%16)*32, y=Math.floor(ix/16)*32, d=(r*2).toFixed(1);
+  return `<svg class="wspr" x="${(cx-r).toFixed(1)}" y="${(cy-r).toFixed(1)}" width="${d}" height="${d}" viewBox="${x} ${y} 32 32" overflow="hidden"><image href="${WHSP}" width="512" height="352"/></svg>`; }
+// o feitiço de cada fatia, como no jogo (índice em spells.png; −1 = sem sprite e fica o desenho)
+function whSpIx(voc,cv){ const V=WHD.voc[voc], k=cv.split(":")[0]; return k==="sp"?spIdx(V.sp[cv.slice(3)]):k==="inst"?spIdx(V.inst[cv.slice(5)]):-1; }
+// dedicação de cada fatia: o selo pequeno do ícone (vida, mana, capacidade, mitigação; vida e mana = dois selos)
+const WHDED = {hp:["#E5484D","M12 20.5s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8 4.5 4.5 0 0 1 8 2.8c0 5.8-8 11-8 11z"], mp:["#3D8BFF","M12 3.5s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"],
+  cap:["#D9A441","M5 9h14l-1 11H6zM9 9V7a3 3 0 0 1 6 0v2"], mit:["#A8B3C2","M12 3l7 2.6v5.6c0 4.4-3 8.1-7 9.8-4-1.7-7-5.4-7-9.8V5.6z"]};
+const whBadge = (t,x,y,r) => { const [c,d]=WHDED[t]; return `<g class="wded"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="#0B0805" stroke="${c}" stroke-width="1.1"/><path d="${d}" fill="${c}" transform="translate(${(x-r*.66).toFixed(1)} ${(y-r*.66).toFixed(1)}) scale(${(r*1.32/24).toFixed(3)})"/></g>`; };
+/* r10: ícones do próprio cliente (OTClient, modules/game_wheel: icons-skillwheel-largeperks / -mediumperks / -smallperks e
+   icons-gematelier-gemvariants64): wheelperks.png = 16 revelações (34 px; ordem por vocação em wheelclass.lua), wheelconv.png = 49 convicções
+   (30 px; o ícone de cada uma das 36 fatias por vocação vem de WheelIcons em icons.lua, na mesma ordem das fatias do código), wheelded.png =
+   13 dedicações (16 px), wheelgems.png = gemas (64 px: x = domínio × 192 + tamanho × 64, y = vocação × 64) */
+const WHIV = "?v=20261021";
+const WHS_PK = ["wheelperks.png"+WHIV,544,34], WHS_CV = ["wheelconv.png"+WHIV,1470,30], WHS_DD = ["wheelded.png"+WHIV,208,16], WHS_GM = ["wheelgems.png"+WHIV,768,320];
+const WHPKIX = {knight:[0,1,2,3], paladin:[0,4,5,6], sorcerer:[0,7,8,9], druid:[0,11,10,12], monk:[0,13,14,15]}; // verde, vermelho, azul, roxo
+const WHCVIX = Object.fromEntries(Object.entries({
+  knight:"8,5,37,7,38,12,37,13,6,38,14,5,11,7,37,10,6,38,39,5,12,40,7,13,6,14,39,5,11,40,10,39,7,40,6,9",
+  paladin:"17,5,37,15,38,22,37,21,6,38,20,5,19,15,37,18,6,38,39,5,22,40,15,21,6,20,39,5,19,40,18,39,15,40,6,16",
+  sorcerer:"35,5,37,34,38,27,37,36,6,38,26,5,25,34,37,24,6,38,39,5,27,40,34,36,6,26,39,5,25,40,24,39,34,40,6,27",
+  druid:"28,5,37,34,38,31,37,32,6,38,33,5,30,34,37,29,6,38,39,5,31,40,34,32,6,33,39,5,30,40,29,39,34,40,6,35",
+  monk:"42,5,37,43,38,47,37,45,6,38,46,5,48,43,37,44,6,38,39,5,47,40,43,45,6,46,39,5,48,40,44,39,43,40,6,41"}).map(([k,v])=>[k,v.split(",").map(Number)]));
+const WHDDIX = {hp:0, mp:1, hpmp:2, cap:3, mit:4};
+const WHVIX = {knight:0, paladin:1, sorcerer:2, druid:3, monk:4};
+// recorte de uma folha dentro do SVG da roda (centro cx,cy e raio r) e o mesmo em HTML (painéis), com a folha de fundo num <span>
+// (o filtro — brilho, cinzento — vai no <g> de fora: num <svg> encaixado o Chrome deixa de recortar)
+const whClip = (src,W,H,x,y,c,cx,cy,r,cls) => `<g class="${cls}"><svg x="${(cx-r).toFixed(1)}" y="${(cy-r).toFixed(1)}" width="${(2*r).toFixed(1)}" height="${(2*r).toFixed(1)}" viewBox="${x} ${y} ${c} ${c}" overflow="hidden"><image href="${src}" width="${W}" height="${H}"/></svg></g>`;
+const whClipH = (src,W,H,x,y,c,px,cls) => { const k=px/c; return `<span class="wico ${cls||""}" style="width:${px}px;height:${px}px;background:url(${src}) -${(x*k).toFixed(1)}px -${(y*k).toFixed(1)}px/${(W*k).toFixed(1)}px ${(H*k).toFixed(1)}px no-repeat" aria-hidden="true"></span>`; };
+const whPkIx = (voc,d) => (WHPKIX[voc]||[])[WHDOM.indexOf(d)];
+const whPkSvg = (voc,d,cx,cy,r) => { const ix=whPkIx(voc,d); return ix==null?"":whClip(...WHS_PK,ix*34,0,34,cx,cy,r,"wx-pk"); };
+const whPkIco = (voc,d,px,cls) => { const ix=whPkIx(voc,d); return ix==null?"":whClipH(...WHS_PK,ix*34,0,34,px,cls); };
+const whCvIco = (voc,i,px,cls) => { const ix=(WHCVIX[voc]||[])[i]; return ix==null?"":whClipH(...WHS_CV,ix*30,0,30,px,cls); };
+const whGemPos = (voc,d,n) => [WHDOM.indexOf(d)*192+(n-1)*64, (WHVIX[voc]||0)*64];
+const whGemSvg = (voc,d,n,cx,cy,r) => { if(WHVIX[voc]==null||!n) return ""; const [x,y]=whGemPos(voc,d,n); return whClip(...WHS_GM,x,y,64,cx,cy,r,"wx-gm"); };
+const whGemImg = (voc,d,n,px,cls) => { if(WHVIX[voc]==null||!n) return whGemIco(n,d,cls); const [x,y]=whGemPos(voc,d,n); return whClipH(...WHS_GM,x,y,64,px,cls); };
+// r10: o nome do item, como no jogo (Lesser Sage Gem, Sage Gem, Greater Sage Gem)
+const whGemName = (voc,n) => `${n===1?"Lesser ":n===3?"Greater ":""}${GEMVN[voc]||""} Gem`;
+// r9: runas gravadas (traços numa caixa de 6 × 10, centrada em 0,0): anel de fora, portões e frisos da moldura
+const WHRUNE = ["M-2 -5V5M-2 -5l4 2.5M-2 -1l4 2.5","M-2.5 5V-5l5 3V5","M-2 -5V5M-2 -2.5l3.5 2.5-3.5 2.5","M-2 5V-5l4 2.5-4 2.5 4 5","M2 -5l-4 5 4 5",
+  "M-3 -5l6 10M3 -5l-6 10","M-2.5 -5V5M2.5 -5V5M-2.5 -1.5l5 3","M0 -5V5M-2.5 -1.5l5 3","M-1 -4l-2.5 2.5L-1 1M1 -1l2.5 2.5L1 4","M0 -5V5M0 -5l2.5 2.5M0 5l-2.5-2.5",
+  "M0 5V-5M-3 -3.5L0 -.5 3 -3.5","M2 -5l-4 3.5 4 3-4 3.5","M0 5V-5M-3 -2L0 -5 3 -2","M-2 -5V5M-2 -5l4 2.5-4 2.5 4 2.5-4 2.5","M-2.5 5V-5M2.5 5V-5M-2.5 -5l5 4M2.5 -5l-5 4",
+  "M-1.5 5V-5l3 3","M0 -5l3 5-3 5-3-5z","M-3 -5V5L3 -5V5Z","M-3 5l3-4 3 4M0 1l-2.5-3L0 -5l2.5 3z"];
+const WHGOLD = ["#FFF1B8","#E0A93C","#7A4E12"];
+// r9: o desenho gravado de cada domínio, por cima das fatias: folhas (verde), chamas (vermelho), escamas (azul), estrelas (roxo) — [largura, altura, rotação, traço]
+const WHPAT = {green:[28,28,24,"M14 3c6 5 6 12 0 16-6-4-6-11 0-16zM14 8v10M14 19v6M3 24c4-3 7-3 9 0M25 24c-4-3-7-3-9 0"],
+  red:[26,26,-12,"M13 2c2 4 6 6 5 11-1 4-3 5-5 6 1-3 0-5-2-6 0 3-2 4-3 6-2-3-1-6 1-9 1-2 2-4 4-8zM0 24l4-4 4 4M18 24l4-4 4 4"],
+  blue:[24,12,0,"M0 12a12 12 0 0 1 24 0M4 12a8 8 0 0 1 16 0M8 12a4 4 0 0 1 8 0M-12 0a12 12 0 0 1 24 0M12 0a12 12 0 0 1 24 0"],
+  purple:[30,30,15,"M15 6l1.6 7.4L24 15l-7.4 1.6L15 24l-1.6-7.4L6 15l7.4-1.6zM3 4h.01M27 26h.01M26 4.5l1.5 1.5M4.5 26l-1.5 1.5"]};
+const WHQ = {green:180, red:270, blue:90, purple:0}; // onde começa cada quarto (graus do SVG, no sentido dos ponteiros do relógio)
+const whRune = (k,x,y,a,sc,cls,st) => `<path class="${cls||"wrn"}"${st?` style="${st}"`:""} d="${WHRUNE[((k%WHRUNE.length)+WHRUNE.length)%WHRUNE.length]}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${a.toFixed(1)}) scale(${sc})"/>`;
+const whSeg = (r1,r2,n,a0) => [...Array(n)].map((_,k)=>{ const a=(a0||0)+k*360/n, [x1,y1]=whPt(r1,a), [x2,y2]=whPt(r2,a); return `M${x1.toFixed(1)} ${y1.toFixed(1)}L${x2.toFixed(1)} ${y2.toFixed(1)}`; }).join("");
+// SVG da roda; o = {size:'sm', edit, budget, label, sug, big, sel}. r9: moldura de pedra com filigrana e constelações, aura de cada domínio,
+// runas no anel que acendem com os pontos do domínio, desenho gravado de cada domínio, medalhões com raios e contas, portões com runas
+// e pedra-chave, centro de ouro; nas rodas pequenas (cartões, hunts) fica só o essencial
+function whSVG(voc,pts,o){ o=o||{}; const id="wh"+(++WHN), U=x=>`url(#${id}${x})`, S=whSum(voc,pts), ed=!!o.edit, free=ed?(o.budget||0)-S.tot:0, sm=o.size==="sm", mo=!sm&&mdMotion();
   const full=new Set(WHD.slots.map((s,i)=>(pts[i]||0)>=s[1]?i:-1).filter(i=>i>=0));
-  const defs=`<linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCEBB0"/><stop offset=".28" stop-color="#E2B456"/><stop offset=".55" stop-color="#9B6B20"/><stop offset=".8" stop-color="#DDAA4C"/><stop offset="1" stop-color="#7A5316"/></linearGradient>
-    <linearGradient id="${id}gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6220"/><stop offset="1" stop-color="#3A270A"/></linearGradient>
-    <radialGradient id="${id}pl" cx="0" cy="0" r="420" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#30251A"/><stop offset="1" stop-color="#0D0905"/></radialGradient>
-    <pattern id="${id}mz" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M1 1h16v16H1zM5 5h8v8H5zM9 1v4M9 13v4M1 9h4M13 9h4" fill="none" stroke="#fff" stroke-opacity=".06" stroke-width="1.2"/></pattern>
-    ${WHDOM.map(d=>`<radialGradient id="${id}${d}" cx="0" cy="0" r="216" gradientUnits="userSpaceOnUse"><stop offset=".05" stop-color="${WHC[d][0]}"/><stop offset=".62" stop-color="${WHC[d][1]}"/><stop offset="1" stop-color="${WHC[d][2]}"/></radialGradient><linearGradient id="${id}${d}j" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${WHC[d][0]}"/><stop offset=".5" stop-color="${WHC[d][1]}"/><stop offset="1" stop-color="${WHC[d][2]}"/></linearGradient>`).join("")}`;
+  const defs=`<linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4C8"/><stop offset=".18" stop-color="#F0C66A"/><stop offset=".4" stop-color="#A8771F"/><stop offset=".55" stop-color="#6E4A14"/><stop offset=".7" stop-color="#D9A84E"/><stop offset=".86" stop-color="#FBE3A0"/><stop offset="1" stop-color="#8A5E1C"/></linearGradient>
+    <linearGradient id="${id}gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A561C"/><stop offset=".5" stop-color="#3A270A"/><stop offset="1" stop-color="#1E1405"/></linearGradient>
+    <radialGradient id="${id}gr" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#FFF4C8"/><stop offset=".35" stop-color="#E2B456"/><stop offset=".7" stop-color="#94661C"/><stop offset="1" stop-color="#4E340C"/></radialGradient>
+    <radialGradient id="${id}pl" cx="0" cy="0" r="430" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2E2318"/><stop offset=".55" stop-color="#15100A"/><stop offset="1" stop-color="#060403"/></radialGradient>
+    <radialGradient id="${id}wb" cx="0" cy="0" r="216" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2A2014"/><stop offset=".7" stop-color="#140F09"/><stop offset="1" stop-color="#090604"/></radialGradient>
+    <radialGradient id="${id}co" cx="0" cy="0" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33210D"/><stop offset=".7" stop-color="#170F07"/><stop offset=".9" stop-color="#5E3D10"/><stop offset="1" stop-color="#C99A3E"/></radialGradient>
+    <linearGradient id="${id}tg" x1="0" y1="-7" x2="0" y2="6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFF6D2"/><stop offset=".55" stop-color="#F2C766"/><stop offset="1" stop-color="#B07A22"/></linearGradient>
+    ${sm?"":`<radialGradient id="${id}cg" cx="0" cy="0" r="74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFD98A" stop-opacity=".5"/><stop offset=".5" stop-color="#FFB94A" stop-opacity=".14"/><stop offset="1" stop-color="#FFB94A" stop-opacity="0"/></radialGradient>
+    <clipPath id="${id}pc"><rect x="-281" y="-281" width="562" height="562" rx="46"/></clipPath>
+    <filter id="${id}nz" x="-300" y="-300" width="600" height="600" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 .88  0 0 0 0 .66  0 0 0 .09 0"/></filter>
+    <filter id="${id}cl" x="-300" y="-300" width="600" height="600" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".011" numOctaves="4" seed="9"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -1.15 0 0 0 .64"/></filter>
+    <filter id="${id}bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="${id}gw" x="-300" y="-300" width="600" height="600" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="1.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`}
+    ${WHDOM.map(d=>{ const [w,h,rot,pp]=WHPAT[d]; return `<radialGradient id="${id}${d}" cx="0" cy="0" r="216" gradientUnits="userSpaceOnUse"><stop offset=".05" stop-color="${WHC[d][0]}"/><stop offset=".62" stop-color="${WHC[d][1]}"/><stop offset="1" stop-color="${WHC[d][2]}"/></radialGradient>
+      <radialGradient id="${id}${d}m" cx=".4" cy=".34" r=".72"><stop offset="0" stop-color="${WHC[d][0]}"/><stop offset=".5" stop-color="${WHC[d][1]}"/><stop offset="1" stop-color="${WHC[d][2]}"/></radialGradient>
+      <radialGradient id="${id}${d}b" cx=".5" cy=".42" r=".62"><stop offset="0" stop-color="${WHC[d][2]}"/><stop offset="1" stop-color="#080604"/></radialGradient>
+      ${sm?"":`<radialGradient id="${id}${d}a"><stop offset="0" stop-color="${WHC[d][1]}" stop-opacity=".9"/><stop offset=".5" stop-color="${WHC[d][2]}" stop-opacity=".38"/><stop offset="1" stop-color="${WHC[d][2]}" stop-opacity="0"/></radialGradient>
+      <pattern id="${id}${d}p" width="${w}" height="${h}" patternUnits="userSpaceOnUse" patternTransform="rotate(${rot})"><path d="${pp}" fill="none" stroke="${WHC[d][0]}" stroke-opacity=".17" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></pattern>`}`; }).join("")}`;
   const sh=[], bd=[];
   WHD.slots.forEach(([d,mx,ded,cv],i)=>{ const g=whGeo(i), r1=WHR[g.ring], r2=WHR[g.ring+1], p=Math.min(pts[i]||0,mx), f=p/mx, k=cv.split(":")[0], st=f>=1?"full":p?"part":"empty";
     const av=ed&&p<mx&&free>0&&(!WHD.adj[i].length||WHD.adj[i].some(j=>full.has(j))), lock=ed&&!p&&!av;
-    sh.push(`<g class="ws ${st}${av?" av":""}${lock?" lock":""}" data-ws="${i}" style="--wc:${WHC[d][0]}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][2]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="${U(d)}"/>${f<1?`<path class="wse" d="${whLine(r1+(r2-r1)*f,g.a1,g.a2)}"/>`:""}`:""}</g>`);
-    const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?12.5:11.5, s=br/18.5;
-    bd.push(`<g class="wbg ${st}" style="--wc:${WHC[d][0]}"><circle class="wbd" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${br}"/><path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/></g>`); });
-  const ticks=[...Array(72)].map((_,k)=>`<circle cx="${whPt(236.5,k*5)[0].toFixed(1)}" cy="${whPt(236.5,k*5)[1].toFixed(1)}" r="1.3"/>`).join("");
-  const axes=[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect x="24" y="-3" width="192" height="6" fill="${U("g")}"/><rect x="26" y="-.6" width="188" height="1.2" fill="#3B2A0C" opacity=".75"/>
-    <path d="M160 -14 L200 -20 L248 -31 L248 31 L200 20 L160 14 Z" fill="${U("g")}" stroke="#3B2A0C" stroke-width="2"/><path d="M171 -8 L200 -12 L238 -21 L238 21 L200 12 L171 8 Z" fill="${U("gd")}"/>
-    <path d="M178 0H236M196 -11V11M218 -16V16" stroke="#F8E3A0" stroke-opacity=".45" stroke-width="1.2"/><circle cx="229" cy="0" r="7.5" fill="${U("g")}" stroke="#3B2A0C" stroke-width="1.5"/><circle cx="229" cy="0" r="2.8" fill="#3B2A0C"/></g>`).join("");
-  const med=WHDOM.map(d=>{ const sx=d==="green"||d==="blue"?-1:1, sy=d==="green"||d==="red"?-1:1, mx=sx*232, my=sy*232, st=S.rev[d], n=S.vr[d], ang=Math.atan2(sy,sx)*180/Math.PI;
-    const pips=[-26,0,26].map((da,k)=>{ const [px,py]=whPt(43,ang+da); return `<path class="wpip${k<st?" on":""}" d="M${(mx+px).toFixed(1)} ${(my+py-5.5).toFixed(1)}l5.5 5.5-5.5 5.5-5.5-5.5z"/>`; }).join(""), gx=sx*183, gy=sy*183;
-    return `<g class="wmed${st?" on":""}" data-wr="${d}" style="--wc:${WHC[d][0]}"><circle cx="${mx}" cy="${my}" r="47" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="41" fill="#22180E"/><circle cx="${mx}" cy="${my}" r="38" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34" fill="${st?U(d):"#15110C"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34" fill="${WHC[d][2]}" fill-opacity=".4"/>`}<path class="wmi" d="${WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>${pips}</g>
-      <g class="wsock${n?" on":""}"><circle cx="${gx}" cy="${gy}" r="17" fill="${U("g")}"/><circle cx="${gx}" cy="${gy}" r="13" fill="#0D0905"/>${n?whGemShape(gx,gy,n,U(d+"j")):`<path d="M${gx} ${gy-6}l6 6-6 6-6-6z" fill="none" stroke="#5B4520" stroke-width="1.5"/>`}</g>`; }).join("");
-  const riv=[[-160,-284],[160,-284],[-160,284],[160,284],[-284,-160],[-284,160],[284,-160],[284,160]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.6" fill="${U("g")}" stroke="#3B2A0C"/>`).join("");
+    const sg=o.sug&&o.sug[i];
+    sh.push(`<g class="ws ${st}${av?" av":""}${lock?" lock":""}${sg?" sug":""}${o.sel==="s:"+i?" sel":""}" data-ws="${i}"${o.big?` tabindex="0" aria-label="${esc(whConvName(voc,cv,d))}"`:""} style="--wc:${WHC[d][0]}"><path class="wsb" d="${whArc(r1,r2,g.a1,g.a2)}" fill="${WHC[d][2]}"/>${p?`<path class="wsf" d="${whArc(r1,r1+(r2-r1)*f,g.a1,g.a2)}" fill="${U(d)}"/>${f<1?`<path class="wse" d="${whLine(r1+(r2-r1)*f,g.a1,g.a2)}"/>`:""}`:""}</g>`);
+    const [cx,cy]=whPt((r1+r2)/2,(g.a1+g.a2)/2), br=g.ring===0?15:14, s=br/18.5, ix=whSpIx(voc,cv), X=cx.toFixed(1), Y=cy.toFixed(1);
+    /* r7: como no jogo: o ícone do feitiço (spells.png) ou o desenho, e o selo da dedicação em baixo (vida, mana, capacidade, mitigação) */
+    const ico=ix>=0?whSpr(ix,cx,cy,br*0.74):`<path class="wsi wsi-${k}" d="${WHIC[k]||WHIC.sp}" transform="translate(${(cx-12*s).toFixed(1)} ${(cy-12*s).toFixed(1)}) scale(${s.toFixed(3)})"/>`;
+    const bx=cx-br*0.74, by=cy+br*0.74, ci=(WHCVIX[voc]||[])[i], di=WHDDIX[ded];
+    const bad=di!=null?whClip(...WHS_DD,di*16,0,16,bx,by,6.4,"wx-dd"):ded==="hpmp"?whBadge("hp",bx,by,5.4)+whBadge("mp",cx+br*0.74,by,5.4):WHDED[ded]?whBadge(ded,bx,by,5.4):"";
+    /* r9: o selo da fatia é uma pedra engastada: fundo da cor do domínio, aro de ouro e, cheia, um halo da cor */
+    /* r10: com o ícone do cliente (já traz o aro), só um fio por fora a dizer o estado */
+    if(ci!=null) bd.push(`<g class="wbg cv ${st}" style="--wc:${WHC[d][0]}">${st==="full"&&!sm?`<circle class="wbgl" cx="${X}" cy="${Y}" r="${br+2.6}"/>`:""}<circle cx="${X}" cy="${Y}" r="${br}" fill="#080604"/>${whClip(...WHS_CV,ci*30,0,30,cx,cy,br,"wx-cv")}<circle class="wbr-c" cx="${X}" cy="${Y}" r="${br+.9}"/>${bad}${sg?`<g class="wsug"><rect x="${(cx-13).toFixed(1)}" y="${(cy-br-13).toFixed(1)}" width="26" height="12" rx="6"/><text x="${X}" y="${(cy-br-4).toFixed(1)}">+${sg}</text></g>`:""}</g>`);
+    else bd.push(`<g class="wbg ${st}${ix>=0?" spr":""}" style="--wc:${WHC[d][0]}">${st==="full"&&!sm?`<circle class="wbgl" cx="${X}" cy="${Y}" r="${br+2.6}"/>`:""}<circle class="wbd" cx="${X}" cy="${Y}" r="${br}" fill="${U(d+"b")}"/>${ico}<circle class="wbr" cx="${X}" cy="${Y}" r="${br}"/>${sm?"":`<circle class="wbr2" cx="${X}" cy="${Y}" r="${br+1.6}"/><path class="wshine" d="M${(cx+(br-2.6)*Math.cos(3.67)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(3.67)).toFixed(1)}A${br-2.6} ${br-2.6} 0 0 1 ${(cx+(br-2.6)*Math.cos(4.97)).toFixed(1)} ${(cy+(br-2.6)*Math.sin(4.97)).toFixed(1)}"/>`}${bad}${sg?`<g class="wsug"><rect x="${(cx-13).toFixed(1)}" y="${(cy-br-13).toFixed(1)}" width="26" height="12" rx="6"/><text x="${X}" y="${(cy-br-4).toFixed(1)}">+${sg}</text></g>`:""}</g>`); });
+  /* r9: moldura de pedra (grão e manchas), aura da cor de cada domínio (mais forte com mais pontos), filigrana, runas e constelações nas margens */
+  const aura=sm?"":`<g class="wdeco waura">${WHDOM.map(d=>{ const [x,y]=whPt(150,WHQ[d]+45), f=Math.min(1,S.dom[d]/1000); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="205" fill="${U(d+"a")}" opacity="${(0.18+0.55*f).toFixed(2)}"/>`; }).join("")}</g>`;
+  const STARS=[[92,-238],[116,-246],[141,-233],[153,-214],[104,-226]];
+  const fil=sm?"":[0,90,180,270].map((a,ai)=>`<g transform="rotate(${a})">${[1,-1].map((sx,si)=>`<g transform="scale(${sx} 1)"><g class="wfil"><path d="M60 -254Q85 -268 110 -255T158 -256"/><path d="M158 -256c8-3 9-11 2-12-5-1-7 4-3 6"/><path d="M60 -254c-6 2-7 9-1 10 4 1 6-3 3-5"/><path d="M118 -250q14 4 26 -2"/></g><path class="wleaf" d="M82 -260q5-8 12-6-4 7-12 6zM106 -255q4 7 11 7-3-7-11-7zM131 -260q5-8 12-6-4 7-12 6z"/>${[0,1,2,3,4].map(k=>whRune(ai*7+si*5+k*3,74+k*15,-271,0,.6,"wrn wrn-p")).join("")}<path class="wcon" d="M92 -238L116 -246L141 -233L153 -214M116 -246L104 -226"/>${STARS.map(([x,y],k)=>`<path class="wtw" style="animation-delay:-${((ai*2+si)*1.3+k*.9).toFixed(1)}s" d="M${x} ${y-3.2}l.8 2.4 2.4.8-2.4.8-.8 2.4-.8-2.4-2.4-.8 2.4-.8z"/>`).join("")}</g>`).join("")}</g>`).join("");
+  const riv=[[-160,-284],[160,-284],[-160,284],[160,284],[-284,-160],[-284,160],[284,-160],[284,160]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.8" fill="${U("gr")}" stroke="#2A1C08"/>`).join("");
+  const plate=`<rect x="-293" y="-293" width="586" height="586" rx="56" fill="${U("pl")}"/>${sm?"":`<g clip-path="${U("pc")}" class="wdeco"><rect x="-300" y="-300" width="600" height="600" filter="${U("cl")}"/><rect x="-300" y="-300" width="600" height="600" filter="${U("nz")}"/>${aura}${fil}</g>`}
+    <rect x="-293" y="-293" width="586" height="586" rx="56" fill="none" stroke="${U("g")}" stroke-width="4.5"/><rect x="-289" y="-289" width="578" height="578" rx="52" fill="none" stroke="#2A1C08" stroke-width="1.6"/><rect x="-282" y="-282" width="564" height="564" rx="47" fill="none" stroke="#C8973A" stroke-opacity=".5"/>${sm?"":`<rect x="-278" y="-278" width="556" height="556" rx="43" fill="none" stroke="#C8973A" stroke-opacity=".34" stroke-dasharray="1 5" stroke-linecap="round" stroke-width="1.6"/>`}${riv}`;
+  /* r9: anel de fora: aro de ouro, faixa escura com runas (12 por domínio, acendem da cor do domínio do meio para os lados com os pontos), aro de dentro com entalhes */
+  let runes;
+  if(sm) runes=`<g fill="#5E4415">${[...Array(72)].map((_,k)=>{ const [x,y]=whPt(232.7,k*5); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.3"/>`; }).join("")}</g>`;
+  else { const lit=[], dim=[]; let gi=0;
+    WHDOM.forEach(d=>{ const s0=WHQ[d], L=Math.round(12*Math.min(1,S.dom[d]/1000)), pos=[...Array(12)].map((_,k)=>s0+12+k*6), on=new Set([...pos].sort((a,b)=>Math.abs(a-s0-45)-Math.abs(b-s0-45)||a-b).slice(0,L));
+      pos.forEach(a=>{ const [x,y]=whPt(232.7,a), lt=on.has(a); (lt?lit:dim).push(whRune(gi++*7+3,x,y,a+90,.78,lt?"wrn lit":"wrn",lt?`--rc:${WHC[d][0]}`:"")); });
+      dim.push(`<path class="wsep" d="${[...Array(11)].map((_,k)=>{ const [x,y]=whPt(232.7,s0+15+k*6); return `M${(x-1).toFixed(1)} ${y.toFixed(1)}a1 1 0 1 0 2 0a1 1 0 1 0-2 0`; }).join("")}"/>`); });
+    runes=`<g class="wrunes">${dim.join("")}</g><g class="wrunes" filter="${U("gw")}">${lit.join("")}</g>`; }
+  const halo=sm?"":`<circle class="wdeco wring3" r="251" stroke-dasharray="1.5 8.5">${mo?`<animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="320s" repeatCount="indefinite"/>`:""}</circle><circle class="wdeco wring4" r="256.5"/>`;
+  const ring=`<circle r="246" fill="${U("g")}" stroke="#2A1C08" stroke-width="1"/><circle r="244.8" fill="none" stroke="#FFF4C8" stroke-opacity=".45" stroke-width=".8"/><circle r="240.5" fill="#150E07" stroke="#2A1C08" stroke-width="1.2"/>${runes}
+    <circle r="225" fill="${U("g")}"/><circle r="224.3" fill="none" stroke="#FFF4C8" stroke-opacity=".35" stroke-width=".7"/>${sm?"":`<path d="${whSeg(221,224,120,1.5)}" stroke="#5A3D10" stroke-width=".8"/>`}<circle r="220.5" fill="#0B0805"/><circle r="216" fill="${U("wb")}"/>`;
+  /* r9: geometria gravada no fundo (círculos, octograma, raios), que se vê através das fatias vazias, e o desenho de cada domínio por cima delas */
+  const geo=sm?"":`<g class="wdeco wgeo"><circle r="196"/><circle r="157"/><circle r="119"/><circle r="81"/><path d="M206 0L0 206L-206 0L0 -206ZM146 146H-146V-146H146Z"/><path d="${whSeg(30,214,16,11.25)}"/></g>`;
+  const pat=sm?"":`<g class="wdeco wpat">${WHDOM.map(d=>`<path d="${whArc(24,216,WHQ[d],WHQ[d]+90)}" fill="${U(d+"p")}"/>`).join("")}</g>`;
+  /* r9: eixos com cravos de ouro nos anéis; portões com bordo gravado, runas e uma pedra-chave */
+  const axes=[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect x="24" y="-3.4" width="192" height="6.8" fill="${U("g")}" stroke="#2A1C08" stroke-width=".8"/><rect x="26" y="-.6" width="188" height="1.2" fill="#3B2A0C" opacity=".75"/>
+    ${[62,100,138].map(r=>`<path d="M${r} -5.6l5.6 5.6-5.6 5.6-5.6-5.6z" fill="${U("gr")}" stroke="#2A1C08" stroke-width=".9"/><circle cx="${r}" cy="0" r="1.5" fill="#2A1C08"/>`).join("")}
+    <path d="M174 -30 L288 -54 L288 54 L174 30 Z" fill="${U("g")}" stroke="#2A1C08" stroke-width="2"/><path d="M184 -21 L278 -41 L278 41 L184 21 Z" fill="${U("gd")}"/>
+    <path d="M188 -16.5 L274 -35 L274 35 L188 16.5 Z" fill="none" stroke="#F8E3A0" stroke-opacity=".3" stroke-width=".9"/>
+    <path d="M186 -17 L276 -36M186 17 L276 36" stroke="#F8E3A0" stroke-opacity=".4" stroke-width="1.2" fill="none"/>
+    ${sm?"":whRune(a/90*4+1,192,-9,90,.5,"wrn wrn-g")+whRune(a/90*4+6,192,9,90,.5,"wrn wrn-g")}
+    <g class="wfig" fill="${U("g")}" stroke="#3B2A0C" stroke-width="1.2"><circle cx="250" cy="0" r="8.5"/><path d="M240 -15 Q226 -21 206 -14 L200 0 L206 14 Q226 21 240 15 Q246 0 240 -15Z"/><path d="M238 -13 L256 -25 L260 -21 M238 13 L256 25 L260 21" fill="none" stroke-width="3" stroke="${U("g")}"/><path d="M262 -4h8M262 4h8" stroke="#3B2A0C" stroke-width="1.4"/></g>
+    <path d="M282 -50v100" stroke="#2A1C08" stroke-width="3"/>${sm?"":`${whGemG(282,0,2,WHGOLD,6.5)}${whRune(a/90*3+2,282,-28,90,.55,"wrn wrn-k")}${whRune(a/90*3+9,282,28,90,.55,"wrn wrn-k")}`}</g>`).join("");
+  /* r9: medalhões das revelações: raios e contas de ouro, aro com brilho, pedra da cor do domínio (apagada e rachada enquanto não abre) */
+  const med=WHDOM.map(d=>{ const ri=spIdx(WHD.voc[voc].rev[d]), sx=d==="green"||d==="blue"?-1:1, sy=d==="green"||d==="red"?-1:1, mx=sx*232, my=sy*232, st=S.rev[d], n=S.vr[d], ang=Math.atan2(sy,sx)*180/Math.PI;
+    /* r9: o estágio são 3 pedras engastadas no aro, viradas para o centro; os 3 Vessel Resonance, contas no aro do encaixe da gema */
+    const pips=[-22,0,22].map((da,k)=>{ const [px,py]=whPt(47.5,ang+180+da); return `<path class="wpip${k<st?" on":""}" d="M${(mx+px).toFixed(1)} ${(my+py-4.6).toFixed(1)}l4.6 4.6-4.6 4.6-4.6-4.6z"/>`; }).join(""), gx=sx*183, gy=sy*183;
+    const vrp=[-42,0,42].map((da,k)=>{ const [px,py]=whPt(18.3,ang+180+da); return `<circle class="wvp${k<n?" on":""}" cx="${(gx+px).toFixed(1)}" cy="${(gy+py).toFixed(1)}" r="2.3"/>`; }).join("");
+    const rays=sm?"":`<g class="wdeco wrays${st?" on":""}" style="--wc:${WHC[d][0]}"><path d="${[...Array(24)].map((_,k)=>{ const a=k*15, [x1,y1]=whPt(49,a-1.7), [x2,y2]=whPt(k%2?56:62,a), [x3,y3]=whPt(49,a+1.7); return `M${(mx+x1).toFixed(1)} ${(my+y1).toFixed(1)}L${(mx+x2).toFixed(1)} ${(my+y2).toFixed(1)}L${(mx+x3).toFixed(1)} ${(my+y3).toFixed(1)}Z`; }).join("")}"/></g>${st?`<circle class="wdeco whalo" cx="${mx}" cy="${my}" r="44" fill="${WHC[d][1]}" filter="${U("bl")}"/>`:""}`;
+    const beads=sm?"":`<g fill="${U("g")}">${[...Array(28)].map((_,k)=>{ const [bx,by]=whPt(51.4,k*360/28); return `<circle cx="${(mx+bx).toFixed(1)}" cy="${(my+by).toFixed(1)}" r="1.5"/>`; }).join("")}</g>`;
+    const cracks=st||sm?"":`<path class="wcrack" d="M${mx-22} ${my-9}l8 4 5-6 9 5 4-3M${mx+3} ${my+16}l6-7 9 2M${mx-12} ${my+12}l5-4"/>`;
+    return `${rays}<g class="wmed${st?" on":""}${o.sel==="r:"+d?" sel":""}" data-wr="${d}"${o.big?` tabindex="0" aria-label="${esc(WHD.voc[voc].rev[d])}"`:""} style="--wc:${WHC[d][0]}">${beads}<circle cx="${mx}" cy="${my}" r="47.5" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${mx}" cy="${my}" r="44.6" fill="none" stroke="#FFF1B8" stroke-opacity=".45"/><circle cx="${mx}" cy="${my}" r="41" fill="#1A120A"/><circle cx="${mx}" cy="${my}" r="38.5" fill="${U("g")}"/><circle cx="${mx}" cy="${my}" r="34.5" fill="${st?U(d+"m"):"#141009"}"/>${st?"":`<circle cx="${mx}" cy="${my}" r="34.5" fill="${WHC[d][2]}" fill-opacity=".38"/>`}${cracks}${whPkSvg(voc,d,mx,my,31)||(ri>=0?whSpr(ri,mx,my,24):`<path class="wmi" d="${SPG[spKey(WHD.voc[voc].rev[d])]||WHRV[d]}" transform="translate(${mx-18} ${my-18}) scale(1.5)"/>`)}${pips}<circle class="wmd-ring" cx="${mx}" cy="${my}" r="54"/></g>
+      <g class="wsock${n?" on":""}${o.sel==="g:"+d?" sel":""}" data-wg="${d}"${o.big?` tabindex="0" aria-label="Vessel ${WHVR[d]}"`:""} style="--wc:${WHC[d][0]}"><circle class="wsk-hit" cx="${gx}" cy="${gy}" r="27"/><circle cx="${gx}" cy="${gy}" r="20" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/><circle cx="${gx}" cy="${gy}" r="16.5" fill="#0D0905"/>${n?`<circle class="wsk-glow" cx="${gx}" cy="${gy}" r="16.5" fill="${WHC[d][2]}"/>${whGemSvg(voc,d,n,gx,gy,15)||whGemG(gx,gy,n,d)}`:`<path d="M${gx} ${gy-7}l7 7-7 7-7-7z" fill="none" stroke="#6B5226" stroke-width="1.5" stroke-dasharray="3 2.4"/>`}<circle class="wsk-ring" cx="${gx}" cy="${gy}" r="22.5"/>${vrp}</g>`; }).join("");
+  /* r9: centro de ouro com entalhes, contas e núcleo; partículas de luz que sobem à volta da roda */
+  const hub=`${sm?"":`<circle class="wdeco wcglow" r="74" fill="${U("cg")}"/>`}<circle r="28" fill="${U("gr")}" stroke="#2A1C08" stroke-width="1.2"/>${sm?"":`<path d="${whSeg(25.3,27.5,32)}" stroke="#4E340C" stroke-width=".9"/>`}<circle r="24.2" fill="#1A1209" stroke="#FFF1B8" stroke-opacity=".4" stroke-width=".8"/><circle r="22" fill="${U("co")}"/>${sm?"":`<g fill="#E6C06A" fill-opacity=".75">${[...Array(12)].map((_,k)=>{ const [x,y]=whPt(23.1,k*30+15); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r=".75"/>`; }).join("")}</g>`}<text y="5.5" class="wpts${S.tot>=1000?" k":""}" fill="${U("tg")}">${S.tot}</text>`;
+  const motes=sm||!mo?"":`<g class="wdeco wmotes">${[...Array(16)].map((_,k)=>{ const [x,y]=whPt(250+(k*7)%26,k*22.5+11); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1+(k%3)*.45).toFixed(2)}" style="animation-delay:-${(k*1.7%9).toFixed(1)}s;animation-duration:${(7+(k%4)*1.6).toFixed(1)}s"/>`; }).join("")}</g>`;
   const lab=o.label||`Wheel of Destiny de ${G.voc[voc].n}: ${S.tot} pontos`;
-  return `<svg class="whs${o.size==="sm"?" sm":""}${ed?" edit":""}" viewBox="-300 -300 600 600" role="img" aria-label="${esc(lab)}" data-wv="${voc}" data-wp="${WHD.slots.map((s,i)=>pts[i]||0).join(",")}"><defs>${defs}</defs>
-    <rect x="-293" y="-293" width="586" height="586" rx="56" fill="${U("pl")}" stroke="${U("g")}" stroke-width="4"/><rect x="-282" y="-282" width="564" height="564" rx="47" fill="none" stroke="#C8973A" stroke-opacity=".3"/>${riv}
-    <circle r="241" fill="${U("g")}"/><circle r="233" fill="#2A1F12"/><g fill="#5E4415">${ticks}</g><circle r="229" fill="${U("g")}"/><circle r="221" fill="#0B0805"/><circle r="216" fill="#17120C"/><circle r="216" fill="${U("mz")}"/>
-    ${sh.join("")}<circle r="216" fill="${U("mz")}" class="wmz"/>${WHR.slice(1,5).map(r=>`<circle r="${r}" class="wring"/>`).join("")}
-    ${bd.join("")}${axes}
-    <circle r="27" fill="${U("g")}"/><circle r="21.5" fill="#0D0905"/><circle r="19" fill="none" stroke="#C8973A" stroke-opacity=".5"/><text y="5" class="wpts${S.tot>=1000?" k":""}">${S.tot}</text>${med}</svg>`; }
+  return `<svg class="whs${sm?" sm":""}${ed?" edit":""}" viewBox="-300 -300 600 600" role="img" aria-label="${esc(lab)}" data-wv="${voc}" data-wp="${WHD.slots.map((s,i)=>pts[i]||0).join(",")}"><defs>${defs}</defs>
+    ${plate}${halo}${ring}${geo}
+    ${sh.join("")}${pat}${WHR.slice(1,5).map(r=>`<circle r="${r}" class="wring"/><circle r="${r+1.1}" class="wring2"/>`).join("")}
+    ${bd.join("")}${axes}${hub}${motes}${med}</svg>`; }
 // texto de uma fatia (tooltip e leitores de ecrã)
 function whSlotTxt(voc,pts,i){ const [d,mx,ded,cv]=WHD.slots[i], V=WHD.voc[voc], p=pts[i]||0;
-  const dv=x=>ded==="hp"?`+${nf(V.hp*x)} vida`:ded==="mp"?`+${nf(V.mp*x)} mana`:ded==="cap"?`+${nf(V.cap*x)} capacidade`:ded==="mit"?`+${String(Math.round(WHD.mit*x*100)/100).replace(".",",")}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`;
+  const dv=x=>ded==="hp"?`+${nf(V.hp*x)} vida`:ded==="mp"?`+${nf(V.mp*x)} mana`:ded==="cap"?`+${nf(V.cap*x)} capacidade`:ded==="mit"?`+${String(Math.round(WHD.mit*x*100)/100).replace(".",DECSEP)}% mitigação`:`+${nf(V.hp*x)} vida e +${nf(V.mp*x)} mana`;
   const n=whConvName(voc,cv,d), k=cv.split(":")[0], nm=n.replace(/^Augmented /,""), desc=k==="sp"?(WHD.aug[nm]||[]).map((x,j)=>`estágio ${j+1}: ${x}`).join("; "):k==="vr"?WHD.perk["Vessel Resonance"]:k==="skill"?`+1 de ${WHSK[voc]}.`:k==="mleech"?WHD.perk["Mana Leech"]:k==="lleech"?WHD.perk["Life Leech"]:(WHD.perk[n]||"");
   return {t:`Fatia ${WHDN[d]} de ${mx}`, st:p>=mx?"cheia":p?`${p} de ${mx} pontos`:"vazia", ded:p?dv(p):dv(mx)+" (com a fatia cheia)", conv:n, desc, full:p>=mx}; }
 let WHTIP=null;
-function whTip(e){ const g=e.target.closest&&e.target.closest(".whs [data-ws]"); if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); }
-  if(!g||!WHD){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), x=whSlotTxt(sv.dataset.wv,pts,+g.dataset.ws);
-  const hint=sv.classList.contains("edit")?(g.classList.contains("lock")?`<div class="tiny whtip-h">Precisa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class="tiny whtip-h">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</div>`):"";
-  WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}${hint}`;
-  WHTIP.hidden=false; const r=WHTIP.getBoundingClientRect(), px=e.clientX||0, py=e.clientY||0;
+const WHWIDE = window.matchMedia ? matchMedia("(min-width: 1100px)") : {matches:true};
+let WHSELK = null; // r8: o que está no painel Selection: "s:<fatia>", "g:<domínio>" (gema) ou "r:<domínio>" (revelação)
+let WHPIN = null; // r9: clicar numa gema, revelação, fatia (fora do modo Distribuir) ou linha dos painéis fixa o Selection; clicar outra vez ou fora da roda solta
+const whPinHTML = () => WHPIN?`<p class="wpin-n">Fixo aqui: clica outra vez (ou fora da roda) para soltar.</p>`:"";
+const WHTGT = ".whs [data-ws],.whs [data-wg],.whs [data-wr],[data-wsk]";
+const whKey = g => g.dataset.ws!=null?"s:"+g.dataset.ws:g.dataset.wg?"g:"+g.dataset.wg:g.dataset.wr?"r:"+g.dataset.wr:g.dataset.wsk||null;
+// r8: escolhe o que o painel Selection mostra e marca-o na roda e nas listas (fica marcado até escolheres outra coisa)
+function whSelSet(k,force){ const sel=$("whSel"), c=C(); if(!sel||!WED||!c||(!force&&(k===WHSELK||(WHPIN&&k!==WHPIN)))) return; WHSELK=k; sel.innerHTML=whPinHTML()+whSelHTML(c.voc,WED.pts,k);
+  const box=$("wheelX"); if(!box) return; box.querySelectorAll(".whs .sel,[data-wsk].on").forEach(x=>x.classList.remove("sel","on"));
+  const [t,v]=String(k).split(":"), at=t==="s"?"data-ws":t==="g"?"data-wg":"data-wr"; box.querySelectorAll(`.whs [${at}="${v}"]`).forEach(x=>x.classList.add("sel"));
+  box.querySelectorAll(`[data-wsk="${k}"]`).forEach(x=>x.classList.add("on")); }
+function whTipBox(){ if(!WHTIP){ WHTIP=document.createElement("div"); WHTIP.className="whtip"; WHTIP.setAttribute("role","tooltip"); document.body.appendChild(WHTIP); } return WHTIP; }
+function whTip(e,el){ const g=el||(e.target.closest&&e.target.closest(WHTGT)), big=g&&WHD&&g.closest("#wheelX");
+  /* r7: na roda grande, com espaço para as barras laterais, o que a fatia dá vai para o painel Selection (sem tooltip); r8: também gemas, revelações e linhas dos painéis */
+  if(big&&(WHWIDE.matches||g.dataset.wsk)){ const k=whKey(g), c=C(); whSelSet(k);
+    /* r9: passar o rato numa gema abre ao lado dela o guia (como se obtém, revela, muda de cor, coloca e melhora) */
+    if(k&&k[0]==="g"&&!g.dataset.wsk&&WED&&c){ const T=whTipBox(); if(T.hidden||T.dataset.k!==k){ const d=k.slice(2); T.dataset.k=k; T.classList.remove("big");
+        T.innerHTML=`<div class="whtip-sel">${whGemGuide(c.voc,d,whSum(c.voc,WED.pts).vr[d])}</div>`; T.hidden=false; const gr=g.getBoundingClientRect(), r=T.getBoundingClientRect();
+        T.style.left=(gr.right+12+r.width<innerWidth-8?gr.right+12:Math.max(8,gr.left-r.width-12))+"px"; T.style.top=Math.max(8,Math.min(innerHeight-r.height-8,gr.top+gr.height/2-r.height/2))+"px"; } }
+    else if(WHTIP){ WHTIP.hidden=true; WHTIP.dataset.k=""; }
+    return; }
+  whTipBox(); WHTIP.dataset.k="";
+  if(!g||!WHD||g.dataset.wsk){ WHTIP.hidden=true; return; } const sv=g.closest("svg"), pts=sv.dataset.wp.split(",").map(Number), voc=sv.dataset.wv, k=whKey(g);
+  if(big) whSelSet(k);
+  WHTIP.classList.toggle("big",k[0]!=="s");
+  if(k[0]!=="s") WHTIP.innerHTML=`<div class="whtip-sel">${whSelHTML(voc,pts,k)}</div>`;
+  else { const x=whSlotTxt(voc,pts,+g.dataset.ws);
+    const hint=sv.classList.contains("edit")?(g.classList.contains("lock")?`<div class="tiny whtip-h">Precisa de uma fatia vizinha cheia, mais perto do centro.</div>`:`<div class="tiny whtip-h">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</div>`):"";
+    WHTIP.innerHTML=`<b>${esc(x.t)}</b> <span class="tag${x.full?" ok":""}">${esc(x.st)}</span><div class="small">${esc(x.ded)}</div><div class="small"><b>${esc(x.conv)}</b>${x.full?"":" <span class=\"tiny muted\">(desbloqueia com a fatia cheia)</span>"}</div>${x.desc?`<div class="tiny muted">${esc(x.desc)}</div>`:""}${hint}`; }
+  WHTIP.hidden=false; const r=WHTIP.getBoundingClientRect(), gr=el?g.getBoundingClientRect():null, px=gr?gr.right:(e.clientX||0), py=gr?gr.top:(e.clientY||0);
   WHTIP.style.left=Math.max(8,Math.min(innerWidth-r.width-8,px+14))+"px"; WHTIP.style.top=Math.max(8,py+16+r.height>innerHeight?py-r.height-12:py+16)+"px"; }
 document.addEventListener("pointermove", e=>{ if(e.pointerType!=="touch") whTip(e); }, {passive:true});
-document.addEventListener("click", e=>{ if(e.target.closest&&e.target.closest(".whs:not(.edit) [data-ws]")) whTip(e); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
-// painel ao lado da roda, como no jogo: dedicação, convicção, vessels (gemas) e revelação
-function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], cv=Object.entries(S.conv).filter(([n])=>!/^Vessel Resonance/.test(n));
-  const f2=v=>String(Math.round(v*100)/100).replace(".",",");
-  const ded=`<dl class="whp-dl"><div><dt>Vida</dt><dd>+${nf(S.hp)}</dd></div><div><dt>Mana</dt><dd>+${nf(S.mp)}</dd></div><div><dt>Capacidade</dt><dd>+${nf(S.cap)}</dd></div><div><dt>Mitigação</dt><dd>×${f2(S.mit)}%</dd></div></dl>`;
-  const cvl=cv.map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:(WHD.perk[n]||"");
-    return `<li><span class="whp-ic">${aug?"✦":n===V.skill?"▲":/Leech/.test(n)?"●":"♛"}</span><span><span class="whp-n"><b>${esc(nm)}</b>${aug?`<span class="tag acc">${ROM[Math.min(k,3)]}</span>`:""}</span><span class="tiny muted">${esc(desc)}</span></span></li>`; }).join("") || `<li class="muted small">Ainda nenhuma fatia cheia.</li>`;
-  let gk=0; const ves=WHDOM.map(d=>{ const n=S.vr[d], mods=whGemMods(voc,n,prof,n?gk++:0); return `<li class="${n?"":"off"}"><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${n?WHC[d][1]:"none"}" stroke="${WHC[d][0]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${n?WHGEM[n]:"Sem gema"}</b><span class="tiny muted">vessel ${WHDN[d]} · ${n} ${n===1?"ressonância":"ressonâncias"}</span></span>${n?`<span class="tiny">${esc(mods.join(" + "))}</span>`:""}</span></li>`; }).join("");
-  const rev=WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]); return `<li class="${st?"":"off"}" title="${esc(WHD.revd[nm]||"")}"><svg class="whp-rv" viewBox="0 0 24 24" aria-hidden="true" style="--wc:${WHC[d][0]}"><path d="${WHRV[d]}"/></svg><span><span class="whp-n"><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`estágio ${st}`:"bloqueado"}</span></span><span class="tiny muted">${S.dom[d]} pontos no ${WHDN[d]}${nx?` · estágio ${WHD.stage.indexOf(nx)+1} aos ${nx}`:""}</span></span></li>`; }).join("");
-  return `<div class="whp"><section><h5>Dedicação</h5>${ded}</section><section><h5>Convicção</h5><ul class="whp-l">${cvl}</ul></section>
-    <section><h5>Vessels e gemas <span class="tiny muted">+${S.gem} de dano e cura com as gemas certas</span></h5><ul class="whp-l">${ves}</ul></section>
-    <section><h5>Revelação <span class="tiny muted">+${S.dh} de dano e cura</span></h5><ul class="whp-l">${rev}</ul></section></div>`; }
+document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.closest(WHTGT);
+  /* r9: no ecrã largo, o clique fixa (ou solta) o que está no painel Selection; um clique na roda fora de tudo solta */
+  if(WHWIDE.matches&&t&&t.closest("#wheelX")&&!(t.matches("[data-ws]")&&t.closest(".whs.edit"))){ const k=whKey(t); WHPIN=WHPIN===k?null:k; whSelSet(k,true); return; }
+  if(WHPIN&&!t&&e.target.closest&&e.target.closest("#wheelX .whs")){ WHPIN=null; whSelSet(WHSELK,true); }
+  if(t&&(!t.closest(".whs.edit")||!t.matches("[data-ws]"))) whTip(e,t.dataset.wsk?t:null); else if(WHTIP&&!WHTIP.hidden&&!e.target.closest(".whtip")) WHTIP.hidden=true; });
+/* r8: com o teclado: Tab chega às fatias, gemas e revelações da roda grande; Enter/Espaço enche ou esvazia a fatia no modo Distribuir */
+document.addEventListener("focusin", e=>{ const t=e.target.closest&&e.target.closest(WHTGT); if(t&&t.closest("#wheelX")){ if(WHWIDE.matches||t.matches(":focus-visible")) whTip(e,t); } else if(WHTIP&&!WHTIP.hidden&&!(e.target.closest&&e.target.closest(".whtip"))) WHTIP.hidden=true; });
+document.addEventListener("keydown", e=>{ if(e.key!=="Enter"&&e.key!==" ") return; const t=e.target.closest&&e.target.closest("#wheelX .whs [data-ws],#wheelX .whs [data-wg],#wheelX .whs [data-wr]"); if(!t) return; e.preventDefault();
+  if(t.dataset.ws!=null&&t.closest(".whs.edit")){ WHSELK="s:"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); const n=document.querySelector(`#wheelX .whs [data-ws="${t.dataset.ws}"]`); if(n) n.focus({preventScroll:true}); }
+  else whTip(e,t); });
+// painéis ao lado da roda, como no jogo: Dedication, Conviction, Vessels e Revelation Perks (r7: nomes do jogo, linhas como no cliente)
+function whPanelHTML(voc,pts,prof){ const S=whSum(voc,pts), V=WHD.voc[voc], f2=v=>String(Math.round(v*100)/100).replace(".",DECSEP);
+  const row=(a,b,t,cls)=>`<div class="wrow${cls?" "+cls:""}"${t?` title="${esc(t)}"`:""}><span class="wrn">${a}</span><b>${b}</b></div>`;
+  const ded=row("Hit Points","+"+nf(S.hp))+row("Mana","+"+nf(S.mp))+row("Capacity","+"+nf(S.cap))+row("Mitigation Mult.",f2(S.mit)+"%");
+  const cvl=Object.entries(S.conv).map(([n,k])=>{ const nm=n.replace(/^Augmented /,""), aug=n!==nm, vr=/^Vessel Resonance /.test(n);
+    const desc=aug?(WHD.aug[nm]||[]).slice(0,k).join(" · "):n===V.skill?`+${k} de ${WHSK[voc]}`:n==="Mana Leech"?`+${f2(0.25*k)}% de mana leech`:n==="Life Leech"?`+${f2(0.75*k)}% de life leech`:vr?WHD.perk["Vessel Resonance"]:(WHD.perk[n]||"");
+    const si=WHD.slots.findIndex(([d0,,,c0])=>whConvName(voc,c0,d0)===n), ic=(si>=0?whCvIco(voc,si,18,"wic"):"")||(aug?sicon({k:[nm],name:nm,cls:"sm wic"}):"");
+    return row(`${ic}${esc(vr?n.replace("Vessel Resonance","VR"):aug?"Aug. "+nm:nm)}`, aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join("") || `<p class="wnone">Ainda nenhuma fatia cheia.</p>`;
+  /* r8: cada vessel e cada revelação é um botão: passar o rato, tocar ou Tab mostra tudo no painel Selection */
+  let gk=0; const ves=row("Damage and Healing","+"+S.gem)+WHDOM.map(d=>{ const n=S.vr[d], mods=!n?[]:GEMD?whGemBis(voc,n,whGemK(S,d)):whGemMods(voc,n,prof,gk++);
+    return `<button type="button" class="wrow wrow-b${n?"":" off"}" data-wsk="g:${d}"><span class="wrn">${whGemImg(voc,d,n,18,"wgi")}${n?whGemName(voc,n):"Sem gema"}</span><b>${esc(WHVR[d])}</b></button>${n?`<div class="wsub">${esc(mods.join(" + "))}</div>`:""}`; }).join("");
+  const rev=row("Damage and Healing","+"+S.dh)+WHDOM.map(d=>{ const st=S.rev[d], nm=V.rev[d];
+    return `<button type="button" class="wrow wrow-b${st?"":" off"}" data-wsk="r:${d}"><span class="wrn">${whPkIco(voc,d,18,"wic")||sicon({k:[nm],name:nm,cls:"sm wic"})}${esc(nm)}</span><b>${st?`Stage ${st}`:"Locked"}</b></button>`; }).join("");
+  const box=(t,b)=>`<section class="wbox"><h5>${t}</h5><div class="wbox-b">${b}</div></section>`;
+  return box("Dedication Perks",ded)+box("Conviction Perks",cvl)+box("Vessels",ves)+box("Revelation Perks",rev); }
+/* ---------- r8: gemas (data/gems.json, _dev/build_gems.py: valores do Canary no grau I) ---------- */
+let GEMD=null, GEMP=null;
+const gemLoad = () => GEMP || (GEMP = dsafe("gems").then(d=>{ GEMD = d&&d.basic ? d : null; return GEMD; }));
+// best in slot do TibiaPal (G.gems) → modificadores do jogo; os básicos que só mudam o elemento andam juntos num grupo
+const GEMBAS = {"Hit Points":["Vocation_Health"], "Mitigation":["General_MitigationMultiplier"], "Mana":["Vocation_Mana"]};
+const GEMRES = [["General_FireResistance","General_EarthResistance","General_IceResistance","General_EnergyResistance"],["General_DeathResistance","General_HolyResistance","General_PhysicalResistance"]];
+const GEMALT = [...GEMRES, ["Vocation_Health_FireResistance","Vocation_Health_EarthResistance","Vocation_Health_IceResistance","Vocation_Health_EnergyResistance"],
+  ["Vocation_Mana_FireResistance","Vocation_Mana_Earth_Resistance","Vocation_Mana_Ice_Resistance","Vocation_Mana_EnergyResistance"], ["Vocation_Mana"], ["General_ManaDrainResistance_LifeDrainResistance"]];
+const GEMSUP = {"Fierce Berserk Base Damage":["Knight_Fierce_Berserk_DamageIncrease"], "Front Sweep Base Damage":["Knight_Front_Sweep_DamageIncrease"], "Fair Wound Cleansing":["Knight_FairWoundCleansing_HealingIncrease"],
+  "Combat Mastery Mastery":["Knight_RevelationMastery_CombatMastery"], "Executioner's Throw Mastery":["Knight_RevelationMastery_ExecutionersThrow"],
+  "Divine Caldera Base Damage":["Paladin_DivineCaldera_DamageIncrease"], "Divine Empowerment Mastery":["Paladin_RevelationMastery_DivineEmpowerment"], "Salvation Healing":["Paladin_Salvation_HealingIncrease"],
+  "Beam Mastery Mastery":["Sorcerer_RevelationMastery_BeamMastery"], "Great Energy/Death Beam Base Damage":["Sorcerer_GreatEnergyBeam_DamageIncrease","Sorcerer_GreatDeathBeam_DamageIncrease"],
+  "Great Fire Wave Base Damage":["Sorcerer_GreatFireWave_DamageIncrease"], "UE Base Damage":["Sorcerer_RageOfTheSkies_DamageIncrease"], "Energy Wave CD Reduction":["Sorcerer_EnergyWave_Cooldown"],
+  "Twin Bursts Mastery":["Druid_RevelationMastery_TwinBursts"], "Blessing of the Grove Mastery":["Druid_RevelationMastery_BlessingOfTheGrove"], "Strong Ice Wave Base Damage":["Druid_StrongIceWave_DamageIncrease"],
+  "FoB Base Damage":["Monk_FlurryOfBlows_DamageIncrease"], "Sweeping Takedown Base Damage":["Monk_SweepingTakedown_DamageIncrease"], "Ascetic Mastery":["Monk_RevelationMastery_Ascetic"], "SOB Mastery":["Monk_RevelationMastery_SpiritualBurst"]};
+// nome de um grupo: as palavras que mudam juntam-se com "/" (Fire/Earth/Ice/Energy Resistance)
+const gName = g => { if(g.length<2) return g[0].n; const W=g.map(m=>m.n.split(" ")); if(W.some(w=>w.length!==W[0].length)) return g.map(m=>m.n).join(" / ");
+  return W[0].map((t,i)=>[...new Set(W.map(w=>w[i]))].join("/")).join(" "); };
+// valor de um efeito no grau I (as fraquezas e os cooldowns não mudam com o grau)
+function gVal(f,voc){ const [k,a,b,c]=f, n=v=>String(Math.round(Math.abs(v)*100)/100).replace(".",DECSEP);
+  if(k==="res") return (b<0?"−":"+")+n(b)+"%";
+  if(k==="hp"||k==="mp"||k==="cap") return "+"+nf((a||{})[voc]||0);
+  if(k==="rev") return "+"+nf(b);
+  if(k==="spell") return b==="cd"?"−"+(Math.abs(c)>=60?n(c/60)+" min":n(c)+" s"):"+"+n(c)+"%";
+  return "+"+n(a)+"%"; }
+// k = qual das gemas greater da build é esta (0 = a primeira): cada uma leva o supremo seguinte da lista
+const whGemK = (S,d) => Math.max(0,WHDOM.filter(x=>S.vr[x]===3).indexOf(d));
+// plano de uma gema com n ressonâncias (1 lesser, 2 regular, 3 greater): best in slot e outras boas opções
+function whGemPlan(voc,n,k){ const L=G.gems[voc]||{}, B=key=>GEMD.basic.find(m=>m.k===key), X=key=>GEMD.supreme.find(m=>m.k===key), nb=[0,1,2,2][n]||2, mage=voc==="sorcerer"||voc==="druid";
+  const grp=(L.lesser_gems||["Hit Points","Mitigation","Any Elemental Resistance"]).flatMap(x=>x==="Any Elemental Resistance"?GEMRES:[GEMBAS[x]||[]]).filter(a=>a.length);
+  const bis=grp.slice(0,nb), used=new Set(bis.flat()), M=a=>a.map(B).filter(Boolean);
+  const alt=[...grp.slice(nb),...GEMALT].filter((g,i,a)=>a.findIndex(h=>h[0]===g[0])===i&&!g.some(x=>used.has(x))&&!(voc==="knight"&&/Mana_/.test(g[0]+"_")));
+  const sp=(L.greater_gems||[]).map(x=>(GEMSUP[x]||[]).map(X).filter(Boolean)).filter(g=>g.length), j=sp.length?(k||0)%sp.length:0;
+  const gen=["General_CriticalDamage",mage?"General_ManaLeech":"General_LifeLeech","General_Dodge"].map(X).filter(Boolean).map(m=>[m]);
+  return {bis:bis.map(M).filter(g=>g.length), alt:alt.slice(0,5).map(M).filter(g=>g.length), sbis:sp.length?[sp[j]]:[], salt:[...sp.filter((g,i)=>i!==j),...gen].slice(0,5)}; }
+const whGemBis = (voc,n,k) => { const P=whGemPlan(voc,n,k); return [...P.bis,...(n===3?P.sbis:[])].map(gName); };
+// r9: guia da gema: como se obtém, revela, muda de cor, coloca, ativa e melhora (TibiaWiki: Gem Atelier, Lesser/Regular/Greater Gem)
+const GEMVN = {knight:"Guardian", paladin:"Marksman", sorcerer:"Sage", druid:"Mystic", monk:"Spiritualist"};
+const GEMCOST = {rev:[0,125000,1000000,6000000], rot:[0,125000,250000,500000]};
+function whGemGuide(voc,d,n,fold){ const t=n||1, nm=`${["","Lesser ","","Greater "][t]}${GEMVN[voc]||""} Gem`;
+  const drop=t===1?`A ${nm} cai sobretudo de criaturas influenced e, às vezes, de fiendish. Também se compra no Market: até ser revelada é um item como os outros.`
+    :t===2?`A ${nm} cai sobretudo de bosses Archfoe com loot cooperativo e, às vezes, de criaturas fiendish. Também se compra no Market: até ser revelada é um item como os outros.`
+    :`A ${nm} cai sobretudo de criaturas fiendish e, raramente, de bosses Archfoe com loot cooperativo. Também se compra no Market: até ser revelada é um item como os outros.`;
+  const st=[["Obter",drop],
+    ["Revelar",`Wheel of Destiny → Gem Atelier → Reveal: ${nf(GEMCOST.rev[t])} gold. A gema passa a ser só tua e mostra a cor e os mods, que saem ao acaso.`],
+    ["Cor",`Só entra no vessel da mesma cor: aqui, ${WHDN[d]}. Se sair outra, «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde) por ${nf(GEMCOST.rot[t])} gold de cada vez.`],
+    ["Colocar","No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo."],
+    ["Ativar",`Cada mod precisa de um Vessel Resonance cheio neste domínio (tens ${n} de 3). Com tantos VR como mods, a gema dá ainda +${t===3?2:1} de Damage and Healing.`],
+    ["Melhorar","No Fragment Workshop cada mod sobe do grau I ao IV (+50% no IV) e o grau vale em todas as gemas com esse mod. Os básicos gastam Lesser Fragments e os supremos Greater Fragments, mais gold. Cada mod no grau IV dá +1 wheel point."],
+    ["Fragments",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.`:`A ${nm} dá 1–4 Lesser Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`} Parte-se com um Crusher (500 gold num Equipment Shopkeeper, 10 usos). Tabela completa em «Gemas e fragments», por baixo da roda.`]];
+  const ol=`<ol class="wg-l">${st.map(([a,b])=>`<li><b>${a}</b><span>${esc(b)}</span></li>`).join("")}</ol>`;
+  return fold?`<details class="wguide" style="--wc:${WHC[d][0]}"><summary class="wsel-sec">Como obter e colocar</summary>${ol}</details>`:`<div class="wguide" style="--wc:${WHC[d][0]}"><p class="wsel-sec">Como obter e colocar</p>${ol}</div>`; }
+// r11: «Gemas e fragments» por baixo da roda: os três tamanhos de gema da vocação (onde caem, mods, custos) e os fragments
+// (como se obtêm, para que servem, custos do Fragment Workshop). Fontes: TibiaWiki (Gem Atelier, Lesser/Greater Fragment, Crusher,
+// Amber Crusher) e o cliente (workshop.lua: os mods básicos gastam Lesser Fragments, os supremos Greater Fragments)
+function whGFHTML(voc){ const T=[1,2,3], tb=(h,r)=>`<div class="wgf-x"><table class="wgf-t"><thead><tr>${h.map(x=>`<th scope="col">${x}</th>`).join("")}</tr></thead><tbody>${r}</tbody></table></div>`;
+  const nm=t=>`<span class="wgf-n">${WHDOM.map(d=>whGemImg(voc,d,t,22,"wgi")).join("")}<b>${esc(whGemName(voc,t))}</b></span>`;
+  const gems=tb(["Gema","Mods","Onde cai","Revelar","Mudar de cor"], T.map(t=>`<tr><th scope="row">${nm(t)}</th><td>${["","1 básico","2 básicos","2 básicos e 1 supremo"][t]}</td><td>${["","criaturas influenced (às vezes, fiendish)","bosses Archfoe com loot cooperativo (às vezes, criaturas fiendish)","criaturas fiendish (raramente, bosses Archfoe)"][t]}</td><td>${nf(GEMCOST.rev[t])}</td><td>${nf(GEMCOST.rot[t])}</td></tr>`).join(""));
+  const yld=tb(["Gema","Partida por revelar (Crusher)","Desmontada depois de revelada"], [[1,"1–4","1–5","Lesser"],[2,"2–8","2–10","Lesser"],[3,"1–4","1–5","Greater"]].map(([t,a,b,f])=>`<tr><th scope="row">${nm(t)}</th><td>${a} ${f} Fragments</td><td>${b} ${f} Fragments</td></tr>`).join(""));
+  const up=tb(["Grau","Fragments","Gold (mod básico)","Gold (mod supremo)"], [["II",5,2000000,5000000],["III",15,5000000,12500000],["IV",30,30000000,75000000]].map(([g,f,a,b])=>`<tr><th scope="row">${g}</th><td>${f}</td><td>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(""));
+  return `<h3>Gemas e fragments</h3>
+    <div class="wgf-g"><section class="card"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems}
+      <ul class="wgf-l"><li>Antes de revelada, a gema é um item normal: compra-se e vende-se no Market.</li>
+        <li>Revelar (Wheel of Destiny → Gem Atelier → Reveal) mostra a cor e os mods, que saem ao acaso, e prende a gema à personagem (até 225 gemas).</li>
+        <li>Só entra no vessel da sua cor; «Rotate affinity» passa-a à cor seguinte (verde → vermelho → roxo → azul → verde).</li>
+        <li>Cada mod precisa de um Vessel Resonance cheio nesse domínio; com tantos VR como mods, a gema dá ainda +1 de Damage and Healing (+2 com a greater).</li></ul></section>
+    <section class="card"><h4>Fragments: como se obtêm</h4>
+      <p class="small">Há dois tipos: os <b>Lesser Fragments</b> saem das Lesser e Regular Gems; os <b>Greater Fragments</b> saem das Greater Gems.</p>${yld}
+      <ul class="wgf-l"><li><b>Crusher</b>: 500 gold em qualquer Equipment Shopkeeper; 10 usos; parte gemas ainda por revelar.</li>
+        <li><b>Amber Crusher</b>: prémio da primeira vitória sobre The Rootkraken; sem limite de usos e parte 10 gemas de cada vez.</li>
+        <li>As gemas já reveladas que não queres desmontam-se no Gem Atelier, e dão um pouco mais.</li>
+        <li>Também se compram no Market ou a NPCs de joias (ex.: Talila, Yonan): 750 000 gold cada Lesser Fragment e 2 250 000 cada Greater Fragment.</li></ul></section>
+    <section class="card"><h4>Fragments: para que servem</h4>
+      <p class="small">No Fragment Workshop (no Gem Atelier) os mods sobem do grau I ao IV. Os <b>básicos</b> gastam <b>Lesser Fragments</b>; os <b>supremos</b>, <b>Greater Fragments</b>; e todos gastam gold.</p>${up}
+      <ul class="wgf-l"><li>O grau é do mod, não da gema: vale em todas as gemas que tenham esse mod.</li>
+        <li>No grau IV o mod dá +50% do valor do grau I, e cada mod no grau IV dá +1 wheel point (até 69).</li>
+        <li>Numa gema, cada mod só usa um grau até ao do mod anterior: um supremo no grau IV com os básicos no grau I conta como grau I.</li>
+        <li>Nos mods de cooldown, subir de grau não corta mais tempo: dá uma chance de Momentum.</li></ul></section></div>`; }
+// r8: o painel Selection de um vessel: a gema, o que está ativo (best in slot) e as outras boas opções, com valores
+function whGemSelHTML(voc,pts,d){ const S=whSum(voc,pts), n=S.vr[d];
+  const head=`<div class="wsel-h"><span class="wsel-gem" style="--wc:${WHC[d][0]}">${n?whGemImg(voc,d,n,40):whGemIco(0,d)}</span><div><b>${n?whGemName(voc,n):"Sem gema"}</b><span class="tag${n?" ok":""}">Vessel ${esc(WHVR[d])}</span></div></div>
+    <p class="wsel-t">Vessel Resonance: ${n}/3 · ${n===3?"2 modificadores básicos e 1 supremo":n===2?"2 modificadores básicos":n===1?"1 modificador básico":"enche uma fatia Vessel Resonance deste domínio para abrir o vessel"}</p>`;
+  if(!GEMD){ gemLoad().then(()=>{ const sl=$("whSel"); if(GEMD&&sl&&WHSELK==="g:"+d) sl.innerHTML=whSelHTML(voc,pts,WHSELK); }); return head+`<p class="wnone">A carregar as gemas…</p>`; }
+  const P=whGemPlan(voc,n||3,whGemK(S,d)), li=(g,sup)=>`<li${sup?' class="sup"':""}><span><i class="wmk" aria-hidden="true"></i>${esc(gName(g))}</span><b>${g[0].fx.map(f=>gVal(f,voc)).join(" · ")}</b></li>`;
+  const sup=n===3||!n, G3=n&&n<3?whGemPlan(voc,3,whGemK(S,d)).sbis:[];
+  return head+`<p class="wsel-sec bis">${n?"Best in slot":"Best in slot (com 3 VR: Greater gem)"}</p><ul class="wmods" style="--wc:${WHC[d][0]}">${P.bis.map(g=>li(g)).join("")}${sup?P.sbis.map(g=>li(g,1)).join(""):""}</ul>
+    ${G3.length?`<p class="wsel-d">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:""}
+    ${P.alt.length?`<p class="wsel-sec">Também boas</p><ul class="wmods alt">${P.alt.map(g=>li(g)).join("")}${sup?P.salt.map(g=>li(g,1)).join(""):""}</ul>`:""}
+    <p class="wsel-n">Valores no grau I: no Gem Atelier cada modificador sobe até ×1,5 (grau IV).</p>${whGemGuide(voc,d,n,WHWIDE.matches)}`; }
+// r8: o painel Selection de uma revelação: estágio, o que faz e quanto falta
+function whRevSelHTML(voc,pts,d){ const S=whSum(voc,pts), nm=WHD.voc[voc].rev[d], st=S.rev[d], nx=WHD.stage.find(x=>x>S.dom[d]), c0=C(), ex=c0?Math.max(0,Math.round(+c0.wpx||0)):0;
+  return `<div class="wsel-h">${whPkIco(voc,d,46,"wsel-ci")||sicon({k:[nm],name:nm,cls:"lg"})}<div><b>${esc(nm)}</b><span class="tag${st?" ok":""}">${st?`Stage ${st}`:"Locked"}</span></div></div>
+    <p class="wsel-t">Revelation Perk · ${S.dom[d]} pontos no ${WHDN[d]}</p>${WHD.revd[nm]?`<p class="wsel-d">${esc(WHD.revd[nm])}</p>`:""}
+    <ol class="wrev-st" style="--wc:${WHC[d][0]}">${WHD.stage.map((x,j)=>`<li class="${S.dom[d]>=x?"on":""}"><b>Stage ${j+1}</b><span>${x} · nível ${Math.max(8,50+x-ex)} · Damage and Healing +${WHD.revdh[j]}</span></li>`).join("")}</ol>
+    <p class="wsel-d">${ex?`O nível é o mínimo pondo neste domínio todos os teus pontos, contando com os ${ex} comprados.`:"O nível é o mínimo pondo neste domínio todos os teus pontos (cada wheel point comprado nas tasks ou nos pergaminhos baixa-o 1 nível)."}</p>
+    ${nx?`<p class="wsel-n">Faltam ${nx-S.dom[d]} pontos no ${WHDN[d]} para o estágio ${WHD.stage.indexOf(nx)+1}.</p>`:""}`; }
+// r7: o painel Selection (à esquerda): o que dá a fatia que estás a ver; r8: ou a gema de um vessel, ou uma revelação (k = "s:3", "g:red", "r:blue")
+function whSelHTML(voc,pts,key){ const [t,v]=String(key==null?"":key).split(":"); if(t==="g") return whGemSelHTML(voc,pts,v); if(t==="r") return whRevSelHTML(voc,pts,v);
+  const i=t==="s"?+v:null, ed=!!(WED&&WED.edit);
+  if(i==null||!WHD.slots[i]) return `<p class="wnone">${ed?"Clica numa fatia para a encher ou esvaziar. Shift: +25 · Ctrl: −25 · botão direito: esvaziar. As de contorno dourado já se podem encher.":"Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá."}</p>${ed?"":`<p class="wsel-d">Nos cantos: as revelações (os losangos são o estágio) e as gemas.</p>`}`;
+  const x=whSlotTxt(voc,pts,i), cv=WHD.slots[i][3], k=cv.split(":")[0], nm=x.conv.replace(/^Augmented /,""), ic=whCvIco(voc,i,46,"wsel-ci")||(k==="sp"||k==="inst"?sicon({k:[nm],name:nm,cls:"lg"}):`<span class="wsel-g wsi-${k}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${WHIC[k]||WHIC.sp}"/></svg></span>`);
+  return `<div class="wsel-h">${ic}<div><b>${esc(x.conv)}</b><span class="tag${x.full?" ok":""}">${esc(x.st)}</span></div></div><p class="wsel-t">${esc(x.t)} · ${esc(x.ded)}</p>${x.desc?`<p class="wsel-d">${esc(x.desc)}</p>`:""}${x.full?"":`<p class="wsel-n">A convicção só conta com a fatia cheia.</p>`}${ed?`<p class="wsel-h2">${x.full?"Clica para esvaziar":"Clica para encher"} · Shift +25 · Ctrl −25</p>`:""}`; }
+// r8: as boas opções para os teus pontos: a best in slot (a build mais completa que cabe nos pontos), as variantes perto dela e a seguinte
+function whOpts(voc,pts){ const ws=G.wheel[voc]||[], ok=ws.filter(w=>w.p<=pts), bis=ok[ok.length-1]||null, alt=[], seen=new Set([bis?bis.note||"":""]);
+  for(let k=ok.length-2;k>=0&&alt.length<3;k--){ const w=ok[k], n=w.note||""; if(!bis||w.p<bis.p-150) break;
+    if(w.p===bis.p||!seen.has(n)){ seen.add(n); alt.push(w); } }
+  return {bis, alt, next:ws.find(w=>w.p>pts)||null}; }
+function whOptsHTML(c,ws,O,w,pts){ const L=[...(O.bis?[[O.bis,"Best in slot","ok"]]:[]),...O.alt.map(x=>[x,"Também boa",""]),...(O.calc||[]).map(x=>[x,"Calculada pelo algoritmo","acc"]),...(O.next?[[O.next,`A seguir: faltam ${O.next.p-pts} pontos`,"acc"]]:[])], V=WHD.voc[c.voc];
+  if(!L.length) return "";
+  return `<div class="whx-oh"><h3>Best in slot e outras boas opções</h3><p class="small muted">Para os teus ${pts} pontos. «Ver na roda» abre a build na janela de cima, com as gemas.</p>${(O.calc||[]).length?`<p class="small muted">As «Calculadas» vêm de um algoritmo que aprendeu com as builds do TibiaPal e as estende a qualquer número de pontos: servem para comparar e para os totais que a lista não tem.</p>`:""}</div>
+    <div class="wopt-l">${L.map(([x,lab,cls])=>{ const b=x.pts||WHD.b[x.c]; if(!b) return ""; const S=whSum(c.voc,b), i=ws.indexOf(x);
+      const rv=WHDOM.filter(d=>S.rev[d]).map(d=>`<span class="hwh-k" style="--wc:${WHC[d][0]}">${whPkIco(c.voc,d,16)}${esc(V.rev[d])} <b>${S.rev[d]}</b></span>`).join("");
+      const gm=WHDOM.filter(d=>S.vr[d]).map(d=>`<span>${whGemImg(c.voc,d,S.vr[d],20,"wgi")}${whGemName(c.voc,S.vr[d])}</span>`).join("");
+      return `<article class="wopt${x===w?" on":""}"><div class="wopt-w">${whSVG(c.voc,b,{size:"sm",label:`${x.t}: ${x.p} pontos`})}</div><div class="wopt-b"><span class="tag ${cls}">${esc(lab)}</span><h4>${esc(x.t)}</h4>
+        <p class="pills"><span class="tag">${x.p} pontos · nível ${x.p+50}</span>${x.note?`<span class="tag acc">${esc(wnote(x.note))}</span>`:""}</p>${rv?`<div class="hwh-ks">${rv}</div>`:""}${gm?`<div class="wopt-g">${gm}</div>`:""}
+        <div class="wopt-a">${x===w?`<span class="tag ok">Na roda</span>`:`<button type="button" class="btn small" data-wsel="${i}">Ver na roda</button>`}${x.c?`<button type="button" class="btn small ghost" data-copy="${esc(x.c)}" data-copied="Código copiado">Copiar código</button>`:""}</div></div></article>`; }).join("")}</div>`; }
+// r7: caixa "Wheel points": quantos pontos tem a personagem (os do nível e os comprados)
+function whPtsHTML(c,E,free,sug){ const base=wpts(c.level), tot=wpOf(c);
+  /* r7: o total escreve-se e confirma-se com Atualizar (ou Enter); os pontos livres têm sugestão de onde os meter */
+  /* r13: só a encher domínios (passaste a build mais completa): o resumo é por domínio — quanto vai para cada um e a revelação que fica */
+  const V=WHD.voc[E.voc], byD={}; if(sug) sug.list.forEach(([i,n])=>{ const d=WHD.slots[i][0]; byD[d]=(byD[d]||0)+n; });
+  const S2=sug?whSum(E.voc,sug.pts):null, maxB=(G.wheel[E.voc]||[]).reduce((a,w)=>Math.max(a,w.p),0);
+  const sl=sug&&sug.list.length&&!sug.to?`<div class="wsug-box"><p class="wsub"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> A roda leva 4000 pontos, mas as builds da lista só vão até aos ${maxB}. Para não os desperdiçares, enche os domínios onde já tens mais pontos, cada um até aos 1000 (a revelação chega ao estágio 3):</p>
+      <ul class="wsug-l">${whFillOrder(d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?E.pts[i]||0:0),0)).filter(d=>byD[d]).map(d=>`<li><span>${whPkIco(E.voc,d,16)}<b>${esc(V.rev[d])}</b> <span class="tiny">${WHDN[d]} · ${S2.dom[d]}/1000${S2.rev[d]?` · Stage ${S2.rev[d]}`:""}</span></span><b class="wsug-n">+${byD[d]}</b></li>`).join("")}</ul>
+      ${sug.left>0?`<p class="wsub">Sobram ${sug.left}: a roda já fica cheia (4000 pontos).</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
+    :sug&&sug.list.length?`<div class="wsug-box"><p class="wsub"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> Para avançares para ${esc(sug.to.t)} (${sug.to.p} pontos), mete-os aqui:</p>
+      <ul class="wsug-l">${sug.list.map(([i,n])=>{ const [d,mx,,cv]=WHD.slots[i], nm=whConvName(E.voc,cv,d).replace(/^Augmented /,"Aug. ").replace(/^Vessel Resonance /,"VR "); return `<li><span><b>${esc(nm)}</b> <span class="tiny">${WHDN[d]} · ${mx}</span></span><b class="wsug-n">+${n}</b></li>`; }).join("")}</ul>
+      ${sug.fill?`<p class="wsub">Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.</p>`:""}${sug.left>0?`<p class="wsub">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:""}<button type="button" class="btn small" data-wsug="1">Aplicar na roda</button></div>`
+    :free>0?`<p class="wsub wsug-box"><b>${free} ${free===1?"ponto livre":"pontos livres"}.</b> ${E.t?"Mete-os onde quiseres em «Distribuir pontos».":"Já estás na build mais completa da lista: mete-os onde quiseres em «Distribuir pontos»."}</p>`:"";
+  return `<section class="wbox wbox-pts"><h5>Wheel points</h5><div class="wbox-b"><label for="whBudget">Quantos wheel points tens?</label><div class="wpts-row"><input id="whBudget" type="number" inputmode="numeric" min="0" max="4000" value="${tot}"><button type="button" class="btn small" data-wpts-go="1">Atualizar</button></div>
+    <p class="wsub">${tot>base?`Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?"":`<p class="wsub">Junta os que compraste nas tasks e os dos pergaminhos: as builds sugeridas (aqui, no início e nas hunts) usam este total.</p>`}${sl}</div></section>`; }
+// r13: ordem para encher os domínios: os que já têm mais pontos; em empate, o do avatar (roxo), depois vermelho, azul e verde (Gift of Life)
+const whFillOrder = dom => ["purple","red","blue","green"].sort((a,b)=>dom(b)-dom(a)||["purple","red","blue","green"].indexOf(a)-["purple","red","blue","green"].indexOf(b));
+// r7: onde meter os pontos livres: o que as builds seguintes (por ordem) põem a mais, nas fatias que já se podem encher (ligação ao centro)
+function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((s,i)=>i).sort((a,b)=>WHD.slots[a][1]-WHD.slots[b][1]||a-b); let left=free, to=null;
+  for(const w of next){ const T=WHD.b[w.c]; if(!T) continue; let moved=true;
+    while(left>0&&moved){ moved=false;
+      for(const i of ord){ if(left<=0) break; const need=Math.min(T[i]||0,WHD.slots[i][1])-P[i]; if(need<=0) continue;
+        if(WHD.adj[i].length&&!WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1])) continue;
+        const n=Math.min(need,left); P[i]+=n; left-=n; add[i]=(add[i]||0)+n; moved=true; if(!to) to=w; } }
+    if(left<=0) break; }
+  /* r13: depois da build mais completa da lista (as do TibiaPal acabam nos 1000–1175 pontos), a roda continua até aos 4000:
+     enchem-se primeiro os domínios onde já há mais pontos, cada um até aos 1000 (a revelação desse domínio chega ao estágio 3) */
+  let fill=false;
+  if(left>0){ const dom=d=>WHD.slots.reduce((a,sl,i)=>a+(sl[0]===d?P[i]:0),0), order=whFillOrder(dom);
+    for(const d of order){ let moved=true;
+      while(left>0&&moved){ moved=false;
+        for(const i of ord){ if(left<=0) break; if(WHD.slots[i][0]!==d) continue; const need=WHD.slots[i][1]-P[i]; if(need<=0) continue;
+          if(WHD.adj[i].length&&!WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1])) continue;
+          const n=Math.min(need,left); P[i]+=n; left-=n; add[i]=(add[i]||0)+n; moved=true; fill=true; } }
+      if(left<=0) break; } }
+  return to||fill?{pts:P, map:add, list:Object.entries(add).map(([i,n])=>[+i,n]).sort((a,b)=>b[1]-a[1]), left, to, fill}:null; }
 // build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
 function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
   const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
@@ -44772,13 +45326,13 @@ function hCharmsHTML(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" dat
 // bloco 'Wheel, gemas e charms' da ficha da hunt
 function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return ""; const ph=`<div class="hwh" data-hwheel="${pid}" data-hd="${d||0}"><p class="small muted" style="margin:0">A preparar a Wheel para esta hunt…</p></div>`;
   if(!WHD||!CRDV){ Promise.all([whLoad(),crdLoad()]).then(()=>document.querySelectorAll("[data-hwheel]").forEach(x=>{ if(WHD) x.outerHTML=hwheelHTML(x.dataset.hwheel,+x.dataset.hd); })); return ph; }
-  const pts=wpts(c.level), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
+  const pts=wpOf(c), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
   const ch=`<div class="hwh-s"><h6>Charms</h6>${hCharmsHTML(Object.assign({},c),p,h)}</div>`;
   if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms</h5></div><p class="small">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:""}</p>${ch}</div>`; }
   const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
-  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
+  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${whPkIco(c.voc,x,16)}${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
     ...Object.entries(S.conv).filter(([n])=>/^Augmented /.test(n)).map(([n,k])=>`<span class="hwh-k">${esc(n.replace(/^Augmented /,""))} <b>${ROM[Math.min(k,3)]}</b></span>`)];
-  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li><svg class="whp-gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l9 9.5-9 9.5-9-9.5z" fill="${WHC[x][1]}" stroke="${WHC[x][0]}" stroke-width="2"/></svg><span><span class="whp-n"><b>${WHGEM[S.vr[x]]}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
+  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,"whp-gem")}<span><span class="whp-n"><b>${whGemName(c.voc,S.vr[x])}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
   return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class="tiny muted">As resistências das gemas seguem o dano desta hunt.</span>`:""}</div>
     <div class="hwh-g"><div class="hwh-w">${whSVG(c.voc,b,{size:"sm"})}</div>
       <div class="hwh-c"><div class="hwh-s"><h6>Wheel</h6><p class="hwh-t"><b>${esc(w.t)}</b> <span class="tag">${w.p} pontos</span>${w.note?` <span class="tag acc">${esc(wnote(w.note))}</span>`:""}</p>${pk.why?`<p class="tiny muted" style="margin:2px 0 0">Porquê: ${esc(pk.why)}.</p>`:""}
@@ -44800,7 +45354,7 @@ async function whDecode(code){ const m=/^([KPSDM])0([A-Za-z0-9_-]{8,})$/.exec(St
 // tira os pontos das fatias que deixam de estar ligadas ao centro por fatias cheias
 function whPrune(P){ let ch=true; while(ch){ ch=false; const full=new Set(WHD.slots.map((s,i)=>P[i]>=s[1]?i:-1)); P.forEach((p,i)=>{ if(p&&WHD.adj[i].length&&!WHD.adj[i].some(j=>full.has(j))){ P[i]=0; ch=true; } }); } return P; }
 let WED=null, WSELV=null;
-function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:[...WHD.b[w.c]], gems:[...((WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpts(c.level),w.p), code:w.c, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
+function whLoadEd(w,c,keepMode){ WED={voc:c.voc, w, pts:w.pts?[...w.pts]:[...WHD.b[w.c]], gems:[...((w.c&&WHD.g&&WHD.g[w.c])||Array(12).fill(255))], budget:Math.max(wpOf(c),w.p), code:w.c||null, dirty:false, t:null, edit:!!(keepMode&&WED&&WED.edit)}; }
 const whUsed = P => P.reduce((a,b)=>a+b,0);
 function whMsg(t){ const m=$("whMsg"); if(m){ m.textContent=t; clearTimeout(whMsg.t); whMsg.t=setTimeout(()=>{ if(m.isConnected) m.textContent=""; },4000); } }
 function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD.slots[i][1], free=E.budget-whUsed(P), ok=!WHD.adj[i].length||WHD.adj[i].some(j=>P[j]>=WHD.slots[j][1]);
@@ -44809,36 +45363,58 @@ function whEdit(i,mode){ const E=WED; if(!E||!WHD) return; const P=E.pts, mx=WHD
   else { if(!ok) return whMsg("Primeiro enche uma fatia vizinha, mais perto do centro."); if(free<=0) return whMsg("Não tens pontos livres: aumenta os pontos ou esvazia outra fatia.");
     P[i]=Math.min(mx,P[i]+(mode==="plus"?Math.min(25,free):free)); }
   whPrune(P); E.dirty=true; if(WHTIP) WHTIP.hidden=true; renderWheelX(); }
-// página da Wheel: a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca), editável, com o painel ao lado
+// página da Wheel (r7: como no jogo): roda grande ao centro, à esquerda Wheel points/Selection/Information, à direita os perks,
+// por baixo o preset atual; a roda da build escolhida (a tua por defeito; 'Ver' na tabela troca), editável
 function renderWheelX(){ const box=$("wheelX"), c=C(); if(!box||!c) return;
   if(!WHD){ box.innerHTML=`<p class="small muted" style="margin:0">A desenhar a Wheel…</p>`; whLoad().then(()=>{ if(WHD) renderWheelX(); }); return; }
-  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; }
-  const ws=G.wheel[c.voc]||[], pts=wpts(c.level), cur=ws.filter(w=>w.p<=pts).pop(), w=WSEL!=null&&ws[WSEL]?ws[WSEL]:cur||ws[0];
-  if(!w||!WHD.b[w.c]){ box.hidden=true; return; } box.hidden=false;
+  if(!GEMD&&!GEMP) gemLoad().then(()=>{ if(GEMD) renderWheelX(); });
+  if(WSELV!==c.voc){ WSEL=null; WSELV=c.voc; WED=null; WHSELK=null; WHPIN=null; }
+  if(!WOPT&&!WOPP) woptLoad().then(()=>{ if(WOPT) renderWheelX(); });
+  const ws=G.wheel[c.voc]||[], pts=wpOf(c), cur=ws.filter(w=>w.p<=pts).pop(), calc=whCalc(c.voc,pts), all=ws.concat(calc);
+  if(WED&&WED.w&&WED.w.calc&&WSEL!=null&&all[WSEL]&&all[WSEL].calc===WED.w.calc) all[WSEL]=WED.w; // a mesma calculada (não recarregar a roda)
+  const w=WSEL!=null&&all[WSEL]?all[WSEL]:cur||ws[0];
+  if(!w||!(w.pts||WHD.b[w.c])){ box.hidden=true; return; } box.hidden=false;
   if(!WED||WED.w!==w) whLoadEd(w,c,true);
   const E=WED, used=whUsed(E.pts), free=E.budget-used, title=E.t||(E.dirty?"Build personalizada":w.t);
-  const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
-  box.innerHTML=`<div class="whx-h"><div><span class="eyebrow">${eb}</span><h3>${esc(title)}</h3><div class="pills">${E.t||E.dirty?`<span class="tag">${used} pontos · nível ${used+50}</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">para o teu nível</span>':""}`}</div></div>
-    <div class="whx-a"><button class="btn small" id="whCopy" data-copy="${esc(E.dirty?"":E.code)}" data-copied="Código copiado"${E.dirty?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div>
-    <div class="whx-tb" role="toolbar" aria-label="Planeador da Wheel">
-      <div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div>
-      <label class="whx-bud">Pontos <input type="number" id="whBudget" inputmode="numeric" min="0" max="3000" value="${E.budget}"></label>
-      <span class="whx-pts"><b>${used}</b> usados · <b class="${free<0?"bad":""}">${free}</b> livres</span>
-      <span class="whx-btn"><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button></span>
-      <details class="whx-imp"><summary>Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details>
-      <span class="tiny whx-msg" id="whMsg" role="status"></span></div>
-    <div class="whx-g"><div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,label:`Wheel of Destiny: ${title}, ${used} pontos`})}<p class="tiny muted whx-leg">${E.edit?"Clica numa fatia para a encher ou esvaziar (Shift: +25 · Ctrl: −25 · botão direito: esvaziar). As de contorno dourado já se podem encher.":"Passa o rato (ou toca) numa fatia para ver o que dá."} ✦ feitiço · ▲ skill · ● leech · ◆ vessel · ♛ perk especial. Nos cantos: revelações (os losangos pequenos são o estágio) e gemas.</p></div>${whPanelHTML(c.voc,E.pts,null)}</div>`;
-  if(E.dirty) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
+  // as builds seguintes, primeiro as da mesma variante (ex.: fogo e morte), depois as outras
+  const nxt=ws.filter(x=>x.p>w.p).sort((a,b)=>a.p-b.p), same=nxt.filter(x=>(x.note||"")===(w.note||""));
+  E.sug = free>0 ? whSuggest(E.pts, same.concat(nxt.filter(x=>!same.includes(x))), free) : null;
+  const eb=E.t?"Do código que colaste":E.dirty?"Build editada por ti":w.calc?"Calculada para os teus pontos":w===cur?"A tua build agora":w.p>pts?"Build para mais tarde":"Build escolhida";
+  const tags=w.calc&&!E.t&&!E.dirty?`<span class="tag">${w.p} pontos</span><span class="tag acc">algoritmo</span>`:E.t||E.dirty?`<span class="tag">${used} pontos</span>${E.dirty&&!E.t?`<span class="tag">baseada em ${esc(w.t)}</span>`:""}`:`<span class="tag">${w.p} pontos · nível ${w.p+50}</span>${w.note?`<span class="tag acc">${esc(wnote(w.note))}</span>`:""}${w===cur?'<span class="tag ok">Best in slot</span><span class="tag ok">para os teus pontos</span>':""}`;
+  /* r8: as outras boas opções logo no fundo da janela (e em cartões por baixo dela) */
+  const O=whOpts(c.voc,pts); O.calc=calc; const oth=[O.bis,...O.alt,...calc].filter(x=>x&&x!==w);
+  const alts=oth.length?`<div class="whx-alt"><span>Outras boas opções:</span>${oth.map(x=>`<button type="button" class="whx-chip${x.calc?" calc":""}" data-wsel="${all.indexOf(x)}" title="${esc(x.t)}">${esc(x===O.bis?"Best in slot":x.calc?x.t:x.note?wnote(x.note):x.t)} <span class="tiny">${x.p}</span></button>`).join("")}</div>`:"";
+  box.innerHTML=`<div class="whx-win"><div class="whx-title">Wheel of Destiny</div>
+    <div class="whx-stage">
+      <aside class="whx-side whx-l">${whPtsHTML(c,E,free,E.sug)}
+        <section class="wbox wbox-sel"><h5>Selection</h5><div class="wbox-b" id="whSel" aria-live="polite">${whPinHTML()}${whSelHTML(c.voc,E.pts,WHSELK)}</div><div class="wbox-av">Available Promotion Points<b class="${free<0?"bad":""}">${free} / ${E.budget}</b></div></section>
+      </aside>
+      <div class="whx-w">${whSVG(c.voc,E.pts,{edit:E.edit,budget:E.budget,sug:E.sug&&E.sug.map,big:true,sel:WHSELK,label:`Wheel of Destiny: ${title}, ${used} pontos`})}</div>
+      <aside class="whx-side whx-r">${whPanelHTML(c.voc,E.pts,null)}</aside>
+    </div>
+    <div class="whx-foot"><div class="whx-cur"><span class="eyebrow">${eb}</span><span>Current Preset: <b>${esc(title)}</b></span><span class="pills">${tags}</span></div>${alts}<span class="tiny whx-msg" id="whMsg" role="status"></span>
+      <div class="whx-a"><div class="whx-seg" role="group" aria-label="Modo"><button type="button" data-wmode="ver" aria-pressed="${!E.edit}">Ver perks</button><button type="button" data-wmode="edit" aria-pressed="${E.edit}">Distribuir pontos</button></div><button type="button" class="btn small ghost" data-wed="reset"${E.dirty||E.t?"":" disabled"}>Repor</button><button type="button" class="btn small ghost" data-wed="clear"${used?"":" disabled"}>Limpar</button>
+        <details class="whx-imp"><summary class="btn small ghost">Importar código</summary><form data-wimp><input id="whImp" type="text" autocomplete="off" spellcheck="false" aria-label="Código da Wheel" placeholder="Cola o código do jogo (ex.: ${WHL[c.voc]}0Y2Bg…)"><button class="btn small">Abrir</button></form></details><button class="btn small" id="whCopy" data-copy="${esc(E.dirty||!E.code?"":E.code)}" data-copied="Código copiado"${E.dirty||!E.code?" disabled":""}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type="button" class="btn small ghost" data-wsel="cur">Voltar à minha</button>`:""}</div></div></div>`;
+  const op=$("wheelOpts"); if(op) op.innerHTML=whOptsHTML(c,all,O,w,pts);
+  const gf=$("wheelGF"); if(gf&&gf.dataset.voc!==c.voc){ gf.innerHTML=whGFHTML(c.voc); gf.dataset.voc=c.voc; }
+  if(E.dirty||!E.code) whEncode(c.voc,E.pts,E.gems).then(code=>{ const b=$("whCopy"); if(b&&code&&WED===E){ b.dataset.copy=code; b.disabled=false; } else if(b&&!code) b.title="Este browser não consegue criar o código."; });
   document.querySelectorAll("#wheelTable tr[data-wi]").forEach(r=>r.classList.toggle("sel",+r.dataset.wi===ws.indexOf(w))); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-wsel]"); if(!b) return; WSEL = b.dataset.wsel==="cur" ? null : +b.dataset.wsel; WED=null; renderWheelX();
-  const box=$("wheelX"); if(box&&b.closest("#wheelTable")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
+  const box=$("wheelX"); if(box&&b.closest("#wheelTable,#wheelOpts")) box.scrollIntoView({behavior:mdMotion()?"smooth":"auto", block:"start"}); });
 document.addEventListener("click", e=>{ const t=e.target.closest&&e.target.closest("[data-wmode],[data-wed],.whs.edit [data-ws]"); if(!t||!WED) return;
   if(t.dataset.wmode){ WED.edit=t.dataset.wmode==="edit"; renderWheelX(); return; }
   if(t.dataset.wed==="reset"){ whLoadEd(WED.w,C(),true); renderWheelX(); return; }
   if(t.dataset.wed==="clear"){ WED.pts=Array(36).fill(0); WED.dirty=true; WED.edit=true; renderWheelX(); return; }
-  if(t.dataset.ws!=null) whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); });
+  if(t.dataset.ws!=null){ WHPIN=null; WHSELK="s:"+t.dataset.ws; whEdit(+t.dataset.ws, e.shiftKey?"plus":(e.ctrlKey||e.altKey||e.metaKey)?"minus":"toggle"); } });
 document.addEventListener("contextmenu", e=>{ const g=e.target.closest&&e.target.closest(".whs.edit [data-ws]"); if(!g) return; e.preventDefault(); whEdit(+g.dataset.ws,"empty"); });
-document.addEventListener("change", e=>{ if(e.target.id!=="whBudget"||!WED) return; WED.budget=Math.max(0,Math.min(3000,parseInt(e.target.value,10)||0)); renderWheelX(); });
+/* r7: o que passa do nível − 50 são pontos comprados (tasks, pergaminhos): ficam na personagem e contam em todo o site */
+function whSetPts(){ const c=C(), inp=$("whBudget"); if(!c||!inp) return; const v=Math.max(0,Math.min(4000,parseInt(inp.value,10)||0));
+  c.wpx=Math.max(0,v-wpts(c.level)); save(); WSEL=null; WED=null; renderWheel(); const n=$("whBudget"); if(n) n.focus({preventScroll:true}); }
+document.addEventListener("change", e=>{ if(e.target.id==="whBudget") whSetPts(); });
+document.addEventListener("keydown", e=>{ if(e.key==="Enter"&&e.target.id==="whBudget"){ e.preventDefault(); whSetPts(); } });
+document.addEventListener("click", e=>{ const b=e.target.closest&&e.target.closest("[data-wpts-go],[data-wsug]"); if(!b) return;
+  if(b.dataset.wptsGo) return whSetPts();
+  if(WED&&WED.sug){ WED.pts=WED.sug.pts; WED.dirty=true; WHSELK=null; renderWheelX(); whMsg("Sugestão aplicada: copia o código no fundo da janela."); } });
 document.addEventListener("submit", async e=>{ const f=e.target.closest&&e.target.closest("[data-wimp]"); if(!f) return; e.preventDefault(); const c=C(), r=await whDecode($("whImp").value);
   if(r.err) return whMsg(r.err); if(r.voc!==c.voc) return whMsg(`Este código é de ${G.voc[r.voc].n}: troca para uma personagem dessa vocação para o abrir.`);
   WED.pts=whPrune(r.pts); WED.gems=r.gems; WED.code=String($("whImp").value).trim(); WED.dirty=false; WED.t="Build importada"; WED.budget=Math.max(WED.budget,whUsed(WED.pts)); renderWheelX(); });
@@ -45230,8 +45806,8 @@ function itemAdvHTML(key,w,d,info){ const W=esc(w), p=priceOf(key,w), np=p.npc?`
   return t+(age!=null&&age>=3?` <span class="tag warn">dados de há ${age} dias</span>`:""); }
 
 /* r4-t2 */ // separador 'Loot e lucro' da ficha (solo e grupo): <div class="lp" data-lootp="pid" data-xp data-lo data-how [data-g data-sb]> preenchido por initLoot
-function gpx(v){ v=+v||0; return v<=0 ? "—" : v<1 ? "< 1 gp" : v<10 ? `${v.toFixed(1).replace(/\.0$/,"").replace(".",",")} gp` : gp(v); }
-function ozTxt(r){ return r>=10 ? nf(r) : r>=0.1 ? r.toFixed(1).replace(".",",") : "< 0,1"; }
+function gpx(v){ v=+v||0; return v<=0 ? "—" : v<1 ? "< 1 gp" : v<10 ? `${v.toFixed(1).replace(/\.0$/,"").replace(".",DECSEP)} gp` : gp(v); }
+function ozTxt(r){ return r>=10 ? nf(r) : r>=0.1 ? r.toFixed(1).replace(".",DECSEP) : "< 0,1"; }
 function initLoot(root){ (root||document).querySelectorAll("[data-lootp]:not([data-lpok])").forEach(el=>{ el.dataset.lpok="1"; const c=C(), w=c&&c.world||"";
   el.innerHTML=`<div class="lp-sk" aria-hidden="true"><i></i><i></i><i></i></div><p class="small muted">A calcular os preços${w?` do Market de ${esc(w)}`:""}…</p>`;
   Promise.all([dsafe("items"),dsafe("creatures"),mktLoad(w),npcData().catch(()=>({})),linkIdxLoad()]).then(([items,crs,,np])=>{ if(!ITV&&items&&Object.keys(items).length) ITV=items; if(!el.isConnected) return;
@@ -45306,7 +45882,7 @@ function lpCalcRun(box){ const f=n=>box.querySelector(`[data-lpf="${n}"]`), hrs=
   box.querySelectorAll("[data-lpk]").forEach(r=>{ sup+=lpNum(r.querySelector('[data-lpf="q"]').value)*lpNum(r.querySelector('[data-lpf="p"]').value); });
   const fe=f("fee"), fee=fe&&fe.checked?(+box.dataset.fee||0):0, loot=lpNum(f("loot").value), pro=loot-sup-fee, ses=pro*hrs, o=box.querySelector(".lp-out");
   const put=(k,v,neg)=>{ const e=o.querySelector(`[data-lpo="${k}"]`); if(e){ e.textContent=v; if(neg!=null) e.classList.toggle("neg",neg); } };
-  put("sup",gp(sup)); put("fee",gp(fee)); put("pro",gp(pro),pro<0); put("ses",gp(ses),ses<0); put("hrs",String(hrs).replace(".",",")); o.classList.toggle("neg",pro<0);
+  put("sup",gp(sup)); put("fee",gp(fee)); put("pro",gp(pro),pro<0); put("ses",gp(ses),ses<0); put("hrs",String(hrs).replace(".",DECSEP)); o.classList.toggle("neg",pro<0);
   return {hrs,sup,fee,loot,pro,ses}; }
 // c.calc[pid] = {hrs, q:{chave:[quantidade, preço só quando o mudaste, nome do 'Outro']}, loot (só quando o mudaste), fee, t}; no máximo 50 hunts
 function lpCalcSave(box){ const c=C(); if(!c) return; const pid=box.dataset.hcalc, f=n=>box.querySelector(`[data-lpf="${n}"]`), val=e=>e&&e.value!==""&&isFinite(+e.value)?+e.value:null, q={};
@@ -45375,7 +45951,7 @@ function itemLookHTML(id){
     ${ab.length?`<div class="lk-pr">${ab.map(([e,v])=>`<div class="c-${e}${v<0?" neg":""}"><span>${esc(elName(e))}</span><i><u style="width:${Math.min(100,Math.abs(v))}%"></u></i><b>${v>0?"+":""}${v}%</b></div>`).join("")}</div>`:""}
     ${ex.length?`<ul class="lk-ex">${ex.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
     ${it&&it.is&&it.it&&it.it.length?`<p class="lk-imb">Imbuements possíveis: ${esc(imbOptions(it).map(x=>IMBL[x]||x).join(", "))}</p>`:""}
-    ${info.wt!=null?`<p class="lk-wt">Pesa ${Number(info.wt).toFixed(2).replace(".",",")} oz${info.stack?" · empilhável":""}</p>`:""}
+    ${info.wt!=null?`<p class="lk-wt">Pesa ${Number(info.wt).toFixed(2).replace(".",DECSEP)} oz${info.stack?" · empilhável":""}</p>`:""}
     <div class="lk-v"><div><span class="lk-vl">Melhor NPC</span>${sell?`<b>${gp(sell[1])}</b><small>${esc(sell[0])}</small>`:ITV?`<small>Nenhum NPC compra.</small>`:`<small class="tkload">A carregar…</small>`}</div><div><span class="lk-vl">Market${w?` · ${esc(w)}`:""}</span>${mkt}${age!=null&&age>=3?`<small class="lk-age">dados de há ${age} dias</small>`:""}</div></div>
     ${pb&&pb.best==="npc"&&pb.npc?`<p class="lk-best">Melhor: vende ${npcTo(pb.npc[0])} por ${gp(pb.npc[1])}</p>`:pb&&pb.best==="market"?`<p class="lk-best">Melhor: vende no Market de ${esc(w)} (≈ ${gp(pb.net)} depois da taxa)</p>`:""}
     ${sc!=null&&notaItem(c,it,sc,"combat","")!=null?`<p class="lk-sc">Nota para ${esc(c.name||G.voc[c.voc].n)}: <b>${notaItem(c,it,sc,"combat","")}</b> de 100 <small>(100 = o melhor deste slot até ao nível ${c.level})</small></p>`:""}`;
@@ -45943,7 +46519,7 @@ function renderDefesa(){
   const PT=[["Great Mana Potion",158,200,"Todas as vocações (nível 80) desde junho de 2026. A mais barata por 1000 de mana."],["Superior Mana Potion",254,300,"Todas menos knights (nível 100)."],["Ultimate Mana Potion",488,500,"Sorcerers e druids (nível 130). A que dá mais mana por poção: para quando precisas de muita mana depressa."]];
   const pnm=x=>String(x||"").split(" (")[0].trim(), pc=vd.pots.filter(p=>p.l<=L).pop(), mine=pc?pnm(pc.m):"", use=new Set(vd.pots.map(p=>pnm(p.m)));
   $("defPots").innerHTML = `<thead><tr><th>Poção</th><th>Custo</th><th>Quem usa</th></tr></thead><tbody>` + PT.map(([n,pr,mn,t])=>`<tr class="${n===mine?"now":use.has(n)?"":"dim"}"><td>${itemChip(n)}${n===mine?' <span class="tag ok">nas tuas hotkeys</span>':""}</td><td>~${nf(Math.round(pr/mn*1000))} gp</td><td>${t}</td></tr>`).join("") + `</tbody>`;
-  $("defFee").textContent = `${String(MKPCT).replace(".",",")} %`;
+  $("defFee").textContent = `${String(MKPCT).replace(".",DECSEP)} %`;
 }
 
 /* ---------- Tibia (TibiaData) ---------- */
@@ -45952,10 +46528,10 @@ function renderDefesa(){
 const API = "https://api.tibiadata.com/v4";
 const NAME_RE = /^[A-Za-z][A-Za-z' .\-]{1,29}$/;
 const vocKey = s => { s=String(s||"").toLowerCase(); return VOCS.find(v=>s.includes(v)) || null; };
-const clampL = L => Math.max(8, Math.min(3000, Math.round(L)||8));
+const clampL = L => Math.max(8, Math.min(LVMAX, Math.round(L)||8));
 const pctFrom = (xp,L) => Math.max(0, Math.min(99, Math.floor((xp-expFor(L))/(expFor(L+1)-expFor(L))*100)));
 const premium = s => s==="Premium Account" ? "Premium" : "Free";
-const RTF = new Intl.RelativeTimeFormat("pt-PT",{numeric:"auto"});
+const RTF = new Intl.RelativeTimeFormat(LOC,{numeric:"auto"});
 const ago = t => { if(!t) return ""; const s=(Date.now()-new Date(t).getTime())/1000;
   if(s<60) return "agora mesmo"; if(s<3600) return RTF.format(-Math.round(s/60),"minute"); if(s<86400) return RTF.format(-Math.round(s/3600),"hour");
   if(s<86400*45) return RTF.format(-Math.round(s/86400),"day"); if(s<86400*365) return RTF.format(-Math.round(s/86400/30.4),"month"); return RTF.format(-Math.floor(s/86400/365),"year"); };
@@ -45979,7 +46555,7 @@ const snap = d => { const c=d.character, a=d.account_information||{};
 function applyTibia(c, d){
   const ch=d.character, v=vocKey(ch.vocation);
   if(v && v!==c.voc){ c.charms={}; c.imb={}; (c.sets||[]).forEach(s=>s.slots={}); c.voc=v; c.hs=null; c.wtype=WTYPES[v]?WTYPES[v][0][0]:""; }
-  if(!c.tib || c.tib.level!==ch.level){ const L=clampL(ch.level); if(L!==c.level){ c.level=L; c.pct=0; if(c.target<=L) c.target=0; } }
+  if(!c.tib || c.tib.level!==ch.level || (c.level===3000 && ch.level>3000)){ const L=clampL(ch.level); if(L!==c.level){ c.level=L; c.pct=0; if(c.target<=L) c.target=0; } }
   if(c.world && c.world!==ch.world) c.hs=null;
   c.name=ch.name; c.world=ch.world; c.tib=snap(d); c.syncedAt=Date.now(); delete c.syncErr;
 }
@@ -46066,11 +46642,11 @@ function profHTML(c){
   return `<div class="card" style="display:grid;gap:14px">
     <div class="controls" style="justify-content:space-between"><h3 style="font-size:20px">Perfil no Tibia: ${esc(c.name)}</h3></div>
     <dl class="dl">${row("Vocação",esc(t.voc))}${row("Nível",t.level)}${row("Mundo",esc(c.world))}${row("Residência",esc(t.res))}
-      ${row("Guild",t.guild?`${esc(t.guild.r)} em ${esc(t.guild.n)}`:"Sem guild")}${row("Título",esc(t.title))}
-      ${row("Conta",esc([premium(t.status),t.loyalty,t.created?`criada em ${new Date(t.created).toLocaleDateString("pt-PT")}`:""].filter(Boolean).join(" · ")))}
+      ${row("Guild",t.guild?`${esc(t.guild.r)} em <b>${esc(t.guild.n)}</b>`:"Sem guild")}${row("Título",esc(t.title))}
+      ${row("Conta",esc([premium(t.status),t.loyalty,t.created?`criada em ${new Date(t.created).toLocaleDateString(LOC)}`:""].filter(Boolean).join(" · ")))}
       ${row("Conquistas",t.ach?`${nf(t.ach)} pontos`:"")}${row("Casas",t.houses.map(esc).join("<br>"))}${row("Nomes antigos",t.former.map(esc).join(", "))}
-      ${row("Último login",t.last?`${new Date(t.last).toLocaleString("pt-PT",{dateStyle:"medium",timeStyle:"short"})} (${ago(t.last)})`:"")}${row("Skills",hsLine(c))}</dl>
-    ${t.deaths.length?`<div><h4 class="sub">Mortes recentes</h4><ul class="small dlist">${t.deaths.map(d=>`<li><span class="muted">${new Date(d.t).toLocaleDateString("pt-PT")}</span> ${esc(d.r)}</li>`).join("")}</ul></div>`:""}
+      ${row("Último login",t.last?`${new Date(t.last).toLocaleString(LOC,{dateStyle:"medium",timeStyle:"short"})} (${ago(t.last)})`:"")}${row("Skills",hsLine(c))}</dl>
+    ${t.deaths.length?`<div><h4 class="sub">Mortes recentes</h4><ul class="small dlist">${t.deaths.map(d=>`<li><span class="muted">${new Date(d.t).toLocaleDateString(LOC)}</span> ${esc(d.r)}</li>`).join("")}</ul></div>`:""}
     ${others?`<div><h4 class="sub">Outras personagens da conta</h4><ul class="olist">${others}</ul></div>`:""}
     <p class="tiny muted">Dados públicos do tibia.com, via TibiaData. Atualizado ${ago(c.syncedAt)}.${busy[c.id]?"":` <button class="linkbtn" data-sync="${c.id}">Atualizar agora</button>`}</p>
   </div>`;
@@ -46144,7 +46720,7 @@ function formHTML(cancel){
     <div style="display:grid;gap:6px"><span class="small muted">Vocação</span><div class="vocpick" role="radiogroup" aria-label="Vocação">${VOCS.map(v=>`<button type="button" role="radio" data-voc="${v}" aria-pressed="${d.voc===v}" aria-checked="${d.voc===v}" style="color:var(--${v})">${VI(v,"lg")}<span style="color:var(--ink)">${G.voc[v].n}</span></button>`).join("")}</div></div>
     <label class="fname" for="f-name">Nome da personagem<input id="f-name" type="text" maxlength="30" autocomplete="off" placeholder="Como aparece no jogo" value="${esc(d.name)}"></label>
     <div class="fgrid">
-      <label for="f-level">Nível<input id="f-level" type="number" inputmode="numeric" min="8" max="3000" placeholder="ex.: 120" value="${esc(d.level)}"></label>
+      <label for="f-level">Nível<input id="f-level" type="number" inputmode="numeric" min="8" max="${LVMAX}" placeholder="ex.: 120" value="${esc(d.level)}"></label>
       <label for="f-pct">% para o próximo<input id="f-pct" type="number" inputmode="numeric" min="0" max="99" placeholder="0" value="${esc(d.pct)}"></label>
       <label for="f-ml">Magic level<input id="f-ml" type="number" inputmode="numeric" min="0" max="200" placeholder="${mage?"ex.: 60":"ex.: 10"}" value="${esc(d.ml)}"></label>
       ${mage?"":`<label for="f-skill">${SKLAB[d.voc]}<input id="f-skill" type="number" inputmode="numeric" min="10" max="200" placeholder="ex.: 90" value="${esc(d.skill)}"></label>`}
@@ -46162,7 +46738,7 @@ function bindForm(host){
     const err=host.querySelector("#f-err"), name=draft.name.trim(), L=parseInt(draft.level,10);
     const fail=(m,f)=>{ err.textContent=m; err.hidden=false; const el=host.querySelector(f); if(el) el.focus(); };
     if(!name) return fail("Escreve o nome da personagem.","#f-name");
-    if(!(L>=8 && L<=3000)) return fail("O nível tem de estar entre 8 e 3000.","#f-level");
+    if(!(L>=8 && L<=LVMAX)) return fail(`O nível tem de estar entre 8 e ${LVMAX}.`,"#f-level");
     const num=(x,min,max,def)=>{ const n=parseInt(x,10); return isNaN(n)?def:Math.max(min,Math.min(max,n)); };
     const mage=draft.voc==="druid"||draft.voc==="sorcerer";
     const vals={name:name.slice(0,30),voc:draft.voc,level:L,pct:num(draft.pct,0,99,0),ml:num(draft.ml,0,200,0),skill:mage?10:num(draft.skill,10,200,10),wtype:WTYPES[draft.voc]?draft.wtype:""};
@@ -46203,8 +46779,8 @@ let sampleFn=null, ctl=null;
 function ctx(){
   const c=C(), vd=VD(), L=c.level;
   const hs = candidates().filter(h=>h.cmp.cls!=="bad").sort((a,b)=>(b.xp||0)-(a.xp||0)).slice(0,40).map(h=>`${h.p.n} (${h.r.place}; nível ${h.l}+; XP ${fmt(h.xp)}/h${h.est?" estimado":""}; lucro ${fmt(h.lo)}/h; ${h.cmp.txt}; risco ${h.d}/3; acesso ${h.q?qName(h.q)+(qDone(c,h.q)?" (feita)":" (por fazer)"):"livre"})`);
-  const ws=(G.wheel[c.voc]||[]).filter(w=>w.p<=wpts(L)+150).map(w=>`${w.p} pontos: ${w.t}`);
-  return {personagem:{nome:c.name,vocacao:vd.promo,nivel:L,magic_level:c.ml,skill:isMage(c)?null:c.skill,arma:c.wtype||null,vida:hpOf(c),mana:manaOf(c),pontos_wheel:wpts(L)},
+  const ws=(G.wheel[c.voc]||[]).filter(w=>w.p<=wpOf(c,L)+150).map(w=>`${w.p} pontos: ${w.t}`);
+  return {personagem:{nome:c.name,vocacao:vd.promo,nivel:L,magic_level:c.ml,skill:isMage(c)?null:c.skill,arma:c.wtype||null,vida:hpOf(c),mana:manaOf(c),pontos_wheel:wpOf(c,L)},
     estilo:"Jogador português no Tibia oficial; joga sobretudo sozinho; prefere hunts sem risco de morrer; gosta de quests com história.",
     quests_feitas:G.quests.filter(q=>c.done[q.id]).map(q=>q.n), charms:Object.keys(c.charms).map(k=>G.charms[k]?G.charms[k].n:k), equipamento_que_tem:Object.keys(c.owned).map(k=>BYID[k]?BYID[k].n:null).filter(Boolean), sets:(c.sets||[]).map(s=>({nome:s.name,tipo:s.mode,itens:Object.entries(s.slots).map(([k,e])=>(BYID[e.id]||{}).n+(e.imb&&e.imb.filter(Boolean).length?" ["+e.imb.filter(Boolean).map(x=>IMBL[x]||x).join(", ")+"]":""))})),
     hunts_para_o_nivel:hs, wheel:ws, stances:vd.stances.map(s=>`${s.n}${s.w?" ("+s.w+")":""}: ${s.d}`), rotacoes:vd.rot.map(r=>r.t+": "+r.seq.map(s=>s[0]).join(" > ")),
@@ -46356,6 +46932,7 @@ const RM = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : 
 const FINE = window.matchMedia ? matchMedia("(hover:hover) and (pointer:fine)") : {matches:false};
 const mdMotion = () => isMd() && !RM.matches;
 function setUI(mode, remember){
+  mode="modern"; // r7: o Original saiu (o CSS base continua a ser a base do Modern)
   const d=document.documentElement;
   if(mode==="modern"){ d.setAttribute("data-ui","modern"); if(!document.getElementById("mdFonts")){ const l=document.createElement("link"); l.rel="stylesheet"; l.id="mdFonts"; l.href=UI_FONTS; document.head.appendChild(l); } }
   else d.removeAttribute("data-ui");
@@ -46364,12 +46941,7 @@ function setUI(mode, remember){
   if(remember){ try{ localStorage.setItem("grimorio-ui", mode); localStorage.setItem("grimorio-ui-hint","1"); }catch(e){} }
   if(mode==="modern") mdStart(); else mdStop();
 }
-document.addEventListener("click", e=>{ const b=e.target.closest("[data-ui-set]"); if(b){ mdVT(()=>setUI(b.dataset.uiSet,true), true); const h=document.querySelector(".ui-hint"); if(h) h.remove(); } });
-(function(){ let seen=true; try{ seen=!!localStorage.getItem("grimorio-ui-hint")||!!localStorage.getItem("grimorio-ui"); }catch(e){}
-  if(seen) return; setTimeout(()=>{ if(document.querySelector(".ui-hint")) return; const el=document.createElement("div"); el.className="ui-hint"; el.setAttribute("role","status");
-    el.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><div><b>Novo: modo Modern</b><p>Néon, ilustrações e animações. Podes voltar ao Original no fundo da página.</p><button type="button" class="btn small" data-ui-set="modern">Experimentar</button></div><button type="button" class="x" aria-label="Fechar">✕</button>`;
-    el.querySelector(".x").onclick=()=>{ el.remove(); try{ localStorage.setItem("grimorio-ui-hint","1"); }catch(e){} };
-    document.body.appendChild(el); }, 2500); })();
+/* r7: sem interruptor Original/Modern nem aviso "experimenta o Modern" (só há o Modern) */
 
 /* ---------- motor do Modern: partículas, paralaxe, luz do cursor, estrelas cadentes ---------- */
 const MD={raf:0, parts:[], cv:null, g:null, w:0, h:0, dpr:1, px:0, py:0, cx:-999, cy:-999, shootT:0, tipT:0, tipEl:null};
@@ -46419,7 +46991,7 @@ function mdInd(){ const nav=$("side"); if(!nav||!isMd()) return; const a=nav.que
   ind.style.opacity="1"; ind.style.transform=`translateY(${y}px)`; ind.style.height=ar.height+"px"; MD_IND={y,h:ar.height}; }
 
 /* ---------- títulos letra a letra e revelação ao descer ---------- */
-function mdSplit(h){ if(!h) return; const t=h.textContent; if(h.dataset.split!==t){ h.setAttribute("aria-label",t); let i=0; /* r4-t4: por palavras (.chw) */
+function mdSplit(h){ if(!h) return; if(window.I18N) I18N.now(h); const t=h.textContent; if(h.dataset.split!==t){ h.setAttribute("aria-label",t); let i=0; /* r4-t4: por palavras (.chw) */
     h.innerHTML=t.split(/(\s+)/).map(w=>!w?"":/^\s+$/.test(w)?'<span class="ch chs" aria-hidden="true"> </span>':`<span class="chw" aria-hidden="true">${[...w].map(c=>`<span class="ch" style="--i:${i++}">${esc(c)}</span>`).join("")}</span>`).join(""); h.dataset.split=h.textContent; }
   h.classList.remove("split-go"); void h.offsetWidth; if(mdMotion()) h.classList.add("split-go"); }
 const MD_IO = "IntersectionObserver" in window ? new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("md-in"); MD_IO.unobserve(en.target); } }),{rootMargin:"0px 0px -8% 0px"}) : null;
@@ -46481,7 +47053,7 @@ const RAR = {"always":["sempre",100],"common":["comum",25],"uncommon":["incomum"
 const rarKey = r => String(r||"").toLowerCase().replace(/_/g," ").replace("semi rare","semi-rare").trim();
 const rarTxt = r => (RAR[rarKey(r)]||[r||"?"])[0];
 const rarVal = (r,p) => p!=null ? p : (RAR[rarKey(r)]||[0,0.3])[1];
-const pctTxt = v => v>=10 ? Math.round(v)+"%" : v>=1 ? v.toFixed(1).replace(".",",")+"%" : v.toFixed(2).replace(".",",")+"%";
+const pctTxt = v => v>=10 ? Math.round(v)+"%" : v>=1 ? v.toFixed(1).replace(".",DECSEP)+"%" : v.toFixed(2).replace(".",DECSEP)+"%";
 const gp = n => n==null ? "—" : nf(n)+" gp";
 const SLUGS = {};
 async function slugIndex(kind){
@@ -46566,11 +47138,11 @@ function ipSpec(eq,info,cl,maxT){ const r=[];
     Object.entries(eq.sk||{}).forEach(([k,v])=>r.push([cap1(SKN[k]||k),`${v>0?"+":""}${v}`])); if(eq.mn) r.push(["Mantra","+"+eq.mn]); if(eq.spd) r.push(["Velocidade",(eq.spd>0?"+":"")+eq.spd]);
     /* r8 */ if(eq.crit) r.push(["Crítico",[eq.crit[0]?`${eq.crit[0]}% de chance`:"",eq.crit[1]?`+${eq.crit[1]}% de dano`:""].filter(Boolean).join(" · ")]);
     if(eq.lch) r.push(["Leech",[eq.lch[0]?`vida ${eq.lch[0]}%`:"",eq.lch[1]?`mana ${eq.lch[1]}%`:""].filter(Boolean).join(" · ")]);
-    if(eq.rg) r.push(["Regeneração",`${String(eq.rg[0]).replace(".",",")} vida · ${String(eq.rg[1]).replace(".",",")} mana/s`]); if(eq.bond) r.push(["Ligação",cap1(ELN[eq.bond]||eq.bond)]);
+    if(eq.rg) r.push(["Regeneração",`${String(eq.rg[0]).replace(".",DECSEP)} vida · ${String(eq.rg[1]).replace(".",DECSEP)} mana/s`]); if(eq.bond) r.push(["Ligação",cap1(ELN[eq.bond]||eq.bond)]);
     if(eq.chg) r.push(["Cargas",eq.chg]); else if(eq.dur) r.push(["Duração",`${Math.round(eq.dur/60)} min`]); }
   const is=eq?eq.is:info.imb; if(is) r.push(["Imbuements",`${is} ${is===1?"slot":"slots"}`]);
   if(cl) r.push(["Forge",`classe ${cl}${maxT?` · até T${maxT}`:""}`]);
-  if(info.wt!=null) r.push(["Peso",String(info.wt).replace(".",",")+" oz"]);
+  if(info.wt!=null) r.push(["Peso",String(info.wt).replace(".",DECSEP)+" oz"]);
   return r.map(([k,v])=>[k,esc(String(v))]); }
 function ipAttrHTML(eq,info,c){
   if(!eq) return "";
@@ -46650,18 +47222,18 @@ async function renderItemPage(key){
   if(forge&&wld) mktLoad(wld).then(d=>{ const f=el.querySelector(".forge"); if(f&&f.isConnected) forgeFill(f,d,key,eq); });
 }
 /* ---------- Exaltation Forge na página do item: bónus por tier, custo de cada fusão e custo mínimo para chegar a cada tier ---------- */
-const kkk = n => n==null ? "—" : n>=1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace(".",",")+"kkk" : n>=1e6 ? (n/1e6).toFixed(n%1e6?1:0).replace(".",",")+"kk" : n>=1e3 ? Math.round(n/1e3)+"k" : String(n);
+const kkk = n => n==null ? "—" : n>=1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace(".",DECSEP)+"kkk" : n>=1e6 ? (n/1e6).toFixed(n%1e6?1:0).replace(".",DECSEP)+"kk" : n>=1e3 ? Math.round(n/1e3)+"k" : String(n);
 // custo mínimo para fazer o tier t a partir de itens tier 0 (todas as fusões com sucesso): 2^t itens e Σ 2^(t-k)·gold(k)
 function forgeMin(costs,t){ let gold=0, cores=0; for(let k=1;k<=t;k++){ const c=costs&&costs[String(k)]; if(!c) return null; const n=2**(t-k); gold+=n*(c.gold||0); cores+=n*(c.cores||0); } return {items:2**t, gold, cores}; }
 function forgeHTML(cl,eq,info){
   const F=FORGE, mx=F.maxTier[String(cl)]; if(!mx) return "";
   const bk=(F.slotMap||{})[info.slot], B=bk&&F.bonus[bk], fu=(F.fusion.cost||{})[String(cl)]||{}, cv=F.convergence&&F.convergence.classes&&F.convergence.classes.includes(+cl) ? (F.convergence.cost||{})[String(cl)]||{} : null;
-  const n2=v=>String(v).replace(".",","), rows=[];
+  const n2=v=>String(v).replace(".",DECSEP), rows=[];
   for(let t=1;t<=mx;t++){ const f=fu[String(t)], m=forgeMin(fu,t), v=cv&&cv[String(t)];
-    rows.push(`<tr><th scope="row">T${t}</th>${B?`<td class="num"><b>${n2(B.v[t-1])}${B.unit||""}</b>${B.extra?`<span class="pt-s">${n2(B.extra.v[t-1])}${B.extra.unit||""} ${esc(B.extra.label.toLowerCase())}</span>`:""}</td>`:""}<td class="num">${f?`${kkk(f.gold)} gp<span class="pt-s">${f.dust||0} dust · ${F.fusion.chance}%</span>`:"—"}</td>${cv?`<td class="num">${v?`${kkk(v.gold)} gp<span class="pt-s">${v.dust||0} dust · 100%</span>`:"—"}</td>`:""}<td class="num">${m?`${m.items} itens + ${kkk(m.gold)} gp<span class="pt-s fz-est" data-ft="${t}" data-fi="${m.items}" data-fg="${m.gold}"></span>`:"—"}</td></tr>`); }
+    rows.push(`<tr><th scope="row">T${t}</th>${B?`<td class="num"><b>${n2(B.v[t-1])}${B.unit||""}</b>${B.extra?`<span class="pt-s">${n2(B.extra.v[t-1])}${B.extra.unit||""} <span>${esc(B.extra.label)}</span></span>`:""}</td>`:""}<td class="num">${f?`${kkk(f.gold)} gp<span class="pt-s">${f.dust||0} dust · ${F.fusion.chance}%</span>`:"—"}</td>${cv?`<td class="num">${v?`${kkk(v.gold)} gp<span class="pt-s">${v.dust||0} dust · 100%</span>`:"—"}</td>`:""}<td class="num">${m?`${m.items} itens + ${kkk(m.gold)} gp<span class="pt-s fz-est" data-ft="${t}" data-fi="${m.items}" data-fg="${m.gold}"></span>`:"—"}</td></tr>`); }
   const r=F.resources||{}, cvn=(r.convert||[]).map(x=>`${x.n} ${x.from==="dust"?"dust":"slivers"} → ${x.get} ${x.to==="sliver"?"slivers":"exalted core"}`).join(" · "), co=F.fusion.coreOpts||{};
   return `<section class="card forge ip-wide"><h3>Exaltation Forge<span class="h3s">classe ${cl} · até tier ${mx}</span></h3>
-    ${B?`<p class="small fz-b"><b>${esc(B.name)}</b> (${esc(B.label.toLowerCase())}): ${esc(B.desc)}</p>`:`<p class="small muted fz-b">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`}
+    ${B?`<p class="small fz-b"><b>${esc(B.name)}</b> (<span>${esc(B.label)}</span>): <span>${esc(B.desc)}</span></p>`:`<p class="small muted fz-b">Este tipo de item sobe de tier mas não tem bónus de tier próprio.</p>`}
     <div class="tablewrap"><table class="pt fz-t"><thead><tr><th>Tier</th>${B?`<th class="num">${esc(B.name)}</th>`:""}<th class="num">Fusão (cada)</th>${cv?`<th class="num">Convergência (cada)</th>`:""}<th class="num">Mínimo para fazer</th></tr></thead><tbody>${rows.join("")}</tbody></table></div>
     <ul class="fz-notes small">
       <li><b>Fusão</b> 2 itens iguais com o mesmo tier dão +1 tier. ${F.fusion.chance}% de sucesso${co.chance?`, ${co.chance.to}% com ${co.chance.cores} exalted core`:""}. Se falhar, um dos itens desce 1 tier (ou desaparece se for tier 0)${co.protect?`; com mais ${co.protect.cores} exalted core o risco desce para ${co.protect.lossChance}%`:""}.</li>
@@ -46683,7 +47255,7 @@ const RSORD=["physical","fire","ice","earth","energy","holy","death","lifedrain"
 const elTx = e => { const t=String(ELN[e]||e); return esc(t.charAt(0).toUpperCase()+t.slice(1)); };
 // textos dos ataques que vêm da TibiaWiki em inglês ("up to 70 turns", "poisoned", "9 seconds, rarely")
 const CPEN=[[/\bup to\b/gi,"até"],[/\bhp\/turn\b/gi,"vida/turno"],[/\bturns\b/gi,"turnos"],[/\bturn\b/gi,"turno"],[/\bhp\b/gi,"vida"],[/\bseconds?\b|\bsecs?\b/gi,"s"],[/\bvery often\b/gi,"muito frequente"],[/\boften\b/gi,"frequente"],[/\brarely\b/gi,"raramente"],[/\bunknown effect\b|\bunknown\b/gi,"efeito desconhecido"],[/\bslowed\b/gi,"lento"],[/\bpoisoned\b/gi,"envenenado"],[/\bdrunk\b/gi,"embriagado"],[/\bcursed\b/gi,"amaldiçoado"],[/\bburning\b/gi,"a arder"],[/\belectrified\b/gi,"eletrificado"],[/\bhexed\b/gi,"enfeitiçado"],[/\brooted\b/gi,"preso"],[/\bfeared\b/gi,"com medo"],[/\bfreezing\b/gi,"a congelar"],[/\bbleeding\b/gi,"a sangrar"],[/\bdazzled\b/gi,"ofuscado"],[/\bpoints\b/gi,"pontos"],[/\bradius\b/gi,"de raio"]];
-const cpEn = s => CPEN.reduce((t,[r,v])=>t.replace(r,v), String(s||""));
+const cpEn = s => (window.I18N && !/^pt/.test(I18N.lang)) ? String(s||"") : CPEN.reduce((t,[r,v])=>t.replace(r,v), String(s||""));
 const rsCls = v => v<0?"heal":v===0?"imm":v<100?"res":v===100?"neu":"weak";
 const CPTR = {fire:"fogo",energy:"energia",poison:"veneno",earth:"terra",ice:"gelo"};
 const cpTr = s => String(s||"").split(/,\s*/).map(x=>CPTR[x.trim().toLowerCase()]||x.trim()).filter(Boolean).join(", ");
@@ -46698,7 +47270,7 @@ async function renderMonPage(key){
   const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"",
     boss?`<span class="tag gold">boss${ci.boss?` · ${esc(ci.boss)}`:""}</span>`:"", ci.blvl||cr.blvl?`<span class="tag">Bestiary ${esc(ci.blvl||cr.blvl)}</span>`:"", ci.occ?`<span class="tag">${esc(ci.occ)}</span>`:""].join("");
   const runN=parseInt(ci.run,10);
-  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",","):null],["Dano máx./turno",ci.maxdmg?nf(+ci.maxdmg):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",",")+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
+  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",DECSEP):null],["Dano máx./turno",ci.maxdmg?nf(+ci.maxdmg):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",DECSEP)+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
   // fraquezas e resistências: uma faixa
   const els=RSORD.filter(e=>dmg[e]!=null||RSORD.indexOf(e)<7);
   const res=`<div class="rs">${els.map(e=>{ const v=dmg[e]??100; return `<div class="rs-c rs-${rsCls(v)}${e===best?" rs-best":""}"><span class="c-${e}">${elTx(e)}</span><b>${v}%</b></div>`; }).join("")}</div>
@@ -46968,7 +47540,7 @@ renderAll();
 guiasLoad().then(()=>{ if(!ST.chars.length) return; renderQuests(); renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
 bootSync();
 route(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
-setUI(isMd()?"modern":"original", false);
+setUI("modern", false);
 linkIdxLoad();
 
 if (window.claude && typeof window.claude.use==="function"){
