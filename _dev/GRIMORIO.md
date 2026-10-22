@@ -334,4 +334,9 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   lê `grimorio-tibia-v4`, `../data/guias.json` e `../data/search.json`); em `app.js`, `QP` usa-o no `isDone`, no "Marcar como
   concluída", no filtro "O meu nível" (`S.filters.lvlChar` = nível vem da personagem) e na wiki ("Ver no Grimório" e o switch).
 - O Original/Modern é o mesmo nos dois (`grimorio-ui`); o Modern do Questski está em `quests/css/modern.css`.
+- Janela da quest (r11): `initQuests` usa o guia do Questski quando há (`guiaOf` → `guiaQ(slug)` lê `quests/data/quests/<slug>.json`):
+  `guiaCardHTML` com o lore (`legend_pt`) em destaque (`.qlore`), requisitos, recompensas fechadas e, num `details.qguide` sempre fechado
+  ('tem spoilers'), o resumo e o passo a passo (`qmd` converte `{npc:}`, `{item:}`, `{creature:}`, `{spell:}`, `{key:}`, `**`/`*`). O título
+  leva ao Questski. Sem guia, fica o `questCardHTML`. No bloco Acesso das hunts, `questReqTag` torna clicável cada 'Quest: …'.
+  `build_guias.py`: os nomes principais dos guias ganham aos `aka` (o 'The New Frontier' ia para o Tomes of Knowledge).
 - Ferramentas do Questski: `_questski/tools/*.py` escrevem em `../quests/` (antes `site/`); `tools/cache/` não vai para o Git.

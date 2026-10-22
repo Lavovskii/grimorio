@@ -497,6 +497,29 @@ a.gsp-o{text-decoration:none}
 .hg-tx small{font-size:13px;line-height:1.3;color:var(--muted);margin-top:2px}
 .hg-go{color:var(--muted);font-size:20px;line-height:1}
 .qguide{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+/* r11: lore da quest em destaque; o título leva ao Questski; o guia (spoiler) começa sempre fechado */
+.qcard .qlore{padding:12px 16px 4px;border-left:4px solid var(--gold);border-radius:10px;background:var(--gold-soft)}
+.qcard .qlore-h{display:block;font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.qcard .qlore p{margin:0 0 10px;font-family:var(--serif);font-size:17px;line-height:1.6;color:var(--ink)}
+.qcard h4 a.qtl{color:inherit;text-decoration:none}
+.qcard h4 a.qtl:hover{text-decoration:underline;text-underline-offset:3px}
+.qcard h4 .qtl-go{font:600 13px var(--sans);color:var(--accent);margin-left:8px;white-space:nowrap;vertical-align:middle}
+.qguide .qsp{font-size:12px;font-weight:600;color:var(--warn);margin-left:8px}
+.qcard .qsum p{margin:0 0 8px;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.qcard .qreq h5{margin:0 0 4px;font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.qcard .qreq ul,.qcard .qrw{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px;line-height:1.45}
+.qcard .qrw{margin-top:6px}
+.qcard .qwarn{color:var(--warn)}
+.qcard,.qguide .gb,.qcard .qmis li,.qcard .chat{grid-template-columns:minmax(0,1fr)} /* r11: o guia aberto não alarga o cartão */
+.qcard .qguide{min-width:0}
+.qcard .chat div,.qcard .qmis li p{overflow-wrap:anywhere}
+.qcard kbd{font:600 12px var(--mono);padding:1px 6px;border:1px solid var(--line);border-radius:5px;background:var(--surface)}
+button.tag.qlink{font:inherit;font-size:13px;cursor:pointer}
+.tag.qlink:hover{text-decoration:underline;text-underline-offset:2px}
+html[data-ui="modern"] .qcard .qlore{background:rgba(250,204,21,.07);border-left-color:#FACC15}
+html[data-ui="modern"] .qcard .qlore-h{color:#FDE68A}
+html[data-ui="modern"] .qcard .qlore p{color:#EDE9FF;font-family:var(--sans);font-weight:400;font-style:italic;font-size:17px}
+html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 .qguide>summary{cursor:pointer;list-style:none;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
 .qguide>summary::-webkit-details-marker{display:none}
 .qguide>summary::after{content:"Mostrar ›";font-weight:600;font-size:13px;color:var(--accent)}
@@ -43609,6 +43632,12 @@ const GIC = `<svg class="gic" viewBox="0 0 24 24" fill="none" stroke="currentCol
 const guiaBtn = (s,t,cls) => s ? `<a class="${cls||"btn small"} gbtn" href="${guiaHref(s)}" title="Guia passo a passo no Questski">${GIC}${t||"Guia passo a passo ›"}</a>` : "";
 // botão de uma quest (modal do Grimório) seguido do link curto para o guia, juntos na mesma linha
 const guiaPair = (btn,s) => s ? `<span class="gpair">${btn}${guiaBtn(s,"Guia ›")}</span>` : btn;
+/* r11 */ // requisito "Quest: Nome (…)" do bloco Acesso: abre a quest do Grimório (lore e guia) ou, se só houver no Questski, o guia de lá
+function questReqTag(r){ const m=/^\s*Quest:\s*(.+)$/i.exec(String(r)); if(!m) return `<span class="tag warn">${esc(r)}</span>`;
+  const nm=m[1].split(/\s+[—(–-]\s*|,\s|:\s/)[0].replace(/\s+Quest$/i,"").trim(), f=fold(nm);
+  const g=f?G.quests.find(x=>{ const a=fold(x.n), w=fold((x.w||"").replace(/_/g," ").replace(/ Quest$/i,"")); return a===f||w===f||(f.length>5&&(a.startsWith(f)||f.startsWith(a))); }):null;
+  if(g) return `<button type="button" class="tag warn qlink" data-qopen2="${g.id}" title="Lore e guia de ${esc(g.n)}">${esc(r)} ›</button>`;
+  const sl=guiaOf(null,nm); return sl?`<a class="tag warn qlink" href="${guiaHref(sl)}" title="Guia no Questski">${esc(r)} ›</a>`:`<span class="tag warn">${esc(r)}</span>`; }
 
 /* ---------- hunts ---------- */
 const EST_ORDER = {druid:["sorcerer","paladin","knight","monk"],sorcerer:["druid","paladin","knight","monk"],knight:["paladin","monk","sorcerer","druid"],paladin:["knight","sorcerer","druid","monk"],monk:["knight","paladin","sorcerer","druid"]};
@@ -43854,7 +43883,8 @@ function itemChip(n){ return `<a class="ilink" href="${itemHref(n)}">${itemSpr(n
 function questCardHTML(id,q){
   const c=C(), b=QBY[id]||{}, dn=!!c&&qDone(c,id), gs=guiaOf(id,b.w||b.n); /* r7: guia do Questski */
   const head=`<div class="qmeta"><span class="tag">nível ${q&&q.req&&q.req.level||b.l||"?"}+</span><span class="tag">${b.s==="party"?"grupo":b.s==="parcial"?"parcial em grupo":"solo"}</span>${q&&q.req&&q.req.premium?'<span class="tag">premium</span>':""}${dn?'<span class="tag ok">✓ feita</span>':c?`<button class="btn small ghost" data-qdone="${id}">Marcar como feita</button>`:""}${guiaBtn(gs)}</div>`;
-  if(!q) return `<div class="qcard"><h4>${esc(qName(id))}</h4>${head}<p class="small">${esc(b.d||"")}</p>${b.u?`<p class="small muted">Desbloqueia: ${esc(b.u)}</p>`:""}${gs?"":`<p class="small muted">Guia passo a passo em preparação.</p>`}</div>`;
+  /* r11 */ const ttl=n=>gs?`<a class="qtl" href="${guiaHref(gs)}" title="Abrir esta quest no Questski">${esc(n)}<span class="qtl-go">Questski ›</span></a>`:esc(n);
+  if(!q) return `<div class="qcard"><h4>${ttl(qName(id))}</h4>${b.d?`<section class="qlore"><span class="qlore-h">Lore</span><p>${esc(b.d)}</p></section>`:""}${head}${b.u?`<p class="small muted">Desbloqueia: ${esc(b.u)}</p>`:""}${gs?"":`<p class="small muted">Guia passo a passo em preparação.</p>`}</div>`;
   const lore=(q.lore||"").split(/\n\n+/).map(t=>`<p>${esc(t)}</p>`).join("");
   const reqs=[...(q.req&&q.req.quests||[]).map(x=>"Quest: "+x),...(q.req&&q.req.items||[]).map(x=>"Leva: "+x)];
   const qp=(c&&c.qp&&c.qp[id])||{}, tot=(q.missions||[]).reduce((a,m)=>a+(m.steps||[]).length,0), nd=Object.keys(qp).length;
@@ -43866,24 +43896,49 @@ function questCardHTML(id,q){
       ${st.items&&st.items.length?`<div class="qitems">${st.items.map(itemChip).join("")}</div>`:""}
       ${st.pos?`<canvas class="qpos" data-qpos="${st.pos.join(",")}" width="360" height="240"></canvas>`:""}
       ${c?`<label class="qck"><input type="checkbox" data-qstep="${id}:${mi}.${si}" ${qp[mi+"."+si]?"checked":""}>Feito</label>`:""}</li>`).join("")}</ol></section>`).join("");
-  return `<div class="qcard"><h4>${esc(q.name||qName(id))}</h4>${head}${prog}
-    <div class="lore">${lore}</div>
+  return `<div class="qcard"><h4>${ttl(q.name||qName(id))}</h4>
+    ${lore?`<section class="lore qlore"><span class="qlore-h">Lore</span>${lore}</section>`:""}${head}${prog}
     ${q.start&&(q.start.npc||q.start.where)?`<div class="qwho">${q.start.npc?npcSpr(q.start.npc,true):""}<span>Começa ${q.start.npc?`com <b>${elink("npc",q.start.npc)}</b>, `:""}${esc(q.start.where||"")}</span></div>`:""}
     ${reqs.length?`<div class="qmeta">${reqs.map(r=>`<span class="tag warn">${esc(r)}</span>`).join("")}</div>`:""}
     ${q.req&&q.req.notes?`<p class="small muted" style="margin:0">${esc(q.req.notes)}</p>`:""}
     ${q.rewards&&q.rewards.length?`<details class="rt-pre" open><summary>Recompensas (${q.rewards.length})</summary><div class="qitems" style="margin-top:6px">${q.rewards.map(itemChip).join("")}</div></details>`:""}
     ${q.boss&&q.boss.length?`<p class="small" style="margin:0"><b>Bosses:</b> ${q.boss.map(b=>mlink(b)).join(", ")}</p>`:""}
     ${q.dangers&&q.dangers.length?`<p class="small" style="margin:0"><b>Perigos:</b> ${q.dangers.map(b=>mlink(b)).join(", ")}</p>`:""}
-    ${(q.missions||[]).length||(q.tips||[]).length?`<details class="qguide" ${nd&&nd<tot?"open":""}><summary>${nd&&nd<tot?"Continuar o guia":"Guia passo a passo"}</summary><div class="gb">${mis}
+    ${(q.missions||[]).length||(q.tips||[]).length?`<details class="qguide"><summary><span>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:"Guia passo a passo"}<span class="qsp">tem spoilers</span></span></summary><div class="gb">${mis}
       ${q.tips&&q.tips.length?`<div><h5 style="margin:0 0 6px">Dicas</h5><ul class="small" style="margin:0;padding-left:18px">${q.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`:""}
     </div></details>`:""}</div>`;
 }
+/* r11 */ // cartão da quest a partir do guia do Questski (quests/data/quests/<slug>.json): lore (legend_pt) em destaque, resumo,
+// requisitos, recompensas (fechadas) e, num spoiler fechado, o resumo (conta o fim e as recompensas) e o passo a passo; os nomes ligam às páginas internas
+const GQC={}; const guiaQ = s => GQC[s]||(GQC[s]=getJSON("quests/data/quests/"+encodeURIComponent(s)+".json",12000).catch(()=>null));
+function qmd(t){ const s=String(t||""), re=/\{(\w+):([^}|]*)(?:\|([^}]*))?\}/g, out=[]; let last=0, m;
+  const txt=x=>esc(x).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/(^|[^*])\*([^*\s][^*]*)\*/g,"$1<i>$2</i>");
+  while((m=re.exec(s))){ out.push(txt(s.slice(last,m.index))); const k=m[1], a=m[2].trim(), lab=(m[3]||m[2]).trim();
+    out.push(k==="npc"?elink("npc",a,esc(lab)):k==="spell"?elink("feitico",a,esc(lab)):k==="item"?`<a class="ilink" href="${itemHref(a)}">${esc(lab)}</a>`:k==="creature"?mlink(a,esc(lab)):k==="key"?`<kbd>${esc(a)}</kbd>`:esc(lab)); last=re.lastIndex; }
+  out.push(txt(s.slice(last))); return out.join(""); }
+function guiaCardHTML(id,g,gs){ const c=C(), b=QBY[id]||{}, dn=!!c&&qDone(c,id);
+  const paras=t=>String(t||"").split(/\n\n+/).filter(x=>x.trim()).map(x=>`<p>${qmd(x)}</p>`).join("");
+  const ent=x=>typeof x==="string"?qmd(x):x.item?`<a class="ilink" href="${itemHref(x.item)}">${itemSpr(x.item)}${esc(x.item)}</a>${x.qty>1?` ×${x.qty}`:""}${x.note?` <span class="muted">— ${qmd(x.note)}</span>`:""}`:qmd(x.text||"");
+  const head=`<div class="qmeta"><span class="tag">nível ${esc(g.lvl||b.l||"?")}+${g.rec&&String(g.rec)!==String(g.lvl)?` · rec. ${esc(g.rec)}`:""}</span>${g.premium?'<span class="tag">premium</span>':""}${g.duration?`<span class="tag">${esc(g.duration)}</span>`:""}${dn?'<span class="tag ok">✓ feita</span>':c?`<button class="btn small ghost" data-qdone="${id}">Marcar como feita</button>`:""}${guiaBtn(gs,"Abrir no Questski ›")}</div>`;
+  const nst=(g.sections||[]).reduce((a,x)=>a+(x.steps||[]).length,0);
+  const step=st=>`<li><p><b>${qmd(st.title)}</b></p>${st.text?`<p>${qmd(st.text)}</p>`:""}${st.npc?`<div class="qwho">${npcSpr(st.npc,true)}<span>Fala com <b>${elink("npc",st.npc)}</b></span></div>`:""}${st.dialogue&&st.dialogue.length?`<div class="chat">${st.dialogue.map(d=>d.you!=null?`<div class="P">${esc(d.you)}</div>`:`<div class="N" data-n="${esc(st.npc||"NPC")}">${esc(d.npc||"")}</div>`).join("")}</div>`:""}${st.warning?`<p class="small qwarn"><b>Atenção:</b> ${qmd(st.warning)}</p>`:""}${st.tip?`<p class="small"><b>Dica:</b> ${qmd(st.tip)}</p>`:""}${st.reward?`<p class="small"><b>Recebes:</b> ${qmd(st.reward)}</p>`:""}</li>`;
+  const secs=(g.sections||[]).map(x=>`<section class="qmis"><h5>${qmd(x.title)}</h5>${x.intro?`<p class="small" style="margin:0 0 8px">${qmd(x.intro)}</p>`:""}<ol>${(x.steps||[]).map(step).join("")}</ol></section>`).join("");
+  const name=g.name||qName(id);
+  return `<div class="qcard"><h4><a class="qtl" href="${guiaHref(gs)}" title="Abrir esta quest no Questski">${esc(name)}<span class="qtl-go">Questski ›</span></a></h4>
+    ${g.legend_pt?`<section class="lore qlore"><span class="qlore-h">Lore</span>${paras(g.legend_pt)}</section>`:""}${head}
+    ${(g.requirements||[]).length?`<div class="qreq"><h5>Requisitos</h5><ul>${g.requirements.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></div>`:""}
+    ${(g.items_needed||[]).length?`<div class="qreq"><h5>Leva contigo</h5><ul>${g.items_needed.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></div>`:""}
+    ${(g.rewards||[]).length?`<details class="rt-pre"><summary>Recompensas (${g.rewards.length})</summary><ul class="qrw">${g.rewards.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></details>`:""}
+    ${secs?`<details class="qguide"><summary><span>Guia passo a passo · ${nst} ${nst===1?"passo":"passos"}<span class="qsp">tem spoilers</span></span></summary><div class="gb">${g.summary?`<div class="qsum">${paras(g.summary)}</div>`:""}${secs}
+      ${(g.tips||[]).length?`<div><h5 style="margin:0 0 6px">Dicas</h5><ul class="small" style="margin:0;padding-left:18px">${g.tips.map(t=>`<li>${qmd(t)}</li>`).join("")}</ul></div>`:""}
+      <p style="margin:0">${guiaBtn(gs,"Mapas e imagens no Questski ›")}</p></div></details>`:""}</div>`; }
 async function drawPos(cv){ const [x,y,z]=cv.dataset.qpos.split(",").map(Number); const g=cv.getContext("2d"), w=48, h=32, S=cv.width/w;
   g.fillStyle="#000"; g.fillRect(0,0,cv.width,cv.height);
   try{ const im=await floorImg(z); g.imageSmoothingEnabled=false; g.drawImage(im,x-w/2-31744,y-h/2-30976,w,h,0,0,cv.width,cv.height); }catch(e){}
   const X=(w/2+.5)*S, Y=(h/2+.5)*S; g.beginPath(); g.arc(X,Y,12,0,7); g.lineWidth=3; g.strokeStyle="#fff"; g.stroke(); g.beginPath(); g.arc(X,Y,5,0,7); g.fillStyle="#E5484D"; g.fill();
   g.font="600 12px system-ui"; g.fillStyle="rgba(0,0,0,.7)"; g.fillRect(6,6,g.measureText(floorTxt(z)).width+12,20); g.fillStyle="#fff"; g.fillText(floorTxt(z),12,20); }
-async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); if(els.length) await guiasLoad(); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard; const q=await getQuest(id); el.innerHTML=questCardHTML(id,q); } }
+async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); if(els.length) await Promise.all([guiasLoad(),linkIdxLoad().catch(()=>null)]); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard;
+  /* r11 */ const b=QBY[id]||{}, gs=guiaOf(id,b.w||b.n), g=gs?await guiaQ(gs):null; el.innerHTML = g ? guiaCardHTML(id,g,gs) : questCardHTML(id,await getQuest(id)); } }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-qopen2]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen2}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen2))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
 document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("qguide")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
 document.addEventListener("change",e=>{ const b=e.target.closest("[data-qstep]"); if(!b) return; const c=C(), [id,k]=b.dataset.qstep.split(":"); c.qp=c.qp||{}; c.qp[id]=c.qp[id]||{};
@@ -44131,7 +44186,7 @@ function huntRoute(pid){ const m=pid&&G.hm[pid], v=G.hv&&G.hv[pid];
   if(p&&p.acc){ const qq=p.q&&QBY[p.q], rq=[qq?`Quest: ${qName(p.q)}`:"",p.prem?"Premium":""].filter(Boolean);
     return `<div class="vroute"><div class="vr-h"><b>Acesso</b><span class="tag">por confirmar</span></div>
     <p class="small" style="margin:0">${elinkTxt(p.acc)}</p>
-    ${rq.length?`<div class="pills" style="align-items:center"><span class="small muted">Requisitos:</span>${rq.map(r=>`<span class="tag warn">${esc(r)}</span>`).join("")}${qq?`<button type="button" class="btn small ghost" data-qopen2="${esc(p.q)}">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:""}</div>`:""}</div>${m&&auto?`<h4 class="sub" style="margin:4px 0 0">Percurso aproximado</h4>${auto}`:""}`; }
+    ${rq.length?`<div class="pills" style="align-items:center"><span class="small muted">Requisitos:</span>${rq.map(questReqTag).join("")}${qq?`<button type="button" class="btn small ghost" data-qopen2="${esc(p.q)}">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:""}</div>`:""}</div>${m&&auto?`<h4 class="sub" style="margin:4px 0 0">Percurso aproximado</h4>${auto}`:""}`; }
   return vRoute(pid)+(auto?`${v&&v.st?'<h4 class="sub" style="margin:4px 0 0">Percurso no mapa</h4>':""}${auto}`:""); }
 function routeHTML(pid,x,y,z){
   const R = pid && G.routes[pid];

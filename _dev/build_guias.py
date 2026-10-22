@@ -32,12 +32,17 @@ def main():
     idx = json.load(open(os.path.join(ROOT, 'quests', 'data', 'index.json'), encoding='utf-8'))
     qs = idx['quests']
     g, n2s = [], {}
+    G = [x for x in gjson.load_G(ROOT) if isinstance(x, dict)][0]
+    # r11: primeiro os nomes principais de todos os guias, depois os 'aka': um aka nunca tapa o guia próprio de outra quest
+    # (ex.: 'The New Frontier' é aka do Tomes of Knowledge e 'The Ice Islands' do Barbarian Test, e iam para o guia errado)
     for q in qs:
         g.append([q['slug'], q['name'], q.get('lvl') or 0, q.get('rec') or 0, 1 if q.get('premium') else 0, q.get('category') or '', q.get('region') or '', q.get('steps') or 0])
-        for nm in [q['name']] + list(q.get('aka') or []):
+        k = key(q['name'])
+        if k and k not in n2s: n2s[k] = q['slug']
+    for q in qs:
+        for nm in q.get('aka') or []:
             k = key(nm)
             if k and k not in n2s: n2s[k] = q['slug']
-    G = [x for x in gjson.load_G(ROOT) if isinstance(x, dict)][0]
     q2s, miss = {}, []
     for q in G['quests']:
         s = n2s.get(key(q['n'])) or n2s.get(key(q.get('w') or ''))
