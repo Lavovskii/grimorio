@@ -204,6 +204,9 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   Diamond), `ammoArea(b,L)`, `ammoChips(b,L,eff)` (chips 'Alvo único'/'Área'; com eff, a % que as criaturas levam e 'usa esta'; link só
   com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem) e em cada set do `hsetsHTML` (`.hs-am`); `setTotals` dá
   `t.sb` (tipo do item da mão do escudo). Sem aljava (abaixo do 150 não há nenhuma com stats): `quivTip` no slot vazio e no chip 'Aljava'.
+  r10: `palAmmo(c,set)` (paladino com arco/besta) divide a mão do escudo em aljava + munição para o nível: no #doll `.slot-pal` com
+  `.slot.half` (aljava = o slot real) e `palAmHalf` (munição, link se tiver página); no #bis e nos sets da ficha `.bslot.pal2` em diagonal.
+  Quiver, Red quiver e Blue quiver (nível 0, 400 gp nos NPCs) entraram no G.items/items.json com sprite em allitems.png (ix 1446–1448).
   Escudos de knight nos magos: defesa × 0,1. Proteção de afogamento só conta com 20 %+ de
   dano drown na hunt. Mão esquerda: `slotLab(c,k)` ('Escudo / aljava', 'Livro / escudo', 'Escudo') no #bis, no #doll e nos sets
   da ficha; o `SLOTNAME`/`DOLL` ficam iguais (o renderSlot e o pickOpen usam-nos). No botão direito (`pickList`), o paladino

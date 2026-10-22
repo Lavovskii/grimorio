@@ -348,7 +348,7 @@ sup.rl{color:var(--ok);font-weight:700;margin-left:1px} sup.rl.rla{color:var(--g
   .hfil .hf-bandq button{flex:1 1 auto;min-height:44px;padding:6px 10px;white-space:nowrap}
 }
 .hc-go{color:var(--muted);font-size:22px;padding-right:2px}
-.vi{--s:24px;width:var(--s);height:var(--s);flex:none;display:inline-block;background:url(allitems.png?v=20261018r2) no-repeat;background-size:calc(var(--s)*32) auto;background-position:calc(var(--x)*var(--s)*-1) calc(var(--y)*var(--s)*-1);image-rendering:pixelated;vertical-align:middle}
+.vi{--s:24px;width:var(--s);height:var(--s);flex:none;display:inline-block;background:url(allitems.png?v=20261022r10) no-repeat;background-size:calc(var(--s)*32) auto;background-position:calc(var(--x)*var(--s)*-1) calc(var(--y)*var(--s)*-1);image-rendering:pixelated;vertical-align:middle}
 .vi.lg{--s:40px}
 .dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
 .dot.great{background:var(--ok)} .dot.ok{background:var(--muted)} .dot.meh{background:var(--gold)} .dot.bad{background:var(--warn)} .dot.na{background:var(--line)}
@@ -643,7 +643,7 @@ a.gsp-o{text-decoration:none}
 .slot[aria-pressed="true"]{outline:3px solid var(--accent);outline-offset:1px}
 .slot .dot{position:absolute;top:5px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--fire)}
 .slot .own{position:absolute;top:3px;left:6px;font-size:12px;color:var(--ok)}
-.spr{width:32px;height:32px;flex:none;display:inline-block;background-image:url(allitems.png?v=20261018r2);background-repeat:no-repeat;image-rendering:pixelated}
+.spr{width:32px;height:32px;flex:none;display:inline-block;background-image:url(allitems.png?v=20261022r10);background-repeat:no-repeat;image-rendering:pixelated}
 .setcard{display:grid;gap:12px}
 .settabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
 .settabs button{flex:none;display:grid;gap:0;text-align:left;border:1px solid var(--line);background:var(--surface-2);border-radius:var(--r1);padding:6px 12px;font-weight:700;font-size:15px}
@@ -658,6 +658,21 @@ a.gsp-o{text-decoration:none}
 .sumrow span{font-size:13px;color:var(--muted)}
 .slot .spr{transform:scale(1.25);margin:4px 0}
 .slot.has{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+/* r10: mão do escudo do paladino (arco/besta) dividida em aljava + munição para o nível */
+.slot-pal{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:4px;min-width:0;min-height:0}
+.slot.half{flex-direction:row;justify-content:flex-start;gap:6px;padding:4px 6px;text-align:left;min-height:0;text-decoration:none;color:inherit}
+.slot.half .spr{transform:none;margin:0;flex:none}
+.slot.half>svg,.slot.half>.ph-ic{width:24px;height:24px;flex:none}
+.slot.half .tx{display:flex;flex-direction:column;gap:1px;min-width:0}
+.slot.half .nm{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.slot.half .lb{letter-spacing:.3px}
+.slot.half .dot{top:4px;right:5px}
+.bslot.pal2{position:relative;overflow:hidden;background-image:linear-gradient(135deg,transparent calc(50% - .6px),var(--line) 50%,transparent calc(50% + .6px))}
+.bslot.pal2 .pq,.bslot.pal2 .pa{position:absolute;display:grid;place-items:center;width:62%;height:62%}
+.bslot.pal2 .pq{left:0;top:0}.bslot.pal2 .pa{right:0;bottom:0}
+.bslot.pal2 .spr{transform:scale(.62)}
+.bslot.pal2 svg{width:14px;height:14px}
+html[data-ui="modern"] .bslot.pal2{background-image:linear-gradient(135deg,transparent calc(50% - .6px),rgba(167,139,250,.4) 50%,transparent calc(50% + .6px))}
 .imbdots{display:flex;gap:3px}
 .imbdots i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .slotsearch{display:flex;align-items:center;gap:6px;margin:10px 0 2px;padding:0 6px 0 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
@@ -7199,7 +7214,10 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "sk":{"fist":6,"ml":2},
    "is":3,
    "it":["strike","elem","vamp","void","s_fist"]
-  }
+  },
+  {"id":35849,"n":"Red quiver","s":"shield","l":0,"ix":1446,"b":"quiver","v":"p"},
+  {"id":35848,"n":"Blue quiver","s":"shield","l":0,"ix":1447,"b":"quiver","v":"p"},
+  {"id":35562,"n":"Quiver","s":"shield","l":0,"ix":1448,"b":"quiver","v":"p"}
  ],
  "gems":{
   "knight":{
@@ -45533,7 +45551,12 @@ function ammoChips(b,L,eff){ const st=ammoBest(b,L), ar=ammoArea(b,L); if(!st) r
   return `<span class="hs-sk">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+show.map(one).join("")
     +(!eff&&els.length?`<span class="hs-sk hs-wr" title="${esc(els.map(x=>x[1]).join(", "))}">Área elemental <b>+${els[0][3]}</b> ${els.map(x=>chip(x[2])).join(" ")}</span>`:""); }
 // sem aljava com arco ou besta (abaixo do 150 não há nenhuma com stats): as simples não têm nível nem bónus
-const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)";
+const quivTip = "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; vendem-se nos NPCs por 400 gp)";
+/* r10 */ // paladino com arco ou besta: a mão do escudo divide-se em aljava (o slot) + munição para o nível (não é um slot: vem do ammoBest)
+function palAmmo(c,set){ if(!c||c.voc!=="paladin") return null; const w=setWeapon(set); return w&&(w.b==="bow"||w.b==="crossbow")?ammoBest(w.b,c.level):null; }
+// meia célula da munição (#doll): link para a página quando o item tem sprite/página no items.json
+function palAmHalf(c,am){ const k=am[2].toLowerCase(), pg=G.lt[k]!=null||!!EQBYN[k], tag=pg?"a":"span", t=`Munição para o nível ${c.level}: ${am[2]} (ataque ${am[1]})`;
+  return `<${tag} class="slot half has slot-am"${pg?` href="${itemHref(am[2])}"`:""} title="${esc(t)}" aria-label="${esc(t)}">${itemSpr(am[2])}<span class="tx"><span class="nm">${esc(am[2])}</span><span class="lb">Munição</span></span></${tag}>`; }
 /* pontuação de um item para a personagem (r10: v3, valor em %). mode: combat | speed | off (ofensivo) | bal (consistente) | def (defensivo).
    prot: elemento ("fire") ou perfil de dano da hunt ({fire:.6, physical:.4}); eff (opcional) = G.places[pid].eff da hunt: a arma conta com o
    dano que as criaturas levam do elemento dela */
@@ -45742,6 +45765,9 @@ function renderBis(){
       if(!k) return '<div aria-hidden="true"></div>';
       if(k==="bag") return `<button class="bslot none" data-bslot="bag" title="Mochila: poções e runas" aria-label="Mochila: poções e runas">${IC.bag}</button>`;
       const it=set.slots[k]&&BYID[set.slots[k].id];
+      /* r10 */ const am=k==="shield"?palAmmo(c,set):null;
+      if(am){ const t=`Aljava: ${it?it.n:"vazio ("+quivTip+")"} · Munição: ${am[2]} (ataque ${am[1]})`;
+        return `<button class="bslot pal2" data-bslot="shield"${it?` data-look="${it.id}"`:""} title="${esc(t)}" aria-label="${esc(t)}"><span class="pq">${it?spr(it):emptyIc(c,k)}</span><span class="pa">${itemSpr(am[2])}</span></button>`; }
       if(!it){ const why = k==="shield"&&c.voc==="monk" ? "os monks usam as duas mãos" : k==="shield"&&c.voc==="paladin"&&!mine ? quivTip : mine ? "vazio (botão direito para escolher)" : "nada para este nível";
         return `<button class="bslot none" data-bslot="${k}" title="${lab}: ${why}" aria-label="${lab}: ${why}">${emptyIc(c,k)}</button>`; }
       return `<button class="bslot" data-bslot="${k}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}. Menu de contexto para trocar">${spr(it)}</button>`; }).join("")}</div>
@@ -46152,7 +46178,9 @@ function hsetsHTML(pid){
     const W=c.voc==="monk"&&S.slots.weapon?BYID[S.slots.weapon.id]:null, ef=(G.places[pid]||{}).eff, wv=W&&W.bond&&ef&&ef[W.bond]!=null?Math.round(ef[W.bond]):null; // r6-t3: arma do monk e o que as criaturas levam da ligação
     return `<div class="hset-p" data-hpane="${k}" ${k===sel?"":"hidden"}><p class="small hset-d">${esc(d)}${twin?` <span class="tiny muted">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:""}</p>
       <div class="hset-b"><div class="bisdoll sm" role="group" aria-label="Set ${esc(t.toLowerCase())}">${DOLL.map(([x,lab0])=>{ const lab=x?slotLab(c,x):lab0; if(!x) return '<div aria-hidden="true"></div>'; if(x==="bag") return `<span class="bslot none" aria-hidden="true">${IC.bag}</span>`;
-        const it=S.slots[x]&&BYID[S.slots[x].id]; return it?`<a class="bslot" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}">${spr(it)}</a>`:`<span class="bslot none" title="${lab}: ${x==="shield"&&c.voc==="paladin"?esc(quivTip):"nada"}">${emptyIc(c,x)}</span>`; }).join("")}</div>
+        const it=S.slots[x]&&BYID[S.slots[x].id]; /* r10 */ const am=x==="shield"?palAmmo(c,S):null;
+        if(am) return `<span class="bslot pal2">${it?`<a class="pq" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="Aljava: ${esc(it.n)}">${spr(it)}</a>`:`<span class="pq" title="Aljava: ${esc(quivTip)}">${emptyIc(c,x)}</span>`}<span class="pa" title="Munição: ${esc(am[2])} (ataque ${am[1]})">${itemSpr(am[2])}</span></span>`;
+        return it?`<a class="bslot" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}">${spr(it)}</a>`:`<span class="bslot none" title="${lab}: ${x==="shield"&&c.voc==="paladin"?esc(quivTip):"nada"}">${emptyIc(c,x)}</span>`; }).join("")}</div>
         <div class="hset-t"><div class="hset-kv"><div><b>${T.arm}</b><span>armadura</span></div>${T.def?`<div><b>${T.def}</b><span>defesa</span></div>`:""}${sk.map(([x,v])=>`<div><b>+${v}</b><span>${esc(SKN[x]||x)}</span></div>`).join("")}</div>
           ${c.voc==="paladin"&&(T.wb==="bow"||T.wb==="crossbow")?`<p class="small hset-wb hs-am"><b>Munição:</b> <span class="hs-chips">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!=="quiver"?` <span class="tiny muted">Aljava: ${esc(quivTip)}.</span>`:""}</p>`:""}
           ${W&&W.bond?`<p class="tiny muted hset-wb">Arma: <a href="${itemHref(W.n)}" data-look="${W.id}">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:""}</p>`:""}
@@ -46267,6 +46295,8 @@ function renderEquip(){
     const e=set.slots[k], it=e&&BYID[e.id];
     if(it && !c.owned[it.id]) miss.push(it.n);
     const imb=e&&e.imb&&e.imb.length?`<span class="imbdots">${e.imb.map(()=>"<i></i>").join("")}</span>`:"";
+    /* r10 */ const am=k==="shield"?palAmmo(c,set):null;
+    if(am) return `<div class="slot-pal"><button class="slot half ${it?"has":""}" data-slot="${k}" ${it?`data-look="${it.id}"`:""} aria-pressed="${sel===k}" aria-label="Aljava: ${it?esc(it.n):"vazio"}">${it&&!c.owned[it.id]?'<span class="dot" title="Ainda não tens"></span>':""}${it&&c.owned[it.id]?'<span class="own">✓</span>':""}${it?sprOr(it,k):IC.shield}<span class="tx"><span class="nm">${it?esc(it.n):"vazio"}</span><span class="lb">Aljava</span></span>${imb}</button>${palAmHalf(c,am)}</div>`;
     return `<button class="slot ${it?"has":""}" data-slot="${k}" ${it?`data-look="${it.id}"`:""} aria-pressed="${sel===k}">${it&&!c.owned[it.id]?'<span class="dot" title="Ainda não tens"></span>':""}${it&&c.owned[it.id]?'<span class="own">✓</span>':""}${it?sprOr(it,k):IC[k==="extra"?"trinket":(k==="shield"&&isMage(c)?"quests":k)]}<span class="nm">${it?esc(it.n):"vazio"}</span>${imb}<span class="lb">${lab}</span></button>`;
   }).join("");
   // resumo do set
