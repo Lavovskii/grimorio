@@ -147,12 +147,20 @@
   "c": "index.html: de imbuement pesados para a tua vocação${set.mode===\"speed\"?\" (modo velocidade)\":\"\"}${set.prot?` com",
   "k": "x"
  },
+ "(modo velocidade) com prioridade a {0}": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
  "(mín. {0})": {
   "c": "index.html: er(v=>d.v[v]).map(v=>{ const [n,mn,ml,xp,pr]=d.v[v]; return `<tr class=\"${v===voc?\"me\":\"\"}\"><td>${VI(v)} ${G.voc[v].n}</td><td>${n}</td><td>${ml} <span class=\"tiny muted\">(mín. ${mn})</span></td><td><b>${fmt(xp)}</b></td",
   "k": "p"
  },
  "(o TibiaPal mediu esta hunt para a tua vocação)": {
   "c": "index.html: & !r.w && !r.o && cmp.cls===\"bad\"){ cmp.cls=\"meh\"; cmp.txt+=\" (o TibiaPal mediu esta hunt para a tua vocação)\"; } let xp=r.xp,",
+  "k": "x"
+ },
+ "(o número do A Prisoner)": {
+  "c": "r13: notas em PT dentro das falas do guia The Paradox Tower Quest (Questski)",
   "k": "x"
  },
  "(o ritmo medido nesta zona)": {
@@ -317,6 +325,34 @@
  },
  ", por isso": {
   "c": "index.html: todo físico: não há imbuement de proteção física${fr.length?\", por isso \"+fr.join(\" e \"):\"\"}<",
+  "k": "x"
+ },
+ ", por isso a aljava fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso a armadura fica só com Vampirism": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso a armadura fica só com Vampirism e a aljava fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso a armadura fica só com Vampirism e o escudo fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso a armadura fica só com Vampirism e o livro fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso o escudo fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ ", por isso o livro fica sem imbuement": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "x"
  },
  ", runas da hunt, Magic Wall": {
@@ -2795,6 +2831,10 @@
   "c": "index.html: ></dl></output> ${lo!=null?`<p class=\"tiny muted\">${est?`Estimativa a partir de outra vocação: ≈ ${gp(lo)}/h aqui`:`O TibiaPal mede ${",
   "k": "p"
  },
+ "Estimativa a partir de outra vocação: ≈ {0}/h aqui (já sem os supplies).": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
  "Estratégia": {
   "c": "quests/js/app.js: omportamento\", \"behavior\": \"Comportamento\", \"strategy\": \"Estratégia\", \"damage taken from",
   "k": "x"
@@ -4195,6 +4235,10 @@
   "c": "index.html: r=>`<span class=\"tag warn\">${esc(r)}</span>`).join(\"\")}${qq?`<button type=\"button\" class=\"btn small ghost\" data-qopen2=\"${esc(p.q)}\">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:\"\"}</div>`:\"\"}</div",
   "k": "x"
  },
+ "Lucro/h": {
+  "c": "r13: site todo em inglês (o extract trata-o como código por causa da /)",
+  "k": "x"
+ },
  "Lucro/h estimado": {
   "c": "index.html: :g1k==null?\"sem dados de loot\":\"sem XP/h medido\")}${kpi(est?\"Lucro/h estimado\":\"Lucro/h medido\", l",
   "k": "x"
@@ -5267,6 +5311,10 @@
   "c": "index.html: ?`Estimativa a partir de outra vocação: ≈ ${gp(lo)}/h aqui`:`O TibiaPal mede ${gp(lo)}/h aqui`} (já sem os supplie",
   "k": "p"
  },
+ "O TibiaPal mede {0}/h aqui (já sem os supplies).": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
  "O TibiaPal não lista esta hunt para Paladin:": {
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: O TibiaPal não lista esta hunt para Paladin:",
   "k": "x"
@@ -5907,7 +5955,15 @@
   "c": "index.html: s=\"wsep\">.</span></p></div>`; $(\"wheelTable\").innerHTML = `<thead><tr><th>Pontos</th><th>Nível</th><th>Build</th><th>Código</th></tr></thead><tbody>` + ws.map((w,i)=>{ c",
   "k": "x"
  },
- "Pontos = armadura, proteções, skills{0}, velocidade e slots de imbuement pesados para a tua vocação{1}{2}.": {
+ "Pontos = armadura, proteções, skills, mantra, velocidade e slots de imbuement pesados para a tua vocação.": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ "Pontos = armadura, proteções, skills, velocidade e slots de imbuement pesados para a tua vocação.": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ "Pontos = armadura, proteções, skills{0}, velocidade e slots de imbuement pesados para a tua vocação{1}.": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
@@ -7077,6 +7133,10 @@
  },
  "Sniper Arrow": {
   "c": "index.html: nico) não a escolhe. const AMMO={bow:[[0,25,\"Arrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arr",
+  "k": "x"
+ },
+ "So know that everthing is based on the simple fact that 1 + 1 is (o teu número)!": {
+  "c": "r13: notas em PT dentro das falas do guia The Paradox Tower Quest (Questski)",
   "k": "x"
  },
  "Sobe": {
@@ -9787,6 +9847,10 @@
   "c": "index.html: )} mortes por hora)` : h.src===\"est\"&&hasKey(G.voc,h.est) ? `estimado a partir do número de ${G.voc[h.est].n}${x.o?\" (de antes do rebalance)\":\"\"}` : \"\"; return `${h",
   "k": "x"
  },
+ "estimado a partir do número de {0} (de antes do rebalance)": {
+  "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
  "estimado a partir do número de {0}{1}": {
   "c": "index.html: )} mortes por hora)` : h.src===\"est\"&&hasKey(G.voc,h.est) ? `estimado a partir do número de ${G.voc[h.est].n}${x.o?\" (de antes do rebalance)\":\"\"}` : \"\"; return `${h",
   "k": "p"
@@ -10239,6 +10303,10 @@
   "c": "index.html:  blue:\"Bottom Left\", purple:\"Bottom Right\"}; const WHDOM = [\"green\",\"red\",\"blue\",\"purpl",
   "k": "x"
  },
+ "green (a tua cor)": {
+  "c": "r13: notas em PT dentro das falas do guia The Paradox Tower Quest (Questski)",
+  "k": "x"
+ },
  "group": {
   "c": "quests/js/app.js: , \"soul points\": \"Soul points\", \"cooldown\": \"Cooldown\", \"group\": \"Grupo\", \"magic le",
   "k": "x"
@@ -10661,6 +10729,10 @@
  },
  "lucro": {
   "c": "index.html: , lucro:(a,b)=>b.lo-a.lo, xp:(a,b)=>b.xp-a.xp}; [\"segura\",\"lucro\",\"xp\"].forEach(k=>{ ",
+  "k": "x"
+ },
+ "lucro/h": {
+  "c": "r13: site todo em inglês (o extract trata-o como código por causa da /)",
   "k": "x"
  },
  "lucro/h (antes do rebalance)": {

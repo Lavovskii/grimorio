@@ -593,9 +593,11 @@ def build_content(lang):
     tm = rd(os.path.join(I18N, 'tm', lang + '.json'), {}) or {}
     src = rd(os.path.join(I18N, 'src', 'content.json'), {}) or {}
     c = {}
+    # também as que ficam iguais à origem ("hi, passage, yes", "Hunt:"): sem elas, uma frase com um link lá dentro
+    # ("… fala com a <a>Maris</a>: hi, fenrock, yes") nunca ficava traduzida por inteiro e o motor deixava-a em PT
     for h, e in tm.items():
         t = tm_text(e)
-        if t and t != src.get(h):
+        if t:
             c[h] = t
     with open(os.path.join(I18N, 'content.%s.js' % lang), 'w', encoding='utf-8', newline='\n') as f:
         f.write('/* gerado por _dev/i18n.py build — conteúdo do Grimório (frases), de i18n/tm/%s.json */\n'

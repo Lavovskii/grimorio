@@ -121,7 +121,7 @@
   function enVal(s) {
     if (/[ãõçáéíóúâêôà]/i.test(s)) return false;
     if (!((" " + s + " ").match(PT_FN) || []).every(function (x) { return /^\s(?:a|as)$/i.test(x); })) return false;
-    if (/\b(?:the|and|of|with|from|for|to|in|on|at|by|is|are|your)\b/i.test(s)) return true;
+    if (/\b(?:the|and|of|with|from|for|to|in|on|at|by|is|are|your)\b|\bas an?\b/i.test(s)) return true;
     var w = s.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
     return !!w && w.every(function (x) { return /^[A-Z]/.test(x); });
   }
@@ -194,7 +194,8 @@
           }
         }
         // um valor que fica por traduzir e é português (ex.: "Até ao meu" em "{0} nível · {1}"): o modelo não serve
-        if (t == null && !mk && !enVal(cap) && (/[ãõçâêô]/i.test(cap) || (cap.match(PT_FN) || []).length)) return null;
+        // (também com marcas de elementos: "41{0}Clique: equipamento · botão direito: trocar item" em "{0} itens · armadura {1}")
+        if (t == null && !enVal(cap.replace(MARK, " ")) && (/[ãõçâêô]/i.test(cap) || (cap.replace(MARK, " ").match(PT_FN) || []).length)) return null;
         // num modelo quase só de valores (ex.: "{0} por {1}"), uma palavra minúscula por traduzir é português
         // ("Hunts por cidade{0}" dava "Hunts for cidade")
         if (t == null && best.len <= 6 && !enVal(cap) && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
