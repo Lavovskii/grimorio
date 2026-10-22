@@ -174,20 +174,37 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `it.ex`, o ML holy do paladino, `it.crit` = [chance %, dano crítico %] e `it.lch` = [life leech %, mana leech %] (r8, da
   TibiaWiki: 23 armas e anéis, ex. Sanguine, Soul, Cobra, Lion). Modos: `SCMODE` [D,P,vel]. O jogador vê a nota 0–100 do `notaItem` (÷ `slotTop`: o melhor item do
   slot até ao nível, sem cargas nem < 15 min; cache `NOTAC`) no botão direito, nas listas do slot e no look.
+  Pontos v3 (r10; o sorcerer 3000 tinha Dawnfire pantaloons e o Prismatic ring do 120 ao 3000 em quase todas as vocações):
+  feitiços dos magos = nível/5 + `SCML` (9) × ML, das fórmulas da TibiaWiki (página Formulae: Hell's Core 7–14 × ML, Eternal Winter
+  6–12…); knight e monk com a parte de feitiços `SCSPL` (Fierce Berserk ≈ 2,05 × (skill + 2 × ataque) + nível/5; `scPhys(B,A)`);
+  `chStats` com curvas que crescem devagar (ML de mago 70/94/109/128 nos níveis 100/400/1000/3000; skill 90/114/130/149). Sem hunt,
+  as proteções pesam pelo `G.dpf` (`scPF(c)`: perfil de dano das hunts da vocação na faixa de nível; `_dev/build_dpf.py`, volta a
+  correr quando mudarem as hunts ou o crdmg.json), com o `SCPF` só de reserva. `SCW[voc]` = [peso do dano, peso da proteção]
+  (knight 1/1,1; monk e paladino 1,5/0,8; magos 1,6/0,8), calibrado com as listas de equipamento do TibiaPal (`G.equip`): o set
+  automático tem de usar um item da lista e não muito mais antigo do que o mais recente; com o v2 eram 434 de 500 casos, com o v3
+  476 (sobram níveis 100–150, o Prismatic ring do monk entre 150 e 350, que é para todas as vocações e por isso não está nas listas
+  do TibiaPal, e o knight com arma de duas mãos no 300). Mantra (só monk) = proteção fixa contra fogo, gelo, energia e terra, como a
+  armadura (TibiaWiki), não dano. Magic Shield Capacity vale pouco (não tira dano, passa-o para a mana). No `pickSet`, entre os itens
+  a menos de 4 % do melhor (1 % nas armas), fica o de nível mais alto (quase empates que só mudam no elemento protegido).
+  Dados (r10): `_dev/fix_bis_items.py` dá os atributos aos 4 Flamingo Amulet (eram entradas do TibiaPal sem atributos) e o dano da
+  versão normal às Stellar Moonsilver Sceptre e Channeler (6–6 da ficha incompleta da wiki). Os 1402 itens do G.items foram
+  comparados com a TibiaWiki (nível, vocações, armadura, defesa, ataque, skills, proteções, slots, dano das wands, elemento, duas
+  mãos, crítico, leech, velocidade, mantra): sem outras diferenças que contem para os sets.
   Sets automáticos (r4-t5): paladino com a arma em 'Automático' (`c.wtype` vazio): o `pickSet` usa arco a partir do nível 100
   (abaixo, lanças e estrelas; com o filtro 'só os que tenho' e nenhum arco, todos os tipos); na ficha, `huntWType(c,pid)` dá o tipo
   da munição do TibiaPal (`how` da linha de G.hunts.paladin: bolt → besta, arrow → arco, spear/star → arremesso) ao `huntSet`, que
   faz os 3 sets e o 'Guardar nos meus sets'. Munição: `AMMO` {bow|crossbow: [[nível, ataque]]} das munições sem elemento (TibiaWiki)
   e `ammoAtk(b,L)`; o `scoreItem` soma-a ao atk dos arcos e das bestas (o `setSumHTML` mostra 'Ataque N + munição'). Durações:
   anéis e amuletos com menos de 15 min ficam fora do `pickSet` (no botão direito continuam, com 'dura N min'); no `scoreItem` um
-  item com dur pesa ×0,35 (< 15 min), ×0,6 (< 30), ×0,8 (< 60) ou ×0,9. Mantra do monk: `it.mn` × 2,5 (× 1,5 no ofensivo, × 0,7
+  item com dur pesa ×0,35 (< 15 min), ×0,6 (< 30), ×0,75 (< 1 h), ×0,85 (< 2 h) ou ×0,95 (r10: os de 3 h que se recarregam
+  quase sem desconto). O mantra do monk é proteção (r10, ver em cima).
   r7: o `AMMO` tem o nome em 3.º lugar e mais Tarsal Arrow, Crystalline Arrow (90, 65), Vortex Bolt e Prismatic Bolt (90, 66); Infernal
   Bolt 72 (era 65). `AMMOA` = flechas de área [nível, nome, elemento, ataque] (TibiaWiki 15.25: Shatterstorm 27 no 50; Firestorm,
   Terrastorm, Froststorm e Thunderstorm 21 de dano do elemento, ataque físico 0, no 125; Diamond 37 no 150). Onyx Arrow 38 (r8). `ammoBest(b,L)` (alvo único, sem a
   Diamond), `ammoArea(b,L)`, `ammoChips(b,L,eff)` (chips 'Alvo único'/'Área'; com eff, a % que as criaturas levam e 'usa esta'; link só
   com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem) e em cada set do `hsetsHTML` (`.hs-am`); `setTotals` dá
   `t.sb` (tipo do item da mão do escudo). Sem aljava (abaixo do 150 não há nenhuma com stats): `quivTip` no slot vazio e no chip 'Aljava'.
-  no defensivo, × 0,5 em velocidade). Escudos de knight nos magos: defesa × 0,1. Proteção de afogamento só conta com 20 %+ de
+  Escudos de knight nos magos: defesa × 0,1. Proteção de afogamento só conta com 20 %+ de
   dano drown na hunt. Mão esquerda: `slotLab(c,k)` ('Escudo / aljava', 'Livro / escudo', 'Escudo') no #bis, no #doll e nos sets
   da ficha; o `SLOTNAME`/`DOLL` ficam iguais (o renderSlot e o pickOpen usam-nos). No botão direito (`pickList`), o paladino
   em 'Automático' a partir do 100 vê os arcos primeiro e as bestas e o arremesso num grupo à parte (`.pk-g`).
