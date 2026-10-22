@@ -31,6 +31,10 @@
   "c": "index.html:  ${ELN[e]}</span>`).join(\"\")}</div></div>`:\"\"} ${t.vibr?`<div class=\"ims\"><h4>Outros</h4><div class=\"imlist\"><span class=\"imchip\" style=\"--imc:var(--ok)\">${t.vibr}% de anular paralyze (Vibrancy)</span></div></div>`:\"\"} <",
   "k": "x"
  },
+ "% de chance": {
+  "c": "index.html: ; /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.crit[0]}% de chance`:\"\",it.crit[1]?`+${i",
+  "k": "x"
+ },
  "% de life leech": {
   "c": "index.html:  efeito const v=(a)=>IMBV[a][ti]; if(k===\"vamp\") return `${v(\"vamp\")}% de life leech`; if(k===\"void\") r",
   "k": "x"
@@ -69,6 +73,10 @@
  },
  "(+{0}% de dano: as criaturas levam {1}% de {2} e {3}% de físico)": {
   "c": "index.html: {esc(IMBL[x]||x)}</span>`).join(\" + \")}${k===\"weapon\"&&H.el?` <span class=\"tiny muted\">(+${Math.round(H.el.g)}% de dano: as criaturas levam ${Math.round(H.el.v)}% de ${esc(ELN[H.el.el])} e ${Math.round(H.el.ph)}% de físi",
+  "k": "p"
+ },
+ "(100 = o melhor deste slot até ao nível {0})": {
+  "c": "index.html: p>`:\"\"} ${sc!=null&&notaItem(c,it,sc,\"combat\",\"\")!=null?`<p class=\"lk-sc\">Nota para ${esc(c.name||G.voc[c.voc].n)}: <b>${notaItem(c,it,sc,\"combat\",\"\")}</b> de 100 <small>(100 = o melhor deste slot até ao nível ${c.level}",
   "k": "p"
  },
  "(Ainda a carregar o índice completo…)": {
@@ -120,7 +128,11 @@
   "k": "x"
  },
  "(hover:hover) and (pointer:fine)": {
-  "c": "index.html: matches:false}; const FINE = window.matchMedia ? matchMedia(\"(hover:hover) and (pointer:fine)\") : {matches:false};",
+  "c": "index.html: s nem paralaxe) const FINE = window.matchMedia ? matchMedia(\"(hover:hover) and (pointer:fine)\") : {matches:false};",
+  "k": "x"
+ },
+ "(hover:none) and (pointer:coarse)": {
+  "c": "index.html: e}; /* r9 */ const MD_LITE = window.matchMedia ? matchMedia(\"(hover:none) and (pointer:coarse)\") : {matches:false};",
   "k": "x"
  },
  "(já sem os supplies).": {
@@ -196,7 +208,7 @@
   "k": "p"
  },
  "+ munição": {
-  "c": "index.html: [1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],am?\"+ munição\":\"\"]); } kv.push([",
+  "c": "index.html: } ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+ ${mb[1]} munição`:am?\"+ munição\":\"\"]); } kv.push([",
   "k": "x"
  },
  "+ set": {
@@ -206,6 +218,10 @@
  "+ viagem": {
   "c": "index.html: até ${esc(r.s)} · ~${pre.c} sqm${pre.st.some(x=>x[0]===\"n\")?\" + viagem\":\"\"}</summary><ol>${",
   "k": "x"
+ },
+ "+ {0} munição": {
+  "c": "index.html: [1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+ ${mb[1]} munição`:am?\"+ munição\":\"\"])",
+  "k": "p"
  },
  "+1 de {0}.": {
   "c": "index.html: oin(\"; \"):k===\"vr\"?WHD.perk[\"Vessel Resonance\"]:k===\"skill\"?`+1 de ${WHSK[voc]}.`:k===\"mleech\"?WHD.pe",
@@ -251,8 +267,20 @@
   "c": "index.html: .v]||0); } const evLabel = () => { const e=ST.ui.ev; return `${e.t===\"mon\"?(hasKey(G.mon,e.v)?G.mon[e.v][0]:cap1(e.v)):clsName(e.v)} +${e.p}% XP`; }; /* r6-t2 */ // ",
   "k": "p"
  },
+ "+{0}% crítico": {
+  "c": "index.html: }${it.spd}`); /* r8 */ if(it.crit){ if(it.crit[0]) p.push(`+${it.crit[0]}% crítico`); if(it.crit[1]) p.",
+  "k": "p"
+ },
+ "+{0}% dano crítico": {
+  "c": "index.html: ]) p.push(`+${it.crit[0]}% crítico`); if(it.crit[1]) p.push(`+${it.crit[1]}% dano crítico`); } if(it.lch){ i",
+  "k": "p"
+ },
  "+{0}% de capacidade": {
   "c": "index.html: v(\"vibr\")}% de anular paralyze`; if(k===\"feather\") return `+${v(\"feather\")}% de capacidade`; if(k.startsWith(",
+  "k": "p"
+ },
+ "+{0}% de dano": {
+  "c": "index.html: ítico\",[it.crit[0]?`${it.crit[0]}% de chance`:\"\",it.crit[1]?`+${it.crit[1]}% de dano`:\"\"].filter(Boolean)",
   "k": "p"
  },
  "+{0}% de dano crítico": {
@@ -783,9 +811,21 @@
   "c": "index.html: ||SLOTNAME.weapon; } if(s===\"shield\") return b===\"quiver\"?\"Aljava\":b===\"spellbook\"?\"Li",
   "k": "x"
  },
+ "Aljava: Quiver, Red ou Blue": {
+  "c": "index.html: lass=\"hs-chips\">${ammoChips(t.wb,c.level)}${t.sb!==\"quiver\"?`<span class=\"hs-sk\" title=\"${esc(quivTip)}\">Aljava: Quiver, Red ou Blue</span>`:\"\"}</div></div>`:\"\"",
+  "k": "x"
+ },
+ "Aljava: {0}.": {
+  "c": "index.html: hips\">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!==\"quiver\"?` <span class=\"tiny muted\">Aljava: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ",
+  "k": "p"
+ },
  "Alternativas": {
   "c": "index.html: untP,6)}</div>`,huntP.length]); if(alts) tabs.push([\"alt\",\"Alternativas\",alts]); const lef",
   "k": "x"
+ },
+ "Alvo único: {0} {1}": {
+  "c": "index.html: <span class=\"tag ok\">usa esta</span>':\"\"}</span>`; return `<span class=\"hs-sk\">Alvo único: ${ln(st[2])} <b>+${st[1]}</b></span>`+show.map(one).join(",
+  "k": "p"
  },
  "Amber Crusher": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
@@ -932,11 +972,11 @@
   "k": "x"
  },
  "Arma: {0} · ligação": {
-  "c": "index.html: ]||x)}</span></div>`).join(\"\")}</div> ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
+  "c": "index.html: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
   "k": "p"
  },
  "Arma: {0} · ligação {1}{2}": {
-  "c": "index.html: ]||x)}</span></div>`).join(\"\")}</div> ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
+  "c": "index.html: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
   "k": "p"
  },
  "Armadura": {
@@ -965,6 +1005,10 @@
  },
  "Arremesso": {
   "c": "index.html: rtir do 100)\"],[\"bow\",\"Arco\"],[\"crossbow\",\"Besta\"],[\"throw\",\"Arremesso\"]]}; const VOCSHORT ",
+  "k": "x"
+ },
+ "Arrow": {
+  "c": "index.html: ammoBest (alvo único) não a escolhe. const AMMO={bow:[[0,25,\"Arrow\"],[20,28,\"Sniper Arr",
   "k": "x"
  },
  "ArrowDown": {
@@ -1044,11 +1088,11 @@
   "k": "x"
  },
  "Ataque · +{0}": {
-  "c": "index.html: ssbow\", a=t.atk||[0,null]; kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],am?\"+",
+  "c": "index.html: wb,c.level):null; /* r7 */ kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+",
   "k": "p"
  },
  "Ataque · +{0} {1}": {
-  "c": "index.html: ssbow\", a=t.atk||[0,null]; kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],am?\"+",
+  "c": "index.html: wb,c.level):null; /* r7 */ kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+",
   "k": "p"
  },
  "Ataques": {
@@ -1269,6 +1313,10 @@
  },
  "Bloqueia passagem": {
   "c": "quests/js/app.js: PCs vendem por\", \"field properties\": \"No chão\", \"blocking\": \"Bloqueia passagem\", \"other propert",
+  "k": "x"
+ },
+ "Bolt": {
+  "c": "index.html: alline Arrow\"],[150,37,\"Diamond Arrow\"]], crossbow:[[0,30,\"Bolt\"],[30,33,\"Piercing B",
   "k": "x"
  },
  "Books": {
@@ -1983,6 +2031,14 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
+ "Crystalline Arrow": {
+  "c": "index.html:  Arrow\"],[30,33,\"Tarsal Arrow\"],[40,38,\"Onyx Arrow\"],[90,65,\"Crystalline Arrow\"],[150,37,\"Diamond A",
+  "k": "x"
+ },
+ "Crítico": {
+  "c": "index.html: spd>0?\"+\":\"\")+it.spd]); /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.c",
+  "k": "x"
+ },
  "Cuidado": {
   "c": "quests/js/app.js: ievements relacionados\", \"general\": \"Geral\", \"caution\": \"Cuidado\", \"creatures\": \"Cria",
   "k": "x"
@@ -2255,6 +2311,10 @@
   "c": "quests/js/app.js: ado\", \"push objects\": \"Empurra objetos\", \"sense invisible\": \"Deteta invisíveis\", \"paralysable\":",
   "k": "x"
  },
+ "Diamond Arrow": {
+  "c": "index.html: \"],[40,38,\"Onyx Arrow\"],[90,65,\"Crystalline Arrow\"],[150,37,\"Diamond Arrow\"]], crossbow:[[0,3",
+  "k": "x"
+ },
  "Dica": {
   "c": "quests/js/app.js: b>${rich(st.warning)}</div></div>`; if (st.tip) html += `<div class=\"callout tip\">${icon(\"bulb\")}<div><b class=\"k\">Dica</b>${rich(st.tip)}</div></div>`; if (st.reward)",
   "k": "x"
@@ -2353,6 +2413,10 @@
  },
  "Dragões": {
   "c": "index.html: nst CLS_PT = {Demon:\"Demónios\",Undead:\"Mortos-vivos\",Dragon:\"Dragões\",Human:\"Humanos\",Hum",
+  "k": "x"
+ },
+ "Drill Bolt": {
+  "c": "index.html: ng Bolt\"],[40,36,\"Vortex Bolt\"],[55,40,\"Power Bolt\"],[70,56,\"Drill Bolt\"],[90,66,\"Prismatic ",
   "k": "x"
  },
  "Druid": {
@@ -2955,6 +3019,10 @@
   "c": "index.html: Fire/Death\":\"fogo e morte\",\"Energy/Death\":\"energia e morte\",\"Fire (TH)\":\"fogo, em team hunt",
   "k": "x"
  },
+ "Firestorm Arrow": {
+  "c": "index.html: st AMMOA={bow:[[50,\"Shatterstorm Arrow\",\"physical\",27],[125,\"Firestorm Arrow\",\"fire\",21],[125,\"Fr",
+  "k": "x"
+ },
  "Fist Fighting Weapons": {
   "c": "index.html: \":\"Comida\",\"Rods\":\"Rod\",\"Wands\":\"Wand\",\"Tools\":\"Ferramenta\",\"Fist Fighting Weapons\":\"Arma de monk\",\"Spe",
   "k": "x"
@@ -3073,6 +3141,10 @@
  },
  "Frost (gelo)": {
   "c": "index.html: hield:\"Blockade (shielding)\",s_fist:\"Punch (fist)\", e_ice:\"Frost (gelo)\",e_fire:\"Scorch (fog",
+  "k": "x"
+ },
+ "Froststorm Arrow": {
+  "c": "index.html: rrow\",\"physical\",27],[125,\"Firestorm Arrow\",\"fire\",21],[125,\"Froststorm Arrow\",\"ice\",21],[125,\"Ter",
   "k": "x"
  },
  "Funcionalidades": {
@@ -3647,6 +3719,10 @@
   "c": "index.html: ue=cap1(n); $(\"tkSug\").innerHTML=\"\"; $(\"tkMsg\").textContent=\"Indica a quantidade e carrega em Adicionar.\"; $(\"tkN\").focus(); ",
   "k": "x"
  },
+ "Infernal Bolt": {
+  "c": "index.html: olt\"],[70,56,\"Drill Bolt\"],[90,66,\"Prismatic Bolt\"],[110,72,\"Infernal Bolt\"],[150,78,\"Spectral ",
+  "k": "x"
+ },
  "Inkborn": {
   "c": "index.html: l\":\"Extradimensionais\",Fey:\"Fadas\",Giant:\"Gigantes\",Inkborn:\"Inkborn\",Plant:\"Plantas\",Sli",
   "k": "x"
@@ -3841,6 +3917,10 @@
  },
  "Largado por": {
   "c": "quests/js/app.js: ades\", \"version\": \"Versão\", \"notes\": \"Notas\", \"dropped by\": \"Largado por\", \"trade details",
+  "k": "x"
+ },
+ "Leech": {
+  "c": "index.html: \"].filter(Boolean).join(\" · \")]); if(it.lch) rows.push([\"Leech\",[it.lch[0]?`vida ${",
   "k": "x"
  },
  "Legs": {
@@ -4320,7 +4400,7 @@
   "k": "x"
  },
  "Melhor: vende no Market de {0} (≈ {1} depois da taxa)": {
-  "c": "index.html: b.npc[0])} por ${gp(pb.npc[1])}</p>`:pb&&pb.best===\"market\"?`<p class=\"lk-best\">Melhor: vende no Market de ${esc(w)} (≈ ${gp(pb.net)} depois da taxa)</p>`:\"\"} ${sc!=null?",
+  "c": "index.html: b.npc[0])} por ${gp(pb.npc[1])}</p>`:pb&&pb.best===\"market\"?`<p class=\"lk-best\">Melhor: vende no Market de ${esc(w)} (≈ ${gp(pb.net)} depois da taxa)</p>`:\"\"} ${sc!=null&",
   "k": "p"
  },
  "Melhor: vende {0} por": {
@@ -4835,6 +4915,10 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
+ "Nota para {0}: {1} de 100 {2}": {
+  "c": "index.html: p>`:\"\"} ${sc!=null&&notaItem(c,it,sc,\"combat\",\"\")!=null?`<p class=\"lk-sc\">Nota para ${esc(c.name||G.voc[c.voc].n)}: <b>${notaItem(c,it,sc,\"combat\",\"\")}</b> de 100 <small>(100 = o melhor deste slot até ao nível ${c.level}",
+  "k": "p"
+ },
  "Notas": {
   "c": "index.html: t(h.r.c,h).length||0], ...(vars||(p&&p.note)?[[\"info\",\"Notas\",`${p&&p.note?`<p cl",
   "k": "x"
@@ -5299,6 +5383,10 @@
   "c": "quests/js/app.js: stica</small></span>`} </div> ${d.loc ? `<p class=\"drop-loc\"><b>Onde vive:</b> ${esc(d.loc)}</p>` : \"\"} ${p",
   "k": "x"
  },
+ "Onyx Arrow": {
+  "c": "index.html: rrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arrow\"],[40,38,\"Onyx Arrow\"],[90,65,\"Crystallin",
+  "k": "x"
+ },
  "Ordem para desbloquear": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5663,6 +5751,10 @@
   "c": "index.html: \"para bosses\",\"Base Ranged Spawn Build\":\"hunts à distância\",\"Physical Resistant Build, e.g. Rosh\":\"criaturas que resi",
   "k": "x"
  },
+ "Piercing Bolt": {
+  "c": "index.html: [150,37,\"Diamond Arrow\"]], crossbow:[[0,30,\"Bolt\"],[30,33,\"Piercing Bolt\"],[40,36,\"Vortex Bol",
+  "k": "x"
+ },
  "Piso +": {
   "c": "quests/js/app.js:  floorLabel = (z) => (z === 7 ? \"Piso 0 · térreo\" : z < 7 ? `Piso +${7 - z}` : `Piso −${z - 7} ·",
   "k": "x"
@@ -5735,10 +5827,6 @@
   "c": "index.html: d small\">Nada nos próximos 120 níveis.</li>'}</ul>` }; h+=`<div class=\"sltabs\" role=\"tablist\" aria-label=\"Itens para este slot\">${[[\"top\",`Melhores até ao nível ${L}`,top.length],[\"mine\",\"Os teus\",mine.length],[\"next\",\"P",
   "k": "p"
  },
- "Pontuação para {0}: {1} pts": {
-  "c": "index.html: )} (≈ ${gp(pb.net)} depois da taxa)</p>`:\"\"} ${sc!=null?`<p class=\"lk-sc\">Pontuação para ${esc(c.name||G.voc[c.voc].n)}: <b>${String(sc).replace(\".\",DECSEP)}</b> pts</p>`:\"\"}`; } function lo",
-  "k": "p"
- },
  "Por criatura": {
   "c": "index.html: \">${mkList.map(lnk).join(\", \")}</span></div>`:\"\"); return `${notes?`<div class=\"lp-note\">${notes}</div>`:\"\"}${kp}${(()=>{ const l=A.kills.filter(x=>x.nd); return l.length?`<p class=\"lp-nd tiny muted\">Sem loot conhecido: ",
   "k": "x"
@@ -5777,6 +5865,10 @@
  },
  "Posição não indicada": {
   "c": "quests/js/app.js: bel(npc.z)}` : null].filter(Boolean).map(esc).join(\" · \") : \"Posição não indicada\"}</span></div> ",
+  "k": "x"
+ },
+ "Power Bolt": {
+  "c": "index.html: Bolt\"],[30,33,\"Piercing Bolt\"],[40,36,\"Vortex Bolt\"],[55,40,\"Power Bolt\"],[70,56,\"Drill Bolt",
   "k": "x"
  },
  "Powerful": {
@@ -5897,6 +5989,10 @@
  },
  "Primeiros passos": {
   "c": "quests/js/app.js:  2560, h: 2048 }; const BANDS = [ [1, 9, \"Nível 1–9\", \"Primeiros passos\"], [10, 19, \"Nível 1",
+  "k": "x"
+ },
+ "Prismatic Bolt": {
+  "c": "index.html: tex Bolt\"],[55,40,\"Power Bolt\"],[70,56,\"Drill Bolt\"],[90,66,\"Prismatic Bolt\"],[110,72,\"Infernal ",
   "k": "x"
  },
  "Probabilidade de drop": {
@@ -6241,6 +6337,10 @@
  },
  "Questski": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)": {
+  "c": "index.html:  stats): as simples não têm nível nem bónus const quivTip = \"Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)\"; /* pontuação de um",
   "k": "x"
  },
  "Quivers": {
@@ -6811,6 +6911,10 @@
   "c": "index.html:  ${fmt(v.xp)}`:\"\"}</span>`).join(\"\")}</div>` : \"\"; return `<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">${esc(VD().n)} · ${h.l}+</span><h3>${esc(name)}</h3></div>${hcmpBtn(h)}</div> <div class=\"shero\">${",
   "k": "p"
  },
+ "Shatterstorm Arrow": {
+  "c": "index.html: iamond 37 no 150). As bestas não têm. const AMMOA={bow:[[50,\"Shatterstorm Arrow\",\"physical\",27],[125",
+  "k": "x"
+ },
  "Shields": {
   "c": "index.html: ia\",\"Valuables\":\"Valioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\":\"Escudo\",\"Legs\":\"Ca",
   "k": "x"
@@ -6879,6 +6983,10 @@
   "c": "index.html: ther:\"Featherweight\", p_fire:\"Dragon Hide (fogo)\",p_earth:\"Snake Skin (terra)\",p_ice:\"Quara Scale ",
   "k": "x"
  },
+ "Sniper Arrow": {
+  "c": "index.html: nico) não a escolhe. const AMMO={bow:[[0,25,\"Arrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arr",
+  "k": "x"
+ },
  "Sobe": {
   "c": "index.html: c===\"p\"?\"pá\":\"corda\"); return {i:s[2]?\"up\":\"down\",t:`${s[2]?\"Sobe\":\"Desce\"} ${s[1]===7",
   "k": "x"
@@ -6933,6 +7041,10 @@
  },
  "Spawn": {
   "c": "index.html: abs.push([\"info\",\"Mais dados\",`<dl class=\"ip-dl\">${ci.spawn?`<dt>Spawn</dt><dd>${esc(ci.spawn)}</dd>`:\"\"}${ci.att?`<dt>Ti",
+  "k": "x"
+ },
+ "Spectral Bolt": {
+  "c": "index.html: ],[90,66,\"Prismatic Bolt\"],[110,72,\"Infernal Bolt\"],[150,78,\"Spectral Bolt\"]]}; const ammoAtk=(",
   "k": "x"
  },
  "Spellbook": {
@@ -7283,6 +7395,10 @@
   "c": "recolhida: /grimorio/#inicio · ex.: Tarefas para o {0}. {1} Vender ao {2}.",
   "k": "p"
  },
+ "Tarsal Arrow": {
+  "c": "index.html: nst AMMO={bow:[[0,25,\"Arrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arrow\"],[40,38,\"Onyx Arrow",
+  "k": "x"
+ },
  "Task Board": {
   "c": "index.html: }, async montaria(k,m){ const SRC={item:\"item\",tarefa:\"Task Board\",loja:\"Loja\",quest:\"",
   "k": "x"
@@ -7343,6 +7459,10 @@
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
+ "Terrastorm Arrow": {
+  "c": "index.html: rm Arrow\",\"fire\",21],[125,\"Froststorm Arrow\",\"ice\",21],[125,\"Terrastorm Arrow\",\"earth\",21], [125",
+  "k": "x"
+ },
  "Tesouro": {
   "c": "quests/js/app.js:  label: \"História\", icon: \"scroll\" }, tesouro: { label: \"Tesouro\", icon: \"chest\" }, ",
   "k": "x"
@@ -7381,6 +7501,10 @@
  },
  "Thu": {
   "c": "index.html: map(x=>[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].indexO",
+  "k": "x"
+ },
+ "Thunderstorm Arrow": {
+  "c": "index.html: rrow\",\"ice\",21],[125,\"Terrastorm Arrow\",\"earth\",21], [125,\"Thunderstorm Arrow\",\"energy\",21],[150,\"",
   "k": "x"
  },
  "Tibia": {
@@ -7973,6 +8097,10 @@
  },
  "Voltar à minha": {
   "c": "index.html: \" disabled\":\"\"}>Copiar código</button>${(w!==cur&&cur)||E.t?`<button type=\"button\" class=\"btn small ghost\" data-wsel=\"cur\">Voltar à minha</button>`:\"\"}</div></div></di",
+  "k": "x"
+ },
+ "Vortex Bolt": {
+  "c": "index.html: ], crossbow:[[0,30,\"Bolt\"],[30,33,\"Piercing Bolt\"],[40,36,\"Vortex Bolt\"],[55,40,\"Power Bolt",
   "k": "x"
  },
  "Vários · {0}": {
@@ -8824,7 +8952,7 @@
   "k": "p"
  },
  "combat": {
-  "c": "index.html: sets da personagem */ function bisSet(c){ const p=pickSet(c,\"combat\",\"\"), slots={}; Obje",
+  "c": "index.html: OTAC.size>400) NOTAC.clear(); const r=ranked(c,slot,mode||\"combat\",prot||\"\",it=>it.l<=",
   "k": "x"
  },
  "combat mastery": {
@@ -9268,7 +9396,7 @@
   "k": "x"
  },
  "drown": {
-  "c": "index.html: ,v] of Object.entries(it.ab)){ let w=e===\"physical\"?1.2:e===\"drown\"?0.03:(e===\"lifedrai",
+  "c": "index.html: ce\",\"earth\",\"energy\",\"holy\",\"death\",\"lifedrain\",\"manadrain\",\"drown\"]; const elTx = e =>",
   "k": "x"
  },
  "druid": {
@@ -10299,8 +10427,12 @@
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "x"
  },
+ "life leech {0}%": {
+  "c": "index.html: t[1]}% dano crítico`); } if(it.lch){ if(it.lch[0]) p.push(`life leech ${it.lch[0]}%`); if(it.lch[1]) p.p",
+  "k": "p"
+ },
  "lifedrain": {
-  "c": "index.html: ies(it.ab)){ let w=e===\"physical\"?1.2:e===\"drown\"?0.03:(e===\"lifedrain\"||e===\"manadrain\")?0",
+  "c": "index.html: { Object.entries(c.el).forEach(([e,v])=>{ out[e===\"hpDrain\"?\"lifedrain\":e]=v; }); return ou",
   "k": "x"
  },
  "ligação elemental:": {
@@ -10431,6 +10563,10 @@
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "x"
  },
+ "mana leech {0}%": {
+  "c": "index.html: ]) p.push(`life leech ${it.lch[0]}%`); if(it.lch[1]) p.push(`mana leech ${it.lch[1]}%`); } if(it.ex) it.",
+  "k": "p"
+ },
  "mana variável": {
   "c": "index.html: ' ? (/party/.test(k||'')?'mana variável (depende do grupo)':'mana variável') : ''; function wlS",
   "k": "x"
@@ -10439,12 +10575,16 @@
   "c": "index.html: inite(m) ? nf(m)+' mana' : m==='var' ? (/party/.test(k||'')?'mana variável (depende do grupo)':'mana variável') : ",
   "k": "x"
  },
+ "mana {0}%": {
+  "c": "index.html: .push([\"Leech\",[it.lch[0]?`vida ${it.lch[0]}%`:\"\",it.lch[1]?`mana ${it.lch[1]}%`:\"\"].filter(Boolean)",
+  "k": "p"
+ },
  "mana25": {
   "c": "index.html: h.min(0.05*hpOf(c), 0.08*H)*dm(\"physical\"); else if(f===\"mana25\") v=Math.min(0.025*m",
   "k": "x"
  },
  "manadrain": {
-  "c": "index.html: w=e===\"physical\"?1.2:e===\"drown\"?0.03:(e===\"lifedrain\"||e===\"manadrain\")?0.2:0.6; if(pf",
+  "c": "index.html: l\",\"fire\",\"ice\",\"earth\",\"energy\",\"holy\",\"death\",\"lifedrain\",\"manadrain\",\"drown\"]; const elT",
   "k": "x"
  },
  "mantra +": {
@@ -10671,12 +10811,16 @@
   "c": "index.html: ><b>${esc(m.n)}</b><span class=\"tag\">${esc(m.c)}</span>${my?`<span class=\"tag acc\">na tua ordem</span>`:\"\"}${c.charms[k]?`<",
   "k": "x"
  },
+ "nada": {
+  "c": "index.html: tle=\"${lab}: ${x===\"shield\"&&c.voc===\"paladin\"?esc(quivTip):\"nada\"}\">${emptyIc(c,x)}</",
+  "k": "x"
+ },
  "nada nesta hunt": {
   "c": "index.html:  <small>${ozTxt(o.oz)} gp/oz</small>`:\"\"}</span>`).join(\"\"):`<span class=\"small muted\">nada nesta hunt</span>`; const pk=`<p cla",
   "k": "x"
  },
  "nada para este nível": {
-  "c": "index.html: duas mãos\" : mine ? \"vazio (botão direito para escolher)\" : \"nada para este nível\"; return `<b",
+  "c": "index.html:  ? quivTip : mine ? \"vazio (botão direito para escolher)\" : \"nada para este nível\"; return `<b",
   "k": "x"
  },
  "nas tuas hotkeys": {
@@ -10770,6 +10914,14 @@
  "noscroll": {
   "c": "index.html: ody\")); sh.classList.add(\"on\"); document.body.classList.add(\"noscroll\"); $(\"sheetBody\").sc",
   "k": "x"
+ },
+ "nota": {
+  "c": "index.html: sem bónus\")}</small></span><span class=\"pk-m\">${(n=>n!=null?`<b>${n}</b><small>nota</small>`:\"<b>—</b>\")(notaIte",
+  "k": "x"
+ },
+ "nota {0}": {
+  "c": "index.html: class=\"d\">${[esc(statLine(it)), (n=>n!=null&&opt&&opt.score?`nota <b>${n}</b>`:\"\")(notaItem(c,it,s",
+  "k": "p"
  },
  "notes": {
   "c": "quests/js/app.js: er properties\": \"Outras propriedades\", \"version\": \"Versão\", \"notes\": \"Notas\", \"dropped ",
@@ -10996,7 +11148,7 @@
   "k": "x"
  },
  "os monks usam as duas mãos": {
-  "c": "index.html: ; if(!it){ const why = k===\"shield\"&&c.voc===\"monk\" ? \"os monks usam as duas mãos\" : mine ? \"vazio (bo",
+  "c": "index.html: ; if(!it){ const why = k===\"shield\"&&c.voc===\"monk\" ? \"os monks usam as duas mãos\" : k===\"shield\"&&c.v",
   "k": "x"
  },
  "other properties": {
@@ -11432,7 +11584,7 @@
   "k": "x"
  },
  "quest": {
-  "c": "index.html: cls\">${esc(clsName(mc[0]).toLowerCase())}</span>`:\"\"}${!qok?' · <span class=\"lk\">quest</span>':\"\"}<span class=\"dan",
+  "c": "index.html: m\"],s:[\"Feitiços\",\"feitiço\"],r:[\"Runas\",\"runa\"],q:[\"Quests\",\"quest\"],g:[\"Guias de quest",
   "k": "x"
  },
  "quests": {
@@ -12040,7 +12192,7 @@
   "k": "x"
  },
  "speed": {
-  "c": "index.html: ||it.cu) return null; const rs=relSkills(c), speed=mode===\"speed\", off=mode===\"off\", ",
+  "c": "index.html: =SCMODE[mode]||SCMODE.combat, rs=relSkills(c), speed=mode===\"speed\"; const pf = prot&",
   "k": "x"
  },
  "spell": {
@@ -12495,6 +12647,10 @@
   "c": "index.html: 0.sort===\"string\"?{sort:f0.sort}:{}); if(hit){ ST.ui.band=\"upto\"; if(kind===\"cidade\"",
   "k": "x"
  },
+ "usa esta": {
+  "c": "index.html: p(x[2])}`:\"\"}${ev(x)!=null?` <b>${ev(x)}%</b>`:\"\"}${x===top?' <span class=\"tag ok\">usa esta</span>':\"\"}</span>`; retu",
+  "k": "x"
+ },
  "usa este": {
   "c": "index.html: =\"chip c-${r.x}\">${ELN[r.x]}</span><b>${r.v}%</b>${r===best?`<span class=\"tag ok\">usa este</span>`:\"\"}${r.main?\"\":`<sp",
   "k": "x"
@@ -12548,15 +12704,15 @@
   "k": "x"
  },
  "vazio (botão direito para escolher)": {
-  "c": "index.html: ld\"&&c.voc===\"monk\" ? \"os monks usam as duas mãos\" : mine ? \"vazio (botão direito para escolher)\" : \"nada para este n",
+  "c": "index.html: : k===\"shield\"&&c.voc===\"paladin\"&&!mine ? quivTip : mine ? \"vazio (botão direito para escolher)\" : \"nada para este n",
   "k": "x"
  },
  "velocidade": {
-  "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); if(it.ex) it.ex",
+  "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); /* r8 */ if(it.",
   "k": "x"
  },
  "velocidade {0}{1}": {
-  "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); if(it.ex) it.ex",
+  "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); /* r8 */ if(it.",
   "k": "p"
  },
  "venda": {
@@ -12651,12 +12807,16 @@
   "c": "index.html: g acc\">${esc(vd.promo)}</span>`; const st = [[nf(hpOf(c)),\"vida\",\"hp\"],[nf(manaOf(c)",
   "k": "x"
  },
+ "vida {0}%": {
+  "c": "index.html: join(\" · \")]); if(it.lch) rows.push([\"Leech\",[it.lch[0]?`vida ${it.lch[0]}%`:\"\",it.lch[1]?`mana ",
+  "k": "p"
+ },
  "vida · {0} mana por s": {
-  "c": "index.html: >0?\"+\":\"\")+it.spd]); if(it.rg) rows.push([\"Regeneração\",`${nfdec(it.rg[0])} vida · ${nfdec(it.rg[1])} mana por s`]); if(it.bond) ",
+  "c": "index.html: lean).join(\" · \")]); if(it.rg) rows.push([\"Regeneração\",`${nfdec(it.rg[0])} vida · ${nfdec(it.rg[1])} mana por s`]); if(it.bond) ",
   "k": "p"
  },
  "vida · {0} mana/s": {
-  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
+  "c": "index.html: Boolean).join(\" · \")]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
   "k": "p"
  },
  "vida/mana por s": {
@@ -13287,10 +13447,6 @@
   "c": "index.html: L(key,w,d,info){ const W=esc(w), p=priceOf(key,w), np=p.npc?`${npcTo(p.npc[0],true)} por ${gp(p.npc[1])}`:\"\"; const age=d&&",
   "k": "p"
  },
- "{0} pts": {
-  "c": "index.html: pan class=\"d\">${[esc(statLine(it)), s!=null&&opt&&opt.score?`<b>${s}</b> pts`:\"\"].filter(Boolean)",
-  "k": "p"
- },
  "{0} quest": {
   "c": "quests/js/app.js: UNLOCK_KINDS[g.kind] || UNLOCK_KINDS.zona; return `<section class=\"acc-card\"><h3>${icon(k[1])}${href ? `<a href=\"${href}\">${esc(g.title)}</a>` : esc(g.title)}<span class=\"muted\">${g.items.length} quest${g.items.length > ",
   "k": "p"
@@ -13384,11 +13540,11 @@
   "k": "p"
  },
  "{0} vida · {1} mana por s": {
-  "c": "index.html: >0?\"+\":\"\")+it.spd]); if(it.rg) rows.push([\"Regeneração\",`${nfdec(it.rg[0])} vida · ${nfdec(it.rg[1])} mana por s`]); if(it.bond) ",
+  "c": "index.html: lean).join(\" · \")]); if(it.rg) rows.push([\"Regeneração\",`${nfdec(it.rg[0])} vida · ${nfdec(it.rg[1])} mana por s`]); if(it.bond) ",
   "k": "p"
  },
  "{0} vida · {1} mana/s": {
-  "c": "index.html: spd>0?\"+\":\"\")+eq.spd]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
+  "c": "index.html: Boolean).join(\" · \")]); if(eq.rg) r.push([\"Regeneração\",`${String(eq.rg[0]).replace(\".\",DECSEP)} vida · ${String(eq.rg[1]).replace(\".\",DECSEP)} mana/s`]); if(eq.bond) r.pu",
   "k": "p"
  },
  "{0} {1} (#{2} em {3})": {
@@ -13559,6 +13715,10 @@
   "c": "index.html:  ${ELN[e]}</span>`).join(\"\")}</div></div>`:\"\"} ${t.vibr?`<div class=\"ims\"><h4>Outros</h4><div class=\"imlist\"><span class=\"imchip\" style=\"--imc:var(--ok)\">${t.vibr}% de anular paralyze (Vibrancy)</span></div></div>`:\"\"} <",
   "k": "p"
  },
+ "{0}% de chance": {
+  "c": "index.html: ; /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.crit[0]}% de chance`:\"\",it.crit[1]?`+${i",
+  "k": "p"
+ },
  "{0}% de life leech": {
   "c": "index.html:  efeito const v=(a)=>IMBV[a][ti]; if(k===\"vamp\") return `${v(\"vamp\")}% de life leech`; if(k===\"void\") r",
   "k": "p"
@@ -13661,10 +13821,6 @@
  },
  "{0}: marcação solo/duo por vocação e relatos de jogadores.": {
   "c": "index.html (HTML)",
-  "k": "p"
- },
- "{0}: nada": {
-  "c": "index.html: ${it.id}\" aria-label=\"${lab}: ${esc(it.n)}\">${spr(it)}</a>`:`<span class=\"bslot none\" title=\"${lab}: nada\">${emptyIc(c,x)}</span>`; }).join(\"\")}</div>",
   "k": "p"
  },
  "{0}: os monks usam as duas mãos": {
@@ -14290,6 +14446,22 @@
  "Área do feitiço": {
   "c": "index.html: tring(ar[1]); if(w<=1&&cells.length<=1) return \"\"; return `<div class=\"sp-area\" style=\"--w:${w}\" role=\"img\" aria-label=\"Área do feitiço\">${[...cells].map(ch=>`<i class=\"${ch===\"2\"?\"me\":ch===\"1\"?\"on\":\"\"}\"></i>`).join(\"\")}",
   "k": "x"
+ },
+ "Área elemental {0}": {
+  "c": "index.html: }</b></span>`+show.map(one).join(\"\") +(!eff&&els.length?`<span class=\"hs-sk hs-wr\" title=\"${esc(els.map(x=>x[1]).join(\", \"))}\">Área elemental <b>+${els[0][3]}</b> ${els.map(x=>chip(x[2])).join(\" \")}</span>`:\"\"); } // sem",
+  "k": "p"
+ },
+ "Área elemental {0} {1}": {
+  "c": "index.html: }</b></span>`+show.map(one).join(\"\") +(!eff&&els.length?`<span class=\"hs-sk hs-wr\" title=\"${esc(els.map(x=>x[1]).join(\", \"))}\">Área elemental <b>+${els[0][3]}</b> ${els.map(x=>chip(x[2])).join(\" \")}</span>`:\"\"); } // sem",
+  "k": "p"
+ },
+ "Área: {0} {1}": {
+  "c": "index.html: ?show.reduce((m,x)=>val(x)>val(m)?x:m):null; const one=x=>`<span class=\"hs-sk\">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!==\"physical\"?` ${chip(x[2])}`:\"\"}${ev(x)!=null?` <b>${ev(x)}%</b>`:\"\"}${x===top?' <span class=\"tag ok",
+  "k": "p"
+ },
+ "Área: {0} {1}{2}{3}{4}": {
+  "c": "index.html: ?show.reduce((m,x)=>val(x)>val(m)?x:m):null; const one=x=>`<span class=\"hs-sk\">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!==\"physical\"?` ${chip(x[2])}`:\"\"}${ev(x)!=null?` <b>${ev(x)}%</b>`:\"\"}${x===top?' <span class=\"tag ok",
+  "k": "p"
  },
  "És um conselheiro experiente de Tibia (servidores oficiais) a ajudar um jogador português. Responde em português europeu (tu), direto e prático, no máximo ~220 palavras. Usa estes dados validados; se algo pode ter mudado ou não tens certeza, diz isso em vez de inventar. DADOS (JSON): {0} PERGUNTA:": {
   "c": "index.html: tent=\"A pensar…\"; ctl=new AbortController(); const prompt=`És um conselheiro experiente de Tibia (servidores oficiais) a ajudar um jogador português. Responde em português europeu (tu), direto e prático, no máximo ~220 p",
