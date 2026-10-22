@@ -115,6 +115,16 @@
 
   function exact(k) { var v = X.get(k); return v === undefined ? null : v; }
 
+  // um valor que já é inglês (um nome do jogo ou um texto que já vem traduzido) não conta como português, mesmo com " a " ou " as ":
+  // "Marcar 20 Years a Cook como feita", "Slab with a Hyaena — abrir na wiki", "Dá acesso a: Trades with A Sweaty Cyclops (…)"
+  // (só com "a"/"as" como palavras que também podiam ser portuguesas: "Entrar no Temple of the Snakes" continua a ser português)
+  function enVal(s) {
+    if (/[ãõçáéíóúâêôà]/i.test(s)) return false;
+    if (!((" " + s + " ").match(PT_FN) || []).every(function (x) { return /^\s(?:a|as)$/i.test(x); })) return false;
+    if (/\b(?:the|and|of|with|from|for|to|in|on|at|by|is|are|your)\b|\bas an?\b/i.test(s)) return true;
+    var w = s.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
+    return !!w && w.every(function (x) { return /^[A-Z]/.test(x); });
+  }
   var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as|e|a|o|à|é|não|mais|só)(?=\s)/gi;
   function pattern(k, depth) {
     depth = depth || 0;
@@ -150,37 +160,47 @@
         // nem é uma frase portuguesa comprida (ex.: "… menos cooldown por cada alvo …" em "{0} por {1}"): o modelo não serve
         if (/[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
         if (cap.indexOf(" · ") >= 0) {
-          if (best.t.indexOf(" · ") < 0) return null;
-          // num modelo com " · ", um valor com várias partes só serve se cada parte tiver tradução ("80+ · podes usar")
+          // um valor com várias partes só serve se cada parte tiver tradução ("80+ · podes usar"); num modelo sem " · ",
+          // também ("Criaturas, pela parte do XP: {0}" com "Mágicos 65% · Mortos-vivos 35%")
           var ps = cap.split(" · ").map(function (x, i) {
             if (!/[A-Za-zÀ-ÖØ-öø-ÿ]{2}/.test(x)) return x;
             var v = exact(x);
             if (v == null && i > 0) { v = exact("· " + x); if (v == null && depth < 3) v = pattern("· " + x, depth + 1); if (v != null) v = v.replace(/^·\s*/, ""); }
             if (v == null && depth < 3) v = pattern(x, depth + 1);
+            // (uma lista "Dragões, Demónios" ou um nome do jogo, ex.: a cidade em "Até ao meu nível · Thais · Todas")
+            if (v == null) v = commas(x);
+            if (v == null && enVal(x)) v = x;
             return v;
           });
           if (!ps.some(function (v) { return v == null; })) t = ps.join(" · ");
+          else if (best.t.indexOf(" · ") < 0) return null;
         }
       }
       if (t == null) {
         // (num modelo comprido e específico — 40+ letras fixas — o valor pode ser uma frase, desde que se traduza por inteiro:
         // "; com mais 1 exalted core o risco desce para 50%" na frase da fusão da Forge)
-        if (cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40) return null;
+        // (só depois de o tentar traduzir: "ao NPC {0} (hoje em Ankrahmun) por 90,000 gp" em "Vende {0}. Sem dados do Market de {1} agora.")
+        var longPT = cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40 && !enVal(cap);
         // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}"), mesmo com
         // marcas de elementos (ex.: "ao NPC {0} (hoje em Port Hope) por 1,500 gp"); uma lista "fogo, energia, veneno" traduz-se item a item
         if (cap.length <= 90 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
-          if (!mk && conts()) t = cget(hkey(cap));
-          if (t == null && depth < 3) t = pattern(cap, depth + 1);
+          // (sem o espaço da frente: um acrescento opcional, ex.: " ≈ 15 linhas de loot sem preço." em "…do mapa.{1}")
+          var sp = /^\s*/.exec(cap)[0], cr = cap.slice(sp.length);
+          if (!mk && conts()) t = cget(hkey(cr));
+          if (t == null && depth < 3) t = pattern(cr, depth + 1);
+          if (t != null) t = sp + t;
           if (t == null && !mk && cap.indexOf(", ") > 0) {
             var it = cap.split(", "), tr = it.map(function (x) { return exact(x); });
             if (tr.every(function (y) { return y != null; })) t = tr.join(", ");
           }
         }
+        if (t == null && longPT) return null;
         // um valor que fica por traduzir e é português (ex.: "Até ao meu" em "{0} nível · {1}"): o modelo não serve
-        if (t == null && !mk && (/[ãõçâêô]/i.test(cap) || (cap.match(PT_FN) || []).length)) return null;
+        // (também com marcas de elementos: "41{0}Clique: equipamento · botão direito: trocar item" em "{0} itens · armadura {1}")
+        if (t == null && !enVal(cap.replace(MARK, " ")) && (/[ãõçâêô]/i.test(cap) || (cap.replace(MARK, " ").match(PT_FN) || []).length)) return null;
         // num modelo quase só de valores (ex.: "{0} por {1}"), uma palavra minúscula por traduzir é português
         // ("Hunts por cidade{0}" dava "Hunts for cidade")
-        if (t == null && best.len <= 6 && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
+        if (t == null && best.len <= 6 && !enVal(cap) && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
       }
       by[best.slots[n]] = t == null ? cap : t;
     }
@@ -256,6 +276,17 @@
     return tr.every(function (v) { return v != null; }) ? tr.join(", ") : null;
   }
 
+  // partes ligadas por " + " (ex.: as gemas "Resistência a terra + Vida + Fierce Berserk: dano base"): só se cada uma tiver tradução
+  function pluses(k) {
+    if (k.indexOf(" + ") < 0 || k.length > 200) return null;
+    var tr = k.split(" + ").map(function (x) {
+      if (!/[A-Za-zÀ-ÖØ-öø-ÿ]{2}/.test(x) || OUT.has(x)) return x;
+      var v = exact(x); if (v == null) v = pattern(x);
+      return v == null && enVal(x) ? x : v;
+    });
+    return tr.every(function (v) { return v != null; }) ? tr.join(" + ") : null;
+  }
+
   // partes separadas por " · " (ex.: "Amuleto · todas as vocações"): cada uma à parte
   function dots(k) {
     var parts = k.split(" · ");
@@ -305,6 +336,7 @@
     t = short(k, 2);
     if (t == null) t = dots(k);
     if (t == null) t = commas(k);
+    if (t == null) t = pluses(k);
     return t != null ? t : edgeSep(k);
   }
 
