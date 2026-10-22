@@ -6799,7 +6799,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   {"id":8028,"n":"Yol's bow","s":"weapon","l":60,"ix":1410,"b":"bow","v":"p","h2":1,"hit":7},
   {"id":10406,"n":"Zaoan halberd","s":"weapon","l":25,"ix":1411,"b":"axe","atk":37,"def":15,"is":3,"h2":1,"it":["strike","elem","vamp","void","s_axe"]},
   {"id":10390,"n":"Zaoan sword","s":"weapon","l":55,"ix":1412,"b":"sword","atk":43,"def":18,"edef":2,"is":2,"it":["strike","elem","vamp","void","s_sword"]},
-  {"id":900000,"n":"Flamingo Amulet of Nature","s":"amulet","l":270,"v":"d","ns":1,"tp":1,"ix":1413,"pe":["fire","physical"]},
+  {"id":900000,"n":"Flamingo Amulet of Nature","s":"amulet","l":270,"v":"d","tp":1,"ix":1413,"sk":{"ml":3,"ml_ice":1},"ab":{"physical":3,"fire":11},"arm":3,"dur":10800},
   {"id":900001,"n":"Enchanted Werewolf Helmet","s":"helmet","l":100,"v":"d","ns":1,"tp":1,"ix":-1,"pe":["physical"]},
   {"id":900002,"n":"Moonsilver Spirit Mask","s":"helmet","l":800,"v":"d","tp":1,"ix":1415,"arm":10,"sk":{"ml":4},"ab":{"physical":3,"energy":8},"is":2,"it":["void","s_ml"]},
   {
@@ -6826,13 +6826,13 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "tp":1,
    "ix":1417,
    "b":"rod",
-   "wd":["ice",6,6],
+   "wd":["ice",103,127],
    "sk":{"ml":6,"ml_ice":1,"ml_healing":2},
    "ab":{"earth":7},
    "is":2,
    "it":["strike","void","s_ml"]
   },
-  {"id":900005,"n":"Flamingo Amulet of Valor","s":"amulet","l":270,"v":"k","ns":1,"tp":1,"ix":1418,"pe":["fire","physical"]},
+  {"id":900005,"n":"Flamingo Amulet of Valor","s":"amulet","l":270,"v":"k","tp":1,"ix":1418,"sk":{"sword":4,"axe":4,"club":4,"shield":1},"ab":{"physical":7,"fire":12},"arm":4,"dur":10800},
   {
    "id":900006,
    "n":"Moonsilver Battle Visor",
@@ -7051,7 +7051,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "h2":1,
    "it":["strike","elem","vamp","void","s_sword"]
   },
-  {"id":900019,"n":"Flamingo Amulet of Precision","s":"amulet","l":270,"v":"p","ns":1,"tp":1,"ix":1432,"pe":["fire","physical"]},
+  {"id":900019,"n":"Flamingo Amulet of Precision","s":"amulet","l":270,"v":"p","tp":1,"ix":1432,"sk":{"dist":4,"ml_holy":1},"ab":{"physical":5,"fire":14},"arm":4,"dur":10800},
   {
    "id":900020,
    "n":"Moonsilver Trail Hood",
@@ -7118,7 +7118,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "h2":1,
    "it":["strike","elem","vamp","void","s_dist"]
   },
-  {"id":900025,"n":"Flamingo Amulet of Destruction","s":"amulet","l":270,"v":"s","ns":1,"tp":1,"ix":1438,"pe":["fire","physical"]},
+  {"id":900025,"n":"Flamingo Amulet of Destruction","s":"amulet","l":270,"v":"s","tp":1,"ix":1438,"sk":{"ml":3,"ml_energy":1},"ab":{"physical":3,"fire":11},"arm":3,"dur":10800},
   {"id":900026,"n":"Moonsilver Nimbus Hat","s":"helmet","l":800,"v":"s","tp":1,"ix":1439,"arm":10,"sk":{"ml":4},"ab":{"physical":3,"ice":8},"is":2,"it":["void","s_ml"]},
   {
    "id":900027,
@@ -7144,7 +7144,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
    "tp":1,
    "ix":1441,
    "b":"wand",
-   "wd":["death",6,6],
+   "wd":["death",103,133],
    "sk":{"ml":6,"ml_death":1},
    "ab":{"energy":7},
    "is":2,
@@ -43383,6 +43383,48 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   "w_monster_graveyard":{"s":0,"t":3,"v":{}},
   "hyaenas":{"s":1,"t":0,"v":{"druid":[1,467,467,2396188,null]}},
   "alchemist":{"s":1,"t":0,"v":{"monk":[1,94,94,419562,-17260]}}
+ },
+ "dpf":{
+  "knight":[
+   [99,{"physical":0.687,"earth":0.081,"lifedrain":0.066,"fire":0.066,"death":0.035,"ice":0.028,"energy":0.027,"manadrain":0.012}],
+   [199,{"physical":0.526,"earth":0.126,"fire":0.098,"lifedrain":0.075,"energy":0.067,"death":0.057,"manadrain":0.03,"ice":0.022}],
+   [299,{"physical":0.522,"energy":0.118,"earth":0.118,"death":0.097,"fire":0.063,"ice":0.047,"lifedrain":0.035}],
+   [399,{"physical":0.358,"earth":0.133,"fire":0.11,"death":0.106,"lifedrain":0.097,"ice":0.063,"holy":0.054,"energy":0.049,"manadrain":0.031}],
+   [599,{"physical":0.391,"death":0.108,"earth":0.101,"energy":0.098,"fire":0.097,"lifedrain":0.094,"ice":0.055,"manadrain":0.039,"holy":0.017}],
+   [99999,{"physical":0.343,"death":0.127,"fire":0.108,"lifedrain":0.107,"energy":0.085,"earth":0.076,"ice":0.068,"holy":0.056,"manadrain":0.029}]
+  ],
+  "paladin":[
+   [99,{"physical":0.672,"earth":0.081,"fire":0.068,"lifedrain":0.067,"death":0.036,"ice":0.027,"energy":0.026,"manadrain":0.012,"drown":0.011}],
+   [199,{"physical":0.508,"earth":0.138,"energy":0.086,"fire":0.081,"lifedrain":0.071,"death":0.055,"ice":0.034,"manadrain":0.027}],
+   [299,{"physical":0.467,"earth":0.148,"death":0.104,"fire":0.087,"lifedrain":0.068,"energy":0.046,"ice":0.031,"manadrain":0.025,"holy":0.025}],
+   [399,{"physical":0.359,"death":0.138,"ice":0.136,"energy":0.105,"lifedrain":0.103,"manadrain":0.06,"fire":0.042,"earth":0.03,"holy":0.026}],
+   [599,{"physical":0.381,"earth":0.135,"energy":0.123,"death":0.109,"lifedrain":0.085,"fire":0.066,"manadrain":0.057,"holy":0.024,"ice":0.02}],
+   [99999,{"physical":0.347,"death":0.132,"fire":0.112,"lifedrain":0.099,"energy":0.097,"earth":0.072,"ice":0.06,"holy":0.05,"manadrain":0.032}]
+  ],
+  "sorcerer":[
+   [99,{"physical":0.687,"earth":0.078,"fire":0.075,"lifedrain":0.064,"death":0.033,"energy":0.027,"ice":0.024,"manadrain":0.012}],
+   [199,{"physical":0.557,"earth":0.131,"fire":0.085,"lifedrain":0.06,"energy":0.059,"death":0.049,"ice":0.036,"manadrain":0.023}],
+   [299,{"physical":0.465,"earth":0.14,"death":0.094,"energy":0.088,"ice":0.084,"lifedrain":0.074,"fire":0.042,"manadrain":0.013}],
+   [399,{"physical":0.342,"death":0.153,"lifedrain":0.11,"fire":0.094,"earth":0.082,"energy":0.069,"ice":0.057,"holy":0.054,"manadrain":0.039}],
+   [599,{"physical":0.379,"earth":0.12,"death":0.117,"energy":0.106,"fire":0.094,"lifedrain":0.062,"ice":0.049,"manadrain":0.048,"holy":0.026}],
+   [99999,{"physical":0.358,"death":0.128,"energy":0.11,"lifedrain":0.105,"fire":0.088,"earth":0.069,"ice":0.065,"holy":0.051,"manadrain":0.026}]
+  ],
+  "druid":[
+   [99,{"physical":0.694,"earth":0.076,"fire":0.074,"lifedrain":0.064,"death":0.031,"energy":0.025,"ice":0.024,"manadrain":0.011}],
+   [199,{"physical":0.576,"earth":0.12,"lifedrain":0.068,"energy":0.065,"fire":0.065,"death":0.052,"ice":0.031,"manadrain":0.023}],
+   [299,{"physical":0.512,"earth":0.188,"death":0.09,"fire":0.063,"energy":0.053,"lifedrain":0.051,"ice":0.042}],
+   [399,{"physical":0.388,"death":0.144,"ice":0.098,"lifedrain":0.09,"earth":0.089,"energy":0.074,"fire":0.067,"manadrain":0.027,"holy":0.023}],
+   [599,{"physical":0.39,"death":0.132,"earth":0.117,"fire":0.108,"energy":0.097,"lifedrain":0.072,"manadrain":0.033,"ice":0.028,"holy":0.025}],
+   [99999,{"physical":0.332,"energy":0.141,"death":0.101,"lifedrain":0.091,"fire":0.086,"earth":0.077,"ice":0.076,"holy":0.068,"manadrain":0.029}]
+  ],
+  "monk":[
+   [99,{"physical":0.68,"earth":0.079,"fire":0.069,"lifedrain":0.066,"death":0.034,"ice":0.027,"energy":0.022,"drown":0.011,"manadrain":0.011}],
+   [199,{"physical":0.52,"earth":0.129,"fire":0.081,"lifedrain":0.077,"energy":0.072,"death":0.059,"manadrain":0.031,"ice":0.031}],
+   [299,{"physical":0.456,"earth":0.161,"energy":0.094,"death":0.094,"fire":0.073,"ice":0.05,"lifedrain":0.035,"manadrain":0.02,"holy":0.018}],
+   [399,{"physical":0.39,"lifedrain":0.136,"death":0.12,"energy":0.106,"ice":0.097,"fire":0.057,"earth":0.051,"holy":0.022,"manadrain":0.021}],
+   [599,{"physical":0.396,"earth":0.151,"death":0.139,"fire":0.089,"energy":0.076,"lifedrain":0.063,"ice":0.032,"holy":0.031,"manadrain":0.023}],
+   [99999,{"physical":0.343,"lifedrain":0.111,"energy":0.104,"death":0.104,"fire":0.097,"ice":0.084,"earth":0.065,"manadrain":0.047,"holy":0.045}]
+  ]
  }
 }
 </script>
