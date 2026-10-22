@@ -86,8 +86,14 @@ PT_HINT = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀ]|\b(de|
 PT_STRONG = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀ]|\b(de|da|das|dos|para|com|não|uma|que|por|sem|mais|ou|ao|aos|na|nas|nos|é|à|às|tu|teu|tua|teus|tuas|já|até|só|quando|onde|como|cada|este|esta|isto|vai|fala|usa|sobe|desce|mata|leva|tens|podes|fica|entre|depois|antes|também|pelo|pela|pelos|pelas|num|numa|dum|duma|vez|vezes|ainda|muito|pouco|sempre|nunca|aqui|ali|então|porque|sobre|contra|desde|durante|segue|abre|clica|escolhe|mostra|ver|nível|níveis|preço|lucro|do|um|em|piso|pisos|acima|abaixo|norte|sul|leste|oeste|nordeste|noroeste|sudeste|sudoeste|lado|segundo|terceiro|primeiro|fracos?|fortes?|imunes?|fogo|gelo|energia|morte|veneno|vende|compra|equipamento|banco|templo|barco|ilha|cidade|rua|loja|andar|subsolo|escadas|entrada|perto|junto|dentro|debaixo|frente|curas?|feitiços?|armas?|escudo|ataque|dano|todos|todas|mão|mãos|os|e|nenhum|nenhuma|recompensas?|dois|duas|três|quatro|cinco|seis|sete|oito|nove|dez|confirmar|completar|receber|entregar|falar|matar|abrir|apanhar|procurar|encontrar|ciclos?|missão|missões|passos?|empurrar|queijos?)\b", re.I)
 
 
+# palavras que só existem em português, sem as palavrinhas do PT_STRONG (ex.: "Chegar a Farmine", "Atravessa o portal")
+with open(os.path.join(ROOT, '_dev', 'i18n-pt-words.txt'), encoding='utf-8') as _f:
+    PT_MORE = re.compile(r'\b(%s)\b' % '|'.join(w.strip() for w in _f if w.strip() and not w.startswith('#')), re.I)
+
+
 def looks_pt(s):
-    return bool(PT_STRONG.search(re.sub(r'<[^>]+>|\{[a-z]+:[^}]*\}', ' ', s)))
+    s = re.sub(r'<[^>]+>|\{[a-z]+:[^}]*\}', ' ', s)
+    return bool(PT_STRONG.search(s) or PT_MORE.search(s))
 
 
 # ------------------------------------------------------------------ JS: literais de texto (com templates aninhados)
@@ -472,9 +478,24 @@ def content_strings():
     return out
 
 
+def zfloor(z):
+    z = int(z)
+    return 'térreo' if z == 7 else ('+' if z < 7 else '−') + str(abs(z - 7))
+
+
+def shown(s):
+    """As formas em que o site mostra o texto, se forem outras: o vRoute tira "(z=…)" e "(x …, y …)" dos passos de G.hv, passa
+    "z=8-10" a "pisos −1 a −3" e tira "(wiki …)" dos requisitos (sem isto a frase do ecrã não batia com a do dicionário)."""
+    v = re.sub(r'\s*\(z=[^)]*\)', '', s)
+    v = re.sub(r'\s*\(x [\d–-]+, y [\d–-]+\)', '', v)
+    v = re.sub(r'\b(?:pisos\s+)?z=(\d+)-(\d+)', lambda m: 'pisos %s a %s' % (zfloor(m.group(1)), zfloor(m.group(2))), v)
+    w = re.sub(r'\s*\((?:a )?wiki[^)]*\)', '', s, flags=re.I)
+    return [x for x in (v, w) if x != s]
+
+
 def extract_content():
     found = {}
-    for s in content_strings():
+    for s in [y for x in content_strings() for y in [x] + shown(x)]:
         n = norm(re.sub(r'<[^>]+>', ' ', s)) if '<' in s else norm(s)
         for piece in [n] if len(sentences(n)) < 2 else sentences(n):
             if LETTER.search(piece) and len(piece) >= 3:
