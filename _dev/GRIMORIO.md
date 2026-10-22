@@ -167,6 +167,13 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `#defFee` da Defesa (o título 'Market −2 %' da tabela do `lpHTML` ainda é texto fixo).
 - Equipamento: `scoreItem(c,it,mode,prot)` (mode combat|speed|off|bal|def; prot = elemento ou perfil {el:peso}), `ranked`, `pickSet`, `bisSet`, `setTotals`,
   `setSumHTML`, `renderBis` (painel inicial), `renderEquip`/`renderSlot`/`renderInventory`, `pickOpen` (botão direito), `itemLookHTML` + `[data-look="<id>"]` (look ao passar por cima).
+  Pontos v2 (r8): o `scoreItem` devolve o que o item muda no combate, em %: D (dano: skills e ML pelo skill/ML da personagem,
+  `chStats` estima-os pelo nível quando ficaram por omissão; arma pela fórmula do dano em `scBase`), P (dano recebido: proteções % ×
+  perfil da hunt ou `SCPF`; armadura e defesa ÷ golpe físico médio do nível `H`), velocidade em % (`SCSPD`) e X (slots de imbuement
+  0,15–1,5 % pelo nível; regeneração). Conta também perfect shot, cleave, damage reflection, magic shield capacity e life leech do
+  `it.ex`, o ML holy do paladino, `it.crit` = [chance %, dano crítico %] e `it.lch` = [life leech %, mana leech %] (r8, da
+  TibiaWiki: 23 armas e anéis, ex. Sanguine, Soul, Cobra, Lion). Modos: `SCMODE` [D,P,vel]. O jogador vê a nota 0–100 do `notaItem` (÷ `slotTop`: o melhor item do
+  slot até ao nível, sem cargas nem < 15 min; cache `NOTAC`) no botão direito, nas listas do slot e no look.
   Sets automáticos (r4-t5): paladino com a arma em 'Automático' (`c.wtype` vazio): o `pickSet` usa arco a partir do nível 100
   (abaixo, lanças e estrelas; com o filtro 'só os que tenho' e nenhum arco, todos os tipos); na ficha, `huntWType(c,pid)` dá o tipo
   da munição do TibiaPal (`how` da linha de G.hunts.paladin: bolt → besta, arrow → arco, spear/star → arremesso) ao `huntSet`, que
@@ -174,6 +181,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   e `ammoAtk(b,L)`; o `scoreItem` soma-a ao atk dos arcos e das bestas (o `setSumHTML` mostra 'Ataque N + munição'). Durações:
   anéis e amuletos com menos de 15 min ficam fora do `pickSet` (no botão direito continuam, com 'dura N min'); no `scoreItem` um
   item com dur pesa ×0,35 (< 15 min), ×0,6 (< 30), ×0,8 (< 60) ou ×0,9. Mantra do monk: `it.mn` × 2,5 (× 1,5 no ofensivo, × 0,7
+  r7: o `AMMO` tem o nome em 3.º lugar e mais Tarsal Arrow, Crystalline Arrow (90, 65), Vortex Bolt e Prismatic Bolt (90, 66); Infernal
+  Bolt 72 (era 65). `AMMOA` = flechas de área [nível, nome, elemento, ataque] (TibiaWiki 15.25: Shatterstorm 27 no 50; Firestorm,
+  Terrastorm, Froststorm e Thunderstorm 21 de dano do elemento, ataque físico 0, no 125; Diamond 37 no 150). Onyx Arrow 38 (r8). `ammoBest(b,L)` (alvo único, sem a
+  Diamond), `ammoArea(b,L)`, `ammoChips(b,L,eff)` (chips 'Alvo único'/'Área'; com eff, a % que as criaturas levam e 'usa esta'; link só
+  com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem) e em cada set do `hsetsHTML` (`.hs-am`); `setTotals` dá
+  `t.sb` (tipo do item da mão do escudo). Sem aljava (abaixo do 150 não há nenhuma com stats): `quivTip` no slot vazio e no chip 'Aljava'.
   no defensivo, × 0,5 em velocidade). Escudos de knight nos magos: defesa × 0,1. Proteção de afogamento só conta com 20 %+ de
   dano drown na hunt. Mão esquerda: `slotLab(c,k)` ('Escudo / aljava', 'Livro / escudo', 'Escudo') no #bis, no #doll e nos sets
   da ficha; o `SLOTNAME`/`DOLL` ficam iguais (o renderSlot e o pickOpen usam-nos). No botão direito (`pickList`), o paladino
@@ -229,6 +242,15 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 4. **Telemóvel.** Testa sempre a 375 px: nada a sair para o lado (sem scroll horizontal), toques ≥ 44 px, `prefers-reduced-motion` respeitado.
    Grelhas de cartões com `minmax(min(Npx,100%),1fr)` (cabem a 320 px). Campos de texto, listas e áreas de texto ficam com 16 px em
    ecrãs de toque (regra `@media (pointer:coarse)` no fim do CSS): abaixo disso o iPhone faz zoom à página.
+   **Letra e contraste (r8).** Escala de letra sem meios píxeis e nada abaixo de 12 px: 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 26,
+   28, 30, 32, 36, 40 (o Questski também; exceção: o texto dentro do escudo de nível `.lvl-shield small`). Texto com contraste ≥ 4,5
+   (≥ 3 a partir de 24 px): no tema claro `--holy` #7E630C, `--gold`/`--paladin` #7D5D0A, `--accent` #26693C; não esbater texto com
+   `opacity` (esbate-se o ícone). Toque: o bloco `@media (pointer:coarse)` do fim do CSS dá 44 px aos botões pequenos e uma área de
+   44 px (`::after`) aos links soltos; uma regra nova com `min-height` menor precisa de lá entrar com a mesma especificidade.
+   **Modern no toque (r9).** Em `(hover:none) and (pointer:coarse)` o fundo fica parado e leve (sem canvas `#mdFx`, grão, dragão,
+   runas, estrelas cadentes nem paralaxe; aurora sem blur), o topo e a barra de baixo opacos sem `backdrop-filter` e os `.hc`/`.wcard`
+   sem `will-change`/3D: tudo junto esgotava a memória gráfica do telemóvel e os cartões piscavam. `MD_LITE` (JS) não arranca o canvas.
+   Não voltar a pôr efeitos contínuos, blur ou uma camada de GPU por cartão no toque. O desktop não muda.
 5. **Sem links externos** em conteúdo (só texto de crédito às fontes, sem `<a href="http...">`). Tudo o que é item/criatura/NPC/feitiço deve abrir uma página ou painel interno.
 6. **Texto** em PT-PT, curto e claro, sem jargão técnico para o jogador. Nunca mostres nomes de jogadores vindos do Hunt Analyser.
 7. **Não mexas** na configuração do Apache, do Windows, firewall ou serviços. Não instales pacotes nem executes código de terceiros descarregado.

@@ -547,7 +547,7 @@
         const p = q.pin;
         if (!p || p.z !== floor || !matches(q)) return;
         const i = bandIndex(q.rec || q.lvl || 1);
-        const ic = L.divIcon({ className: "qmarker-wrap", html: `<div class="qmarker" style="--c:${bandColor(i)}">${q.lvl || q.rec || 1}</div>`, iconSize: [22, 26], iconAnchor: [11, 26], popupAnchor: [0, -24] });
+        const ic = L.divIcon({ className: "qmarker-wrap", html: `<div class="qmarker" style="--c:${bandColor(i)}">${q.lvl || q.rec || 1}</div>`, iconSize: [26, 30], iconAnchor: [13, 30], popupAnchor: [0, -28] });
         L.marker(toLL(p.x, p.y), { icon: ic, title: q.name, riseOnHover: true }).addTo(questLayer)
           .bindPopup(`<b>${esc(q.name)}</b><br>Nível ${q.lvl || "—"} · rec. ${esc(q.rec_raw || q.rec || "—")}<br><span class="muted">${esc(p.label || q.region || "")}</span><br><a href="#/quest/${q.slug}">Abrir guia →</a>`);
       });
