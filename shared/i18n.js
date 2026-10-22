@@ -179,7 +179,8 @@
       if (t == null) {
         // (num modelo comprido e específico — 40+ letras fixas — o valor pode ser uma frase, desde que se traduza por inteiro:
         // "; com mais 1 exalted core o risco desce para 50%" na frase da fusão da Forge)
-        if (cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40 && !enVal(cap)) return null;
+        // (só depois de o tentar traduzir: "ao NPC {0} (hoje em Ankrahmun) por 90,000 gp" em "Vende {0}. Sem dados do Market de {1} agora.")
+        var longPT = cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40 && !enVal(cap);
         // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}"), mesmo com
         // marcas de elementos (ex.: "ao NPC {0} (hoje em Port Hope) por 1,500 gp"); uma lista "fogo, energia, veneno" traduz-se item a item
         if (cap.length <= 90 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
@@ -193,6 +194,7 @@
             if (tr.every(function (y) { return y != null; })) t = tr.join(", ");
           }
         }
+        if (t == null && longPT) return null;
         // um valor que fica por traduzir e é português (ex.: "Até ao meu" em "{0} nível · {1}"): o modelo não serve
         // (também com marcas de elementos: "41{0}Clique: equipamento · botão direito: trocar item" em "{0} itens · armadura {1}")
         if (t == null && !enVal(cap.replace(MARK, " ")) && (/[ãõçâêô]/i.test(cap) || (cap.replace(MARK, " ").match(PT_FN) || []).length)) return null;
