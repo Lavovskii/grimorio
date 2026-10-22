@@ -247,6 +247,10 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
    (≥ 3 a partir de 24 px): no tema claro `--holy` #7E630C, `--gold`/`--paladin` #7D5D0A, `--accent` #26693C; não esbater texto com
    `opacity` (esbate-se o ícone). Toque: o bloco `@media (pointer:coarse)` do fim do CSS dá 44 px aos botões pequenos e uma área de
    44 px (`::after`) aos links soltos; uma regra nova com `min-height` menor precisa de lá entrar com a mesma especificidade.
+   **Modern no toque (r9).** Em `(hover:none) and (pointer:coarse)` o fundo fica parado e leve (sem canvas `#mdFx`, grão, dragão,
+   runas, estrelas cadentes nem paralaxe; aurora sem blur), o topo e a barra de baixo opacos sem `backdrop-filter` e os `.hc`/`.wcard`
+   sem `will-change`/3D: tudo junto esgotava a memória gráfica do telemóvel e os cartões piscavam. `MD_LITE` (JS) não arranca o canvas.
+   Não voltar a pôr efeitos contínuos, blur ou uma camada de GPU por cartão no toque. O desktop não muda.
 5. **Sem links externos** em conteúdo (só texto de crédito às fontes, sem `<a href="http...">`). Tudo o que é item/criatura/NPC/feitiço deve abrir uma página ou painel interno.
 6. **Texto** em PT-PT, curto e claro, sem jargão técnico para o jogador. Nunca mostres nomes de jogadores vindos do Hunt Analyser.
 7. **Não mexas** na configuração do Apache, do Windows, firewall ou serviços. Não instales pacotes nem executes código de terceiros descarregado.

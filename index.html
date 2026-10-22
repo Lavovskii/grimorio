@@ -2699,6 +2699,19 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   html[data-ui="modern"] .def-tips li:hover{transform:translateY(-2px)}
 }
 /* campos com 16 px no toque: abaixo disso o iPhone faz zoom à página quando se escreve */
+/* r9: telemóvel e tablet no Modern (vídeo de 22/10/2026: cartões a piscar e meio pintados, mesmo parados). O fundo animado
+   (aurora com blur numa camada de 150 % do ecrã, grelha 3D, estrelas, grão com mix-blend, canvas a 60 fps), o desfoque do topo e da
+   barra de baixo por cima dele e uma camada de GPU por cartão esgotavam a memória gráfica. Só em ecrãs de toque: fundo parado e leve,
+   topo e barra opacos, cartões sem camada 3D (a inclinação é de rato). O desktop fica igual. */
+@media (hover:none) and (pointer:coarse){
+  html[data-ui="modern"] .hc,html[data-ui="modern"] .wcard{will-change:auto;transform:none}
+  .mdbg .grain,.mdbg #mdFx,.mdbg .dragon,.mdbg .rune,.mdbg .shoot{display:none}
+  .mdbg .aur{inset:0;filter:none;animation:none}
+  .mdbg .grid,.mdbg .stars,.mdbg .scene .win{animation:none}
+  .mdbg .stars,.mdbg .scene,.mdbg .scene .far{transform:none}
+  html[data-ui="modern"] header.bar{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(9,8,26,.95)}
+  html[data-ui="modern"] nav.bottom{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(9,8,26,.97)}
+}
 /* r8: alvos de toque com 44 px no telemóvel (auditoria: botões pequenos, seletores e links soltos de feitiços/itens) */
 @media (pointer:coarse){
   .btn.small,.own-btn,.cchip,.seg button,.bis-seg button,.csw-btn,.tabs button,#spFilter button,#tkType button,.setacts .btn{min-height:44px}
@@ -46339,6 +46352,7 @@ $("tkList").addEventListener("click",async e=>{ const c=C();
 const UI_FONTS = "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";
 const isMd = () => document.documentElement.getAttribute("data-ui")==="modern";
 const RM = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : {matches:false};
+/* r9 */ const MD_LITE = window.matchMedia ? matchMedia("(hover:none) and (pointer:coarse)") : {matches:false}; // toque: fundo do Modern leve (sem canvas, estrelas cadentes nem paralaxe)
 const FINE = window.matchMedia ? matchMedia("(hover:hover) and (pointer:fine)") : {matches:false};
 const mdMotion = () => isMd() && !RM.matches;
 function setUI(mode, remember){
@@ -46359,7 +46373,7 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-ui-set]"
 
 /* ---------- motor do Modern: partículas, paralaxe, luz do cursor, estrelas cadentes ---------- */
 const MD={raf:0, parts:[], cv:null, g:null, w:0, h:0, dpr:1, px:0, py:0, cx:-999, cy:-999, shootT:0, tipT:0, tipEl:null};
-function mdStart(){ if(!isMd()) return; mdInd(); mdPanel(ST.ui.p); mdHero(); if(!RM.matches){ mdFxInit(); mdShootLoop(); } mdSearchTxt(); }
+function mdStart(){ if(!isMd()) return; mdInd(); mdPanel(ST.ui.p); mdHero(); if(!RM.matches&&!MD_LITE.matches){ mdFxInit(); mdShootLoop(); } mdSearchTxt(); }
 function mdStop(){ cancelAnimationFrame(MD.raf); MD.raf=0; clearTimeout(MD.shootT); document.querySelectorAll("[data-mdtip]").forEach(el=>{ el.setAttribute("title",el.dataset.mdtip); el.removeAttribute("data-mdtip"); }); mdTipHide();
   document.querySelectorAll(".hc,.wcard").forEach(el=>{ el.style.removeProperty("--rx"); el.style.removeProperty("--ry"); }); document.querySelectorAll("[style*='translate']").forEach(el=>{ el.style.translate=""; }); }
 function mdFxInit(){ MD.cv=document.getElementById("mdFx"); if(!MD.cv) return; MD.g=MD.cv.getContext("2d"); mdFxSize();
@@ -46391,7 +46405,7 @@ document.addEventListener("pointermove", e=>{ if(!isMd()) return; mdPE=e; if(mdP
   const mg=ev.target.closest&&ev.target.closest(".srchbtn,#obHost .lk .btn[type=submit],.ui-hint .btn"); document.querySelectorAll(".md-mag").forEach(x=>{ if(x!==mg){ x.style.translate=""; x.classList.remove("md-mag"); } });
   if(mg && FINE.matches && !RM.matches){ const r=mg.getBoundingClientRect(); mg.classList.add("md-mag"); mg.style.translate=`${((ev.clientX-r.left-r.width/2)*.18).toFixed(1)}px ${((ev.clientY-r.top-r.height/2)*.25).toFixed(1)}px`; }
 }); }, {passive:true});
-addEventListener("scroll",()=>{ if(!mdMotion()) return; const bg=document.querySelector(".mdbg"); if(bg) bg.style.setProperty("--sy",Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)).toFixed(3)); mdTipHide(); },{passive:true});
+addEventListener("scroll",()=>{ if(!mdMotion()) return; const bg=document.querySelector(".mdbg"); if(bg&&!MD_LITE.matches) bg.style.setProperty("--sy",Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)).toFixed(3)); mdTipHide(); },{passive:true});
 // ondulação a partir do ponto do clique
 document.addEventListener("pointerdown", e=>{ if(!mdMotion()) return; const b=e.target.closest(".btn,.seg button,.cchip,nav.side button,nav.bottom button,.srchbtn,.bslot,.tabs button"); if(!b) return;
   const r=b.getBoundingClientRect(), s=Math.max(r.width,r.height)*2.2, sp=document.createElement("span"); sp.className="md-rip"; sp.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;
