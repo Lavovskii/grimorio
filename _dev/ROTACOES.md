@@ -1,7 +1,7 @@
 # Motor de rotações (hotkeys de ataque)
 
-Ainda **não está ligado ao site**. Fica pronto para entrar nas hotkeys e rotações de cada vocação (`G.voc[voc].hk` e `.rot`)
-e na ficha das hunts, com o nível da personagem e o elemento das criaturas.
+Ligado à página **Rotação e hotkeys** (`#rotacao`, `renderRx` no index.html) desde a r13. Falta ligá-lo à ficha das hunts
+(com o `eff` das criaturas) e ao montador da barra.
 
 ## Ficheiros
 - `shared/rotacoes.js`: o motor, em JS sem dependências. No browser é `window.GrimRot` e no node é `require(...)`.
@@ -19,7 +19,8 @@ const P = GrimRot.plan(D, {
   scen: "boss",                        // boss | caixa (monstros colados) | espalhados (lure) | party
   budget: "max",                       // max | eco (limite pelo nível: GrimRot.ecoCap(nível)) | número em gp/h
   eff: G.places[pid].eff,              // opcional: % de dano que as criaturas levam por elemento (100 = neutro)
-  ml: 0, skill: 0,                     // opcional: se faltarem, estima-se pelo nível (as curvas do chStats do index.html)
+  ml: 0, skill: 0,                     // opcional: os da personagem sem equipamento; se faltarem, estima-se pelo nível
+  gear: {ml, mlEl:{fire:1,…}, sk, atk},// opcional: bónus do equipamento (ML, ML por elemento, skill de ataque, ataque da arma + munição)
   shield: true,                        // knight: com escudo (Shield Bash/Slam) ou duas mãos
   wheel: null,                         // estágio dos feitiços da Wheel (0–3); por omissão pelo nível (300/550/1050)
   role: "dps",                         // party: knight 'dps' (senão Protector), druid 'healer' (Shared Conservation)
@@ -45,6 +46,7 @@ O plano devolve:
 | `econ` | gp/h, gp/h só em runas, mana por segundo, leech por segundo, mana que falta, poção, `dps` (ótimo do LP) e `dpsSeq` (sequência simulada). |
 | `imbs` | Os imbuements, com números. |
 | `notes` | As notas de jogo. |
+| `mab` | Os Multi-Action Buttons: `mabs` (até 3 ações cada, por ordem), `keys` (teclas à parte, ex. spenders do monk), `dps` e `pct` (dano carregando nas MABs por ordem, em % do ótimo) e `gpH`. |
 
 Demora cerca de 2 ms por plano.
 
@@ -100,6 +102,9 @@ Demora cerca de 2 ms por plano.
      - druid: Elemental Synthesis +10% do ML em gelo e terra; em party como healer, Shared Conservation;
      - sorcerer: Master of X, com o bónus do Lord of Destruction pelo estágio;
      - monk: Virtue of Harmony ou Virtue of Justice +8/16% de fist.
+
+     O ataque automático (arma, ou munição no paladino: as flechas de área apanham um losango de 13 casas) conta na escolha da
+     stance, porque o Sharpshooter, a Virtue of Justice e a Blood Rage também o sobem. Aparece em `econ.autoDps`.
 4. **Otimização: programação linear.** O simplex em JS (`GrimRot._simplex`, regra de Bland) escolhe as taxas de cada
    feitiço e runa (lançamentos por segundo) que dão mais dano, com estas restrições:
    - grupo de ataque (2 s; 4 s nos de foco);
@@ -131,6 +136,17 @@ Demora cerca de 2 ms por plano.
    - **Strike:** +5% de crítico com +5/15/40% de dano.
    - **Vampirism:** o argumento é que as poções de vida e as de mana partilham o mesmo exhaust.
 
+## Multi-Action Buttons
+No jogo (Winter Update 2025), um MAB tem até 3 ações (feitiços ou objetos, como runas) e cada toque dispara a 1.ª que não está em
+cooldown. O `buildMab` passa a rotação a MABs:
+- os feitiços com cooldown vão à frente, por prioridade, e o enchimento sem cooldown (normalmente uma runa) fica no fim do último MAB;
+- se a rotação não tiver enchimento, entra o melhor do kit (para não ficares parado);
+- carrega-se nas MABs por ordem (MAB 1, depois MAB 2): uma MAB sem nada pronto não gasta o grupo de ataque;
+- os spenders do monk ficam numa tecla à parte, porque o MAB não sabe a Harmony e gastava com menos de 5 pontos;
+- no sorcerer, os feitiços da linha vêm antes dos que saem convertidos.
+
+A simulação de carregar nas MABs por ordem dá 86–100% do ótimo do LP (às vezes mais, porque o enchimento gasta acima do orçamento).
+
 ## Responde ao nível
 - O kit muda com o nível e com o estágio da Wheel (pontos = nível − 50: estágio 1 a 300, 2 a 550, 3 a 1050). Os feitiços da
   Wheel mudam com o estágio:
@@ -143,16 +159,17 @@ Demora cerca de 2 ms por plano.
 - O ML e o skill seguem as curvas do `chStats` do index.html, ou vêm da personagem (`ml`, `skill`).
 
 ## Limitações
-- As fórmulas de escala são de antes de 2020. Para a ordem dentro de uma vocação mono-família isso não conta. Conta no
-  paladino: com estas fórmulas, ethereal (distance) ≈ 3 × holy (ML) no nível 500, e a linha física ganha quase sempre.
-  - Falta calibrar com um teste no jogo: no training dummy, Divine Missile contra Ethereal Spear, com a mesma personagem.
-  - O Ethereal Barrage não tem base power publicado: está assumido igual ao Divine Barrage (130), marcado no porquê.
+- As fórmulas de escala são de antes de 2020. Para a ordem dentro de uma vocação mono-família isso não conta. No paladino conta,
+  e foi verificado sem ir ao jogo: a TibiaWiki não tem o base power do Ethereal Barrage, mas os dados de feitiços do cliente
+  15.25 usados pelo Crystal Server (zimbadev/crystalserver) dão 40. Com as escalas do motor, um paladino 500 com Sharpshooter
+  faz 40 × distance ≈ 360 e 130 × ML holy ≈ 353: os dois Barrages ficam iguais, como o desenho do jogo sugere. Um teste no
+  training dummy (Divine Missile contra Ethereal Spear) continua a ser a confirmação definitiva.
 - Fora do modelo: críticos, armadura e mitigação das criaturas, overkill (grupos que encolhem), Beam Mastery,
-  augments da Wheel, ataques automáticos (só aparecem numa nota) e o mana que a wand/rod gera desde 2026.
+  augments da Wheel e o mana que a wand/rod gera desde 2026.
 - Cooldown do Mystic Repulse: o spells.json diz 8 s e as notas oficiais dizem 12 s. Usam-se 12 s e base power 85 (a
   TibiaWiki ainda tem 72).
 
-## Ligar ao site (mais tarde)
+## Ligar ao site (o que falta)
 1. `<script src="shared/rotacoes.js?v=…">` no index.html, e `dload("rotacoes")` quando a página das hotkeys ou a ficha da
    hunt abrir.
 2. Hotkeys da vocação: `GrimRot.plan(D, {voc: C().voc, level: C().level, ml: C().ml, skill: C().skill, scen, budget})`,

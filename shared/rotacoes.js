@@ -39,24 +39,33 @@
     var S = Math.floor((Math.sqrt(2 * L + 2025) + 5) / 10);
     return Math.floor((L + 1000) / S) + 50 * S - 450;
   }
-  function stats(voc, L, ml, sk) {
+  // ml e sk = os da personagem sem equipamento (highscores ou escritos à mão); sem eles, estimam-se pelo nível.
+  // gear = bónus do equipamento: {ml, mlEl: {fire: 1, …}, sk (skill de ataque da vocação), atk (ataque da arma + munição)}
+  function stats(voc, L, ml, sk, gear) {
     var mage = voc === "sorcerer" || voc === "druid", pal = voc === "paladin", lg = Math.log2(Math.max(1, L / 100));
+    gear = gear || {};
     var skill = sk > 10 ? sk : mage ? 10 : Math.round(L <= 100 ? (pal ? 25 : 20) + 0.7 * L : (pal ? 95 : 90) + 12 * lg);
     var mlv = ml > 0 ? ml : Math.round(mage ? (L <= 100 ? 4 + 0.66 * L : 70 + 17 * Math.log(L / 100))
       : pal ? Math.min(45, 5 + L * 0.08) : voc === "monk" ? Math.min(40, 5 + L * 0.06) : Math.min(15, 3 + L * 0.02));
-    var At = pal ? (L < 90 ? 40 : L < 150 ? 70 : 80) : Math.min(60, 30 + L * 0.04);
-    return { L: L, B: baseDmg(L), sk: skill, ml: mlv, At: At };
+    var At = gear.atk > 0 ? gear.atk : pal ? (L < 90 ? 40 : L < 150 ? 70 : 80) : Math.min(60, 30 + L * 0.04);
+    return { L: L, B: baseDmg(L), skBase: skill, mlBase: mlv, gearSk: gear.sk || 0, gearMl: gear.ml || 0, mlEl: gear.mlEl || {},
+      sk: skill + (mage ? 0 : gear.sk || 0), ml: mlv + (gear.ml || 0), At: At, atkGear: gear.atk > 0, mlSrc: ml > 0, skSrc: sk > 10 };
   }
   // dano médio por ponto de base power (fórmulas da TibiaWiki, página Formulae; medidas antes de 2020, por isso aproximadas):
   // magic = Sudden Death (BP 150): nível + 6 × ML + 37; melee/fist = Fierce Berserk (BP 92): 2,05 × (skill + 2 × ataque);
   // dist = Ethereal Spear (BP 25): 2/3 × (skill + 25). O que conta para a ordem é a razão entre famílias da mesma vocação.
   function famScale(st, mod) {
     mod = mod || {};
-    var sk = st.sk * (mod.sk || 1), ml = st.ml + (mod.ml || 0);
+    var sk = st.sk * (mod.sk || 1), ml = st.ml + (mod.ml || 0), el = st.mlEl || {};
     return {
       magic: (st.B + 6 * ml + 37) / 150,
-      magicIE: (st.B + 6 * (ml + (mod.ie || 0)) + 37) / 150,      // gelo/terra com Elemental Synthesis
-      holy: (st.B + 6 * (ml + (mod.holy || 0)) + 37) / 150,       // holy do paladino com Divine Defiance
+      // por elemento: + ML desse elemento do equipamento; gelo/terra com Elemental Synthesis; holy do paladino com Divine Defiance
+      magicEl: function (e, voc) {
+        var x = ml + (el[e] || 0);
+        if (voc === "druid" && (e === "ice" || e === "earth")) x += mod.ie || 0;
+        if (voc === "paladin" && e === "holy") x += mod.holy || 0;
+        return (st.B + 6 * x + 37) / 150;
+      },
       melee: (2.05 * (sk + 2 * st.At) + st.B) / 92,
       shield: (2.05 * (sk + 2 * st.At) + st.B) / 92,
       fist: (2.05 * (sk + 2 * st.At) + st.B) / 92,
@@ -94,11 +103,7 @@
   }
   function mult(eff, el) { return eff && eff[el] != null ? Math.max(0, eff[el]) / 100 : 1; }
   function scaleFor(a, voc, S, stance) {
-    if (a.fm === "magic") {
-      if (voc === "druid" && (a.el === "ice" || a.el === "earth")) return S.magicIE;
-      if (voc === "paladin" && a.el === "holy") return S.holy;
-      return S.magic;
-    }
+    if (a.fm === "magic") return S.magicEl(a.el, voc);
     return S[a.fm] || S.melee;
   }
 
@@ -106,7 +111,7 @@
   function plan(D, opt) {
     var voc = opt.voc, L = Math.max(1, opt.level | 0), scen = opt.scen || "caixa";
     if (VOCS.indexOf(voc) < 0) throw new Error("vocação desconhecida: " + voc);
-    var st = stats(voc, L, opt.ml, opt.skill);
+    var st = stats(voc, L, opt.ml, opt.skill, opt.gear);
     var stage = opt.wheel != null ? opt.wheel : wheelStage(L);
     var o = { level: L, st: st, stage: stage, shield: voc === "knight" ? opt.shield !== false : false, quests: opt.quests };
     var gk = geoKey(voc, scen), eff = opt.eff || null, party = scen === "party";
@@ -224,7 +229,13 @@
     });
     if (!best) return null;
     best.sim = sequence(cand, best, harm, cap, share);
-    return { lane: ln, stance: sto, cand: cand, opener: opener, out: out, lp: best, sim: best.sim, harm: harm, tier: tier, nVoid: nVoid, leech: leech, S: S, dps: best.dps };
+    // ataque automático (fora do grupo de ataque): conta na escolha da stance (Sharpshooter, Virtue of Justice, Blood Rage)
+    var auto = 0;
+    if (voc === "paladin" || MELEE_VOC[voc]) {
+      var ah = voc === "paladin" && opt.level >= 50 && gk !== "boss_r" ? (D.auto.area13[gk] || 1) : 1;
+      auto = S.auto / 2 * ah * (sto.mod.dmg || 1);
+    }
+    return { lane: ln, stance: sto, cand: cand, opener: opener, out: out, lp: best, sim: best.sim, harm: harm, tier: tier, nVoid: nVoid, leech: leech, S: S, dps: best.dps + auto, auto: auto };
   }
 
   // ---------- programação linear: as taxas ótimas (lançamentos por segundo) ----------
@@ -373,7 +384,7 @@
       else if (c.a.cd <= c.a.gcd && rate >= 0.3) why.push("enche os segundos em que o resto está em cooldown");
       else if (cap < Infinity) why.push("o orçamento dá para " + nf(cpm, 1) + " por minuto");
       if (c.a.kind === "rune") why.push(c.a.gp + " gp por runa");
-      if (c.a.est) why.push("base power ainda não publicado: assumido igual ao do par holy");
+      if (c.a.est) why.push("base power fora da TibiaWiki: o dos dados do cliente (40)");
       if (isFill) why.push("enchimento: só nos segundos em que os cooldowns do resto não encaixam");
       if (R.harm && c.a.role === "S") why.push("gasta com " + (lp.hOf[c.a.n] || 5) + " de Harmony (+" + Math.round(100 * R.harm.base * Math.pow(2, (lp.hOf[c.a.n] || 5) - 1)) + "%)");
       if (R.harm && c.a.role === "B") why.push("gera Harmony");
@@ -424,12 +435,8 @@
     if (voc === "sorcerer" && rot.some(function (r) { return R.cand.some(function (c) { return c.a.n === r.n && c.conv; }); }))
       notes.push("Com " + R.stance.n + " ligado, alterna: um feitiço de " + ELN[R.lane.el] + " e logo a seguir o de outro elemento, que sai em " + ELN[R.lane.el] + ".");
     if (voc === "monk" && R.harm) notes.push("Junta 5 de Harmony antes de cada spender: o bónus duplica a cada ponto (" + Math.round(100 * R.harm.base) + "% → " + Math.round(1600 * R.harm.base) + "%)." + (scen === "party" ? " Em party, com 6+ monstros colados e aliados por perto, perdes o Serene." : ""));
-    if (!MELEE_VOC[voc] && voc !== "paladin") { /* magos: a wand/rod gera mana e o dano dela é pequeno */ }
-    else {
-      var Sa = famScale(st, R.stance.mod || {}), auto = Sa.auto / 2 * (R.stance.mod && R.stance.mod.dmg || 1);
-      notes.push("O ataque automático (" + (voc === "paladin" ? "munição" : "arma") + ") corre ao lado da rotação sem gastar o grupo de ataque: ≈ " + nf(auto) +
-        " de dano por segundo num alvo, " + Math.round(100 * auto / (auto + lp.dps)) + "% do total neste cenário" + (voc === "paladin" ? "; com munição de área sobe nos grupos." : "."));
-    }
+    if (R.auto > 0) notes.push("O ataque automático (" + (voc === "paladin" ? "munição" : "arma") + ") corre ao lado da rotação sem gastar o grupo de ataque: ≈ " + nf(R.auto) +
+      " de dano por segundo, " + Math.round(100 * R.auto / (R.auto + lp.dps)) + "% do total neste cenário" + (voc === "paladin" && opt.level >= 50 && scen !== "boss" ? " (com munição de área)." : "."));
     var potMana = lp.pot ? lp.pot.mana : 0;
     if (!(voc === "sorcerer" || voc === "druid") && lp.need > 0 && potMana)
       notes.push("A rotação pede " + nf(lp.need) + " de mana por segundo depois do leech: " + Math.round(100 * lp.need / potMana) + "% das poções vão para mana e o resto fica para as de vida.");
@@ -440,16 +447,74 @@
       manaS: +lp.mps.toFixed(1), leechS: +lp.leechS.toFixed(1), needS: +lp.need.toFixed(1),
       potion: lp.pot ? { n: lp.pot.n, perH: Math.round(potH), gpH: Math.round(potH * lp.pot.gp) } : null,
       budget: budget, cap: cap === Infinity ? null : cap,
-      dps: Math.round(lp.dps), dpsSeq: Math.round(sim.dps),
+      dps: Math.round(lp.dps), dpsSeq: Math.round(sim.dps), autoDps: Math.round(R.auto),
       dpsNote: "dano médio por segundo da rotação (estimativa: sem ataques automáticos, críticos nem a armadura da criatura); dpsSeq = o que a sequência simulada consegue com os cooldowns"
     };
     return {
-      voc: voc, level: L, scen: scen, scenName: SCN[scen], stats: { ml: st.ml, skill: st.sk, wheel: stage },
+      voc: voc, level: L, scen: scen, scenName: SCN[scen], stats: { ml: st.ml, mlBase: st.mlBase, mlGear: st.gearMl, mlSrc: st.mlSrc, skill: st.sk, skillBase: st.skBase, skillGear: st.gearSk, skSrc: st.skSrc, atk: Math.round(st.At), atkGear: st.atkGear, wheel: stage },
       lane: { k: R.lane.k, n: R.lane.n, el: R.lane.el }, alts: alts,
       stance: R.stance.n ? [{ n: R.stance.n, w: R.stance.w, why: R.stance.why }] : [],
-      opener: opener, rotation: rot, seq: sim.seq, out: outW.slice(0, 8), econ: econ,
+      opener: opener, rotation: rot, seq: sim.seq, out: outW.slice(0, 8), econ: econ, mab: buildMab(R, rot, voc, cap),
       imbs: imbuements(D, voc, L, st, R, opt), notes: notes
     };
+  }
+
+  // ---------- Multi-Action Buttons ----------
+  // No jogo, um MAB tem até 3 ações e, a cada toque, dispara a 1.ª que não está em cooldown (feitiços ou objetos, como runas).
+  // A rotação por prioridade passa a MABs: os feitiços com cooldown à frente, o enchimento (sem cooldown) no fim do último.
+  // Carrega-se nas MABs por ordem (MAB 1, depois MAB 2…): uma MAB sem nada pronto não gasta o grupo de ataque.
+  // Spenders do monk numa tecla à parte (o MAB não sabe a Harmony); no sorcerer, os da linha antes dos convertidos.
+  function buildMab(R, rot, voc, cap) {
+    var byN = {}; R.cand.forEach(function (c) { byN[c.a.n] = c; });
+    var items = rot.map(function (r) { return { r: r, c: byN[r.n] }; }).filter(function (x) { return x.c; });
+    var spenders = R.harm ? items.filter(function (x) { return x.c.a.role === "S"; }) : [];
+    var rest = items.filter(function (x) { return spenders.indexOf(x) < 0; });
+    var fill = rest.filter(function (x) { return x.c.a.cd <= x.c.a.gcd + 1e-9; }).sort(function (a, b) { return b.r.share - a.r.share; })[0] || null;
+    if (!fill) {        // sem enchimento sem cooldown na rotação: o melhor do kit (uma runa, quase sempre) para não ficar parado
+      var best = null;
+      R.cand.forEach(function (c) { if (c.a.cd <= c.a.gcd + 1e-9 && c.a.role !== "S" && (!best || c.v > best.v)) best = c; });
+      if (best) fill = { c: best, r: { n: best.a.n, share: 0, fill: true }, extra: true };
+    }
+    var cds = rest.filter(function (x) { return x !== fill && x.c.a.cd > x.c.a.gcd + 1e-9; });
+    cds.sort(function (a, b) { return (a.c.conv ? 1 : 0) - (b.c.conv ? 1 : 0); });    // estável: mantém a prioridade
+    var groups = [], i = 0;
+    if (!fill) while (i < cds.length) { groups.push(cds.slice(i, i + 3)); i += 3; }
+    else if (cds.length <= 2) groups.push(cds.concat([fill]));
+    else { groups.push(cds.slice(0, 3)); i = 3; while (i < cds.length) { groups.push(cds.slice(i, i + 2)); i += 2; }
+      var last = groups[groups.length - 1]; if (last.length < 3) last.push(fill); else groups.push([fill]); }
+    var act = function (x) { return { n: x.c.a.n, w: x.c.a.kind === "rune" ? "" : x.c.a.w, kind: x.c.a.kind,
+      use: x.c.a.kind === "rune" ? (x.c.a.k === "rarea" ? "usar no alvo (a área cai à volta dele)" : "usar no alvo") : "" }; };
+    var mabs = groups.filter(function (g) { return g.length; }).map(function (g, k) {
+      var why = g.map(function (x) { return x === fill ? x.c.a.n + " enche o que sobra" + (x.extra ? " (não está na rotação ótima, mas evita ficares parado)" : "") : x.c.a.n + (x.c.conv ? " (sai convertido)" : "") + " quando estiver pronto"; }).join("; ");
+      return { n: "MAB " + (k + 1), acts: g.map(act), why: why };
+    });
+    var keys = spenders.map(function (x) { return { n: x.c.a.n, w: x.c.a.w, why: "à parte: carrega quando tiveres 5 de Harmony (o MAB não sabe a Harmony e gastava antes)" }; });
+    // quanto dano dá carregar nas MABs por ordem (com a Harmony: o spender só com 5)
+    var order = [].concat.apply([], groups), T = 300, t = 0, ready = {}, g2r = {}, H = 0, conv = false, dmg = 0, gold = 0, mana = 0;
+    var gpm = R.lp.pot ? R.lp.pot.gpm : 0;
+    while (t < T) {
+      var pick = null;
+      if (R.harm && H >= 5) spenders.forEach(function (x) { if (!pick && (ready[x.c.a.n] || 0) <= t + 1e-9) pick = x; });
+      for (var j = 0; j < order.length && !pick; j++) {
+        var x = order[j], a = x.c.a;
+        if ((ready[a.n] || 0) > t + 1e-9 || (a.g2 && (g2r[a.g2] || 0) > t + 1e-9)) continue;
+        pick = x;
+      }
+      var dt = 2;
+      if (pick) {
+        var a2 = pick.c.a, v = pick.c.v;
+        if (pick.c.conv && !conv) v *= 0.85;      // sem um feitiço da linha antes não converte: sai no elemento dele (estimativa)
+        if (R.harm && a2.role === "S") { v *= 1 + R.harm.base * Math.pow(2, H - 1); if (a2.n === "Spiritual Outburst" && H === 5) v *= 1 + R.harm.echo; }
+        dmg += v; mana += a2.m; gold += a2.kind === "rune" ? a2.gp : 0;
+        ready[a2.n] = t + a2.cd; if (a2.g2) g2r[a2.g2] = t + (a2.cd2 || a2.cd);
+        if (R.harm) { if (a2.role === "B") H = Math.min(5, H + 1); else if (a2.role === "S") H = R.harm.refund; }
+        conv = !!pick.c.lane; dt = a2.gcd;
+      }
+      t += dt;
+    }
+    var gph = (gold + Math.max(0, mana - R.lp.leechS / Math.max(R.lp.mps, 1e-9) * mana) * gpm) / T * 3600;
+    return { mabs: mabs, keys: keys, dps: Math.round(dmg / T), pct: Math.round(100 * dmg / T / Math.max(1, R.lp.dps)), gpH: Math.round(gph),
+      overBudget: cap < Infinity && gph > cap * 1.1 };
   }
 
   // imbuements: o que mais rende para a economia e para o dano, com números
