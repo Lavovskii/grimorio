@@ -566,8 +566,10 @@ def build():
     for lang in UI_LANGS:
         tr = rd(os.path.join(I18N, 'ui', lang + '.json'), {}) or {}
         x, p = {}, []
+        # também as que ficam iguais à origem: no pt-BR são a maioria e, sem elas, uma frase feita de partes ("{0} ({1}–{2})"
+        # com "o teu nível" lá dentro) não tinha modelo e ficava toda em PT-PT
         for k, t in sorted(tr.items()):
-            if not t or t == k:
+            if not t:
                 continue
             if src.get(k, {}).get('k') == 'p':
                 p.append([k, t])
