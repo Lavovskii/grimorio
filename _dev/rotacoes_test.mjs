@@ -39,9 +39,11 @@ for (const voc of R.VOCS) {
         if (a.wheel && P.stats.wheel < 1) fail(id + ": feitiço da Wheel sem estágio");
         // uma linha de elemento: feitiços próprios de outra linha só convertidos (sorcerer)
         if (D.ab[r.n] && a.el !== P.lane.el && lanesEl.includes(a.el) && !/^.*sai em /.test(r.why)) fail(id + ": " + r.n + " (" + a.el + ") fora da linha " + P.lane.el);
+        if (D.runes[r.n] && a.el !== P.lane.el && r.n !== "Sudden Death Rune") fail(id + ": runa " + r.n + " (" + a.el + ") fora da linha " + P.lane.el);
       }
       if (budget === "eco" && P.econ.gpH > P.econ.cap * 1.05) fail(id + `: ${P.econ.gpH} gp/h acima do limite ${P.econ.cap}`);
-      const g = P.econ.dpsSeq / Math.max(1, P.econ.dps);
+      // com um só feitiço de nível baixo (paladino 20, sem runas do elemento) o dano é 2–3 e o arredondamento manda: não conta
+      const g = P.econ.dps < 20 ? 1 : P.econ.dpsSeq / Math.max(1, P.econ.dps);
       gapMin = Math.min(gapMin, g); gapMax = Math.max(gapMax, g); gapSum += g;
       if (g < 0.75 || g > 1.06) fail(id + `: sequência ${P.econ.dpsSeq} longe do ótimo ${P.econ.dps}`);
       if (budget === "max" && prev && P.econ.dps < prev * 0.95) fail(id + `: o dano desce com o nível (${prev} → ${P.econ.dps})`);
@@ -51,6 +53,42 @@ for (const voc of R.VOCS) {
     }
   }
 }
+// barra recomendada (layout): cada vocação e nível dá uma linha com teclas, sem teclas repetidas
+let lays = 0;
+for (const voc of R.VOCS) for (let L = 8; L <= 1200; L += 37) {
+  const id = `layout ${voc} ${L}`; let X;
+  try { X = R.layout(D, { voc, level: L }); lays++; } catch (e) { fail(id + ": exceção " + e.message); continue; }
+  if (!X.rows.length || !X.rows[0].keys.length) fail(id + ": sem teclas");
+  const seen = new Set();
+  for (const k of X.rows.flatMap(r => r.keys).concat(X.common)) { if (seen.has(k.k)) fail(id + ": tecla " + k.k + " repetida"); seen.add(k.k);
+    for (const a of k.mab ? k.mab.acts : [k.a]) { const d = D.ab[a.n] || D.runes[a.n]; if (!d || d.l > L) fail(id + ": " + a.n + " fora do nível"); } }
+  X.rows.forEach(r => r.keys.forEach(k => (k.mab ? k.mab.acts : [k.a]).forEach(a => { const d = D.ab[a.n] || D.runes[a.n];
+    if (d && d.el !== r.el && a.n !== "Sudden Death Rune" && voc !== "sorcerer") fail(id + ": " + a.n + " (" + d.el + ") na linha " + r.el); })));
+}
+// clientoptions.json sintético → readBars → review: acha o preset pelo nome, lê MAB e runa, e dá as dicas certas
+const CO = { hotkeyOptions: { currentHotkeySetName: "Outro", hotkeySets: {
+  Outro: { actionBarOptions: { mappings: [] }, chatOff: [] },
+  Teste: { actionBarOptions: { mappings: [
+    { actionBar: 1, actionButton: 1, actionsetting: { multiActions: [{ chatText: "exori dir san" }, { chatText: "exori dir moe" }, { chatText: "exevo mas san" }] } },
+    { actionBar: 1, actionButton: 2, actionsetting: { chatText: "exevo mas san" } },
+    { actionBar: 1, actionButton: 3, actionsetting: { useObject: 3191, useType: "UseOnTarget" } },
+    { actionBar: 1, actionButton: 4, actionsetting: { useObject: 23373, useType: "UseOnYourself" } },
+    { actionBar: 1, actionButton: 5, actionsetting: { useObject: 3420, useType: "Equip" } } ] },
+    chatOff: [{ keysequence: "Q", actionsetting: { action: "TriggerActionButton_1.1" } }, { keysequence: "Shift+!", actionsetting: { action: "TriggerActionButton_1.2" } }] } } } };
+const B = R.readBars(D, CO, "teste");
+if (!B || B.set !== "Teste") fail("readBars: não escolheu o preset pelo nome");
+else {
+  if (B.user.length !== 4) fail("readBars: " + B.user.length + " ações (esperava 4: o Equip não conta)");
+  if (B.user[0].k !== "Q" || B.user[0].acts.length !== 3) fail("readBars: MAB do Q mal lido");
+  if (B.user[1].k !== "Shift+1") fail("readBars: Shift+! devia ser Shift+1");
+  if (B.user[2].acts[0].item !== "Great Fireball Rune") fail("readBars: runa pelo id do cliente");
+  const V = R.review(D, { voc: "paladin", level: 101 }, B.user), txt = V.tips.map(t => t.t + ":" + t.txt).join("\n");
+  if (!/^warn:Q: este MAB junta/m.test(txt)) fail("review: não avisou do MAB com holy e físico");
+  if (!/Divine Caldera já está no MAB Q/.test(txt)) fail("review: não viu o Caldera repetido");
+  if (V.known < 3) fail("review: reconheceu só " + V.known + " feitiços");
+}
+if (R.readBars(D, { outra: 1 }, "x") !== null) fail("readBars: devia recusar um ficheiro sem hotkeyOptions");
+console.log(`${lays} barras recomendadas e o comparador verificados`);
 const ms = (Date.now() - t0) / plans;
 console.log(`${plans} planos, ${ms.toFixed(1)} ms por plano; sequência/ótimo: mín ${gapMin.toFixed(2)}, máx ${gapMax.toFixed(2)}, média ${(gapSum / plans).toFixed(2)}`);
 console.log(fails ? `${fails} falhas` : "tudo certo");

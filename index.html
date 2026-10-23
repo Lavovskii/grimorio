@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261022a" data-c></script><script src="shared/rotacoes.js?v=20261023a"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261022a" data-c></script><script src="shared/rotacoes.js?v=20261023b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -658,53 +658,42 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 /* r13: rotação e hotkeys (motor shared/rotacoes.js) */
 .hk.nok{grid-template-columns:minmax(0,1fr)}
 .hkf.nok{grid-template-columns:auto minmax(0,1fr)}
-.rx-ctl{display:grid;gap:10px;padding:14px 16px}
-.rx-c{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
-.rx-l{font-size:13px;font-weight:600;color:var(--muted);min-width:72px}
-.rx-st{margin:0}
-.rx-mabs{align-items:start}
-.rx-mab,.rx-keys,.rx-econ{display:grid;gap:10px;padding:14px 16px;align-content:start}
-.rx-mab h4,.rx-keys h4,.rx-econ h4{font-size:18px;display:flex;align-items:center;gap:8px}
-.rx-acts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.rx-acts li{display:grid;grid-template-columns:28px auto minmax(0,1fr);gap:10px;align-items:center}
-.rx-k{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--line)}
-.rx-k:last-child{border-bottom:0}
-.rx-o{font:600 13px/1 var(--mono);color:var(--muted)}
-.rx-an{display:grid;gap:2px;min-width:0}
-.rx-an b{font-size:15px}
-.rx-an code{font-family:var(--mono);font-size:13px;color:var(--muted)}
-.rx-an .small{color:var(--ink-2)}
+.rx-lay,.rx-how,.rx-cmp{display:grid;gap:14px;padding:14px 16px;margin-bottom:14px}
+.rx-lay h3,.rx-how h3,.rx-cmp h3{font-size:19px;margin:0}
+.rx-row h4{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 8px;font-size:15px}
+.rx-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.rx-tile{display:grid;gap:6px;align-content:start;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-width:0}
+.rx-tile .th{display:flex;align-items:center;gap:8px}
+.rx-tile.mab{grid-column:1/-1}
+.rx-tile kbd,.rx-cmp kbd,.rx-how kbd{font-family:var(--mono);font-size:13px;font-weight:600;border:1px solid var(--line);border-bottom-width:3px;border-radius:7px;padding:3px 6px;background:var(--surface-2);white-space:nowrap}
+.rx-tile kbd{min-width:44px;text-align:center;padding:5px 6px}
+.rx-tile .rl{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.rx-tile .tn{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.rx-tile .tn b{font-size:15px}
+.rx-tile .ta{display:inline-flex;align-items:center;gap:6px}
+.rx-tile .chev{color:var(--muted)}
+.rx-tile code{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.rx-tile p{margin:0;font-size:13px;color:var(--ink-2)}
 .rx-ic{display:inline-grid;place-items:center;width:32px;height:32px}
-.rx-rot{padding:6px 16px 14px}
-.rx-r{display:grid;grid-template-columns:24px auto minmax(0,1fr) 78px 70px;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
-.rx-r p{grid-column:3/-1;margin:0;color:var(--ink-2)}
-.rx-n{font:700 14px/1 var(--mono);color:var(--muted);text-align:center}
-.rx-v{display:grid;text-align:right}
-.rx-v b{font-variant-numeric:tabular-nums}
-.rx-v small{font-size:12px;color:var(--muted)}
-.rx-seq .step{width:76px}
-.rx-econ .dl{margin:0}
-.rx-imb{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-.rx-imb li .small{display:block;color:var(--ink-2)}
-.rx-notes{margin:10px 0 0;padding-left:18px;display:grid;gap:4px}
-.rx-out{margin-top:10px}
-.rx-out summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-@media (max-width:640px){ .rx-r{grid-template-columns:24px auto minmax(0,1fr) auto} .rx-r .rx-v+.rx-v{display:none} .rx-r p{grid-column:2/-1} }
-.rx-add{justify-self:start;margin-top:4px}
-.hk .rx-add{display:block;margin-top:8px}
-.rx-bar{display:grid;gap:10px}
-.rx-bar .hbs.on .well{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
-.rx-binfo{display:grid;gap:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
-.rx-binfo kbd{font-family:var(--mono);font-size:13px;font-weight:600;border:1px solid var(--line);border-bottom-width:3px;border-radius:7px;padding:5px 7px;background:var(--surface)}
+.rx-stc{margin:0}
+.rx-stc code{font-family:var(--mono);font-size:13px}
+.rx-how dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;margin:0}
+.rx-how dt{font-weight:700}
+.rx-how dd{margin:0}
+@media (max-width:480px){ .rx-how dl{grid-template-columns:minmax(0,1fr);gap:2px} .rx-how dd{margin-bottom:8px} }
+.rx-cmp p{margin:0}
+.rx-cmp code{font-family:var(--mono);font-size:13px;word-break:break-all}
+.rx-cmph{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px}
+.rx-pre{display:flex;align-items:center;gap:8px}
+.rx-pre select{min-height:44px;font:inherit;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.rx-file{display:inline-flex;align-items:center;justify-self:start;cursor:pointer}
 .rx-bbtn{display:flex;flex-wrap:wrap;gap:8px}
-.rx-pick{display:grid;gap:8px}
-.rx-pick h4{font-size:14px;color:var(--muted);margin-top:6px}
-.rx-kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
-.rx-kb{display:grid;justify-items:center;gap:3px;min-height:56px;padding:6px 4px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer}
-.rx-kb kbd{font-family:var(--mono);font-size:13px;font-weight:600}
-.rx-kb.occ{background:var(--surface-2)}
-.rx-kb.cur{border-color:var(--accent)}
-.rx-kb:hover,.rx-kb:focus-visible{border-color:var(--accent)}
+.rx-tips{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rx-tips li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;align-items:start;font-size:14px}
+.rx-tips .tag{justify-self:start}
+.rx-st{margin:0 0 14px}
+.rx-tips .tag.bad{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn);border-color:transparent}
+.rx-cmp .bad{color:var(--warn)}
 
 /* ---------- equipment ---------- */
 .doll-wrap{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:start}
@@ -3154,11 +3143,11 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <p class="note" style="margin-top:14px">Dados: bestiário e mapa de spawns do servidor de código aberto Canary (cópia do mapa oficial, setembro 2026), loot com a chance de cada criatura, dicas de tasks do TibiaPal e mapa do tibiamaps.io. As áreas mais recentes podem faltar ou ter menos spawns do que no jogo.</p>
     </section>
 
-    <!-- ROTAÇÃO E HOTKEYS (r13: uma só página, com o motor shared/rotacoes.js) -->
+    <!-- ROTAÇÃO E HOTKEYS (r14: a barra recomendada do motor shared/rotacoes.js, sem escolhas) -->
     <section class="panel" data-p="rotacao">
       <div class="ph"><span class="eyebrow">Combate</span><h2>Rotação e hotkeys</h2><p id="rotLead"></p></div>
       <div id="rxBody"></div>
-      <div class="sec"><h3>Sobreviver e utilidade</h3><p class="small muted" style="margin:-4px 0 10px">Ações para pores na tua barra, na tecla que te der mais jeito.</p><div class="grid2" id="hkList" style="align-items:start"></div></div>
+      <div class="sec"><h3>Sobreviver e utilidade</h3><p class="small muted" style="margin:-4px 0 10px">As teclas são uma sugestão: longe das de ataque, para não curares por engano.</p><div class="grid2" id="hkList" style="align-items:start"></div></div>
       <div class="sec"><h3>Stances</h3><div class="grid2" id="stanceList"></div></div>
       <div class="sec"><div class="callout" id="weaponNote"></div></div>
       <div class="sec"><h3>Todos os feitiços</h3><div class="spfilter" id="spFilter" role="group" aria-label="Filtrar feitiços"></div><div class="card spl" id="spellTable"></div></div>
@@ -44934,13 +44923,13 @@ function sicon(o){ // o: {k:[candidatos], name, el, cls, n}
   return `<span class="si fb ${o.cls||""}"${st}><b class="ini">${ini}</b>${badge}</span>`;
 }
 const LOOP_SVG = '<svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg>';
-/* r13 */ // Rotação e hotkeys: o motor shared/rotacoes.js (window.GrimRot) com data/rotacoes.json (_dev/ROTACOES.md).
-// Stats: o ML (magos) ou o skill (outros) da personagem, dos highscores ou escritos à mão, sem equipamento; sem eles, o motor
-// estima-os pelo nível. Mais os bónus do set da personagem (o ativo, se tiver itens) ou do BiS do nível (bisSet), via setTotals.
+/* r14 */ // Rotação e hotkeys: o motor shared/rotacoes.js (window.GrimRot) com data/rotacoes.json (_dev/ROTACOES.md).
+// Sem escolhas: GrimRot.layout dá a barra que um jogador monta (uma linha de teclas por elemento, Q W E R F D T, a 2.ª com Shift;
+// MABs no knight, paladino e monk), mais o 'Como jogar'. Stats: o ML ou o skill da personagem (sem eles, estimados pelo nível)
+// e os bónus do set da personagem (o ativo, se tiver itens) ou do BiS do nível (bisSet), via setTotals.
+// Comparar: o jogador escolhe o clientoptions.json do Tibia; lê-se no browser (GrimRot.readBars, só hotkeyOptions) e guarda-se
+// em c.tbar = {sets: {preset: [{k, acts:[{w}|{item}]}]}, sel} apenas as ações das teclas. GrimRot.review dá as dicas.
 let RXD=null, RXERR=false;
-const RXSCEN=[["boss","Boss"],["caixa","Caixa"],["espalhados","Espalhados"],["party","Party"]], RXBUD=[["max","Máximo"],["eco","Económico"]];
-const RXSCD={boss:"Um alvo com muita vida. Mago e paladino a 2–3 casas (kiting), alinhados com ele; knight e monk colados.",
-  caixa:"Monstros colados a ti (box).", espalhados:"Puxas um grupo que chega a 1–3 casas (lure).", party:"Em equipa, com o bolo de monstros à volta do blocker."};
 function rxGear(c){
   ensureSets(c); rebuildIndex();
   const my=heroSetSel(c), has=s=>s&&Object.values(s.slots||{}).some(e=>e&&BYID[e.id]), mine=has(my);
@@ -44954,117 +44943,65 @@ function rxGear(c){
   const sh=set.slots.shield&&BYID[set.slots.shield.id], wp=set.slots.weapon&&BYID[set.slots.weapon.id];
   return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para o nível ${L} (BiS)`, mine, shield:!!(sh&&sh.s==="shield"&&!(wp&&wp.h2))};
 }
-function rxPlan(c){
-  const u=ST.ui.rx=Object.assign({scen:"caixa",budget:"max",lane:""},ST.ui.rx||{}), gr=rxGear(c);
-  if(u.lane&&!(GrimRot.LANES[c.voc]||[]).some(l=>l.k===u.lane)) u.lane="";
-  const P=GrimRot.plan(RXD,{voc:c.voc, level:c.level, scen:u.scen, budget:u.budget, lane:u.lane||null, gear:gr.g,
-    ml:isMage(c)&&c.ml>0?c.ml:0, skill:!isMage(c)&&c.skill>10?c.skill:0, shield:gr.shield});
-  return {u,P,gr};
-}
+function rxOpt(c,gr){ return {voc:c.voc, level:c.level, gear:gr.g, ml:isMage(c)&&c.ml>0?c.ml:0, skill:!isMage(c)&&c.skill>10?c.skill:0, shield:gr.shield}; }
 const rxIc = a => a.kind==="rune"||a.kind==="item" ? `<span class="rx-ic">${itemSpr(a.n)}</span>` : sicon({k:[a.w,a.n],name:a.n,w:a.w,cls:"sm"});
-const rxNm = a => a.kind==="rune" ? elink("feitico",[a.n.replace(/ Rune$/,""),a.n],esc(a.n)) : elink("feitico",[a.n,a.w],esc(a.n));
-function rxStatsLine(c,P,gr){
-  const s=P.stats, mage=isMage(c), sk=SKN[gr.skn]||"skill";
+const rxNm = a => a.kind==="rune" ? elink("feitico",[a.n.replace(/ Rune$/,""),a.n],esc(a.n.replace(/ Rune$/,""))) : elink("feitico",[a.n,a.w],esc(a.n));
+function rxStatsLine(c,s,gr){
+  const mage=isMage(c), sk=SKN[gr.skn]||"skill";
   const part=(lab,base,src,gear)=>`<b>${esc(lab)} ${base+gear}</b> <span class="muted">(${base} ${src?"da personagem":"estimado pelo nível"}${gear?` + ${gear} do equipamento`:""})</span>`;
   const bits=[`Nível <b>${c.level}</b>`];
   if(mage) bits.push(part("ML",s.mlBase,s.mlSrc,s.mlGear));
-  else { bits.push(part(sk.charAt(0).toUpperCase()+sk.slice(1),s.skillBase,s.skSrc,s.skillGear)); if(c.voc==="paladin"||c.voc==="monk") bits.push(part("ML",s.mlBase,false,s.mlGear)); bits.push(`ataque <b>${s.atk}</b> <span class="muted">(${s.atkGear?"arma"+(c.voc==="paladin"?" + munição":""):"estimado"})</span>`); }
-  if(s.wheel) bits.push(`Wheel: feitiços no estágio ${s.wheel}`);
-  return `<p class="small rx-st">${bits.join(" · ")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href="#" data-go="perso">Escreve o teu ${mage?"ML":esc(sk)}</a> para a conta ficar exata.`:""}</p>`;
+  else { bits.push(part(sk.charAt(0).toUpperCase()+sk.slice(1),s.skillBase,s.skSrc,s.skillGear)); if(c.voc==="paladin"||c.voc==="monk") bits.push(part("ML",s.mlBase,false,s.mlGear)); }
+  return `<p class="small muted rx-st">Contas feitas com: ${bits.join(" · ")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href="#" data-go="perso">Escreve o teu ${mage?"ML":esc(sk)}</a> para ficarem exatas.`:""}</p>`;
+}
+const rxKb = t => esc(t).replace(/(^|[\s(])(Shift\+[A-Z0-9]|[QWERTFDGH])(?=$|[\s.,:;)›])/g,'$1<kbd>$2</kbd>'); // só as teclas da barra (Q W E R T F D G H, Shift+…)
+function rxTile(k){
+  const body = k.mab
+    ? `<div class="tn"><span class="mabtag" title="Multi Action Button">MAB</span>${k.mab.acts.map((a,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}<span class="ta">${rxIc(a)}<b>${rxNm(a)}</b></span>`).join("")}</div>`
+    : `<div class="tn">${rxIc(k.a)}<b>${rxNm(k.a)}</b></div>${k.a.w?`<code>${esc(k.a.w)}</code>`:""}`;
+  return `<div class="rx-tile${k.mab?" mab":""}"><div class="th"><kbd>${esc(k.k)}</kbd><span class="rl">${esc(k.label)}</span></div>${body}<p>${esc(k.when)}</p></div>`;
+}
+const RXTIP={warn:["Atenção","bad"],add:["Juntar",""],order:["MAB","acc"],tip:["Dica","ok"],info:["Nota",""]};
+function rxCmpHTML(c,opt){
+  const tb=c.tbar&&c.tbar.sets&&typeof c.tbar.sets==="object"?c.tbar:null;
+  const file=lab=>`<label class="btn small${tb?" ghost":""} rx-file"><input type="file" accept=".json,application/json" data-rxfile hidden>${lab}</label>`;
+  const head=`<h3>Compara com a tua barra do Tibia</h3>`;
+  if(!tb) return `<div class="card rx-cmp">${head}<p class="small">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windows está em <code>%LOCALAPPDATA%\Tibia\packages\Tibia\conf</code> (cola isto na barra do Explorador de Ficheiros).</p>
+    <p class="small muted">O ficheiro é lido só no teu browser. O site guarda apenas os feitiços e objetos das tuas teclas; nada do resto do ficheiro.</p>${file("Escolher o ficheiro")}<p class="small bad" id="rxFileErr" hidden></p></div>`;
+  const names=Object.keys(tb.sets), sel=tb.sets[tb.sel]?tb.sel:names[0], user=tb.sets[sel]||[];
+  let R; try{ R=GrimRot.review(RXD,opt,user); }catch(e){ console.error(e); return `<div class="card rx-cmp">${head}<p class="small muted">Não consegui comparar a tua barra.</p>${file("Escolher outro ficheiro")}</div>`; }
+  const pick=names.length>1?`<label class="rx-pre"><span class="small">Preset</span><select data-rxpre>${names.map(n=>`<option${n===sel?" selected":""}>${esc(n)}</option>`).join("")}</select></label>`:`<p class="small">Preset <b>${esc(sel)}</b></p>`;
+  const tips=!R.known?`<p class="small">Não encontrei feitiços de ataque de ${esc(VOCN(c.voc))} neste preset: escolhe o preset desta personagem.</p>`
+    : R.tips.length?`<ul class="rx-tips">${R.tips.map(t=>{ const [l,cl]=RXTIP[t.t]||["Nota",""]; return `<li><span class="tag ${cl}">${l}</span><span>${rxKb(t.txt)}</span></li>`; }).join("")}</ul>`
+    : `<p class="small">A tua barra já tem tudo o que a recomendada tem, pela ordem certa.</p>`;
+  return `<div class="card rx-cmp">${head}<div class="rx-cmph">${pick}<div class="rx-bbtn">${file("Ler outra vez")}<button type="button" class="btn small ghost" data-rxforget>Esquecer</button></div></div>${tips}<p class="small bad" id="rxFileErr" hidden></p></div>`;
 }
 function renderRx(){
   const el=$("rxBody"), c=C(); if(!el||!c) return;
   if(!RXD||!window.GrimRot){ el.innerHTML=`<p class="small muted">${RXERR||!window.GrimRot?"Não consegui carregar os dados das rotações.":"A carregar as rotações…"}</p>`;
     if(!RXERR&&window.GrimRot&&!RXD) dload("rotacoes").then(d=>{ RXD=d; renderRx(); }).catch(()=>{ RXERR=true; renderRx(); }); return; }
-  let R; try{ R=rxPlan(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui montar a rotação.</p>`; return; }
-  const {u,P,gr}=R, lanes=GrimRot.LANES[c.voc]||[], alt={}; (P.alts||[]).forEach(a=>alt[a.lane]=a.pct);
-  Object.keys(RXADD).forEach(k=>{ if(/^rx/.test(k)) delete RXADD[k]; });
-  if(P.empty){ el.innerHTML=`<p class="small muted">${esc(P.notes[0])}</p>`; return; }
-  const laneOpts=lanes.length>1 ? [["","Melhor"]].concat(lanes.map(l=>[l.k, l.n+(l.k===P.lane.k&&!u.lane?" ✓":alt[l.k]!=null?` · ${alt[l.k]}%`:"")])) : null;
-  const E=P.econ, M=P.mab;
-  const mabs=M.mabs.map(m=>`<div class="card rx-mab"><div class="rot-h"><h4><span class="mabtag" title="Multi Action Button">MAB</span> ${esc(m.n.replace("MAB ",""))}</h4><span class="tiny muted">${m.acts.length} ${m.acts.length===1?"ação":"ações"}</span></div>
-      <ol class="rx-acts">${m.acts.map((a,i)=>`<li><span class="rx-o">${i+1}.º</span>${rxIc(a)}<span class="rx-an"><b>${rxNm(a)}</b>${a.w?`<code>${esc(a.w)}</code>`:`<span class="tiny muted">${esc(a.use||"")}</span>`}</span></li>`).join("")}</ol>
-      <p class="small" style="margin:0">${esc(m.why)}.</p>${rxAddBtn({t:"mab",label:`${P.scenName} · ${P.lane.n}`,scen:u.scen,acts:m.acts.map(a=>({n:a.n,w:a.w,kind:a.kind}))},"rxm")}</div>`).join("");
-  const sep=[].concat(P.stance.map(s=>({n:s.n,w:s.w,why:"stance: "+s.why})), M.keys, P.opener);
-  const sepHTML=sep.length?`<div class="card rx-keys"><h4>Teclas à parte</h4>${sep.map(k=>`<div class="rx-k">${k.w?sicon({k:[k.w,k.n],name:k.n,w:k.w,cls:"sm"}):`<span class="rx-ic">${itemSpr(k.n)}</span>`}<span class="rx-an"><b>${k.w?elink("feitico",[k.n,k.w],esc(k.n)):esc(k.n)}</b>${k.w?`<code>${esc(k.w)}</code>`:""}<span class="small">${esc(k.why)}</span>${rxAddBtn({t:"act",label:k.n,acts:[{n:k.n,w:k.w||"",kind:k.w?"spell":"item"}]},"rxk")}</span></div>`).join("")}</div>`:"";
-  const rot=P.rotation.map((r,i)=>`<div class="rx-r${r.fill?" fill":""}"><span class="rx-n">${i+1}</span>${rxIc(r)}<span class="rx-an"><b>${rxNm(r)}</b>${r.w&&r.kind!=="rune"?`<code>${esc(r.w)}</code>`:""}</span>
-      <span class="rx-v"><b>${nfdec(r.cpm)}</b><small>por minuto</small></span><span class="rx-v"><b>${r.share}%</b><small>do dano</small></span><p class="small">${esc(r.why)}</p></div>`).join("");
-  const seqArr=P.seq.map(n=>P.rotation.find(r=>r.n===n)||{n,w:"",kind:/ Rune$/.test(n)?"rune":"spell"});
-  const seq=`<ol class="seq rx-seq" aria-label="Primeiros lançamentos">${seqArr.map((r,i)=>`<li>${i?'<span class="chev" aria-hidden="true">›</span>':""}<div class="step">${rxIc(r)}<b>${esc(r.n.replace(/ Rune$/,""))}</b></div></li>`).join("")}</ol>`;
-  const pot=E.potion&&E.needS>0?`${nf(E.potion.perH)} ${esc(E.potion.n)} por hora`:"o mana leech chega: poções de mana só para emergências";
-  const econ=`<div class="card rx-econ"><h4>Economia</h4><dl class="dl">
-      <dt>Gasto</dt><dd><b>${gp(E.gpH)}</b> por hora${E.cap?` <span class="muted">(limite económico ${gp(E.cap)}/h)</span>`:""}</dd>
-      <dt>Runas</dt><dd>${E.runesGpH?gp(E.runesGpH)+" por hora":"nenhuma"}</dd>
-      <dt>Mana</dt><dd>${nfdec(E.manaS)}/s gasta · ${nfdec(E.leechS)}/s volta pelo mana leech · ${pot}</dd>
-      <dt>Com os MABs</dt><dd>≈ ${M.pct}% do dano ótimo · ≈ ${gp(M.gpH)}/h${M.overBudget?' <span class="warnt">(passa o limite: carrega menos no enchimento)</span>':""}</dd></dl>
-      <h4 style="margin-top:12px">Imbuements</h4><ul class="rx-imb">${P.imbs.map(i=>`<li><b>${esc(i.n)}</b> <span class="muted">· ${esc(i.slot)}</span>${i.must?' <span class="tag ok">essencial</span>':""}<span class="small">${esc(i.why)}</span></li>`).join("")}</ul></div>`;
-  const notes=P.notes.length?`<ul class="small rx-notes">${P.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:"";
-  const out=P.out.length?`<details class="rx-out"><summary>O que ficou de fora e porquê</summary><ul class="small">${P.out.map(o=>`<li><b>${esc(o.n)}</b>: ${esc(o.why)}</li>`).join("")}</ul></details>`:"";
-  el.innerHTML=`<div class="card rx-ctl">
-      <div class="rx-c"><span class="rx-l">Cenário</span><div class="seg" id="rxScen" role="group" aria-label="Cenário"></div></div>
-      <div class="rx-c"><span class="rx-l">Gasto</span><div class="seg" id="rxBud" role="group" aria-label="Gasto"></div></div>
-      ${laneOpts?`<div class="rx-c"><span class="rx-l">Elemento</span><div class="seg" id="rxLane" role="group" aria-label="Elemento da rotação"></div></div>`:""}
-      <p class="small muted" style="margin:0">${esc(RXSCD[u.scen])} ${u.budget==="eco"?`Gasto económico: até ${gp(GrimRot.ecoCap(c.level))} por hora em runas e poções.`:"Gasto máximo: o dano todo, sem olhar ao preço."}</p>
-      ${rxStatsLine(c,P,gr)}</div>
-    <div id="rxBarHost" class="sec">${rxBarHTML(c)}</div>
-    <div class="sec"><h3>Multi-Action Buttons</h3><p class="small muted" style="margin:-4px 0 10px">No jogo: botão direito numa tecla da barra → <i>Assign Multiaction</i>. Cada toque dispara a 1.ª ação que não estiver em cooldown; carrega nas MABs por ordem (a MAB 1 primeiro). Linha <b>${esc(P.lane.n)}</b>: uma rotação só usa feitiços de um elemento.</p>
-      <div class="grid2 rx-mabs">${mabs}${sepHTML}</div>${notes}</div>
-    <div class="sec"><h3>A rotação, por prioridade</h3><div class="card rx-rot">${rot}<h4 style="margin:14px 0 6px">Os primeiros lançamentos</h4>${seq}</div>${out}</div>
-    <div class="sec">${econ}</div>`;
-  seg($("rxScen"),RXSCEN,u.scen,v=>{ u.scen=v; save(); renderRx(); });
-  seg($("rxBud"),RXBUD,u.budget,v=>{ u.budget=v; save(); renderRx(); });
-  if(laneOpts) seg($("rxLane"),laneOpts,u.lane||"",v=>{ u.lane=v; save(); renderRx(); });
+  const gr=rxGear(c), opt=rxOpt(c,gr); let Lr;
+  try{ Lr=GrimRot.layout(RXD,opt); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui montar a barra.</p>`; return; }
+  if(!Lr.rows.length){ el.innerHTML=`<p class="small muted">Ainda não tens feitiços nem runas de ataque neste nível.</p>`; return; }
+  const rows=Lr.rows.map(r=>`<div class="rx-row"><h4>${chip(r.el)}<span class="small muted">${r.main?"linha principal":"com Shift: para criaturas que resistem a "+esc(ELN[Lr.rows[0].el]||"")}</span></h4><div class="rx-tiles">${r.keys.map(rxTile).join("")}</div></div>`).join("");
+  const com=Lr.common.length?`<div class="rx-row"><h4><span class="small muted">Para as duas linhas</span></h4><div class="rx-tiles">${Lr.common.map(rxTile).join("")}</div></div>`:"";
+  const st=Lr.stance[0], stance=st?`<p class="small rx-stc">Antes de começar, liga <b>${elink("feitico",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: ${esc(st.why)}</p>`:"";
+  const how=Lr.how.length?`<div class="card rx-how"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKb(h.txt)}</dd>`).join("")}</dl></div>`:"";
+  el.innerHTML=`<div class="card rx-lay"><div><h3>A tua barra de ataque</h3><p class="small muted" style="margin:2px 0 0">As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.":""}</p></div>${stance}${rows}${com}</div>
+    ${how}${rxCmpHTML(c,opt)}${rxStatsLine(c,Lr.stats,gr)}`;
 }
-/* r13 */ // A tua barra: o jogador põe cada MAB ou ação na tecla que quiser (c.bar = {tecla: {t:"mab"|"act", label, acts:[{n,w,kind}], scen}}).
-// As sugestões (MABs, teclas à parte, Sobreviver/Utilidade) levam o botão 'Pôr na barra' (data-rxadd → RXADD); a tecla escolhe-se num
-// painel (openSheet) com as teclas livres e as ocupadas. 'Começar com a sugestão' só preenche teclas livres.
-const RXKEYS=[..."1234567890"].concat(Array.from({length:12},(_,i)=>"F"+(i+1)),[..."1234567890"].map(k=>"Shift+"+k),[..."1234567890"].map(k=>"Ctrl+"+k));
-const RXKORD=k=>{ const i=RXKEYS.indexOf(k); return i<0?999:i; };
-let RXADD={}, RXN=0, RXSEL=null;
-function rxBarOf(c){ if(!c.bar||typeof c.bar!=="object"||Array.isArray(c.bar)) c.bar={}; return c.bar; }
-function rxAddBtn(item,pref){ const id=pref+(RXN++); RXADD[id]=item; return `<button type="button" class="btn small ghost rx-add" data-rxadd="${id}">Pôr na barra</button>`; }
-const rxActTxt = a => a.kind==="rune"||a.kind==="item" ? a.n : (a.w||a.n);
-const rxItemTxt = it => (it.t==="mab"&&it.acts.length>1?"MAB: ":"")+it.acts.map(rxActTxt).join(" › ");
-function rxBarHTML(c){
-  const bar=rxBarOf(c), keys=Object.keys(bar).filter(k=>bar[k]&&Array.isArray(bar[k].acts)&&bar[k].acts.length).sort((a,b)=>RXKORD(a)-RXKORD(b));
-  const slots=keys.map(k=>{ const it=bar[k], a=it.acts[0];
-    return `<button type="button" class="hbs${RXSEL===k?" on":""}" data-rxkey="${esc(k)}" title="${esc(k+": "+rxItemTxt(it))}" aria-label="${esc(k+": "+rxItemTxt(it))}" aria-pressed="${RXSEL===k}"><span class="well">${rxIc(a)}${it.t==="mab"&&it.acts.length>1?'<i class="mab">MAB</i>':""}<i>${esc(k.replace("Shift+","⇧").replace("Ctrl+","^"))}</i></span></button>`; }).join("");
-  const sel=RXSEL&&bar[RXSEL], info=sel?`<div class="rx-binfo"><div class="acts"><kbd>${esc(RXSEL)}</kbd>${sel.t==="mab"&&sel.acts.length>1?'<span class="mabtag">MAB</span>':""}${sel.acts.map((a,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}<span class="act">${rxIc(a)}<code>${esc(rxActTxt(a))}</code></span>`).join("")}</div>${sel.label?`<span class="small">${esc(sel.label)}</span>`:""}<div class="rx-bbtn"><button type="button" class="btn small ghost" data-rxmove="${esc(RXSEL)}">Mudar de tecla</button><button type="button" class="btn small ghost" data-rxdel="${esc(RXSEL)}">Tirar da barra</button></div></div>`:"";
-  const txt=keys.map(k=>`${k}: ${rxItemTxt(bar[k])}`).join("\n");
-  return `<div class="card hotbar-card rx-bar"><div class="hb-head"><h3>A tua barra</h3><span class="small muted">${keys.length?`${keys.length} ${keys.length===1?"tecla":"teclas"} · toca numa para a ver, mudar ou tirar`:"Vazia: usa os botões «Pôr na barra» ou começa com a sugestão."}</span></div>
-    ${keys.length?`<div class="hotbar" id="rxHotbar">${slots}</div>`:""}${info}
-    <div class="rx-bbtn"><button type="button" class="btn small" data-rxfill>${keys.length?"Completar com a sugestão":"Começar com a sugestão"}</button>${keys.length?`<button type="button" class="btn small ghost" data-copy="${esc(txt)}" data-copied="Esquema copiado">Copiar o esquema</button><button type="button" class="btn small ghost" data-rxclear>Limpar a barra</button>`:""}</div></div>`;
-}
-function rxPickHTML(id,from){
-  const it=RXADD[id]||(from&&rxBarOf(C())[from]); if(!it) return "";
-  const bar=rxBarOf(C()), grp=[["Números",RXKEYS.slice(0,10)],["F1–F12",RXKEYS.slice(10,22)],["Shift",RXKEYS.slice(22,32)],["Ctrl",RXKEYS.slice(32)]];
-  return `<div class="rx-pick" data-rxpick="${esc(id||"")}" data-rxfrom="${esc(from||"")}"><h3>Em que tecla?</h3><p class="small"><b>${esc(rxItemTxt(it))}</b>${it.label?` · ${esc(it.label)}`:""}</p>
-    ${grp.map(([t,ks])=>`<h4>${t}</h4><div class="rx-kgrid">${ks.map(k=>{ const o=bar[k]&&bar[k].acts&&bar[k].acts.length?bar[k]:null; return `<button type="button" class="rx-kb${o?" occ":""}${k===from?" cur":""}" data-rxset="${esc(k)}" title="${esc(o?k+": troca "+rxItemTxt(o):k+": livre")}"><kbd>${esc(k)}</kbd>${o?`<span class="tiny">${esc(o.acts[0].n.replace(/ Rune$/,"").slice(0,14))}</span>`:`<span class="tiny muted">livre</span>`}</button>`; }).join("")}</div>`).join("")}
-    <p class="small muted">Uma tecla ocupada troca a ação que lá está.</p></div>`;
-}
-function rxRefreshBar(){ const el=$("rxBarHost"), c=C(); if(el&&c) el.innerHTML=rxBarHTML(c); }
-// sugestão: MABs nos números, teclas à parte a seguir, Sobreviver e Stances nas F (a Utilidade fica para o jogador pôr);
-// só em teclas livres e sem repetir ações
-function rxFill(){ const c=C(), bar=rxBarOf(c), have=new Set(Object.values(bar).map(rxItemTxt));
-  const free=ks=>ks.filter(k=>!(bar[k]&&bar[k].acts&&bar[k].acts.length));
-  const put=(items,ks)=>{ const f=free(ks); items.forEach(it=>{ const t=rxItemTxt(it); if(have.has(t)||!f.length) return; bar[f.shift()]=it; have.add(t); }); };
-  const ids=Object.keys(RXADD);
-  put(ids.filter(i=>/^rxm/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(0,10));
-  put(ids.filter(i=>/^rxk/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(0,10).concat(RXKEYS.slice(22,32)));
-  put(ids.filter(i=>/^hkb/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(10,22).concat(RXKEYS.slice(32)));
-  save(); rxRefreshBar(); }
-document.addEventListener("click", e=>{ const t=e.target; let b;
-  if((b=t.closest("[data-rxadd]"))){ openSheet(rxPickHTML(b.dataset.rxadd,"")); return; }
-  if((b=t.closest("[data-rxmove]"))){ openSheet(rxPickHTML("",b.dataset.rxmove)); return; }
-  if((b=t.closest("[data-rxset]"))){ const p=b.closest("[data-rxpick]"), c=C(), bar=rxBarOf(c), k=b.dataset.rxset, id=p.dataset.rxpick, from=p.dataset.rxfrom;
-    const it=id?RXADD[id]:bar[from]; if(!it) return;
-    if(from&&from!==k){ const old=bar[k]; bar[k]=it; if(old&&old.acts&&old.acts.length) bar[from]=old; else delete bar[from]; } else bar[k]=JSON.parse(JSON.stringify(it));
-    RXSEL=k; save(); closeSheet(); rxRefreshBar(); return; }
-  if((b=t.closest("[data-rxkey]"))){ RXSEL=RXSEL===b.dataset.rxkey?null:b.dataset.rxkey; rxRefreshBar(); return; }
-  if((b=t.closest("[data-rxdel]"))){ const bar=rxBarOf(C()); delete bar[b.dataset.rxdel]; RXSEL=null; save(); rxRefreshBar(); return; }
-  if(t.closest("[data-rxfill]")){ rxFill(); return; }
-  if((b=t.closest("[data-rxclear]"))){ if(b.dataset.confirm!=="1"){ b.dataset.confirm="1"; b.textContent="Confirmar: limpar a barra"; b.classList.add("danger"); return; } C().bar={}; RXSEL=null; save(); rxRefreshBar(); return; }
+// ler o clientoptions.json: só hotkeyOptions, um preset de cada vez em c.tbar; escolhe o preset com o nome da personagem
+document.addEventListener("change", e=>{ const t=e.target;
+  if(t.matches("[data-rxpre]")){ const c=C(); if(c.tbar){ c.tbar.sel=t.value; save(); renderRx(); } return; }
+  if(!t.matches("[data-rxfile]")||!t.files||!t.files[0]) return;
+  const err=m=>{ const p=$("rxFileErr"); if(p){ p.textContent=m; p.hidden=false; } };
+  if(t.files[0].size>8e6){ err("Este ficheiro é grande demais para ser o clientoptions.json."); return; }
+  t.files[0].text().then(txt=>{ let j; try{ j=JSON.parse(txt); }catch(_){ err("Não é um ficheiro JSON: escolhe o clientoptions.json."); return; }
+    const c=C(), first=GrimRot.readBars(RXD,j,c.name||""); if(!first){ err("Não encontrei hotkeys neste ficheiro: escolhe o clientoptions.json."); return; }
+    const sets={}; first.sets.forEach(n=>{ sets[n]=GrimRot.readBars(RXD,j,n).user; });
+    c.tbar={sets, sel:first.set}; save(); renderRx(); }).catch(()=>err("Não consegui ler o ficheiro."));
 });
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget]"); if(!b) return; delete C().tbar; save(); renderRx(); });
 let spFilter="all";
 function renderRotation(){
   const c=C(), vd=VD(), L=c.level;
@@ -45103,18 +45040,18 @@ function candInfo(vd,cand,L){
   const r=spRow(vd,t); return {t, l:r?r[2]:0, wheel:!!(r&&r[8].includes("wheel"))};
 }
 function hkPick(vd,key,L){ const inf=key.c.map(x=>candInfo(vd,x,L)), av=inf.filter(x=>x.l<=L); return {inf, chosen:(key.mab?av.slice(0,3):av.slice(0,1)).map(x=>x.t)}; }
-function renderHotkeys(){ /* r13: sem o grupo "Atacar" (vem do motor, em renderRx) e sem tecla fixa: o jogador escolhe onde pôr cada ação */
+function renderHotkeys(){ /* r14: sem o grupo "Atacar" (vem do motor, em renderRx); Sobreviver nos números (1–4, depois Shift+1–4), stances e utilidade nas F */
   const c=C(), vd=VD(), L=c.level; let n=0; const future=[];
-  Object.keys(RXADD).forEach(k=>{ if(/^hk[bu]/.test(k)) delete RXADD[k]; });
+  const KS={sob:["1","2","3","4","Shift+1","Shift+2","Shift+3","Shift+4","5","6"], f:Array.from({length:12},(_,i)=>"F"+(i+1))}, ki={sob:0,f:0};
   WNAME={}; (vd.allsp||[]).forEach(r=>{ WNAME[r[1]]={n:r[0],el:r[6]||""}; });
   vd.stances.forEach(s=>{ if(s.w) WNAME[s.w.toLowerCase()]={n:s.n,el:""}; });
-  const groups = (vd.hk||[]).filter(g=>!/^Atacar/.test(g.g)).map(g=>{ const rows=g.k.map(key=>{ const {inf,chosen}=hkPick(vd,key,L);
+  const groups = (vd.hk||[]).filter(g=>!/^Atacar/.test(g.g)).map(g=>{ const kk=/^Sobreviver/.test(g.g)?"sob":"f"; const rows=g.k.map(key=>{ const {inf,chosen}=hkPick(vd,key,L);
       if(!chosen.length){ const lv=Math.min(...inf.map(x=>x.l)); if(lv<99999) future.push({l:lv,t:inf.find(x=>x.l===lv).t,d:key.d,wheel:inf.find(x=>x.l===lv).wheel}); return ""; }
       const a=(key.mab&&chosen.length>1?"MAB: ":"")+chosen.join(" › ");
       let nxt=""; const lvls=[...new Set(inf.map(x=>x.l).filter(x=>x>L&&x<99999))].sort((a,b)=>a-b);
       for(const t of lvls){ const ch=hkPick(vd,key,t).chosen; if(ch.join("|")!==chosen.join("|")){ const add=ch.filter(x=>!chosen.includes(x)); nxt=`Nível ${t}${inf.some(x=>x.l===t&&x.wheel)?" (Wheel)":""}: ${add.length?"entra "+add.join(", "):"muda a ordem"}${key.mab&&ch.length>1?` → ${ch.join(" › ")}`:""}`; break; } }
-      const id="hk"+(n++), {mab,parts}=hkParts(a);
-      return `<div class="hk nok" id="${id}"><div><div class="acts">${mab?'<span class="mabtag" title="Multi Action Button">MAB</span>':""}${parts.map((p,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}${actChip(p)}`).join("")}</div><span class="d">${esc(key.d)}</span>${nxt?`<span class="nx">${esc(nxt)}</span>`:""}${rxAddBtn({t:mab?"mab":"act",label:key.d,acts:parts.map(p=>{ const al=p.split(" / ")[0].trim(), wn=WNAME[al.toLowerCase().replace(/\s*".*$/,"").replace(/\s+(up|down)$/,"")]; return wn?{n:wn.n,w:al,kind:"spell"}:{n:al.replace(/\s*\((runa?|rune)\)\s*$/i," Rune"),w:"",kind:"item"}; })},/^Utilidade/.test(g.g)?"hku":"hkb")}</div></div>`; }).join("");
+      const id="hk"+(n++), {mab,parts}=hkParts(a), tk=KS[kk][ki[kk]++];
+      return `<div class="hk${tk?"":" nok"}" id="${id}">${tk?`<kbd>${esc(tk)}</kbd>`:""}<div><div class="acts">${mab?'<span class="mabtag" title="Multi Action Button">MAB</span>':""}${parts.map((p,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}${actChip(p)}`).join("")}</div><span class="d">${esc(key.d)}</span>${nxt?`<span class="nx">${esc(nxt)}</span>`:""}</div></div>`; }).join("");
     return rows ? `<div class="card"><h3 style="font-size:19px;margin-bottom:2px">${esc(g.g)}</h3>${rows}</div>` : ""; }).join("");
   future.sort((a,b)=>a.l-b.l);
   $("hkList").innerHTML = groups + (future.length?`<div class="card hkfut"><h3 style="font-size:19px;margin-bottom:6px">Ações que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\s*".*$/,"")]||{}).n||f.t; return `<div class="hkf nok">${sicon({k:[f.t],name:fn,w:f.t,cls:"sm"})}<span><b>${elink("feitico",[fn,f.t],esc(fn))}</b> <code>${esc(f.t)}</code><span class="d">${f.wheel?"Desbloqueado na Wheel (perto do nível "+f.l+")":"Nível "+f.l}. ${esc(f.d)}</span></span></div>`; }).join("")}</div>`:"");
