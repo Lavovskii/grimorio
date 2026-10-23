@@ -690,6 +690,21 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 .rx-out{margin-top:10px}
 .rx-out summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
 @media (max-width:640px){ .rx-r{grid-template-columns:24px auto minmax(0,1fr) auto} .rx-r .rx-v+.rx-v{display:none} .rx-r p{grid-column:2/-1} }
+.rx-add{justify-self:start;margin-top:4px}
+.hk .rx-add{display:block;margin-top:8px}
+.rx-bar{display:grid;gap:10px}
+.rx-bar .hbs.on .well{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.rx-binfo{display:grid;gap:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.rx-binfo kbd{font-family:var(--mono);font-size:13px;font-weight:600;border:1px solid var(--line);border-bottom-width:3px;border-radius:7px;padding:5px 7px;background:var(--surface)}
+.rx-bbtn{display:flex;flex-wrap:wrap;gap:8px}
+.rx-pick{display:grid;gap:8px}
+.rx-pick h4{font-size:14px;color:var(--muted);margin-top:6px}
+.rx-kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+.rx-kb{display:grid;justify-items:center;gap:3px;min-height:56px;padding:6px 4px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer}
+.rx-kb kbd{font-family:var(--mono);font-size:13px;font-weight:600}
+.rx-kb.occ{background:var(--surface-2)}
+.rx-kb.cur{border-color:var(--accent)}
+.rx-kb:hover,.rx-kb:focus-visible{border-color:var(--accent)}
 
 /* ---------- equipment ---------- */
 .doll-wrap{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:start}
@@ -44946,7 +44961,7 @@ function rxPlan(c){
     ml:isMage(c)&&c.ml>0?c.ml:0, skill:!isMage(c)&&c.skill>10?c.skill:0, shield:gr.shield});
   return {u,P,gr};
 }
-const rxIc = a => a.kind==="rune" ? `<span class="rx-ic">${itemSpr(a.n)}</span>` : sicon({k:[a.w,a.n],name:a.n,w:a.w,cls:"sm"});
+const rxIc = a => a.kind==="rune"||a.kind==="item" ? `<span class="rx-ic">${itemSpr(a.n)}</span>` : sicon({k:[a.w,a.n],name:a.n,w:a.w,cls:"sm"});
 const rxNm = a => a.kind==="rune" ? elink("feitico",[a.n.replace(/ Rune$/,""),a.n],esc(a.n)) : elink("feitico",[a.n,a.w],esc(a.n));
 function rxStatsLine(c,P,gr){
   const s=P.stats, mage=isMage(c), sk=SKN[gr.skn]||"skill";
@@ -44963,14 +44978,15 @@ function renderRx(){
     if(!RXERR&&window.GrimRot&&!RXD) dload("rotacoes").then(d=>{ RXD=d; renderRx(); }).catch(()=>{ RXERR=true; renderRx(); }); return; }
   let R; try{ R=rxPlan(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui montar a rotação.</p>`; return; }
   const {u,P,gr}=R, lanes=GrimRot.LANES[c.voc]||[], alt={}; (P.alts||[]).forEach(a=>alt[a.lane]=a.pct);
+  Object.keys(RXADD).forEach(k=>{ if(/^rx/.test(k)) delete RXADD[k]; });
   if(P.empty){ el.innerHTML=`<p class="small muted">${esc(P.notes[0])}</p>`; return; }
   const laneOpts=lanes.length>1 ? [["","Melhor"]].concat(lanes.map(l=>[l.k, l.n+(l.k===P.lane.k&&!u.lane?" ✓":alt[l.k]!=null?` · ${alt[l.k]}%`:"")])) : null;
   const E=P.econ, M=P.mab;
   const mabs=M.mabs.map(m=>`<div class="card rx-mab"><div class="rot-h"><h4><span class="mabtag" title="Multi Action Button">MAB</span> ${esc(m.n.replace("MAB ",""))}</h4><span class="tiny muted">${m.acts.length} ${m.acts.length===1?"ação":"ações"}</span></div>
       <ol class="rx-acts">${m.acts.map((a,i)=>`<li><span class="rx-o">${i+1}.º</span>${rxIc(a)}<span class="rx-an"><b>${rxNm(a)}</b>${a.w?`<code>${esc(a.w)}</code>`:`<span class="tiny muted">${esc(a.use||"")}</span>`}</span></li>`).join("")}</ol>
-      <p class="small" style="margin:0">${esc(m.why)}.</p></div>`).join("");
+      <p class="small" style="margin:0">${esc(m.why)}.</p>${rxAddBtn({t:"mab",label:`${P.scenName} · ${P.lane.n}`,scen:u.scen,acts:m.acts.map(a=>({n:a.n,w:a.w,kind:a.kind}))},"rxm")}</div>`).join("");
   const sep=[].concat(P.stance.map(s=>({n:s.n,w:s.w,why:"stance: "+s.why})), M.keys, P.opener);
-  const sepHTML=sep.length?`<div class="card rx-keys"><h4>Teclas à parte</h4>${sep.map(k=>`<div class="rx-k">${k.w?sicon({k:[k.w,k.n],name:k.n,w:k.w,cls:"sm"}):`<span class="rx-ic">${itemSpr(k.n)}</span>`}<span class="rx-an"><b>${k.w?elink("feitico",[k.n,k.w],esc(k.n)):esc(k.n)}</b>${k.w?`<code>${esc(k.w)}</code>`:""}<span class="small">${esc(k.why)}</span></span></div>`).join("")}</div>`:"";
+  const sepHTML=sep.length?`<div class="card rx-keys"><h4>Teclas à parte</h4>${sep.map(k=>`<div class="rx-k">${k.w?sicon({k:[k.w,k.n],name:k.n,w:k.w,cls:"sm"}):`<span class="rx-ic">${itemSpr(k.n)}</span>`}<span class="rx-an"><b>${k.w?elink("feitico",[k.n,k.w],esc(k.n)):esc(k.n)}</b>${k.w?`<code>${esc(k.w)}</code>`:""}<span class="small">${esc(k.why)}</span>${rxAddBtn({t:"act",label:k.n,acts:[{n:k.n,w:k.w||"",kind:k.w?"spell":"item"}]},"rxk")}</span></div>`).join("")}</div>`:"";
   const rot=P.rotation.map((r,i)=>`<div class="rx-r${r.fill?" fill":""}"><span class="rx-n">${i+1}</span>${rxIc(r)}<span class="rx-an"><b>${rxNm(r)}</b>${r.w&&r.kind!=="rune"?`<code>${esc(r.w)}</code>`:""}</span>
       <span class="rx-v"><b>${nfdec(r.cpm)}</b><small>por minuto</small></span><span class="rx-v"><b>${r.share}%</b><small>do dano</small></span><p class="small">${esc(r.why)}</p></div>`).join("");
   const seqArr=P.seq.map(n=>P.rotation.find(r=>r.n===n)||{n,w:"",kind:/ Rune$/.test(n)?"rune":"spell"});
@@ -44990,6 +45006,7 @@ function renderRx(){
       ${laneOpts?`<div class="rx-c"><span class="rx-l">Elemento</span><div class="seg" id="rxLane" role="group" aria-label="Elemento da rotação"></div></div>`:""}
       <p class="small muted" style="margin:0">${esc(RXSCD[u.scen])} ${u.budget==="eco"?`Gasto económico: até ${gp(GrimRot.ecoCap(c.level))} por hora em runas e poções.`:"Gasto máximo: o dano todo, sem olhar ao preço."}</p>
       ${rxStatsLine(c,P,gr)}</div>
+    <div id="rxBarHost" class="sec">${rxBarHTML(c)}</div>
     <div class="sec"><h3>Multi-Action Buttons</h3><p class="small muted" style="margin:-4px 0 10px">No jogo: botão direito numa tecla da barra → <i>Assign Multiaction</i>. Cada toque dispara a 1.ª ação que não estiver em cooldown; carrega nas MABs por ordem (a MAB 1 primeiro). Linha <b>${esc(P.lane.n)}</b>: uma rotação só usa feitiços de um elemento.</p>
       <div class="grid2 rx-mabs">${mabs}${sepHTML}</div>${notes}</div>
     <div class="sec"><h3>A rotação, por prioridade</h3><div class="card rx-rot">${rot}<h4 style="margin:14px 0 6px">Os primeiros lançamentos</h4>${seq}</div>${out}</div>
@@ -44998,6 +45015,56 @@ function renderRx(){
   seg($("rxBud"),RXBUD,u.budget,v=>{ u.budget=v; save(); renderRx(); });
   if(laneOpts) seg($("rxLane"),laneOpts,u.lane||"",v=>{ u.lane=v; save(); renderRx(); });
 }
+/* r13 */ // A tua barra: o jogador põe cada MAB ou ação na tecla que quiser (c.bar = {tecla: {t:"mab"|"act", label, acts:[{n,w,kind}], scen}}).
+// As sugestões (MABs, teclas à parte, Sobreviver/Utilidade) levam o botão 'Pôr na barra' (data-rxadd → RXADD); a tecla escolhe-se num
+// painel (openSheet) com as teclas livres e as ocupadas. 'Começar com a sugestão' só preenche teclas livres.
+const RXKEYS=[..."1234567890"].concat(Array.from({length:12},(_,i)=>"F"+(i+1)),[..."1234567890"].map(k=>"Shift+"+k),[..."1234567890"].map(k=>"Ctrl+"+k));
+const RXKORD=k=>{ const i=RXKEYS.indexOf(k); return i<0?999:i; };
+let RXADD={}, RXN=0, RXSEL=null;
+function rxBarOf(c){ if(!c.bar||typeof c.bar!=="object"||Array.isArray(c.bar)) c.bar={}; return c.bar; }
+function rxAddBtn(item,pref){ const id=pref+(RXN++); RXADD[id]=item; return `<button type="button" class="btn small ghost rx-add" data-rxadd="${id}">Pôr na barra</button>`; }
+const rxActTxt = a => a.kind==="rune"||a.kind==="item" ? a.n : (a.w||a.n);
+const rxItemTxt = it => (it.t==="mab"&&it.acts.length>1?"MAB: ":"")+it.acts.map(rxActTxt).join(" › ");
+function rxBarHTML(c){
+  const bar=rxBarOf(c), keys=Object.keys(bar).filter(k=>bar[k]&&Array.isArray(bar[k].acts)&&bar[k].acts.length).sort((a,b)=>RXKORD(a)-RXKORD(b));
+  const slots=keys.map(k=>{ const it=bar[k], a=it.acts[0];
+    return `<button type="button" class="hbs${RXSEL===k?" on":""}" data-rxkey="${esc(k)}" title="${esc(k+": "+rxItemTxt(it))}" aria-label="${esc(k+": "+rxItemTxt(it))}" aria-pressed="${RXSEL===k}"><span class="well">${rxIc(a)}${it.t==="mab"&&it.acts.length>1?'<i class="mab">MAB</i>':""}<i>${esc(k.replace("Shift+","⇧").replace("Ctrl+","^"))}</i></span></button>`; }).join("");
+  const sel=RXSEL&&bar[RXSEL], info=sel?`<div class="rx-binfo"><div class="acts"><kbd>${esc(RXSEL)}</kbd>${sel.t==="mab"&&sel.acts.length>1?'<span class="mabtag">MAB</span>':""}${sel.acts.map((a,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}<span class="act">${rxIc(a)}<code>${esc(rxActTxt(a))}</code></span>`).join("")}</div>${sel.label?`<span class="small">${esc(sel.label)}</span>`:""}<div class="rx-bbtn"><button type="button" class="btn small ghost" data-rxmove="${esc(RXSEL)}">Mudar de tecla</button><button type="button" class="btn small ghost" data-rxdel="${esc(RXSEL)}">Tirar da barra</button></div></div>`:"";
+  const txt=keys.map(k=>`${k}: ${rxItemTxt(bar[k])}`).join("\n");
+  return `<div class="card hotbar-card rx-bar"><div class="hb-head"><h3>A tua barra</h3><span class="small muted">${keys.length?`${keys.length} ${keys.length===1?"tecla":"teclas"} · toca numa para a ver, mudar ou tirar`:"Vazia: usa os botões «Pôr na barra» ou começa com a sugestão."}</span></div>
+    ${keys.length?`<div class="hotbar" id="rxHotbar">${slots}</div>`:""}${info}
+    <div class="rx-bbtn"><button type="button" class="btn small" data-rxfill>${keys.length?"Completar com a sugestão":"Começar com a sugestão"}</button>${keys.length?`<button type="button" class="btn small ghost" data-copy="${esc(txt)}" data-copied="Esquema copiado">Copiar o esquema</button><button type="button" class="btn small ghost" data-rxclear>Limpar a barra</button>`:""}</div></div>`;
+}
+function rxPickHTML(id,from){
+  const it=RXADD[id]||(from&&rxBarOf(C())[from]); if(!it) return "";
+  const bar=rxBarOf(C()), grp=[["Números",RXKEYS.slice(0,10)],["F1–F12",RXKEYS.slice(10,22)],["Shift",RXKEYS.slice(22,32)],["Ctrl",RXKEYS.slice(32)]];
+  return `<div class="rx-pick" data-rxpick="${esc(id||"")}" data-rxfrom="${esc(from||"")}"><h3>Em que tecla?</h3><p class="small"><b>${esc(rxItemTxt(it))}</b>${it.label?` · ${esc(it.label)}`:""}</p>
+    ${grp.map(([t,ks])=>`<h4>${t}</h4><div class="rx-kgrid">${ks.map(k=>{ const o=bar[k]&&bar[k].acts&&bar[k].acts.length?bar[k]:null; return `<button type="button" class="rx-kb${o?" occ":""}${k===from?" cur":""}" data-rxset="${esc(k)}" title="${esc(o?k+": troca "+rxItemTxt(o):k+": livre")}"><kbd>${esc(k)}</kbd>${o?`<span class="tiny">${esc(o.acts[0].n.replace(/ Rune$/,"").slice(0,14))}</span>`:`<span class="tiny muted">livre</span>`}</button>`; }).join("")}</div>`).join("")}
+    <p class="small muted">Uma tecla ocupada troca a ação que lá está.</p></div>`;
+}
+function rxRefreshBar(){ const el=$("rxBarHost"), c=C(); if(el&&c) el.innerHTML=rxBarHTML(c); }
+// sugestão: MABs nos números, teclas à parte a seguir, Sobreviver e Stances nas F (a Utilidade fica para o jogador pôr);
+// só em teclas livres e sem repetir ações
+function rxFill(){ const c=C(), bar=rxBarOf(c), have=new Set(Object.values(bar).map(rxItemTxt));
+  const free=ks=>ks.filter(k=>!(bar[k]&&bar[k].acts&&bar[k].acts.length));
+  const put=(items,ks)=>{ const f=free(ks); items.forEach(it=>{ const t=rxItemTxt(it); if(have.has(t)||!f.length) return; bar[f.shift()]=it; have.add(t); }); };
+  const ids=Object.keys(RXADD);
+  put(ids.filter(i=>/^rxm/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(0,10));
+  put(ids.filter(i=>/^rxk/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(0,10).concat(RXKEYS.slice(22,32)));
+  put(ids.filter(i=>/^hkb/.test(i)).map(i=>RXADD[i]), RXKEYS.slice(10,22).concat(RXKEYS.slice(32)));
+  save(); rxRefreshBar(); }
+document.addEventListener("click", e=>{ const t=e.target; let b;
+  if((b=t.closest("[data-rxadd]"))){ openSheet(rxPickHTML(b.dataset.rxadd,"")); return; }
+  if((b=t.closest("[data-rxmove]"))){ openSheet(rxPickHTML("",b.dataset.rxmove)); return; }
+  if((b=t.closest("[data-rxset]"))){ const p=b.closest("[data-rxpick]"), c=C(), bar=rxBarOf(c), k=b.dataset.rxset, id=p.dataset.rxpick, from=p.dataset.rxfrom;
+    const it=id?RXADD[id]:bar[from]; if(!it) return;
+    if(from&&from!==k){ const old=bar[k]; bar[k]=it; if(old&&old.acts&&old.acts.length) bar[from]=old; else delete bar[from]; } else bar[k]=JSON.parse(JSON.stringify(it));
+    RXSEL=k; save(); closeSheet(); rxRefreshBar(); return; }
+  if((b=t.closest("[data-rxkey]"))){ RXSEL=RXSEL===b.dataset.rxkey?null:b.dataset.rxkey; rxRefreshBar(); return; }
+  if((b=t.closest("[data-rxdel]"))){ const bar=rxBarOf(C()); delete bar[b.dataset.rxdel]; RXSEL=null; save(); rxRefreshBar(); return; }
+  if(t.closest("[data-rxfill]")){ rxFill(); return; }
+  if((b=t.closest("[data-rxclear]"))){ if(b.dataset.confirm!=="1"){ b.dataset.confirm="1"; b.textContent="Confirmar: limpar a barra"; b.classList.add("danger"); return; } C().bar={}; RXSEL=null; save(); rxRefreshBar(); return; }
+});
 let spFilter="all";
 function renderRotation(){
   const c=C(), vd=VD(), L=c.level;
@@ -45038,6 +45105,7 @@ function candInfo(vd,cand,L){
 function hkPick(vd,key,L){ const inf=key.c.map(x=>candInfo(vd,x,L)), av=inf.filter(x=>x.l<=L); return {inf, chosen:(key.mab?av.slice(0,3):av.slice(0,1)).map(x=>x.t)}; }
 function renderHotkeys(){ /* r13: sem o grupo "Atacar" (vem do motor, em renderRx) e sem tecla fixa: o jogador escolhe onde pôr cada ação */
   const c=C(), vd=VD(), L=c.level; let n=0; const future=[];
+  Object.keys(RXADD).forEach(k=>{ if(/^hk[bu]/.test(k)) delete RXADD[k]; });
   WNAME={}; (vd.allsp||[]).forEach(r=>{ WNAME[r[1]]={n:r[0],el:r[6]||""}; });
   vd.stances.forEach(s=>{ if(s.w) WNAME[s.w.toLowerCase()]={n:s.n,el:""}; });
   const groups = (vd.hk||[]).filter(g=>!/^Atacar/.test(g.g)).map(g=>{ const rows=g.k.map(key=>{ const {inf,chosen}=hkPick(vd,key,L);
@@ -45046,7 +45114,7 @@ function renderHotkeys(){ /* r13: sem o grupo "Atacar" (vem do motor, em renderR
       let nxt=""; const lvls=[...new Set(inf.map(x=>x.l).filter(x=>x>L&&x<99999))].sort((a,b)=>a-b);
       for(const t of lvls){ const ch=hkPick(vd,key,t).chosen; if(ch.join("|")!==chosen.join("|")){ const add=ch.filter(x=>!chosen.includes(x)); nxt=`Nível ${t}${inf.some(x=>x.l===t&&x.wheel)?" (Wheel)":""}: ${add.length?"entra "+add.join(", "):"muda a ordem"}${key.mab&&ch.length>1?` → ${ch.join(" › ")}`:""}`; break; } }
       const id="hk"+(n++), {mab,parts}=hkParts(a);
-      return `<div class="hk nok" id="${id}"><div><div class="acts">${mab?'<span class="mabtag" title="Multi Action Button">MAB</span>':""}${parts.map((p,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}${actChip(p)}`).join("")}</div><span class="d">${esc(key.d)}</span>${nxt?`<span class="nx">${esc(nxt)}</span>`:""}</div></div>`; }).join("");
+      return `<div class="hk nok" id="${id}"><div><div class="acts">${mab?'<span class="mabtag" title="Multi Action Button">MAB</span>':""}${parts.map((p,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}${actChip(p)}`).join("")}</div><span class="d">${esc(key.d)}</span>${nxt?`<span class="nx">${esc(nxt)}</span>`:""}${rxAddBtn({t:mab?"mab":"act",label:key.d,acts:parts.map(p=>{ const al=p.split(" / ")[0].trim(), wn=WNAME[al.toLowerCase().replace(/\s*".*$/,"").replace(/\s+(up|down)$/,"")]; return wn?{n:wn.n,w:al,kind:"spell"}:{n:al.replace(/\s*\((runa?|rune)\)\s*$/i," Rune"),w:"",kind:"item"}; })},/^Utilidade/.test(g.g)?"hku":"hkb")}</div></div>`; }).join("");
     return rows ? `<div class="card"><h3 style="font-size:19px;margin-bottom:2px">${esc(g.g)}</h3>${rows}</div>` : ""; }).join("");
   future.sort((a,b)=>a.l-b.l);
   $("hkList").innerHTML = groups + (future.length?`<div class="card hkfut"><h3 style="font-size:19px;margin-bottom:6px">Ações que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\s*".*$/,"")]||{}).n||f.t; return `<div class="hkf nok">${sicon({k:[f.t],name:fn,w:f.t,cls:"sm"})}<span><b>${elink("feitico",[fn,f.t],esc(fn))}</b> <code>${esc(f.t)}</code><span class="d">${f.wheel?"Desbloqueado na Wheel (perto do nível "+f.l+")":"Nível "+f.l}. ${esc(f.d)}</span></span></div>`; }).join("")}</div>`:"");
