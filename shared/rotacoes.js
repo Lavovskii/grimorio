@@ -202,6 +202,8 @@
         else if (mult(eff, el) < laneMult - 1e-9) { out.push({ a: a, why: "resist" }); return; }
       }
       if (!a.own && !sameLane && mult(eff, el) < laneMult - 1e-9) { out.push({ a: a, why: "resist" }); return; }
+      // runas: só do elemento da linha (a Sudden Death também, porque nenhuma linha da vocação é de morte)
+      if (!a.own && !sameLane && !(opt.mix && eff) && !(a.n === "Sudden Death Rune" && !LANES[voc].some(function (x) { return x.el === "death"; }))) { out.push({ a: a, why: LANES[voc].some(function (x) { return x.el === el; }) ? "lane" : "rune" }); return; }
       var effEl = conv ? ln.el : el;
       var h = a.hst && stage ? a.hst[stage - 1][gk] : a.h[gk];
       if (!h) { out.push({ a: a, why: "geo" }); return; }
@@ -561,7 +563,259 @@
       why: P.rotation.slice(0, 3).map(function (r) { return r.n + ": " + r.why; }).join(" · ") };
   }
 
-  var API = { _simplex: simplex, plan: plan, toHK: toHK, toRot: toRot, stats: stats, baseDmg: baseDmg, famScale: famScale, wheelStage: wheelStage, ecoCap: ecoCap, LANES: LANES, VOCS: VOCS };
+  // ---------- barra recomendada: o que um jogador monta ----------
+  // Como num preset de jogador: uma linha de teclas por elemento (Q W E R F D T; a 2.ª linha com Shift), cada tecla com um
+  // papel fixo (área, onda, ultimate, alvo forte, grande área, runa de área, burst), para os dedos não mudarem de sítio entre
+  // elementos. Knight, paladino e monk põem Multi-Action Buttons no Q (caixa) e no W (alvo único), tirados das rotações do plan.
+  var ROLE = { area: "Área", wave: "Onda / feixe", ult: "Ultimate", strong: "Alvo forte", basic: "Ataque básico", focus: "Grande área",
+    rune: "Runa de área", burst: "Burst", srune: "Runa de alvo", opener: "Abrir o boss", mabA: "Caixa", mabS: "Alvo único",
+    lure: "Monstros espalhados", spender: "Spender", extra: "Extra" };
+  var WHEN = {
+    area: "Grupos: sempre que estiver pronto.",
+    wave: "Monstros em linha à tua frente; no boss, alinha-te com ele.",
+    ult: "Boss e monstros fortes: sempre que estiver pronto.",
+    strong: "Alvo único, entre os outros ataques.",
+    basic: "Enche os segundos em que o resto está em cooldown.",
+    focus: "Só em caixas grandes (6 ou mais): 40 s de cooldown e muita mana.",
+    rune: "Enche os segundos em que os feitiços estão em cooldown.",
+    burst: "Monstros a 2–4 casas: o anel não apanha os que estão colados a ti.",
+    srune: "No boss, enche os segundos livres.",
+    opener: "Uma vez no início de cada boss: dano contínuo durante a luta.",
+    mabA: "Caixa: carrega sempre nesta; dispara a 1.ª ação que estiver pronta.",
+    mabS: "Boss ou um monstro só: carrega sempre nesta.",
+    lure: "Quando o grupo chega aos poucos e não está todo colado.",
+    spender: "Só com 5 de Harmony: o MAB não sabe a Harmony.",
+    extra: "Quando o resto está em cooldown."
+  };
+  var SRUNES = ["Sudden Death Rune", "Icicle Rune", "Stalagmite Rune", "Fireball Rune", "Holy Missile Rune", "Heavy Magic Missile Rune"];
+  function isRune(D, n) { return !!D.runes[n]; }
+  function kitAt(D, voc, L, stage, ml) {
+    var out = [];
+    Object.keys(D.ab).forEach(function (n) { var a = D.ab[n]; if (a.v.indexOf(voc) >= 0 && a.l <= L && (!a.wheel || stage >= 1)) out.push(a); });
+    Object.keys(D.runes).forEach(function (n) { var r = D.runes[n]; if (r.v.indexOf(voc) >= 0 && r.l <= L && r.ml <= ml) out.push(r); });
+    return out;
+  }
+  function roleOf(D, a) {
+    if (!a) return "extra";
+    if (isRune(D, a.n)) return a.dot ? "" : a.k === "rarea" ? "rune" : "srune";
+    if (a.dot) return "opener";
+    if (a.g2 === "Focus") return "focus";
+    if (a.g2 === "Ultimate Strikes") return "ult";
+    if (a.g2 === "Bursts of Nature") return "burst";
+    if (a.g2 === "Special") return "strong";
+    if (a.g2 === "Great Beams" || a.k === "wave") return "wave";
+    if (a.k === "chain" || a.k === "tarea" || a.k === "self") return "area";
+    return "basic";
+  }
+  function roleVal(a, role) {
+    var h = a.h || {}, bp = a.bp * (a.x || 1);
+    if (role === "area" || role === "focus" || role === "rune") return bp * Math.max(h.caixa || 0, h.espalhados || 0);
+    if (role === "wave") return bp * Math.max(h.party || 0, h.boss_r || 0) / Math.max(1, a.cd / 4);
+    if (role === "burst") return bp * (h.espalhados || 0);
+    return bp;
+  }
+  function act(D, a) { return { n: a.n, w: isRune(D, a.n) ? "" : a.w, kind: isRune(D, a.n) ? "rune" : "spell" }; }
+  function layout(D, opt) {
+    var voc = opt.voc, L = Math.max(1, opt.level | 0), mage = voc === "sorcerer" || voc === "druid";
+    var st = stats(voc, L, opt.ml, opt.skill, opt.gear), stage = opt.wheel != null ? opt.wheel : wheelStage(L);
+    var K = kitAt(D, voc, L, stage, st.ml);
+    var base = { voc: voc, level: L, ml: opt.ml, skill: opt.skill, gear: opt.gear, shield: opt.shield, eff: opt.eff, wheel: opt.wheel, budget: "max" };
+    var memo = {}, P = function (scen, lane, budget) { var k = scen + "|" + lane + "|" + (budget || "max");
+      return memo[k] || (memo[k] = plan(D, Object.assign({}, base, { scen: scen, lane: lane || null, budget: budget || "max" }))); };
+    // linhas: os elementos da vocação, o que dá mais dano em caixa primeiro; no máximo duas (a 2.ª com Shift)
+    var lanes = LANES[voc].map(function (ln) { var p = P("caixa", ln.k); return { ln: ln, dps: p.empty ? 0 : p.econ.dps }; })
+      .filter(function (x) { return x.dps > 0; }).sort(function (a, b) { return b.dps - a.dps; }).slice(0, 2);
+    var rows = [], used = {};
+    var best = function (role, ok) {
+      var c = K.filter(function (a) { return roleOf(D, a) === role && ok(a); });
+      c.sort(function (a, b) { return roleVal(b, role) - roleVal(a, role) || (a.gp || 0) - (b.gp || 0) || b.l - a.l; });
+      return c[0] || null;
+    };
+    lanes.forEach(function (x, ri) {
+      var ln = x.ln, pre = ri ? "Shift+" : "", keys = [];
+      var put = function (k, role, a, mab) { if (!a && !mab) return;
+        keys.push({ k: pre + k, role: role, label: ROLE[role] || ROLE.extra, a: a ? act(D, a) : null, mab: mab || null, when: WHEN[role] || WHEN.extra }); };
+      if (mage) {
+        var inLane = function (a) { return a.el === ln.el; };
+        put("Q", "area", best("area", inLane)); put("W", "wave", best("wave", inLane)); put("E", "ult", best("ult", inLane));
+        var s = best("strong", inLane); put("R", s ? "strong" : "basic", s || best("basic", inLane));
+        put("F", "focus", best("focus", inLane)); put("D", "rune", best("rune", inLane) || (ri ? null : best("rune", function () { return true; })));
+        put("T", "burst", best("burst", inLane));
+      } else {
+        var pc = P("caixa", ln.k), pb = P("boss", ln.k), pe = P("espalhados", ln.k);
+        var m1 = function (p) { return p.empty ? null : p.mab.mabs[0] || null; };
+        var sig = function (mm) { return mm ? mm.acts.map(function (a) { return a.n; }).join("|") : ""; };
+        var mA = m1(pc), mS = m1(pb), mE = m1(pe);
+        if (mA) put("Q", "mabA", null, mA);
+        if (mS && sig(mS) !== sig(mA)) put("W", "mabS", null, mS);
+        var spells = function (mm) { return mm ? mm.acts.filter(function (a) { return a.kind !== "rune"; }).map(function (a) { return a.n; }).sort().join("|") : ""; };
+        if (mE && spells(mE) !== spells(mA) && spells(mE) !== spells(mS)) put("E", "lure", null, mE);
+        var have = {}; keys.forEach(function (k) { k.mab.acts.forEach(function (a) { have[a.n] = 1; }); });
+        var extra = [];
+        [pc, pb, pe].forEach(function (p) { if (p.empty) return;
+          p.mab.keys.forEach(function (kk) { if (!have[kk.n]) { have[kk.n] = 1; extra.push({ role: "spender", a: D.ab[kk.n] }); } });
+          p.mab.mabs.slice(1).forEach(function (mm) { mm.acts.forEach(function (a) { if (!have[a.n] && a.kind !== "rune") { have[a.n] = 1; extra.push({ role: roleOf(D, D.ab[a.n]), a: D.ab[a.n] }); } }); });
+        });
+        ["R", "F", "D", "T"].forEach(function (k, i) { var e = extra[i]; if (e && e.a) put(k, e.role, e.a); });
+      }
+      keys.forEach(function (k) { (k.mab ? k.mab.acts : [k.a]).forEach(function (a) { used[a.n] = 1; }); });
+      rows.push({ lane: ln.k, el: ln.el, t: ln.n, main: !ri, keys: keys });
+    });
+    // teclas comuns às linhas: runa de alvo (G) e abertura do boss (H)
+    var common = [];
+    if (mage || voc === "paladin") {
+      var sr = null; SRUNES.forEach(function (n) { var r = D.runes[n]; if (!sr && r && r.v.indexOf(voc) >= 0 && r.l <= L && r.ml <= st.ml && (n === "Sudden Death Rune" || lanes.some(function (x) { return x.ln.el === r.el; }))) sr = r; });
+      if (sr && !used[sr.n]) common.push({ k: "G", role: "srune", label: ROLE.srune, a: act(D, sr), mab: null, when: WHEN.srune });
+    }
+    var dot = K.filter(function (a) { return a.dot && !isRune(D, a.n) && !used[a.n] && lanes.some(function (x) { return x.ln.el === a.el; }); }).sort(function (a, b) { return b.bp - a.bp; })[0];
+    if (dot) common.push({ k: "H", role: "opener", label: ROLE.opener, a: act(D, dot), mab: null, when: WHEN.opener });
+    // como jogar: as rotações do motor ditas em teclas
+    var keyOf = {}; rows.concat([{ keys: common }]).forEach(function (r) { r.keys.forEach(function (k) { (k.mab ? k.mab.acts : [k.a]).forEach(function (a) { if (!keyOf[a.n]) keyOf[a.n] = k.k; }); }); });
+    var lane0 = lanes.length ? lanes[0].ln.k : null, how = [];
+    var seqTxt = function (p) { var seen = {}, out = [];
+      p.rotation.forEach(function (r) { var k = keyOf[r.n]; if (k && !seen[k] && r.share >= 3) { seen[k] = 1; out.push(k); } });
+      return out.join(" › "); };
+    var hasH = common.some(function (k) { return k.k === "H"; });
+    if (lane0 && !mage) {
+      var r0 = rows[0].keys, kA = r0.filter(function (k) { return k.role === "mabA"; })[0], kS = r0.filter(function (k) { return k.role === "mabS"; })[0] || kA;
+      var sp = r0.filter(function (k) { return k.role === "spender"; }).map(function (k) { return k.k; });
+      var pcN = P("caixa", lane0), pbN = P("boss", lane0);
+      if (kA) how.push({ t: "Caixa", txt: "carrega sempre no " + kA.k + (sp.length ? "; " + sp.join(" e ") + " quando tiveres 5 de Harmony" : "") + "." });
+      if (kS) how.push({ t: "Boss", txt: (hasH ? "H ao começar, depois " : "") + "carrega sempre no " + kS.k + "." });
+      if (!pcN.empty) how.push({ t: "Gasto", txt: "≈ " + Math.round(pcN.econ.gpH / 1000) + "k gp/h em caixa" + (pbN.empty ? "." : ", ≈ " + Math.round(pbN.econ.gpH / 1000) + "k gp/h no boss.") });
+      if (lanes.length > 1) how.push({ t: "Shift", txt: "a 2.ª linha é para quem resiste a " + ELN[lanes[0].ln.el] + ": mesma tecla, mesmo papel." });
+    }
+    if (lane0 && mage) {
+      var pc0 = P("caixa", lane0), pb0 = P("boss", lane0), pec = P("caixa", lane0, "eco");
+      if (!pc0.empty && seqTxt(pc0)) how.push({ t: "Caixa", txt: seqTxt(pc0) + ": carrega por esta ordem; se uma estiver em cooldown, passa à seguinte." });
+      if (!pb0.empty && seqTxt(pb0)) how.push({ t: "Boss", txt: (hasH ? "H ao começar, depois " : "") + seqTxt(pb0) + ", a 2–3 casas e alinhado com ele." });
+      if (!pc0.empty) how.push({ t: "Gasto", txt: "≈ " + Math.round(pc0.econ.gpH / 1000) + "k gp/h em caixa" + (pb0.empty ? "" : ", ≈ " + Math.round(pb0.econ.gpH / 1000) + "k gp/h no boss") +
+        (pec.empty || pec.econ.gpH >= pc0.econ.gpH * 0.85 || !seqTxt(pec) ? "." : ". Para poupar (≈ " + Math.round(pec.econ.gpH / 1000) + "k gp/h): " + seqTxt(pec) + ".") });
+      if (lanes.length > 1) how.push({ t: "Shift", txt: "a 2.ª linha é para quem resiste a " + ELN[lanes[0].ln.el] + ": mesma tecla, mesmo papel." });
+      // sorcerer com stance: os feitiços da outra linha saem convertidos no elemento da principal, por isso entram na rotação dela
+      var stc = !pc0.empty && pc0.stance[0];
+      if (voc === "sorcerer" && stc && how.some(function (h) { return /Shift\+/.test(h.txt) && h.t !== "Shift"; }))
+        how.push({ t: "Stance", txt: "com " + stc.n + " (" + stc.w + ") ligado, as teclas com Shift a seguir a uma de " + ELN[lanes[0].ln.el] + " também saem em " + ELN[lanes[0].ln.el] + ": por isso aparecem na rotação." });
+    }
+    var p0 = lane0 ? P("caixa", lane0) : null;
+    return { voc: voc, level: L, rows: rows, common: common, how: how, stance: p0 && !p0.empty ? p0.stance : [],
+      stats: p0 && !p0.empty ? p0.stats : { ml: st.ml, mlBase: st.mlBase, mlGear: st.gearMl, mlSrc: st.mlSrc, skill: st.sk, skillBase: st.skBase, skillGear: st.gearSk, skSrc: st.skSrc, wheel: stage }, potion: p0 && !p0.empty && p0.econ.potion ? p0.econ.potion.n : null };
+  }
+
+  // ---------- rever a barra do jogador (lida do clientoptions.json do Tibia, no browser) ----------
+  // user = [{k: "Q", acts: [{w: "exevo fur tera"} | {item: "Ultimate Mana Potion"}]}]. Dicas curtas, as mais importantes primeiro.
+  var SPIRIT = { "Great Spirit Potion": 1, "Ultimate Spirit Potion": 1 };
+  function review(D, opt, user) {
+    var Lr = layout(D, opt), voc = opt.voc, L = Math.max(1, opt.level | 0), tips = [];
+    var W2N = {}; Object.keys(D.ab).forEach(function (n) { if (D.ab[n].v.indexOf(voc) >= 0) W2N[D.ab[n].w.toLowerCase()] = D.ab[n]; });
+    var norm = function (s) { return String(s || "").toLowerCase().replace(/\s*".*$/, "").replace(/\s+/g, " ").trim(); };
+    var abOf = function (x) { return x.w ? W2N[norm(x.w)] || null : x.item ? D.runes[x.item] || null : null; };
+    var uniq = function (l) { return l.filter(function (k, i) { return l.indexOf(k) === i; }); };
+    var has = {}, items = {};
+    user.forEach(function (u) { u.acts.forEach(function (x) { var a = abOf(x); if (a) (has[a.n] = has[a.n] || []).push(u.k); if (x.item) (items[x.item] = items[x.item] || []).push(u.k); }); });
+    var lanesEl = LANES[voc].map(function (x) { return x.el; });
+    var nm = function (n) { return n.replace(/ Rune$/, ""); };
+    var recKeys = []; Lr.rows.forEach(function (r) { r.keys.forEach(function (k) { recKeys.push(k); }); }); Lr.common.forEach(function (k) { recKeys.push(k); });
+    var recMabs = recKeys.filter(function (k) { return k.mab; });
+    var userMabs = user.filter(function (u) { return u.acts.map(abOf).filter(Boolean).length >= 2; });
+    var covered = {};   // feitiços já tratados numa dica de MAB
+    // 1) Multi-Action Buttons: um elemento por MAB e a ordem certa (a 1.ª ação pronta é a que sai)
+    var used = {};
+    userMabs.forEach(function (u) {
+      var abs = u.acts.map(abOf).filter(Boolean), els = uniq(abs.filter(function (a) { return lanesEl.indexOf(a.el) >= 0; }).map(function (a) { return a.el; }));
+      var mixed = els.length > 1 && voc !== "sorcerer";
+      // o MAB recomendado mais parecido (do mesmo elemento que a 1.ª ação)
+      var el0 = (abs.filter(function (a) { return lanesEl.indexOf(a.el) >= 0; })[0] || abs[0]).el;
+      var cands = recMabs.filter(function (k) { return !used[k.k] && Lr.rows.some(function (r) { return r.el === el0 && r.keys.indexOf(k) >= 0; }); });
+      var score = function (k) { return k.mab.acts.filter(function (a) { return abs.some(function (b) { return b.n === a.n; }); }).length; };
+      var rec = cands.sort(function (a, b) { return score(b) - score(a); })[0];
+      var mine = abs.map(function (a) { return a.n; }).join(" › ");
+      if (mixed) tips.push({ t: "warn", txt: u.k + ": este MAB junta " + els.map(function (e) { return ELN[e]; }).join(" e ") + ". Se a criatura resistir a um, metade dos toques perde força." +
+        (rec ? " Para " + ELN[el0] + ": " + rec.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + " (" + rec.label.toLowerCase() + ")." : "") });
+      else if (rec && score(rec) >= 1 && rec.mab.acts.map(function (a) { return a.n; }).join(" › ") !== mine) {
+        var add = rec.mab.acts.filter(function (a) { return !abs.some(function (b) { return b.n === a.n; }); }).map(function (a) { return nm(a.n); });
+        tips.push({ t: "order", txt: u.k + ": " + rec.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + "." + (add.length ? " Junta " + add.join(" e ") + "." : "") +
+          " O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente" + (rec.mab.acts.some(function (a) { return a.kind === "rune"; }) ? " e a runa fica no fim." : ".") });
+      }
+      if (rec) { used[rec.k] = 1; rec.mab.acts.forEach(function (a) { covered[a.n] = 1; }); }
+    });
+    // MABs recomendados sem nada parecido na barra do jogador
+    if (voc !== "sorcerer" && voc !== "druid") recMabs.forEach(function (k) {
+      if (used[k.k] || (k.role !== "mabA" && k.role !== "mabS")) return;
+      if (k.mab.acts.every(function (a) { return covered[a.n]; })) return;
+      tips.push({ t: "add", txt: "Cria um MAB para " + k.label.toLowerCase() + " (" + k.k.replace("Shift+", "Shift + ") + " na barra recomendada): " + k.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + ". " + k.when });
+      k.mab.acts.forEach(function (a) { covered[a.n] = 1; });
+    });
+    // 2) runas de área de um elemento que as tuas linhas não usam
+    var badRune = false;
+    Object.keys(items).forEach(function (n) { var r = D.runes[n]; if (!r || r.k !== "rarea" || lanesEl.indexOf(r.el) >= 0) return;
+      var alt = Object.keys(D.runes).map(function (k) { return D.runes[k]; }).filter(function (x) { return x.k === "rarea" && lanesEl.indexOf(x.el) >= 0 && x.l <= L && x.v.indexOf(voc) >= 0; }).sort(function (a, b) { return a.gp - b.gp; });
+      if (!alt.length) return; badRune = true;
+      tips.push({ t: "tip", txt: uniq(items[n]).join(", ") + ": " + n + " é de " + ELN[r.el] + ". Põe a runa do elemento de cada linha: " + alt.map(function (x) { return nm(x.n) + " (" + ELN[x.el] + ", " + x.gp + " gp)"; }).join(" e ") +
+        (alt[0].gp < r.gp ? "; a de " + ELN[alt[0].el] + " ainda sai mais barata do que a de " + ELN[r.el] + " (" + r.gp + " gp)" : "") + ". Fica com a de " + ELN[r.el] + " só para criaturas fracas a " + ELN[r.el] + "." });
+      alt.forEach(function (x) { covered[x.n] = 1; });
+    });
+    // 3) o que a barra recomendada tem e a tua não (fora dos MABs já tratados)
+    recKeys.forEach(function (k) { (k.mab ? k.mab.acts : [k.a]).forEach(function (a) {
+      if (has[a.n] || items[a.n] || covered[a.n]) return; covered[a.n] = 1;
+      var ab = D.ab[a.n] || D.runes[a.n];
+      tips.push({ t: "add", txt: "Falta " + nm(a.n) + (ab.w && !isRune(D, a.n) ? " (" + ab.w + ")" : "") + " — " + k.label.toLowerCase() + ". " + WHEN[roleOf(D, ab)] }); }); });
+    // 4) o mesmo feitiço em duas teclas soltas, ou solto e num MAB
+    Object.keys(has).forEach(function (n) { if (isRune(D, n)) return;
+      var hit = function (u) { return u.acts.some(function (x) { var a = abOf(x); return a && a.n === n; }); };
+      var solo = uniq(user.filter(function (u) { return u.acts.length === 1 && hit(u); }).map(function (u) { return u.k; }));
+      var inMab = uniq(user.filter(function (u) { return u.acts.length > 1 && hit(u); }).map(function (u) { return u.k; }));
+      if (solo.length && inMab.length) tips.push({ t: "info", txt: n + " já está no MAB " + inMab.join(", ") + ": a tecla " + solo.join(", ") + " fica livre para outra coisa." });
+      else if (solo.length > 1) tips.push({ t: "info", txt: n + " está em " + solo.join(" e ") + ": uma tecla chega." }); });
+    // 5) poção de mana: a mais barata que dá para a rotação de caixa com folga (uma poção a cada 3 s ou mais; as curas também gastam mana)
+    var potsOk = D.pots.filter(function (p) { return p[2] <= L && p[5].indexOf(VOCK[voc]) >= 0; });
+    var mine = potsOk.filter(function (p) { return items[p[1]]; });
+    var pc = plan(D, { voc: voc, level: L, ml: opt.ml, skill: opt.skill, gear: opt.gear, shield: opt.shield, wheel: opt.wheel, scen: "caixa", budget: "max" });
+    if (!mine.length) tips.push({ t: "warn", txt: "Não encontrei nenhuma poção de mana na barra." });
+    else if (!pc.empty && pc.econ.needS > 0) {
+      var need = pc.econ.needS, share = D.potShare[voc] || 1;
+      var fits = potsOk.filter(function (q) { return !SPIRIT[q[1]] && q[3] * share >= need * 3; }).sort(function (a, b) { return a[4] / a[3] - b[4] / b[3]; })[0];
+      var gpH = function (q) { return need * 3600 / q[3] * q[4]; };
+      var dear = mine.filter(function (p) { return !SPIRIT[p[1]] && fits && p[1] !== fits[1] && gpH(fits) < gpH(p) * 0.9; });
+      if (dear.length && !items[fits[1]]) {
+        var worst = dear.sort(function (a, b) { return gpH(b) - gpH(a); })[0];
+        tips.push({ t: "tip", txt: "Poções: o ataque em caixa gasta ≈ " + Math.round(need) + " de mana/s depois do mana leech. " + fits[1] + " (" + fits[4] + " gp) chega com folga e poupa até ≈ " +
+          Math.round((gpH(worst) - gpH(fits)) / 1000) + "k gp/h face a " + dear.map(function (p) { return p[1] + " (" + p[4] + " gp)"; }).join(" e ") + ". Deixa a mais forte numa tecla para quando apertar." });
+      }
+    }
+    var rank = { warn: 0, add: 1, order: 2, tip: 3, info: 4 };
+    tips.sort(function (a, b) { return rank[a.t] - rank[b.t]; });
+    return { layout: Lr, tips: tips, known: Object.keys(has).length };
+  }
+
+  // clientoptions.json do Tibia → barra do jogador. Só lê hotkeyOptions (o resto do ficheiro não sai do browser nem é guardado).
+  // Escolhe o preset com o nome da personagem; se não houver, o que está ativo no cliente.
+  var SHIFTN = { "!": "1", "\"": "2", "@": "2", "#": "3", "$": "4", "%": "5" };
+  function readBars(D, json, name) {
+    var h = json && json.hotkeyOptions, sets = h && h.hotkeySets;
+    if (!sets) return null;
+    var names = Object.keys(sets), want = String(name || "").toLowerCase();
+    var set = names.filter(function (n) { return n.toLowerCase() === want; })[0] || (sets[h.currentHotkeySetName] ? h.currentHotkeySetName : names[0]);
+    var hs = sets[set] || {}, keyOf = {};
+    (hs.chatOff || hs.chatOn || []).forEach(function (b) {
+      var m = /^TriggerActionButton_(\d+)\.(\d+)$/.exec(b.actionsetting && b.actionsetting.action || "");
+      if (m && b.keysequence) keyOf[m[1] + "." + m[2]] = keyOf[m[1] + "." + m[2]] || b.keysequence.replace(/^Shift\+(.)$/, function (x, c) { return "Shift+" + (SHIFTN[c] || c); });
+    });
+    var one = function (x) {
+      if (x.chatText) return { w: x.chatText };
+      if (x.useObject != null && x.useType !== "Equip") return D.oid[String(x.useObject)] ? { item: D.oid[String(x.useObject)] } : null;
+      return null;
+    };
+    var user = [];
+    ((hs.actionBarOptions || {}).mappings || []).forEach(function (m) {
+      var s = m.actionsetting || {}, acts = (s.multiActions || [s]).map(one).filter(Boolean);
+      if (acts.length) user.push({ k: keyOf[m.actionBar + "." + m.actionButton] || "sem tecla", bar: m.actionBar, btn: m.actionButton, acts: acts });
+    });
+    user.sort(function (a, b) { return a.bar - b.bar || a.btn - b.btn; });
+    return { set: set, sets: names, user: user };
+  }
+
+  var API = { _simplex: simplex, plan: plan, layout: layout, review: review, readBars: readBars, toHK: toHK, toRot: toRot, stats: stats, baseDmg: baseDmg, famScale: famScale, wheelStage: wheelStage, ecoCap: ecoCap, LANES: LANES, VOCS: VOCS };
   if (typeof module !== "undefined" && module.exports) module.exports = API;
   else root.GrimRot = API;
 })(typeof window !== "undefined" ? window : this);

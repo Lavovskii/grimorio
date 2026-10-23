@@ -147,6 +147,27 @@ cooldown. O `buildMab` passa a rotação a MABs:
 
 A simulação de carregar nas MABs por ordem dá 86–100% do ótimo do LP (às vezes mais, porque o enchimento gasta acima do orçamento).
 
+## Barra recomendada e comparador (o que o site mostra)
+`GrimRot.layout(D, {voc, level, ml, skill, gear, shield})` monta a barra como um jogador: uma linha de teclas por elemento (os dois
+melhores em caixa; a 2.ª com Shift), cada tecla sempre com o mesmo papel, para os dedos não mudarem de sítio:
+- magos: Q área (Forked/Death Echo), W onda ou feixe, E ultimate, R alvo forte (ou o básico), F grande área (focus), D runa de área do
+  elemento, T Burst (com a Wheel);
+- knight, paladino e monk: Q MAB de caixa, W MAB de alvo único e E MAB de monstros espalhados (os MAB 1 do `plan` em cada cenário,
+  sem repetir), R F D T o que sobra (spenders do monk, extras);
+- teclas comuns: G runa de alvo (SD, ou a do elemento) e H o DoT de abertura do boss.
+Devolve `{rows:[{el, main, keys:[{k, role, label, a|mab, when}]}], common, how, stance, stats, potion}`. O `how` diz as rotações
+do `plan` em teclas (caixa, boss, gasto e a versão económica).
+
+As runas seguem a linha: no `plan`, uma runa de outro elemento fica de fora (a Sudden Death entra em todas, menos no sorcerer, que
+tem a linha de morte).
+
+`GrimRot.readBars(D, clientoptions, nome)` lê só o `hotkeyOptions` do ficheiro do Tibia (`%LOCALAPPDATA%\Tibia\packages\Tibia\conf\
+clientoptions.json`): `mappings` (ações por botão; `multiActions` para MAB; `useObject` pelo id do cliente em `D.oid`, sem os Equip)
+e `chatOff` (tecla → `TriggerActionButton_barra.botão`). `GrimRot.review(D, opt, user)` compara com a barra recomendada:
+MAB com dois elementos (e o MAB certo), MAB pela ordem errada ou sem uma ação, MABs que faltam, runa de área de um elemento que as
+linhas não usam (e a mais barata), feitiços recomendados que faltam, o mesmo feitiço em duas teclas, e a poção de mana mais barata
+que dá para a rotação de caixa com folga (uma poção a cada 3 s ou mais; as Spirit ficam de fora porque também curam).
+
 ## Responde ao nível
 - O kit muda com o nível e com o estágio da Wheel (pontos = nível − 50: estágio 1 a 300, 2 a 550, 3 a 1050). Os feitiços da
   Wheel mudam com o estágio:
@@ -169,12 +190,6 @@ A simulação de carregar nas MABs por ordem dá 86–100% do ótimo do LP (às 
 - Cooldown do Mystic Repulse: o spells.json diz 8 s e as notas oficiais dizem 12 s. Usam-se 12 s e base power 85 (a
   TibiaWiki ainda tem 72).
 
-## Ligar ao site (o que falta)
-1. `<script src="shared/rotacoes.js?v=…">` no index.html, e `dload("rotacoes")` quando a página das hotkeys ou a ficha da
-   hunt abrir.
-2. Hotkeys da vocação: `GrimRot.plan(D, {voc: C().voc, level: C().level, ml: C().ml, skill: C().skill, scen, budget})`,
-   com um seletor de cenário (Boss, Caixa, Espalhados, Party) e outro de gasto (Máximo, Económico). Desenha-se com o mesmo
-   HTML das hotkeys de hoje (`toHK`).
-3. Ficha da hunt: o mesmo com `eff: G.places[pid].eff`, e `budget` pode vir do lucro/h da linha do TibiaPal.
-4. Imbuements: `price: k => buyOf(k, mundo).v` (preços do Market) para o custo do Void.
-5. Textos já em PT-PT. O i18n do site traduz o DOM, por isso não é preciso nada à parte.
+## Ligar ao site
+Feito: a página `#rotacao` mostra o `layout`, o 'Como jogar' e o comparador (ver `_dev/GRIMORIO.md`). Falta a ficha da hunt
+(`eff: G.places[pid].eff`) e os preços do Market nos imbuements (`price: k => buyOf(k, mundo).v`).

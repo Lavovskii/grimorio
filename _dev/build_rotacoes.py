@@ -223,6 +223,16 @@ def build():
     # ataque automático com munição de área (Shatterstorm, Diamond e as elementais: 13 casas = losango de raio 2 no alvo)
     ammo13 = [(x, y, 1.0) for x in range(-2, 3) for y in range(-2, 3) if abs(x) + abs(y) <= 2]
     auto = {'area13': geo('tarea', ammo13, None, False, False)}
+    # ids do cliente (os useObject do clientoptions.json) → nome, para o site ler a barra do jogador sem o items.json
+    oid = {}
+    for n in list(runes) + [p[1] for p in POTS] + ['Health Potion', 'Strong Health Potion', 'Great Health Potion',
+            'Ultimate Health Potion', 'Supreme Health Potion', 'Great Spirit Potion', 'Ultimate Spirit Potion']:
+        for i in (ITEMS.get(n.lower()) or {}).get('ids') or []:
+            oid[str(i)] = n
+    # runas que o items.json não tem (ids do cliente na TibiaWiki)
+    for i, n in ((3174, 'Light Magic Missile Rune'), (3198, 'Heavy Magic Missile Rune'), (3179, 'Stalagmite Rune'),
+                 (3189, 'Fireball Rune'), (3182, 'Holy Missile Rune')):
+        oid.setdefault(str(i), n)
     return {
         'v': 1,
         'fontes': 'data/spells.json do Grimório + TibiaWiki e notas oficiais das Vocation Adjustments 2026 '
@@ -230,7 +240,7 @@ def build():
         'scen': list(SCEN),
         'ab': ab, 'runes': runes, 'auto': auto,
         'pots': POTS, 'potShare': POT_SHARE,
-        'imbFee': IMB_FEE, 'imbs': imbs,
+        'imbFee': IMB_FEE, 'imbs': imbs, 'oid': oid,
     }
 
 def dump(D):
