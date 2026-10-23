@@ -42,6 +42,10 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   prioridade, economia e imbuements), `rxGear(c)` (bónus de ML, ML por elemento, skill e ataque do set da personagem, ou do `bisSet`
   se estiver vazio), `rxPlan(c)`; o `renderHotkeys` só desenha Sobreviver/Stances/Utilidade, sem tecla fixa. O `vd.rot` (presets
   do TibiaPal) fica no G mas já não aparece. O motor carrega no `<head>` (`shared/rotacoes.js?v=`).
+  A tua barra (r13): `c.bar = {tecla: {t:'mab'|'act', label, acts:[{n,w,kind}], scen}}` (teclas `RXKEYS`: 1–0, F1–F12, Shift+, Ctrl+).
+  As sugestões levam 'Pôr na barra' (`rxAddBtn` → `RXADD`, ids `rxm` MABs, `rxk` teclas à parte, `hkb` Sobreviver/Stances, `hku`
+  Utilidade); a tecla escolhe-se no `openSheet(rxPickHTML(...))` (ocupada = troca); `rxFill` ('Começar/Completar com a sugestão')
+  só usa teclas livres e não põe a Utilidade; 'Copiar o esquema' usa o `[data-copy]`. `rxBarHTML`/`rxRefreshBar` em `#rxBarHost`.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
