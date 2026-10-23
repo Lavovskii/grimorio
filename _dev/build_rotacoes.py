@@ -28,8 +28,9 @@ VOCS = ['knight', 'paladin', 'sorcerer', 'druid', 'monk']
 FIX = {
     # notas oficiais 16/06/2026: "Mystic Repulse: base power 72 → 85, cooldown 20 → 12" (o spells.json tem cd 8)
     'Mystic Repulse': {'bp': 85, 'cd': 12},
-    # sem base power publicado (TibiaWiki em branco): assumido igual ao Divine Barrage, o par holy (mesma mana e cooldown)
-    'Ethereal Barrage': {'bp': 130, 'est': 1},
+    # a TibiaWiki não publica o base power; 40 é o dos dados de feitiços do cliente 15.25 usados pelo Crystal Server
+    # (zimbadev/crystalserver, data/scripts/spells/attack/ethereal_barrage.lua), cujos outros valores batem com a TibiaWiki
+    'Ethereal Barrage': {'bp': 40, 'est': 1},
 }
 
 # ---------- mecânicas que o spells.json não tem ----------
@@ -219,12 +220,15 @@ def build():
         d = dict(v)
         d['src'] = [[n, q, npcval(n)] for n, q in v['src']]
         imbs[k] = d
+    # ataque automático com munição de área (Shatterstorm, Diamond e as elementais: 13 casas = losango de raio 2 no alvo)
+    ammo13 = [(x, y, 1.0) for x in range(-2, 3) for y in range(-2, 3) if abs(x) + abs(y) <= 2]
+    auto = {'area13': geo('tarea', ammo13, None, False, False)}
     return {
         'v': 1,
         'fontes': 'data/spells.json do Grimório + TibiaWiki e notas oficiais das Vocation Adjustments 2026 '
                   '(16/06/2026 e 07/07/2026), outubro de 2026',
         'scen': list(SCEN),
-        'ab': ab, 'runes': runes,
+        'ab': ab, 'runes': runes, 'auto': auto,
         'pots': POTS, 'potShare': POT_SHARE,
         'imbFee': IMB_FEE, 'imbs': imbs,
     }
