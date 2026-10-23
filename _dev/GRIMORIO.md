@@ -36,6 +36,8 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   começa por `.git` (a pasta pública é um clone do repositório; `RewriteRule` e, sem mod_rewrite, `RedirectMatch`). `_dev/` tem o seu `.htaccess` (403, também para os `*.json`,
   que o `<FilesMatch "\.json$">` da raiz deixaria ler).
   `.editorconfig`: UTF-8 e fins de linha LF (o `.gitattributes` tem `* -text`: o Git guarda os ficheiros tal e qual).
+- Rotações (r12, ainda não ligado ao index.html): `shared/rotacoes.js` (`GrimRot.plan`, `toHK`, `toRot`) + `data/rotacoes.json`
+  (`_dev/build_rotacoes.py`) + teste `node _dev/rotacoes_test.mjs`. Modelo, regras e como ligar ao site: `_dev/ROTACOES.md`.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
