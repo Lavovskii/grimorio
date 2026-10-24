@@ -658,6 +658,12 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 /* r13: rotação e hotkeys (motor shared/rotacoes.js) */
 .hk.nok{grid-template-columns:minmax(0,1fr)}
 .hkf.nok{grid-template-columns:auto minmax(0,1fr)}
+.img-g h4{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.img-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.img-t{display:grid;gap:3px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.img-t b{font-size:18px}
+.img-t b small{font-size:13px;font-weight:500;color:var(--muted)}
+.ok-t{color:var(--ok)}
 .bs-top{display:grid;gap:10px;padding:14px 16px;margin-bottom:14px}
 .bs-list{display:grid;gap:8px}
 .bs-r{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px 12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
@@ -3242,7 +3248,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <!-- EQUIP -->
     <section class="panel" data-p="equip">
       <div class="ph"><span class="eyebrow">Equipamento</span><h2>Sets e inventário</h2><p id="equipLead"></p></div>
-      <div class="eqtabs" id="eqTabs" role="tablist" aria-label="Vista do equipamento"><button type="button" role="tab" data-eqv="sets" aria-selected="true">Os meus sets</button><button type="button" role="tab" data-eqv="inv" aria-selected="false">Inventário <span class="n" id="eqInvN"></span></button><button type="button" role="tab" data-eqv="ref" aria-selected="false">Referência por nível</button></div>
+      <div class="eqtabs" id="eqTabs" role="tablist" aria-label="Vista do equipamento"><button type="button" role="tab" data-eqv="sets" aria-selected="true">Os meus sets</button><button type="button" role="tab" data-eqv="imbu" aria-selected="false">Imbuements</button><button type="button" role="tab" data-eqv="inv" aria-selected="false">Inventário <span class="n" id="eqInvN"></span></button><button type="button" role="tab" data-eqv="ref" aria-selected="false">Referência por nível</button></div>
       <div class="eqv" data-eqview="sets">
       <div class="card setcard">
         <div class="settabs" id="setTabs" role="tablist" aria-label="Sets"></div>
@@ -3281,28 +3287,9 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
         </details>
       </div>
       </div>
-      <div class="eqv" data-eqview="ref" hidden>
-      <div class="sec" style="margin-top:0"><h3>Referência do TibiaPal (do teu nível até +110)</h3><div class="scroll-x card" style="padding:4px 8px"><table id="pathTable"></table></div><p class="note">O que o TibiaPal recomenda por nível para a tua vocação. Stats: base de dados do cliente oficial 15.25 e do projeto Canary; itens do verão de 2026 (Moonsilver, Flamingo) ainda sem stats.</p></div>
-      </div>
-    </section>
+      <div class="eqv" data-eqview="imbu" hidden>
+      <p class="small muted" id="imLead" style="margin:0 0 10px"></p>
 
-    <!-- CHARMS -->
-    <section class="panel" data-p="charms">
-      <div class="ph"><span class="eyebrow">Progresso</span><h2>Charms</h2><p id="charmLead"></p></div>
-      <div class="grid2">
-        <div class="card"><h3 style="font-size:20px">Ordem para desbloquear</h3><div class="ch-prog" id="charmProg"></div><ul class="check" id="charmList"></ul></div>
-        <div style="display:grid;gap:14px;align-content:start">
-          <div class="card"><h3 style="font-size:20px">Minors (echoes)</h3><div class="ch-prog" id="minorProg"></div><ul class="check" id="minorList"></ul></div>
-          <div class="card"><h4>Onde se aplicam</h4><ol class="small" style="margin:6px 0 0;padding-left:20px;display:grid;gap:4px"><li>Cyclopedia → separador <b>Charms</b>.</li><li>Desbloqueia ou sobe o charm.</li><li>Escolhe a criatura: majors exigem o Bestiary completo; minors só o estágio 2.</li></ol><p class="small muted" style="margin-top:6px">Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.</p></div>
-          <div class="callout"><h4>Como ganhar charm points</h4><p class="small">Completa entradas do Bestiary: Harmless 1, Trivial 5, Easy 15, Medium 25, Hard 50, Challenging 100 pontos. Os majors pedem a criatura completa; os minors chegam com o estágio 2. Mudar um charm de criatura custa nível × 100 gp. As criaturas Very Rare completam-se com 5 kills e dão o dobro; a primeira vitória contra cada Echo Warden também dá pontos.</p></div>
-        </div>
-      </div>
-      <div class="card cm-all" id="charmAll"></div>
-    </section>
-
-    <!-- IMBUEMENTS -->
-    <section class="panel" data-p="imbu">
-      <div class="ph"><span class="eyebrow">Progresso</span><h2>Imbuements</h2><p id="imLead"></p></div>
       <div class="imtop">
         <div class="seg" id="imSets" role="tablist" aria-label="Set"></div>
         <div class="seg" id="imTier" role="group" aria-label="Nível dos imbuements"></div>
@@ -3323,6 +3310,24 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
           <tr><td><span class="chip c-death">morte</span></td><td>Lich Shroud</td><td>5% / 10%</td></tr>
           <tr><td><span class="chip c-holy">holy</span></td><td>Demon Presence</td><td>8% / 15%</td></tr>
         </tbody></table></div></div>
+      </div>
+      <div class="eqv" data-eqview="ref" hidden>
+      <div class="sec" style="margin-top:0"><h3>Referência do TibiaPal (do teu nível até +110)</h3><div class="scroll-x card" style="padding:4px 8px"><table id="pathTable"></table></div><p class="note">O que o TibiaPal recomenda por nível para a tua vocação. Stats: base de dados do cliente oficial 15.25 e do projeto Canary; itens do verão de 2026 (Moonsilver, Flamingo) ainda sem stats.</p></div>
+      </div>
+    </section>
+
+    <!-- CHARMS -->
+    <section class="panel" data-p="charms">
+      <div class="ph"><span class="eyebrow">Progresso</span><h2>Charms</h2><p id="charmLead"></p></div>
+      <div class="grid2">
+        <div class="card"><h3 style="font-size:20px">Ordem para desbloquear</h3><div class="ch-prog" id="charmProg"></div><ul class="check" id="charmList"></ul></div>
+        <div style="display:grid;gap:14px;align-content:start">
+          <div class="card"><h3 style="font-size:20px">Minors (echoes)</h3><div class="ch-prog" id="minorProg"></div><ul class="check" id="minorList"></ul></div>
+          <div class="card"><h4>Onde se aplicam</h4><ol class="small" style="margin:6px 0 0;padding-left:20px;display:grid;gap:4px"><li>Cyclopedia → separador <b>Charms</b>.</li><li>Desbloqueia ou sobe o charm.</li><li>Escolhe a criatura: majors exigem o Bestiary completo; minors só o estágio 2.</li></ol><p class="small muted" style="margin-top:6px">Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.</p></div>
+          <div class="callout"><h4>Como ganhar charm points</h4><p class="small">Completa entradas do Bestiary: Harmless 1, Trivial 5, Easy 15, Medium 25, Hard 50, Challenging 100 pontos. Os majors pedem a criatura completa; os minors chegam com o estágio 2. Mudar um charm de criatura custa nível × 100 gp. As criaturas Very Rare completam-se com 5 kills e dão o dobro; a primeira vitória contra cada Echo Warden também dá pontos.</p></div>
+        </div>
+      </div>
+      <div class="card cm-all" id="charmAll"></div>
     </section>
 
     <!-- QUESTS -->
@@ -43659,7 +43664,7 @@ const SECS = [
  {id:"inicio",t:"Início",subs:[["inicio","Início"]]},
  {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["bosses","Bosses"],["tarefas","Tarefas"]]},
  {id:"build",t:"Build",subs:[["rotacao","Rotação e hotkeys"],["wheel","Wheel"],["equip","Equipamento"]]},
- {id:"prog",t:"Progresso",subs:[["charms","Charms"],["imbu","Imbuements"],["quests","Quests"],["guias","Guias de quests","quests/"]]},
+ {id:"prog",t:"Progresso",subs:[["charms","Charms"],["quests","Quests"],["guias","Guias de quests","quests/"]]},
  {id:"wiki",t:"Wiki",subs:[["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
  {id:"mais",t:"Mais",subs:[["defesa","Defesa"],["ask","Perguntar"],["perso","Personagens"],["fontes","Fontes"]]}
 ];
@@ -43696,7 +43701,7 @@ function migrate(d){
   s.chars.forEach(c=>{ if(c.level===3000 && c.tib && +c.tib.level>3000) c.level=Math.min(LVMAX,Math.round(+c.tib.level)); });
   s.active = s.chars.some(c=>c.id===d.active) ? d.active : (s.chars[0]?s.chars[0].id:null);
   s.custom = Array.isArray(d.custom)?d.custom.filter(x=>x&&x.id&&x.n):[];
-  s.ui = Object.assign(s.ui, d.ui||{}); if(s.ui.p==="hotkeys") s.ui.p="rotacao"; /* r13 */ return s;
+  s.ui = Object.assign(s.ui, d.ui||{}); if(s.ui.p==="hotkeys") s.ui.p="rotacao"; /* r13 */ if(s.ui.p==="imbu"){ s.ui.p="equip"; s.ui.eqv="imbu"; } /* r17: os imbuements são um separador do Equipamento */ return s;
 }
 try { const r = localStorage.getItem(LS); const m = r && migrate(JSON.parse(r)); if (m) ST = m; ["grimorio-tibia-v3","grimorio-druid-v2","grimorio-druid-v1"].forEach(k=>localStorage.removeItem(k)); } catch(e){}
 const C = () => ST.chars.find(c=>c.id===ST.active) || ST.chars[0] || null;
@@ -44271,7 +44276,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   else if(t==="o") location.hash=wkHref("outfit",k);
   else if(t==="hc"||t==="ht"){ const x="#hunts/"+(t==="hc"?"cidade":"tipo")+"/"+k; if(location.hash===x) route(); else location.hash=x; } // r5-t2
   else if(t==="ch") mdVT(()=>{ go("charms"); charmFocus(k); }); // r5-t5: leva ao charm no cartão dos 25
-  else if(t==="im") mdVT(()=>go("imbu")); });
+  else if(t==="im") mdVT(()=>{ ST.ui.eqv="imbu"; go("equip"); eqView(); }); });
 function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); }
 document.addEventListener("change",e=>{ const s=e.target.closest("[data-rthome]"); if(!s) return; const c=C(); if(!c) return; c.home=s.value||""; save();
   document.querySelectorAll("[data-rt]").forEach(b=>{ const R=RTS[b.dataset.rt]; if(!R) return; const hi=R.routes.findIndex(r=>r.s===c.home); R.sel=hi>=0?hi:R.sel; R.step=null; b.innerHTML=rtInner(b.dataset.rt); drawRoute(b.dataset.rt); }); });
@@ -45006,9 +45011,9 @@ const LOOP_SVG = '<svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"
 // Comparar: o jogador escolhe o clientoptions.json do Tibia; lê-se no browser (GrimRot.readBars, só hotkeyOptions) e guarda-se
 // em c.tbar = {sets: {preset: [{k, acts:[{w}|{item}]}]}, sel} apenas as ações das teclas. GrimRot.review dá as dicas.
 let RXD=null, RXERR=false;
-function rxGear(c){
+function rxGear(c,forSet){
   ensureSets(c); rebuildIndex();
-  const my=heroSetSel(c), has=s=>s&&Object.values(s.slots||{}).some(e=>e&&BYID[e.id]), mine=has(my);
+  const my=forSet||heroSetSel(c), has=s=>s&&Object.values(s.slots||{}).some(e=>e&&BYID[e.id]), mine=has(my);
   const set=mine?my:bisSet(c), t=setTotals(set.slots), v=c.voc, L=c.level, g={ml:t.sk.ml||0, mlEl:{}, sk:0, atk:0};
   ["fire","ice","earth","energy","death","holy"].forEach(e=>{ if(t.sk["ml_"+e]) g.mlEl[e]=t.sk["ml_"+e]; });
   let skn="";
@@ -45017,7 +45022,7 @@ function rxGear(c){
   // ataque da arma = físico + elemental (G.items: atk e wel [elemento, valor]); arco/besta: + a munição do nível
   if(!isMage(c)){ const a=t.atk?(t.atk[0]||0)+(t.atk[1]&&t.atk[1][1]||0):0, am=(t.wb==="bow"||t.wb==="crossbow")?ammoAtk(t.wb,L):0; if(a||am) g.atk=a+am; }
   const sh=set.slots.shield&&BYID[set.slots.shield.id], wp=set.slots.weapon&&BYID[set.slots.weapon.id];
-  return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para o nível ${L} (BiS)`, mine, shield:!!(sh&&sh.s==="shield"&&!(wp&&wp.h2))};
+  return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para o nível ${L} (BiS)`, mine, set, shield:!!(sh&&sh.s==="shield"&&!(wp&&wp.h2))};
 }
 function rxOpt(c,gr){ return {voc:c.voc, level:c.level, gear:gr.g, ml:isMage(c)&&c.ml>0?c.ml:0, skill:!isMage(c)&&c.skill>10?c.skill:0, shield:gr.shield}; }
 const rxIc = a => a.kind==="rune"||a.kind==="item" ? `<span class="rx-ic">${itemSpr(a.n)}</span>` : sicon({k:[a.w,a.n],name:a.n,w:a.w,cls:"sm"});
@@ -46577,7 +46582,7 @@ function defImbElem(c,eff,it){
 }
 function imbOptions(it){ const o=[]; (it.it||[]).forEach(k=>{ if(k==="elem") ["e_ice","e_fire","e_earth","e_energy","e_death"].forEach(x=>o.push(x)); else o.push(k); }); return o; }
 let invShow=60;
-function eqView(){ const v=["sets","inv","ref"].includes(ST.ui.eqv)?ST.ui.eqv:"sets";
+function eqView(){ const v=["sets","imbu","inv","ref"].includes(ST.ui.eqv)?ST.ui.eqv:"sets"; if(v==="imbu") imGameLoad();
   document.querySelectorAll("[data-eqview]").forEach(x=>x.hidden=x.dataset.eqview!==v); document.querySelectorAll("#eqTabs [data-eqv]").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.eqv===v))); }
 $("eqTabs").addEventListener("click", e=>{ const b=e.target.closest("[data-eqv]"); if(!b) return; ST.ui.eqv=b.dataset.eqv; save(); eqView(); });
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-sltab]"); if(!b) return; ST.ui.sltab=b.dataset.sltab; save(); const c=C(), set=ensureSets(c); renderSlot(c,set,(ST.ui.eq||{})[c.id]||"weapon"); });
@@ -46815,9 +46820,38 @@ function setStats(set,ti){
   });
   return t;
 }
+/* r17 */ // Imbuements 'no jogo': o set com e sem imbuements no motor de rotações (GrimRot.plan, caixa e boss) dá o ganho real:
+// dano por segundo (skills dos imbuements + Strike: 10 % de chance × dano crítico), vida e mana por segundo do leech
+// (econ.leechBase × %), poções poupadas (gp/h) e o que cada proteção tira a um golpe. O RXD carrega quando o separador abre.
+let IMG_LOAD=false;
+function imGameLoad(){ if(RXD||IMG_LOAD||!window.GrimRot) return; IMG_LOAD=true; dload("rotacoes").then(d=>{ RXD=d; if(ST.ui.p==="equip") renderImbu(); }).catch(()=>{}); }
+function imGameHTML(c,set,t){
+  if(!window.GrimRot) return "";
+  if(!RXD){ imGameLoad(); return `<div class="ims img-g"><h4>No jogo</h4><p class="small muted">A calcular com a tua rotação…</p></div>`; }
+  const gr=rxGear(c,set); if(!gr.mine) return `<div class="ims img-g"><h4>No jogo</h4><p class="small muted">Põe itens no set ${esc(set.name)} (separador «Os meus sets») para veres o efeito dos imbuements na tua rotação.</p></div>`;
+  const opt=rxOpt(c,gr), g0=gr.g, g1=Object.assign({},g0), sk=t.ski||{};
+  g1.ml=(g0.ml||0)+(sk.ml||0); if(gr.skn) g1.sk=(g0.sk||0)+(sk[gr.skn]||0);
+  const run=(gear,ml,scen)=>{ const P=GrimRot.plan(RXD,Object.assign({},opt,{gear,scen,manaLeech:ml})); return P.empty?null:P; };
+  const crit=1+0.10*(t.crit||0)/100, dps=(P,k)=>P?(P.econ.dps+(P.econ.autoDps||0))*(k||1):0;
+  const rows=[];
+  ["caixa","boss"].forEach(sc=>{ const A=run(g0,0,sc), B=run(g1,(t.mana||0)/100,sc); if(!A||!B) return;
+    const d0=dps(A), d1=dps(B,crit), lb=B.econ.leechBase||0;
+    rows.push({sc, d0, d1, life:lb*(t.life||0)/100, mana:B.econ.leechS, need:B.econ.manaS, save:Math.max(0,A.econ.gpH-B.econ.gpH)}); });
+  if(!rows.length) return "";
+  const nm={caixa:"Em caixa",boss:"No boss"}, pct=(a,b)=>b>0?Math.round((a/b-1)*100):0, fee=t.imbs.length*TFEE[imTier(c)]/20;
+  const tiles=rows.map(r=>`<div class="img-t"><span class="tiny muted">${nm[r.sc]}</span>
+      <b>${r.d1>r.d0+0.5?`+${nf(r.d1-r.d0)}`:"±0"} <small>de dano/s</small></b><span class="small">${nf(r.d0)} → ${nf(r.d1)}${pct(r.d1,r.d0)?` (+${pct(r.d1,r.d0)}%)`:""}</span>
+      ${t.life?`<span class="small">vida: +${nf(r.life)}/s do life leech</span>`:""}
+      ${t.mana?`<span class="small">mana: +${nf(r.mana)}/s ${r.mana>=r.need?"(paga toda a mana da rotação)":`dos ${nf(r.need)}/s que a rotação gasta`}</span>`:""}
+      ${r.save>=500?`<span class="small ok-t">poções: −${nf(r.save/1000)}k gp/h</span>`:""}</div>`).join("");
+  const els=["fire","earth","energy","ice","death","holy","physical"].filter(e=>(t.ab[e]||0)+(t.abi[e]||0)>0);
+  const prot=els.length?`<p class="small" style="margin:8px 0 0">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(1-v/100))}</b>`; }).join(" · ")}${els.some(e=>t.abi[e])?` <span class="muted">(com os imbuements de proteção)</span>`:""}.</p>`:"";
+  const best=rows.reduce((m,r)=>Math.max(m,r.save),0);
+  return `<div class="ims img-g"><h4>No jogo <span class="tiny muted">com a tua rotação e o set ${esc(set.name)}</span></h4><div class="img-ts">${tiles}</div>${prot}
+    <p class="tiny muted" style="margin:6px 0 0">Sem imbuements → com estes imbuements. Strike: 10% dos golpes com +${t.crit||0}% de dano. Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?"isso":"parte disso"}`:""}.</p></div>`; }
 function renderImbu(){
   const c=C(), vd=VD(), set=ensureSets(c), tier=imTier(c), ti=TIERS.findIndex(x=>x[0]===tier);
-  $("imLead").textContent = `Ligados ao set do Equipamento · duram 20 h de combate.`;
+  $("imLead").textContent = `Ligados ao set do Equipamento (o mesmo dos separadores acima) · duram 20 h de combate. Muda um imbuement e o «No jogo» do resumo mostra o efeito na tua rotação.`;
   $("imSets").innerHTML = c.sets.map(s2=>`<button role="tab" data-imset="${s2.id}" aria-pressed="${s2.id===set.id}">${esc(s2.name)}</button>`).join("");
   $("imTier").innerHTML = TIERS.map(([k,t])=>`<button data-imtier="${k}" aria-pressed="${k===tier}">${t}</button>`).join("");
   // itens
@@ -46861,6 +46895,7 @@ function renderImbu(){
     ${Object.keys(t.elem).length?`<div class="ims"><h4>Dano elemental na arma</h4><div class="imlist">${Object.entries(t.elem).map(([e,v])=>`<span class="imchip" style="--imc:var(--${e})">${v}% em ${ELN[e]}</span>`).join("")}</div></div>`:""}
     ${t.vibr?`<div class="ims"><h4>Outros</h4><div class="imlist"><span class="imchip" style="--imc:var(--ok)">${t.vibr}% de anular paralyze (Vibrancy)</span></div></div>`:""}
     <div class="ims"><h4>Ativos (${n})</h4><div class="imlist">${n?Object.entries(counts).map(([k,v])=>`<span class="imchip" style="--imc:${imColor(k)}">${v>1?v+"× ":""}${esc(IMBL[k]||k)}</span>`).join(""):'<span class="muted small">Nenhum imbuement escolhido.</span>'}</div></div>
+    ${imGameHTML(c,set,t)}
     <div class="ims-t"><b>${nf(fee)} gp</b><span>taxas do altar para ${n} imbuement${n===1?"":"s"} ${TIERS[ti][1]}</span><small>≈ ${nf(Math.round(fee/20))} gp por hora de hunt, sem contar os materiais</small></div>`;
   // guia
   const list = [{s:"Primeiro",i:"Entrega os 5 Heavy Old Tomes ao Albinius para poderes usar os altares."}].concat(vd.imbs);
@@ -47928,6 +47963,7 @@ function route(){ HFRDY=true; HFMISS=""; const raw=(location.hash||"").slice(1);
   if((m=h.match(/^(feitico|npc|conquista|montaria|outfit)\/(.+)$/i))){ openWiki(m[1].toLowerCase(),m[2]); return true; }
   if((m=h.match(/^hunts\/(cidade|tipo)\/(.+)$/i))){ hfRoute(m[1].toLowerCase(),m[2]); return true; } // r5-t2
   let hl=h.toLowerCase(); if(hl==="hotkeys"){ hl="rotacao"; history.replaceState(history.state,"","#rotacao"); } /* r13 */
+  if(hl==="imbu"){ hl="equip"; ST.ui.eqv="imbu"; history.replaceState(history.state,"","#equip"); if(ST.ui.p==="equip") eqView(); } /* r17 */
   if(hl && isPanel(hl)){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); hfHash(); return true; } hfHash(); return false; }
   // endereço que não corresponde a nada ('#item/', '#xyz'): o hash volta a ser o da página à vista (ou o Início, se era uma página interna)
   if(h && h!==ST.ui.p){ const det=["item","criatura","wiki2"].includes(ST.ui.p); history.replaceState(history.state,"","#"+(det?"inicio":ST.ui.p)); if(det) go("inicio"); else hfHash(); }
