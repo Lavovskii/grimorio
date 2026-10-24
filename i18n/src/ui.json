@@ -479,13 +479,25 @@
   "c": "index.html: cor\"], T.map(t=>`<tr><th scope=\"row\">${nm(t)}</th><td>${[\"\",\"1 básico\",\"2 básicos\",\"2 bási",
   "k": "x"
  },
+ "1 item": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "1 modificador básico": {
   "c": "index.html:  básicos e 1 supremo\":n===2?\"2 modificadores básicos\":n===1?\"1 modificador básico\":\"enche uma fatia Ve",
+  "k": "x"
+ },
+ "1 slot de imbuement": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
   "k": "x"
  },
  "1 vez por dia ({0} h)": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
+ },
+ "1 viagem": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
  },
  "10% de chance de crítico": {
   "c": "index.html: ><b>+${t.crit}%</b><span>dano crítico</span><small>${t.crit?\"10% de chance de crítico\":\"sem Strike\"}</smal",
@@ -905,6 +917,14 @@
  },
  "Addon": {
   "c": "index.html: ;display:grid;gap:6px\">${o.addons.map(a=>`<li><b>${esc(a.n||\"Addon\")}</b>: ${esc(a.how|",
+  "k": "x"
+ },
+ "Addon 1": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Addon 2": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Addons": {
@@ -1335,6 +1355,10 @@
   "c": "index.html: d na janela de cima, com as gemas.</p>${(O.calc||[]).length?`<p class=\"small muted\">As «Calculadas» vêm de um algoritmo que aprendeu com as builds do TibiaPal e as estende a qualquer número de pontos: servem para compara",
   "k": "x"
  },
+ "Asas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Ascetic Mastery": {
   "c": "index.html: down Base Damage\":[\"Monk_SweepingTakedown_DamageIncrease\"], \"Ascetic Mastery\":[\"Monk_RevelationMa",
   "k": "x"
@@ -1511,6 +1535,10 @@
   "c": "index.html: a.l-b.l); $(\"hkList\").innerHTML = groups + (future.length?`<div class=\"card hkfut\"><h3 style=\"font-size:19px;margin-bottom:6px\">Ações que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\\s*\".",
   "k": "x"
  },
+ "Barba": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Barco": {
   "c": "index.html: ?\"c\":s[4]===\"b\"?\"b\":\"n\",t:`${s[4]===\"c\"?\"Tapete\":s[4]===\"b\"?\"Barco\":\"Viagem\"}: ${s[1]}`",
   "k": "x"
@@ -1549,6 +1577,10 @@
  },
  "Basic": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Bastão e escudo": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Beam Mastery Mastery": {
@@ -1649,6 +1681,10 @@
  },
  "Botas": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Botas e luvas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Botas, capacetes e armas que acabam contam menos.": {
@@ -1767,6 +1803,14 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
+ "Cajado": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Cajado vudu": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Calculada": {
   "c": "index.html: duce((x,y)=>x+y,0)); return {t:f.n?`Calculada (${f.n})`:\"Calculada\", p:b, note:\"\", calc",
   "k": "x"
@@ -1815,6 +1859,14 @@
   "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"small muted\">Junta uma vocação:</span>${V",
   "k": "x"
  },
+ "Capa": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Capa (masculino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Capacete": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -1833,6 +1885,14 @@
  },
  "Capacity": {
   "c": "index.html: row(\"Hit Points\",\"+\"+nf(S.hp))+row(\"Mana\",\"+\"+nf(S.mp))+row(\"Capacity\",\"+\"+nf(S.cap))+row(",
+  "k": "x"
+ },
+ "Capuz / protetores": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Capuz / tiara": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Cargas": {
@@ -1859,8 +1919,24 @@
   "c": "index.html: ):0}%\"></i></td></tr>`; }).join(\"\"); const tbl=top.length?`<div class=\"tablewrap\"><table class=\"lp-tbl\"><thead><tr><th>Item</th><th>Chance</th><th>NPC</th>${mkOk?`<th title=\"Média do mês menos a taxa de 2 % do Market\">Ma",
   "k": "x"
  },
+ "Chapéu": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Chapéu (feminino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Chapéu (masculino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Chapéu (masculino):": {
   "c": "recolhida: /grimorio/#outfit/mage · ex.: Chapéu (masculino):",
+  "k": "x"
+ },
+ "Chapéu de penas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Charm": {
@@ -1897,6 +1973,18 @@
  },
  "Cidade: todas": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Cimitarra / cinto": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Cinto (feminino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Cinto (masculino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Classe de upgrade": {
@@ -1940,7 +2028,7 @@
   "k": "x"
  },
  "Clique: equipamento · botão direito: trocar item": {
-  "c": "index.html: {IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipamento · botão direito: trocar item\"}`; el.innerHTML =",
+  "c": "index.html: {IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipamento · botão direito: trocar item\"}</div>`; el.inner",
   "k": "x"
  },
  "Cloud Fabric": {
@@ -2355,6 +2443,10 @@
   "c": "index.html: só tua e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só entra no vessel",
   "k": "x"
  },
+ "Coroa": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Corpo a corpo": {
   "c": "index.html: head><tbody>${atk.map(([t,n,d,e,x])=>`<tr><td>${t===\"melee\"?\"Corpo a corpo\":esc(n)}${x?`<span c",
   "k": "x"
@@ -2431,13 +2523,13 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Cura ({0})": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "p"
+ },
  "Cura recebida": {
   "c": "index.html: se do Bestiary</dt><dd>${esc(ci.bclass)}</dd>`:\"\"}${ci.heal?`<dt>Cura recebida</dt><dd>${esc(ci.heal)}</dd>`:\"\"}</dl>`]); el.i",
   "k": "x"
- },
- "Cura {0}": {
-  "c": "index.html: oLowerCase(),esc(n)):\"\"}${d?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura ${esc(d||\"\")}` : t===\"haste\"?\"Hast",
-  "k": "p"
  },
  "Curiosidades": {
   "c": "quests/js/app.js: \"Cidade\", \"sells\": \"Vende\", \"buys\": \"Compra\", \"trivia\": \"Curiosidades\", \"price\": \"Preço\", ",
@@ -3108,7 +3200,7 @@
   "k": "x"
  },
  "Escolher no Equipamento": {
-  "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span> ${empty.map(k=>SLOTNAME[k].toLowerCase()).join(\", \")}. <a href=\"#equip\" data-go=\"equip\">Escolher no Equipamen",
+  "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span>${empty.map(k=>`<span class=\"pill\">${esc(SLOTNAME[k])}</span>`).join(\"\")} <a href=\"#equip\" data-go=\"equip\">Esc",
   "k": "x"
  },
  "Escolher o ficheiro": {
@@ -3167,12 +3259,20 @@
   "c": "index.html: eld\"||!c) return SLOTNAME[k]||k; return c.voc===\"paladin\"?\"Escudo / aljava\":isMage(c)?\"Livro / ",
   "k": "x"
  },
+ "Escudo / lança": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Escudo / livro": {
   "c": "index.html: \"Mochila\"],[\"weapon\",\"Arma\"],[\"armor\",\"Armadura\"],[\"shield\",\"Escudo / livro\"],[\"ring\",\"Anel\"],[\"",
   "k": "x"
  },
  "Escudo / livro / aljava": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Escudo e arma": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Escudos / livros / aljavas": {
@@ -3603,6 +3703,10 @@
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
+ "Foice": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Fonte de luz": {
   "c": "index.html: ns\":\"Arma de monk\",\"Spellbooks\":\"Spellbook\",\"Light Sources\":\"Fonte de luz\",\"Trophies\":\"Troféu\"",
   "k": "x"
@@ -3649,6 +3753,10 @@
  },
  "Fragments: para que servem": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
+  "k": "x"
+ },
+ "Fraque": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Fraquezas e resistências{0}": {
@@ -3729,6 +3837,14 @@
  },
  "Game Tokens": {
   "c": "index.html: uido\",\"Plants and Herbs\":\"Planta\",\"Decorations\":\"Decoração\",\"Game Tokens\":\"Token\",\"Attack Run",
+  "k": "x"
+ },
+ "Gancho": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Garra": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Gasta 1 teleport crystal": {
@@ -3935,8 +4051,12 @@
   "c": "index.html:  omissão um botão pequeno) const guiaBtn = (s,t,cls) => s ? `<a class=\"${cls||\"btn small\"} gbtn\" href=\"${guiaHref(s)}\" title=\"Guia passo a passo no Questski\">${GIC}${t||\"Guia passo a passo ›\"}</a>` : \"\"; // botão de u",
   "k": "x"
  },
- "Guia passo a passo · {0} {1}{2}": {
-  "c": "index.html: i>${ent(x)}</li>`).join(\"\")}</ul></details>`:\"\"} ${secs?`<details class=\"qguide\"><summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span class=\"qsp\">tem spoilers</span></span></summary><div class=\"gb\"",
+ "Guia passo a passo · {0}": {
+  "c": "index.html: i>${ent(x)}</li>`).join(\"\")}</ul></details>`:\"\"} ${secs?`<details class=\"qguide\"><summary><span><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}</span><span class=\"qsp\">tem spoilers</span></span></summary><d",
+  "k": "p"
+ },
+ "Guia passo a passo · {0} {1}": {
+  "c": "index.html: i>${ent(x)}</li>`).join(\"\")}</ul></details>`:\"\"} ${secs?`<details class=\"qguide\"><summary><span><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}</span><span class=\"qsp\">tem spoilers</span></span></summary><d",
   "k": "p"
  },
  "Guia passo a passo ›": {
@@ -3976,7 +4096,7 @@
   "k": "x"
  },
  "Haste": {
-  "c": "index.html: c(d)}`:\"\"}` : t===\"heal\"?`Cura ${esc(d||\"\")}` : t===\"haste\"?\"Haste\" : t===\"debuff\"?`${e",
+  "c": "index.html: t===\"heal\"?`Cura${d?` (${esc(cpEn(d))})`:\"\"}` : t===\"haste\"?\"Haste\" : t===\"debuff\"?`${e",
   "k": "x"
  },
  "Healing Runes": {
@@ -4324,11 +4444,15 @@
   "k": "x"
  },
  "Invoca": {
-  "c": "index.html: .</p>`; const othL = oth.map(([t,n,d,e,x])=> t===\"summon\"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):\"\"}${d?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura ",
+  "c": "index.html: .</p>`; const othL = oth.map(([t,n,d,e,x])=> t===\"summon\"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):\"\"}${d?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura$",
   "k": "x"
  },
+ "Invoca {0}": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "p"
+ },
  "Invoca {0}{1}": {
-  "c": "index.html: .</p>`; const othL = oth.map(([t,n,d,e,x])=> t===\"summon\"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):\"\"}${d?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura ",
+  "c": "index.html: .</p>`; const othL = oth.map(([t,n,d,e,x])=> t===\"summon\"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):\"\"}${d?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura$",
   "k": "p"
  },
  "Invocar": {
@@ -4463,8 +4587,16 @@
   "c": "index.html: hidden=\"true\">›</span></a></li>`; }).join(\"\")}</ul>` :`<p class=\"small\" style=\"margin:0\">Já fizeste os guias que sugerimos para o teu nível.</p>`}`; } $(\"calcHunt\").",
   "k": "x"
  },
+ "Kabuto": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Kais": {
   "c": "index.html: \",[\"Eremo\"],\"Eremo's Island\",reg],[\"Blood of the Mountain\",[\"Kais\"],\"Norte de Tiquanda",
+  "k": "x"
+ },
+ "Katana": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Kawill": {
@@ -4489,6 +4621,10 @@
  },
  "Krailos": {
   "c": "index.html: 31323],[\"Roshamuul\",33513,32363],[\"Rathleton\",33594,31899],[\"Krailos\",33657,31665],[\"Issa",
+  "k": "x"
+ },
+ "Lança": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Largado por": {
@@ -4745,6 +4881,14 @@
  },
  "Lucro/h medido": {
   "c": "index.html: os de loot\":\"sem XP/h medido\")}${kpi(est?\"Lucro/h estimado\":\"Lucro/h medido\", lo!=null?(est?\"≈ \"",
+  "k": "x"
+ },
+ "Luvas de atirador": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Lâmina": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Líquido": {
@@ -5291,6 +5435,18 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "Máscara": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Máscara / tiara": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Máscara vudu": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Máximo de 3 hunts: saiu": {
   "c": "index.html: ift(); } hcmpSave(l); const on=l.includes(pid), msg=out?`Máximo de 3 hunts: saiu ${hcmpName(out)}`:\"\"; b.setAttrib",
   "k": "x"
@@ -5537,6 +5693,10 @@
  },
  "No terreno da hunt": {
   "c": "index.html: .</p>`; return `${h.length?`<div class=\"mgrp\"><h5>${o.ht||\"No terreno da hunt\"}</h5><div class=\"ml",
+  "k": "x"
+ },
+ "Nobori": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Nomad": {
@@ -6000,7 +6160,7 @@
   "k": "x"
  },
  "O meu set": {
-  "c": "index.html: uipamento · botão direito: trocar item\"}`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
+  "c": "index.html: nto · botão direito: trocar item\"}</div>`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
   "k": "x"
  },
  "O nosso": {
@@ -6073,6 +6233,18 @@
  },
  "Ofensivo": {
   "c": "index.html: 8 10 8 10z\"/><path d=\"m9 12 2 2 4-4\"/>'}; const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills ",
+  "k": "x"
+ },
+ "Olhos e ombreira": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Ombreira": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Ombreira / asas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Onda / feixe": {
@@ -6371,6 +6543,10 @@
   "c": "index.html:  Cada mod no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a parti",
   "k": "x"
  },
+ "Partida": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
+  "k": "x"
+ },
  "Partida por revelar (Crusher)": {
   "c": "index.html: COST.rot[t])}</td></tr>`).join(\"\")); const yld=tb([\"Gema\",\"Partida por revelar (Crusher)\",\"Desmontada depois ",
   "k": "x"
@@ -6407,6 +6583,10 @@
   "c": "quests/js/app.js: ass=\"step-head\">${st.title ? `<h4>${rich(st.title)}</h4>` : `<h4>Passo ${n}</h4>`}<a class=\"step-link",
   "k": "p"
  },
+ "Patas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Pede passagem": {
   "c": "index.html: c:s[1]}; if(k===\"p\") return {i:\"n\",t:`Fala com ${s[1]}`,d:\"Pede passagem\",npc:s[1]}; if(k==",
   "k": "x"
@@ -6415,9 +6595,17 @@
   "c": "index.html: io\",\"Healing Runes\":\"Runa de cura\",\"Metals\":\"Metal\",\"Rocks\":\"Pedra\"}; /* ---------- pá",
   "k": "x"
  },
+ "Pele de urso / lobo": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Pelo caminho {0}": {
   "c": "index.html: ])=>monCard(k,c)).join(\"\")}</div></div>`:\"\"} ${r.length?`<div class=\"mgrp\"><h5>Pelo caminho <span class=\"tag\">até à entrada</span></h5><div class=\"mlist\">${r.map(([k,c])=>monCard(k,c)).join(\"\")}</div></div>`:\"\"} <p class",
   "k": "p"
+ },
+ "Penas": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
  },
  "Percentagem para o próximo nível": {
   "c": "index.html (HTML)",
@@ -6465,6 +6653,10 @@
  },
  "Personagens": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Peruca": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Pesa {0} oz": {
@@ -7052,7 +7244,7 @@
   "k": "x"
  },
  "Que set mostrar": {
-  "c": "index.html: uipamento · botão direito: trocar item\"}`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
+  "c": "index.html: nto · botão direito: trocar item\"}</div>`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
   "k": "x"
  },
  "Quem compra": {
@@ -7205,6 +7397,10 @@
  },
  "Recebes como recompensa": {
   "c": "quests/js/app.js: .quests && h.quests.length) { const label = { reward: \"Recebes como recompensa\", needed: \"Precisas ",
+  "k": "x"
+ },
+ "Recebes:": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
   "k": "x"
  },
  "Recomendado": {
@@ -7445,6 +7641,10 @@
  },
  "SOB Mastery": {
   "c": "index.html: se\"], \"Ascetic Mastery\":[\"Monk_RevelationMastery_Ascetic\"], \"SOB Mastery\":[\"Monk_RevelationMa",
+  "k": "x"
+ },
+ "Sabre": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Sage": {
@@ -7696,7 +7896,7 @@
   "k": "x"
  },
  "Set BiS": {
-  "c": "index.html: uipamento · botão direito: trocar item\"}`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
+  "c": "index.html: nto · botão direito: trocar item\"}</div>`; el.innerHTML = `<div class=\"bis-h\"><div class=\"bis-seg\" role=\"group\" aria-label=\"Que set mostrar\"><button type=\"button\" data-hview=\"bis\" aria-pressed=\"${!mine}\">Set BiS</button>",
   "k": "x"
  },
  "Set de combate{0}.": {
@@ -7771,6 +7971,10 @@
   "c": "index.html: onst KS={sob:[\"1\",\"2\",\"3\",\"4\",\"Shift+1\",\"Shift+2\",\"Shift+3\",\"Shift+4\",\"5\",\"6\"], f:Array.f",
   "k": "x"
  },
+ "Sino": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Skill": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -7820,7 +8024,7 @@
   "k": "x"
  },
  "Slots vazios no set:": {
-  "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span> ${empty.map(k=>SLOTNAME[k].toLowerCase()).join(\", \")}. <a href=\"#equip\" data-go=\"equip\">Escolher no Equipamen",
+  "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span>${empty.map(k=>`<span class=\"pill\">${esc(SLOTNAME[k])}</span>`).join(\"\")} <a href=\"#equip\" data-go=\"equip\">Esc",
   "k": "x"
  },
  "Snake Skin": {
@@ -8111,6 +8315,10 @@
   "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
  },
+ "Sábio": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Só as de {0} ({1})": {
   "c": "quests/js/app.js: m passos por lá.</p> <div class=\"seg\">${[[true, `Só as de ${esc(reg.name)} (${reg.main})`], [false, `+ as que",
   "k": "p"
@@ -8185,6 +8393,10 @@
  },
  "Tabela completa em «Gemas e fragments», por baixo da roda.": {
   "c": "index.html: whGemGuide — passo Fragments (o tradutor parte o texto em frases)",
+  "k": "x"
+ },
+ "Tacho": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Também boa": {
@@ -8411,6 +8623,10 @@
   "c": "index.html: rrow\",\"ice\",21],[125,\"Terrastorm Arrow\",\"earth\",21], [125,\"Thunderstorm Arrow\",\"energy\",21],[150,\"",
   "k": "x"
  },
+ "Tiara (feminino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Tibia": {
   "c": "quests/index.html (HTML)",
   "k": "x"
@@ -8500,7 +8716,7 @@
   "k": "x"
  },
  "Tipo de arma usado: {0} ({1}; para outro, escolhe-o em Definições do set › Arma).": {
-  "c": "index.html: e armas que acabam contam menos.\":\"\"}${wg&&c.voc===\"knight\"?` Tipo de arma usado: ${esc(wg.n)} (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?\"o teu skill mais alto\":\"o que dá o melhor set no teu nível\"}; para outro, escolhe-o em De",
+  "c": "index.html: e armas que acabam contam menos.\":\"\"}${wg&&c.voc===\"knight\"?` <span>Tipo de arma usado: ${esc(wg.n)} (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?\"o teu skill mais alto\":\"o que dá o melhor set no teu nível\"}; para outro, escolhe-o",
   "k": "p"
  },
  "Tipo de ataque": {
@@ -8640,7 +8856,7 @@
   "k": "x"
  },
  "Toque: equipamento · toque longo: trocar item": {
-  "c": "index.html: ra ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipament",
+  "c": "index.html: ems.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipament",
   "k": "x"
  },
  "Transcendence (chance a cada {0} s):": {
@@ -8685,6 +8901,14 @@
  },
  "Tue": {
   "c": "index.html: new Date()).map(x=>[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"",
+  "k": "x"
+ },
+ "Turbante (headpiece)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Turbante / véu": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Tutorial": {
@@ -8797,6 +9021,14 @@
  },
  "Variantes no TibiaPal": {
   "c": "index.html: ${p&&p.note?`<p class=\"small\">${esc(p.note)}</p>`:\"\"}${vars?`<h4 class=\"sub\">Variantes no TibiaPal</h4>${vars}`:\"\"}`]]:[])])} $",
+  "k": "x"
+ },
+ "Varinha (feminino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Varinha (masculino)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
  "Variável (depende da criatura)": {
@@ -9011,6 +9243,10 @@
   "c": "recolhida: /grimorio/#hunts · ex.: Vida + Mitigação + Fierce Berserk: dano base",
   "k": "p"
  },
+ "Vilão": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
  "Vista do equipamento": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -9058,6 +9294,10 @@
  "Vários · {0}": {
   "c": "recolhida: /grimorio/quests/ · ex.: Vários · rec. 8",
   "k": "p"
+ },
+ "Véu": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
  },
  "Vê invisível": {
   "c": "index.html: \"n\"}\">${t}</li>`; const props=[ci.sinv!=null?prop(ci.sinv,\"Vê invisível\"):\"\", ci.para!=null?",
@@ -9518,6 +9758,10 @@
  "armadura": {
   "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "x"
+ },
+ "armadura {0}": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "p"
  },
  "armor": {
   "c": "index.html: ,[\"helmet\",\"Capacete\"],[\"bag\",\"Mochila\"],[\"weapon\",\"Arma\"],[\"armor\",\"Armadura\"],[\"shiel",
@@ -10336,8 +10580,12 @@
   "k": "x"
  },
  "debuff": {
-  "c": "index.html: t===\"heal\"?`Cura ${esc(d||\"\")}` : t===\"haste\"?\"Haste\" : t===\"debuff\"?`${esc(n)}${d?` (${",
+  "c": "index.html: ra${d?` (${esc(cpEn(d))})`:\"\"}` : t===\"haste\"?\"Haste\" : t===\"debuff\"?`${esc(n)}${d?` (${",
   "k": "x"
+ },
+ "def {0}": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
+  "k": "p"
  },
  "def {0}{1}": {
   "c": "index.html: it.wd[2]} ${ELN[it.wd[0]]||it.wd[0]}`); if(it.def) p.push(`def ${it.def}${it.edef?\"+\"+it.edef:\"\"}`); if(it.sk) Objec",
@@ -10536,11 +10784,11 @@
   "k": "x"
  },
  "e mais": {
-  "c": "index.html: :+l,k:\"Equipamento\",t:ns.slice(0,4).join(\", \")+(ns.length>4?` e mais ${ns.length-4}`:\"\")})); (vd.allsp",
+  "c": "index.html: ,3).map(x=>mlink(x.gk,esc(x.name))).join(\", \")}${l.length>3?` e mais ${l.length-3}`:\"\"} (${l.length>1?\"",
   "k": "x"
  },
  "e mais {0}": {
-  "c": "index.html: :+l,k:\"Equipamento\",t:ns.slice(0,4).join(\", \")+(ns.length>4?` e mais ${ns.length-4}`:\"\")})); (vd.allsp",
+  "c": "index.html: ,3).map(x=>mlink(x.gk,esc(x.name))).join(\", \")}${l.length>3?` e mais ${l.length-3}`:\"\"} (${l.length>1?\"",
   "k": "p"
  },
  "e o Market de {0} (média do mês menos a taxa de 2 %; conta quando houve 10 ou mais vendas e rende mais de 10 % acima do NPC)": {
@@ -11268,7 +11516,7 @@
   "k": "x"
  },
  "haste": {
-  "c": "index.html: ?` ×${esc(d)}`:\"\"}` : t===\"heal\"?`Cura ${esc(d||\"\")}` : t===\"haste\"?\"Haste\" : t===\"debu",
+  "c": "index.html: :\"\"}` : t===\"heal\"?`Cura${d?` (${esc(cpEn(d))})`:\"\"}` : t===\"haste\"?\"Haste\" : t===\"debu",
   "k": "x"
  },
  "heal": {
@@ -12043,6 +12291,10 @@
   "c": "recolhida: /grimorio/#hunts · ex.: neutro a físico (104%)",
   "k": "p"
  },
+ "neutro a {0} ({1}%)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "p"
+ },
  "next": {
   "c": "index.html: b)=>a.it.l-b.it.l).slice(0,10); const tab = [\"top\",\"mine\",\"next\"].includes(ST.ui.slt",
   "k": "x"
@@ -12496,11 +12748,11 @@
   "k": "p"
  },
  "passo": {
-  "c": "index.html: guide\"><summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span clas",
+  "c": "index.html: ><summary><span><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}</span><sp",
   "k": "x"
  },
  "passos": {
-  "c": "index.html: summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span class=\"qsp\">t",
+  "c": "index.html: y><span><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}</span><span class=",
   "k": "x"
  },
  "passos feitos": {
@@ -12987,6 +13239,10 @@
   "c": "recolhida: /grimorio/#inicio · ex.: resiste a morte (80%) (o TibiaPal mediu esta hunt para a tua vocação)",
   "k": "p"
  },
+ "resiste a {0} ({1}%)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "p"
+ },
  "resiste a {0} ({1})": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
@@ -13021,6 +13277,10 @@
  },
  "resiste um pouco a morte ({0})": {
   "c": "recolhida: /grimorio/#inicio · ex.: resiste um pouco a morte (95%)",
+  "k": "p"
+ },
+ "resiste um pouco a {0} ({1}%)": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "p"
  },
  "resiste: {0}": {
@@ -14019,6 +14279,10 @@
   "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); /* r8 */ if(it.",
   "k": "x"
  },
+ "velocidade {0}": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
+  "k": "p"
+ },
  "velocidade {0}{1}": {
   "c": "index.html:  if(it.mn) p.push(`mantra +${it.mn}`); if(it.spd) p.push(`velocidade ${it.spd>0?\"+\":\"\"}${it.spd}`); /* r8 */ if(it.",
   "k": "p"
@@ -14359,6 +14623,34 @@
   "c": "quests/js/app.js: eature)}</div> <div class=\"drop-stats\">${d.hp ? `${icon(\"checkCircle\")} ${esc(d.hp)} HP` : \"\"}${d.exp ? ` · ",
   "k": "p"
  },
+ "{0} ML cura": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML energia": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML fogo": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML gelo": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML holy": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML morte": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} ML terra": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
  "{0} Merudri Battle Mail, Eldritch Monk Boots, Demon Mengu, Mutant Hide Trousers e mais {1}": {
   "c": "recolhida: /grimorio/#imbu · ex.: {0} Merudri Battle Mail, Eldritch Monk Boots, Demon Mengu, Mutant Hide Trousers e mais 3",
   "k": "p"
@@ -14435,6 +14727,10 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
+ "{0} axe": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
  "{0} cada quest abre numa aba própria no topo — podes ter várias abertas e saltar entre elas.{1} {2} marca cada passo como feito; fica guardado neste navegador.": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "p"
@@ -14449,6 +14745,10 @@
  },
  "{0} clica num mini-mapa ou coordenada para abrir o mapa interativo (▲▼ mudam de piso). {1} filtra as quests por cidade na barra lateral ou nos cartões de região.{2} {3} clica numa palavra {4} para a copiar.": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
+  "k": "p"
+ },
+ "{0} club": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
   "k": "p"
  },
  "{0} com “{1}” que {2} pode usar neste slot": {
@@ -14567,6 +14867,10 @@
   "c": "quests/js/app.js: filtered(); $(\"#fcount\") && ($(\"#fcount\").textContent = `${list.length} de ${S.quests.length} quests`); const active ",
   "k": "p"
  },
+ "{0} distance": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
  "{0} dust · 100%": {
   "c": "index.html: .fusion.chance}%</span>`:\"—\"}</td>${cv?`<td class=\"num\">${v?`${kkk(v.gold)} gp<span class=\"pt-s\">${v.dust||0} dust · 100%</span>`:\"—\"}</td>`:\"\"}<td c",
   "k": "p"
@@ -14601,6 +14905,10 @@
  },
  "{0} feitiços · {1}": {
   "c": "recolhida: /grimorio/#feiticos · ex.: 36 feitiços · Knight",
+  "k": "p"
+ },
+ "{0} fist": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
   "k": "p"
  },
  "{0} fogo": {
@@ -14879,12 +15187,24 @@
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
+ "{0} shielding": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
+  "k": "p"
+ },
+ "{0} slots de imbuement": {
+  "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
+  "k": "p"
+ },
  "{0} solo e {1} em grupo, publicadas por jogadores no Hunt Analyser depois do rebalance de junho. Medianas; os nomes dos jogadores não são mostrados.": {
   "c": "index.html: d>${pr!=null?fmt(pr):\"—\"}</td></tr>`; }).join(\"\"); return `<div class=\"hasess\"><h5>Sessões reais desde junho de 2026</h5>${rows?`<div class=\"tablewrap\"><table><thead><tr><th>Vocação</th><th>Sessões solo</th><th>Nível (me",
   "k": "p"
  },
  "{0} spawns no mapa": {
   "c": "index.html: d.v>=85?\"meh\":\"bad\"}\">${ELN[d.e]} ${d.v}%</span>`:\"\"}${m[8]?`<span class=\"tag\">${m[8]} spawns no mapa</span>`:\"\"}`; box.inn",
+  "k": "p"
+ },
+ "{0} sword": {
+  "c": "à mão (r19): skills nas notas dos itens (+2 fist, +1 ML fogo)",
   "k": "p"
  },
  "{0} terra": {
@@ -14901,6 +15221,10 @@
  },
  "{0} veneno": {
   "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} viagens": {
+  "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "p"
  },
  "{0} vida": {
@@ -14951,12 +15275,12 @@
   "c": "index.html: s(byB).map(Number).sort((x,y)=>x-y); if(bs.length) more=`<div class=\"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ${n===1?\"hunt\":\"hunts\"}${f.cls.length?` de <span>${esc(f.cls.map(k=>",
   "k": "p"
  },
- "{0} {1} · armadura {2}{3}": {
-  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipam",
+ "{0} {1} · armadura": {
+  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`<div>${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Cli",
   "k": "p"
  },
- "{0} {1} · armadura {2}{3}{4}": {
-  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipam",
+ "{0} {1} · armadura {2}": {
+  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`<div>${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Cli",
   "k": "p"
  },
  "{0} {1} · hunt a partir do": {
@@ -14995,12 +15319,12 @@
   "c": "index.html: i==null||i<0){ if(mini===\"thumb\") return \"\"; return mini?\"\":`<button type=\"button\" class=\"hmap hmap-x\" data-map=\"${x},${y},${z}\" data-maplabel=\"${esc((G.places[h.r.c]||{}).n||\"\")}\"><span class=\"cap\"><span>${floorTxt(z)} ",
   "k": "p"
  },
- "{0} · armadura {1}{2}": {
-  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipam",
+ "{0} · armadura": {
+  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`<div>${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Cli",
   "k": "p"
  },
- "{0} · armadura {1}{2}{3}": {
-  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipam",
+ "{0} · armadura {1}": {
+  "c": "index.html: e=>BYID[e.id]).filter(Boolean), n=items.length; const def=`<div>${n} ${n===1?\"item\":\"itens\"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Cli",
   "k": "p"
  },
  "{0} · hunt a partir do": {

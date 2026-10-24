@@ -68,6 +68,14 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   meio de uma lista passa por português e o modelo falha); cada valor uma só vez por frase («a cada 2 h», não «de 2 em 2 h»);
   um porquê com várias frases vai num `<span>` à parte; nunca remendar com texto português um texto que já foi traduzido
   (escrever a frase toda outra vez, como `bsLead`). Para ver o que falta: modo recolha (`grimorio-i18n-harvest`) no browser.
+- Textos antigos noutras línguas (r19): a ficha da quest no Grimório usa o guia do Questski traduzido (`guiaQ` passa o JSON por
+  `I18N.overlay("data/quests/<slug>.json")`; o `<script src="shared/i18n.js" data-c data-q>` carrega a lista `i18n/q.<l>.js`).
+  Partes que se traduzem à parte vão em elementos próprios (título e descrição dos próximos passos, custo dos feitiços, contagem e
+  dica do boneco, «Slots vazios no set» em pills, «Tipo de arma usado…» num `<span>`); a calculadora mostra «hunt · xp/h» (o « · »
+  traduz cada parte). No `shared/i18n.js`, uma tradução frase a frase só parcial num texto com « · » cede às partes (`dots`): as
+  notas dos itens partiam no «:» de «ligação elemental:». Para medir, o PT que fica visível no ecrã depois da tradução conta mais
+  do que o modo recolha (que regista também tentativas intermédias que acabam traduzidas). O dano máximo da TibiaWiki vem como
+  «375~», «242+», «~1000»: `mdNum` lê o primeiro número (antes dava NaN).
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,

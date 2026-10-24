@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261024a" data-c></script><script src="shared/rotacoes.js?v=20261024c"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261024c" data-c data-q></script><script src="shared/rotacoes.js?v=20261024c"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -44024,7 +44024,7 @@ function questCardHTML(id,q){
 }
 /* r11 */ // cartão da quest a partir do guia do Questski (quests/data/quests/<slug>.json): lore (legend_pt) em destaque, resumo,
 // requisitos, recompensas (fechadas) e, num spoiler fechado, o resumo (conta o fim e as recompensas) e o passo a passo; os nomes ligam às páginas internas
-const GQC={}; const guiaQ = s => GQC[s]||(GQC[s]=getJSON("quests/data/quests/"+encodeURIComponent(s)+".json",12000).catch(()=>null));
+const GQC={}; const guiaQ = s => GQC[s]||(GQC[s]=getJSON("quests/data/quests/"+encodeURIComponent(s)+".json",12000).then(d=>window.I18N?I18N.overlay("data/quests/"+s+".json",d):d).catch(()=>null)); // noutras línguas, o texto do guia vem de i18n/<l>/q/ (shared/i18n.js)
 function qmd(t){ const s=String(t||""), re=/\{(\w+):([^}|]*)(?:\|([^}]*))?\}/g, out=[]; let last=0, m;
   const txt=x=>esc(x).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/(^|[^*])\*([^*\s][^*]*)\*/g,"$1<i>$2</i>");
   while((m=re.exec(s))){ out.push(txt(s.slice(last,m.index))); const k=m[1], a=m[2].trim(), lab=(m[3]||m[2]).trim();
@@ -44043,7 +44043,7 @@ function guiaCardHTML(id,g,gs){ const c=C(), b=QBY[id]||{}, dn=!!c&&qDone(c,id);
     ${(g.requirements||[]).length?`<div class="qreq"><h5>Requisitos</h5><ul>${g.requirements.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></div>`:""}
     ${(g.items_needed||[]).length?`<div class="qreq"><h5>Leva contigo</h5><ul>${g.items_needed.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></div>`:""}
     ${(g.rewards||[]).length?`<details class="rt-pre"><summary>Recompensas (${g.rewards.length})</summary><ul class="qrw">${g.rewards.map(x=>`<li>${ent(x)}</li>`).join("")}</ul></details>`:""}
-    ${secs?`<details class="qguide"><summary><span>Guia passo a passo · ${nst} ${nst===1?"passo":"passos"}<span class="qsp">tem spoilers</span></span></summary><div class="gb">${g.summary?`<div class="qsum">${paras(g.summary)}</div>`:""}${secs}
+    ${secs?`<details class="qguide"><summary><span><span>Guia passo a passo · ${nst} ${nst===1?"passo":"passos"}</span><span class="qsp">tem spoilers</span></span></summary><div class="gb">${g.summary?`<div class="qsum">${paras(g.summary)}</div>`:""}${secs}
       ${(g.tips||[]).length?`<div><h5 style="margin:0 0 6px">Dicas</h5><ul class="small" style="margin:0;padding-left:18px">${g.tips.map(t=>`<li>${qmd(t)}</li>`).join("")}</ul></div>`:""}
       <p style="margin:0">${guiaBtn(gs,"Mapas e imagens no Questski ›")}</p></div></details>`:""}</div>`; }
 async function drawPos(cv){ const [x,y,z]=cv.dataset.qpos.split(",").map(Number); const g=cv.getContext("2d"), w=48, h=32, S=cv.width/w;
@@ -44580,7 +44580,7 @@ function milestones(){
   const c=C(), vd=VD(), ev=[];
   (G.wheel[c.voc]||[]).forEach(w=>{ if(w.p+50<=520) ev.push({l:w.p+50,k:"Wheel",t:`${w.p} pontos: ${w.t}`}); });
   const seen={}; (G.equip[c.voc]||[]).forEach(it=>{ if(it.l>=c.level-60 && it.l<=500 && it.l>=50){ (seen[it.l]=seen[it.l]||[]).push(it.n); } });
-  Object.entries(seen).forEach(([l,ns])=>ev.push({l:+l,k:"Equipamento",t:ns.slice(0,4).join(", ")+(ns.length>4?` e mais ${ns.length-4}`:"")}));
+  Object.entries(seen).forEach(([l,ns])=>ev.push({l:+l,k:"Equipamento",t:ns.slice(0,4).join(", ")+(ns.length>4?` · +${ns.length-4}`:"")}));
   (vd.allsp||[]).forEach(r=>{ if(r[2]>=30 && !r[8].includes("wheel") && r[5]!=="utility") ev.push({l:r[2],k:"Feitiço",t:`${r[0]} (${r[1]})`}); });
   vd.pots.forEach(p=>{ if(p.l>8) ev.push({l:p.l,k:"Poções",t:[p.h,p.m].filter(x=>x&&x!=="—").join(" · ")}); });
   return ev.filter(e=>e.l<=520).sort((a,b)=>a.l-b.l);
@@ -44606,12 +44606,12 @@ function renderInicio(){
   const ch = vd.charms.find(k=>!c.charms[k]); if (ch){ const cm=G.charms[ch]; steps.push({t:`Charm seguinte: <b>${esc(cm.n)}</b> (${esc(cm.c.split(" / ")[0])} pontos)`,d:cm.d}); }
   const im = vd.imbs.findIndex((x,i)=>!c.imb["i"+i]); if (im>=0) steps.push({t:`Imbuement: <b>${esc(vd.imbs[im].s)}</b>`,d:vd.imbs[im].i});
   const pot = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||"").split(" (")[0].trim()).filter(x=>x&&x!=="—").join(" + "))}</b> · <a href="#" data-go="defesa">ver custos ›</a>`,d:"As que deves ter nas hotkeys agora."}); /* r6-t5: só os nomes (sem o parêntese do G) */
-  $("nextSteps").innerHTML = steps.map(s=>`<li><span aria-hidden="true" style="color:var(--accent)">→</span><span class="t">${s.t}<span class="d">${esc(s.d.split(/(?<=\.)\s|;|—/)[0])}</span>${s.q?`<span class="gpair" style="margin-top:4px"><button class="btn small ghost" data-qopen2="${s.q}">Lore e guia ›</button>${guiaBtn(guiaOf(s.q))}</span>`:""}</span><span></span></li>`).join("");
+  $("nextSteps").innerHTML = steps.map(s=>`<li><span aria-hidden="true" style="color:var(--accent)">→</span><span class="t"><span>${s.t}</span><span class="d">${esc(s.d.split(/(?<=\.)\s|;|—/)[0])}</span>${s.q?`<span class="gpair" style="margin-top:4px"><button class="btn small ghost" data-qopen2="${s.q}">Lore e guia ›</button>${guiaBtn(guiaOf(s.q))}</span>`:""}</span><span></span></li>`).join("");
   renderGuiasHome();
   // calculator
   const opts = huntRows(c.voc, L+2).filter(h=>h.p && !isTeam(h) && h.l<=L+2 && h.xp && h.l>=wlo).sort((a,b)=>b.xp-a.xp).slice(0,20);
   if (!opts.some(h=>String(h.i)===String(c.hunt))){ const h0=opts.find(h=>!h.est)||opts[0]; c.hunt = h0 ? h0.i : null; }
-  $("calcHunt").innerHTML = opts.map(h=>`<option value="${h.i}" ${String(h.i)===String(c.hunt)?"selected":""}>${esc(h.p?h.p.n:h.r.place)} — ${fmt(h.xp)}/h${h.est?" ≈":""}</option>`).join("");
+  $("calcHunt").innerHTML = opts.map(h=>`<option value="${h.i}" ${String(h.i)===String(c.hunt)?"selected":""}>${esc(h.p?h.p.n:h.r.place)} · ${fmt(h.xp)}/h${h.est?" ≈":""}</option>`).join("");
   if (!c.target || c.target<=L){ const nx = milestones().find(e=>e.l>L); c.target = nx ? nx.l : L+10; }
   $("tgtIn").value=c.target; $("bonusSel").value=c.bonus; $("preyChk").checked=!!c.prey;
   const h = opts.find(x=>String(x.i)===String(c.hunt));
@@ -45182,7 +45182,7 @@ function renderRotation(){
   $("spellTable").innerHTML = sp.filter(s=>spFilter==="all"||kind(s)===spFilter).map(s=>{ const ws=s.w.split(/ \/ | · /), k=ws.concat(s.n.split(" / "));
     const icons = ws.length>1 && spIdx(ws[1])>=0 && spIdx(ws[1])!==spIdx(ws[0]) && s.n.includes("/") ? `<span style="display:inline-flex;gap:3px">${sicon({k:[ws[0]],name:s.n.split(" / ")[0],w:ws[0],el:s.el,cls:"sm"})}${sicon({k:[ws[1]],name:(s.n.split(" / ")[1]||s.n),w:ws[1],el:s.el,cls:"sm"})}</span>` : sicon({k,name:s.n,w:s.w,el:s.el});
     const meta=[s.mana?s.mana+" mana":"", s.cd&&s.cd>2?(s.cd>=120?Math.round(s.cd/60)+" min":s.cd+" s"):"", s.hm==="b"?"builder":s.hm==="s"?"spender":s.hm==="sh"?"precisa de escudo":""].filter(Boolean).join(" · ");
-    return `<div class="spr-row ${s.l>L?"dim":""}">${icons}<div class="nm"><b>${elink("feitico",[s.n,s.w])}</b><code>${esc(s.w)}</code></div><div class="lv">${s.wheel?"W":s.l}<small>${s.wheel?"Wheel":(s.l>L?"faltam "+(s.l-L):"nível")}</small></div><div class="el">${kind(s)==="ataque"&&s.el?chip(s.el):`<span class="tag ${kind(s)==="cura"?"ok":""}">${KL[s.kind]||"suporte"}</span>`}</div><div class="use">${esc(s.r)}${meta?`<span class="tiny muted" style="display:block">${esc(meta)}</span>`:""}</div></div>`; }).join("");
+    return `<div class="spr-row ${s.l>L?"dim":""}">${icons}<div class="nm"><b>${elink("feitico",[s.n,s.w])}</b><code>${esc(s.w)}</code></div><div class="lv">${s.wheel?"W":s.l}<small>${s.wheel?"Wheel":(s.l>L?"faltam "+(s.l-L):"nível")}</small></div><div class="el">${kind(s)==="ataque"&&s.el?chip(s.el):`<span class="tag ${kind(s)==="cura"?"ok":""}">${KL[s.kind]||"suporte"}</span>`}</div><div class="use"><div>${esc(s.r)}</div>${meta?`<div class="tiny muted">${esc(meta)}</div>`:""}</div></div>`; }).join("");
   const cur = vd.pots.filter(p=>p.l<=L).pop();
   const pot = t => t&&t!=="—" ? `<span style="display:inline-flex;align-items:center;gap:8px">${spIdx(t)>=0?sicon({k:[t],name:t,cls:"sm bare"}):""}${esc(t)}</span>` : "—";
   $("potTable").innerHTML = `<thead><tr><th>A partir do nível</th><th>Vida</th><th>Mana</th></tr></thead><tbody>` + vd.pots.map(p=>`<tr class="${p===cur?"now":(p.l>L?"dim":"")}"><td><b>${p.l}</b></td><td>${pot(p.h)}</td><td>${pot(p.m)}</td></tr>`).join("") + `</tbody>`;
@@ -46076,7 +46076,7 @@ function renderBis(){
   const c=C(), el=$("bis"); if(!c||!el) return; rebuildIndex();
   const mine=c.hset==="mine", my=heroSetSel(c), set=mine?my:bisSet(c);
   const items=Object.values(set.slots).map(e=>BYID[e.id]).filter(Boolean), n=items.length;
-  const def=`${n} ${n===1?"item":"itens"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}<br>${IS_TOUCH()?"Toque: equipamento · toque longo: trocar item":"Clique: equipamento · botão direito: trocar item"}`;
+  const def=`<div>${n} ${n===1?"item":"itens"} · armadura ${items.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?"Toque: equipamento · toque longo: trocar item":"Clique: equipamento · botão direito: trocar item"}</div>`;
   el.innerHTML = `<div class="bis-h"><div class="bis-seg" role="group" aria-label="Que set mostrar"><button type="button" data-hview="bis" aria-pressed="${!mine}">Set BiS</button><button type="button" data-hview="mine" aria-pressed="${mine}">O meu set</button></div><span class="tiny muted">${mine?`set ${esc(my.name)}`:`${esc(VD().promo)} · nível ${c.level}`}</span></div>
     <div class="bisdoll" role="group" aria-label="${mine?"O teu equipamento":"Melhor equipamento para o teu nível"}">${DOLL.map(([k,lab0])=>{ const lab=k?slotLab(c,k):lab0;
       if(!k) return '<div aria-hidden="true"></div>';
@@ -46674,7 +46674,7 @@ function renderSlot(c,set,sel){
     top: `<ul class="ilist">${topShown.map(row).join("")+(topOS.length?`<li class="ilist-g">${esc(wg.lab)}</li>${topOS.map(row).join("")}`:"")||'<li class="muted small">Nada encontrado.</li>'}</ul>${(wg&&!showAll?top.length>topShown.length+topOS.length:top.length>8)?`<button class="btn small ghost" data-allslot="1" style="margin-top:8px">${showAll?"Mostrar só os 8 melhores":`Ver todos os ${top.length} itens deste slot`}</button>`:""}`,
     mine: mine.length ? `<ul class="ilist">${mine.slice(0,40).map(row).join("")}</ul>` : `<p class="small muted" style="margin:6px 0">Ainda não marcaste nenhum item deste slot. Usa “tenho?” nas listas e no inventário, ou escolhe com o botão direito no boneco.</p>`,
     next: `<ul class="ilist">${nxt.map(row).join("")||'<li class="muted small">Nada nos próximos 120 níveis.</li>'}</ul>` };
-  h+=`<div class="sltabs" role="tablist" aria-label="Itens para este slot">${[["top",`Melhores até ao nível ${L}`,top.length],["mine","Os teus",mine.length],["next","Próximos upgrades",nxt.length]].map(([k,t,n])=>`<button type="button" role="tab" data-sltab="${k}" aria-selected="${k===tab}">${t}<span class="n">${n}</span></button>`).join("")}</div><div class="slpane">${pane[tab]}</div><p class="note">Pontos = armadura, proteções, skills${c.voc==="monk"?", mantra":""}, velocidade e slots de imbuement pesados para a tua vocação${set.mode==="speed"?" (modo velocidade)":""}${set.prot?` com prioridade a ${ELN[set.prot]}`:""}.${sel==="weapon"&&c.voc==="paladin"?" Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.":""}${sel==="ring"||sel==="amulet"?" Os que duram menos de 15 minutos (Ring of healing, Death ring…) contam pouco e ficam fora dos sets sugeridos.":""}${["boots","helmet","weapon","extra"].includes(sel)?" Botas, capacetes e armas que acabam contam menos.":""}${wg&&c.voc==="knight"?` Tipo de arma usado: ${esc(wg.n)} (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?"o teu skill mais alto":"o que dá o melhor set no teu nível"}; para outro, escolhe-o em Definições do set › Arma).`:""} Itens raros também aparecem: o que manda é o que marcaste como teu.</p>`;
+  h+=`<div class="sltabs" role="tablist" aria-label="Itens para este slot">${[["top",`Melhores até ao nível ${L}`,top.length],["mine","Os teus",mine.length],["next","Próximos upgrades",nxt.length]].map(([k,t,n])=>`<button type="button" role="tab" data-sltab="${k}" aria-selected="${k===tab}">${t}<span class="n">${n}</span></button>`).join("")}</div><div class="slpane">${pane[tab]}</div><p class="note">Pontos = armadura, proteções, skills${c.voc==="monk"?", mantra":""}, velocidade e slots de imbuement pesados para a tua vocação${set.mode==="speed"?" (modo velocidade)":""}${set.prot?` com prioridade a ${ELN[set.prot]}`:""}.${sel==="weapon"&&c.voc==="paladin"?" Nos arcos e nas bestas o ataque conta com a melhor munição sem elemento do teu nível; com a arma em ‘Automático’, os sets usam arco a partir do nível 100.":""}${sel==="ring"||sel==="amulet"?" Os que duram menos de 15 minutos (Ring of healing, Death ring…) contam pouco e ficam fora dos sets sugeridos.":""}${["boots","helmet","weapon","extra"].includes(sel)?" Botas, capacetes e armas que acabam contam menos.":""}${wg&&c.voc==="knight"?` <span>Tipo de arma usado: ${esc(wg.n)} (${c.hs&&c.hs.sk&&c.hs.sk.k===wg.b?"o teu skill mais alto":"o que dá o melhor set no teu nível"}; para outro, escolhe-o em Definições do set › Arma).</span>`:""} Itens raros também aparecem: o que manda é o que marcaste como teu.</p>`;
   $("slotDetail").innerHTML=head+`<div id="slotBody">${h}</div>`;
   renderSlotSearch(c,set,sel);
 }
@@ -46878,7 +46878,7 @@ function renderImbu(){
     bisH=`<div class="imbis"><p class="imbis-h"><b>O set ${esc(set.name)} está vazio — imbuements para o BiS do teu nível</b></p>${br.join("")||'<p class="small muted" style="margin:0">Nenhum item do BiS do teu nível aceita imbuements.</p>'}${Object.keys(bs.slots).length?`<button type="button" class="btn small" data-imcopybis>Copiar o BiS e estes imbuements para ${esc(set.name)}</button>`:""}</div>`; }
   $("imItems").innerHTML = (rows.join("") || (hasIt?`<p class="muted" style="padding:10px 0">Nenhum item deste set aceita imbuements.</p>`:bisH))
     + (none.length?`<div class="imnone"><span>Sem slots de imbuement:</span>${none.map(([k,it])=>`<span class="pill">${spr(it)}${esc(it.n)}</span>`).join("")}</div>`:"")
-    + (empty.length?`<div class="imnone"><span>Slots vazios no set:</span> ${empty.map(k=>SLOTNAME[k].toLowerCase()).join(", ")}. <a href="#equip" data-go="equip">Escolher no Equipamento</a></div>`:"")
+    + (empty.length?`<div class="imnone"><span>Slots vazios no set:</span>${empty.map(k=>`<span class="pill">${esc(SLOTNAME[k])}</span>`).join("")} <a href="#equip" data-go="equip">Escolher no Equipamento</a></div>`:"")
     + `<div class="imnone"><span>Mochila: Featherweight (+${IMBV.feather[ti]}% de capacidade) se andares pesado.</span></div>`;
   // resumo
   const t=setStats(set,ti), n=t.imbs.length, fee=n*TFEE[tier];
@@ -47725,6 +47725,8 @@ const elTx = e => { const t=String(ELN[e]||e); return esc(t.charAt(0).toUpperCas
 // textos dos ataques que vêm da TibiaWiki em inglês ("up to 70 turns", "poisoned", "9 seconds, rarely")
 const CPEN=[[/\bup to\b/gi,"até"],[/\bhp\/turn\b/gi,"vida/turno"],[/\bturns\b/gi,"turnos"],[/\bturn\b/gi,"turno"],[/\bhp\b/gi,"vida"],[/\bseconds?\b|\bsecs?\b/gi,"s"],[/\bvery often\b/gi,"muito frequente"],[/\boften\b/gi,"frequente"],[/\brarely\b/gi,"raramente"],[/\bunknown effect\b|\bunknown\b/gi,"efeito desconhecido"],[/\bslowed\b/gi,"lento"],[/\bpoisoned\b/gi,"envenenado"],[/\bdrunk\b/gi,"embriagado"],[/\bcursed\b/gi,"amaldiçoado"],[/\bburning\b/gi,"a arder"],[/\belectrified\b/gi,"eletrificado"],[/\bhexed\b/gi,"enfeitiçado"],[/\brooted\b/gi,"preso"],[/\bfeared\b/gi,"com medo"],[/\bfreezing\b/gi,"a congelar"],[/\bbleeding\b/gi,"a sangrar"],[/\bdazzled\b/gi,"ofuscado"],[/\bpoints\b/gi,"pontos"],[/\bradius\b/gi,"de raio"]];
 const cpEn = s => (window.I18N && !/^pt/.test(I18N.lang)) ? String(s||"") : CPEN.reduce((t,[r,v])=>t.replace(r,v), String(s||""));
+// dano máximo da TibiaWiki ("375~", "242+", "~1000", "100?", "80+ (120+ with summons)"): o primeiro número
+const mdNum = v => { const m=String(v||"").match(/\d[\d,.]*/); return m ? +m[0].replace(/[,.]/g,"") : 0; };
 const rsCls = v => v<0?"heal":v===0?"imm":v<100?"res":v===100?"neu":"weak";
 const CPTR = {fire:"fogo",energy:"energia",poison:"veneno",earth:"terra",ice:"gelo"};
 const cpTr = s => String(s||"").split(/,\s*/).map(x=>CPTR[x.trim().toLowerCase()]||x.trim()).filter(Boolean).join(", ");
@@ -47739,7 +47741,7 @@ async function renderMonPage(key){
   const tags=[cls?((G.mcn||[]).includes(cls)?`<a class="tag" href="#hunts/tipo/${slug(cls)}" title="Hunts de ${esc(clsName(cls).toLowerCase())}">${esc(clsName(cls))}</a>`:`<span class="tag">${esc(clsName(cls))}</span>`):"",
     boss?`<span class="tag gold">boss${ci.boss?` · ${esc(ci.boss)}`:""}</span>`:"", ci.blvl||cr.blvl?`<span class="tag">Bestiary ${esc(ci.blvl||cr.blvl)}</span>`:"", ci.occ?`<span class="tag">${esc(ci.occ)}</span>`:""].join("");
   const runN=parseInt(ci.run,10);
-  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",DECSEP):null],["Dano máx./turno",ci.maxdmg?nf(+ci.maxdmg):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",DECSEP)+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
+  const spec=specBar([["Vida",nf(hp)],["XP",nf(xp)],["XP por vida",hp?(xp/hp).toFixed(2).replace(".",DECSEP):null],["Dano máx./turno",mdNum(ci.maxdmg)?nf(mdNum(ci.maxdmg)):null],["Velocidade",cr.speed||null],["Armadura",cr.armor??null],["Mitigação",cr.mitig!=null?String(cr.mitig).replace(".",DECSEP)+"%":null],["Foge com",ci.run!=null?(runN?nf(runN)+" vida":"não foge"):null],["Kills Bestiary",cr.kills?nf(cr.kills):null],["Charm points",cr.charm||null],["Invocar / convencer",ci.sum||ci.conv?[ci.sum?nf(ci.sum)+" mana":"—",ci.conv?nf(ci.conv)+" mana":"—"].join(" / "):null]]);
   // fraquezas e resistências: uma faixa
   const els=RSORD.filter(e=>dmg[e]!=null||RSORD.indexOf(e)<7);
   const res=`<div class="rs">${els.map(e=>{ const v=dmg[e]??100; return `<div class="rs-c rs-${rsCls(v)}${e===best?" rs-best":""}"><span class="c-${e}">${elTx(e)}</span><b>${v}%</b></div>`; }).join("")}</div>
@@ -47747,7 +47749,7 @@ async function renderMonPage(key){
   // ataques
   const ab=ci.ab||[], atk=ab.filter(a=>a[0]==="melee"||a[0]==="atk"), oth=ab.filter(a=>!(a[0]==="melee"||a[0]==="atk"));
   const atkT = atk.length ? `<table class="pt"><thead><tr><th>Ataque</th><th>Elemento</th><th class="num">Dano</th></tr></thead><tbody>${atk.map(([t,n,d,e,x])=>`<tr><td>${t==="melee"?"Corpo a corpo":esc(n)}${x?`<span class="pt-s">${esc(cpEn(x))}</span>`:""}</td><td>${e?`<span class="eld c-${e}">${elTx(e)}</span>`:"—"}</td><td class="num">${esc(cpEn(d)||"—")}</td></tr>`).join("")}</tbody></table>` : `<p class="small muted" style="margin:0">Sem dados dos ataques desta criatura.</p>`;
-  const othL = oth.map(([t,n,d,e,x])=> t==="summon"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):""}${d?` ×${esc(d)}`:""}` : t==="heal"?`Cura ${esc(d||"")}` : t==="haste"?"Haste" : t==="debuff"?`${esc(n)}${d?` (${esc(cpEn(d))})`:""}` : t==="buff"?`${esc(n)}${d?` (${esc(cpEn(d))})`:""}` : esc(n||"")).filter(Boolean);
+  const othL = oth.map(([t,n,d,e,x])=> t==="summon"?`Invoca ${n?mlink(n.toLowerCase(),esc(n)):""}${d?` ×${esc(d)}`:""}` : t==="heal"?`Cura${d?` (${esc(cpEn(d))})`:""}` : t==="haste"?"Haste" : t==="debuff"?`${esc(n)}${d?` (${esc(cpEn(d))})`:""}` : t==="buff"?`${esc(n)}${d?` (${esc(cpEn(d))})`:""}` : esc(n||"")).filter(Boolean);
   const prop=(y,t)=>`<li class="${y?"y":"n"}">${t}</li>`;
   const props=[ci.sinv!=null?prop(ci.sinv,"Vê invisível"):"", ci.para!=null?prop(ci.para,"Imune a paralisia"):"", ci.push!=null?prop(ci.push,"Empurrável"):"", ci.pobj!=null?prop(ci.pobj,"Empurra objetos"):"", ci.ill!=null?prop(ci.ill,"Ilusionável"):"", imm.length?prop(true,"Imune a "+imm.map(x=>IMMN[x]).join(", ")):""].join("");
   const walk=[ci.thru?`Atravessa ${esc(cpTr(ci.thru))}`:"", ci.walk?`Evita ${esc(cpTr(ci.walk))}`:""].filter(Boolean).join(" · ");
@@ -47773,7 +47775,7 @@ async function renderMonPage(key){
   el.innerHTML = pageHead("Criatura", esc(name), crSpr(key,72), tags) + spec + `
     <section class="card rs-card"><h3>Fraquezas e resistências<span class="h3s">dano que leva de cada elemento</span></h3>${res}</section>
     <div class="pg2">
-      <section class="card"><h3>Ataques${ci.maxdmg?`<span class="h3s">até ${nf(+ci.maxdmg)} por turno</span>`:""}</h3>${atkT}
+      <section class="card"><h3>Ataques${mdNum(ci.maxdmg)?`<span class="h3s">até ${nf(mdNum(ci.maxdmg))} por turno</span>`:""}</h3>${atkT}
         ${othL.length?`<p class="pt-ab"><b>Habilidades</b> ${othL.join(" · ")}</p>`:""}
         ${props?`<ul class="props">${props}</ul>`:""}${walk?`<p class="tiny muted" style="margin:6px 0 0">${walk}</p>`:""}</section>
       <section class="card"><h3>Loot<span class="h3s">${loot.length} itens · do que mais rende ao que menos</span></h3>${lootT}</section>
