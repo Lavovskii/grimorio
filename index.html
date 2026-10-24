@@ -2532,6 +2532,51 @@ html[data-ui="modern"] .lk-best{color:#45E8A6}
   html[data-ui="modern"] .lp-sk i::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(167,139,250,.22) 50%,transparent 65%);transform:translateX(-120%);animation:mdShine 1.6s ease-in-out infinite}
 }
 
+/* r15: Modern leve no desktop (medido com o Chromium sem GPU: o site parado gastava ~1,3 núcleos e caía para 8 fps). O que o browser
+   não passa à placa gráfica repinta a cada frame: bordas cónicas a rodar (--ang), faixas e texto com background-position, sombras a
+   pulsar, rects de SVG a piscar, o grão com mix-blend e a aurora com blur numa camada de 150 % do ecrã. Ficam: o movimento por
+   transform/opacity (aurora, estrelas, runas, dragão, grelha), as bordas a rodar só com o rato por cima, e tudo pausa em repouso
+   (html.md-calm: 40 s sem mexer ou a janela sem foco; o canvas também). */
+.mdbg .aur{filter:none}
+.mdbg .grain{display:none}
+.mdbg .dragon{filter:none;opacity:.3}
+.mdbg .scene .win{animation:none}
+.mdbg .grid{animation:none;background-image:none}
+.mdbg .grid::before{content:"";position:absolute;left:0;right:0;top:-56px;bottom:0;background-image:linear-gradient(rgba(167,139,250,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,.07) 1px,transparent 1px);background-size:56px 56px;animation:mdGridT 18s linear infinite}
+@keyframes mdGridT{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,56px,0)}}
+html[data-ui="modern"] .mdcur{mix-blend-mode:normal;background:radial-gradient(circle,rgba(139,92,246,.12),rgba(34,211,238,.045) 40%,transparent 70%)}
+html[data-ui="modern"] header.bar{backdrop-filter:none;-webkit-backdrop-filter:none;background:linear-gradient(180deg,rgba(13,11,34,.93),rgba(9,8,26,.87))}
+/* com o motor do fundo ligado (html.md-fx), a aurora, as estrelas e a grelha mexem-se no mesmo tick de 30 fps do canvas (mdFxTick):
+   o ecrã inteiro muda 30 vezes por segundo em vez de cada camada pedir 60 frames por conta própria */
+html.md-fx .mdbg .aur,html.md-fx .mdbg .stars,html.md-fx .mdbg .grid::before,html.md-fx .mdbg .rune,html.md-fx .mdbg .dragon,html.md-fx .mdbg .dragon .wing{animation:none}
+html.md-fx .mdbg .grid::before{transform:translate3d(0,var(--gy,0px),0)}
+html[data-ui="modern"] .hcmp-tray{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+html[data-ui="modern"] header.bar::after,html[data-ui="modern"] header.bar::before,html[data-ui="modern"] .sh::before,html[data-ui="modern"] .site-foot::before{animation:none}
+html[data-ui="modern"] header.bar::before{display:none}
+html[data-ui="modern"] .brand b{animation:none}
+html[data-ui="modern"] .dot.great{animation:none;box-shadow:0 0 10px currentColor}
+html[data-ui="modern"] .evbar{animation:none;box-shadow:0 0 24px rgba(69,232,166,.25)}
+html[data-ui="modern"] .sf-const circle{animation:none;opacity:.7}
+html[data-ui="modern"] :focus-visible{animation:none;box-shadow:0 0 0 4px rgba(34,211,238,.16)}
+/* bordas cónicas: paradas num ângulo bonito; rodam só com o rato por cima (ou com o foco) */
+html[data-ui="modern"] .cchip[aria-pressed="true"],html[data-ui="modern"] .srchbtn::after,html[data-ui="modern"] .ph-emb .ph-ring,html[data-ui="modern"] .card.hero,
+html[data-ui="modern"] .btn.ghost::before,html[data-ui="modern"] .gs::after{animation-play-state:paused;--ang:200deg}
+html[data-ui="modern"] .cchip[aria-pressed="true"]:hover,html[data-ui="modern"] .srchbtn:hover::after,html[data-ui="modern"] .srchbtn:focus-visible::after,html[data-ui="modern"] .ph-emb:hover .ph-ring,
+html[data-ui="modern"] .card.hero:hover,html[data-ui="modern"] .btn.ghost:hover::before,html[data-ui="modern"] .btn.ghost:focus-visible::before,html[data-ui="modern"] .gs:hover::after,html[data-ui="modern"] .gs:focus-within::after{animation-play-state:running}
+/* cartões de hunt e da Wheel: sem camada de GPU cada um (a página das hunts tem centenas); a inclinação 3D só com o rato por cima */
+html[data-ui="modern"] .hc,html[data-ui="modern"] .wcard{will-change:auto;transform:translateY(var(--ty,0px))}
+@media (hover:hover) and (pointer:fine){
+  html[data-ui="modern"] .hc:hover,html[data-ui="modern"] .wcard:hover{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px))}
+}
+/* enfeites da interface em ciclo: cada um pedia 60 frames por segundo; agora mexem com o rato por cima */
+html[data-ui="modern"] .sec>h3::before,html[data-ui="modern"] .ip-grid h3::before{animation:none}
+html[data-ui="modern"] .ring::before,html[data-ui="modern"] .ring::after,html[data-ui="modern"] .ip-spr::before,html[data-ui="modern"] .ip-spr .bigspr,html[data-ui="modern"] .ip-spr>.cr,html[data-ui="modern"] .ip-spr>.npc,
+html[data-ui="modern"] .seg button[aria-pressed="true"]::after,html[data-ui="modern"] .ad-slot::after,html[data-ui="modern"] .sp-area i.on{animation-play-state:paused}
+html[data-ui="modern"] .card:hover .ring::before,html[data-ui="modern"] .card:hover .ring::after,html[data-ui="modern"] .ip-spr:hover::before,html[data-ui="modern"] .ip-spr:hover .bigspr,html[data-ui="modern"] .ip-spr:hover>.cr,html[data-ui="modern"] .ip-spr:hover>.npc,
+html[data-ui="modern"] .seg:hover button[aria-pressed="true"]::after,html[data-ui="modern"] .ad-slot:hover::after,html[data-ui="modern"] .sp-area:hover i.on{animation-play-state:running}
+/* repouso: tudo o que anima em ciclo pára até voltares a mexer */
+html.md-calm[data-ui="modern"] .mdbg *,html.md-calm[data-ui="modern"] body *:not(.tkload)::before,html.md-calm[data-ui="modern"] body *:not(.tkload)::after,html.md-calm[data-ui="modern"] .brand .sig{animation-play-state:paused!important}
+
 /* menos movimento: tudo parado, estado final visível */
 @media (prefers-reduced-motion:reduce){
   html[data-ui="modern"] *,html[data-ui="modern"] *::before,html[data-ui="modern"] *::after{animation:none!important;transition:none!important}
@@ -3007,7 +3052,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
   html[data-ui="modern"] .hc,html[data-ui="modern"] .wcard{will-change:auto;transform:none}
   .mdbg .grain,.mdbg #mdFx,.mdbg .dragon,.mdbg .rune,.mdbg .shoot{display:none}
   .mdbg .aur{inset:0;filter:none;animation:none}
-  .mdbg .grid,.mdbg .stars,.mdbg .scene .win{animation:none}
+  .mdbg .grid,.mdbg .grid::before,.mdbg .stars,.mdbg .scene .win{animation:none}
   .mdbg .stars,.mdbg .scene,.mdbg .scene .far{transform:none}
   html[data-ui="modern"] header.bar{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(9,8,26,.95)}
   html[data-ui="modern"] nav.bottom{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(9,8,26,.97)}
@@ -47188,29 +47233,59 @@ function setUI(mode, remember){
 /* ---------- motor do Modern: partículas, paralaxe, luz do cursor, estrelas cadentes ---------- */
 const MD={raf:0, parts:[], cv:null, g:null, w:0, h:0, dpr:1, px:0, py:0, cx:-999, cy:-999, shootT:0, tipT:0, tipEl:null};
 function mdStart(){ if(!isMd()) return; mdInd(); mdPanel(ST.ui.p); mdHero(); if(!RM.matches&&!MD_LITE.matches){ mdFxInit(); mdShootLoop(); } mdSearchTxt(); }
-function mdStop(){ cancelAnimationFrame(MD.raf); MD.raf=0; clearTimeout(MD.shootT); document.querySelectorAll("[data-mdtip]").forEach(el=>{ el.setAttribute("title",el.dataset.mdtip); el.removeAttribute("data-mdtip"); }); mdTipHide();
+function mdStop(){ cancelAnimationFrame(MD.raf); MD.raf=0; clearTimeout(MD.shootT); document.documentElement.classList.remove("md-fx");
+  [MD.aur,MD.stars,MD.drag,MD.wing].concat(MD.runes||[]).forEach(el=>{ if(el){ el.style.transform=""; el.style.opacity=""; } }); document.querySelectorAll("[data-mdtip]").forEach(el=>{ el.setAttribute("title",el.dataset.mdtip); el.removeAttribute("data-mdtip"); }); mdTipHide();
   document.querySelectorAll(".hc,.wcard").forEach(el=>{ el.style.removeProperty("--rx"); el.style.removeProperty("--ry"); }); document.querySelectorAll("[style*='translate']").forEach(el=>{ el.style.translate=""; }); }
+/* r15 */ // partículas: um sprite com o brilho de cada cor desenhado uma vez (antes, um gradiente novo por partícula e por frame),
+// 24 fps, no máximo 56; param em repouso (mdCalm) e com o separador escondido. O resto do fundo mexe-se no mesmo tick (mdBgStep).
 function mdFxInit(){ MD.cv=document.getElementById("mdFx"); if(!MD.cv) return; MD.g=MD.cv.getContext("2d"); mdFxSize();
-  const n=Math.round(Math.min(90, Math.max(28, innerWidth/16))); MD.parts=Array.from({length:n},()=>mdPart(true));
+  if(!MD.spr) MD.spr=MD_COL.map(c=>{ const cv=document.createElement("canvas"), R=32; cv.width=cv.height=R*2; const g=cv.getContext("2d"), gr=g.createRadialGradient(R,R,0,R,R,R);
+    gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},1)`); gr.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},0)`); g.fillStyle=gr; g.fillRect(0,0,R*2,R*2); return cv; });
+  const n=Math.round(Math.min(56, Math.max(24, innerWidth/26))); MD.parts=Array.from({length:n},()=>mdPart(true));
+  const bg=document.querySelector(".mdbg"); MD.aur=bg&&bg.querySelector(".aur"); MD.stars=bg&&bg.querySelector(".stars"); MD.grid=bg&&bg.querySelector(".grid");
+  MD.drag=bg&&bg.querySelector(".dragon"); MD.wing=MD.drag&&MD.drag.querySelector(".wing"); MD.runes=bg?[...bg.querySelectorAll(".rune")]:[];
+  document.documentElement.classList.add("md-fx");
   if(!MD.raf) MD.raf=requestAnimationFrame(mdFxTick); }
+// aurora, estrelas, grelha, runas e dragão no tick das partículas (os movimentos das @keyframes mdAur, mdTwinkle, mdGrid, mdRune,
+// mdFly e mdWing): todo o fundo muda nos mesmos frames
+const MD_RUNE=[[18,0],[22,-4],[18,-9],[25,-2],[18,-12],[20,-6],[18,-15],[24,-8]]; // [duração, atraso] em s, como no CSS
+const mdLerp=(ks,u)=>{ let i=1; while(i<ks.length-1&&u>ks[i][0]) i++; const a=ks[i-1], b=ks[i], f=(u-a[0])/((b[0]-a[0])||1); return a.slice(1).map((v,j)=>v+(b[j+1]-v)*f); };
+function mdBgStep(t){ const T=t/1000, vm=Math.max(MD.w,MD.h)/100, P=Math.PI*2; mdPara();
+  MD.runes.forEach((r,i)=>{ const [d,dl]=MD_RUNE[i%8], u=((T-dl)%d+d)%d/d, op=u<.1?u/.1*.55:u<.8?.55-(u-.1)/.7*.25:.3*(1-(u-.8)/.2);
+    r.style.transform=`translate3d(0,${(-.95*MD.h*u).toFixed(1)}px,0) rotate(${(160*u).toFixed(1)}deg)`; r.style.opacity=op.toFixed(3); });
+  if(MD.drag){ const u=(T%80)/80, [x,y]=mdLerp([[0,0,0],[.25,.35*MD.w,-.03*MD.h],[.5,.7*MD.w,.02*MD.h],[.75,1.05*MD.w,-.02*MD.h],[1,MD.w+560,0]],u);
+    MD.drag.style.transform=`translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
+    if(MD.wing) MD.wing.style.transform=`scaleY(${(.775+.225*Math.cos(T*P/1.4)).toFixed(3)})`; }
+  if(MD.aur) MD.aur.style.transform=`translate3d(${(vm*(.5+2.5*Math.sin(T*P/60))).toFixed(1)}px,${(-vm*2.25*Math.sin(T*P/47)).toFixed(1)}px,0) rotate(${(6*Math.sin(T*P/71)).toFixed(2)}deg)`;
+  if(MD.stars) MD.stars.style.opacity=(.675+.225*Math.sin(T*P/12)).toFixed(3);
+  if(MD.grid) MD.grid.style.setProperty("--gy",((T*56/18)%56).toFixed(1)+"px"); }
 function mdFxSize(){ if(!MD.cv) return; MD.dpr=Math.min(2,window.devicePixelRatio||1); MD.w=innerWidth; MD.h=innerHeight; MD.cv.width=MD.w*MD.dpr; MD.cv.height=MD.h*MD.dpr; MD.g.setTransform(MD.dpr,0,0,MD.dpr,0,0); }
 const MD_COL=[[139,92,246],[34,211,238],[244,63,94],[185,155,255],[251,191,36]];
-function mdPart(any){ const c=MD_COL[Math.random()*MD_COL.length|0]; return {x:Math.random()*MD.w, y:any?Math.random()*MD.h:MD.h+10, r:.6+Math.random()*2.2, vy:-(.15+Math.random()*.55), vx:(Math.random()-.5)*.2, ph:Math.random()*6.28, c, a:.25+Math.random()*.6}; }
-function mdFxTick(t){ MD.raf=0; if(!mdMotion()||document.hidden||!MD.g) return; const g=MD.g; g.clearRect(0,0,MD.w,MD.h); g.globalCompositeOperation="lighter";
-  for(const p of MD.parts){ p.ph+=.02; p.x+=p.vx+Math.sin(p.ph)*.25; p.y+=p.vy;
-    const dx=p.x-MD.cx, dy=p.y-MD.cy, d2=dx*dx+dy*dy; if(d2<14000){ const f=(14000-d2)/14000*.9; p.x+=dx/Math.sqrt(d2+1)*f; p.y+=dy/Math.sqrt(d2+1)*f; }
+function mdPart(any){ const ci=Math.random()*MD_COL.length|0; return {x:Math.random()*MD.w, y:any?Math.random()*MD.h:MD.h+10, r:.6+Math.random()*2.2, vy:-(.15+Math.random()*.55), vx:(Math.random()-.5)*.2, ph:Math.random()*6.28, ci, a:.25+Math.random()*.6}; }
+function mdFxTick(t){ MD.raf=0; if(!mdMotion()||document.hidden||!MD.g||MD.calm) return;
+  if(t-(MD.lt||0)<40){ MD.raf=requestAnimationFrame(mdFxTick); return; } const k=MD.lt?Math.min(4,(t-MD.lt)/16.7):2.5; MD.lt=t; // 24 fps; o passo segue o tempo
+  mdBgStep(t); const g=MD.g; g.clearRect(0,0,MD.w,MD.h); g.globalCompositeOperation="lighter";
+  for(const p of MD.parts){ p.ph+=.02*k; p.x+=(p.vx+Math.sin(p.ph)*.25)*k; p.y+=p.vy*k;
+    const dx=p.x-MD.cx, dy=p.y-MD.cy, d2=dx*dx+dy*dy; if(d2<14000){ const f=(14000-d2)/14000*.9*k; p.x+=dx/Math.sqrt(d2+1)*f; p.y+=dy/Math.sqrt(d2+1)*f; }
     if(p.y<-12||p.x<-20||p.x>MD.w+20){ Object.assign(p,mdPart(false)); }
-    const rr=p.r*4, gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,rr); gr.addColorStop(0,`rgba(${p.c[0]},${p.c[1]},${p.c[2]},${p.a})`); gr.addColorStop(1,`rgba(${p.c[0]},${p.c[1]},${p.c[2]},0)`);
-    g.fillStyle=gr; g.beginPath(); g.arc(p.x,p.y,rr,0,6.283); g.fill(); }
-  g.globalCompositeOperation="source-over"; MD.raf=requestAnimationFrame(mdFxTick); }
+    const rr=p.r*4; g.globalAlpha=p.a; g.drawImage(MD.spr[p.ci],p.x-rr,p.y-rr,rr*2,rr*2); }
+  g.globalAlpha=1; g.globalCompositeOperation="source-over"; MD.raf=requestAnimationFrame(mdFxTick); }
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden && mdMotion() && MD.g && !MD.raf) MD.raf=requestAnimationFrame(mdFxTick); });
+// repouso: 40 s sem rato, teclado, toque ou scroll, ou a janela sem foco → html.md-calm (animações em ciclo pausadas) e o canvas pára
+let MD_CALMT=0;
+function mdCalm(on){ if(MD.calm===on) return; MD.calm=on; document.documentElement.classList.toggle("md-calm",on);
+  if(!on&&isMd()&&mdMotion()&&MD.g&&!MD.raf&&!document.hidden){ MD.lt=0; MD.raf=requestAnimationFrame(mdFxTick); } }
+function mdWake(){ mdCalm(false); clearTimeout(MD_CALMT); MD_CALMT=setTimeout(()=>mdCalm(true),40000); }
+["pointermove","pointerdown","keydown","wheel","touchstart","scroll"].forEach(ev=>addEventListener(ev,mdWake,{passive:true}));
+addEventListener("focus",mdWake); addEventListener("blur",()=>{ clearTimeout(MD_CALMT); mdCalm(true); });
+mdWake();
 addEventListener("resize",()=>{ if(isMd()){ mdFxSize(); mdInd(); } },{passive:true});
 function mdShootLoop(){ clearTimeout(MD.shootT); MD.shootT=setTimeout(()=>{ const s=document.querySelector(".mdbg .shoot"); if(s&&mdMotion()&&!document.hidden){ s.style.top=(4+Math.random()*22)+"vh"; s.style.left=(45+Math.random()*50)+"vw"; s.classList.remove("go"); void s.offsetWidth; s.classList.add("go"); } mdShootLoop(); }, 6000+Math.random()*9000); }
 // rato: paralaxe, luz do cursor, foco de luz e inclinação dos cartões, íman
 let mdPE=null, mdPR=0, mdTilt=null;
 document.addEventListener("pointermove", e=>{ if(!isMd()) return; mdPE=e; if(mdPR) return; mdPR=requestAnimationFrame(()=>{ mdPR=0; const ev=mdPE, bg=document.querySelector(".mdbg");
   MD.cx=ev.clientX; MD.cy=ev.clientY;
-  if(bg && !RM.matches){ bg.style.setProperty("--px",(ev.clientX/innerWidth*2-1).toFixed(3)); bg.style.setProperty("--py",(ev.clientY/innerHeight*2-1).toFixed(3)); }
+  if(bg && !RM.matches){ MD.ppx=(ev.clientX/innerWidth*2-1).toFixed(2); MD.ppy=(ev.clientY/innerHeight*2-1).toFixed(2); if(!MD.raf) mdPara(); } // r15: com o tick a correr, a paralaxe vai no tick
   const cur=document.querySelector(".mdcur"); if(cur){ cur.style.setProperty("--cx",ev.clientX+"px"); cur.style.setProperty("--cy",ev.clientY+"px"); }
   const el=ev.target.closest&&ev.target.closest(".card,.hc,.wcard,.spa,.gmem"); if(el){ const r=el.getBoundingClientRect(); el.style.setProperty("--mx",(ev.clientX-r.left)+"px"); el.style.setProperty("--my",(ev.clientY-r.top)+"px");
     if(FINE.matches && !RM.matches && (el.classList.contains("hc")||el.classList.contains("wcard"))){ if(mdTilt&&mdTilt!==el){ mdTilt.style.removeProperty("--rx"); mdTilt.style.removeProperty("--ry"); } mdTilt=el;
@@ -47219,7 +47294,10 @@ document.addEventListener("pointermove", e=>{ if(!isMd()) return; mdPE=e; if(mdP
   const mg=ev.target.closest&&ev.target.closest(".srchbtn,#obHost .lk .btn[type=submit],.ui-hint .btn"); document.querySelectorAll(".md-mag").forEach(x=>{ if(x!==mg){ x.style.translate=""; x.classList.remove("md-mag"); } });
   if(mg && FINE.matches && !RM.matches){ const r=mg.getBoundingClientRect(); mg.classList.add("md-mag"); mg.style.translate=`${((ev.clientX-r.left-r.width/2)*.18).toFixed(1)}px ${((ev.clientY-r.top-r.height/2)*.25).toFixed(1)}px`; }
 }); }, {passive:true});
-addEventListener("scroll",()=>{ if(!mdMotion()) return; const bg=document.querySelector(".mdbg"); if(bg&&!MD_LITE.matches) bg.style.setProperty("--sy",Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)).toFixed(3)); mdTipHide(); },{passive:true});
+addEventListener("scroll",()=>{ if(!mdMotion()) return; if(!MD_LITE.matches){ MD.psy=Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)).toFixed(3); if(!MD.raf) mdPara(); } mdTipHide(); },{passive:true});
+// paralaxe do fundo (--px/--py do rato, --sy do scroll): só muda o que mudou, no tick do fundo (mdBgStep) ou logo, se o tick estiver parado
+function mdPara(){ const bg=document.querySelector(".mdbg"); if(!bg) return; const o=MD.pv||(MD.pv={});
+  [["--px","ppx"],["--py","ppy"],["--sy","psy"]].forEach(([v,k])=>{ if(MD[k]!=null&&o[k]!==MD[k]){ o[k]=MD[k]; bg.style.setProperty(v,MD[k]); } }); }
 // ondulação a partir do ponto do clique
 document.addEventListener("pointerdown", e=>{ if(!mdMotion()) return; const b=e.target.closest(".btn,.seg button,.cchip,nav.side button,nav.bottom button,.srchbtn,.bslot,.tabs button"); if(!b) return;
   const r=b.getBoundingClientRect(), s=Math.max(r.width,r.height)*2.2, sp=document.createElement("span"); sp.className="md-rip"; sp.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;
