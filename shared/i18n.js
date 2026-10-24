@@ -52,7 +52,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261024a";
+    var DV = "?v=20261024c";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
@@ -333,10 +333,13 @@
     t = ui(k);
     if (t != null) return t;
     var c = content(k);
-    if (c) return c.t;
+    // (só em parte, num texto com " · ": as partes traduzem-se melhor à parte — "ligação elemental: energia · def 20 · +2 ML"
+    // partia-se no ":" e ficava "elemental bond: energia · …")
+    if (c && (c.full || k.indexOf(" · ") < 0)) return c.t;
     // num texto simples só os modelos curtos com 2+ palavras fixas (ex.: "Só as de {0} ({1})"), nunca "{0} de {1}"
     t = short(k, 2);
     if (t == null) t = dots(k);
+    if (t == null && c) return c.t;
     if (t == null) t = commas(k);
     if (t == null) t = pluses(k);
     return t != null ? t : edgeSep(k);
