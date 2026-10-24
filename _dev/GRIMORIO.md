@@ -54,6 +54,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `rxOpt`; cache `BSCACHE`). O loot por kill é `lootPerKill`. O Bosstiary é `c.bst = {chave: estágio 0–3}` (`[data-bstier]` roda
   o estágio), com pontos e bónus de loot em `GrimBoss`. O filtro é `ST.ui.bsf` (`BSF`). Modelo e limites: `_dev/BOSSES.md`;
   teste: `node _dev/bosses_test.mjs`.
+- Imbuements (r17): são o separador «Imbuements» do Equipamento (`[data-eqview="imbu"]`, `ST.ui.eqv="imbu"`); o painel `imbu`
+  saiu do menu. O `migrate` e o `route` levam o `#imbu` antigo para `#equip` nesse separador, e a pesquisa (`im`) também. O
+  `renderImbu` mantém os mesmos ids (`imSets`, `imTier`, `imItems`, `imSum`, `imbList`). «No jogo» (`imGameHTML`): o set ativo com e
+  sem imbuements no `GrimRot.plan` (caixa e boss; `rxGear(c,set)`, skills dos imbuements em `g.ml`/`g.sk`, `manaLeech` do set),
+  mais o Strike (10% × dano crítico), a vida (`econ.leechBase` × life leech), a mana do leech, as poções poupadas (gp/h) e o
+  golpe de 1000 com as proteções. O RXD carrega quando o separador abre (`imGameLoad`).
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,

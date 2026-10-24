@@ -222,7 +222,9 @@
     var harm = sto.harm ? { base: sto.harm.base, refund: sto.harm.refund, echo: (D.ab["Spiritual Outburst"].wh.echo || [0])[Math.max(0, stage - 1)] } : null;
     var mage = voc === "sorcerer" || voc === "druid";
     var tier = voidTier(opt.level), nVoid = mage ? 2 : 1, leech = D.imbs.void.v[tier] / 100 * nVoid;
-    cand.forEach(function (c) { c.leech = c.per * leech * (0.1 * c.hits + 0.9); });   // mana leech (TibiaWiki, Formulae)
+    if (opt.manaLeech != null) leech = Math.max(0, +opt.manaLeech || 0);   // o mana leech do set (fração), em vez do Void do nível
+    // lb = o dano que conta para o leech (TibiaWiki, Formulae: com h alvos, × (0,1 h + 0,9)); vida/mana leech = lb × %
+    cand.forEach(function (c) { c.lb = c.per * (0.1 * c.hits + 0.9); c.leech = c.lb * leech; });
     // uma solução por poção (a mais barata por mana dá menos mana por segundo); fica a de mais dano e, empatadas, a mais barata
     var best = null;
     (pots.length ? pots : [null]).forEach(function (p) {
@@ -309,16 +311,16 @@
     obj.push(-eps * gpm);
     var S = simplex(obj, A, b);
     if (!S) return null;
-    var x = S.x, rates = {}, hOf = {}, dps = 0, rune = 0, mana = 0, lee = 0;
+    var x = S.x, rates = {}, hOf = {}, dps = 0, rune = 0, mana = 0, lee = 0, lb = 0;
     cols.forEach(function (q, j) {
       if (x[j] < 1e-7) return;
       rates[q.c.a.n] = (rates[q.c.a.n] || 0) + x[j];
       if (q.h) hOf[q.c.a.n] = Math.max(hOf[q.c.a.n] || 0, q.h);
-      dps += q.v * x[j]; mana += q.c.a.m * x[j]; lee += q.c.leech * x[j];
+      dps += q.v * x[j]; mana += q.c.a.m * x[j]; lee += q.c.leech * x[j]; lb += q.c.lb * x[j];
       if (q.c.a.kind === "rune") rune += q.c.a.gp * x[j];
     });
     var y = x[Y] || 0;
-    return { rates: rates, hOf: hOf, dps: dps, mps: mana, leechS: lee, need: y, pot: pot, gph: (rune + y * gpm) * 3600, runeGph: rune * 3600 };
+    return { rates: rates, hOf: hOf, dps: dps, mps: mana, leechS: lee, leechBase: lb, need: y, pot: pot, gph: (rune + y * gpm) * 3600, runeGph: rune * 3600 };
   }
 
   // ---------- sequência: a rotação a jogar, com as taxas do LP (fichas por feitiço) e os cooldowns ----------
@@ -446,7 +448,7 @@
     var potH = lp.pot && potMana ? lp.need * 3600 / potMana : 0;
     var econ = {
       gpH: Math.round(lp.gph), runesGpH: Math.round(lp.runeGph),
-      manaS: +lp.mps.toFixed(1), leechS: +lp.leechS.toFixed(1), needS: +lp.need.toFixed(1),
+      manaS: +lp.mps.toFixed(1), leechS: +lp.leechS.toFixed(1), needS: +lp.need.toFixed(1), leechBase: +(lp.leechBase || 0).toFixed(1),
       potion: lp.pot ? { n: lp.pot.n, perH: Math.round(potH), gpH: Math.round(potH * lp.pot.gp) } : null,
       budget: budget, cap: cap === Infinity ? null : cap,
       dps: Math.round(lp.dps), dpsSeq: Math.round(sim.dps), autoDps: Math.round(R.auto),

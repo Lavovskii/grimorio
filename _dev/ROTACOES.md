@@ -28,6 +28,7 @@ const P = GrimRot.plan(D, {
   mix: false,                          // misturar elementos (só com eff e quando a criatura leva o mesmo dos dois)
   forkBoss: false,                     // Forked no boss (fora por omissão)
   price: (chave) => gp                 // opcional: preço dos materiais dos imbuements (ex.: buyOf/priceOf do site)
+  manaLeech: 0.16,                     // opcional: o mana leech do set (fração); por omissão o Void do nível (1 ou 2)
 });
 GrimRot.toHK(P);   // → [{g, k:[{k, c:[...], d}]}], o formato de G.voc[voc].hk
 GrimRot.toRot(P);  // → {t, seq:[[palavras, nome]], why}, o formato de uma entrada de G.voc[voc].rot
