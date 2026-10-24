@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261022a" data-c></script><script src="shared/rotacoes.js?v=20261023b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261022a" data-c></script><script src="shared/rotacoes.js?v=20261023b"></script><script src="shared/bosses.js?v=20261024a"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -658,6 +658,30 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 /* r13: rotação e hotkeys (motor shared/rotacoes.js) */
 .hk.nok{grid-template-columns:minmax(0,1fr)}
 .hkf.nok{grid-template-columns:auto minmax(0,1fr)}
+.bs-top{display:grid;gap:10px;padding:14px 16px;margin-bottom:14px}
+.bs-list{display:grid;gap:8px}
+.bs-r{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px 12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.bs-ic{display:grid;place-items:center;width:48px;height:48px}
+.bs-m{display:grid;gap:5px;min-width:0}
+.bs-h{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.bs-h b{font-size:16px}
+.bs-st{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.bs-v{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;font-size:14px}
+.bs-v .small{flex-basis:100%}
+.bs-d summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
+.bs-d ul{margin:0 0 4px;padding-left:18px;display:grid;gap:4px}
+.bs-tier{display:grid;justify-items:center;gap:1px;min-width:96px;min-height:56px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--ink);font:inherit;cursor:pointer;text-align:center}
+.bs-tier b{font-size:14px}
+.bs-tier.s1{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.bs-tier.s2{border-color:var(--accent)}
+.bs-tier.s3{border-color:var(--ok);background:var(--ok-soft)}
+.tag.bs-cb{background:var(--surface-2)}
+.tag.bs-ca{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.tag.bs-cn{background:var(--gold-soft,var(--surface-2));color:var(--gold,var(--ink));border-color:transparent}
+.bs-how{padding:10px 16px;margin-top:14px}
+.bs-how summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.bs-how ul{margin:0 0 6px;padding-left:18px;display:grid;gap:6px}
+@media (max-width:560px){ .bs-r{grid-template-columns:44px minmax(0,1fr)} .bs-tier{grid-column:1/-1;justify-self:stretch;grid-template-columns:auto auto auto;justify-content:center;gap:8px;min-height:44px} .bs-ic{width:44px;height:44px} }
 .rx-lay,.rx-how,.rx-cmp{display:grid;gap:14px;padding:14px 16px;margin-bottom:14px}
 .rx-lay h3,.rx-how h3,.rx-cmp h3{font-size:19px;margin:0}
 .rx-row h4{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 8px;font-size:15px}
@@ -3174,6 +3198,12 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     </section>
 
     <div id="sheet" role="dialog" aria-modal="true" aria-label="Detalhe"><div class="sh"><button class="sh-x" id="sheetX" aria-label="Fechar">✕</button><div id="sheetBody"></div></div></div>
+
+    <!-- BOSSES (r16: shared/bosses.js + data/bosses.json) -->
+    <section class="panel" data-p="bosses">
+      <div class="ph"><span class="eyebrow">Hunts</span><h2>Bosses</h2><p id="bsLead">Que bosses aguentas no teu nível, quanto dão e o teu Bosstiary.</p></div>
+      <div id="bsBody"></div>
+    </section>
 
     <!-- TAREFAS -->
     <section class="panel" data-p="tarefas">
@@ -43581,6 +43611,7 @@ const S = (p,vb) => `<svg viewBox="${vb||"0 0 24 24"}" fill="none" stroke="curre
 const IC = {
  inicio:S('<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-3H4zM14 7h6V4h-6z"/>'),
  tarefas:S('<path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/>'),
+ bosses:S('<path d="M4 17 3 7l5 4 4-7 4 7 5-4-1 10z"/><path d="M5 21h14"/>'),
  hunts:S('<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/>'),
  build:S('<path d="M14.5 4.5l5 5L9 20H4v-5z"/><path d="M12 7l5 5"/>'),
  prog:S('<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/>'),
@@ -43626,7 +43657,7 @@ const VI = (v,cls) => { const ix=VIX[v]; return ix==null ? (IC[v]||"") : `<span 
 /* ---------- navigation ---------- */
 const SECS = [
  {id:"inicio",t:"Início",subs:[["inicio","Início"]]},
- {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["tarefas","Tarefas"]]},
+ {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["bosses","Bosses"],["tarefas","Tarefas"]]},
  {id:"build",t:"Build",subs:[["rotacao","Rotação e hotkeys"],["wheel","Wheel"],["equip","Equipamento"]]},
  {id:"prog",t:"Progresso",subs:[["charms","Charms"],["imbu","Imbuements"],["quests","Quests"],["guias","Guias de quests","quests/"]]},
  {id:"wiki",t:"Wiki",subs:[["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
@@ -44506,7 +44537,7 @@ function renderNav(){
   { const sg=$("subtabs").querySelector(".seg"), st=sg&&sg.querySelector('[aria-pressed="true"]'); if(st&&sg.scrollWidth>sg.clientWidth+1){ const r=sg.getBoundingClientRect(), b=st.getBoundingClientRect(); if(b.left<r.left||b.right>r.right) sg.scrollLeft+=b.left-r.left-(r.width-b.width)/2; } } // menu lateral e separadores com scroll: o item ativo fica à vista
   if(typeof mdInd==="function") mdInd();
 }
-function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:true}); ST.ui.p=p; save(); renderNav(); if(p==="tarefas") renderTasks(); if(p==="itens") renderItemList(); if(p==="criaturas") renderMonList(); if(p==="feiticos") renderSpellList(); if(p==="npcs") renderNpcList(); if(p==="colecoes") renderColList();
+function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:true}); ST.ui.p=p; save(); renderNav(); if(p==="tarefas") renderTasks(); if(p==="bosses") renderBosses(); if(p==="itens") renderItemList(); if(p==="criaturas") renderMonList(); if(p==="feiticos") renderSpellList(); if(p==="npcs") renderNpcList(); if(p==="colecoes") renderColList();
   if(location.hash!=="#"+p) history.replaceState(history.state,"","#"+p); if(scroll!==false) window.scrollTo({top:0}); if(typeof mdPanel==="function") mdPanel(p); }
 $("side").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
 $("subtabs").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
@@ -45047,6 +45078,86 @@ document.addEventListener("change", e=>{ const t=e.target;
     c.tbar={sets, sel:first.set}; save(); renderRx(); }).catch(()=>err("Não consegui ler o ficheiro."));
 });
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget]"); if(!b) return; delete C().tbar; save(); renderRx(); });
+/* r16 */ // Bosses: que bosses a personagem aguenta no nível (GrimBoss.judge, shared/bosses.js), com o loot por kill aos preços do
+// mundo (lootPerKill) e o Bosstiary (c.bst = {chave: estágio 0–3}; pontos e bónus de loot pela Cyclopedia). O dano de boss vem
+// do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
+// personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
+let BSD=null, BSERR=false, BSCACHE=null;
+const BSF=[["solo","Sozinho"],["team","Em equipa"],["later","Mais tarde"],["all","Todos"]];
+const BSPROT={fire:"p_fire",earth:"p_earth",ice:"p_ice",energy:"p_energy",death:"p_death",holy:"p_holy"};
+const BSSTG=["—","Prowess","Expertise","Mastery"];
+const bsT = s => s==null?"—":s<60?`${Math.max(1,Math.round(s))} s`:s<3600?`${Math.round(s/60)} min`:`${Math.round(s/360)/10} h`;
+function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt);
+  if(BSCACHE&&BSCACHE.key===key) return BSCACHE;
+  const dps=p=>p&&!p.empty?p.econ.dps+(p.econ.autoDps||0):0;
+  const real=dps(GrimRot.plan(RXD,Object.assign({},opt,{scen:"boss"})));
+  const curve=GrimBoss.makeCurve(l=>dps(GrimRot.plan(RXD,{voc:c.voc,level:l,scen:"boss",shield:opt.shield})), c.level, real);
+  return BSCACHE={key, curve, real, gr}; }
+function bsStageBtn(c,k,b){ const st=(c.bst&&+c.bst[k])||0, pt=BSD.pts[b.c]||[], nx=pt[st];
+  return `<button type="button" class="bs-tier s${st}" data-bstier="${esc(k)}" aria-label="${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}"><span class="tiny">Bosstiary</span><b>${BSSTG[st]}</b><span class="tiny muted">${nx?`${BSSTG[st+1]}: ${nx[0]} ${nx[0]===1?"morte":"mortes"} · +${nx[1]}`:"completo"}</span></button>`; }
+function bsRow(c,r,b,lo,CR){
+  const L=c.level, cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
+  const st = r.st==="solo" ? `<span class="tag ok">Sozinho · ≈ ${bsT(r.ttk)}</span>`
+    : r.st==="team" ? `<span class="tag acc">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:""}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`
+    : r.st==="locked" ? `<span class="tag">Acesso no nível ${b.ql}</span>`
+    : r.st==="unknown" ? `<span class="tag">Em equipa (vida desconhecida)</span>`
+    : `<span class="tag warn">${r.teamL?`Em equipa ~${r.teamL}`:"Grupo grande"}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`;
+  const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : "loot sem preço";
+  const top = lo&&lo.top.length ? lo.top.slice(0,3).map(([n,g,pct])=>`${esc(n)} <span class="muted">${pct<1?pct.toFixed(1).replace(".",DECSEP):Math.round(pct)}%</span>`).join(" · ") : "";
+  const dm=Object.entries(b.dm||{}).sort((a,x)=>x[1]-a[1]), prot=dm.map(([e])=>BSPROT[e]).filter(Boolean)[0];
+  const why=[];
+  if(b.md) why.push(r.eff>=2*b.md?`Aguentas: vida efetiva ≈ ${nf(r.eff)}${isMage(c)?" (vida + Magic Shield)":""} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscado: golpes até ${nf(b.md)} por turno e tens ≈ ${nf(r.eff)} de vida efetiva${isMage(c)?" (vida + Magic Shield)":""} (pedimos o dobro do golpe).`);
+  if(r.hp) why.push(`${nf(r.hp)} de vida: com ≈ ${nf(r.dps)} de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})`:""}, ≈ ${bsT(r.ttk)} sozinho${r.ttkT?`, ≈ ${bsT(r.ttkT)} com 4 como tu`:""}.`);
+  else why.push("A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.");
+  if(b.q) why.push(`Acesso: ${elink("quest",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:""})`:""}.`);
+  if(b.lv) why.push("Sala com alavanca: até 5 jogadores, normalmente.");
+  if(b.sp==="r") why.push("Aparece em raids: não se marca, aparece no mundo.");
+  return `<div class="bs-r" data-bsk="${esc(r.k)}"><span class="bs-ic">${crSpr(r.k,44)}</span>
+    <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
+      <div class="bs-st">${st}</div>
+      <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
+      <details class="bs-d"><summary>Porquê e como</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
+        ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}${prot?`. Proteção: <b>${esc(IMBL[prot])}</b>.`:""}</li>`:""}
+        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul></details></div>
+    ${bsStageBtn(c,r.k,b)}</div>`; }
+function renderBosses(){
+  const el=$("bsBody"), c=C(); if(!el||!c) return;
+  if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class="small muted">Não consegui carregar o motor dos bosses.</p>`; return; }
+  const w=c.world||"";
+  if(!BSD||!RXD){ el.innerHTML=`<p class="small muted">${BSERR?"Não consegui carregar os bosses.":"A carregar os bosses e os preços…"}</p>`;
+    if(!BSERR) Promise.all([dload("bosses"),dload("rotacoes"),dsafe("items"),dsafe("creatures"),w?mktLoad(w):null]).then(([b,r,items,crs])=>{ BSD=b; RXD=RXD||r; if(!ITV&&items&&Object.keys(items).length) ITV=items; BSD.cr=crs||{}; renderBosses(); }).catch(()=>{ BSERR=true; renderBosses(); });
+    return; }
+  let cv; try{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui calcular o teu dano de boss.</p>`; return; }
+  const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[];
+  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0});
+    all.push({k,b,r,lo:lootPerKill(k,CR,w)}); });
+  const cnt={solo:0,team:0,later:0,all:all.length}; all.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
+  const f=BSF.some(x=>x[0]===ST.ui.bsf)?ST.ui.bsf:"solo";
+  const pick=x=>f==="all"||(f==="solo"?x.r.st==="solo":f==="team"?(x.r.st==="team"||x.r.st==="unknown"):(x.r.st==="later"||x.r.st==="locked"));
+  const lv=x=>Math.min(x.r.soloL||9999,x.r.teamL||9999,x.r.st==="locked"?x.b.ql:9999);
+  const list=all.filter(pick).sort(f==="later"?(a,b)=>lv(a)-lv(b):(a,b)=>((b.lo&&b.lo.v)||0)-((a.lo&&a.lo.v)||0));
+  // Bosstiary
+  const bst=c.bst&&typeof c.bst==="object"?c.bst:{}; let P=0, done=0;
+  Object.entries(bst).forEach(([k,s])=>{ const b=BSD.b[k]; if(b&&+s>0){ P+=GrimBoss.pointsOf(BSD.pts,b.c,+s); done++; } });
+  $("bsLead").textContent=`Nível ${c.level}: ${cnt.solo} sozinho, ${cnt.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`;
+  const mk=w&&MKV[w]&&MKV[w].items;
+  el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
+      <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
+    <div class="bs-list">${list.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
+    ${list.length>120?`<p class="small muted">E mais ${list.length-120}: escolhe outra lista ou procura pelo nome na pesquisa.</p>`:""}
+    <details class="card bs-how"><summary>Como contamos</summary><ul class="small">
+      <li>Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).</li>
+      <li>Matar: a vida do boss ÷ 70% do teu dano por segundo de boss (o resto do tempo vai para mexer, curar e fugir), no elemento a que o boss é mais fraco, até 2,5 min (Bane), 5 min (Archfoe) ou 10 min (Nemesis) sozinho; em equipa, com 4 como tu e mais 50% de tempo.</li>
+      <li>Nunca abaixo do nível mínimo e do recomendado da quest de acesso: as fases e mecânicas dos bosses não entram nas contas.</li>
+      <li>Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).</li>
+      <li>Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Grimório. ${nf(Object.keys(BSD.b).length)} bosses do Bosstiary.</li></ul></details>`;
+  seg($("bsSeg"),BSF.map(([k,t])=>[k,`${t} <span class="tiny">${cnt[k]}</span>`]),f,v=>{ ST.ui.bsf=v; save(); renderBosses(); });
+}
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-bstier]"); if(!b) return; const c=C(), k=b.dataset.bstier, bd=BSD&&BSD.b[k]; if(!bd) return;
+  if(!c.bst||typeof c.bst!=="object") c.bst={}; const s=((+c.bst[k]||0)+1)%4; if(s) c.bst[k]=s; else delete c.bst[k]; save();
+  b.outerHTML=bsStageBtn(c,k,bd); const P=Object.entries(c.bst).reduce((t,[x,v])=>t+(BSD.b[x]?GrimBoss.pointsOf(BSD.pts,BSD.b[x].c,+v):0),0);
+  $("bsLead").textContent=$("bsLead").textContent.replace(/Bosstiary: .*$/,`Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`);
+  const nb=document.querySelector(`[data-bstier="${CSS.escape(k)}"]`); if(nb) nb.focus({preventScroll:true}); });
 let spFilter="all";
 function renderRotation(){
   const c=C(), vd=VD(), L=c.level;
@@ -47850,7 +47961,7 @@ function renderAll(){
     if (manual){ if(!draft || draft.mode!=="new") draft=newDraft(); } else { draft=null; if(!look) look=newLook(); }
     renderChars(); $("obHost").innerHTML = manual ? formHTML(false) : lookHTML(false); $("formHost").innerHTML=""; renderNav(); return; }
   $("obHost").innerHTML="";
-  renderChars(); renderNav(); renderHero(); renderInicio(); renderHunts(); renderRotation(); renderHotkeys(); renderWheel(); renderEquip(); renderCharms(); renderImbu(); renderQuests(); renderDefesa(); renderPerso(); renderTasks(); if(ST.ui.p==="feiticos"&&WLS.sp) renderSpellList(); }
+  renderChars(); renderNav(); renderHero(); renderInicio(); renderHunts(); renderRotation(); renderHotkeys(); renderWheel(); renderEquip(); renderCharms(); renderImbu(); renderQuests(); renderDefesa(); renderPerso(); renderTasks(); if(ST.ui.p==="bosses") renderBosses(); if(ST.ui.p==="feiticos"&&WLS.sp) renderSpellList(); }
 if (!isPanel(ST.ui.p)) ST.ui.p="inicio";
 const hash = (location.hash||"").slice(1).replace(/[?&].*$/,"").toLowerCase(); if (hash && isPanel(hash)) ST.ui.p=hash;
 document.body.appendChild($("sheet")); // r2-t5: o painel fica no body (no Modern o main cria um contexto de empilhamento e a barra inferior ficava por cima)

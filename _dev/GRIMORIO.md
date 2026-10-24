@@ -47,6 +47,13 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `[data-rxpre]` troca de preset, `[data-rxforget]` apaga. `GrimRot.review` dá as dicas (`RXTIP`: Atenção, Juntar, MAB, Dica, Nota).
   O `renderHotkeys` desenha Sobreviver (teclas 1–4, depois Shift+1–4), Stances e Utilidade (F1…). O `vd.rot` (presets do TibiaPal)
   fica no G mas já não aparece. O motor carrega no `<head>` (`shared/rotacoes.js?v=`). Textos novos ainda sem tradução no i18n.
+- Bosses (r16): página `#bosses` (Hunts → Bosses), `renderBosses` só quando a página abre (carrega `bosses`, `rotacoes`, `items`,
+  `creatures` e o Market do mundo). O motor é `shared/bosses.js` (`GrimBoss.judge`: estado solo|team|later|locked|unknown,
+  `soloL`/`teamL`, tempo para matar), sobre `data/bosses.json` (`_dev/build_bosses.py`, TibiaWiki; `--loot` acrescenta ao items.json o
+  loot dos bosses que faltava). A curva de dano é `bsCurve(c)` (GrimRot.plan, cenário boss, escalado pelo dano real com `rxGear`/
+  `rxOpt`; cache `BSCACHE`). O loot por kill é `lootPerKill`. O Bosstiary é `c.bst = {chave: estágio 0–3}` (`[data-bstier]` roda
+  o estágio), com pontos e bónus de loot em `GrimBoss`. O filtro é `ST.ui.bsf` (`BSF`). Modelo e limites: `_dev/BOSSES.md`;
+  teste: `node _dev/bosses_test.mjs`.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
