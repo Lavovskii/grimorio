@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261022a" data-c></script><script src="shared/rotacoes.js?v=20261023b"></script><script src="shared/bosses.js?v=20261024a"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261024a" data-c></script><script src="shared/rotacoes.js?v=20261024c"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -44605,7 +44605,7 @@ function renderInicio(){
   if (cw) steps.push({t:`Wheel: <b>${esc(cw.t)}</b>`,d:nw?`Próxima build com ${nw.p} pontos (nível ${nw.p+50}).`:"Build completa para os teus pontos."}); else if(nw) steps.push({t:"Wheel: ainda sem pontos",d:`A primeira build chega com ${nw.p} pontos (nível ${nw.p+50}).`});
   const ch = vd.charms.find(k=>!c.charms[k]); if (ch){ const cm=G.charms[ch]; steps.push({t:`Charm seguinte: <b>${esc(cm.n)}</b> (${esc(cm.c.split(" / ")[0])} pontos)`,d:cm.d}); }
   const im = vd.imbs.findIndex((x,i)=>!c.imb["i"+i]); if (im>=0) steps.push({t:`Imbuement: <b>${esc(vd.imbs[im].s)}</b>`,d:vd.imbs[im].i});
-  const pot = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||"").split(" (")[0].trim()).filter(x=>x&&x!=="—").join(" e "))}</b> · <a href="#" data-go="defesa">ver custos ›</a>`,d:"As que deves ter nas hotkeys agora."}); /* r6-t5: só os nomes (sem o parêntese do G) */
+  const pot = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||"").split(" (")[0].trim()).filter(x=>x&&x!=="—").join(" + "))}</b> · <a href="#" data-go="defesa">ver custos ›</a>`,d:"As que deves ter nas hotkeys agora."}); /* r6-t5: só os nomes (sem o parêntese do G) */
   $("nextSteps").innerHTML = steps.map(s=>`<li><span aria-hidden="true" style="color:var(--accent)">→</span><span class="t">${s.t}<span class="d">${esc(s.d.split(/(?<=\.)\s|;|—/)[0])}</span>${s.q?`<span class="gpair" style="margin-top:4px"><button class="btn small ghost" data-qopen2="${s.q}">Lore e guia ›</button>${guiaBtn(guiaOf(s.q))}</span>`:""}</span><span></span></li>`).join("");
   renderGuiasHome();
   // calculator
@@ -45066,7 +45066,8 @@ function renderRx(){
   if(!Lr.rows.length){ el.innerHTML=`<p class="small muted">Ainda não tens feitiços nem runas de ataque neste nível.</p>`; return; }
   const rows=Lr.rows.map(r=>`<div class="rx-row"><h4>${chip(r.el)}<span class="small muted">${r.main?"linha principal":"com Shift: para criaturas que resistem a "+esc(ELN[Lr.rows[0].el]||"")}</span></h4><div class="rx-tiles">${r.keys.map(rxTile).join("")}</div></div>`).join("");
   const com=Lr.common.length?`<div class="rx-row"><h4><span class="small muted">Para as duas linhas</span></h4><div class="rx-tiles">${Lr.common.map(rxTile).join("")}</div></div>`:"";
-  const st=Lr.stance[0], stance=st?`<p class="small rx-stc">Antes de começar, liga <b>${elink("feitico",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: ${esc(st.why)}</p>`:"";
+  // (o porquê num <span> à parte: o tradutor do site traduz cada frase do motor sozinha)
+  const st=Lr.stance[0], stance=st?`<p class="small rx-stc">Antes de começar, liga <b>${elink("feitico",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st.why)}</span></p>`:"";
   const how=Lr.how.length?`<div class="card rx-how"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKb(h.txt)}</dd>`).join("")}</dl></div>`:"";
   el.innerHTML=`<div class="card rx-lay"><div><h3>A tua barra de ataque</h3><p class="small muted" style="margin:2px 0 0">As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.":""}</p></div>${stance}${rows}${com}</div>
     ${how}${rxCmpHTML(c,opt)}${rxStatsLine(c,Lr.stats,gr)}`;
@@ -45087,7 +45088,9 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget
 // mundo (lootPerKill) e o Bosstiary (c.bst = {chave: estágio 0–3}; pontos e bónus de loot pela Cyclopedia). O dano de boss vem
 // do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
 // personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
-let BSD=null, BSERR=false, BSCACHE=null;
+let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null;
+// o título é sempre escrito de novo inteiro (o tradutor do site traduz a frase toda; um remendo no texto já traduzido misturava línguas)
+function bsLead(P){ if(BSLEAD) $("bsLead").textContent=`Nível ${BSLEAD.L}: ${BSLEAD.solo} sozinho, ${BSLEAD.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`; }
 const BSF=[["solo","Sozinho"],["team","Em equipa"],["later","Mais tarde"],["all","Todos"]];
 const BSPROT={fire:"p_fire",earth:"p_earth",ice:"p_ice",energy:"p_energy",death:"p_death",holy:"p_holy"};
 const BSSTG=["—","Prowess","Expertise","Mastery"];
@@ -45122,7 +45125,7 @@ function bsRow(c,r,b,lo,CR){
       <div class="bs-st">${st}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
       <details class="bs-d"><summary>Porquê e como</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
-        ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}${prot?`. Proteção: <b>${esc(IMBL[prot])}</b>.`:""}</li>`:""}
+        ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}</li>`:""}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:""}
         ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul></details></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
 function renderBosses(){
@@ -45144,7 +45147,7 @@ function renderBosses(){
   // Bosstiary
   const bst=c.bst&&typeof c.bst==="object"?c.bst:{}; let P=0, done=0;
   Object.entries(bst).forEach(([k,s])=>{ const b=BSD.b[k]; if(b&&+s>0){ P+=GrimBoss.pointsOf(BSD.pts,b.c,+s); done++; } });
-  $("bsLead").textContent=`Nível ${c.level}: ${cnt.solo} sozinho, ${cnt.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`;
+  BSLEAD={L:c.level, solo:cnt.solo, team:cnt.team}; bsLead(P);
   const mk=w&&MKV[w]&&MKV[w].items;
   el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
       <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
@@ -45161,7 +45164,7 @@ function renderBosses(){
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-bstier]"); if(!b) return; const c=C(), k=b.dataset.bstier, bd=BSD&&BSD.b[k]; if(!bd) return;
   if(!c.bst||typeof c.bst!=="object") c.bst={}; const s=((+c.bst[k]||0)+1)%4; if(s) c.bst[k]=s; else delete c.bst[k]; save();
   b.outerHTML=bsStageBtn(c,k,bd); const P=Object.entries(c.bst).reduce((t,[x,v])=>t+(BSD.b[x]?GrimBoss.pointsOf(BSD.pts,BSD.b[x].c,+v):0),0);
-  $("bsLead").textContent=$("bsLead").textContent.replace(/Bosstiary: .*$/,`Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`);
+  bsLead(P);
   const nb=document.querySelector(`[data-bstier="${CSS.escape(k)}"]`); if(nb) nb.focus({preventScroll:true}); });
 let spFilter="all";
 function renderRotation(){
