@@ -102,11 +102,12 @@
   }
   function cdText(h) {
     if (h == null) return "";
-    if (h < 1) return "de " + Math.round(h * 60) + " em " + Math.round(h * 60) + " min";
-    if (h < 20) return "de " + h + " em " + h + " h";
+    // (um só valor por frase: o tradutor do site, shared/i18n.js, troca cada valor uma vez)
+    if (h < 1) return "a cada " + Math.round(h * 60) + " min";
+    if (h < 20) return "a cada " + h + " h";
     if (h <= 24) return "1 vez por dia (" + h + " h)";
-    if (h < 120) return "de " + Math.round(h / 24 * 10) / 10 + " em " + Math.round(h / 24 * 10) / 10 + " dias";
-    return "de " + Math.round(h / 24) + " em " + Math.round(h / 24) + " dias";
+    if (h < 120) return "a cada " + Math.round(h / 24 * 10) / 10 + " dias";
+    return "a cada " + Math.round(h / 24) + " dias";
   }
   return { judge: judge, makeCurve: makeCurve, curveAt: curveAt, effHP: effHP, laneMult: laneMult, stageOf: stageOf, pointsOf: pointsOf,
     lootBonus: lootBonus, cdText: cdText, ANCHORS: ANCHORS, CLS: CLS, TMAX: TMAX };

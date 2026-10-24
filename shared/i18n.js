@@ -51,10 +51,12 @@
     hs.textContent = "html.i18n-hold body{visibility:hidden}";
     document.head.appendChild(hs);
     setTimeout(release, 2500);
-    document.write('<script src="' + BASE + "i18n/ui." + lang + '.js"><\/script>');
+    // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
+    var DV = "?v=20261024a";
+    document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
-      if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js"><\/script>');
-      if (me && me.hasAttribute("data-q")) document.write('<script src="' + BASE + "i18n/q." + l + '.js"><\/script>');
+      if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
+      if (me && me.hasAttribute("data-q")) document.write('<script src="' + BASE + "i18n/q." + l + '.js' + DV + '"><\/script>');
     });
   }
 

@@ -71,6 +71,10 @@
   "c": "index.html:  && !wt.some(x=>x[0]===d.wtype)) d.wtype=wt[0][0]; return `<form id=\"charForm\" novalidate style=\"display:grid;gap:14px\"> <div style=\"display:grid;gap:6px\"><span class=\"small muted\">Vocação</span><div class=\"vocpick\" role",
   "k": "x"
  },
+ "%LOCALAPPDATA%TibiapackagesTibiaconf": {
+  "c": "index.html: h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `<div class=\"card rx-cmp\">${head}<p class=\"small\">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windo",
+  "k": "x"
+ },
  "(+{0}% de dano: as criaturas levam {1}% de {2} e {3}% de físico)": {
   "c": "index.html: {esc(IMBL[x]||x)}</span>`).join(\" + \")}${k===\"weapon\"&&H.el?` <span class=\"tiny muted\">(+${Math.round(H.el.g)}% de dano: as criaturas levam ${Math.round(H.el.v)}% de ${esc(ELN[H.el.el])} e ${Math.round(H.el.ph)}% de físi",
   "k": "p"
@@ -93,6 +97,10 @@
  },
  "(com a fatia cheia)": {
   "c": "index.html: cheia\":p?`${p} de ${mx} pontos`:\"vazia\", ded:p?dv(p):dv(mx)+\" (com a fatia cheia)\", conv:n, desc, full",
+  "k": "x"
+ },
+ "(com os imbuements de proteção)": {
+  "c": "index.html: 00*(1-v/100))}</b>`; }).join(\" · \")}${els.some(e=>t.abi[e])?` <span class=\"muted\">(com os imbuements de proteção)</span>`:\"\"}.</p>`:\"\"; con",
   "k": "x"
  },
  "(de antes do rebalance)": {
@@ -139,6 +147,10 @@
   "c": "index.html: dd data-lpo=\"ses\">—</dd></div></dl></output> ${lo!=null?`<p class=\"tiny muted\">${est?`Estimativa a partir de outra vocação: ≈ ${gp(lo)}/h aqui`:`O TibiaPal mede ${gp(lo)}/h aqui`} (já sem os supplies).</p>`:\"\"} <p class=",
   "k": "x"
  },
+ "(leva {0}% de {1})": {
+  "c": "index.html:  de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})`:\"\"}, ≈ ${bsT(r.ttk)",
+  "k": "p"
+ },
  "(min-width: 1100px)": {
   "c": "index.html: t WHTIP=null; const WHWIDE = window.matchMedia ? matchMedia(\"(min-width: 1100px)\") : {matches:true}; ",
   "k": "x"
@@ -155,6 +167,10 @@
   "c": "index.html: er(v=>d.v[v]).map(v=>{ const [n,mn,ml,xp,pr]=d.v[v]; return `<tr class=\"${v===voc?\"me\":\"\"}\"><td>${VI(v)} ${G.voc[v].n}</td><td>${n}</td><td>${ml} <span class=\"tiny muted\">(mín. ${mn})</span></td><td><b>${fmt(xp)}</b></td",
   "k": "p"
  },
+ "(nível {0}{1})": {
+  "c": "index.html: \"); if(b.q) why.push(`Acesso: ${elink(\"quest\",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(b.lv) ",
+  "k": "p"
+ },
  "(o TibiaPal mediu esta hunt para a tua vocação)": {
   "c": "index.html: & !r.w && !r.o && cmp.cls===\"bad\"){ cmp.cls=\"meh\"; cmp.txt+=\" (o TibiaPal mediu esta hunt para a tua vocação)\"; } let xp=r.xp,",
   "k": "x"
@@ -165,6 +181,10 @@
  },
  "(o ritmo medido nesta zona)": {
   "c": "index.html:  ${nf(Math.round((x.k||1000)/10)*10)} mortes por hora ${x.z?\"(o ritmo medido nesta zona)\":\"ao teu nível\"}, co",
+  "k": "x"
+ },
+ "(paga toda a mana da rotação)": {
+  "c": "index.html: <span class=\"small\">mana: +${nf(r.mana)}/s ${r.mana>=r.need?\"(paga toda a mana da rotação)\":`dos ${nf(r.need)}/",
   "k": "x"
  },
  "(perto de {0})": {
@@ -183,6 +203,10 @@
   "c": "index.html: Guia · ${r[2]?`nível ${r[2]}+`:\"qualquer nível\"}${r[3]>r[2]?` (recomendado ${r[3]})`:\"\"}${r[6]?` · ${r[6",
   "k": "p"
  },
+ "(sem dados do Market de {0} agora)": {
+  "c": "index.html:  preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:\"\"}.`} Toca no Boss",
+  "k": "p"
+ },
  "(só {0})": {
   "c": "index.html: defaultImbs(c,set,Object.assign({},it,{is:3}))||[]).length)?` (só ${it.is===1?\"cabe 1\":\"cabem \"+it.is})`:\"\"}: <b>${rec.lengt",
   "k": "p"
@@ -190,6 +214,26 @@
  "(uma mão)": {
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
+ },
+ "(vida + Magic Shield)": {
+  "c": "index.html: f>=2*b.md?`Aguentas: vida efetiva ≈ ${nf(r.eff)}${isMage(c)?\" (vida + Magic Shield)\":\"\"} contra golpes a",
+  "k": "x"
+ },
+ "({0} da personagem + {1} do equipamento)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "({0} da personagem)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "({0} estimado pelo nível + {1} do equipamento)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "({0} estimado pelo nível)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "({0} itens + {1} imb.)": {
   "c": "index.html: yle=\"--imc:var(--accent)\">+${v} ${esc(SKN[k]||k)}${t.ski[k]?` <span class=\"tiny muted\">(${t.sk[k]||0} itens + ${t.ski[k]} imb.)</span>`:\"\"}</span>`).join(\"",
@@ -226,6 +270,10 @@
  "+ viagem": {
   "c": "index.html: até ${esc(r.s)} · ~${pre.c} sqm${pre.st.some(x=>x[0]===\"n\")?\" + viagem\":\"\"}</summary><ol>${",
   "k": "x"
+ },
+ "+ {0} do equipamento": {
+  "c": "index.html: (${base} ${src?\"da personagem\":\"estimado pelo nível\"}${gear?` + ${gear} do equipamento`:\"\"})</span>`; con",
+  "k": "p"
  },
  "+ {0} munição": {
   "c": "index.html: [1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+ ${mb[1]} munição`:am?\"+ munição\":\"\"])",
@@ -295,12 +343,32 @@
   "c": "index.html: rn `${v(\"void\")}% de mana leech`; if(k===\"strike\") return `+${v(\"strike\")}% de dano crítico`; if(k===\"swift\") ",
   "k": "p"
  },
+ "+{0}% de distance: sobe os feitiços ethereal e os ataques automáticos (a maior parte do dano do paladino).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "+{0}% de fist em todos os golpes e bónus para a party (sorcerer +{1}% de dano, paladin +{2}% nos ataques automáticos).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "+{0}% de fist em todos os golpes.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "+{0}% de life leech": {
   "c": "index.html: ana Leech\"?`+${f2(0.25*k)}% de mana leech`:n===\"Life Leech\"?`+${f2(0.75*k)}% de life leech`:vr?WHD.perk[\"Vessel",
   "k": "p"
  },
  "+{0}% de mana leech": {
   "c": "index.html: \" · \"):n===V.skill?`+${k} de ${WHSK[voc]}`:n===\"Mana Leech\"?`+${f2(0.25*k)}% de mana leech`:n===\"Life Leech\"?`+",
+  "k": "p"
+ },
+ "+{0}% de skill de arma: mais dano em todos os feitiços e ataques. Recebes +{1}% de dano; troca para Protector se a vida não aguentar.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "+{0}% do ML (+{1}) em gelo e terra: tudo o que a rotação lança sobe.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "+{0}% mitigação": {
@@ -355,6 +423,14 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "x"
  },
+ ", recomendado": {
+  "c": "index.html: ink(\"quest\",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(",
+  "k": "x"
+ },
+ ", recomendado {0}": {
+  "c": "index.html: ink(\"quest\",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(",
+  "k": "p"
+ },
  ", runas da hunt, Magic Wall": {
   "c": "index.html: pot.h,pot.m].filter(x=>x&&x!==\"—\").join(\" e \"))}${isMage(c)?\", runas da hunt, Magic Wall\"+(c.voc===\"druid\"?\" ",
   "k": "x"
@@ -365,6 +441,10 @@
  },
  ", {0}, {1} · ver mapa": {
   "c": "index.html: i==null||i<0){ if(mini===\"thumb\") return \"\"; return mini?\"\":`<button type=\"button\" class=\"hmap hmap-x\" data-map=\"${x},${y},${z}\" data-maplabel=\"${esc((G.places[h.r.c]||{}).n||\"\")}\"><span class=\"cap\"><span>${floorTxt(z)} ",
+  "k": "p"
+ },
+ ", ≈ {0} com 4 como tu": {
+  "c": "index.html: sc(ELN[r.el]||r.el)})`:\"\"}, ≈ ${bsT(r.ttk)} sozinho${r.ttkT?`, ≈ ${bsT(r.ttkT)} com 4 como tu`:\"\"}.`); else why.",
   "k": "p"
  },
  "-30% 0px -60% 0px": {
@@ -402,6 +482,10 @@
  "1 modificador básico": {
   "c": "index.html:  básicos e 1 supremo\":n===2?\"2 modificadores básicos\":n===1?\"1 modificador básico\":\"enche uma fatia Ve",
   "k": "x"
+ },
+ "1 vez por dia ({0} h)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "10% de chance de crítico": {
   "c": "index.html: ><b>+${t.crit}%</b><span>dano crítico</span><small>${t.crit?\"10% de chance de crítico\":\"sem Strike\"}</smal",
@@ -467,6 +551,14 @@
   "c": "index.html: \":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=",
   "k": "p"
  },
+ "; as poções poupadas pagam": {
+  "c": "index.html: t||0}% de dano. Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
+  "k": "x"
+ },
+ "; as poções poupadas pagam {0}": {
+  "c": "index.html: t||0}% de dano. Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
+  "k": "p"
+ },
  "; com mais {0} exalted core o risco desce para {1}%": {
   "c": "index.html: tens desce 1 tier (ou desaparece se for tier 0)${co.protect?`; com mais ${co.protect.cores} exalted core o risco desce para ${co.protect.lossChance}%`:\"\"}.</li> ${c",
   "k": "p"
@@ -483,12 +575,20 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "<{0} class=\"slot half has slot-am\"{1} title=\"{2}\" aria-label=\"{3}\">{4}{5}</{6}>": {
+  "c": "index.html: a o nível ${c.level}: ${am[2]} (ataque ${am[1]})`; return `<${tag} class=\"slot half has slot-am\"${pg?` href=\"${itemHref(am[2])}\"`:\"\"} title=\"${esc(t)}\" aria-label=\"${esc(t)}\">${itemSpr(am[2])}<span class=\"tx\"><span class",
+  "k": "p"
+ },
  "A % para o próximo nível não é pública:": {
   "c": "recolhida: /grimorio/#inicio · ex.: A % para o próximo nível não é pública:",
   "k": "x"
  },
  "A % para o próximo nível não é pública: ajusta-a quando quiseres.": {
   "c": "index.html: e o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próximo nível não é pública: ajusta-a quando quiseres.\"); } function hsLine",
+  "k": "x"
+ },
+ "A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.": {
+  "c": "index.html: ?`, ≈ ${bsT(r.ttkT)} com 4 como tu`:\"\"}.`); else why.push(\"A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.\"); if(b.q) why.pus",
   "k": "x"
  },
  "A abrir a página…": {
@@ -523,6 +623,10 @@
   "c": "index.html: . Mudou de nome?\"}</span>`:\"\"; const state = b===\"sync\" ? `<span class=\"tkload\">A atualizar…</span>` : b===\"hs\" ? `<span",
   "k": "x"
  },
+ "A calcular com a tua rotação…": {
+  "c": "index.html: window.GrimRot) return \"\"; if(!RXD){ imGameLoad(); return `<div class=\"ims img-g\"><h4>No jogo</h4><p class=\"small muted\">A calcular com a tua rotação…</p></div>`; } const gr=rxGea",
+  "k": "x"
+ },
  "A calcular os preços{0}…": {
   "c": "index.html: set.lpok=\"1\"; const c=C(), w=c&&c.world||\"\"; el.innerHTML=`<div class=\"lp-sk\" aria-hidden=\"true\"><i></i><i></i><i></i></div><p class=\"small muted\">A calcular os preços${w?` do Market de ${esc(w)}`:\"\"}…</p>`; Promise.all(",
   "k": "p"
@@ -543,12 +647,20 @@
   "c": "quests/js/app.js: ----- boot async function boot() { view().innerHTML = `<div class=\"loading\">A carregar as quests…</div>`; try { co",
   "k": "x"
  },
+ "A carregar as rotações…": {
+  "c": "index.html: ndow.GrimRot?\"Não consegui carregar os dados das rotações.\":\"A carregar as rotações…\"}</p>`; if(!RXER",
+  "k": "x"
+ },
  "A carregar o item…": {
   "c": "index.html: renderItemPage(key){ const el=$(\"itemPage\"); el.innerHTML=`<p class=\"tkload\">A carregar o item…</p>`; const [items,crs",
   "k": "x"
  },
  "A carregar o índice completo…": {
   "c": "index.html: on\" data-gsq=\"${x}\">${x}</button>`).join(\"\")}</div>${GSX?\"\":`<p class=\"tiny muted tkload\">A carregar o índice completo…</p>`}</div>`; return; } ",
+  "k": "x"
+ },
+ "A carregar os bosses e os preços…": {
+  "c": "index.html: ss=\"small muted\">${BSERR?\"Não consegui carregar os bosses.\":\"A carregar os bosses e os preços…\"}</p>`; if(!BSER",
   "k": "x"
  },
  "A carregar…": {
@@ -635,8 +747,12 @@
   "c": "index.html: pan>`:\"\"}</h4><div class=\"small wpd\">${perk(cur)}</div>${nx?`<p class=\"small\">A seguir: <b>${esc(nx.t)}</b>, com ${nx.p} pontos.</p>${prog}`:`<p class=\"small\">B",
   "k": "p"
  },
- "A tua barra": {
-  "c": "index.html (HTML)",
+ "A tua barra de ataque": {
+  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
+  "k": "x"
+ },
+ "A tua barra já tem tudo o que a recomendada tem, pela ordem certa.": {
+  "c": "index.html: <span>${rxKb(t.txt)}</span></li>`; }).join(\"\")}</ul>` : `<p class=\"small\">A tua barra já tem tudo o que a recomendada tem, pela ordem certa.</p>`; return `<div cla",
   "k": "x"
  },
  "A tua build agora": {
@@ -711,12 +827,24 @@
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
+ "Abrir esta quest no Questski": {
+  "c": "index.html: ton>`:\"\"}${guiaBtn(gs)}</div>`; /* r11 */ const ttl=n=>gs?`<a class=\"qtl\" href=\"${guiaHref(gs)}\" title=\"Abrir esta quest no Questski\">${esc(n)}<span class=\"qtl-go\">Questski ›</span></a>`:esc(n); if(!q) re",
+  "k": "x"
+ },
  "Abrir guia →": {
   "c": "quests/js/app.js: riseOnHover: true }).addTo(questLayer) .bindPopup(`<b>${esc(q.name)}</b><br>Nível ${q.lvl || \"—\"} · rec. ${esc(q.rec_raw || q.rec || \"—\")}<br><span class=\"muted\">${esc(p.label || q.region || \"\")}</span><br><a href=\"#/que",
   "k": "x"
  },
+ "Abrir no Questski ›": {
+  "c": "index.html: a-qdone=\"${id}\">Marcar como feita</button>`:\"\"}${guiaBtn(gs,\"Abrir no Questski ›\")}</div>`; const n",
+  "k": "x"
+ },
  "Abrir no mapa": {
   "c": "index.html: style=\"${pos}\" ${ml} aria-label=\"Mapa\"></button>`; return `<button type=\"button\" class=\"hmap ${conf===\"a\"?\"area\":\"\"}\" style=\"${pos}\" ${ml} title=\"Abrir no mapa\"><span class=\"cap\"><span>${floorTxt(z)}${conf===\"a\"?\" · apro",
+  "k": "x"
+ },
+ "Abrir o boss": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Absorve até 7 × ML + 7,6 × nível + 300 de dano, dura 180 s e tem 14 s de cooldown. Voltar a lançar repõe-no; em cooldown usa uma Magic Shield Potion. Liga-o antes de puxar nas hunts duras.": {
@@ -734,6 +862,30 @@
  "Acesso livre": {
   "c": "index.html: isSafe(x,h.ms[i].level)) : isSafe(h,c.level)], livre:[()=>\"Acesso livre\",(h,c)=> !h.q || (h.",
   "k": "x"
+ },
+ "Acesso no nível": {
+  "c": "index.html: d\">sozinho ~${r.soloL}</span>`:\"\"}` : r.st===\"locked\" ? `<span class=\"tag\">Acesso no nível ${b.ql}</span>` : r.st===\"unkno",
+  "k": "x"
+ },
+ "Acesso no nível {0}": {
+  "c": "index.html: d\">sozinho ~${r.soloL}</span>`:\"\"}` : r.st===\"locked\" ? `<span class=\"tag\">Acesso no nível ${b.ql}</span>` : r.st===\"unkno",
+  "k": "p"
+ },
+ "Acesso: {0} (nível {1}).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Acesso: {0} (nível {1}, recomendado {2}).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Acesso: {0}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Acesso: {0}{1}.": {
+  "c": "index.html: : segue o nível recomendado da quest.\"); if(b.q) why.push(`Acesso: ${elink(\"quest\",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(b.lv) why.pu",
+  "k": "p"
  },
  "Acessos": {
   "c": "quests/index.html (HTML)",
@@ -791,6 +943,22 @@
   "c": "index.html: }.</p>`:\"\"}${prog}</div>`; else $(\"wheelNow\").innerHTML = `<div class=\"wh-main\"><h4>Agora: ${esc(cur.t)}${cur.note?` <span class=\"tag\">${esc(cur.note)}</span>`:\"\"}</h4><div class=\"small wpd\">${perk(cur)}</div>${nx?`<p cl",
   "k": "p"
  },
+ "Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Aguentas: vida efetiva ≈ {0} (vida + Magic Shield) contra golpes até {1} por turno.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Aguentas: vida efetiva ≈ {0} contra golpes até {1} por turno.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Aguentas: vida efetiva ≈ {0}{1} contra golpes até {2} por turno.": {
+  "c": "index.html: lean)[0]; const why=[]; if(b.md) why.push(r.eff>=2*b.md?`Aguentas: vida efetiva ≈ ${nf(r.eff)}${isMage(c)?\" (vida + Magic Shield)\":\"\"} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscad",
+  "k": "p"
+ },
  "Ainda nenhuma fatia cheia.": {
   "c": "index.html: , aug||vr?ROM[Math.min(k,3)]:`+${k}`, desc); }).join(\"\") || `<p class=\"wnone\">Ainda nenhuma fatia cheia.</p>`; /* r8: cada vess",
   "k": "x"
@@ -816,7 +984,11 @@
   "k": "x"
  },
  "Ainda não tens": {
-  "c": "index.html: t.id}\"`:\"\"} aria-pressed=\"${sel===k}\">${it&&!c.owned[it.id]?'<span class=\"dot\" title=\"Ainda não tens\"></span>':\"\"}${it&&c.owned[it",
+  "c": "index.html: bel=\"Aljava: ${it?esc(it.n):\"vazio\"}\">${it&&!c.owned[it.id]?'<span class=\"dot\" title=\"Ainda não tens\"></span>':\"\"}${it&&c.owned[it",
+  "k": "x"
+ },
+ "Ainda não tens feitiços nem runas de ataque neste nível.": {
+  "c": "index.html:  barra.</p>`; return; } if(!Lr.rows.length){ el.innerHTML=`<p class=\"small muted\">Ainda não tens feitiços nem runas de ataque neste nível.</p>`; return; } const ",
   "k": "x"
  },
  "Ainda não tens tarefas. Escolhe o tipo, escreve o nome e carrega em Adicionar.": {
@@ -859,12 +1031,32 @@
   "c": "index.html: lass=\"hs-chips\">${ammoChips(t.wb,c.level)}${t.sb!==\"quiver\"?`<span class=\"hs-sk\" title=\"${esc(quivTip)}\">Aljava: Quiver, Red ou Blue</span>`:\"\"}</div></div>`:\"\"",
   "k": "x"
  },
+ "Aljava: {0}": {
+  "c": "index.html: :null; if(am) return `<span class=\"bslot pal2\">${it?`<a class=\"pq\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\" aria-label=\"Aljava: ${esc(it.n)}\">${spr(it)}</a>`:`<span class=\"pq\" t",
+  "k": "p"
+ },
+ "Aljava: {0} · Munição: {1} (ataque {2})": {
+  "c": "index.html:  am=k===\"shield\"?palAmmo(c,set):null; if(am){ const t=`Aljava: ${it?it.n:\"vazio (\"+quivTip+\")\"} · Munição: ${am[2]} (ataque ${am[1]})`; return `<b",
+  "k": "p"
+ },
  "Aljava: {0}.": {
   "c": "index.html: hips\">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!==\"quiver\"?` <span class=\"tiny muted\">Aljava: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ",
   "k": "p"
  },
  "Alternativas": {
   "c": "index.html: untP,6)}</div>`,huntP.length]); if(alts) tabs.push([\"alt\",\"Alternativas\",alts]); const lef",
+  "k": "x"
+ },
+ "Alvo forte": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Alvo único": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Alvo único, entre os outros ataques.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Alvo único: {0} {1}": {
@@ -923,6 +1115,10 @@
   "c": "quests/index.html (HTML)",
   "k": "x"
  },
+ "Antes de começar, liga {0} {1}: {2}": {
+  "c": "index.html:  frase do motor sozinha) const st=Lr.stance[0], stance=st?`<p class=\"small rx-stc\">Antes de começar, liga <b>${elink(\"feitico\",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st.why)}</span></p>`:\"\"; c",
+  "k": "p"
+ },
  "Antes de começares{0}": {
   "c": "quests/js/app.js:  `<div class=\"guide-layout\"><div> ${before.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"flag\")}Antes de começares<span class=\"cap-extra\"><a style=\"color:inherit\" href=\"#/quest/${d.slug}/preparacao\">prep",
   "k": "p"
@@ -962,6 +1158,10 @@
  "Apanha sempre {0}": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "p"
+ },
+ "Aparece em raids: não se marca, aparece no mundo.": {
+  "c": "index.html:  até 5 jogadores, normalmente.\"); if(b.sp===\"r\") why.push(\"Aparece em raids: não se marca, aparece no mundo.\"); return `<div cl",
+  "k": "x"
  },
  "Aparece nestas quests": {
   "c": "index.html: null; }).filter(Boolean))]; const questHTML = (qIn.length?`<h4 class=\"sub\" style=\"margin-top:0\">Aparece nestas quests</h4><div class=\"pills\">${qIn.map(([k,b])=>qBtn(k)+(b?' <span class=\"tag gold\">boss</span>':\"\")).join(\"",
@@ -1020,7 +1220,7 @@
   "k": "x"
  },
  "Arma e equipamento de combate": {
-  "c": "index.html: hy)}</p></div>`; }).join(\"\"); $(\"weaponNote\").innerHTML = `<h4>Arma e equipamento de combate</h4><p class=\"small\">${esc(vd.weapon)}</p>${vd.tips&&vd.tips.length?`<ul class=\"small\" style=\"margin:4px 0 0;padding-left:18px\"",
+  "c": "index.html:  no G mas já não aparecem) */ $(\"weaponNote\").innerHTML = `<h4>Arma e equipamento de combate</h4><p class=\"small\">${esc(vd.weapon)}</p>${vd.tips&&vd.tips.length?`<ul class=\"small\" style=\"margin:4px 0 0;padding-left:18px\"",
   "k": "x"
  },
  "Arma: {0} · ligação": {
@@ -1111,6 +1311,22 @@
   "c": "index.html:  e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistências das gemas seguem o dano desta hunt.</span>`:\"\"}</div> <div ",
   "k": "x"
  },
+ "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.": {
+  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
+  "k": "x"
+ },
+ "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas. MAB: no jogo, botão direito numa tecla da barra → {0}; cada toque dispara a 1.ª ação que estiver pronta.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.{0}": {
+  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
+  "k": "p"
+ },
+ "As teclas são uma sugestão: longe das de ataque, para não curares por engano.": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "As tuas personagens": {
   "c": "index.html: \"}`, open=box.classList.contains(\"open\"); box.innerHTML = `<button type=\"button\" class=\"csw-btn\" aria-haspopup=\"listbox\" aria-expanded=\"${open}\" aria-controls=\"cswList\" aria-label=\"Personagem ativa: ${nm(c)}. Mudar de pe",
   "k": "x"
@@ -1121,6 +1337,10 @@
  },
  "Ascetic Mastery": {
   "c": "index.html: down Base Damage\":[\"Monk_SweepingTakedown_DamageIncrease\"], \"Ascetic Mastery\":[\"Monk_RevelationMa",
+  "k": "x"
+ },
+ "Assign Multiaction": {
+  "c": "index.html: el nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.\":\"\"}</p></div>${stan",
   "k": "x"
  },
  "Asura Palace + The Lost Brother": {
@@ -1139,6 +1359,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Ataque básico": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Ataque · +{0}": {
   "c": "index.html: wb,c.level):null; /* r7 */ kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+",
   "k": "p"
@@ -1152,7 +1376,7 @@
   "k": "x"
  },
  "Atenção": {
-  "c": "quests/js/app.js: .join(\", \")}</p>` : \"\"} ${(p.warnings || []).length ? `<div class=\"callout warn\">${icon(\"warn\")}<div><b class=\"k\">Atenção</b>${p.warnings.map(rich).join(\"<br>\")}</div></div>` : \"\"} ${p.ent",
+  "c": "index.html: v>${body}<p>${esc(k.when)}</p></div>`; } const RXTIP={warn:[\"Atenção\",\"bad\"],add:[\"Juntar",
   "k": "x"
  },
  "Ativa": {
@@ -1283,6 +1507,10 @@
   "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
  },
+ "Ações que vais ganhar": {
+  "c": "index.html: a.l-b.l); $(\"hkList\").innerHTML = groups + (future.length?`<div class=\"card hkfut\"><h3 style=\"font-size:19px;margin-bottom:6px\">Ações que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\\s*\".",
+  "k": "x"
+ },
  "Barco": {
   "c": "index.html: ?\"c\":s[4]===\"b\"?\"b\":\"n\",t:`${s[4]===\"c\"?\"Tapete\":s[4]===\"b\"?\"Barco\":\"Viagem\"}: ${s[1]}`",
   "k": "x"
@@ -1395,8 +1623,28 @@
   "c": "index.html: ch(([k,m])=>{ if(m[2]>0||m[7]) add(m[7]?\"b\":\"c\",k,m[0],m[7]?`Boss${m[1]?` · ${nf(m[1])} de vida`:\"\"}`:`Criatura · ${nf(m[",
   "k": "x"
  },
+ "Boss e monstros fortes: sempre que estiver pronto.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Boss ou um monstro só: carrega sempre nesta.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Bosses": {
-  "c": "index.html: \"lista\"],ht:[\"Hunts\",\"lista\"],c:[\"Criaturas\",\"criatura\"],b:[\"Bosses\",\"boss\"],i:[\"Itens\",",
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Bosstiary": {
+  "c": "index.html: st&&+c.bst[k])||0, pt=BSD.pts[b.c]||[], nx=pt[st]; return `<button type=\"button\" class=\"bs-tier s${st}\" data-bstier=\"${esc(k)}\" aria-label=\"${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}\"><span class=\"tiny",
+  "k": "x"
+ },
+ "Bosstiary de {0}: {1}. Toca para mudar.": {
+  "c": "index.html: =\"bs-tier s${st}\" data-bstier=\"${esc(k)}\" aria-label=\"${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}\"><span class=\"tin",
+  "k": "p"
+ },
+ "Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "x"
  },
  "Botas": {
@@ -1428,7 +1676,7 @@
   "k": "x"
  },
  "Build": {
-  "c": "index.html: :[[\"hunts\",\"Hunts\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"R",
+  "c": "index.html: [\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"R",
   "k": "x"
  },
  "Build completa para os teus pontos.": {
@@ -1459,13 +1707,29 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Burst": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Bónus": {
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Bónus base da Harmony {0}% (×{1} com {2} pontos) e cada spender devolve {3} ponto.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Bónus do melhor set para o nível {0} (BiS).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "Bónus do set": {
   "c": "index.html: kt=([x,v])=>`${v>0?\"+\":\"\"}${v} ${esc(SKN[x]||x)}`; return `<div class=\"hs-h\"><b>Bónus do set</b><span>${lab}</span></div> <div class=\"hs-kv\">${kv.map(([k,l,v,u])=>`<div class=\"hs-i\" data-k=\"${k}\"><i aria-hidden=\"true\"><s",
   "k": "x"
+ },
+ "Bónus do teu set «{0}».": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.": {
   "c": "index.html (HTML)",
@@ -1494,6 +1758,14 @@
  "Cai de {0} {1}": {
   "c": "index.html: pills\">${quests.join(\"\")}</div></div>`:\"\", drops.length?`<div class=\"ip-get\"><h4 class=\"sub\">Cai de ${drops.length} ${drops.length===1?\"criatura\":\"criaturas\"}</h4>${dropT(drops.slice(0,8))}${drops.length>8?`<p class=\"tin",
   "k": "p"
+ },
+ "Caixa": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Caixa: carrega sempre nesta; dispara a 1.ª ação que estiver pronta.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
  },
  "Calculada": {
   "c": "index.html: duce((x,y)=>x+y,0)); return {t:f.n?`Calculada (${f.n})`:\"Calculada\", p:b, note:\"\", calc",
@@ -1748,11 +2020,11 @@
   "k": "x"
  },
  "Começa": {
-  "c": "index.html: \">${lore}</div> ${q.start&&(q.start.npc||q.start.where)?`<div class=\"qwho\">${q.start.npc?npcSpr(q.start.npc,true):\"\"}<span>Começa ${q.start.npc?`com <b>${elink(\"npc\",q.start.npc)}</b>, `:\"\"}${esc(q.start.where||\"\")}</spa",
+  "c": "index.html: }${head}${prog} ${q.start&&(q.start.npc||q.start.where)?`<div class=\"qwho\">${q.start.npc?npcSpr(q.start.npc,true):\"\"}<span>Começa ${q.start.npc?`com <b>${elink(\"npc\",q.start.npc)}</b>, `:\"\"}${esc(q.start.where||\"\")}</spa",
   "k": "x"
  },
  "Começa {0}{1}": {
-  "c": "index.html: \">${lore}</div> ${q.start&&(q.start.npc||q.start.where)?`<div class=\"qwho\">${q.start.npc?npcSpr(q.start.npc,true):\"\"}<span>Começa ${q.start.npc?`com <b>${elink(\"npc\",q.start.npc)}</b>, `:\"\"}${esc(q.start.where||\"\")}</spa",
+  "c": "index.html: }${head}${prog} ${q.start&&(q.start.npc||q.start.where)?`<div class=\"qwho\">${q.start.npc?npcSpr(q.start.npc,true):\"\"}<span>Começa ${q.start.npc?`com <b>${elink(\"npc\",q.start.npc)}</b>, `:\"\"}${esc(q.start.where||\"\")}</spa",
   "k": "p"
  },
  "Comida": {
@@ -1787,8 +2059,16 @@
   "c": "index.html:  key=\"a\"+x+\"_\"+y+\"_\"+z; AREAS[key]={cl,mon,mxp,e}; return `<button class=\"spa ${best?\"best\":\"\"}\" data-area=\"${key}\"><canvas data-cl='${JSON.stringify(cl).replace(/'/g,\"&#39;\")}' aria-hidden=\"true\"></canvas><span class=\"i",
   "k": "x"
  },
+ "Como contamos": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "k": "x"
+ },
  "Como ganhar charm points": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Como jogar": {
+  "c": "index.html: an>${esc(st.why)}</span></p>`:\"\"; const how=Lr.how.length?`<div class=\"card rx-how\"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=",
   "k": "x"
  },
  "Como meto os pontos da Wheel agora?": {
@@ -1817,6 +2097,10 @@
  },
  "Como usar": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
+  "k": "x"
+ },
+ "Compara com a tua barra do Tibia": {
+  "c": "index.html: tion/json\" data-rxfile hidden>${lab}</label>`; const head=`<h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `",
   "k": "x"
  },
  "Comparar": {
@@ -1931,6 +2215,22 @@
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
   "k": "p"
  },
+ "Contas com o teu dano de boss (≈ {0} por segundo no nível {1}, da {2} com {3}) e a tua vida.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Contas com o teu dano de boss (≈ {0} por segundo no nível {1}, da {2} com {3}) e a tua vida. {4} Toca no Bosstiary de cada boss para marcares o teu progresso.": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "k": "p"
+ },
+ "Contas feitas com: {0}. Bónus {1}.": {
+  "c": "index.html: ) bits.push(part(\"ML\",s.mlBase,false,s.mlGear)); } return `<p class=\"small muted rx-st\">Contas feitas com: ${bits.join(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ",
+  "k": "p"
+ },
+ "Contas feitas com: {0}. Bónus {1}.{2}": {
+  "c": "index.html: ) bits.push(part(\"ML\",s.mlBase,false,s.mlGear)); } return `<p class=\"small muted rx-st\">Contas feitas com: ${bits.join(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ",
+  "k": "p"
+ },
  "Contentor": {
   "c": "index.html:  Items\":\"Item para montarias\",\"Rubbish\":\"Lixo\",\"Containers\":\"Contentor\",\"Magical Items\":\"It",
   "k": "x"
@@ -1947,9 +2247,9 @@
   "c": "quests/js/app.js: s por ti</span></div> </div> ${inProg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"clock\")}Continua onde ficaste</h2><div class=\"box-body\"><div class=\"qgrid\">${inProg.map(questCard).join(\"\")}</div></div",
   "k": "x"
  },
- "Continuar o guia": {
-  "c": "index.html: lass=\"qguide\" ${nd&&nd<tot?\"open\":\"\"}><summary>${nd&&nd<tot?\"Continuar o guia\":\"Guia passo a passo",
-  "k": "x"
+ "Continuar o guia · {0} de {1} passos": {
+  "c": "index.html: length?`<details class=\"qguide\"><summary><span>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:\"Guia passo a passo",
+  "k": "p"
  },
  "Convencer": {
   "c": "quests/js/app.js: nce\": \"Invocar/convencer\", \"summon\": \"Invocar\", \"convince\": \"Convencer\", \"illusionable\": \"P",
@@ -1970,6 +2270,18 @@
  "Conversa": {
   "c": "quests/js/app.js: v class=\"chat\"><div class=\"chat-head\"><span>${esc(st.npc || \"Conversa\")} · NPCs</span><spa",
   "k": "x"
+ },
+ "Converte o feitiço seguinte de outro elemento em {0}: a rotação inteira bate em {0}. E +{1}% de base power no fogo.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Converte o feitiço seguinte de outro elemento em {0}: a rotação inteira bate em {0}. E +{1}% de crítico na energia.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Converte o feitiço seguinte de outro elemento em {0}: a rotação inteira bate em {0}. E mais dano crítico na morte.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "Conviction": {
   "c": "index.html: lass=\"wsep\"> · </span>')}</div>`:\"\"; const perk = w => pk(\"Conviction\",\"c\",w.conv,([k,v])=",
@@ -2058,6 +2370,10 @@
  "Cria outro set para hunts com dano de um elemento (+ set e escolhe a proteção).": {
   "c": "index.html: mam ter um set por hunt: cria um set por elemento (+ set).\":\"Cria outro set para hunts com dano de um elemento (+ set e escolhe a proteção).\"}`}</p>`; // bonec",
   "k": "x"
+ },
+ "Cria um MAB para {0} ({1} na barra recomendada): {2}. {3}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "Criatura": {
   "c": "index.html: rar?esc(rarTxt(d.rar)):\"—\"}</td></tr>`; const dropT=list=>`<table class=\"pt\"><thead><tr><th>Criatura</th><th class=\"num\">Chance</th></tr></thead><tbody>${list.map(dtr).join(\"\")}</tbody></table>`; const huntP = [.",
@@ -2199,6 +2515,14 @@
   "c": "index.html:  por vida\",hp?(xp/hp).toFixed(2).replace(\".\",DECSEP):null],[\"Dano máx./turno\",ci.maxdmg?nf(+ci.ma",
   "k": "x"
  },
+ "Dano que faz:": {
+  "c": "index.html: ${why.map(x=>`<li>${x}</li>`).join(\"\")} ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")}</li>`:\"\"}${prot?`<li>Prot",
+  "k": "x"
+ },
+ "Dano que faz: {0}": {
+  "c": "index.html: ${why.map(x=>`<li>${x}</li>`).join(\"\")} ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")}</li>`:\"\"}${prot?`<li>Prot",
+  "k": "p"
+ },
  "Dano que vais levar": {
   "c": "index.html: }`:na),H.map(h=>h.cmp&&h.cmp.best?h.cmp.v:null),1), row(\"Dano que vais levar\",H.map(h=>{ if(!CRDV",
   "k": "x"
@@ -2324,7 +2648,7 @@
   "k": "x"
  },
  "Desbloqueia: {0}": {
-  "c": "index.html: (id))}</h4>${head}<p class=\"small\">${esc(b.d||\"\")}</p>${b.u?`<p class=\"small muted\">Desbloqueia: ${esc(b.u)}</p>`:\"\"}${gs?\"\":`<p clas",
+  "c": "index.html: h\">Lore</span><p>${esc(b.d)}</p></section>`:\"\"}${head}${b.u?`<p class=\"small muted\">Desbloqueia: ${esc(b.u)}</p>`:\"\"}${gs?\"\":`<p clas",
   "k": "p"
  },
  "Desbloqueias": {
@@ -2396,7 +2720,7 @@
   "k": "x"
  },
  "Dica": {
-  "c": "quests/js/app.js: b>${rich(st.warning)}</div></div>`; if (st.tip) html += `<div class=\"callout tip\">${icon(\"bulb\")}<div><b class=\"k\">Dica</b>${rich(st.tip)}</div></div>`; if (st.reward)",
+  "c": "index.html: \"Atenção\",\"bad\"],add:[\"Juntar\",\"\"],order:[\"MAB\",\"acc\"],tip:[\"Dica\",\"ok\"],info:[\"Nota\",",
   "k": "x"
  },
  "Dicas": {
@@ -2551,6 +2875,10 @@
   "c": "index.html: d></tr>`; }).join(\"\")}</tbody></table></div>${arr.length>60?`<p class=\"tiny muted\">E mais ${arr.length-60} itens.</p>`:\"\"}`; npcIxFill",
   "k": "p"
  },
+ "E mais {0}: escolhe outra lista ou procura pelo nome na pesquisa.": {
+  "c": "index.html: >Nenhum boss nesta lista.</p>`}</div> ${list.length>120?`<p class=\"small muted\">E mais ${list.length-120}: escolhe outra lista ou procura pelo nome na pesquisa.</p>`:\"\"} <details cl",
+  "k": "p"
+ },
  "Edala": {
   "c": "index.html: ds of Glory, norte de Carlin\",reg],[\"The Fire of the Suns\",[\"Edala\"],\"Suntower, sul de ",
   "k": "x"
@@ -2599,8 +2927,36 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Em caixa": {
+  "c": "index.html: gpH)}); }); if(!rows.length) return \"\"; const nm={caixa:\"Em caixa\",boss:\"No boss\"}, pc",
+  "k": "x"
+ },
  "Em curso ({0})": {
   "c": "quests/js/app.js: v>` : \"\").join(\"\")}</div></section> ${inProg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"clock\")}Em curso (${inProg.length})</h2><div class=\"box-body\"><div class=\"qgrid\">${inProg.map(questCard).join(\"\"",
+  "k": "p"
+ },
+ "Em equipa": {
+  "c": "index.html:  no boss do slot.`; } const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa\"],[\"later\",\"Mais tar",
+  "k": "x"
+ },
+ "Em equipa (vida desconhecida)": {
+  "c": "index.html: g\">Acesso no nível ${b.ql}</span>` : r.st===\"unknown\" ? `<span class=\"tag\">Em equipa (vida desconhecida)</span>` : `<span class=",
+  "k": "x"
+ },
+ "Em equipa ~": {
+  "c": "index.html: sconhecida)</span>` : `<span class=\"tag warn\">${r.teamL?`Em equipa ~${r.teamL}`:\"Grupo grande\"}</sp",
+  "k": "x"
+ },
+ "Em equipa ~{0}": {
+  "c": "index.html: sconhecida)</span>` : `<span class=\"tag warn\">${r.teamL?`Em equipa ~${r.teamL}`:\"Grupo grande\"}</sp",
+  "k": "p"
+ },
+ "Em equipa · ≈ {0} com 4": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Em equipa{0}": {
+  "c": "index.html: ok\">Sozinho · ≈ ${bsT(r.ttk)}</span>` : r.st===\"team\" ? `<span class=\"tag acc\">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:\"\"}</span>${r.soloL?` <span class=\"tiny muted\">sozinho ~${r.soloL}</span>`:\"\"}` : r.st===\"locke",
   "k": "p"
  },
  "Em grupo ·": {
@@ -2611,12 +2967,28 @@
   "c": "index.html: lemHTML(h.voc,g.p)}</details></div>`; }).join(\"\"); return `<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">Em grupo · ${ms.map(m=>VOC_SHORT[m.voc]).join(\" + \")}</span><h3>${esc(name)}</h3></div></div> <div ",
   "k": "p"
  },
+ "Em party como healer: o Heal Friend e o Nature's Embrace curam também um 2.º aliado.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Em party és tu quem segura os monstros: −15% de dano recebido (e −15% de dano feito) vale mais do que o dano extra.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Empurra objetos": {
   "c": "index.html: l?prop(ci.push,\"Empurrável\"):\"\", ci.pobj!=null?prop(ci.pobj,\"Empurra objetos\"):\"\", ci.ill!=null?p",
   "k": "x"
  },
  "Empurrável": {
   "c": "index.html: ci.para,\"Imune a paralisia\"):\"\", ci.push!=null?prop(ci.push,\"Empurrável\"):\"\", ci.pobj!=null?",
+  "k": "x"
+ },
+ "Enche os segundos em que o resto está em cooldown.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Enche os segundos em que os feitiços estão em cooldown.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "End": {
@@ -2719,6 +3091,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Escolhe o ficheiro {0} do teu Tibia e o site diz o que mudava na tua barra. No Windows está em {1} (cola isto na barra do Explorador de Ficheiros).": {
+  "c": "index.html: h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `<div class=\"card rx-cmp\">${head}<p class=\"small\">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windo",
+  "k": "p"
+ },
  "Escolhe o que usas · ordenado por pontuação": {
   "c": "index.html: ria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML = `<div class=\"pk-h\"><div><b>${esc(SLOTNAME[slot])}</b><span>Escolhe o que usas · ordenado por pontuação</span></div><button type=\"button\" class=\"pk-x\" data-pkx=\"1\"",
   "k": "x"
@@ -2733,6 +3109,14 @@
  },
  "Escolher no Equipamento": {
   "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span> ${empty.map(k=>SLOTNAME[k].toLowerCase()).join(\", \")}. <a href=\"#equip\" data-go=\"equip\">Escolher no Equipamen",
+  "k": "x"
+ },
+ "Escolher o ficheiro": {
+  "c": "index.html: jetos das tuas teclas; nada do resto do ficheiro.</p>${file(\"Escolher o ficheiro\")}<p class=\"small ba",
+  "k": "x"
+ },
+ "Escolher outro ficheiro": {
+  "c": "index.html: =\"small muted\">Não consegui comparar a tua barra.</p>${file(\"Escolher outro ficheiro\")}</div>`; } const",
   "k": "x"
  },
  "Escolher {0}": {
@@ -2758,6 +3142,14 @@
  "Escreve o nome tal como aparece no jogo. O Grimório vai buscar a vocação, o nível, o mundo e as skills ao Tibia, e o guia adapta-se a ela. Podes juntar mais personagens depois.": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Escreve o teu": {
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
+  "k": "x"
+ },
+ "Escreve o teu {0}": {
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
+  "k": "p"
  },
  "Escreve um nome.": {
   "c": "index.html: value).trim().toLowerCase(); if(!x){ $(\"tkMsg\").textContent=\"Escreve um nome.\"; return; } const ",
@@ -2795,6 +3187,10 @@
   "c": "index.html: de druid e sorcerer ficam 'Wand / rod'). const IKIND={sword:\"Espada\",axe:\"Machado\",club:",
   "k": "x"
  },
+ "Esquecer": {
+  "c": "index.html: o o que a recomendada tem, pela ordem certa.</p>`; return `<div class=\"card rx-cmp\">${head}<div class=\"rx-cmph\">${pick}<div class=\"rx-bbtn\">${file(\"Ler outra vez\")}<button type=\"button\" class=\"btn small ghost\" data-rxfor",
+  "k": "x"
+ },
  "Esta build ainda não ativa nenhum vessel.": {
   "c": "index.html: wh-s\"><h6>Gemas</h6>${gems?`<ul class=\"whp-l\">${gems}</ul>`:`<p class=\"small muted\" style=\"margin:0\">Esta build ainda não ativa nenhum vessel.</p>`}</div> ${ch",
   "k": "x"
@@ -2826,6 +3222,10 @@
  "Este código é de {0}: troca para uma personagem dessa vocação para o abrir.": {
   "c": "index.html: (r.err) return whMsg(r.err); if(r.voc!==c.voc) return whMsg(`Este código é de ${G.voc[r.voc].n}: troca para uma personagem dessa vocação para o abrir.`); WED.pts=whPrune",
   "k": "p"
+ },
+ "Este ficheiro é grande demais para ser o clientoptions.json.": {
+  "c": "index.html: tent=m; p.hidden=false; } }; if(t.files[0].size>8e6){ err(\"Este ficheiro é grande demais para ser o clientoptions.json.\"); return; } t.fil",
+  "k": "x"
  },
  "Este item não aceita imbuements.": {
   "c": "index.html: t>`).join(\"\")}</div>`; } else if(!cur.cu && !cur.ns) h+=`<p class=\"small muted\">Este item não aceita imbuements.</p>`; } else h+=`<p cl",
@@ -2923,6 +3323,10 @@
   "c": "quests/js/app.js: : \"Combate\", \"hit points\": \"Vida\", \"experience points\": \"Experiência\", \"armor\": \"Armadura",
   "k": "x"
  },
+ "Expertise": {
+  "c": "index.html: ,death:\"p_death\",holy:\"p_holy\"}; const BSSTG=[\"—\",\"Prowess\",\"Expertise\",\"Mastery\"]; const b",
+  "k": "x"
+ },
  "Exportar": {
   "c": "quests/js/app.js: e(q.slug) && stepsDone(q.slug) > 0); view().innerHTML = ` <div class=\"toolbar\"><h1>O meu progresso</h1> <button class=\"btn btn-ghost btn-sm\" id=\"expP\">${icon(\"download\")}Exportar</button> <label class=\"btn btn-ghost btn-",
   "k": "x"
@@ -2978,6 +3382,10 @@
  "Falar com NPCs:": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "x"
+ },
+ "Falta {0} — {1}. {2}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "Faltam {0} de experiência até ao nível {1}: cerca de {2} {3} de 3 horas.": {
   "c": "index.html:  h\"; const ses=Math.ceil(hrs/3); $(\"calcSub\").textContent = `Faltam ${nf(need)} de experiência até ao nível ${c.target}: cerca de ${ses} ${ses===1?\"sessão\":\"sessões\"} de 3 horas.`; } else { $(\"calc",
@@ -3207,6 +3615,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Grimório. {0} bosses do Bosstiary.": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "k": "p"
+ },
  "Food": {
   "c": "index.html: ds\":\"Escudo\",\"Legs\":\"Calças\",\"Boots\":\"Botas\",\"Rings\":\"Anel\",\"Food\":\"Comida\",\"Rods\":\"Ro",
   "k": "x"
@@ -3323,6 +3735,10 @@
   "c": "index.html: /^(teleport|portal) to /i,\"Teleporte: \"):\"Teleporte\",d:s[2]?\"Gasta 1 teleport crystal\":\"\"}; return {i:\"w",
   "k": "x"
  },
+ "Gasto": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Gelo {0}%": {
   "c": "r13: site todo em inglês (rótulos curtos e elementos com %)",
   "k": "p"
@@ -3403,6 +3819,10 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "Grande área": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Grau": {
   "c": "index.html: d>${b} ${f} Fragments</td></tr>`).join(\"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (",
   "k": "x"
@@ -3459,8 +3879,16 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Grupo grande": {
+  "c": "index.html: : `<span class=\"tag warn\">${r.teamL?`Em equipa ~${r.teamL}`:\"Grupo grande\"}</span>${r.soloL?` ",
+  "k": "x"
+ },
  "Grupo: todos": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Grupos: sempre que estiver pronto.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Guardado em Equipamento ✓": {
@@ -3491,8 +3919,12 @@
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "x"
  },
+ "Guia no Questski": {
+  "c": "index.html: {esc(r)} ›</button>`; const sl=guiaOf(null,nm); return sl?`<a class=\"tag warn qlink\" href=\"${guiaHref(sl)}\" title=\"Guia no Questski\">${esc(r)} ›</a>`:`<span class=\"tag w",
+  "k": "x"
+ },
  "Guia passo a passo": {
-  "c": "index.html: &nd<tot?\"open\":\"\"}><summary>${nd&&nd<tot?\"Continuar o guia\":\"Guia passo a passo\"}</summary><div clas",
+  "c": "index.html: an>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:\"Guia passo a passo\"}<span class=\"qsp\">t",
   "k": "x"
  },
  "Guia passo a passo em preparação.": {
@@ -3502,6 +3934,10 @@
  "Guia passo a passo no Questski": {
   "c": "index.html:  omissão um botão pequeno) const guiaBtn = (s,t,cls) => s ? `<a class=\"${cls||\"btn small\"} gbtn\" href=\"${guiaHref(s)}\" title=\"Guia passo a passo no Questski\">${GIC}${t||\"Guia passo a passo ›\"}</a>` : \"\"; // botão de u",
   "k": "x"
+ },
+ "Guia passo a passo · {0} {1}{2}": {
+  "c": "index.html: i>${ent(x)}</li>`).join(\"\")}</ul></details>`:\"\"} ${secs?`<details class=\"qguide\"><summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span class=\"qsp\">tem spoilers</span></span></summary><div class=\"gb\"",
+  "k": "p"
  },
  "Guia passo a passo ›": {
   "c": "index.html: Href(s)}\" title=\"Guia passo a passo no Questski\">${GIC}${t||\"Guia passo a passo ›\"}</a>` : \"\"; // botã",
@@ -3520,11 +3956,11 @@
   "k": "p"
  },
  "Guia ›": {
-  "c": "index.html: air = (btn,s) => s ? `<span class=\"gpair\">${btn}${guiaBtn(s,\"Guia ›\")}</span>` : btn; /",
+  "c": "index.html: air = (btn,s) => s ? `<span class=\"gpair\">${btn}${guiaBtn(s,\"Guia ›\")}</span>` : btn; /*",
   "k": "x"
  },
  "Guias de quests": {
-  "c": "index.html: Charms\"],[\"imbu\",\"Imbuements\"],[\"quests\",\"Quests\"],[\"guias\",\"Guias de quests\",\"quests/\"]]}, {id:",
+  "c": "index.html: sso\",subs:[[\"charms\",\"Charms\"],[\"quests\",\"Quests\"],[\"guias\",\"Guias de quests\",\"quests/\"]]}, {id:",
   "k": "x"
  },
  "Guias de quests passo a passo": {
@@ -3589,14 +4025,6 @@
  },
  "Horas de sessão": {
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
-  "k": "x"
- },
- "Hotkeys": {
-  "c": "index.html: id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\",\"Wheel\"],",
-  "k": "x"
- },
- "Hotkeys e Multi Action Buttons": {
-  "c": "index.html (HTML)",
   "k": "x"
  },
  "Hrodmir (Buddel → Camp)": {
@@ -4011,6 +4439,10 @@
   "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"small muted\">Junta uma vocação:</span>${V",
   "k": "x"
  },
+ "Juntar": {
+  "c": "index.html: en)}</p></div>`; } const RXTIP={warn:[\"Atenção\",\"bad\"],add:[\"Juntar\",\"\"],order:[\"MAB\",\"a",
+  "k": "x"
+ },
  "Juntar personagem": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4071,6 +4503,10 @@
   "c": "index.html: lioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\":\"Escudo\",\"Legs\":\"Calças\",\"Boots\":\"B",
   "k": "x"
  },
+ "Ler outra vez": {
+  "c": "index.html: ead}<div class=\"rx-cmph\">${pick}<div class=\"rx-bbtn\">${file(\"Ler outra vez\")}<button type=\"butt",
+  "k": "x"
+ },
  "Lesser": {
   "c": "index.html: em, Greater Sage Gem) const whGemName = (voc,n) => `${n===1?\"Lesser \":n===3?\"Greater \":\"\"",
   "k": "x"
@@ -4092,8 +4528,12 @@
   "k": "p"
  },
  "Leva contigo": {
-  "c": "quests/js/app.js: </ul>`); if ((d.items_needed || []).length) before.push(`<h4>Leva contigo</h4><ul class=\"list-clean\">${d.items_needed.map((it) => `<li>${icon(\"bag\")}<span>${it.item ? `${it.qty ? `<span class=\"qty\">${it.qty}× </span>` : ",
+  "c": "index.html: join(\"\")}</ul></div>`:\"\"} ${(g.items_needed||[]).length?`<div class=\"qreq\"><h5>Leva contigo</h5><ul>${g.items_needed.map(x=>`<li>${ent(x)}</li>`).join(\"\")}</ul></div>`:\"\"} ${(g.reward",
   "k": "x"
+ },
+ "Leva mais dano de: {0}.": {
+  "c": "index.html: o: <b>${esc(IMBL[prot])}</b>.</li>`:\"\"} ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")||\"nenhum el",
+  "k": "p"
  },
  "Leva {0}{1}. Featherweight na mochila dá mais capacidade.": {
   "c": "index.html: sel===\"bag\"){ const pot=vd.pots.filter(p=>p.l<=L).pop(); h+=`<p style=\"margin-top:8px\">Leva ${esc([pot.h,pot.m].filter(x=>x&&x!==\"—\").join(\" e \"))}${isMage(c)?\", runas da hunt, Magic Wall\"+(c.voc===\"druid\"?\" e Paralyze\":",
@@ -4143,8 +4583,8 @@
   "c": "index.html: in:0\">${esc(a.how||\"Sem guia ainda.\")}</p>${wkLinks(a.link)?`<h4 class=\"sub\">Ligado a</h4>${wkLinks(a.link)}`:\"\"}</section> ",
   "k": "x"
  },
- "Ligados ao set do Equipamento · duram 20 h de combate.": {
-  "c": "index.html: IERS.findIndex(x=>x[0]===tier); $(\"imLead\").textContent = `Ligados ao set do Equipamento · duram 20 h de combate.`; $(\"imSets\").inne",
+ "Ligados ao set do Equipamento (o mesmo dos separadores acima) · duram 20 h de combate. Muda um imbuement e o «No jogo» do resumo mostra o efeito na tua rotação.": {
+  "c": "index.html: IERS.findIndex(x=>x[0]===tier); $(\"imLead\").textContent = `Ligados ao set do Equipamento (o mesmo dos separadores acima) · duram 20 h de combate. Muda um imbuement e o «No jogo» do resumo mostra o efeito na tua rotação.`",
   "k": "x"
  },
  "Ligar ao Tibia": {
@@ -4247,6 +4687,14 @@
   "c": "quests/js/app.js: ginas relacionadas\", \"location\": \"Localização\", \"loot\": \"Loot\", \"abilities\": \"Habi",
   "k": "x"
  },
+ "Loot aos preços de NPC{0}.": {
+  "c": "index.html:  a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:\"\"}.`} Toca no Bosstiary ",
+  "k": "p"
+ },
+ "Loot aos preços do Market de {0}.": {
+  "c": "index.html: e(/^do /,\"o \").replace(/^dos /,\"os \"))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de",
+  "k": "p"
+ },
  "Loot de criaturas": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4275,8 +4723,16 @@
   "c": "index.html: \">${mkList.map(lnk).join(\", \")}</span></div>`:\"\"); return `${notes?`<div class=\"lp-note\">${notes}</div>`:\"\"}${kp}${(()=>{ const l=A.kills.filter(x=>x.nd); return l.length?`<p class=\"lp-nd tiny muted\">Sem loot conhecido: ",
   "k": "p"
  },
+ "Lore": {
+  "c": "index.html:  return `<div class=\"qcard\"><h4>${ttl(qName(id))}</h4>${b.d?`<section class=\"qlore\"><span class=\"qlore-h\">Lore</span><p>${esc(b.d)}</p></section>`:\"\"}${head}${b.u?`<p",
+  "k": "x"
+ },
+ "Lore e guia de {0}": {
+  "c": "index.html: a.startsWith(f)||f.startsWith(a))); }):null; if(g) return `<button type=\"button\" class=\"tag warn qlink\" data-qopen2=\"${g.id}\" title=\"Lore e guia de ${esc(g.n)}\">${esc(r)} ›</button>`; const sl=guiaOf(",
+  "k": "p"
+ },
  "Lore e guia ›": {
-  "c": "index.html: r=>`<span class=\"tag warn\">${esc(r)}</span>`).join(\"\")}${qq?`<button type=\"button\" class=\"btn small ghost\" data-qopen2=\"${esc(p.q)}\">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:\"\"}</div>`:\"\"}</div",
+  "c": "index.html: uted\">Requisitos:</span>${rq.map(questReqTag).join(\"\")}${qq?`<button type=\"button\" class=\"btn small ghost\" data-qopen2=\"${esc(p.q)}\">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:\"\"}</div>`:\"\"}</div",
   "k": "x"
  },
  "Lucro/h": {
@@ -4294,6 +4750,10 @@
  "Líquido": {
   "c": "index.html: and Papers\":\"Documento\",\"Extra Slot\":\"Slot extra\",\"Liquids\":\"Líquido\",\"Plants and Herbs\":",
   "k": "x"
+ },
+ "MAB: no jogo, botão direito numa tecla da barra → {0}; cada toque dispara a 1.ª ação que estiver pronta.": {
+  "c": "index.html: el nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.\":\"\"}</p></div>${stan",
+  "k": "p"
  },
  "ML cura": {
   "c": "index.html: L energia\",ml_death:\"ML morte\",ml_holy:\"ML holy\",ml_healing:\"ML cura\"}; let BYID = {}; fu",
@@ -4399,6 +4859,10 @@
   "c": "index.html: 9;\")}' aria-hidden=\"true\"></canvas><span class=\"inf\">${best?'<span class=\"rk\">Mais spawns</span>':\"\"}<b>${esc((e&&e.l",
   "k": "x"
  },
+ "Mais tarde": {
+  "c": "index.html: const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa\"],[\"later\",\"Mais tarde\"],[\"all\",\"Todos\"]]; ",
+  "k": "x"
+ },
  "Mais vida": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4461,6 +4925,10 @@
  },
  "Mapa indisponível.": {
   "c": "index.html: t.createElement(\"div\"),{className:\"small muted\",textContent:\"Mapa indisponível.\"})); } } function my",
+  "k": "x"
+ },
+ "Mapas e imagens no Questski ›": {
+  "c": "index.html: \"\")}</ul></div>`:\"\"} <p style=\"margin:0\">${guiaBtn(gs,\"Mapas e imagens no Questski ›\")}</p></div></detail",
   "k": "x"
  },
  "Mapas:": {
@@ -4535,8 +5003,16 @@
   "c": "index.html: ular/Greater Gem) const GEMVN = {knight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", d",
   "k": "x"
  },
+ "Mastery": {
+  "c": "index.html: ath\",holy:\"p_holy\"}; const BSSTG=[\"—\",\"Prowess\",\"Expertise\",\"Mastery\"]; const bsT = s => ",
+  "k": "x"
+ },
  "Mastery (revelation)": {
   "c": "index.html: }; const supPT = s => String(s).replace(/ Mastery Mastery$/,\" Mastery (revelation)\").replace(/^(.*) Bas",
+  "k": "x"
+ },
+ "Matar: a vida do boss ÷ 70% do teu dano por segundo de boss (o resto do tempo vai para mexer, curar e fugir), no elemento a que o boss é mais fraco, até 2,5 min (Bane), 5 min (Archfoe) ou 10 min (Nemesis) sozinho; em equipa, com 4 como tu e mais 50% de tempo.": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "x"
  },
  "Maça": {
@@ -4671,8 +5147,20 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Monstros a 2–4 casas: o anel não apanha os que estão colados a ti.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Monstros e loot": {
   "c": "index.html: </div>${tabsUI([[\"rota\",\"Como chegar\",huntRoute(k)],[\"mons\",\"Monstros e loot\",monsPanel((G.pm[k]|",
+  "k": "x"
+ },
+ "Monstros em linha à tua frente; no boss, alinha-te com ele.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Monstros espalhados": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Montaria": {
@@ -4756,7 +5244,7 @@
   "k": "x"
  },
  "Multi Action Button": {
-  "c": "index.html: ${id}\"><kbd>${esc(key.k)}</kbd><div><div class=\"acts\">${mab?'<span class=\"mabtag\" title=\"Multi Action Button\">MAB</span>':\"\"}${parts.map((p,i",
+  "c": "index.html:  H, Shift+…) function rxTile(k){ const body = k.mab ? `<div class=\"tn\"><span class=\"mabtag\" title=\"Multi Action Button\">MAB</span>${k.mab.acts.map((a,i)=>`${i?'<span class=\"chev\" aria-hidden=\"true\">›</span>':\"\"}<span cla",
   "k": "x"
  },
  "Mundo": {
@@ -4766,6 +5254,14 @@
  "Munição": {
   "c": "index.html: w?`<p class=\"small\" style=\"margin:0\"><b>${h.voc===\"paladin\"?\"Munição\":h.voc===\"knight\"||h",
   "k": "x"
+ },
+ "Munição para o nível {0}: {1} (ataque {2})": {
+  "c": "index.html: rCase(), pg=G.lt[k]!=null||!!EQBYN[k], tag=pg?\"a\":\"span\", t=`Munição para o nível ${c.level}: ${am[2]} (ataque ${am[1]})`; return `<${tag} ",
+  "k": "p"
+ },
+ "Munição: {0} (ataque {0})": {
+  "c": "index.html: st am=x===\"shield\"?palAmmo(c,S):null; if(am) return `<span class=\"bslot pal2\">${it?`<a class=\"pq\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\" aria-label=\"Aljava: ${esc(it.n)}\">${spr(it)}</a>`:`<span class=\"pq\" title=\"A",
+  "k": "p"
  },
  "Mystic": {
   "c": "index.html: ight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", druid:\"Mystic\", monk:\"Spiritualist",
@@ -4923,12 +5419,16 @@
   "c": "index.html:  else if(bestNpc) adv=\"Vende a um NPC.\"; else if(mkr) adv=\"Nenhum NPC compra: vende no Market.\"; if(!wld) adv+=(a",
   "k": "x"
  },
+ "Nenhum boss nesta lista.": {
+  "c": "index.html: lice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join(\"\")||`<p class=\"small muted\">Nenhum boss nesta lista.</p>`}</div> ${list.l",
+  "k": "x"
+ },
  "Nenhum feitiço com esses filtros.": {
   "c": "index.html: join(\"\")}</div>${wlMore('data-spmore=\"1\"',f.n,L.length)}` : `<p class=\"muted\">Nenhum feitiço com esses filtros.</p>`; } function wlNpCar",
   "k": "x"
  },
  "Nenhum imbuement escolhido.": {
-  "c": "index.html: r(k)}\">${v>1?v+\"× \":\"\"}${esc(IMBL[k]||k)}</span>`).join(\"\"):'<span class=\"muted small\">Nenhum imbuement escolhido.</span>'}</div></div> <d",
+  "c": "index.html: r(k)}\">${v>1?v+\"× \":\"\"}${esc(IMBL[k]||k)}</span>`).join(\"\"):'<span class=\"muted small\">Nenhum imbuement escolhido.</span>'}</div></div> ${",
   "k": "x"
  },
  "Nenhum item com essa pesquisa.": {
@@ -5011,6 +5511,14 @@
   "c": "index.html: wld}…`; else if(mkr && bestNpc) adv = mk[0]>bestNpc*1.1 ? \"No Market costuma valer mais do que nos NPCs.\" : \"Os NPCs pagam pe",
   "k": "x"
  },
+ "No boss": {
+  "c": "index.html: (!rows.length) return \"\"; const nm={caixa:\"Em caixa\",boss:\"No boss\"}, pct=(a,b)=>b>0?Ma",
+  "k": "x"
+ },
+ "No boss, enche os segundos livres.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "No chão": {
   "c": "quests/js/app.js:  por\", \"bought for\": \"NPCs vendem por\", \"field properties\": \"No chão\", \"blocking\": \"Bloqu",
   "k": "x"
@@ -5018,6 +5526,14 @@
  "No grau IV o mod dá +50% do valor do grau I, e cada mod no grau IV dá +1 wheel point (até 69).": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
+ },
+ "No jogo": {
+  "c": "index.html: window.GrimRot) return \"\"; if(!RXD){ imGameLoad(); return `<div class=\"ims img-g\"><h4>No jogo</h4><p class=\"small muted\">A calcular com a tua rotação…</p></div>`; } const gr=rxGea",
+  "k": "x"
+ },
+ "No jogo {0}": {
+  "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
+  "k": "p"
  },
  "No terreno da hunt": {
   "c": "index.html: .</p>`; return `${h.length?`<div class=\"mgrp\"><h5>${o.ht||\"No terreno da hunt\"}</h5><div class=\"ml",
@@ -5091,6 +5607,10 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
+ "Nota": {
+  "c": "index.html: d:[\"Juntar\",\"\"],order:[\"MAB\",\"acc\"],tip:[\"Dica\",\"ok\"],info:[\"Nota\",\"\"]}; function rxCm",
+  "k": "x"
+ },
  "Nota para {0}: {1} de 100 {2}": {
   "c": "index.html: p>`:\"\"} ${sc!=null&&notaItem(c,it,sc,\"combat\",\"\")!=null?`<p class=\"lk-sc\">Nota para ${esc(c.name||G.voc[c.voc].n)}: <b>${notaItem(c,it,sc,\"combat\",\"\")}</b> de 100 <small>(100 = o melhor deste slot até ao nível ${c.level}",
   "k": "p"
@@ -5119,12 +5639,44 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
+ "Nunca abaixo do nível mínimo e do recomendado da quest de acesso: as fases e mecânicas dos bosses não entram nas contas.": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "k": "x"
+ },
+ "Não consegui calcular o teu dano de boss.": {
+  "c": "index.html: y{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class=\"small muted\">Não consegui calcular o teu dano de boss.</p>`; return; } const ",
+  "k": "x"
+ },
+ "Não consegui carregar o motor dos bosses.": {
+  "c": "index.html: turn; if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class=\"small muted\">Não consegui carregar o motor dos bosses.</p>`; return; } const ",
+  "k": "x"
+ },
+ "Não consegui carregar os bosses.": {
+  "c": "index.html: f(!BSD||!RXD){ el.innerHTML=`<p class=\"small muted\">${BSERR?\"Não consegui carregar os bosses.\":\"A carregar os boss",
+  "k": "x"
+ },
+ "Não consegui carregar os dados das rotações.": {
+  "c": "index.html: .innerHTML=`<p class=\"small muted\">${RXERR||!window.GrimRot?\"Não consegui carregar os dados das rotações.\":\"A carregar as rota",
+  "k": "x"
+ },
+ "Não consegui comparar a tua barra.": {
+  "c": "index.html: t.review(RXD,opt,user); }catch(e){ console.error(e); return `<div class=\"card rx-cmp\">${head}<p class=\"small muted\">Não consegui comparar a tua barra.</p>${file(\"Escolher outro ficheiro\")}</div>`; } const pick=nam",
+  "k": "x"
+ },
  "Não consegui contactar o Tibia agora. Tenta outra vez daqui a pouco, ou preenche à mão.": {
   "c": "index.html: q)}” no Tibia. Confirma o nome tal como aparece no jogo.` : \"Não consegui contactar o Tibia agora. Tenta outra vez daqui a pouco, ou preenche à mão.\"; redrawLook(hos",
   "k": "x"
  },
  "Não consegui ler este código. Confirma que o copiaste inteiro.": {
   "c": "index.html: ice(36,48)]:Array(12).fill(255)}; } catch(e){ return {err:\"Não consegui ler este código. Confirma que o copiaste inteiro.\"}; } } // tira os po",
+  "k": "x"
+ },
+ "Não consegui ler o ficheiro.": {
+  "c": "index.html: {sets, sel:first.set}; save(); renderRx(); }).catch(()=>err(\"Não consegui ler o ficheiro.\")); }); document.add",
+  "k": "x"
+ },
+ "Não consegui montar a barra.": {
+  "c": "index.html: .layout(RXD,opt); }catch(e){ console.error(e); el.innerHTML=`<p class=\"small muted\">Não consegui montar a barra.</p>`; return; } if(!Lr",
   "k": "x"
  },
  "Não deu para copiar": {
@@ -5157,6 +5709,18 @@
  },
  "Não encontrei este nome no Tibia.": {
   "c": "index.html: arnt\">${c.syncErr===\"offline\"?\"Sem ligação ao Tibia agora.\":\"Não encontrei este nome no Tibia.\"}</p>`:\"\"}<div class",
+  "k": "x"
+ },
+ "Não encontrei feitiços de ataque de {0} neste preset: escolhe o preset desta personagem.": {
+  "c": "index.html: mall\">Preset <b>${esc(sel)}</b></p>`; const tips=!R.known?`<p class=\"small\">Não encontrei feitiços de ataque de ${esc(VOCN(c.voc))} neste preset: escolhe o preset desta personagem.</p>` : R.tips.length",
+  "k": "p"
+ },
+ "Não encontrei hotkeys neste ficheiro: escolhe o clientoptions.json.": {
+  "c": "index.html: , first=GrimRot.readBars(RXD,j,c.name||\"\"); if(!first){ err(\"Não encontrei hotkeys neste ficheiro: escolhe o clientoptions.json.\"); return; } con",
+  "k": "x"
+ },
+ "Não encontrei nenhuma poção de mana na barra.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Não encontrei “{0}” no Tibia. Confirma o nome tal como aparece no jogo.": {
@@ -5225,6 +5789,10 @@
  },
  "Não vai ao Market.": {
   "c": "index.html: nst m=mktRow(key,w,it); if(!m) mkt = info.mkt===false ? `<small>Não vai ao Market.</small>` : `<small>Sem ofert",
+  "k": "x"
+ },
+ "Não é um ficheiro JSON: escolhe o clientoptions.json.": {
+  "c": "index.html: ).then(txt=>{ let j; try{ j=JSON.parse(txt); }catch(_){ err(\"Não é um ficheiro JSON: escolhe o clientoptions.json.\"); return; } con",
   "k": "x"
  },
  "Nível": {
@@ -5312,11 +5880,7 @@
   "k": "x"
  },
  "Nível {0}": {
-  "c": "quests/js/app.js: chip-done\">${icon(\"check\")}Feita</span>` : \"\"}${locked(q) ? `<span class=\"chip chip-locked\">${icon(\"lock\")}Nível ${q.lvl}</span>` : \"\"}</div> ",
-  "k": "p"
- },
- "Nível {0} · MAB = até 3 ações, sai a primeira fora de cooldown.": {
-  "c": "index.html: div>`; }).join(\"\")}</div>`:\"\"); $(\"hkLead\").textContent = `Nível ${L} · MAB = até 3 ações, sai a primeira fora de cooldown.`; const ord = k =>",
+  "c": "index.html: ear?` + ${gear} do equipamento`:\"\"})</span>`; const bits=[`Nível <b>${c.level}</b>`]; if(mage) bits.p",
   "k": "p"
  },
  "Nível {0} · {1}{2} ·": {
@@ -5333,6 +5897,10 @@
  },
  "Nível {0} − 50 = {1}.": {
   "c": "index.html: `Nível ${c.level} − 50 = ${base} · +${tot-base} comprados.`:`Nível ${c.level} − 50 = ${base}.`}</p>${tot>base?\"\":`",
+  "k": "p"
+ },
+ "Nível {0}: {1} sozinho, {2} em equipa. Bosstiary: {3} pontos, {4}% de bónus de loot no boss do slot.": {
+  "c": "index.html: uas) function bsLead(P){ if(BSLEAD) $(\"bsLead\").textContent=`Nível ${BSLEAD.L}: ${BSLEAD.solo} sozinho, ${BSLEAD.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`; ",
   "k": "p"
  },
  "Nível {0}{1}:": {
@@ -5406,6 +5974,10 @@
  "O evento ({0}) já está incluído.": {
   "c": "index.html:  porque puxam mais criaturas de cada vez.</p> ${g.boost?`<p class=\"small\" style=\"margin:0;color:var(--ok)\">O evento (${esc(evLabel())}) já está incluído.</p>`:\"\"} <div class=",
   "k": "p"
+ },
+ "O ficheiro é lido só no teu browser. O site guarda apenas os feitiços e objetos das tuas teclas; nada do resto do ficheiro.": {
+  "c": "index.html: h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `<div class=\"card rx-cmp\">${head}<p class=\"small\">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windo",
+  "k": "x"
  },
  "O grau é do mod, não da gema: vale em todas as gemas que tenham esse mod.": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
@@ -5501,6 +6073,10 @@
  },
  "Ofensivo": {
   "c": "index.html: 8 10 8 10z\"/><path d=\"m9 12 2 2 4-4\"/>'}; const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills ",
+  "k": "x"
+ },
+ "Onda / feixe": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Onde": {
@@ -5743,6 +6319,10 @@
   "c": "index.html: ? `<div class=\"lk-req ${!c?\"\":can&&lvOk?\"ok\":\"bad\"}\">${it.v?`Para ${esc(vocTag(it))}`:\"Todas as vocações\"",
   "k": "x"
  },
+ "Para as duas linhas": {
+  "c": "index.html: n(\"\")}</div></div>`).join(\"\"); const com=Lr.common.length?`<div class=\"rx-row\"><h4><span class=\"small muted\">Para as duas linhas</span></h4><div class=\"rx-tiles\">${Lr.common.map(rxTile).join(\"\")}</div></div>`:\"\"; // (o p",
+  "k": "x"
+ },
  "Para cada hunt somo as criaturas principais e calculo o dano médio que levam de cada elemento. Depois uso o melhor elemento da tua vocação: gelo/terra no druid, fogo/energia/morte no sorcerer, físico/holy no paladin, físico no knight e no monk (com a alternativa de arma elemental). Fraco ≥ 110%, neutro 98–109%, resiste um pouco 85–97%, resiste < 85%. As hunts marcadas \"por confirmar\" têm a lista de criaturas incompleta.": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5813,10 +6393,6 @@
  },
  "Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá.": {
   "c": "index.html: eito: esvaziar. As de contorno dourado já se podem encher.\":\"Passa o rato (ou toca) numa fatia, numa gema ou numa revelação para veres o que dá.\"}</p>${ed?\"\":`<p cla",
-  "k": "x"
- },
- "Passa o rato ou clica numa tecla para ver o que faz.": {
-  "c": "index.html: hh) hh.textContent = matchMedia(\"(pointer:fine)\").matches ? \"Passa o rato ou clica numa tecla para ver o que faz.\" : \"Toca numa tecla ",
   "k": "x"
  },
  "Passo": {
@@ -6051,6 +6627,10 @@
   "c": "quests/js/app.js: e=\"margin-top:10px\"> <div class=\"seg\">${[[\"area\", \"Por zona / acesso\"], [\"quest\", \"Por qu",
   "k": "x"
  },
+ "Porquê e como": {
+  "c": "index.html: arece em raids: não se marca, aparece no mundo.\"); return `<div class=\"bs-r\" data-bsk=\"${esc(r.k)}\"><span class=\"bs-ic\">${crSpr(r.k,44)}</span> <div class=\"bs-m\"><div class=\"bs-h\"><a class=\"elink\" href=\"${monHref(b.n)}\">",
+  "k": "x"
+ },
  "Porquê: {0}.": {
   "c": "index.html: ass=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}</p>${pk.why?`<p class=\"tiny muted\" style=\"margin:2px 0 0\">Porquê: ${esc(pk.why)}.</p>`:\"\"} ${key",
   "k": "p"
@@ -6087,8 +6667,12 @@
   "c": "index.html:  '<div aria-hidden=\"true\"></div>'; if(k===\"bag\") return `<button class=\"slot\" data-slot=\"bag\" aria-pressed=\"${sel===\"bag\"}\">${IC.bag}<span class=\"nm\">Poções e runas</span><span class=\"lb\">${lab}</span></button>`; const e",
   "k": "x"
  },
+ "Poções: o ataque em caixa gasta ≈ {0} de mana/s depois do mana leech. {1} ({2} gp) chega com folga e poupa até ≈ {3}k gp/h face a {4}. Deixa a mais forte numa tecla para quando apertar.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "Poções: {0} · {1}": {
-  "c": "index.html: t = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||\"\").split(\" (\")[0].trim()).filter(x=>x&&x!==\"—\").join(\" e \"))}</b> · <a href=\"#\" data-go=\"defesa\">ver custos ›<",
+  "c": "index.html: t = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||\"\").split(\" (\")[0].trim()).filter(x=>x&&x!==\"—\").join(\" + \"))}</b> · <a href=\"#\" data-go=\"defesa\">ver custos ›<",
   "k": "p"
  },
  "Precisa de uma fatia vizinha cheia, mais perto do centro.": {
@@ -6142,6 +6726,14 @@
  "Preparação": {
   "c": "quests/js/app.js: \"guia\", \"Guia passo-a-passo\", \"scroll\"], [\"preparacao\", \"Preparação\", \"bag\"], [\"reco",
   "k": "x"
+ },
+ "Preset": {
+  "c": "index.html: her outro ficheiro\")}</div>`; } const pick=names.length>1?`<label class=\"rx-pre\"><span class=\"small\">Preset</span><select data-rxpre>${names.map(n=>`<option${n===sel?\" selected\":\"\"}>${esc(n)}</option>`).join(\"\")}</select",
+  "k": "x"
+ },
+ "Preset {0}": {
+  "c": "index.html: ected\":\"\"}>${esc(n)}</option>`).join(\"\")}</select></label>`:`<p class=\"small\">Preset <b>${esc(sel)}</b></p>`; const tips=!R.kn",
+  "k": "p"
  },
  "Prey de XP (+25%)": {
   "c": "index.html (HTML)",
@@ -6311,12 +6903,20 @@
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
  },
+ "Proteção: {0}.": {
+  "c": "index.html: map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")}</li>`:\"\"}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:\"\"} ${CR&&C",
+  "k": "p"
+ },
  "Proteções": {
   "c": "index.html: kt=([x,v])=>`${v>0?\"+\":\"\"}${v} ${esc(SKN[x]||x)}`; return `<div class=\"hs-h\"><b>Bónus do set</b><span>${lab}</span></div> <div class=\"hs-kv\">${kv.map(([k,l,v,u])=>`<div class=\"hs-i\" data-k=\"${k}\"><i aria-hidden=\"true\"><s",
   "k": "x"
  },
  "Proteções por elemento": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Prowess": {
+  "c": "index.html: \"p_energy\",death:\"p_death\",holy:\"p_holy\"}; const BSSTG=[\"—\",\"Prowess\",\"Expertise\",\"Master",
   "k": "x"
  },
  "Próxima build com {0} pontos (nível {1}).": {
@@ -6371,6 +6971,10 @@
   "c": "quests/js/app.js: from\": \"Comprar a\", \"sell to\": \"Vender a\", \"related pages\": \"Páginas relacionadas\", \"location\": \"L",
   "k": "x"
  },
+ "Põe itens no set {0} (separador «Os meus sets») para veres o efeito dos imbuements na tua rotação.": {
+  "c": "index.html: /p></div>`; } const gr=rxGear(c,set); if(!gr.mine) return `<div class=\"ims img-g\"><h4>No jogo</h4><p class=\"small muted\">Põe itens no set ${esc(set.name)} (separador «Os meus sets») para veres o efeito dos imbuements na ",
+  "k": "p"
+ },
  "Põe primeiro quantas gastas por hora.": {
   "c": "index.html: se; if(out){ out.textContent=!t?(b.dataset.lpcopy===\"buy\"?\"Põe primeiro quantas gastas por hora.\":\"Nada para copiar.\"",
   "k": "x"
@@ -6391,6 +6995,14 @@
   "c": "quests/js/app.js: } ${block(\"Desbloqueias\", \"key\", unl.length ? `<ul class=\"qs-tags qs-unlocks\">${unl.map((u) => { const h = u.place ? wikiHref(u.place) : null; return `<li title=\"${esc(plainText(u.when || \"\"))}\">${icon((UNLOCK_KINDS[u.ki",
   "k": "x"
  },
+ "Quando o grupo chega aos poucos e não está todo colado.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Quando o resto está em cooldown.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Quantidade": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -6409,6 +7021,14 @@
  },
  "Quara Scale (gelo)": {
   "c": "index.html: ire:\"Dragon Hide (fogo)\",p_earth:\"Snake Skin (terra)\",p_ice:\"Quara Scale (gelo)\",p_energy:\"Cloud Fab",
+  "k": "x"
+ },
+ "Que bosses aguentas no teu nível, quanto dão e o teu Bosstiary.": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Que bosses mostrar": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "x"
  },
  "Que hotkeys me faltam?": {
@@ -6535,8 +7155,12 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
- "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)": {
-  "c": "index.html:  stats): as simples não têm nível nem bónus const quivTip = \"Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; a Red Quiver vende-se nos NPCs por 400 gp)\"; /* pontuação de um",
+ "Questski ›": {
+  "c": "index.html: ton>`:\"\"}${guiaBtn(gs)}</div>`; /* r11 */ const ttl=n=>gs?`<a class=\"qtl\" href=\"${guiaHref(gs)}\" title=\"Abrir esta quest no Questski\">${esc(n)}<span class=\"qtl-go\">Questski ›</span></a>`:esc(n); if(!q) re",
+  "k": "x"
+ },
+ "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; vendem-se nos NPCs por 400 gp)": {
+  "c": "index.html:  stats): as simples não têm nível nem bónus const quivTip = \"Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; vendem-se nos NPCs por 400 gp)\"; /* r10 */ // palad",
   "k": "x"
  },
  "Quivers": {
@@ -6664,7 +7288,7 @@
   "k": "p"
  },
  "Requisitos": {
-  "c": "quests/js/app.js: </div></div>` : \"\"} ${(p.requirements || []).length ? `<div class=\"callout tip\">${icon(\"key\")}<div><b class=\"k\">Requisitos</b>${p.requirements.map(rich).join(\"<br>\")}</div></div>` : \"\"} <div cl",
+  "c": "index.html: t)}</section>`:\"\"}${head} ${(g.requirements||[]).length?`<div class=\"qreq\"><h5>Requisitos</h5><ul>${g.requirements.map(x=>`<li>${ent(x)}</li>`).join(\"\")}</ul></div>`:\"\"} ${(g.items_",
   "k": "x"
  },
  "Residência": {
@@ -6694,10 +7318,6 @@
  "Resistências das criaturas: base de dados de monstros (percentagens do Cyclopedia), verificada por amostragem na {0}.": {
   "c": "index.html (HTML)",
   "k": "p"
- },
- "ResizeObserver": {
-  "c": "index.html: ).addEventListener(\"scroll\", hbNavSync, {passive:true}); if(\"ResizeObserver\" in window) new Resi",
-  "k": "x"
  },
  "Respostas com os dados desta personagem.": {
   "c": "index.html (HTML)",
@@ -6772,14 +7392,10 @@
   "k": "x"
  },
  "Rotação": {
-  "c": "index.html: efas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkey",
+  "c": "index.html: \"paladin\"?\"Munição\":h.voc===\"knight\"||h.voc===\"monk\"?\"Arma\":\"Rotação\"}:</b> ${esc(h.r.how",
   "k": "x"
  },
- "Rotação e feitiços": {
-  "c": "index.html (HTML)",
-  "k": "x"
- },
- "Rotações": {
+ "Rotação e hotkeys": {
   "c": "index.html (HTML)",
   "k": "x"
  },
@@ -6795,6 +7411,10 @@
   "c": "index.html: t((a,b)=>a[1]-b[1]).slice(0,8):[]; return pageHead(rune?\"Runa\":\"Feitiço\", esc(s.n)",
   "k": "x"
  },
+ "Runa de alvo": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Runa de apoio": {
   "c": "index.html: \",\"Ammunition\":\"Munição\",\"Quivers\":\"Aljava\",\"Support Runes\":\"Runa de apoio\",\"Healing Runes\":\"Ru",
   "k": "x"
@@ -6805,6 +7425,10 @@
  },
  "Runa de cura": {
   "c": "index.html: s\":\"Aljava\",\"Support Runes\":\"Runa de apoio\",\"Healing Runes\":\"Runa de cura\",\"Metals\":\"Metal\",\"R",
+  "k": "x"
+ },
+ "Runa de área": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Runas": {
@@ -6834,6 +7458,10 @@
  "Saiu da comparação: {0} (já não há {1} para {2}).": {
   "c": "index.html: s para comparar\"}</h3></div></div>`; if(gone.length) out+=`<p class=\"small warnt\" style=\"margin:0\">Saiu da comparação: ${esc(gone.map(hcmpName).join(\", \"))} (já não há ${gone.length>1?\"estas hunts\":\"esta hunt\"} para ${vn",
   "k": "p"
+ },
+ "Sala com alavanca: até 5 jogadores, normalmente.": {
+  "c": "index.html: l?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(b.lv) why.push(\"Sala com alavanca: até 5 jogadores, normalmente.\"); if(b.sp===\"r\") ",
+  "k": "x"
  },
  "Salvation Healing": {
   "c": "index.html: t Mastery\":[\"Paladin_RevelationMastery_DivineEmpowerment\"], \"Salvation Healing\":[\"Paladin_Salvation",
@@ -6954,6 +7582,10 @@
  "Sem hunts validadas para este nível.": {
   "c": "index.html: ilter(([k,h])=>h).map(([k,h])=>huntCard(h,[k])).join(\"\") || `<p class=\"muted\">Sem hunts validadas para este nível.</p>`; // next steps ",
   "k": "x"
+ },
+ "Sem imbuements → com estes imbuements. Strike: 10% dos golpes com +{0}% de dano. Taxas do altar ≈ {1} gp/h{2}.": {
+  "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
+  "k": "p"
  },
  "Sem itens nesta janela.": {
   "c": "index.html: ?\"tenho ✓\":\"tenho?\"}</button>`:\"\"}</td></tr>`; }).join(\"\")||`<tr><td colspan=\"5\" class=\"muted\">Sem itens nesta janela.</td></tr>`) + `</tbody>`; re",
@@ -7119,8 +7751,24 @@
   "c": "index.html: ia\",\"Valuables\":\"Valioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\":\"Escudo\",\"Legs\":\"Ca",
   "k": "x"
  },
- "Shift+": {
-  "c": "index.html: })}${h.mab?'<i class=\"mab\">MAB</i>':\"\"}<i>${esc(h.k.replace(\"Shift+\",\"⇧\"))}</i></span></",
+ "Shift": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Shift+1": {
+  "c": "index.html:  let n=0; const future=[]; const KS={sob:[\"1\",\"2\",\"3\",\"4\",\"Shift+1\",\"Shift+2\",\"Shift+3\"",
+  "k": "x"
+ },
+ "Shift+2": {
+  "c": "index.html: const future=[]; const KS={sob:[\"1\",\"2\",\"3\",\"4\",\"Shift+1\",\"Shift+2\",\"Shift+3\",\"Shift+4\"",
+  "k": "x"
+ },
+ "Shift+3": {
+  "c": "index.html: re=[]; const KS={sob:[\"1\",\"2\",\"3\",\"4\",\"Shift+1\",\"Shift+2\",\"Shift+3\",\"Shift+4\",\"5\",\"6\"],",
+  "k": "x"
+ },
+ "Shift+4": {
+  "c": "index.html: onst KS={sob:[\"1\",\"2\",\"3\",\"4\",\"Shift+1\",\"Shift+2\",\"Shift+3\",\"Shift+4\",\"5\",\"6\"], f:Array.f",
   "k": "x"
  },
  "Skill": {
@@ -7219,6 +7867,10 @@
   "c": "index.html:  mais pontos, até aos 1000 de cada um.</p>`:\"\"}${sug.left>0?`<p class=\"wsub\">Sobram ${sug.left}: podes pô-los onde quiseres.</p>`:\"\"}<button type=\"bu",
   "k": "p"
  },
+ "Sobreviver e utilidade": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Solo ED \"Forked Glacier\" build": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -7243,9 +7895,33 @@
   "c": "quests/js/app.js: Tipo\", \"premium\": \"Premium\", \"mana\": \"Mana\", \"soul points\": \"Soul points\", \"cooldown\": \"Coold",
   "k": "x"
  },
+ "Sozinho": {
+  "c": "index.html: }% de bónus de loot no boss do slot.`; } const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa",
+  "k": "x"
+ },
  "Sozinho até à luta final": {
   "c": "index.html:  */ const QG = [{k:\"solo\",t:\"Fazes sozinho\"},{k:\"parcial\",t:\"Sozinho até à luta final\"},{k:\"party\",t:\"Prec",
   "k": "x"
+ },
+ "Sozinho · ≈": {
+  "c": "index.html: oc||[]).slice(0,2).join(\", \"); const st = r.st===\"solo\" ? `<span class=\"tag ok\">Sozinho · ≈ ${bsT(r.ttk)}</span>` : r.st===\"team\"",
+  "k": "x"
+ },
+ "Sozinho · ≈ {0}": {
+  "c": "index.html: oc||[]).slice(0,2).join(\", \"); const st = r.st===\"solo\" ? `<span class=\"tag ok\">Sozinho · ≈ ${bsT(r.ttk)}</span>` : r.st===\"team\"",
+  "k": "p"
+ },
+ "Sozinho é arriscado: golpes até {0} por turno e tens ≈ {1} de vida efetiva (pedimos o dobro do golpe).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Sozinho é arriscado: golpes até {0} por turno e tens ≈ {1} de vida efetiva (vida + Magic Shield) (pedimos o dobro do golpe).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "Sozinho é arriscado: golpes até {0} por turno e tens ≈ {1} de vida efetiva{2} (pedimos o dobro do golpe).": {
+  "c": "index.html: agic Shield)\":\"\"} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscado: golpes até ${nf(b.md)} por turno e tens ≈ ${nf(r.eff)} de vida efetiva${isMage(c)?\" (vida + Magic Shield)\":\"\"} (pedimos o dobro do golpe).",
+  "k": "p"
  },
  "Sozinho. Podes fazer party com XP partilhada {0}. Junta outra vocação para ver as hunts onde podem ir juntos.": {
   "c": "index.html: \"1\">+ Juntar alguém</button>`; const info = ms.length<2 ? `Sozinho. Podes fazer party com XP partilhada ${rng}. Junta outra vocação para ver as hunts onde podem ir juntos.` : canShare(ms) ",
@@ -7265,6 +7941,10 @@
  },
  "Spellbooks": {
   "c": "index.html: \"Tools\":\"Ferramenta\",\"Fist Fighting Weapons\":\"Arma de monk\",\"Spellbooks\":\"Spellbook\",\"Light ",
+  "k": "x"
+ },
+ "Spender": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Spiritualist": {
@@ -7289,6 +7969,10 @@
  },
  "Stamina verde ×1,5": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Stance": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Stances": {
@@ -7431,12 +8115,20 @@
   "c": "quests/js/app.js: m passos por lá.</p> <div class=\"seg\">${[[true, `Só as de ${esc(reg.name)} (${reg.main})`], [false, `+ as que",
   "k": "p"
  },
+ "Só com 5 de Harmony: o MAB não sabe a Harmony.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Só conta em PvP": {
   "c": "index.html: omad\"],\"Hrodmir (Buddel → Camp)\",enh],[\"Twist of Fate\",null,\"Só conta em PvP\",twist]]; const to",
   "k": "x"
  },
  "Só da Loja": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Só em caixas grandes (6 ou mais): 40 s de cooldown e muita mana.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Só em equipa para {0}": {
@@ -7620,18 +8312,6 @@
   "k": "x"
  },
  "Taxa no altar": {
-  "c": "index.html (HTML)",
-  "k": "x"
- },
- "Teclas anteriores": {
-  "c": "index.html (HTML)",
-  "k": "x"
- },
- "Teclas que vais ganhar": {
-  "c": "index.html: a.l-b.l); $(\"hkList\").innerHTML = groups + (future.length?`<div class=\"card hkfut\"><h3 style=\"font-size:19px;margin-bottom:6px\">Teclas que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\\s*\"",
-  "k": "x"
- },
- "Teclas seguintes": {
   "c": "index.html (HTML)",
   "k": "x"
  },
@@ -7871,12 +8551,12 @@
   "c": "index.html: ).innerHTML=l.map(pid=>{ const n=esc(hcmpName(pid)); return `<span class=\"hcmp-c${pid===added?\" hcmp-new\":\"\"}\"><button type=\"button\" class=\"hcmp-n\" data-gs=\"h:${esc(pid)}\" title=\"${n}\">${esc(hcmpShort(pid))}</button><but",
   "k": "p"
  },
- "Toca num slot para ver as opções; toque longo para trocar depressa.": {
-  "c": "index.html: , \")}</p>`:\"\"); $(\"equipLead\").textContent = IS_TOUCH() ? \"Toca num slot para ver as opções; toque longo para trocar depressa.\" : \"Clica num slot p",
+ "Toca no Bosstiary de cada boss para marcares o teu progresso.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
- "Toca numa tecla para ver o que faz.": {
-  "c": "index.html (HTML)",
+ "Toca num slot para ver as opções; toque longo para trocar depressa.": {
+  "c": "index.html: , \")}</p>`:\"\"); $(\"equipLead\").textContent = IS_TOUCH() ? \"Toca num slot para ver as opções; toque longo para trocar depressa.\" : \"Clica num slot p",
   "k": "x"
  },
  "Todas": {
@@ -8027,12 +8707,24 @@
   "c": "index.html: ave Base Damage\":[\"Sorcerer_GreatFireWave_DamageIncrease\"], \"UE Base Damage\":[\"Sorcerer_RageOfTh",
   "k": "x"
  },
+ "Ultimate": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "Ultimate Mana Potion": {
   "c": "index.html: r Mana Potion\",254,300,\"Todas menos knights (nível 100).\"],[\"Ultimate Mana Potion\",488,500,\"Sorcerers ",
   "k": "x"
  },
+ "Um golpe de 1000 fica: {0}{1}.": {
+  "c": "index.html: r(e=>(t.ab[e]||0)+(t.abi[e]||0)>0); const prot=els.length?`<p class=\"small\" style=\"margin:8px 0 0\">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(",
+  "k": "p"
+ },
  "Uma criatura (ex.: a boosted do dia)": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
+  "k": "x"
+ },
+ "Uma vez no início de cada boss: dano contínuo durante a luta.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Usa": {
@@ -8408,7 +9100,7 @@
   "k": "x"
  },
  "Wheel": {
-  "c": "index.html: ,subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipame",
+  "c": "index.html: d\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipame",
   "k": "x"
  },
  "Wheel of Destiny": {
@@ -8559,6 +9251,10 @@
   "c": "index.html: er(\"click\", e=>{ const t=e.target.closest&&e.target.closest(\"[data-wmode],[data-wed],.whs.edit [data-ws]\"); if(!t||!WED) retu",
   "k": "x"
  },
+ "a 2.ª linha é para quem resiste a {0}: mesma tecla, mesmo papel.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "a aljava fica sem imbuement": {
   "c": "index.html: \"spellbook\"?\"o livro fica sem imbuement\":sr[1].b===\"quiver\"?\"a aljava fica sem imbuement\":\"o escudo fica sem ",
   "k": "x"
@@ -8574,6 +9270,18 @@
  "a armadura fica só com Vampirism": {
   "c": "index.html: []; if(ar&&ar[2].length===1&&ar[2][0]===\"vamp\") fr.push(\"a armadura fica só com Vampirism\"); if(sr&&!sr[2].len",
   "k": "x"
+ },
+ "a cada {0} dias": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "a cada {0} h": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "a cada {0} min": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "a class=\"ent-card\" href=\"{0}\"": {
   "c": "quests/js/app.js: \"); const href = wikiHref(name); const tag = href ? `a class=\"ent-card\" href=\"${href}\"` : `div class=\"ent-c",
@@ -8621,6 +9329,10 @@
  },
  "abrir mapa": {
   "c": "quests/js/app.js: N.stringify({ x, y, z, marks: marks || null })); return `<div class=\"minimap\" data-mm=\"${data}\" role=\"button\" tabindex=\"0\" title=\"${esc(title || \"Abrir no mapa\")}\"> <canvas></canvas><span class=\"mm-floor\">${floorLabel(z)",
+  "k": "x"
+ },
+ "abrir o boss": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "acesso": {
@@ -8689,6 +9401,14 @@
  },
  "alvo": {
   "c": "index.html: = s => KK[s.kind]||\"suporte\"; const KL={aoe:\"área\",target:\"alvo\",heal_self:\"cura\",he",
+  "k": "x"
+ },
+ "alvo forte": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "alvo único": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "always": {
@@ -8823,6 +9543,10 @@
   "c": "index.html: `<li>${esc(t)}</li>`).join(\"\")}</ul>`:\"\"}`; const KK={aoe:\"ataque\",target:\"ataque\",hea",
   "k": "x"
  },
+ "ataque básico": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "ativo": {
   "c": "index.html: el=\"Filtros: ${resumo}${nAtivos?` (${nAtivos} ${nAtivos===1?\"ativo\":\"ativos\"})`:\"\"}\"><s",
   "k": "x"
@@ -8868,7 +9592,7 @@
   "k": "x"
  },
  "auto": {
-  "c": "index.html:  el=$(b.dataset.hk); el.scrollIntoView({behavior:RM.matches?\"auto\":\"smooth\",block:\"cen",
+  "c": "index.html: prev\")?-.8:.8)*hb.clientWidth, behavior:mdMotion()?\"smooth\":\"auto\"}); })); $(\"spFilter",
   "k": "x"
  },
  "avail": {
@@ -8947,6 +9671,10 @@
   "c": "index.html: Left\", purple:\"Bottom Right\"}; const WHDOM = [\"green\",\"red\",\"blue\",\"purple\"]; const WH",
   "k": "x"
  },
+ "blur": {
+  "c": "index.html: true})); addEventListener(\"focus\",mdWake); addEventListener(\"blur\",()=>{ clearTimeout(",
+  "k": "x"
+ },
  "book": {
   "c": "quests/js/app.js: , icon: \"spark\" }, tutorial: { label: \"Tutorial\", icon: \"book\" }, }; const QTA",
   "k": "x"
@@ -8992,7 +9720,7 @@
   "k": "x"
  },
  "build": {
-  "c": "index.html: unts\",subs:[[\"hunts\",\"Hunts\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"r",
+  "c": "index.html: ,\"Hunts\"],[\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"r",
   "k": "x"
  },
  "build física": {
@@ -9013,6 +9741,10 @@
  },
  "bulb": {
   "c": "quests/js/app.js: section class=\"box\"> <h2 class=\"box-caption\">${icon(\"bulb\")}Como usar</h2> ",
+  "k": "x"
+ },
+ "burst": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "buy from": {
@@ -9039,6 +9771,10 @@
   "c": "index.html: opT(drops),drops.length]); if(huntP.length&&c) tabs.push([\"cacar\",\"Onde caçar\",`<div ",
   "k": "x"
  },
+ "caixa": {
+  "c": "index.html: econ.dps+(P.econ.autoDps||0))*(k||1):0; const rows=[]; [\"caixa\",\"boss\"].forEach(sc=",
+  "k": "x"
+ },
  "calc": {
   "c": "index.html: ${oth.map(x=>`<button type=\"button\" class=\"whx-chip${x.calc?\" calc\":\"\"}\" data-wsel=\"${a",
   "k": "x"
@@ -9054,6 +9790,14 @@
  "cargas": {
   "c": "index.html: .is===1?\"slot\":\"slots\"} de imbuement`); if(it.chg) p.push(`${it.chg} cargas`); else if(it.dur) p",
   "k": "x"
+ },
+ "carrega sempre no {0}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "carrega sempre no {0}; {1} quando tiveres 5 de Harmony.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "caution": {
   "c": "quests/js/app.js: ents\": \"Achievements relacionados\", \"general\": \"Geral\", \"caution\": \"Cuidado\", \"creatu",
@@ -9080,7 +9824,7 @@
   "k": "x"
  },
  "charms": {
-  "c": "index.html: [\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"imbu\",\"",
+  "c": "index.html: [\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"quests\"",
   "k": "x"
  },
  "chars": {
@@ -9164,7 +9908,7 @@
   "k": "x"
  },
  "club": {
-  "c": "index.html: TYPES = {knight:[[\"\",\"Automático (o teu skill mais alto)\"],[\"club\",\"Club\"],[\"sword\",\"S",
+  "c": "index.html: et skn=\"\"; if(v===\"knight\"){ skn=c.wtype||([\"sword\",\"axe\",\"club\"].includes(t.wb)?t.w",
   "k": "x"
  },
  "coin": {
@@ -9175,9 +9919,25 @@
   "c": "index.html: uras\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\",\"Coleções\"]]}, {id",
   "k": "x"
  },
+ "com Shift: para criaturas que resistem a": {
+  "c": "index.html: (r.el)}<span class=\"small muted\">${r.main?\"linha principal\":\"com Shift: para criaturas que resistem a \"+esc(ELN[Lr.rows[0].",
+  "k": "x"
+ },
+ "com Shift: para criaturas que resistem a {0}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "com a arma em ‘Automático’, os sets usam arco a partir do nível 100.": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "x"
+ },
+ "com a tua rotação e o set": {
+  "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
+  "k": "x"
+ },
+ "com a tua rotação e o set {0}": {
+  "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
+  "k": "p"
  },
  "com arma de": {
   "c": "index.html: [pick.x]}`:voc===\"paladin\"?` com munição de ${ELN[pick.x]}`:` com arma de ${ELN[pick.x]}`) : \"\"; const phea",
@@ -9239,6 +9999,10 @@
   "c": "index.html: heel of Destiny\":s.o===\"quest\"?\"recompensa de quest\":\"\", n0?`com ${esc(n0[0])}`:\"\"].filter(Boolean)",
   "k": "p"
  },
+ "com {0} ({1}) ligado, as teclas com Shift a seguir a uma de {2} também saem em {2}: por isso aparecem na rotação.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "com {0},": {
   "c": "index.html: .npc?npcSpr(q.start.npc,true):\"\"}<span>Começa ${q.start.npc?`com <b>${elink(\"npc\",q.start.npc)}</b>, `:\"\"}${esc(q.start.wh",
   "k": "p"
@@ -9269,6 +10033,10 @@
  },
  "complete": {
   "c": "quests/js/app.js: g}/guia/sec-${si}\" data-toc=\"${si}\" class=\"${dc === total ? \"complete\" : \"\"}\">${icon(dc ==",
+  "k": "x"
+ },
+ "completo": {
+  "c": "index.html: st+1]}: ${nx[0]} ${nx[0]===1?\"morte\":\"mortes\"} · +${nx[1]}`:\"completo\"}</span></button>`; ",
   "k": "x"
  },
  "compra": {
@@ -9368,11 +10136,11 @@
   "k": "x"
  },
  "creature": {
-  "c": "quests/js/app.js: >\" : \"</span>\"; switch (kind) { case \"item\": case \"creature\": case \"spell\": ",
+  "c": "index.html: <a class=\"ilink\" href=\"${itemHref(a)}\">${esc(lab)}</a>`:k===\"creature\"?mlink(a,esc(lab)):k",
   "k": "x"
  },
  "creatures": {
-  "c": "index.html: e ${esc(w)}`:\"\"}…</p>`; Promise.all([dsafe(\"items\"),dsafe(\"creatures\"),mktLoad(w),npcData",
+  "c": "index.html: all([dload(\"bosses\"),dload(\"rotacoes\"),dsafe(\"items\"),dsafe(\"creatures\"),w?mktLoad(w):null]",
   "k": "x"
  },
  "criada em": {
@@ -9420,7 +10188,7 @@
   "k": "x"
  },
  "crossbow": {
-  "c": "index.html: n:[[\"\",\"Automático (arco a partir do 100)\"],[\"bow\",\"Arco\"],[\"crossbow\",\"Besta\"],[\"throw\",\"",
+  "c": "index.html: ||0)+(t.atk[1]&&t.atk[1][1]||0):0, am=(t.wb===\"bow\"||t.wb===\"crossbow\")?ammoAtk(t.wb,L):0;",
   "k": "x"
  },
  "crusader helmet": {
@@ -9483,6 +10251,10 @@
   "c": "index.html: ate-raw\"))).arrayBuffer()); if(d.length<36) throw new Error(\"curto\"); return {voc:W",
   "k": "x"
  },
+ "da personagem": {
+  "c": "index.html: c(lab)} ${base+gear}</b> <span class=\"muted\">(${base} ${src?\"da personagem\":\"estimado pelo níve",
+  "k": "x"
+ },
  "da região · {0} no total": {
   "c": "quests/js/app.js: : r.x, y: r.y, z: 7, s: 1.6, nomark: true })); return `<a class=\"region-card ${S.filters.region === r.name ? \"on\" : \"\"}\" href=\"#/quests/regiao/${encodeURIComponent(r.name)}\" data-goregion> <div class=\"minimap region-thum",
   "k": "p"
@@ -9519,6 +10291,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "de dano/s": {
+  "c": "index.html: t.imbs.length*TFEE[imTier(c)]/20; const tiles=rows.map(r=>`<div class=\"img-t\"><span class=\"tiny muted\">${nm[r.sc]}</span> <b>${r.d1>r.d0+0.5?`+${nf(r.d1-r.d0)}`:\"±0\"} <small>de dano/s</small></b><span class=\"small\">${nf(",
+  "k": "x"
+ },
  "de raio": {
   "c": "index.html: \\b/gi,\"ofuscado\"],[/\\bpoints\\b/gi,\"pontos\"],[/\\bradius\\b/gi,\"de raio\"]]; const cpEn = s =",
   "k": "x"
@@ -9526,6 +10302,10 @@
  "de vida": {
   "c": "index.html: tArea(c,cls); el.querySelector(\".tk-sub\").innerHTML = `<span class=\"tag\">${nf(m[1])} de vida</span><span class=\"tag\">${nf(m[2])} XP</span>${m[3]?`<span class=\"tag\">${\"★\".repeat(m[3])}</span>`:\"\"}${d?`<span class=\"compat ",
   "k": "x"
+ },
+ "de vida: com ≈ {0} de dano por segundo em {1}{2}, ≈ {3} sozinho{4}.": {
+  "c": "index.html: ld)\":\"\"} (pedimos o dobro do golpe).`); if(r.hp) why.push(`${nf(r.hp)} de vida: com ≈ ${nf(r.dps)} de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})",
+  "k": "p"
  },
  "de {0}": {
   "c": "index.html:  $(\"huntLead\").textContent = `${HFMISS?HFMISS+\" \":\"\"}${filt?`${list.length} de ${rows.length}`:rows.length} hunts$",
@@ -9607,6 +10387,10 @@
   "c": "quests/js/app.js: andom() * S.quests.length)]?.slug}\" id=\"randomQuest\">${icon(\"dice\")}Quest aleatória</a",
   "k": "x"
  },
+ "dist": {
+  "c": "index.html: \"sword\"; g.sk=t.sk[skn]||0; } else if(v===\"paladin\"){ skn=\"dist\"; g.sk=t.sk.dist||0;",
+  "k": "x"
+ },
  "distance": {
   "c": "index.html:  200 pontos const WHSK = {knight:\"skill de ataque\", paladin:\"distance\", sorcerer:\"magic le",
   "k": "x"
@@ -9631,6 +10415,10 @@
   "c": "index.html: <i></i></div><p class=\"small muted\">A calcular os preços${w?` do Market de ${esc(w)}`:\"\"}…</p>`; Promis",
   "k": "p"
  },
+ "do melhor set para o nível {0} (BiS)": {
+  "c": "index.html: n.id]; return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para o nível ${L} (BiS)`, mine, set, shield:",
+  "k": "p"
+ },
  "do nível {0} ao {1}": {
   "c": "index.html: const lo=shareMin(ms), hi=shareMax(ms), okR=lo<=hi, rng=okR?`do nível <b>${lo}</b> ao <b>${hi}</b>`:\"\"; const outR=l=",
   "k": "p"
@@ -9638,6 +10426,10 @@
  "do teu Hunt Analyser": {
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
   "k": "x"
+ },
+ "do teu set «{0}»": {
+  "c": "index.html: apon&&BYID[set.slots.weapon.id]; return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para",
+  "k": "p"
  },
  "dodge": {
   "c": "index.html: gio 3</span></span></li>`); if(p&&p.d>=3&&hasKey(G.charms,\"dodge\")) cards.push(`<li c",
@@ -9658,6 +10450,10 @@
  "done": {
   "c": "index.html: onst m=G.charms[k], f=!!c.charms[k]; return `<li class=\"${f?\"done\":\"\"}\"><input type=\"c",
   "k": "x"
+ },
+ "dos {0}/s que a rotação gasta": {
+  "c": "index.html: r.mana)}/s ${r.mana>=r.need?\"(paga toda a mana da rotação)\":`dos ${nf(r.need)}/s que a rotação gasta`}</span>`:\"\"} ",
+  "k": "p"
  },
  "down": {
   "c": "index.html: [3]||\"\")].map(c=>c===\"p\"?\"pá\":\"corda\"); return {i:s[2]?\"up\":\"down\",t:`${s[2]?\"Sobe\":\"D",
@@ -9912,7 +10708,7 @@
   "k": "x"
  },
  "equip": {
-  "c": "index.html: otacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, ",
+  "c": "index.html: d\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, ",
   "k": "x"
  },
  "equipa": {
@@ -9966,6 +10762,10 @@
  "estimado pela XP das criaturas (cerca de {0} mortes por hora)": {
   "c": "index.html: artir de sessões reais de outras vocações\" : h.src===\"mx\" ? `estimado pela XP das criaturas (cerca de ${nf(Math.round((x.k||1000)/10)*10)} mortes por hora)` : h.src===\"est\"&&ha",
   "k": "p"
+ },
+ "estimado pelo nível": {
+  "c": "index.html: ear}</b> <span class=\"muted\">(${base} ${src?\"da personagem\":\"estimado pelo nível\"}${gear?` + ${gear} ",
+  "k": "x"
  },
  "estrela": {
   "c": "index.html: }\"><span class=\"wc-ach\" role=\"img\" aria-label=\"${g} ${g===1?\"estrela\":\"estrelas\"}\">${\"★\".",
@@ -10144,7 +10944,7 @@
   "k": "x"
  },
  "fist": {
-  "c": "index.html: e:\"axe\",club:\"club\",dist:\"distance\",shield:\"shielding\",fist:\"fist\",ml:\"ML\",ml_fire:\"ML",
+  "c": "index.html: { skn=\"dist\"; g.sk=t.sk.dist||0; } else if(v===\"monk\"){ skn=\"fist\"; g.sk=t.sk.fist||0;",
   "k": "x"
  },
  "fist fighting": {
@@ -10153,10 +10953,6 @@
  },
  "flag": {
   "c": "quests/js/app.js: \"\"} <div class=\"travel-cols\"> <div><h5>${icon(\"flag\")}Como chegar</h5>${",
-  "k": "x"
- },
- "flash": {
-  "c": "index.html: .matches?\"auto\":\"smooth\",block:\"center\"}); el.classList.add(\"flash\"); setTimeout(()=>el",
   "k": "x"
  },
  "flavor text": {
@@ -10356,7 +11152,7 @@
   "k": "x"
  },
  "ghost": {
-  "c": "index.html: \"controls\" style=\"gap:6px\"><button class=\"btn small ${on?\"\":\"ghost\"}\" data-use=\"${x.id}",
+  "c": "index.html: c.tbar:null; const file=lab=>`<label class=\"btn small${tb?\" ghost\":\"\"} rx-file\"><input",
   "k": "x"
  },
  "giant": {
@@ -10407,6 +11203,10 @@
   "c": "quests/js/app.js: ra\", \"speed\": \"Velocidade\", \"description\": \"Descrição\", \"grade\": \"Grau\", \"points\": ",
   "k": "x"
  },
+ "grande área": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "great": {
   "c": "index.html: ll); const av = alt? e[alt] : null; const cls = bv>=110?\"great\":bv>=98?\"ok\":bv>=85?",
   "k": "x"
@@ -10448,7 +11248,7 @@
   "k": "x"
  },
  "guias": {
-  "c": "index.html: harms\",\"Charms\"],[\"imbu\",\"Imbuements\"],[\"quests\",\"Quests\"],[\"guias\",\"Guias de quests\",\"",
+  "c": "index.html: :\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"quests\",\"Quests\"],[\"guias\",\"Guias de quests\",\"",
   "k": "x"
  },
  "h2, h3, h4, th, .pi-data-label, .mw-headline": {
@@ -10520,11 +11320,11 @@
   "k": "x"
  },
  "hotbar": {
-  "c": "index.html: lice().sort((x,y)=>ord(x.k)-ord(y.k)); let prev=null; $(\"hotbar\").innerHTML = sorted",
+  "c": "index.html: máscara mostra que há mais function hbNavSync(){ const hb=$(\"hotbar\"), w=hb&&hb.parentEl",
   "k": "x"
  },
  "hotkeys": {
-  "c": "index.html: as\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\"",
+  "c": "index.html: .n):[]; s.ui = Object.assign(s.ui, d.ui||{}); if(s.ui.p===\"hotkeys\") s.ui.p=\"rotacao\"; ",
   "k": "x"
  },
  "hour": {
@@ -10580,7 +11380,7 @@
   "k": "x"
  },
  "imbu": {
-  "c": "index.html: o\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"imbu\",\"Imbuements\"],[\"que",
+  "c": "index.html: s.ui.p===\"hotkeys\") s.ui.p=\"rotacao\"; /* r13 */ if(s.ui.p===\"imbu\"){ s.ui.p=\"equip\"; s",
   "k": "x"
  },
  "imbuement": {
@@ -10671,6 +11471,10 @@
   "c": "quests/js/app.js: ull; function renderMapPage(arg) { view().innerHTML = `<div class=\"map-page\"> <div class=\"toolbar\"><h1>Mapa do Tibia</h1> <form id=\"gotoForm\" class=\"map-toolbar\" style=\"margin:0\"> <input class=\"input\" id=\"gotoInput\" plac",
   "k": "x"
  },
+ "isso": {
+  "c": "index.html: e)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}",
+  "k": "x"
+ },
  "item": {
   "c": "index.html: s contam como a lista de onde vêm function navOf(p){ if(p===\"item\") return \"itens\"; if",
   "k": "x"
@@ -10735,6 +11539,10 @@
   "c": "quests/js/app.js: s\" : \"\"}`); if (h.drops && h.drops.length) summary.push(`largado por ${h.drops.length} criatura${h.drops.length > 1 ? \"s\" : \"\"}`); if (h.spots &",
   "k": "p"
  },
+ "later": {
+  "c": "index.html: ot.`; } const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa\"],[\"later\",\"Mais tarde\"],[\"all",
+  "k": "x"
+ },
  "layers": {
   "c": "quests/js/app.js: section class=\"box\"> <h2 class=\"box-caption\">${icon(\"layers\")}Quests por nível<s",
   "k": "x"
@@ -10787,6 +11595,10 @@
   "c": "index.html: D.g; g.clearRect(0,0,MD.w,MD.h); g.globalCompositeOperation=\"lighter\"; for(const p of M",
   "k": "x"
  },
+ "linha principal": {
+  "c": "index.html: rx-row\"><h4>${chip(r.el)}<span class=\"small muted\">${r.main?\"linha principal\":\"com Shift: para cr",
+  "k": "x"
+ },
  "link": {
   "c": "index.html: .getElementById(\"mdFonts\")){ const l=document.createElement(\"link\"); l.rel=\"stylesheet",
   "k": "x"
@@ -10823,10 +11635,6 @@
   "c": "index.html: c?mainCls(h.r.c):null; return `<button class=\"hc ${locked?\"locked\":\"\"}\" data-hunt=\"${k",
   "k": "x"
  },
- "long": {
-  "c": "index.html: join(\"\"); return `<div class=\"card rot${r.seq.length>=4?\" long\":\"\"}\"><div class=\"ro",
-  "k": "x"
- },
  "look": {
   "c": "index.html: ocument.createElement(\"div\"); el.id=\"lookTip\"; el.className=\"look\"; el.setAttribute(\"r",
   "k": "x"
@@ -10837,6 +11645,10 @@
  },
  "loot (TibiaWiki)": {
   "c": "index.html: }</div> <div class=\"sh-n\">${h.xp==null&&p&&(p.xs||p.ls)?`<div><b class=\"stars\">${stars(p.xs)||\"—\"}</b><span>XP (TibiaWiki)</span></div><div><b class=\"stars\">${stars(p.ls)||\"—\"}</b><span>loot (TibiaWiki)</span></div>`:`<d",
+  "k": "x"
+ },
+ "loot sem preço": {
+  "c": "index.html: l = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : \"loot sem preço\"; const top = lo&&",
   "k": "x"
  },
  "lord of destruction": {
@@ -10926,6 +11738,14 @@
  "mana25": {
   "c": "index.html: h.min(0.05*hpOf(c), 0.08*H)*dm(\"physical\"); else if(f===\"mana25\") v=Math.min(0.025*m",
   "k": "x"
+ },
+ "mana: +{0}/s": {
+  "c": "index.html: : +${nf(r.life)}/s do life leech</span>`:\"\"} ${t.mana?`<span class=\"small\">mana: +${nf(r.mana)}/s ${r.mana>=r.need?\"(paga toda a mana da rotação)\":`dos ${nf(r.need)}/s que a rotação gasta`}</span>`:\"\"} ${r.save>",
+  "k": "p"
+ },
+ "mana: +{0}/s {1}": {
+  "c": "index.html: : +${nf(r.life)}/s do life leech</span>`:\"\"} ${t.mana?`<span class=\"small\">mana: +${nf(r.mana)}/s ${r.mana>=r.need?\"(paga toda a mana da rotação)\":`dos ${nf(r.need)}/s que a rotação gasta`}</span>`:\"\"} ${r.save>",
+  "k": "p"
  },
  "manadrain": {
   "c": "index.html: l\",\"fire\",\"ice\",\"earth\",\"energy\",\"holy\",\"death\",\"lifedrain\",\"manadrain\",\"drown\"]; const elT",
@@ -11047,6 +11867,10 @@
   "c": "index.html: )}</h3></div>${tabsUI([[\"rota\",\"Como chegar\",huntRoute(k)],[\"mons\",\"Monstros e loot\",m",
   "k": "x"
  },
+ "monstros espalhados": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "montaria": {
   "c": "index.html: s\",\"imbuement\"],a:[\"Conquistas\",\"conquista\"],m:[\"Montarias\",\"montaria\"],o:[\"Outfits\",\"outf",
   "k": "x"
@@ -11089,6 +11913,10 @@
  },
  "morte/terra": {
   "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "mortes": {
+  "c": "index.html: y muted\">${nx?`${BSSTG[st+1]}: ${nx[0]} ${nx[0]===1?\"morte\":\"mortes\"} · +${nx[1]}`:\"comp",
   "k": "x"
  },
  "mortos-vivos": {
@@ -11181,6 +12009,10 @@
  },
  "nearest": {
   "c": "index.html: t\",i===GS.sel)); const a=o[GS.sel]; a.scrollIntoView({block:\"nearest\"}); $(\"gsQ\").setAttr",
+  "k": "x"
+ },
+ "nenhum elemento": {
+  "c": "index.html: [1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")||\"nenhum elemento\"}.</li>`:\"\"}</ul></d",
   "k": "x"
  },
  "nenhum item deste set tem slots de imbuement.": {
@@ -11367,6 +12199,10 @@
   "c": "index.html: uiaOf(id,b.w||b.n); /* r7: guia do Questski */ const head=`<div class=\"qmeta\"><span class=\"tag\">nível ${q&&q.req&&q.req.level||b.l||\"?\"}+</span><span class=\"tag\">${b.s===\"party\"?\"grupo\":b.s===\"parcial\"?\"parcial em grupo\"",
   "k": "p"
  },
+ "nível {0}+{1}": {
+  "c": "index.html: — ${qmd(x.note)}</span>`:\"\"}`:qmd(x.text||\"\"); const head=`<div class=\"qmeta\"><span class=\"tag\">nível ${esc(g.lvl||b.l||\"?\")}+${g.rec&&String(g.rec)!==String(g.lvl)?` · rec. ${esc(g.rec)}`:\"\"}</span>${g.premium?'<span cl",
+  "k": "p"
+ },
  "nível {0}{1}+": {
   "c": "index.html:  return {l:est,src:\"est\"}; } function lvlTag(c,r){ return `<span class=\"tag ${r.l>c.level?\"warn\":\"ok\"}\" title=\"${r.src===\"hunt\"?\"Nível da hunt mais próxima\":\"Estimado pela XP do monstro\"}\">nível ${r.src===\"hunt\"?\"\":\"~\"}$",
   "k": "p"
@@ -11395,6 +12231,10 @@
   "c": "index.html: rism\"); if(sr&&!sr[2].length) fr.push(sr[1].b===\"spellbook\"?\"o livro fica sem imbuement\":sr[1].b===\"quiver\"?",
   "k": "x"
  },
+ "o melhor set para o nível {0} (BiS)": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "o nível vem da TibiaWiki ou das outras vocações.": {
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: o nível vem da TibiaWiki ou das outras vocações.",
   "k": "x"
@@ -11418,6 +12258,10 @@
  "o teu": {
   "c": "index.html: ebrow\").textContent = `${who} · ${b===\"me\"?`${grp?\"o vosso\":\"o teu\"} nível (${lo}–${hi}",
   "k": "x"
+ },
+ "o teu set «{0}»": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
  },
  "o teu set ·": {
   "c": "index.html: if(hs) hs.innerHTML = setSumHTML(setTotals(set.slots), mine?`o teu set · ${esc(my.name)}`:`set BiS · nível ${",
@@ -11463,6 +12307,10 @@
   "c": "index.html: s.length; document.body.classList.toggle(\"noch\", none); $(\"onboard\").hidden = !none; ",
   "k": "x"
  },
+ "onda / feixe": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "onde": {
   "c": "index.html: as zonas onde aparece não pedem quest.</p>`; const tabs=[[\"onde\",\"Onde aparece\",wher",
   "k": "x"
@@ -11472,7 +12320,7 @@
   "k": "x"
  },
  "open": {
-  "c": "index.html: ||(q.tips||[]).length?`<details class=\"qguide\" ${nd&&nd<tot?\"open\":\"\"}><summary>${nd&&",
+  "c": "index.html: box) return; if(!c){ box.innerHTML=\"\"; box.classList.remove(\"open\"); return; } const",
   "k": "x"
  },
  "open unrolled": {
@@ -11496,7 +12344,7 @@
   "k": "x"
  },
  "os monks usam as duas mãos": {
-  "c": "index.html: ; if(!it){ const why = k===\"shield\"&&c.voc===\"monk\" ? \"os monks usam as duas mãos\" : k===\"shield\"&&c.v",
+  "c": "index.html: } if(!it){ const why = k===\"shield\"&&c.voc===\"monk\" ? \"os monks usam as duas mãos\" : k===\"shield\"&&c.v",
   "k": "x"
  },
  "other properties": {
@@ -11631,6 +12479,10 @@
   "c": "index.html: pts[i]||0,mx), f=p/mx, k=cv.split(\":\")[0], st=f>=1?\"full\":p?\"part\":\"empty\"; const ",
   "k": "x"
  },
+ "parte disso": {
+  "c": "index.html: h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; ",
+  "k": "x"
+ },
  "party": {
   "c": "index.html: eq&&q.req.level||b.l||\"?\"}+</span><span class=\"tag\">${b.s===\"party\"?\"grupo\":b.s===\"parc",
   "k": "x"
@@ -11643,8 +12495,12 @@
   "c": "quests/js/app.js:  : \"\"}${S.filters.region && q.region !== S.filters.region ? ` <span class=\"chip chip-pass\" title=\"A região principal desta quest é ${esc(q.region || \"várias\")}, mas tem passos em ${esc(S.filters.region)}\">passa por ${esc",
   "k": "p"
  },
+ "passo": {
+  "c": "index.html: guide\"><summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span clas",
+  "k": "x"
+ },
  "passos": {
-  "c": "index.html: ?`${esc(r[6])} · `:\"\"}${st?`${st} de ${r[7]} passos feitos`:`${r[7]} passos`}</small></span><spa",
+  "c": "index.html: summary><span>Guia passo a passo · ${nst} ${nst===1?\"passo\":\"passos\"}<span class=\"qsp\">t",
   "k": "x"
  },
  "passos feitos": {
@@ -11831,6 +12687,10 @@
   "c": "index.html: } const TIERS=[[\"basic\",\"Basic\"],[\"intricate\",\"Intricate\"],[\"powerful\",\"Powerful\"]]; const",
   "k": "x"
  },
+ "poções: −{0}k gp/h": {
+  "c": "index.html: d)}/s que a rotação gasta`}</span>`:\"\"} ${r.save>=500?`<span class=\"small ok-t\">poções: −${nf(r.save/1000)}k gp/h</span>`:\"\"}</div>`).join(\"\"",
+  "k": "p"
+ },
  "precisa de": {
   "c": "index.html: `<span class=\"tag ok\">acesso ✓ ${esc(qName(h.q))}</span>` : `<span class=\"tag warn\">precisa de ${esc(qName(h.q))}${qq&&qq.s===\"party\"?\" (grupo)\":\"\"}</span>${guiaBtn(guiaOf(h.q),\"Guia passo a passo ›\",\"tag acc\")}`; } cons",
   "k": "x"
@@ -11908,7 +12768,7 @@
   "k": "x"
  },
  "prog": {
-  "c": "index.html: Hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:",
+  "c": "index.html: hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:",
   "k": "x"
  },
  "progresso": {
@@ -11980,7 +12840,7 @@
   "k": "x"
  },
  "quests": {
-  "c": "index.html: Progresso\",subs:[[\"charms\",\"Charms\"],[\"imbu\",\"Imbuements\"],[\"quests\",\"Quests\"],[\"guias\",",
+  "c": "index.html: o\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"quests\",\"Quests\"],[\"guias\",",
   "k": "x"
  },
  "quests são de {0} e arredores; outras {1} são de outras regiões mas têm passos por lá.": {
@@ -12077,10 +12937,6 @@
  },
  "renova seg. 9h": {
   "c": "index.html: nd(x=>x[0]===t.t)[1]}${t.q?` · ${t.q}×`:\"\"}${t.t!==\"bounty\"?' · <span title=\"Weekly: limpa à segunda-feira às 9h (Lisboa)\">renova seg. 9h</span>':\"\"}</span><h3>${esc",
-  "k": "x"
- },
- "repete": {
-  "c": "index.html: ode>${esc(sub)}</code></div></li>`; }).join(\"\"); return `<div class=\"card rot${r.seq.length>=4?\" long\":\"\"}\"><div class=\"rot-h\"><h4>${esc(r.t)}</h4><span class=\"tiny muted\">${r.seq.length} passos</span></div><ol class=\"se",
   "k": "x"
  },
  "reptile": {
@@ -12224,7 +13080,15 @@
   "k": "x"
  },
  "rotacao": {
-  "c": "index.html: ts\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkey",
+  "c": "index.html: es\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"",
+  "k": "x"
+ },
+ "rotacoes": {
+  "c": "index.html: otações…\"}</p>`; if(!RXERR&&window.GrimRot&&!RXD) dload(\"rotacoes\").then(d=>{ RXD=d; r",
+  "k": "x"
+ },
+ "rotação": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "x"
  },
  "round": {
@@ -12251,16 +13115,24 @@
   "c": "index.html: ss\"],i:[\"Itens\",\"item\"],s:[\"Feitiços\",\"feitiço\"],r:[\"Runas\",\"runa\"],q:[\"Quests\",\"quest",
   "k": "x"
  },
+ "runa de alvo": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "runa de {0} rende mais ({1}%)": {
   "c": "index.html: && av>=bv+12){ altTxt = (voc===\"druid\"||voc===\"sorcerer\") ? `runa de ${ELN[alt]} rende mais (${av}%)` : `arma/munição de ",
   "k": "p"
+ },
+ "runa de área": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
  },
  "runas": {
   "c": "index.html: c===\"paladin\"?\"munição\":h.voc===\"druid\"||h.voc===\"sorcerer\"?\"runas\":\"arma\"}</span>`:\"\"}",
   "k": "x"
  },
  "rune": {
-  "c": "index.html: )=>a[0]-b[0]); if(hit.length) hit.forEach(([,k])=>add(k,\"rune\")); else (vd.hk|",
+  "c": "index.html: ?c.skill:0, shield:gr.shield}; } const rxIc = a => a.kind===\"rune\"||a.kind===\"item\" ? ",
   "k": "x"
  },
  "rune spell": {
@@ -12444,7 +13316,7 @@
   "k": "x"
  },
  "shield": {
-  "c": "index.html: ],[\"bag\",\"Mochila\"],[\"weapon\",\"Arma\"],[\"armor\",\"Armadura\"],[\"shield\",\"Escudo / livro\"],[",
+  "c": "index.html: t para o nível ${L} (BiS)`, mine, set, shield:!!(sh&&sh.s===\"shield\"&&!(wp&&wp.h2))}; } ",
   "k": "x"
  },
  "shielding": {
@@ -12472,7 +13344,7 @@
   "k": "x"
  },
  "skill": {
-  "c": "index.html: c[voc]; return cv===\"vr\"?`Vessel Resonance ${WHVR[d]}`:cv===\"skill\"?V.skill:cv===\"mleec",
+  "c": "index.html: xStatsLine(c,s,gr){ const mage=isMage(c), sk=SKN[gr.skn]||\"skill\"; const part=(lab,",
   "k": "x"
  },
  "skill de arma": {
@@ -12544,7 +13416,7 @@
   "k": "x"
  },
  "smooth": {
-  "c": "index.html: .dataset.hk); el.scrollIntoView({behavior:RM.matches?\"auto\":\"smooth\",block:\"center\"}); e",
+  "c": "index.html: ontains(\"prev\")?-.8:.8)*hb.clientWidth, behavior:mdMotion()?\"smooth\":\"auto\"}); })); $(\"s",
   "k": "x"
  },
  "sold for": {
@@ -12571,6 +13443,14 @@
   "c": "quests/js/app.js: rges\": \"Cargas\", \"duration\": \"Duração\", \"slot\": \"Slot\", \"sounds\": \"Sons\", \"flavor te",
   "k": "x"
  },
+ "sozinho ~": {
+  "c": "index.html: ipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:\"\"}</span>${r.soloL?` <span class=\"tiny muted\">sozinho ~${r.soloL}</span>`:\"\"}` : r.st===\"",
+  "k": "x"
+ },
+ "sozinho ~{0}": {
+  "c": "index.html: ipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:\"\"}</span>${r.soloL?` <span class=\"tiny muted\">sozinho ~${r.soloL}</span>`:\"\"}` : r.st===\"",
+  "k": "p"
+ },
  "span": {
   "c": "index.html: pg=card.querySelector(\".qprog\"); if(pg){ pg.querySelector(\"span\").textContent=`${nd}",
   "k": "x"
@@ -12592,7 +13472,7 @@
   "k": "x"
  },
  "spell": {
-  "c": "index.html: a||{})[voc]||0); if(k===\"rev\") return \"+\"+nf(b); if(k===\"spell\") return b===\"cd\"?\"−",
+  "c": "index.html: .trim(); out.push(k===\"npc\"?elink(\"npc\",a,esc(lab)):k===\"spell\"?elink(\"feitico\",a,e",
   "k": "x"
  },
  "spell id": {
@@ -12736,7 +13616,7 @@
   "k": "x"
  },
  "sword": {
-  "c": "index.html: [[\"\",\"Automático (o teu skill mais alto)\"],[\"club\",\"Club\"],[\"sword\",\"Sword\"],[\"axe\",\"Ax",
+  "c": "index.html: _\"+e]; }); let skn=\"\"; if(v===\"knight\"){ skn=c.wtype||([\"sword\",\"axe\",\"club\"].inclu",
   "k": "x"
  },
  "swords": {
@@ -12800,7 +13680,7 @@
   "k": "x"
  },
  "tarefas": {
-  "c": "index.html: Início\"]]}, {id:\"hunts\",t:\"Hunts\",subs:[[\"hunts\",\"Hunts\"],[\"tarefas\",\"Tarefas\"]]}, {id:",
+  "c": "index.html: nts\",t:\"Hunts\",subs:[[\"hunts\",\"Hunts\"],[\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:",
   "k": "x"
  },
  "taxas do altar para {0} imbuement {1}": {
@@ -12821,6 +13701,14 @@
  },
  "teach": {
   "c": "index.html: kFn=x=>fn===\"all\"||(fn===\"sell\"?x.s>0:fn===\"buy\"?x.b>0:fn===\"teach\"?x.t>0:fn===\"trans\"?",
+  "k": "x"
+ },
+ "team": {
+  "c": "index.html: de loot no boss do slot.`; } const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa\"],[\"late",
+  "k": "x"
+ },
+ "tem spoilers": {
+  "c": "index.html: /p>`:\"\"} ${(q.missions||[]).length||(q.tips||[]).length?`<details class=\"qguide\"><summary><span>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:\"Guia passo a passo\"}<span class=\"qsp\">tem spoilers</span></span></",
   "k": "x"
  },
  "tenho ✓": {
@@ -12971,6 +13859,14 @@
   "c": "quests/js/app.js: , \"npcs\": \"NPCs\", \"items\": \"Itens\", \"quests\": \"Quests\", \"transcripts\": \"Transcrições\", \"p",
   "k": "x"
  },
+ "translate3d(0,{0}px,0) rotate({1}deg)": {
+  "c": "index.html: 8?.55-(u-.1)/.7*.25:.3*(1-(u-.8)/.2); r.style.transform=`translate3d(0,${(-.95*MD.h*u).toFixed(1)}px,0) rotate(${(160*u).toFixed(1)}deg)`; r.style.opacity=op",
+  "k": "p"
+ },
+ "translate3d({0}px,{1}px,0) rotate({2}deg)": {
+  "c": "index.html: /1.4)).toFixed(3)})`; } if(MD.aur) MD.aur.style.transform=`translate3d(${(vm*(.5+2.5*Math.sin(T*P/60))).toFixed(1)}px,${(-vm*2.25*Math.sin(T*P/47)).toFixed(1)}px,0) rotate(${(6*Math.sin(T*P/71)).toFixed(2)}deg)`; if(MD.s",
+  "k": "p"
+ },
  "trash": {
   "c": "quests/js/app.js: one ? `<button class=\"btn btn-ghost\" id=\"resetSteps\">${icon(\"trash\")}Recomeçar</button>",
   "k": "x"
@@ -13015,6 +13911,10 @@
   "c": "index.html: ]; if(!v0||!(v0.st||v0.rq)) return \"\"; const zf=z=>+z===7?\"térreo\":(+z<7?\"+\":\"−\")+Math",
   "k": "x"
  },
+ "ultimate": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
  "ultimate healing rune": {
   "c": "index.html: ne shower rune\"],[\"stone shower\",\"stone shower rune\"],[\"uh\",\"ultimate healing rune\"]]; function supRows",
   "k": "x"
@@ -13029,6 +13929,10 @@
  },
  "undead": {
   "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "x"
+ },
+ "unknown": {
+  "c": "index.html: an class=\"tag\">Acesso no nível ${b.ql}</span>` : r.st===\"unknown\" ? `<span class=\"tag",
   "k": "x"
  },
  "unrolled": {
@@ -13100,7 +14004,11 @@
   "k": "x"
  },
  "vazio": {
-  "c": "index.html: ld\"&&isMage(c)?\"quests\":k)]}<span class=\"nm\">${it?esc(it.n):\"vazio\"}</span>${imb}<span ",
+  "c": "index.html: ria-pressed=\"${sel===k}\" aria-label=\"Aljava: ${it?esc(it.n):\"vazio\"}\">${it&&!c.owned[it",
+  "k": "x"
+ },
+ "vazio (": {
+  "c": "index.html: lAmmo(c,set):null; if(am){ const t=`Aljava: ${it?it.n:\"vazio (\"+quivTip+\")\"} · Muni",
   "k": "x"
  },
  "vazio (botão direito para escolher)": {
@@ -13148,7 +14056,7 @@
   "k": "x"
  },
  "ver custos ›": {
-  "c": "index.html: t = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||\"\").split(\" (\")[0].trim()).filter(x=>x&&x!==\"—\").join(\" e \"))}</b> · <a href=\"#\" data-go=\"defesa\">ver custos ›<",
+  "c": "index.html: t = vd.pots.filter(p=>p.l<=L).pop(); if (pot) steps.push({t:`Poções: <b>${esc([pot.h,pot.m].map(x=>String(x||\"\").split(\" (\")[0].trim()).filter(x=>x&&x!==\"—\").join(\" + \"))}</b> · <a href=\"#\" data-go=\"defesa\">ver custos ›<",
   "k": "x"
  },
  "ver rotação ›": {
@@ -13223,6 +14131,10 @@
   "c": "index.html: h([\"rg\",\"Regeneração\",`${nfdec(t.rg[0])}/${nfdec(t.rg[1])}`,\"vida/mana por s\"]); const sk0=Obje",
   "k": "x"
  },
+ "vida: +{0}/s do life leech": {
+  "c": "index.html: d1,r.d0)?` (+${pct(r.d1,r.d0)}%)`:\"\"}</span> ${t.life?`<span class=\"small\">vida: +${nf(r.life)}/s do life leech</span>`:\"\"} ${t.mana?",
+  "k": "p"
+ },
  "visibilitychange": {
   "c": "index.html: equestAnimationFrame(mdFxTick); } document.addEventListener(\"visibilitychange\",()=>{ if(!document.",
   "k": "x"
@@ -13288,7 +14200,7 @@
   "k": "x"
  },
  "wheel": {
-  "c": "index.html: :\"Build\",subs:[[\"rotacao\",\"Rotação\"],[\"hotkeys\",\"Hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"",
+  "c": "index.html: id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"",
   "k": "x"
  },
  "wheelopt": {
@@ -13515,6 +14427,14 @@
   "c": "index.html: ote\").value=\"\"; $(\"cuLvl\").value=\"\"; $(\"cuMsg\").textContent=`${it.n} adicionado e marcado como teu.`; save(); renderEqui",
   "k": "p"
  },
+ "{0} ao começar, depois carrega sempre no {1}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0} ao começar, depois {1}, a 2–3 casas e alinhado com ele.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0} cada quest abre numa aba própria no topo — podes ter várias abertas e saltar entre elas.{1} {2} marca cada passo como feito; fica guardado neste navegador.": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "p"
@@ -13569,6 +14489,26 @@
  },
  "{0} de vida": {
   "c": "index.html: tArea(c,cls); el.querySelector(\".tk-sub\").innerHTML = `<span class=\"tag\">${nf(m[1])} de vida</span><span class=\"tag\">${nf(m[2])} XP</span>${m[3]?`<span class=\"tag\">${\"★\".repeat(m[3])}</span>`:\"\"}${d?`<span class=\"compat ",
+  "k": "p"
+ },
+ "{0} de vida: com ≈ {1} de dano por segundo em {2} (leva {3}% de {4}), ≈ {5} sozinho, ≈ {6} com 4 como tu.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0} de vida: com ≈ {1} de dano por segundo em {2} (leva {3}% de {4}), ≈ {5} sozinho.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0} de vida: com ≈ {1} de dano por segundo em {2}, ≈ {3} sozinho, ≈ {4} com 4 como tu.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0} de vida: com ≈ {1} de dano por segundo em {2}, ≈ {3} sozinho.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0} de vida: com ≈ {1} de dano por segundo em {2}{3}, ≈ {4} sozinho{5}.": {
+  "c": "index.html: ld)\":\"\"} (pedimos o dobro do golpe).`); if(r.hp) why.push(`${nf(r.hp)} de vida: com ≈ ${nf(r.dps)} de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})",
   "k": "p"
  },
  "{0} de {1}": {
@@ -13635,12 +14575,20 @@
   "c": "index.html: tra.label)}</span></span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
+ "{0} e {1}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0} em {1}": {
   "c": "index.html: ss=\"tm-w\">${tmi(\"w\")}<b>${esc(c.world)}</b></span>${t.guild?`<span class=\"tm-g\">${tmi(\"g\")}<span>${esc(t.guild.r)} em <b>${esc(t.guild.n)}</b></span></span>`:\"\"}<span class=\"tm-",
   "k": "p"
  },
  "{0} energia": {
   "c": "r12: percorrer o site em inglês (Grimório)",
+  "k": "p"
+ },
+ "{0} está em {1}: uma tecla chega.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "{0} fechar": {
@@ -13739,6 +14687,10 @@
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "p"
  },
+ "{0} já está no MAB {1}: a tecla {2} fica livre para outra coisa.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0} já pode usar este {1}.": {
   "c": "index.html: ine&&lvOk?\"\":\"muted\"}\" style=\"margin:10px 0 0\">${mine?(lvOk?`${esc(c.name||VOCN(c.voc))} já pode usar este ${rune?\"rune spell\":\"feitiço\"}.`:`${esc(c.name||VOCN",
   "k": "p"
@@ -13756,7 +14708,7 @@
   "k": "p"
  },
  "{0} min": {
-  "c": "index.html: sh([\"Cargas\",it.chg]); else if(it.dur) rows.push([\"Duração\",`${Math.round(it.dur/60)} min`]); } const ab=i",
+  "c": "index.html: => s==null?\"—\":s<60?`${Math.max(1,Math.round(s))} s`:s<3600?`${Math.round(s/60)} min`:`${Math.round(s/360",
   "k": "p"
  },
  "{0} morte": {
@@ -13781,6 +14733,10 @@
  },
  "{0} oz": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
+  "k": "p"
+ },
+ "{0} para ficarem exatas.": {
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
   "k": "p"
  },
  "{0} para veres o preço do Market no teu mundo.": {
@@ -14155,12 +15111,20 @@
   "c": "index.html: [k.slice(2)]||k.slice(2)}`; if(k.startsWith(\"e_\")) return `${v(\"elem\")}% do dano físico em ${ELN[k.slice(2)]}`; if(k.startsWith(",
   "k": "p"
  },
+ "{0}% do distance passa a ML de holy (+{1} ML): sobe os feitiços divine; e {2}% de esquiva contra monstros à distância.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0}% em": {
   "c": "index.html: 4><div class=\"imlist\">${Object.entries(t.elem).map(([e,v])=>`<span class=\"imchip\" style=\"--imc:var(--${e})\">${v}% em ${ELN[e]}</span>`).join(\"\")}</div></d",
   "k": "p"
  },
  "{0}% em {1}": {
   "c": "index.html: 4><div class=\"imlist\">${Object.entries(t.elem).map(([e,v])=>`<span class=\"imchip\" style=\"--imc:var(--${e})\">${v}% em ${ELN[e]}</span>`).join(\"\")}</div></d",
+  "k": "p"
+ },
+ "{0}, a 2–3 casas e alinhado com ele.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "{0}, lidas no planner.": {
@@ -14223,12 +15187,24 @@
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: {0}: Entrega 100 Minotaur Leathers ao Lubo (Thais) e volta 2 horas depois.",
   "k": "p"
  },
+ "{0}: carrega por esta ordem; se uma estiver em cooldown, passa à seguinte.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0}: cura": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
  "{0}: dano base": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
+ "{0}: este MAB junta {1} e {2}. Se a criatura resistir a um, metade dos toques perde força.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: este MAB junta {1} e {2}. Se a criatura resistir a um, metade dos toques perde força. Para {3}: {4} ({5}).": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "{0}: fora do top 1000 de {1}, escreve o valor acima.": {
@@ -14283,8 +15259,40 @@
   "c": "index.html: =\"${lab}: ${why}\">${emptyIc(c,k)}</button>`; } return `<button class=\"bslot\" data-bslot=\"${k}\" data-look=\"${it.id}\" aria-label=\"${lab}: ${esc(it.n)}. Menu de contexto para trocar\">${spr(it)}</button>`; }).join(\"\")}</div>",
   "k": "p"
  },
+ "{0}: {1} morte · +{2}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1} mortes · +{2}": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
  "{0}: {1} pontos": {
   "c": "index.html: \":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=",
+  "k": "p"
+ },
+ "{0}: {1} é de {2}. Nas tuas linhas: {3}. A {4} sai mais barata ({5} gp contra {6} gp). Fica com a de {2} só para criaturas fracas a {2}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1} é de {2}. Nas tuas linhas: {3}. Fica com a de {2} só para criaturas fracas a {2}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1}. Junta {2}. O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente e a runa fica no fim.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1}. Junta {2}. O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1}. O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente e a runa fica no fim.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: {1}. O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "{0}A estimativa em party soma o XP/h solo de cada um, aplica o bónus e divide pelo grupo. Em grupo costuma render mais, porque puxam mais criaturas de cada vez.": {
@@ -14803,6 +15811,14 @@
   "c": "index.html: ted\">${set.mode===\"speed\"?\"velocidade\":\"combate\"}${set.prot?` · proteção de ${ELN[set.prot]}`:\"\"}</span></summary",
   "k": "p"
  },
+ "· rec.": {
+  "c": "index.html: sc(g.lvl||b.l||\"?\")}+${g.rec&&String(g.rec)!==String(g.lvl)?` · rec. ${esc(g.rec)}`:\"\"}</span>${g.premi",
+  "k": "x"
+ },
+ "· rec. {0}": {
+  "c": "index.html: sc(g.lvl||b.l||\"?\")}+${g.rec&&String(g.rec)!==String(g.lvl)?` · rec. ${esc(g.rec)}`:\"\"}</span>${g.premi",
+  "k": "p"
+ },
  "· risco": {
   "c": "index.html: -hidden=\"true\"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class=\"sr-only\"> · risco ${HCMP_RISK[h.d]}</span>`:\"\"}</span></span><s",
   "k": "x"
@@ -14832,7 +15848,7 @@
   "k": "p"
  },
  "· {0} XP": {
-  "c": "quests/js/app.js: p ? `${icon(\"checkCircle\")} ${esc(d.hp)} HP` : \"\"}${d.exp ? ` · ${esc(d.exp)} XP` : \"\"}</div></div> ",
+  "c": "index.html: st\">${st}</div> <div class=\"bs-v\"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:\"\"}${top?`<span cla",
   "k": "p"
  },
  "· {0} XP/h": {
@@ -14869,6 +15885,10 @@
  },
  "· último login {0}": {
   "c": "index.html: .name)}`:\"\"} · ${premium(ch.account_status)}${ch.last_login?` · último login ${ago(ch.last_login)}`:\"\"}</div></div></di",
+  "k": "p"
+ },
+ "· ≈ {0} com 4": {
+  "c": "index.html:  : r.st===\"team\" ? `<span class=\"tag acc\">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:\"\"}</span>${r.soloL",
   "k": "p"
  },
  "Área": {
@@ -14995,12 +16015,28 @@
   "c": "index.html: p da TibiaWiki; quantidades de criaturas do mapa.${A.miss>0?` ≈ ${nf(A.miss)} linhas de loot sem preço.`:\"\"}</p>`; } let LPN",
   "k": "p"
  },
+ "≈ {0} por kill": {
+  "c": "index.html: ho ~${r.soloL}</span>`:\"\"}`; const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : \"loot sem preço\";",
+  "k": "p"
+ },
  "≈ {0} · Market de": {
   "c": "index.html: iced){ const b=buyOf(x.k,w); pr=b.best===\"market\"&&b.mkt&&w?`≈ ${gp(b.mkt.v)} · Market de ${esc(w)}`:b.best===\"npc\"&&b.n",
   "k": "p"
  },
  "≈ {0} · Market de {1}": {
   "c": "index.html: iced){ const b=buyOf(x.k,w); pr=b.best===\"market\"&&b.mkt&&w?`≈ ${gp(b.mkt.v)} · Market de ${esc(w)}`:b.best===\"npc\"&&b.n",
+  "k": "p"
+ },
+ "≈ {0}k gp/h em caixa, ≈ {1}k gp/h no boss.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "≈ {0}k gp/h em caixa, ≈ {1}k gp/h no boss. Para poupar (≈ {2}k gp/h): {3}.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "≈ {0}k gp/h em caixa.": {
+  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
  "★ 1 estrela": {

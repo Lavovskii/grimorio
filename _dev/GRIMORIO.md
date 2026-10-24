@@ -46,7 +46,7 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   (preset com o nome da personagem, senão o ativo) e guarda `c.tbar = {sets: {preset: [{k, acts:[{w}|{item}]}]}, sel}`;
   `[data-rxpre]` troca de preset, `[data-rxforget]` apaga. `GrimRot.review` dá as dicas (`RXTIP`: Atenção, Juntar, MAB, Dica, Nota).
   O `renderHotkeys` desenha Sobreviver (teclas 1–4, depois Shift+1–4), Stances e Utilidade (F1…). O `vd.rot` (presets do TibiaPal)
-  fica no G mas já não aparece. O motor carrega no `<head>` (`shared/rotacoes.js?v=`). Textos novos ainda sem tradução no i18n.
+  fica no G mas já não aparece. O motor carrega no `<head>` (`shared/rotacoes.js?v=`).
 - Bosses (r16): página `#bosses` (Hunts → Bosses), `renderBosses` só quando a página abre (carrega `bosses`, `rotacoes`, `items`,
   `creatures` e o Market do mundo). O motor é `shared/bosses.js` (`GrimBoss.judge`: estado solo|team|later|locked|unknown,
   `soloL`/`teamL`, tempo para matar), sobre `data/bosses.json` (`_dev/build_bosses.py`, TibiaWiki; `--loot` acrescenta ao items.json o
@@ -60,6 +60,14 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   sem imbuements no `GrimRot.plan` (caixa e boss; `rxGear(c,set)`, skills dos imbuements em `g.ml`/`g.sk`, `manaLeech` do set),
   mais o Strike (10% × dano crítico), a vida (`econ.leechBase` × life leech), a mana do leech, as poções poupadas (gp/h) e o
   golpe de 1000 com as proteções. O RXD carrega quando o separador abre (`imGameLoad`).
+- Línguas dos textos dos motores (r18): o `_dev/i18n.py extract` só lê o `index.html` e o Questski. O que `shared/rotacoes.js` e
+  `shared/bosses.js` escrevem no ecrã (papéis e conselhos das teclas, stances, dicas do comparador, «Como jogar», cooldowns)
+  entra no dicionário como modelos escritos à mão em `i18n/src/ui-extra.json` (contexto «à mão (r18)»): uma frase com valores
+  `{0}`, `{1}`… por cada forma, e cada parte que vai num valor (ex.: «alvo único», «caixa», o porquê de cada tecla) também como
+  chave própria. Regras para os textos novos dos motores: listas só de nomes do jogo separadas por «, » ou « › » (um « e » no
+  meio de uma lista passa por português e o modelo falha); cada valor uma só vez por frase («a cada 2 h», não «de 2 em 2 h»);
+  um porquê com várias frases vai num `<span>` à parte; nunca remendar com texto português um texto que já foi traduzido
+  (escrever a frase toda outra vez, como `bsLead`). Para ver o que falta: modo recolha (`grimorio-i18n-harvest`) no browser.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,

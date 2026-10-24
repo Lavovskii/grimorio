@@ -682,7 +682,7 @@
       var r0 = rows[0].keys, kA = r0.filter(function (k) { return k.role === "mabA"; })[0], kS = r0.filter(function (k) { return k.role === "mabS"; })[0] || kA;
       var sp = r0.filter(function (k) { return k.role === "spender"; }).map(function (k) { return k.k; });
       var pcN = P("caixa", lane0), pbN = P("boss", lane0);
-      if (kA) how.push({ t: "Caixa", txt: "carrega sempre no " + kA.k + (sp.length ? "; " + sp.join(" e ") + " quando tiveres 5 de Harmony" : "") + "." });
+      if (kA) how.push({ t: "Caixa", txt: "carrega sempre no " + kA.k + (sp.length ? "; " + sp.join(", ") + " quando tiveres 5 de Harmony" : "") + "." });
       if (kS) how.push({ t: "Boss", txt: (hasH ? "H ao começar, depois " : "") + "carrega sempre no " + kS.k + "." });
       if (!pcN.empty) how.push({ t: "Gasto", txt: "≈ " + Math.round(pcN.econ.gpH / 1000) + "k gp/h em caixa" + (pbN.empty ? "." : ", ≈ " + Math.round(pbN.econ.gpH / 1000) + "k gp/h no boss.") });
       if (lanes.length > 1) how.push({ t: "Shift", txt: "a 2.ª linha é para quem resiste a " + ELN[lanes[0].ln.el] + ": mesma tecla, mesmo papel." });
@@ -736,7 +736,7 @@
         (rec ? " Para " + ELN[el0] + ": " + rec.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + " (" + rec.label.toLowerCase() + ")." : "") });
       else if (rec && score(rec) >= 1 && rec.mab.acts.map(function (a) { return a.n; }).join(" › ") !== mine) {
         var add = rec.mab.acts.filter(function (a) { return !abs.some(function (b) { return b.n === a.n; }); }).map(function (a) { return nm(a.n); });
-        tips.push({ t: "order", txt: u.k + ": " + rec.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + "." + (add.length ? " Junta " + add.join(" e ") + "." : "") +
+        tips.push({ t: "order", txt: u.k + ": " + rec.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + "." + (add.length ? " Junta " + add.join(", ") + "." : "") +
           " O MAB dispara a 1.ª ação que estiver pronta, por isso o que bate mais vai à frente" + (rec.mab.acts.some(function (a) { return a.kind === "rune"; }) ? " e a runa fica no fim." : ".") });
       }
       if (rec) { used[rec.k] = 1; rec.mab.acts.forEach(function (a) { covered[a.n] = 1; }); }
@@ -753,8 +753,9 @@
     Object.keys(items).forEach(function (n) { var r = D.runes[n]; if (!r || r.k !== "rarea" || lanesEl.indexOf(r.el) >= 0) return;
       var alt = Object.keys(D.runes).map(function (k) { return D.runes[k]; }).filter(function (x) { return x.k === "rarea" && lanesEl.indexOf(x.el) >= 0 && x.l <= L && x.v.indexOf(voc) >= 0; }).sort(function (a, b) { return a.gp - b.gp; });
       if (!alt.length) return; badRune = true;
-      tips.push({ t: "tip", txt: uniq(items[n]).join(", ") + ": " + n + " é de " + ELN[r.el] + ". Põe a runa do elemento de cada linha: " + alt.map(function (x) { return nm(x.n) + " (" + ELN[x.el] + ", " + x.gp + " gp)"; }).join(" e ") +
-        (alt[0].gp < r.gp ? "; a de " + ELN[alt[0].el] + " ainda sai mais barata do que a de " + ELN[r.el] + " (" + r.gp + " gp)" : "") + ". Fica com a de " + ELN[r.el] + " só para criaturas fracas a " + ELN[r.el] + "." });
+      // (frases curtas e listas só de nomes: o tradutor do site, shared/i18n.js, traduz cada uma por um modelo)
+      tips.push({ t: "tip", txt: uniq(items[n]).join(", ") + ": " + n + " é de " + ELN[r.el] + ". Nas tuas linhas: " + alt.map(function (x) { return x.n; }).join(", ") + "." +
+        (alt[0].gp < r.gp ? " A " + alt[0].n + " sai mais barata (" + alt[0].gp + " gp contra " + r.gp + " gp)." : "") + " Fica com a de " + ELN[r.el] + " só para criaturas fracas a " + ELN[r.el] + "." });
       alt.forEach(function (x) { covered[x.n] = 1; });
     });
     // 3) o que a barra recomendada tem e a tua não (fora dos MABs já tratados)
@@ -768,7 +769,7 @@
       var solo = uniq(user.filter(function (u) { return u.acts.length === 1 && hit(u); }).map(function (u) { return u.k; }));
       var inMab = uniq(user.filter(function (u) { return u.acts.length > 1 && hit(u); }).map(function (u) { return u.k; }));
       if (solo.length && inMab.length) tips.push({ t: "info", txt: n + " já está no MAB " + inMab.join(", ") + ": a tecla " + solo.join(", ") + " fica livre para outra coisa." });
-      else if (solo.length > 1) tips.push({ t: "info", txt: n + " está em " + solo.join(" e ") + ": uma tecla chega." }); });
+      else if (solo.length > 1) tips.push({ t: "info", txt: n + " está em " + solo.join(", ") + ": uma tecla chega." }); });
     // 5) poção de mana: a mais barata que dá para a rotação de caixa com folga (uma poção a cada 3 s ou mais; as curas também gastam mana)
     var potsOk = D.pots.filter(function (p) { return p[2] <= L && p[5].indexOf(VOCK[voc]) >= 0; });
     var mine = potsOk.filter(function (p) { return items[p[1]]; });
@@ -782,7 +783,7 @@
       if (dear.length && !items[fits[1]]) {
         var worst = dear.sort(function (a, b) { return gpH(b) - gpH(a); })[0];
         tips.push({ t: "tip", txt: "Poções: o ataque em caixa gasta ≈ " + Math.round(need) + " de mana/s depois do mana leech. " + fits[1] + " (" + fits[4] + " gp) chega com folga e poupa até ≈ " +
-          Math.round((gpH(worst) - gpH(fits)) / 1000) + "k gp/h face a " + dear.map(function (p) { return p[1] + " (" + p[4] + " gp)"; }).join(" e ") + ". Deixa a mais forte numa tecla para quando apertar." });
+          Math.round((gpH(worst) - gpH(fits)) / 1000) + "k gp/h face a " + dear.map(function (p) { return p[1] + " (" + p[4] + " gp)"; }).join(", ") + ". Deixa a mais forte numa tecla para quando apertar." });
       }
     }
     var rank = { warn: 0, add: 1, order: 2, tip: 3, info: 4 };
