@@ -35,6 +35,14 @@
   "c": "index.html: ; /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.crit[0]}% de chance`:\"\",it.crit[1]?`+${i",
   "k": "x"
  },
+ "% de evitar o golpe": {
+  "c": "index.html: ,v) => k===\"weapon\"?`${ftN(v)}% de golpe fatal`:k===\"armor\"?`${ftN(v)}% de evitar o golpe`:k===\"helmet\"?`${ftN",
+  "k": "x"
+ },
+ "% de golpe fatal": {
+  "c": "index.html: .replace(\".\",DECSEP); const ftShort = (k,v) => k===\"weapon\"?`${ftN(v)}% de golpe fatal`:k===\"armor\"?`${ftN(",
+  "k": "x"
+ },
  "% de life leech": {
   "c": "index.html:  efeito const v=(a)=>IMBV[a][ti]; if(k===\"vamp\") return `${v(\"vamp\")}% de life leech`; if(k===\"void\") r",
   "k": "x"
@@ -50,6 +58,14 @@
  "% de proteção a {0}": {
   "c": "index.html: ico em ${ELN[k.slice(2)]}`; if(k.startsWith(\"p_\")) return `${k===\"p_death\"?v(\"protd\"):v(\"prot\")}% de proteção a ${ELN[k.slice(2)]}`; return IMBL[k]||",
   "k": "p"
+ },
+ "% de virar Avatar": {
+  "c": "index.html: :k===\"helmet\"?`${ftN(v)}% de −2 s nos cooldowns`:k===\"legs\"?`${ftN(v)}% de virar Avatar`:k===\"boots\"?`+${ftN",
+  "k": "x"
+ },
+ "% de −2 s nos cooldowns": {
+  "c": "index.html: al`:k===\"armor\"?`${ftN(v)}% de evitar o golpe`:k===\"helmet\"?`${ftN(v)}% de −2 s nos cooldowns`:k===\"legs\"?`${ftN(v",
+  "k": "x"
  },
  "% do dano físico em": {
   "c": "index.html: [k.slice(2)]||k.slice(2)}`; if(k.startsWith(\"e_\")) return `${v(\"elem\")}% do dano físico em ${ELN[k.slice(2)]}`; if(k.startsWith(",
@@ -100,7 +116,7 @@
   "k": "x"
  },
  "(com os imbuements de proteção)": {
-  "c": "index.html: 00*(1-v/100))}</b>`; }).join(\" · \")}${els.some(e=>t.abi[e])?` <span class=\"muted\">(com os imbuements de proteção)</span>`:\"\"}.</p>`:\"\"; con",
+  "c": "index.html: 00*(1-v/100))}</b>`; }).join(\" · \")}${els.some(e=>t.abi[e])?` <span class=\"muted\">(com os imbuements de proteção)</span>`:\"\"}.${ruse}</p>`:ru",
   "k": "x"
  },
  "(de antes do rebalance)": {
@@ -205,10 +221,6 @@
  },
  "(sem dados do Market de {0} agora)": {
   "c": "index.html:  preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:\"\"}.`} Toca no Boss",
-  "k": "p"
- },
- "(só {0})": {
-  "c": "index.html: defaultImbs(c,set,Object.assign({},it,{is:3}))||[]).length)?` (só ${it.is===1?\"cabe 1\":\"cabem \"+it.is})`:\"\"}: <b>${rec.lengt",
   "k": "p"
  },
  "(uma mão)": {
@@ -373,6 +385,10 @@
  },
  "+{0}% mitigação": {
   "c": "index.html:  mana`:ded===\"cap\"?`+${nf(V.cap*x)} capacidade`:ded===\"mit\"?`+${String(Math.round(WHD.mit*x*100)/100).replace(\".\",DECSEP)}% mitigação`:`+${nf(V.hp*x)} vid",
+  "k": "p"
+ },
+ "+{0}% na chance dos outros tiers": {
+  "c": "index.html: ldowns`:k===\"legs\"?`${ftN(v)}% de virar Avatar`:k===\"boots\"?`+${ftN(v)}% na chance dos outros tiers`:\"\"; function ftStat",
   "k": "p"
  },
  ", e o XP é estimado": {
@@ -564,11 +580,11 @@
   "k": "p"
  },
  "; as poções poupadas pagam": {
-  "c": "index.html: t||0}% de dano. Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
+  "c": "index.html: 0%.</span>`:\"\"} Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
   "k": "x"
  },
  "; as poções poupadas pagam {0}": {
-  "c": "index.html: t||0}% de dano. Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
+  "c": "index.html: 0%.</span>`:\"\"} Taxas do altar ≈ ${nf(fee)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}.</p></div>`; } ",
   "k": "p"
  },
  "; com mais {0} exalted core o risco desce para {1}%": {
@@ -1089,6 +1105,10 @@
  },
  "Ammunition": {
   "c": "index.html: \":\"Contentor\",\"Magical Items\":\"Item mágico\",\"Books\":\"Livro\",\"Ammunition\":\"Munição\",\"Quivers\"",
+  "k": "x"
+ },
+ "Amplification": {
+  "c": "index.html: DECSEP)}% do tempo)</small></div>`); if(o.amp) tiles.push(`<div class=\"ft-t\"><span>Amplification</span><b>+${ftN(o.amp)}%</b><small>na chance dos outros tiers (já contada)</small></div>`); return `<div cl",
   "k": "x"
  },
  "Amplification (aumento da chance dos outros bónus):": {
@@ -2003,6 +2023,10 @@
   "c": "quests/js/app.js: neral properties\": \"Propriedades gerais\", \"classification\": \"Classificação\", \"pickupable\": \"Pod",
   "k": "x"
  },
+ "Classificação {0}: até tier {1}.": {
+  "c": "index.html: tens + ${kkk(m.gold)} gp, se todas as fusões correrem bem.`:`Classificação ${it.up}: até tier ${mx}.`}</small></div>`; } ",
+  "k": "p"
+ },
  "Clica no mapa para ver as coordenadas · ▲▼ ou PageUp/PageDown mudam de piso · os marcadores mostram o nível de cada quest (respeitam os filtros da barra lateral).": {
   "c": "quests/js/app.js: ull; function renderMapPage(arg) { view().innerHTML = `<div class=\"map-page\"> <div class=\"toolbar\"><h1>Mapa do Tibia</h1> <form id=\"gotoForm\" class=\"map-toolbar\" style=\"margin:0\"> <input class=\"input\" id=\"gotoInput\" plac",
   "k": "x"
@@ -2085,6 +2109,10 @@
  },
  "Com 3 VR (Greater gem) junta-se um supremo: {0}.": {
   "c": "index.html: up?P.sbis.map(g=>li(g,1)).join(\"\"):\"\"}</ul> ${G3.length?`<p class=\"wsel-d\">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:\"\"} ${P.alt.len",
+  "k": "p"
+ },
+ "Com Ruse, {0}% dos golpes nem chegam.": {
+  "c": "index.html: lter(e=>(t.ab[e]||0)+(t.abi[e]||0)>0); const ruse=ft.ruse?` <span>Com Ruse, ${ftN(ft.ruse)}% dos golpes nem chegam.</span>`:\"\"; const prot=el",
   "k": "p"
  },
  "Com as 7 blessings perdes muito menos ao morrer.": {
@@ -3515,6 +3543,10 @@
   "c": "index.html: (cur)}`:gp(p)}</td></tr>`).join(\"\")}</tbody></table></div>`:`<p class=\"small muted\" style=\"margin:0\">Faz-se com o feitiço (precisa de uma blank rune e de soul).</p>`}</section>`:\"\"} ",
   "k": "x"
  },
+ "Fazer o tier {0}: {1} itens + {2} gp, se todas as fusões correrem bem.": {
+  "c": "index.html: ónus\"}</option>`).join(\"\")}</select></label> <small>${m?`Fazer o tier ${t}: ${m.items} itens + ${kkk(m.gold)} gp, se todas as fusões correrem bem.`:`Classificação ${it",
+  "k": "p"
+ },
  "Fazer {0}": {
   "c": "index.html: ]; if (keyQ){ const q=QBY[keyQ.q]; steps.push({q:keyQ.q,t:`Fazer <b>${esc(qName(keyQ.q))}</b>`,d:`Abre ${keyQ.p.n}",
   "k": "p"
@@ -4356,12 +4388,16 @@
   "k": "p"
  },
  "Imbuements": {
-  "c": "index.html (HTML)",
+  "c": "index.html:  quests\",\"guia\"],n:[\"NPCs\",\"NPC\"],ch:[\"Charms\",\"charm\"],im:[\"Imbuements\",\"imbuement\"],a:[\"Co",
   "k": "x"
  },
  "Imbuements ({0})": {
   "c": "index.html:  const opts=imbOptions(cur); const cho=e.imb||[]; h+=`<div class=\"imbsel\"><span class=\"small muted\">Imbuements (${cur.is})</span>${Array.from({length:cur.is}).map((_,i)=>`<select data-imb=\"${i}\" aria-label=\"Imbuement ${i",
   "k": "p"
+ },
+ "Imbuements e tiers": {
+  "c": "index.html (HTML)",
+  "k": "x"
  },
  "Imbuements possíveis:": {
   "c": "index.html: `).join(\"\")}</ul>`:\"\"} ${it&&it.is&&it.it&&it.it.length?`<p class=\"lk-imb\">Imbuements possíveis: ${esc(imbOptions(it).map(x=>IMBL[x]||x).join(\", \"))}</p>`:\"\"} ${info.wt!=",
@@ -4727,8 +4763,8 @@
   "c": "index.html: in:0\">${esc(a.how||\"Sem guia ainda.\")}</p>${wkLinks(a.link)?`<h4 class=\"sub\">Ligado a</h4>${wkLinks(a.link)}`:\"\"}</section> ",
   "k": "x"
  },
- "Ligados ao set do Equipamento (o mesmo dos separadores acima) · duram 20 h de combate. Muda um imbuement e o «No jogo» do resumo mostra o efeito na tua rotação.": {
-  "c": "index.html: IERS.findIndex(x=>x[0]===tier); $(\"imLead\").textContent = `Ligados ao set do Equipamento (o mesmo dos separadores acima) · duram 20 h de combate. Muda um imbuement e o «No jogo» do resumo mostra o efeito na tua rotação.`",
+ "Ligados ao set do Equipamento (o mesmo dos separadores acima) · os imbuements duram 20 h de combate; o tier de cada item é o da Exaltation Forge. Muda um imbuement ou um tier e o «No jogo» do resumo mostra o efeito na tua rotação.": {
+  "c": "index.html: IERS.findIndex(x=>x[0]===tier); $(\"imLead\").textContent = `Ligados ao set do Equipamento (o mesmo dos separadores acima) · os imbuements duram 20 h de combate; o tier de cada item é o da Exaltation Forge. Muda um imbueme",
   "k": "x"
  },
  "Ligar ao Tibia": {
@@ -5275,6 +5311,10 @@
   "c": "index.html: ll>· os 12 itens que mais rendem</small></h5>${tbl}${coin>0?`<p class=\"tiny muted\">Moedas: ≈ ${gpx(coin)} por kill, já contadas no loot por hora.</p>`:\"\"} <h5>Por cri",
   "k": "p"
  },
+ "Momentum": {
+  "c": "index.html:  recebidos evitados</small></div>`); if(o.mom) tiles.push(`<div class=\"ft-t\"><span>Momentum</span><b>${ftN(o.mom)}%</b><small>a cada 2 s: ≈ ${nf(act(o.mom))} vezes por hora de combate, −2 s nos cooldowns</small></div>`);",
+  "k": "x"
+ },
  "Momentum (chance a cada {0} s):": {
   "c": "recolhida: /grimorio/#item/antler-horn-helmet · ex.: Momentum (chance a cada 2 s):",
   "k": "p"
@@ -5601,6 +5641,10 @@
  },
  "Nenhum item com estes filtros.": {
   "c": "index.html: m=\"${it.id}\">Apagar</button>`:\"\"}</div></div>`).join(\"\") || `<p class=\"muted\">Nenhum item com estes filtros.</p>`; $(\"invMore\").hid",
+  "k": "x"
+ },
+ "Nenhum item com tier. Escolhe o tier na arma, armadura, capacete, calças ou botas.": {
+  "c": "index.html: ${tiles.length?`<div class=\"ft-ts\">${tiles.join(\"\")}</div>`:`<p class=\"small muted\" style=\"margin:0\">Nenhum item com tier. Escolhe o tier na arma, armadura, capacete, calças ou botas.</p>`}</div>`; } function",
   "k": "x"
  },
  "Nenhum item com “{0}” para este slot. Experimenta o inventário em baixo, com “Todas as vocações”.": {
@@ -6318,6 +6362,14 @@
  "Onde vive:": {
   "c": "quests/js/app.js: stica</small></span>`} </div> ${d.loc ? `<p class=\"drop-loc\"><b>Onde vive:</b> ${esc(d.loc)}</p>` : \"\"} ${p",
   "k": "x"
+ },
+ "Onslaught": {
+  "c": "index.html: (set), act=ch=>1800*ch/100, tiles=[]; if(o.on) tiles.push(`<div class=\"ft-t\"><span>Onslaught</span><b>${ftN(o.on)}%</b><small>dos golpes com +60% de dano: ≈ +${ftN(0.6*o.on)}% de dano</small></div>`); if(o.ruse) tile",
+  "k": "x"
+ },
+ "Onslaught: {0}% dos golpes com +60%.": {
+  "c": "index.html: . Strike: 10% dos golpes com +${t.crit||0}% de dano.${ft.on?` <span>Onslaught: ${ftN(ft.on)}% dos golpes com +60%.</span>`:\"\"} Taxas do altar ",
+  "k": "p"
  },
  "Onyx Arrow": {
   "c": "index.html: rrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arrow\"],[40,38,\"Onyx Arrow\"],[90,65,\"Crystallin",
@@ -7415,12 +7467,16 @@
   "c": "index.html: +f.only.length+(on?1:0)+(f.city?1:0); const sorts=[[\"rec\",\"Recomendado\"],[\"xp\",grp?\"XP/h em",
   "k": "x"
  },
- "Recomendado: {0}": {
-  "c": "index.html: faultImbs(c,bs,it), nm=`<b>${esc(it.n)}</b>`; br.push(`<div class=\"imbis-r\"><span class=\"ic\">${sprOr(it,k)}</span><div><div class=\"hd\">${it.cu?nm:`<a href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${nm}</a>`}<span class=\"",
+ "Recomendado (só cabe 1)": {
+  "c": "index.html: (c,set,Object.assign({},it,{is:3}))||[]).length)?(it.is===1?\"Recomendado (só cabe 1)\":`Recomendado (só ca",
+  "k": "x"
+ },
+ "Recomendado (só cabem {0})": {
+  "c": "index.html: ,{is:3}))||[]).length)?(it.is===1?\"Recomendado (só cabe 1)\":`Recomendado (só cabem ${it.is})`):\"Recomendado\"}: <b",
   "k": "p"
  },
- "Recomendado{0}: {1}": {
-  "c": "index.html: ) && cur.filter(Boolean).length===rec.length; rows.push(`<div class=\"imr\" data-imslot=\"${k}\"><span class=\"ic\">${sprOr(it,k)}</span><div><div class=\"hd\"><b>${esc(it.n)}</b><span class=\"tiny\">${esc(itemKind(it))} · ${it.is",
+ "Recomendado: {0}": {
+  "c": "index.html: faultImbs(c,bs,it), nm=`<b>${esc(it.n)}</b>`; br.push(`<div class=\"imbis-r\"><span class=\"ic\">${sprOr(it,k)}</span><div><div class=\"hd\">${it.cu?nm:`<a href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${nm}</a>`}<span class=\"",
   "k": "p"
  },
  "Recomeçar": {
@@ -7639,6 +7695,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Ruse": {
+  "c": "index.html: .6*o.on)}% de dano</small></div>`); if(o.ruse) tiles.push(`<div class=\"ft-t\"><span>Ruse</span><b>${ftN(o.ruse)}%</b><small>dos golpes recebidos evitados</small></div>`); if(o.mom) tiles",
+  "k": "x"
+ },
  "Répteis": {
   "c": "index.html: :\"Licantropos\",Magical:\"Mágicos\",Mammal:\"Mamíferos\",Reptile:\"Répteis\",Vermin:\"Vermes e in",
   "k": "x"
@@ -7791,7 +7851,7 @@
   "c": "index.html: ilter(([k,h])=>h).map(([k,h])=>huntCard(h,[k])).join(\"\") || `<p class=\"muted\">Sem hunts validadas para este nível.</p>`; // next steps ",
   "k": "x"
  },
- "Sem imbuements → com estes imbuements. Strike: 10% dos golpes com +{0}% de dano. Taxas do altar ≈ {1} gp/h{2}.": {
+ "Sem imbuements nem tiers → com os deste set. Strike: 10% dos golpes com +{0}% de dano.{1} Taxas do altar ≈ {2} gp/h{3}.": {
   "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
   "k": "p"
  },
@@ -8715,6 +8775,22 @@
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "x"
  },
+ "Tier 0 · sem bónus": {
+  "c": "index.html: selected\":\"\"}>${i?`Tier ${i} · ${esc(ftShort(k,B.v[i-1]))}`:\"Tier 0 · sem bónus\"}</option>`).join(\"\"",
+  "k": "x"
+ },
+ "Tier {0} ·": {
+  "c": "index.html: +1},(_,i)=>`<option value=\"${i}\" ${t===i?\"selected\":\"\"}>${i?`Tier ${i} · ${esc(ftShort(k,B.v[i-1]))}`:\"Tier 0 · sem bónus",
+  "k": "p"
+ },
+ "Tier {0} · {1}": {
+  "c": "index.html: +1},(_,i)=>`<option value=\"${i}\" ${t===i?\"selected\":\"\"}>${i?`Tier ${i} · ${esc(ftShort(k,B.v[i-1]))}`:\"Tier 0 · sem bónus",
+  "k": "p"
+ },
+ "Tiers (Exaltation Forge)": {
+  "c": "index.html: nce dos outros tiers (já contada)</small></div>`); return `<div class=\"ims\"><h4>Tiers (Exaltation Forge)</h4>${tiles.length?`<div class=\"ft-ts\">${tiles.join(\"\")}</div>`:`<p class=\"small muted\" style=\"margin:0\">Nenhum ite",
+  "k": "x"
+ },
  "Tipo": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -8867,6 +8943,10 @@
   "c": "index.html: ems.reduce((x,it)=>x+(it.arm||0),0)}</div><div>${IS_TOUCH()?\"Toque: equipamento · toque longo: trocar item\":\"Clique: equipament",
   "k": "x"
  },
+ "Transcendence": {
+  "c": "index.html: , −2 s nos cooldowns</small></div>`); if(o.tr) tiles.push(`<div class=\"ft-t\"><span>Transcendence</span><b>${ftN(o.tr)}%</b><small>a cada 2 s a atacar: ≈ ${String(Math.round(act(o.tr)*10)/10).replace(\".\",DECSEP)} vezes po",
+  "k": "x"
+ },
  "Transcendence (chance a cada {0} s):": {
   "c": "recolhida: /grimorio/#item/bast-legs · ex.: Transcendence (chance a cada 2 s):",
   "k": "p"
@@ -8948,7 +9028,11 @@
   "k": "x"
  },
  "Um golpe de 1000 fica: {0}{1}.": {
-  "c": "index.html: r(e=>(t.ab[e]||0)+(t.abi[e]||0)>0); const prot=els.length?`<p class=\"small\" style=\"margin:8px 0 0\">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(",
+  "c": "index.html:  dos golpes nem chegam.</span>`:\"\"; const prot=els.length?`<p class=\"small\" style=\"margin:8px 0 0\">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(",
+  "k": "p"
+ },
+ "Um golpe de 1000 fica: {0}{1}.{2}": {
+  "c": "index.html:  dos golpes nem chegam.</span>`:\"\"; const prot=els.length?`<p class=\"small\" style=\"margin:8px 0 0\">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(",
   "k": "p"
  },
  "Uma criatura (ex.: a boosted do dia)": {
@@ -8992,7 +9076,7 @@
   "k": "x"
  },
  "Usar o recomendado": {
-  "c": "index.html: \")}</select>`; }).join(\"\")}</div> ${!same&&rec.length?`<button class=\"btn small ghost fix\" data-imfix=\"${k}\">Usar o recomendado</button>`:\"\"}</div>`); }); ",
+  "c": "index.html: \")}</select>`; }).join(\"\")}</div> ${!same&&rec.length?`<button class=\"btn small ghost fix\" data-imfix=\"${k}\">Usar o recomendado</button>`:\"\"}${ft}</div>`); ",
   "k": "x"
  },
  "Vai até à casa do {0}": {
@@ -9527,6 +9611,14 @@
   "c": "index.html: []; if(ar&&ar[2].length===1&&ar[2][0]===\"vamp\") fr.push(\"a armadura fica só com Vampirism\"); if(sr&&!sr[2].len",
   "k": "x"
  },
+ "a cada 2 s a atacar: ≈ {0} vezes por hora, Avatar 7 s ({1}% do tempo)": {
+  "c": "index.html: , −2 s nos cooldowns</small></div>`); if(o.tr) tiles.push(`<div class=\"ft-t\"><span>Transcendence</span><b>${ftN(o.tr)}%</b><small>a cada 2 s a atacar: ≈ ${String(Math.round(act(o.tr)*10)/10).replace(\".\",DECSEP)} vezes po",
+  "k": "p"
+ },
+ "a cada 2 s: ≈ {0} vezes por hora de combate, −2 s nos cooldowns": {
+  "c": "index.html:  recebidos evitados</small></div>`); if(o.mom) tiles.push(`<div class=\"ft-t\"><span>Momentum</span><b>${ftN(o.mom)}%</b><small>a cada 2 s: ≈ ${nf(act(o.mom))} vezes por hora de combate, −2 s nos cooldowns</small></div>`);",
+  "k": "p"
+ },
  "a cada {0} dias": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
@@ -9963,6 +10055,10 @@
   "c": "index.html: }</td><td>${[\"\",\"criaturas influenced (às vezes, fiendish)\",\"bosses Archfoe com loot cooperativo (às vezes, criaturas fiendish)\",\"criaturas fiendish",
   "k": "x"
  },
+ "botas": {
+  "c": "index.html: rma\",armor:\"armadura\",helmet:\"capacete\",legs:\"calcas\",boots:\"botas\"}; let FORGE_LOAD=fa",
+  "k": "x"
+ },
  "bottom": {
   "c": "index.html: {IC[id]}${t}</button></li>`).join(\"\")}</ul>`).join(\"\"); $(\"bottom\").innerHTML = NS.map",
   "k": "x"
@@ -10023,14 +10119,6 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
  },
- "cabe 1": {
-  "c": "index.html: Object.assign({},it,{is:3}))||[]).length)?` (só ${it.is===1?\"cabe 1\":\"cabem \"+it.is})`:\"",
-  "k": "x"
- },
- "cabem": {
-  "c": "index.html: sign({},it,{is:3}))||[]).length)?` (só ${it.is===1?\"cabe 1\":\"cabem \"+it.is})`:\"\"}: <b>${",
-  "k": "x"
- },
  "cacar": {
   "c": "index.html: opT(drops),drops.length]); if(huntP.length&&c) tabs.push([\"cacar\",\"Onde caçar\",`<div ",
   "k": "x"
@@ -10043,8 +10131,16 @@
   "c": "index.html: ${oth.map(x=>`<button type=\"button\" class=\"whx-chip${x.calc?\" calc\":\"\"}\" data-wsel=\"${a",
   "k": "x"
  },
+ "calcas": {
+  "c": "index.html: SLOT={weapon:\"arma\",armor:\"armadura\",helmet:\"capacete\",legs:\"calcas\",boots:\"botas\"}; let",
+  "k": "x"
+ },
  "cancelled": {
   "c": "index.html: uidos. Espera um minuto e tenta outra vez.\"; else if(code!==\"cancelled\") out.textContent=\"S",
+  "k": "x"
+ },
+ "capacete": {
+  "c": "index.html: ate. */ const FTSLOT={weapon:\"arma\",armor:\"armadura\",helmet:\"capacete\",legs:\"calcas\",boots",
   "k": "x"
  },
  "capacidade": {
@@ -10719,6 +10815,14 @@
   "c": "index.html: onst m=G.charms[k], f=!!c.charms[k]; return `<li class=\"${f?\"done\":\"\"}\"><input type=\"c",
   "k": "x"
  },
+ "dos golpes com +60% de dano: ≈ +{0}% de dano": {
+  "c": "index.html: (set), act=ch=>1800*ch/100, tiles=[]; if(o.on) tiles.push(`<div class=\"ft-t\"><span>Onslaught</span><b>${ftN(o.on)}%</b><small>dos golpes com +60% de dano: ≈ +${ftN(0.6*o.on)}% de dano</small></div>`); if(o.ruse) tile",
+  "k": "p"
+ },
+ "dos golpes recebidos evitados": {
+  "c": "index.html: .6*o.on)}% de dano</small></div>`); if(o.ruse) tiles.push(`<div class=\"ft-t\"><span>Ruse</span><b>${ftN(o.ruse)}%</b><small>dos golpes recebidos evitados</small></div>`); if(o.mom) tiles",
+  "k": "x"
+ },
  "dos {0}/s que a rotação gasta": {
   "c": "index.html: r.mana)}/s ${r.mana>=r.need?\"(paga toda a mana da rotação)\":`dos ${nf(r.need)}/s que a rotação gasta`}</span>`:\"\"} ",
   "k": "p"
@@ -11296,7 +11400,7 @@
   "k": "p"
  },
  "forge": {
-  "c": "index.html: a (tecla /).</p>`; return; } if(!FORGE) FORGE=await dsafe(\"forge\"); const name = in",
+  "c": "index.html: oad(){ if(FORGE||FORGE_LOAD) return; FORGE_LOAD=true; dsafe(\"forge\").then(d=>{ FORGE=d;",
   "k": "x"
  },
  "fraco": {
@@ -12249,6 +12353,10 @@
  },
  "mínimo": {
   "c": "quests/js/app.js: ed\">Ordenado por nível ${f.sort === \"rec\" ? \"recomendado\" : \"mínimo\"}</span><button clas",
+  "k": "x"
+ },
+ "na chance dos outros tiers (já contada)": {
+  "c": "index.html: DECSEP)}% do tempo)</small></div>`); if(o.amp) tiles.push(`<div class=\"ft-t\"><span>Amplification</span><b>+${ftN(o.amp)}%</b><small>na chance dos outros tiers (já contada)</small></div>`); return `<div cl",
   "k": "x"
  },
  "na lista": {
@@ -15383,6 +15491,10 @@
   "c": "index.html: ></div></div>`; const on = c && x.id===c.id; return `<div class=\"card crow\" style=\"${on?\"border-color:var(--accent)\":\"\"}\"><span>${VI(x.voc,\"lg\")}</span><div style=\"min-width:0\"><b>${esc(x.name)}</b><div class=\"small mute",
   "k": "p"
  },
+ "{0} · sem slots de imbuement": {
+  "c": "index.html:  if(!it.is || !it.it || !it.it.length){ if(ft) rows.push(`<div class=\"imr\" data-imslot=\"${k}\"><span class=\"ic\">${sprOr(it,k)}</span><div><div class=\"hd\"><b>${esc(it.n)}</b><span class=\"tiny\">${esc(itemKind(it))} · sem sl",
+  "k": "p"
+ },
  "{0} · spawns": {
   "c": "index.html: ath.abs(a-z)-Math.abs(b-z))[0]; openMap(x,y,bz==null?z:bz,`${G.places[pid].n} · spawns`,bz==null?[]:byZ[bz]",
   "k": "p"
@@ -15435,6 +15547,14 @@
   "c": "index.html: ; /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.crit[0]}% de chance`:\"\",it.crit[1]?`+${i",
   "k": "p"
  },
+ "{0}% de evitar o golpe": {
+  "c": "index.html: ,v) => k===\"weapon\"?`${ftN(v)}% de golpe fatal`:k===\"armor\"?`${ftN(v)}% de evitar o golpe`:k===\"helmet\"?`${ftN",
+  "k": "p"
+ },
+ "{0}% de golpe fatal": {
+  "c": "index.html: .replace(\".\",DECSEP); const ftShort = (k,v) => k===\"weapon\"?`${ftN(v)}% de golpe fatal`:k===\"armor\"?`${ftN(",
+  "k": "p"
+ },
  "{0}% de life leech": {
   "c": "index.html:  efeito const v=(a)=>IMBV[a][ti]; if(k===\"vamp\") return `${v(\"vamp\")}% de life leech`; if(k===\"void\") r",
   "k": "p"
@@ -15449,6 +15569,14 @@
  },
  "{0}% de proteção a {1}": {
   "c": "index.html: ico em ${ELN[k.slice(2)]}`; if(k.startsWith(\"p_\")) return `${k===\"p_death\"?v(\"protd\"):v(\"prot\")}% de proteção a ${ELN[k.slice(2)]}`; return IMBL[k]||",
+  "k": "p"
+ },
+ "{0}% de virar Avatar": {
+  "c": "index.html: :k===\"helmet\"?`${ftN(v)}% de −2 s nos cooldowns`:k===\"legs\"?`${ftN(v)}% de virar Avatar`:k===\"boots\"?`+${ftN",
+  "k": "p"
+ },
+ "{0}% de −2 s nos cooldowns": {
+  "c": "index.html: al`:k===\"armor\"?`${ftN(v)}% de evitar o golpe`:k===\"helmet\"?`${ftN(v)}% de −2 s nos cooldowns`:k===\"legs\"?`${ftN(v",
   "k": "p"
  },
  "{0}% do dano físico em": {
@@ -15597,6 +15725,10 @@
  },
  "{0}: sessões de caça públicas publicadas por jogadores depois do rebalance de 16 de junho de 2026 (nível, XP raw/h e lucro por vocação, solo e em grupo). Usadas para confirmar hunts solo e de equipa e quando o TibiaPal não tem número.": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "{0}: tier": {
+  "c": "index.html: cost[String(it.up)]:null, m=t?forgeMin(fu,t):null; return `<div class=\"ftr\"><label><span class=\"tiny muted\">${esc(B.name)}</span><select data-ftsel data-v=\"${t}\" aria-label=\"${esc(it.n)}: tier\">${Array.from({length:mx+1}",
   "k": "p"
  },
  "{0}: tirado dos highscores de {1} (#{2}).": {
@@ -16174,6 +16306,10 @@
  "· risco {0}": {
   "c": "index.html: -hidden=\"true\"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class=\"sr-only\"> · risco ${HCMP_RISK[h.d]}</span>`:\"\"}</span></span><s",
   "k": "p"
+ },
+ "· sem slots de imbuement": {
+  "c": "index.html:  if(!it.is || !it.it || !it.it.length){ if(ft) rows.push(`<div class=\"imr\" data-imslot=\"${k}\"><span class=\"ic\">${sprOr(it,k)}</span><div><div class=\"hd\"><b>${esc(it.n)}</b><span class=\"tiny\">${esc(itemKind(it))} · sem sl",
+  "k": "x"
  },
  "· set": {
   "c": "index.html: :\"+sel; if(qk!==slotQKey){ slotQ=\"\"; slotQKey=qk; } let h=`<h3 style=\"font-size:21px\">${SLOTNAME[sel]} <span class=\"tiny muted\" style=\"font-family:var(--sans);font-weight:400\">· set ${esc(set.name)}</span></h3>`; if(sel=",
