@@ -82,6 +82,13 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   `spellLookHTML`: base power, cooldown e grupo do motor (`RXD.ab` / `RXD.runes`; runas: 2 s e grupo de ataque), descrição,
   palavras, mana, área e 2.º grupo (`g2`/`gcd2`) de `data/spells.json` (`spdLoad`, pedido logo no `renderRx`). Nas runas não
   há nível no cabeçalho (é o de as fazer; para usar conta o magic level). As teclas simples já não repetem as palavras.
+- Tiers da Exaltation Forge no Equipamento (r21): o separador «Imbuements e tiers» tem, por baixo dos imbuements de cada item
+  com bónus de tier (arma Onslaught, armadura Ruse, capacete Momentum, calças Transcendence, botas Amplification), um seletor
+  de tier guardado em `set.slots[k].tier` (0 = sem; as calças, sem imbuements, também entram). O tier máximo vem da
+  classificação do item (`G.items[].up`, posta por `_dev/add_item_class.py` a partir de data/items.json; correr outra vez se
+  entrarem itens novos) e do `maxTier` de data/forge.json, que dá também o efeito de cada tier e o custo mínimo de fusão
+  (`forgeMin`). O resumo mostra os efeitos com a Amplification das botas (chance × (1 + amp%); testes a cada 2 s = 1800 por
+  hora) e o «No jogo» conta o Onslaught no dano (× (1 + 0,6 × chance)) e diz quantos golpes o Ruse evita.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
