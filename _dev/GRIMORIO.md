@@ -76,6 +76,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   notas dos itens partiam no «:» de «ligação elemental:». Para medir, o PT que fica visível no ecrã depois da tradução conta mais
   do que o modo recolha (que regista também tentativas intermédias que acabam traduzidas). O dano máximo da TibiaWiki vem como
   «375~», «242+», «~1000»: `mdNum` lê o primeiro número (antes dava NaN).
+- Dica dos feitiços nas rotações (r20): cada feitiço das teclas e a stance têm `data-spl="<nome>"` (runas com « Rune»). Com o
+  rato abre a caixa dos itens (`#lookTip`: `lookShow` passa a `splShow`; o `pointerover`/`focusin` ouvem `[data-look],[data-spl]`);
+  com um toque (`LASTPT==="touch"` ou `IS_TOUCH()`) abre a ficha de baixo com «Ver a página do feitiço» e o clique não navega.
+  `spellLookHTML`: base power, cooldown e grupo do motor (`RXD.ab` / `RXD.runes`; runas: 2 s e grupo de ataque), descrição,
+  palavras, mana, área e 2.º grupo (`g2`/`gcd2`) de `data/spells.json` (`spdLoad`, pedido logo no `renderRx`). Nas runas não
+  há nível no cabeçalho (é o de as fazer; para usar conta o magic level). As teclas simples já não repetem as palavras.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
