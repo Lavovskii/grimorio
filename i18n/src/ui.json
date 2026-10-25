@@ -1136,7 +1136,7 @@
   "k": "x"
  },
  "Antes de começar, liga {0} {1}: {2}": {
-  "c": "index.html:  frase do motor sozinha) const st=Lr.stance[0], stance=st?`<p class=\"small rx-stc\">Antes de começar, liga <b>${elink(\"feitico\",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st.why)}</span></p>`:\"\"; c",
+  "c": "index.html:  frase do motor sozinha) const st=Lr.stance[0], stance=st?`<p class=\"small rx-stc\">Antes de começar, liga <b data-spl=\"${esc(st.n)}\">${elink(\"feitico\",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st",
   "k": "p"
  },
  "Antes de começares{0}": {
@@ -1569,6 +1569,10 @@
  },
  "Base Ranged Spawn Build": {
   "c": "index.html: al Build\":\"build física\",\"Base Bossing Build\":\"para bosses\",\"Base Ranged Spawn Build\":\"hunts à distância\"",
+  "k": "x"
+ },
+ "Base power": {
+  "c": "index.html: g||\"attack\"):s.g]||\"\"; const rows=[]; if(bp) rows.push([\"Base power\",nf(bp)]); if(cd!=",
   "k": "x"
  },
  "Bash (club)": {
@@ -2604,7 +2608,7 @@
   "k": "x"
  },
  "Dano máx./turno": {
-  "c": "index.html:  por vida\",hp?(xp/hp).toFixed(2).replace(\".\",DECSEP):null],[\"Dano máx./turno\",ci.maxdmg?nf(+ci.ma",
+  "c": "index.html:  por vida\",hp?(xp/hp).toFixed(2).replace(\".\",DECSEP):null],[\"Dano máx./turno\",mdNum(ci.maxdmg)?nf",
   "k": "x"
  },
  "Dano que faz:": {
@@ -3999,6 +4003,10 @@
   "c": "index.html: : `<span class=\"tag warn\">${r.teamL?`Em equipa ~${r.teamL}`:\"Grupo grande\"}</span>${r.soloL?` ",
   "k": "x"
  },
+ "Grupo {0}": {
+  "c": "index.html: {gcd} s`:`${gcd} s`]); if(!rune&&s.g2&&s.gcd2) rows.push([`Grupo ${s.g2}`,`${s.gcd2} s`]); ",
+  "k": "p"
+ },
  "Grupo: todos": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4092,7 +4100,7 @@
   "k": "x"
  },
  "Habilidades": {
-  "c": "index.html: g)} por turno</span>`:\"\"}</h3>${atkT} ${othL.length?`<p class=\"pt-ab\"><b>Habilidades</b> ${othL.join(\" · \")}</p>`:\"\"} ${props",
+  "c": "index.html: ))} por turno</span>`:\"\"}</h3>${atkT} ${othL.length?`<p class=\"pt-ab\"><b>Habilidades</b> ${othL.join(\" · \")}</p>`:\"\"} ${props",
   "k": "x"
  },
  "Haste": {
@@ -9107,6 +9115,14 @@
   "c": "index.html:  class=\"btn small ghost\" data-wsel=\"${i}\" aria-label=\"${esc(`Ver a build ${w.t} na roda`)}\">Ver</button> <bu",
   "k": "p"
  },
+ "Ver a página da runa ›": {
+  "c": "index.html: <a class=\"btn small\" href=\"${wkHref(\"feitico\",key)}\">${rune?\"Ver a página da runa ›\":\"Ver a página do fe",
+  "k": "x"
+ },
+ "Ver a página do feitiço ›": {
+  "c": "index.html: =\"${wkHref(\"feitico\",key)}\">${rune?\"Ver a página da runa ›\":\"Ver a página do feitiço ›\"}</a>`:\"\"}`; } funct",
+  "k": "x"
+ },
  "Ver e editar na Wheel ›": {
   "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As",
   "k": "x"
@@ -9727,6 +9743,10 @@
   "c": "index.html: \"podes\"} fazer. Escolher um tipo mostra-as todas, até ${grp?\"ao vosso\":\"ao teu\"} nível.`; ",
   "k": "x"
  },
+ "apoio": {
+  "c": "index.html: |null; } const SPGR={attack:\"ataque\",healing:\"cura\",support:\"apoio\"}; function spellLoo",
+  "k": "x"
+ },
  "aquatic": {
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
@@ -9804,7 +9824,7 @@
   "k": "p"
  },
  "attack": {
-  "c": "quests/js/app.js: : \"Curiosidades\", \"price\": \"Preço\", \"creature\": \"Criatura\", \"attack\": \"Ataque\", \"defense",
+  "c": "index.html: cd, gcd=rune?2:a.gcd!=null?a.gcd:s.gcd, gr=SPGR[rune?(s.rg||\"attack\"):s.g]||\"\"; const ",
   "k": "x"
  },
  "attributes": {
@@ -9820,7 +9840,7 @@
   "k": "x"
  },
  "até {0} por turno": {
-  "c": "index.html: s=\"pg2\"> <section class=\"card\"><h3>Ataques${ci.maxdmg?`<span class=\"h3s\">até ${nf(+ci.maxdmg)} por turno</span>`:\"\"}</h3>${atkT} ",
+  "c": "index.html: > <section class=\"card\"><h3>Ataques${mdNum(ci.maxdmg)?`<span class=\"h3s\">até ${nf(mdNum(ci.maxdmg))} por turno</span>`:\"\"}</h3>${atkT} ",
   "k": "p"
  },
  "até à entrada": {
@@ -11520,7 +11540,7 @@
   "k": "x"
  },
  "heal": {
-  "c": "index.html: v])=>t.replace(r,v), String(s||\"\")); const rsCls = v => v<0?\"heal\":v===0?\"imm\":v<100?\"",
+  "c": "index.html:  ? +m[0].replace(/[,.]/g,\"\") : 0; }; const rsCls = v => v<0?\"heal\":v===0?\"imm\":v<100?\"",
   "k": "x"
  },
  "helmet": {
@@ -12177,6 +12197,10 @@
  },
  "mounts": {
   "c": "index.html: itico:\"spells\",npc:\"npcs\",conquista:\"achievements\",montaria:\"mounts\",outfit:\"outfits\"}; ",
+  "k": "x"
+ },
+ "mouse": {
+  "c": "index.html:  (o rato continua a abrir a página com o clique) let LASTPT=\"mouse\"; document.addEventL",
   "k": "x"
  },
  "mseg": {
