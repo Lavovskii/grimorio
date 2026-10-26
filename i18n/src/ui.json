@@ -267,6 +267,10 @@
   "c": "index.html: s=\"linkbtn\" data-pmclose=\"1\">Cancelar</button></div>` : `<button type=\"button\" class=\"btn small ghost\" data-pmopen=\"1\">+ Juntar alguém</button>`; const info = ms.",
   "k": "x"
  },
+ "+ Tecla": {
+  "c": "index.html: er a tecla de ${esc(k.label)}`}\">${u?`<kbd>${esc(u)}</kbd>`:\"+ Tecla\"}</button><span clas",
+  "k": "x"
+ },
  "+ as que passam por lá ({0})": {
   "c": "quests/js/app.js: [[true, `Só as de ${esc(reg.name)} (${reg.main})`], [false, `+ as que passam por lá (${reg.total})`]].map(([v, l]) => `",
   "k": "p"
@@ -776,7 +780,7 @@
   "k": "p"
  },
  "A tua barra de ataque": {
-  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
   "k": "x"
  },
  "A tua barra já tem tudo o que a recomendada tem, pela ordem certa.": {
@@ -1051,6 +1055,10 @@
   "c": "index.html: de XP/h.\":h.src===\"ha\"?\"O XP/h vem de sessões reais.\":h.est?\"Ainda sem medição de XP/h: o número é uma estimativa.\":\"\"}${p.acc&&((G.hv&",
   "k": "x"
  },
+ "Ainda sem teclas. Escolhe a tecla de cada papel acima e o teclado aparece aqui, com o feitiço em cada tecla.": {
+  "c": "index.html: ; }); const used=Object.keys(by); if(!used.length) return `<div class=\"card rx-kbd\"><h3>O teu teclado</h3><p class=\"small muted\" style=\"margin:0\">Ainda sem teclas. Escolhe a tecla de cada papel acima e o teclado aparece ",
+  "k": "x"
+ },
  "Ajustes finais (7 jul 2026)": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -1078,6 +1086,14 @@
  "Aljava: {0}.": {
   "c": "index.html: hips\">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!==\"quiver\"?` <span class=\"tiny muted\">Aljava: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ",
   "k": "p"
+ },
+ "Alt": {
+  "c": "index.html: ), u.slice(m.length)]; }; const layers=[\"\",\"Shift\",\"Ctrl\",\"Alt\"].filter(L=>used.som",
+  "k": "x"
+ },
+ "Alt+": {
+  "c": "index.html: oUpperCase() : k; return (e.ctrlKey?\"Ctrl+\":\"\")+(e.altKey?\"Alt+\":\"\")+(e.shiftKey?\"Sh",
+  "k": "x"
  },
  "Alternativas": {
   "c": "index.html: untP,6)}</div>`,huntP.length]); if(alts) tabs.push([\"alt\",\"Alternativas\",alts]); const lef",
@@ -1156,7 +1172,7 @@
   "k": "x"
  },
  "Antes de começar, liga {0} {1}: {2}": {
-  "c": "index.html:  frase do motor sozinha) const st=Lr.stance[0], stance=st?`<p class=\"small rx-stc\">Antes de começar, liga <b data-spl=\"${esc(st.n)}\">${elink(\"feitico\",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st",
+  "c": "index.html:  const kb=rxKbdHTML(Lr); const st=Lr.stance[0], stance=st?`<p class=\"small rx-stc\">Antes de começar, liga <b data-spl=\"${esc(st.n)}\">${elink(\"feitico\",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st",
   "k": "p"
  },
  "Antes de começares{0}": {
@@ -1351,16 +1367,8 @@
   "c": "index.html:  e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistências das gemas seguem o dano desta hunt.</span>`:\"\"}</div> <div ",
   "k": "x"
  },
- "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.": {
-  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
-  "k": "x"
- },
  "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas. MAB: no jogo, botão direito numa tecla da barra → {0}; cada toque dispara a 1.ª ação que estiver pronta.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
-  "k": "p"
- },
- "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.{0}": {
-  "c": "index.html: xKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">As teclas que um jogador usa: cada uma com o mesmo pape",
   "k": "p"
  },
  "As teclas são uma sugestão: longe das de ataque, para não curares por engano.": {
@@ -1384,7 +1392,7 @@
   "k": "x"
  },
  "Assign Multiaction": {
-  "c": "index.html: el nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.\":\"\"}</p></div>${stan",
+  "c": "index.html: ão nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" <span>MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.</span>\":\"\"}</p></div>${st",
   "k": "x"
  },
  "Asura Palace + The Lost Brother": {
@@ -1553,6 +1561,10 @@
  },
  "Ações que vais ganhar": {
   "c": "index.html: a.l-b.l); $(\"hkList\").innerHTML = groups + (future.length?`<div class=\"card hkfut\"><h3 style=\"font-size:19px;margin-bottom:6px\">Ações que vais ganhar</h3>${future.map(f=>{ const fn=(WNAME[f.t.toLowerCase().replace(/\\s*\".",
+  "k": "x"
+ },
+ "Backspace": {
+  "c": "index.html: rRx(); return; } const r=HKON.dataset.hkset; if(e.key===\"Backspace\"||e.key===\"Delete\"){",
   "k": "x"
  },
  "Barba": {
@@ -1863,6 +1875,10 @@
   "c": "recolhida: /grimorio/#hunts · ex.: Calças: Soulshanks",
   "k": "p"
  },
+ "Camada do teclado": {
+  "c": "index.html: er(u=>split(u)[0]===L).length; const tabs=layers.length>1?`<div class=\"seg kb-tabs\" role=\"group\" aria-label=\"Camada do teclado\">${layers.map(L=>`<button type=\"button\" data-hklayer=\"${esc(L)}\" aria-pressed=\"${L===cur}\">${",
+  "k": "x"
+ },
  "Caminha ~{0} sqm": {
   "c": "index.html: on rtStep(s){ const k=s[0]; if(k===\"w\") return {i:\"w\",t:`Caminha ~${s[1]} sqm${s[2]>=0?\" para \"+DIRN[s[2]]:\"\"}`}; if(k===\"f\"){ co",
   "k": "p"
@@ -1911,6 +1927,10 @@
   "c": "index.html: row(\"Hit Points\",\"+\"+nf(S.hp))+row(\"Mana\",\"+\"+nf(S.mp))+row(\"Capacity\",\"+\"+nf(S.cap))+row(",
   "k": "x"
  },
+ "CapsLock": {
+  "c": "index.html: e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"Dead\",\"Unide",
+  "k": "x"
+ },
  "Capuz / protetores": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
@@ -1929,6 +1949,18 @@
  },
  "Carlin": {
   "c": "index.html: \",\"oeste\",\"noroeste\"]; const CITIES=[[\"Thais\",32369,32241],[\"Carlin\",32360,31782],[\"Veno",
+  "k": "x"
+ },
+ "Carrega em «+ Tecla» e depois na tecla que usas no Tibia. Cada papel tem a mesma função nas duas linhas.": {
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
+  "k": "x"
+ },
+ "Carrega em «+ Tecla» e depois na tecla que usas no Tibia. Cada papel tem a mesma função nas duas linhas.{0}": {
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
+  "k": "p"
+ },
+ "Carrega numa tecla…": {
+  "c": "index.html:  } hkStop(); HKON=b; b.classList.add(\"listen\"); b.innerHTML=\"Carrega numa tecla…\"; // (no telemóv",
   "k": "x"
  },
  "Casas": {
@@ -2188,7 +2220,7 @@
   "k": "x"
  },
  "Como jogar": {
-  "c": "index.html: an>${esc(st.why)}</span></p>`:\"\"; const how=Lr.how.length?`<div class=\"card rx-how\"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKb(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=",
+  "c": "index.html: an>${esc(st.why)}</span></p>`:\"\"; const how=Lr.how.length?`<div class=\"card rx-how\"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=",
   "k": "x"
  },
  "Como meto os pontos da Wheel agora?": {
@@ -2371,6 +2403,10 @@
   "c": "index.html: length?`<details class=\"qguide\"><summary><span>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:\"Guia passo a passo",
   "k": "p"
  },
+ "Control": {
+  "c": "index.html: e(); } function hkName(e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsL",
+  "k": "x"
+ },
  "Convencer": {
   "c": "quests/js/app.js: nce\": \"Invocar/convencer\", \"summon\": \"Invocar\", \"convince\": \"Convencer\", \"illusionable\": \"P",
   "k": "x"
@@ -2495,7 +2531,7 @@
   "c": "index.html: mam ter um set por hunt: cria um set por elemento (+ set).\":\"Cria outro set para hunts com dano de um elemento (+ set e escolhe a proteção).\"}`}</p>`; // bonec",
   "k": "x"
  },
- "Cria um MAB para {0} ({1} na barra recomendada): {2}. {3}": {
+ "Cria um MAB para {0}: {1}. {2}": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
@@ -2545,6 +2581,14 @@
  },
  "Crítico": {
   "c": "index.html: spd>0?\"+\":\"\")+it.spd]); /* r8 */ if(it.crit) rows.push([\"Crítico\",[it.crit[0]?`${it.c",
+  "k": "x"
+ },
+ "Ctrl": {
+  "c": "index.html: \\+$/,\"\"), u.slice(m.length)]; }; const layers=[\"\",\"Shift\",\"Ctrl\",\"Alt\"].filter(L=>us",
+  "k": "x"
+ },
+ "Ctrl+": {
+  "c": "index.html: \" : k.length===1 ? k.toUpperCase() : k; return (e.ctrlKey?\"Ctrl+\":\"\")+(e.altKey?\"Alt+",
   "k": "x"
  },
  "Cuidado": {
@@ -2683,6 +2727,10 @@
   "c": "index.html: /option>`).join(\"\")}</select></label>`; const preHTML=pre?`<details class=\"rt-pre\"><summary>De ${esc(home)} até ${esc(r.s)} · ~${pre.c} sqm${pre.st.some(x=>x[0]===\"n\")?\" + viagem\":\"\"}</summary><ol>${pre.st.map(x=>{ const",
   "k": "p"
  },
+ "Dead": {
+  "c": "index.html: ey; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"Dead\",\"Unidentified\",\"Pro",
+  "k": "x"
+ },
  "Decorations": {
   "c": "index.html: Slot extra\",\"Liquids\":\"Líquido\",\"Plants and Herbs\":\"Planta\",\"Decorations\":\"Decoração\",\"Game T",
   "k": "x"
@@ -2721,6 +2769,10 @@
  },
  "Deixar vazio": {
   "c": "index.html: ria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML = `<div class=\"pk-h\"><div><b>${esc(SLOTNAME[slot])}</b><span>Escolhe o que usas · ordenado por pontuação</span></div><button type=\"button\" class=\"pk-x\" data-pkx=\"1\"",
+  "k": "x"
+ },
+ "Delete": {
+  "c": "index.html: nst r=HKON.dataset.hkset; if(e.key===\"Backspace\"||e.key===\"Delete\"){ e.preventDefault(",
   "k": "x"
  },
  "Demasiados pedidos seguidos. Espera um minuto e tenta outra vez.": {
@@ -3231,6 +3283,14 @@
   "c": "index.html: hild(pop); bindPick(pop); } pop.setAttribute(\"aria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML =",
   "k": "x"
  },
+ "Escolher a tecla de": {
+  "c": "index.html: ria-label=\"${u?`Tecla de ${esc(k.label)}: ${esc(u)}. Mudar`:`Escolher a tecla de ${esc(k.label)}`}\">${u?`<kbd>${esc(u",
+  "k": "x"
+ },
+ "Escolher a tecla de {0}": {
+  "c": "index.html: ria-label=\"${u?`Tecla de ${esc(k.label)}: ${esc(u)}. Mudar`:`Escolher a tecla de ${esc(k.label)}`}\">${u?`<kbd>${esc(u",
+  "k": "p"
+ },
  "Escolher no Equipamento": {
   "c": "index.html: sc(it.n)}</span>`).join(\"\")}</div>`:\"\") + (empty.length?`<div class=\"imnone\"><span>Slots vazios no set:</span>${empty.map(k=>`<span class=\"pill\">${esc(SLOTNAME[k])}</span>`).join(\"\")} <a href=\"#equip\" data-go=\"equip\">Esc",
   "k": "x"
@@ -3268,11 +3328,11 @@
   "k": "x"
  },
  "Escreve o teu": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
   "k": "x"
  },
  "Escreve o teu {0}": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
   "k": "p"
  },
  "Escreve um nome.": {
@@ -3766,6 +3826,14 @@
  "Fora da Loja": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Fora do teclado:": {
+  "c": "index.html: eclas</button></div>${tabs}${board(cur)} ${extra.length?`<p class=\"small muted\" style=\"margin:0\">Fora do teclado: ${extra.map(u=>`<kbd>${esc(u)}</kbd> ${esc(by[u].label)}`).join(\" · \")}</p>`:\"\"}<ul class=\"kb-lg",
+  "k": "x"
+ },
+ "Fora do teclado: {0}": {
+  "c": "index.html: eclas</button></div>${tabs}${board(cur)} ${extra.length?`<p class=\"small muted\" style=\"margin:0\">Fora do teclado: ${extra.map(u=>`<kbd>${esc(u)}</kbd> ${esc(by[u].label)}`).join(\" · \")}</p>`:\"\"}<ul class=\"kb-lg",
+  "k": "p"
  },
  "Forge": {
   "c": "index.html: ments\",`${is} ${is===1?\"slot\":\"slots\"}`]); if(cl) r.push([\"Forge\",`classe ${cl}${maxT",
@@ -4795,6 +4863,10 @@
   "c": "index.html: /p>`; $(\"slotDetail\").innerHTML=h; return; } const head=h+`<div class=\"slotsearch\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input id=\"slotQ\" type=\"search\" au",
   "k": "x"
  },
+ "Limpar teclas": {
+  "c": "index.html: \">${cnt(L)}</span></button>`).join(\"\")}</div>`:\"\"; return `<div class=\"card rx-kbd\"><div class=\"kb-h\"><h3>O teu teclado</h3><button type=\"button\" class=\"btn small ghost\" data-hkclear>Limpar teclas</button></div>${tabs}${",
+  "k": "x"
+ },
  "Link copiado": {
   "c": "index.html: ); }catch(err){ ok=false; } } if(msg){ msg.textContent=ok?\"Link copiado\":\"Não deu para copia",
   "k": "x"
@@ -4940,7 +5012,7 @@
   "k": "x"
  },
  "MAB: no jogo, botão direito numa tecla da barra → {0}; cada toque dispara a 1.ª ação que estiver pronta.": {
-  "c": "index.html: el nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.\":\"\"}</p></div>${stan",
+  "c": "index.html: ão nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?\" <span>MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.</span>\":\"\"}</p></div>${st",
   "k": "p"
  },
  "ML cura": {
@@ -5253,6 +5325,10 @@
  },
  "Menos tipos": {
   "c": "index.html: ata-hcls-all aria-expanded=\"${!!ST.ui.hfAll}\">${ST.ui.hfAll?\"Menos tipos\":`+${nx} tipos`}</bu",
+  "k": "x"
+ },
+ "Meta": {
+  "c": "index.html: hkName(e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"D",
   "k": "x"
  },
  "Metal": {
@@ -5847,6 +5923,10 @@
   "c": "index.html: s.prot?ELN[s.prot]:\"combate\")}</span></button>`).join(\"\") + `<button data-newset=\"1\" class=\"addset\" aria-label=\"Novo set\">+ set</button>`; const wt = WTYPE",
   "k": "x"
  },
+ "Num": {
+  "c": "index.html: .code) ? e.code.slice(5) : e.code&&/^Numpad/.test(e.code) ? \"Num\"+e.code.slice(6) : k",
+  "k": "x"
+ },
  "Numa gema, cada mod só usa um grau até ao do mod anterior: um supremo no grau IV com os básicos no grau I conta como grau I.": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
@@ -6269,6 +6349,10 @@
  },
  "O teu equipamento": {
   "c": "index.html: v> <div class=\"bisdoll\" role=\"group\" aria-label=\"${mine?\"O teu equipamento\":\"Melhor equipamento",
+  "k": "x"
+ },
+ "O teu teclado": {
+  "c": "index.html: ; }); const used=Object.keys(by); if(!used.length) return `<div class=\"card rx-kbd\"><h3>O teu teclado</h3><p class=\"small muted\" style=\"margin:0\">Ainda sem teclas. Escolhe a tecla de cada papel acima e o teclado aparece ",
   "k": "x"
  },
  "Objetivo": {
@@ -7037,6 +7121,10 @@
  },
  "Probabilidade de drop": {
   "c": "quests/js/app.js: d.exp)} XP` : \"\"}</div></div> ${d.pct != null ? `<span class=\"drop-pct ${d.rarity ? \"r-\" + d.rarity.replace(/ /g, \"-\") : \"\"}\" title=\"Probabilidade de drop\">${d.pct < 1 ? d.pct.toFixed(2) : d.pct.toFixed(1)}%${d.qty && d.",
+  "k": "x"
+ },
+ "Process": {
+  "c": "index.html: ontrol\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"Dead\",\"Unidentified\",\"Process\"].includes(k)) retur",
   "k": "x"
  },
  "Procura em tudo: hunts, criaturas, bosses, itens, feitiços, runas, quests, guias de quests, NPCs, charms, imbuements, conquistas, montarias e outfits.": {
@@ -7879,6 +7967,10 @@
   "c": "index.html: om o teu dano nesta zona.`; else if(e&&hasKey(G.voc,e)) t=`Sem medição para ${vn(h.voc)}: valores de ${vn(e)}${x.o?\" (do TibiaPal, de antes do rebalance de junho de 2026)\":\"\"} ajustados ao teu dano e ao que cada vocação ",
   "k": "p"
  },
+ "Sem modificador": {
+  "c": "index.html: kb\">${layers.length>1?\"\":`<div class=\"kb-l\">${L?esc(L)+\" +\":\"Sem modificador\"}</div>`}${f?`<div c",
+  "k": "x"
+ },
  "Sem negócios": {
   "c": "index.html: tElementSibling:null; b.textContent = s ? gp(s.v) : d ? \"Sem negócios\" : \"Sem dados agora\"",
   "k": "x"
@@ -8020,7 +8112,11 @@
   "k": "x"
  },
  "Shift": {
-  "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "c": "index.html: eplace(/\\+$/,\"\"), u.slice(m.length)]; }; const layers=[\"\",\"Shift\",\"Ctrl\",\"Alt\"].filte",
+  "k": "x"
+ },
+ "Shift+": {
+  "c": "index.html: urn (e.ctrlKey?\"Ctrl+\":\"\")+(e.altKey?\"Alt+\":\"\")+(e.shiftKey?\"Shift+\":\"\")+b; } function h",
   "k": "x"
  },
  "Shift+1": {
@@ -8198,6 +8294,10 @@
  "Sozinho. Podes fazer party com XP partilhada {0}. Junta outra vocação para ver as hunts onde podem ir juntos.": {
   "c": "index.html: \"1\">+ Juntar alguém</button>`; const info = ms.length<2 ? `Sozinho. Podes fazer party com XP partilhada ${rng}. Junta outra vocação para ver as hunts onde podem ir juntos.` : canShare(ms) ",
   "k": "p"
+ },
+ "Space": {
+  "c": "index.html: &/^Numpad/.test(e.code) ? \"Num\"+e.code.slice(6) : k===\" \" ? \"Space\" : k.length===1 ? k.",
+  "k": "x"
  },
  "Spawn": {
   "c": "index.html: abs.push([\"info\",\"Mais dados\",`<dl class=\"ip-dl\">${ci.spawn?`<dt>Spawn</dt><dd>${esc(ci.spawn)}</dd>`:\"\"}${ci.att?`<dt>Ti",
@@ -8594,6 +8694,14 @@
  "Taxa no altar": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Tecla": {
+  "c": "index.html: id=\"hkIn\"; i.className=\"hk-in\"; i.setAttribute(\"aria-label\",\"Tecla\"); i.autocomplete=\"o",
+  "k": "x"
+ },
+ "Tecla de {0}: {1}. Mudar": {
+  "c": "index.html: -set${u?\" on\":\"\"}\" data-hkset=\"${esc(k.k)}\" aria-label=\"${u?`Tecla de ${esc(k.label)}: ${esc(u)}. Mudar`:`Escolher a tecla d",
+  "k": "p"
  },
  "Teleporte": {
   "c": "index.html: :s[1]?s[1].replace(/^(teleport|portal) to /i,\"Teleporte: \"):\"Teleporte\",d:s[2]?\"Gasta 1 tel",
@@ -9041,6 +9149,10 @@
  },
  "Uma vez no início de cada boss: dano contínuo durante a luta.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Unidentified": {
+  "c": "index.html: !k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"Dead\",\"Unidentified\",\"Process\"].includes",
   "k": "x"
  },
  "Usa": {
@@ -10028,7 +10140,7 @@
   "k": "x"
  },
  "blur": {
-  "c": "index.html: true})); addEventListener(\"focus\",mdWake); addEventListener(\"blur\",()=>{ clearTimeout(",
+  "c": "index.html: t.hkset; hkStop(); hkSet(r,v); } }); i.addEventListener(\"blur\", ()=>setTimeout(()=",
   "k": "x"
  },
  "book": {
@@ -10169,6 +10281,10 @@
  },
  "cfocus": {
   "c": "index.html: focus({preventScroll:true}); }catch(e){} el.classList.add(\"cfocus\"); clearTimeout(el._",
+  "k": "x"
+ },
+ "characters": {
+  "c": "index.html: ria-label\",\"Tecla\"); i.autocomplete=\"off\"; i.autocapitalize=\"characters\"; b.after(i); i.",
   "k": "x"
  },
  "charges": {
@@ -11983,6 +12099,10 @@
   "c": "index.html: ias do Questski const GSC = {h:[\"Hunts\",\"hunt\"],hc:[\"Hunts\",\"lista\"],ht:[\"Hunts\",\"lista",
   "k": "x"
  },
+ "listen": {
+  "c": "index.html: AYER=\"\"; function hkStop(){ if(HKON){ HKON.classList.remove(\"listen\"); HKON=null; } cons",
+  "k": "x"
+ },
  "livre": {
   "c": "index.html: an>`:na),CRDV?hits:null,-1), row(\"Acesso\",H.map(h=>!h.q?\"livre\":qDone(c,h.q)?`<span",
   "k": "x"
@@ -12400,7 +12520,7 @@
   "k": "x"
  },
  "nenhuma": {
-  "c": "index.html: so.w]||so.w)}`:\"não contam para esta vocação\"})</span>`:\"\"):`<span class=\"tiny muted\">nenhuma</span>`}</div></div> <d",
+  "c": "index.html: so.w)}`:\"não contam para esta vocação\"})</span></span>`:\"\"):`<span class=\"tiny muted\">nenhuma</span>`}</div></div> <d",
   "k": "x"
  },
  "nenhuma marcada": {
@@ -12516,15 +12636,15 @@
   "k": "x"
  },
  "não contam com": {
-  "c": "index.html: span class=\"hs-sk hs-nc\">${nc.map(skt).join(\" · \")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para es",
+  "c": "index.html: lass=\"hs-sk hs-nc\">${nc.map(skt).join(\" · \")} <span>(${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para es",
   "k": "x"
  },
  "não contam com {0}": {
-  "c": "index.html: span class=\"hs-sk hs-nc\">${nc.map(skt).join(\" · \")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para es",
+  "c": "index.html: lass=\"hs-sk hs-nc\">${nc.map(skt).join(\" · \")} <span>(${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para es",
   "k": "p"
  },
  "não contam para esta vocação": {
-  "c": "index.html: in(\" · \")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para esta vocação\"})</span>`:\"\"):`<spa",
+  "c": "index.html:  \")} <span>(${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:\"não contam para esta vocação\"})</span></span>`:\"\"",
   "k": "x"
  },
  "não dá para usar escudo.": {
@@ -15176,7 +15296,7 @@
   "k": "p"
  },
  "{0} para ficarem exatas.": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } const r",
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
   "k": "p"
  },
  "{0} para veres o preço do Market no teu mundo.": {
