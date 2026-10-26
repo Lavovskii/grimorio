@@ -52,7 +52,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261026c";
+    var DV = "?v=20261026d";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
@@ -127,7 +127,27 @@
     var w = s.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
     return !!w && w.every(function (x) { return /^[A-Z]/.test(x); });
   }
-  var PT_FN = /\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as|e|a|o|à|é|não|mais|só)(?=\s)/gi;
+  // r11: um valor que já vem na língua escolhida também não conta como português: o Questski traduz os dados antes de montar a
+  // frase ("Dá acesso a: {0}" com a lista já em polaco) e o polaco, o espanhol… também têm "na", "do", "de", "a" (só minúsculas
+  // e letras que o PT não tem; o pt-BR fica como estava)
+  var TGT = {
+    pl: /[ąćęłńśźżĄĆĘŁŃŚŹŻ]|\b(?:i|w|z|ze|jest|lub|dla|od|przy|oraz)\b/,
+    es: /[ñÑ¿¡]|\b(?:el|los|las|del|al|y|con|su|sus|hay|muy|pero)\b/,
+    de: /[äöüßÄÖÜ]|\b(?:und|der|die|den|dem|mit|von|zu|im|auf|ist|ein|eine|nicht)\b/,
+    sv: /[åäöÅÄÖ]|\b(?:och|att|med|av|till|det|den|ett)\b/,
+    nl: /ij|\b(?:het|een|van|met|voor|naar|op|bij|niet|zijn|wordt)\b/
+  };
+  // palavras do PT_FN que a língua também usa ("do", "na" no polaco; "de", "que", "para" no espanhol) e letras com acento que ela
+  // também tem: sem mais nada português, um valor com elas não conta como português ("Addony do Wayfarer Outfits")
+  var AMB = { pl: /^(?:do|na|a|o)$/i, es: /^(?:de|da|que|para|por|se|a|o|e|no|nos)$/i, de: /^(?:da|um)$/i, sv: /^(?:de|se)$/i, nl: /^(?:de|na)$/i };
+  var PTCH = { pl: /[ãõçáéíúâêôà]/i, es: /[ãõçâêôà]/i, de: /[ãõçáéíóúâêôà]/i, sv: /[ãõçáíóúâêôà]/i, nl: /[ãõçáíúâêôà]/i };
+  function tgtVal(s) { return enVal(s) || !!(TGT[lang] && TGT[lang].test(s)); }
+  function doneVal(s) {
+    if (tgtVal(s)) return true;
+    if (!TGT[lang] || PTCH[lang].test(s)) return false;
+    return ((" " + s + " ").match(PT_FN) || []).every(function (x) { return AMB[lang].test(x.trim()); });
+  }
+  var PT_FN =/\s(?:de|do|da|dos|das|que|para|com|em|no|na|nos|nas|ao|aos|um|uma|por|pelo|pela|se|os|as|e|a|o|à|é|não|mais|só)(?=\s)/gi;
   function pattern(k, depth) {
     depth = depth || 0;
     var words = k.match(/[A-Za-zÀ-ÖØ-öø-ÿ]{3,}/g);
@@ -160,7 +180,8 @@
         // um valor nunca passa o fim de uma frase (ex.: "{0} por {1}" em "Compra na Loja por 870 Tibia Coins. Não tem addons."),
         // nem várias partes separadas por " · " (ex.: "Market de {0}" em "Market de Bona · média do mês · 36 vendidos"),
         // nem é uma frase portuguesa comprida (ex.: "… menos cooldown por cada alvo …" em "{0} por {1}"): o modelo não serve
-        if (/[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
+        // (um número ordinal com ponto, "2. piętro", "3. Stock" no polaco e no alemão, não é fim de frase)
+        if (/(?:^|[^\d])[.!?…]\s+\S/.test(cap) && !/[.!?…]\s/.test(best.t)) return null;
         if (cap.indexOf(" · ") >= 0) {
           // um valor com várias partes só serve se cada parte tiver tradução ("80+ · podes usar"); num modelo sem " · ",
           // também ("Criaturas, pela parte do XP: {0}" com "Mágicos 65% · Mortos-vivos 35%")
@@ -171,7 +192,7 @@
             if (v == null && depth < 3) v = pattern(x, depth + 1);
             // (uma lista "Dragões, Demónios" ou um nome do jogo, ex.: a cidade em "Até ao meu nível · Thais · Todas")
             if (v == null) v = commas(x);
-            if (v == null && enVal(x)) v = x;
+            if (v == null && doneVal(x)) v = x;
             return v;
           });
           if (!ps.some(function (v) { return v == null; })) t = ps.join(" · ");
@@ -182,7 +203,7 @@
         // (num modelo comprido e específico — 40+ letras fixas — o valor pode ser uma frase, desde que se traduza por inteiro:
         // "; com mais 1 exalted core o risco desce para 50%" na frase da fusão da Forge)
         // (só depois de o tentar traduzir: "ao NPC {0} (hoje em Ankrahmun) por 90,000 gp" em "Vende {0}. Sem dados do Market de {1} agora.")
-        var longPT = cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40 && !enVal(cap);
+        var longPT = cap.length > 30 && (cap.match(PT_FN) || []).length >= 2 && best.len < 40 && !doneVal(cap);
         // o valor também se procura no conteúdo e nos modelos (ex.: "podes usar" em "Para {0} · level {1}+ · {2}"), mesmo com
         // marcas de elementos (ex.: "ao NPC {0} (hoje em Port Hope) por 1,500 gp"); uma lista "fogo, energia, veneno" traduz-se item a item
         if (cap.length <= 90 && /[A-Za-zÀ-ÖØ-öø-ÿ]{3}/.test(cap)) {
@@ -199,10 +220,10 @@
         if (t == null && longPT) return null;
         // um valor que fica por traduzir e é português (ex.: "Até ao meu" em "{0} nível · {1}"): o modelo não serve
         // (também com marcas de elementos: "41{0}Clique: equipamento · botão direito: trocar item" em "{0} itens · armadura {1}")
-        if (t == null && !enVal(cap.replace(MARK, " ")) && (/[ãõçâêô]/i.test(cap) || (cap.replace(MARK, " ").match(PT_FN) || []).length)) return null;
+        if (t == null && !doneVal(cap.replace(MARK, " ")) && (/[ãõçâêô]/i.test(cap) || (cap.replace(MARK, " ").match(PT_FN) || []).length)) return null;
         // num modelo quase só de valores (ex.: "{0} por {1}"), uma palavra minúscula por traduzir é português
         // ("Hunts por cidade{0}" dava "Hunts for cidade")
-        if (t == null && best.len <= 6 && !enVal(cap) && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
+        if (t == null && best.len <= 6 && !tgtVal(cap) && /(^|[\s(])[a-zà-ÿ]{3,}/.test(cap.replace(MARK, " "))) return null;
       }
       by[best.slots[n]] = t == null ? cap : t;
     }
@@ -284,7 +305,7 @@
     var tr = k.split(" + ").map(function (x) {
       if (!/[A-Za-zÀ-ÖØ-öø-ÿ]{2}/.test(x) || OUT.has(x)) return x;
       var v = exact(x); if (v == null) v = pattern(x);
-      return v == null && enVal(x) ? x : v;
+      return v == null && doneVal(x) ? x : v;
     });
     return tr.every(function (v) { return v != null; }) ? tr.join(" + ") : null;
   }
