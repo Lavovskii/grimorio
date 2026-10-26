@@ -340,6 +340,14 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
    runas, estrelas cadentes nem paralaxe; aurora sem blur), o topo e a barra de baixo opacos sem `backdrop-filter` e os `.hc`/`.wcard`
    sem `will-change`/3D: tudo junto esgotava a memória gráfica do telemóvel e os cartões piscavam. `MD_LITE` (JS) não arranca o canvas.
    Não voltar a pôr efeitos contínuos, blur ou uma camada de GPU por cartão no toque. O desktop não muda.
+   **Fundo leve no desktop (r26).** Medido com o Chromium a compor por software (`bench.cjs`, CPU de todos os processos):
+   parado de ~150 % para ~80 %, a 1× e a 2×. Três regras para quem mexer no fundo:
+   (1) nada se mexe *dentro* de um plano 3D ou com máscara: a grelha em perspetiva desloca-se a si própria (`.grid::before`
+   tem a perspetiva, a máscara e o movimento); um filho a mexer obrigava a redesenhar o plano todo a cada frame;
+   (2) camadas grandes só com translação andam em píxeis inteiros (`Math.round`): com frações o Chrome redesenha a camada
+   para a manter nítida (a aurora, numa caixa de 116 % do ecrã e sem rotação);
+   (3) o canvas das partículas fica a 1× (`MD.dpr=1`), e o brilho que segue o rato só em cartões até 700 px de altura.
+   As letras dos títulos animam com `backwards` (com `both` ficavam com `filter:blur(0)` para sempre).
 5. **Sem links externos** em conteúdo (só texto de crédito às fontes, sem `<a href="http...">`). Tudo o que é item/criatura/NPC/feitiço deve abrir uma página ou painel interno.
 6. **Texto** em PT-PT, curto e claro, sem jargão técnico para o jogador. Nunca mostres nomes de jogadores vindos do Hunt Analyser.
 7. **Não mexas** na configuração do Apache, do Windows, firewall ou serviços. Não instales pacotes nem executes código de terceiros descarregado.
