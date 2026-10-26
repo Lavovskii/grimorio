@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261025b" data-c data-q></script><script src="shared/rotacoes.js?v=20261024c"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261026a" data-c data-q></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -706,6 +706,32 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 .rx-tile p{margin:0;font-size:13px;color:var(--ink-2)}
 .rx-ic{display:inline-grid;place-items:center;width:32px;height:32px}
 .rx-stc{margin:0}
+.hk-set{min-width:64px;min-height:44px;padding:4px 10px;border:1px dashed var(--line);border-radius:9px;background:transparent;color:var(--accent);font:600 13px var(--sans);cursor:pointer}
+.hk-set{flex:none}
+.hk-set.on{border-style:solid;padding:2px 4px;min-width:0}
+.hk-set kbd{font-size:12px!important;padding:3px 5px!important}
+.rx-tile .th{min-width:0}
+.hk-set.listen{border-style:solid;border-color:var(--accent);color:var(--ink);animation:hkPulse 1s ease-in-out infinite}
+@keyframes hkPulse{50%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent)}}
+.hk-in{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.hk-ph{font-weight:600;border-bottom:1px dashed var(--muted)}
+.rx-kbd{display:grid;gap:12px;padding:14px 16px;margin-bottom:14px}
+.kb-h{display:flex;justify-content:space-between;align-items:center;gap:10px} .kb-h h3{font-size:19px;margin:0}
+.kb{display:grid;gap:4px;overflow-x:auto;padding-bottom:2px}
+.kb-l{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.kb-r{display:flex;gap:4px;padding-left:calc(var(--off,0)*46px)}
+.kb-k{position:relative;flex:none;width:44px;height:50px;border:1px solid var(--line);border-bottom-width:3px;border-radius:7px;background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:2px;opacity:.45}
+.kb-k i{font:600 10px/12px var(--mono);font-style:normal;color:var(--muted)}
+.kb-k .si,.kb-k .rx-ic{margin-top:1px}
+.kb-k.on{opacity:1;border-color:var(--accent)}
+.kb-k.on i{color:var(--ink)}
+.kb-k .si{transform:scale(.95)}
+.kb-tabs{justify-self:start}
+.kb-k em{position:absolute;right:2px;bottom:1px;font:700 8px var(--sans);font-style:normal;color:var(--accent)}
+.kb-f .kb-k{width:38px;height:48px}
+.kb-lg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+.kb-lg li{display:flex;align-items:center;gap:6px} .kb-lg kbd{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 5px}
+@media (max-width:480px){ .kb-k{width:28px;height:40px;padding-top:1px} .kb-k i{font-size:9px;line-height:10px} .kb-r{gap:2px;padding-left:calc(var(--off,0)*30px)} .kb-k .si,.kb-k .rx-ic{transform:scale(.78);margin-top:-3px} .kb-f .kb-k{width:23px;height:40px} .kb-f .kb-k .si,.kb-f .kb-k .rx-ic{transform:scale(.66)} }
 .rx-stc code{font-family:var(--mono);font-size:13px}
 .rx-how dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;margin:0}
 .rx-how dt{font-weight:700}
@@ -45725,12 +45751,17 @@ function rxStatsLine(c,s,gr){
   else { bits.push(part(sk.charAt(0).toUpperCase()+sk.slice(1),s.skillBase,s.skSrc,s.skillGear)); if(c.voc==="paladin"||c.voc==="monk") bits.push(part("ML",s.mlBase,false,s.mlGear)); }
   return `<p class="small muted rx-st">Contas feitas com: ${bits.join(" · ")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href="#" data-go="perso">Escreve o teu ${mage?"ML":esc(sk)}</a> para ficarem exatas.`:""}</p>`;
 }
+// teclas do jogador (c.hk: tecla sugerida pelo motor = papel → tecla escolhida); RXROLE: tecla sugerida → nome do papel
+let RXROLE={};
+const rxHk = () => { const c=C(); return (c&&c.hk)||{}; };
+const rxKbU = t => esc(t).replace(/(^|[\s(])(Shift\+[A-Z0-9]|[QWERTFDGH])(?=$|[\s.,:;)›])/g,(m,a,k)=>{ const u=rxHk()[k]; return a+(u?`<kbd>${esc(u)}</kbd>`:`<span class="hk-ph">${esc(RXROLE[k]||k)}</span>`); });
 const rxKb = t => esc(t).replace(/(^|[\s(])(Shift\+[A-Z0-9]|[QWERTFDGH])(?=$|[\s.,:;)›])/g,'$1<kbd>$2</kbd>'); // só as teclas da barra (Q W E R T F D G H, Shift+…)
 function rxTile(k){
   const body = k.mab
     ? `<div class="tn"><span class="mabtag" title="Multi Action Button">MAB</span>${k.mab.acts.map((a,i)=>`${i?'<span class="chev" aria-hidden="true">›</span>':""}<span class="ta" data-spl="${esc(a.n)}">${rxIc(a)}<b>${rxNm(a)}</b></span>`).join("")}</div>`
     : `<div class="tn"><span class="ta" data-spl="${esc(k.a.n)}">${rxIc(k.a)}<b>${rxNm(k.a)}</b></span></div>`;
-  return `<div class="rx-tile${k.mab?" mab":""}"><div class="th"><kbd>${esc(k.k)}</kbd><span class="rl">${esc(k.label)}</span></div>${body}<p>${esc(k.when)}</p></div>`;
+  const u=rxHk()[k.k];
+  return `<div class="rx-tile${k.mab?" mab":""}"><div class="th"><button type="button" class="hk-set${u?" on":""}" data-hkset="${esc(k.k)}" aria-label="${u?`Tecla de ${esc(k.label)}: ${esc(u)}. Mudar`:`Escolher a tecla de ${esc(k.label)}`}">${u?`<kbd>${esc(u)}</kbd>`:"+ Tecla"}</button><span class="rl">${esc(k.label)}</span></div>${body}<p>${esc(k.when)}</p></div>`;
 }
 const RXTIP={warn:["Atenção","bad"],add:["Juntar",""],order:["MAB","acc"],tip:["Dica","ok"],info:["Nota",""]};
 function rxCmpHTML(c,opt){
@@ -45747,6 +45778,56 @@ function rxCmpHTML(c,opt){
     : `<p class="small">A tua barra já tem tudo o que a recomendada tem, pela ordem certa.</p>`;
   return `<div class="card rx-cmp">${head}<div class="rx-cmph">${pick}<div class="rx-bbtn">${file("Ler outra vez")}<button type="button" class="btn small ghost" data-rxforget>Esquecer</button></div></div>${tips}<p class="small bad" id="rxFileErr" hidden></p></div>`;
 }
+/* r22: o jogador escolhe a tecla de cada papel (o motor só sugere os papéis). «+ Tecla» ouve a próxima tecla (com Shift, Ctrl
+   ou Alt; Esc cancela, Backspace/Delete apaga); uma tecla já usada noutro papel passa para este. O quadro mostra um teclado
+   reduzido (F1–F12 só se usadas, 1–0, Q–P, A–L, Z–M) por camada (sem modificador, Shift, Ctrl, Alt) com o ícone do 1.º
+   feitiço de cada papel. Guardado em c.hk (papel → tecla). */
+const HKROWS=[["1","2","3","4","5","6","7","8","9","0"],["Q","W","E","R","T","Y","U","I","O","P"],["A","S","D","F","G","H","J","K","L"],["Z","X","C","V","B","N","M"]];
+const HKF=["F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
+function rxKbdHTML(Lr){
+  // (com duas linhas, o mesmo papel aparece duas vezes: junta-se o elemento da linha)
+  const hk=rxHk(), tiles=[], two=Lr.rows.length>1; Lr.rows.forEach(r=>r.keys.forEach(k=>tiles.push(two?Object.assign({},k,{el:r.el}):k))); Lr.common.forEach(k=>tiles.push(k));
+  const by={}; tiles.forEach(k=>{ const u=hk[k.k]; if(u&&!by[u]) by[u]=k; });
+  const used=Object.keys(by); if(!used.length) return `<div class="card rx-kbd"><h3>O teu teclado</h3><p class="small muted" style="margin:0">Ainda sem teclas. Escolhe a tecla de cada papel acima e o teclado aparece aqui, com o feitiço em cada tecla.</p></div>`;
+  const split=u=>{ const m=/^((?:Ctrl|Alt|Shift)\+)*/.exec(u)[0]; return [m.replace(/\+$/,""), u.slice(m.length)]; };
+  const layers=["","Shift","Ctrl","Alt"].filter(L=>used.some(u=>split(u)[0]===L)).concat([...new Set(used.map(u=>split(u)[0]))].filter(L=>!["","Shift","Ctrl","Alt"].includes(L)));
+  const known=new Set(HKROWS.flat().concat(HKF)), extra=used.filter(u=>!known.has(split(u)[1]));
+  const cell=(L,key)=>{ const u=L?L+"+"+key:key, k=by[u]; if(!k) return `<span class="kb-k"><i>${esc(key)}</i></span>`;
+    const a=k.mab?k.mab.acts[0]:k.a; return `<span class="kb-k on" title="${esc(u)}: ${esc(k.label)}${k.el?` (${esc(ELN[k.el]||k.el)})`:""}"><i>${esc(key)}</i>${rxIc(a)}${k.mab?'<em>MAB</em>':""}</span>`; };
+  const board=L=>{ const f=HKF.some(x=>by[L?L+"+"+x:x]); return `<div class="kb">${layers.length>1?"":`<div class="kb-l">${L?esc(L)+" +":"Sem modificador"}</div>`}${f?`<div class="kb-r kb-f">${HKF.map(x=>cell(L,x)).join("")}</div>`:""}${HKROWS.map((r,i)=>`<div class="kb-r" style="--off:${[0,0.25,0.5,0.75][i]}">${r.map(x=>cell(L,x)).join("")}</div>`).join("")}</div>`; };
+  const legend=tiles.filter(k=>hk[k.k]).map(k=>{ const a=k.mab?k.mab.acts[0]:k.a; return `<li><kbd>${esc(hk[k.k])}</kbd>${rxIc(a)}<span>${esc(k.label)}</span>${k.el?`<span class="tiny muted">${esc(ELN[k.el]||k.el)}</span>`:""}</li>`; }).join("");
+  const cur=layers.includes(HKLAYER)?HKLAYER:layers[0], cnt=L=>used.filter(u=>split(u)[0]===L).length;
+  const tabs=layers.length>1?`<div class="seg kb-tabs" role="group" aria-label="Camada do teclado">${layers.map(L=>`<button type="button" data-hklayer="${esc(L)}" aria-pressed="${L===cur}">${L?esc(L):"Sem modificador"} <span class="tiny muted">${cnt(L)}</span></button>`).join("")}</div>`:"";
+  return `<div class="card rx-kbd"><div class="kb-h"><h3>O teu teclado</h3><button type="button" class="btn small ghost" data-hkclear>Limpar teclas</button></div>${tabs}${board(cur)}
+    ${extra.length?`<p class="small muted" style="margin:0">Fora do teclado: ${extra.map(u=>`<kbd>${esc(u)}</kbd> ${esc(by[u].label)}`).join(" · ")}</p>`:""}<ul class="kb-lg">${legend}</ul></div>`;
+}
+// ouvir a tecla: um botão de cada vez
+let HKON=null, HKLAYER="";
+function hkStop(){ if(HKON){ HKON.classList.remove("listen"); HKON=null; } const i=$("hkIn"); if(i) i.remove(); }
+function hkName(e){
+  const k=e.key; if(!k||["Shift","Control","Alt","Meta","CapsLock","Tab","Dead","Unidentified","Process"].includes(k)) return null;
+  let b = /^F([1-9]|1[0-2])$/.test(k) ? k : e.code&&/^Key[A-Z]$/.test(e.code) ? e.code.slice(3) : e.code&&/^Digit\d$/.test(e.code) ? e.code.slice(5) : e.code&&/^Numpad/.test(e.code) ? "Num"+e.code.slice(6) : k===" " ? "Space" : k.length===1 ? k.toUpperCase() : k;
+  return (e.ctrlKey?"Ctrl+":"")+(e.altKey?"Alt+":"")+(e.shiftKey?"Shift+":"")+b;
+}
+function hkSet(role,u){ const c=C(); if(!c) return; c.hk=c.hk||{};
+  if(u){ Object.keys(c.hk).forEach(r=>{ if(r!==role&&c.hk[r]===u) delete c.hk[r]; }); c.hk[role]=u; } else delete c.hk[role];
+  save(); renderRx(); const b=document.querySelector(`[data-hkset="${CSS.escape(role)}"]`); if(b) b.focus({preventScroll:true}); }
+document.addEventListener("click", e=>{
+  const b=e.target.closest&&e.target.closest("[data-hkset]");
+  if(b){ e.preventDefault(); if(HKON===b){ hkStop(); return; } hkStop(); HKON=b; b.classList.add("listen"); b.innerHTML="Carrega numa tecla…";
+    // (no telemóvel o teclado do ecrã só abre com um campo de texto)
+    const i=document.createElement("input"); i.id="hkIn"; i.className="hk-in"; i.setAttribute("aria-label","Tecla"); i.autocomplete="off"; i.autocapitalize="characters";
+    b.after(i); i.focus({preventScroll:true});
+    i.addEventListener("input", ()=>{ const v=i.value.trim().slice(-1).toUpperCase(); if(v&&HKON){ const r=HKON.dataset.hkset; hkStop(); hkSet(r,v); } });
+    i.addEventListener("blur", ()=>setTimeout(()=>{ if(HKON&&document.activeElement!==i) { hkStop(); renderRx(); } },150));
+    return; }
+  const lb=e.target.closest&&e.target.closest("[data-hklayer]"); if(lb){ HKLAYER=lb.dataset.hklayer; renderRx(); return; }
+  if(e.target.closest&&e.target.closest("[data-hkclear]")){ const c=C(); if(c){ delete c.hk; save(); renderRx(); } } });
+document.addEventListener("keydown", e=>{ if(!HKON) return;
+  if(e.key==="Escape"){ e.preventDefault(); hkStop(); renderRx(); return; }
+  const r=HKON.dataset.hkset;
+  if(e.key==="Backspace"||e.key==="Delete"){ e.preventDefault(); hkStop(); hkSet(r,""); return; }
+  const u=hkName(e); if(!u) return; e.preventDefault(); e.stopPropagation(); hkStop(); hkSet(r,u); }, true);
 function renderRx(){
   const el=$("rxBody"), c=C(); if(!el||!c) return;
   if(!RXD||!window.GrimRot){ el.innerHTML=`<p class="small muted">${RXERR||!window.GrimRot?"Não consegui carregar os dados das rotações.":"A carregar as rotações…"}</p>`;
@@ -45757,10 +45838,12 @@ function renderRx(){
   const rows=Lr.rows.map(r=>`<div class="rx-row"><h4>${chip(r.el)}<span class="small muted">${r.main?"linha principal":"com Shift: para criaturas que resistem a "+esc(ELN[Lr.rows[0].el]||"")}</span></h4><div class="rx-tiles">${r.keys.map(rxTile).join("")}</div></div>`).join("");
   const com=Lr.common.length?`<div class="rx-row"><h4><span class="small muted">Para as duas linhas</span></h4><div class="rx-tiles">${Lr.common.map(rxTile).join("")}</div></div>`:"";
   // (o porquê num <span> à parte: o tradutor do site traduz cada frase do motor sozinha)
+  RXROLE={}; Lr.rows.concat([{keys:Lr.common}]).forEach(r=>r.keys.forEach(k=>{ RXROLE[k.k]=k.label; }));
+  const kb=rxKbdHTML(Lr);
   const st=Lr.stance[0], stance=st?`<p class="small rx-stc">Antes de começar, liga <b data-spl="${esc(st.n)}">${elink("feitico",[st.n,st.w],esc(st.n))}</b> <code>${esc(st.w)}</code>: <span>${esc(st.why)}</span></p>`:"";
-  const how=Lr.how.length?`<div class="card rx-how"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKb(h.txt)}</dd>`).join("")}</dl></div>`:"";
-  el.innerHTML=`<div class="card rx-lay"><div><h3>A tua barra de ataque</h3><p class="small muted" style="margin:2px 0 0">As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?" MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.":""}</p></div>${stance}${rows}${com}</div>
-    ${how}${rxCmpHTML(c,opt)}${rxStatsLine(c,Lr.stats,gr)}`;
+  const how=Lr.how.length?`<div class="card rx-how"><h3>Como jogar</h3><dl>${Lr.how.map(h=>`<dt>${esc(h.t)}</dt><dd>${rxKbU(h.txt)}</dd>`).join("")}</dl></div>`:"";
+  el.innerHTML=`<div class="card rx-lay"><div><h3>A tua barra de ataque</h3><p class="small muted" style="margin:2px 0 0">Carrega em «+ Tecla» e depois na tecla que usas no Tibia. Cada papel tem a mesma função nas duas linhas.${Lr.rows.some(r=>r.keys.some(k=>k.mab))?" <span>MAB: no jogo, botão direito numa tecla da barra → <i>Assign Multiaction</i>; cada toque dispara a 1.ª ação que estiver pronta.</span>":""}</p></div>${stance}${rows}${com}</div>
+    ${kb}${how}${rxCmpHTML(c,opt)}${rxStatsLine(c,Lr.stats,gr)}`;
 }
 // ler o clientoptions.json: só hotkeyOptions, um preset de cada vez em c.tbar; escolhe o preset com o nome da personagem
 document.addEventListener("change", e=>{ const t=e.target;
@@ -46754,7 +46837,7 @@ function setSumHTML(t,lab,c){
   const so=c?setSkOk(c,t):null, sk=so?sk0.filter(([x])=>so.ok(x)):sk0, nc=so?sk0.filter(([x])=>!so.ok(x)):[], skt=([x,v])=>`${v>0?"+":""}${v} ${esc(SKN[x]||x)}`;
   return `<div class="hs-h"><b>Bónus do set</b><span>${lab}</span></div>
     <div class="hs-kv">${kv.map(([k,l,v,u])=>`<div class="hs-i" data-k="${k}"><i aria-hidden="true"><svg viewBox="0 0 24 24">${SUMI[k]}</svg></i><b>${v}${u?` <small>${esc(String(u))}</small>`:""}</b><span>${l}</span></div>`).join("")}</div>
-    <div class="hs-row"><span class="hs-l">Skills</span><div class="hs-chips">${sk.length||nc.length?sk.map(x=>`<span class="hs-sk">${skt(x)}</span>`).join("")+(nc.length?`<span class="hs-sk hs-nc">${nc.map(skt).join(" · ")} (${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:"não contam para esta vocação"})</span>`:""):`<span class="tiny muted">nenhuma</span>`}</div></div>
+    <div class="hs-row"><span class="hs-l">Skills</span><div class="hs-chips">${sk.length||nc.length?sk.map(x=>`<span class="hs-sk">${skt(x)}</span>`).join("")+(nc.length?`<span class="hs-sk hs-nc">${nc.map(skt).join(" · ")} <span>(${so.w?`não contam com ${esc(SKN[so.w]||so.w)}`:"não contam para esta vocação"})</span></span>`:""):`<span class="tiny muted">nenhuma</span>`}</div></div>
     <div class="hs-row"><span class="hs-l">Proteções</span><div class="hs-chips">${ab.length?ab.map(([e,v])=>`<span class="hs-pr c-${e}${v<0?" neg":""}">${esc(elName(e))} <b>${v>0?"+":""}${v}%</b></span>`).join(""):`<span class="tiny muted">nenhuma neste set</span>`}</div></div>
     ${ex.length?`<div class="hs-row"><span class="hs-l">Extra</span><div class="hs-chips">${ex.slice(0,6).map(x=>`<span class="hs-sk">${esc(x)}</span>`).join("")}</div></div>`:""}${c&&(t.wb==="bow"||t.wb==="crossbow")?`
     <div class="hs-row"><span class="hs-l">Munição</span><div class="hs-chips">${ammoChips(t.wb,c.level)}${t.sb!=="quiver"?`<span class="hs-sk" title="${esc(quivTip)}">Aljava: Quiver, Red ou Blue</span>`:""}</div></div>`:""}`;

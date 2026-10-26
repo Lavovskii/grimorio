@@ -89,6 +89,13 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   entrarem itens novos) e do `maxTier` de data/forge.json, que dá também o efeito de cada tier e o custo mínimo de fusão
   (`forgeMin`). O resumo mostra os efeitos com a Amplification das botas (chance × (1 + amp%); testes a cada 2 s = 1800 por
   hora) e o «No jogo» conta o Onslaught no dano (× (1 + 0,6 × chance)) e diz quantos golpes o Ruse evita.
+- Teclas do jogador (r22): a página das rotações já não mostra as teclas sugeridas pelo motor (Q, W, E… são só o id de cada
+  papel). Cada papel tem «+ Tecla» (`data-hkset`): ouve a próxima tecla (Ctrl/Alt/Shift + letra, número, F1–F12, Numpad,
+  Space; Esc cancela, Backspace/Delete apaga; no telemóvel um campo escondido abre o teclado do ecrã) e guarda em
+  `c.hk` (papel → tecla); uma tecla já usada passa para o papel novo. «O teu teclado» (`rxKbdHTML`) mostra um teclado
+  reduzido por camada (separadores Sem modificador / Shift / Ctrl / Alt; fila F só se usada) com o ícone do 1.º feitiço de
+  cada papel, e uma legenda. «Como jogar» troca as teclas sugeridas pelas do jogador (`rxKbU`; sem tecla, o nome do papel).
+  O comparador do clientoptions.json continua a falar das teclas da barra do próprio jogador.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,

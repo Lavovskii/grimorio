@@ -745,7 +745,7 @@
     if (voc !== "sorcerer" && voc !== "druid") recMabs.forEach(function (k) {
       if (used[k.k] || (k.role !== "mabA" && k.role !== "mabS")) return;
       if (k.mab.acts.every(function (a) { return covered[a.n]; })) return;
-      tips.push({ t: "add", txt: "Cria um MAB para " + k.label.toLowerCase() + " (" + k.k.replace("Shift+", "Shift + ") + " na barra recomendada): " + k.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + ". " + k.when });
+      tips.push({ t: "add", txt: "Cria um MAB para " + k.label.toLowerCase() + ": " + k.mab.acts.map(function (a) { return nm(a.n); }).join(" › ") + ". " + k.when });
       k.mab.acts.forEach(function (a) { covered[a.n] = 1; });
     });
     // 2) runas de área de um elemento que as tuas linhas não usam
