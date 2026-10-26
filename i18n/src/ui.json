@@ -556,7 +556,7 @@
   "k": "x"
  },
  "600 12px system-ui": {
-  "c": "index.html: g.arc(X,Y,5,0,7); g.fillStyle=\"#E5484D\"; g.fill(); g.font=\"600 12px system-ui\"; g.fillStyle=\"rgba(",
+  "c": "index.html: t fl=window.I18N?I18N.tr(floorTxt(z)):floorTxt(z); g.font=\"600 12px system-ui\"; g.fillStyle=\"rgba(",
   "k": "x"
  },
  "7 500 gp": {
@@ -3260,7 +3260,7 @@
   "k": "x"
  },
  "Escape": {
-  "c": "index.html: ; } }); p.addEventListener(\"keydown\", e=>{ if(e.key===\"Escape\"){ e.preventDefault(",
+  "c": "index.html: rget.closest&&e.target.closest(\"[data-lsq]\"); if(i&&e.key===\"Escape\"&&i.value){ e.preven",
   "k": "x"
  },
  "Escolhe a criatura: majors exigem o Bestiary completo; minors só o estágio 2.": {
@@ -5663,6 +5663,10 @@
   "c": "index.html: ength?now.slice(0,80).map(x=>row(x)).join(\"\"):oth.length?\"\":`<p class=\"small muted\" style=\"margin:10px\">Nada encontrado${f?` com “${esc(PK.q)}”`:\"\"}.</p>`) + (oth.length?",
   "k": "p"
  },
+ "Nada nesta lista.": {
+  "c": "index.html: n ? `<span>${n} ${n===1?\"resultado\":\"resultados\"}</span>` : `<span>Nada nesta lista.</span>${C2.all?` <button type=\"button\" class=\"linkbtn\" data-lsall=\"${k}\">Procurar em todos ›</button>`:\"\"}`; } function lsInit(",
+  "k": "x"
+ },
  "Nada neste slot. Escolhe um item abaixo.": {
   "c": "index.html: l muted\">Este item não aceita imbuements.</p>`; } else h+=`<p class=\"muted\" style=\"margin:8px 0\">Nada neste slot. Escolhe um item abaixo.</p>`; const mine = ran",
   "k": "x"
@@ -7167,6 +7171,22 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Procurar boss, sítio, quest ou item": {
+  "c": "à mão (r25): aria-label das pesquisas nas listas",
+  "k": "x"
+ },
+ "Procurar boss, sítio, quest ou item…": {
+  "c": "index.html: s:{list:\"#bsBody\", item:\".bs-r\", f:\".bs-h,.bs-st,.bs-v\", ph:\"Procurar boss, sítio, quest ou item…\", all:\"#bsSeg button",
+  "k": "x"
+ },
+ "Procurar charm ou efeito": {
+  "c": "à mão (r25): aria-label das pesquisas nas listas",
+  "k": "x"
+ },
+ "Procurar charm ou efeito…": {
+  "c": "index.html: harmAll\", item:\".cm-list>li\", f:\".cm-t\", grp:\".cm-list\", ph:\"Procurar charm ou efeito…\"} }; const LSQ={}; c",
+  "k": "x"
+ },
  "Procurar conquista, montaria ou outfit": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -7179,8 +7199,20 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Procurar em todos ›": {
+  "c": "index.html: ultados\"}</span>` : `<span>Nada nesta lista.</span>${C2.all?` <button type=\"button\" class=\"linkbtn\" data-lsall=\"${k}\">Procurar em todos ›</button>`:\"\"}`; } function ls",
+  "k": "x"
+ },
  "Procurar feitiço por nome ou palavras": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Procurar hunt, cidade ou criatura": {
+  "c": "à mão (r25): aria-label das pesquisas nas listas",
+  "k": "x"
+ },
+ "Procurar hunt, cidade ou criatura…": {
+  "c": "index.html:  LSC={ hunts:{list:\"#huntList\", item:\".hc\", f:\".hc-b\", ph:\"Procurar hunt, cidade ou criatura…\", all:\"gs\"}, bosse",
   "k": "x"
  },
  "Procurar hunts, itens, criaturas, feitiços, NPCs…": {
@@ -7217,6 +7249,14 @@
  },
  "Procurar pelo nome no Tibia": {
   "c": "index.html: ton\" data-cancel=\"1\">Cancelar</button>`:\"\"}${d.mode===\"new\"?`<button class=\"linkbtn\" type=\"button\" data-lkback=\"1\">Procurar pelo nome no Tibia</button>`:\"\"}</div> </form>",
+  "k": "x"
+ },
+ "Procurar quest ou o que desbloqueia": {
+  "c": "à mão (r25): aria-label das pesquisas nas listas",
+  "k": "x"
+ },
+ "Procurar quest ou o que desbloqueia…": {
+  "c": "index.html: roups\", item:\".q\", f:\"h5,p,.meta\", grp:\"details.qgroup\", ph:\"Procurar quest ou o que desbloqueia…\", all:\"#qFilterSeg b",
   "k": "x"
  },
  "Procurar quest, item, NPC…": {
@@ -11767,6 +11807,10 @@
   "c": "quests/js/app.js: \": \"Conteúdo\", }; function translateWiki(root) { $$(\"h2, h3, h4, th, .pi-data-label, .mw-headline\", root).forEach((el)",
   "k": "x"
  },
+ "h5,p,.meta": {
+  "c": "index.html: n:last-child\"}, quests:{list:\"#questGroups\", item:\".q\", f:\"h5,p,.meta\", grp:\"details.qgrou",
+  "k": "x"
+ },
  "hailstorm rod": {
   "c": "index.html: \",paladin:\"royal crossbow\",sorcerer:\"wand of inferno\",druid:\"hailstorm rod\",monk:\"drachaku\"}; c",
   "k": "x"
@@ -13568,11 +13612,11 @@
   "k": "x"
  },
  "resultado": {
-  "c": "quests/js/app.js: ion>`).join(\"\"); } $(\"#accResults\").innerHTML = `<p class=\"muted\">${list.length} resultado${list.length === 1 ? \"\" : \"s\"}</p><div class=\"acc-grid\">${html}</div>` + (list.len",
+  "c": "index.html:  out.innerHTML = !ws.length ? \"\" : n ? `<span>${n} ${n===1?\"resultado\":\"resultados\"}</span",
   "k": "x"
  },
  "resultados": {
-  "c": "quests/js/app.js: st.slice(0, wikiLimit); $(\"#wikiResults\").innerHTML = `<p class=\"muted\">${list.length.toLocaleString(LOC)} resultados${!words.length ? \" · ordenados pelos mais usados nos guias\" : \"\"}</p> <div class=\"ent-grid\">${shown.ma",
+  "c": "index.html: TML = !ws.length ? \"\" : n ? `<span>${n} ${n===1?\"resultado\":\"resultados\"}</span>` : `<span>N",
   "k": "x"
  },
  "revisto": {
