@@ -780,7 +780,7 @@
   "k": "p"
  },
  "A tua barra de ataque": {
-  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:8px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
   "k": "x"
  },
  "A tua barra já tem tudo o que a recomendada tem, pela ordem certa.": {
@@ -1952,11 +1952,11 @@
   "k": "x"
  },
  "Carrega em «+ Tecla» e depois na tecla que usas no Tibia. Cada papel tem a mesma função nas duas linhas.": {
-  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:8px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
   "k": "x"
  },
  "Carrega em «+ Tecla» e depois na tecla que usas no Tibia. Cada papel tem a mesma função nas duas linhas.{0}": {
-  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:2px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
+  "c": "index.html: KbU(h.txt)}</dd>`).join(\"\")}</dl></div>`:\"\"; el.innerHTML=`<div class=\"card rx-lay\"><div><h3>A tua barra de ataque</h3><p class=\"small muted\" style=\"margin:8px 0 0\">Carrega em «+ Tecla» e depois na tecla que usas no Tibi",
   "k": "p"
  },
  "Carrega numa tecla…": {
@@ -3218,6 +3218,14 @@
  "Enter": {
   "c": "index.html: bute(\"aria-label\",\"Pesquisar no Grimório\"); p.innerHTML=`<div class=\"gsp-in\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input id=\"gsQ\" type=\"search\" autocomple",
   "k": "x"
+ },
+ "Entrada da zona: o boss fica lá dentro.": {
+  "c": "index.html: {b.pa?(loc?`Entrada de ${esc(loc)}: o boss fica lá dentro.`:\"Entrada da zona: o boss fica lá dentro.\"):(loc?`Onde aparece",
+  "k": "x"
+ },
+ "Entrada de {0}: o boss fica lá dentro.": {
+  "c": "index.html: {esc(b.n)}\"></canvas> <p class=\"tiny muted\">${b.pa?(loc?`Entrada de ${esc(loc)}: o boss fica lá dentro.`:\"Entrada da zona: o",
+  "k": "p"
  },
  "Entrega os 5 Heavy Old Tomes ao Albinius para poderes usar os altares.": {
   "c": "index.html: s</small></div>`; // guia const list = [{s:\"Primeiro\",i:\"Entrega os 5 Heavy Old Tomes ao Albinius para poderes usar os altares.\"}].concat(vd.imbs); ",
@@ -5175,6 +5183,10 @@
   "c": "quests/js/app.js: label\">${marks.length ? `${marks.length} pontos marcados` : \"Mapa da zona\"}</span> $",
   "k": "x"
  },
+ "Mapa de {0}": {
+  "c": "index.html: b,loc){ if(!b.pos) return \"\"; const [x,y,z]=b.pos; return `<div class=\"bs-map\"><canvas class=\"qpos\" width=\"360\" height=\"240\" data-qpos=\"${x},${y},${z}\" aria-label=\"Mapa de ${esc(b.n)}\"></canvas> <p class=\"tiny muted\">${b",
+  "k": "p"
+ },
  "Mapa do Tibia": {
   "c": "quests/js/app.js: ull; function renderMapPage(arg) { view().innerHTML = `<div class=\"map-page\"> <div class=\"toolbar\"><h1>Mapa do Tibia</h1> <form id=\"gotoForm\" class=\"map-toolbar\" style=\"margin:0\"> <input class=\"input\" id=\"gotoInput\" plac",
   "k": "x"
@@ -6395,6 +6407,14 @@
   "c": "index.html: s onde aparece não pedem quest.</p>`; const tabs=[[\"onde\",\"Onde aparece\",where,hp_.length||0",
   "k": "x"
  },
+ "Onde aparece.": {
+  "c": "index.html:  o boss fica lá dentro.\"):(loc?`Onde aparece: ${esc(loc)}.`:\"Onde aparece.\")}</p>${mapBtn(x,y,z",
+  "k": "x"
+ },
+ "Onde aparece: {0}.": {
+  "c": "index.html: lá dentro.`:\"Entrada da zona: o boss fica lá dentro.\"):(loc?`Onde aparece: ${esc(loc)}.`:\"Onde aparece.\")}</",
+  "k": "p"
+ },
  "Onde aprender": {
   "c": "index.html: t(\"item\",\"728 × 90 · 320 × 100\",\"ip-wide\")} ${teach?`<section class=\"card ip-wide\"><h3>Onde aprender</h3><div class=\"tablewrap\"><table><thead><tr><th>NPC</th><th>Cidade</th><th></th></tr></thead><tbody>${teach}</tbody></",
   "k": "x"
@@ -6964,7 +6984,11 @@
   "k": "x"
  },
  "Porquê e como": {
-  "c": "index.html: arece em raids: não se marca, aparece no mundo.\"); return `<div class=\"bs-r\" data-bsk=\"${esc(r.k)}\"><span class=\"bs-ic\">${crSpr(r.k,44)}</span> <div class=\"bs-m\"><div class=\"bs-h\"><a class=\"elink\" href=\"${monHref(b.n)}\">",
+  "c": "index.html: details class=\"bs-d\"><summary>${b.pos?\"Porquê, como e onde\":\"Porquê e como\"}</summary><ul class",
+  "k": "x"
+ },
+ "Porquê, como e onde": {
+  "c": "index.html: an>`:\"\"}</div> <details class=\"bs-d\"><summary>${b.pos?\"Porquê, como e onde\":\"Porquê e como\"}</s",
   "k": "x"
  },
  "Porquê: {0}.": {
@@ -9336,7 +9360,7 @@
   "k": "x"
  },
  "Ver no mapa": {
-  "c": "index.html: p=\"${x},${y},${z}\" data-maplabel=\"${esc(label||\"\")}\">${txt||\"Ver no mapa\"}</button>`; } const",
+  "c": "index.html: \" data-maplabel=\"${esc(b.n+(loc?\" · \"+loc:\"\"))}\">${esc(loc||\"Ver no mapa\")} ›</button>`:loc?`",
   "k": "x"
  },
  "Ver no mapa ›": {
@@ -12512,7 +12536,7 @@
   "k": "x"
  },
  "nenhum elemento": {
-  "c": "index.html: [1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")||\"nenhum elemento\"}.</li>`:\"\"}</ul></d",
+  "c": "index.html: [1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(\" \")||\"nenhum elemento\"}.</li>`:\"\"}</ul>${b",
   "k": "x"
  },
  "nenhum item deste set tem slots de imbuement.": {

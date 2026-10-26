@@ -10,7 +10,10 @@ O loot e as resistências ficam no data/creatures.json (o site junta-os pela cha
 Formato: {"v":1, "fontes":…, "pts":{cls:[[kills,pontos]×3]}, "b":{chave:{…}}} com um boss por linha (o Git junta sem conflitos).
 Campos de cada boss: n (nome), c ('b' Bane, 'a' Archfoe, 'n' Nemesis), hp, xp, cd (horas; null = desconhecido), sp ('t' por
 quest/alavanca, 'r' raid, 'g' spawn normal; null), lv (1 = alavanca), q (quest), ql/qr (nível mínimo/recomendado da quest),
-loc ([sítios]), md (dano máximo por turno, sem summons; null = desconhecido), dm ({elemento: %} do dano que faz).
+loc ([sítios]), md (dano máximo por turno, sem summons; null = desconhecido), dm ({elemento: %} do dano que faz),
+pos ([x, y, z] no mapa: o {{Mapper Coords}} da localização na TibiaWiki; senão o 1.º spawn de data/spawns.json; senão a
+entrada do 1.º sítio em quests/data/places.json do Questski, ou o 1.º {{Mapper Coords}} da página desse sítio na
+TibiaWiki, e então pa = 1: aproximada, é a zona e não o sítio do boss).
 Uso: python -I build_bosses.py [raiz] [--cache PASTA] [--offline] [--check] [--loot]
   --check: não grava; sai com 1 se o ficheiro gerado for diferente do que está no disco.
   --loot: acrescenta também a data/items.json os itens do loot destes bosses que lá faltam (ex.: Gold Token, Silver Token),
@@ -135,6 +138,29 @@ def links(s):
     return out
 
 
+MC = re.compile(r'\{\{\s*Mapper Coords\s*\|\s*(\d+)\.(\d+)\s*\|\s*(\d+)\.(\d+)\s*\|\s*(\d+)')
+
+
+def mapper(s):
+    """1.º {{Mapper Coords|x.x|y.y|z|...}} → [x, y, z] (cada coordenada é bloco.casa, 256 casas por bloco)."""
+    m = MC.search(str(s or ''))
+    return [int(m.group(1)) * 256 + int(m.group(2)), int(m.group(3)) * 256 + int(m.group(4)), int(m.group(5))] if m else None
+
+
+def places(root):
+    """Sítios do Questski com entrada no mapa: nome (e alias) em minúsculas → [x, y, z]."""
+    P = json.load(open(os.path.join(root, 'quests', 'data', 'places.json'), encoding='utf-8'))
+    out = {}
+    for n, v in (P.get('places') or {}).items():
+        e = (v or {}).get('entrance') or {}
+        if all(isinstance(e.get(k), int) for k in 'xyz'):
+            out[n.lower()] = [e['x'], e['y'], e['z']]
+    for a, n in (P.get('alias') or {}).items():
+        if isinstance(n, str) and n.lower() in out:
+            out.setdefault(a.lower(), out[n.lower()])
+    return out
+
+
 def spawn(s):
     s = str(s or '').lower()
     return 't' if 'trigger' in s else 'r' if 'raid' in s else 'g' if 'regular' in s else None
@@ -167,6 +193,16 @@ def build(o):
         f = infobox((qp.get(q) or {}).get('content') or '', 'Quest')
         qinfo[q] = (num(f.get('lvl')), num(f.get('lvlrec')))
     crs = json.load(open(os.path.join(o['root'], 'data', 'creatures.json'), encoding='utf-8'))
+    sps = json.load(open(os.path.join(o['root'], 'data', 'spawns.json'), encoding='utf-8'))
+    pls = places(o['root'])
+    # sítios sem entrada no Questski: o 1.º {{Mapper Coords}} da página do sítio na TibiaWiki
+    need = sorted({x for t, (c, f, q) in raw.items() if not mapper(f.get('location')) and not sps.get(t.lower())
+                   for x in links(f.get('location')) if not re.search(r'\bQuest\b', x) and x.lower() not in pls})
+    lp = BS.fetch(need, cache, off)
+    for x in need:
+        m = mapper((lp.get(x) or {}).get('content'))
+        if m:
+            pls[x.lower()] = m
     out = {}
     for t, (c, f, q) in sorted(raw.items()):
         k = t.lower()
@@ -178,6 +214,13 @@ def build(o):
              'q': q, 'ql': ql, 'qr': qr,
              'loc': [x for x in links(f.get('location')) if not re.search(r'\bQuest\b', x)][:4],
              'md': maxdmg(f.get('maxdmg')), 'dm': dmgmix(f.get('behaviour'))}
+        pos, pa = mapper(f.get('location')), 0
+        if not pos and sps.get(k):
+            pos = list(sps[k][0][:3])
+        if not pos:
+            pos = next((pls[x.lower()] for x in e['loc'] if x.lower() in pls), None)
+            pa = 1 if pos else 0
+        e['pos'], e['pa'] = pos, pa
         out[k] = {x: v for x, v in e.items() if v not in (None, [], {}, 0) or x in ('c', 'n')}
     return {'v': 1, 'fontes': 'TibiaWiki (Infobox Creature, Infobox Quest, Bosstiary e Lever Bosses), outubro de 2026',
             'pts': PTS, 'b': out}
@@ -238,7 +281,8 @@ def main(argv):
     b = D['b']
     print(dst, len(b), 'bosses |', sum(1 for x in b.values() if x['c'] == 'b'), 'Bane,', sum(1 for x in b.values() if x['c'] == 'a'), 'Archfoe,',
           sum(1 for x in b.values() if x['c'] == 'n'), 'Nemesis | com quest:', sum(1 for x in b.values() if 'q' in x),
-          '| com dano máximo:', sum(1 for x in b.values() if 'md' in x), '| alavanca:', sum(1 for x in b.values() if 'lv' in x))
+          '| com dano máximo:', sum(1 for x in b.values() if 'md' in x), '| alavanca:', sum(1 for x in b.values() if 'lv' in x),
+          '| no mapa:', sum(1 for x in b.values() if 'pos' in x), f"({sum(1 for x in b.values() if 'pa' in x)} pela entrada da zona)")
     if '--loot' in argv:
         return add_loot(o, list(b))
     return 0

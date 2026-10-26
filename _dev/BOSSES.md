@@ -50,3 +50,8 @@ Bónus de loot do boss no slot:
 - A TibiaWiki não tem a vida de alguns bosses recentes. As notas de estratégia (texto livre, em inglês) não entram.
 - A quest de acesso vem da 1.ª quest ligada nas notas ou na localização da página do boss, mais a tabela `ACCESS` do
   `build_bosses.py` para os que não a ligam. Sem quest, não há nível de acesso.
+- Posição no mapa (`pos`, r24): o 1.º `{{Mapper Coords}}` da localização na página do boss (exata); senão o 1.º spawn de
+  `data/spawns.json` (exato); senão a entrada do 1.º sítio em `quests/data/places.json` do Questski ou o 1.º
+  `{{Mapper Coords}}` da página desse sítio na TibiaWiki, e então `pa = 1` (aproximada: é a zona, o boss fica lá dentro).
+  Em outubro de 2026: 272 de 316 com mapa (101 aproximados). Os outros estão em zonas instanciadas sem coordenadas na
+  wiki (Warzones, Zarganash, Dream Scar…).
