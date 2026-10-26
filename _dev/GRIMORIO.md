@@ -99,6 +99,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
 - Mapas dos bosses (r24): cada boss com `pos` (data/bosses.json, ver `_dev/BOSSES.md`) tem o sítio no cabeçalho como
   ligação para o mapa grande (`data-map`) e, em «Porquê, como e onde», o mapa pequeno (canvas `.qpos`, desenhado com
   `drawPos` quando abre) e «Abrir no mapa». O andar escrito no canvas passa por `I18N.tr` (o tradutor não vê canvas).
+- Pesquisa nas listas (r25): hunts, bosses, quests e charms têm um campo (`.lsbar[data-ls]`, montado por `lsInit`; a
+  configuração está em `LSC`: lista, itens, campos de texto, grupos e o «Procurar em todos»). Esconde os itens sem todas as
+  palavras (sem acentos, no texto que se vê, por isso na língua escolhida; `data-lsx` junta texto escondido, ex.: a quest
+  de cada boss) e volta a filtrar quando a lista se redesenha (MutationObserver). Os bosses só mostram 120: com pesquisa,
+  `renderBosses` filtra os dados antes do corte. Sem resultados, «Procurar em todos» muda para «Todos»/«Todas» ou, nas
+  hunts, abre a pesquisa geral com o mesmo texto. Esc limpa. Os separadores de wiki, tarefas e inventário já tinham pesquisa.
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,

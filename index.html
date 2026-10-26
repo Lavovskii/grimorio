@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261026b" data-c data-q></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261026c" data-c data-q></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -3142,6 +3142,13 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
 @media (pointer:coarse){
   html input:not([type=checkbox]):not([type=radio]):not([type=range]),html select,html textarea{font-size:16px!important}
 }
+/* r25: pesquisa nas listas */
+.lsbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ls-in{flex:1 1 280px;max-width:460px;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.ls-in:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.ls-in svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--muted);stroke-width:2}
+.ls-in input,html[data-ui="modern"] .ls-in input{flex:1;min-width:0;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;color:inherit;font:inherit;font-size:15px;outline:none;padding:10px 0!important;min-height:0}
+.ls-n{display:flex;align-items:center;gap:8px}
 /* r23: mais respiro. Entrelinha maior no texto pequeno e mais espaço entre blocos, sem mudar o desenho */
 .small{line-height:1.6} .tiny{line-height:1.5}
 .card p{line-height:1.6}
@@ -3280,7 +3287,8 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
         <div class="card hfil" id="huntFilters"></div>
         <div class="legend"><span><i class="dot great"></i> fraco ao teu dano</span><span><i class="dot ok"></i> neutro</span><span><i class="dot meh"></i> resiste um pouco</span><span><i class="dot bad"></i> resiste</span></div>
       </div>
-      <div id="huntList" style="margin-top:16px"></div>
+      <div class="lsbar" data-ls="hunts" style="margin-top:16px"></div>
+      <div id="huntList" style="margin-top:12px"></div>
       <div class="hidx" id="huntIdx" hidden></div>
       <div class="sec" id="avoidBox" hidden><h3>A evitar com esta vocação</h3><p class="muted">Hunts populares que, depois de validadas, resistem ao teu dano ou dão prejuízo.</p><div class="card" style="padding:4px 16px"><ul class="check" id="avoidList"></ul></div></div>
       <p class="note" style="margin-top:14px" id="huntNote"></p>
@@ -3291,6 +3299,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
     <!-- BOSSES (r16: shared/bosses.js + data/bosses.json) -->
     <section class="panel" data-p="bosses">
       <div class="ph"><span class="eyebrow">Hunts</span><h2>Bosses</h2><p id="bsLead">Que bosses aguentas no teu nível, quanto dão e o teu Bosstiary.</p></div>
+      <div class="lsbar" data-ls="bosses" style="margin-bottom:12px"></div>
       <div id="bsBody"></div>
     </section>
 
@@ -3410,6 +3419,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
           <div class="callout"><h4>Como ganhar charm points</h4><p class="small">Completa entradas do Bestiary: Harmless 1, Trivial 5, Easy 15, Medium 25, Hard 50, Challenging 100 pontos. Os majors pedem a criatura completa; os minors chegam com o estágio 2. Mudar um charm de criatura custa nível × 100 gp. As criaturas Very Rare completam-se com 5 kills e dão o dobro; a primeira vitória contra cada Echo Warden também dá pontos.</p></div>
         </div>
       </div>
+      <div class="lsbar" data-ls="charms" style="margin:16px 0 12px"></div>
       <div class="card cm-all" id="charmAll"></div>
     </section>
 
@@ -3418,6 +3428,7 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       <div class="ph"><span class="eyebrow">Progresso</span><h2>Quests</h2><p id="questLead"></p></div>
       <div class="controls"><div class="seg" id="qFilterSeg"></div></div>
       <div class="bar-prog" style="margin:14px 0"><i id="questBar" style="width:0"></i></div>
+      <div class="lsbar" data-ls="quests" style="margin-bottom:12px"></div>
       <div style="display:grid;gap:12px" id="questGroups"></div>
     </section>
 
@@ -44892,6 +44903,40 @@ function gsRender(){
 function gsPlace(){ const p=$("gsPop"); if(!p||p.hidden) return; const b=$("gsBtn").getBoundingClientRect(), bar=document.querySelector("header.bar").getBoundingClientRect();
   if(innerWidth<=620){ p.style.left="8px"; p.style.width=(innerWidth-16)+"px"; p.style.top=Math.round(bar.bottom+6)+"px"; return; }
   const W=Math.min(660,innerWidth-24); p.style.width=W+"px"; p.style.left=Math.round(Math.max(12,Math.min(b.right,innerWidth-12)-W))+"px"; p.style.top=Math.round(Math.max(8,b.top-5))+"px"; }
+/* r25: pesquisa nas listas (hunts, bosses, quests, charms). Esconde o que não tem todas as palavras escritas (sem acentos nem
+   maiúsculas, no texto que se vê, por isso também na língua escolhida); volta a filtrar sempre que a lista se redesenha
+   (MutationObserver só de childList: o filtro mexe em hidden, não em filhos). data-lsx num item junta texto que não se vê
+   (a quest de acesso de cada boss). Sem resultados: «Procurar em todos» muda para o
+   separador com tudo (bosses, quests) ou abre a pesquisa geral (hunts, que dependem dos filtros de nível). */
+const LSC={
+  hunts:{list:"#huntList", item:".hc", f:".hc-b", ph:"Procurar hunt, cidade ou criatura…", all:"gs"},
+  bosses:{list:"#bsBody", item:".bs-r", f:".bs-h,.bs-st,.bs-v", ph:"Procurar boss, sítio, quest ou item…", all:"#bsSeg button:last-child"},
+  quests:{list:"#questGroups", item:".q", f:"h5,p,.meta", grp:"details.qgroup", ph:"Procurar quest ou o que desbloqueia…", all:"#qFilterSeg button:last-child"},
+  charms:{list:"#charmAll", item:".cm-list>li", f:".cm-t", grp:".cm-list", ph:"Procurar charm ou efeito…"}
+};
+const LSQ={};
+const lsNorm = t => String(t||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+function lsApply(k){
+  const C2=LSC[k], box=document.querySelector(`.lsbar[data-ls="${k}"]`), L=document.querySelector(C2.list); if(!box||!L) return;
+  const ws=lsNorm(LSQ[k]).split(/\s+/).filter(Boolean), items=[...L.querySelectorAll(C2.item)]; let n=0;
+  items.forEach(it=>{ const t=lsNorm(([...it.querySelectorAll(C2.f)].map(x=>x.textContent).join(" ")||it.textContent)+" "+(it.dataset.lsx||"")), ok=ws.every(w=>t.includes(w)); it.hidden=!ok; if(ok) n++; });
+  if(C2.grp) L.querySelectorAll(C2.grp).forEach(g=>{ const any=[...g.querySelectorAll(C2.item)].some(x=>!x.hidden); g.hidden=ws.length>0&&!any; if(ws.length&&any&&g.tagName==="DETAILS") g.open=true;
+    if(g.classList.contains("cm-list")){ const h=g.previousElementSibling; if(h&&h.matches(".cm-h")) h.hidden=g.hidden; } });
+  L.querySelectorAll(".ad-slot").forEach(a=>{ a.hidden=ws.length>0; });
+  const out=box.querySelector(".ls-n");
+  out.innerHTML = !ws.length ? "" : n ? `<span>${n} ${n===1?"resultado":"resultados"}</span>` : `<span>Nada nesta lista.</span>${C2.all?` <button type="button" class="linkbtn" data-lsall="${k}">Procurar em todos ›</button>`:""}`;
+}
+function lsInit(){
+  document.querySelectorAll(".lsbar[data-ls]").forEach(box=>{ const k=box.dataset.ls, C2=LSC[k]; if(!C2||box.firstChild) return;
+    box.innerHTML=`<label class="ls-in"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" autocomplete="off" spellcheck="false" data-lsq="${k}" placeholder="${esc(C2.ph)}" aria-label="${esc(C2.ph.replace(/…$/,""))}"></label><span class="ls-n tiny muted" role="status" aria-live="polite"></span>`;
+    const L=document.querySelector(C2.list); if(L) new MutationObserver(()=>{ if(LSQ[k]) lsApply(k); }).observe(L,{childList:true,subtree:true}); });
+}
+// (bosses: a lista só mostra 120, por isso a pesquisa redesenha-a; o observador volta a filtrar)
+document.addEventListener("input", e=>{ const i=e.target.closest&&e.target.closest("[data-lsq]"); if(!i) return; const k=i.dataset.lsq; LSQ[k]=i.value; clearTimeout(i._t); i._t=setTimeout(()=>{ if(k==="bosses") renderBosses(); lsApply(k); },150); });
+document.addEventListener("keydown", e=>{ const i=e.target.closest&&e.target.closest("[data-lsq]"); if(i&&e.key==="Escape"&&i.value){ e.preventDefault(); e.stopPropagation(); i.value=""; LSQ[i.dataset.lsq]=""; if(i.dataset.lsq==="bosses") renderBosses(); lsApply(i.dataset.lsq); } }, true);
+document.addEventListener("click", e=>{ const b=e.target.closest&&e.target.closest("[data-lsall]"); if(!b) return; const k=b.dataset.lsall, C2=LSC[k];
+  if(C2.all==="gs"){ GS.q=LSQ[k]||""; gsOpen(); return; }
+  const t=document.querySelector(C2.all); if(t) t.click(); setTimeout(()=>lsApply(k),60); });
 function gsOpen(){
   let p=$("gsPop");
   if(!p){ p=document.createElement("div"); p.id="gsPop"; p.className="gsp"; p.setAttribute("role","dialog"); p.setAttribute("aria-label","Pesquisar no Grimório");
@@ -45937,7 +45982,7 @@ function bsRow(c,r,b,lo,CR){
   if(b.q) why.push(`Acesso: ${elink("quest",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:""})`:""}.`);
   if(b.lv) why.push("Sala com alavanca: até 5 jogadores, normalmente.");
   if(b.sp==="r") why.push("Aparece em raids: não se marca, aparece no mundo.");
-  return `<div class="bs-r" data-bsk="${esc(r.k)}"><span class="bs-ic">${crSpr(r.k,44)}</span>
+  return `<div class="bs-r" data-bsk="${esc(r.k)}"${b.q?` data-lsx="${esc(b.q)}"`:""}><span class="bs-ic">${crSpr(r.k,44)}</span>
     <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
       <div class="bs-st">${st}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
@@ -45967,6 +46012,9 @@ function renderBosses(){
   const pick=x=>f==="all"||(f==="solo"?x.r.st==="solo":f==="team"?(x.r.st==="team"||x.r.st==="unknown"):(x.r.st==="later"||x.r.st==="locked"));
   const lv=x=>Math.min(x.r.soloL||9999,x.r.teamL||9999,x.r.st==="locked"?x.b.ql:9999);
   const list=all.filter(pick).sort(f==="later"?(a,b)=>lv(a)-lv(b):(a,b)=>((b.lo&&b.lo.v)||0)-((a.lo&&a.lo.v)||0));
+  // r25: só se mostram 120; com pesquisa, filtra-se antes nos dados (nome, classe, sítio, quest, loot) para não perder os outros
+  const qw=lsNorm(LSQ.bosses).split(/\s+/).filter(Boolean);
+  const shown=qw.length&&list.length>120 ? list.filter(x=>{ const t=lsNorm([x.b.n,GrimBoss.CLS[x.b.c],(x.b.loc||[]).join(" "),x.b.q||"",...((x.lo&&x.lo.top)||[]).map(y=>y[0])].join(" ")); return qw.every(w2=>t.includes(w2)); }) : list;
   // Bosstiary
   const bst=c.bst&&typeof c.bst==="object"?c.bst:{}; let P=0, done=0;
   Object.entries(bst).forEach(([k,s])=>{ const b=BSD.b[k]; if(b&&+s>0){ P+=GrimBoss.pointsOf(BSD.pts,b.c,+s); done++; } });
@@ -45974,8 +46022,8 @@ function renderBosses(){
   const mk=w&&MKV[w]&&MKV[w].items;
   el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
       <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
-    <div class="bs-list">${list.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
-    ${list.length>120?`<p class="small muted">E mais ${list.length-120}: escolhe outra lista ou procura pelo nome na pesquisa.</p>`:""}
+    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
+    ${shown.length>120?`<p class="small muted">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:""}
     <details class="card bs-how"><summary>Como contamos</summary><ul class="small">
       <li>Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).</li>
       <li>Matar: a vida do boss ÷ 70% do teu dano por segundo de boss (o resto do tempo vai para mexer, curar e fugir), no elemento a que o boss é mais fraco, até 2,5 min (Bane), 5 min (Archfoe) ou 10 min (Nemesis) sozinho; em equipa, com 4 como tu e mais 50% de tempo.</li>
@@ -48909,6 +48957,7 @@ document.body.appendChild($("sheet")); // r2-t5: o painel fica no body (no Moder
 try{ if(!(history.state&&typeof history.state.gd==="number")) history.replaceState(Object.assign({},history.state,{gd:0}),""); if(history.state.sheet) history.replaceState(Object.assign({},history.state,{sheet:0}),""); NAVD=history.state.gd; }catch(e){} // recarregar a meio não perde a profundidade
 rebuildIndex(); // r3-t5: o BYID (look dos itens) também para o visitante; com personagem o Equipamento e o BiS voltam a montá-lo
 renderAll();
+lsInit();
 guiasLoad().then(()=>{ if(!ST.chars.length) return; renderQuests(); renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
 bootSync();
 route(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
