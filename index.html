@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261026a" data-c data-q></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261026b" data-c data-q></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
 <title>Grimório de Tibia</title>
 <script>(function(){var d=document.documentElement;d.setAttribute("data-ui","modern");try{var l=document.createElement("link");l.rel="stylesheet";l.id="mdFonts";l.href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap";document.head.appendChild(l);}catch(e){}})();</script>
 <meta name="theme-color" content="#11181a">
@@ -676,6 +676,9 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#7DE8FF}
 .bs-v .small{flex-basis:100%}
 .bs-d summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
 .bs-d ul{margin:0 0 4px;padding-left:18px;display:grid;gap:4px}
+.bs-map{display:grid;gap:6px;justify-items:start;margin:10px 0 4px}
+.bs-map p{margin:0}
+.bs-loc{font-size:13px}
 .bs-tier{display:grid;justify-items:center;gap:1px;min-width:96px;min-height:56px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--ink);font:inherit;cursor:pointer;text-align:center}
 .bs-tier b{font-size:14px}
 .bs-tier.s1{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
@@ -44805,7 +44808,9 @@ async function drawPos(cv){ const [x,y,z]=cv.dataset.qpos.split(",").map(Number)
   g.fillStyle="#000"; g.fillRect(0,0,cv.width,cv.height);
   try{ const im=await floorImg(z); g.imageSmoothingEnabled=false; g.drawImage(im,x-w/2-31744,y-h/2-30976,w,h,0,0,cv.width,cv.height); }catch(e){}
   const X=(w/2+.5)*S, Y=(h/2+.5)*S; g.beginPath(); g.arc(X,Y,12,0,7); g.lineWidth=3; g.strokeStyle="#fff"; g.stroke(); g.beginPath(); g.arc(X,Y,5,0,7); g.fillStyle="#E5484D"; g.fill();
-  g.font="600 12px system-ui"; g.fillStyle="rgba(0,0,0,.7)"; g.fillRect(6,6,g.measureText(floorTxt(z)).width+12,20); g.fillStyle="#fff"; g.fillText(floorTxt(z),12,20); }
+  // (texto no canvas: o tradutor do site não o vê, por isso passa por I18N.tr)
+  const fl=window.I18N?I18N.tr(floorTxt(z)):floorTxt(z);
+  g.font="600 12px system-ui"; g.fillStyle="rgba(0,0,0,.7)"; g.fillRect(6,6,g.measureText(fl).width+12,20); g.fillStyle="#fff"; g.fillText(fl,12,20); }
 async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); if(els.length) await Promise.all([guiasLoad(),linkIdxLoad().catch(()=>null)]); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard;
   /* r11 */ const b=QBY[id]||{}, gs=guiaOf(id,b.w||b.n), g=gs?await guiaQ(gs):null; el.innerHTML = g ? guiaCardHTML(id,g,gs) : questCardHTML(id,await getQuest(id)); } }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-qopen2]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen2}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen2))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
@@ -45933,13 +45938,19 @@ function bsRow(c,r,b,lo,CR){
   if(b.lv) why.push("Sala com alavanca: até 5 jogadores, normalmente.");
   if(b.sp==="r") why.push("Aparece em raids: não se marca, aparece no mundo.");
   return `<div class="bs-r" data-bsk="${esc(r.k)}"><span class="bs-ic">${crSpr(r.k,44)}</span>
-    <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
+    <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
       <div class="bs-st">${st}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
-      <details class="bs-d"><summary>Porquê e como</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
+      <details class="bs-d"><summary>${b.pos?"Porquê, como e onde":"Porquê e como"}</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
         ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}</li>`:""}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:""}
-        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul></details></div>
+        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul>${bsMapHTML(b,loc)}</details></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
+/* r24: onde está cada boss (data/bosses.json pos, de _dev/build_bosses.py): o mapa como nas quests e nos NPCs (canvas .qpos,
+   desenhado com drawPos quando «Porquê, como e onde» abre) e «Abrir no mapa»; pa = 1 é a entrada da zona, não o sítio exato */
+function bsMapHTML(b,loc){ if(!b.pos) return ""; const [x,y,z]=b.pos;
+  return `<div class="bs-map"><canvas class="qpos" width="360" height="240" data-qpos="${x},${y},${z}" aria-label="Mapa de ${esc(b.n)}"></canvas>
+    <p class="tiny muted">${b.pa?(loc?`Entrada de ${esc(loc)}: o boss fica lá dentro.`:"Entrada da zona: o boss fica lá dentro."):(loc?`Onde aparece: ${esc(loc)}.`:"Onde aparece.")}</p>${mapBtn(x,y,z,b.n+(loc?" · "+loc:""),"Abrir no mapa")}</div>`; }
+document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("bs-d")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
 function renderBosses(){
   const el=$("bsBody"), c=C(); if(!el||!c) return;
   if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class="small muted">Não consegui carregar o motor dos bosses.</p>`; return; }

@@ -96,6 +96,9 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   reduzido por camada (separadores Sem modificador / Shift / Ctrl / Alt; fila F só se usada) com o ícone do 1.º feitiço de
   cada papel, e uma legenda. «Como jogar» troca as teclas sugeridas pelas do jogador (`rxKbU`; sem tecla, o nome do papel).
   O comparador do clientoptions.json continua a falar das teclas da barra do próprio jogador.
+- Mapas dos bosses (r24): cada boss com `pos` (data/bosses.json, ver `_dev/BOSSES.md`) tem o sítio no cabeçalho como
+  ligação para o mapa grande (`data-map`) e, em «Porquê, como e onde», o mapa pequeno (canvas `.qpos`, desenhado com
+  `drawPos` quando abre) e «Abrir no mapa». O andar escrito no canvas passa por `I18N.tr` (o tradutor não vê canvas).
 - `CONTRIBUTING.md` (r5-t3): como colaborar no GitHub (um ramo por tarefa, Pull Request revisto pelo outro, testes com o smoke.mjs,
   o G só com `load_G`/`save_G` e `gjson.py --check`); o `README.md` aponta para ele. `build_supplies.py` (r5-t3; `C:\xampp\_tools` = `_dev/`):
   acrescenta a data/items.json as poções, munições e runas do `supRows` que faltam, lidas da TibiaWiki (Infobox Object + Module:ItemPrices/data,
