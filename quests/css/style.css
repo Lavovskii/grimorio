@@ -381,9 +381,10 @@ kbd { font-family: var(--font-mono); }
   background:
     radial-gradient(14px 8px at 10px 0, transparent 9px, rgba(120, 200, 255, .45) 10px, transparent 12px) repeat-x;
   background-size: 28px 18px;
-  animation: waves 6s linear infinite;
+  left: -28px; animation: waves .6s linear infinite; /* r28: anda com transform (sem voltar a pintar a faixa a cada imagem) */
 }
-@keyframes waves { to { background-position: 280px 0; } }
+@keyframes waves { to { transform: translateX(28px); } }
+html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
 .hero-logo { width: 300px; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .55)); animation: bob 3.2s ease-in-out infinite; }
 @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-7px) rotate(1.5deg); } }
 .hero h1 {

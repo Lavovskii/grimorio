@@ -427,3 +427,21 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - Âmbito do Questski (r27): todas as quests que existem no jogo, de qualquer nível (`fetch_wiki.py` `in_scope` só tira as
   retiradas do jogo); faixas novas 101–150, 151–200, 201–300 e 300+ (`BANDS` em `quests/js/app.js`, `--band-14`); região
   nova `Bounac` (`validate.py` e `build.py`).
+
+## Tema Tibia e PCs antigos (r28, outubro de 2026)
+- O atributo continua `data-ui="modern"` (o JS usa `isMd()`), mas o Modern veste-se de cliente do Tibia: a camada
+  "Tema TIBIA (r28)" no fim do `<style>` define a paleta (pedra escura, bronze, ouro), molduras de janela, botões de metal,
+  campos encaixados e o fundo de pedra (um SVG pequeno em `data:`). Letra só do sistema: Tahoma/Verdana no texto,
+  Palatino nos títulos, `--tb-num` (Verdana) nos números; já não se descarrega o Chakra Petch nem o Russo One.
+- Saiu tudo o que pesava na placa gráfica: canvas de partículas, aurora com blur, grelha 3D, estrelas, dragão, runas,
+  estrelas cadentes, `backdrop-filter`, bordas cónicas a rodar, brilhos e inclinação que seguiam o rato, `drop-shadow` de
+  néon. Ficam animações só de transform/opacity: transição de página (View Transitions de `main`), cascata dos blocos
+  ao abrir uma página (`tbRise`), letras dos títulos, contagens, marcador do menu, ondulação nos botões e a tocha do emblema
+  (a única em ciclo; pára em repouso, `md-calm`).
+- `html.fx-lite` (efeitos leves): escolha no rodapé ("Efeitos: Completos / Leves", `localStorage` `grimorio-fx`) ou
+  deteção: no arranque com ≤ 2 núcleos, ≤ 2 GB ou poupança de dados; depois, uma vez por browser, WebGL só por software
+  (`failIfMajorPerformanceCaveat`, placa na lista negra) → `auto-lite`. Contar imagens por segundo ao abrir não serve
+  (a primeira pintura desta página apanhava PCs rápidos). Com `fx-lite`, `mdMotion()` é falso e o CSS tira cascatas,
+  tocha, elevações e sombras desfocadas.
+- O Questski voltou ao visual Original (pedra e ouro, `quests/css/style.css`), que já era o do Tibia; o `css/modern.css`
+  ficou no repositório mas deixou de ser carregado. Lê a mesma escolha `grimorio-fx`.
