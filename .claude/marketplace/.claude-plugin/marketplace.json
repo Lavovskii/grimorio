@@ -1,0 +1,21 @@
+{
+  "name": "grimorio-extra",
+  "owner": { "name": "Lavovskii" },
+  "metadata": { "description": "Skills de terceiros sem marketplace próprio, instaladas a partir dos repositórios originais (nada é copiado para aqui)." },
+  "plugins": [
+    {
+      "name": "app-store-screenshots",
+      "description": "Páginas de screenshots para a App Store e o Google Play (ParthJadhav/app-store-screenshots, MIT).",
+      "source": { "source": "github", "repo": "ParthJadhav/app-store-screenshots" },
+      "strict": false,
+      "skills": ["./skills/app-store-screenshots"]
+    },
+    {
+      "name": "transitions-dev",
+      "description": "Transições e animações de interface (Jakubantalik/transitions.dev, licença Transitions.dev: uso livre, sem redistribuir a biblioteca).",
+      "source": { "source": "github", "repo": "Jakubantalik/transitions.dev" },
+      "strict": false,
+      "skills": ["./skills/transitions-dev", "./skills/transitions-polish", "./skills/transitions-ui-generation"]
+    }
+  ]
+}
