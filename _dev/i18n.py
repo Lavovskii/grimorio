@@ -383,7 +383,12 @@ JUNK = re.compile(r'https?://|^#|^\.|=>|\bfunction\b|\breturn\b|;\s*\w+\s*[:=]|^
                   r'|^(?:afterbegin|afterend|beforebegin|beforeend|auxclick|contextmenu|focusin|focusout|keydown|keyup|pointerdown|pointerup|mousedown|mouseup|mousemove|touchstart|touchend|scroll|resize|change|input|click|submit|load|error|hidden|visible|checked|disabled|boolean|number|string|object|undefined|function|canvas|button|dialog|figcaption)$')
 
 
+NOT_UI = {'webgl', 'lite'}  # palavras soltas do código (contexto WebGL, modo de efeitos) que não são texto da página
+
+
 def good_key(k):
+    if k in NOT_UI:
+        return False
     if len(k) < 2 or not re.search(r'[A-Za-zÀ-ÖØ-öø-ÿ]{2}', re.sub(r'\{\d+\}', '', k)):
         return False
     if JUNK.search(k):

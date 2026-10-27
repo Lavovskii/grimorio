@@ -1163,6 +1163,10 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "Animações e transições": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Ankrahmun": {
   "c": "index.html: 2649,31925],[\"Edron\",33217,31814],[\"Darashia\",33213,32454],[\"Ankrahmun\",33194,32853],[\"Port",
   "k": "x"
@@ -2275,6 +2279,10 @@
   "c": "quests/js/app.js: <h4>${icon(ic)}${title}</h4>${body}</div>` : \"\"; return ` <section class=\"quest-scroll ${UNROLLED.has(d.slug) ? \"open unrolled\" : \"\"}\" data-slug=\"${d.slug}\" aria-label=\"Recompensas da quest\"> <div class=\"qs-roll\"></div> ",
   "k": "p"
  },
+ "Completos": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Comportamento": {
   "c": "quests/js/app.js: \", \"loot\": \"Loot\", \"abilities\": \"Habilidades\", \"behaviour\": \"Comportamento\", \"behavior\": \"Compo",
   "k": "x"
@@ -3077,6 +3085,14 @@
  },
  "Efeito": {
   "c": "quests/js/app.js: , \"words\": \"Palavras\", \"element\": \"Elemento\", \"effect\": \"Efeito\", \"implemented\": \"Im",
+  "k": "x"
+ },
+ "Efeitos": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Efeitos visuais": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Electrify (energia)": {
@@ -4801,6 +4817,10 @@
  },
  "Leva:": {
   "c": "r13: site todo em inglês (rótulos curtos e elementos com %)",
+  "k": "x"
+ },
+ "Leves": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Levitate": {
@@ -6680,6 +6700,10 @@
   "k": "x"
  },
  "Para cada hunt somo as criaturas principais e calculo o dano médio que levam de cada elemento. Depois uso o melhor elemento da tua vocação: gelo/terra no druid, fogo/energia/morte no sorcerer, físico/holy no paladin, físico no knight e no monk (com a alternativa de arma elemental). Fraco ≥ 110%, neutro 98–109%, resiste um pouco 85–97%, resiste < 85%. As hunts marcadas \"por confirmar\" têm a lista de criaturas incompleta.": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Para computadores antigos ou lentos": {
   "c": "index.html (HTML)",
   "k": "x"
  },
@@ -12127,16 +12151,8 @@
   "c": "quests/js/app.js: nst t = document.documentElement.dataset.theme === \"dark\" ? \"light\" : \"dark\"; doc",
   "k": "x"
  },
- "lighter": {
-  "c": "index.html: D.g; g.clearRect(0,0,MD.w,MD.h); g.globalCompositeOperation=\"lighter\"; for(const p of M",
-  "k": "x"
- },
  "linha principal": {
   "c": "index.html: rx-row\"><h4>${chip(r.el)}<span class=\"small muted\">${r.main?\"linha principal\":\"com Shift: para cr",
-  "k": "x"
- },
- "link": {
-  "c": "index.html: .getElementById(\"mdFonts\")){ const l=document.createElement(\"link\"); l.rel=\"stylesheet",
   "k": "x"
  },
  "list": {
@@ -13351,10 +13367,6 @@
   "c": "quests/js/app.js: vince\": \"Convencer\", \"illusionable\": \"Pode ser ilusão\", \"pushable\": \"Pode ser empurrad",
   "k": "x"
  },
- "px {0}px": {
-  "c": "index.html: lientRect(); mg.classList.add(\"md-mag\"); mg.style.translate=`${((ev.clientX-r.left-r.width/2)*.18).toFixed(1)}px ${((ev.clientY-r.top-r.height/2)*.25).toFixed(1)}px`; } }); }, {passive:",
-  "k": "p"
- },
  "python serve.py": {
   "c": "quests/js/app.js: vlChar = true; } } catch (e) { view().innerHTML = `<div class=\"note-box\"><b>Não foi possível carregar os dados.</b><br>Abre o site através do servidor local (<code>python serve.py</code>) e não diretamente pelo ficheiro.",
   "k": "x"
@@ -14107,10 +14119,6 @@
   "c": "index.html: \"); const g=SPG[spKey(o.name).replace(/\\u2019/g,\"'\")], st=` style=\"--el:var(--${guessEl(o.w,o.el)})\"${t} aria-hidden=\"true\"`; if(g) return `<s",
   "k": "p"
  },
- "stylesheet": {
-  "c": "index.html: (\"mdFonts\")){ const l=document.createElement(\"link\"); l.rel=\"stylesheet\"; l.id=\"mdFonts\"; l.",
-  "k": "x"
- },
  "subsolo": {
   "c": "r16: Questski em inglês (pisos, wiki)",
   "k": "x"
@@ -14403,10 +14411,6 @@
   "c": "quests/js/app.js: , \"npcs\": \"NPCs\", \"items\": \"Itens\", \"quests\": \"Quests\", \"transcripts\": \"Transcrições\", \"p",
   "k": "x"
  },
- "translate3d(0,{0}px,0) rotate({1}deg)": {
-  "c": "index.html: 8?.55-(u-.1)/.7*.25:.3*(1-(u-.8)/.2); r.style.transform=`translate3d(0,${(-.95*MD.h*u).toFixed(1)}px,0) rotate(${(160*u).toFixed(1)}deg)`; r.style.opacity=op",
-  "k": "p"
- },
  "trash": {
   "c": "quests/js/app.js: one ? `<button class=\"btn btn-ghost\" id=\"resetSteps\">${icon(\"trash\")}Recomeçar</button>",
   "k": "x"
@@ -14679,10 +14683,6 @@
   "c": "index.html: d1,r.d0)?` (+${pct(r.d1,r.d0)}%)`:\"\"}</span> ${t.life?`<span class=\"small\">vida: +${nf(r.life)}/s do life leech</span>`:\"\"} ${t.mana?",
   "k": "p"
  },
- "visibilitychange": {
-  "c": "index.html: equestAnimationFrame(mdFxTick); } document.addEventListener(\"visibilitychange\",()=>{ if(!document.",
-  "k": "x"
- },
  "vocation": {
   "c": "quests/js/app.js: \"level\": \"Nível\", \"required level\": \"Nível necessário\", \"vocation\": \"Vocação\", \"vocati",
   "k": "x"
@@ -14717,10 +14717,6 @@
  },
  "warnt": {
   "c": "index.html: ent; warn.setAttribute(\"role\", \"alert\"); warn.className = \"warnt\"; warn.style.margin ",
-  "k": "x"
- },
- "wcard": {
-  "c": "index.html: ches && (el.classList.contains(\"hc\")||el.classList.contains(\"wcard\"))){ if(mdTilt&&mdTi",
   "k": "x"
  },
  "weak": {
@@ -16129,10 +16125,6 @@
  },
  "{0}fraco ao teu dano · {1}{2}{3}": {
   "c": "recolhida: /grimorio/#inicio · ex.: {0}fraco ao teu dano · {1}{2}{3}",
-  "k": "p"
- },
- "{0}px {1}px": {
-  "c": "index.html: lientRect(); mg.classList.add(\"md-mag\"); mg.style.translate=`${((ev.clientX-r.left-r.width/2)*.18).toFixed(1)}px ${((ev.clientY-r.top-r.height/2)*.25).toFixed(1)}px`; } }); }, {passive:",
   "k": "p"
  },
  "{0}resiste um pouco · {1} · {2}{3}{4}": {
