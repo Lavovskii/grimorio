@@ -1,6 +1,6 @@
 # PLACE: Azzilon Castle
 slug: azzilon-castle-8472a
-mentioned in 1 guides: mystery-of-the-valley-quest
+mentioned in 3 guides: fiend-slayer-outfits-quest, mystery-of-the-valley-quest, no-rest-for-the-wicked-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Azzilon Castle 
@@ -23,9 +23,15 @@ mentioned in 1 guides: mystery-of-the-valley-quest
 (none)
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[fiend-slayer-outfits-quest 0-3] Entrar no teleporte laranja
+Entra no **teleporte laranja** ao lado do Fernlor. Chegas ao {wiki:Azzilon Castle|Azzilon Castle}. Desce as escadas e sobe outras para entrares no castelo.
+coords: [{'x': 33281, 'y': 31848, 'z': 8, 'label': 'Teleporte laranja para Azzilon'}]
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
 [mystery-of-the-valley-quest 0-0] Falar com a Lai
 Vai a **Edron** (de barco: {key:hi}, {key:edron}, {key:yes} ao capitão do porto da tua cidade) e entra no teleporte para o {wiki:Azzilon Castle} (só funciona se tiveres acesso pela {wiki:No Rest for the Wicked Quest}). Fala com a {npc:Lai}: {key:hi}, {key:statue}, {key:legend} e {key:yes}. Ela conta-te o segredo do vale dos Merudri e a lenda do intruso que viu um peregrino usar uma estátua de três dragões a segurar um cristal para viajar até ao vale. Para te ajudar, ela vai canalizar o Dhar-Enpa Udra, o que demora alguns dias.
 coords: [{'x': 33281, 'y': 31848, 'z': 8, 'label': 'Teleporte para o Azzilon Castle (Edron)'}]
+[no-rest-for-the-wicked-quest 0-3] Entrar no teleporte laranja
+Entra no **teleporte laranja** ao lado do Fernlor. Chegas ao {wiki:Azzilon Castle|Azzilon Castle}, na ilha de {wiki:Azzilon|Azzilon}. É por aqui que entras sempre que voltares a Azzilon.
+coords: [{'x': 33281, 'y': 31848, 'z': 8, 'label': 'Teleporte laranja para Azzilon'}]

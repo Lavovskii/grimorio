@@ -1,6 +1,6 @@
 # PLACE: Goroma
 slug: goroma-10998
-mentioned in 7 guides: assassin-outfits-quest, fire-from-the-earth-mini-world-change, killing-in-the-name-of-quest, marlin-trophy-quest, the-ice-islands-quest, the-lightbearer, the-shattered-isles-quest
+mentioned in 8 guides: assassin-outfits-quest, feaster-of-souls-quest, fire-from-the-earth-mini-world-change, killing-in-the-name-of-quest, marlin-trophy-quest, the-ice-islands-quest, the-lightbearer, the-shattered-isles-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Goroma 
@@ -58,12 +58,12 @@ coords: []
 [assassin-outfits-quest 2-2] Pegar fogo a ti próprio
 O {npc:Atrad} está em {wiki:Goroma|Goroma}, para lá da parede de energia, numa cabana subterrânea. Só fala contigo se estiveres **em chamas**: há campos de fogo na superfície de Goroma, e o mais próximo fica **diretamente a sul** da entrada para a cabana do Atrad. Pisa-o e desce logo para falar com ele.
 coords: []
+[feaster-of-souls-quest 9-4] Chegar a Ramoa
+Vai a **Liberty Bay**: de Issavi, apanha o barco do {npc:Captain Harava} ou o tapete para **Darashia**, onde o {npc:Petros} te leva a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 200 gp); de Edron, o {npc:Captain Seahorse} também vai lá (170 gp). No porto de Liberty Bay, o {npc:Jack Fate} leva-te a Goroma: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas na costa **leste** de {wiki:Goroma}; anda para **oeste** até às escadas do {wiki:Teleportation Hub}, desce e entra no teleporte da **direita**, que leva a Ramoa.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (porto de Darashia)'}, {'x': 32161, 'y': 32556, 'z': 6, 'label': 'Jack Fate em Goroma (chegada)'}, {'x': 32038, 'y': 32561, 'z': 7, 'label': 'Escadas do Teleportation Hub de Goroma'}]
+[feaster-of-souls-quest 9-7] Sair de Ramoa
+Volta pelo mesmo caminho (leva {item:Rope} para subires o buraco) até ao Teleportation Hub de Ramoa e entra no teleporte da **esquerda**, que leva a Goroma. Sobe as escadas, vai para **leste** até ao navio do {npc:Jack Fate} e diz {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay.
+coords: [{'x': 31946, 'y': 32557, 'z': 7, 'label': 'Escadas do Teleportation Hub de Ramoa'}, {'x': 32161, 'y': 32556, 'z': 6, 'label': 'Jack Fate em Goroma'}]
 [fire-from-the-earth-mini-world-change 0-0] Mensagens do evento
 Quando o vulcão entra em erupção aparece a mensagem: *"The volcano on Goroma sends his fiery message into the sky. A lot of creatures are flooding the lands together with its lava."* Os anunciadores das cidades dizem: *"Hear ye! Hear ye! The volcano on Goroma is spitting fire. [...]"*
-coords: []
-[fire-from-the-earth-mini-world-change 1-0] Ir ao vulcão
-Viaja até à ilha de {wiki:Goroma}, a noroeste de Liberty Bay: no porto de **Liberty Bay**, fala com o {npc:Jack Fate} no barco dele e diz {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas no **leste** de Goroma. Vai ao vulcão {wiki:Hellgore}. No caminho podes encontrar {creature:Crab|Crabs}, {creature:Island Troll|Island Trolls}, {creature:Pirate Skeleton|Pirate Skeletons} e {creature:Pirate Ghost|Pirate Ghosts}.
-coords: [{'x': 32161, 'y': 32556, 'z': 6, 'label': 'Barco do Jack Fate no leste de Goroma (chegada e regresso)'}, {'x': 32095, 'y': 32583, 'z': 7, 'label': 'Goroma'}, {'x': 32097, 'y': 32631, 'z': 7, 'label': 'Hellgore (por baixo de Goroma)'}]
-[hunting-for-tokens-quest 2-1] Lista de réplicas
-Todas custam 20 Silver Raid Tokens. Na coluna da direita está a palavra que o Jorge destaca para cada uma; as que aparecem com "-" fazem parte da lista de recompensas mas não aparecem na transcrição do diálogo.
 coords: []

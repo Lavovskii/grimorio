@@ -141,8 +141,7 @@ tr.dim td{opacity:.5} tr.now td{background:var(--accent-soft)}
 .check input{width:20px;height:20px;margin-top:3px;accent-color:var(--ok)}
 .check li.done .t{text-decoration:line-through;text-decoration-color:var(--ok);color:var(--muted)}
 .check .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;color:var(--muted)}
-.check li.open .d,.q.open p{-webkit-line-clamp:unset;display:block}
-.q p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.check li.open .d{-webkit-line-clamp:unset;display:block}
 .danger-dots{display:inline-flex;gap:3px;vertical-align:middle}
 .danger-dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
 .d1 i:nth-child(1){background:var(--ok)} .d2 i:nth-child(-n+2){background:var(--gold)} .d3 i{background:var(--warn)}
@@ -927,16 +926,6 @@ h4.sub{font-size:16px;font-family:var(--sans);font-style:normal;font-weight:600;
 .own-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;font-size:13px;padding:3px 10px;white-space:nowrap}
 .own-btn[aria-pressed="true"]{background:var(--ok-soft);color:var(--ok);border-color:transparent}
 
-/* ---------- quests ---------- */
-details.qgroup{background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);box-shadow:var(--shadow);padding:4px 16px}
-details.qgroup > summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;font-family:var(--serif);font-weight:800;font-size:20px}
-details.qgroup > summary::-webkit-details-marker{display:none}
-.q{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;padding:11px 0;border-top:1px solid var(--line)}
-.q h5{font-size:17px;font-family:var(--sans);font-weight:700}
-.q p{font-size:15px;color:var(--muted)}
-.q .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-.q.locked{opacity:.55} .q.done h5{text-decoration:line-through;text-decoration-color:var(--ok)}
-.q input{width:20px;height:20px;margin-top:2px;accent-color:var(--ok)}
 .bar-prog{height:8px;background:var(--sunk);border-radius:99px;overflow:hidden}
 .bar-prog i{display:block;height:100%;background:var(--accent)}
 .stars{color:var(--gold);letter-spacing:1px;font-size:13px}
@@ -2826,8 +2815,6 @@ html[data-ui="modern"] .ip-vals>div:last-child:nth-child(odd){flex-basis:100%}
 .cm-n{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .cm-d{font-size:14px;color:var(--muted)}
 .cm-list li.cfocus{background:var(--accent-soft);box-shadow:0 0 0 2px var(--accent);border-radius:8px}
-.qchk{display:flex;cursor:pointer}
-.qchk>input{flex:none}
 .panel[data-p="charms"] .check li.done label b{text-decoration:line-through;text-decoration-color:var(--ok)}
 html[data-ui="modern"] .panel[data-p="charms"] .grid2{align-items:start}
 html[data-ui="modern"] .panel[data-p="charms"] .check li{position:relative;grid-template-columns:26px 40px minmax(0,1fr);align-items:center;border-radius:12px;padding-inline:8px;transition:background var(--d2)}
@@ -2854,8 +2841,6 @@ html[data-ui="modern"] .cm-list li.cfocus{background:rgba(125,232,255,.08);borde
   html[data-ui="modern"] .panel[data-p="charms"] li.done .ch-ic{animation:mdPop .5s var(--e-spring)}
   html[data-ui="modern"] .cfocus .ch-ic::after{content:"";position:absolute;inset:-1px;border-radius:12px;border:2px solid var(--cc);animation:mdPing 1.2s 2;pointer-events:none}
 }
-/* Quests no Modern: cartões numa grelha (2 colunas a partir de 1100 px), título com traço animado, glifo de cada grupo, barra com marcador */
-html[data-ui="modern"] .qgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:6px 0 12px}
 /* r7: guias do Questski no Modern — cartão do Início com os níveis em néon e o mesmo vidro dos cartões das quests */
 html[data-ui="modern"] .hg{border-color:rgba(167,139,250,.2);border-radius:14px;background:linear-gradient(160deg,rgba(124,58,237,.12),rgba(15,12,40,.55));transition:transform var(--d3) var(--e-out),border-color var(--d2),box-shadow var(--d2)}
 html[data-ui="modern"] .hg:hover{border-color:rgba(167,139,250,.55);box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 16px rgba(139,92,246,.2)}
@@ -2874,46 +2859,6 @@ html[data-ui="modern"] .gpair>:first-child:not(:last-child){border-top-right-rad
 html[data-ui="modern"] .gpair>.gbtn{border-top-left-radius:0;border-bottom-left-radius:0}
 html[data-ui="modern"] .btn.gbtn:hover{background:rgba(34,211,238,.18);border-color:rgba(125,232,255,.8);color:#fff;box-shadow:0 0 18px rgba(34,211,238,.3)}
 @media (prefers-reduced-motion:no-preference){ html[data-ui="modern"] .hg:hover{transform:translateY(-2px)} }
-/* a 2 colunas a descrição fica inteira (sem '…'): letra um pouco mais pequena e cartões mais baixos para a página não crescer */
-@media (min-width:1100px){
-  html[data-ui="modern"] .qgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;padding:8px 0 12px}
-  html[data-ui="modern"] .qgrid .q{padding:12px 16px}
-  html[data-ui="modern"] .qgrid .q p{display:block;-webkit-line-clamp:unset;font-size:14px;line-height:1.45}
-}
-html[data-ui="modern"] details.qgroup{padding:4px 18px 8px}
-html[data-ui="modern"] details.qgroup>summary{justify-content:flex-start;gap:12px}
-html[data-ui="modern"] details.qgroup>summary>.tag{margin-left:auto}
-html[data-ui="modern"] details.qgroup>summary::before{content:"";flex:none;width:28px;height:28px;background:center/contain no-repeat;filter:drop-shadow(0 0 5px rgba(125,232,255,.55))}
-html[data-ui="modern"] details.qgroup[data-qg="solo"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237DE8FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7.5' r='3.5'/%3E%3Cpath d='M5 21v-1.5A5.5 5.5 0 0 1 10.5 14h3a5.5 5.5 0 0 1 5.5 5.5V21'/%3E%3C/svg%3E")}
-html[data-ui="modern"] details.qgroup[data-qg="parcial"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C084FC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 4l-1.2 4.8L9.5 18 6 14.5l9.2-9.3L20 4zM4.5 12.5l7 7M7.2 16.8L3.5 20.5'/%3E%3C/svg%3E");filter:drop-shadow(0 0 5px rgba(192,132,252,.6))}
-html[data-ui="modern"] details.qgroup[data-qg="party"]>summary::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F472B6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='3'/%3E%3Cpath d='M7 20v-1a5 5 0 0 1 10 0v1'/%3E%3Ccircle cx='5' cy='9.5' r='2.2'/%3E%3Cpath d='M1.5 19v-.5A3.5 3.5 0 0 1 5 15'/%3E%3Ccircle cx='19' cy='9.5' r='2.2'/%3E%3Cpath d='M22.5 19v-.5A3.5 3.5 0 0 0 19 15'/%3E%3C/svg%3E");filter:drop-shadow(0 0 5px rgba(244,114,182,.6))}
-html[data-ui="modern"] .q{position:relative;padding:14px 16px;border:1px solid rgba(167,139,250,.18);border-radius:16px;background:linear-gradient(160deg,rgba(124,58,237,.10),rgba(15,12,40,.55));transition:transform var(--d3) var(--e-out),border-color var(--d2),box-shadow var(--d2)}
-html[data-ui="modern"] .q:hover{border-color:rgba(167,139,250,.5)}
-html[data-ui="modern"] .q h5{padding-right:30px}
-html[data-ui="modern"] .q.done{border-color:rgba(69,232,166,.45)}
-html[data-ui="modern"] .q.done::after{content:"✓";content:"✓"/"";position:absolute;top:12px;right:12px;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1px solid rgba(69,232,166,.65);background:rgba(69,232,166,.14);color:#45E8A6;font:800 13px/1 var(--sans);box-shadow:0 0 12px rgba(69,232,166,.4);pointer-events:none}
-html[data-ui="modern"] .q.locked{filter:saturate(.6)}
-html[data-ui="modern"] .qtitle{text-decoration:none;font-weight:700;color:#fff;background:linear-gradient(90deg,#7DE8FF,#C084FC) no-repeat 0 100%/0 1px;background-origin:content-box;transition:background-size var(--d3) var(--e-out),color var(--d2)}
-html[data-ui="modern"] .qtitle:hover,html[data-ui="modern"] .qtitle:focus-visible{background-size:100% 1px;color:#fff}
-html[data-ui="modern"] .panel[data-p="quests"] .bar-prog{height:10px;border:1px solid rgba(167,139,250,.3);position:relative}
-html[data-ui="modern"] #questBar.zero{min-width:6px;border-radius:99px}
-/* r6-t5: Quests no Modern a partir de 1100 px (2 colunas): o título é o único controlo visível que abre 'Lore e guia' (com ' ›' ao passar),
-   a .meta sobe para a linha do título e a descrição fica inteira por baixo; nas feitas a .meta afasta-se do ✓ (.q.done::after) */
-@media (min-width:1100px){
-  html[data-ui="modern"] .qgrid .q .meta [data-qopen]{display:none}
-  html[data-ui="modern"] .qgrid .q>div{display:flex;flex-wrap:wrap;align-items:baseline;align-content:flex-start;column-gap:10px;row-gap:4px}
-  html[data-ui="modern"] .qgrid .q>div>h5{flex:0 1 auto;margin:0;padding-right:0}
-  html[data-ui="modern"] .qgrid .q>div>.meta{order:2;margin:0 0 0 auto}
-  html[data-ui="modern"] .qgrid .q>div>p{order:3;flex:1 1 100%;margin:0}
-  html[data-ui="modern"] .qgrid .q.done>div>.meta{margin-right:30px}
-  html[data-ui="modern"] .qtitle::after{content:" ›";display:inline-block;opacity:0;transition:opacity var(--d2),transform var(--d2) var(--e-out)}
-  html[data-ui="modern"] .qtitle:hover::after,html[data-ui="modern"] .qtitle:focus-visible::after{opacity:1;transform:translateX(3px)}
-}
-@media (min-width:1100px) and (prefers-reduced-motion:reduce){ html[data-ui="modern"] .qtitle::after{transition:none} }
-@media (prefers-reduced-motion:no-preference){
-  html[data-ui="modern"] .q:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 18px rgba(139,92,246,.22)}
-  html[data-ui="modern"] .q.qpop::after{animation:mdPop .5s var(--e-spring)}
-}
 /* Charms a ≤620 px: descrição inteira e larga (a etiqueta do custo desce para a 2.ª linha); no Modern o glifo fica por baixo da checkbox */
 @media (max-width:620px){
   .panel[data-p="charms"] .check li{grid-template-columns:44px minmax(0,1fr)}
@@ -2927,22 +2872,10 @@ html[data-ui="modern"] #questBar.zero{min-width:6px;border-radius:99px}
   html[data-ui="modern"] .panel[data-p="charms"] .check li>.tag{grid-area:3/2;position:static}
   html[data-ui="modern"] .panel[data-p="charms"] .check .t>label{max-width:none}
 }
-/* toque (os dois modos): checkboxes dos charms com 24 px e o nome com 44 px de altura; quests com a checkbox, o título e os botões com 44 px */
+/* toque (os dois modos): checkboxes dos charms com 24 px e o nome com 44 px de altura */
 @media (pointer:coarse){
   .panel[data-p="charms"] .check input[type=checkbox]{width:24px;height:24px;margin-top:10px}
   .panel[data-p="charms"] .check label{display:inline-flex;align-items:center;min-height:44px}
-  .qchk{display:grid;place-items:center;width:44px;height:44px;margin:-12px;flex:none}
-  .qchk input[type=checkbox]{appearance:none;-webkit-appearance:none;display:grid;place-items:center;width:44px;height:44px;margin:0;border:11px solid transparent;border-radius:16px;background:var(--surface) padding-box;box-shadow:inset 0 0 0 2px var(--muted);cursor:pointer}
-  .qchk input[type=checkbox]::after{content:"";width:10px;height:6px;margin-top:-2px;border-left:2.5px solid var(--surface);border-bottom:2.5px solid var(--surface);transform:rotate(-45deg) scale(0)}
-  .qchk input[type=checkbox]:checked{background:var(--ok) padding-box;box-shadow:inset 0 0 0 2px var(--ok)}
-  .qchk input[type=checkbox]:checked::after{transform:rotate(-45deg) scale(1)}
-  .qchk input[type=checkbox]:focus-visible{outline-offset:-8px;border-radius:16px}
-  html[data-ui="modern"] .qchk input[type=checkbox]{width:44px;height:44px;margin:0;border:11px solid transparent;border-radius:17px;background:rgba(7,6,22,.6) padding-box;box-shadow:inset 0 0 0 1.5px rgba(185,155,255,.6)}
-  html[data-ui="modern"] .qchk input[type=checkbox]:checked{background:linear-gradient(135deg,#7C3AED,#22D3EE) padding-box;box-shadow:none;filter:drop-shadow(0 0 6px rgba(139,92,246,.65))}
-  html[data-ui="modern"] .qchk input[type=checkbox]:focus-visible{outline:2px solid #7DE8FF;outline-offset:-8px;border-radius:17px}
-  .qtitle{display:inline-block;padding-block:13px;margin-block:-13px}
-  .panel[data-p="quests"] .btn.small,.panel[data-p="quests"] .seg button{min-height:44px}
-  .panel[data-p="quests"] .q .meta{align-items:center}
 }
 @media (pointer:coarse) and (min-width:621px){ html[data-ui="modern"] .panel[data-p="charms"] .check input[type=checkbox]{margin-top:0} }
 /* separadores no telemóvel (os dois modos): partem em linhas em vez de esconder os últimos fora do ecrã; ✕ da ficha com 44×44 e fundo opaco */
@@ -3193,13 +3126,6 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
 /* listas */
 .check li{padding:14px 0}
 .check .d{line-height:1.55;margin-top:2px}
-.q p{line-height:1.55}
-/* quests em 2 colunas: título, por baixo as etiquetas e depois o texto (as etiquetas encostadas à direita amontoavam-se) */
-@media (min-width:1100px){
-  html[data-ui="modern"] .qgrid .q>div{row-gap:8px}
-  html[data-ui="modern"] .qgrid .q>div>.meta{flex:1 1 100%;margin:0}
-  html[data-ui="modern"] .qgrid .q.done>div>.meta{margin-right:0}
-}
 </style>
 
 <div class="mdbg" aria-hidden="true">
@@ -3433,15 +3359,6 @@ html[data-ui="modern"] .def-tips li:last-child:nth-child(odd){grid-column:1/-1}
       </div>
       <div class="lsbar" data-ls="charms" style="margin:16px 0 12px"></div>
       <div class="card cm-all" id="charmAll"></div>
-    </section>
-
-    <!-- QUESTS -->
-    <section class="panel" data-p="quests">
-      <div class="ph"><span class="eyebrow">Progresso</span><h2>Quests</h2><p id="questLead"></p></div>
-      <div class="controls"><div class="seg" id="qFilterSeg"></div></div>
-      <div class="bar-prog" style="margin:14px 0"><i id="questBar" style="width:0"></i></div>
-      <div class="lsbar" data-ls="quests" style="margin-bottom:12px"></div>
-      <div style="display:grid;gap:12px" id="questGroups"></div>
     </section>
 
     <!-- DEFESA -->
@@ -44445,7 +44362,7 @@ const SECS = [
  {id:"inicio",t:"Início",subs:[["inicio","Início"]]},
  {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["bosses","Bosses"],["tarefas","Tarefas"]]},
  {id:"build",t:"Build",subs:[["rotacao","Rotação e hotkeys"],["wheel","Wheel"],["equip","Equipamento"]]},
- {id:"prog",t:"Progresso",subs:[["charms","Charms"],["quests","Quests"],["guias","Guias de quests","quests/"]]},
+ {id:"prog",t:"Progresso",subs:[["charms","Charms"],["guias","Quests","quests/"]]},
  {id:"wiki",t:"Wiki",subs:[["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
  {id:"mais",t:"Mais",subs:[["defesa","Defesa"],["ask","Perguntar"],["perso","Personagens"],["fontes","Fontes"]]}
 ];
@@ -44526,7 +44443,8 @@ const GIC = `<svg class="gic" viewBox="0 0 24 24" fill="none" stroke="currentCol
 // link para o guia (normal: navega para o Questski); t = texto, cls = classes (por omissão um botão pequeno)
 const guiaBtn = (s,t,cls) => s ? `<a class="${cls||"btn small"} gbtn" href="${guiaHref(s)}" title="Guia passo a passo no Questski">${GIC}${t||"Guia passo a passo ›"}</a>` : "";
 // botão de uma quest (modal do Grimório) seguido do link curto para o guia, juntos na mesma linha
-const guiaPair = (btn,s) => s ? `<span class="gpair">${btn}${guiaBtn(s,"Guia ›")}</span>` : btn;
+// r27: com guia, a quest é só o link para o Questski (com o nome que o botão mostrava); sem guia fica o botão
+const guiaPair = (btn,s) => { if(!s) return btn; const m=/>([^<>]*)<\/(?:button|span)>\s*$/.exec(btn); return guiaBtn(s, m?m[1]:null, "btn small ghost"); };
 /* r11 */ // requisito "Quest: Nome (…)" do bloco Acesso: abre a quest do Grimório (lore e guia) ou, se só houver no Questski, o guia de lá
 function questReqTag(r){ const m=/^\s*Quest:\s*(.+)$/i.exec(String(r)); if(!m) return `<span class="tag warn">${esc(r)}</span>`;
   const nm=m[1].split(/\s+[—(–-]\s*|,\s|:\s/)[0].replace(/\s+Quest$/i,"").trim(), f=fold(nm);
@@ -44836,7 +44754,8 @@ async function drawPos(cv){ const [x,y,z]=cv.dataset.qpos.split(",").map(Number)
   g.font="600 12px system-ui"; g.fillStyle="rgba(0,0,0,.7)"; g.fillRect(6,6,g.measureText(fl).width+12,20); g.fillStyle="#fff"; g.fillText(fl,12,20); }
 async function initQuests(root){ const els=(root||document).querySelectorAll("[data-qcard]:not([data-ok])"); if(els.length) await Promise.all([guiasLoad(),linkIdxLoad().catch(()=>null)]); for(const el of els){ el.dataset.ok=1; const id=el.dataset.qcard;
   /* r11 */ const b=QBY[id]||{}, gs=guiaOf(id,b.w||b.n), g=gs?await guiaQ(gs):null; el.innerHTML = g ? guiaCardHTML(id,g,gs) : questCardHTML(id,await getQuest(id)); } }
-document.addEventListener("click",e=>{ const b=e.target.closest("[data-qopen2]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen2}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen2))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
+// r27: as quests ficam no Questski: o botão abre o guia de lá; só uma quest sem guia abre a janela do Grimório
+document.addEventListener("click",async e=>{ const b=e.target.closest("[data-qopen2]"); if(!b) return; const id=b.dataset.qopen2, q=QBY[id]||{}; await guiasLoad(); const gs=guiaOf(id,q.w?decodeURIComponent(q.w).replace(/_/g," "):q.n); if(gs){ location.href=guiaHref(gs); return; } openSheet(`<div data-qcard="${b.dataset.qopen2}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen2))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
 document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("qguide")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
 document.addEventListener("change",e=>{ const b=e.target.closest("[data-qstep]"); if(!b) return; const c=C(), [id,k]=b.dataset.qstep.split(":"); c.qp=c.qp||{}; c.qp[id]=c.qp[id]||{};
   if(b.checked) c.qp[id][k]=1; else delete c.qp[id][k]; save();
@@ -44844,8 +44763,8 @@ document.addEventListener("change",e=>{ const b=e.target.closest("[data-qstep]")
   const card=b.closest(".qcard"), tot=card.querySelectorAll("[data-qstep]").length, nd=card.querySelectorAll("[data-qstep]:checked").length, pg=card.querySelector(".qprog");
   if(pg){ pg.querySelector("span").textContent=`${nd}/${tot} passos`; pg.querySelector("i").style.width=Math.round(nd/tot*100)+"%"; }
   card.querySelectorAll("li.nx").forEach(x=>x.classList.remove("nx")); const nx=[...card.querySelectorAll("[data-qstep]")].find(x=>!x.checked); if(nx&&nd) nx.closest("li").classList.add("nx");
-  if(nd===tot&&!c.done[id]){ c.done[id]=true; save(); renderQuests(); renderHunts(); } });
-document.addEventListener("click",e=>{ const b=e.target.closest("[data-qdone]"); if(!b) return; const c=C(); if(!c) return; c.done[b.dataset.qdone]=true; save(); const card=b.closest("[data-qcard]"); if(card){ card.removeAttribute("data-ok"); initQuests(card.parentElement); } renderQuests(); renderHunts(); });
+  if(nd===tot&&!c.done[id]){ c.done[id]=true; save(); renderHunts(); } });
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-qdone]"); if(!b) return; const c=C(); if(!c) return; c.done[b.dataset.qdone]=true; save(); const card=b.closest("[data-qcard]"); if(card){ card.removeAttribute("data-ok"); initQuests(card.parentElement); } renderHunts(); });
 /* ---------- pesquisa global: tudo o que existe, por categoria, numa lista que desce da barra ---------- */
 let GSI=null, GSX=null, GSXP=null;
 function gsLoadX(){ return GSXP||(GSXP=Promise.all([dsafe("search"),guiasLoad()]).then(([d])=>{ GSX=(d&&d.e)||[]; GSI=null; return GSX; })); } // r7: com os guias do Questski
@@ -44923,7 +44842,6 @@ function gsPlace(){ const p=$("gsPop"); if(!p||p.hidden) return; const b=$("gsBt
 const LSC={
   hunts:{list:"#huntList", item:".hc", f:".hc-b", ph:"Procurar hunt, cidade ou criatura…", all:"gs"},
   bosses:{list:"#bsBody", item:".bs-r", f:".bs-h,.bs-st,.bs-v", ph:"Procurar boss, sítio, quest ou item…", all:"#bsSeg button:last-child"},
-  quests:{list:"#questGroups", item:".q", f:"h5,p,.meta", grp:"details.qgroup", ph:"Procurar quest ou o que desbloqueia…", all:"#qFilterSeg button:last-child"},
   charms:{list:"#charmAll", item:".cm-list>li", f:".cm-t", grp:".cm-list", ph:"Procurar charm ou efeito…"}
 };
 const LSQ={};
@@ -45075,6 +44993,7 @@ async function openWiki(kind,sl){
 }
 
 async function openQuestW(name){ const [qs]=await Promise.all([dsafe("quests"),guiasLoad()]), key=Object.keys(qs).find(k=>k.toLowerCase()===String(name).toLowerCase()), q=key&&qs[key], gs=guiaOf(null,key||name);
+  if(gs){ location.href=guiaHref(gs); return; } // r27: quest com guia = Questski
   openSheet(`<div class="sh-h"><div><span class="eyebrow" style="margin:0">Quest</span><h3>${esc(key||name)}</h3></div></div>${gs?`<p style="margin:0 0 12px">${guiaBtn(gs)}</p>`:""}${q?`<dl class="dl">${q.lvl?`<dt>Nível</dt><dd>${q.lvl}+</dd>`:""}<dt>Premium</dt><dd>${q.prem?"sim":"não"}</dd>${q.loc?`<dt>Onde</dt><dd>${esc(q.loc)}</dd>`:""}${(q.boss||[]).length?`<dt>Bosses</dt><dd>${q.boss.map(x=>mlink(x)).join(", ")}</dd>`:""}${(q.dangers||[]).length?`<dt>Perigos</dt><dd>${q.dangers.map(x=>mlink(x)).join(", ")}</dd>`:""}</dl>${(q.rewards||[]).length?`<h4 class="sub">Recompensas</h4><div class="qitems">${q.rewards.map(itemChip).join("")}</div>`:""}${q.legend?`<p class="small">${esc(q.legend)}</p>`:""}`:`<p class="muted">Ainda sem detalhes desta quest.</p>`}`); }
 
 document.addEventListener("keydown",e=>{ if((e.key==="/"&&!/input|textarea|select/i.test(document.activeElement.tagName))||(e.key==="k"&&(e.ctrlKey||e.metaKey))){ e.preventDefault(); openSearch(); } });
@@ -45084,6 +45003,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   if(t==="h"){ const hr=c?huntRows(c.voc).find(r=>r.r.c===k):null; if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr)); } else { const m=G.hm[k]; openSheet(`<div class="sh-h"><h3>${esc(G.places[k].n)}</h3></div>${tabsUI([["rota","Como chegar",huntRoute(k)],["mons","Monstros e loot",monsPanel((G.pm[k]||{}).h,(G.pm[k]||{}).r)],["quests","Quests",questsTab(questsForHunt(k,null))]])}`); } }
   else if(t==="c"||t==="b") location.hash=monHref(k);
   else if(t==="q"&&k.startsWith("w:")) openQuestW(k.slice(2));
+  else if(t==="q"&&guiaOf(k,(QBY[k]||{}).n)) location.href=guiaHref(guiaOf(k,(QBY[k]||{}).n)); // r27: quest com guia = Questski
   else if(t==="q"){ openSheet(`<div data-qcard="${k}"><div class="qcard"><h4>${esc(qName(k))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); }
   else if(t==="i") location.hash=itemHref(k);
   else if(t==="s"||t==="r") location.hash=wkHref("feitico",k);
@@ -47875,23 +47795,6 @@ $("imItems").addEventListener("click", e=>{ const b=e.target.closest("[data-imfi
 $("imApply").onclick=()=>{ const c=C(), set=ensureSets(c); Object.values(set.slots).forEach(ent=>{ const it=BYID[ent.id]; if(it&&it.is) ent.imb=defaultImbs(c,set,it); }); save(); renderEquip(); };
 $("imbList").addEventListener("change", e=>{ const k=e.target.dataset.imb; if(!k) return; const c=C(); if(e.target.checked) c.imb[k]=true; else delete c.imb[k]; save(); renderImbu(); renderInicio(); });
 
-/* ---------- quests ---------- */
-const QG = [{k:"solo",t:"Fazes sozinho"},{k:"parcial",t:"Sozinho até à luta final"},{k:"party",t:"Precisas de grupo"}];
-let QPOP=""; /* r5-t5 */ // quest acabada de marcar (o cartão leva .qpop: o selo ✓ salta no Modern)
-const opensHunt = {}; Object.values(G.places).forEach(p=>{ if(p.q){ (p.q==="marapur"?G.marapur:[p.q]).forEach(q=>{ (opensHunt[q]=opensHunt[q]||[]).push(p.n); }); } });
-function renderQuests(){
-  const c=C(), L=c.level, f=ST.ui.qf||"avail";
-  seg($("qFilterSeg"), [["avail","Disponíveis"],["todo","Por fazer"],["all","Todas"]], f, v=>{ ST.ui.qf=v; save(); renderQuests(); });
-  const pass = q => f==="all" ? true : f==="todo" ? (q.l<=L && !c.done[q.id]) : q.l<=L;
-  const av=G.quests.filter(q=>q.l<=L), dn=av.filter(q=>c.done[q.id]).length, soloT=av.filter(q=>q.s==="solo"&&!c.done[q.id]).length;
-  $("questLead").textContent = `${dn} de ${av.length} feitas · ${soloT} solo por fazer`;
-  $("questBar").style.width=(av.length?dn/av.length*100:0)+"%"; $("questBar").classList.toggle("zero", !(av.length&&dn));
-  $("questGroups").innerHTML = QG.map(g=>{ const list=G.quests.filter(q=>q.s===g.k && pass(q)).sort((a,b)=>a.l-b.l), todo=G.quests.filter(q=>q.s===g.k&&q.l<=L&&!c.done[q.id]).length;
-    return `<details class="qgroup" data-qg="${g.k}" ${g.k==="party"?"":"open"}><summary><span>${g.t}</span><span class="tag">${todo} por fazer</span></summary>${list.length?`<div class="qgrid">${list.map(q=>{ const lk=q.l>L, oh=opensHunt[q.id];
-      return `<div class="q ${c.done[q.id]?"done":""} ${lk?"locked":""}${QPOP===q.id&&c.done[q.id]?" qpop":""}"><label class="qchk"><input type="checkbox" data-q="${q.id}" ${c.done[q.id]?"checked":""} aria-label="Marcar ${esc(q.n)} como feita"></label><div><h5><button class="qtitle" data-qopen="${q.id}">${esc(q.n)}</button></h5><p>${elinkTxt(q.d)} <b style="color:var(--ink-2);font-weight:500">Desbloqueia:</b> ${elinkTxt(q.u)}</p><div class="meta"><span class="tag">nível ${q.l}</span>${q.st?`<span class="stars" title="História">${"★".repeat(q.st)}${"☆".repeat(3-q.st)}</span>`:""}${oh?`<span class="tag ok">abre ${oh.length} ${oh.length===1?"hunt":"hunts"}</span>`:""}${lk?`<span class="tag">faltam ${q.l-L}</span>`:""}${c.qp&&c.qp[q.id]&&Object.keys(c.qp[q.id]).length&&!c.done[q.id]?`<span class="tag acc">${Object.keys(c.qp[q.id]).length} passos feitos</span>`:""}<button class="btn small ghost" data-qopen="${q.id}">Lore e guia ›</button>${guiaBtn(guiaOf(q.id))}</div></div></div>`; }).join("")}</div>`:'<p class="muted small" style="padding:8px 0 14px">Nada com este filtro.</p>'}</details>`; }).join("");
-}
-$("questGroups").addEventListener("click", e=>{ const b=e.target.closest("[data-qopen]"); if(!b) return; openSheet(`<div data-qcard="${b.dataset.qopen}"><div class="qcard"><h4>${esc(qName(b.dataset.qopen))}</h4><p class="small muted">A carregar…</p></div></div>`); initQuests($("sheetBody")); });
-$("questGroups").addEventListener("change", e=>{ const id=e.target.dataset && e.target.dataset.q; if(!id) return; const c=C(); if(e.target.checked){ c.done[id]=true; QPOP=id; } else delete c.done[id]; save(); renderQuests(); QPOP=""; renderInicio(); renderHunts(); const nb=$("questGroups").querySelector(`[data-q="${CSS.escape(id)}"]`); if(nb) try{ nb.focus({preventScroll:true}); }catch(x){} });
 
 /* ---------- defesa ---------- */
 function renderDefesa(){
@@ -48510,7 +48413,7 @@ function linkIdxLoad(){
       String(x.w||"").split(" / ").forEach(w=>{ w=w.trim().toLowerCase(); if(!w) return; if(!spw.has(w)) spw.set(w,n); const w2=wk(w); if(w2&&!spw.has(w2)) spw.set(w2,n); });
       if(x.rn) spr.set(String(x.rn).toLowerCase(),n); });
     LINKX={npc,npn,spn,spw,spr,wk,rx:null};
-    if(ST.chars.length&&C()) try{ renderRotation(); renderHotkeys(); renderQuests(); renderDefesa(); }catch(e){ console.error(e); }
+    if(ST.chars.length&&C()) try{ renderRotation(); renderHotkeys(); renderDefesa(); }catch(e){ console.error(e); }
     return LINKX;
   }).catch(()=>{ linkIdxLoad.p=null; return null; });
 }
@@ -48930,7 +48833,7 @@ function route(){ HFRDY=true; HFMISS=""; const raw=(location.hash||"").slice(1);
   if((m=h.match(/^criatura\/(.+)$/i))){ openDetail("criatura",m[1]); return true; }
   if((m=h.match(/^(feitico|npc|conquista|montaria|outfit)\/(.+)$/i))){ openWiki(m[1].toLowerCase(),m[2]); return true; }
   if((m=h.match(/^hunts\/(cidade|tipo)\/(.+)$/i))){ hfRoute(m[1].toLowerCase(),m[2]); return true; } // r5-t2
-  let hl=h.toLowerCase(); if(hl==="hotkeys"){ hl="rotacao"; history.replaceState(history.state,"","#rotacao"); } /* r13 */
+  let hl=h.toLowerCase(); if(hl==="quests"){ location.replace("quests/"); return true; } /* r27: a página Quests passou para o Questski */ if(hl==="hotkeys"){ hl="rotacao"; history.replaceState(history.state,"","#rotacao"); } /* r13 */
   if(hl==="imbu"){ hl="equip"; ST.ui.eqv="imbu"; history.replaceState(history.state,"","#equip"); if(ST.ui.p==="equip") eqView(); } /* r17 */
   if(hl && isPanel(hl)){ if(raw!==hl) history.replaceState(history.state,"","#"+hl); if(hl!==ST.ui.p){ go(hl); hfHash(); return true; } hfHash(); return false; }
   // endereço que não corresponde a nada ('#item/', '#xyz'): o hash volta a ser o da página à vista (ou o Início, se era uma página interna)
@@ -48965,7 +48868,7 @@ function renderAll(){
     if (manual){ if(!draft || draft.mode!=="new") draft=newDraft(); } else { draft=null; if(!look) look=newLook(); }
     renderChars(); $("obHost").innerHTML = manual ? formHTML(false) : lookHTML(false); $("formHost").innerHTML=""; renderNav(); return; }
   $("obHost").innerHTML="";
-  renderChars(); renderNav(); renderHero(); renderInicio(); renderHunts(); renderRotation(); renderHotkeys(); renderWheel(); renderEquip(); renderCharms(); renderImbu(); renderQuests(); renderDefesa(); renderPerso(); renderTasks(); if(ST.ui.p==="bosses") renderBosses(); if(ST.ui.p==="feiticos"&&WLS.sp) renderSpellList(); }
+  renderChars(); renderNav(); renderHero(); renderInicio(); renderHunts(); renderRotation(); renderHotkeys(); renderWheel(); renderEquip(); renderCharms(); renderImbu(); renderDefesa(); renderPerso(); renderTasks(); if(ST.ui.p==="bosses") renderBosses(); if(ST.ui.p==="feiticos"&&WLS.sp) renderSpellList(); }
 if (!isPanel(ST.ui.p)) ST.ui.p="inicio";
 const hash = (location.hash||"").slice(1).replace(/[?&].*$/,"").toLowerCase(); if (hash && isPanel(hash)) ST.ui.p=hash;
 document.body.appendChild($("sheet")); // r2-t5: o painel fica no body (no Modern o main cria um contexto de empilhamento e a barra inferior ficava por cima)
@@ -48973,7 +48876,7 @@ try{ if(!(history.state&&typeof history.state.gd==="number")) history.replaceSta
 rebuildIndex(); // r3-t5: o BYID (look dos itens) também para o visitante; com personagem o Equipamento e o BiS voltam a montá-lo
 renderAll();
 lsInit();
-guiasLoad().then(()=>{ if(!ST.chars.length) return; renderQuests(); renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
+guiasLoad().then(()=>{ if(!ST.chars.length) return; renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
 bootSync();
 route(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
 setUI("modern", false);

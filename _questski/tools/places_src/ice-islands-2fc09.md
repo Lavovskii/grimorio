@@ -41,9 +41,9 @@ coords: []
 [demons-lullaby 1-1] Cumprir o pedido
 Com o bebé atento, usa-o na criatura, item ou local pedido (ou usa o item pedido nele). Procura a frase dele na tabela abaixo para saberes o que fazer. Se resultar, aparece a frase de sucesso e o bebé adormece durante 20 horas.
 coords: []
-[in-service-of-yalahar-quest 7-3] Comprar o Animal Cure
-Vai a **Nibelor** (Ice Islands) e compra um {item:Animal Cure} ao {npc:Siflind}. Só o consegues comprar com esta missão já iniciada e com acesso a Nibelor (primeira missão da {wiki:Ice Islands Quest}). Se não tiveres acesso, pede a alguém que esteja nesta mesma missão e tenha acesso para o comprar por ti.
+[grave-danger-quest 0-3] Pedir a lista das sepulturas
+Diz {key:report} e depois {key:locations}. O Jack diz-te onde ficam as **12 sepulturas** que tens de proteger. A tabela resume-as e indica a secção deste guia de cada uma.
 coords: []
-[inukaya-quest 0-0] Chegar a Nibelor
-Em **Svargrond**, vai à zona de gelo a **norte/nordeste** da cidade e fala com o {npc:Iskan}, o dono do trenó de cães: {key:hi}, {key:passage}. Ele leva-te à ilha de {wiki:Nibelor|Nibelor} (só aceita depois de teres feito o {wiki:Barbarian Test Quest|Barbarian Test Quest} e a primeira missão da Ice Islands Quest).
-coords: [{'x': 32301, 'y': 31083, 'z': 7, 'label': 'Iskan (trenó Svargrond → Nibelor)'}, {'x': 32353, 'y': 31053, 'z': 7, 'label': 'Ilha de Nibelor'}]
+[hand-of-the-inquisition-outfits-quest 0-3] Santificar as 12 campas
+Tens de visitar **12 campas** de cavaleiros caídos, por qualquer ordem. Seis só precisam de uma visita e da Holy Water (Dark Cathedral, Femor Hills, Kilmaresh, Vengoth, Orclands e Folda); nas outras há bosses que enfrentas com equipas de **até 5 jogadores** e que podes repetir a cada **20 horas**. A última coluna diz como chegas a cada campa e como voltas; o guia da {wiki:Grave Danger Quest|Grave Danger Quest} tem cada caminho passo a passo.
+coords: []

@@ -1,6 +1,6 @@
 # PLACE: Cemetery Quarter
 slug: cemetery-quarter-7cfac
-mentioned in 4 guides: dreamers-challenge-quest, killing-in-the-name-of-quest, spirithunters-quest, the-gravedigger-of-drefia-quest
+mentioned in 5 guides: dreamers-challenge-quest, feaster-of-souls-quest, killing-in-the-name-of-quest, spirithunters-quest, the-gravedigger-of-drefia-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Cemetery Quarter 
@@ -36,18 +36,23 @@ In the cemetery quarter, the dead have taken over completely and the former buil
  Name Exp HP Max. Damage Loot | Bonebeast 580 515 342+ ( 200 , 95 , 47+ ) 0-90× Gold Coin (common) Bone (common) Skull (Item) (uncommon) Plate Armor (uncommon) Bony Tail (uncommon) Bone Club (semi-rare) Bone Shield (semi-rare) Green Mushroom (semi-rare) Health Potion (rare) Hardened Bone (rare) Bonebeast Trophy (very rare) Stone Skin Amulet (very rare) | Mutated Bat 750 900 462+ 1-130× Gold Coin (common) Battle Shield (uncommon) Obsidian Lance (uncommon) Heavily Rusted Armor (uncommon) Star Herb (semi-rare) 1-2× Bat Wing (semi-rare) Mutated Bat Ear (semi-rare) 1-3× Black Pearl (rare) 1-2× Small Amethyst (rare) Energy Ring (rare) Rusted Armor (rare) Batwing Hat (very rare) Black Shield (very rare) Mercenary Sword (very rare) | Banshee 900 1,000 654 ( 100 , 4 , 350 , 200 ) 0-80× Gold Coin Candlestick Silver Amulet Simple Dress Hair of a Banshee (semi-rare) Petrified Scream (semi-rare) Black Pearl (semi-rare) Poison Dagger (rare) Silver Brooch (rare) White Pearl (rare) Lyre (rare) Stone Skin Amulet (rare) Blue Robe (rare) Ring of Healing (rare) Strong Mana Potion (rare) Spellbook (rare) Wedding Ring (very rare) Terra Mantle (very rare) Red Robe (very rare) Life Crystal (very rare) Crystal Ring (very rare)
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[feaster-of-souls-quest 6-4] Chegar ao Cemetery Quarter (Yalahar)
+De Edron não há barco direto para **Yalahar**: vai de tapete mágico com o {npc:Pino} para Darashia ({key:hi}, {key:darashia}, {key:yes}, 40 gp) e lá o {npc:Petros} leva-te a Yalahar ({key:hi}, {key:yalahar}, {key:yes}, 210 gp). Também há barco para Yalahar em Thais ({npc:Captain Bluebear}) e em Ankrahmun ({npc:Captain Sinbeard}). Chegas ao porto, junto ao {npc:Karith}. Vai para **norte** até ao centro da cidade e entra no **Magician Quarter**, cujo portão não tem mecanismo. Lá dentro, fala com o guarda {npc:Reed}, entre o Magician Quarter e o Cemetery Quarter: diz {key:hi}, {key:pass} e depois o nome do bairro de destino (o Cemetery Quarter). Se já tens acesso ao mecanismo do Cemetery Quarter (In Service of Yalahar), também podes usá-lo.
+coords: [{'x': 33192, 'y': 31783, 'z': 3, 'label': 'Pino (tapetes de Edron)'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (porto de Darashia)'}, {'x': 32818, 'y': 31278, 'z': 5, 'label': 'Karith (porto de Yalahar)'}, {'x': 32802, 'y': 31103, 'z': 7, 'label': 'Reed (Magician / Cemetery Quarter)'}, {'x': 32761, 'y': 31077, 'z': 7, 'label': 'Cemetery Quarter'}]
+[feaster-of-souls-quest 6-6] Sair do Cemetery Quarter
+Volta ao {npc:Reed} e diz {key:pass} e o nome do Magician Quarter; daí regressa ao centro e ao porto. Para seguires para Ankrahmun: o {npc:Karith} leva-te se tiveres as rotas da In Service of Yalahar; senão, o {npc:Captain Cookie}, no barco ao lado, leva-te a Liberty Bay (400 gp) ou Thais (800 gp); de Liberty Bay, o {npc:Jack Fate} leva-te a Ankrahmun ({key:ankrahmun}, 90 gp).
+coords: [{'x': 32804, 'y': 31276, 'z': 6, 'label': 'Captain Cookie (porto de Yalahar)'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[feaster-of-souls-quest 6-0] Os três sítios
+Resumo da segunda ronda de sinos:
+coords: []
+[feaster-of-souls-quest 6-5] Sino 5: Cemetery Quarter
+No **rés-do-chão**, do lado **leste** do Cemetery Quarter, toca o {item:Death Knell} no ponto da coordenada.
+coords: [{'x': 32803, 'y': 31069, 'z': 7, 'label': 'Cemetery Quarter, lado leste (sino 5)'}]
 [in-service-of-yalahar-quest 8-0] Receber a missão (Yalahari + Palimuth)
 Diz {key:mission} ao {npc:Yalahari (NPC)}: recebes um {item:Ghost Charm} e acesso ao mecanismo do **Cemetery Quarter**. Depois diz {key:mission} ao {npc:Palimuth}.
 coords: []
 [in-service-of-yalahar-quest 8-1] Usar o charm na Strange Carving
 Vai ao **grande edifício** do Cemetery Quarter. Ao fundo da sala está a {item:Strange Carving}: usa o {item:Ghost Charm} nela. O Cemetery Quarter fica a **norte** do centro: entra pelo mecanismo do portão do centro para o Cemetery Quarter.
 coords: [{'x': 32761, 'y': 31077, 'z': 7, 'label': 'Cemetery Quarter'}]
-[in-service-of-yalahar-quest 8-2] Carregar o charm
-Mata os {creature:Tormented Ghost|Tormented Ghosts} que aparecem e usa o {item:Ghost Residue} que deixam no charm. Repete **três vezes** (cada uso faz aparecer mais 2 Tormented Ghosts). No fim, o Ghost Charm transforma-se em {item:Charged Ghost Charm}. Depois volta ao portão por onde entraste e usa o mecanismo outra vez para regressares ao centro.
-coords: []
-[killing-in-the-name-of-quest 3-1] Onde caçar e dicas
-Melhores locais e conselhos para cada task desta faixa:
-coords: []

@@ -1,0 +1,40 @@
+{
+  "title": "Forgotten Crypt",
+  "type": "dungeon",
+  "near": "Ab'Dendriel",
+  "summary": "Cripta exterior **por baixo de {wiki:Draconia}**, aberta pela {wiki:The Roost of the Graveborn Quest}: é uma zona de caça de entrada livre e é aqui que fica a sala do {creature:Bone Overlord}, o boss final da quest.",
+  "requirements": [
+    "{wiki:The Roost of the Graveborn Quest} (nível **450**, conta **Premium**) até à missão final: só depois de sintonizares os quatro ancestrais é que o {npc:S'Zallar M'Andar} te oferece a passagem de canoa.",
+    "Não gasta cargas: é a cripta de entrada livre (a {wiki:Forsaken Crypt} pede {wiki:Ancestral Charge|Ancestral Charges} e a {wiki:Unhallowed Crypt} pede {wiki:Favour of the Ancients})."
+  ],
+  "items": ["Rope", "Parcel", "White Mushroom", "Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Ab'Dendriel** de barco: o {npc:Captain Greyhound} (Carlin), o {npc:Captain Seahorse} (Edron), o {npc:Captain Bluebear} (Thais) ou o {npc:Captain Fearless} (Venore) levam-te lá com {key:hi}, {key:ab'dendriel}, {key:yes}. Chegas ao porto do {npc:Captain Seagull}, a **leste** do centro, 1 andar acima do chão ({coord:32735,31668,6}).",
+    "Vai ter com o {npc:S'Zallar M'Andar}, a **norte/nordeste** do centro da cidade ({coord:32702,31594,7}).",
+    "Diz {key:hi}, {key:mission}, {key:passage} e {key:yes}. A canoa dele, preparada com magia antiga, atravessa as brumas que protegem a ilha e leva-te a {wiki:Draconia} (o S'Zallar fala em voltar ao cemitério dos dragões).",
+    "A Forgotten Crypt fica **por baixo de Draconia**: o {npc:Dragon Ancestor Spirit} diz que o necromante está *\"Deep beneath us\"*. O wiki não descreve o caminho entre o sítio onde a canoa te deixa e a cripta; a sala do {creature:Bone Overlord} fica em {coord:32925,31779,11}."
+  ],
+  "leave": [
+    "O wiki não descreve a saída da Forgotten Crypt nem uma viagem de regresso de canoa. Volta pelo caminho por onde entraste até à superfície de Draconia.",
+    "**Com um Dragonfetish (mais rápido):** leva um {item:White Mushroom} ao {npc:An Old Dragonlord}, no topo da montanha do **norte** da ilha ({coord:32796,31557,2}), e diz {key:hi}: ele troca-o logo por um {item:Dragonfetish}. Sacrifica-o na sala do teleporte de saída, no covil de {creature:Dragon|Dragons} por baixo do **sudeste** da ilha, e és teleportado para **Ab'Dendriel**. Só recebes um de cada vez: não o percas antes de o usares.",
+    "**A pé:** volta até ao {wiki:Hellgate} pelo {wiki:Redbone Castle} e sai pela rota normal ({wiki:Route:Hellgate|Route:Hellgate}), com {item:Rope} e {spell:Levitate} (ou 6 {item:Parcel|Parcels}) para subires 2 andares. Sais à superfície perto de Ab'Dendriel ({coord:32603,31705,7}).",
+    "**Pela pirâmide:** se fizeste a {wiki:Draconia Quest} e tens a {item:Key 3008}, sobe ao **7.º andar** da pirâmide, abre a porta, põe as alavancas em esquerda-direita-esquerda-direita e entra no portal: sais junto à pedra de sacrifício de Ab'Dendriel, perto do templo.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block).",
+    "Em Ab'Dendriel, o {npc:Captain Seagull} ({coord:32735,31668,6}) leva-te a Carlin, Edron, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32702, "y": 31594, "z": 7, "label": "S'Zallar M'Andar (canoa para Draconia)"},
+    {"x": 32925, "y": 31779, "z": 11, "label": "Sala do Bone Overlord (Forgotten Crypt)"},
+    {"x": 32796, "y": 31557, "z": 2, "label": "An Old Dragonlord (troca o White Mushroom por um Dragonfetish)"},
+    {"x": 32603, "y": 31705, "z": 7, "label": "Saída do Hellgate (superfície, perto de Ab'Dendriel)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (porto de Ab'Dendriel)"}
+  ],
+  "images": [
+    {"file": "Draconia Map.png", "caption": "Mapa de Draconia: a Forgotten Crypt fica por baixo da ilha"}
+  ],
+  "warnings": [
+    "O wiki só mostra a conversa da canoa na missão final da quest: não diz se o S'Zallar continua a levar-te depois de a acabares, nem como se volta de canoa. O outro caminho documentado até Draconia é a pé pelo {wiki:Hellgate} (precisa da {item:Key 3012}), mas o wiki também não diz como se desce da ilha até à cripta.",
+    "Antes de ires, leva uma forma de sair de Draconia: {item:Rope} e 6 {item:Parcel|Parcels} (ou {spell:Levitate}), um {item:White Mushroom} ou uma {item:Temple Teleport Scroll}.",
+    "Criaturas de nível alto: {creature:Crypt Construct|Crypt Constructs} (25 000 de vida, curam em área), {creature:Haunted Hunter|Haunted Hunters} (23 000 de vida, invocam {creature:Bone Bear|Bone Bears}) e {creature:Walking Dread|Walking Dreads} (25 000 de vida). Os Crypt Constructs deixam cair {item:Fetid Heart|Fetid Hearts}, que dão acesso à {wiki:Forsaken Crypt}."
+  ]
+}

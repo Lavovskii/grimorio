@@ -1,0 +1,506 @@
+{
+  "slug": "bloody-tusks-quest",
+  "category": "historia",
+  "region": "Yalahar",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "2–3 horas (mais o tempo de juntar 17 talismãs; o boss tem cooldown de 20 h)",
+  "summary": "Um morcego sinistro em Edron leva-te até à vampira {npc:Anaztassja Moroia}, que quer travar o {creature:Vladrukh}, o pai dos vampiros, e o seu exército de Norcferatu (orcs vampiros) em {wiki:Vengoth}. Acalmas os espíritos ancestrais dos orcs com a Ritual Dance of the Red Moon, recebes um batismo de sangue, atrais um Behemoth com talismãs para partir a defesa da {wiki:Norcferatu Fortress}, proteges a Anaztassja num ritual, destróis o coração de um xamã por dentro e, no fim, matas o Vladrukh. Recebes a montada {wiki:Gloom Maw (Mount)|Gloom Maw}, o achievement **Bat Person** e o direito de usar a Mysterious Machine que te leva à entrada da fortaleza.",
+  "legend_pt": "Uma união sombria e profana entre orcs e vampiros deu origem a uma raça híbrida aterradora: os Norcferatu. Os orcs desta região tinham uma cultura guerreira orgulhosa, guiada por xamãs, mas a corrupção vampírica infiltrou-se nos seus clãs e o Vladrukh, o pai dos vampiros, deformou a linhagem deles. Os Nightweavers, antigos xamãs, entregaram-se à adoração das sombras e à magia de sangue; os Heartless arrancam o próprio coração e guardam-no em ânforas de ferro para lutarem sem medo da morte. Os espíritos ancestrais dos orcs, revoltados ao verem os descendentes corromper a sua herança, só te ajudam se executares a Ritual Dance of the Red Moon, uma dança tradicional que desperta o fogo no sangue.",
+  "start": {"x": 33264, "y": 31786, "z": 7, "label": "An Ominous Bat, em Edron"},
+  "requirements": [
+    "Nível **250**: abaixo disso o {npc:An Ominous Bat} limita-se a olhar para ti e não te dá a quest.",
+    "Conta **Premium**.",
+    "Acesso a {wiki:Vengoth}: {wiki:Blood Brothers Quest} feita até à missão 4 (*The Dark Lands*), para o {npc:Harlow} te levar à ilha.",
+    "Pelo menos **17** {item:Norcferatu Talisman|Norcferatu Talismans} para a missão *Breaking in* (podem ser juntados em equipa).",
+    "Feitiço {spell:Levitate}: usas-o em Edron (para baixo) e para entrar na fortaleza (para cima).",
+    "Uma equipa para *The Blood Ritual* (recomenda-se equipa completa), *The Belly of the Beast* e o boss {creature:Vladrukh}."
+  ],
+  "items_needed": [
+    {"item": "Norcferatu Talisman", "qty": 17, "note": "para atrair o Behemoth na missão Breaking in; loot das criaturas da Norcferatu Fortress ou compra no Market"},
+    {"item": "Stealth Ring", "note": "ou o feitiço {spell:Invisible}: os Vampire Bats do Vladrukh não veem invisibilidade"},
+    {"text": "Equipamento com proteção contra **Life Drain** e **Earth** para o Vladrukh"},
+    {"text": "Possivelmente uma bomba (*bomb*) para o Blood Totem: o spoiler diz só *throw a bomb near the Blood Totem*, sem dizer qual nem onde a arranjas"},
+    {"text": "Muitas poções de vida e mana"},
+    {"text": "100 gp para o barco do {npc:Harlow} para Vengoth (50 gp para voltar)"}
+  ],
+  "rewards": [
+    {"text": "Montada {wiki:Gloom Maw (Mount)|Gloom Maw} (+10 de velocidade, pode ser colorida)"},
+    {"text": "Achievement **Bat Person** (3 pontos)"},
+    {"text": "Podes usar a **Mysterious Machine** do piso mais alto, que te teleporta para a entrada da fortaleza (torna a caça mais eficiente)"},
+    {"text": "Loot do {creature:Vladrukh} (boss de 450 000 de experiência): {item:Crystal Coin|Crystal Coins}, {item:Platinum Coin|Platinum Coins}, poções e, com sorte, {item:Blood Crown}, {item:Blood Sceptre}, {item:Skull Belt}, {item:Greater Proficiency Catalyst}, entre outros"}
+  ],
+  "achievements": ["Bat Person"],
+  "unlocks": [
+    {"what": "Entrada no covil do Vladrukh (Norcferatu Fortress)", "kind": "zona", "place": "Norcferatu Fortress", "when": "Missão *Into the Grave*: a {npc:Anaztassja Moroia} dá-te a magia dela para atravessares a proteção dos orcs e entrares no covil (sobes com {spell:Levitate} depois da névoa)."},
+    {"what": "Norcferatu Dungeons", "kind": "zona", "place": "Norcferatu Dungeons", "when": "Missão *Breaking in*: depois de o Behemoth partir a defesa do Blood Guardian, entras pelo teleporte desprotegido."},
+    {"what": "Boss Vladrukh", "kind": "funcionalidade", "place": "Vladrukh", "when": "Missão *The Father of Vampires*.", "note": "A página do boss indica cooldown de 20 horas e combate de 15 minutos no máximo."},
+    {"what": "Mysterious Machine do piso mais alto (teleporte para a entrada da Norcferatu Fortress)", "kind": "transporte", "when": "Ao reportares à {npc:Anaztassja Moroia} depois de matares o Vladrukh."},
+    {"what": "Montada Gloom Maw", "kind": "funcionalidade", "place": "Gloom Maw (Mount)", "when": "Ao reportares à {npc:Anaztassja Moroia} depois de matares o Vladrukh (achievement **Bat Person**)."}
+  ],
+  "dangers": [
+    "Dworc Shadowstalker",
+    "Gloom Maw",
+    "Norcferatu Heartless",
+    "Norcferatu Nightweaver",
+    "Orclops Bloodbreaker",
+    "Varg",
+    "Blind Monstrosity",
+    "Norcferatu Minion",
+    "Norcferatu Abomination",
+    "Norcferatu Monstrosity",
+    "Digestive Fluid",
+    "Vampiric Flesh",
+    "Digestive Ooze",
+    "Vampiric Heart",
+    "Blood Pool",
+    "Vampire Bat",
+    "Vampiric Essence",
+    "Vladrukh"
+  ],
+  "npcs": ["An Ominous Bat", "Anaztassja Moroia", "An Orchish Ancestor Spirit", "Harlow", "Captain Seahorse", "Captain Max"],
+  "tips": [
+    "Junta os 17 {item:Norcferatu Talisman|Norcferatu Talismans} antes de chegares à missão *Breaking in*: caem de {creature:Dworc Shadowstalker|Dworc Shadowstalkers}, {creature:Gloom Maw|Gloom Maws}, {creature:Norcferatu Heartless}, {creature:Norcferatu Nightweaver|Norcferatu Nightweavers}, {creature:Orclops Bloodbreaker|Orclops Bloodbreakers} e {creature:Varg|Vargs}, ou compra-os no Market. Em equipa, juntem os talismãs entre todos.",
+    "As criaturas da fortaleza são muito fortes (de 5 400 a 10 300 de HP); a wiki recomenda nível 550 para caçar nas {wiki:Norcferatu Dungeons}. Mesmo sendo a quest de nível 250, não vás sozinho para as partes de combate.",
+    "Composição útil para o Vladrukh: um {wiki:Knight} para prender o boss num canto, shooters a atacar à distância e um mago que possa invocar {creature:Demon Skeleton|Demon Skeletons} para bloquear as Blood Pools.",
+    "Tem {item:Stealth Ring|Stealth Rings} ou o {spell:Invisible} numa hotkey: os {creature:Vampire Bat|Vampire Bats} aparecem várias vezes durante o Vladrukh.",
+    "Em *The Belly of the Beast* evita ataques em área: as {creature:Vampiric Flesh} refletem o dano que recebem."
+  ],
+  "sections": [
+    {
+      "title": "1. Into the Grave (Edron)",
+      "intro": "A quest começa em Edron, junto à casa do Telas. Leva o {spell:Levitate} preparado.",
+      "steps": [
+        {
+          "title": "Chegar a Edron",
+          "text": "Apanha um barco para **Edron** ({key:hi}, {key:edron}, {key:yes}). Chegas ao porto do {npc:Captain Seahorse}; daí segue para **leste** pela cidade até à zona da casa do {npc:Telas}.",
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}],
+          "images": [{"file": "Map edron.jpg", "caption": "Mapa de Edron"}]
+        },
+        {
+          "title": "Falar com o An Ominous Bat",
+          "text": "Fala com o {npc:An Ominous Bat}: diz {key:hi}. O morcego diz-te que a campa te está a chamar. Se tiveres menos de nível 250, ele só olha para ti (*<the bat just glares at you>*).",
+          "npc": "An Ominous Bat",
+          "coords": [{"x": 33264, "y": 31786, "z": 7, "label": "An Ominous Bat"}],
+          "dialogue": [{"you": "hi"}]
+        },
+        {
+          "title": "Subir para o andar do Telas",
+          "text": "Sobe as escadas para o andar de cima (piso 6), **mesmo a norte** do sítio onde está o {npc:Telas}.",
+          "coords": [{"x": 33276, "y": 31799, "z": 6, "label": "Telas (referência)"}]
+        },
+        {
+          "title": "Levitar para baixo",
+          "text": "Neste ponto usa {spell:Levitate} para **baixo** (*exani hur down*). Desces para o sítio onde está uma campa sinistra (*ominous grave*).",
+          "coords": [{"x": 33270, "y": 31787, "z": 6, "label": "Ponto onde levitas para baixo"}]
+        },
+        {
+          "title": "Usar a campa",
+          "text": "Usa a campa sinistra. És levado para uma sala, um andar abaixo (piso -1), onde está a {npc:Anaztassja Moroia}.",
+          "coords": [{"x": 33268, "y": 31787, "z": 8, "label": "Anaztassja Moroia (sala da campa, Edron)"}]
+        },
+        {
+          "title": "Falar com a Anaztassja",
+          "text": "Diz {key:hi}. Ela diz que está contente por finalmente teres respondido ao seu {key:call}: diz essa palavra. Depois pergunta-lhe pela {key:entity}: ela conta-te que o {creature:Vladrukh} e o seu exército de orcs vis obtiveram sangue preservado de uma entidade antiga. No fim, concede-te a magia dela para atravessares a proteção deles e entrares no covil.",
+          "npc": "Anaztassja Moroia",
+          "dialogue": [{"you": "hi"}, {"you": "call"}, {"you": "entity"}],
+          "reward": "A magia da Anaztassja, que te deixa entrar no covil dos Norcferatu"
+        },
+        {
+          "title": "Sair da sala da campa",
+          "text": "A wiki não descreve a saída desta sala. Procura a saída na própria sala e volta ao porto de Edron, ao {npc:Captain Seahorse}, para seguires viagem para Vengoth (secção seguinte). Se não encontrares saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block).",
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Through the Mist (Vengoth)",
+      "steps": [
+        {
+          "title": "Ir para Yalahar",
+          "text": "Vai até **Yalahar**. A partir de Edron: o {npc:Captain Seahorse} leva-te a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 170 gp) e, em Liberty Bay, o {npc:Captain Max} (num dos barcos do lado **leste** do cais) leva-te a Yalahar ({key:hi}, {key:yalahar}, {key:yes}, 400 gp). O Captain Max só faz esta rota depois de começares a {wiki:In Service of Yalahar Quest}. Depois da missão *Searoutes around Yalahar* dessa quest, o {npc:Karith} (no porto de Yalahar, um andar acima) também liga Yalahar a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais e Venore.",
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (Edron)"}, {"x": 32298, "y": 32896, "z": 6, "label": "Captain Max (Liberty Bay)"}]
+        },
+        {
+          "title": "Viajar para Vengoth",
+          "text": "Nas docas do **Trade Quarter** de Yalahar (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.",
+          "npc": "Harlow",
+          "dialogue": [{"you": "hi"}, {"you": "vengoth"}, {"you": "yes"}],
+          "coords": [{"x": 32857, "y": 31550, "z": 7, "label": "Chegada a Vengoth (Harlow)"}],
+          "images": [{"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"}]
+        },
+        {
+          "title": "Caminhar até à Norcferatu Fortress",
+          "text": "Caminha para **norte** em direção à {wiki:Norcferatu Fortress}. Pelo caminho atravessas uma névoa.",
+          "coords": [{"x": 32914, "y": 31451, "z": 7, "label": "Norcferatu Fortress"}],
+          "warning": "A Norcferatu Fortress tem criaturas muito fortes ({creature:Orclops Bloodbreaker|Orclops Bloodbreakers}, {creature:Dworc Shadowstalker|Dworc Shadowstalkers}, {creature:Varg|Vargs}...). Não andes a puxar monstros."
+        },
+        {
+          "title": "Levitar para cima depois da névoa",
+          "text": "**Não subas as escadas.** Em vez disso, logo depois da névoa, um pouco a **leste** das escadas, usa {spell:Levitate} para **cima** (*exani hur up*) neste ponto. Sobes para o piso 6 e encontras outra vez a {npc:Anaztassja Moroia}.",
+          "coords": [{"x": 32914, "y": 31451, "z": 7, "label": "Ponto onde levitas para cima"}]
+        },
+        {
+          "title": "Falar sobre o negócio",
+          "text": "Diz {key:hi} e {key:business} à Anaztassja. Ela pede-te que encontres a gruta ancestral e uma forma de comunicares com os espíritos ancestrais dos orcs.",
+          "dialogue": [{"you": "hi"}, {"you": "business"}]
+        }
+      ]
+    },
+    {
+      "title": "3. The Wrath of the Ancestors",
+      "steps": [
+        {
+          "title": "Passar as portas de quest",
+          "text": "Passa pela porta de quest **ao lado** da Anaztassja e caminha para **leste** até outra porta de quest. Passa-a também.",
+          "coords": [{"x": 32951, "y": 31419, "z": 6, "label": "Segunda porta de quest"}]
+        },
+        {
+          "title": "Falar com o espírito ancestral",
+          "text": "Fala com o {npc:An Orchish Ancestor Spirit}: diz {key:hi} e {key:appease}. O espírito diz-te que tens de os apaziguar para ganhares o apoio deles: tens de dançar para honrar os ritos do seu povo.",
+          "npc": "An Orchish Ancestor Spirit",
+          "dialogue": [{"you": "hi"}, {"you": "appease"}],
+          "coords": [{"x": 32956, "y": 31420, "z": 6, "label": "An Orchish Ancestor Spirit"}]
+        }
+      ]
+    },
+    {
+      "title": "4. Dance of Death",
+      "intro": "Tens de executar a *Ritual Dance of the Red Moon* para receberes a bênção dos espíritos.",
+      "steps": [
+        {
+          "title": "Pisar a marca sinistra",
+          "text": "Entra na sala e põe-te em cima de uma das marcas sinistras (*ominous mark*) do chão."
+        },
+        {
+          "title": "Dançar",
+          "text": "Roda a tua personagem o mais depressa que conseguires (vira-a para todos os lados com **Ctrl + setas**). Aparece um contador ao lado da personagem que vai subindo até **50**.",
+          "images": [{"file": "Feared Icon.gif", "caption": "Ícone do estado Feared (medo)"}],
+          "warning": "Não fiques ao lado dos **Angry Orc Ancestor Spirits** (espíritos zangados na sala): deixam-te muitas vezes {wiki:Drunk|bêbedo}, {wiki:Rooted|enraizado} ou com {wiki:Feared|medo}, e isso estraga a dança."
+        },
+        {
+          "title": "Ritual concluído",
+          "text": "Ao chegares a 50 aparece a mensagem *YOU HAVE APPEASED THE ORCISH ANCESTORS!*. O ritual está concluído."
+        },
+        {
+          "title": "Reportar à Anaztassja",
+          "text": "Volta para **oeste** pelas duas portas de quest até à Anaztassja e diz {key:hi} e {key:business}.",
+          "dialogue": [{"you": "hi"}, {"you": "business"}],
+          "coords": [{"x": 32951, "y": 31419, "z": 6, "label": "Porta de quest (caminho de volta)"}]
+        }
+      ]
+    },
+    {
+      "title": "5. Bloodbath",
+      "steps": [
+        {
+          "title": "O batismo de sangue",
+          "text": "A Anaztassja diz-te que precisas de um batismo de sangue para enganares as proteções das masmorras mais fundas."
+        },
+        {
+          "title": "Subir e entrar pela porta de quest",
+          "text": "Sobe **um andar** (piso 5) e entra na sala protegida por uma porta de quest.",
+          "coords": [{"x": 32909, "y": 31432, "z": 5, "label": "Porta de quest da sala da Blind Monstrosity"}]
+        },
+        {
+          "title": "Passar pela Blind Monstrosity",
+          "text": "Esta sala é guardada por uma {creature:Blind Monstrosity}. Sê rápido, ou usa uma boa estratégia, e atravessa a sala sem seres atingido pelos ataques dela até chegares à sala seguinte, a **leste**.",
+          "tip": "Segundo a página da criatura, a Blind Monstrosity tem um movimento fixo e não causa dano aos jogadores; mesmo assim o spoiler diz para não seres atingido pelos ataques dela. Observa o padrão antes de atravessares."
+        },
+        {
+          "title": "Ativar o Blood Totem",
+          "text": "Na sala a leste está o {creature:Blood Totem}. Atira uma bomba (*bomb*) para junto dele.",
+          "warning": "O spoiler diz apenas *throw a bomb near the Blood Totem* e não indica que bomba é nem onde a arranjas: vê primeiro se há alguma na sala antes de gastares runas tuas."
+        },
+        {
+          "title": "Receber o sacramento de sangue",
+          "text": "Deixa que os feitiços do Blood Totem te atinjam até o sacramento ficar completo: aparece um contador que sobe até **10**. Vão aparecendo as mensagens *Argh!*, *That Pain!!*, *<gasp>* e, no fim, *You gained the sacrament of blood!*.",
+          "tip": "Segundo a página do Blood Totem, ele não se mexe e não causa dano aos jogadores.",
+          "reward": "Sacramento de sangue"
+        },
+        {
+          "title": "Reportar à Anaztassja",
+          "text": "Volta pelo mesmo caminho: atravessa outra vez a sala da Blind Monstrosity para **oeste**, sai pela porta de quest e desce um andar até à Anaztassja. Fala com ela ({key:hi}). O spoiler só diz *report back to Anaztassja* e não indica a palavra do relatório; se ela não reagir, usa {key:business}, a palavra dos relatórios anteriores na fortaleza.",
+          "coords": [{"x": 32909, "y": 31432, "z": 5, "label": "Porta de quest (saída)"}]
+        }
+      ]
+    },
+    {
+      "title": "6. Breaking in",
+      "intro": "Esta missão pode ser feita em equipa: trabalhem juntos para juntar os talismãs.",
+      "steps": [
+        {
+          "title": "O plano da Anaztassja",
+          "text": "A Anaztassja sente o cheiro do sangue orc em ti e confirma que está tudo pronto. O último obstáculo antes dos pisos subterrâneos é passar por um {creature:Blood Guardian}. O plano dela: usar {item:Norcferatu Talisman|Norcferatu Talismans} para atrair um {creature:Behemoth} que parta a guarda deles."
+        },
+        {
+          "title": "Entrar no corredor estreito",
+          "text": "Caminha um pouco para **noroeste** e entra num corredor estreito de onde consegues ver o guardião no andar de baixo. Segue o corredor até ao fim, para **leste**."
+        },
+        {
+          "title": "Atirar os talismãs",
+          "text": "Começa a atirar os talismãs para o andar de baixo, começando pelo quadrado **mais a leste**, e vai atraindo o Behemoth até ao extremo **oeste**. Tem de ser feito **quadrado a quadrado**, por isso precisas de pelo menos **17** talismãs.",
+          "warning": "Com menos de 17 talismãs não consegues levar o Behemoth até ao fim. Em equipa, juntem os talismãs de todos."
+        },
+        {
+          "title": "Descer e entrar no teleporte",
+          "text": "Quando o Behemoth partir a parede, tu e qualquer outro jogador que queira avançar na quest têm **5 minutos** para correr para baixo e entrar no teleporte, agora desprotegido.",
+          "warning": "Só tens 5 minutos: quem não entrar a tempo fica para trás."
+        }
+      ]
+    },
+    {
+      "title": "7. Into the Vampire's Lair",
+      "intro": "Vais para a zona subterrânea (as {wiki:Norcferatu Dungeons}) à procura da Anaztassja. Segue a rota, piso a piso.",
+      "steps": [
+        {
+          "title": "Piso -1",
+          "text": "Chegas ao piso -1. Caminha até ao ponto marcado a **sul** e desce para o piso -2.",
+          "map": {"x": 32909, "y": 31436, "z": 8, "marks": [{"x": 32912, "y": 31428, "label": "Chegada"}, {"x": 32906, "y": 31444, "label": "Descida para o piso -2"}]}
+        },
+        {
+          "title": "Piso -2",
+          "text": "Caminha para **noroeste** até ao ponto marcado e desce para o piso -3.",
+          "map": {"x": 32881, "y": 31428, "z": 9, "marks": [{"x": 32906, "y": 31444, "label": "Chegada"}, {"x": 32877, "y": 31411, "label": "Descida para o piso -3"}]}
+        },
+        {
+          "title": "Piso -3",
+          "text": "Caminha um pouco para **sul** até à Anaztassja.",
+          "map": {"x": 32880, "y": 31423, "z": 10, "marks": [{"x": 32877, "y": 31411, "label": "Chegada"}, {"x": 32882, "y": 31423, "label": "Anaztassja"}]}
+        },
+        {
+          "title": "Falar com a Anaztassja",
+          "text": "Diz {key:hi} e pergunta pelo próximo passo ({key:step}). Ela diz-te que vai quebrar os últimos selos que protegem a cabala dos orcs, mas precisa que a protejas enquanto o faz.",
+          "dialogue": [{"you": "hi"}, {"you": "step"}],
+          "coords": [{"x": 32882, "y": 31423, "z": 10, "label": "Anaztassja (piso -3)"}]
+        },
+        {
+          "title": "Entrar no teleporte",
+          "text": "Entra no teleporte e junta-te à tua equipa para a tarefa seguinte."
+        }
+      ]
+    },
+    {
+      "title": "8. The Blood Ritual",
+      "intro": "Recomenda-se fazer esta missão com uma **equipa completa**. Se falhares, só podes tentar outra vez **1 hora** depois.",
+      "steps": [
+        {
+          "title": "A sala do ritual",
+          "text": "Ao entrares vês a Anaztassja, três sinais sinistros no chão e duas caixas. Cada sinal dá aos jogadores um feitiço **automático** que pode ser melhorado:",
+          "table": {
+            "head": ["Sinal", "Feitiço que te dá"],
+            "rows": [
+              ["Círculo", "Feitiço em forma de anel à tua volta"],
+              ["Círculo cheio", "Armadilha que dispara quando as criaturas passam por cima"],
+              ["Traço", "Feitiço em onda (wave)"]
+            ]
+          }
+        },
+        {
+          "title": "Apanhar os itens das caixas",
+          "text": "A caixa do **norte** dá-te uma {item:Empowered Stake}, para causares dano a criaturas ao teu lado (corpo a corpo). A caixa do **sul** dá-te um {item:Vial of Corrosive Blood}, para causares dano à distância."
+        },
+        {
+          "title": "Ir até à névoa",
+          "text": "Caminha para **oeste** pelo corredor até encontrares uma névoa. Não a consegues atravessar. Da névoa saem criaturas que tentam avançar para **leste** para matar a Anaztassja: o teu objetivo é matá-las antes disso, com tudo o que tiveres (feitiços dos sinais, itens das caixas e os teus próprios ataques)."
+        },
+        {
+          "title": "As criaturas do ritual",
+          "text": "Aparecem três tipos de criatura:",
+          "table": {
+            "head": ["Criatura", "Notas"],
+            "rows": [
+              ["{creature:Norcferatu Minion}", "A mais comum. Rápida mas fácil de matar. Podes bloquear-lhe o caminho com o corpo para a atrasar."],
+              ["{creature:Norcferatu Abomination}", "Mais lenta mas com mais HP e mais dano que os minions. Causa {wiki:Feared|medo} a quem estiver perto. **Prioriza-a**: o cadáver dá melhorias aos feitiços dos jogadores (pisa o corpo depois de morrer)."],
+              ["{creature:Norcferatu Monstrosity}", "O boss final e a última criatura a aparecer. Concentra todo o dano nela: mata a Anaztassja com um só golpe."]
+            ]
+          },
+          "tip": "Depois de matares uma Norcferatu Abomination, pisa o cadáver dela para melhorares o teu feitiço automático."
+        },
+        {
+          "title": "Matar a Norcferatu Monstrosity",
+          "text": "Quando aparecer a {creature:Norcferatu Monstrosity}, toda a equipa ataca-a. Quando ela morrer, a missão fica concluída.",
+          "warning": "Se a Monstrosity chegar à Anaztassja, mata-a com um só golpe e falhas a missão (só podes repetir 1 hora depois)."
+        },
+        {
+          "title": "Reportar à Anaztassja",
+          "text": "Fala outra vez com a Anaztassja ({key:hi}) para reportares a missão."
+        }
+      ]
+    },
+    {
+      "title": "9. Facing the True Threat",
+      "intro": "Sai da sala do ritual (o spoiler só diz *leave the current location*, sem descrever a saída) e volta ao ponto onde falaste com a Anaztassja no piso -3 ({coord:32882,31423,10}). Daí segue a rota até ao novo sítio onde ela te espera, no piso -4 (passando primeiro pelo piso -1).",
+      "steps": [
+        {
+          "title": "Piso -3: subir",
+          "text": "A partir do sítio da Anaztassja, caminha um pouco para **norte** e sobe para o piso -2.",
+          "map": {"x": 32880, "y": 31423, "z": 10, "marks": [{"x": 32882, "y": 31423, "label": "Ponto de partida"}, {"x": 32877, "y": 31411, "label": "Subida para o piso -2"}]}
+        },
+        {
+          "title": "Piso -2: subir",
+          "text": "Caminha para **sudeste** e sobe para o piso -1.",
+          "map": {"x": 32881, "y": 31428, "z": 9, "marks": [{"x": 32877, "y": 31411, "label": "Chegada"}, {"x": 32906, "y": 31444, "label": "Subida para o piso -1"}]}
+        },
+        {
+          "title": "Piso -1: descer noutro sítio",
+          "text": "Caminha para **nordeste** até ao ponto marcado e desce para o piso -2.",
+          "map": {"x": 32918, "y": 31431, "z": 8, "marks": [{"x": 32906, "y": 31444, "label": "Chegada"}, {"x": 32929, "y": 31421, "label": "Descida para o piso -2"}]}
+        },
+        {
+          "title": "Piso -2: descer",
+          "text": "Dá alguns passos para **sudeste** e desce para o piso -3.",
+          "map": {"x": 32932, "y": 31423, "z": 9, "marks": [{"x": 32929, "y": 31421, "label": "Chegada"}, {"x": 32935, "y": 31425, "label": "Descida para o piso -3"}]}
+        },
+        {
+          "title": "Piso -3: descer",
+          "text": "Caminha para **sudoeste** e desce para o piso -4.",
+          "map": {"x": 32920, "y": 31427, "z": 10, "marks": [{"x": 32935, "y": 31425, "label": "Chegada"}, {"x": 32911, "y": 31440, "label": "Descida para o piso -4"}]}
+        },
+        {
+          "title": "Piso -4: chegar à Anaztassja",
+          "text": "Caminha para **noroeste** até à Anaztassja.",
+          "map": {"x": 32902, "y": 31426, "z": 11, "marks": [{"x": 32911, "y": 31440, "label": "Chegada"}, {"x": 32893, "y": 31417, "label": "Anaztassja"}]}
+        },
+        {
+          "title": "Falar sobre o xamã",
+          "text": "Diz {key:hi} e {key:shaman}. Ela diz-te que tens de matar o xamã **por dentro**: deixar que ele te engula e depois destruir o seu coração vil.",
+          "dialogue": [{"you": "hi"}, {"you": "shaman"}],
+          "coords": [{"x": 32893, "y": 31417, "z": 11, "label": "Anaztassja (piso -4)"}]
+        }
+      ]
+    },
+    {
+      "title": "10. The Belly of the Beast",
+      "intro": "Missão arriscada por causa da reflexão de dano e do dano de agony. Se não tens a certeza de aguentar o dano, tem cuidado e evita atacar em área. Há um limite de **10 minutos**: passado esse tempo és expulso.",
+      "steps": [
+        {
+          "title": "Entrar na barriga do xamã",
+          "text": "Entra na sala a **leste** da Anaztassja e pisa a poça de sangue. Vais parar a uma sala de alavanca (*lever room*), por onde se entra na última parte: destruir o coração do xamã. Junta lá a equipa antes de avançar. O spoiler não explica como funciona a alavanca nem quantos jogadores podem entrar.",
+          "warning": "A partir daqui tens **10 minutos**; quando o tempo acaba és expulso."
+        },
+        {
+          "title": "Os inimigos lá dentro",
+          "text": "O objetivo é atravessar a sala sobrevivendo às criaturas e destruir o {creature:Vampiric Heart} que está mesmo no fim. Vais enfrentar:",
+          "table": {
+            "head": ["Criatura", "Notas"],
+            "rows": [
+              ["{creature:Digestive Fluid}", "Causa dano a quem a pisa. Desaparece de vez em quando, por isso dá para a evitar."],
+              ["{creature:Vampiric Flesh}", "Reflete o dano que recebe: não ataques muitas ao mesmo tempo."],
+              ["{creature:Digestive Ooze}", "Criaturas normais que atacam corpo a corpo. Voltam a aparecer depressa depois de mortas."],
+              ["{creature:Vampiric Heart}", "Imóvel e com todos os efeitos das outras criaturas. O ataque constante de terra em área chega no máximo a 4 quadrados."]
+            ]
+          }
+        },
+        {
+          "title": "Destruir o Vampiric Heart",
+          "text": "Ataca o {creature:Vampiric Heart}. Os shooters podem ficar a **5 quadrados** de distância: o ataque de terra dele só chega a 4, e assim também evitam o {creature:Digestive Fluid} da sala.",
+          "tip": "Se a equipa tiver dificuldade em atacar o coração enquanto aguenta os {creature:Digestive Ooze|Digestive Oozes}, puxa-os primeiro para longe."
+        },
+        {
+          "title": "Sair e reportar",
+          "text": "Quando o coração for destruído recebes uma atualização no quest log. Sai pelo teleporte que fica a **sul** do sítio onde estava o coração e fala com a Anaztassja ({key:hi}) para reportares.",
+          "coords": [{"x": 32893, "y": 31417, "z": 11, "label": "Anaztassja (piso -4)"}]
+        }
+      ]
+    },
+    {
+      "title": "11. The Father of Vampires (Vladrukh)",
+      "intro": "A Anaztassja diz-te que chegou a hora de enfrentar o vampiro usurpador e destruí-lo de vez. O combate alterna entre duas fases até ao fim.",
+      "steps": [
+        {
+          "title": "Preparar o combate",
+          "text": "Equipa proteção contra **Life Drain** e **Earth**. Tem {item:Stealth Ring|Stealth Rings} ou o {spell:Invisible} numa hotkey para os Vampire Bats. Combinem antes quem prende o boss (o {wiki:Knight}), quem trata das Blood Pools e quem mata as essências.",
+          "warning": "Segundo a página do boss, o combate dura no máximo **15 minutos** e cada personagem só o pode enfrentar uma vez a cada **20 horas**."
+        },
+        {
+          "title": "Entrar na sala do boss",
+          "text": "Entra na sala a **oeste** da Anaztassja e prepara-te: o {creature:Vladrukh} está lá dentro."
+        },
+        {
+          "title": "Fase 1: atacar o Vladrukh",
+          "text": "Na primeira fase (a de início) o Vladrukh está na sala e, pouco depois, aparecem três {creature:Blood Pool|Blood Pools}. Em geral, o Knight puxa o boss para um canto, virado para um lado em que as **waves** frequentes dele não apanham os shooters. Nesta fase a equipa tem cerca de **2 minutos e 20 segundos** para atacar o boss.",
+          "warning": "O Vladrukh lança waves com muita frequência: shooters, nunca fiquem à frente dele."
+        },
+        {
+          "title": "Lidar com as Blood Pools",
+          "text": "Os shooters podem aguentar as {creature:Blood Pool|Blood Pools}, mas é mais seguro puxá-las para longe do boss e ter um mago a invocar {creature:Demon Skeleton|Demon Skeletons} para as bloquear. O spoiler explica que as pools atacam só com Life Drain, e os Demon Skeletons são imunes a esse dano.",
+          "tip": "A página da Blood Pool diz que um patch de 2 de setembro de 2025 mudou os ataques dela de Life Drain para dano **físico**: os Demon Skeletons ainda bloqueiam o caminho, mas podem já não ser imunes ao dano."
+        },
+        {
+          "title": "Fase 2: matar as essências",
+          "text": "Passados os 2 minutos e 20 segundos o Vladrukh desaparece e surgem quatro {creature:Vampire Bat|Vampire Bats} e quatro {creature:Vampiric Essence|Vampiric Essences} (as Blood Pools **não** desaparecem). Mata as quatro Vampiric Essences (cerca de 20 000 de HP cada) o mais depressa possível para voltares à fase 1.",
+          "warning": "Enquanto estás ocupado com as essências, o Vladrukh cura-se. Quanto mais demorares, mais vida ele recupera."
+        },
+        {
+          "title": "Cuidado com os Vampire Bats",
+          "text": "Os {creature:Vampire Bat|Vampire Bats} são perigosos: são imortais, deixam-te {wiki:Drunk|bêbedo}, causam {wiki:Feared|medo}, refletem todo o dano que recebem e ignoram o {spell:Challenge} do Knight. Mas **não veem invisibilidade**: põe um {item:Stealth Ring} ou usa o {spell:Invisible} assim que eles aparecerem.",
+          "warning": "Não ataques os Vampire Bats: refletem 100% do dano."
+        },
+        {
+          "title": "Repetir as fases",
+          "text": "Alterna entre a fase 1 (atacar o Vladrukh) e a fase 2 (matar as essências) até o boss chegar à vida **vermelha**."
+        },
+        {
+          "title": "Forma de campo de veneno",
+          "text": "Com a vida vermelha, o Vladrukh ganha uma forma temporária extra: transforma-se num campo de veneno durante alguns segundos. Nessa forma é **imortal** e causa bastante mais dano. Os Knights podem aproveitar esses segundos para correr com o boss pela sala (desde que seja seguro para eles e para os shooters; lembra-te das waves frequentes) e depois voltar a prendê-lo.",
+          "tip": "É só uma mecânica para atrasar o fim do combate: aguenta, não gastes dano enquanto ele estiver imortal."
+        },
+        {
+          "title": "Matar o Vladrukh",
+          "text": "Continua a causar dano até o Vladrukh morrer. O boss dá 450 000 de experiência. Algum do loot possível (dados de poucas amostras na wiki):",
+          "table": {
+            "head": ["Loot", "Notas"],
+            "rows": [
+              ["{item:Crystal Coin}", "2–3, sempre"],
+              ["{item:Platinum Coin}", "74–171, sempre"],
+              ["{item:Ultimate Mana Potion}, {item:Great Mana Potion}, {item:Strong Mana Potion}", "comum"],
+              ["{item:Supreme Health Potion}, {item:Ultimate Health Potion}, {item:Ultimate Spirit Potion}, {item:Great Spirit Potion}", "comum"],
+              ["{item:Yellow Gem}, {item:Red Gem}, {item:Blue Gem}", "às vezes"],
+              ["{item:Blood Preservation}, {item:Skull Belt}, {item:Red Piece of Cloth}, {item:Blood Sceptre}, {item:Dark Armor}, {item:Vampire Teeth}", "às vezes"],
+              ["{item:Blood Crown}, {item:Giant Ruby}, {item:Giant Emerald}, {item:Greater Garlic Necklace}, {item:Death Ring}, {item:Skull Staff}, {item:Vampire Shield}, {item:Orcish Axe}", "raro"],
+              ["{item:Greater Proficiency Catalyst}, {item:Proficiency Catalyst}, {item:Stone Skin Amulet}, {item:Skull Helmet}, {item:Epee}", "possível"]
+            ]
+          },
+          "reward": "Loot do Vladrukh e 450 000 de experiência"
+        }
+      ]
+    },
+    {
+      "title": "12. Recompensa e saída",
+      "steps": [
+        {
+          "title": "Reportar à Anaztassja",
+          "text": "Depois de matares o {creature:Vladrukh}, sai da sala do boss (o spoiler não descreve a saída) e fala uma última vez com a {npc:Anaztassja Moroia} ({key:hi}; o spoiler não indica a palavra do relatório). Recebes a montada {wiki:Gloom Maw (Mount)|Gloom Maw} e o achievement **Bat Person**. Passas também a poder usar a **Mysterious Machine** do piso mais alto, que te teleporta para a entrada da fortaleza.",
+          "coords": [{"x": 32893, "y": 31417, "z": 11, "label": "Anaztassja (piso -4)"}],
+          "images": [{"file": "Gloom Maw (Mount).gif", "caption": "Montada Gloom Maw"}],
+          "reward": "Montada Gloom Maw, achievement Bat Person e acesso à Mysterious Machine"
+        },
+        {
+          "title": "Sair das Norcferatu Dungeons",
+          "text": "Volta para cima pelo caminho por onde desceste (a rota da secção 9 ao contrário: no piso -4 vai até {coord:32911,31440,11} e sobe; no piso -3 vai até {coord:32935,31425,10} e sobe; no piso -2 vai até {coord:32929,31421,9} e sobe para o piso -1). No piso -1 estás outra vez na zona onde chegaste pelo teleporte ({coord:32912,31428,8}). A wiki não descreve como se sai das masmorras para a fortaleza nem a posição exata da **Mysterious Machine**: só diz que a máquina fica no piso mais alto e que, depois da quest, te teleporta para a entrada da {wiki:Norcferatu Fortress}.",
+          "coords": [{"x": 32911, "y": 31440, "z": 11, "label": "Subida do piso -4"}, {"x": 32935, "y": 31425, "z": 10, "label": "Subida do piso -3"}, {"x": 32929, "y": 31421, "z": 9, "label": "Subida do piso -2"}, {"x": 32912, "y": 31428, "z": 8, "label": "Chegada do teleporte (piso -1)"}],
+          "tip": "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block)."
+        },
+        {
+          "title": "Descer da fortaleza",
+          "text": "Se ficares no piso 6 da entrada (onde a Anaztassja estava em *Through the Mist*), desce pelo mesmo sítio por onde subiste: usa {spell:Levitate} para **baixo** junto ao ponto onde levitaste para cima.",
+          "coords": [{"x": 32914, "y": 31451, "z": 7, "label": "Ponto de Levitate da Norcferatu Fortress"}]
+        },
+        {
+          "title": "Voltar a Yalahar",
+          "text": "Da entrada da fortaleza caminha para **sul**, pelo mesmo caminho por onde vieste, até ao {npc:Harlow} no **oeste** de Vengoth. Diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares às docas do Trade Quarter de Yalahar. Daí apanha um barco para a tua cidade (o {npc:Karith}, no porto de Yalahar, se já fizeste a missão *Searoutes around Yalahar*).",
+          "dialogue": [{"you": "hi"}, {"you": "yalahar"}, {"you": "yes"}],
+          "coords": [{"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth"}]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O achievement **Bat Person** vale 3 pontos, precisa de Premium e não é secreto (*No matter your command, this beast is all ears!*).",
+    "A montada {wiki:Gloom Maw (Mount)|Gloom Maw} só se obtém com esta quest e não está à venda na Store.",
+    "Se falhares *The Blood Ritual*, podes repetir a missão 1 hora depois. *The Belly of the Beast* tem limite de 10 minutos.",
+    "O {creature:Vladrukh} é um boss da categoria **Archfoe** do Bosstiary, vê invisibilidade e atravessa campos de fogo, energia e veneno. Não tem nada a ver com o NPC Vladruc.",
+    "Os {item:Norcferatu Talisman|Norcferatu Talismans} que sobrarem vendem-se ao {npc:Yasir} por 670 gp ou no Market."
+  ]
+}

@@ -1,0 +1,1724 @@
+{
+  "slug": "feaster-of-souls-quest",
+  "category": "historia",
+  "region": "Vários",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Vários dias (9 bosses com 20 h de espera cada e muitas viagens)",
+  "summary": "O {npc:Para Norbert}, a norte do Jakundaf Desert, sente distorções na realidade causadas por um portal invisível. Tocas o {item:Death Knell} em nove locais ligados à morte, entras nas {wiki:Brain Grounds}, no {wiki:Netherworld}, na {wiki:Barren Drift} e em {wiki:Zarganash} e matas nove bosses — entre eles o {creature:Brain Head}, o {creature:Thaian} e, no fim, {creature:The Pale Worm}. Recebes o outfit {wiki:Poltergeist Outfits|Poltergeist} e os achievements **Prospectre** e **Beyonder**.",
+  "legend_pt": "Investiga uma série de portais e viaja até ao Netherworld e a Zarganash para desvendar os mistérios do reino entre a vida e a morte.",
+  "start": {
+    "x": 32627,
+    "y": 32076,
+    "z": 7,
+    "label": "Para Norbert, a norte do Jakundaf Desert"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível **250** (recomendado **300+**). As quatro zonas novas da quest são zonas de caça para nível 300+.",
+    "Acesso ao santuário (Inner Sanctum) do {wiki:Lion's Rock}, obtido na {wiki:Lion's Rock Quest} (um dos sinos toca-se lá dentro).",
+    "{wiki:Sea of Light Quest} completa (para a parte do Thaian, com o {npc:Spectulus}).",
+    "{wiki:The Shattered Isles Quest} feita até teres acesso a {wiki:Ramoa}.",
+    "{wiki:Blood Brothers Quest} até à missão 4 (acesso a {wiki:Vengoth} com o {npc:Harlow}).",
+    "Um {item:Skull (Item)|Skull} e uma {item:Grave Flower} para a poção da primeira missão.",
+    "Os três minibosses do Netherworld têm de ser mortos **sozinho**. O {creature:Brain Head}, o {creature:Thaian} e os três minibosses de Zarganash aceitam equipas de **até 5 jogadores**; {creature:The Pale Worm}, **até 10**."
+  ],
+  "items_needed": [
+    {
+      "item": "Skull (Item)",
+      "qty": 1,
+      "note": "para o Bone Meal"
+    },
+    {
+      "item": "Grave Flower",
+      "qty": 1,
+      "note": "para o Grave Flower Extract"
+    },
+    {
+      "item": "Death Knell",
+      "note": "dado pelo Para Norbert; serve para as três rondas de sinos"
+    },
+    {
+      "item": "Small Sapphire",
+      "qty": 1,
+      "note": "para abrir a entrada da Barren Drift"
+    },
+    {
+      "item": "Pick",
+      "note": "para minerar os cristais na Barren Drift (ou uma ferramenta de agente secreto equivalente) e abrir o buraco para a Lich Hell"
+    },
+    {
+      "item": "Shovel",
+      "note": "para abrir a entrada da Shadow Tomb"
+    },
+    {
+      "item": "Rope",
+      "note": "para subir os buracos (Ghostlands, Shadow Tomb, Kilmaresh Catacombs, Ramoa)"
+    },
+    {
+      "item": "Lost Soul (Item)",
+      "qty": 20,
+      "note": "loot nas Brain Grounds; junta mais, porque 25% das purificações falham"
+    },
+    {
+      "item": "Skull Coin",
+      "qty": 3,
+      "note": "loot (pouco frequente) dos minibosses do Netherworld, também no Market; entregas ao The Thaian"
+    },
+    {
+      "item": "Luminescent Crystal",
+      "qty": 100,
+      "note": "mineradas na Barren Drift"
+    },
+    {
+      "item": "Death Toll",
+      "qty": 2,
+      "note": "por cada entrada no labirinto antes do The Pale Worm"
+    },
+    {
+      "item": "Soulforged Lantern",
+      "note": "recomendado para Knights e Paladins no boss final (cai dos minibosses de Zarganash)"
+    },
+    {
+      "item": "Poison Bomb Rune",
+      "note": "para afastar os Bad Thoughts no Brain Head"
+    },
+    {
+      "item": "Sudden Death Rune",
+      "note": "para magos contra os Prospectors"
+    },
+    {
+      "item": "Envenomed Arrow",
+      "note": "para Paladins contra os minibosses do Netherworld"
+    },
+    {
+      "item": "Fire Wall Rune",
+      "note": "para arrastar os minibosses do Netherworld por cima do fogo"
+    },
+    {
+      "text": "Dinheiro para muitos barcos, tapetes e ferries (Carlin, Venore, Edron, Yalahar, Ankrahmun, Port Hope, Issavi, Liberty Bay/Goroma, Darashia, Vengoth)"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "Outfit {wiki:Poltergeist Outfits|Poltergeist} (base), recebido automaticamente ao matares {creature:The Pale Worm}"
+    },
+    {
+      "text": "Achievement **Prospectre** (ao matares o {creature:Thaian})"
+    },
+    {
+      "text": "Achievement **Beyonder** (ao reportares ao {npc:Para Norbert} no fim)"
+    },
+    {
+      "text": "Acesso às {wiki:Brain Grounds}, ao {wiki:Netherworld}, à {wiki:Barren Drift} e a {wiki:Zarganash} (zonas de caça para nível 300+)"
+    },
+    {
+      "text": "Loot dos bosses: {item:Crystal Coin|Crystal Coins}, {item:Diamond|Diamonds}, {item:Moonstone|Moonstones}, {item:White Gem|White Gems}, muitas poções e, raramente, itens como {item:Phantasmal Axe}, {item:Ring of Souls}, {item:Ravenous Circlet} ou {item:Fabulous Legs}"
+    }
+  ],
+  "achievements": [
+    "Prospectre",
+    "Beyonder"
+  ],
+  "unlocks": [
+    {
+      "what": "Brain Grounds",
+      "kind": "zona",
+      "place": "Brain Grounds",
+      "when": "Missão Drain the Brain: depois de tocares os três primeiros sinos e beberes o {item:Vial with a Skull Cork}, passas pelo portal invisível junto ao {npc:Para Norbert}."
+    },
+    {
+      "what": "Netherworld",
+      "kind": "zona",
+      "place": "Netherworld",
+      "when": "Missão Journey to the Netherworld: depois da segunda ronda de sinos, entras pelo portal invisível a leste de Banuta com a {item:Burial Shroud} vestida."
+    },
+    {
+      "what": "Barren Drift",
+      "kind": "zona",
+      "place": "Barren Drift",
+      "when": "Parte do Thaian: depois de entregares os sinos e as {item:Skull Coin|Skull Coins} ao {npc:The Thaian}; para entrares, usa uma {item:Small Sapphire} na parede da formação rochosa junto à taberna, a norte de Edron."
+    },
+    {
+      "what": "Zarganash",
+      "kind": "zona",
+      "place": "Zarganash",
+      "when": "Parte final da quest: teleporte invisível em {wiki:Vengoth}."
+    },
+    {
+      "what": "Bosses do Feaster of Souls",
+      "kind": "funcionalidade",
+      "when": "À medida que avanças: Brain Head, Unaz the Mean, Irgix the Flimsy, Vok the Freakish, Thaian, The Unwelcome, The Dread Maiden, The Fear Feaster e The Pale Worm.",
+      "note": "Todos com 20 horas de espera, incluindo o final."
+    },
+    {
+      "what": "Outfit Poltergeist",
+      "kind": "funcionalidade",
+      "place": "Poltergeist Outfits",
+      "when": "Automaticamente, ao matares {creature:The Pale Worm}."
+    },
+    {
+      "what": "Poltergeist Outfits Quest (addons)",
+      "kind": "missao",
+      "place": "Poltergeist Outfits Quest",
+      "when": "Com o outfit base, podes juntar os addons ({item:Spooky Hood} e {item:Ghost Claw})."
+    },
+    {
+      "what": "Soul War Quest",
+      "kind": "missao",
+      "place": "Soul War Quest",
+      "when": "Depois de completares a Feaster of Souls Quest (é um requisito da Soul War, que começa em Zarganash)."
+    }
+  ],
+  "dangers": [
+    "Flimsy Lost Soul",
+    "Mean Lost Soul",
+    "Freakish Lost Soul",
+    "Grim Reaper",
+    "Brain Head",
+    "Cerebellum",
+    "Bad Thought",
+    "Unaz the Mean",
+    "Irgix the Flimsy",
+    "Vok the Freakish",
+    "Evil Prospector",
+    "Cursed Prospector",
+    "Thaian",
+    "Thaian's Ghost",
+    "The Unwelcome",
+    "Brother Worm",
+    "Wormling",
+    "The Dread Maiden",
+    "Red Soul Stealer",
+    "Green Soul Stealer",
+    "Blue Soul Stealer",
+    "The Fear Feaster",
+    "Horror",
+    "Phobia",
+    "Fear",
+    "Symbol of Fear",
+    "Empty",
+    "The Pale Worm",
+    "Greed Worm",
+    "Hunger Worm",
+    "A Weak Spot",
+    "Vampire",
+    "Lich",
+    "Undead Cavebear"
+  ],
+  "npcs": [
+    "Para Norbert",
+    "Spectulus",
+    "The Thaian",
+    "Harlow",
+    "Jack Fate",
+    "Captain Greyhound",
+    "Captain Fearless",
+    "Captain Bluebear",
+    "Captain Seahorse",
+    "Captain Sinbeard",
+    "Captain Harava",
+    "Charles",
+    "Pino",
+    "Chemar",
+    "Reed",
+    "Karith",
+    "Captain Cookie",
+    "Milos",
+    "Sinclair",
+    "Petros"
+  ],
+  "tips": [
+    "Todos os bosses têm **20 horas** de espera, incluindo o final: conta com vários dias.",
+    "Faz a {item:Burial Shroud} (secção 6) enquanto andas pelas Brain Grounds nas tarefas da secção 4: poupas uma viagem.",
+    "Não vendas as {item:Skull Coin|Skull Coins} dos minibosses do Netherworld (os NPCs compram-nas por 12 000 gp): precisas de **3** para o {npc:The Thaian}. Caem pouco; se te faltarem, compram-se no Market.",
+    "Guarda todos os {item:Death Toll|Death Tolls} que caírem (Lost Souls e todos os bosses da quest): precisas de **2** por cada entrada no labirinto antes do The Pale Worm.",
+    "Guarda as {item:Soulforged Lantern|Soulforged Lanterns} que caem do {creature:The Unwelcome}, da {creature:The Dread Maiden} e do {creature:The Fear Feaster}: tiram o Hex no boss final.",
+    "Leva sempre {item:Rope}, {item:Shovel} e {item:Pick}: a quest passa por buracos, túmulos e minas.",
+    "Para a poção: os {creature:Vampire|Vampires} largam tanto {item:Skull (Item)|Skulls} como {item:Grave Flower|Grave Flowers}, e as Grave Flowers também aparecem em cemitérios e criptas (muitas vezes junto a caixões)."
+  ],
+  "sections": [
+    {
+      "title": "1. Drain the Brain — o Para Norbert e o Death Knell",
+      "intro": "Primeira missão (Drain the Brain). O Para Norbert dá-te um sino que tens de tocar em três sítios ligados à morte e pede-te uma poção. Só com as duas coisas feitas consegues passar pelo portal invisível ao lado dele.",
+      "steps": [
+        {
+          "title": "Chegar ao Para Norbert",
+          "text": "O {npc:Para Norbert} está a **norte** do {wiki:Jakundaf Desert}, o deserto a **sul** de Kazordoon e a **oeste** de Venore. A cidade mais perto é **Venore**: sai da cidade para **oeste** e segue a pé até ele (de Thais, anda para **leste**). Para voltares, faz o mesmo caminho a pé até à cidade.",
+          "npc": "Para Norbert",
+          "coords": [
+            {
+              "x": 32627,
+              "y": 32076,
+              "z": 7,
+              "label": "Para Norbert"
+            },
+            {
+              "x": 32633,
+              "y": 32113,
+              "z": 7,
+              "label": "Jakundaf Desert"
+            }
+          ]
+        },
+        {
+          "title": "Aceitar a missão",
+          "text": "Diz {key:hi}. Ele fala-te do portal inativo que está ao lado dele e pergunta se pode contar contigo. Responde {key:yes}. Recebes o {item:Death Knell} e a lista dos três sítios onde o tens de tocar. Ele pede-te também que bebas uma poção feita com **bone meal** e **grave flower extract**.",
+          "npc": "Para Norbert",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Welcome adventurer! I'm sensing some very unusual distortions in the fabric of reality recently. They are caused by an inactive portal right beside me. [...] Can I count on you?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Thank you very much. In order to pass the invisible portal over there, you have to visit three places that are closely linked to death and afterlife. Sound this knell at each of the sites [...]"
+            },
+            {
+              "npc": "The places you have to visit are: the cemetery east of Carlin, a sacrificial site beneath the Ghostlands and a skull-adorned altar underneath the Dark Cathedral. [...]"
+            },
+            {
+              "npc": "You also have to drink a special potion to pass the portal. Find bone meal and grave flower extract and mix them together to brew this potion. [...]"
+            }
+          ],
+          "reward": "Death Knell",
+          "tip": "Se tiveres dúvidas sobre a poção, pergunta-lhe por {key:bone meal} (faz-se moendo um skull até ficar em pó) e por {key:grave flower extract} (apanha uma grave flower de uma campa e destila-a)."
+        },
+        {
+          "title": "Os três sítios do sino",
+          "text": "Usa (toca) o {item:Death Knell} em cada um destes três sítios para impregnares a tua aura com energia fantasmagórica. A wiki não indica uma ordem obrigatória; a secção 2 explica como chegar e sair de cada um.",
+          "table": {
+            "head": [
+              "Local",
+              "Onde exatamente",
+              "Coordenada"
+            ],
+            "rows": [
+              [
+                "{wiki:Carlin Graveyard} (leste de Carlin)",
+                "À entrada do cemitério",
+                "{coord:32408,31781,7}"
+              ],
+              [
+                "{wiki:Ghostlands} (oeste de Carlin)",
+                "Desce pelo buraco do sudoeste e vai à sala a oeste",
+                "{coord:32178,31836,8}"
+              ],
+              [
+                "{wiki:Dark Cathedral} (sudoeste de Venore)",
+                "2.º andar subterrâneo, para leste, primeira sala a norte",
+                "{coord:32629,32416,9}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 32408,
+              "y": 31781,
+              "z": 7,
+              "label": "Sino 1: Carlin Graveyard"
+            },
+            {
+              "x": 32178,
+              "y": 31836,
+              "z": 8,
+              "label": "Sino 2: Ghostlands"
+            },
+            {
+              "x": 32629,
+              "y": 32416,
+              "z": 9,
+              "label": "Sino 3: Dark Cathedral"
+            }
+          ],
+          "images": [
+            {
+              "file": "Feaster of Souls - Death Knell 1.png",
+              "caption": "Sino 1: entrada do Carlin Graveyard"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 2.png",
+              "caption": "Sino 2: local de sacrifício por baixo das Ghostlands"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 3.png",
+              "caption": "Sino 3: altar com caveiras por baixo da Dark Cathedral"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Drain the Brain — tocar os três sinos (Carlin, Ghostlands, Dark Cathedral)",
+      "steps": [
+        {
+          "title": "Chegar a Carlin",
+          "text": "Apanha um barco para **Carlin**: por exemplo, em Venore com o {npc:Captain Fearless} ou em Thais com o {npc:Captain Bluebear} ({key:hi}, {key:carlin}, {key:yes}). Chegas ao porto de Carlin, junto ao {npc:Captain Greyhound}.",
+          "coords": [
+            {
+              "x": 32955,
+              "y": 32022,
+              "z": 6,
+              "label": "Captain Fearless (porto de Venore)"
+            },
+            {
+              "x": 32310,
+              "y": 32210,
+              "z": 6,
+              "label": "Captain Bluebear (porto de Thais)"
+            },
+            {
+              "x": 32388,
+              "y": 31822,
+              "z": 6,
+              "label": "Captain Greyhound (porto de Carlin)"
+            }
+          ]
+        },
+        {
+          "title": "Sino 1: Carlin Graveyard",
+          "text": "O {wiki:Carlin Graveyard} fica a **leste** de Carlin. Vai até à entrada do cemitério e usa o {item:Death Knell} no ponto da coordenada. Depois volta a pé para Carlin pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 32408,
+              "y": 31781,
+              "z": 7,
+              "label": "Entrada do Carlin Graveyard (sino 1)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Feaster of Souls - Death Knell 1.png",
+              "caption": "O sino tocado à entrada do Carlin Graveyard"
+            }
+          ]
+        },
+        {
+          "title": "Chegar às Ghostlands",
+          "text": "As {wiki:Ghostlands} ficam a **oeste** de Carlin, fechadas por uma sebe mágica. Sai de Carlin para oeste e entra pela gruta de entrada das Ghostlands (coordenada abaixo). Lá dentro, vai para **sul** até ao **segundo buraco** (a sudoeste) e desce por ele.",
+          "coords": [
+            {
+              "x": 32222,
+              "y": 31767,
+              "z": 7,
+              "label": "Gruta de entrada das Ghostlands"
+            },
+            {
+              "x": 32190,
+              "y": 31839,
+              "z": 7,
+              "label": "Segundo buraco (desce aqui)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Ghostlands Map.jpg",
+              "caption": "Mapa das Ghostlands"
+            }
+          ]
+        },
+        {
+          "title": "Sino 2: o local de sacrifício",
+          "text": "No andar de baixo, vai para **oeste** até à sala do local de sacrifício e toca o {item:Death Knell} no ponto da coordenada.",
+          "coords": [
+            {
+              "x": 32178,
+              "y": 31836,
+              "z": 8,
+              "label": "Local de sacrifício (sino 2)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Ghostlands Second Hole Floor 1.png",
+              "caption": "Primeiro andar abaixo do segundo buraco"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 2.png",
+              "caption": "O sino tocado por baixo das Ghostlands"
+            }
+          ]
+        },
+        {
+          "title": "Sair das Ghostlands",
+          "text": "Volta ao sítio onde caíste e sobe pelo buraco com a {item:Rope}. Depois sai das Ghostlands pela gruta da entrada e anda para **leste** até Carlin. No porto, o {npc:Captain Greyhound} leva-te a **Venore** ({key:hi}, {key:venore}, {key:yes}), a cidade mais perto da Dark Cathedral.",
+          "coords": [
+            {
+              "x": 32222,
+              "y": 31767,
+              "z": 7,
+              "label": "Gruta de entrada/saída das Ghostlands"
+            },
+            {
+              "x": 32388,
+              "y": 31822,
+              "z": 6,
+              "label": "Captain Greyhound (porto de Carlin)"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à Dark Cathedral",
+          "text": "De **Venore**, sai para **sudoeste**: a {wiki:Dark Cathedral} fica a sul do pântano de Venore e do Outlaw Camp, a **oeste** das {wiki:Plains of Havoc}, e só lá chegas atravessando as planícies. Entra nas ruínas e desce as escadas até ao **2.º andar subterrâneo**.",
+          "coords": [
+            {
+              "x": 32664,
+              "y": 32344,
+              "z": 7,
+              "label": "Dark Cathedral (superfície)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Dark Cathedral 0.png",
+              "caption": "Mapa da Dark Cathedral"
+            }
+          ],
+          "warning": "No meio das planícies pode haver {creature:Giant Spider|Giant Spiders} atraídas por outros jogadores."
+        },
+        {
+          "title": "Sino 3: o altar com caveiras",
+          "text": "No 2.º andar subterrâneo vai para **leste** e entra na primeira sala a **norte**. Toca o {item:Death Knell} junto ao altar, no ponto da coordenada. Não precisas das alavancas nem do teleporte da catedral: esses só servem para o 3.º andar.",
+          "coords": [
+            {
+              "x": 32629,
+              "y": 32416,
+              "z": 9,
+              "label": "Altar com caveiras (sino 3)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Feaster of Souls - Death Knell 3.png",
+              "caption": "O sino tocado por baixo da Dark Cathedral"
+            }
+          ]
+        },
+        {
+          "title": "Sair da Dark Cathedral",
+          "text": "Sobe pelas mesmas escadas até à superfície e volta a **Venore** pelo mesmo caminho, para **nordeste** através das planícies."
+        }
+      ]
+    },
+    {
+      "title": "3. Drain the Brain — a poção (Vial with a Skull Cork)",
+      "intro": "Precisas de um {item:Skull (Item)|Skull} e de uma {item:Grave Flower}. Na academia de Edron há um Wooden Grinder e um Alchemical Apparatus; há outros locais indicados abaixo. De Venore, o {npc:Captain Fearless} leva-te a Edron ({key:hi}, {key:edron}, {key:yes}).",
+      "steps": [
+        {
+          "title": "Bone Meal",
+          "text": "Usa o {item:Skull (Item)|Skull} num {item:Wooden Grinder} para obteres {item:Bone Meal}. Há um na {wiki:Noodles Academy of Modern Magic|academia de Edron}: na segunda torre, **dois andares abaixo** do {npc:Milos}. Também há Wooden Grinders nos {wiki:Crystal Gardens}.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Bone Meal.png",
+              "caption": "Usar o Skull no Wooden Grinder"
+            }
+          ],
+          "reward": "Bone Meal"
+        },
+        {
+          "title": "Grave Flower Extract",
+          "text": "Usa a {item:Grave Flower} num {item:Alchemical Apparatus} ou numa {item:Distilling Machine} para obteres {item:Grave Flower Extract}. Na academia de Edron há um Alchemical Apparatus no laboratório do {npc:Sinclair}, na torre central (do lado **norte** da sala). Há Distilling Machines, por exemplo, em Liberty Bay.",
+          "tip": "Se um aparelho não reagir, experimenta outro Alchemical Apparatus ou uma Distilling Machine.",
+          "coords": [
+            {
+              "x": 32260,
+              "y": 32876,
+              "z": 7,
+              "label": "Distilling Machines em Liberty Bay"
+            }
+          ],
+          "images": [
+            {
+              "file": "Feaster of Souls - Flower Extract.png",
+              "caption": "Usar a Grave Flower na máquina"
+            }
+          ],
+          "reward": "Grave Flower Extract"
+        },
+        {
+          "title": "Misturar a poção",
+          "text": "Usa o {item:Bone Meal} no {item:Grave Flower Extract}: obténs um {item:Vial with a Skull Cork}.",
+          "reward": "Vial with a Skull Cork"
+        },
+        {
+          "title": "Beber a poção",
+          "text": "Usa o {item:Vial with a Skull Cork} para beberes a poção. Com a poção bebida e os três sinos tocados, já podes passar pelo portal invisível ao lado do {npc:Para Norbert}.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Drinking Vial.png",
+              "caption": "Beber a poção"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Drain the Brain — Brain Grounds: amostras de tecido e almas",
+      "steps": [
+        {
+          "title": "Entrar nas Brain Grounds",
+          "text": "Volta ao {npc:Para Norbert}: de Edron, o {npc:Captain Seahorse} leva-te a Venore ({key:hi}, {key:venore}, {key:yes}) e daí andas para **oeste**. Ao lado dele está o portal invisível para as {wiki:Brain Grounds}: parece **areia**. Entra nele.",
+          "coords": [
+            {
+              "x": 32630,
+              "y": 32074,
+              "z": 7,
+              "label": "Para Norbert e o portal invisível"
+            }
+          ],
+          "images": [
+            {
+              "file": "Brain Grounds -1.png",
+              "caption": "Brain Grounds, 1.º piso"
+            }
+          ]
+        },
+        {
+          "title": "Descer até à zona bloqueada",
+          "text": "Desce **2 pisos** até encontrares uma zona onde ainda não consegues entrar. Isso basta para avançares a missão.",
+          "images": [
+            {
+              "file": "Brain Grounds -2.png",
+              "caption": "Brain Grounds, 2.º piso"
+            },
+            {
+              "file": "Brain Grounds -3.png",
+              "caption": "Brain Grounds, 3.º piso"
+            }
+          ],
+          "warning": "Cuidado com o chão amarelo ({wiki:Slime Fungus}): de vez em quando tira-te uma percentagem da vida máxima em dano de terra, cada vez maior à medida que desces (**15%**, **20%** e **25%**)."
+        },
+        {
+          "title": "Sair das Brain Grounds",
+          "text": "Volta pelo mesmo caminho, subindo os pisos até ao ponto onde chegaste, e sai por onde entraste para voltares ao {npc:Para Norbert} (a wiki não descreve outra saída)."
+        },
+        {
+          "title": "Receber o Scalpel",
+          "text": "Fala com o {npc:Para Norbert} e reporta. Ele dá-te um {item:Scalpel} e pede-te **20 amostras de tecido** ({item:Ulcer Probe|Ulcer Probes}) do chão que te fere, o *ulcer*.",
+          "npc": "Para Norbert",
+          "reward": "Scalpel"
+        },
+        {
+          "title": "Recolher 20 Ulcer Probes",
+          "text": "Nas Brain Grounds (em qualquer piso), anda por cima do *ulcer* (o chão amarelo) até levares dano. Logo a seguir aparece uma pequena bolha num quadrado: usa o {item:Scalpel} nesse quadrado para tirares uma amostra. Repete **20 vezes**.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Ulcer.png",
+              "caption": "O ulcer: usa o Scalpel no quadrado com a bolha"
+            },
+            {
+              "file": "Feaster of Souls - Brain Aura.png",
+              "caption": "Efeito do chão das Brain Grounds"
+            }
+          ]
+        },
+        {
+          "title": "Entregar as amostras",
+          "text": "Sai das Brain Grounds como antes e entrega as 20 amostras ao {npc:Para Norbert}. Ele dá-te um {item:Purifier for Lost Souls} e pede-te **20 almas purificadas**.",
+          "npc": "Para Norbert",
+          "reward": "Purifier for Lost Souls"
+        },
+        {
+          "title": "Purificar 20 Lost Souls",
+          "text": "Mata as criaturas das Brain Grounds ({creature:Flimsy Lost Soul|Flimsy}, {creature:Mean Lost Soul|Mean} e {creature:Freakish Lost Soul|Freakish Lost Souls}) e loota {item:Lost Soul (Item)|Lost Souls}. Usa cada uma no {item:Purifier for Lost Souls} para obteres um {item:Purified Soul (Netherworld)|Purified Soul}. Precisas de **20**.",
+          "warning": "Cada purificação tem **25%** de hipótese de falhar: junta mais de 20 Lost Souls.",
+          "tip": "Podes receber Lost Souls de outros jogadores, mas tens de ser tu a purificá-las."
+        },
+        {
+          "title": "Entregar as almas",
+          "text": "Sai das Brain Grounds e entrega as almas purificadas ao {npc:Para Norbert}. A partir de agora podes entrar na luta contra o {creature:Brain Head}.",
+          "npc": "Para Norbert",
+          "tip": "Antes de ires ao boss, aproveita para fazer a {item:Burial Shroud} (secção 6): é tudo nas Brain Grounds."
+        }
+      ]
+    },
+    {
+      "title": "5. Drain the Brain — boss: Brain Head",
+      "steps": [
+        {
+          "title": "Preparar a luta",
+          "text": "O {creature:Brain Head} pode ser enfrentado por uma equipa de **até 5 jogadores** e tens **5 minutos** para o matar.",
+          "table": {
+            "head": [
+              "Dica",
+              "Elemento"
+            ],
+            "rows": [
+              [
+                "Ataca com",
+                "**Gelo** (o boss é muito fraco a gelo)"
+              ],
+              [
+                "Não uses",
+                "**Energia** (cura o boss); segundo a página do boss, o **fogo** também o cura"
+              ],
+              [
+                "Protege-te contra",
+                "**Energia**"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Chegar à luta",
+          "text": "Entra outra vez nas {wiki:Brain Grounds} pelo portal junto ao {npc:Para Norbert} e desce até à zona que antes estava bloqueada, 2 pisos abaixo: depois da entrega das almas, o acesso à luta fica aberto. Os {creature:Cerebellum} e os {creature:Bad Thought|Bad Thoughts} da sala do boss só existem nas Brain Grounds, por isso a luta é lá (só a página do Brain Head diz Netherworld)."
+        },
+        {
+          "title": "Matar os Cerebellum",
+          "text": "Na sala há vários {creature:Cerebellum}. Antes de te focares no boss, mata o do **nordeste** e depois os que estão à volta do Brain Head. Isso costuma bastar."
+        },
+        {
+          "title": "Matar o Brain Head",
+          "text": "Com esses Cerebellum mortos, concentra-te no {creature:Brain Head} com dano de **gelo**. A equipa pode usar {item:Poison Bomb Rune|Poison Bomb Runes} para manter afastados os {creature:Bad Thought|Bad Thoughts}.",
+          "warning": "O ataque de energia dos Bad Thoughts atinge um raio de 2 quadrados à volta do alvo e **cura o Brain Head** se ele estiver ao alcance.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Brain Head.png",
+              "caption": "A luta contra o Brain Head"
+            }
+          ]
+        },
+        {
+          "title": "Se o tempo acabar",
+          "text": "Se não o matares em 5 minutos, és teleportado para fora da sala e só podes tentar outra vez **20 horas** depois."
+        },
+        {
+          "title": "Reportar e aceitar a missão seguinte",
+          "text": "Sai das Brain Grounds pelo mesmo caminho e reporta ao {npc:Para Norbert}: a missão Drain the Brain fica concluída. Logo a seguir ele volta a pedir a tua ajuda — responde {key:yes} para receberes a missão **Journey to the Netherworld**.",
+          "npc": "Para Norbert",
+          "dialogue": [
+            {
+              "you": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Journey to the Netherworld — a Burial Shroud",
+      "intro": "Para entrar no Netherworld precisas de vestir uma Burial Shroud. Podes fazê-la mais cedo, durante as tarefas da secção 4 (antes até de aceitares esta missão).",
+      "steps": [
+        {
+          "title": "Yarn",
+          "text": "Nas {wiki:Brain Grounds}, vai até ao extremo **sudeste** e usa o {item:Stump}: recebes {item:Yarn}.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Yarn.png",
+              "caption": "Usar o Stump para obter Yarn"
+            }
+          ],
+          "reward": "Yarn"
+        },
+        {
+          "title": "Glittering Yarn",
+          "text": "Segue a gruta para **norte**. Por volta do centro encontras uma poça de {wiki:Ghostly Water}: usa a {item:Yarn} nela e ela transforma-se em {item:Glittering Yarn}.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Ghostly Water.png",
+              "caption": "A poça de Ghostly Water"
+            }
+          ],
+          "reward": "Glittering Yarn"
+        },
+        {
+          "title": "Burial Shroud",
+          "text": "Desce **1 piso** e vai até ao extremo **sudoeste**, onde está um {item:Loom}. Usa a {item:Glittering Yarn} no tear para obteres a {item:Burial Shroud}. Depois sai das Brain Grounds pelo caminho por onde vieste.",
+          "images": [
+            {
+              "file": "Feaster of Souls - Loom.png",
+              "caption": "O Loom no piso de baixo"
+            },
+            {
+              "file": "Feaster of Souls - Burial Shroud.png",
+              "caption": "A Burial Shroud"
+            }
+          ],
+          "reward": "Burial Shroud"
+        }
+      ]
+    },
+    {
+      "title": "7. Journey to the Netherworld — mais três sinos (Edron, Yalahar, Ankrahmun)",
+      "intro": "Com a missão aceite, toca outra vez o {item:Death Knell} nestes três sítios.",
+      "steps": [
+        {
+          "title": "Os três sítios",
+          "text": "Resumo da segunda ronda de sinos:",
+          "table": {
+            "head": [
+              "Local",
+              "Onde exatamente",
+              "Coordenada"
+            ],
+            "rows": [
+              [
+                "{wiki:Edron Vampire Crypt} (norte de Edron)",
+                "Junto à poça de sangue, 4 andares abaixo do chão",
+                "{coord:32999,31610,11}"
+              ],
+              [
+                "{wiki:Cemetery Quarter} (Yalahar)",
+                "Rés-do-chão, do lado leste",
+                "{coord:32803,31069,7}"
+              ],
+              [
+                "{wiki:Shadow Tomb} (a leste de Ankrahmun)",
+                "6.º andar do túmulo, do lado leste",
+                "{coord:33297,32861,13}"
+              ]
+            ]
+          },
+          "images": [
+            {
+              "file": "Feaster of Souls - Death Knell 4.png",
+              "caption": "Sino 4: Edron Vampire Crypt"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 5.png",
+              "caption": "Sino 5: Cemetery Quarter"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 6.png",
+              "caption": "Sino 6: Shadow Tomb"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à Edron Vampire Crypt",
+          "text": "Apanha um barco para **Edron**: de Venore, o {npc:Captain Fearless} leva-te ({key:hi}, {key:edron}, {key:yes}, 40 gp). Chegas junto ao {npc:Captain Seahorse}. A {wiki:Edron Vampire Crypt} fica a **norte** da cidade: entra pela pequena gruta da entrada e desce.",
+          "coords": [
+            {
+              "x": 33176,
+              "y": 31764,
+              "z": 6,
+              "label": "Captain Seahorse (porto de Edron)"
+            },
+            {
+              "x": 33109,
+              "y": 31722,
+              "z": 7,
+              "label": "Entrada da Edron Vampire Crypt"
+            }
+          ]
+        },
+        {
+          "title": "Sino 4: a poça de sangue",
+          "text": "Desce até ao andar da poça de sangue (a wiki chama-lhe o 3.º andar da cripta; fica 4 andares abaixo do chão) e toca o {item:Death Knell} junto à poça.",
+          "coords": [
+            {
+              "x": 32999,
+              "y": 31610,
+              "z": 11,
+              "label": "Poça de sangue (sino 4)"
+            }
+          ],
+          "warning": "A cripta está cheia de {creature:Vampire|Vampires}."
+        },
+        {
+          "title": "Sair da cripta",
+          "text": "No mesmo andar há um teleporte que te leva aos Stone Blocks junto à entrada da gruta. Daí sobe pelo caminho da entrada até à superfície e volta a Edron, para **sul**.",
+          "coords": [
+            {
+              "x": 33019,
+              "y": 31605,
+              "z": 11,
+              "label": "Teleporte de saída"
+            },
+            {
+              "x": 33052,
+              "y": 31698,
+              "z": 8,
+              "label": "Stone Blocks junto à entrada"
+            }
+          ]
+        },
+        {
+          "title": "Chegar ao Cemetery Quarter (Yalahar)",
+          "text": "De Edron não há barco direto para **Yalahar**: vai de tapete mágico com o {npc:Pino} para Darashia ({key:hi}, {key:darashia}, {key:yes}, 40 gp) e lá o {npc:Petros} leva-te a Yalahar ({key:hi}, {key:yalahar}, {key:yes}, 210 gp). Também há barco para Yalahar em Thais ({npc:Captain Bluebear}) e em Ankrahmun ({npc:Captain Sinbeard}). Chegas ao porto, junto ao {npc:Karith}. Vai para **norte** até ao centro da cidade e entra no **Magician Quarter**, cujo portão não tem mecanismo. Lá dentro, fala com o guarda {npc:Reed}, entre o Magician Quarter e o Cemetery Quarter: diz {key:hi}, {key:pass} e depois o nome do bairro de destino (o Cemetery Quarter). Se já tens acesso ao mecanismo do Cemetery Quarter (In Service of Yalahar), também podes usá-lo.",
+          "npc": "Reed",
+          "coords": [
+            {
+              "x": 33192,
+              "y": 31783,
+              "z": 3,
+              "label": "Pino (tapetes de Edron)"
+            },
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Petros (porto de Darashia)"
+            },
+            {
+              "x": 32818,
+              "y": 31278,
+              "z": 5,
+              "label": "Karith (porto de Yalahar)"
+            },
+            {
+              "x": 32802,
+              "y": 31103,
+              "z": 7,
+              "label": "Reed (Magician / Cemetery Quarter)"
+            },
+            {
+              "x": 32761,
+              "y": 31077,
+              "z": 7,
+              "label": "Cemetery Quarter"
+            }
+          ],
+          "images": [
+            {
+              "file": "Cemetary Quarter.png",
+              "caption": "Mapa do Cemetery Quarter"
+            }
+          ]
+        },
+        {
+          "title": "Sino 5: Cemetery Quarter",
+          "text": "No **rés-do-chão**, do lado **leste** do Cemetery Quarter, toca o {item:Death Knell} no ponto da coordenada.",
+          "coords": [
+            {
+              "x": 32803,
+              "y": 31069,
+              "z": 7,
+              "label": "Cemetery Quarter, lado leste (sino 5)"
+            }
+          ],
+          "warning": "Fica nas estradas: {creature:Nightmare|Nightmares} podem atacar-te por cima da vedação, e o bairro tem {creature:Giant Spider|Giant Spiders} e {creature:Grim Reaper|Grim Reapers}."
+        },
+        {
+          "title": "Sair do Cemetery Quarter",
+          "text": "Volta ao {npc:Reed} e diz {key:pass} e o nome do Magician Quarter; daí regressa ao centro e ao porto. Para seguires para Ankrahmun: o {npc:Karith} leva-te se tiveres as rotas da In Service of Yalahar; senão, o {npc:Captain Cookie}, no barco ao lado, leva-te a Liberty Bay (400 gp) ou Thais (800 gp); de Liberty Bay, o {npc:Jack Fate} leva-te a Ankrahmun ({key:ankrahmun}, 90 gp).",
+          "coords": [
+            {
+              "x": 32804,
+              "y": 31276,
+              "z": 6,
+              "label": "Captain Cookie (porto de Yalahar)"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à Shadow Tomb (Ankrahmun)",
+          "text": "Em **Ankrahmun** desembarcas junto ao {npc:Captain Sinbeard}. Sai da cidade pela rampa **nordeste** e segue as muralhas para **sul**: a entrada da {wiki:Shadow Tomb} fica no deserto a sudeste da cidade. Usa a {item:Shovel} no ponto da coordenada para abrires o buraco e desce.",
+          "coords": [
+            {
+              "x": 33094,
+              "y": 32884,
+              "z": 6,
+              "label": "Captain Sinbeard (porto de Ankrahmun)"
+            },
+            {
+              "x": 33255,
+              "y": 32833,
+              "z": 7,
+              "label": "Entrada da Shadow Tomb (cava aqui)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Tombsoutheast.jpg",
+              "caption": "Shadow Tomb, a sudeste de Ankrahmun"
+            }
+          ]
+        },
+        {
+          "title": "Sino 6: Shadow Tomb",
+          "text": "Desce o túmulo até ao **6.º andar** (6 pisos abaixo do deserto). Lá, vai para **leste** até ao ponto da coordenada e toca o {item:Death Knell}.",
+          "coords": [
+            {
+              "x": 33297,
+              "y": 32861,
+              "z": 13,
+              "label": "Shadow Tomb, 6.º andar (sino 6)"
+            }
+          ],
+          "warning": "O túmulo tem criaturas de fogo ({creature:Fire Elemental|Fire Elementals}, {creature:Fire Devil|Fire Devils}), {creature:Vampire|Vampires} e criaturas que ficam invisíveis."
+        },
+        {
+          "title": "Sair da Shadow Tomb",
+          "text": "Volta pelo mesmo caminho até ao início do túmulo e sobe com a {item:Rope} pelo buraco que abriste. Regressa a Ankrahmun pela rampa **nordeste**: o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes}).",
+          "npc": "Captain Sinbeard",
+          "coords": [
+            {
+              "x": 33255,
+              "y": 32833,
+              "z": 7,
+              "label": "Entrada/saída da Shadow Tomb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Journey to the Netherworld — o Netherworld e os três minibosses (solo)",
+      "intro": "No Netherworld matas três minibosses **sozinho**. Batem forte (combos de até 2000 de vida num turno) e têm um Mana Drain forte.",
+      "steps": [
+        {
+          "title": "Preparar-te",
+          "text": "Dicas de elementos para o Netherworld:",
+          "table": {
+            "head": [
+              "Dica",
+              "Elementos"
+            ],
+            "rows": [
+              [
+                "Protege-te contra",
+                "**Morte**, **energia** e **mana drain**"
+              ],
+              [
+                "Ataca com",
+                "**Gelo** ou **sagrado**"
+              ],
+              [
+                "Evita atacar com",
+                "**Morte**, **físico** e **energia**"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Chegar à entrada do Netherworld",
+          "text": "Apanha um barco para **Port Hope**: de Ankrahmun, o {npc:Captain Sinbeard} ({key:hi}, {key:port hope}, {key:yes}, 80 gp); de Edron, o {npc:Captain Seahorse} (150 gp). Atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta}. A entrada do {wiki:Netherworld} fica logo a **leste** de Banuta: tal como o portal das Brain Grounds, é invisível e só se nota por uma pequena parede.",
+          "coords": [
+            {
+              "x": 32529,
+              "y": 32785,
+              "z": 6,
+              "label": "Charles (porto de Port Hope)"
+            },
+            {
+              "x": 32807,
+              "y": 32542,
+              "z": 7,
+              "label": "Banuta"
+            },
+            {
+              "x": 32885,
+              "y": 32520,
+              "z": 7,
+              "label": "Entrada invisível do Netherworld"
+            }
+          ]
+        },
+        {
+          "title": "Entrar com a Burial Shroud",
+          "text": "Equipa a {item:Burial Shroud} no lugar da armadura e pisa a terra junto à pequena parede. Já lá dentro, podes voltar a vestir a tua armadura.",
+          "warning": "Sem a Burial Shroud vestida não entras."
+        },
+        {
+          "title": "Andar pelo Netherworld",
+          "text": "Para passares de uma zona para a seguinte usa os quadrados especiais com uma caveira desenhada: funcionam como teleportes. Procura o portal de cada um dos três minibosses.",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Netherworld.png",
+              "caption": "Mapa do Netherworld"
+            }
+          ],
+          "warning": "O Netherworld está cheio de {creature:Flimsy Lost Soul|Flimsy}, {creature:Mean Lost Soul|Mean} e {creature:Freakish Lost Soul|Freakish Lost Souls}."
+        },
+        {
+          "title": "Os três minibosses",
+          "text": "Mata os três, cada um **sozinho** (cada um tem 20 h de espera):",
+          "table": {
+            "head": [
+              "Miniboss",
+              "Vida",
+              "Local"
+            ],
+            "rows": [
+              [
+                "{creature:Unaz the Mean}",
+                "28 000",
+                "{coord:33567,31476,8}"
+              ],
+              [
+                "{creature:Irgix the Flimsy}",
+                "24 000",
+                "{coord:33491,31398,8}"
+              ],
+              [
+                "{creature:Vok the Freakish}",
+                "32 000",
+                "{coord:33509,31451,9}"
+              ]
+            ]
+          },
+          "coords": [
+            {
+              "x": 33567,
+              "y": 31476,
+              "z": 8,
+              "label": "Unaz the Mean"
+            },
+            {
+              "x": 33491,
+              "y": 31398,
+              "z": 8,
+              "label": "Irgix the Flimsy"
+            },
+            {
+              "x": 33509,
+              "y": 31451,
+              "z": 9,
+              "label": "Vok the Freakish"
+            }
+          ]
+        },
+        {
+          "title": "Táticas por vocação",
+          "text": "O que funciona melhor contra estes minibosses:",
+          "table": {
+            "head": [
+              "Vocação",
+              "Conselho"
+            ],
+            "rows": [
+              [
+                "Knight",
+                "Armas elementais de **gelo** ou **fogo**"
+              ],
+              [
+                "Paladin",
+                "{item:Envenomed Arrow|Envenomed Arrows}: os bosses são muito resistentes a dano físico"
+              ],
+              [
+                "Druid",
+                "Ondas de **terra** e **gelo**, com cuidado para não ficares sem mana"
+              ],
+              [
+                "Sorcerer",
+                "Ondas de **fogo** e **energia**, com cuidado para não ficares sem mana"
+              ]
+            ]
+          },
+          "tip": "Para todas as vocações menos Knights ajuda muito arrastar os bosses por cima de umas {item:Fire Wall Rune|Fire Walls}. Segundo as páginas dos bosses, os três são imunes a morte, recebem só metade do dano físico e são ligeiramente fracos a gelo; o Irgix e o Vok não recebem dano de energia (o Unaz recebe metade)."
+        },
+        {
+          "title": "Apanhar as Skull Coins",
+          "text": "Os minibosses podem largar {item:Skull Coin|Skull Coins}: apanha-as, porque vais precisar de **três** para o {npc:The Thaian}. Nas estatísticas de loot da wiki a Skull Coin aparece com taxas baixas (cerca de 9% no Unaz, 6% no Irgix e 3% no Vok); se te faltar alguma, a Skull Coin é negociável no Market.",
+          "warning": "Não as vendas aos NPCs (pagam 12 000 gp por cada uma): precisas de 3.",
+          "reward": "Skull Coins (precisas de 3)"
+        },
+        {
+          "title": "Sair do Netherworld",
+          "text": "Volta pelos quadrados de caveira até ao sítio onde chegaste e sai por onde entraste, a leste de Banuta (a wiki não descreve outra saída). Depois atravessa a selva para **sudoeste** até Port Hope, onde o {npc:Charles} te leva de barco a **Venore**, a cidade mais perto do Para Norbert ({key:hi}, {key:venore}, {key:yes}, 160 gp).",
+          "npc": "Charles",
+          "tip": "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+        },
+        {
+          "title": "Reportar ao Para Norbert",
+          "text": "De Venore, anda para **oeste** até ao {npc:Para Norbert} e entrega a missão Journey to the Netherworld. A seguir começa a parte do Thaian.",
+          "npc": "Para Norbert"
+        }
+      ]
+    },
+    {
+      "title": "9. The Thaian — o Spectulus e a taberna",
+      "intro": "Esta parte exige a {wiki:Sea of Light Quest}.",
+      "steps": [
+        {
+          "title": "Falar com o Spectulus",
+          "text": "Vai a **Edron** (de Venore, {npc:Captain Fearless}: {key:hi}, {key:edron}, {key:yes}) e sobe ao último andar da torre central da {wiki:Noodles Academy of Modern Magic|academia}, onde está o {npc:Spectulus}. Diz {key:hi} e pergunta-lhe por {key:The Thaian}.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "The Thaian"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33268,
+              "y": 31832,
+              "z": 1,
+              "label": "Spectulus (topo da academia de Edron)"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à taberna do The Thaian",
+          "text": "Sai de Edron para **norte**: a taberna do {npc:The Thaian} fica na floresta a norte da montanha. Para voltares a Edron, faz o caminho ao contrário, para **sul**.",
+          "coords": [
+            {
+              "x": 33232,
+              "y": 31696,
+              "z": 7,
+              "label": "The Thaian (taberna)"
+            }
+          ]
+        },
+        {
+          "title": "Pedir a tarefa",
+          "text": "Diz {key:hi}, depois {key:need} e responde {key:yes} duas vezes. Ele pede-te que toques o {item:Death Knell} em mais três sítios.",
+          "npc": "The Thaian",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "need"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10. The Thaian — os últimos três sinos (Issavi, Ramoa, Lion's Rock)",
+      "steps": [
+        {
+          "title": "Os três sítios",
+          "text": "Resumo da terceira ronda de sinos:",
+          "table": {
+            "head": [
+              "Local",
+              "Onde exatamente",
+              "Coordenada"
+            ],
+            "rows": [
+              [
+                "{wiki:Kilmaresh Catacombs} (Issavi)",
+                "Desce pelo buraco dentro do Water Temple",
+                "{coord:33864,31519,8}"
+              ],
+              [
+                "Por baixo de {wiki:Ramoa}",
+                "Onde aparecem os Cavebears, perto do esqueleto de dragão",
+                "{coord:31964,32591,10}"
+              ],
+              [
+                "Por baixo do {wiki:Lion's Rock} (Darashia)",
+                "Logo depois da entrada do santuário",
+                "{coord:33121,32304,8}"
+              ]
+            ]
+          },
+          "images": [
+            {
+              "file": "Feaster of Souls - Death Knell 7.png",
+              "caption": "Sino 7: Kilmaresh Catacombs"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 8.png",
+              "caption": "Sino 8: por baixo de Ramoa"
+            },
+            {
+              "file": "Feaster of Souls - Death Knell 9.png",
+              "caption": "Sino 9: por baixo do Lion's Rock"
+            }
+          ]
+        },
+        {
+          "title": "Chegar às Kilmaresh Catacombs",
+          "text": "Viaja até **Issavi**. De Edron, o mais simples é o tapete mágico do {npc:Pino} ({key:hi}, {key:issavi}, {key:yes}, 100 gp), que te deixa no tapete de Issavi. Também há barco a partir de **Venore**, **Darashia**, **Krailos** e **Oramond** ({key:hi}, {key:issavi}, {key:yes}), que chega ao barco do {npc:Captain Harava}, no porto a norte da cidade. As {wiki:Kilmaresh Catacombs} ficam por baixo do lado **oeste** de Issavi: vai ao **Water Temple** e desce pelo buraco que há lá dentro.",
+          "coords": [
+            {
+              "x": 33192,
+              "y": 31783,
+              "z": 3,
+              "label": "Pino (tapetes de Edron)"
+            },
+            {
+              "x": 33958,
+              "y": 31514,
+              "z": 0,
+              "label": "Tapete de Issavi"
+            },
+            {
+              "x": 33902,
+              "y": 31462,
+              "z": 6,
+              "label": "Captain Harava (porto de Issavi)"
+            }
+          ]
+        },
+        {
+          "title": "Sino 7: Kilmaresh Catacombs",
+          "text": "Logo abaixo do buraco (1 andar abaixo do chão), toca o {item:Death Knell} no ponto da coordenada.",
+          "coords": [
+            {
+              "x": 33864,
+              "y": 31519,
+              "z": 8,
+              "label": "Kilmaresh Catacombs (sino 7)"
+            }
+          ],
+          "warning": "As catacumbas são um esconderijo dos cultistas de Fafnar, uma zona de caça para nível 300+."
+        },
+        {
+          "title": "Sair das Kilmaresh Catacombs",
+          "text": "Sobe pelo mesmo buraco (leva {item:Rope}) e volta a Issavi. O {npc:Captain Harava} leva-te de barco a Venore, Darashia, Krailos ou Oramond, e o tapete de Issavi leva-te a Darashia (40 gp) ou Edron (60 gp).",
+          "npc": "Captain Harava"
+        },
+        {
+          "title": "Chegar a Ramoa",
+          "text": "Vai a **Liberty Bay**: de Issavi, apanha o barco do {npc:Captain Harava} ou o tapete para **Darashia**, onde o {npc:Petros} te leva a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 200 gp); de Edron, o {npc:Captain Seahorse} também vai lá (170 gp). No porto de Liberty Bay, o {npc:Jack Fate} leva-te a Goroma: {key:hi}, {key:goroma}, {key:yes} (500 gp). Desembarcas na costa **leste** de {wiki:Goroma}; anda para **oeste** até às escadas do {wiki:Teleportation Hub}, desce e entra no teleporte da **direita**, que leva a Ramoa.",
+          "coords": [
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Petros (porto de Darashia)"
+            },
+            {
+              "x": 32161,
+              "y": 32556,
+              "z": 6,
+              "label": "Jack Fate em Goroma (chegada)"
+            },
+            {
+              "x": 32038,
+              "y": 32561,
+              "z": 7,
+              "label": "Escadas do Teleportation Hub de Goroma"
+            }
+          ],
+          "tip": "Em Goroma só há o teleporte da direita (é o primeiro da cadeia). Só o podes usar depois da {wiki:The Shattered Isles Quest} até ao acesso a Ramoa."
+        },
+        {
+          "title": "Descer à Lich Hell",
+          "text": "O sino toca-se **por baixo de Ramoa**, onde aparecem os {creature:Undead Cavebear|Undead Cavebears}, perto de um esqueleto de dragão. Esses ursos aparecem na {wiki:Lich Hell}, um piso da dungeon de Ramoa, no mesmo andar e mesmo ao lado do ponto do sino (local dos ursos: {coord:31948,32578,10}). Segue os mapas: em cada um entras pelo círculo vermelho e caminhas até ao azul; no último, usa a {item:Pick} na terra à volta do círculo azul para abrires o buraco para a Lich Hell.",
+          "images": [
+            {
+              "file": "Waytolichhell1.png",
+              "caption": "Caminho para a Lich Hell (1/3)"
+            },
+            {
+              "file": "Waytolichhell2.png",
+              "caption": "Caminho para a Lich Hell (2/3)"
+            },
+            {
+              "file": "Waytolichhell3.png",
+              "caption": "Caminho para a Lich Hell (3/3): abre o buraco com a Pick"
+            },
+            {
+              "file": "Lich Hell map.jpg",
+              "caption": "Mapa da Lich Hell"
+            }
+          ],
+          "warning": "A Lich Hell tem {creature:Lich|Liches}, {creature:Priestess|Priestesses}, {creature:Necromancer|Necromancers}, {creature:Demon Skeleton|Demon Skeletons} e {creature:Bonebeast|Bonebeasts}."
+        },
+        {
+          "title": "Sino 8: por baixo de Ramoa",
+          "text": "Toca o {item:Death Knell} junto ao esqueleto de dragão, no ponto da coordenada.",
+          "coords": [
+            {
+              "x": 31964,
+              "y": 32591,
+              "z": 10,
+              "label": "Por baixo de Ramoa (sino 8)"
+            },
+            {
+              "x": 31948,
+              "y": 32578,
+              "z": 10,
+              "label": "Local dos Undead Cavebears (Lich Hell)"
+            }
+          ]
+        },
+        {
+          "title": "Sair de Ramoa",
+          "text": "Volta pelo mesmo caminho (leva {item:Rope} para subires o buraco) até ao Teleportation Hub de Ramoa e entra no teleporte da **esquerda**, que leva a Goroma. Sobe as escadas, vai para **leste** até ao navio do {npc:Jack Fate} e diz {key:hi}, {key:passage}, {key:yes} para voltares a Liberty Bay.",
+          "npc": "Jack Fate",
+          "coords": [
+            {
+              "x": 31946,
+              "y": 32557,
+              "z": 7,
+              "label": "Escadas do Teleportation Hub de Ramoa"
+            },
+            {
+              "x": 32161,
+              "y": 32556,
+              "z": 6,
+              "label": "Jack Fate em Goroma"
+            }
+          ]
+        },
+        {
+          "title": "Chegar ao Lion's Rock",
+          "text": "Vai a **Darashia**: de Liberty Bay, o {npc:Jack Fate} leva-te ({key:hi}, {key:darashia}, {key:yes}, 200 gp); de Edron, vai de tapete mágico com o {npc:Pino} ({key:hi}, {key:darashia}, {key:yes}, 40 gp). Sai para **oeste-noroeste** até ao {wiki:Lion's Rock}, desce à gruta e atravessa a {item:Mystic Flame} do lado **oeste** do primeiro andar subterrâneo para entrares no santuário (só passas se fizeste as provas da {wiki:Lion's Rock Quest}).",
+          "coords": [
+            {
+              "x": 33192,
+              "y": 31783,
+              "z": 3,
+              "label": "Pino (tapetes de Edron)"
+            },
+            {
+              "x": 33143,
+              "y": 32362,
+              "z": 7,
+              "label": "Lion's Rock"
+            },
+            {
+              "x": 33128,
+              "y": 32308,
+              "z": 8,
+              "label": "Mystic Flame (entrada do santuário)"
+            }
+          ]
+        },
+        {
+          "title": "Sino 9: Lion's Rock",
+          "text": "Logo a seguir à entrada do santuário, toca o {item:Death Knell} no ponto da coordenada.",
+          "coords": [
+            {
+              "x": 33121,
+              "y": 32304,
+              "z": 8,
+              "label": "Lion's Rock, depois da entrada do santuário (sino 9)"
+            }
+          ],
+          "warning": "Nos pisos de baixo há {creature:Ancient Scarab|Ancient Scarabs} (paralisam) e {creature:Roaring Lion|Roaring Lions}."
+        },
+        {
+          "title": "Sair do Lion's Rock",
+          "text": "Volta pela {item:Mystic Flame} e pelo caminho da gruta até à superfície e regressa a Darashia, para **leste-sudeste**. Para voltares a Edron, fala com o {npc:Chemar}, na plataforma dos tapetes de Darashia: {key:hi}, {key:edron}, {key:yes}.",
+          "npc": "Chemar"
+        },
+        {
+          "title": "Entregar ao The Thaian",
+          "text": "Volta à taberna do {npc:The Thaian}, a norte de Edron, e fala com ele como da primeira vez ({key:hi}, {key:need}, {key:yes}, {key:yes}; a wiki não regista outras palavras para esta entrega). Entrega-lhe também as **3 {item:Skull Coin|Skull Coins}** que lootaste no Netherworld. A partir daqui podes entrar na Barren Drift.",
+          "npc": "The Thaian",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "need"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11. The Thaian — Barren Drift e o Eye of the Chasm",
+      "steps": [
+        {
+          "title": "Preparar-te",
+          "text": "Dicas de elementos para a Barren Drift e para o boss:",
+          "table": {
+            "head": [
+              "Dica",
+              "Elementos"
+            ],
+            "rows": [
+              [
+                "Protege-te contra",
+                "**Sagrado** e **energia**"
+              ],
+              [
+                "Ataca com",
+                "**Morte**, **gelo** ou **fogo**"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Entrar na Barren Drift",
+          "text": "A gruta {wiki:Barren Drift} fica dentro da montanha mesmo ao lado da taberna do {npc:The Thaian}. Usa uma {item:Small Sapphire} na parede da formação rochosa para entrares.",
+          "coords": [
+            {
+              "x": 33221,
+              "y": 31704,
+              "z": 7,
+              "label": "Entrada da Barren Drift"
+            }
+          ]
+        },
+        {
+          "title": "Cuidado com os Prospectors",
+          "text": "Os {creature:Evil Prospector|Evil Prospectors} e {creature:Cursed Prospector|Cursed Prospectors} ficam à distância mas têm dois ataques fortes. A bola de energia no alvo parece bater mais quando apanha vários jogadores: não fiquem juntos. E têm um ataque de *parry* que bate muito: quanto mais criaturas atacares com dano em área, mais dano podes levar. Também refletem dano de **terra**.",
+          "tip": "Mata-os um a um quando for preciso. Os magos podem usar {item:Sudden Death Rune|Sudden Death Runes}: estas criaturas são fracas a morte."
+        },
+        {
+          "title": "Minerar Luminescent Crystals",
+          "text": "Usa uma {item:Pick} (ou uma ferramenta de agente secreto equivalente) nos {item:Large Luminescent Crystal|Large Luminescent Crystals} das paredes para obteres {item:Luminescent Crystal|Luminescent Crystals}. Cada vez recebes 1, 5 ou 10. Podes andar pela gruta ou ficar sempre no mesmo sítio: os cristais voltam a aparecer bastante depressa.",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Large Crystals.png",
+              "caption": "Large Luminescent Crystals nas paredes da Barren Drift"
+            }
+          ],
+          "warning": "Minerar provoca raids de {creature:Evil Prospector|Evil Prospectors}: quanto mais cristais se mineram, mais raids podem acontecer. Com muitos jogadores a fazer a quest ao mesmo tempo, cuidado redobrado."
+        },
+        {
+          "title": "Entregar 100 cristais",
+          "text": "Com pelo menos **100** {item:Luminescent Crystal|Luminescent Crystals}, volta **diretamente** ao {npc:The Thaian}, pelo caminho mais curto até à taberna. Diz {key:hi}, {key:need}, {key:yes}, {key:yes} para os entregares.",
+          "npc": "The Thaian",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "need"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "warning": "Se andares para **sul**, os cristais desaparecem."
+        },
+        {
+          "title": "Minerar até seres teleportado",
+          "text": "Volta à gruta e continua a minerar. Se tudo correu bem, ao fim de algumas tentativas és teleportado para uma pequena sala.",
+          "tip": "Se chegares a 50 cristais sem seres teleportado, entrega-os outra vez ao The Thaian e volta a minerar."
+        },
+        {
+          "title": "Fundir o cristal grande",
+          "text": "Na pequena sala, prepara-te para enfrentar {creature:Cursed Prospector|Cursed Prospectors} e {creature:Evil Prospector|Evil Prospectors}. Usa o cristal grande: fundes-o, recebes um {item:Raw Eye of the Chasm} e és logo teleportado para fora, a **sul** da sala, onde as criaturas aparecem.",
+          "reward": "Raw Eye of the Chasm"
+        },
+        {
+          "title": "Sair da Barren Drift e voltar ao Thaian",
+          "text": "Sai da gruta pelo caminho por onde entraste (o portal da formação rochosa) e volta à taberna do {npc:The Thaian}. Assim que o cumprimentares ({key:hi}), és enviado automaticamente para a sala da alavanca da luta contra o boss.",
+          "npc": "The Thaian"
+        }
+      ]
+    },
+    {
+      "title": "12. The Thaian — boss: Thaian",
+      "steps": [
+        {
+          "title": "A luta",
+          "text": "Na sala da alavanca junta a equipa (até 5 jogadores) e usa a alavanca para entrarem. Primeiro matem os Prospectors da gruta. Quando morrerem todos, a sala muda de aspeto e aparece o {creature:Thaian's Ghost}, com mais Prospectors. Matar o Ghost causa **5000 de dano de afogamento** ao {creature:Thaian}. Repete até o boss morrer.",
+          "tip": "Segundo a página do boss, o Thaian só recebe 10% do dano de qualquer elemento: o dano que conta vem dos Ghosts."
+        },
+        {
+          "title": "Limite de tempo",
+          "text": "Tens **10 minutos**. Se a equipa falhar, são teleportados para fora da gruta e o The Thaian só volta a mandar-vos para a sala do boss **20 horas** depois.",
+          "warning": "Tal como todos os bosses da quest, o Thaian tem 20 horas de espera."
+        },
+        {
+          "title": "Vitória",
+          "text": "Ao matares o {creature:Thaian} recebes o achievement **Prospectre**. A wiki não descreve a saída da sala do boss depois da vitória: procura a saída da sala e, já na {wiki:Barren Drift}, volta pelo portal por onde entraste, que dá à formação rochosa junto à taberna, a norte de Edron.",
+          "reward": "Achievement Prospectre",
+          "tip": "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+        },
+        {
+          "title": "Reportar ao Spectulus",
+          "text": "Volta a Edron (para **sul**), sobe ao último andar da torre central da academia até ao {npc:Spectulus} e diz {key:Thaian} para lhe contares o que descobriste.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "Thaian"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "13. Zarganash — chegar e os três minibosses",
+      "intro": "A parte final passa-se em Zarganash, a que se chega por um teleporte invisível em Vengoth. Primeiro matas 3 minibosses com equipas de até 5 jogadores; o boss final aceita até 10.",
+      "steps": [
+        {
+          "title": "Chegar a Vengoth",
+          "text": "Apanha um barco para **Yalahar**. De Edron não há barco direto: vai de tapete com o {npc:Pino} para Darashia ({key:hi}, {key:darashia}, {key:yes}) e lá o {npc:Petros} leva-te a Yalahar ({key:hi}, {key:yalahar}, {key:yes}, 210 gp); também há barco em Thais e em Ankrahmun. Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.",
+          "npc": "Harlow",
+          "coords": [
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Petros (porto de Darashia)"
+            },
+            {
+              "x": 32856,
+              "y": 31548,
+              "z": 7,
+              "label": "Harlow em Vengoth (chegada e regresso)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Vengoth Map.png",
+              "caption": "Mapa de Vengoth"
+            }
+          ]
+        },
+        {
+          "title": "Entrar em Zarganash",
+          "text": "Anda para **nordeste** até ao teleporte invisível de {wiki:Zarganash}, no ponto da coordenada, e entra nele. Usa o mapa para chegares a cada miniboss e à batalha final.",
+          "coords": [
+            {
+              "x": 32962,
+              "y": 31497,
+              "z": 7,
+              "label": "Teleporte invisível para Zarganash"
+            }
+          ],
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Zarganash.png",
+              "caption": "Mapa de Zarganash: caminho até cada miniboss e ao boss final"
+            }
+          ]
+        },
+        {
+          "title": "Guardar lanternas e Death Tolls",
+          "text": "Os três minibosses podem largar {item:Soulforged Lantern|Soulforged Lanterns} (tiram o Hex no boss final) e {item:Death Toll|Death Tolls} (precisas de 2 para o labirinto). Guarda-os todos."
+        },
+        {
+          "title": "The Unwelcome",
+          "text": "O {creature:The Unwelcome} quase não recebe dano direto e usa {wiki:Lifesteal}: afasta-o do resto das criaturas e da equipa. A sala é grande: põe a equipa junto à parede **oeste** e deixa o boss do lado **leste** (assim os Druids também podem usar {spell:Terra Wave}). Ataca o {creature:Brother Worm}, que aparece e desaparece repetidamente no **centro** da sala: é o dano nele que fere o boss. Continua até o The Unwelcome morrer.",
+          "warning": "Os {creature:Wormling|Wormlings} aparecem sem parar e, quando morrem, explodem com **750 de dano de terra** num raio de 2 quadrados. Não é muito, mas vários a morrer ao mesmo tempo podem matar magos distraídos."
+        },
+        {
+          "title": "The Dread Maiden: os fantasmas",
+          "text": "Na sala da {creature:The Dread Maiden} há fantasmas coloridos: {creature:Red Soul Stealer}, {creature:Green Soul Stealer} e {creature:Blue Soul Stealer}. Tornam o boss mais forte, por isso tens de te livrar deles: atrai cada fantasma para um **vórtice da mesma cor** e ele desaparece.",
+          "warning": "Se um Soul Stealer passar por um vórtice de **outra** cor, causa dano em área ou cura o boss."
+        },
+        {
+          "title": "The Dread Maiden: prender o boss",
+          "text": "Os fantasmas só mudam de alvo com {spell:Challenge}. O blocker deve levar logo a Dread Maiden para o canto **nordeste** da sala e mantê-la lá enquanto os shooters tratam dos fantasmas. Um segundo Knight, um Paladin ou {creature:Fire Elemental|Fire Elementals} ajudam a prendê-la. Continua a atacar o boss: no início é imune e depois recebe muito pouco dano, mas com o avançar da luta passa a receber mais e morre facilmente."
+        },
+        {
+          "title": "The Fear Feaster: as criaturas",
+          "text": "É o mais perigoso dos três. Na sala do {creature:The Fear Feaster} há também {creature:Horror|Horrors} (jesters), {creature:Phobia|Phobias} (tarântulas) e {creature:Fear|Fears} (blightwalkers). Começa pelas Phobias, que são fáceis. Os Horrors curam-se uns aos outros e ao boss, mas atacam à distância e os shooters conseguem geri-los (magos, cuidado: o dano deles é considerável); enquanto não atacarem o blocker, não precisas de os matar. O Fear pode ser bloqueado junto com o boss.",
+          "tip": "Segundo a página do boss, dano de morte cura o Fear Feaster: evita-o."
+        },
+        {
+          "title": "The Fear Feaster: o Symbol of Fear",
+          "text": "Cerca de **30 segundos** depois do início, a equipa é teleportada para uma pequena sala com o {creature:Symbol of Fear}. É um totem parado, mas todos na sala levam dano de **morte** cada vez maior: destruam-no depressa para voltarem à sala principal. Isto repete-se algumas vezes até o Fear Feaster morrer.",
+          "warning": "Quanto mais tempo ficarem na sala do Symbol of Fear, mais dano levam."
+        }
+      ]
+    },
+    {
+      "title": "14. Zarganash — o labirinto e The Pale Worm",
+      "intro": "Depois dos 3 minibosses podes avançar para o boss final. Antes da sala da alavanca há ainda um labirinto.",
+      "steps": [
+        {
+          "title": "Death Tolls para entrar",
+          "text": "Para entrares no labirinto precisas de ter **2** {item:Death Toll|Death Tolls} no inventário. São gastos quando entras nos vórtices **verdes** ou **vermelhos**. Caem das Lost Souls e de todos os bosses da quest (solo e de equipa).",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Labyrinth 1.png",
+              "caption": "Entrada do labirinto"
+            }
+          ]
+        },
+        {
+          "title": "Regras do labirinto",
+          "text": "O objetivo é atravessar o labirinto sem seres mandado de volta à entrada. Voltas ao início se pisares **Ghost Webs**, se sofreres o *death-berserk* dos {creature:Empty|Empties} (fantasmas; não fazem dano) ou se passares por cima das barreiras de energia, que aparecem e desaparecem sempre nos mesmos sítios. Os {creature:Innocent Soul|Innocent Souls} (fantasmas brancos) atraem a atenção dos Empties: aproveita-os.",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Labyrinth 2.png",
+              "caption": "Aproveita bem os Innocent Souls"
+            },
+            {
+              "file": "Feaster of Souls Quest - Labyrinth 3.png",
+              "caption": "Se errares, voltas à entrada"
+            }
+          ],
+          "warning": "Cada vez que voltas à entrada gastas mais Death Tolls."
+        },
+        {
+          "title": "Estratégia para a equipa",
+          "text": "Manda primeiro os magos: lá dentro podem invocar {creature:Demon Skeleton|Demon Skeletons}, que os fantasmas acabam por atacar sem os conseguir matar, e o caminho fica mais fácil para os outros. Dá todas as Death Tolls ao mesmo jogador, que deve passar em **último**: assim ninguém fica sem tolls à entrada enquanto quem já passou tem tolls a mais.",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Labyrinth 4.png",
+              "caption": "A saída para a sala da alavanca"
+            }
+          ]
+        },
+        {
+          "title": "O Greater Hex e a Soulforged Lantern",
+          "text": "Depois do labirinto chegas à sala da alavanca: junta a equipa (até 10 jogadores) e entrem. Ao entrar na sala do boss, **todos** ficam com {wiki:Hexed|Greater Hex}: fazes menos dano, recebes menos cura e a tua vida total fica em **40%** da máxima. Usar uma {item:Soulforged Lantern} remove o Hex durante toda a luta (depois de removido não volta a ser aplicado). A mesma lanterna pode ser usada por vários jogadores, mas tem **20%** de hipótese de partir em cada uso; mesmo quando parte, o efeito aplica-se.",
+          "images": [
+            {
+              "file": "Feaster of Souls Quest - Lantern 1.png",
+              "caption": "A Soulforged Lantern a ser usada"
+            },
+            {
+              "file": "Feaster of Souls Quest - Lantern 2.png",
+              "caption": "A lanterna pode partir, mas o efeito aplica-se na mesma"
+            }
+          ],
+          "tip": "A lanterna é essencial para Knights e Paladins, mas não para magos. A não ser que tenham lanternas a mais, os magos não as devem usar: guardem-nas para outros jogadores noutras tentativas."
+        },
+        {
+          "title": "Greed Worms e o Hunger Worm",
+          "text": "Na sala estão o {creature:The Pale Worm} e vários {creature:Greed Worm|Greed Worms}. Junta-os e vai atacando até aparecer o {creature:Hunger Worm}.",
+          "warning": "Tal como os Wormlings do The Unwelcome, os Greed Worms fazem **750 de dano de terra** quando morrem. Aqui são muitos e podem morrer vários ao mesmo tempo."
+        },
+        {
+          "title": "Descer pelo buraco",
+          "text": "Mata o {creature:Hunger Worm}: no sítio onde morre aparece um buraco. Toda a equipa deve descer **logo**, de preferência primeiro um Knight ou Paladin. Tens cerca de **10 segundos** antes de o buraco desaparecer; quem ficar para trás tem de esperar na sala principal com o boss e os Greed Worms."
+        },
+        {
+          "title": "A Weak Spot",
+          "text": "Na sala de baixo estão {creature:A Weak Spot} e mais Greed Worms. Ataca o Weak Spot: o dano que ele recebe passa para o The Pale Worm (partilham a vida). Os jogadores nesta sala levam dano de **morte** cada vez maior, por isso fica só **10 a 15 segundos** e sai pela rampa antes de o dano ficar alto demais (normalmente dá para ficar até o dano saltar de cerca de 1000 para 2000).",
+          "warning": "Não fiques demasiado tempo na sala do Weak Spot."
+        },
+        {
+          "title": "Repetir até ao fim",
+          "text": "Repete o ciclo (Hunger Worm, buraco, Weak Spot, rampa) até o {creature:The Pale Worm} morrer. Tens **25 minutos**, muito mais do que o necessário com uma equipa de 10. Ao venceres recebes **automaticamente** o outfit {wiki:Poltergeist Outfits|Poltergeist}.",
+          "reward": "Outfit Poltergeist"
+        },
+        {
+          "title": "Sair de Zarganash e de Vengoth",
+          "text": "A wiki não descreve a saída: volta pelo caminho por onde vieste até ao teleporte por onde entraste e sai para Vengoth. Lá, anda para **sudoeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares ao Trade Quarter de Yalahar.",
+          "npc": "Harlow",
+          "coords": [
+            {
+              "x": 32962,
+              "y": 31497,
+              "z": 7,
+              "label": "Teleporte de Zarganash (Vengoth)"
+            },
+            {
+              "x": 32856,
+              "y": 31548,
+              "z": 7,
+              "label": "Harlow em Vengoth"
+            }
+          ],
+          "tip": "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+        },
+        {
+          "title": "Reportar ao Para Norbert",
+          "text": "Volta ao {npc:Para Norbert}, a norte do Jakundaf Desert. Em Yalahar, o {npc:Karith} leva-te a Venore se tiveres as rotas da In Service of Yalahar; senão, o {npc:Captain Cookie} leva-te a Thais (800 gp) ou a Liberty Bay (400 gp), e de Liberty Bay o {npc:Jack Fate} leva-te a Venore. De Venore anda para **oeste** (de Thais, para **leste**). Reporta-lhe para completares a quest e receberes o achievement **Beyonder**.",
+          "npc": "Para Norbert",
+          "reward": "Achievement Beyonder"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Addons do outfit: vê a {wiki:Poltergeist Outfits Quest} (usa um {item:Spooky Hood} e um {item:Ghost Claw}). O outfit completo dá o achievement **Mainstreet Nightmare**. Os dois itens caem raramente do {creature:Brain Head}, do {creature:The Unwelcome}, da {creature:The Dread Maiden} e do {creature:The Fear Feaster} e também se compram no Market.",
+    "Todos os bosses (incluindo o The Pale Worm) têm 20 horas de espera e podem ser repetidos depois da quest, por loot.",
+    "No 2.º piso das Brain Grounds há um portal para o Netherworld ({coord:31904,32347,9}), usado por quem caça nas duas zonas.",
+    "O Netherworld e Zarganash são zonas diferentes, apesar de alguns NPCs dizerem que são o mesmo lugar.",
+    "Loot raro do The Pale Worm inclui {item:Spectral Scrap of Cloth}, {item:Pale Worm's Scalp}, {item:Ravenous Circlet}, {item:Fabulous Legs}, {item:Phantasmal Axe}, {item:Pair of Nightmare Boots} e {item:Ring of Souls}."
+  ]
+}

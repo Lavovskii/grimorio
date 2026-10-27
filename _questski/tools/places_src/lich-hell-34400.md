@@ -1,6 +1,6 @@
 # PLACE: Lich Hell
 slug: lich-hell-34400
-mentioned in 1 guides: the-shattered-isles-quest
+mentioned in 2 guides: feaster-of-souls-quest, the-shattered-isles-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Lich Hell 
@@ -32,6 +32,12 @@ Use a Pick on the dirt around the blue circle to open the hole to Lich Hell.
 (none)
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[feaster-of-souls-quest 9-5] Descer à Lich Hell
+O sino toca-se **por baixo de Ramoa**, onde aparecem os {creature:Undead Cavebear|Undead Cavebears}, perto de um esqueleto de dragão. Esses ursos aparecem na {wiki:Lich Hell}, um piso da dungeon de Ramoa, no mesmo andar e mesmo ao lado do ponto do sino (local dos ursos: {coord:31948,32578,10}). Segue os mapas: em cada um entras pelo círculo vermelho e caminhas até ao azul; no último, usa a {item:Pick} na terra à volta do círculo azul para abrires o buraco para a Lich Hell.
+coords: []
+[feaster-of-souls-quest 9-6] Sino 8: por baixo de Ramoa
+Toca o {item:Death Knell} junto ao esqueleto de dragão, no ponto da coordenada.
+coords: [{'x': 31964, 'y': 32591, 'z': 10, 'label': 'Por baixo de Ramoa (sino 8)'}, {'x': 31948, 'y': 32578, 'z': 10, 'label': 'Local dos Undead Cavebears (Lich Hell)'}]
 [the-shattered-isles-quest 8-1] Colocar os cogumelos
 Coloca os cogumelos nas bacias nesta disposição e depois entra no teleporte:
 coords: []

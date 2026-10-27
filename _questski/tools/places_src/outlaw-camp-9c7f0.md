@@ -1,6 +1,6 @@
 # PLACE: Outlaw Camp
 slug: outlaw-camp-9c7f0
-mentioned in 9 guides: a-pirates-tail-quest, cults-of-tibia-quest, down-the-drain-mini-world-change, forgotten-knowledge-quest, loose-ends-quest, rottin-wood-and-the-married-men-quest, the-outlaw-camp-quest, the-thieves-guild-quest, the-travelling-trader-quest
+mentioned in 10 guides: a-pirates-tail-quest, cults-of-tibia-quest, down-the-drain-mini-world-change, forgotten-knowledge-quest, loose-ends-quest, rottin-wood-and-the-married-men-quest, the-dream-courts-quest, the-outlaw-camp-quest, the-thieves-guild-quest, the-travelling-trader-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Outlaw Camp 

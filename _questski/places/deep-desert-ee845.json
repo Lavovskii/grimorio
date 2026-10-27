@@ -1,0 +1,35 @@
+{
+  "title": "Deep Desert",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Construção subterrânea abandonada **por baixo do deserto de Darama, a oeste de Darashia**, cheia de mortos-vivos fortes ({creature:Skeleton Elite Warrior|Skeleton Elite Warriors} e {creature:Undead Elite Gladiator|Undead Elite Gladiators}); entra-se por um vórtice de areia e é aqui que se faz a parte *The Path of Defiances* da {wiki:The Secret Library Quest}.",
+  "entrance": {"x": 33105, "y": 32384, "z": 7, "label": "Vórtice de areia (entrada do Deep Desert, oeste de Darashia)"},
+  "requirements": [
+    "A wiki não indica requisito para entrares pelo vórtice. Para teres acesso a todas as zonas do edifício (os quatro puzzles e a sala do {creature:Furious Scorpion}) precisas da {wiki:The Secret Library Quest} (Premium, nível 250), parte *The Path of Defiances*: o acesso ao Deep Desert (Elite Skeletons) é uma das recompensas da quest.",
+    "A wiki recomenda nível **300** para knights e **250** para paladins e mages para caçar aqui."
+  ],
+  "items": ["Rope", "Temple Teleport Scroll"],
+  "arrive": [
+    "Viaja até **Darashia**. **De barco:** em Venore, Ankrahmun, Port Hope ou Liberty Bay diz ao capitão {key:hi}, {key:darashia}, {key:yes} (de Venore, o {npc:Captain Fearless}, 60 gp, com 10% de hipótese de acabares no {wiki:Ghostship}); chegas ao porto do {npc:Petros} ({coord:33289,32481,6}). **De tapete voador:** em Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi diz ao gestor do tapete {key:hi}, {key:darashia}, {key:yes}; chegas ao tapete do {npc:Chemar} ({coord:33270,32439,6}). De Thais, Carlin ou Ab'Dendriel não há ligação direta: apanha primeiro o barco para Venore.",
+    "Sai da cidade para **oeste** pelo deserto até ao {item:Vortex (Green)|vórtice de areia} ({coord:33105,32384,7}) e entra nele: és teleportado para o Deep Desert.",
+    "Para chegares aos puzzles da The Secret Library Quest: sai do edifício pelo lado **sul**, contorna-o pelo lado **oeste** e desce pelo buraco ({coord:32997,32296,8})."
+  ],
+  "leave": [
+    "A wiki não descreve a saída do Deep Desert para a superfície. Volta pelo caminho por onde vieste: se estás no piso dos puzzles, sobe pelo buraco com a {item:Rope} ({coord:32997,32296,8}) e regressa ao sítio onde apareceste quando entraste no vórtice de areia; procura aí o regresso ao deserto.",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block) e já não precisas do passo seguinte.",
+    "De volta ao deserto, caminha para **leste** até Darashia: o {npc:Petros} ({coord:33289,32481,6}) leva-te de barco ({key:hi}, o nome da cidade, por exemplo {key:venore}, e {key:yes}) e o {npc:Chemar} ({coord:33270,32439,6}) de tapete voador ({key:hi}, o destino, por exemplo {key:edron}, e {key:yes})."
+  ],
+  "coords": [
+    {"x": 33105, "y": 32384, "z": 7, "label": "Vórtice de areia (entrada, à superfície)"},
+    {"x": 32997, "y": 32296, "z": 8, "label": "Buraco para o piso dos puzzles (sobe com a Rope)"},
+    {"x": 32949, "y": 32295, "z": 9, "label": "Escadas para a sala dos tapetes coloridos"},
+    {"x": 32965, "y": 32284, "z": 10, "label": "Sala das estátuas de bonelord"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"}
+  ],
+  "warnings": [
+    "A wiki avisa que a dificuldade deste sítio não deve ser subestimada: os {creature:Skeleton Elite Warrior|Skeleton Elite Warriors} (7800 HP, até 1500 de dano) e os {creature:Undead Elite Gladiator|Undead Elite Gladiators} (8000 HP, 1450+ de dano) aparecem em grande número, sobretudo no corredor de areia do 2.º puzzle.",
+    "A sala do {creature:Furious Scorpion} é **solo** e não consegues sair sem matar o boss: tens **5 minutos** para o matar, abrir o baú e sair pelo **teleporte a sul** (a wiki não diz onde esse teleporte te deixa); se o tempo acabar, és expulso da sala. Só podes repetir a luta de 2 em 2 horas.",
+    "O {item:Temple Teleport Scroll} não funciona com Logout Block ou Protection Zone Block: espera que o bloqueio de combate passe antes de o usares."
+  ]
+}

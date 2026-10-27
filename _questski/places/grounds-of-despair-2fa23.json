@@ -1,0 +1,51 @@
+{
+  "title": "Grounds of Despair",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Tarbaz}, servo de Pumin, **debaixo do mar a leste de Darashia**: é um dos sete seals da {wiki:Ferumbras' Ascension Quest} e entra-se pelo teleporte **sudoeste** da sala dos portais do {wiki:Hell Hub}, a que se chega pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33297, "y": 32403, "z": 14, "label": "Teleporte sudoeste do Hell Hub (entrada das Grounds of Despair)"},
+  "requirements": [
+    "Conta **Premium** e **nível 150** para falares com o {npc:Mazarius}, em Darashia.",
+    "As portas do inferno têm de estar abertas para ti: aceita a missão do Mazarius e entrega-lhe 30 {item:Demonic Essence|Demonic Essences} ({key:hi}, {key:short}, {key:yes}, {key:demonic essence}, {key:yes}).",
+    "{item:Teleportation Rod} (dado pelo Mazarius; se o perderes, vende-te outro por 1.000 gp) para enviares a peça da Godbreaker no fim: é isso que completa o seal.",
+    "Nível recomendado pela wiki para esta zona: knights 350, paladins e mages 300.",
+    "Para chegares ao boss tens de resolver o puzzle das 5 letras e dizer o nome ao NPC das ruínas. O boss é para até **5 jogadores** e só pode ser tentado de 44 em 44 horas."
+  ],
+  "items": ["Demonic Essence", "Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco, por exemplo em Venore ao {npc:Captain Fearless} ({key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}), e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}); ou de tapete voador, por exemplo em Edron ao {npc:Pino} ({key:hi}, {key:darashia}, {key:yes}, 40 gp), e chegas à plataforma do {npc:Chemar} ({coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** da cidade ({coord:33271,32395,7}), e desce 1 andar (subsolo): ele está aí ({coord:33275,32392,8}).",
+    "Com o acesso aberto (as 30 Demonic Essences entregues), entra no portal a **norte** do Mazarius. Apareces numa zona de proteção (sala segura): prepara-te aqui.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}; no fim da gruta, desce as escadas até à sala dos portais do {wiki:Hell Hub}.",
+    "Na sala dos portais, segue o caminho a **sudoeste** das escadas e entra no teleporte ({coord:33297,32403,14}): estás nas Grounds of Despair.",
+    "Segue o mapa até à zona do puzzle, nas ruínas (aí não há criaturas). Resolve o puzzle das 5 letras e leva a {creature:Desperate Soul} (um coelho branco) até à sala do NPC das ruínas, a **sudoeste** ({coord:33451,32808,11}); depois diz-lhe {key:hi}, {key:mission} e {key:tevon}.",
+    "Vai à sala a **norte** e desce a escada de mão ({coord:33464,32775,11}); segue o mapa à volta das ruínas até à sala da alavanca do {creature:Tarbaz}."
+  ],
+  "leave": [
+    "Depois de matares o {creature:Tarbaz}, entra no teleporte e usa o {item:Teleportation Rod} na peça da {wiki:The Godbreaker}: o teleporte de saída devolve-te à sala segura (zona de proteção) antes da entrada do Hell Hub. Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do {npc:Mazarius}.",
+    "Se quiseres sair antes do boss: a wiki não descreve o regresso das Grounds à sala dos portais (nem diz se há um teleporte de volta onde chegaste). Faz o caminho ao contrário até ao sítio onde chegaste e daí à sala dos portais; depois sobe as escadas e atravessa as grutas até à zona de proteção.",
+    "Da zona de proteção volta à sala do {npc:Mazarius}, em Darashia, pelo caminho por onde entraste (a wiki não descreve esta passagem de regresso em pormenor). Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Da casa do Mazarius sobe à rua: no porto, o {npc:Petros} ({coord:33289,32481,6}) leva-te de barco, por exemplo, a Venore ({key:hi}, {key:venore}, {key:yes}, 60 gp) ou Ankrahmun (100 gp); na plataforma dos tapetes, o {npc:Chemar} ({coord:33270,32439,6}) leva-te, por exemplo, a Edron ({key:hi}, {key:edron}, {key:yes}, 40 gp)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (subsolo), com o portal a norte"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub"},
+    {"x": 33297, "y": 32403, "z": 14, "label": "Teleporte sudoeste (Grounds of Despair)"},
+    {"x": 33463, "y": 32798, "z": 8, "label": "Grounds of Despair (ponto indicado pela wiki)"},
+    {"x": 33451, "y": 32779, "z": 11, "label": "Sala da primeira alavanca do puzzle (noroeste)"},
+    {"x": 33451, "y": 32808, "z": 11, "label": "Sala do NPC das ruínas (sudoeste)"},
+    {"x": 33464, "y": 32775, "z": 11, "label": "Escada de mão para o caminho do boss"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção, pelas grutas, até às escadas da sala dos portais"},
+    {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete teleportes da sala dos portais (começas no círculo branco); o 6 é o das Grounds of Despair"},
+    {"file": "Ferumbras Ascendant - Path to Tarbaz 1.png", "caption": "À esquerda, o caminho na sala dos portais até ao teleporte sudoeste; à direita, o caminho lá dentro até à zona do puzzle"},
+    {"file": "Ferumbras Ascendant - Path to Tarbaz 2.png", "caption": "Caminho à volta das ruínas até à sala da alavanca"}
+  ],
+  "warnings": [
+    "Na zona do puzzle alguns campos são invisíveis no mapa e fazem-te andar **extremamente devagar**: procura as passagens com paciência.",
+    "Depois da sala segura não há mais zonas de proteção. No resto das Grounds há {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches}, {creature:Hand of Cursed Fate|Hands of Cursed Fate} e {creature:Spectre|Spectres}; na sala do boss há {creature:Guilt|Guilts} que atacam à distância.",
+    "Não fiques na sala do boss depois de o matares: se o tempo acabar és teleportado para fora e, como a missão só conta quando usas o {item:Teleportation Rod}, terias de matar o boss outra vez."
+  ]
+}

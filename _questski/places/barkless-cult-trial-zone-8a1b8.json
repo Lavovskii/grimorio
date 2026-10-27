@@ -1,0 +1,43 @@
+{
+  "title": "Barkless Cult Trial Zone",
+  "type": "gruta",
+  "near": "Ab'Dendriel",
+  "summary": "Zona subterrânea do culto Barkless **por baixo do norte de Ab'Dendriel**, a que se chega pela gruta dos trolls: tem o {npc:Tigo}, as provas do tar e do sulphur da {wiki:Cults of Tibia Quest} e, no piso de baixo, o Shrine of Serenity da {wiki:The Way of the Monk Quest}.",
+  "entrance": {"x": 32689, "y": 31581, "z": 7, "label": "Entrada da gruta dos trolls (norte de Ab'Dendriel)"},
+  "requirements": [
+    "Conta **Premium** (a {wiki:Cults of Tibia Quest} é Premium).",
+    "Para entrares no edifício do {npc:Tigo} (o caminho para a zona das provas) tens de lhe pedir uma missão: {key:hi}, {key:mission} (missão Barkless da {wiki:Cults of Tibia Quest}).",
+    "O piso de baixo (z9) fica atrás de uma porta selada a **oeste** da zona das provas, que só abre depois da purificação, na etapa *The Powerful Relic* da missão Barkless.",
+    "A wiki recomenda nível **150** para caçar aqui."
+  ],
+  "items": ["Rope"],
+  "arrive": [
+    "Viaja até **Ab'Dendriel**: de barco, diz {key:hi}, {key:ab'dendriel}, {key:yes} ao capitão (por exemplo o {npc:Captain Bluebear} em Thais, 130 gp, ou o {npc:Captain Seahorse} em Edron, 70 gp); chegas ao porto do {npc:Captain Seagull} ({coord:32735,31668,6}). Da {wiki:Gray Island}, o {npc:Scrutinon} leva-te de graça.",
+    "A entrada da gruta dos trolls fica a **norte** da cidade ({coord:32689,31581,7}). Entra, desce outra vez e depois sobe pelo rope spot a **sul** com a {item:Rope}.",
+    "Caminha para **nordeste** até à {item:Mystic Flame} ({coord:32721,31546,8}) e depois para **oeste** até ao {npc:Tigo}, que está um piso abaixo da chama ({coord:32692,31543,9}). Se ainda não falaste com ele, diz {key:hi} e pede uma {key:mission}.",
+    "Entra no edifício a **oeste** do Tigo e sai pela porta a **norte**. Segue o caminho e sobe pelo buraco no fim: estás na zona das provas dos Barkless.",
+    "Para o piso de baixo: depois da purificação, abre a porta selada a **oeste** da zona das provas e desce ({coord:32744,31515,9}). O Shrine of Serenity fica para **leste** neste piso ({coord:32778,31526,9})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada da gruta dos trolls: se estás no piso de baixo, passa outra vez pela porta selada; desce pelo buraco por onde subiste para a zona das provas, atravessa o edifício do {npc:Tigo}, volta à zona da {item:Mystic Flame} e segue para **sudoeste** até ao rope spot; desce por ele e sobe os dois pisos por onde desceste à entrada, até à superfície de Ab'Dendriel ({coord:32689,31581,7}). A wiki não descreve este regresso em pormenor.",
+    "No cais de Ab'Dendriel (Underwood), o {npc:Captain Seagull} ({coord:32735,31668,6}) leva-te de barco: {key:hi}, o destino ({key:carlin}, {key:edron}, {key:thais} ou {key:venore}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (porto de Ab'Dendriel)"},
+    {"x": 32689, "y": 31581, "z": 7, "label": "Entrada da gruta dos trolls"},
+    {"x": 32721, "y": 31546, "z": 8, "label": "Mystic Flame"},
+    {"x": 32692, "y": 31543, "z": 9, "label": "Tigo"},
+    {"x": 32750, "y": 31508, "z": 8, "label": "Zona das provas (primeiro tile de tar)"},
+    {"x": 32725, "y": 31530, "z": 9, "label": "Barkless Cult Trial Zone (ponto da wiki)"},
+    {"x": 32744, "y": 31515, "z": 9, "label": "Piso de baixo, depois da porta selada"},
+    {"x": 32778, "y": 31526, "z": 9, "label": "Shrine of Serenity"}
+  ],
+  "images": [
+    {"file": "Barkless Cult Trial Zone Map.PNG", "caption": "Mapa da Barkless Cult Trial Zone"}
+  ],
+  "warnings": [
+    "Os {creature:Barkless Devotee|Barkless Devotees} e {creature:Barkless Fanatic|Barkless Fanatics} são muito mais fortes do que elfos normais e o seu Poison Ball faz bastante dano, mesmo com um blocker.",
+    "Na purificação da Cults of Tibia Quest a tua personagem **morre** ao passar o portão de energia (sem perderes experiência, skills, itens nem blessings) e reapareces no templo da tua cidade natal: tens de voltar a entrar pela gruta dos trolls.",
+    "As portas a oeste ({coord:32686,31431,8}) e a leste ({coord:32754,31443,8}) da zona das provas só se abrem depois de lá chegares pelo corredor do meio e as abrires uma vez pelo **norte**."
+  ]
+}

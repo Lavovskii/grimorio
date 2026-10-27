@@ -1,6 +1,6 @@
 # PLACE: White Flower Temple
 slug: white-flower-temple-ee712
-mentioned in 3 guides: forgotten-knowledge-quest, pilgrimage-of-ashes-quest, what-a-foolish-quest
+mentioned in 4 guides: forgotten-knowledge-quest, pilgrimage-of-ashes-quest, the-way-of-the-monk-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## White Flower Temple 

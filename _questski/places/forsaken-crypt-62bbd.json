@@ -1,0 +1,31 @@
+{
+  "title": "Forsaken Crypt",
+  "type": "dungeon",
+  "near": "Ab'Dendriel",
+  "summary": "Zona de caça pensada para **um só jogador**, perto de Ab'Dendriel, que faz parte da {wiki:The Roost of the Graveborn Quest}; cada entrada gasta 1 {wiki:Ancestral Charge}.",
+  "requirements": [
+    "{wiki:The Roost of the Graveborn Quest} (nível **450**, conta **Premium**): a cripta faz parte da quest e as tuas cargas aparecem no Quest Log depois de a acabares, em *The Spirits Are At Ease*.",
+    "**1 {wiki:Ancestral Charge}** por entrada. Cada {item:Fetid Heart} dá **5** cargas (cai dos {creature:Crypt Construct|Crypt Constructs} da {wiki:Forgotten Crypt} e da {wiki:Unhallowed Crypt}, e pode ser comprado no Market); a {item:Jade Dragon Head (Charged)} dá **1** a cada 14 dias (e também 1 {wiki:Favour of the Ancients})."
+  ],
+  "items": ["Fetid Heart", "Jade Dragon Head (Charged)", "Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Ab'Dendriel** de barco: o {npc:Captain Greyhound} (Carlin), o {npc:Captain Seahorse} (Edron), o {npc:Captain Bluebear} (Thais) ou o {npc:Captain Fearless} (Venore) levam-te lá com {key:hi}, {key:ab'dendriel}, {key:yes}. Chegas ao porto do {npc:Captain Seagull}, a **leste** do centro, 1 andar acima do chão ({coord:32735,31668,6}).",
+    "Garante que tens pelo menos 1 Ancestral Charge: usa um {item:Fetid Heart} (+5) ou a {item:Jade Dragon Head (Charged)} (+1, a cada 14 dias). Se ainda for cedo para usar o talismã aparece *\"It is too early to use this again!\"*.",
+    "O wiki não indica onde fica a entrada da Forsaken Crypt: diz apenas que fica perto de Ab'Dendriel. Das três criptas da quest, só a {wiki:Forgotten Crypt} (a cripta **exterior**, por baixo de {wiki:Draconia}, onde também caem os Fetid Hearts) tem acesso descrito: a missão final da quest leva-te lá pela canoa do {npc:S'Zallar M'Andar} ({coord:32702,31594,7}).",
+    "Ao entrares, gastas 1 Ancestral Charge."
+  ],
+  "leave": [
+    "O wiki não descreve a saída da Forsaken Crypt: volta pelo caminho por onde entraste.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block).",
+    "Em Ab'Dendriel, o {npc:Captain Seagull} ({coord:32735,31668,6}) leva-te a Carlin, Edron, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32702, "y": 31594, "z": 7, "label": "S'Zallar M'Andar (canoa para Draconia e a Forgotten Crypt)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (porto de Ab'Dendriel)"}
+  ],
+  "warnings": [
+    "Zona para caçar **sozinho**: o {creature:Cyclursus} aplica um debuff de skills se houver mais de um jogador perto.",
+    "Cada vez que entras gastas 1 Ancestral Charge: se saíres e voltares a entrar, gastas outra.",
+    "Criaturas: {creature:Roaming Dread|Roaming Dreads}, {creature:Cyclursus} e {creature:Crypt Mage|Crypt Mages} (13 500 a 14 500 de vida cada). Os Crypt Mages deixam cair {item:Cryptic Fossil|Cryptic Fossils}, que dão acesso à {wiki:Unhallowed Crypt}."
+  ]
+}

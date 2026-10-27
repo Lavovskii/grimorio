@@ -1,6 +1,6 @@
 # PLACE: Carlin Graveyard
 slug: carlin-graveyard-49fb5
-mentioned in 2 guides: cults-of-tibia-quest, fanfare-quest
+mentioned in 3 guides: cults-of-tibia-quest, fanfare-quest, feaster-of-souls-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Carlin Graveyard 
@@ -32,3 +32,9 @@ coords: [{'x': 32404, 'y': 31790, 'z': 7, 'label': 'Carlin Graveyard'}]
 [fanfare-quest 1-0] Descer à cripta
 Entra no {wiki:Carlin Graveyard|cemitério de Carlin}, logo a **leste** da cidade, e desce à cripta que fica no extremo **sul** do cemitério.
 coords: [{'x': 32407, 'y': 31784, 'z': 7, 'label': 'Entrada do cemitério de Carlin'}]
+[feaster-of-souls-quest 0-2] Os três sítios do sino
+Usa (toca) o {item:Death Knell} em cada um destes três sítios para impregnares a tua aura com energia fantasmagórica. A wiki não indica uma ordem obrigatória; a secção 2 explica como chegar e sair de cada um.
+coords: [{'x': 32408, 'y': 31781, 'z': 7, 'label': 'Sino 1: Carlin Graveyard'}, {'x': 32178, 'y': 31836, 'z': 8, 'label': 'Sino 2: Ghostlands'}, {'x': 32629, 'y': 32416, 'z': 9, 'label': 'Sino 3: Dark Cathedral'}]
+[feaster-of-souls-quest 1-1] Sino 1: Carlin Graveyard
+O {wiki:Carlin Graveyard} fica a **leste** de Carlin. Vai até à entrada do cemitério e usa o {item:Death Knell} no ponto da coordenada. Depois volta a pé para Carlin pelo mesmo caminho.
+coords: [{'x': 32408, 'y': 31781, 'z': 7, 'label': 'Entrada do Carlin Graveyard (sino 1)'}]

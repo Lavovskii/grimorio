@@ -1,0 +1,43 @@
+{
+  "title": "Infected Area",
+  "type": "zona",
+  "near": "Venore",
+  "summary": "Círculo fechado de árvores mortas e vivas no **sul das {wiki:Plains of Havoc}**, a leste da {wiki:Dark Cathedral} e a norte da casa dos {creature:Vampire|vampiros}, onde está presa a {wiki:The Demon Oak|Demon Oak}; só entras depois de começares a {wiki:The Demon Oak Quest}.",
+  "entrance": {"x": 32717, "y": 32351, "z": 7, "label": "Área infestada (Demon Oak): corredor de entrada de 1 sqm"},
+  "requirements": [
+    "Conta **Premium** (a {wiki:The Demon Oak Quest} é Premium).",
+    "**Nível 120** ou mais: não há porta de nível, mas o jogo verifica o nível no corredor de entrada.",
+    "Na primeira entrada, um {item:Holy Icon} no inventário: deixa-te entrar e desaparece. É a recompensa da task dos 6666 {creature:Demon|Demons} do {npc:Grizzly Adams} (Port Hope), mas também se compra a outros jogadores no Market. Nas vezes seguintes basta já teres começado a quest."
+  ],
+  "items": ["Holy Icon"],
+  "arrive": [
+    "Viaja até **Venore** de barco ({key:hi}, {key:venore}, {key:yes}): por exemplo, de Thais com o {npc:Captain Bluebear} (170 gp) ou de Edron com o {npc:Captain Seahorse} (40 gp). Chegas ao porto do **norte**, junto ao barco do {npc:Captain Fearless} ({coord:32955,32022,6}).",
+    "Sai de Venore e caminha para **sudoeste** até às {wiki:Plains of Havoc}. O templo do {npc:Oldrak}, 1 andar acima do chão ({coord:32816,32260,6}), é o ponto de referência e sítio de descanso.",
+    "Do templo, segue para **sudoeste** até à área infestada: um círculo fechado rodeado de muitas {item:Dead Tree|árvores mortas}, a **leste** da {wiki:Dark Cathedral} ({coord:32664,32344,7}) e a **norte** da casa dos vampiros. À volta há 5 quadrados que fazem a Demon Oak gritar quando passas por eles.",
+    "Procura o **corredor de 1 sqm** que leva ao centro ({coord:32717,32351,7}) e percorre-o com o {item:Holy Icon} no inventário: és teleportado para dentro da área infestada e recebes a mensagem *It seems that you have discovered an 'Ultimate Challenge'*."
+  ],
+  "leave": [
+    "A wiki diz apenas que tens de sair (depois da primeira entrada e depois de derrubares a árvore), sem descrever como: volta pelo mesmo caminho, o corredor de 1 sqm por onde entraste. Se não conseguires sair, usa um {item:Temple Teleport Scroll}: vais para o templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Depois de derrubares a árvore, ao saíres recebes o achievement **Herbicide** e a mensagem *Tell Oldrak about your great victory against the demon oak.*: o {npc:Oldrak} está no templo das Plains of Havoc, para **nordeste**, 1 andar acima do chão ({coord:32816,32260,6}).",
+    "Para voltares a Venore, caminha para **nordeste**. No porto do norte, o {npc:Captain Fearless} ({coord:32955,32022,6}) leva-te a outras cidades ({key:hi}, o nome da cidade, {key:yes}).",
+    "Alternativa, se tiveres pelo menos o 1.º rank da {wiki:Dreamer's Challenge Quest} (Novice/Maggot), conta **Premium** e uma {item:Orichalcum Pearl}: no **sul** das Plains of Havoc, entra pelo buraco debaixo de uma árvore junto à água, um pouco a norte da {wiki:Knightwatch Tower} ({coord:32816,32322,7}), e usa os teleportes do **2.º andar** da torre para Thais ou Carlin."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"},
+    {"x": 32816, "y": 32260, "z": 6, "label": "Templo das Plains of Havoc (Oldrak)"},
+    {"x": 32664, "y": 32344, "z": 7, "label": "Dark Cathedral (a oeste)"},
+    {"x": 32710, "y": 32398, "z": 7, "label": "Campa 'Yesim Adeit' (sala das recompensas, a sul)"},
+    {"x": 32695, "y": 32766, "z": 6, "label": "Grizzly Adams (Port Hope, Holy Icon)"},
+    {"x": 32816, "y": 32322, "z": 7, "label": "Buraco para a Knightwatch Tower (teleportes para Thais/Carlin)"}
+  ],
+  "images": [
+    {"file": "Plains of Havoc.png", "caption": "Mapa das Plains of Havoc: 1 templo, 7 zona infetada, 8 Demon Oak"},
+    {"file": "The Demon Oak.gif", "caption": "A Demon Oak"}
+  ],
+  "warnings": [
+    "O {item:Holy Icon} gasta-se na primeira entrada e o {npc:Grizzly Adams} só o dá uma vez: não entres antes de estares pronto para começar a quest.",
+    "No caminho pelas {wiki:Plains of Havoc} há {creature:Giant Spider|Giant Spiders} e outras criaturas perigosas para níveis baixos; a sul da área fica a casa dos {creature:Vampire|Vampires}.",
+    "Lá dentro, cada golpe do {item:Hallowed Axe} na árvore tira-te 300 de vida (Earth) e a árvore vai invocando criaturas e, no 10.º golpe do último ponto, um {creature:Demon}.",
+    "A sala das recompensas (campa *Yesim Adeit*, a sul da área) também não tem saída descrita na wiki: leva um {item:Temple Teleport Scroll}."
+  ]
+}

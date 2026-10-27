@@ -1,0 +1,683 @@
+{
+  "slug": "ferumbras-ascension-quest",
+  "category": "historia",
+  "region": "Darashia",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "8+ horas de jogo, repartidas por vários dias (cada boss só de 44 em 44 h; o Ferumbras de 14 em 14 dias)",
+  "summary": "O estudioso {npc:Mazarius}, em Darashia, quer impedir que o {creature:Ferumbras} ganhe poderes divinos. Abres as portas do inferno com 30 {item:Demonic Essence|Demonic Essences}, atravessas o {wiki:Hell Hub} e, em cada um dos sete seals dos {wiki:The Ruthless Seven Minions|Ruthless Seven Minions}, resolves um puzzle, matas o boss e envias uma peça da {wiki:The Godbreaker} com o {item:Teleportation Rod}. No fim descobres que o Mazarius te traiu e enfrentas o {creature:Ascending Ferumbras} com até 15 jogadores nas {wiki:Halls of Ascension}. Recompensa: outfit {wiki:Rift Warrior Outfits|Rift Warrior}, achievement **Hat Hunter**, itens decorativos e a hipótese de lootar o {item:Ferumbras' Hat}.",
+  "legend_pt": "O Ferumbras está prestes a ganhar poderes divinos e tem de ser travado.",
+  "start": {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius, nordeste de Darashia"},
+  "requirements": [
+    "Conta **Premium**.",
+    "**Nível 150** para conseguires falar com o {npc:Mazarius} (desde o patch de 31 de julho de 2018). Nível recomendado: **250+** (equipas de nível 300–400 já são consideradas baixas).",
+    "Equipa: até **5 jogadores** por boss dos seals, até **3 jogadores de cada vez** no acesso ao seal do Mazoran e até **15 jogadores** na luta final contra o Ferumbras.",
+    "30 {item:Demonic Essence|Demonic Essences} para o Mazarius abrir as portas do inferno."
+  ],
+  "items_needed": [
+    {"item": "Demonic Essence", "qty": 30, "note": "para o Mazarius; caem de Demons, Destroyers, Furies, Dark Torturers, Blightwalkers e outros demónios"},
+    {"item": "Dwarven Ring", "note": "listado como equipamento obrigatório no spoiler (anula os efeitos de embriaguez)"},
+    {"item": "Shovel", "note": "o spoiler pede «Pick, Shovel ou equivalente»; a pá (ou uma secret agent tool) usa-se na lápide do seal do Ragiaz"},
+    {"item": "Pick", "note": "listado com a Shovel no equipamento obrigatório do spoiler (ou uma ferramenta equivalente)"},
+    {"item": "Teleportation Rod", "note": "o Mazarius dá-to; se o perderes, ele vende outro por 1.000 gp"},
+    {"item": "Great Fireball Rune", "note": "a única arma recomendada para os shooters contra o Plagirath"},
+    {"item": "Avalanche Rune", "note": "dano em área contra os clones do Zamulosh"},
+    {"item": "Thunderstorm Rune", "note": "mages, no caminho para o Ragiaz"},
+    {"item": "Wild Growth Rune", "note": "opcional, para prender os Death Dragons do Ragiaz"},
+    {"item": "Energy Wall Rune", "note": "ou Energy Bombs, para afastar criaturas no caminho para o Shulgrax"},
+    {"item": "Convince Creature Rune", "qty": 2, "note": "por jogador, obrigatório na 3.ª fase do Ferumbras"},
+    {"item": "Depth Galea", "note": "ou {item:Helmet of the Deep} (equipamento de mergulho) contra o dano de afogamento na luta final"},
+    {"text": "Proteção contra fogo para paladins e mages; proteção contra {wiki:Mana Drain} para os mages na luta contra o {creature:Ferumbras Mortal Shell}"},
+    {"item": "Adventurer's Stone", "note": "para ires ao Adventurers' Guild levantar o loot dos bosses que deixaste na sala"},
+    {"text": "Muitas poções e runas: as zonas estão cheias de Vexclaws, Hellflayers e Grimeleeches"}
+  ],
+  "rewards": [
+    {"text": "Outfit {wiki:Rift Warrior Outfits|Rift Warrior} (base), dado pelo {npc:Heavenly Messenger}"},
+    {"text": "Achievement **Hat Hunter**"},
+    {"item": "Silver Token", "qty": 5},
+    {"item": "Ferumbras' Teddy"},
+    {"item": "Folded Rift Carpet", "qty": 4},
+    {"item": "Rift Tapestry", "qty": 4},
+    {"item": "Crystal Coin", "qty": 10},
+    {"text": "Cada boss dos sete seals dá **500.000 XP** e deixa sempre 1 {item:Silver Token}; o {creature:Ferumbras Mortal Shell} dá **2.000.000 XP** e 1 a 5 Silver Tokens"},
+    {"text": "Hipótese de lootar o {item:Ferumbras' Hat} (muito raro) e o {item:Mysterious Scroll} do {creature:Ferumbras Mortal Shell}"}
+  ],
+  "achievements": ["Hat Hunter"],
+  "unlocks": [
+    {"what": "Hell Hub e os sete Grounds dos Ruthless Seven Minions", "kind": "zona", "place": "Hell Hub", "when": "Ao entregares as 30 {item:Demonic Essence|Demonic Essences} ao {npc:Mazarius}: o portal a norte dele, em Darashia, leva-te ao Hell Hub.", "note": "Só é possível a partir do nível 150."},
+    {"what": "Atalho para o piso do Plagirath (Grounds of Plague)", "kind": "zona", "place": "Grounds of Plague", "when": "Depois de matares {creature:The Lord of the Lice} pela primeira vez, podes usar o teleporte em {coord:33201,31425,11}."},
+    {"what": "Atalho para o Razzagorn (Grounds of Destruction)", "kind": "zona", "place": "Grounds of Destruction", "when": "Depois de matares {creature:The Shatterer} pela primeira vez, podes usar o teleporte em {coord:33395,32460,13}."},
+    {"what": "Halls of Ascension e a luta contra o Ferumbras", "kind": "zona", "place": "Halls of Ascension", "when": "Depois de enviares as sete peças da {wiki:The Godbreaker}: abre-se um portal novo na sala do Mazarius.", "note": "Podes enfrentar o Ferumbras de 13 dias e 20 horas em 13 dias e 20 horas, com até 15 jogadores."},
+    {"what": "Rift Warrior Outfits (e compra dos addons)", "kind": "funcionalidade", "place": "Rift Warrior Outfits", "when": "Ao dizeres {key:hi} ao {npc:Heavenly Messenger} depois de matares o Ferumbras.", "note": "Os dois addons compram-se ao {npc:Cledwyn} por 100 {item:Silver Token|Silver Tokens} cada."},
+    {"what": "Rift Warrior Outfits Quest (addons)", "kind": "missao", "place": "Rift Warrior Outfits Quest", "when": "Ao completares a quest ficas com o outfit base, que é o requisito dessa quest."},
+    {"what": "Montada Rift Runner (usar o Mysterious Scroll)", "kind": "funcionalidade", "place": "Mysterious Scroll", "when": "Só quem completou a quest consegue usar o {item:Mysterious Scroll}, loot do {creature:Ferumbras Mortal Shell}.", "note": "Sem a quest feita aparece *The ascension of great evil must be stopped before the secret of this scroll may be revealed.*"}
+  ],
+  "dangers": ["Vexclaw", "Hellflayer", "Grimeleech", "Demon", "Plaguesmith", "Defiler", "Disgusting Ooze", "Phantasm", "Nightmare", "Hellfire Fighter", "Hellhound", "Fury", "Rage of Mazoran", "Juggernaut", "Destroyer", "Eruption of Destruction", "Undead Dragon", "Blightwalker", "Death Dragon", "Bone Capsule", "Hand of Cursed Fate", "Spectre", "Guilt", "Despair", "Dark Torturer", "Sin Devourer", "Damned Soul", "The Lord of the Lice", "Plagirath", "Zamulosh", "Mazoran", "The Fettered Shatterer", "The Shatterer", "Razzagorn", "Ragiaz", "Tarbaz", "Shulgrax", "Enthralled Demon", "Rift Invader", "Ferumbras Soul Splinter", "Ascending Ferumbras", "Destabilized Ferumbras", "Ferumbras Mortal Shell"],
+  "npcs": ["Mazarius", "...", "Demonic Messenger", "Heavenly Messenger", "Petros", "Chemar"],
+  "tips": [
+    "Para equipas de nível mais baixo (300–400), uma boa estratégia é juntar **10 jogadores** para os puzzles e minibosses (mais rápido, seguro e barato) e dividir-se em **2 grupos de 5** só na altura dos bosses.",
+    "A missão de cada seal só fica feita quando usas o {item:Teleportation Rod} na peça da Godbreaker, **não** quando matas o boss. Sai da sala do boss logo a seguir e deixa o loot para levantares depois no {wiki:Adventurers' Guild}: se ficares na sala e o tempo acabar, és expulso e tens de voltar a matar o boss.",
+    "Depois de matares um boss, o teleporte de saída devolve-te à sala segura antes da entrada: não precisas de guardar supplies para a volta, desde que chegues ao boss.",
+    "Cada boss dos seals tem um cooldown de **44 horas** e uma luta de no máximo **17 minutos**. O Ferumbras tem cooldown de **13 dias e 20 horas** e uma luta de no máximo **45 minutos**.",
+    "Leva proteção contra fogo (paladins e mages), equipamento de mergulho e proteção contra Mana Drain para a luta final."
+  ],
+  "sections": [
+    {
+      "title": "1. Opening the gates of hell: o Mazarius em Darashia",
+      "intro": "Tudo começa com o estudioso Mazarius, especialista em ascensão, que te pede ajuda para impedir que o Ferumbras se torne um deus.",
+      "steps": [
+        {
+          "title": "Chegar a Darashia",
+          "text": "Viaja até **Darashia**: de barco (ao capitão diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas à plataforma do {npc:Chemar}). O Petros liga Darashia a Ankrahmun (100 gp), Gray Island (150), Issavi (130), Krailos (110), Liberty Bay (200), Port Hope (180), Venore (60) e Yalahar (210 gp): é por ele que voltas no fim (ou pelo tapete do Chemar).",
+          "coords": [
+            {"x": 33289, "y": 32481, "z": 6, "label": "Petros (barco de Darashia)"},
+            {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete voador)"}
+          ]
+        },
+        {
+          "title": "Ir à casa do Mazarius",
+          "text": "O {npc:Mazarius} vive na parte **nordeste** de Darashia. Entra na casa e desce 1 andar (piso -1): é aí que ele está.",
+          "npc": "Mazarius",
+          "coords": [
+            {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius"},
+            {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (piso -1)"}
+          ],
+          "warning": "O Mazarius não fala com personagens abaixo do **nível 150**. Sem isso é impossível abrir as portas do inferno e continuar a quest (quem já tinha o acesso antes de 31/07/2018 não foi afetado)."
+        },
+        {
+          "title": "Aceitar a missão",
+          "text": "Diz {key:hi}, {key:short} e {key:yes}. Quando ele te pedir ajuda para impedir o {creature:Ferumbras} de ganhar poderes divinos, aceita.",
+          "npc": "Mazarius",
+          "dialogue": [{"you": "hi"}, {"you": "short"}, {"you": "yes"}]
+        },
+        {
+          "title": "Entregar as 30 Demonic Essences",
+          "text": "Com as 30 {item:Demonic Essence|Demonic Essences} no inventário, diz {key:demonic essence} e {key:yes}. As portas do inferno ficam abertas para ti.",
+          "npc": "Mazarius",
+          "dialogue": [{"you": "demonic essence"}, {"you": "yes"}],
+          "reward": "Acesso ao Hell Hub"
+        },
+        {
+          "title": "Receber o Teleportation Rod",
+          "text": "O Mazarius dá-te um {item:Teleportation Rod}. A tua tarefa é usá-lo nas **sete peças** da {wiki:The Godbreaker}, escondidas nas masmorras dos {wiki:The Ruthless Seven Minions|Ruthless Seven Minions}, para as enviar em segurança para ele.",
+          "npc": "Mazarius",
+          "reward": "Teleportation Rod",
+          "tip": "Se perderes o rod, o Mazarius vende outro por 1.000 gp (enquanto ainda estiver na sala, antes da parte final)."
+        }
+      ]
+    },
+    {
+      "title": "2. A weapon to kill a God: o Hell Hub",
+      "intro": "O {wiki:Hell Hub}, debaixo do mar a leste de Darashia, liga os sete Grounds dos Ruthless Seven Minions. Cada seal tem demónios, um puzzle, um boss (até 5 jogadores) e uma sala com uma peça da Godbreaker.",
+      "steps": [
+        {
+          "title": "Entrar no portal do Mazarius",
+          "text": "Na sala do {npc:Mazarius}, entra no portal a **norte** dele. Apareces primeiro numa {wiki:Protection Zone|zona de proteção} (sala segura): prepara-te aqui.",
+          "images": [{"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção até à sala dos portais"}]
+        },
+        {
+          "title": "Atravessar as grutas",
+          "text": "Segue pelas grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}. No fim da gruta, desce as escadas.",
+          "coords": [{"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub"}],
+          "warning": "A wiki recomenda nível 300+ para mages e paladins e 350+ para knights nesta zona."
+        },
+        {
+          "title": "A sala dos portais",
+          "text": "Chegas a uma sala grande com caminhos para os portais de cada um dos sete minions. No mapa começas no círculo branco; os números são os seals da tabela. Podes fazê-los por qualquer ordem.",
+          "images": [
+            {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete portais do Hell Hub (começas no círculo branco)"},
+            {"file": "Hell Hub 1.png", "caption": "Hell Hub"}
+          ],
+          "table": {
+            "head": ["N.º", "Seal (Ruthless Seven)", "Zona", "Boss", "Teleporte no Hub"],
+            "rows": [
+              ["1", "Verminor", "{wiki:Grounds of Plague}", "{creature:Plagirath}", "noroeste {coord:33292,32322,14}"],
+              ["2", "Bazir", "{wiki:Grounds of Deceit}", "{creature:Zamulosh}", "norte {coord:33328,32321,14}"],
+              ["3", "Infernatil", "{wiki:Grounds of Fire}", "{creature:Mazoran}", "nordeste {coord:33355,32336,14}"],
+              ["4", "Apocalypse", "{wiki:Grounds of Destruction}", "{creature:Razzagorn}", "leste {coord:33356,32366,14}"],
+              ["5", "Ashfalor", "{wiki:Grounds of Undeath}", "{creature:Ragiaz}", "sudeste {coord:33325,32400,14}"],
+              ["6", "Pumin", "{wiki:Grounds of Despair}", "{creature:Tarbaz}", "sudoeste {coord:33297,32403,14}"],
+              ["7", "Tafariel", "{wiki:Grounds of Damnation}", "{creature:Shulgrax}", "oeste {coord:33288,32353,14}"]
+            ]
+          }
+        },
+        {
+          "title": "Como funciona cada seal",
+          "text": "Em cada seal: atravessas a zona com demónios, resolves o puzzle (ou matas um miniboss), entras na sala da alavanca (5 tiles), matas o boss com até 5 jogadores e, na sala seguinte, usas o {item:Teleportation Rod} na peça da Godbreaker.",
+          "images": [{"file": "Ferumbras Ascendant - The Godbreaker.png", "caption": "Sala com uma das sete peças da Godbreaker"}],
+          "warning": "A missão só conta quando usas o rod na peça. Sai da sala do boss logo depois de o matares: se o tempo da sala acabar (17 minutos) és teleportado para fora e tens de matar o boss outra vez. O loot pode ser levantado depois no {wiki:Adventurers' Guild}.",
+          "tip": "Cada boss pode ser tentado de **44 em 44 horas**. Para levantares o loot que ficou na sala: no templo de qualquer cidade usa uma {item:Adventurer's Stone} (pede-a ao NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}) para ires ao {wiki:Adventurers' Guild}; o loot aparece na {wiki:Reward Chest}. Para sair, usa o portal de saída da guilda, que te devolve ao templo de onde vieste."
+        },
+        {
+          "title": "Sair do Hell Hub",
+          "text": "Depois de usares o rod, o teleporte de saída devolve-te à sala segura antes da entrada. Daí volta pelo mesmo caminho até à sala do Mazarius, em Darashia. Se quiseres sair a meio de um seal, faz o caminho ao contrário até à sala dos portais e sobe pelas grutas até à zona de proteção.",
+          "tip": "A wiki não descreve em pormenor o regresso do Hell Hub a Darashia. Em alternativa, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block)."
+        }
+      ]
+    },
+    {
+      "title": "3. Verminor: Plagirath's Seal (Grounds of Plague)",
+      "intro": "Este seal é só um miniboss e o boss. Criaturas: Vexclaws, Hellflayers, Grimeleeches, Plaguesmiths, Defilers e Disgusting Oozes.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Plague",
+          "text": "Na sala dos portais do Hell Hub, segue o caminho até ao teleporte **noroeste** e entra.",
+          "coords": [{"x": 33292, "y": 32322, "z": 14, "label": "Teleporte noroeste (Grounds of Plague)"}],
+          "images": [{"file": "Ferumbras Ascendant - Path to Plagirath.png", "caption": "Caminho até à entrada do seal"}]
+        },
+        {
+          "title": "Ir até à sala da alavanca do miniboss",
+          "text": "Começas no canto **nordeste**. Segue o caminho da imagem até ao teleporte a **sudoeste** e entra numa salinha com 5 tiles e uma alavanca.",
+          "images": [{"file": "Ferumbras Ascencion - Plagirath 1.jpg", "caption": "Caminho até The Lord of the Lice"}]
+        },
+        {
+          "title": "Puxar a alavanca",
+          "text": "Põe a equipa nas tiles e puxa a alavanca. São todos levados para o **norte** de uma sala grande; {creature:The Lord of the Lice} está a **sul**."
+        },
+        {
+          "title": "Miniboss: The Lord of the Lice",
+          "text": "Ataca-o e livra-te das criaturas que invoca. É uma luta simples. Depois de o matares, sai da sala pelo teleporte **sul**.",
+          "tip": "Depois de o matares pela primeira vez, podes usar o teleporte em {coord:33201,31425,11} se a equipa quiser voltar ao Plagirath ou caçar no segundo piso."
+        },
+        {
+          "title": "Ir até à sala da alavanca do Plagirath",
+          "text": "Apareces noutro piso. Segue para **noroeste** e atravessa o teleporte para entrares na sala da alavanca.",
+          "coords": [
+            {"x": 33238, "y": 31479, "z": 13, "label": "Chegada ao segundo piso"},
+            {"x": 33199, "y": 31439, "z": 13, "label": "Teleporte para a sala da alavanca"},
+            {"x": 33201, "y": 31425, "z": 11, "label": "Teleporte de atalho (depois do primeiro Lord of the Lice)"}
+          ],
+          "images": [{"file": "Ferumbras Ascencion - Plagirath 2.jpg", "caption": "Caminho até ao Plagirath"}]
+        },
+        {
+          "title": "Boss: Plagirath",
+          "text": "Põe a equipa (até 5) nas tiles e puxa a alavanca. O knight fica no **centro** da sala (o mais longe possível, mas de forma a que o druid ainda o veja no canto do ecrã) e os shooters ficam nos cantos **sudeste** ou **sudoeste**. Os {creature:Disgusting Ooze|Disgusting Oozes} nascem constantemente e paralisam com força: deixa o knight bloqueá-los e ataca **só com {item:Great Fireball Rune|Great Fireball Runes}** (paladins com diamond arrows). Se um Ooze for atrás de um shooter, o paladin leva-o até ao knight e volta ao canto.",
+          "warning": "O {creature:Plagirath} transforma por vezes o alvo num Bog Raider. Quando o efeito acaba (cerca de 10 s), todos à volta (área do tamanho de um UE) levam **1.500 de dano**. Os Oozes **não desaparecem** quando o boss morre: sai de forma organizada.",
+          "tip": "Fraco a fogo (recebe 125% do dano) e energia (110%), imune a terra. Matá-lo perto do teleporte de saída torna a saída mais segura (na imagem da wiki é morto logo a oeste desse teleporte, com dois blockers).",
+          "images": [{"file": "Plagirath Fight.png", "caption": "Plagirath a ser morto a oeste do teleporte de saída"}]
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Sai da sala do boss e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te de volta à sala segura antes da entrada.",
+          "reward": "1.ª peça da Godbreaker enviada; 500.000 XP e loot do Plagirath (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "4. Bazir: Zamulosh's Seal (Grounds of Deceit)",
+      "intro": "Três puzzles seguidos (alavanca, monstros solitários e labirinto de paredes falsas) antes do boss. Criaturas: Vexclaws, Hellflayers, Grimeleeches, Phantasms e Nightmares.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Deceit",
+          "text": "Na sala dos portais do Hell Hub, segue o caminho até ao teleporte **norte** e entra.",
+          "coords": [{"x": 33328, "y": 32321, "z": 14, "label": "Teleporte norte (Grounds of Deceit)"}],
+          "images": [{"file": "Ferumbras Ascendant - Path to Zamulosh.png", "caption": "Caminho até à entrada do seal"}]
+        },
+        {
+          "title": "Puxar a alavanca (todos)",
+          "text": "Chegas à parte **sul** do mapa. Segue a linha azul para **norte** até à bandeira azul: há aqui uma alavanca que **cada membro da equipa** tem de puxar. Aparece *In another room south of this one, something just made a loud booming sound.* A alavanca demora uns segundos a voltar ao sítio para o jogador seguinte.",
+          "images": [{"file": "Ferumbras Ascendant - Zamulosh 1.png", "caption": "Linha azul até à alavanca (bandeira) e teleporte (ponto de exclamação)"}]
+        },
+        {
+          "title": "Teleporte para as salas dos monstros",
+          "text": "Quando todos tiverem puxado a alavanca, vai para **sul**, ao ponto de exclamação vermelho logo abaixo da alavanca, e entra no teleporte."
+        },
+        {
+          "title": "Puzzle dos monstros solitários",
+          "text": "Há **8 salas**, cada uma com uma alavanca à porta. Ao puxar a alavanca aparece um monstro na sala e, por pouco tempo, o chão dessa sala muda para a paisagem do monstro da sala oposta. Tens de levar cada monstro solitário para a sala **em frente** dele **enquanto o chão dela corresponder à paisagem desse monstro**. Exemplos: o {creature:Lonely Frazzlemaw} entra quando o chão parece o de {wiki:Roshamuul}; o {creature:Lonely Deer} quando parece um relvado com pinheiros.",
+          "images": [{"file": "Ferumbras Ascendant - Zamulosh 2.png", "caption": "As 8 salas do puzzle dos monstros"}],
+          "table": {
+            "head": ["Monstro solitário (um por sala)", "Paisagem certa da sala em frente"],
+            "rows": [["{creature:Lonely Frazzlemaw}", "chão de {wiki:Roshamuul}"], ["{creature:Lonely Deer}", "relvado com pinheiros"], ["{creature:Lonely Rotworm}", "não indicada na wiki"], ["{creature:Lonely Scorpion}", "não indicada na wiki"], ["{creature:Lonely Snake}", "não indicada na wiki"], ["{creature:Lonely Polar Bear}", "não indicada na wiki"], ["{creature:Lonely Souleater}", "não indicada na wiki"], ["{creature:Lonely Yielothax}", "não indicada na wiki"]]
+          },
+          "tip": "Os monstros são muito fracos: **não os mates**. Um knight usa {spell:Challenge} (exeta res) e leva-os pelo corredor. Só um jogador precisa de puxar a alavanca; conta para todos os que estiverem **dentro** da sala quando a criatura entrar."
+        },
+        {
+          "title": "Confirmar cada sala",
+          "text": "Quando a criatura entra na sala certa, desaparece e ouves *That seemed correct!*. Se falhares, ouves *That seemed wrong!*: não faz mal, puxa a alavanca outra vez para aparecer outro monstro. Repete nas 8 salas e depois entra no teleporte a **sul**."
+        },
+        {
+          "title": "Labirinto de paredes falsas",
+          "text": "Chegas à sala mais a **noroeste** deste mapa. As salas só têm paredes, sem portas: em alguns sítios podes atravessar as paredes. Segue a linha azul até ao teleporte a **sudeste** e entra: chegas à última sala antes do boss.",
+          "images": [
+            {"file": "Ferumbras Ascendant - Zamulosh 3.png", "caption": "Mapa do labirinto (começas a noroeste)"},
+            {"file": "Ferumbras Ascendant - Zamulosh 4.png", "caption": "Linha azul pelas paredes que se atravessam"}
+          ],
+          "tip": "Os monstros das outras salas só te atacam se estiveres na mesma sala que eles ou dentro da parede."
+        },
+        {
+          "title": "Boss: Zamulosh",
+          "text": "Põe a equipa nas 5 tiles e puxa a alavanca. O {creature:Zamulosh} invoca sempre 1 cópia igualmente forte e 5 mais fracas, e fica invisível muitas vezes. A equipa fica num **canto** da sala com o knight à frente, a segurar as cópias e o boss, e todos usam o melhor dano em área ({item:Avalanche Rune|Avalanche Runes}, diamond arrows).",
+          "warning": "Se nem todas as versões estiverem a ser atacadas, a equipa é teleportada para o **centro** da sala. Se acontecer, volta ao canto e garante que todos atacam todas as cópias, e não só uma.",
+          "tip": "Só recebe 50% do dano de fogo. As cópias desaparecem quando o verdadeiro morre."
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Sai pelo teleporte **verde** e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Zamulosh (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "5. Infernatil: Mazoran's Seal (Grounds of Fire)",
+      "intro": "É de longe o seal mais difícil de atravessar: matas Vexclaws, Hellflayers, Hellfire Fighters, Hellhounds e Furies sem parar, e o acesso só pode ser feito por **3 jogadores de cada vez**. Se ninguém da equipa o fez, vai preparado para o repetir várias vezes.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Fire",
+          "text": "No piso dos teleportes do Hell Hub, vai ao teleporte mais a **nordeste** e entra.",
+          "coords": [{"x": 33355, "y": 32336, "z": 14, "label": "Teleporte nordeste (Grounds of Fire)"}],
+          "images": [{"file": "Ferumbras Ascencion - Path to Mazoran.png", "caption": "Caminho até ao Mazoran"}]
+        },
+        {
+          "title": "Atravessar até às escadas",
+          "text": "Apareces aqui. Mantém-te **junto às paredes**: se fores para o centro podes ser cercado por mais de 8 criaturas. Segue o caminho até às escadas a **sudeste** e desce.",
+          "coords": [
+            {"x": 33612, "y": 32630, "z": 14, "label": "Chegada às Grounds of Fire"},
+            {"x": 33663, "y": 32706, "z": 14, "label": "Escadas a sudeste"}
+          ]
+        },
+        {
+          "title": "O piso do puzzle",
+          "text": "Neste piso há 3 alavancas inundadas de lava (setas no mapa), 3 fontes com um tile colorido ao lado (cruzes vermelhas) e mais 3 alavancas juntas que usas no fim (bandeira azul, perto das escadas).",
+          "images": [{"file": "Mazoranpuzzle.jpg", "caption": "Puzzle do Mazoran: alavancas inundadas (setas), fontes (cruzes) e alavancas finais (bandeira)"}]
+        },
+        {
+          "title": "Pisar os tiles coloridos",
+          "text": "Cada um dos 3 jogadores pisa um dos 3 tiles coloridos. A fonte enche-se de lava, a lava de uma das alavancas inundadas escoa durante algum tempo e recebes uma mensagem com uma **sequência de cores**, por exemplo *You hear a whisper: 'You will not be guided but your path shines in the colours green, blue and red. Heed this hierarchy.'* **Escreve a tua sequência.** Os 3 tiles têm de ser pisados para as 3 alavancas ficarem acessíveis.",
+          "tip": "Se falhares e voltares mais tarde, a tua sequência continua válida."
+        },
+        {
+          "title": "Puxar as alavancas pela tua ordem",
+          "text": "As alavancas inundadas estão marcadas no mapa com círculos vermelho, verde e azul. Puxa-as **pela ordem da tua mensagem**. Depois da última recebes um elemento: **blood**, **ice** ou **grass** (ex.: *A booming sound almost deafens you. From somewhere deep within you hear a whisper: 'Ice...'*).",
+          "warning": "Depois de a lava escoar, demora cerca de **5 minutos** a voltar. Se estiveres dentro da poça quando ela enche, és teleportado para o centro do piso, provavelmente com as criaturas já de volta. Se puxares pela ordem errada, tens de pisar outra vez um tile colorido para receber uma nova sequência (pode ou não ser igual)."
+        },
+        {
+          "title": "Alavanca do teu elemento",
+          "text": "Quando todos tiverem o seu elemento, vai à bandeira azul perto das escadas. Cada uma das 3 alavancas tem ao lado um tile de gelo, sangue ou relva: põe-te no tile a **sul** da alavanca do teu elemento e puxa-a. Entras na sala da alavanca do boss."
+        },
+        {
+          "title": "Boss: Mazoran",
+          "text": "Puxa a alavanca com a equipa nas tiles. Este boss é dos mais fáceis: o blocker leva-o para a parte **sul** da sala e os shooters ficam encostados à parede. De poucos em poucos minutos o chão vira **lava** e nascem 5 {creature:Rage of Mazoran|Rages of Mazoran}: não andes enquanto houver lava e mata as Rages com dano em área (gelo funciona bem). Se for preciso, passa-as ao blocker quando a lava desaparecer (dá cerca de um minuto para andar em segurança).",
+          "warning": "Andar na lava tira **1.500 de dano de fogo**. O {creature:Mazoran} é imune a fogo."
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Sai da sala e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Mazoran (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "6. Apocalypse: Razzagorn's Seal (Grounds of Destruction)",
+      "intro": "Parecido com o seal do Plagirath: tens de matar um miniboss (pelo menos uma vez) para chegar à sala do boss, mas é mais difícil. Criaturas: Juggernauts, Destroyers, Furies, Demons, Vexclaws, Hellflayers e Grimeleeches. A wiki recomenda aqui nível **400+** para knights e **350+** para paladins e mages.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Destruction",
+          "text": "Na sala dos portais do Hell Hub, vai ao teleporte **leste** e entra. Lá dentro, tem muito cuidado: ao aproximares-te do centro das salas grandes podes ser cercado por muitos {creature:Juggernaut|Juggernauts}, Vexclaws, Grimeleeches e Hellflayers.",
+          "coords": [{"x": 33356, "y": 32366, "z": 14, "label": "Teleporte leste (Grounds of Destruction)"}],
+          "images": [{"file": "Ferumbras Ascencion - Path to Razzagorn 1.png", "caption": "Caminho até à sala do miniboss"}]
+        },
+        {
+          "title": "Sala da alavanca do miniboss",
+          "text": "Segue o caminho da imagem até à bandeira azul: entras numa salinha com 5 tiles e uma alavanca. Põe a equipa nas tiles e puxa-a."
+        },
+        {
+          "title": "Libertar o Shatterer: as 4 alavancas",
+          "text": "No meio da sala seguinte está {creature:The Fettered Shatterer}, preso por 4 correntes. Para o soltar, puxa 4 alavancas: a **norte** (guardada por 4 {creature:Destroyer|Destroyers}), a **oeste** (guardada por 4 {creature:Fury|Furies}), e as de **sul** e **leste**, cujos caminhos estão tapados por rochas e escondidos por campos de fogo (linhas brancas na imagem). Ao puxares as alavancas escondidas, o fogo desaparece e vês o caminho.",
+          "images": [{"file": "Ferumbras Ascencion - Razzagorn Puzzle.png", "caption": "As 4 alavancas e os caminhos escondidos (linhas brancas)"}],
+          "tip": "Se as correntes não desaparecerem depois das 4 alavancas, volta a andar à volta da alavanca correspondente."
+        },
+        {
+          "title": "Miniboss: The Shatterer",
+          "text": "Mata {creature:The Shatterer}. Os shooters ficam na **diagonal** e a alguma distância para fugir às ondas e à explosão. É imune a fogo e terra.",
+          "warning": "Assim que ele morre, a equipa é teleportada para a sala seguinte, com as mesmas criaturas de antes: vai pronto."
+        },
+        {
+          "title": "Ir até à sala da alavanca do Razzagorn",
+          "text": "Segue o caminho até à bandeira azul para entrares na sala da alavanca do boss. Anda junto às bordas e não puxes muitos monstros do centro das salas.",
+          "images": [{"file": "Ferumbras Ascencion - Path to Razzagorn 2.gif", "caption": "Caminho até à sala da alavanca do Razzagorn"}],
+          "coords": [{"x": 33395, "y": 32460, "z": 13, "label": "Teleporte de atalho (depois do primeiro Shatterer)"}],
+          "tip": "Depois de matares o Shatterer pela primeira vez, podes usar o teleporte de atalho se quiseres voltar a lutar com o Razzagorn."
+        },
+        {
+          "title": "Boss: Razzagorn",
+          "text": "Puxa a alavanca. Na sala estão o {creature:Razzagorn} e 4 {creature:Demon|Demons} espalhados. A equipa fica do lado **oeste** da sala, para os Demons do leste não voltarem à luta quando renascem. A sala lança {wiki:Paralyze} de vez em quando. O boss invoca {creature:Eruption of Destruction|Eruptions of Destruction} durante toda a luta: assim que aparece uma, **todos a atacam** até morrer, mesmo que um Demon ou o boss estejam quase mortos.",
+          "warning": "Se uma Eruption não morrer em **8 segundos**, explode (até 2.500 de dano de energia, fogo, físico e mana drain), cura o boss em 11.500 a 19.500 e faz nascer outro Demon. Só ataques o Razzagorn quando não houver Eruptions vivas.",
+          "tip": "Só recebe 60% do dano de fogo e 90% do dano sagrado."
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Sai da sala e usa o {item:Teleportation Rod} na peça da {wiki:The Godbreaker}. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Razzagorn (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "7. Ashfalor: Ragiaz's Seal (Grounds of Undeath)",
+      "intro": "Pelo caminho apanhas os itens de um ritual que cada jogador tem de fazer. Criaturas: Undead Dragons, Blightwalkers, Death Dragons, Vexclaws, Hellflayers e Grimeleeches. Mages: levem {item:Thunderstorm Rune|Thunderstorm Runes}, são mais eficazes no caminho até ao boss.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Undeath",
+          "text": "Na sala dos portais do Hell Hub, vai ao teleporte **sudeste** e entra. Depois segue o caminho para **sul**, apanhando os itens do ritual pela ordem abaixo.",
+          "coords": [{"x": 33325, "y": 32400, "z": 14, "label": "Teleporte sudeste (Grounds of Undeath)"}],
+          "images": [{"file": "Ferumbras Ascencion - Path to Ragiaz.png", "caption": "Caminho até ao Ragiaz, com os locais dos itens do ritual"}]
+        },
+        {
+          "title": "Item 1: Grave Flower",
+          "text": "Na salinha a seguir ao teleporte, apanha uma {item:Grave Flower} da que está plantada no chão. **Cada jogador** precisa da sua; a flor volta a nascer passados cerca de 30 segundos. Há várias flores na zona (ver mapa).",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Flower.png", "caption": "Grave Flower"}]
+        },
+        {
+          "title": "Item 2: The Rite of Eternal Night",
+          "text": "Desce pelo buraco e volta a descer a **norte**: encontras {item:The Rite of Eternal Night}.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Rite.png", "caption": "The Rite of Eternal Night"}]
+        },
+        {
+          "title": "Item 3: House Silversun's Signet Ring",
+          "text": "Continua pelo caminho até encontrares uma pequena lápide branca. Usa a {item:Shovel} (ou uma secret agent tool) **à frente** dela e recebes o {item:House Silversun's Signet Ring}.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Ring.png", "caption": "Lápide branca"}]
+        },
+        {
+          "title": "Item 4: Bones",
+          "text": "A **sudeste** da lápide há dois caixões. Usa o que tem uma **flor azul** em cima e recebes {item:Bones (Item)|Bones}.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Bones.png", "caption": "Caixão com a flor azul"}]
+        },
+        {
+          "title": "Item 5: Vampire Teeth",
+          "text": "Segue para **sul** até umas cinzas. Usa as cinzas e recebes {item:Vampire Teeth}.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Teeth.png", "caption": "Cinzas com os Vampire Teeth"}]
+        },
+        {
+          "title": "Descer à zona segura",
+          "text": "Com todos os itens, desce pelo buraco: é uma zona segura. Aqui **cada jogador** tem de fazer o ritual uma vez, por isso é preciso alguma paciência."
+        },
+        {
+          "title": "Ritual 1: oferecer os quatro itens",
+          "text": "Usa cada um dos itens ({item:Grave Flower}, {item:House Silversun's Signet Ring}, {item:Bones (Item)|Bones} e {item:Vampire Teeth}) no canto **sudeste** do {wiki:Dried Well}. O Rite (a folha) fica para o fim.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Ritual 1.png", "caption": "A colocar o primeiro dos 4 itens"}]
+        },
+        {
+          "title": "Ritual 2: apagar a tocha",
+          "text": "Apaga a tocha da estátua logo a **noroeste** do Dried Well.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Ritual 2.png", "caption": "Apagar a tocha da estátua"}]
+        },
+        {
+          "title": "Ritual 3: ler o Rite junto ao poço",
+          "text": "Volta ao Dried Well e usa {item:The Rite of Eternal Night}. Tem de começar a correr **sangue** do poço: ficas com acesso à zona seguinte.",
+          "images": [{"file": "Ferumbras Ascension - Ragiaz Ritual 3.png", "caption": "Usar o Rite junto ao poço"}]
+        },
+        {
+          "title": "Ir até à sala da alavanca",
+          "text": "Entra no portão a **norte** e segue o caminho até à sala da alavanca.",
+          "images": [{"file": "Ferumbras Ascencion - Path to Ragiaz 2.png", "caption": "Caminho do portão até à sala da alavanca"}]
+        },
+        {
+          "title": "Boss: Ragiaz",
+          "text": "Puxa a alavanca. Com o {creature:Ragiaz} estão 4 {creature:Death Dragon|Death Dragons}, que renascem logo quando morrem (não vale a pena matá-los). De vez em quando o Ragiaz transforma-se numa {creature:Bone Capsule}, um casulo imóvel: **mata-o o mais depressa possível**, porque quanto mais tempo vive mais vida o Ragiaz recupera. Depois o Ragiaz volta a aparecer no centro da sala. Escolhe um dos métodos da tabela.",
+          "table": {
+            "head": ["Método", "Como"],
+            "rows": [
+              ["1. Bloquear tudo", "O blocker segura os 4 Death Dragons e o Ragiaz ao mesmo tempo. Perigoso consoante o nível; um knight 350+ com dois druids deve chegar."],
+              ["2. Prender os dragões", "Na primeira Bone Capsule, o blocker e 2–3 mages vão para **norte** prender os Death Dragons com {item:Wild Growth Rune|Wild Growths}, enquanto os outros shooters atacam o casulo."],
+              ["3. Dois blockers", "Um blocker leva os 4 Death Dragons para longe do Ragiaz. Só se os shooters tiverem muito dano (todos 350+?), porque só 4 jogadores atacam o boss."]
+            ]
+          },
+          "warning": "Seja qual for o método, sê rápido: se a luta demorar, a equipa é expulsa da sala por falta de tempo.",
+          "tip": "Recebe só 50% (ou menos) do dano de morte e 80% do dano de terra."
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Sai da sala e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Ragiaz (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "8. Pumin: Tarbaz's Seal (Grounds of Despair)",
+      "intro": "Um puzzle fácil e sem criaturas: ajudar o NPC sem nome ({npc:...}) a descobrir o seu nome, encontrando pistas para 5 letras nas ruínas. Acompanha o progresso no {wiki:Quest Log}. Alguns campos são invisíveis no mapa e muito lentos: tem paciência e procura as passagens certas.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Despair",
+          "text": "Na sala dos portais do Hell Hub, segue o caminho a **sudoeste** das escadas e entra no teleporte. Depois segue o mapa até à zona do puzzle.",
+          "coords": [{"x": 33297, "y": 32403, "z": 14, "label": "Teleporte sudoeste (Grounds of Despair)"}],
+          "images": [{"file": "Ferumbras Ascendant - Path to Tarbaz 1.png", "caption": "Caminho até à zona do puzzle"}]
+        },
+        {
+          "title": "Os mapas das 5 letras",
+          "text": "Estes mapas mostram todos os sítios onde tens de ir para encontrar as cinco letras.",
+          "images": [
+            {"file": "Ferumbras Ascendant - Tarbaz Puzzle Map 1.png", "caption": "Mapa do puzzle (1)"},
+            {"file": "Ferumbras Ascendant - Tarbaz Puzzle Map 2.png", "caption": "Mapa do puzzle (2)"}
+          ]
+        },
+        {
+          "title": "1.ª letra: a alavanca do elemento",
+          "text": "Vai à sala a **noroeste** e entra nela pela sala a sul. Lá dentro há uma alavanca que **todos os jogadores** têm de puxar: cada um recebe uma cor e um elemento (*Blood*, *Decay*, *Magic* ou *Clay*).",
+          "coords": [{"x": 33451, "y": 32779, "z": 11, "label": "Sala da primeira alavanca"}],
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 2.png", "caption": "A primeira alavanca"}]
+        },
+        {
+          "title": "1.ª letra: o labirinto invisível",
+          "text": "Sobe as escadas junto à alavanca e anda para **sul**. Atravessas um labirinto de paredes invisíveis (com muitos passos na diagonal). No fim, puxa a alavanca do teu elemento.",
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 5.png", "caption": "A usar a alavanca do elemento"}],
+          "table": {
+            "head": ["Alavanca (da esquerda para a direita)", "Elemento"],
+            "rows": [["1.ª", "Blood"], ["2.ª (Slime)", "Decay"], ["3.ª (Mana)", "Magic"], ["4.ª (Mud)", "Clay"]]
+          },
+          "tip": "Ajustando as definições gráficas talvez consigas distinguir os tiles onde se anda (têm uma cor ligeiramente diferente). Se não souberes a tua cor, experimenta as quatro alavancas até uma funcionar."
+        },
+        {
+          "title": "2.ª letra: apanhar a Bone Flute",
+          "text": "Volta à zona principal e vai à sala a **nordeste**, com alguns animais. Não te fazem dano mas têm muito mais vida do que as criaturas normais. **Não os mates**, precisas deles vivos. Entre o primeiro e o segundo totem, usa a parede para apanhar uma {item:Bone Flute}.",
+          "coords": [{"x": 33485, "y": 32778, "z": 11, "label": "Sala dos animais (nordeste)"}],
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 3.png", "caption": "Apanhar a Bone Flute aqui"}]
+        },
+        {
+          "title": "2.ª letra: tocar para o teu animal",
+          "text": "Usa a {item:Bone Flute} no animal que corresponde ao teu espírito, várias vezes. No animal errado aparece uma mensagem vermelha a dizer que não é o animal do teu espírito; no certo, o som é diferente. Pode demorar várias tentativas: sabes que conseguiste quando a flauta desaparece e o Quest Log é atualizado.",
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 4.png", "caption": "Usar no animal certo até o Quest Log atualizar"}]
+        },
+        {
+          "title": "3.ª letra: acender um basin",
+          "text": "Apanha um {item:Fire Bug} no baú do canto **noroeste** da sala logo a norte do NPC {npc:...}. Depois vai à sala do lado **leste** das ruínas e acende um dos basins para atualizar o Quest Log.",
+          "coords": [
+            {"x": 33449, "y": 32796, "z": 11, "label": "Baú com o Fire Bug"},
+            {"x": 33490, "y": 32791, "z": 11, "label": "Sala dos basins (leste)"}
+          ],
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 6.png", "caption": "Sala com os basins"}]
+        },
+        {
+          "title": "4.ª letra: o relógio de pêndulo",
+          "text": "Antes de continuares, garante que **todos** os Fire Basins da sala norte estão acesos. Vai à sala a **sul**, com {item:Bookcase|Bookcases}. Move o {item:Pendulum Clock} para junto da estante perto da porta e usa a placa que ele escondia. Se o Quest Log não atualizar, dá um passo para **sul** e tenta outra vez (vês um efeito de luz em ti e recebes a atualização).",
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 7.png", "caption": "Sala com o Pendulum Clock"}]
+        },
+        {
+          "title": "5.ª letra: o labirinto das portas falsas",
+          "text": "Continua para **sul** e sobe a escada de mão. Encontra o caminho para **norte** neste labirinto com várias portas falsas e usa a placa na parede para teres a última letra.",
+          "coords": [{"x": 33493, "y": 32783, "z": 10, "label": "Placa da 5.ª letra"}],
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 8.png", "caption": "Placa na parede"}],
+          "tip": "Depois das 5 letras, as entradas desaparecem do Quest Log. É normal, continua."
+        },
+        {
+          "title": "Levar a Desperate Soul ao dono",
+          "text": "Atrai a {creature:Desperate Soul} (um coelho branco que já deves ter visto por ali) até à sala do NPC {npc:...}, a **sudoeste**. A alma desaparece quando encontra o dono. Não a tentes matar: foge muito depressa e não leva dano.",
+          "coords": [{"x": 33451, "y": 32808, "z": 11, "label": "Sala do NPC ..."}]
+        },
+        {
+          "title": "Dizer o nome ao NPC",
+          "text": "Fala com o {npc:...}: diz {key:hi}, {key:mission} e o nome dele, {key:tevon}.",
+          "npc": "...",
+          "dialogue": [{"you": "hi"}, {"you": "mission"}, {"you": "tevon"}],
+          "images": [{"file": "Ferumbras Ascendant - Tarbaz Puzzle 1.png", "caption": "A falar com o NPC ..."}]
+        },
+        {
+          "title": "Ir até à sala da alavanca",
+          "text": "Vai à sala a norte e desce a escada de mão para continuares em direção ao boss. Segue o mapa à volta das ruínas até à sala da alavanca.",
+          "coords": [{"x": 33464, "y": 32775, "z": 11, "label": "Escada para o caminho do boss"}],
+          "images": [{"file": "Ferumbras Ascendant - Path to Tarbaz 2.png", "caption": "Caminho à volta das ruínas até à sala da alavanca"}]
+        },
+        {
+          "title": "Boss: Tarbaz",
+          "text": "Puxa a alavanca. Na sala há 4 {creature:Guilt|Guilts} que não se mexem mas atacam à distância: evita o centro e fica perto de um dos cantos. O {creature:Tarbaz} não é muito forte, ataca-o. A certa altura a equipa é teleportada para outra sala onde todos andam **muito devagar**: segue o caminho fugindo ao alcance corpo a corpo dos Guilts, mata os 4 {creature:Despair|Despairs} que bloqueiam o caminho e, no fim, entra no teleporte para voltares à sala do Tarbaz.",
+          "warning": "A principal causa de falhanço aqui é a **falta de tempo**. Não percas tempo: os shooters atacam os Despairs assim que estiverem ao alcance."
+        },
+        {
+          "title": "Enviar a peça da Godbreaker",
+          "text": "Depois de matares o boss, entra no teleporte e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Tarbaz (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "9. Tafariel: Shulgrax's Seal (Grounds of Damnation)",
+      "intro": "Um dos seals mais fáceis: o puzzle e o boss são relativamente seguros. Criaturas: Dark Torturers, Sin Devourers, Vexclaws, Hellflayers e Grimeleeches.",
+      "steps": [
+        {
+          "title": "Chegar às Grounds of Damnation",
+          "text": "Na sala dos portais do Hell Hub, entra no teleporte das Grounds of Damnation (o **oeste**, segundo a página da zona). Segue o caminho para **sudeste** e desce as escadas. Há muitas criaturas pelo caminho: usa {item:Energy Wall Rune|Energy Walls} ou {item:Energy Bomb Rune|Energy Bombs} para as afastar dos corredores por onde não vais passar.",
+          "coords": [{"x": 33288, "y": 32353, "z": 14, "label": "Teleporte para as Grounds of Damnation"}],
+          "images": [{"file": "Ferumbras Ascension - Path to Shulgrax 1.png", "caption": "Caminho até às escadas"}]
+        },
+        {
+          "title": "Ir até ao jardim do puzzle",
+          "text": "O piso seguinte é grande e tem o puzzle. Vai para **oeste** e depois para **norte**. Passa a porta a **leste**, depois vai para **norte** e **oeste** até ao Puzzle Garden.",
+          "images": [{"file": "Ferumbras Ascension - Shulgrax Puzzle Map.png", "caption": "Mapa do piso do puzzle"}],
+          "warning": "Quando chegares à zona da solução, com tiles de metal, **não os pises**. Se pisares ao calhas, podes ter de esperar que reiniciem (10 minutos)."
+        },
+        {
+          "title": "Decorar as flores",
+          "text": "No Puzzle Garden há três jardins com rosas **azuis**, **vermelhas** e **amarelas**. Tira uma captura de ecrã ou escreve a posição de todas as flores: são a solução do puzzle. Também podes dividir a equipa e ditar as posições uns aos outros.",
+          "images": [
+            {"file": "Ferumbras Ascension - Shulgrax Puzzle 1.png", "caption": "Jardim das rosas (1)"},
+            {"file": "Ferumbras Ascension - Shulgrax Puzzle 2.png", "caption": "Jardim das rosas (2)"}
+          ]
+        },
+        {
+          "title": "Pintar os tiles",
+          "text": "Nos tiles a **sul**, iguala as cores de cada quadrado às flores do jardim correspondente. Para veres bem as cores, ativa *Show Light Effects* e baixa a *Ambient Light* (Options > Graphics > Effects) e tira qualquer equipamento que dê luz. Também podes ver as cores no minimapa (aí, **verde** corresponde às flores/tiles **azuis**).",
+          "images": [
+            {"file": "Ferumbras Ascension - Shulgrax Puzzle 3.png", "caption": "Tiles a mudar de cor"},
+            {"file": "Ferumbras Ascension - Shulgrax Puzzle Minimap.png", "caption": "As cores no minimapa (verde = azul)"}
+          ],
+          "warning": "Não é possível voltar a pôr um tile em branco. Se pisares um tile que devia ficar neutro, tens de esperar que o puzzle reinicie e voltar a ver as flores."
+        },
+        {
+          "title": "Puxar a alavanca e passar o portão",
+          "text": "Com os tiles certos, tens **10 minutos** para puxar a alavanca (**cada jogador** puxa uma vez) e entrar no portão para a sala da alavanca do boss. Passados os 10 minutos, as flores mudam para um padrão novo."
+        },
+        {
+          "title": "Boss: Shulgrax",
+          "text": "Puxa a alavanca com a equipa nas tiles. No início e de poucos em poucos minutos, o {creature:Shulgrax} invoca cerca de 5 {creature:Sin Devourer|Sin Devourers} e 3–4 {creature:Damned Soul|Damned Souls}. Os Sin Devourers paralisam e baixam muito as skills e o magic level. As Damned Souls fogem; quando as matas transformam-se num {item:Purified Soul}, que tens de usar nos Sin Devourers para os fazer desaparecer (o cristal só dura **5 segundos**). Um shooter (de preferência o mais fraco) trata disto o tempo todo, enquanto o resto da equipa ataca o boss.",
+          "tip": "O druid que cura o blocker pode ficar mais longe do centro, junto a uma parede: assim os Sin Devourers vão sobretudo atrás dos outros shooters. O Shulgrax baixa muito as skills de corpo a corpo: prende-o num canto. É um pouco fraco a fogo e energia (110%)."
+        },
+        {
+          "title": "Enviar a última peça da Godbreaker",
+          "text": "Depois de matares o Shulgrax, usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída leva-te à sala segura antes da entrada.",
+          "reward": "Peça da Godbreaker enviada; 500.000 XP e loot do Shulgrax (inclui sempre 1 Silver Token)"
+        }
+      ]
+    },
+    {
+      "title": "10. A traição do Mazarius: as Halls of Ascension",
+      "intro": "Com as sete peças enviadas, descobres que foste enganado e segues para o local onde o Ferumbras prepara a sua ascensão.",
+      "steps": [
+        {
+          "title": "Voltar à sala do Mazarius",
+          "text": "Depois da sétima peça, o último portal leva-te de volta à sala do {npc:Mazarius}, mas ele já lá não está. Pela {wiki:Unfinished Letter of Mazarius (Book)|carta inacabada do Mazarius} descobres que foste traído: o Mazarius trabalhava para {wiki:Variphor} e roubou as peças da Godbreaker.",
+          "coords": [{"x": 33274, "y": 32395, "z": 9, "label": "Carta inacabada do Mazarius"}]
+        },
+        {
+          "title": "Entrar nas Halls of Ascension",
+          "text": "Na sala dele há agora um portal novo que leva às {wiki:Halls of Ascension}, debaixo da Zao Steppe. Só entra quem matou os bosses dos sete seals.",
+          "coords": [
+            {"x": 33279, "y": 32392, "z": 9, "label": "Portal para as Halls of Ascension"},
+            {"x": 33304, "y": 31460, "z": 12, "label": "Halls of Ascension"}
+          ],
+          "images": [{"file": "Halls of Ascension 1.png", "caption": "Halls of Ascension"}]
+        },
+        {
+          "title": "Falar com o Demonic Messenger",
+          "text": "À entrada está o {npc:Demonic Messenger}, que te dá dicas sobre como travar o ritual de ascensão do Ferumbras.",
+          "npc": "Demonic Messenger"
+        },
+        {
+          "title": "Caminho (1): norte e buraco",
+          "text": "Daqui em diante o caminho está cheio de inimigos. Segue sempre para **norte** a lutar e desce por um buraco no fim do caminho."
+        },
+        {
+          "title": "Caminho (2): leste, sul e escadas",
+          "text": "Vai para **leste** e sobe as escadas. Segue sempre para **sul** e desce as escadas."
+        },
+        {
+          "title": "Caminho (3): oeste e o corredor sul",
+          "text": "Vai para **oeste** e, na primeira sala, apanha o corredor para **sul**. Continua até encontrares escadas para descer outra vez e desce."
+        },
+        {
+          "title": "Caminho (4): a sala em 8",
+          "text": "Chegas a uma sala em forma de **8**. Escolhe um dos caminhos e segue sempre para **norte** até um portal: leva-te à sala da alavanca da luta final, com lugar para **15 jogadores**.",
+          "images": [{"file": "Halls of Ascension 2.png", "caption": "Halls of Ascension"}]
+        }
+      ]
+    },
+    {
+      "title": "11. Luta final: Ferumbras",
+      "intro": "A luta tem quatro fases e dura no máximo 45 minutos. Só podes tentá-la de 13 dias e 20 horas em 13 dias e 20 horas.",
+      "steps": [
+        {
+          "title": "Preparação",
+          "text": "Cada jogador deve levar cerca de **2 {item:Convince Creature Rune|Convince Creature Runes}** (obrigatórias na 3.ª fase). É recomendado que todos usem equipamento de mergulho ({item:Depth Galea} ou {item:Helmet of the Deep}) e proteção contra {wiki:Mana Drain}: são duas fontes de dano muito fortes nesta luta.",
+          "warning": "Sem Convince Creature Runes não consegues passar a 3.ª fase."
+        },
+        {
+          "title": "Entrar na sala",
+          "text": "Põe a equipa (até 15) nos lugares e puxa a alavanca. O {creature:Ascending Ferumbras} **não pode ser morto** nesta altura: não percas tempo com ele. Há {creature:Enthralled Demon|Enthralled Demons}, que renascem logo e têm de ser bloqueados, e {creature:Rift Invader|Rift Invaders}, que são necessários para a luta. As fontes de energia nas paredes também atacam os jogadores."
+        },
+        {
+          "title": "Fase 1: os cristais",
+          "text": "Oito estruturas de cristal azul rodeiam o Ferumbras. Para destruir um cristal, mata um Rift Invader **ao lado** dele: o cristal fica cor-de-rosa. Os Invaders nascem na parte **norte** da sala, por isso os blockers devem puxá-los de lá, sobretudo para os cristais do sul. A estratégia habitual é deixar para o fim o pilar sul do lado oeste, para preparar a equipa para a fase seguinte.",
+          "images": [{"file": "Ferumbras Ascension - Last - Crystals.png", "caption": "Cristais do oeste já destruídos (rosa) enquanto um knight bloqueia os Enthralled Demons a sul"}]
+        },
+        {
+          "title": "Fase 1: o último cristal",
+          "text": "Quando só faltar um cristal, a equipa junta-se num **canto** perto dele e destrói-o à distância."
+        },
+        {
+          "title": "Fase 2: Ferumbras Soul Splinters",
+          "text": "Mal o último cristal cai, aparecem oito {creature:Ferumbras Soul Splinter|Ferumbras Soul Splinters}. Se a equipa estiver bem posicionada no canto, só 2 a 4 ficam ao alcance. Como invocam {creature:Demon|Demons} e batem bastante, puxa-os devagar e mata-os **um a um** com ataques de alvo único. Cada Splinter morto vira uma {creature:Ferumbras Essence}, inofensiva.",
+          "images": [{"file": "Ferumbras Ascension - Last - Soul Splinters.png", "caption": "Os dois últimos Soul Splinters a morrer"}]
+        },
+        {
+          "title": "Fase 3: Rift Fragments",
+          "text": "O Ferumbras passa a {creature:Destabilized Ferumbras}, que ainda não pode ser morto. Leva cada {creature:Ferumbras Essence} para cima dos vórtices deixados pelos Rift Invaders, para que desapareçam. Quando acabarem as Essences, nascem {creature:Rift Fragment|Rift Fragments} a **norte**: **convence-os** com as Convince Creature Runes, porque são eles que fazem a maior parte do dano ao Destabilized Ferumbras. Os druids ficam perto deles e usam {spell:Mass Healing} para os curar (também fere o boss).",
+          "images": [{"file": "Ferumbras Ascension - Last - Rift Fragment.png", "caption": "Os Rift Fragments fazem muito dano ao Destabilized Ferumbras"}],
+          "warning": "Nesta fase as criaturas fazem **dano de afogamento**: usa a {item:Depth Galea} ou o {item:Helmet of the Deep}."
+        },
+        {
+          "title": "Fase 4: Ferumbras Mortal Shell",
+          "text": "Derrotado o Destabilized Ferumbras, ele torna-se o {creature:Ferumbras Mortal Shell}, a última fase: basta atacá-lo. Resiste muito a todos os elementos (incluindo morte); o dano físico é o que entra melhor. A wiki sugere puxá-lo para o canto **sudoeste** da sala.",
+          "images": [{"file": "Ferumbras Ascension - Last - Mortal Shell.png", "caption": "O Ferumbras enfraquecido a ser morto"}],
+          "reward": "2.000.000 XP; loot com 1–5 Silver Tokens e hipótese de Ferumbras' Hat e Mysterious Scroll"
+        },
+        {
+          "title": "Sala de recompensa: Heavenly Messenger",
+          "text": "Depois da vitória, usa o portal no lado **sul** da sala para ires à sala de recompensa. Diz {key:hi} ao {npc:Heavenly Messenger} para receberes os {wiki:Rift Warrior Outfits|Rift Warrior Outfits} e o achievement **Hat Hunter**.",
+          "npc": "Heavenly Messenger",
+          "dialogue": [{"you": "hi"}],
+          "reward": "Rift Warrior Outfit e achievement Hat Hunter"
+        },
+        {
+          "title": "Sair das Halls of Ascension",
+          "text": "A wiki não descreve a saída da sala de recompensa nem o regresso das Halls of Ascension a Darashia. Se lá não houver um teleporte de saída, volta pelo caminho das Halls of Ascension até à entrada, junto ao {npc:Demonic Messenger}, por onde chegaste a partir da sala do Mazarius em Darashia. Em alternativa, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block).",
+          "tip": "O loot que não apanhaste fica na {wiki:Reward Chest} do {wiki:Adventurers' Guild}: usa uma {item:Adventurer's Stone} no templo de qualquer cidade para lá ires e sai pelo portal de saída da guilda, que te devolve ao templo de onde vieste."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os sete bosses dos seals podem ser repetidos de **44 em 44 horas** (1 dia e 20 horas) e o Ferumbras de **13 dias e 20 horas** em 13 dias e 20 horas.",
+    "Todos os bosses dos seals deixam sempre 1 {item:Silver Token}. Com 100 Silver Tokens compras cada addon do Rift Warrior ao {npc:Cledwyn} (ver {wiki:Rift Warrior Outfits Quest}).",
+    "O {item:Ferumbras' Hat} é um dos itens mais caros do jogo e serve para um addon do outfit Mage (masculino) / Summoner (feminino).",
+    "O {item:Mysterious Scroll} serve para obter a montada Rift Runner, mas só o consegue usar quem completou esta quest.",
+    "A história da {wiki:The Godbreaker} continua noutras quests, como a {wiki:The Secret Library Quest}, onde tentas impedir os servos de Variphor de descobrir como usar a arma."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Putrefactory",
+  "type": "zona",
+  "near": "Darashia",
+  "summary": "Uma das quatro zonas de caça da {wiki:Rotten Blood Quest|Rotten Blood Quest}, no reino de sangue do Sanguine Lord (o wiki situa-a no norte de Darama); chega-se por um {item:Spheric Teleporter} do {wiki:Blood Vestibule|Blood Vestibule} e aqui fica a sala do boss {creature:Ichgahal}, o único que deixa cair a {item:Cursed Wood}.",
+  "entrance": {"x": 34100, "y": 31688, "z": 14, "label": "Putrefactory (ponto da zona indicado pelo wiki)"},
+  "requirements": [
+    "Conta **Premium** e nível **250** (requisito da {wiki:Rotten Blood Quest|Rotten Blood Quest}; recomendado 800+).",
+    "Acesso ao {wiki:Blood Vestibule|Blood Vestibule}: missão do {npc:Torkada} em Drefia, feitiço {spell:Levitate} e o sacrifício ao {npc:A Bloodshade} (**2 {item:Bloody Tears}** ou **5.000.000 gp**).",
+    "Para entrar na sala da alavanca do {creature:Ichgahal}, o contador de **Rotten Charges** de **todos** os membros da equipa tem de estar a **100** (sobe sozinho dentro da zona, 1 a cada 20 segundos: 33 minutos)."
+  ],
+  "items": ["Rope", "Bloody Tears", "Temple Teleport Scroll"],
+  "arrive": [
+    "Viaja até **Darashia**. **De barco:** em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Krailos ou Issavi diz ao capitão {key:hi}, {key:darashia}, {key:yes} e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}). **De tapete voador:** em Edron, Kazordoon, Svargrond, Femor Hills, Issavi ou Farmine diz ao gestor do tapete {key:hi}, {key:darashia}, {key:yes} e chegas ao tapete do {npc:Chemar} ({coord:33270,32439,6}). De Thais, Carlin ou Ab'Dendriel não há ligação direta: apanha primeiro o barco para Venore.",
+    "Sai de Darashia para **oeste**, sobe a montanha com a {item:Rope} no sítio de corda ({coord:33048,32429,7}) e vai até {wiki:Drefia|Drefia}. Fala com o {npc:Torkada} ({coord:33033,32428,7}): {key:hi}, {key:expedition}, {key:mission}, {key:yes}.",
+    "No sítio de {spell:Levitate} a **noroeste** do Torkada ({coord:32989,32393,7}) sobe com *exani hur up*. Passa pelos 2 {creature:Ghoul|Ghouls}, desce as escadas, desce pelo buraco, desce outra vez pelas escadas logo a **nordeste** e segue para **sudoeste** até à porta entre dois pilares de calcário: lá dentro está o {npc:A Bloodshade} ({coord:32956,32398,9}).",
+    "Faz o sacrifício ao A Bloodshade ({key:hi}, {key:quest}; usa o prato de sacrifício duas vezes com as 2 {item:Bloody Tears}, ou diz {key:detour} para pagares 5.000.000 gp) e entra na poça de sangue: chegas ao {wiki:Blood Vestibule|Blood Vestibule}.",
+    "No Blood Vestibule há **quatro salas**, cada uma com um {item:Spheric Teleporter}. Usa o que leva ao **Putrefactory** (o wiki não diz qual das salas é; confirma que chegaste perto de {coord:34100,31688,14}).",
+    "Com o contador de Rotten Charges de toda a equipa a 100, entrem na sala da alavanca do {creature:Ichgahal} e usem a alavanca (15 minutos de luta, 20 horas de cooldown). O wiki não indica a posição desta sala dentro da zona."
+  ],
+  "leave": [
+    "O wiki não descreve a saída do Putrefactory nem da sala do Ichgahal. Volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule. Se não encontrares saída, usa um {item:Temple Teleport Scroll}: vais para o templo da tua cidade e já não precisas dos passos seguintes.",
+    "No Blood Vestibule, volta ao sítio onde chegaste pela poça de sangue (junto ao {npc:A Bloodshade}) e regressa por aí à sala do A Bloodshade em Drefia ({coord:32956,32398,9}); o wiki também não descreve esta saída.",
+    "Refaz o caminho do templo ao contrário: sai pela porta entre os pilares, segue para **nordeste** até às escadas e sobe-as, usa a {item:Rope} no buraco para subires, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate} ({coord:32989,32393,7}), onde desces com *exani hur down*.",
+    "Volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia: barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou tapete voador do {npc:Chemar} ({key:hi}, o destino, {key:yes})."
+  ],
+  "coords": [
+    {"x": 34100, "y": 31688, "z": 14, "label": "Putrefactory"},
+    {"x": 34070, "y": 32009, "z": 14, "label": "Blood Vestibule (Altar)"},
+    {"x": 32956, "y": 32398, "z": 9, "label": "A Bloodshade e poça de sangue (Drefia, piso -2)"},
+    {"x": 32989, "y": 32393, "z": 7, "label": "Sítio de Levitate (entrada do templo)"},
+    {"x": 33033, "y": 32428, "z": 7, "label": "Torkada"},
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda entre Darashia e Drefia"}
+  ],
+  "images": [
+    {"file": "Drefia Map.gif", "caption": "Mapa de Drefia (caminho entre Darashia e o templo)"}
+  ],
+  "warnings": [
+    "Os monstros daqui ({creature:Oozing Carcass}, {creature:Sopping Carcass}, {creature:Rotten Man-Maggot}, {creature:Meandering Mushroom}) dão dano de **Death**, **Ice** e **Energy** (e **Earth** a quem tem 3+ {wiki:Bakragore's Taints|Bakragore's Taints}); são fracos a **Holy**, **Earth** e **Fire**.",
+    "Há {creature:Radicular Totem|Radicular Totems} indestrutíveis espalhados pela zona: lançam grandes ondas de dano **Earth**, rodando de direção (leste, sul, oeste e depois norte), e cada criatura que morre perto deles aumenta o dano da onda seguinte. Podes bloqueá-las com {item:Magic Wall Rune|Magic Walls}, mas os monstros também partem as paredes.",
+    "**Não** entres na poça de sangue de Drefia antes de fazeres o sacrifício: levas {wiki:Agony Damage|Agony Damage} que pode tirar uma percentagem da tua vida.",
+    "O {item:Temple Teleport Scroll} leva-te ao teu templo, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block: espera que o bloqueio de combate passe antes de o usares. Não se compra no Market: vem das recompensas diárias ou da Store."
+  ]
+}

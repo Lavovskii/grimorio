@@ -1,0 +1,45 @@
+{
+  "title": "Podzilla",
+  "type": "outro",
+  "near": "Oramond",
+  "summary": "Planta gigantesca que avança pelo mar em direção ao continente, corrompida pelo {creature:Doctor Marrow (Podzilla)|Doctor Marrow}. Lá dentro desembarcas no rés-do-chão, junto ao {npc:Atui}; 1 andar acima estão o {npc:Two Lips} e o {npc:Petaloid}, e por baixo há uma zona de caça de nível alto em vários pisos (com o {npc:Sprout Sentinel} no piso -2). Chega-se de barco a partir de **Edron**, pela {wiki:Podzilla Quest|Podzilla Quest}.",
+  "entrance": {"x": 33834, "y": 32012, "z": 7, "label": "Rés-do-chão de Podzilla, onde desembarcas (Atui)"},
+  "requirements": [
+    "Conta **Premium**. A {wiki:Podzilla Quest|Podzilla Quest} pede nível **300** (recomendado 600+).",
+    "Na primeira vez tens de falar com o {npc:Gunther} e fazer a navegação da missão *A Dangerous Journey*. Depois da primeira viagem bem-sucedida o {npc:Captain Seahorse} leva-te direto pelo {key:shortcut}."
+  ],
+  "items": ["Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Edron** de barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, com o {npc:Captain Bluebear}, custa 160 gp). Chegas ao porto a **norte** da cidade, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "**Primeira vez:** vai ao castelo de Edron, um pouco a **sul** do porto, e fala com o {npc:Gunther} ({coord:33172,31777,7}): {key:hi}. Aceita o convite dele para travar e destruir a planta.",
+    "Volta ao barco do {npc:Captain Seahorse} e diz {key:hi}, {key:gunther}: embarcas no navio que vai até à planta.",
+    "No navio, usa a **alavanca** para começar e navega sempre para **oeste** até entrares pela **boca** da planta. Mantém-te longe das {creature:Storm|Storms}, dos {wiki:Water Vortex|Water Vortexes} e dos {creature:Ghost Ship|Ghost Ships}: baixam o teu contador e podem pôr-te {wiki:Feared|feared}. Se o contador chegar a zero falhas e só podes tentar outra vez **10 minutos** depois.",
+    "**Viagens seguintes:** depois da primeira viagem bem-sucedida, diz ao {npc:Captain Seahorse} {key:hi}, {key:shortcut} e vais direto a Podzilla, sem repetir a navegação.",
+    "Desembarcas no **rés-do-chão** de Podzilla, junto ao {npc:Atui} ({coord:33834,32012,7}). O **teleporte verde a noroeste** leva às escadas que sobem ao {npc:Two Lips} e ao {npc:Petaloid} (1 andar acima); o **teleporte em vórtice** leva à zona de caça (pisos -1 a -4; o {npc:Sprout Sentinel} está no piso -2)."
+  ],
+  "leave": [
+    "A wiki **não documenta** a viagem de regresso de Podzilla para Edron. Se estiveres na zona de caça, sobe pelo mesmo caminho até ao **rés-do-chão** e volta ao navio onde desembarcaste, junto ao {npc:Atui} ({coord:33834,32012,7}); vê no local se há regresso.",
+    "Da sala do {creature:The Rootkraken} a wiki também não descreve a saída: volta pelas escadas junto à chegada até ao piso -3, ao lado do orbe e do teleporte da missão *Coin Toss* ({coord:33849,31998,10}), e sobe os pisos da zona de caça até ao rés-do-chão.",
+    "Se não houver regresso, usa um {item:Temple Teleport Scroll}: leva-te ao templo da tua cidade, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block.",
+    "Já em Edron, o {npc:Captain Seahorse} leva-te de barco a Ab'Dendriel, Ankrahmun, Carlin, Cormaya, Liberty Bay, Port Hope, Thais, Travora ou Venore ({key:hi}, o nome da cidade, {key:yes}); Oramond só com o rank *Citizen* da {wiki:Rathleton Quest}. Para voltares a Podzilla noutro dia, pede-lhe o {key:shortcut}."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33172, "y": 31777, "z": 7, "label": "Gunther (castelo de Edron)"},
+    {"x": 33834, "y": 32012, "z": 7, "label": "Atui (rés-do-chão de Podzilla, chegada do navio)"},
+    {"x": 33808, "y": 31984, "z": 6, "label": "Two Lips (1 andar acima, pelo teleporte verde a noroeste)"},
+    {"x": 33824, "y": 31982, "z": 6, "label": "Petaloid (mesmo piso do Two Lips)"},
+    {"x": 33848, "y": 32058, "z": 8, "label": "Entrada do covil da Crimson Death Blossom (piso -1)"},
+    {"x": 33819, "y": 31998, "z": 9, "label": "Sprout Sentinel (piso -2)"},
+    {"x": 33892, "y": 31983, "z": 9, "label": "Sala do coração (missão Heart Attack, piso -2)"},
+    {"x": 33848, "y": 31986, "z": 10, "label": "Teleporte da missão Coin Toss (piso -3)"},
+    {"x": 33849, "y": 31998, "z": 10, "label": "Orbe do atalho para o covil do Doctor Marrow (piso -3)"}
+  ],
+  "images": [
+    {"file": "Podzilla 01.png", "caption": "Podzilla (imagem da atualização de verão de 2024)"}
+  ],
+  "warnings": [
+    "Zona de caça de nível **600**: a wiki recomenda Knights e Paladins com 110/100 de ataque/defesa e Mages com magic level 110. Lá dentro há {creature:Rootthing Amber Shaper|Rootthings} e Quaras ({creature:Quara Raider|Quara Raiders}, Looters e Plunderers).",
+    "A wiki não descreve a saída de Podzilla, das salas com alavanca nem da sala do boss: leva sempre um {item:Temple Teleport Scroll}."
+  ]
+}

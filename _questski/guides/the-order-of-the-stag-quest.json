@@ -1,0 +1,518 @@
+{
+  "slug": "the-order-of-the-stag-quest",
+  "category": "historia",
+  "region": "Bounac",
+  "difficulty": 5,
+  "team": "parcial",
+  "duration": "Várias horas a vários dias (os Night Harpies só aparecem à noite e não em todas as noites)",
+  "summary": "Depois da {wiki:The Order of the Lion Quest|Order of the Lion}, o rei {npc:Kesar the Younger} confia-te um segredo de família: um writ guardado por baixo da catedral de Bounac. Com ele vais à misteriosa **Isle of Ada**, ajudas a expedição de Bounac e os últimos cavaleiros da Order of the Stag, caças Night Harpies, limpas o bastião e derrotas o {creature:Court Warlock}, o mago que transformou os Stags em Raubritters. Recebes a {item:The Broken Sword of Eldoran Etzel}, o {item:Brass-Shod Chest (Order of the Stag)}, o segundo addon das Royal Bounacean Advisor Outfits e os achievements **Bastard** e **King's Council**.",
+  "legend_pt": "Ajuda o Kesar the Younger.",
+  "start": {"x": 32365, "y": 32478, "z": 2, "label": "Kesar the Younger, sala do trono de Bounac (só de dia)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível mínimo **250** (é também o nível mínimo para entrar em Bounac).",
+    "Nível recomendado: **400+ em equipa** ou **600+ sozinho** (sobretudo para o {creature:Court Warlock}).",
+    "{wiki:The Order of the Lion Quest} completa (que por sua vez exige o acesso à {wiki:Order of the Falcon} da {wiki:The Secret Library Quest} e à {wiki:Order of the Cobra} da {wiki:Grave Danger Quest}).",
+    "Feitiço {spell:Levitate}: a Isle of Ada está cheia de pontos onde tens de levitar para cima ou para baixo.",
+    "Uma {item:Frozen Starlight} para abrir a passagem por baixo da catedral de Bounac.",
+    "Uma {item:Pick} (ou ferramenta equivalente) e uma {item:Obsidian Knife}."
+  ],
+  "items_needed": [
+    {"item": "Frozen Starlight", "note": "para abrir o buraco na catedral de Bounac; obtém-se na {wiki:Pits of Inferno Quest} ou compra-se no Market"},
+    {"item": "Pick", "note": "o spoiler pede-a como requisito (ou ferramenta equivalente: as {item:Secret Agent Tools|Secret Agent Tools} também servem de pick)"},
+    {"item": "Rope", "note": "por precaução, para saíres da sala selada por baixo da catedral (a wiki não descreve essa saída)"},
+    {"item": "Obsidian Knife", "note": "para esfolar os Night Harpies e tirar os bicos; vende-se no Market"},
+    {"text": "Uma arma qualquer para partir a tapeçaria que esconde a porta do {npc:Eldoran the Ambitious}"},
+    {"item": "Tender Venison", "qty": 20, "note": "só para a missão opcional *Supplies for the Steadfast*"},
+    {"item": "Salvaged Iron Parts", "qty": 30, "note": "só para a missão opcional *Emmanuelle's Boat Repair*"},
+    {"item": "Salvaged Bronze Parts", "qty": 20, "note": "só para a missão opcional *Emmanuelle's Boat Repair*"},
+    {"item": "Salvaged Silver Parts", "qty": 10, "note": "só para a missão opcional *Emmanuelle's Boat Repair*"},
+    {"item": "Twisted Marionette", "note": "opcional: repõe o cooldown do Court Warlock"},
+    {"item": "Repair Kit For Boats", "note": "opcional: atalho dentro da Isle of Ada, do pequeno barco a sudoeste para o pequeno barco a norte (cai do Clavius; vende-se no Market)"}
+  ],
+  "rewards": [
+    {"item": "The Broken Sword of Eldoran Etzel"},
+    {"item": "Brass-Shod Chest (Order of the Stag)"},
+    {"text": "Segundo addon das {wiki:Royal Bounacean Advisor Outfits|Royal Bounacean Advisor Outfits}"},
+    {"text": "Achievements **Bastard** e **King's Council**"},
+    {"text": "10 000 de experiência (missão opcional *Supplies for the Steadfast*)"},
+    {"item": "The Mariner's Compass From the Antoinette", "note": "missão opcional *Emmanuelle's Boat Repair*"},
+    {"text": "Loot do {creature:Court Warlock} (147 000 de experiência): peças do conjunto Stag (muito raras), {item:Twisted Marionette} (rara), poções, gemas e moedas"}
+  ],
+  "achievements": ["Bastard", "King's Council"],
+  "unlocks": [
+    {"what": "Isle of Ada", "kind": "zona", "place": "Isle of Ada", "when": "Depois de levares o writ ao {npc:Kesar the Younger}: ele manda-te para o pequeno barco de pesca a sul do castelo de Bounac.", "note": "Zona de caça com Raubritters, Stags e, em algumas noites, Night Harpies."},
+    {"what": "Andar superior do bastião da Isle of Ada (Eldoran the Ambitious)", "kind": "zona", "place": "Isle of Ada", "when": "Ao entregares 20 {item:Night Harpy Beak|Night Harpy Beaks} esfolados por ti ao {npc:Guard Captain Hartford}."},
+    {"what": "Boss Court Warlock", "kind": "funcionalidade", "place": "Court Warlock", "when": "Depois de limpares os três corpos para o {npc:Eldoran the Ambitious} e de falares com a {npc:Captain Marie-Denise Banner} ({key:wall}): a parede da torre oeste leva-te à sala das alavancas.", "note": "Tem cooldown; uma {item:Twisted Marionette} repõe-no. Única fonte das peças do conjunto Stag."},
+    {"what": "Segundo addon das Royal Bounacean Advisor Outfits", "kind": "funcionalidade", "place": "Royal Bounacean Advisor Outfits", "when": "No fim, ao dizeres {key:help} ao {npc:Kesar the Younger}."}
+  ],
+  "dangers": [
+    "Raubritter Skirmisher",
+    "Raubritter Marksman",
+    "Raubritter Chastener",
+    "Night Harpy",
+    "Clavius",
+    "Michael the Stalwart",
+    "Adlerauge",
+    "Overseer Osverger",
+    "Poisoned Raubritter",
+    "Frozen Raubritter",
+    "Raging Raubritter",
+    "Energised Raubritter",
+    "Falcon Paladin",
+    "Falcon Knight",
+    "Court Warlock"
+  ],
+  "npcs": [
+    "Kesar the Younger",
+    "Bounac Guard",
+    "Second In Command Demeron",
+    "Lieutenant Harlan",
+    "Guard Captain Hartford",
+    "Eldoran the Ambitious",
+    "Captain Marie-Denise Banner"
+  ],
+  "tips": [
+    "A quest depende do ciclo dia/noite de Tibia (1 dia de Tibia = 1 hora real). O {npc:Kesar the Younger} só está na sala do trono **de dia** (mais ou menos entre hh:15 e hh:45 de cada hora real); de noite está nos aposentos um andar abaixo. Os {creature:Night Harpy|Night Harpies} só aparecem **de noite**.",
+    "A Isle of Ada é confusa: tem muitas escadas, portas e pontos de {spell:Levitate}. Segue as coordenadas passo a passo e guarda o caminho na memória.",
+    "Leva sempre a {item:Obsidian Knife}: os bicos de Night Harpy só contam se fores tu a esfolá-los, por isso convém esfolar todos os corpos que matares.",
+    "Para o Court Warlock, o primeiro jogador a entrar na sala das alavancas fica com os Raubritters a nascer na sua posição durante todo o combate: faz entrar o **Knight** primeiro.",
+    "Se fores fazer as missões opcionais, junta logo as {item:Tender Venison} (dos {creature:Stag|Stags} da ilha) e as peças de salvado (dos minibosses da ilha ou do Market)."
+  ],
+  "sections": [
+    {
+      "title": "0. Preparação: chegar a Bounac",
+      "intro": "Tudo começa em Bounac, a ilha da Order of the Lion. Como já fizeste a Order of the Lion Quest, tens acesso a toda a cidade e ao castelo.",
+      "steps": [
+        {
+          "title": "Chegar a Bounac",
+          "text": "Vai a **Edron** e procura o pequeno barco a **norte** da passagem da montanha (ponto marcado). É por aí que se viaja para **Bounac**, a ilha entre Thais e Meriana. Precisas de nível 250 para entrar.",
+          "coords": [
+            {"x": 33183, "y": 31757, "z": 7, "label": "Pequeno barco para Bounac (Edron)"},
+            {"x": 32355, "y": 32473, "z": 7, "label": "Bounac"},
+            {"x": 32391, "y": 32489, "z": 7, "label": "Depot de Bounac"}
+          ],
+          "images": [{"file": "Bounac Map.png", "caption": "Mapa de Bounac"}],
+          "tip": "Para voltares de Bounac ao continente, regressa ao sítio onde desembarcaste e apanha o barco de volta a Edron (a wiki não documenta este regresso). Em alternativa, um {item:Temple Teleport Scroll} leva-te ao teu templo."
+        },
+        {
+          "title": "Subir à sala do trono",
+          "text": "Usa o **elevador** do castelo, o atalho que ficaste a conhecer na Order of the Lion (fica no fim da rampa a **sul**, no andar por baixo da sala do trono, e também serve para saíres do castelo). Em alternativa, sobe ao **3.º andar** pelas escadas onde está o {npc:Onfroi} durante o dia, segue para **norte** e depois **oeste** até ao {npc:Bounac Guard} e sobe mais **2 andares** até à sala do trono, onde está o {npc:Kesar the Younger}.",
+          "coords": [
+            {"x": 32400, "y": 32481, "z": 4, "label": "Bounac Guard (3.º andar)"},
+            {"x": 32365, "y": 32478, "z": 2, "label": "Kesar the Younger (sala do trono)"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "1. Etzel Writ — o segredo por baixo da catedral",
+      "intro": "O Kesar enviou os seus melhores cavaleiros no Emmanuelle, o navio-almirante, para a Isle of Ada, mas nunca mais deram notícias. Antes de te mandar atrás deles, pede-te que recuperes um documento de família guardado numa sala selada por baixo da catedral.",
+      "steps": [
+        {
+          "title": "Falar com o Kesar the Younger",
+          "text": "De **dia**, fala com o {npc:Kesar the Younger} na sala do trono. Diz {key:hi} e {key:help} (podes perguntar antes por {key:problem} para ouvir a história). Ele conta-te que por baixo da catedral há uma sala selada, guardada durante séculos por um warlock, com um baú que contém um writ muito importante para a família Etzel, e pede-te que o vás buscar a partir das salas sagradas mesmo por cima.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hail, what can I do for the hero of Bounac? The siege is finally under control, thanks to you. Meanwhile, another problem has left me in dismay."},
+            {"you": "problem"},
+            {"npc": "I have sent a party of my best men on a mission to a certain island [...] Hero of Bounac and royal advisor of the court, I am in need of your help once again."},
+            {"you": "help"},
+            {"npc": "[...] There is a room below the cathedral [...] I want you to retrieve it and bring it to me. You will have to find a way from the sacred halls directly above it."}
+          ]
+        },
+        {
+          "title": "Ir à catedral",
+          "text": "Vai à **catedral** de Bounac, no **3.º andar** da cidade (o mesmo piso do {npc:Bounac Guard}). A sala do baú fica por baixo dela.",
+          "coords": [{"x": 32402, "y": 32468, "z": 4, "label": "Catedral de Bounac"}]
+        },
+        {
+          "title": "Abrir o buraco com a Frozen Starlight",
+          "text": "Na catedral, põe a {item:Frozen Starlight} em cima do **suporte** (stand). Isso abre o buraco que leva à sala selada por baixo. Desce por ele.",
+          "tip": "Tem também a {item:Pick} na mochila: o spoiler pede-a como requisito para a quest, sem dizer exatamente onde a usas."
+        },
+        {
+          "title": "Abrir o baú congelado",
+          "text": "Na sala de baixo, abre o **baú congelado** (frozen chest). Lá dentro está o **writ** da família Etzel. A wiki não descreve a saída desta sala: volta a subir por onde desceste até à catedral (leva uma {item:Rope} por precaução) e sai da catedral para o castelo.",
+          "reward": "Writ da família Etzel (item de quest)"
+        },
+        {
+          "title": "Levar o writ ao Kesar",
+          "text": "Volta à sala do trono (de dia) e fala com o {npc:Kesar the Younger}: {key:hi}, {key:help} e {key:yes}. Ele revela o segredo da família e pede-te que leves o writ contigo e o mostres à Captain **Banner**, líder da expedição. A Isle of Ada não está nos mapas: como o porto de Bounac ainda está um caos, tens de usar um pequeno barco a **sul**, junto à velha cabana do pescador.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "help"},
+            {"npc": "Now that you know our family secret, I want you to take the writ with you and show it to Captain Banner, leader of this expedition."},
+            {"npc": "[...] find a boat to the south near the old fisherman's hut. Say no word to anyone besides the captain and make utmost haste. Are you prepared?"},
+            {"you": "yes"},
+            {"npc": "Then make it so. Find Captain Banner on the Isle of Ada, state the purpose of your mission [...]"}
+          ],
+          "warning": "Não deites fora o writ: vais precisar dele na Isle of Ada."
+        }
+      ]
+    },
+    {
+      "title": "2. Isle of Ada — da praia até ao bastião",
+      "intro": "A Isle of Ada está cheia de monstros e é confusa: muitas escadas, portas e pontos de Levitate. De noite, os raids de Night Harpies tornam-na ainda mais perigosa.",
+      "steps": [
+        {
+          "title": "Apanhar o barco de pesca",
+          "text": "Sai do castelo (pelo elevador: desce ao andar por baixo da sala do trono e segue a rampa para **sul**) e vai até à costa a **sul** do castelo de Bounac, junto à velha cabana do pescador. Dentro de um pequeno barco de pesca há uma **corda** (rope): clica nela e és transportado para a **Isle of Ada**.",
+          "coords": [{"x": 32394, "y": 32513, "z": 7, "label": "Corda no barco de pesca (para a Isle of Ada)"}]
+        },
+        {
+          "title": "Falar com o Second In Command Demeron",
+          "text": "Na Isle of Ada, fala com o {npc:Second In Command Demeron}. Diz {key:hi}, {key:mission}, {key:tell} e responde {key:yes} três vezes. Ele acaba por acreditar que vens da parte do Kesar e dá-te autorização para entrares nas **minas** a **noroeste**.",
+          "npc": "Second In Command Demeron",
+          "coords": [{"x": 33872, "y": 32243, "z": 7, "label": "Second In Command Demeron"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "If you don't carry any spares, state your business quickly or move along."},
+            {"you": "mission"},
+            {"npc": "If you can't tell me why you're here, stop distracting me [...]"},
+            {"you": "tell"},
+            {"npc": "[...] So you say Kesar himself sent you [...] And do you have any proof for that outrageous claim?"},
+            {"you": "yes"},
+            {"npc": "Royal Bounacean advisor? [...] Has he really told you what this is all about?"},
+            {"you": "yes"},
+            {"npc": "A bastard?! Lower your voice, stranger [...] you say you have solid evidence of this?"},
+            {"you": "yes"},
+            {"npc": "[...] We need to find the heir of this Eldoran then. [...] Fight your way through the mines and further into the isle."}
+          ]
+        },
+        {
+          "title": "Explorar as minas",
+          "text": "Entra nas minas a **noroeste** e explora-as. Quando chegares ao ponto marcado, o teu Quest Log é atualizado.",
+          "coords": [{"x": 33872, "y": 32193, "z": 7, "label": "Ponto que atualiza o Quest Log"}],
+          "tip": "Nesta primeira travessia das minas chegas ao primeiro acampamento, onde está o {npc:Lieutenant Harlan}: é aí que se faz a missão opcional *Supplies for the Steadfast* (secção 6)."
+        },
+        {
+          "title": "Voltar à entrada e subir as escadas",
+          "text": "Volta à entrada (junto ao {npc:Second In Command Demeron}). Agora já tens acesso às escadas: sobe no ponto marcado para começares o caminho até ao castelo.",
+          "coords": [{"x": 33858, "y": 32237, "z": 7, "label": "Escadas para cima"}]
+        },
+        {
+          "title": "Levitar para cima",
+          "text": "Segue até ao ponto marcado e usa {spell:Levitate} para **cima**.",
+          "coords": [{"x": 33887, "y": 32202, "z": 6, "label": "Levitate para cima"}]
+        },
+        {
+          "title": "Subir as escadas seguintes",
+          "text": "Sobe as escadas no ponto marcado.",
+          "coords": [{"x": 33888, "y": 32156, "z": 5, "label": "Escadas para cima"}]
+        },
+        {
+          "title": "Chegar aos portões do castelo",
+          "text": "Vai até aos **portões** do castelo. Se estiverem **abertos**, entra e vai diretamente ao {npc:Guard Captain Hartford}. Se estiverem **fechados**, segue o passo seguinte.",
+          "coords": [
+            {"x": 33888, "y": 32114, "z": 4, "label": "Portões do castelo"},
+            {"x": 33882, "y": 32113, "z": 4, "label": "Guard Captain Hartford"}
+          ]
+        },
+        {
+          "title": "Se os portões estiverem fechados",
+          "text": "Usa {spell:Levitate} para **baixo** duas vezes (primeiro ponto e segundo ponto marcados), sobe as escadas no terceiro ponto e outra vez no quarto ponto, e entra na zona dos NPCs pela **porta** marcada. Chegas ao {npc:Guard Captain Hartford}.",
+          "coords": [
+            {"x": 33896, "y": 32114, "z": 4, "label": "1.º Levitate para baixo"},
+            {"x": 33901, "y": 32112, "z": 5, "label": "2.º Levitate para baixo"},
+            {"x": 33872, "y": 32117, "z": 6, "label": "Escadas para cima"},
+            {"x": 33861, "y": 32115, "z": 5, "label": "Escadas para cima outra vez"},
+            {"x": 33882, "y": 32105, "z": 4, "label": "Porta para a zona dos NPCs"}
+          ],
+          "tip": "Se ainda não conseguires abrir as portas nesta fase, ou se quiseres abrir os portões, usa o passo seguinte."
+        },
+        {
+          "title": "Abrir os portões (alternativa)",
+          "text": "A partir dos portões, usa {spell:Levitate} para **baixo** a **sul** deles. Depois levita para **cima** três vezes (nos três pontos marcados a seguir), levita para **baixo** no último ponto, sobe as escadas e clica nos **dois mecanismos de corrente** que mantêm o portão trancado. Os dois têm de ser clicados quase ao mesmo tempo.",
+          "coords": [
+            {"x": 33887, "y": 32141, "z": 4, "label": "Levitate para baixo (a sul dos portões)"},
+            {"x": 33883, "y": 32141, "z": 5, "label": "1.º Levitate para cima"},
+            {"x": 33880, "y": 32139, "z": 4, "label": "2.º Levitate para cima"},
+            {"x": 33880, "y": 32136, "z": 3, "label": "3.º Levitate para cima"},
+            {"x": 33890, "y": 32130, "z": 2, "label": "Levitate para baixo; depois sobe as escadas"}
+          ],
+          "tip": "Um jogador rápido consegue fazê-lo sozinho; com níveis mais baixos pode ser preciso mais do que uma pessoa (uma em cada mecanismo)."
+        },
+        {
+          "title": "Atalho para as próximas visitas (opcional)",
+          "text": "Se tiveres um {item:Repair Kit For Boats} (cai do {creature:Clavius}, o miniboss do bastião; também se vende no Market), usa-o no **pequeno barco a sudoeste** da Isle of Ada. Tens uma chance de seres teleportado para o **pequeno barco a norte** da ilha, já perto do bastião. Pode falhar e ser preciso tentar algumas vezes; o kit **não se gasta**.",
+          "coords": [
+            {"x": 33831, "y": 32232, "z": 7, "label": "Pequeno barco a sudoeste (usa aqui o Repair Kit For Boats)"},
+            {"x": 33901, "y": 32106, "z": 7, "label": "Pequeno barco a norte da ilha (chegada)"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Night Harpy Beaks — Guard Captain Hartford",
+      "intro": "O bastião está cercado: de dia pelos cavaleiros amaldiçoados do warlock, de noite pelos Night Harpies. O capitão da guarda só te deixa subir até ao Eldoran se provares que o ajudaste contra as harpias.",
+      "steps": [
+        {
+          "title": "Falar com o Guard Captain Hartford",
+          "text": "Fala com o {npc:Guard Captain Hartford}: {key:hi}, {key:business}, {key:explain} e {key:yes}. Ele pede-te 20 {item:Night Harpy Beak|Night Harpy Beaks} como prova de que mataste harpias.",
+          "npc": "Guard Captain Hartford",
+          "coords": [{"x": 33882, "y": 32113, "z": 4, "label": "Guard Captain Hartford"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "HALT! Outsider, state your business!"},
+            {"you": "business"},
+            {"npc": "[...] Explain yourself."},
+            {"you": "explain"},
+            {"npc": "[...] Say, are you in for another round?"},
+            {"you": "yes"},
+            {"npc": "[...] If you can help us with those night harpies, we would be grateful [...] Just bring me a few of their beaks. [...] I will give you access to the upper hall [...]"}
+          ],
+          "tip": "Se disseres {key:winged}, ele explica que as harpias têm um ninho muito a **sul** da ilha, algures nas montanhas."
+        },
+        {
+          "title": "Caçar Night Harpies (só de noite)",
+          "text": "Os {creature:Night Harpy|Night Harpies} só aparecem **de noite** (Tibia), como parte de um **raid**, e **não em todas as noites**. Quando o raid começa dura várias horas, mas mesmo assim elas só aparecem durante a noite. Caça-as na Isle of Ada.",
+          "warning": "Durante o raid a ilha enche-se de inimigos. As Night Harpies atacam em bando e corpo a corpo: não puxes mais do que aguentas."
+        },
+        {
+          "title": "Esfolar os corpos",
+          "text": "Usa a {item:Obsidian Knife} em cada corpo de Night Harpy que matares: tens uma **chance** de obter um {item:Night Harpy Beak}. Repete até teres **20 bicos esfolados por ti**.",
+          "warning": "Comprar bicos no Market ou a outros jogadores **não** faz avançar a quest: cada personagem tem de esfolar os seus."
+        },
+        {
+          "title": "Entregar os bicos",
+          "text": "Volta ao {npc:Guard Captain Hartford} e diz {key:hi}, {key:news} e {key:yes}. Ele dá-te acesso ao **andar superior**, onde está o {npc:Eldoran the Ambitious}. Os bicos **não** são retirados do inventário.",
+          "npc": "Guard Captain Hartford",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "news"},
+            {"you": "yes"}
+          ],
+          "reward": "Acesso ao andar superior do bastião"
+        }
+      ]
+    },
+    {
+      "title": "4. Limpar o castelo — Eldoran the Ambitious",
+      "steps": [
+        {
+          "title": "Encontrar a porta escondida",
+          "text": "Sobe as escadas nos dois pontos marcados. A porta para o {npc:Eldoran the Ambitious} está **escondida atrás de uma tapeçaria**: usa uma **arma** na tapeçaria para a partir e passa a porta.",
+          "coords": [
+            {"x": 33875, "y": 32114, "z": 4, "label": "Escadas para cima"},
+            {"x": 33870, "y": 32114, "z": 3, "label": "Escadas para cima outra vez"},
+            {"x": 33868, "y": 32115, "z": 2, "label": "Porta atrás da tapeçaria"}
+          ]
+        },
+        {
+          "title": "Falar com o Eldoran the Ambitious",
+          "text": "Fala com o {npc:Eldoran the Ambitious}: {key:hi}, {key:word}, {key:yes} e {key:yes}. Ele pede-te que trates de alguns **corpos** espalhados pelo castelo.",
+          "npc": "Eldoran the Ambitious",
+          "coords": [{"x": 33862, "y": 32104, "z": 2, "label": "Eldoran the Ambitious"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "word"},
+            {"you": "yes"},
+            {"you": "yes"}
+          ]
+        },
+        {
+          "title": "Usar os três corpos",
+          "text": "Desce do andar do Eldoran até ao piso dos corpos (**2 andares acima do chão**, 3 abaixo do Eldoran). Há **três corpos**, todos nesse piso, junto a pilhas a arder. Ao contrário dos cadáveres normais (virados para oeste), estes estão virados para a **direita** (leste). Usa (\"use\") cada um deles.",
+          "coords": [
+            {"x": 33858, "y": 32118, "z": 5, "label": "Corpo 1"},
+            {"x": 33869, "y": 32114, "z": 5, "label": "Corpo 2"},
+            {"x": 33869, "y": 32135, "z": 5, "label": "Corpo 3"}
+          ],
+          "table": {
+            "head": ["Corpo", "Coordenada"],
+            "rows": [
+              ["1", "{coord:33858,32118,5}"],
+              ["2", "{coord:33869,32114,5}"],
+              ["3", "{coord:33869,32135,5}"]
+            ]
+          }
+        },
+        {
+          "title": "Voltar ao Eldoran",
+          "text": "Volta ao {npc:Eldoran the Ambitious} e diz {key:hi}, {key:news} e {key:yes}.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "news"},
+            {"you": "yes"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Court Warlock — a parte final",
+      "intro": "O Court Warlock controla os antigos cavaleiros da Order of the Stag, agora Raubritters. Esta é a única parte da quest que pede mesmo uma boa equipa (ou um personagem muito forte: 600+ recomendado a solo).",
+      "steps": [
+        {
+          "title": "Pedir a missão final",
+          "text": "Pede outra {key:mission} ao {npc:Eldoran the Ambitious}. Ele pede-te que acabes com o {creature:Court Warlock}.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "mission"}
+          ]
+        },
+        {
+          "title": "Descer à cave dos Tamed Frazzlemaws",
+          "text": "Desce alguns andares até à cave com os {creature:Tamed Frazzlemaw|Tamed Frazzlemaws} (não se mexem nem atacam). Agora já consegues passar as portas.",
+          "coords": [{"x": 33870, "y": 32132, "z": 6, "label": "Cave dos Tamed Frazzlemaws"}]
+        },
+        {
+          "title": "Atravessar a Blood Gorge até à torre oeste",
+          "text": "Atravessa a **Blood Gorge** (1 andar abaixo do chão) e sobe para a **torre oeste** pelo ponto marcado. Continua a subir pela torre até ao piso da {npc:Captain Marie-Denise Banner} (**3 andares acima do chão**).",
+          "coords": [
+            {"x": 33834, "y": 32146, "z": 8, "label": "Subida para a torre oeste"},
+            {"x": 33837, "y": 32137, "z": 4, "label": "Captain Marie-Denise Banner (torre oeste)"}
+          ]
+        },
+        {
+          "title": "Falar com a Captain Marie-Denise Banner",
+          "text": "Na torre, fala com a {npc:Captain Marie-Denise Banner}: {key:hi} e {key:wall}. Ela dá-te acesso ao teleporte escondido na parede.",
+          "npc": "Captain Marie-Denise Banner",
+          "coords": [{"x": 33837, "y": 32137, "z": 4, "label": "Captain Marie-Denise Banner"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "wall"}
+          ]
+        },
+        {
+          "title": "Entrar na sala das alavancas",
+          "text": "Clica na **parede** marcada: o teleporte leva-te à **sala das alavancas**, de onde a alavanca leva a equipa para o combate contra o {creature:Court Warlock}.",
+          "coords": [{"x": 33833, "y": 32140, "z": 4, "label": "Parede-teleporte para a sala das alavancas"}],
+          "warning": "O **primeiro jogador a entrar** na sala das alavancas fica com os Raubritters a nascer **na sua posição** durante todo o combate. Garante que o **Knight** entra primeiro."
+        },
+        {
+          "title": "Fase 1: as vagas de Raubritters",
+          "text": "O combate começa com vagas contínuas de Raubritters, cada tipo imune a um elemento. Continua a matá-los. Se o teu dano em área não chegar, concentra-te num alvo de cada vez para **nunca teres quatro Raubritters do mesmo tipo vivos ao mesmo tempo**: se isso acontecer, transformam-se numa versão mais forte que bate muito mais.",
+          "table": {
+            "head": ["Raubritter", "Imune a", "Nota"],
+            "rows": [
+              ["{creature:Poisoned Raubritter}", "Earth", ""],
+              ["{creature:Frozen Raubritter}", "Ice", ""],
+              ["{creature:Raging Raubritter}", "Fire", ""],
+              ["{creature:Energised Raubritter}", "Energy", "Lutam à distância e afastam-se do Knight"]
+            ]
+          },
+          "warning": "{spell:Chivalrous Challenge} não funciona em salas de boss, por isso os Energised Raubritters, que mantêm distância do Knight, são difíceis de apanhar."
+        },
+        {
+          "title": "Teleportes e terreno especial",
+          "text": "De tempos a tempos **todos os jogadores são teleportados** para pontos diferentes da sala. A sala tem chão normal e zonas de **terreno especial**, visivelmente diferentes. **Não andes no terreno especial**: cada passo dá muito dano de **morte** (Death).",
+          "warning": "Depois de cada teleporte, olha bem para o chão antes de te mexeres."
+        },
+        {
+          "title": "Fase 2: Falcon Paladins e Falcon Knights",
+          "text": "Ao fim de algumas vagas, a sala enche-se de {creature:Falcon Paladin|Falcon Paladins} e {creature:Falcon Knight|Falcon Knights}, e o terreno especial **desaparece**: a partir daqui podes andar livremente pela sala. Mata todos os lacaios."
+        },
+        {
+          "title": "Fase 3: o Court Warlock",
+          "text": "Quando todos os lacaios estiverem mortos aparece o {creature:Court Warlock}. Nasce com **menos vida**, consoante a forma como correu o combate até aí. Acaba com ele.",
+          "table": {
+            "head": ["Loot relevante do Court Warlock", "Raridade"],
+            "rows": [
+              ["{item:Crystal Coin}, {item:Platinum Coin}, gemas e poções", "comum"],
+              ["{item:Twisted Marionette} (repõe o cooldown do boss)", "rara"],
+              ["{item:Stag Helmet}, {item:Stag Plate}, {item:Stag Robe}, {item:Stag Legs}, {item:Stag Shinguards}, {item:Stag Boots}, {item:Stag Footwraps}, {item:Stag Shield}, {item:Stag Spellbook}, {item:Stag Scrolls}", "muito rara"]
+            ]
+          },
+          "reward": "147 000 de experiência e o loot do boss"
+        },
+        {
+          "title": "Sair da sala do boss",
+          "text": "A wiki **não documenta** como se sai da sala do Court Warlock. Se depois do combate não encontrares uma saída, usa um {item:Temple Teleport Scroll} (Daily Reward ou Store) para ires para o teu templo e regressa ao {npc:Eldoran the Ambitious} pelo mesmo caminho de antes: barco de Edron para Bounac, corda no barco de pesca a sul do castelo para a Isle of Ada e o percurso da secção 2 até ao bastião (ou o atalho do {item:Repair Kit For Boats}), e as escadas da secção 4 até ao andar superior.",
+          "warning": "O {item:Temple Teleport Scroll} não funciona em zonas No-Logout nem enquanto tiveres **Logout Block** ou **Protection Zone Block**: espera que o bloqueio do combate passe antes de o usares."
+        },
+        {
+          "title": "Entregar a missão ao Eldoran",
+          "text": "Volta ao {npc:Eldoran the Ambitious} e diz {key:hi} e {key:news}. Recebes a {item:The Broken Sword of Eldoran Etzel} e o achievement **Bastard**. A página da quest lista também o {item:Brass-Shod Chest (Order of the Stag)} como recompensa (a wiki não diz em que momento exato o recebes).",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "news"}
+          ],
+          "images": [{"file": "Brass-shod Chest (Order of the Stag) Animated.gif", "caption": "Brass-Shod Chest (Order of the Stag), com a animação ao ser usado"}],
+          "reward": "The Broken Sword of Eldoran Etzel, Brass-Shod Chest (Order of the Stag) e achievement Bastard"
+        }
+      ]
+    },
+    {
+      "title": "6. Missões opcionais na Isle of Ada",
+      "intro": "Duas missões extra, que podes fazer enquanto estás na ilha.",
+      "steps": [
+        {
+          "title": "Supplies for the Steadfast: Lieutenant Harlan",
+          "text": "Na tua primeira visita, ao atravessar as minas chegas ao primeiro acampamento. Fala com o {npc:Lieutenant Harlan}: {key:hi}, {key:yes}, {key:yes} e {key:no}. Ele abre um caminho para **nordeste**.",
+          "npc": "Lieutenant Harlan",
+          "coords": [{"x": 33850, "y": 32193, "z": 6, "label": "Lieutenant Harlan (primeiro acampamento)"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "yes"},
+            {"you": "yes"},
+            {"you": "no"}
+          ]
+        },
+        {
+          "title": "Entregar 20 Tender Venison",
+          "text": "Oferece ajuda ao {npc:Lieutenant Harlan} (a wiki não indica a palavra-chave exata) e ele pede 20 {item:Tender Venison} para abastecer o acampamento. Os {creature:Stag|Stags} da Isle of Ada deixam cair Tender Venison com alguma frequência; também se compra no Market. Entrega-as e recebes **10 000 de experiência**.",
+          "npc": "Lieutenant Harlan",
+          "reward": "10 000 de experiência"
+        },
+        {
+          "title": "Emmanuelle's Boat Repair: peças para o Demeron",
+          "text": "O {npc:Second In Command Demeron} precisa de peças para reparar o navio. Junta as peças da tabela (cada uma cai de um miniboss Raubritter da ilha; todas se vendem no Market) e entrega-lhas: {key:hi} e {key:spares} (é a palavra que ele próprio destaca na saudação; a wiki não mostra o resto do diálogo). Em troca recebes {item:The Mariner's Compass From the Antoinette}.",
+          "npc": "Second In Command Demeron",
+          "table": {
+            "head": ["Peça", "Qtd.", "Cai de", "Onde está o miniboss"],
+            "rows": [
+              ["{item:Salvaged Iron Parts}", "30", "{creature:Clavius}", "{coord:33862,32106,4}"],
+              ["{item:Salvaged Bronze Parts}", "20", "{creature:Michael the Stalwart}", "{coord:33863,32115,0}"],
+              ["{item:Salvaged Silver Parts}", "10", "{creature:Adlerauge}", "{coord:33857,32167,2}"]
+            ]
+          },
+          "tip": "Contra o {creature:Michael the Stalwart} mantém-no em movimento: se ficar parado, ganha cargas (até 10) e chega a bater cerca de 50% mais.",
+          "reward": "The Mariner's Compass From the Antoinette"
+        }
+      ]
+    },
+    {
+      "title": "7. Regressar a Bounac: segundo addon e King's Council",
+      "steps": [
+        {
+          "title": "Sair da Isle of Ada",
+          "text": "A wiki **não documenta** a viagem de volta da Isle of Ada para Bounac. Procura primeiro o barco em que chegaste (junto ao acampamento do {npc:Second In Command Demeron}). Se não houver viagem de volta, usa um {item:Temple Teleport Scroll} (Daily Reward ou Store) para ires para o teu templo e regressa a Bounac pelo barco a norte da passagem da montanha de Edron. O Demeron chega a dizer que a expedição, no estado em que está, *não tem como sair da ilha*.",
+          "warning": "O {item:Temple Teleport Scroll} não funciona em zonas No-Logout nem com **Logout Block** ou **Protection Zone Block**: sai primeiro de combate.",
+          "coords": [
+            {"x": 33872, "y": 32243, "z": 7, "label": "Zona de chegada à Isle of Ada (Demeron)"},
+            {"x": 33183, "y": 31757, "z": 7, "label": "Barco de Edron para Bounac"}
+          ]
+        },
+        {
+          "title": "Falar com o Kesar the Younger",
+          "text": "De **dia**, sobe à sala do trono e fala com o {npc:Kesar the Younger}: {key:hi} e {key:help}. Ele dá-te o **segundo addon** das {wiki:Royal Bounacean Advisor Outfits|Royal Bounacean Advisor Outfits} e o achievement **King's Council**.",
+          "npc": "Kesar the Younger",
+          "coords": [{"x": 32365, "y": 32478, "z": 2, "label": "Kesar the Younger (sala do trono)"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "help"}
+          ],
+          "images": [
+            {"file": "Outfit Royal Bounacean Advisor Male Addon 2.gif", "caption": "Royal Bounacean Advisor com o segundo addon (masculino)"},
+            {"file": "Outfit Royal Bounacean Advisor Female Addon 2.gif", "caption": "Royal Bounacean Advisor com o segundo addon (feminino)"}
+          ],
+          "tip": "Segundo a página do achievement, o **King's Council** é dado a quem tem **os dois addons** do outfit. O primeiro addon obtém-se na {wiki:Adventures of Galthen Quest} (matar a {creature:Megasylvan Yselda} com os Saplings vivos e falar com o {npc:John (Bounac)}). O outfit base também vem da Adventures of Galthen Quest.",
+          "reward": "Segundo addon das Royal Bounacean Advisor Outfits e achievement King's Council"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Minibosses da Isle of Ada (todos Raubritters): {creature:Clavius} ({coord:33862,32106,4}), {creature:Michael the Stalwart} ({coord:33863,32115,0}), {creature:Adlerauge} ({coord:33857,32167,2}) e {creature:Overseer Osverger} ({coord:33878,32121,2}), que só aparece de noite e desaparece de dia se não for morto. O {creature:Clavius} e o {creature:Adlerauge} (tal como os {creature:Raubritter Chastener|Raubritter Chasteners} e {creature:Raubritter Marksman|Raubritter Marksmen}) deixam cair {item:Stag Parchment}; só o {creature:Clavius} deixa cair o {item:Repair Kit For Boats} (atalho de barco dentro da ilha, ver secção 2).",
+    "Os {creature:Tamed Frazzlemaw|Tamed Frazzlemaws} da cave do bastião dão a montada **Battlefrazzle**: usa neles uma {item:Marinated Sturgeon}, que só cai dos {creature:Raubritter Skirmisher|Raubritter Skirmishers} da cozinha do bastião ({coord:33863,32112,3}). Não faz parte da quest.",
+    "Os {item:Night Harpy Beak|Night Harpy Beaks} ficam contigo depois de mostrares os 20 ao Hartford.",
+    "O {creature:Court Warlock} pode voltar a ser combatido depois do cooldown; a wiki não indica a duração. Usar uma {item:Twisted Marionette} (loot raro dele, vende-se no Market) repõe o cooldown de imediato.",
+    "O Court Warlock é a única fonte das peças do conjunto Stag (Stag Helmet, Plate, Robe, Legs, Shinguards, Boots, Footwraps, Shield, Spellbook e Scrolls), todas muito raras."
+  ]
+}

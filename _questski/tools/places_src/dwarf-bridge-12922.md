@@ -22,9 +22,9 @@ coords: [{'x': 32699, 'y': 32018, 'z': 7, 'label': 'Entrada da Venore Rotworm Ca
 [bored-mini-world-change 1-0] Chegar à Venore Rotworm Cave
 A casa da {npc:Wyda} fica no **Green Claw Swamp**, a oeste de Venore. Sai de **Venore** pela saída **sudoeste** e segue a estrada para **noroeste**. Mais ou menos a 3/4 do caminho para a {wiki:Dwarf Bridge}, desvia para **norte** e procura o buraco da Venore Rotworm Cave. Abre a {item:Loose Stone Pile} com a {item:Shovel} e entra. No pântano há {creature:Snake|Snakes} e {creature:Rotworm|Rotworms}.
 coords: [{'x': 32699, 'y': 32018, 'z': 7, 'label': 'Entrada da Venore Rotworm Cave'}]
+[heart-of-destruction-quest 0-0] Descobrir qual entrada está aberta
+Se tiveres um {item:Spying Eye}, usa-o: diz-te onde está aberto o vórtice. Sem ele, vai à entrada mais próxima e confirma se o vórtice lá está. As mensagens do Spying Eye que interessam a esta quest são as da tabela; as de Kazordoon e Edron referem-se a dois Otherworlds mais fracos (perto da Dwarf Bridge e a norte de Edron) que não fazem parte desta quest.
+coords: []
 [longsword-quest 0-0] Encontrar a entrada
 Vai à gruta dos trolls ({wiki:Dusalk's Troll Clan Cave|Kazordoon Troll Den}) a **leste** da {wiki:Dwarf Bridge|Dwarf Bridge}, entre Kazordoon e Venore. A Dwarf Bridge fica a nordeste de Thais e a noroeste de Venore: vai a pé de qualquer uma destas cidades, atravessa a ponte e segue para **leste**. A entrada é um buraco **escondido atrás de uma árvore**: abre-o com a {item:Shovel} e desce.
 coords: [{'x': 32662, 'y': 31966, 'z': 7, 'label': 'Entrada da gruta (atrás de uma árvore)'}]
-[longsword-quest 1-2] Sair da gruta
-Volta pelo mesmo caminho: regressa para **sul** até às escadas, sobe-as e vai para **norte** até ao buraco da entrada, onde sobes com a {item:Rope}. Cá fora, atravessa a Dwarf Bridge para voltares a Thais (sudoeste) ou segue para sudeste até Venore.
-coords: [{'x': 32662, 'y': 31966, 'z': 7, 'label': 'Entrada/saída da gruta (atrás de uma árvore)'}]

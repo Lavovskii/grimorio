@@ -1,6 +1,6 @@
 # PLACE: Adventurers' Guild
 slug: adventurers-guild-a9fff
-mentioned in 8 guides: bank-robbery-mini-world-change, cartography-101-quest, demons-lullaby, hunting-for-tokens-quest, loose-ends-quest, measuring-tibia-quest, rift-warrior-outfits-quest, the-scatterbrained-sorcerer-quest
+mentioned in 13 guides: bank-robbery-mini-world-change, between-the-lines-quest, cartography-101-quest, demons-lullaby, ferumbras-ascension-quest, heart-of-destruction-quest, hunting-for-tokens-quest, illuminator-outfits-quest, loose-ends-quest, measuring-tibia-quest, rift-warrior-outfits-quest, the-scatterbrained-sorcerer-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Adventurers' Guild 
@@ -29,6 +29,9 @@ The Adventurers' Guild is a society of adventurers whose mission is to provide h
 [cartography-101-quest 0-0] Chegar ao Adventurers' Guild
 O {wiki:Adventurers' Guild} fica numa ilha a **oeste** do farol de Thais. Vai ao templo de qualquer cidade e usa uma {item:Adventurer's Stone}: és teleportado para a guilda. Se não tiveres nenhuma, pede outra a um NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}. Para saíres, usa o portal de saída da guilda, que te devolve ao templo de onde vieste.
 coords: [{'x': 32200, 'y': 32300, 'z': 7, 'label': "Ilha do Adventurers' Guild"}]
+[heart-of-destruction-quest 12-0] Ir à Adventurers' Guild
+Vai ao templo de qualquer cidade e usa um {item:Adventurer's Stone}: és teleportado para a {wiki:Adventurers' Guild}. Se não tiveres nenhum, pede outro a um NPC do templo ({key:hi}, {key:adventurer's stone}, {key:yes}). A {npc:Yana} está no **andar de cima** da guilda.
+coords: [{'x': 32198, 'y': 32304, 'z': 6, 'label': "Yana, Adventurers' Guild (andar de cima)"}]
 [hunting-for-tokens-quest 0-0] Chegar ao Adventurers' Guild
 O {wiki:Adventurers' Guild} fica numa ilha a **oeste** do farol de Thais e não tem barco. Vai ao templo de qualquer cidade e usa uma {item:Adventurer's Stone}: és teleportado para a guilda. Se não tiveres nenhuma, pede outra a um NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}. Para saíres, usa o portal de saída da guilda, que te devolve ao templo de onde vieste.
 coords: [{'x': 32200, 'y': 32300, 'z': 7, 'label': "Ilha do Adventurers' Guild"}, {'x': 32201, 'y': 32292, 'z': 6, 'label': 'Jorge'}]
@@ -41,6 +44,9 @@ coords: [{'x': 32190, 'y': 32292, 'z': 7, 'label': "Cledwyn, Adventurers' Guild"
 [rift-warrior-outfits-quest 2-3] Sair do Adventurers' Guild
 Para saíres, pisa o teleporte do Guild: leva-te de volta à cidade de onde vieste. Se preferires aparecer noutra cidade, o {npc:Charos} pode mudar o destino do teleporte ({key:service}).
 coords: []
+[the-way-of-the-monk-quest 0-0] Ir à Adventurers' Guild
+Vai ao templo de qualquer cidade e usa um {item:Adventurer's Stone}: és levado para a {wiki:Adventurers' Guild}. Se não tiveres a pedra, pede-a ao NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}.
+coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [25-years-of-tibia-quest 7-3] Pintar as restantes 6 fotografias
@@ -52,6 +58,6 @@ coords: [{'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear (porto de T
 [bank-robbery-mini-world-change 0-0] Ver se o evento está ativo
 Quando o evento começa aparece uma destas mensagens: *"Several banks in major coastal towns are being robbed! The thieves are still on the loose!"* O {wiki:Towncryer} anuncia o assalto e o Adventurer's Board no {wiki:Adventurers' Guild} também o menciona. Se nenhum deles fala do assalto, o evento ainda não aconteceu ou o ouro já foi devolvido.
 coords: []
-[cartography-101-quest 0-1] Falar com o Rotem Valos
-Vai ao {wiki:Adventurers' Guild} e fala com o {npc:Rotem Valos}. Diz {key:hi}, {key:map} e {key:yes}. Recebes o {item:Adventurer's Map}. Diz {key:list} para ouvires as pistas dos locais.
-coords: []
+[between-the-lines-quest 2-12] Monk: ir a Blue Valley
+Usa um {item:Adventurer's Stone} no templo de qualquer cidade para ires à {wiki:Adventurers' Guild|Adventurers' Guild} (se não tiveres, pede-o ao NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}). No **piso de cima** da guilda, ao lado do Reward Shrine, usa a {wiki:Enchanted Guarded Crystal Sphere|Enchanted Guarded Crystal Sphere}: és teleportado para {wiki:Blue Valley}.
+coords: [{'x': 33603, 'y': 31469, 'z': 7, 'label': 'Chegada a Blue Valley'}]

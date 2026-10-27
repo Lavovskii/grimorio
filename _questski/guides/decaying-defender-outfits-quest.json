@@ -1,0 +1,562 @@
+{
+  "slug": "decaying-defender-outfits-quest",
+  "category": "outfit",
+  "region": "Darashia",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Vários dias para a Rotten Blood Quest (outfit base); depois, minutos se comprares os dois itens no Market ou várias tentativas (20 h de cooldown por boss e drops raros) se fores tu a caçá-los",
+  "summary": "Os {wiki:Decaying Defender Outfits|Decaying Defender Outfits} pertencem à {wiki:Rotten Blood Quest|Rotten Blood Quest}: o outfit base recebes ao derrotar o {creature:Bakragore}, no fim dessa quest. O primeiro addon obtém-se ao usar uma {item:Cursed Wood}, que só o boss {creature:Ichgahal} (Putrefactory) deixa cair; o segundo addon ao usar uma {item:Darklight Geode}, que só o {creature:Chagorz} (Gloom Pillars) deixa cair. Os dois itens também se compram no Market. Com os dois addons ganhas o achievement **Fully Decayed**.",
+  "start": {
+    "x": 33033,
+    "y": 32428,
+    "z": 7,
+    "label": "Torkada, em Drefia (início da Rotten Blood Quest)"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível **250** (recomendado **700+**; a Rotten Blood Quest recomenda 800+).",
+    "**Outfit base:** concluir a {wiki:Rotten Blood Quest|Rotten Blood Quest} derrotando o {creature:Bakragore}.",
+    "Para entrares no Blood Vestibule pela primeira vez (parte da Rotten Blood Quest): 2× {item:Bloody Tears} **ou** 5.000.000 gp.",
+    "Feitiço {spell:Levitate} para chegares à entrada do templo em Drefia (precisas sempre dele, porque o outfit base exige a Rotten Blood Quest completa).",
+    "Para usares a {item:Cursed Wood} ou a {item:Darklight Geode} tens de **já ter o outfit base**; sem ele recebes a mensagem *\"You do not have the base outfit for this addon piece.\"*."
+  ],
+  "items_needed": [
+    {
+      "item": "Cursed Wood",
+      "note": "addon 1; drop do Ichgahal ou compra no Market"
+    },
+    {
+      "item": "Darklight Geode",
+      "note": "addon 2; drop do Chagorz ou compra no Market"
+    },
+    {
+      "item": "Rope",
+      "note": "para o caminho de entrada e saída do templo em Drefia"
+    },
+    {
+      "item": "Temple Teleport Scroll",
+      "note": "opcional: o wiki não descreve a saída das zonas de caça nem do Blood Vestibule"
+    },
+    {
+      "item": "Magic Wall Rune",
+      "note": "útil para bloquear as ondas dos Radicular Totems no Putrefactory"
+    },
+    {
+      "text": "Muitas poções e proteções elementais adequadas a cada zona (ver cada secção)"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Decaying Defender Outfits|Decaying Defender Outfit} base (masculino e feminino), ao derrotar o Bakragore na Rotten Blood Quest"
+    },
+    {
+      "text": "Addon 1, ao usar a {item:Cursed Wood}"
+    },
+    {
+      "text": "Addon 2, ao usar a {item:Darklight Geode}"
+    },
+    {
+      "text": "Achievement **Fully Decayed** (2 pontos), ao teres os dois addons"
+    }
+  ],
+  "achievements": [
+    "Fully Decayed"
+  ],
+  "unlocks": [
+    {
+      "what": "Addons 1 e 2 dos Decaying Defender Outfits",
+      "kind": "funcionalidade",
+      "place": "Decaying Defender Outfits",
+      "when": "Ao usares a {item:Cursed Wood} (addon 1) e a {item:Darklight Geode} (addon 2), já com o outfit base da {wiki:Rotten Blood Quest|Rotten Blood Quest}.",
+      "note": "Precisas de Premium. Os dois itens podem ser comprados no Market."
+    }
+  ],
+  "dangers": [
+    "Ichgahal",
+    "Chagorz",
+    "Bakragore",
+    "Murcion",
+    "Vemiath",
+    "Elder Bloodjaw",
+    "Bloodjaw",
+    "Oozing Carcass",
+    "Sopping Carcass",
+    "Rotten Man-Maggot",
+    "Meandering Mushroom",
+    "Darklight Emitter",
+    "Darklight Construct",
+    "Wandering Pillar",
+    "Converter",
+    "Pillar of Dark Energy"
+  ],
+  "npcs": [
+    "Torkada",
+    "A Bloodshade"
+  ],
+  "tips": [
+    "A {item:Cursed Wood} e a {item:Darklight Geode} são **comercializáveis** (Market) e nenhum NPC as compra ou vende. Se não quiseres caçar os bosses, compra-as a outros jogadores: o efeito é igual. Só precisas sempre do outfit base, que exige a Rotten Blood Quest completa.",
+    "O {creature:Ichgahal} e o {creature:Chagorz} têm cada um **20 horas de cooldown** e **15 minutos** de luta, e os dois itens são drops **raros**. Conta com várias tentativas.",
+    "Estas lutas são feitas para equipas organizadas: o **Paladin** é o bloqueador principal (foge com o boss), o **Knight** segura os {creature:Elder Bloodjaw|Elder Bloodjaws}, e druid/sorcerers atacam à distância.",
+    "Knights: usa o {item:Necklace of the Deep} na maior parte do tempo por causa do muito dano de Life Drain dos Elder Bloodjaws. Paladins: evita passos na diagonal e usa {wiki:Powerful Vibrancy|Powerful Vibrancy}, porque todos os bosses lançam {wiki:Paralyse|Paralyse} sem parar.",
+    "Matar outra vez o mesmo boss **não** te dá um novo taint. O nível de taints da equipa é o do membro com **menos** taints (ver «Taints» em baixo)."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base: concluir a Rotten Blood Quest",
+      "intro": "O outfit base é a recompensa final da {wiki:Rotten Blood Quest|Rotten Blood Quest}. Aqui fica o resumo do caminho e do que tens de fazer; para todos os pormenores das quatro zonas e do Bakragore segue o guia dessa quest. Estes passos também te levam ao Blood Vestibule, onde vais caçar os itens dos addons.",
+      "steps": [
+        {
+          "title": "Chegar a Darashia",
+          "text": "Viaja até **Darashia**: de barco (o {npc:Petros} liga Darashia a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi, Krailos e Gray Island; no capitão dessa cidade diz {key:hi}, {key:darashia} e {key:yes} e chegas ao porto do Petros) ou de tapete voador (chegas ao {npc:Chemar}).",
+          "coords": [
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Petros, porto de Darashia"
+            },
+            {
+              "x": 33270,
+              "y": 32439,
+              "z": 6,
+              "label": "Chemar, tapete voador de Darashia"
+            }
+          ]
+        },
+        {
+          "title": "Chegar a Drefia",
+          "text": "{wiki:Drefia|Drefia} fica a **oeste** de Darashia ({coord:33018,32443,7}), do outro lado das montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Sai de Darashia para oeste e usa a {item:Rope} para subires a montanha neste sítio {coord:33048,32429,7} (ou vem pela passagem entre Darashia e Ankrahmun). Na montanha há muitos {creature:Scorpion|Scorpions}.",
+          "coords": [
+            {
+              "x": 33048,
+              "y": 32429,
+              "z": 7,
+              "label": "Sítio de corda para subir para Drefia"
+            },
+            {
+              "x": 33018,
+              "y": 32443,
+              "z": 7,
+              "label": "Drefia"
+            }
+          ],
+          "images": [
+            {
+              "file": "Drefia Map.gif",
+              "caption": "Mapa de Drefia"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Torkada",
+          "text": "Em Drefia, fala com o {npc:Torkada}: diz {key:hi}, {key:expedition}, {key:mission} e {key:yes}. Ele conta que uma expedição da Inquisição encontrou a entrada de um templo maligno, abençoa-te e deixa-te entrar no templo.",
+          "npc": "Torkada",
+          "coords": [
+            {
+              "x": 33033,
+              "y": 32428,
+              "z": 7,
+              "label": "Torkada, em Drefia"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "expedition"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Chegar à entrada do Blood Vestibule",
+          "text": "Vai ao sítio de {spell:Levitate} a **noroeste** do Torkada ({coord:32989,32393,7}) e sobe com *exani hur up*. Passa pelos 2 {creature:Ghoul|Ghouls}, desce as escadas e depois desce pelo buraco. Desce outra vez pelas escadas que estão logo a **nordeste** e segue para **sudoeste** até uma porta entre dois pilares de calcário. Passa a porta: logo à entrada do {wiki:Blood Vestibule|Blood Vestibule} está o {npc:A Bloodshade}.",
+          "npc": "A Bloodshade",
+          "coords": [
+            {
+              "x": 32989,
+              "y": 32393,
+              "z": 7,
+              "label": "Sítio de Levitate (entrada do templo)"
+            },
+            {
+              "x": 32956,
+              "y": 32398,
+              "z": 9,
+              "label": "A Bloodshade, entrada do Blood Vestibule (3 pisos abaixo do sítio de Levitate)"
+            }
+          ],
+          "tip": "Guarda a {item:Rope}: vais precisar dela para voltar a subir por este buraco quando saíres."
+        },
+        {
+          "title": "Pagar a entrada no reino de sangue",
+          "text": "Fala com o {npc:A Bloodshade} ({key:hi}, {key:quest}). Para entrares no reino sanguíneo tens de sacrificar **2 {item:Bloody Tears}** ou **5.000.000 gp** (escolhe o ouro com {key:detour}). Para as lágrimas, usa o prato de sacrifício duas vezes com elas contigo (pode ser preciso clicar várias vezes até serem consumidas). Depois disso a poça de sangue funciona como portal: entra nela e chegas ao {wiki:Blood Vestibule|Blood Vestibule}, onde está o Altar.",
+          "npc": "A Bloodshade",
+          "warning": "Não entres na poça de sangue antes de fazeres o sacrifício: levas {wiki:Agony Damage|Agony Damage} que tira uma percentagem da tua vida.",
+          "coords": [
+            {
+              "x": 34070,
+              "y": 32009,
+              "z": 14,
+              "label": "Blood Vestibule (Altar)"
+            }
+          ]
+        },
+        {
+          "title": "Matar os quatro filhos do Bakragore",
+          "text": "Dentro do Blood Vestibule, fala outra vez com o {npc:A Bloodshade} ({key:quest}): tens de matar dois pares de gémeos malignos antes de chegares ao Bakragore. Há quatro salas com {item:Spheric Teleporter|Spheric Teleporters}; cada um leva a uma zona de caça. Em cada zona, toda a equipa tem de encher o contador de **Rotten Charges** até **100** para entrar na sala da alavanca do boss. Podes matá-los por qualquer ordem, mas a ordem mais usada é a da tabela. Cada boss morto dá um {wiki:Bakragore's Taints|Bakragore's Taint} à equipa, sempre pela mesma ordem.",
+          "npc": "A Bloodshade",
+          "table": {
+            "head": [
+              "Ordem",
+              "Zona",
+              "Boss",
+              "Taint recebido"
+            ],
+            "rows": [
+              [
+                "1",
+                "Jaded Roots",
+                "{creature:Murcion}",
+                "1.º: monstros corpo-a-corpo podem trocar de posição contigo (6%)"
+              ],
+              [
+                "2",
+                "Darklight Core",
+                "{creature:Vemiath}",
+                "2.º: pode nascer um {creature:Bloodjaw} do cadáver (6,25%); +1 Elder Bloodjaw nas lutas de boss"
+              ],
+              [
+                "3",
+                "Gloom Pillars",
+                "{creature:Chagorz}",
+                "3.º: monstros podem prender-te (root) e usam um 4.º elemento"
+              ],
+              [
+                "4",
+                "Putrefactory",
+                "{creature:Ichgahal}",
+                "4.º: recebes +14% de dano de tudo na Rotten Blood"
+              ]
+            ]
+          },
+          "tip": "As zonas do Putrefactory e das Gloom Pillars e as lutas com o Ichgahal e o Chagorz estão explicadas em detalhe nas secções 2 e 3; a Jaded Roots, o Darklight Core e o Bakragore estão no guia da {wiki:Rotten Blood Quest|Rotten Blood Quest}. O wiki não descreve a saída das zonas nem das salas de boss: depois de cada luta, volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}).",
+          "coords": [
+            {
+              "x": 33842,
+              "y": 31664,
+              "z": 14,
+              "label": "Jaded Roots (Murcion)"
+            },
+            {
+              "x": 34118,
+              "y": 31880,
+              "z": 14,
+              "label": "Darklight Core (Vemiath)"
+            },
+            {
+              "x": 33810,
+              "y": 31824,
+              "z": 14,
+              "label": "Gloom Pillars (Chagorz)"
+            },
+            {
+              "x": 34100,
+              "y": 31688,
+              "z": 14,
+              "label": "Putrefactory (Ichgahal)"
+            }
+          ]
+        },
+        {
+          "title": "Derrotar o Bakragore",
+          "text": "Com os quatro taints (os quatro filhos mortos), a equipa pode lutar contra o {creature:Bakragore}, no Blood Vestibule. Têm **25 minutos**. O boss luta com quatro {creature:Elder Bloodjaw|Elder Bloodjaws} e junta mecânicas dos filhos (Mushrooms, rastos de Mould, Darkfields, Pillars of Dark Energy e a Rotten Charge a cada 90 segundos). Quando o derrotares recebes o **outfit base** e a autorização para fazer {wiki:Crimson Offering|Crimson Offerings} no altar do Blood Vestibule.",
+          "warning": "Se a equipa falhar a luta, perde os **dois últimos taints** e o progresso de **dois bosses ao acaso** (os mesmos para toda a equipa). O Bakragore tem cooldown de 2 dias e 20 horas.",
+          "images": [
+            {
+              "file": "Decaying Defender Outfits Artwork.jpg",
+              "caption": "Arte oficial dos Decaying Defender Outfits"
+            }
+          ],
+          "reward": "Decaying Defender Outfit (base)",
+          "coords": [
+            {
+              "x": 34070,
+              "y": 32009,
+              "z": 14,
+              "label": "Altar das Crimson Offerings (Blood Vestibule)"
+            }
+          ]
+        },
+        {
+          "title": "Sair do Blood Vestibule",
+          "text": "O wiki não descreve a saída do Blood Vestibule. Volta ao sítio onde chegaste pela poça de sangue e regressa por aí à sala do {npc:A Bloodshade} em Drefia; se não encontrares a saída, usa um {item:Temple Teleport Scroll} (vais para o templo e já não precisas do passo seguinte).",
+          "coords": [
+            {
+              "x": 32956,
+              "y": 32398,
+              "z": 9,
+              "label": "A Bloodshade (Drefia, entrada do templo)"
+            }
+          ]
+        },
+        {
+          "title": "Sair do templo e de Drefia",
+          "text": "Da sala do A Bloodshade, refaz o caminho ao contrário: sai pela porta entre os pilares de calcário, segue para **nordeste** até às escadas e sobe-as, sobe pelo buraco com a {item:Rope}, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate}, onde desces com *exani hur down*. Depois volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia, onde apanhas o barco do {npc:Petros} ou o tapete do {npc:Chemar}.",
+          "coords": [
+            {
+              "x": 32989,
+              "y": 32393,
+              "z": 7,
+              "label": "Sítio de Levitate (desce com exani hur down)"
+            },
+            {
+              "x": 33048,
+              "y": 32429,
+              "z": 7,
+              "label": "Sítio de corda (caminho para Darashia)"
+            },
+            {
+              "x": 33289,
+              "y": 32481,
+              "z": 6,
+              "label": "Petros, porto de Darashia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Primeiro addon: Cursed Wood (Ichgahal, Putrefactory)",
+      "intro": "A {item:Cursed Wood} (\"This wood has an otherworldly strength and sturdiness.\") só cai do {creature:Ichgahal}. Ou a compras no Market, ou caças o boss com a tua equipa.",
+      "steps": [
+        {
+          "title": "Opção rápida: comprar no Market",
+          "text": "Procura **Cursed Wood** no Market de qualquer depot e compra-a. Nenhum NPC a vende. Se a comprares, salta para o passo «Usar a Cursed Wood».",
+          "tip": "O preço é negociado entre jogadores; compara as ofertas antes de comprar."
+        },
+        {
+          "title": "Preparar os taints da equipa (opcional)",
+          "text": "Se já acabaste a quest, lembra-te de que o nível de taints da equipa é o do membro com **menos** taints, e que cada taint extra traz mais Elder Bloodjaws e penalizações (mas também mais loot e experiência). Se quiseres limpar os teus taints, fala com o {npc:A Bloodshade}: {key:hi}, {key:manage}, depois {key:lesser} (só os taints normais) ou {key:great} (também o taint final do Bakragore) e confirma com {key:yes}.",
+          "npc": "A Bloodshade",
+          "dialogue": [
+            {
+              "you": "manage"
+            },
+            {
+              "npc": "I can lift the lesser taints from you, all at once. I also can lift the great taint from you. Choose wisely, as your mortal body can only handle this procedure once every 68 hours."
+            },
+            {
+              "you": "lesser"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "warning": "Só podes fazer isto **uma vez a cada 68 horas**, e remove **todos** os taints desse tipo de uma vez."
+        },
+        {
+          "title": "Ir para o Putrefactory",
+          "text": "Chega ao Blood Vestibule como na secção 1 (Darashia, Drefia, sítio de Levitate, A Bloodshade e poça de sangue). Lá dentro, entra na sala do {item:Spheric Teleporter} do {wiki:Putrefactory|Putrefactory} e usa-o. Os monstros daqui dão dano de **Death**, **Ice** e **Energy** (e **Earth** a quem tem 3+ taints) e são fracos a **Holy**, **Earth** e **Fire**. Equipa proteção contra Death, Ice e Earth.",
+          "coords": [
+            {
+              "x": 34100,
+              "y": 31688,
+              "z": 14,
+              "label": "Putrefactory (zona de caça)"
+            }
+          ],
+          "warning": "Os {wiki:Radicular Totem|Radicular Totems} são indestrutíveis e estão em todas as salas grandes. Lançam ondas de **4500 de dano Earth** que chegam muito longe (mesmo fora do teu ecrã), em sentido horário: leste, sul, oeste e depois norte. Cada criatura que morre perto de um totem dá-lhe uma carga (+10% de dano por carga). Podes bloquear as ondas com {item:Magic Wall Rune|Magic Walls}, mas as criaturas também partem as paredes."
+        },
+        {
+          "title": "Encher o contador de Rotten Charges",
+          "text": "Toda a equipa precisa de **100 Rotten Charges** (o contador com a seta para cima ao lado do nome) para entrar na sala do boss. O contador sobe sozinho enquanto estás na zona de caça: 1 carga a cada 20 segundos, cheio em **33 minutos**. Para acelerar, usa as mecânicas da zona:",
+          "table": {
+            "head": [
+              "Ação",
+              "Cargas",
+              "Tempo poupado"
+            ],
+            "rows": [
+              [
+                "Usar {item:Lichen Gobbler} em certos tiles do **piso de baixo** da zona",
+                "+1",
+                "20 segundos"
+              ],
+              [
+                "Usar um {item:Spore Reservoir}",
+                "+15",
+                "5 minutos"
+              ]
+            ]
+          },
+          "tip": "Os {item:Lichen Gobbler|Lichen Gobblers} caem dos próprios monstros do Putrefactory ({creature:Oozing Carcass}, {creature:Sopping Carcass}, {creature:Rotten Man-Maggot} e {creature:Meandering Mushroom})."
+        },
+        {
+          "title": "Entrar na sala do Ichgahal",
+          "text": "Com o contador de todos a 100, entrem na sala da alavanca do boss e usem a alavanca para enfrentar o {creature:Ichgahal}. A luta dura no máximo **15 minutos** e o boss tem **20 horas** de cooldown.",
+          "warning": "O Ichgahal luta com dois {creature:Elder Bloodjaw|Elder Bloodjaws} (mais, conforme os taints da equipa). Equipa proteção contra **Life Drain** e **Death**."
+        },
+        {
+          "title": "Derrotar o Ichgahal",
+          "text": "O {creature:Ichgahal} deixa rastos de **Spores** por onde passa. No primeiro estado, tocar-lhes dá pouco Agony Damage e um *lesser hex*. Passados uns segundos viram **Volatile Funghi**: tocar-lhes dá muito Agony Damage e um *greater hex* durante 15 segundos, e o funghi transforma-se numa **Spore Cloud**, ainda mais perigosa. O boss **cura 13.500 HP** por cada Volatile Funghi que pisa e **27.000 HP** por cada Spore Cloud, por isso tem de andar sempre para terreno limpo. Durante toda a luta invoca até 8 {wiki:Mushroom|Mushrooms} à volta dele, que explodem passado um tempo ou quando te aproximas (2.500+ de Life Drain numa área pequena).",
+          "table": {
+            "head": [
+              "Estratégia",
+              "Como se faz"
+            ],
+            "rows": [
+              [
+                "Knight no canto",
+                "O Knight usa {spell:Challenge} em todos os Elder Bloodjaws e fica num canto, com um Druid perto a curá-lo. A sala é grande: o Paladin corre meia volta do outro lado da sala com o boss e os atiradores ficam longe da vista dos Elder Bloodjaws (evitas as trocas de posição do 1.º taint)."
+              ],
+              [
+                "Volta completa",
+                "Como no {creature:Murcion}: o Paladin corre em círculo com o boss e o Knight corre a volta inteira com os Elder Bloodjaws, sempre meia volta atrás do Paladin."
+              ]
+            ]
+          },
+          "tip": "É considerado o boss mais fácil da quest. Os ataques mais fortes dele são um Great Death Ring (4.500+), corpo-a-corpo (1.600+) e uma Physical Ball (1.200+); também drena mana e paralisa."
+        },
+        {
+          "title": "Lootar a Cursed Wood",
+          "text": "Abre o corpo do Ichgahal. Além de Crystal Coins, poções e gemas, ele pode deixar cair a {item:Cursed Wood} (drop **raro**: não apareceu em nenhuma das 29 mortes registadas no wiki). Se não sair, repete a partir do passo «Encher o contador de Rotten Charges» depois das 20 horas de cooldown.",
+          "reward": "Cursed Wood (raro), 3.250.000 de experiência"
+        },
+        {
+          "title": "Sair do Putrefactory",
+          "text": "O wiki não descreve a saída da sala do Ichgahal nem do Putrefactory: depois da luta, volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres do Blood Vestibule e de Drefia, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 1."
+        },
+        {
+          "title": "Usar a Cursed Wood",
+          "text": "Com o outfit base já desbloqueado, usa a {item:Cursed Wood} (clique direito → *Use*). Recebes o **primeiro addon** dos Decaying Defender Outfits.",
+          "warning": "Sem o outfit base recebes a mensagem *\"You do not have the base outfit for this addon piece.\"*.",
+          "reward": "Addon 1 dos Decaying Defender Outfits"
+        }
+      ]
+    },
+    {
+      "title": "3. Segundo addon: Darklight Geode (Chagorz, Gloom Pillars)",
+      "intro": "A {item:Darklight Geode} (\"This geode contains some of the rarerest darklight sediments that can be found.\") só cai do {creature:Chagorz}. Ou a compras no Market, ou caças o boss com a tua equipa.",
+      "steps": [
+        {
+          "title": "Opção rápida: comprar no Market",
+          "text": "Procura **Darklight Geode** no Market e compra-a. Nenhum NPC a vende. Se a comprares, salta para o passo «Usar a Darklight Geode»."
+        },
+        {
+          "title": "Ir para as Gloom Pillars",
+          "text": "Chega ao Blood Vestibule como na secção 1 (Darashia, Drefia, sítio de Levitate, A Bloodshade e poça de sangue). Lá dentro, entra na sala do {item:Spheric Teleporter} das {wiki:Gloom Pillars|Gloom Pillars} e usa-o. Os monstros daqui dão dano de **Holy**, **Fire** e **Earth** (e **Energy** a quem tem 3+ taints) e são fracos a **Physical**, **Death** e **Energy**. Equipa proteção contra Holy, Fire e Earth.",
+          "coords": [
+            {
+              "x": 33810,
+              "y": 31824,
+              "z": 14,
+              "label": "Gloom Pillars (zona de caça)"
+            }
+          ],
+          "warning": "Aqui absorves energia escura (um contador próprio ao lado do nome). Quando chega a **100**, dispara uma corrente dolorosa em cima de ti que salta até **5 alvos** próximos (distância inicial de 3 tiles e saltos até 6 tiles), com mais dano a cada salto: se o primeiro alvo for Knight ou Paladin, 2.250 de Energy a subir 37% por salto; se for Sorcerer ou Druid, 900 a subir 90% por salto. Mantém-te afastado dos colegas quando o teu contador estiver perto de 100."
+        },
+        {
+          "title": "Encher o contador de Rotten Charges",
+          "text": "Tal como no Putrefactory, toda a equipa precisa de **100 Rotten Charges** (sobe sozinho, 1 a cada 20 segundos, cheio em 33 minutos). Para acelerar:",
+          "table": {
+            "head": [
+              "Ação",
+              "Cargas",
+              "Tempo poupado"
+            ],
+            "rows": [
+              [
+                "Usar um {item:Darklight Obsidian Axe} nos pilares",
+                "+1",
+                "20 segundos"
+              ],
+              [
+                "Usar um {item:Darklight Obelisk}",
+                "+15",
+                "5 minutos"
+              ]
+            ]
+          },
+          "tip": "Os {item:Darklight Obsidian Axe|Darklight Obsidian Axes} caem dos monstros da zona ({creature:Darklight Emitter}, {creature:Darklight Construct}, {creature:Wandering Pillar} e {creature:Converter})."
+        },
+        {
+          "title": "Entrar na sala do Chagorz",
+          "text": "Com o contador de todos a 100, entrem na sala da alavanca do boss e usem a alavanca para enfrentar o {creature:Chagorz} (600.000 HP). A luta dura no máximo **15 minutos** e o boss tem **20 horas** de cooldown.",
+          "warning": "O Chagorz luta com dois {creature:Elder Bloodjaw|Elder Bloodjaws} (mais, conforme os taints). Equipa proteção contra **Fire** e **Energy**."
+        },
+        {
+          "title": "Controlar o teu contador de cargas",
+          "text": "Durante a luta tens um contador ao lado do nome que sobe **2 por segundo** até **21**. No máximo, levas **15% da vida máxima** em Agony Damage por segundo. Cada passo que dás \"larga\" uma carga no chão como {wiki:Darkfield|Darkfield} e baixa o contador em 1. Os Darkfields duram 3 segundos e tiram **3% da vida máxima** quando os pisas (ou por segundo enquanto estás em cima). Ou seja, podes levar até 18% por segundo se não tiveres cuidado: anda sempre, mas não pises os teus rastos. O Chagorz **cura 375 HP** por cada Darkfield que pisa."
+        },
+        {
+          "title": "Evitar os Pillars of Dark Energy",
+          "text": "O boss invoca até 8 {creature:Pillar of Dark Energy|Pillars of Dark Energy}. Cada um acorrenta quem estiver ao lado dele com dano de **Fire**; nunca fiques junto de um, e muito menos de vários (as correntes juntam-se em picos de dano enormes). Quem leva a corrente ganha outro contador (máximo 11) que baixa 1 por segundo e dá cerca de **1.200 de Fire** em cada tick.",
+          "warning": "O raio (beam) do Chagorz faz disparar **todas** as cargas desse contador de uma vez. Se tiveres muitas, afasta-te da frente do boss."
+        },
+        {
+          "title": "Usar a Rotten Charge a vosso favor",
+          "text": "A cada **90 segundos** o Chagorz larga uma **Rotten Charge** no centro da sala, que dura 15 segundos. **Se nenhum Elder Bloodjaw a pisar**: a sala avisa aos 6 segundos (*\"The rotten charge is going to explode!\"*) e aos 10 segundos (*\"THE ROTTEN CHARGE WILL EXPLODE SOON!\"*), e aos 15 segundos explode e cada jogador perde **40% da vida máxima**. **Se um Elder Bloodjaw a pisar**, durante 15 segundos: quem está perto não larga Darkfields, o boss não se cura nos campos, os Elder Bloodjaws saem da sala e as resistências do boss baixam bastante. Em troca, o boss prepara um golpe devastador no alvo atual aos 6 e aos 12 segundos.",
+          "table": {
+            "head": [
+              "Alvo do golpe",
+              "1.º golpe",
+              "2.º golpe"
+            ],
+            "rows": [
+              [
+                "Knight",
+                "5% da vida máxima",
+                "10% da vida máxima"
+              ],
+              [
+                "Paladin, Druid ou Sorcerer",
+                "20% da vida máxima",
+                "40% da vida máxima"
+              ]
+            ]
+          },
+          "tip": "O boss grita *\"WILL ... PUNISH ... YOU!\"* no início da mecânica e de novo depois do 1.º golpe, e *\"RAAAR!\"* no 2.º golpe. Por isso o Knight deve ser o alvo nestes 12 segundos."
+        },
+        {
+          "title": "Estratégia da equipa",
+          "text": "A estratégia mais usada: o **Paladin** corre em círculos com o boss na parte **norte** da sala, enquanto os atiradores se dividem pelos lados **oeste** e **leste**. O **Knight** fica com os Elder Bloodjaws e corre em círculos na parte **sul**. Quando aparece a Rotten Charge, o Knight leva os Bloodjaws para cima dela e depois puxa o boss para aguentar os dois golpes. A seguir o Paladin volta a pegar no boss e repete-se tudo até o Chagorz morrer."
+        },
+        {
+          "title": "Lootar a Darklight Geode",
+          "text": "Abre o corpo do Chagorz. Além de Crystal Coins, poções e gemas, ele pode deixar cair a {item:Darklight Geode} (drop **raro**: não apareceu em nenhuma das 22 mortes registadas no wiki). Se não sair, repete a partir do passo «Encher o contador de Rotten Charges» depois das 20 horas de cooldown.",
+          "reward": "Darklight Geode (raro), 3.250.000 de experiência"
+        },
+        {
+          "title": "Sair das Gloom Pillars",
+          "text": "O wiki não descreve a saída da sala do Chagorz nem das Gloom Pillars: depois da luta, volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres do Blood Vestibule e de Drefia, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 1."
+        },
+        {
+          "title": "Usar a Darklight Geode",
+          "text": "Com o outfit base desbloqueado, usa a {item:Darklight Geode}. Recebes o **segundo addon**. Quando tiveres usado os dois itens (Cursed Wood e Darklight Geode), ganhas o achievement **Fully Decayed**.",
+          "warning": "Sem o outfit base recebes a mensagem *\"You do not have the base outfit for this addon piece.\"*.",
+          "images": [
+            {
+              "file": "Decaying Defender Concept.jpg",
+              "caption": "Arte conceptual do Decaying Defender"
+            }
+          ],
+          "reward": "Addon 2 dos Decaying Defender Outfits e achievement Fully Decayed (com os dois addons)"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Resumo dos addons: o **primeiro addon** vem da {item:Cursed Wood} (só a deixa cair o {creature:Ichgahal}, no Putrefactory) e o **segundo addon** da {item:Darklight Geode} (só a deixa cair o {creature:Chagorz}, nas Gloom Pillars). Ambos se compram e vendem no Market.",
+    "Achievement **Fully Decayed** (2 pontos): \"You defeated the embodiments of decay and live to tell the tale, wear the rotting attire of the unfaltering defender proudly.\"",
+    "**Taints:** recebes um taint por cada filho do Bakragore que matas pela primeira vez; repetir o mesmo boss não dá outro. Para ganhar um taint numa luta tens de ter o mesmo número de taints que o membro da equipa com menos, ainda não ter o taint desse boss e causar dano ao boss. Os taints normais desaparecem quando derrotas o Bakragore, quando a equipa falha a luta com ele (perde os dois últimos) ou quando os removes com o {npc:A Bloodshade} (uma vez a cada 68 horas).",
+    "**Taint final:** ao matar o Bakragore recebes o taint final (+4,5% de experiência e mais loot, como um taint normal, mas sem penalizações por si só). Se toda a equipa o tiver, os filhos do Bakragore podem deixar cair as suas essências. Taints normais por cima do taint final aumentam as penalizações (mais trocas de posição, mais Bloodjaws, medo e +21% de dano recebido).",
+    "Quanto mais taints a equipa tiver, mais {creature:Elder Bloodjaw|Elder Bloodjaws} aparecem nas lutas com o Ichgahal e o Chagorz (até 5)."
+  ]
+}

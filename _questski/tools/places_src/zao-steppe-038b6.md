@@ -1,6 +1,6 @@
 # PLACE: Zao Steppe
 slug: zao-steppe-038b6
-mentioned in 9 guides: a-fathers-burden-quest, an-interest-in-botany-quest, an-uneasy-alliance-quest, children-of-the-revolution-quest, elementalist-outfits-quest, mystery-of-the-valley-quest, river-runs-deep-mini-world-change, the-mages-tower-world-change, wrath-of-the-emperor-quest
+mentioned in 12 guides: a-fathers-burden-quest, an-interest-in-botany-quest, an-uneasy-alliance-quest, children-of-the-revolution-quest, elementalist-outfits-quest, heart-of-destruction-quest, mystery-of-the-valley-quest, river-runs-deep-mini-world-change, the-mages-tower-world-change, the-secret-library-quest, the-way-of-the-monk-quest, wrath-of-the-emperor-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Zao Steppe 
@@ -38,6 +38,9 @@ coords: [{'x': 33085, 'y': 31532, 'z': 7, 'label': 'Saída da montanha para a Za
 [an-uneasy-alliance-quest 0-0] Chegar à Zao Steppe
 Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon, ou o {npc:Gurbasch}, 8 andares abaixo de {wiki:Cormaya} (o {npc:Captain Seahorse} leva-te de Edron a Cormaya). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}. Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até saíres para a {wiki:Zao Steppe}. Daí vai para **nordeste** até ao acampamento orc central.
 coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorgrin)'}, {'x': 33085, 'y': 31532, 'z': 7, 'label': 'Saída da montanha para a Zao Steppe'}, {'x': 33173, 'y': 31395, 'z': 7, 'label': 'Curos (acampamento orc central)'}]
+[heart-of-destruction-quest 0-3] Chegar à entrada da Zao Steppe
+Apanha o {wiki:Steamship} para **Farmine** com o {npc:Brodrosch} (muito abaixo de Kazordoon) ou o {npc:Gurbasch} (8 andares abaixo de {wiki:Cormaya}; o {npc:Captain Seahorse} leva-te de Edron a Cormaya com {key:hi}, {key:cormaya}, {key:yes}): {key:hi}, {key:farmine}, {key:yes}. Chegas junto ao {npc:Thorgrin}. Em Farmine, vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo a montanha com {spell:Levitate} (ou parcels/caixas), até saíres na {wiki:Zao Steppe}. Depois segue para **norte**, pelo lado **oeste** da estepe, até ao Messenger. Este vórtice leva ao caminho do **Rupture**.
+coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorgrin)'}, {'x': 33085, 'y': 31532, 'z': 7, 'label': 'Saída da passagem da montanha para a Zao Steppe'}, {'x': 33036, 'y': 31374, 'z': 7, 'label': 'Messenger of Heaven e Glowing Vortex, oeste da Zao Steppe'}]
 [river-runs-deep-mini-world-change 1-3] Ir ao rio da Zao Steppe
 Na estepe, procura o leito do rio seco da {wiki:Zao Steppe}, que agora tem água a correr. A estepe fica a leste da montanha de Farmine e a sul dos {wiki:Dragonblaze Peaks}.
 coords: []

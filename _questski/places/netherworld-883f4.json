@@ -1,0 +1,46 @@
+{
+  "title": "Netherworld",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Lugar entre o mundo dos vivos e o dos mortos, **no subsolo, sob o mar a sul de Quirefang**; entra-se por um portal invisível logo a **leste de {wiki:Banuta}**, na selva de Tiquanda (a nordeste de Port Hope), com a {item:Burial Shroud} vestida. Tem os três minibosses solo da {wiki:Feaster of Souls Quest}.",
+  "entrance": {"x": 32885, "y": 32520, "z": 7, "label": "Entrada invisível do Netherworld (leste de Banuta)"},
+  "requirements": [
+    "Acesso obtido na missão Journey to the Netherworld da {wiki:Feaster of Souls Quest} (conta **Premium**, nível **250**), que o {npc:Para Norbert} te dá depois de derrotares o {creature:Brain Head}. Antes do Netherworld, a missão manda-te tocar o {item:Death Knell} em mais três sítios: {wiki:Edron Vampire Crypt}, {wiki:Cemetery Quarter} (Yalahar) e {wiki:Shadow Tomb} (Ankrahmun).",
+    "Para entrares tens de ter a {item:Burial Shroud} vestida no lugar da armadura. Faz-se nas {wiki:Brain Grounds}: {item:Yarn} do {item:Stump} do extremo **sudeste**, {item:Glittering Yarn} na poça de Ghostly Water e, 1 piso abaixo, o {item:Loom} do extremo **sudoeste**.",
+    "Zona de caça para nível **300+** (Paladins **350+**). Os três minibosses ({creature:Unaz the Mean}, {creature:Irgix the Flimsy} e {creature:Vok the Freakish}) têm de ser mortos **sozinho** e cada um tem 20 horas de espera."
+  ],
+  "items": ["Burial Shroud"],
+  "arrive": [
+    "Apanha um barco para **Port Hope**: de Ankrahmun, o {npc:Captain Sinbeard} ({key:hi}, {key:port hope}, {key:yes}, 80 gp); de Edron, o {npc:Captain Seahorse} (150 gp); de Venore, o {npc:Captain Fearless} (160 gp). Chegas ao cais do {npc:Charles}, no extremo **oeste** de Port Hope ({coord:32529,32785,6}).",
+    "Atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta} ({coord:32807,32542,7}). Atalho: com o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope ({coord:32679,32775,7}), leva-te diretamente a Banuta por 30 gp.",
+    "A entrada do Netherworld fica logo a **leste** de Banuta ({coord:32885,32520,7}): é invisível e só se nota por uma pequena parede.",
+    "Veste a {item:Burial Shroud} no lugar da armadura e pisa a terra junto à pequena parede. Já lá dentro, podes voltar a vestir a tua armadura.",
+    "Lá dentro, passa de uma zona para a seguinte pelos quadrados especiais com uma caveira desenhada (funcionam como teleportes) e procura o portal de cada miniboss. Usa o mapa.",
+    "Outro caminho: a página das {wiki:Brain Grounds} diz que o portal do 2.º piso delas ({coord:31904,32347,9}) também leva ao Netherworld; não diz em que ponto chegas."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída: volta pelos quadrados de caveira até ao sítio onde chegaste e sai por onde entraste, a **leste de Banuta** ({coord:32885,32520,7}).",
+    "Atravessa a selva para **sudoeste** até Port Hope.",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te de barco a outras cidades: {key:hi}, o nome da cidade e {key:yes}. Por exemplo {key:venore} (160 gp, a cidade mais perto do {npc:Para Norbert}), {key:thais} (160 gp), {key:edron} (150 gp), {key:ankrahmun} (110 gp) ou {key:liberty bay} (50 gp).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek (ferry para Banuta, rank Ranger)"},
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+    {"x": 32885, "y": 32520, "z": 7, "label": "Entrada invisível do Netherworld"},
+    {"x": 33543, "y": 31438, "z": 8, "label": "Netherworld (localização indicada pela wiki)"},
+    {"x": 33567, "y": 31476, "z": 8, "label": "Unaz the Mean"},
+    {"x": 33491, "y": 31398, "z": 8, "label": "Irgix the Flimsy"},
+    {"x": 33509, "y": 31451, "z": 9, "label": "Vok the Freakish"},
+    {"x": 31904, "y": 32347, "z": 9, "label": "Portal das Brain Grounds para o Netherworld (2.º piso)"}
+  ],
+  "images": [
+    {"file": "Feaster of Souls Quest - Netherworld.png", "caption": "Mapa do Netherworld"}
+  ],
+  "warnings": [
+    "Sem a {item:Burial Shroud} vestida não entras pela entrada de Banuta: não a vendas nem a deites fora.",
+    "O Netherworld está cheio de {creature:Flimsy Lost Soul|Flimsy}, {creature:Mean Lost Soul|Mean} e {creature:Freakish Lost Soul|Freakish Lost Souls}. Os minibosses podem tirar até 2000 de vida numa ronda e têm um {wiki:Mana Drain} forte.",
+    "No caminho pela selva há {creature:Carniphila}, {creature:Terror Bird|Terror Birds} e {creature:Tarantula|Tarantulas}, e em Banuta os macacos ({creature:Sibang}, {creature:Kongra}, {creature:Merlkin}) atacam em grupo."
+  ]
+}

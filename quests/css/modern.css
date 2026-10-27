@@ -29,7 +29,7 @@ html:root[data-ui="modern"] {
   /* faixas de nível: os mesmos tons, mais saturados e com contraste AA (≥ 4,5:1) para o número branco dos escudos */
   --band-1: #157A4B; --band-2: #3F7A12; --band-3: #7A6A0A; --band-4: #9E5A10;
   --band-5: #B4441A; --band-6: #C4333A; --band-7: #CF2560; --band-8: #B02A8E;
-  --band-9: #8B3BD6; --band-10: #6748E6; --band-11: #3A61DE; --band-12: #0F6E9C; --band-13: #4A4872;
+  --band-9: #8B3BD6; --band-10: #6748E6; --band-11: #3A61DE; --band-12: #0F6E9C; --band-13: #4A4872; --band-14: #7A2E4A;
 
   --bg: #08071A;
   --bg-deep: #060515;
@@ -237,6 +237,8 @@ html[data-ui="modern"] .chip-premium { background: rgba(255, 203, 69, .14); colo
 html[data-ui="modern"] .chip-free { background: var(--ok-soft); color: var(--ok); border-color: rgba(69, 232, 166, .42); }
 html[data-ui="modern"] .chip-done { background: linear-gradient(135deg, #45E8A6, #22D3EE); color: #04201A; border-color: transparent; box-shadow: 0 0 14px rgba(69, 232, 166, .45); }
 html[data-ui="modern"] .chip-cat { background: rgba(139, 92, 246, .20); color: #E6DBFF; border-color: rgba(139, 92, 246, .5); }
+html[data-ui="modern"] .chip-team { background: rgba(20, 184, 166, .16); color: #CCFBF1; border-color: rgba(20, 184, 166, .5); }
+html[data-ui="modern"] .chip-team-grupo { background: rgba(239, 68, 68, .16); color: #FEE2E2; border-color: rgba(239, 68, 68, .5); }
 html[data-ui="modern"] .chip-locked { background: var(--warn-soft); color: var(--warn); border-color: rgba(255, 115, 147, .45); }
 html[data-ui="modern"] .chip-key { background: var(--reward-soft); color: var(--gold); border-color: rgba(255, 203, 69, .42); }
 html[data-ui="modern"] .chip-pass { background: var(--tip-soft); color: var(--tip); border-color: rgba(125, 232, 255, .42); }

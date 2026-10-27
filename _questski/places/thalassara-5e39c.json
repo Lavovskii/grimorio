@@ -1,0 +1,42 @@
+{
+  "title": "Thalassara",
+  "type": "ilha",
+  "near": "Marapur",
+  "summary": "Reino distante e isolado por recifes de coral traiçoeiros, perto de {wiki:Marapur}, onde caiu um fragmento da lua. É o palco da {wiki:Make Believe Quest|Make Believe Quest}: a aldeia de {wiki:Salgadara}, a região de Recifar a **sul**, a cratera da pedra lunar e a base do culto ({wiki:Radiant Skyhold}).",
+  "requirements": [
+    "A entrada faz parte da {wiki:Make Believe Quest|Make Believe Quest}, que pede conta **Premium** e nível **300** (recomendado 800+). Não precisas de nenhuma quest anterior.",
+    "Na primeira vez entras como clandestino: o {npc:Wayland Smythers}, em Venore, dá-te acesso ao armazém onde se carregam os navios de abastecimento para Thalassara."
+  ],
+  "items": ["Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Venore** de barco: no porto da tua cidade diz {key:hi}, {key:venore}, {key:yes} (de Thais, com o {npc:Captain Bluebear}, custa 170 gp). Chegas ao porto do **norte** de Venore, junto ao {npc:Captain Fearless} ({coord:32955,32022,6}).",
+    "**Primeira vez:** procura o {npc:Wayland Smythers} **junto ao templo** de Venore, 1 andar acima do chão ({coord:32960,32075,6}). Diz {key:hi} e segue a conversa: {key:danger}, {key:hear}, {key:Marrow}, {key:spherequake}, {key:moonsilver}, {key:Thalassara}, {key:headstart}, {key:threat}, {key:reputation}, {key:align}, {key:entity}, {key:find}, {key:proceed}, {key:captive}, {key:stronghold}, {key:further}, {key:yes} e {key:infiltration}. Quando ele perguntar se estás pronto para atravessar o armazém, responde {key:yes}.",
+    "No armazém, **clica no caixote** da entrada para te disfarçares de caixote de carga e avança até ao canto **noroeste** da sala. Não fiques ao alcance corpo a corpo (1 sqm) dos guardas, não fiques parado no mesmo sqm (a personagem espirra e és apanhado) e evita os sqm de grelha, que fazem barulho e revelam a tua posição.",
+    "No **noroeste** entra no teleporte: depois de uma pequena cena animada chegas a Thalassara. A wiki não dá as coordenadas do ponto de chegada; daí, caminha para **sudeste** e sobe umas escadas até à aldeia de {wiki:Salgadara}, onde está o {npc:Mayor Pocaro} ({coord:34073,32504,6}).",
+    "**Viagens seguintes:** o {npc:Captain Fearless}, no porto norte de Venore, tem **Thalassara** na lista de destinos por **500 gp** ({key:hi}, {key:thalassara}, {key:yes}). A wiki não diz se ele exige a entrada como clandestino nem onde o barco atraca; se ele recusar, faz primeiro a entrada pelo armazém."
+  ],
+  "leave": [
+    "A wiki **não documenta** nenhum barco nem teleporte de regresso de Thalassara ao continente. Em {wiki:Salgadara} há uma NPC com título de capitã, a {npc:Captain Corsarah} ({coord:34010,32475,6}), mas a wiki não descreve o trabalho nem as rotas dela: podes experimentar {key:hi} e ver o que oferece.",
+    "A saída garantida é um {item:Temple Teleport Scroll} (vem do Daily Reward e expira ao fim de 7 dias) ou um {wiki:Temple Teleport|Temple Teleport} da Store (15 Tibia Coins): ambos te levam logo ao templo da tua cidade.",
+    "O scroll não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block: sai de combate e espera que o bloqueio acabe antes de o usares.",
+    "Para voltares mais tarde, apanha o barco do {npc:Captain Fearless} em Venore (500 gp). Depois de venceres o {creature:Phosphorus}, a sala do {npc:Wayland Smythers} (teleporte a **sudoeste**, no rés-do-chão) tem teleportes de atalho para todos os bosses da quest."
+  ],
+  "coords": [
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto norte de Venore; Thalassara 500 gp)"},
+    {"x": 32960, "y": 32075, "z": 6, "label": "Wayland Smythers (junto ao templo de Venore): acesso ao armazém"},
+    {"x": 34073, "y": 32504, "z": 6, "label": "Mayor Pocaro (Salgadara)"},
+    {"x": 34010, "y": 32475, "z": 6, "label": "Captain Corsarah (Salgadara; rotas não documentadas)"},
+    {"x": 34101, "y": 32519, "z": 7, "label": "Zona do ataque dos Moonspawns, a leste de Salgadara"},
+    {"x": 34105, "y": 32600, "z": 7, "label": "Recifar (Cult Initiates), sul de Thalassara"},
+    {"x": 34107, "y": 32621, "z": 7, "label": "Teleporte do culto (puzzle do gongo)"},
+    {"x": 34144, "y": 32673, "z": 6, "label": "Sala do Mimar Haffar (dentro da cratera)"},
+    {"x": 34067, "y": 32655, "z": 7, "label": "Entrada da base do culto (Radiant Skyhold)"}
+  ],
+  "images": [
+    {"file": "Make Believe Quest - Thalassara Access Task.png", "caption": "O armazém de Venore: atravessa-o disfarçado de caixote até ao teleporte no noroeste"}
+  ],
+  "warnings": [
+    "A wiki não documenta nenhuma forma de voltar de Thalassara ao continente (nem pelo armazém de Venore nem pelo barco do {npc:Captain Fearless}): leva um {item:Temple Teleport Scroll} antes de partires.",
+    "A leste de Salgadara há um ataque de Moonspawns a cada **30 minutos**, que acaba com o {creature:Moonspawn Juggernaut} (imune a Earth). Os bosses e as zonas de caça da ilha são para níveis muito altos (a quest recomenda 800+)."
+  ]
+}

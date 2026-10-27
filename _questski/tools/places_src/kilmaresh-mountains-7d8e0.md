@@ -1,6 +1,6 @@
 # PLACE: Kilmaresh Mountains
 slug: kilmaresh-mountains-7d8e0
-mentioned in 1 guides: kilmaresh-quest
+mentioned in 2 guides: kilmaresh-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Kilmaresh Mountains 
@@ -24,7 +24,9 @@ mentioned in 1 guides: kilmaresh-quest
  Name Exp HP Max. Damage Loot | Gryphon 1,000 3,200 500 This creature drops no loot.
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[the-way-of-the-monk-quest 10-1] Ir às Kilmaresh Mountains
+As {wiki:Kilmaresh Mountains} ficam no **centro** da ilha de Kilmaresh, a sul de Issavi, entre a Central Steppe e a Southern Steppe. Sai da cidade para **sul** e atravessa as estepes até à montanha. Aqui vivem {creature:Gryphon|Gryphons}, além das criaturas do resto da ilha.
+coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [kilmaresh-quest 1-3] Gryphon Mask
@@ -35,4 +37,7 @@ Antes de recolher os ingredientes precisas destas ferramentas:
 coords: [{'x': 33873, 'y': 31446, 'z': 8, 'label': 'Sarcófago com a Ritual Scissors'}, {'x': 33898, 'y': 31477, 'z': 7, 'label': 'Caixa com o Bark Peeler'}]
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
+coords: []
+[the-way-of-the-monk-quest 0-3] Os 10 santuários
+Os santuários estão espalhados pelo mapa e têm de ser usados **por esta ordem**. Cada um tem um nível mínimo e dá uma recompensa; os Monks recebem recompensas próprias. Para usares um santuário, chega ao local e **usa-o** (Use).
 coords: []

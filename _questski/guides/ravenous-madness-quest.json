@@ -1,0 +1,198 @@
+{
+  "slug": "ravenous-madness-quest",
+  "category": "historia",
+  "region": "Thais",
+  "difficulty": 2,
+  "team": "solo",
+  "duration": "30–45 min",
+  "summary": "O {npc:Hector The Mentor}, filósofo de Thais e mentor da academia de Edron, perdeu os seus alunos numa gruta a leste de Thais, atacados por lobos raivosos. Desce à Rabid Wolf Cave, abre caminho entre {creature:Rabid Wolf|Rabid Wolves} e {creature:Cave Rat|Cave Rats}, derrota o mini-boss {creature:Trollwut} e recolhe o {item:Maddening Mushroom} que enlouquece os animais. No fim escolhes uma recompensa conforme a tua vocação e levas o cogumelo ao {npc:Benjamin}, no depot de Thais.",
+  "legend_pt": "Alguns alunos do Hector estavam a fazer experiências de estudos geológicos, a explorar as profundezas deste mundo. Lobos raivosos despedaçaram os alunos que tinham ido mais fundo na gruta, enquanto os outros fugiam para a entrada. No fim, só o Hector se salvou: era o mais lento de todos e não tinha entrado muito no buraco.",
+  "start": {"x": 32476, "y": 32286, "z": 7, "label": "Hector The Mentor, a leste-sudeste de Thais"},
+  "requirements": [
+    "Nível 8 (recomendado 10).",
+    "Não precisa de Premium: é uma quest Free."
+  ],
+  "items_needed": [
+    {"item": "Small Health Potion", "note": "algumas para o caminho e para o Trollwut; o Hector vende-as a 20 gp"},
+    {"item": "Rope", "note": "recomendada por precaução em qualquer gruta; o Hector vende-a a 50 gp"},
+    {"item": "Maddening Mushroom", "note": "obtido na gruta, depois de matares o Trollwut"}
+  ],
+  "rewards": [
+    {"item": "Protection Amulet", "note": "Knight"},
+    {"item": "Poison Arrow", "qty": 25, "note": "Paladin (junto com as Burst Arrows)"},
+    {"item": "Burst Arrow", "qty": 25, "note": "Paladin (junto com as Poison Arrows)"},
+    {"text": "Druid: 10 × {item:Intense Healing Rune}, 10 × {item:Cure Poison Rune} e 10 × {item:Destroy Field Rune}"},
+    {"text": "Sorcerer: 10 × {item:Fire Field Rune}, 10 × {item:Energy Field Rune} e 10 × {item:Poison Field Rune}"},
+    {"item": "Power Ring", "note": "Monk"},
+    {"text": "2 × {item:Small Health Potion} num baú a meio do caminho"}
+  ],
+  "achievements": [],
+  "dangers": ["Rabid Wolf", "Ragged Rabid Wolf", "Cave Rat", "Trollwut"],
+  "npcs": ["Hector The Mentor", "Benjamin"],
+  "tips": [
+    "O {npc:Hector The Mentor} é também uma pequena loja ({key:trade}): vende {item:Small Health Potion} (20 gp), {item:Health Potion} (50 gp), {item:Mana Potion} (56 gp), {item:Antidote Potion} (50 gp), {item:Rope} (50 gp) e {item:Shovel} (50 gp). Compra o que precisares antes de desceres.",
+    "Diz {key:services} ao Hector: ele tem serviços de banco, ensina feitiços e cura-te.",
+    "O Hector compra {item:Wolf Paw} (70 gp), {item:Wolf Tooth Chain} (100 gp) e {item:Bunch of Troll Hair} (30 gp), que os lobos e o Trollwut deixam cair.",
+    "Não mates o {creature:Trollwut} enquanto estás em cima da porta de quest: essa morte não conta e terias de o matar outra vez."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar ao Hector (Thais)",
+      "steps": [
+        {
+          "title": "Ir até Thais",
+          "text": "Se ainda não estiveres em **Thais**, viaja para lá: em qualquer porto com ligação a Thais, fala com o capitão e diz {key:hi}, {key:thais} e {key:yes}. Em Thais, o barco chega ao porto do {npc:Captain Bluebear}, na zona oeste da cidade.",
+          "coords": [{"x": 32310, "y": 32210, "z": 6, "label": "Porto de Thais (Captain Bluebear)"}]
+        },
+        {
+          "title": "Ir até ao Hector",
+          "text": "Sai de Thais para **leste**. O {npc:Hector The Mentor} está fora da cidade, a **leste-sudeste**, na península de Thais, à superfície ({coord:32476,32286,7}). Vais a pé; para voltares à cidade, fazes o mesmo caminho a pé para **oeste-noroeste**.",
+          "npc": "Hector The Mentor",
+          "coords": [{"x": 32476, "y": 32286, "z": 7, "label": "Hector The Mentor"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Aceitar a missão",
+      "steps": [
+        {
+          "title": "Falar com o Hector",
+          "text": "Fala com o {npc:Hector The Mentor}: diz {key:hi} e depois {key:mission}, a palavra que ele destaca no cumprimento. Aceita a missão que ele te propõe: ajudar a descobrir o que se passa na gruta ali perto.",
+          "npc": "Hector The Mentor",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hail, traveller and welcome! I can help you getting started, offer various services or you can assist me on my mission, what shall it be."},
+            {"you": "mission"}
+          ],
+          "tip": "Não há transcrição conhecida da conversa da missão: se ele te fizer uma pergunta, segue as palavras que ele destacar no diálogo."
+        }
+      ]
+    },
+    {
+      "title": "3. Primeira descida: os lobos raivosos (opcional)",
+      "intro": "Matar os 20 lobos e voltar ao Hector é um passo **opcional**. Se o quiseres saltar, faz só o primeiro passo desta secção (chegar à gruta) e segue diretamente a secção 4.",
+      "steps": [
+        {
+          "title": "Chegar à Rabid Wolf Cave",
+          "text": "A gruta (Rabid Wolf Cave, também chamada {wiki:Thais Wolf Den|Thais Wolf Den}) fica a poucos passos do Hector. A partir dele, segue para **leste** e depois um pouco para **norte**, até à entrada na encosta da montanha ({coord:32505,32283,7}). Desce por aí para entrares na gruta.",
+          "coords": [{"x": 32505, "y": 32283, "z": 7, "label": "Entrada da Rabid Wolf Cave"}],
+          "map": {"x": 32505, "y": 32283, "z": 7, "marks": [
+            {"x": 32476, "y": 32286, "label": "Hector The Mentor"},
+            {"x": 32505, "y": 32283, "label": "Entrada da Rabid Wolf Cave"}
+          ]},
+          "images": [{"file": "2024-09-15 162127668 King Waver Hotkey.png", "caption": "Mapa da superfície: o caminho (linha azul) para leste até à entrada da gruta (ponto amarelo)"}]
+        },
+        {
+          "title": "Matar 20 Rabid Wolves",
+          "text": "Dentro da gruta, mata 20 {creature:Rabid Wolf|Rabid Wolves}. Há lobos ao longo do caminho descrito na secção 4: um no troço 1 e muitos nos troços 3 e 4 (usa os mapas dessa secção para te orientares).",
+          "warning": "Os Rabid Wolves batem até 30 por golpe. A nível 8–10, não puxes muitos de uma vez e bebe poções cedo."
+        },
+        {
+          "title": "Reportar ao Hector",
+          "text": "Sai da gruta pelo mesmo caminho por onde entraste (sobe até à entrada, {coord:32505,32283,7}) e volta ao {npc:Hector The Mentor}, um pouco a **oeste**. Diz {key:hi} e {key:mission} para reportares a missão. Depois disso, o objetivo passa a ser encontrar a causa da raiva dos lobos, lá no fundo da gruta.",
+          "npc": "Hector The Mentor"
+        }
+      ]
+    },
+    {
+      "title": "4. O caminho até ao Trollwut",
+      "intro": "Volta a entrar na Rabid Wolf Cave ({coord:32505,32283,7}). O Trollwut está no fundo, 2 andares abaixo da superfície. O caminho tem quatro troços: em cada mapa, segue a linha azul de um ponto amarelo (escadas/passagem) até ao seguinte.",
+      "steps": [
+        {
+          "title": "Troço 1",
+          "text": "Segue a seta azul de **oeste** para **leste** até ao ponto amarelo do outro lado. Aqui encontras um {creature:Rabid Wolf}.",
+          "images": [{"file": "Ravnous Madness Quest 2.png", "caption": "Troço 1: segue a seta de oeste para leste"}]
+        },
+        {
+          "title": "Troço 2",
+          "text": "Segue a linha azul de **sudoeste** para **nordeste**, até ao ponto amarelo seguinte. Aqui encontras dois {creature:Cave Rat|Cave Rats}.",
+          "images": [{"file": "Ravnous Madness Quest 3.png", "caption": "Troço 2: de sudoeste para nordeste"}]
+        },
+        {
+          "title": "Troço 3 e o baú das poções",
+          "text": "Segue a linha azul de **sul** para **norte**. Este troço tem muitos {creature:Cave Rat|Cave Rats} e muitos {creature:Rabid Wolf|Rabid Wolves}. A meio do caminho, do lado **oeste**, abre o baú marcado com um **X** vermelho no mapa para receberes 2 {item:Small Health Potion|Small Health Potions}.",
+          "images": [{"file": "Ravnous Madness Quest 4.png", "caption": "Troço 3: de sul para norte; o X vermelho marca o baú com as poções"}],
+          "reward": "2 × Small Health Potion"
+        },
+        {
+          "title": "Troço 4",
+          "text": "Segue a linha azul a partir do ponto amarelo a **sudeste**, para **noroeste**, depois **norte** e por fim **oeste**, até à porta de quest no fim da linha. Há muitos {creature:Rabid Wolf|Rabid Wolves}. Se o portão à volta do **X** do mapa (a leste do caminho) estiver aberto, podes encontrar também até dois {creature:Ragged Rabid Wolf|Ragged Rabid Wolves}.",
+          "images": [{"file": "Ravnous Madness Quest 5.png", "caption": "Troço 4: o último troço até à porta de quest; o X marca a zona do portão"}],
+          "warning": "Os {creature:Ragged Rabid Wolf|Ragged Rabid Wolves} são mais fortes (120 HP, até 50 por golpe). Cura-te antes de avançares."
+        }
+      ]
+    },
+    {
+      "title": "5. O Trollwut",
+      "steps": [
+        {
+          "title": "Atravessar a porta de quest",
+          "text": "No fim do último troço, atravessa a porta de quest. Do outro lado espera-te o mini-boss {creature:Trollwut}. Afasta-te da porta antes de começares a luta a sério.",
+          "coords": [{"x": 32529, "y": 32167, "z": 9, "label": "Zona do Trollwut (piso -2)"}]
+        },
+        {
+          "title": "Matar o Trollwut",
+          "text": "Luta com o {creature:Trollwut} com tudo o que tens. Tem 280 HP e bate até 55 por golpe (só corpo a corpo). Deixa sempre cair um {item:Platinum Coin} e um {item:Bunch of Troll Hair}.",
+          "images": [{"file": "Ravnous Madness Quest 6.png", "caption": "A luta com o Trollwut, rodeado de campos de fogo"}],
+          "warning": "Se o matares enquanto estás **dentro da porta de quest**, a morte não conta e tens de o matar outra vez.",
+          "tip": "O Trollwut contorna campos de fogo, de energia e de veneno (não passa por cima deles). Se tiveres runas de campo, podes usá-las para o atrasar, como se vê na imagem."
+        }
+      ]
+    },
+    {
+      "title": "6. O cogumelo e a recompensa",
+      "steps": [
+        {
+          "title": "Apanhar o Maddening Mushroom",
+          "text": "Depois de matares o Trollwut, segue para **norte** e entra pela porta de quest. Na sala, usa o cadáver (círculo vermelho na imagem) para obteres um {item:Maddening Mushroom}, um cogumelo infestado usado para enfurecer animais selvagens.",
+          "images": [{"file": "Ravnous Madness Quest 7.png", "caption": "A sala da recompensa: o cadáver (círculo vermelho) e as portas das vocações (X coloridos)"}],
+          "reward": "Maddening Mushroom (item de quest)"
+        },
+        {
+          "title": "Escolher a porta da tua vocação",
+          "text": "Na mesma sala há portas de quest coloridas, uma por vocação. Entra pela porta da tua vocação para receberes a recompensa. As posições abaixo são as da imagem anterior, que só marca as portas de Knight, Paladin, Sorcerer e Druid; nenhuma fonte indica a cor ou a posição da porta do Monk.",
+          "table": {
+            "head": ["Vocação", "Porta", "Recompensa"],
+            "rows": [
+              ["Knight", "Azul (oeste)", "{item:Protection Amulet}"],
+              ["Paladin", "Roxa (noroeste)", "25 × {item:Poison Arrow} e 25 × {item:Burst Arrow}"],
+              ["Sorcerer", "Laranja (nordeste)", "10 × {item:Fire Field Rune}, 10 × {item:Energy Field Rune} e 10 × {item:Poison Field Rune}"],
+              ["Druid", "Verde (leste)", "10 × {item:Intense Healing Rune}, 10 × {item:Cure Poison Rune} e 10 × {item:Destroy Field Rune}"],
+              ["Monk", "Cor não documentada", "{item:Power Ring}"]
+            ]
+          },
+          "reward": "A recompensa da tua vocação"
+        }
+      ]
+    },
+    {
+      "title": "7. Sair da gruta e terminar",
+      "steps": [
+        {
+          "title": "Sair da Rabid Wolf Cave",
+          "text": "Não há atalho de saída conhecido: volta pelo mesmo caminho. Sai da sala da recompensa pelo portão a **sul**, passa a zona do Trollwut e a porta de quest, e refaz os quatro troços ao contrário (do 4 para o 1), sempre pelos pontos amarelos, até voltares à superfície (o Trollwut está 2 andares abaixo dela) e saíres pela entrada da gruta, perto do Hector.",
+          "coords": [{"x": 32505, "y": 32283, "z": 7, "label": "Entrada/saída da Rabid Wolf Cave"}],
+          "tip": "Leva uma {item:Rope}: se alguma passagem for um buraco, é com ela que voltas a subir."
+        },
+        {
+          "title": "Reportar ao Hector",
+          "text": "Volta ao {npc:Hector The Mentor}, um pouco a **oeste** da entrada da gruta, e fala com ele sobre a missão ({key:hi}, {key:mission}). Ele pede-te que leves o {item:Maddening Mushroom} ao {npc:Benjamin}, no depot de Thais, para que o cogumelo seja enviado para a academia de Edron e investigado.",
+          "npc": "Hector The Mentor",
+          "coords": [{"x": 32476, "y": 32286, "z": 7, "label": "Hector The Mentor"}]
+        },
+        {
+          "title": "Entregar o cogumelo ao Benjamin",
+          "text": "Volta a pé para **Thais** (para **oeste-noroeste**) e vai ao depot, na esquina da Harbour Street com a Main Street, onde fica a estação de correios. Fala com o {npc:Benjamin} ({key:hi}) com o {item:Maddening Mushroom} no inventário e entrega-o para terminares a quest.",
+          "npc": "Benjamin",
+          "coords": [{"x": 32350, "y": 32219, "z": 7, "label": "Benjamin, depot de Thais"}],
+          "tip": "As palavras exatas desta entrega não estão registadas: se ele não reagir ao {key:hi}, segue as palavras que ele destacar no diálogo."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A quest aparece no Quest Log em *Tibia Tales*.",
+    "Também é conhecida como **Rabid Wolf Quest** ou **Trollwut Quest** (por vezes escrita *Ravnous Madness Quest*).",
+    "A gruta é uma zona de caça para níveis baixos, introduzida no início de 2024 com o tutorial para novos jogadores na península de Thais."
+  ]
+}

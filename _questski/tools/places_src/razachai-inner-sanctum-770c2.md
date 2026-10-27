@@ -32,6 +32,9 @@ Com as 3 provas feitas recebes *“You have passed the Lion's Tests and are now 
 coords: [{'x': 33128, 'y': 32308, 'z': 8, 'label': 'Mystic Flame para o Inner Sanctum'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[illuminated-warrior-outfits-quest 1-5] Encontrar o Doctor Marrow
+Sai da sala do boss e da cratera pelo caminho por onde entraste (a wiki não descreve outra saída). Ao venceres o Mimar Haffar, tu e a tua equipa ganham acesso à base do culto, a **sudoeste** de Thalassara. Entra, anda para **sul** e entra no teleporte a **leste**; percorre a sala até encontrares o {npc:Doctor Marrow (NPC)|Doctor Marrow} fechado numa sala (no {wiki:Radiant Skyhold|Radiant Skyhold}). Diz {key:hi}, {key:capable}, {key:prison} e {key:explain}, e continua com {key:samples}, {key:interaction}, {key:believers}, {key:purpose}, {key:CREATION}, {key:failure}, {key:god}, {key:unpleasant}, {key:stopped}, {key:traitor}, {key:abomination}, {key:hesitate} e {key:helping}. Ele pede-te para matares o {creature:Maior Domus}, o mordomo traidor que guarda a chave espiritual do santuário interior.
+coords: [{'x': 34067, 'y': 32655, 'z': 7, 'label': 'Entrada da base do culto'}, {'x': 34009, 'y': 32643, 'z': 6, 'label': 'Doctor Marrow'}]
 [in-service-of-yalahar-quest 12-0] Receber a última missão
 Diz {key:mission} a quem escolheste. O **Palimuth** conta que um círculo de Yalahari quer abrir um portal para demónios e que a entrada do santuário interior foi aberta para ti. O **Yalahari** convida-te para uma 'cerimónia' no centro da cidade interior e diz que podes passar todas as portas até ao salão.
 coords: []
@@ -41,6 +44,3 @@ coords: []
 [lions-rock-quest 1-0] Usar o Dead Explorer
 Com os dois itens, vai à gruta subterrânea. Perto do início encontras um {item:Dead Explorer} (corpo). Usa-o para obteres um {item:Lion's Rock Three Tests (Book)|Old Parchment}, que fala das três provas. Se precisares de sair antes de chegares ao Inner Sanctum, volta à superfície pelo mesmo caminho por onde desceste.
 coords: [{'x': 33145, 'y': 32342, 'z': 8, 'label': 'Dead Explorer'}]
-[lions-rock-quest 4-0] Encontrar a sala das gemas
-Na zona **noroeste** do Inner Sanctum, encontra a sala retangular a **sul**, a sudoeste. Tem 4 inscrições de "sol" no chão (encaixes para gemas) e uma rocha no centro. Olha (Look) para cada tile para ver o que representa.
-coords: [{'x': 33074, 'y': 32300, 'z': 9, 'label': 'Sala das gemas'}]

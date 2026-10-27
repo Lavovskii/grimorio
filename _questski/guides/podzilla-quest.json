@@ -1,0 +1,468 @@
+{
+  "slug": "podzilla-quest",
+  "category": "historia",
+  "region": "Edron",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Várias horas, em 2 ou mais sessões (duas salas com alavanca para 5, uma janela de 2 horas para os casulos e o boss final)",
+  "summary": "O {npc:Gunther}, em Edron, viu uma planta gigantesca a avançar pelo mar em direção ao continente: é {wiki:Podzilla|Podzilla}, mais um plano do {creature:Doctor Marrow (Podzilla)|Doctor Marrow}. Navega até ela com o {npc:Captain Seahorse}, entra pela boca da planta, alia-te aos rootthings ({npc:Two Lips} e {npc:Sprout Sentinel}) e cumpre as missões no interior até chegares ao covil do Doctor Marrow. No fim derrotas {creature:The Rootkraken}, recebes o outfit base {wiki:Rootwalker Outfits|Rootwalker} e, na primeira vitória sobre o boss, um {item:Amber Crusher}.",
+  "start": {"x": 33172, "y": 31777, "z": 7, "label": "Gunther, castelo de Edron"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível mínimo **300** (recomendado **600+**): a dificuldade de Podzilla é comparável à de {wiki:Ingol} e da {wiki:Secret Library}.",
+    "Equipa: as salas de *Protect the Bloom* e *For The Sprout* têm alavanca para 5 jogadores e o boss final faz-se em equipa, com um {wiki:Knight} a tanquear.",
+    "A wiki não exige nenhuma quest anterior. A história continua a da {wiki:The Cradle of Monsters Quest} (o vilão é o mesmo Doctor Marrow)."
+  ],
+  "items_needed": [
+    {"item": "Demon Root", "qty": 1, "note": "para poderes falar com os rootthings; cai dos rootthings da zona de caça e é comercializável (Market)"},
+    {"item": "Amber Sickle", "note": "várias, para cortar as raízes da Crimson Death Blossom; caem dos Rootthing Amber Shapers e partem-se após alguns usos ou 2 horas"},
+    {"item": "Gold Coin", "note": "algumas, para atirar aos Powergenerators (missão Coin Toss e boss final)"},
+    {"text": "Proteção contra dano **físico** e de **morte** para o boss final (e de **terra** só quando o Doctor Marrow te estiver a atacar)"},
+    {"text": "Opcional para o boss: sementes ({item:Preserved Dark Seed}, {item:Preserved Red Seed}, {item:Preserved Pink Seed}, etc.) para plantares Blooming Towers"},
+    {"text": "Muitas poções e runas: quase todas as missões são feitas na zona de caça de Podzilla (nível 600)"},
+    {"item": "Temple Teleport Scroll", "note": "opcional, como saída de recurso: a wiki não descreve as saídas das salas de tarefa, da sala do boss nem de Podzilla"}
+  ],
+  "rewards": [
+    {"item": "Amber Crusher", "note": "garantido no loot da primeira vez que matas a The Rootkraken"},
+    {"text": "Outfit base {wiki:Rootwalker Outfits|Rootwalker} (masculino e feminino), dado pelo {npc:Two Lips} no fim"},
+    {"text": "Loot da {creature:The Rootkraken} (700.000 de experiência): {item:Crystal Coin|Crystal Coins}, {item:Platinum Coin|Platinum Coins}, poções, gemas gigantes, armas de âmbar ({item:Amber Sabre}, {item:Amber Bludgeon}, {item:Amber Greataxe}, {item:Amber Kusarigama}), {item:Collar of Orange Plasma}, {item:Root Tentacle} e {item:Strange Inedible Fruit} (1.º addon Rootwalker)"}
+  ],
+  "unlocks": [
+    {"what": "Podzilla (zona de caça)", "kind": "zona", "place": "Podzilla", "when": "Ao entrares pela boca da planta no fim da missão *A Dangerous Journey*."},
+    {"what": "Atalho do Captain Seahorse para Podzilla", "kind": "transporte", "place": "Podzilla", "when": "Depois da primeira viagem bem-sucedida: pede {key:shortcut} ao {npc:Captain Seahorse} em Edron e não tens de repetir a navegação."},
+    {"what": "Jardim sagrado dos rootthings", "kind": "zona", "place": "Podzilla", "when": "Ao dizeres {key:worth} ao {npc:Two Lips} depois de destruíres a Crimson Death Blossom."},
+    {"what": "Atalho (orbe) para o covil do Doctor Marrow", "kind": "zona", "place": "Podzilla", "when": "Ao completares a missão *Coin Toss*: o orbe a sul do teleporte da tarefa (piso -3) leva-te ao último andar, onde está a alavanca da {creature:The Rootkraken}."},
+    {"what": "Boss The Rootkraken", "kind": "funcionalidade", "place": "The Rootkraken", "when": "Depois de *Coin Toss*, pela alavanca na zona central do último andar."},
+    {"what": "Outfit Rootwalker (base)", "kind": "funcionalidade", "place": "Rootwalker Outfits", "when": "Ao dizeres {key:leader} ao {npc:Two Lips} depois de matares a The Rootkraken."},
+    {"what": "Rootwalker Outfits Quest (addons)", "kind": "missao", "place": "Rootwalker Outfits Quest", "when": "Com o outfit base: os addons obtêm-se ao usares uma {item:Strange Inedible Fruit} e uma {item:Petrified Leaf}."}
+  ],
+  "dangers": ["Rootthing Amber Shaper", "Rootthing Bug Tracker", "Rootthing Nutshell", "Quara Looter", "Quara Plunderer", "Quara Raider", "Rootthing Buckler", "Quara Kindler", "Blightling", "Thorn Lily", "Pupated Rootthing", "Enraged Pupated Rootthing", "Writhing Mass", "Rotten Plant Thing", "Angry Plant Thing", "Frenzied Plant Thing", "Doctor Marrow (Podzilla)", "The Rootkraken", "Storm", "Ghost Ship"],
+  "npcs": ["Gunther", "Captain Seahorse", "Atui", "Two Lips", "Sprout Sentinel"],
+  "tips": [
+    "Compra a {item:Demon Root} no Market antes de ires (é comercializável): assim não tens de caçar rootthings só para poderes falar com o Two Lips.",
+    "Planeia a janela de 2 horas: quando cortas as raízes da Crimson Death Blossom, os casulos da missão *Symbiosis* aparecem durante 2 horas. Se não fores fazer tudo de seguida, avança pelo menos até essa missão; senão terás de repetir os Bucklers e as raízes.",
+    "Palavras-chave: o spoiler só documenta {key:gunther} e {key:shortcut} (Captain Seahorse), {key:help} (Atui), {key:worth} e {key:leader} (Two Lips). Nos outros relatórios fala com o NPC ({key:hi}) e segue as palavras destacadas no diálogo.",
+    "Faz as missões em party com experiência partilhada: na missão *Symbiosis* as mortes contam para todos os membros que estejam perto e que causem dano.",
+    "Leva sempre algumas {item:Gold Coin|Gold Coins} na mochila: são precisas na missão *Coin Toss* e outra vez no boss final.",
+    "A wiki não descreve como se sai das salas com alavanca (*Protect the Bloom*, *For The Sprout*, *Coin Toss*), da sala do boss nem de Podzilla para Edron. Leva um {item:Temple Teleport Scroll} como recurso: leva-te ao templo da tua cidade, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block. Depois voltas a Podzilla pelo {key:shortcut} do {npc:Captain Seahorse}."
+  ],
+  "sections": [
+    {
+      "title": "1. The Rise of Podzilla (Edron)",
+      "intro": "O Gunther procura um aventureiro: viu uma planta enorme a navegar em mar aberto, devagar, direita ao continente.",
+      "steps": [
+        {
+          "title": "Chegar a Edron",
+          "text": "Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, a **norte** da cidade, junto ao barco do {npc:Captain Seahorse}. O {npc:Gunther} está no castelo de Edron, um pouco a **sul** do porto.",
+          "coords": [
+            {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+            {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+            {"x": 33172, "y": 31777, "z": 7, "label": "Gunther (castelo de Edron)"}
+          ]
+        },
+        {
+          "title": "Falar com o Gunther",
+          "text": "Fala com o {npc:Gunther} ({key:hi}). Ele conta que viu uma planta gigantesca no mar a caminho do continente e convida-te a travá-la e destruí-la. Aceita o convite e ele manda-te ao navio de Edron, falar com o {npc:Captain Seahorse}.",
+          "npc": "Gunther"
+        },
+        {
+          "title": "Falar com o Captain Seahorse",
+          "text": "Sobe ao barco do {npc:Captain Seahorse} no porto norte de Edron e fala-lhe do Gunther: {key:hi} e {key:gunther}. Embarca no navio que te leva até à planta.",
+          "npc": "Captain Seahorse",
+          "dialogue": [{"you": "hi"}, {"you": "gunther"}]
+        }
+      ]
+    },
+    {
+      "title": "2. A Dangerous Journey (navegar até Podzilla)",
+      "intro": "Já no navio, percebes que só consegues derrotar a planta por dentro: tens de navegar até ela e entrar pela boca.",
+      "steps": [
+        {
+          "title": "Começar a tarefa",
+          "text": "Usa a **alavanca** do navio para começar a navegação."
+        },
+        {
+          "title": "Navegar para oeste até à boca da planta",
+          "text": "Navega sempre para **oeste**, em direção à planta gigante, e entra pela **boca** dela. Pelo caminho aparecem {creature:Storm|Storms}, {wiki:Water Vortex|Water Vortexes} e {creature:Ghost Ship|Ghost Ships}: lançam muitos feitiços de área, baixam o teu contador e podem causar {wiki:Feared|medo} (o personagem foge sem controlo). Mantém-te longe deles.",
+          "images": [{"file": "Feared Icon.gif", "caption": "Ícone do estado Feared (medo)"}],
+          "warning": "Se o contador chegar a **zero**, falhas a tarefa e tens de esperar **10 minutos** antes de tentar outra vez."
+        },
+        {
+          "title": "Atalho para as próximas viagens",
+          "text": "Depois da primeira viagem bem-sucedida já não precisas de repetir a navegação: sempre que quiseres voltar a Podzilla, vai ao {npc:Captain Seahorse} em Edron e pede-lhe o {key:shortcut}.",
+          "npc": "Captain Seahorse",
+          "dialogue": [{"you": "hi"}, {"you": "shortcut"}],
+          "reward": "Acesso direto a Podzilla a partir de Edron"
+        }
+      ]
+    },
+    {
+      "title": "3. Looking for Clues e Contact the Plant People",
+      "intro": "Já dentro da planta, procura pistas sobre o que se passa e arranja aliados entre os rootthings, o povo-planta.",
+      "steps": [
+        {
+          "title": "Falar com o Atui",
+          "text": "Desembarcas no **rés-do-chão** de Podzilla. Sai do navio e fala com o {npc:Atui}, ali perto, para lhe ofereceres ajuda: {key:hi} e {key:help}. Ele cumprimenta-te e diz logo que aquele lugar está perdido, corrompido pelo toque vil do Doctor Marrow.",
+          "npc": "Atui",
+          "coords": [{"x": 33834, "y": 32012, "z": 7, "label": "Atui (rés-do-chão de Podzilla, chegada do navio)"}],
+          "dialogue": [{"you": "hi"}, {"you": "help"}],
+          "images": [{"file": "Podzilla 01.png", "caption": "Podzilla (imagem divulgada na atualização de verão de 2024)"}]
+        },
+        {
+          "title": "Arranjar uma Demon Root",
+          "text": "Para conseguires falar com o povo-planta tens de comer uma {item:Demon Root}. Cai de qualquer rootthing da zona de caça (o Stalk): {creature:Rootthing Amber Shaper}, {creature:Rootthing Bug Tracker} e {creature:Rootthing Nutshell}. Como é comercializável, também a podes comprar no Market antes de vires.",
+          "tip": "Para entrar na zona de caça usa o **teleporte em vórtice**; o primeiro andar da zona é o piso -1."
+        },
+        {
+          "title": "Comer a Demon Root",
+          "text": "Usa (come) a {item:Demon Root}. Aparece a mensagem *You feel countless tiny roots burrowing into your brain!* e passas a poder falar com os rootthings.",
+          "warning": "Ficas {wiki:Drunk|Superdrunk} depois de a comer (o spoiler fala em alguns segundos; a página do item diz 1 minuto): não o faças rodeado de monstros."
+        },
+        {
+          "title": "Chegar ao Two Lips",
+          "text": "Volta ao rés-do-chão de Podzilla e entra no **teleporte verde** a **noroeste**. Sobe as escadas: o {npc:Two Lips} está 1 andar acima.",
+          "coords": [{"x": 33808, "y": 31984, "z": 6, "label": "Two Lips"}]
+        },
+        {
+          "title": "Oferecer ajuda ao Two Lips",
+          "text": "Fala com o {npc:Two Lips} ({key:hi}) e oferece-lhe ajuda para destruir os invasores. Antes de confiar em ti, ele pede-te que proves o teu valor destruindo a **Crimson Death Blossom**.",
+          "npc": "Two Lips",
+          "tip": "O spoiler não indica a palavra exata para oferecer ajuda ao Two Lips: usa a palavra destacada no diálogo dele (com o Atui é {key:help})."
+        }
+      ]
+    },
+    {
+      "title": "4. Crimson Death Blossom / Striking Roots",
+      "intro": "A flor está protegida por 13 **Rootthing Bucklers** e as raízes têm um escudo mágico. Tens de matar os Bucklers, partir o escudo e cortar 10 raízes com Amber Sickles.",
+      "steps": [
+        {
+          "title": "Chegar ao covil da flor",
+          "text": "Entra na zona de caça pelo **teleporte em vórtice** e, no primeiro andar (piso -1), vai para **sul**. A entrada do covil da Crimson Death Blossom fica em {coord:33848,32058,8}.",
+          "coords": [{"x": 33848, "y": 32058, "z": 8, "label": "Entrada do covil da Crimson Death Blossom"}],
+          "images": [{"file": "Crimson Death Flower.gif", "caption": "Crimson Death Blossom"}]
+        },
+        {
+          "title": "Arranjar Amber Sickles",
+          "text": "Para cortar as raízes precisas de {item:Amber Sickle|Amber Sickles}. Caem dos {creature:Rootthing Amber Shaper|Rootthing Amber Shapers}. Cada foice parte-se depois de alguns usos ou ao fim de **2 horas** na mochila, por isso vais quase de certeza precisar de mais do que uma: sê rápido."
+        },
+        {
+          "title": "Preparar os Bucklers",
+          "text": "Conselho do spoiler para teres mais tempo para cortar: deixa todos os **Rootthing Bucklers** com pouca vida, parte as raízes com uma arma corpo-a-corpo e, quando estiveres pronto, mata os 13 o mais depressa possível. Quanto mais rápido os matares, mais tempo tens para cortar antes de algum renascer."
+        },
+        {
+          "title": "Matar os 13 Bucklers e partir o escudo",
+          "text": "Mata os **13 Rootthing Bucklers**. Com todos mortos, o escudo mágico das raízes pode ser partido com **qualquer arma**."
+        },
+        {
+          "title": "Cortar 10 raízes",
+          "text": "Usa a {item:Amber Sickle} nas raízes da flor. Tens de cortar **10 raízes** no total; o progresso aparece no questlog.",
+          "warning": "Assim que um Buckler renascer deixas de conseguir cortar raízes. Se isso acontecer, mata-os outra vez."
+        },
+        {
+          "title": "Reportar ao Two Lips",
+          "text": "Com a flor destruída, volta à superfície: regressa ao rés-do-chão de Podzilla pelo caminho por onde vieste, entra no teleporte verde a **noroeste** e sobe até ao {npc:Two Lips}. Diz {key:worth} para provares o teu valor: ele dá-te acesso ao jardim sagrado.",
+          "npc": "Two Lips",
+          "dialogue": [{"you": "hi"}, {"you": "worth"}],
+          "reward": "Acesso ao jardim sagrado. Durante 2 horas, os rootthings causam menos dano com feitiços a todos os que participaram.",
+          "tip": "Cortar todas as raízes faz aparecer os casulos (Rootthing Cocoons) nas zonas de caça durante **2 horas**, para todos os jogadores. São precisos na missão *Symbiosis* (secção 8). O contador de 2 horas recomeça sempre que alguém volta a fazer esta missão."
+        }
+      ]
+    },
+    {
+      "title": "5. Protect the Bloom",
+      "intro": "Protege **The Bloom** dos **Invader Bugs** com flores que nascem de sementes. Não há perigo nesta sala: só precisas de material para causar dano.",
+      "steps": [
+        {
+          "title": "Entrar na sala",
+          "text": "Mesmo a **leste** do {npc:Two Lips} há um teleporte. Entra nele: chegas a uma sala com uma **alavanca para 5 jogadores**. Junta a equipa e puxa a alavanca.",
+          "coords": [{"x": 33836, "y": 31982, "z": 6, "label": "Teleporte de Protect the Bloom"}]
+        },
+        {
+          "title": "Matar plantas e apanhar sementes",
+          "text": "Mata as **Wildly Growing Plants** da sala e apanha a semente aleatória que deixam cair."
+        },
+        {
+          "title": "Plantar as sementes",
+          "text": "Arrasta a semente para o **andar de baixo**, para um quadrado de **terra fértil**. Nasce uma flor da cor da semente que fica **1 minuto** a lançar feitiços contra os bugs que estejam perto. Cada cor tem um padrão de feitiços diferente."
+        },
+        {
+          "title": "Chegar aos 100 pontos",
+          "text": "Cada **Invader Bug** morto dá 1 ponto. Ganhas a missão aos **100 pontos**.",
+          "warning": "Falhas se o contador de **The Bloom** chegar a 0."
+        },
+        {
+          "title": "Reportar ao Two Lips",
+          "text": "Sai da sala e volta ao {npc:Two Lips} (mesmo andar, a oeste do teleporte) para reportares e receberes a missão seguinte. A wiki não descreve a saída desta sala.",
+          "npc": "Two Lips"
+        }
+      ]
+    },
+    {
+      "title": "6. Quara Quarrel / Heart Attack",
+      "intro": "Os **Quara Kindlers** estão a atacar os **Rootthing Conservators** para destruir o **Plant Heart** (o coração da planta). Tens de apagar o fogo.",
+      "steps": [
+        {
+          "title": "Chegar à sala do coração",
+          "text": "Volta à zona de caça e desce ao piso **-2**. Vai para **nordeste** até uma sala em forma de **coração**.",
+          "coords": [{"x": 33892, "y": 31983, "z": 9, "label": "Sala do coração (piso -2)"}]
+        },
+        {
+          "title": "Apagar o fogo com Potent Dew",
+          "text": "O coração tem um contador de fogo de **100** pontos. Apanha as {item:Potent Dew|Potent Dews} do chão e usa-as no coração: cada uma baixa o contador em 1, mas ele volta a subir passado pouco tempo. Tu e todos os jogadores na sala completam a missão quando o contador ao lado do coração chegar a **1**.",
+          "tip": "Há muita confusão na sala e é fácil não ver a mensagem do questlog: confirma que as chamas desapareceram do coração ou abre o questlog."
+        },
+        {
+          "title": "Reportar ao Two Lips",
+          "text": "Volta à superfície pelo caminho por onde desceste (rés-do-chão, teleporte verde a **noroeste**, sobe) e reporta outra vez ao {npc:Two Lips}.",
+          "npc": "Two Lips",
+          "reward": "Com o coração curado e sem fogo, os feitiços de todos os Quara de Podzilla ficam mais fracos (enquanto o coração arde são 5% mais fortes)."
+        }
+      ]
+    },
+    {
+      "title": "7. Going Deeper e For The Sprout",
+      "intro": "O Sprout Sentinel precisa de ajuda contra os bugs que atacam os rebentos, com o poder da matéria vegetal podre.",
+      "steps": [
+        {
+          "title": "Falar com o Sprout Sentinel",
+          "text": "Volta ao piso **-2** da zona de caça e vai para **noroeste**, até ao {npc:Sprout Sentinel}. Ele diz que precisa da tua ajuda e pede-te que mates os bugs-praga com o poder da matéria vegetal podre.",
+          "npc": "Sprout Sentinel",
+          "coords": [{"x": 33818, "y": 32004, "z": 9, "label": "Sprout Sentinel (piso -2)"}]
+        },
+        {
+          "title": "Entrar na sala de For The Sprout",
+          "text": "Entra no teleporte ao lado do {npc:Sprout Sentinel}. Chegas a outra sala com **alavanca para 5 jogadores**; junta a equipa e puxa-a."
+        },
+        {
+          "title": "Carregar energia corrompida",
+          "text": "Sobe as escadas, mata as **Writhing Masses** e fica em cima do **vórtice verde** que aparece quando morrem. Ficas carregado de energia corrompida e o teu personagem começa a lançar **ondas ou raios** com um padrão aleatório."
+        },
+        {
+          "title": "Matar 100 Pest Bugs",
+          "text": "Desce e usa essas ondas e raios para matar os **Pest Bugs** que tentam destruir os **Fledgling Sprouts**. Precisas de **100** Pest Bugs mortos. A carga acaba ao fim de cerca de **1 minuto**: quando isso acontecer, sobe outra vez, mata outra Writhing Mass e repete até completares.",
+          "warning": "As tuas ondas e raios também ferem os rebentos que estás a proteger. Escolhe bem a posição para não os matares."
+        },
+        {
+          "title": "Reportar ao Sprout Sentinel",
+          "text": "Sai da sala e volta ao {npc:Sprout Sentinel} (piso -2, junto ao teleporte por onde entraste) para reportares. A wiki não descreve a saída desta sala.",
+          "npc": "Sprout Sentinel"
+        }
+      ]
+    },
+    {
+      "title": "8. The Root of Evil e Symbiosis (casulos)",
+      "intro": "A Crimson Death Blossom ainda não foi derrotada: espalhou **Rootthing Cocoons** pela zona de caça e tens de os destruir.",
+      "steps": [
+        {
+          "title": "The Root of Evil",
+          "text": "Ao reportares, o {npc:Sprout Sentinel} conta-te que a Crimson Death Blossom continua viva e espalhou casulos à volta, que têm de ser destruídos.",
+          "npc": "Sprout Sentinel"
+        },
+        {
+          "title": "Confirmar a janela de 2 horas",
+          "text": "Os casulos só existem durante **2 horas** depois de alguém matar os 13 **Rootthing Bucklers** e cortar todas as raízes da Crimson Death Blossom (secção 4).",
+          "warning": "Se já passaram as 2 horas, volta ao covil da flor ({coord:33848,32058,8}) e repete os Bucklers e as raízes antes de procurares casulos."
+        },
+        {
+          "title": "Casulos no piso -1",
+          "text": "Os casulos ficam nos **cantos** dos pisos -1 e -2. Não são difíceis de ver, mas muitas vezes estão no meio de grupos grandes de criaturas. Locais no piso -1:",
+          "map": {"x": 33858, "y": 32028, "z": 8, "marks": [
+            {"x": 33902, "y": 32052, "label": "Casulo"},
+            {"x": 33893, "y": 32067, "label": "Casulo"},
+            {"x": 33895, "y": 32077, "label": "Casulo"},
+            {"x": 33869, "y": 32061, "label": "Casulo"},
+            {"x": 33835, "y": 32086, "label": "Casulo"},
+            {"x": 33815, "y": 32082, "label": "Casulo"},
+            {"x": 33805, "y": 32070, "label": "Casulo"},
+            {"x": 33821, "y": 32034, "label": "Casulo"},
+            {"x": 33809, "y": 32027, "label": "Casulo"},
+            {"x": 33808, "y": 31981, "label": "Casulo"},
+            {"x": 33826, "y": 31975, "label": "Casulo"},
+            {"x": 33846, "y": 31982, "label": "Casulo"},
+            {"x": 33868, "y": 31994, "label": "Casulo"},
+            {"x": 33866, "y": 31979, "label": "Casulo"}
+          ]}
+        },
+        {
+          "title": "Casulos no piso -2",
+          "text": "Locais dos casulos no piso -2:",
+          "map": {"x": 33855, "y": 32027, "z": 9, "marks": [
+            {"x": 33902, "y": 31978, "label": "Casulo"},
+            {"x": 33906, "y": 31991, "label": "Casulo"},
+            {"x": 33869, "y": 32045, "label": "Casulo"},
+            {"x": 33905, "y": 32065, "label": "Casulo"},
+            {"x": 33908, "y": 32061, "label": "Casulo"},
+            {"x": 33912, "y": 32061, "label": "Casulo"},
+            {"x": 33913, "y": 32064, "label": "Casulo"},
+            {"x": 33911, "y": 32069, "label": "Casulo"},
+            {"x": 33910, "y": 32072, "label": "Casulo"},
+            {"x": 33805, "y": 32024, "label": "Casulo"},
+            {"x": 33801, "y": 32083, "label": "Casulo"},
+            {"x": 33800, "y": 32051, "label": "Casulo"},
+            {"x": 33802, "y": 32011, "label": "Casulo"},
+            {"x": 33797, "y": 31974, "label": "Casulo"},
+            {"x": 33845, "y": 31975, "label": "Casulo"},
+            {"x": 33865, "y": 31968, "label": "Casulo"},
+            {"x": 33866, "y": 32026, "label": "Casulo"},
+            {"x": 33872, "y": 32037, "label": "Casulo"}
+          ]}
+        },
+        {
+          "title": "Matar casulos e 20 pupated rootthings",
+          "text": "Mata cada casulo: no lugar dele nasce uma criatura nova. Só as duas *pupated* contam para a missão; precisas de matar **20**.",
+          "table": {
+            "head": ["Criatura que nasce", "Conta?", "Nota"],
+            "rows": [
+              ["{creature:Pupated Rootthing}", "Sim (+1)", "É esta que procuras"],
+              ["{creature:Enraged Pupated Rootthing}", "Sim (+1)", "É esta que procuras"],
+              ["{creature:Blightling}", "Não", "Só atrasa e causa muito dano"],
+              ["{creature:Thorn Lily}", "Não", "Faz muito {wiki:Mana Drain|mana drain}: não fiques encurralado com ela"]
+            ]
+          },
+          "tip": "Em party com experiência partilhada, as mortes contam para todos os membros dentro do alcance de partilha que tenham causado dano."
+        },
+        {
+          "title": "Reportar ao Sprout Sentinel",
+          "text": "Com 20 pupated rootthings mortos, volta ao {npc:Sprout Sentinel} (piso -2, noroeste) e reporta.",
+          "npc": "Sprout Sentinel"
+        }
+      ]
+    },
+    {
+      "title": "9. Coin Toss",
+      "intro": "O Sprout Sentinel pede-te que encontres maneira de partir a parede cintilante (shimmer-wall) do Doctor Marrow. A tarefa é um labirinto com barreiras de energia e vegetação a bloquear o caminho até aos geradores.",
+      "steps": [
+        {
+          "title": "Chegar ao teleporte da tarefa",
+          "text": "Desce ao piso **-3** da zona de caça e entra no teleporte desta tarefa. Leva {item:Gold Coin|Gold Coins}!",
+          "coords": [{"x": 33848, "y": 31986, "z": 10, "label": "Teleporte de Coin Toss (piso -3)"}]
+        },
+        {
+          "title": "Limpar as Undergrowths",
+          "text": "As **Undergrowths** matam-se normalmente. Se ficares em cima do quadrado onde uma renasce, obriga-la a renascer noutro sítio: faz isso para a equipa não perder tempo a matar a mesma várias vezes."
+        },
+        {
+          "title": "Partir as barreiras com Overloads",
+          "text": "As **Powered Energy Barriers** destroem-se quando um **Overload** morre perto delas. Para criar um Overload, ataca a **Charged Energy Coil** no **centro** da sala. Depois de criar o Overload ela passa a **Energy Coil** e tens de esperar alguns segundos até voltar a carregar. Puxa o Overload para junto da barreira e mata-o lá."
+        },
+        {
+          "title": "Atirar moedas ao Powergenerator",
+          "text": "Abre caminho até um **Powergenerator** e atira-lhe uma {item:Gold Coin} (arrasta a moeda para cima dele). O gerador sofre dano e teleporta-se para outro sítio aleatório da sala. Repete o processo até o destruíres.",
+          "reward": "Acesso ao covil do Doctor Marrow (atalho a sul do teleporte desta tarefa)."
+        }
+      ]
+    },
+    {
+      "title": "10. Death to Marrow: The Rootkraken",
+      "intro": "O combate final é no último andar da zona de caça, contra {creature:The Rootkraken} e o {creature:Doctor Marrow (Podzilla)|Doctor Marrow}. Proteções recomendadas: **físico** e **morte**; **terra** só quando o Doctor Marrow te estiver a atacar. Não te esqueças das {item:Gold Coin|Gold Coins}.",
+      "steps": [
+        {
+          "title": "Usar o orbe do atalho",
+          "text": "Com *Coin Toss* completa, tens acesso a um atalho mesmo a **sul** do teleporte da tarefa, no piso -3. Clica no **orbe** e desce as escadas.",
+          "map": {"x": 33849, "y": 31993, "z": 10, "marks": [
+            {"x": 33848, "y": 31986, "label": "Teleporte de Coin Toss"},
+            {"x": 33849, "y": 31998, "label": "Orbe do atalho (a sul)"}
+          ]}
+        },
+        {
+          "title": "Ir até à alavanca da Rootkraken",
+          "text": "No último andar segue para a **zona central**, onde está a alavanca da {creature:The Rootkraken}. Junta a equipa e puxa-a. A wiki não indica o número máximo de jogadores, o cooldown nem o limite de tempo deste boss.",
+          "map": {"x": 33851, "y": 31992, "z": 11, "marks": [
+            {"x": 33849, "y": 31998, "label": "Chegada pelas escadas"},
+            {"x": 33855, "y": 31984, "label": "Alavanca da The Rootkraken (zona central)"}
+          ]}
+        },
+        {
+          "title": "Fase 1: carregar energia",
+          "text": "Na sala estão a {creature:The Rootkraken} e o {creature:Doctor Marrow (Podzilla)|Doctor Marrow}, mas no início **ambos são imunes** a dano: não percas tempo com eles. Sobe pelas escadas a **oeste**, **norte** ou **leste**, mata as **Writhing Masses** e fica em cima dos **vórtices verdes** para ficares carregado de energia corrompida (como em *For The Sprout*)."
+        },
+        {
+          "title": "Partir as Rampant Barriers",
+          "text": "Carregado, sobe pelas escadas do **sul** e posiciona-te para destruir as {creature:Rampant Barrier|Rampant Barriers} com os feitiços automáticos dos vórtices. Repete (carregar e partir barreiras) até chegares ao **Powergenerator**.",
+          "warning": "Com o tempo vão aparecendo plantas invocadas na sala, o que torna as idas e voltas cada vez mais perigosas."
+        },
+        {
+          "title": "Destruir o Powergenerator",
+          "text": "Atira uma {item:Gold Coin} ao **Powergenerator**, como em *Coin Toss*, até o destruíres. A partir daí os dois bosses da sala principal já podem levar dano: o objetivo é matar a {creature:The Rootkraken}."
+        },
+        {
+          "title": "Fase 2: quem te ataca",
+          "text": "Depois do gerador destruído enfrentas:",
+          "table": {
+            "head": ["Inimigo", "Dano", "Efeitos"],
+            "rows": [
+              ["{creature:The Rootkraken}", "Sobretudo físico, algum de morte", "{wiki:Rooted|Root}"],
+              ["{creature:Doctor Marrow (Podzilla)|Doctor Marrow}", "Sobretudo terra, bastante físico", "Root, {wiki:Feared|Fear} e {wiki:Drunk|Superdrunk}"],
+              ["Plantas invocadas: {creature:Rotten Plant Thing}, {creature:Angry Plant Thing}, {creature:Frenzied Plant Thing}", "Sobretudo físico, também terra e morte", "Aparecem em vagas e evoluem até ao estado Frenzied"]
+            ]
+          },
+          "tip": "Segundo a página do boss (valores ainda por confirmar na wiki), a Rootkraken recebe mais dano de fogo (115%) e de terra (110%) e menos de energia (85%)."
+        },
+        {
+          "title": "Afastar o Doctor Marrow",
+          "text": "É possível causar dano ao Doctor Marrow (quando chega a cerca de metade da vida, foge e teleporta-se para fora do combate), mas o recomendado é **atraí-lo para o lado oposto** da sala ao sítio onde vão atacar a Rootkraken. Assim o {wiki:Knight} tanqueia melhor e não leva com o medo (Fear)."
+        },
+        {
+          "title": "Onde lutar",
+          "text": "Luta no canto **sul / sudoeste** da sala: aí é possível prender o boss com a ajuda das paredes."
+        },
+        {
+          "title": "Cuidado com os stacks dos Frenzied",
+          "text": "No estado Frenzied, as plantas aumentam os *stacks* do jogador que estão a atacar; quanto mais stacks tiveres, mais dano levas de tudo no combate. O mínimo de stacks é 100 e diminuem continuamente 10 a cada 4 segundos. Mata as plantas antes de chegarem a Frenzied."
+        },
+        {
+          "title": "Blooming Towers (opcional)",
+          "text": "Tal como em *Protect the Bloom*, podes plantar {item:Blooming Tower (Dark)|Blooming Towers} nos quadrados de terra espalhados pela sala. Não é obrigatório, mas ajuda a causar dano ao boss e a controlar as plantas. Aqui tens de trazer as tuas sementes, que caem dos rootthings e dos Quaras dos primeiros andares de Podzilla:",
+          "table": {
+            "head": ["Semente", "Dano na Rootkraken", "Dano nas plantas", "Área", "Quem a deixa cair"],
+            "rows": [
+              ["{item:Preserved Dark Seed}", "1.050", "35.000", "Área grande", "{creature:Rootthing Amber Shaper}"],
+              ["{item:Preserved Pink Seed}", "450", "15.000", "Área pequena", "Rootthing Amber Shaper, Bug Tracker e Nutshell"],
+              ["{item:Preserved Purple Seed}", "165", "5.500", "?", "Quara Raider, Plunderer e Looter"],
+              ["{item:Preserved Light Blue Seed}", "?", "8.500 – 12.500", "Ondas a rodar no sentido dos ponteiros do relógio", "Quara Raider e Looter"],
+              ["{item:Preserved Red Seed}", "370 – 1.185", "10.000 – 17.500", "Quatro anéis, cada vez maiores", "Rootthing Amber Shaper, Bug Tracker e Nutshell"],
+              ["{item:Preserved Violet Seed}", "?", "?", "Área enorme", "Quara Raider e Looter"],
+              ["{item:Preserved Yellow Seed}", "300 – 315", "10.000 – 15.000", "Raios pequenos em forma de cruz", "Rootthing Amber Shaper, Bug Tracker e Nutshell"]
+            ]
+          }
+        },
+        {
+          "title": "Loot da Rootkraken",
+          "text": "Mata a {creature:The Rootkraken}. Na **primeira** vez, o loot inclui sempre um {item:Amber Crusher}: com ele esmagas {wiki:Wheel of Destiny|gemas} por revelar para obter {item:Lesser Fragment|Lesser Fragments} e {item:Greater Fragment|Greater Fragments} (usos ilimitados, até 10 gemas de cada vez).",
+          "reward": "Amber Crusher (primeira vez) e o loot normal do boss"
+        }
+      ]
+    },
+    {
+      "title": "11. Recompensa e saída",
+      "steps": [
+        {
+          "title": "Voltar ao Two Lips",
+          "text": "Depois do combate, volta à superfície pelo caminho por onde desceste (andares da zona de caça até ao rés-do-chão), entra no teleporte verde a **noroeste** e sobe até ao {npc:Two Lips}. A wiki não descreve a saída da sala do boss: se não a encontrares, usa um {item:Temple Teleport Scroll} (vais para o templo da tua cidade) e volta a Podzilla pelo {key:shortcut} do {npc:Captain Seahorse}, em Edron.",
+          "coords": [{"x": 33808, "y": 31984, "z": 6, "label": "Two Lips"}]
+        },
+        {
+          "title": "Receber o outfit",
+          "text": "Fala com o {npc:Two Lips} e diz {key:leader}. Recebes o outfit base **Rootwalker** (masculino e feminino). A quest fica concluída.",
+          "npc": "Two Lips",
+          "dialogue": [{"you": "hi"}, {"you": "leader"}],
+          "reward": "Outfit {wiki:Rootwalker Outfits|Rootwalker} (base)"
+        },
+        {
+          "title": "Sair de Podzilla",
+          "text": "A wiki não documenta como se volta de Podzilla para Edron. Vai ao rés-do-chão, ao navio onde desembarcaste (perto do {npc:Atui}), e vê no local se há regresso. Se não houver, usa um {item:Temple Teleport Scroll}: leva-te ao templo da tua cidade, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block. Para voltares a Podzilla noutro dia, usa o {key:shortcut} do {npc:Captain Seahorse} em Edron.",
+          "coords": [{"x": 33834, "y": 32012, "z": 7, "label": "Atui (rés-do-chão de Podzilla)"}]
+        },
+        {
+          "title": "Addons (opcional)",
+          "text": "Com o outfit base podes fazer a {wiki:Rootwalker Outfits Quest|Rootwalker Outfits Quest}: o 1.º addon obtém-se ao usares uma {item:Strange Inedible Fruit} (cai da Rootkraken) e o 2.º ao usares uma {item:Petrified Leaf}. Com os dois addons ganhas o achievement **The Rootwalker**."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os efeitos das missões afetam a zona de caça: a *Crimson Death Blossom* faz aparecer os casulos para todos durante 2 horas e reduz o dano dos feitiços dos rootthings aos participantes; o coração curado em *Heart Attack* enfraquece os feitiços dos Quara (5% mais fortes enquanto arde).",
+    "A {creature:The Rootkraken} dá 700.000 de experiência e é um boss da categoria *Archfoe* no Bosstiary.",
+    "O {npc:Petaloid}, em Podzilla, troca 20 {item:Processed Blue Tea Leaves} por um {item:Podzilla's Finest}, um chá feito das folhas azuis que crescem dentro da planta (não é preciso para a quest)."
+  ]
+}

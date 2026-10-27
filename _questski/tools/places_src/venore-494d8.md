@@ -62,6 +62,9 @@ coords: [{'x': 33072, 'y': 32088, 'z': 7, 'label': 'Entrada da Venore Corym Cave
 [hidden-threats-quest 0-0] Chegar à Venore Corym Cave
 A {wiki:Venore Corym Cave} fica no pântano a **leste** de Venore. Sai da cidade pela entrada **leste** e segue pelo pântano até um edifício: sobe as escadas desse edifício e depois desce pelas escadas de mão (ladders) até à gruta. Assim não precisas de usar a corda.
 coords: [{'x': 33002, 'y': 32096, 'z': 7, 'label': 'Entrada leste de Venore'}, {'x': 33073, 'y': 32085, 'z': 7, 'label': 'Edifício de entrada da Venore Corym Cave'}]
+[illuminated-warrior-outfits-quest 0-0] Chegar a Venore
+Viaja até **Venore**: no capitão de barco da tua cidade diz {key:hi}, {key:venore} e {key:yes}. O {npc:Wayland Smythers} está junto ao **templo de Venore**, um andar acima do rés-do-chão.
+coords: [{'x': 32960, 'y': 32075, 'z': 6, 'label': 'Wayland Smythers, junto ao templo de Venore'}]
 [secret-service-quest 13-3] Voltar a Svargrond e a Venore
 Desce da torre e volta à paragem do {npc:Buddel} no acampamento. Diz {key:passage} e {key:svargrond} (ao chegar, diz {key:passage} outra vez para confirmares onde estás). Em Svargrond, apanha o barco da {npc:Captain Breezelda} ({key:hi}, {key:venore}, {key:yes}) para voltares a Venore.
 coords: [{'x': 32020, 'y': 31294, 'z': 7, 'label': 'Paragem do Buddel no acampamento bárbaro'}, {'x': 32347, 'y': 31108, 'z': 6, 'label': 'Captain Breezelda (barco de Svargrond)'}]
@@ -74,6 +77,9 @@ coords: [{'x': 32750, 'y': 32105, 'z': 7, 'label': 'Ninho da Mamma Longlegs'}]
 [swamp-fever-world-change 1-2] Sair da gruta e voltar a Venore
 Sai da Swamp Troll Cave pelo mesmo sítio por onde entraste ({coord:32938,32219,7}) e volta para **norte**, pelo pântano, até Venore e ao asilo do {npc:Ottokar}. Se caçaste em Port Hope, sobe com a {item:Rope} pelo buraco por onde desceste e apanha o barco do {npc:Charles} no porto: {key:hi}, {key:venore}, {key:yes}.
 coords: [{'x': 32938, 'y': 32219, 'z': 7, 'label': 'Saída da Swamp Troll Cave'}, {'x': 32880, 'y': 32117, 'z': 7, 'label': 'Asilo de Venore (Ottokar)'}]
+[the-demon-oak-quest 4-3] Sair da sala e voltar a Venore
+A TibiaWiki não descreve como se sai da sala das recompensas. Procura a saída na própria sala; se não a encontrares, usa um {item:Temple Teleport Scroll} (leva-te ao teu templo, mas não funciona em No-Logout Zones nem com Logout Block ou Protection Zone Block). Já de volta às Plains of Havoc, regressa a pé para **nordeste** até **Venore**.
+coords: []
 [the-pits-of-inferno-quest 0-0] Ir ao buraco a sudoeste de Venore
 Sai de **Venore** pela saída sul e caminha para **sudoeste**. Junto a uma pequena poça de água encontras um buraco tapado. Usa a {item:Shovel} para o abrir e desce.
 coords: [{'x': 32841, 'y': 32231, 'z': 7, 'label': 'Buraco para a Key 3700'}]

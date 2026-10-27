@@ -5,7 +5,7 @@ Site de fãs de Tibia, em português de Portugal, centrado em **hunts solo por v
 Junta dois sites num só, com um switch no topo para passar de um para o outro:
 
 - **Grimório** (`/grimorio/`): hunts, builds, equipamento, Wheel, charms, wiki com preços do Market.
-- **Questski** (`/grimorio/quests/`): guias passo a passo das quests até ao nível 100, com mapa, acessos e wiki própria.
+- **Questski** (`/grimorio/quests/`): guias passo a passo de todas as quests do Tibia (do nível 1 ao endgame), com mapa, acessos e wiki própria.
 
 Os dois partilham o aspeto (Original/Modern), a personagem ativa e as quests concluídas, e ligam-se entre si
 (a pesquisa do Grimório encontra os guias; a wiki do Questski abre as páginas do Grimório).

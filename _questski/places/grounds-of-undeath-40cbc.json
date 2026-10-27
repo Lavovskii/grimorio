@@ -1,0 +1,49 @@
+{
+  "title": "Grounds of Undeath",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Ragiaz}, servo de Ashfalor, **debaixo do mar a leste de Darashia**: é um dos sete seals da {wiki:Ferumbras' Ascension Quest} e entra-se pelo teleporte **sudeste** da sala dos portais do {wiki:Hell Hub}, a que se chega pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33325, "y": 32400, "z": 14, "label": "Teleporte sudeste do Hell Hub (entrada das Grounds of Undeath)"},
+  "requirements": [
+    "Conta **Premium** e **nível 150** para falares com o {npc:Mazarius}, em Darashia.",
+    "As portas do inferno têm de estar abertas para ti: aceita a missão do Mazarius e entrega-lhe 30 {item:Demonic Essence|Demonic Essences} ({key:hi}, {key:short}, {key:yes}, {key:demonic essence}, {key:yes}).",
+    "{item:Teleportation Rod} (dado pelo Mazarius; se o perderes, vende-te outro por 1.000 gp) para enviares a peça da Godbreaker no fim: é isso que completa o seal.",
+    "Nível recomendado pela wiki para esta zona: knights 350, paladins e mages 300.",
+    "Para passares para a parte do boss, **cada jogador** tem de fazer o ritual do {wiki:Dried Well}; um dos itens do ritual obriga a cavar com uma {item:Shovel} (ou uma secret agent tool). O boss é para até **5 jogadores** e só pode ser tentado de 44 em 44 horas."
+  ],
+  "items": ["Demonic Essence", "Teleportation Rod", "Shovel"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco, por exemplo em Venore ao {npc:Captain Fearless} ({key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}), e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}); ou de tapete voador, por exemplo em Edron ao {npc:Pino} ({key:hi}, {key:darashia}, {key:yes}, 40 gp), e chegas à plataforma do {npc:Chemar} ({coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** da cidade ({coord:33271,32395,7}), e desce 1 andar (subsolo): ele está aí ({coord:33275,32392,8}).",
+    "Com o acesso aberto (as 30 Demonic Essences entregues), entra no portal a **norte** do Mazarius. Apareces numa zona de proteção (sala segura): prepara-te aqui.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}; no fim da gruta, desce as escadas até à sala dos portais do {wiki:Hell Hub}.",
+    "Na sala dos portais, segue o caminho até ao teleporte **sudeste** ({coord:33325,32400,14}) e entra: estás nas Grounds of Undeath.",
+    "Na salinha a seguir ao teleporte, **cada jogador** apanha uma {item:Grave Flower} da que está plantada no chão (volta a nascer em cerca de 30 segundos). Desce pelo buraco e volta a descer a **norte**: aí encontras {item:The Rite of Eternal Night}.",
+    "Continua pelo caminho: usa a {item:Shovel} à frente da pequena lápide branca ({item:House Silversun's Signet Ring}), depois, a **sudeste** dela, o caixão com a flor azul ({item:Bones (Item)|Bones}) e, mais a **sul**, as cinzas ({item:Vampire Teeth}).",
+    "Com os itens todos, desce pelo buraco até à zona segura do {wiki:Dried Well} e faz o ritual: usa os 4 itens no canto **sudeste** do poço, apaga a tocha da estátua a **noroeste** e usa o Rite junto ao poço. Quando correr sangue do poço, entra no portão a **norte** e segue o caminho até à sala da alavanca do {creature:Ragiaz}."
+  ],
+  "leave": [
+    "Depois de matares o {creature:Ragiaz}, sai da sala e usa o {item:Teleportation Rod} na peça da {wiki:The Godbreaker}: o teleporte de saída devolve-te à sala segura (zona de proteção) antes da entrada do Hell Hub. Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do {npc:Mazarius}.",
+    "Se quiseres sair antes do boss: a wiki não descreve o regresso das Grounds à sala dos portais (nem diz por onde se volta a subir pelos buracos onde desceste). Faz o caminho ao contrário até ao sítio onde chegaste e daí à sala dos portais; depois sobe as escadas e atravessa as grutas até à zona de proteção.",
+    "Da zona de proteção volta à sala do {npc:Mazarius}, em Darashia, pelo caminho por onde entraste (a wiki não descreve esta passagem de regresso em pormenor). Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Da casa do Mazarius sobe à rua: no porto, o {npc:Petros} ({coord:33289,32481,6}) leva-te de barco, por exemplo, a Venore ({key:hi}, {key:venore}, {key:yes}, 60 gp) ou Ankrahmun (100 gp); na plataforma dos tapetes, o {npc:Chemar} ({coord:33270,32439,6}) leva-te, por exemplo, a Edron ({key:hi}, {key:edron}, {key:yes}, 40 gp)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (subsolo), com o portal a norte"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub"},
+    {"x": 33325, "y": 32400, "z": 14, "label": "Teleporte sudeste (Grounds of Undeath)"},
+    {"x": 33394, "y": 32336, "z": 10, "label": "Grounds of Undeath (ponto indicado pela wiki; a zona continua nos pisos abaixo)"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção, pelas grutas, até às escadas da sala dos portais"},
+    {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete teleportes da sala dos portais (começas no círculo branco); o 5 é o das Grounds of Undeath"},
+    {"file": "Ferumbras Ascencion - Path to Ragiaz.png", "caption": "À esquerda, o caminho na sala dos portais até ao teleporte sudeste; à direita, o caminho lá dentro com os locais dos itens do ritual"},
+    {"file": "Ferumbras Ascencion - Path to Ragiaz 2.png", "caption": "Caminho do portão a norte do Dried Well até à sala da alavanca do Ragiaz"}
+  ],
+  "warnings": [
+    "Entre a sala segura e o Dried Well não há zonas de proteção. No caminho há {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Undead Dragon|Undead Dragons} e {creature:Blightwalker|Blightwalkers}; a wiki aconselha os mages a levar {item:Thunderstorm Rune|Thunderstorm Runes} para o caminho até ao boss.",
+    "Na sala do boss há 4 {creature:Death Dragon|Death Dragons} que renascem logo; se a equipa não acabar o boss a tempo, é expulsa da sala.",
+    "Não fiques na sala do boss depois de o matares: se o tempo acabar és teleportado para fora e, como a missão só conta quando usas o {item:Teleportation Rod}, terias de matar o boss outra vez."
+  ]
+}

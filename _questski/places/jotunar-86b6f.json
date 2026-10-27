@@ -1,0 +1,46 @@
+{
+  "title": "Jotunar",
+  "type": "montanha",
+  "near": "Svargrond",
+  "summary": "Montanha de rocha e gelo no **centro de Tyrsung**, a ilha a sudeste de Svargrond, casa dos {creature:Frost Giant|Frost Giants}; tem grutas por baixo e, no topo, o portal da {wiki:Court of Winter}.",
+  "entrance": {"x": 32425, "y": 31277, "z": 7, "label": "1.º ponto da subida (rés-do-chão, lado leste)"},
+  "requirements": [
+    "Para o {npc:Buddel} te levar a {wiki:Tyrsung} precisas da {wiki:Barbarian Test Quest} e de ter pelo menos começado a missão *Nibelor 2: Ecological Terrorism* da {wiki:The Ice Islands Quest}."
+  ],
+  "arrive": [
+    "Viaja de barco até **Svargrond** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:svargrond}, {key:yes}; também há barco em Carlin e em Venore).",
+    "Vai ao barco a **sul** de Svargrond e fala com o {npc:Buddel} ({coord:32254,31195,7}): {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Desembarcas no cais de Tyrsung, no **norte** da ilha ({coord:32332,31230,7}); se ele te deixar noutra ilha, pede outra vez.",
+    "A montanha fica no centro da ilha ({coord:32385,31269,7}). Contorna-a pelo **leste** até uma escada a subir: o 1.º ponto da subida que a wiki marca é {coord:32425,31277,7}. Sobe; neste andar já há Frost Giants, {creature:Frost Giantess|Frost Giantesses} e {creature:Mammoth|Mammoths}.",
+    "Para o topo (portal da {wiki:Court of Winter} e Shrine of Respect): continua a subir andar a andar pelos pontos {coord:32372,31245,6}, {coord:32375,31265,5} e {coord:32367,31259,4}, até {coord:32356,31248,3} (4 andares acima do chão). A wiki só dá estes pontos, sem descrever o caminho entre eles.",
+    "Para as grutas por baixo da montanha (caminho da {wiki:Skeleton Decoration Quest}): no 1.º andar acima do chão, anda para **oeste** encostado à falésia até uma gruta e desce as escadas; na gruta nova vai para **norte** e depois para **leste** até outras escadas a descer."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: do topo, desce pelos mesmos pontos até ao rés-do-chão; das grutas, sobe as escadas das duas grutas, sai pela encosta e volta para **leste** junto à falésia até à escada que desce ao rés-do-chão.",
+    "Contorna a montanha até ao cais no **norte** da ilha ({coord:32332,31230,7}) e diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:svargrond} (50 gp). Chegas ao cais a **sul** de Svargrond; se ele te deixar noutra ilha, pede outra vez {key:svargrond}.",
+    "Em Svargrond, a {npc:Captain Breezelda}, no porto ({coord:32347,31108,6}), leva-te a Carlin, Venore ou Thais ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung (chegada e regresso)"},
+    {"x": 32385, "y": 31269, "z": 7, "label": "Jotunar (centro da montanha, localização da wiki)"},
+    {"x": 32425, "y": 31277, "z": 7, "label": "1.º ponto da subida (rés-do-chão, lado leste)"},
+    {"x": 32372, "y": 31245, "z": 6, "label": "2.º ponto (1 andar acima)"},
+    {"x": 32375, "y": 31265, "z": 5, "label": "3.º ponto (2 andares acima)"},
+    {"x": 32367, "y": 31259, "z": 4, "label": "4.º ponto (3 andares acima)"},
+    {"x": 32356, "y": 31248, "z": 3, "label": "Topo: portal da Court of Winter"},
+    {"x": 32411, "y": 31274, "z": 3, "label": "Shrine of Respect (topo, mesmo andar do portal)"}
+  ],
+  "images": [
+    {"file": "Jotunar 0.png", "caption": "Jotunar: rés-do-chão"},
+    {"file": "Jotunar 1.png", "caption": "Jotunar: 1 andar acima"},
+    {"file": "Jotunar -1.png", "caption": "Jotunar: 1 piso abaixo (grutas)"},
+    {"file": "Jotunar-2.png", "caption": "Jotunar: 2 pisos abaixo (grutas)"},
+    {"file": "Skeleton_decoration_spoiler_map.PNG", "caption": "Caminho até às grutas dos gigantes (spoiler da Skeleton Decoration Quest)"},
+    {"file": "Map tyrsung.jpg", "caption": "Mapa de Tyrsung"}
+  ],
+  "warnings": [
+    "Os {creature:Frost Giant|Frost Giants} batem até 200 de dano; a wiki aponta a montanha como boa caça para nível 40–60.",
+    "No sul de Tyrsung há uma aldeia de {creature:Smuggler|Smugglers}; o cais do Buddel fica no norte, por isso não precisas de lá passar.",
+    "O {npc:Buddel} está sempre bêbedo e pode deixar-te na ilha errada. Se tiveres um {item:Dwarven Ring} na mochila ele leva-te ao sítio certo e não cobra os 50 gp, mas fica com o anel (diz {key:no} quando ele o pedir se o quiseres guardar)."
+  ]
+}

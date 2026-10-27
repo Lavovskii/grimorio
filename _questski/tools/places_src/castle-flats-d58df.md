@@ -1,6 +1,6 @@
 # PLACE: Castle Flats
 slug: castle-flats-d58df
-mentioned in 1 guides: fire-axe-quest
+mentioned in 2 guides: fire-axe-quest, rootwalker-outfits-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Castle Flats 
@@ -108,3 +108,6 @@ coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de E
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
+[rootwalker-outfits-quest 0-1] Primeira vez: falar com o Gunther
+Se ainda não começaste a {wiki:Podzilla Quest|Podzilla Quest}, vai ao {wiki:Edron Castle|castelo de Edron} e fala com o {npc:Gunther} ({key:hi}). Ele conta-te que viu uma planta enorme a mover-se no mar aberto, em direção ao continente. Aceita o convite dele para a destruir e volta ao barco do {npc:Captain Seahorse}.
+coords: [{'x': 33172, 'y': 31777, 'z': 7, 'label': 'Gunther, castelo de Edron'}]

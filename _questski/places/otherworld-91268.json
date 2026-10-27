@@ -1,0 +1,53 @@
+{
+  "title": "Otherworld",
+  "type": "dungeon",
+  "near": "Svargrond",
+  "summary": "Conjunto de masmorras (também chamado *The Void*) muito abaixo das ilhas geladas do norte, onde decorre a {wiki:Heart of Destruction Quest}; entra-se por um de três {wiki:Glowing Vortex|Glowing Vortexes} (norte de Ankrahmun, sudoeste de Svargrond e oeste da Zao Steppe), mas só um está aberto de cada vez.",
+  "entrance": {"x": 33168, "y": 32638, "z": 7, "label": "Glowing Vortex a norte de Ankrahmun (entrada de Darama)"},
+  "requirements": [
+    "Conta **Premium** (exigida pela Heart of Destruction Quest, que pede nível 150, recomendado 250+). A wiki recomenda nível **200+** para caçar no Otherworld.",
+    "Na primeira vez, mata **10 criaturas** à volta do Glowing Vortex ({creature:Sparkion|Sparkions}, {creature:Reality Reaver|Reality Reavers}, {creature:Dread Intruder|Dread Intruders} e {creature:Breach Brood|Breach Broods}): a partir daí tens acesso permanente ao vórtice.",
+    "Se fores pela entrada de Zao, precisas de {spell:Levitate} (ou parcels/caixas) para desceres e voltares a subir a montanha entre Farmine e a Zao Steppe."
+  ],
+  "arrive": [
+    "Só **uma** das três entradas está aberta de cada vez: muda ao acaso **de 2 em 2 horas** (a partir do server save) e às vezes calha ficar no mesmo sítio. Um {item:Spying Eye} diz-te qual está aberta; sem ele, vai à entrada mais próxima e confirma se o vórtice lá está.",
+    "**Ankrahmun (Darama):** vai de barco a Ankrahmun ({key:hi}, {key:ankrahmun}, {key:yes}; por exemplo o {npc:Captain Fearless} em Venore) e chegas junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}). Sai da cidade pela saída **norte** ({coord:33182,32773,7}) e atravessa o deserto de {wiki:Kha'labal} até ao {npc:Messenger of Heaven} e ao vórtice ({coord:33168,32638,7}). Leva ao caminho do {creature:Anomaly}.",
+    "**Svargrond:** vai de barco a Svargrond a partir de Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade. Sai para **sudoeste**, a pé pelo {wiki:Formorgar Glacier}, em direção a {wiki:Ragnir}: o Messenger e o vórtice ficam **1 andar acima** do chão ({coord:32165,31293,6}). Leva ao caminho do {creature:Realityquake}.",
+    "**Zao Steppe:** apanha o {wiki:Steamship} para Farmine (o {npc:Brodrosch} em Kazordoon ou o {npc:Gurbasch} por baixo de Cormaya: {key:hi}, {key:farmine}, {key:yes}). Em Farmine, vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te no interruptor e usa a **alavanca da direita** (elevador); segue a passagem para **leste**, descendo com {spell:Levitate}, até à estepe ({coord:33085,31532,7}). Depois vai para **norte** pelo lado **oeste** da estepe até ao Messenger e ao vórtice ({coord:33034,31370,7}). Leva ao caminho do {creature:Rupture}.",
+    "Para a quest, fala com o {npc:Messenger of Heaven} ({key:hi}, {key:strong}, {key:yes}); na primeira vez mata as 10 criaturas à volta do vórtice. Depois entra no {wiki:Glowing Vortex}: apareces no Otherworld num sítio que depende da entrada que usaste.",
+    "A **sala de teleportes (hub)** é zona segura. Chegas lá depois de matares qualquer um dos bosses das cargas, ou a pé a partir de qualquer entrada, pelos caminhos das imagens: o vórtice de entrada do hub fica em {coord:32162,31327,11}."
+  ],
+  "leave": [
+    "A forma mais segura: vai ao **hub** (zona segura) e usa uma {item:Temple Teleport Scroll}, que te leva ao templo da tua cidade.",
+    "Sem ela, entra no vórtice vermelho **norte** do hub (a saída): apareces no vórtice de entrada do hub ({coord:32162,31327,11}). Daí segue o caminho da imagem para **sul**, **descendo 2 andares**, até à entrada de **Darama** (o vórtice a norte de Ankrahmun, no deserto de {wiki:Kha'labal}). A wiki garante que este caminho serve **sempre** para sair, seja qual for a entrada aberta nesse momento.",
+    "Já no deserto de Kha'labal, caminha para **sul** até à saída norte de Ankrahmun ({coord:33182,32773,7}) e apanha o barco do {npc:Captain Sinbeard} no porto **sul** ({key:hi}, o nome da cidade, {key:yes}).",
+    "Também podes seguir ao contrário os caminhos das imagens até à entrada que estiver aberta **nesse momento** (o {item:Spying Eye} diz-te qual é) e sair por ela. Se for a de Svargrond ou a de Zao, volta depois à cidade como em *Como chegar*: de Svargrond, a pé para **nordeste** até à cidade e o barco da {npc:Captain Breezelda}; de Zao, para **sul** até à passagem ({coord:33085,31532,7}), sobe com {spell:Levitate} e segue para **oeste** até ao elevador de Farmine, onde o {npc:Thorgrin} te leva de {wiki:Steamship} a Kazordoon ou Cormaya.",
+    "Ao saíres da sala da recompensa da quest, apareces junto ao vórtice de entrada do hub ({coord:32159,31327,11}), com muitas criaturas do Otherworld à espera (sai com a equipa junta e vida e mana cheias): entra no vórtice para ires ao hub e usa lá a {item:Temple Teleport Scroll}, ou segue o caminho de saída para Darama."
+  ],
+  "coords": [
+    {"x": 33168, "y": 32638, "z": 7, "label": "Glowing Vortex a norte de Ankrahmun (Darama, caminho do Anomaly)"},
+    {"x": 32165, "y": 31293, "z": 6, "label": "Glowing Vortex a sudoeste de Svargrond (caminho do Realityquake)"},
+    {"x": 33034, "y": 31370, "z": 7, "label": "Glowing Vortex a oeste da Zao Steppe (caminho do Rupture)"},
+    {"x": 32162, "y": 31327, "z": 11, "label": "Vórtice de entrada/saída do hub"},
+    {"x": 32213, "y": 31376, "z": 14, "label": "Sala de teleportes (hub, zona segura)"},
+    {"x": 32084, "y": 31368, "z": 12, "label": "Parede que pode fechar: Darama / Anomaly"},
+    {"x": 32114, "y": 31400, "z": 13, "label": "Parede que pode fechar: Zao / Rupture"},
+    {"x": 32178, "y": 31360, "z": 11, "label": "Parede que pode fechar: Svargrond / Realityquake"},
+    {"x": 32103, "y": 31402, "z": 13, "label": "Exemplo de vórtice de fuga (destino não documentado)"},
+    {"x": 33182, "y": 32773, "z": 7, "label": "Saída norte de Ankrahmun (deserto de Kha'labal)"},
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"}
+  ],
+  "images": [
+    {"file": "HoD Leaving the Hub.png", "caption": "Caminho de saída do hub em direção à entrada de Darama (Ankrahmun)"},
+    {"file": "HoD Ankrahmun to Hub.png", "caption": "Caminho da entrada de Ankrahmun até ao hub"},
+    {"file": "HoD Zao to Hub.png", "caption": "Caminho da entrada de Zao até ao hub"},
+    {"file": "HoD Svargrond to Hub.png", "caption": "Caminho da entrada de Svargrond até ao hub"},
+    {"file": "HoD Hub.png", "caption": "A sala de teleportes (hub)"}
+  ],
+  "warnings": [
+    "Quando a entrada muda, fecha-se uma parede num de três sítios (Darama/Anomaly, Zao/Rupture, Svargrond/Realityquake) e podes deixar de conseguir sair por onde entraste. Mesmo ao lado de cada parede há uma **saída de emergência** (o ponto amarelo do mapa) para o caso de ficares preso.",
+    "Há outros vórtices espalhados (por exemplo em {coord:32103,31402,13}) que servem para fugir se ficares preso numa sala durante a mudança de entrada, mas a wiki não diz para onde levam.",
+    "A {item:Temple Teleport Scroll} não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block: usa-a no hub, que é zona segura.",
+    "Este não é o mesmo sítio que o {wiki:Otherworld (Dwarf Bridge)} nem o {wiki:Otherworld (Edron)}, dois Otherworlds mais fracos; as mensagens do Spying Eye sobre Kazordoon e Edron referem-se a esses."
+  ]
+}

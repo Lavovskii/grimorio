@@ -29,7 +29,7 @@
   /* level band colours */
   --band-1: #4f9a3a; --band-2: #79a832; --band-3: #b2a52a; --band-4: #c98a26;
   --band-5: #c86a24; --band-6: #c04a2a; --band-7: #b0323a; --band-8: #93305c;
-  --band-9: #6e3a8e; --band-10: #4b3f9e; --band-11: #2f4f8f; --band-12: #245f7a; --band-13: #3a3a3a;
+  --band-9: #6e3a8e; --band-10: #4b3f9e; --band-11: #2f4f8f; --band-12: #245f7a; --band-13: #3a3a3a; --band-14: #5a2f2f;
 }
 
 /* ---------- light theme: parchment ---------- */
@@ -268,6 +268,8 @@ kbd { font-family: var(--font-mono); }
 .chip-free { background: var(--ok-soft); color: var(--ok); border-color: color-mix(in srgb, var(--ok) 45%, transparent); }
 .chip-done { background: var(--ok); color: #fff; border-color: var(--ok); }
 .chip-cat { background: var(--panel-3); }
+.chip-team { background: var(--panel-3); }
+.chip-team-grupo { border-color: #b0323a; }
 .chip-locked { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 50%, transparent); background: var(--warn-soft); }
 .skulls { display: inline-flex; gap: 1px; vertical-align: middle; }
 .skulls .ico { width: 15px; height: 15px; color: var(--border-soft); }

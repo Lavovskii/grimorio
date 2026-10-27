@@ -53,9 +53,9 @@ coords: [{'x': 33714, 'y': 31707, 'z': 7, 'label': 'Leste de Krailos'}, {'x': 32
 [a-pirates-tail-quest 1-0] Usar a concha em Issavi
 Viaja até **Issavi**, na ilha de Kilmaresh: há barco a partir de **Venore**, **Darashia**, **Krailos** ou **Oramond** (diz {key:hi}, {key:issavi} e {key:yes} ao capitão) e também podes ir de tapete mágico. Em Issavi, usa a pequena concha a **norte do depot**.
 coords: [{'x': 33919, 'y': 31471, 'z': 7, 'label': 'Concha a norte do depot de Issavi'}]
-[grimvale-quest 4-11] Purificar os 3 Dark Stone Totems
-Vai à origem de cada ley line (Krailos, Banuta e Vengoth) e usa o {item:Golden Symbol of Suon} junto ao {item:Dark Stone Totem}. Recebes *"You remove the curse that was put on this statue."*
-coords: [{'x': 33680, 'y': 31630, 'z': 7, 'label': 'Totem de Krailos'}, {'x': 32809, 'y': 32583, 'z': 7, 'label': 'Totem de Banuta'}, {'x': 32949, 'y': 31489, 'z': 6, 'label': 'Totem de Vengoth'}]
-[grimvale-quest 4-12] Totem de Krailos: ir e voltar
-Apanha um barco para **Krailos** em Venore ({npc:Captain Fearless}: {key:hi}, {key:krailos}, {key:yes}, 100 gp) ou em Darashia ({npc:Petros}, 110 gp). Desembarcas junto à {npc:Captain Pelagia}. O totem fica a **nordeste** da aldeia. Para voltar, a {npc:Captain Pelagia} leva-te a {key:edron} (100 gp), {key:venore}, {key:darashia} ou {key:oramond}.
-coords: [{'x': 32955, 'y': 32022, 'z': 6, 'label': 'Captain Fearless (Venore)'}, {'x': 33492, 'y': 31710, 'z': 6, 'label': 'Captain Pelagia (porto de Krailos)'}, {'x': 33680, 'y': 31630, 'z': 7, 'label': 'Totem de Krailos'}]
+[citizen-of-issavi-outfits-quest 0-0] Viajar até Issavi
+Tudo se passa na ilha de {wiki:Kilmaresh|Kilmaresh}, cuja capital é **Issavi**. Há barco para Issavi a partir de **Venore**, **Darashia**, **Krailos** e **Oramond**: fala com o capitão do porto e diz {key:hi}, {key:issavi}, {key:yes}. Chegas ao barco do {npc:Captain Harava}, no porto a **norte** da cidade (1 andar acima do chão). Em alternativa, usa o tapete mágico a partir de qualquer cidade com esse serviço: chegas à plataforma do {npc:Tanyt}, no ponto mais alto de Issavi.
+coords: [{'x': 33902, 'y': 31462, 'z': 6, 'label': 'Captain Harava, barco de Issavi'}, {'x': 33958, 'y': 31514, 'z': 0, 'label': 'Tanyt, plataforma dos tapetes mágicos'}, {'x': 33907, 'y': 31512, 'z': 7, 'label': 'Centro de Issavi'}]
+[citizen-of-issavi-outfits-quest 5-0] Apanhar o barco ou o tapete
+Para saíres da ilha, vai ao porto de Issavi e fala com o {npc:Captain Harava}: diz {key:hi}, o destino ({key:darashia}, {key:venore} ou {key:krailos}, 80 gp cada; {key:oramond}, 100 gp) e {key:yes}. Quem completou a Postman Quest tem 10 gp de desconto na maioria dos destinos. Também podes usar o tapete mágico do {npc:Tanyt}, no ponto mais alto da cidade.
+coords: [{'x': 33902, 'y': 31462, 'z': 6, 'label': 'Captain Harava, porto de Issavi'}, {'x': 33958, 'y': 31514, 'z': 0, 'label': 'Tanyt, plataforma dos tapetes mágicos'}]

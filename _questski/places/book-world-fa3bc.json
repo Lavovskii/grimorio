@@ -1,0 +1,45 @@
+{
+  "title": "Book World",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Mundo de tinta **dentro de um livro da biblioteca do castelo de Edron**, dividido em capítulos (do I ao IV, cada um um piso mais abaixo), cenário da {wiki:Between the Lines Quest} e, depois dela, zona de caça com atalhos para os capítulos.",
+  "entrance": {"x": 33185, "y": 31795, "z": 7, "label": "Livro da biblioteca do castelo de Edron (entrada)"},
+  "requirements": [
+    "Durante a {wiki:Between the Lines Quest} (nível 200, **Premium**, feitiço Summon Familiar) só entras com o {item:Magic Bookmark} no inventário: o {npc:Wyrdin} dá-to quando acabas a preparação da tua vocação. Se o perderes, pede outro ao Wyrdin com {key:lost bookmark}.",
+    "Depois de acabares a quest já não precisas do Magic Bookmark: ficas com acesso às zonas de caça do Book World e aos atalhos para os diferentes capítulos.",
+    "Para desceres de capítulo durante a quest precisas da {item:Dip Pen} com tinta, da {item:Painted Torch} (para queimar as flores de fogo) e do {item:Boat Ticket} (para o barco do Capítulo III); arranjam-se todos lá dentro."
+  ],
+  "items": ["Magic Bookmark", "Dip Pen", "Painted Torch", "Boat Ticket"],
+  "arrive": [
+    "Viaja até **Edron**: no porto da tua cidade diz ao capitão {key:hi}, {key:edron}, {key:yes} (por exemplo {npc:Captain Bluebear} em Thais, 160 gp, ou {npc:Captain Greyhound} em Carlin, 110 gp). Desembarcas no porto do {npc:Captain Seahorse}, no **norte** da cidade ({coord:33176,31764,6}).",
+    "Vai para **sul** até ao **castelo de Edron**, a noroeste das Ivory Towers, onde está o {npc:Daniel Steelsoul} ({coord:33191,31795,7}). A biblioteca fica a **oeste** dele.",
+    "Com o {item:Magic Bookmark} no inventário (só é preciso durante a quest), usa o livro da biblioteca ({coord:33185,31795,7}): entras no **Capítulo I**, onde está o {npc:Quill (NPC)|Quill} ({coord:32541,32519,8}).",
+    "Para desceres: usa o pergaminho do chão para tirares uma {item:Dip Pen}, enche-a numa poça ou fonte de tinta e escreve num espaço em branco do pergaminho para receberes uma {item:Painted Torch}. Usa a tocha no ladrilho com a flor de fogo estilizada: abre-se um buraco e desces para o **Capítulo II** ({coord:32525,32513,9}).",
+    "No Capítulo II, queima outra flor de fogo com a tocha ({coord:32544,32609,9}) e desce para o **Capítulo III** ({coord:32551,32596,10}).",
+    "No Capítulo III, segue para **leste** até ao barco (pelo corredor do **noroeste**, ou pela sala do tesouro depois de fazeres a missão do Quill). Para o usares precisas de um {item:Boat Ticket}: usa a Dip Pen com tinta perto do barco ({coord:32593,32568,10}). O barco leva-te ao **Capítulo IV** ({coord:32585,32560,11}).",
+    "No Capítulo IV, o teleporte para o boss {creature:Sir Leonard} fica em {coord:32631,32560,11}.",
+    "Depois de acabares a quest podes usar os **atalhos** para os diferentes capítulos; a wiki não diz onde ficam."
+  ],
+  "leave": [
+    "Depois do {creature:Sir Leonard}, sai da sala do boss para **sul** e chegas à sala do teu familiar. Para saíres dela, clica na **porta** e entra no **teleporte** que está no chão.",
+    "Volta para trás por todos os capítulos (IV, III, II e I) e sai do Book World para a biblioteca do castelo de **Edron** ({coord:33185,31795,7}). A wiki não descreve por onde se sobe de capítulo em capítulo nem onde fica exatamente a saída no Capítulo I. Se não encontrares o caminho, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Em Edron, volta ao porto, no **norte** da cidade, e fala com o {npc:Captain Seahorse}: {key:hi}, o nome da cidade (por exemplo {key:thais} ou {key:carlin}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"},
+    {"x": 33191, "y": 31795, "z": 7, "label": "Daniel Steelsoul (castelo de Edron)"},
+    {"x": 33185, "y": 31795, "z": 7, "label": "Livro da biblioteca: entrada e saída do Book World"},
+    {"x": 32541, "y": 32519, "z": 8, "label": "Quill (Capítulo I, piso -1)"},
+    {"x": 32525, "y": 32513, "z": 9, "label": "Início do Capítulo II (piso -2)"},
+    {"x": 32544, "y": 32609, "z": 9, "label": "Flor de fogo do Capítulo II (descida para o III)"},
+    {"x": 32551, "y": 32596, "z": 10, "label": "Início do Capítulo III (piso -3)"},
+    {"x": 32593, "y": 32568, "z": 10, "label": "Barco do Capítulo III (Boat Ticket)"},
+    {"x": 32585, "y": 32560, "z": 11, "label": "Início do Capítulo IV (piso -4)"},
+    {"x": 32631, "y": 32560, "z": 11, "label": "Teleporte para o Sir Leonard"}
+  ],
+  "warnings": [
+    "Cada capítulo tem criaturas próprias: {creature:Bramble Wyrmling|Bramble Wyrmlings} e {creature:Hawk Hopper|Hawk Hoppers} no II, {creature:Lion Hydra|Lion Hydras} e {creature:Bluebeak|Bluebeaks} no III, {creature:Crusader|Crusaders} (até 1050 de dano) e {creature:Headwalker|Headwalkers} no IV.",
+    "Paladins: leva contigo os itens da quest (por exemplo {item:The Sacred Writings of Getema}) quando entrares no teleporte do Sir Leonard; sem eles não és levado para a sala do familiar depois do combate.",
+    "O {creature:Sir Leonard} tem cooldown de **2 horas** e o combate dura no máximo **10 minutos**."
+  ]
+}

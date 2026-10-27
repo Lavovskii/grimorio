@@ -1,6 +1,6 @@
 # PLACE: Meriana
 slug: meriana-dd0fa
-mentioned in 7 guides: 20-years-a-cook-quest, assassin-outfits-quest, exchange-quests, pirate-outfits-quest, the-mermaid-marina-quest, the-shattered-isles-quest, warrior-outfits-quest
+mentioned in 8 guides: 20-years-a-cook-quest, assassin-outfits-quest, exchange-quests, pirate-outfits-quest, the-dream-courts-quest, the-mermaid-marina-quest, the-shattered-isles-quest, warrior-outfits-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Meriana 
@@ -33,7 +33,7 @@ mentioned in 7 guides: 20-years-a-cook-quest, assassin-outfits-quest, exchange-q
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
 [20-years-a-cook-quest 10-3] Sair de Meriana
 Quando acabares, sai da zona da tarefa pelo mesmo sítio por onde entraste. Para voltares a **Liberty Bay**, vai ao {npc:Sebastian}, a **sul** de Sabrehaven, e diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp). Em Liberty Bay apanha o barco do {npc:Jack Fate} para Venore ({key:hi}, {key:venore}, {key:yes}).
-coords: [{'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (sul de Sabrehaven)'}, {'x': 32161, 'y': 32556, 'z': 6, 'label': 'Jack Fate (porto de Liberty Bay)'}]
+coords: [{'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (sul de Sabrehaven)'}]
 [oriental-outfits-quest 0-4] Sair de Meriana
 Para voltares a **Liberty Bay**, vai ao {npc:Sebastian}, a **sul** de Sabrehaven, e diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp).
 coords: [{'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (sul de Sabrehaven)'}]

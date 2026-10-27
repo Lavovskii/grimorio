@@ -1,0 +1,41 @@
+{
+  "title": "Cobra Bastion",
+  "type": "edificio",
+  "near": "Ankrahmun",
+  "summary": "Fortaleza da {wiki:Order of the Cobra}, liderada pela {creature:Scarlett Etzel}, numa ilha a **nordeste do deserto de Ankrahmun**; só entram personagens de nível 250+ e é aqui que fica uma das sepulturas da {wiki:Grave Danger Quest}.",
+  "entrance": {"x": 33301, "y": 32647, "z": 7, "label": "Cobra Bastion (ponto marcado pela wiki, nordeste do deserto de Ankrahmun)"},
+  "requirements": [
+    "Nível **250** ou mais: a fortaleza só deixa entrar personagens desse nível.",
+    "Conta **Premium** para chegares de barco a Ankrahmun.",
+    "Lá dentro, cada parte abre-se ao matares um miniboss, por ordem: o {creature:Gaffir} (3.º andar) abre a cave, o {creature:Custodian} (cave) abre a zona final e o {creature:Guard Captain Quaid} (4.º andar) abre a zona do xadrez. Para a Grave Danger Quest bastam o Gaffir e o Custodian. Abre as portas pelo lado de dentro: algumas só ficam abertas para sempre se as abrires pelo lado certo."
+  ],
+  "arrive": [
+    "Viaja até **Ankrahmun** de barco: por exemplo o {npc:Captain Fearless} em Venore, o {npc:Petros} em Darashia ou o {npc:Captain Seahorse} em Edron ({key:hi}, {key:ankrahmun}, {key:yes}). Chegas ao porto **sul**, junto ao {npc:Captain Sinbeard} ({coord:33094,32884,6}).",
+    "Sai da cidade pela saída **norte** ({coord:33182,32773,7}) para o deserto de {wiki:Kha'labal} e segue para **nordeste**.",
+    "A Cobra Bastion fica numa ilha a nordeste do deserto; a wiki marca-a em {coord:33301,32647,7}, mas **não descreve o caminho exato até à entrada**: orienta-te pela coordenada no mapa.",
+    "Já na fortaleza, sobe a rampa da parte **sul** e depois mais **2 andares**: no 3.º andar, na sala de **sudeste** ({coord:33394,32674,4}), está o {creature:Gaffir}, o primeiro miniboss."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída da fortaleza: volta pelos mesmos corredores e escadas até à entrada da Cobra Bastion e refaz o caminho pelo deserto, para **sudoeste**, até à saída norte de Ankrahmun ({coord:33182,32773,7}).",
+    "Em Ankrahmun, vai ao porto **sul** ({coord:33094,32884,6}) e fala com o {npc:Captain Sinbeard}: {key:hi}, o nome da cidade ({key:darashia}, {key:venore}, {key:edron}, {key:port hope}, {key:liberty bay} ou {key:yalahar}) e {key:yes}.",
+    "Se ficares sem caminho, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33094, "y": 32884, "z": 6, "label": "Captain Sinbeard (porto de Ankrahmun)"},
+    {"x": 33182, "y": 32773, "z": 7, "label": "Saída norte de Ankrahmun (deserto de Kha'labal)"},
+    {"x": 33301, "y": 32647, "z": 7, "label": "Cobra Bastion (ponto marcado pela wiki)"},
+    {"x": 33394, "y": 32674, "z": 4, "label": "Sala do Gaffir (3.º andar)"},
+    {"x": 33376, "y": 32825, "z": 8, "label": "Sala do Custodian (cave); a sepultura da Grave Danger fica na sala a norte"},
+    {"x": 33393, "y": 32660, "z": 3, "label": "Guard Captain Quaid (4.º andar)"},
+    {"x": 33396, "y": 32640, "z": 4, "label": "Key 0303 (abre várias portas da fortaleza)"},
+    {"x": 33396, "y": 32642, "z": 4, "label": "Varanda onde atiras uma moeda para levantar a maldição (Strange Rats)"},
+    {"x": 33399, "y": 32663, "z": 5, "label": "Large Cauldron (Flask with Snake Poison: Cobras com menos 2000 HP durante 30 min)"},
+    {"x": 33302, "y": 31196, "z": 9, "label": "Sala secreta do Gaffir (expulsa-te ao fim de cerca de 3 minutos)"}
+  ],
+  "warnings": [
+    "Os membros da Order of the Cobra ({creature:Cobra Scout|Cobra Scouts}, {creature:Cobra Assassin|Cobra Assassins} e {creature:Cobra Vizier|Cobra Viziers}) batem até 1000 a 1600 de dano; a wiki recomenda nível **300+** (knights 350+) para caçar aqui.",
+    "A sala secreta a que chegas pelo tapete da sala do Gaffir **não é zona segura**: és teleportado para fora cerca de 3 minutos depois de entrares.",
+    "Na ilha podem aparecer de repente vários {creature:Strange Rat|Strange Rats} junto à tua personagem (a wiki liga-os à maldição da Cobra). Para levantares a maldição, atira uma {item:Gold Coin}, {item:Platinum Coin} ou {item:Crystal Coin} para o chão da varanda do 3.º andar ({coord:33396,32642,4}).",
+    "Para chegares à sala do xadrez, a partir da área que se abre no 6.º andar, precisas de {spell:Levitate} e de uma {item:Rope}; só depois do xadrez podes enfrentar a {creature:Scarlett Etzel}."
+  ]
+}

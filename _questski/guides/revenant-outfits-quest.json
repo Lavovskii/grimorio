@@ -1,0 +1,530 @@
+{
+  "slug": "revenant-outfits-quest",
+  "category": "outfit",
+  "region": "Yalahar",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Outfit base: vários dias (cinco bosses de acesso com 20 h de cooldown e o boss final com 68 h). Addons: minutos se comprares os dois itens no Market; muitas tentativas se fores tu a caçá-los",
+  "summary": "Os {wiki:Revenant Outfits|Revenant Outfits} são a recompensa da {wiki:Soul War Quest|Soul War Quest}: recebes o outfit base quando derrotas o {creature:Goshnar's Megalomania} e reportas a tarefa ao {npc:Flickering Soul}, em {wiki:Zarganash}. O primeiro addon obtém-se ao usar {item:The Skull of a Beast}, que cai de quatro dos bosses de acesso do Soul War; o segundo ao usar um {item:Bracelet of Strengthening}, que cai do {creature:Goshnar's Hatred}. Os dois itens também se compram no Market. Com os dois addons ganhas o achievement **Unleash the Beast**.",
+  "legend_pt": "Ajuda o Goshnar a derrotar a manifestação dos seus traços malignos e ganha o direito de vestir os Revenant Outfits.",
+  "start": {"x": 33621, "y": 31418, "z": 10, "label": "Flickering Soul, no hub do Soul War em Zarganash"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível **250** (recomendado **700+** para os outfits; a wiki indica *600?* para a Soul War Quest).",
+    "**Outfit base:** concluir a {wiki:Soul War Quest|Soul War Quest}, derrotando o {creature:Goshnar's Megalomania} e reportando a {key:task} ao {npc:Flickering Soul}.",
+    "Para a Soul War Quest: ter completado a {wiki:Feaster of Souls Quest|Feaster of Souls Quest} (é ela que dá acesso a Zarganash).",
+    "Para viajar até {wiki:Vengoth} com o {npc:Harlow}: ter chegado pelo menos à missão 4 (*The Dark Lands*) da {wiki:The Blood Brothers Quest|Blood Brothers Quest}.",
+    "Equipa: todos os bosses, incluindo o final, aceitam **até 5 jogadores**. A composição habitual é um **Knight** a bloquear e quatro atiradores (Paladin, Sorcerer e Druids).",
+    "**Addon 1:** usar {item:The Skull of a Beast}. **Addon 2:** usar um {item:Bracelet of Strengthening}. Os dois itens caem dos bosses do Soul War ou compram-se no Market."
+  ],
+  "items_needed": [
+    {"item": "The Skull of a Beast", "note": "addon 1; drop do Goshnar's Malice, Greed, Spite ou Cruelty, ou compra no Market"},
+    {"item": "Bracelet of Strengthening", "note": "addon 2; drop do Goshnar's Hatred, ou compra no Market"},
+    {"item": "Stone Skin Amulet", "note": "muitos: recomendados durante todas as lutas"},
+    {"item": "Might Ring", "note": "muitos: recomendados durante todas as lutas"},
+    {"item": "Magic Wall Rune", "note": "para cancelar o teleporte de monstros do 1.º taint e ajudar a empurrar summons"},
+    {"item": "Fire Bomb Rune", "note": "contra o medo (fear) em Ebb and Flow e no Goshnar's Spite, e para gerar Pulsating Energies no Furious Crater"},
+    {"item": "Great Fireball Rune", "note": "runa de área preferida no Goshnar's Megalomania"},
+    {"item": "Sudden Death Rune", "note": "dano de alvo único (Greedbeasts, Megalomania)"},
+    {"text": "150 gp para o barco do {npc:Harlow} (100 gp para Vengoth e 50 gp para voltar a Yalahar), mais o barco até Yalahar"},
+    {"text": "Muitas poções e proteções elementais adequadas a cada zona (ver cada secção)"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Revenant Outfits|Revenant Outfit} base (masculino e feminino), ao reportares ao {npc:Flickering Soul} depois de derrotares o Goshnar's Megalomania"},
+    {"text": "Addon 1, ao usares {item:The Skull of a Beast}"},
+    {"text": "Addon 2, ao usares o {item:Bracelet of Strengthening}"},
+    {"text": "Achievement **Unleash the Beast** (8 pontos), ao teres os dois addons"}
+  ],
+  "achievements": ["Unleash the Beast"],
+  "unlocks": [
+    {"what": "Revenant Outfits (base e 2 addons)", "kind": "funcionalidade", "place": "Revenant Outfits", "when": "Base: ao reportares a {key:task} ao {npc:Flickering Soul} depois de derrotares o {creature:Goshnar's Megalomania}. Addons: ao usares {item:The Skull of a Beast} e o {item:Bracelet of Strengthening}.", "note": "Precisas de Premium. Os dois itens dos addons podem ser comprados no Market."}
+  ],
+  "dangers": ["Goshnar's Malice", "Goshnar's Greed", "Goshnar's Spite", "Goshnar's Cruelty", "Goshnar's Hatred", "Goshnar's Megalomania", "Dreadful Harvester", "Brachiodemon", "Infernal Demon", "Infernal Phantom", "Many Faces", "Distorted Phantom", "Druid's Apparition", "Knight's Apparition", "Monk's Apparition", "Paladin's Apparition", "Sorcerer's Apparition", "Bony Sea Devil", "Capricious Phantom", "Hazardous Phantom", "Turbulent Elemental", "Cloak of Terror", "Vibrant Phantom", "Courage Leech", "Branchy Crawler", "Mould Phantom", "Rotten Golem"],
+  "npcs": ["Flickering Soul", "Harlow", "Captain Bluebear", "Jack Fate", "Captain Max", "Karith", "Captain Cookie"],
+  "tips": [
+    "{item:The Skull of a Beast} e o {item:Bracelet of Strengthening} são **comercializáveis** (Market) e nenhum NPC os compra ou vende. Se não quiseres caçar os bosses, compra-os a outros jogadores: o efeito é igual. O outfit base, esse, exige sempre a Soul War Quest completa.",
+    "Os cinco bosses de acesso têm **20 horas** de cooldown cada e o boss final **68 horas** (2 dias e 20 horas). Segundo as páginas dos bosses, o Malice, o Greed, o Spite, o Cruelty e o Megalomania dão-te no máximo **20 minutos** de luta. Cada vez que queres matar o boss final tens de matar outra vez os cinco bosses de acesso, por isso cada ciclo completo dá-te várias hipóteses de loot dos itens dos addons.",
+    "O progresso de cada acesso **perde-se se saíres da zona**: tens de repetir o acesso para chegar outra vez ao boss. Leva tudo o que precisas antes de entrar.",
+    "Todos os jogadores, sobretudo os atiradores, devem usar {item:Stone Skin Amulet|Stone Skin Amulets} e {item:Might Ring|Might Rings} durante toda a luta: os {creature:Dreadful Harvester|Dreadful Harvesters} aparecem em todas as salas de boss e dão golpes críticos muito fortes.",
+    "As mecânicas de cada boss são essenciais: se falharem, o boss fica mais forte. Para equipas mais fracas, falhar duas vezes pode chegar para o boss ficar impossível de matar a tempo.",
+    "Mantém os summons no Knight (luring) e não deixes os atiradores levar golpes corpo-a-corpo. Com os taints, os Dreadful Harvesters aparecem e teleportam-se a toda a hora: a posição e os movimentos de cada jogador contam como mais uma mecânica."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a Zarganash e aceitar a tarefa",
+      "intro": "O outfit base é a recompensa final da {wiki:Soul War Quest|Soul War Quest}. Aqui tens o caminho e o resumo de cada parte. Estes passos também servem para caçar os itens dos addons, porque ambos caem dos bosses de acesso do Soul War.",
+      "steps": [
+        {
+          "title": "Chegar a Yalahar",
+          "text": "Apanha um barco para **Yalahar**: em **Thais** fala com o {npc:Captain Bluebear} ({key:hi}, {key:yalahar}, {key:yes}, 200 gp) ou em **Liberty Bay** com o {npc:Jack Fate} ({key:hi}, {key:yalahar}, {key:yes}, 275 gp). Em Liberty Bay, o {npc:Captain Max} (barco de leste) também te leva por 400 gp, mas só depois de teres começado a {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}. Desembarcas no porto de Yalahar.",
+          "coords": [
+            {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear, barco de Thais"},
+            {"x": 32298, "y": 32896, "z": 6, "label": "Captain Max, barco de leste de Liberty Bay"}
+          ]
+        },
+        {
+          "title": "Ir para Vengoth com o Harlow",
+          "text": "Vai às docas do **Trade Quarter** de Yalahar (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.",
+          "npc": "Harlow",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "vengoth"},
+            {"you": "yes"}
+          ],
+          "coords": [{"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"}],
+          "images": [{"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"}],
+          "warning": "O Harlow só te leva se já tiveres chegado à missão 4 (*The Dark Lands*) da Blood Brothers Quest."
+        },
+        {
+          "title": "Entrar em Zarganash",
+          "text": "Em Vengoth, anda para **nordeste** até ao teleporte **invisível** de {wiki:Zarganash}, no ponto da coordenada, e entra nele. O acesso a Zarganash obtém-se na {wiki:Feaster of Souls Quest|Feaster of Souls Quest}, e a Soul War exige essa quest completa.",
+          "coords": [{"x": 32962, "y": 31497, "z": 7, "label": "Teleporte invisível para Zarganash (Vengoth)"}]
+        },
+        {
+          "title": "Chegar ao hub do Soul War",
+          "text": "Dentro de Zarganash, atravessa a masmorra até ao **extremo sudoeste** e entra no teleporte que lá está. Chegas a um hub de teleportes: é a base de toda a Soul War Quest, com o {npc:Flickering Soul} e os {wiki:Fog Portal|Fog Portals} para as cinco zonas.",
+          "coords": [{"x": 33568, "y": 31538, "z": 10, "label": "Teleporte para o hub do Soul War (sudoeste de Zarganash)"}]
+        },
+        {
+          "title": "Aceitar a tarefa do Flickering Soul",
+          "text": "No hub, fala com o {npc:Flickering Soul} (é a alma do Goshnar): diz {key:hi}, {key:task} e {key:yes}. A partir daqui tens de destruir os *fettered vices* do Goshnar, um boss em cada zona.",
+          "npc": "Flickering Soul",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be greeted, living soul!"},
+            {"you": "task"},
+            {"npc": "I'm aware I have no right to ask and I have little to offer as a payment, but I ask you nonetheless. Will you face my fettered vices and destroy them for me?"},
+            {"you": "yes"},
+            {"npc": "Thank you for accepting this burden."}
+          ]
+        },
+        {
+          "title": "Perceber os Goshnar's Taints",
+          "text": "Cada boss de acesso que matas dá-te um {wiki:Goshnar's Taints|Goshnar's Taint} (penalização), **sempre pela mesma ordem**, seja qual for o boss. Matar o mesmo boss outra vez não dá novo taint. Os taints só funcionam dentro das zonas do Soul War (incluindo as salas de boss) e vês os teus na barra de estados. Para saber de que bosses já tens taint, diz {key:shards} ao {npc:Flickering Soul}.",
+          "table": {
+            "head": ["Taint", "Efeito"],
+            "rows": [
+              ["1.º", "10% de hipótese de um monstro se teleportar para junto de ti (2 segundos antes aparece um efeito de aviso no monstro e em ti; uma {item:Magic Wall Rune} no quadrado onde estavas cancela o teleporte)"],
+              ["2.º", "0,5% de hipótese de nascer um monstro novo perto de ti quando bates noutro"],
+              ["3.º", "Recebes +15% de dano"],
+              ["4.º", "10% de hipótese de um monstro se curar totalmente em vez de morrer"],
+              ["5.º", "Perdes 10% da vida e da mana atuais a cada 10 segundos (aplica-se na luta final)"]
+            ]
+          },
+          "tip": "Se alguém morrer numa luta mas tiver causado dano ao boss, recebe o taint na mesma, desde que o resto da equipa mate o boss. Podes limpar os taints dizendo {key:penalties} ou {key:taints} ao Flickering Soul, mas depois de ganhares ou perderes taints tens de esperar **duas semanas** para o fazer.",
+          "npc": "Flickering Soul"
+        },
+        {
+          "title": "Os Fog Portals e a ordem recomendada",
+          "text": "Podes matar os bosses por qualquer ordem, mas a mais usada (pela dificuldade dos acessos e dos bosses) é a da tabela. Os Fog Portals estão lado a lado no hub; a coluna «Portal» conta-os da esquerda para a direita. O boss final está no portal a **sudoeste** do hub.",
+          "table": {
+            "head": ["Ordem", "Zona", "Portal", "Acesso ao boss", "Boss"],
+            "rows": [
+              ["1", "Claustrophobic Inferno", "1.º (o da esquerda)", "Sobreviver a 3 raids de 2 minutos", "{creature:Goshnar's Malice}"],
+              ["2", "Mirrored Nightmare", "5.º (o da direita)", "Matar 25 apparitions de cada vocação", "{creature:Goshnar's Greed}"],
+              ["3", "Ebb and Flow", "3.º (o do meio)", "Matar 20 {creature:Hazardous Phantom|Hazardous Phantoms}", "{creature:Goshnar's Spite}"],
+              ["4", "Furious Crater", "4.º", "Recolher 40, 55 e 70 {item:Pulsating Energy|Pulsating Energies} em três andares", "{creature:Goshnar's Cruelty}"],
+              ["5", "Rotten Wasteland", "2.º", "Ativar os quatro shrines", "{creature:Goshnar's Hatred}"],
+              ["Final", "Sala do boss final", "Portal a sudoeste do hub", "Ter matado os cinco bosses de acesso", "{creature:Goshnar's Megalomania}"]
+            ]
+          },
+          "images": [{"file": "Soul War Quest - Goshnar's Taint map.png", "caption": "Hub do Soul War: o portal e o boss de cada zona"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Claustrophobic Inferno — Goshnar's Malice",
+      "intro": "Proteção recomendada: **Death** e **Fire**. Ataca com **Ice**. O {creature:Goshnar's Malice} pode deixar cair {item:The Skull of a Beast} (addon 1).",
+      "steps": [
+        {
+          "title": "Entrar no Claustrophobic Inferno",
+          "text": "No hub, entra no **primeiro Fog Portal da esquerda**. Chegas a uma zona segura. A partir daqui tens de sobreviver a **três raids seguidas**, cada uma numa área fechada e com **2 minutos** de duração.",
+          "images": [{"file": "Claustrophobic Inferno Map.png", "caption": "Mapa do Claustrophobic Inferno"}]
+        },
+        {
+          "title": "Sobreviver às três raids",
+          "text": "Entrem **todos juntos** na área da raid: o primeiro jogador que passar pelo {item:Sandtimer} da entrada inicia o contador, e poucos segundos depois aparece uma parede que fecha a entrada. Logo a seguir começam a nascer ondas de {creature:Brachiodemon|Brachiodemons} e {creature:Infernal Phantom|Infernal Phantoms}. Aguentem **2 minutos**: no fim os monstros desaparecem e a equipa é teleportada para a área seguinte. A estratégia recomendada é correr para um canto, com os atiradores junto às paredes e o Knight uns passos dentro do spawn, para os monstros o atacarem a ele quando nascem.",
+          "coords": [
+            {"x": 33989, "y": 31061, "z": 9, "label": "Canto habitual da 1.ª raid"},
+            {"x": 33990, "y": 31050, "z": 10, "label": "Canto habitual da 2.ª raid"},
+            {"x": 34040, "y": 31063, "z": 11, "label": "Canto habitual da 3.ª raid"}
+          ],
+          "warning": "Depois de cada raid és teleportado para junto de um {item:Magic Forcefield|teleporte}: esse é a **saída**. Para continuar, desce sempre pelas **escadas** que estão perto. Os {creature:Infernal Demon|Infernal Demons} atacam sempre o jogador com **menos vida máxima**: planeiem as posições a contar com isso.",
+          "tip": "A causa mais comum de falhanço é não matar os monstros depressa: os que sobram viram-se para os atiradores. Dano constante é o mais importante. Depois de saíres de uma área de raid, tens **3 minutos** de espera até poderes entrar nela outra vez."
+        },
+        {
+          "title": "Chegar à sala do Goshnar's Malice",
+          "text": "Depois da terceira raid, a equipa é enviada para uma sala com um Fog Portal que leva à sala da alavanca do {creature:Goshnar's Malice}. Entrem e preparem-se (até 5 jogadores)."
+        },
+        {
+          "title": "Derrotar o Goshnar's Malice",
+          "text": "O boss **reflete 100% do dano** que leva e **cura-se** quando te acerta, por isso evita os feitiços dele. O bloqueador tem de ficar com todas as criaturas: o boss, dois {creature:Dreadful Harvester|Dreadful Harvesters} e duas {creature:Malicious Soul|Malicious Souls} (algumas só aparecem uns segundos depois). O Knight deve usar {spell:Challenge} sempre que puder (o boss e os summons mudam de alvo muitas vezes) e evitar ficar à frente do boss. Equipa proteção contra **Death** (e o Knight contra **Ice**, por causa da onda e do raio do boss).",
+          "table": {
+            "head": ["Mecânica", "O que fazer"],
+            "rows": [
+              ["**Soul Cage** (*\"GOSHNAR'S MALICE PREPARES TO DEVOUR A TRAPPED SOUL!\"*)", "Aparece uma {wiki:Soul Cage} na parte **norte** da sala. Todos os atiradores a matam em menos de **14 segundos**; se não, o boss absorve-a e fica mais forte (leva menos dano, dá mais e o reflexo sobe de 100% para cerca de 200%). Mantém o boss longe da Soul Cage, ou ele cura-se a si e aos summons em 14.000–20.000 HP."],
+              ["**Ladrilhos brancos** (*\"A MALICIOUS SOUL FLOOD IS IMMINENT!\"*)", "Aparecem {item:White Stone Tile|ladrilhos brancos} pela sala (nunca nos mesmos sítios). Põe-te em cima de um: 3 segundos depois todos os outros quadrados levam 7.000–9.000 de Death. Em alternativa, aguenta o golpe com Stone Skin Amulet, Might Ring e pelo menos uma peça com {wiki:Powerful Lich Shroud} (cerca de 1.000–1.200 de dano)."]
+            ]
+          },
+          "warning": "Quem ataca com dano Physical ou Death perde **duas cargas** de Stone Skin por turno por causa do reflexo: vigia as cargas e troca de amuleto a tempo.",
+          "tip": "Estratégia alternativa: o Knight encosta-se a uma parede, completamente rodeado pelo boss e pelos 4 summons. Só funciona se o boss ficar garantidamente na **diagonal** (senão o Knight leva as ondas todas e cura o boss com Life Leech) e exige muita atenção aos ladrilhos brancos."
+        },
+        {
+          "title": "Loot do Goshnar's Malice",
+          "text": "Abre o corpo do boss. Entre Crystal Coins, poções e gemas, pode deixar cair {item:The Skull of a Beast} (addon 1). As estatísticas da wiki também registam um {item:Bracelet of Strengthening} (addon 2) no loot dele (5,9% numa amostra de só 17 mortes). Se for a primeira vez que matas este boss, ganhas um taint (o 1.º, na ordem recomendada).",
+          "reward": "75.000 de experiência; possível The Skull of a Beast ou Bracelet of Strengthening"
+        },
+        {
+          "title": "Voltar ao hub",
+          "text": "A wiki não descreve a saída da sala do boss: volta pelo caminho por onde vieste. A única saída que a wiki indica nesta zona é o {item:Magic Forcefield|teleporte} que fica ao lado do ponto onde és deixado no fim de cada raid; usa-o (ou a zona segura da entrada) para regressares ao hub do Flickering Soul. Lembra-te de que, se saíres do Claustrophobic Inferno, perdes o progresso do acesso."
+        }
+      ]
+    },
+    {
+      "title": "3. Mirrored Nightmare — Goshnar's Greed",
+      "intro": "Proteção recomendada: **Holy** e **Ice**. Ataca com **Fire**. O {creature:Goshnar's Greed} pode deixar cair {item:The Skull of a Beast} (addon 1; 2,0% numa amostra de 49 mortes).",
+      "steps": [
+        {
+          "title": "Entrar no Mirrored Nightmare",
+          "text": "No hub, entra no Fog Portal **mais à direita**. Chegas a uma zona segura.",
+          "images": [{"file": "Soul War Quest - Mirrored Nightmare Map.png", "caption": "Mapa do Mirrored Nightmare, com o portal do templo que leva ao boss"}]
+        },
+        {
+          "title": "Matar 25 apparitions de cada vocação",
+          "text": "Para entrar na sala do boss tens de matar **25** de cada uma: {creature:Druid's Apparition}, {creature:Knight's Apparition}, {creature:Monk's Apparition}, {creature:Paladin's Apparition} e {creature:Sorcerer's Apparition}. As apparitions aparecem quando atacas uma {wiki:Mirror Image}: é mais provável que se transforme na apparition da vocação de quem a atacou primeiro, mas pode sair qualquer outra. Equilibra as mortes para não perderes tempo. Há mais Mirror Images no piso **subterrâneo** do mapa, mas lá há menos espaço e é mais perigoso."
+        },
+        {
+          "title": "Entrar na sala do Goshnar's Greed",
+          "text": "Com as 125 mortes feitas, vai ao **portal do templo** (assinalado no mapa do passo «Entrar no Mirrored Nightmare») e entra na sala do {creature:Goshnar's Greed}."
+        },
+        {
+          "title": "Derrotar o Goshnar's Greed",
+          "text": "No início o boss é **imune a todo o dano**. O Knight bloqueia-o a **norte** da sala e pode correr da direita para a esquerda para levar menos dano (e evitar que o boss se cure com Life Leech), enquanto os atiradores tratam das mecânicas.",
+          "table": {
+            "head": ["Mecânica", "O que fazer"],
+            "rows": [
+              ["**Greedbeasts**", "Nasce um {creature:Greedbeast} no centro-esquerda da sala. Mata-o depressa (Sudden Death Runes ou ondas): só depois de **5 Greedbeasts** mortos o boss fica vulnerável. Mortos enquanto o boss está vulnerável **não contam**. Dá muito Life Drain: costuma ser um Paladin com {item:Necklace of the Deep} a bloqueá-lo."],
+              ["**Soul Sphere** (boss vulnerável)", "O boss fica preso a **noroeste** e vulnerável durante **40 segundos**. Uma {creature:Soul Sphere} aparece a **nordeste** e anda devagar até ele: se lá chegar, **cura o boss por completo**. Um atirador mata a esfera; os outros dão todo o dano possível ao boss."],
+              ["**Weak Souls e Soulsnatchers**", "Aparecem duas {creature:Weak Soul|Weak Souls} (esquerda e direita) e um {creature:Soulsnatcher} (sul). Leva-os para cima de um {item:Active Spirit Vortex|vórtice azul} ativo para desaparecerem. Os vórtices alternam entre ativos (15 segundos) e {item:Inactive Vortex|cristal inativo} (25 segundos). Uma Weak Soul passa a {creature:Strong Soul} após 8 segundos, a {creature:Powerful Soul} após mais 8 e, 8 segundos depois, desaparece e fortalece o boss."]
+            ]
+          },
+          "tip": "Para poupar tempo, durante a fase vulnerável deixem o Greedbeast que nascer com pouca vida e matem-no só quando o boss voltar a ficar imune: conta logo como o primeiro dos 5 seguintes. Muitas equipas põem os 4 atiradores em linha no meio da sala: um no extremo esquerdo, o Paladin por cima do spawn do Greedbeast, outro no centro para o Soulsnatcher e o último no extremo direito. {item:Magic Wall Rune|Magic Walls} e {item:Wild Growth Rune|Wild Growths} ajudam a empurrar as Weak Souls para os vórtices dos cantos."
+        },
+        {
+          "title": "Loot do Goshnar's Greed",
+          "text": "Abre o corpo do boss: pode deixar cair {item:The Skull of a Beast} (addon 1).",
+          "reward": "150.000 de experiência; possível The Skull of a Beast"
+        },
+        {
+          "title": "Voltar ao hub",
+          "text": "A wiki não descreve a saída da sala do boss: volta pelo caminho por onde vieste até ao hub do Flickering Soul."
+        }
+      ]
+    },
+    {
+      "title": "4. Ebb and Flow — Goshnar's Spite",
+      "intro": "Proteção recomendada: **Earth** e **Ice** (no boss: **Death**, **Earth** e **Energy**). Ataca com **Fire** (no boss também **Death**). O {creature:Goshnar's Spite} pode deixar cair {item:The Skull of a Beast} (addon 1).",
+      "steps": [
+        {
+          "title": "Entrar em Ebb and Flow",
+          "text": "No hub, entra no Fog Portal **do meio**. Chegas a uma zona segura. Para chegar ao boss tens de matar **20 {creature:Hazardous Phantom|Hazardous Phantoms}**, mas o mapa alterna entre **inundado** e **seco** a cada **2 minutos**.",
+          "warning": "Os monstros daqui causam medo (*Feared*): primeiro aparece um efeito de fumo fantasma e, 2 segundos depois, um fantasma azul aplica o medo a uma das personagens."
+        },
+        {
+          "title": "Perceber a maré",
+          "text": "Usa um cronómetro de 2 minutos: é difícil ver as pistas no meio da luta. As pequenas poças no chão passam de pequenas a médias **80 segundos** depois de secar, o que quer dizer que faltam **40 segundos** para voltar a inundar.",
+          "table": {
+            "head": ["Estado", "O que podes fazer"],
+            "rows": [
+              ["**Inundado**", "Nos telhados, passas de edifício em edifício pelas jangadas. Não podes descer pelas rampas. Se caíres num buraco vais para o piso de baixo (dentro do edifício) e **não há forma de voltar a subir** nem de sair pelas portas. Se estiveres numa jangada quando a água desce, cais para o piso de baixo (fora dos edifícios)."],
+              ["**Seco**", "Andas livremente no piso de baixo, abres portas, entras nos edifícios e usas as rampas, mas não podes usar as jangadas entre telhados. Se a água subir e não estiveres numa jangada, és teleportado para a entrada (zona segura); se estiveres numa jangada, vais para o telhado do edifício mais próximo."]
+            ]
+          },
+          "images": [{"file": "Soul War Quest - Ebb and Flow pools.gif", "caption": "As poças que indicam quanto tempo falta para a água voltar"}],
+          "warning": "Desde setembro de 2022 já **não** é possível usar {spell:Levitate} do piso de baixo para as jangadas. Guias ou vídeos antigos que o sugerem estão desatualizados."
+        },
+        {
+          "title": "Chegar à jangada de sudeste",
+          "text": "Estratégia mais usada: esperem pelos últimos **20–30 segundos** antes de a água subir e corram juntos até à jangada de **sudeste**. Se alguém ficar preso ou for afastado pelo medo, só tem de aguentar uns segundos até a água subir e o teleportar para a zona segura. Na jangada, ponham {item:Fire Bomb Rune|Fire Bombs} e fiquem em cima delas para não serem afastados pelo medo, e defendam a posição. Quando a água sobe, vão parar ao edifício a **oeste** da jangada: fiquem num canto e atirem Fire Bombs à volta para não serem empurrados para buracos ou outras jangadas.",
+          "coords": [{"x": 33940, "y": 31110, "z": 9, "label": "Jangada de sudeste"}],
+          "tip": "Equipas fortes podem correr assim que a água desce e limpar os monstros antes da jangada de sudeste ({coord:33945,31098,9}). Só se aguentarem a zona toda (mais do que um box cheio no Knight), mas ganham tempo para recuperar mana antes de a água subir."
+        },
+        {
+          "title": "Matar os 20 Hazardous Phantoms",
+          "text": "No edifício do sul, continua a matar os monstros que nascem à volta, incluindo um {creature:Hazardous Phantom}, até completares os **20**. Podem demorar uns minutos a nascer: é o acesso mais longo da quest e pode passar facilmente de **uma hora**. Equipas mais fortes podem descer pelas escadas a **sudeste** deste edifício, onde há outro Hazardous Phantom logo a **sul**, o que quase duplica a velocidade (com o risco de terem spawn cheio nos dois pisos e de serem empurrados pelo medo para **oeste**, onde há muitos monstros).",
+          "coords": [{"x": 33945, "y": 31127, "z": 9, "label": "Segundo Hazardous Phantom, a sul"}]
+        },
+        {
+          "title": "Derrotar o Goshnar's Spite",
+          "text": "É uma das lutas mais fáceis da quest, mas o boss também causa medo. O Knight bloqueia o boss no **centro** da sala; os atiradores correm à volta para levar os summons ({creature:Dreadful Harvester|Dreadful Harvesters}, {creature:Weeping Soul|Weeping Souls} e {creature:Spiteful Spitter|Spiteful Spitters}) para o Knight e evitar o corpo-a-corpo. Se houver demasiados summons, usem ondas e {item:Great Fireball Rune|Great Fireballs}; os magos atacam o boss com feitiços e {item:Sudden Death Rune|Sudden Deaths}.",
+          "table": {
+            "head": ["Mecânica", "O que fazer"],
+            "rows": [
+              ["**Chamas roxas** (*\"A soulfire is blazing! Stomp it out in time!\"*)", "A cada **14 segundos** aparece uma {item:Cleansed Soul Splinter|chama roxa} num dos lados da sala. Um jogador pisa-a para a apagar e fica **60 segundos** sem poder apagar outra (*\"Your soul has recovered!\"* avisa quando pode). Todos (incluindo o Knight) revezam-se numa **ordem fixa** combinada antes da luta. Se ninguém a pisar, o boss absorve-a e fica mais forte."],
+              ["**Pool of Tears**", "Quando morre uma Weeping Soul, o corpo vira uma {item:Pool of Tears}. Quem a pisa transforma-se em {creature:Water Elemental} e leva **dano de Energy enorme** do boss e dos summons. Como nem sempre se consegue evitar, usa proteção contra Energy."]
+            ]
+          },
+          "tip": "Na ordem recomendada a equipa já tem **2 taints** aqui: controlar o número de summons na sala faz a diferença entre falhar e passar. Algumas equipas põem Fire Bomb no centro, onde o Knight bloqueia, para ele não fugir com o medo (mas fica mais vulnerável enquanto está com medo)."
+        },
+        {
+          "title": "Loot do Goshnar's Spite",
+          "text": "Abre o corpo do boss: pode deixar cair {item:The Skull of a Beast} (addon 1).",
+          "reward": "75.000 de experiência; possível The Skull of a Beast"
+        },
+        {
+          "title": "Voltar ao hub",
+          "text": "A wiki não descreve a saída da sala do boss: volta pelo caminho por onde vieste até ao hub do Flickering Soul."
+        }
+      ]
+    },
+    {
+      "title": "5. Furious Crater — Goshnar's Cruelty",
+      "intro": "Proteção recomendada: **Holy** e **Energy** (no boss: **Death** e **Fire**). Ataca com **Earth**. O {creature:Goshnar's Cruelty} pode deixar cair {item:The Skull of a Beast} (addon 1).",
+      "steps": [
+        {
+          "title": "Entrar no Furious Crater",
+          "text": "No hub, entra no **quarto Fog Portal** (a contar da esquerda). Chegas a uma zona segura. Para descer cada andar e chegar à sala da alavanca do boss, cada jogador tem de recolher **40**, **55** e **70** {item:Pulsating Energy|Pulsating Energies} no 1.º, 2.º e 3.º andar. Vês o progresso no {wiki:Quest Log}."
+        },
+        {
+          "title": "Recolher as Pulsating Energies",
+          "text": "As energias funcionam como o sangue dos monstros: bate nas criaturas até deixarem cair energias no chão e anda por cima delas.",
+          "warning": "Quando acertas num {creature:Cloak of Terror}, aparece por baixo dele uma poça de {item:The Blood of Cloak of Terror}: funciona como um campo de energia, mas tira muito mais (até cerca de **20% da vida máxima**, conforme o tamanho da poça). Os Cloaks of Terror curam **1.500–2.000 HP** quando andam por cima do próprio sangue."
+        },
+        {
+          "title": "1.º andar (40 energias)",
+          "text": "Entra no respawn e puxa um ou dois {creature:Vibrant Phantom|Vibrant Phantoms} e/ou {creature:Courage Leech|Courage Leeches}. Põe {item:Fire Bomb Rune|Fire Bombs} ou {item:Poison Bomb Rune|Poison Bombs} no chão e fá-los passar por cima: cada golpe faz cair várias energias. Se aparecer um Cloak of Terror, afasta-o ou para de correr (para não espalhar o sangue) e mata-o em alvo único. Quando todos tiverem as energias, passa ao andar seguinte pelo teleporte de nevoeiro do lado **leste** da área."
+        },
+        {
+          "title": "2.º andar (55 energias)",
+          "text": "Ao chegar tens logo vários monstros à frente (de um pouco menos a mais de um box cheio). Põe os monstros corpo-a-corpo no Knight e **não** uses {spell:Chivalrous Challenge} nos Vibrant Phantoms até os Cloaks e a maior parte dos Courage Leeches estarem mortos. Depois repete a técnica das bombas. Quando todos tiverem as energias, segue pelo teleporte de nevoeiro **ao lado da entrada** deste andar."
+        },
+        {
+          "title": "3.º andar (70 energias)",
+          "text": "Outra vez podes ter vários monstros à entrada. Repete a mesma técnica até toda a equipa ter as energias (aqui é provável que os monstros voltem a nascer antes de terminarem). Depois entra na sala da alavanca pelo teleporte de nevoeiro **ao lado da entrada**.",
+          "tip": "Equipas experientes mandam o Paladin saltar primeiro para o 2.º e 3.º andares e afastar a maior parte dos monstros da entrada: os andares são circulares, por isso pode dar a volta completa ou voltar para trás."
+        },
+        {
+          "title": "Derrotar o Goshnar's Cruelty",
+          "text": "É uma das partes mais difíceis da quest (na ordem recomendada a equipa já tem **3 taints**). Quanto mais a luta dura, mais **resistente** o boss fica; isto não se evita, mas atrasa-se bastante com as mecânicas. Definam os papéis antes de entrar: o Knight fica perto do **centro** (o boss pode ser atacado de todo o lado) e perto do spawn da Mean Maw; dois atiradores (normalmente o Paladin e o Sorcerer) tratam das Poor Souls do lado **esquerdo**; os outros dois ficam junto à parede da **direita** ou a **sul** a dar dano e a curar.",
+          "table": {
+            "head": ["Mecânica", "O que fazer"],
+            "rows": [
+              ["**Poor Souls**", "Nascem na parte **sudoeste**. Um atirador fica perto do spawn, puxa a {creature:Poor Soul} e leva-a para **norte**, para a frente do {creature:A Greedy Eye}. O raio do olho mata-a e deixa {item:Some Mortal Essence} no chão. Cuidado: o raio também te tira 3.000 de Drown."],
+              ["**Greedy Maw**", "Leva a Mortal Essence para **sul** e usa-a na {item:Greedy Maw}. Quando resulta aparece *\"The hunger for cruelty has lessened!\"*. Se às vezes não resultar, é porque estão a fazê-lo mais depressa do que o limite permite (bom sinal)."],
+              ["**Explosão da sala** (*\"Goshnar's Cruelty begins to channel its energy! Prepare!\"*)", "A cada 60–70 segundos; 6 segundos depois toda a sala leva até 3.000 de Physical."],
+              ["**Explosão de fogo**", "A cada 30 segundos um jogador ao acaso vira {wiki:Massive Fire Elemental} e explode 6 segundos depois (até 3.500 de Fire numa área enorme). Quem for transformado afasta-se dos outros."],
+              ["**Mean Maw**", "Nasce no centro-sul da sala. É imune a {spell:Challenge}: o Knight só lhe ganha o alvo bloqueando-lhe o caminho enquanto ela anda."]
+            ]
+          },
+          "tip": "Desde a introdução dos feitiços {wiki:Avatar}, muitas equipas usam-nos logo no início, quando o boss tem menos resistências. Equipas de nível mais baixo podem guardá-los para quando houver demasiados summons."
+        },
+        {
+          "title": "Loot do Goshnar's Cruelty",
+          "text": "Abre o corpo do boss: pode deixar cair {item:The Skull of a Beast} (addon 1).",
+          "reward": "75.000 de experiência; possível The Skull of a Beast"
+        },
+        {
+          "title": "Voltar ao hub",
+          "text": "A wiki não descreve a saída da sala do boss: volta pelo caminho por onde vieste até ao hub do Flickering Soul."
+        }
+      ]
+    },
+    {
+      "title": "6. Rotten Wasteland — Goshnar's Hatred",
+      "intro": "Proteção recomendada: **Holy** e **Earth** (no boss: **Death** e **Fire**). Ataca com **Fire**. O {creature:Goshnar's Hatred} é o boss que deixa cair o {item:Bracelet of Strengthening} (addon 2).",
+      "steps": [
+        {
+          "title": "Entrar na Rotten Wasteland",
+          "text": "No hub, entra no **segundo Fog Portal** (a contar da esquerda). Chegas a uma zona segura; ao entrar no respawn estás na sala principal da {wiki:Rotten Wasteland}.",
+          "warning": "Os monstros daqui podem prender-te (*Rooted*): ficas 3 segundos sem te poder mexer."
+        },
+        {
+          "title": "Ativar os quatro shrines",
+          "text": "Para abrir o portal do boss tens de usar quatro shrines, um em cada ramo, espalhados por três andares. Os caminhos partem da sala principal e são diretos (ver os mapas). **Todos** os membros da equipa têm de usar cada shrine. Depois de usares um shrine, entra no teleporte ao lado dele para voltar ao centro da sala principal (não é zona segura, mas fica muito perto). Podes ver no {wiki:Quest Log} quais já ativaste.",
+          "table": {
+            "head": ["Shrine", "Ramo"],
+            "rows": [
+              ["{item:Shrine (Blue)|Blue}", "Sudeste"],
+              ["{item:Shrine (Green)|Green}", "Noroeste"],
+              ["{item:Shrine (Orange)|Orange}", "Nordeste"],
+              ["{item:Shrine (Violet)|Violet}", "Sudoeste"]
+            ]
+          },
+          "images": [
+            {"file": "Soul War Quest - Rotten Wasteland Blue Shrine.png", "caption": "Caminho para o shrine azul (sudeste)"},
+            {"file": "Soul War Quest - Rotten Wasteland Green Shrine.png", "caption": "Caminho para o shrine verde (noroeste)"},
+            {"file": "Soul War Quest - Rotten Wasteland Orange Shrine.png", "caption": "Caminho para o shrine laranja (nordeste)"},
+            {"file": "Soul War Quest - Rotten Wasteland Violet Shrine.png", "caption": "Caminho para o shrine violeta (sudoeste)"}
+          ]
+        },
+        {
+          "title": "Chegar à sala do Goshnar's Hatred",
+          "text": "Com os quatro shrines ativados, vai até ao extremo **oeste** da sala principal, passa a porta e desce as escadas. Lá está o portal para a sala da alavanca do {creature:Goshnar's Hatred}.",
+          "coords": [{"x": 33914, "y": 31033, "z": 12, "label": "Portal para a sala do Goshnar's Hatred"}]
+        },
+        {
+          "title": "Derrotar o Goshnar's Hatred",
+          "text": "É um dos bosses mais fáceis, por isso fica para último (com **4 taints**). Mexam-se constantemente entre os dois pilares, atacando ao mesmo tempo o boss, os pilares e as {creature:Hateful Soul|Hateful Souls} com dano de área. Os atiradores ficam a **norte** e a **sul** e deixam o meio livre para o Knight. A cada 8 segundos há um feitiço tipo *exori* à volta de cada personagem que dá **Life Drain** aos outros: não fiquem juntos.",
+          "table": {
+            "head": ["Mecânica", "O que fazer"],
+            "rows": [
+              ["**Burning Hatred**", "No centro da sala há uma fogueira que cresce: {item:Ashes of Burning Hatred} → {item:Spark of Burning Hatred} → {item:Flame of Burning Hatred} → {item:Blaze of Burning Hatred}. Quanto maior, mais forte o boss. Mata as Hateful Souls e usa o corpo delas ({item:Sorrow}) na fogueira, sempre que puderes."],
+              ["**Dread's Torment**", "Um contador junto ao teu nome sobe 1 a cada 3 segundos. Aos **30** levas um golpe forte de Death a cada 3 segundos (*\"The dread's torment is killing you!\"*). Para o pôr a zero, destrói os {wiki:Symbol of Hatred|Symbols of Hatred} que nascem a **leste** e a **oeste** da sala e pisa os restos ({item:Condensed Remorse}). Combinem uma ordem para cada um repor o contador."]
+            ]
+          }
+        },
+        {
+          "title": "Loot do Goshnar's Hatred",
+          "text": "Abre o corpo do boss: pode deixar cair o {item:Bracelet of Strengthening} (addon 2).",
+          "reward": "75.000 de experiência; possível Bracelet of Strengthening"
+        },
+        {
+          "title": "Voltar ao hub",
+          "text": "A wiki não descreve a saída da sala do boss: volta pelo caminho por onde vieste até ao hub do Flickering Soul."
+        }
+      ]
+    },
+    {
+      "title": "7. Goshnar's Megalomania e o outfit base",
+      "intro": "Proteção recomendada: **Physical** (Stone Skin Amulets, sobretudo o Knight), **Death**, **Energy** e **Fire**. Ataca com **Death** em alvo único e com **Fire** em área (Great Fireballs e as ondas dos magos). A lista de loot do boss final na wiki não inclui os itens dos addons, mas é ele que te dá o outfit base.",
+      "steps": [
+        {
+          "title": "Entrar na sala do boss final",
+          "text": "Depois de matares os **cinco** bosses de acesso, entra no portal a **sudoeste** do hub. A luta junta muitas das mecânicas das anteriores e aqui aplica-se o **5.º taint**: a mana desce muito depressa e não consegues manter muita, por isso não entres em pânico.",
+          "warning": "Cada vez que quiseres matar o {creature:Goshnar's Megalomania} tens de voltar a matar os cinco bosses de acesso. O boss tem **2 dias e 20 horas** (68 h) de cooldown e a luta dura no máximo **20 minutos**."
+        },
+        {
+          "title": "As três formas do boss",
+          "text": "O {creature:Goshnar's Megalomania} muda de forma durante a luta: **roxo** — imune a todo o dano (é assim que começa); **verde** ({creature:Goshnar's Megalomania (Vulnerable)}) — vulnerável; **azul** ({creature:Goshnar's Megalomania (Annihilation)}) — prepara o ataque Annihilation, mas continua vulnerável."
+        },
+        {
+          "title": "Torná-lo vulnerável com os Aspects of Power",
+          "text": "Com o boss imune, matem **4 {creature:Aspect of Power|Aspects of Power}**: o boss fica verde e vulnerável durante **70 segundos**, por isso deem-lhe todo o dano possível. Aspects mortos enquanto o boss está vulnerável **não contam** para o ciclo seguinte. Os atiradores devem atacar os Aspects em alvo único (para não fazer nascer mais {creature:Dreadful Harvester|Dreadful Harvesters} pelo 2.º taint) e usar área só quando há vários Harvesters ou quando dá para acertar no boss e nos Aspects ao mesmo tempo."
+        },
+        {
+          "title": "Tratar das Splinters of Madness",
+          "text": "O boss tem um contador invisível de **Madness**: sobe com o tempo e com as mecânicas falhadas, e quanto mais alto, menos dano o boss leva. Durante a luta nascem {wiki:Lesser Splinter of Madness|Lesser Splinters of Madness}, que passam a {wiki:Greater Splinter of Madness|Greater} e depois a {wiki:Mighty Splinter of Madness|Mighty}. Leva-as a pisar o corpo dos Aspects of Power ({item:Phantasmal Ooze}): viram {item:Cleansed Sanity}, que tens de usar na {item:Maw (Object)|Maw} a **sul** da sala (como no Goshnar's Cruelty). Se houver várias, trata primeiro da mais forte.",
+          "warning": "Se uma Mighty Splinter of Madness não for tratada a tempo, o boss absorve-a e a Madness sobe."
+        },
+        {
+          "title": "Necromantic Focus e Dread's Torment",
+          "text": "Dois {wiki:Necromantic Focus|Necromantic Focuses} nascem a **oeste** e a **leste** da sala. Ao matá-los ficam {item:Necromantic Remains}: pisá-los baixa a Madness (*\"Your soul is weakened by the destruction of the remains but the intensity of madness is lessened!\"*); se ninguém os pisar, o boss absorve-os. A luta pode fazer-se a ignorá-los: ataquem-nos só quando o boss está imune e não há Aspects vivos. Ao mesmo tempo, o teu contador de **Dread's Torment** sobe a cada 10 segundos; aos **36** passas a levar até **5.600 de Death** a cada 10 segundos (*\"The dread's torment is now lethal!\"*), cerca de 700 com SSA, Might Ring e imbuements. Repõe-no a zero pisando uma Phantasmal Ooze (ficas uns segundos vulnerável a dano fantasmal).",
+          "tip": "As oozes também fazem falta para as Splinters. O melhor momento para alguém repor o contador é quando morre um Aspect e não há Splinter na sala. Combinem a ordem antes e não deixem vários jogadores perto dos 36."
+        },
+        {
+          "title": "Os outros ataques do boss",
+          "text": "Além das mecânicas principais, tens de lidar com estes ataques:",
+          "table": {
+            "head": ["Ataque", "O que fazer"],
+            "rows": [
+              ["**Dano fantasmal** (onda de fantasmas)", "É Life Drain. Normalmente é *minor*, mas é *massive* se pisaste uma Phantasmal Ooze há pouco."],
+              ["**Painful Energies** (*\"You emit painful energies!\"*)", "A cada 30 segundos, um feitiço tipo *exori* à volta de cada personagem dá Life Drain aos outros jogadores: não fiquem juntos."],
+              ["**Massive Fire Elemental**", "Um jogador ao acaso é transformado e explode 6 segundos depois (dano de Fire em área grande): afasta-te dos outros."],
+              ["**Ladrilhos brancos** (*\"FEEL THE POWER OF MY WRATH!!\"*)", "Aparecem {item:White Stone Tile|ladrilhos brancos} e destroem os Necromantic Remains no chão; 8 segundos depois quem **não** estiver num ladrilho leva **10.000 de Death**. Só acontece 2 ou 3 vezes: decidam antes quem pisa os ladrilhos e quem aguenta o golpe com SSA, Might Ring e proteção Death."],
+              ["**Annihilation** (forma azul)", "O boss fica azul, prende-se no sítio e grita *\"NOW - I - WILL - ANNIHILATE - YOU!\"*. Afastem-se dele mas continuem a atacar. Só acontece uma vez e dura cerca de 7 segundos."],
+              ["**Medo**", "O boss pode causar medo (*Feared*) no alvo dele."]
+            ]
+          },
+          "tip": "Equipas fortes usam os feitiços {wiki:Avatar} na primeira fase verde: o boss passa a azul quando a vida chega um pouco acima do amarelo, e se isso acontecer logo na primeira rotação de Aspects poupa-se muito tempo. Equipas mais fracas precisam de mais rotações."
+        },
+        {
+          "title": "Reportar ao Flickering Soul e receber o outfit base",
+          "text": "Depois de derrotares o boss, volta ao hub e fala com o {npc:Flickering Soul}: {key:hi} e {key:task}. Recebes os **Revenant Outfits** base (masculino e feminino).",
+          "npc": "Flickering Soul",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Be greeted, living soul!"},
+            {"you": "task"},
+            {"npc": "You did it! For the first time I can feel free from the pull of my past. Now I'm free at last. [...]"}
+          ],
+          "images": [{"file": "Revenant Outfits Artwork.jpg", "caption": "Arte oficial dos Revenant Outfits"}],
+          "reward": "Revenant Outfit (base)"
+        },
+        {
+          "title": "Abrir o baú de recompensa",
+          "text": "Entra no portal **atrás** de um {npc:Flickering Soul} na sala principal e abre o {item:Brass-Shod Chest} a **norte**. Dá **um** item ao acaso do {wiki:Soul Set|Soul Set}, uma única vez por personagem.",
+          "reward": "Um item aleatório do Soul Set"
+        },
+        {
+          "title": "Sair de Zarganash",
+          "text": "Na sala do baú, o {item:Magic Forcefield} leva-te diretamente para o **depot de Thais**. Se ainda não chegaste a esta sala (por exemplo, depois de caçares só os bosses de acesso), a wiki não descreve outra saída: volta pelo caminho por onde entraste até ao teleporte de Vengoth ({coord:32962,31497,7}), anda para **sudoeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp). Em Yalahar, se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}, o {npc:Karith} (no porto, num barco 1 andar acima) leva-te para a tua cidade ({key:hi}, nome da cidade, {key:yes}; ver tabela). Se não, o {npc:Captain Cookie}, no barco à esquerda do do Karith, leva-te a **Liberty Bay** (400 gp) ou a **Thais** (800 gp).",
+          "coords": [
+            {"x": 32962, "y": 31497, "z": 7, "label": "Teleporte de Zarganash (Vengoth)"},
+            {"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth"},
+            {"x": 32818, "y": 31278, "z": 5, "label": "Karith, porto de Yalahar"},
+            {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie, porto de Yalahar"}
+          ],
+          "table": {
+            "head": ["Destino do Karith (após Searoutes around Yalahar)", "Preço"],
+            "rows": [
+              ["Ab'Dendriel", "160 gp"],
+              ["Ankrahmun", "230 gp"],
+              ["Carlin", "185 gp"],
+              ["Darashia", "210 gp"],
+              ["Liberty Bay", "275 gp"],
+              ["Port Hope", "260 gp"],
+              ["Thais", "200 gp"],
+              ["Venore", "185 gp"]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "8. Primeiro addon: The Skull of a Beast",
+      "intro": "{item:The Skull of a Beast} (*\"Unleash the beast.\"*, 2,30 oz) dá o primeiro addon. Cai de quatro dos bosses de acesso do Soul War, ou compra-se no Market.",
+      "steps": [
+        {
+          "title": "Opção rápida: comprar no Market",
+          "text": "Procura **The Skull of a Beast** no Market de qualquer depot e compra-o. Nenhum NPC o vende. Se o comprares, salta para o passo «Usar The Skull of a Beast».",
+          "tip": "O preço é negociado entre jogadores; compara as ofertas antes de comprar."
+        },
+        {
+          "title": "Caçar o item nos bosses",
+          "text": "Se preferires caçá-lo, mata os bosses que o deixam cair (secções 2 a 5). Cada um tem **20 horas** de cooldown, e as taxas da wiki vêm de amostras pequenas, por isso conta com várias tentativas.",
+          "table": {
+            "head": ["Boss", "Zona", "Secção", "Taxa na wiki"],
+            "rows": [
+              ["{creature:Goshnar's Malice}", "Claustrophobic Inferno", "2", "não indicada (17 mortes registadas)"],
+              ["{creature:Goshnar's Greed}", "Mirrored Nightmare", "3", "2,0% (49 mortes registadas)"],
+              ["{creature:Goshnar's Spite}", "Ebb and Flow", "4", "não indicada (9 mortes registadas)"],
+              ["{creature:Goshnar's Cruelty}", "Furious Crater", "5", "não indicada (11 mortes registadas)"]
+            ]
+          }
+        },
+        {
+          "title": "Usar The Skull of a Beast",
+          "text": "Usa {item:The Skull of a Beast} (clique direito → *Use*). Recebes o **primeiro addon** dos Revenant Outfits e a mensagem *\"Now the beast is unleashed!\"*.",
+          "reward": "Addon 1 dos Revenant Outfits"
+        }
+      ]
+    },
+    {
+      "title": "9. Segundo addon: Bracelet of Strengthening",
+      "intro": "O {item:Bracelet of Strengthening} (1,50 oz) dá o segundo addon. Cai do Goshnar's Hatred, ou compra-se no Market.",
+      "steps": [
+        {
+          "title": "Opção rápida: comprar no Market",
+          "text": "Procura **Bracelet of Strengthening** no Market e compra-o. Nenhum NPC o vende. Se o comprares, salta para o passo «Usar o Bracelet of Strengthening»."
+        },
+        {
+          "title": "Caçar o item no Goshnar's Hatred",
+          "text": "Mata o {creature:Goshnar's Hatred} na Rotten Wasteland (secção 6), com **20 horas** de cooldown entre tentativas (a wiki não indica a taxa: só 12 mortes registadas). As estatísticas de loot da wiki registam também um Bracelet of Strengthening no {creature:Goshnar's Malice} (secção 2), numa amostra de só 17 mortes."
+        },
+        {
+          "title": "Usar o Bracelet of Strengthening",
+          "text": "Usa o {item:Bracelet of Strengthening} (clique direito → *Use*). Recebes o **segundo addon** e a mensagem *\"Wild power flows though your body!\"*. Quando tiveres usado os dois itens ({item:The Skull of a Beast} e o Bracelet of Strengthening), ganhas o achievement **Unleash the Beast**.",
+          "reward": "Addon 2 dos Revenant Outfits e achievement Unleash the Beast (com os dois addons)"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Resumo: **outfit base** na {wiki:Soul War Quest|Soul War Quest} (derrotar o {creature:Goshnar's Megalomania} e reportar ao {npc:Flickering Soul}); **addon 1** com {item:The Skull of a Beast} (drop do Goshnar's Malice, Greed, Spite ou Cruelty); **addon 2** com o {item:Bracelet of Strengthening} (drop do Goshnar's Hatred). Os dois itens compram-se e vendem-se no Market.",
+    "A wiki não é consistente sobre a numeração: o spoiler da quest diz que The Skull of a Beast dá o **primeiro** addon e o Bracelet o **segundo**, mas as páginas dos itens dizem o contrário. Para ficares com o outfit completo e o achievement precisas sempre dos dois.",
+    "Achievement **Unleash the Beast** (8 pontos): *\"You defeated the manifestation of Goshnar's evil traits by fighting your way through beasts you didn't even want to imagine. It transformed you and now you can also look the part.\"*",
+    "Se a equipa falhar a luta com o Goshnar's Megalomania, cada jogador perde os **dois últimos** taints e o progresso de **dois bosses ao acaso** (os mesmos para toda a equipa); vês quais com {key:shards} ao Flickering Soul. Derrotar o boss final limpa os taints.",
+    "Ter taints aumenta a hipótese de os monstros e os bosses do Soul War deixarem cair uma {item:Bag You Desire}.",
+    "A Soul War Quest também pode dar o achievement **Soul Mender** (em certas condições), além do item do Soul Set."
+  ]
+}

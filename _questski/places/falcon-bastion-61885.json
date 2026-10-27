@@ -1,0 +1,57 @@
+{
+  "title": "Falcon Bastion",
+  "type": "edificio",
+  "near": "Farmine",
+  "summary": "Castelo em ruínas da {wiki:Order of the Falcon}, numa ilha a **nordeste da {wiki:Zao Steppe}**, com uma zona subterrânea; entra-se pelo ritual da {wiki:Falcon Outpost} (Edron) ou, depois da {wiki:The New Frontier Quest}, pelo barco-atalho de Zao. Só a partir do nível 250.",
+  "entrance": {"x": 33362, "y": 31343, "z": 7, "label": "Falcon Bastion (castelo, nordeste da Zao Steppe)"},
+  "requirements": [
+    "Nível **250** ou mais para usares a Falcon Outpost e entrares na Falcon Bastion.",
+    "Segundo a wiki, a parte *Order of the Falcon* da {wiki:The Secret Library Quest} só pode ser começada **à noite** ({wiki:Night|noite}: entre as 18:00 e as 06:00 de Tibia; na hora real, entre o minuto :45 de uma hora e o minuto :15 da seguinte).",
+    "Para o ritual: um {item:Bucket} vazio, dois recipientes de líquido (um com sangue e outro com água) e {spell:Levitate} para subires à Falcon Outpost.",
+    "Barco-atalho entre a Zao Steppe e a ilha: {wiki:The New Frontier Quest} completa e teres ativado o atalho uma vez no pequeno barco da ilha (ver *Como sair*).",
+    "Dentro do castelo, a sala de acesso à zona subterrânea e a sala do {creature:Grand Master Oberon} só abrem depois de matares os minibosses por ordem (ver o guia da {wiki:The Secret Library Quest})."
+  ],
+  "items": ["Bucket"],
+  "arrive": [
+    "**Pelo ritual (Edron):** vai a **Edron** de barco (por exemplo, de Thais com o {npc:Captain Bluebear}: {key:hi}, {key:edron}, {key:yes}); chegas ao porto, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}). Leva o {item:Bucket} vazio e os dois recipientes, um com sangue e outro com água.",
+    "Vai até à rampa logo a **norte** da Wyvern Mountain ({coord:33212,31748,7}), um pouco a **leste** do porto, sobe-a e atravessa a ponte para **sul**. Usa o {item:Bucket} no monte de giz ({item:Chalk}) do chão para obteres um {item:Bucket Filled with Chalk (Fine)}.",
+    "No canto **sudeste**, vira-te para **sul** e usa {spell:Levitate} para cima ({key:exani hur up}) em {coord:33202,31761,4}; depois sobe as escadas até à {wiki:Falcon Outpost}. No baú está a {item:Page from a Mystic Book}, com as instruções do ritual.",
+    "No chão está pintado o símbolo da Order of the Falcon com um pauzinho de incenso aceso. Deita **primeiro o sangue** e **depois a água** no lado **sudeste** do símbolo, em cima do incenso, e usa o balde de giz no quadrado **nordeste** (canto superior direito do símbolo): és teleportado para o castelo da Falcon Bastion. Numa equipa, só um jogador precisa de deitar o sangue e a água; os outros só usam o balde de giz.",
+    "**Pelo barco-atalho (só depois da New Frontier e de ativares o atalho):** apanha o {wiki:Steamship} para **Farmine**: o {npc:Brodrosch} em Kazordoon ou o {npc:Gurbasch}, 8 andares abaixo de Cormaya (de Edron, o {npc:Captain Seahorse} leva-te a Cormaya com {key:hi}, {key:cormaya}, {key:yes}). Diz {key:hi}, {key:farmine}, {key:yes}; chegas junto ao {npc:Thorgrin}.",
+    "Em Farmine vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície. Segue a passagem para **leste**, descendo com {spell:Levitate} (ou parcels/caixas), até à {wiki:Zao Steppe} ({coord:33085,31532,7}).",
+    "Atravessa a estepe para **nordeste** até ao barco ({coord:33326,31351,7}) e usa-o: leva-te à ilha da Falcon Bastion."
+  ],
+  "leave": [
+    "A wiki não descreve a saída da sala do Oberon nem da zona subterrânea: volta pelo caminho por onde vieste ({wiki:Mystic Flame|Mystic Flames}, {wiki:Electric Sparks} e zona subterrânea) até ao rés-do-chão do castelo.",
+    "Do rés-do-chão, sai do castelo para **norte**, contorna-o pelo lado **oeste** e entra na zona de natação; a **sul** dela há um pequeno barco. Também lá chegas caindo de propósito pelas rachas em {coord:33367,31324,5} ou abrindo com a {item:Key 0909} uma das duas portas do rés-do-chão que dão para a zona exterior ({coord:33360,31350,7} e {coord:33368,31331,7}). Usa uma das pontas do barco: na primeira vez isso ativa o atalho.",
+    "Com a {wiki:The New Frontier Quest} completa, esse barco leva-te ao barco a **nordeste** da {wiki:Zao Steppe} ({coord:33326,31351,7}). Daí volta para **sudoeste** até à passagem pelas montanhas ({coord:33085,31532,7}), sobe com {spell:Levitate} (ou parcels/caixas) e segue para **oeste** até ao elevador, que te leva a **Farmine**.",
+    "Em Farmine, o {npc:Thorgrin} leva-te de Steamship a Kazordoon ou Cormaya: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}. De Cormaya, o {npc:Pemaret} (porto **norte** de Cormaya) leva-te a Edron: {key:hi}, {key:edron}, {key:yes} (20 gp).",
+    "Como tens a New Frontier completa, também podes sair de Farmine pelo tapete voador do {npc:Melian}, no alto das montanhas por cima da cidade ({coord:32984,31540,1}): {key:hi}, o destino (Darashia, Edron, Femor Hills, Svargrond, Kazordoon ou Issavi) e {key:yes}.",
+    "Sem a New Frontier Quest, a wiki não descreve nenhuma outra saída da ilha: leva uma {item:Temple Teleport Scroll}, que te leva ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33212, "y": 31748, "z": 7, "label": "Rampa a norte da Wyvern Mountain (Edron)"},
+    {"x": 33202, "y": 31761, "z": 4, "label": "Ponto para levitar até à Falcon Outpost"},
+    {"x": 33362, "y": 31343, "z": 7, "label": "Falcon Bastion (castelo)"},
+    {"x": 33376, "y": 31322, "z": 1, "label": "Onde está a Key 0909 (andares de cima)"},
+    {"x": 33360, "y": 31350, "z": 7, "label": "Porta da Key 0909 (1), rés-do-chão, para a zona exterior"},
+    {"x": 33368, "y": 31331, "z": 7, "label": "Porta da Key 0909 (2), rés-do-chão, para a zona exterior"},
+    {"x": 33367, "y": 31324, "z": 5, "label": "Rachas que levam à zona do barco-atalho"},
+    {"x": 33363, "y": 31342, "z": 7, "label": "Sala de acesso à zona subterrânea"},
+    {"x": 33310, "y": 31326, "z": 8, "label": "Electric Sparks (caminho para o Oberon)"},
+    {"x": 33326, "y": 31351, "z": 7, "label": "Barco-atalho a nordeste da Zao Steppe"},
+    {"x": 33085, "y": 31532, "z": 7, "label": "Passagem pelas montanhas (Zao Steppe ↔ Farmine)"},
+    {"x": 32984, "y": 31540, "z": 1, "label": "Tapete voador de Farmine (Melian)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya, barco para Edron)"}
+  ],
+  "images": [
+    {"file": "Screenshot 143.png", "caption": "Ritual na Falcon Outpost: usa o balde de giz no quadrado assinalado"},
+    {"file": "Shortcut.gif", "caption": "Barco-atalho entre a Zao Steppe e a ilha da Falcon Bastion"}
+  ],
+  "warnings": [
+    "O castelo tem muitas salas pequenas e **rachas no chão** que te fazem cair para o andar de baixo.",
+    "Cuidado sobretudo ao subir e descer escadas: podes ficar cercado por {creature:Falcon Knight|Falcon Knights} e {creature:Falcon Paladin|Falcon Paladins}, que batem mais de 1200 de dano.",
+    "Sem o barco-atalho (New Frontier Quest) não há saída documentada da ilha: entra só com uma {item:Temple Teleport Scroll} na mochila."
+  ]
+}

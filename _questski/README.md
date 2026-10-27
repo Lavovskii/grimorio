@@ -5,8 +5,8 @@
 > tem a fonte: os guias (`guides/`), as fichas de locais (`places/`) e as ferramentas (`tools/`).
 > O `.htaccess` desta pasta não a deixa ver de fora. A ligação ao Grimório está explicada no fim deste ficheiro.
 
-Guias passo-a-passo, em português, de todas as quests do Tibia que se podem começar até ao nível 100
-(requisito de nível ≤ 100 ou sem requisito),
+Guias passo-a-passo, em português, de todas as quests do Tibia que ainda existem no jogo, de qualquer nível
+(todas as "Quest Overview Pages" da TibiaWiki menos as retiradas do jogo; até outubro de 2026 eram só as até ao nível 100),
 com mini-mapas, coordenadas, mapa interativo, capturas de ecrã, diálogos dos NPCs e progresso guardado.
 
 ## Abrir o site
@@ -27,8 +27,9 @@ e depois Importar no outro.
 ## O que tem
 
 - **Lista por nível** (barra lateral), do mais baixo para o mais alto, agrupada em faixas (1–9, 10–19, …, 90–100,
-  e "Rec. 100+" para quests com requisito ≤ 100 mas recomendadas acima). Ordena por nível recomendado ou mínimo.
-- **Filtros**: o teu nível (bloqueia/esconde o que ainda não podes fazer), Free/Premium, tipo de quest,
+  101–150, 151–200, 201–300 e 300+). Ordena por nível recomendado ou mínimo.
+- **Filtros**: o teu nível (bloqueia/esconde o que ainda não podes fazer), Free/Premium, equipa (solo, solo até ao boss
+  ou em grupo: campo `team` dos guias, classificação que veio das quests do Grimório), tipo de quest,
   esconder concluídas, e pesquisa (tecla `/`) por nome, NPC, recompensa ou local.
 - **Região (cidade)**: escolhe uma cidade (barra lateral, cartões "Quests por região" na página inicial, ou a barra de
   regiões na página Quests; link direto `#/quests/regiao/Darashia`) para ver só as quests de lá. Por omissão mostra as

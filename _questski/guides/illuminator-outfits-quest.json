@@ -1,0 +1,416 @@
+{
+  "slug": "illuminator-outfits-quest",
+  "category": "outfit",
+  "region": "Edron",
+  "difficulty": 4,
+  "team": "solo",
+  "duration": "Vários dias (a Between the Lines Quest leva 4–6 horas; depois é farm de dois bosses com cooldown de 20 h e drops de 3,5% e 2%)",
+  "summary": "Os {wiki:Illuminator Outfits|Illuminator Outfits} estão ligados ao {wiki:Book World|Book World}, o mundo dentro de um livro do castelo de Edron. O outfit base é a recompensa final da {wiki:Between the Lines Quest|Between the Lines Quest}. No fim dessa quest, o {npc:Wyrdin} conta-te que roubaram dois acessórios: o {item:Scallop Shell}, que cai do {creature:Tropical Desolator} (quadro em Liberty Bay), dá o 1.º addon, e o {item:Sand-Filled Horn}, que cai do {creature:Wrathful Archivist} (quadro em Yalahar), dá o 2.º. Com os dois addons ganhas o achievement **Illuminator**.",
+  "start": {"x": 32369, "y": 31764, "z": 7, "label": "Phillip, escola de Carlin (início da Between the Lines Quest)"},
+  "requirements": [
+    "Conta **Premium** (outfit e addons são só para Premium).",
+    "Nível **200** (nível mínimo da quest e do feitiço {spell:Summon Familiar}); nível **recomendado 300+**.",
+    "Outfit base: completar a {wiki:Between the Lines Quest|Between the Lines Quest} (precisa do feitiço {spell:Summon Familiar} e de um item que depende da vocação; vê a secção 1).",
+    "Os bosses dos quadros ({creature:Tropical Desolator}, {creature:Blight Mariner} e {creature:Wrathful Archivist}) **só ficam acessíveis depois de terminares a Between the Lines Quest**.",
+    "1.º addon: 1 {item:Scallop Shell} (loot do {creature:Tropical Desolator}).",
+    "2.º addon: 1 {item:Sand-Filled Horn} (loot do {creature:Wrathful Archivist}).",
+    "Feitiço {spell:Levitate} para subir ao telhado onde está o quadro do Wrathful Archivist, em Yalahar.",
+    "Barco para Yalahar: o {npc:Jack Fate} (Liberty Bay, 275 gp) e o {npc:Captain Bluebear} (Thais, 200 gp) levam-te sem condições na wiki; o {npc:Captain Max} (Liberty Bay, 400 gp) só depois de começares a {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}."
+  ],
+  "items_needed": [
+    {"item": "Scallop Shell", "note": "dá o 1.º addon; cai do Tropical Desolator (3,5%) ou compra-se no Market"},
+    {"item": "Sand-Filled Horn", "note": "dá o 2.º addon; cai do Wrathful Archivist (2,0%) ou compra-se no Market"},
+    {"item": "Cheese", "note": "opcional: para dar de comer aos ratos na mecânica dos animais do Wrathful Archivist"},
+    {"item": "Baguette", "note": "opcional: pão para os coelhos na mesma mecânica"},
+    {"item": "Meat", "note": "opcional: para os rotworms na mesma mecânica"},
+    {"item": "Rope", "note": "Sorcerers, na Between the Lines Quest (Phoenix Feather Quill em Kazordoon)"},
+    {"text": "Itens de vocação da Between the Lines Quest: Knights — {item:Sword} e {item:Inkwell}; Druids — {item:Sling Herb} e {item:Star Herb}; Monks — {item:Coned Hat of Enlightenment} e um {item:Adventurer's Stone} (para irem a Blue Valley); Paladins e Sorcerers obtêm o seu durante a quest."},
+    {"item": "Temple Teleport Scroll", "note": "opcional: a wiki não descreve a saída das salas dos quadros; leva-te ao templo da tua cidade"},
+    {"text": "Poções de vida e de mana para os bosses; proteção contra **terra** ajuda no Tropical Desolator e contra **morte** e **energia** no Wrathful Archivist."}
+  ],
+  "rewards": [
+    {"text": "Outfit base {wiki:Illuminator Outfits|Illuminator} (masculino e feminino), ao terminares a {wiki:Between the Lines Quest|Between the Lines Quest}"},
+    {"text": "1.º addon Illuminator (usar o {item:Scallop Shell})"},
+    {"text": "2.º addon Illuminator (usar o {item:Sand-Filled Horn})"},
+    {"text": "Achievement **Illuminator** (3 pontos), com os dois addons"},
+    {"text": "Pelo caminho: achievement **Power of Words**, as duas partes do {item:Painting of Thais} e a figurine do teu familiar (recompensas da Between the Lines Quest)"}
+  ],
+  "achievements": ["Illuminator", "Power of Words"],
+  "unlocks": [
+    {"what": "Illuminator Outfit (base e 2 addons)", "kind": "funcionalidade", "place": "Illuminator Outfits", "when": "Base: relatório final ao {npc:Wyrdin} na {wiki:Between the Lines Quest|Between the Lines Quest}. Addons: ao usares o {item:Scallop Shell} (1.º) e o {item:Sand-Filled Horn} (2.º).", "note": "Precisas de Premium. Os dois itens dos addons podem ser comprados no Market."},
+    {"what": "Bosses dos quadros: Tropical Desolator (Liberty Bay), Blight Mariner (Venore) e Wrathful Archivist (Yalahar)", "kind": "funcionalidade", "when": "Depois de terminares a {wiki:Between the Lines Quest|Between the Lines Quest}, quando o {npc:Wyrdin} te fala dos acessórios roubados.", "note": "O Tropical Desolator e o Blight Mariner têm cooldown de 20 h."}
+  ],
+  "dangers": ["Tropical Desolator", "Bound Ape", "Bound Cave Spider", "Bound Iks Aucar", "Wrathful Archivist", "Inkwing", "Vicious Ink Splash", "Sir Leonard", "Crusader Guardian", "Cinder Wyrmling", "Shell Drake", "Bramble Wyrmling", "Hawk Hopper", "Lion Hydra", "Bluebeak", "Crusader", "Headwalker"],
+  "npcs": ["Phillip", "Wyrdin", "Quill (NPC)", "Daniel Steelsoul", "Willard", "Thomas", "Luna", "Sinclair", "Quentin", "Pydar", "Death (NPC)", "Captain Seahorse", "Captain Greyhound", "Captain Bluebear", "Gurbasch", "Brodrosch", "Pemaret", "Captain Max", "Jack Fate", "Captain Cookie", "Karith", "Soilance", "Marcus"],
+  "tips": [
+    "Se já fizeste a {wiki:Between the Lines Quest|Between the Lines Quest}, salta diretamente para a secção 2: o outfit base já é teu e os bosses dos quadros já estão desbloqueados.",
+    "O {item:Scallop Shell} e o {item:Sand-Filled Horn} são **comercializáveis no Market** (nenhum NPC os compra nem vende). Se os drops (3,5% e 2,0%) não te saírem, podes comprá-los a outros jogadores.",
+    "Faz os dois bosses na mesma viagem: Edron → Liberty Bay ({creature:Tropical Desolator}) → Yalahar ({creature:Wrathful Archivist}), com o barco do {npc:Jack Fate} ou do {npc:Captain Max} de Liberty Bay para Yalahar.",
+    "A primeira vez que matas o Tropical Desolator ele deixa cair um {item:Proficiency Catalyst}.",
+    "Leva {item:Cheese}, {item:Baguette} e {item:Meat} para o Wrathful Archivist: poupam tempo numa das mecânicas (se não tiveres, há uma máquina na sala que te dá a comida)."
+  ],
+  "sections": [
+    {
+      "title": "1. Outfit base — Between the Lines Quest",
+      "intro": "O outfit base é a recompensa final da {wiki:Between the Lines Quest|Between the Lines Quest}. Aqui tens o resumo de todas as etapas, com as coordenadas; o guia dessa quest tem cada passo em pormenor (viagens, cada tarefa de vocação e as saídas de cada zona). A quest começa em Carlin, continua em Edron e acaba no {wiki:Book World|Book World}, um mundo dentro de um livro da biblioteca do castelo de Edron.",
+      "steps": [
+        {
+          "title": "Ir a Carlin e falar com o Phillip",
+          "text": "Apanha um barco para **Carlin** (de Edron, o {npc:Captain Seahorse}: {key:hi}, {key:carlin}, {key:yes}, 110 gp). Chegas ao porto, junto ao {npc:Captain Greyhound}. Vai à escola de Carlin e fala com o {npc:Phillip}: {key:hi} e {key:book}. Ele conta-te que saiu um monstro do livro dele; aceita tratar do assunto e ele diz-te que o monstro deixou um **rasto de tinta**.",
+          "npc": "Phillip",
+          "dialogue": [{"you": "hi"}, {"you": "book"}],
+          "coords": [
+            {"x": 32388, "y": 31822, "z": 6, "label": "Porto de Carlin (Captain Greyhound)"},
+            {"x": 32369, "y": 31764, "z": 7, "label": "Phillip"}
+          ]
+        },
+        {
+          "title": "Seguir a tinta e matar o Inkwing",
+          "text": "Segue o rasto de tinta até aos arredores de Carlin, para **leste** ({coord:32510,31744,7}), e **desce**. Segue os corredores até ao fim e pisa a **poça de tinta** no chão: enfrentas o {creature:Inkwing} (12.000 de vida, invoca {creature:Vicious Ink Splash|Vicious Ink Splashes}; cooldown de 2 h).",
+          "coords": [
+            {"x": 32510, "y": 31744, "z": 7, "label": "Fim do rasto de tinta (descida)"},
+            {"x": 32532, "y": 31777, "z": 9, "label": "Inkwing (Fields of Glory)"}
+          ]
+        },
+        {
+          "title": "Sair do covil e reportar ao Phillip",
+          "text": "Volta pelos mesmos corredores até ao sítio onde desceste ({coord:32510,31744,7}) e regressa a pé a Carlin, para **oeste**. Diz ao {npc:Phillip} {key:hi} e {key:book}: ele manda-te falar com o {npc:Wyrdin}, em **Edron**.",
+          "npc": "Phillip"
+        },
+        {
+          "title": "Ir a Edron e falar com o Wyrdin",
+          "text": "No porto de Carlin diz ao {npc:Captain Greyhound} {key:hi}, {key:edron}, {key:yes}. Em Edron vai às Ivory Towers da {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}, na parte **leste** da cidade. O {npc:Wyrdin} está na torre do meio, **1 andar acima** do chão. Diz {key:hi} e {key:book}: ele pede-te três páginas de livros que estão a servir de portais.",
+          "npc": "Wyrdin",
+          "dialogue": [{"you": "hi"}, {"you": "book"}],
+          "coords": [
+            {"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"},
+            {"x": 33268, "y": 31838, "z": 6, "label": "Wyrdin"}
+          ]
+        },
+        {
+          "title": "Apanhar as três Illuminated Book Pages",
+          "text": "Desce **três andares** e passa a porta de quest a **leste**. Na zona de caça ({creature:Cinder Wyrmling|Cinder Wyrmlings} e {creature:Shell Drake|Shell Drakes}) usa os três objetos da tabela para apanhares as páginas. Depois volta pelas mesmas escadas até ao {npc:Wyrdin}.",
+          "table": {
+            "head": ["Página", "Onde está", "Coordenada"],
+            "rows": [
+              ["{item:Illuminated Book Page (A)}", "Árvore morta", "{coord:33364,31812,10}"],
+              ["{item:Illuminated Book Page (B)}", "Tronco de árvore", "{coord:33382,31835,10}"],
+              ["{item:Illuminated Book Page (C)}", "Cogumelos", "{coord:33432,31838,10}"]
+            ]
+          }
+        },
+        {
+          "title": "Devolver as páginas A e B",
+          "text": "Diz ao {npc:Wyrdin} {key:hi} e {key:book}. O contra-feitiço resultou para as duas páginas da academia: devolve-as aos livros, uma **1 andar acima** na torre central e a outra na torre **mais a sul**. Depois volta ao Wyrdin e diz {key:book}.",
+          "npc": "Wyrdin",
+          "coords": [
+            {"x": 33265, "y": 31832, "z": 5, "label": "Livro da torre central"},
+            {"x": 33269, "y": 31845, "z": 3, "label": "Livro da torre mais a sul"}
+          ]
+        },
+        {
+          "title": "Usar a página C no livro do castelo",
+          "text": "Vai ao **castelo de Edron** e usa a {item:Illuminated Book Page (C)} no livro da biblioteca, a **oeste** do {npc:Daniel Steelsoul}. Umas garras puxam o teu familiar para dentro das páginas.",
+          "coords": [{"x": 33185, "y": 31795, "z": 7, "label": "Livro da biblioteca do castelo (entrada do Book World)"}],
+          "warning": "A partir daqui **deixas de poder usar o {spell:Summon Familiar}** até acabares a quest."
+        },
+        {
+          "title": "Preparar o item da tua vocação",
+          "text": "Diz ao {npc:Wyrdin} {key:hi} e {key:book}. Para salvares o familiar tens de entrar no livro, mas antes cada vocação prepara uma coisa diferente (tabela). As viagens de ida e volta a Thais, Kazordoon e Blue Valley estão no passo seguinte. A {item:Star Herb} vende-a a {npc:Luna} (Edron, 21 gp); a {item:Sling Herb} não se compra: apanha-se em daily respawns, por exemplo na quinta do Donald McRonald, em Thais ({coord:32405,32241,7}).",
+          "npc": "Wyrdin",
+          "table": {
+            "head": ["Vocação", "O que fazer", "Resultado"],
+            "rows": [
+              ["Knight", "Compra uma {item:Sword} ao {npc:Willard} e um {item:Inkwell} ao {npc:Thomas} (ambos em Edron) e usa um no outro", "{item:Ink-Coated Sword}"],
+              ["Paladin", "Fala com o {npc:Quentin} no templo de Thais: {key:Getema}", "{item:The Sacred Writings of Getema}"],
+              ["Druid", "Sobe 4 andares acima do Wyrdin, ao laboratório do {npc:Sinclair} ({coord:33268,31835,2}), e usa uma {item:Sling Herb} e uma {item:Star Herb} nos {item:Suspicious Cauldron|Suspicious Cauldrons}", "{item:Jar of Blue Colour} e {item:Jar of Red Colour}"],
+              ["Sorcerer", "Em Kazordoon, perto do {npc:Pydar}, usa uma {item:Rope} em {coord:32631,31884,11}, clica no campo de fogo amarelo/laranja a leste e volta a subir com a corda", "{item:Phoenix Feather Quill}"],
+              ["Monk", "Com o {item:Coned Hat of Enlightenment} vestido, vai a {wiki:Blue Valley}, sobe ao último andar do edifício principal e põe-te entre as duas estátuas ({coord:33604,31454,4})", "Meditação feita"]
+            ]
+          }
+        },
+        {
+          "title": "Viagens da tua vocação (ida e volta)",
+          "text": "Knights e Druids fazem tudo em Edron. Paladins, Sorcerers e Monks têm de viajar: segue a linha da tua vocação.",
+          "table": {
+            "head": ["Vocação", "Como chegar", "Como voltar a Edron"],
+            "rows": [
+              ["Paladin (Thais)", "No porto de Edron, {npc:Captain Seahorse}: {key:hi}, {key:thais}, {key:yes} (160 gp). Chegas ao porto de Thais ({npc:Captain Bluebear}, {coord:32310,32210,6}); o {npc:Quentin} está no templo ({coord:32369,32239,7})", "No porto de Thais, {npc:Captain Bluebear}: {key:hi}, {key:edron}, {key:yes} (160 gp)"],
+              ["Sorcerer (Kazordoon)", "{npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Em Cormaya desce 8 andares até ao Steamship, no fim da Cormaya Street, e diz ao {npc:Gurbasch} ({coord:33313,31989,15}) {key:hi}, {key:kazordoon}, {key:yes} (160 gp). Chegas muito abaixo de Kazordoon, junto ao {npc:Brodrosch} ({coord:32661,31957,15}); sobe até ao piso do {npc:Pydar} ({coord:32655,31893,11})", "Sobe com a {item:Rope}, desce até ao {npc:Brodrosch}: {key:hi}, {key:cormaya}, {key:yes} (160 gp). No porto norte de Cormaya, {npc:Pemaret} ({coord:33287,31956,6}): {key:hi}, {key:edron}, {key:yes} (20 gp)"],
+              ["Monk (Blue Valley)", "Usa um {item:Adventurer's Stone} no templo de uma cidade (se não tiveres, pede-o ao NPC do templo: {key:hi}, {key:adventurer's stone}, {key:yes}) para ires à {wiki:Adventurers' Guild|Adventurers' Guild}. Lá usa a {wiki:Enchanted Guarded Crystal Sphere|Enchanted Guarded Crystal Sphere}: chegas a Blue Valley ({coord:33603,31469,7})", "Usa a {wiki:Guarded Crystal Sphere|Guarded Crystal Sphere} de Blue Valley para voltares à Adventurers' Guild, sai pelo portal da guilda para o templo de onde vieste e apanha um barco para Edron ({key:hi}, {key:edron}, {key:yes})"]
+            ]
+          }
+        },
+        {
+          "title": "Receber o Magic Bookmark e entrar no Book World",
+          "text": "Volta ao {npc:Wyrdin} e diz {key:book}: recebes um {item:Magic Bookmark}. Com ele no inventário, usa o livro da biblioteca do castelo para entrares no {wiki:Book World|Book World}. Fala com o {npc:Quill (NPC)|Quill} ({key:hi}, {key:mission}): o teu familiar foi raptado pelos crusaders do {creature:Sir Leonard}.",
+          "npc": "Quill (NPC)",
+          "coords": [
+            {"x": 33185, "y": 31795, "z": 7, "label": "Livro da biblioteca do castelo"},
+            {"x": 32541, "y": 32519, "z": 8, "label": "Quill (Capítulo I)"}
+          ],
+          "tip": "Se perderes o Magic Bookmark durante a quest, pede outro ao Wyrdin com {key:lost bookmark}."
+        },
+        {
+          "title": "Atravessar os capítulos",
+          "text": "Usa o pergaminho do chão para tirares uma {item:Dip Pen}, enche-a numa poça ou fonte de tinta ({item:Dip Pen with Ink}) e escreve num espaço em branco para teres uma {item:Painted Torch}. Usa a tocha nas **flores de fogo** do chão para abrires buracos entre capítulos. Cumpre a missão do Quill no capítulo da tua vocação (tabela).",
+          "table": {
+            "head": ["Capítulo", "Início", "Criaturas", "O que fazer"],
+            "rows": [
+              ["I", "{coord:32541,32519,8}", "—", "Quill, Dip Pen e Painted Torch; queima a flor de fogo e desce"],
+              ["II", "{coord:32525,32513,9}", "{creature:Bramble Wyrmling}, {creature:Hawk Hopper}", "**Druid**: {item:Painted Bandages} ({coord:32542,32560,9}), 3 {item:Painted Healing Herbs} ({coord:32532,32553,9}, {coord:32517,32576,9}, {coord:32540,32582,9}), {item:Saturated Painted Bandages} no veado branco ({coord:32548,32565,9}) → {item:Deer Fur Brush}. **Paladin**: {item:Painted Bow} ({coord:32539,32514,9}), {item:Painted Arrow} ({coord:32536,32539,9}) e 3 tiros certeiros nos alvos, em cima dos selos de cera. Saída: flor de fogo {coord:32544,32609,9}"],
+              ["III", "{coord:32551,32596,10}", "{creature:Lion Hydra}, {creature:Bluebeak}", "Escreve um {item:Boat Ticket} perto do barco ({coord:32593,32568,10}) e apanha o barco a leste. Para chegares à zona leste usa o corredor noroeste (ou, com a missão do Quill cumprida, o atalho pela sala do tesouro). **Knight**: mata 30 Lion Hydras. **Monk**: fala com o {npc:Death (NPC)|Death} ({coord:32572,32574,11}) sobre {key:loss} e {key:acceptance}"],
+              ["IV", "{coord:32585,32560,11}", "{creature:Crusader}, {creature:Headwalker}", "**Sorcerer**: acende as velas com a Painted Torch em {coord:32586,32517,11}, {coord:32645,32520,11} e {coord:32616,32557,11} (cada vez levas 44,15% da vida atual de dano). Depois, teleporte do boss em {coord:32631,32560,11}"]
+            ]
+          }
+        },
+        {
+          "title": "Derrotar o Sir Leonard e salvar o familiar",
+          "text": "Entra no teleporte de {coord:32631,32560,11} e mata o {creature:Sir Leonard} (22.000 de vida, invoca até 5 {creature:Crusader Guardian|Crusader Guardians}; sem mecânicas especiais; cooldown de 2 h). Sai da sala pelo **sul**, usa na porta selada o item da tua vocação, fala com o familiar e diz {key:saving}. Tira a figurine do baú.",
+          "coords": [{"x": 32631, "y": 32560, "z": 11, "label": "Teleporte para o Sir Leonard"}],
+          "table": {
+            "head": ["Vocação", "Item a usar na porta selada"],
+            "rows": [
+              ["Knight", "{item:Ink-Coated Sword}"],
+              ["Paladin", "{item:Painted Bow} (com 3 {item:Painted Arrow|Painted Arrows} na mochila)"],
+              ["Druid", "{item:Deer Fur Brush}"],
+              ["Sorcerer", "{item:Phoenix Feather Quill}"],
+              ["Monk", "{item:Dip Pen with Ink}"]
+            ]
+          },
+          "warning": "Leva contigo **todos os itens de quest** das etapas anteriores. Os Paladins têm de ter {item:The Sacred Writings of Getema}, senão não são levados à sala do familiar depois do combate."
+        },
+        {
+          "title": "Sair do Book World",
+          "text": "Sai da sala do familiar pela **porta** e entra no **teleporte** do chão. Depois volta para trás através de todos os capítulos (IV, III, II e I) e sai do Book World para a biblioteca do castelo de **Edron**.",
+          "coords": [{"x": 33185, "y": 31795, "z": 7, "label": "Saída: biblioteca do castelo de Edron"}]
+        },
+        {
+          "title": "Receber o outfit base",
+          "text": "Volta às Ivory Towers e diz ao {npc:Wyrdin} {key:hi} e {key:book} uma última vez. Recebes o outfit base **Illuminator**, as duas partes do {item:Painting of Thais} e o achievement **Power of Words**.",
+          "npc": "Wyrdin",
+          "images": [
+            {"file": "Outfit Illuminator Male.gif", "caption": "Illuminator Outfit base (masculino)"},
+            {"file": "Outfit Illuminator Female.gif", "caption": "Illuminator Outfit base (feminino)"}
+          ],
+          "reward": "Illuminator Outfit (base) + achievement Power of Words"
+        },
+        {
+          "title": "Os acessórios roubados",
+          "text": "O {npc:Wyrdin} conta-te ainda que roubaram dois acessórios: um {item:Scallop Shell} e um {item:Sand-Filled Horn}. Os possíveis ladrões estão **dentro de quadros** em Liberty Bay, Venore e Yalahar. Só os podes enfrentar a partir de agora, com a Between the Lines Quest terminada.",
+          "table": {
+            "head": ["Boss", "Quadro", "Deixa cair"],
+            "rows": [
+              ["{creature:Tropical Desolator}", "Liberty Bay {coord:32315,32858,6}", "{item:Scallop Shell} (1.º addon)"],
+              ["{creature:Wrathful Archivist}", "Yalahar {coord:32821,31222,6}", "{item:Sand-Filled Horn} (2.º addon)"],
+              ["{creature:Blight Mariner}", "Venore {coord:33000,32034,4}", "Nenhum dos dois (não serve para os addons)"]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "2. 1.º addon — Scallop Shell (Tropical Desolator, Liberty Bay)",
+      "intro": "O {creature:Tropical Desolator} é um boss Iks (Bosstiary: Archfoe) escondido num quadro em Liberty Bay. Tem **20.500** de vida, dá **23.000** de experiência, vê invisíveis, não pode ser paralisado e anda por cima de campos de energia, fogo e veneno. Cooldown de **20 horas** e combate de **10 minutos** no máximo.",
+      "steps": [
+        {
+          "title": "Ir a Liberty Bay",
+          "text": "Em **Edron**, fala com o {npc:Captain Seahorse} no porto: {key:hi}, {key:liberty bay}, {key:yes} (170 gp). Desembarcas no porto de **Liberty Bay**.",
+          "npc": "Captain Seahorse",
+          "dialogue": [{"you": "hi"}, {"you": "liberty bay"}, {"you": "yes"}],
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse, porto de Edron"}]
+        },
+        {
+          "title": "Encontrar o quadro",
+          "text": "O quadro do Tropical Desolator fica **1 andar acima** do chão, na zona do porto, no **sul** de Liberty Bay, perto do guarda {npc:Marcus}. Sobe a esse andar e vai ao ponto da coordenada.",
+          "coords": [
+            {"x": 32316, "y": 32862, "z": 7, "label": "Marcus (guarda do porto)"},
+            {"x": 32315, "y": 32858, "z": 6, "label": "Quadro do Tropical Desolator"}
+          ]
+        },
+        {
+          "title": "Entrar no quadro",
+          "text": "Clica (usa) o **quadro** para entrares na sala do {creature:Tropical Desolator}.",
+          "warning": "Só funciona depois de terminares a {wiki:Between the Lines Quest|Between the Lines Quest} e se não estiveres em cooldown (20 h depois da última vitória)."
+        },
+        {
+          "title": "Preparar a luta",
+          "text": "O boss ataca **corpo a corpo**, nunca foge e invoca 1–2 criaturas: {creature:Bound Ape}, {creature:Bound Cave Spider} ou {creature:Bound Iks Aucar}. Leva mais dano de **fogo** (110%) e **gelo** (105%) e um pouco menos de **terra** (95%); sagrado e energia a 100%.",
+          "tip": "Ataca com fogo ou gelo e leva proteção contra terra por causa da Blastberry."
+        },
+        {
+          "title": "Fugir das frutas",
+          "text": "A cada **10 segundos** aparece uma fruta aleatória que faz uma contagem decrescente a partir de **5** e depois explode em área. Afasta-te da fruta e **mantém o boss longe dela**.",
+          "table": {
+            "head": ["Fruta", "Efeito da explosão"],
+            "rows": [
+              ["Blastberry", "Cerca de **1.250 de dano de terra**"],
+              ["Painapple", "Aplica a condição **Feared** (medo)"],
+              ["Blamana", "Explosão grande que **cura o boss até 7.000** se ele estiver no alcance"]
+            ]
+          },
+          "warning": "Nunca deixes o boss em cima ou ao lado de uma Blamana quando ela explode: perdes boa parte do dano que fizeste."
+        },
+        {
+          "title": "Matar o Tropical Desolator e ver o loot",
+          "text": "Mata o boss e abre o corpo. O {item:Scallop Shell} cai em **3,5%** das mortes (342 amostras na wiki). Se não te sair, repete passadas 20 horas ou compra-o no Market.",
+          "table": {
+            "head": ["Loot", "Quantidade", "Probabilidade"],
+            "rows": [
+              ["{item:Platinum Coin}", "15–94", "100%"],
+              ["{item:White Pearl}", "1–6", "53%"],
+              ["{item:Black Pearl}", "1–6", "49%"],
+              ["{item:Mango}", "1–6", "40%"],
+              ["{item:Coconut}", "1–6", "38%"],
+              ["{item:Melon}", "1–6", "37%"],
+              ["{item:Banana}", "1–5", "34%"],
+              ["{item:Pineapple}", "1–5", "33%"],
+              ["{item:Opal}", "1–6", "30%"],
+              ["{item:Gold Ingot}", "1–2", "27%"],
+              ["{item:Rainbow Quartz}", "1–5", "26%"],
+              ["{item:Green Crystal Shard}", "1–4", "24%"],
+              ["{item:Red Gem}", "1–2", "22%"],
+              ["{item:Green Gem}", "1–2", "15,8%"],
+              ["{item:Giant Shimmering Pearl}", "1–2", "13,5%"],
+              ["{item:Proficiency Catalyst}", "1", "9,4% (garantido na primeira morte)"],
+              ["{item:Etcher}", "1", "8,2%"],
+              ["{item:Scallop Shell} (1.º addon)", "1", "3,5%"],
+              ["{item:Collar of Green Plasma}", "1", "2,0%"],
+              ["{item:Collar of Red Plasma}", "1", "2,0%"],
+              ["{item:Collar of Orange Plasma}", "1", "0,88%"],
+              ["{item:Collar of Blue Plasma}", "1", "0,58%"]
+            ]
+          },
+          "reward": "Loot do Tropical Desolator (pode trazer o Scallop Shell)"
+        },
+        {
+          "title": "Sair da sala e de Liberty Bay",
+          "text": "A wiki não descreve como se sai da sala do quadro: procura a saída na própria sala. Se não a encontrares, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block). Para seguires para o 2.º addon, apanha um barco para Yalahar no porto de Liberty Bay: o {npc:Jack Fate} ({key:hi}, {key:yalahar}, {key:yes}; 275 gp) ou o {npc:Captain Max}, num dos barcos a **leste** do cais ({key:hi}, {key:yalahar}, {key:yes}; 400 gp, só depois de começares a {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}). Para voltares a Edron, o {npc:Jack Fate} leva-te por 170 gp ({key:hi}, {key:edron}, {key:yes}).",
+          "coords": [{"x": 32298, "y": 32896, "z": 6, "label": "Captain Max (barco para Yalahar)"}]
+        },
+        {
+          "title": "Usar o Scallop Shell",
+          "text": "Usa o {item:Scallop Shell}. Aparece a mensagem *\"Your illuminator robes look more impressive now.\"* e recebes o **1.º addon** do Illuminator.",
+          "images": [
+            {"file": "Outfit Illuminator Male Addon 1.gif", "caption": "Illuminator com o 1.º addon (masculino)"},
+            {"file": "Outfit Illuminator Female Addon 1.gif", "caption": "Illuminator com o 1.º addon (feminino)"}
+          ],
+          "reward": "1.º addon Illuminator"
+        }
+      ]
+    },
+    {
+      "title": "3. 2.º addon — Sand-Filled Horn (Wrathful Archivist, Yalahar)",
+      "intro": "O {creature:Wrathful Archivist} é um boss Voodoo Cultist (Bosstiary: Archfoe) num quadro no telhado de uma casa da Inner City de Yalahar. Tem **15.000** de vida, dá **24.000** de experiência, vê invisíveis e faz dano de **morte**, **energia** e **manadrain** (dano máximo estimado de 1.325+). Começa **imortal**: só o consegues ferir depois de cumprires uma mecânica aleatória.",
+      "steps": [
+        {
+          "title": "Ir a Yalahar",
+          "text": "De **Liberty Bay**: o {npc:Jack Fate} ({key:hi}, {key:yalahar}, {key:yes}; 275 gp) ou o {npc:Captain Max} ({key:hi}, {key:yalahar}, {key:yes}; 400 gp, só depois de começares a {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}). De **Thais**: o {npc:Captain Bluebear} ({key:hi}, {key:yalahar}, {key:yes}; 200 gp); de Edron chegas a Thais com o {npc:Captain Seahorse} ({key:thais}, 160 gp). Chegas ao porto de Yalahar, a **sul** da Inner City.",
+          "dialogue": [{"you": "hi"}, {"you": "yalahar"}, {"you": "yes"}],
+          "coords": [
+            {"x": 32298, "y": 32896, "z": 6, "label": "Captain Max, porto de Liberty Bay"},
+            {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear, porto de Thais"}
+          ]
+        },
+        {
+          "title": "Ir à casa do Soilance",
+          "text": "Do porto, caminha para **norte** até à **Inner City**. O {npc:Soilance}, o vendedor de carne, tem a casa a **norte do banco**. O quadro está no **telhado** dessa casa.",
+          "coords": [{"x": 32821, "y": 31222, "z": 7, "label": "Casa do Soilance (Inner City)"}]
+        },
+        {
+          "title": "Subir ao telhado com Levitate",
+          "text": "Sai da casa e vai para o **lado direito (leste), por fora**. Aí usa {spell:Levitate} para cima para subires ao telhado, onde está o quadro.",
+          "coords": [{"x": 32821, "y": 31222, "z": 6, "label": "Quadro do Wrathful Archivist (telhado)"}]
+        },
+        {
+          "title": "Entrar no quadro",
+          "text": "Clica (usa) o **quadro** para entrares na sala do {creature:Wrathful Archivist}.",
+          "warning": "Só funciona depois de terminares a {wiki:Between the Lines Quest|Between the Lines Quest}."
+        },
+        {
+          "title": "Esperar pelos livros azuis",
+          "text": "Ao entrares o boss é **imortal**. Ao fim de cerca de **15 segundos** aparecem **livros azuis** na sala. Clica num deles: começa uma **mecânica aleatória** (tabela no passo seguinte)."
+        },
+        {
+          "title": "Cumprir a mecânica",
+          "text": "Resolve a mecânica que te calhou. Assim que a completares, o boss fica vulnerável.",
+          "table": {
+            "head": ["Mecânica", "Como resolver"],
+            "rows": [
+              ["Runas", "Desativa as runas clicando nelas por esta ordem: **leste**, **oeste** e **norte**."],
+              ["Fantasmas", "Atrai **3 fantasmas** para cima dos **teleportes roxos**."],
+              ["Animais", "Dá de comer a todos os animais: atira a comida preferida de cada um para o chão e faz com que passem por cima dela — {item:Cheese} para os ratos, pão ({item:Baguette}) para os coelhos e {item:Meat} para os rotworms. Se não tiveres comida, vai até ao fundo **oeste** da sala e usa a máquina que lá está."]
+            ]
+          }
+        },
+        {
+          "title": "Bater no boss e repetir",
+          "text": "Tens cerca de **15 segundos** para bater no {creature:Wrathful Archivist}. Se ele não morrer nesse tempo, voltam a aparecer livros azuis: clica noutro, cumpre a nova mecânica aleatória e volta a bater. Repete até ele morrer.",
+          "tip": "Guarda os ataques mais fortes (e as poções de ataque) para as janelas de 15 segundos. Leva proteção contra **morte** e **energia**."
+        },
+        {
+          "title": "Ver o loot",
+          "text": "Abre o corpo. O {item:Sand-Filled Horn} cai em **2,0%** das mortes (344 amostras na wiki). Se não te sair, volta mais tarde ou compra-o no Market.",
+          "table": {
+            "head": ["Loot", "Quantidade", "Probabilidade"],
+            "rows": [
+              ["{item:Platinum Coin}", "10–69", "100%"],
+              ["{item:Blue Gem}", "1–2", "38%"],
+              ["{item:Gold Coin}", "1–2", "37%"],
+              ["{item:Death Ring}", "1–2", "36%"],
+              ["{item:Time Ring}", "1–2", "35%"],
+              ["{item:Life Ring}", "1–2", "33%"],
+              ["{item:Mana Potion}", "1–15", "33%"],
+              ["{item:Strong Mana Potion}", "1–10", "28%"],
+              ["{item:Great Mana Potion}", "1–5", "28%"],
+              ["{item:Small Emerald}", "1–5", "21%"],
+              ["{item:Violet Crystal Shard}", "1–2", "21%"],
+              ["{item:Violet Gem}", "1–2", "20%"],
+              ["{item:Blue Crystal Splinter}", "1–2", "19,2%"],
+              ["{item:Small Ruby}", "1–4", "18,9%"],
+              ["{item:Small Sapphire}", "1–5", "18,9%"],
+              ["{item:Small Amethyst}", "1–4", "17,7%"],
+              ["{item:Blue Crystal Shard}", "1–2", "16,0%"],
+              ["{item:Ultimate Mana Potion}", "1", "10,8%"],
+              ["{item:Proficiency Catalyst}", "1", "8,1%"],
+              ["{item:Blank Imbuement Scroll}", "1", "7,6%"],
+              ["{item:Wand of Inferno}", "1–2", "7,0%"],
+              ["{item:Spellweaver's Robe}", "1", "6,4%"],
+              ["{item:Spellbook of Mind Control}", "1", "5,5%"],
+              ["{item:Wand of Cosmic Energy}", "1–2", "5,2%"],
+              ["{item:Terra Amulet}", "1–2", "4,1%"],
+              ["{item:Magma Amulet}", "1", "4,1%"],
+              ["{item:Lightning Pendant}", "1", "4,1%"],
+              ["{item:Glacier Amulet}", "1", "2,9%"],
+              ["{item:Sand-Filled Horn} (2.º addon)", "1", "2,0%"]
+            ]
+          },
+          "reward": "Loot do Wrathful Archivist (pode trazer o Sand-Filled Horn)"
+        },
+        {
+          "title": "Sair da sala e de Yalahar",
+          "text": "A wiki não descreve como se sai da sala do quadro: procura a saída na própria sala. Se voltares ao telhado, usa {spell:Levitate} para baixo para voltares à rua. Se não encontrares saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block). Para saíres de Yalahar, vai ao porto (a **sul** da Inner City) e fala com o {npc:Captain Cookie}: {key:hi}, {key:liberty bay} (400 gp) ou {key:thais} (800 gp), e {key:yes}. Se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}, o {npc:Karith} (no barco 1 andar acima, no mesmo porto) é mais barato: Thais 200, Venore 185, Carlin 185, Ab'Dendriel 160, Liberty Bay 275, Darashia 210, Ankrahmun 230 e Port Hope 260 gp. De Thais voltas a Edron com o {npc:Captain Bluebear} ({key:edron}, 160 gp).",
+          "npc": "Captain Cookie",
+          "coords": [{"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie, porto de Yalahar"}]
+        },
+        {
+          "title": "Usar o Sand-Filled Horn",
+          "text": "Usa o {item:Sand-Filled Horn}: recebes o **2.º addon** do Illuminator. Quando tiveres os **dois addons** ganhas o achievement **Illuminator** (3 pontos): *\"Joran and Yvette have brought the colours back to the world, and you have freed it from the monsters of this story. The world of books is now yours.\"*",
+          "images": [
+            {"file": "Outfit Illuminator Male Addon 2.gif", "caption": "Illuminator com o 2.º addon (masculino)"},
+            {"file": "Outfit Illuminator Female Addon 2.gif", "caption": "Illuminator com o 2.º addon (feminino)"},
+            {"file": "Outfit Illuminator Male Addon 3.gif", "caption": "Illuminator completo, com os dois addons (masculino)"},
+            {"file": "Outfit Illuminator Female Addon 3.gif", "caption": "Illuminator completo, com os dois addons (feminino)"}
+          ],
+          "reward": "2.º addon Illuminator + achievement Illuminator"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Os Illuminator Outfits, a {wiki:Between the Lines Quest|Between the Lines Quest} e os três bosses dos quadros chegaram na versão 15.10.46b862 (Summer Update 2025, 21 de julho de 2025).",
+    "O {creature:Blight Mariner} (quadro em Venore, {coord:33000,32034,4}, 3 andares acima do chão; de Edron vai-se com o {npc:Captain Seahorse}, {key:venore}) é um dos três \"suspeitos\" do roubo, mas **não deixa cair** nem o Scallop Shell nem o Sand-Filled Horn. Só interessa pelo loot e pelo Bosstiary; a estratégia está no guia da {wiki:Between the Lines Quest|Between the Lines Quest}.",
+    "O Tropical Desolator e o Blight Mariner têm cooldown de 20 horas e combate máximo de 10 minutos. A wiki não indica o cooldown do Wrathful Archivist.",
+    "O {item:Scallop Shell} (*\"It has been used as a colour palette.\"*) e o {item:Sand-Filled Horn} (*\"The fine, white sand is trickling out.\"*) pesam 1,20 oz cada, são comercializáveis e nenhum NPC os compra nem vende."
+  ]
+}

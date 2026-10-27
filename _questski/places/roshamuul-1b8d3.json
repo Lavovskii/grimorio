@@ -1,0 +1,39 @@
+{
+  "title": "Roshamuul",
+  "type": "ilha",
+  "near": "Roshamuul",
+  "summary": "Ilha **a leste de Darashia**, cheia de ruínas e tomada por criaturas demoníacas e de pesadelo, onde a Inquisition montou acampamento; divide-se em {wiki:Lower Roshamuul}, {wiki:Guzzlemaw Valley} e {wiki:Upper Roshamuul} (com depot e templo); de barco, só se chega a partir de Thais.",
+  "entrance": {"x": 33493, "y": 32569, "z": 7, "label": "Acampamento da Inquisition, onde atraca o barco (Captain Chelop)"},
+  "requirements": [
+    "As zonas da ilha abrem por estágios em cada servidor ({wiki:Roshamuul Quest}): ao início só o acampamento e {wiki:Lower Roshamuul}; reparar a ponte abre o {wiki:Guzzlemaw Valley}; abrir a muralha dá acesso a {wiki:Upper Roshamuul}; matar o {creature:Gaz'haragoth} faz aparecer os NPCs da cidade de Upper Roshamuul.",
+    "Ilha perigosa: a wiki sugere **nível 200** para {wiki:Lower Roshamuul} (e para a Roshamuul Quest) e **250+** para {wiki:Upper Roshamuul}."
+  ],
+  "arrive": [
+    "Em **Thais**, vai ao porto e fala com o {npc:Captain Bluebear} ({coord:32310,32210,6}): {key:hi}, {key:roshamuul}, {key:yes} (210 gp). É a única ligação de barco para a ilha.",
+    "O barco atraca no acampamento base da Inquisition, no **sudoeste** da ilha (Lower Roshamuul), junto ao {npc:Captain Chelop} ({coord:33493,32569,7}) e ao {npc:Sandomo} ({coord:33505,32552,7}), que dá as missões da {wiki:Roshamuul Quest}.",
+    "Sobe a rampa do acampamento para entrares em {wiki:Lower Roshamuul}. Para **norte**, a ponte (onde está o {npc:Mortis}, {coord:33536,32503,5}) leva ao {wiki:Guzzlemaw Valley}; atravessa o vale para **nordeste** e passa a muralha ({coord:33632,32401,7}) para chegares a {wiki:Upper Roshamuul}.",
+    "Em Upper Roshamuul, a entrada da {wiki:Roshamuul Prison} fica a **oeste** da muralha; o depot e o templo ficam a **noroeste** da muralha (o templo, com o {npc:Zedrulon the Fallen}, a oeste do depot).",
+    "Atalho: se a tua cidade de residência for Roshamuul, podes ir diretamente para o templo de Upper Roshamuul, por exemplo com um {item:Temple Teleport Scroll} (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block), sem atravessar o vale."
+  ],
+  "leave": [
+    "Volta ao acampamento da Inquisition, no sudoeste: de Upper Roshamuul passa a muralha, atravessa o Guzzlemaw Valley e a ponte para **sul** e desce a rampa de Lower Roshamuul.",
+    "Fala com o {npc:Captain Chelop}, junto ao barco: {key:hi}, {key:sail}, {key:thais}, {key:yes} (210 gp). Thais é o único destino.",
+    "Em Thais, o {npc:Captain Bluebear} leva-te, por exemplo, a Carlin (110 gp), Ab'Dendriel (130 gp), Edron (160 gp) ou Venore (170 gp): {key:hi}, o nome da cidade, {key:yes}."
+  ],
+  "coords": [
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"},
+    {"x": 33493, "y": 32569, "z": 7, "label": "Captain Chelop (barco, acampamento da Inquisition)"},
+    {"x": 33505, "y": 32552, "z": 7, "label": "Sandomo (acampamento da Inquisition)"},
+    {"x": 33536, "y": 32503, "z": 5, "label": "Mortis (ponte entre Lower Roshamuul e Guzzlemaw Valley)"},
+    {"x": 33632, "y": 32401, "z": 7, "label": "Passagem na muralha para Upper Roshamuul"},
+    {"x": 33513, "y": 32363, "z": 6, "label": "Zedrulon the Fallen (templo de Upper Roshamuul)"}
+  ],
+  "images": [
+    {"file": "Roshamuul Legend.png", "caption": "Mapa de Roshamuul com as zonas assinaladas"},
+    {"file": "Roshamuul Map.jpg", "caption": "Mapa de Roshamuul"}
+  ],
+  "warnings": [
+    "Toda a ilha é zona de caça de nível alto: {creature:Frazzlemaw|Frazzlemaws}, {creature:Guzzlemaw|Guzzlemaws}, {creature:Silencer|Silencers} e, em Upper Roshamuul, criaturas ainda mais perigosas.",
+    "O {wiki:Hell Hub} e as Grounds da {wiki:Ferumbras' Ascension Quest} (Plague, Deceit, Fire, Destruction, Undeath, Despair e Damnation) aparecem na wiki como zonas de Roshamuul, mas ficam **debaixo do mar a leste de Darashia**: entra-se pelo portal do {npc:Mazarius}, em Darashia, e não pela ilha."
+  ]
+}

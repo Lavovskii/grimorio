@@ -10,9 +10,8 @@
     [30, 39, "Nível 30–39", ""], [40, 49, "Nível 40–49", ""], [50, 59, "Nível 50–59", ""],
     [60, 69, "Nível 60–69", ""], [70, 79, "Nível 70–79", ""], [80, 89, "Nível 80–89", ""],
     [90, 100, "Nível 90–100", ""],
-    [101, 150, "Rec. 101–150", "Sem requisito acima de 100, mas recomendadas para nível 101–150"],
-    [151, 200, "Rec. 151–200", "Sem requisito acima de 100, mas recomendadas para nível 151–200"],
-    [201, 99999, "Rec. 200+", "Podes começá-las cedo, mas são para níveis altos"],
+    [101, 150, "Nível 101–150", ""], [151, 200, "Nível 151–200", ""],
+    [201, 300, "Nível 201–300", "Níveis altos"], [301, 99999, "Nível 300+", "Endgame"],
   ];
   const CATS = {
     historia: { label: "História", icon: "scroll" },
@@ -24,6 +23,12 @@
     "world-change": { label: "World Change", icon: "globe" },
     evento: { label: "Evento", icon: "spark" },
     tutorial: { label: "Tutorial", icon: "book" },
+  };
+  // quem consegue fazer a quest (campo "team" dos guias; a classificação veio das quests do Grimório)
+  const TEAMS = {
+    solo: { label: "Solo", title: "Dá para fazer sozinho" },
+    parcial: { label: "Solo até ao boss", title: "Sozinho até à luta final, que pede grupo" },
+    grupo: { label: "Em grupo", title: "Precisas de grupo" },
   };
   const QTABS = [
     ["guia", "Guia passo-a-passo", "scroll"],
@@ -118,7 +123,7 @@
     wiki: { pages: [], byLower: {}, alias: {}, cache: {} }, questByName: {},
     places: {}, placeAlias: {},
     regions: [],
-    filters: Object.assign({ q: "", level: null, onlyAvail: false, prem: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec", open: true },
+    filters: Object.assign({ q: "", level: null, onlyAvail: false, prem: "all", team: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec", open: true },
       load("tq-filters", {}), { q: "" }),
     progress: load("tq-progress", {}),
     tabs: load("tq-tabs", []),
@@ -208,6 +213,7 @@
   const skulls = (n) => n ? `<span class="skulls" title="Dificuldade ${n}/5">${[1, 2, 3, 4, 5].map((i) => icon("skull", i <= n ? "on" : "")).join("")}</span>` : "";
   const premChip = (p) => p === true ? `<span class="chip chip-premium">${icon("star")}Premium</span>` : p === false ? `<span class="chip chip-free">Free</span>` : "";
   const catChip = (c) => CATS[c] ? `<span class="chip chip-cat">${icon(CATS[c].icon)}${CATS[c].label}</span>` : "";
+  const teamChip = (t) => TEAMS[t] ? `<span class="chip chip-team chip-team-${t}" title="${TEAMS[t].title}">${icon("users")}${TEAMS[t].label}</span>` : "";
 
   // progress -----------------------------------------------------------------
   const prog = (slug) => S.progress[slug] || { s: {}, done: false };
@@ -287,12 +293,13 @@
     const f = S.filters;
     if (f.prem === "free" && q.premium !== false) return false;
     if (f.prem === "premium" && q.premium !== true) return false;
+    if (f.team && f.team !== "all" && q.team !== f.team) return false;
     if (f.cats.length && !f.cats.includes(q.category)) return false;
     if (f.region && !inRegion(q, f.region, f.regionMain)) return false;
     if (f.hideDone && isDone(q.slug)) return false;
     if (f.onlyAvail && f.level && ((q.lvl || 0) > f.level || (q.rec || 0) > f.level + 30)) return false;
     if (f.q) {
-      const hay = q._hay || (q._hay = fold([q.name, q.aka.join(" "), q.location, q.region, (q.regions || []).join(" "), (q.unlocks || []).map((u) => plainText(u.what) + " " + (u.place || "")).join(" "), (q.npcs || []).join(" "), (q.rewards || []).join(" "), plainText(q.summary), CATS[q.category]?.label].join(" ")));
+      const hay = q._hay || (q._hay = fold([q.name, q.aka.join(" "), q.location, q.region, (q.regions || []).join(" "), (q.unlocks || []).map((u) => plainText(u.what) + " " + (u.place || "")).join(" "), (q.npcs || []).join(" "), (q.rewards || []).join(" "), plainText(q.summary), CATS[q.category]?.label, TEAMS[q.team]?.label].join(" ")));
       return fold(f.q).split(/\s+/).filter(Boolean).every((w) => hay.includes(w));
     }
     return true;
@@ -328,6 +335,12 @@
               <button data-sort="min" class="${f.sort === "min" ? "on" : ""}" title="Ordenar pelo nível mínimo">Mín.</button>
             </div>
           </div>
+          <div class="filter-row">
+            <span class="filter-label">Equipa</span>
+            <div class="seg" role="group" aria-label="Equipa">
+              ${[["all", "Todas"], ["solo", "Solo"], ["parcial", "Solo até ao boss"], ["grupo", "Grupo"]].map(([v, l]) => `<button data-team="${v}" class="${(f.team || "all") === v ? "on" : ""}">${l}</button>`).join("")}
+            </div>
+          </div>
           <div class="filter-row cat-pills">
             ${Object.entries(CATS).map(([k, c]) => `<button class="cat-pill ${f.cats.includes(k) ? "on" : ""}" data-cat="${k}">${icon(c.icon)}${c.label}</button>`).join("")}
           </div>
@@ -351,12 +364,13 @@
       const b = e.target.closest("button");
       if (!b) return;
       if (b.dataset.prem) S.filters.prem = b.dataset.prem;
+      else if (b.dataset.team) S.filters.team = b.dataset.team;
       else if (b.dataset.sort) S.filters.sort = b.dataset.sort;
       else if (b.dataset.cat) {
         const c = b.dataset.cat, cats = S.filters.cats;
         S.filters.cats = cats.includes(c) ? cats.filter((x) => x !== c) : cats.concat(c);
       } else if (b.id === "fReset") {
-        Object.assign(S.filters, { q: "", level: null, lvlChar: false, onlyAvail: false, prem: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec" });
+        Object.assign(S.filters, { q: "", level: null, lvlChar: false, onlyAvail: false, prem: "all", team: "all", cats: [], region: "", regionMain: true, hideDone: false, sort: "rec" });
         $("#search").value = "";
       } else if ("gpchar" in b.dataset) {
         const ch = QP.char(); if (ch && ch.level) { S.filters.level = ch.level; S.filters.lvlChar = true; }
@@ -640,7 +654,7 @@
     return `<a class="qcard ${isDone(q.slug) ? "done" : ""} ${locked(q) ? "locked" : ""}" href="#/quest/${q.slug}">
       <div class="qcard-top">${lvlShield(q)}
         <div style="min-width:0"><h3>${esc(q.name)}</h3>
-          <div class="meta">${premChip(q.premium)}${catChip(q.category)}${(q.unlocks || []).length ? `<span class="chip chip-key" title="Dá acesso a: ${esc(q.unlocks.map((u) => plainText(u.what)).join(", "))}">${icon("key")}Acesso</span>` : ""}${isDone(q.slug) ? `<span class="chip chip-done">${icon("check")}Feita</span>` : ""}${locked(q) ? `<span class="chip chip-locked">${icon("lock")}Nível ${q.lvl}</span>` : ""}</div>
+          <div class="meta">${premChip(q.premium)}${catChip(q.category)}${teamChip(q.team)}${(q.unlocks || []).length ? `<span class="chip chip-key" title="Dá acesso a: ${esc(q.unlocks.map((u) => plainText(u.what)).join(", "))}">${icon("key")}Acesso</span>` : ""}${isDone(q.slug) ? `<span class="chip chip-done">${icon("check")}Feita</span>` : ""}${locked(q) ? `<span class="chip chip-locked">${icon("lock")}Nível ${q.lvl}</span>` : ""}</div>
         </div></div>
       <p>${esc(plainText(q.summary)) || `<span class="muted">${esc(q.location)}</span>`}</p>
       ${p > 0 && p < 100 ? `<div class="progress-mini"><i style="width:${p}%"></i></div>` : ""}
@@ -667,7 +681,7 @@
         <img class="hero-logo" src="assets/logo-full.webp" alt="Tibia Questski — feiticeira num jetski">
         <div>
           <h1>Guia de Quests</h1>
-          <p>Todas as quests que podes começar <b>até ao nível 100</b>, explicadas passo a passo, com coordenadas, mini-mapas, capturas de ecrã, diálogos dos NPCs e progresso guardado.</p>
+          <p>Todas as quests do Tibia, <b>do nível 1 ao endgame</b>, explicadas passo a passo, com coordenadas, mini-mapas, capturas de ecrã, diálogos dos NPCs e progresso guardado.</p>
           <form class="hero-form" id="heroForm">
             <label for="heroLevel">O meu nível</label>
             <input class="input" id="heroLevel" type="number" min="1" max="2000" placeholder="ex. 30" value="${lvl || ""}">
@@ -1013,7 +1027,7 @@
           <div class="hero-inner">
             ${lvlShield(d, "lg")}
             <div style="min-width:0">
-              <div class="meta">${premChip(d.premium)}${catChip(d.category)}${skulls(d.difficulty)}${d.implemented ? `<span class="chip">Versão ${esc(d.implemented)}</span>` : ""}${isDone(slug) ? `<span class="chip chip-done">${icon("check")}Concluída</span>` : ""}${locked(d) ? `<span class="chip chip-locked">${icon("lock")}Precisas de nível ${d.lvl}</span>` : ""}</div>
+              <div class="meta">${premChip(d.premium)}${catChip(d.category)}${teamChip(d.team)}${skulls(d.difficulty)}${d.implemented ? `<span class="chip">Versão ${esc(d.implemented)}</span>` : ""}${isDone(slug) ? `<span class="chip chip-done">${icon("check")}Concluída</span>` : ""}${locked(d) ? `<span class="chip chip-locked">${icon("lock")}Precisas de nível ${d.lvl}</span>` : ""}</div>
               <h1>${esc(d.name)}</h1>
               ${d.aka && d.aka.length ? `<div class="aka">Também conhecida como: ${d.aka.map(esc).join(", ")}</div>` : ""}
               ${d.summary ? `<p class="summary">${rich(d.summary)}</p>` : ""}

@@ -1,6 +1,6 @@
 # PLACE: Formorgar Glacier
 slug: formorgar-glacier-dc72e
-mentioned in 6 guides: forgotten-knowledge-quest, formorgar-mines-hoist-quest, killing-in-the-name-of-quest, lion-trophy-quest, mastermind-potion-quest, thawing-mini-world-change
+mentioned in 7 guides: forgotten-knowledge-quest, formorgar-mines-hoist-quest, heart-of-destruction-quest, killing-in-the-name-of-quest, lion-trophy-quest, mastermind-potion-quest, thawing-mini-world-change
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Formorgar Glacier 

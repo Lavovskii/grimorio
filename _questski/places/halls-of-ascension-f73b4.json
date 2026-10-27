@@ -1,0 +1,49 @@
+{
+  "title": "Halls of Ascension",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo secreto **por baixo da Zao Steppe** onde o {creature:Ferumbras} prepara a sua ascensão; é a zona da luta final da {wiki:Ferumbras' Ascension Quest} e só se entra por um portal novo na sala do {npc:Mazarius}, em Darashia, depois dos sete seals do {wiki:Hell Hub}.",
+  "entrance": {"x": 33296, "y": 31457, "z": 12, "label": "Entrada das Halls of Ascension (Demonic Messenger)"},
+  "requirements": [
+    "Conta **Premium** e nível **150** (o {npc:Mazarius} não fala com personagens abaixo disso); a wiki recomenda nível **300** para mages e paladins e **350** para knights.",
+    "Ter feito toda a parte do {wiki:Hell Hub}: matar os bosses dos sete seals ({creature:Plagirath}, {creature:Zamulosh}, {creature:Mazoran}, {creature:Razzagorn}, {creature:Ragiaz}, {creature:Tarbaz} e {creature:Shulgrax}) e enviar as sete peças da Godbreaker com o {item:Teleportation Rod}. Só quem matou esses bosses consegue entrar.",
+    "A luta final aceita até **15 jogadores** e o Ferumbras só pode ser tentado de 14 em 14 dias (exatamente 13 dias e 20 horas)."
+  ],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi ou Krailos diz ao capitão {key:hi}, {key:darashia}, {key:yes}; de Venore, no {npc:Captain Fearless}, custa 60 gp; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi; chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** de Darashia ({coord:33271,32395,7}), e desce à sala dele. Depois da sétima peça da Godbreaker, o último portal do Hell Hub já te deixa aqui; o Mazarius desapareceu e deixou uma {wiki:Unfinished Letter of Mazarius (Book)|carta inacabada} ({coord:33274,32395,9}).",
+    "Entra no portal novo da sala ({coord:33279,32392,9}): leva-te às Halls of Ascension, por baixo da Zao Steppe. À entrada está o {npc:Demonic Messenger} ({coord:33296,31457,12}), que te dá dicas sobre como travar o ritual.",
+    "Daqui em diante o caminho está cheio de inimigos. Segue sempre para **norte** e desce por um buraco no fim do caminho.",
+    "Vai para **leste** e sobe as escadas. Segue sempre para **sul** e desce as escadas.",
+    "Vai para **oeste** e, na primeira sala, apanha o corredor para **sul** até encontrares escadas para descer; desce.",
+    "Chegas a uma sala em forma de **8**: escolhe um dos caminhos e segue sempre para **norte** até um portal, que te leva à sala da alavanca da luta final."
+  ],
+  "leave": [
+    "Depois de venceres o Ferumbras, usa o portal no lado **sul** da sala para ires à sala de recompensa, onde está o {npc:Heavenly Messenger} ({coord:33388,31411,14}); diz-lhe {key:hi} para receberes os {wiki:Rift Warrior Outfits|Rift Warrior Outfits}.",
+    "A wiki não descreve a saída da sala de recompensa nem o regresso das Halls of Ascension a Darashia. O mais seguro é levares um {item:Temple Teleport Scroll}: usa-o na sala de recompensa, quando o bloqueio de combate passar, e vais para o templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Se lá não houver um teleporte de saída e não tiveres o scroll, volta pelo caminho das Halls of Ascension até à entrada, junto ao {npc:Demonic Messenger}, por onde chegaste a partir da sala do Mazarius. Atenção: na ida desceste por um buraco e a wiki não diz como se volta a subir, nem se há na entrada um portal de regresso a Darashia.",
+    "Se voltares a Darashia, sobe da casa do Mazarius à rua e apanha o barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou o tapete do {npc:Chemar} ({key:hi}, o destino, {key:yes})."
+  ],
+  "items": ["Temple Teleport Scroll"],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (posição da página dele, piso -1)"},
+    {"x": 33274, "y": 32395, "z": 9, "label": "Carta inacabada do Mazarius"},
+    {"x": 33279, "y": 32392, "z": 9, "label": "Portal para as Halls of Ascension"},
+    {"x": 33296, "y": 31457, "z": 12, "label": "Demonic Messenger (entrada das Halls of Ascension)"},
+    {"x": 33304, "y": 31460, "z": 12, "label": "Halls of Ascension (ponto indicado pela wiki)"},
+    {"x": 33388, "y": 31411, "z": 14, "label": "Heavenly Messenger (sala de recompensa)"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"}
+  ],
+  "images": [
+    {"file": "Halls of Ascension 1.png", "caption": "Mapa das Halls of Ascension (1)"},
+    {"file": "Halls of Ascension 2.png", "caption": "Mapa das Halls of Ascension (2)"},
+    {"file": "Halls of Ascension 3.png", "caption": "A sala em forma de 8 que leva à sala da alavanca"}
+  ],
+  "warnings": [
+    "A wiki marca o portal e a carta no piso -2 (z9), mas põe o Mazarius no piso -1 (z8): guia-te pelas coordenadas se não vires o portal logo na sala onde ele estava.",
+    "O caminho até à sala da alavanca não tem zonas de proteção e está cheio de inimigos.",
+    "Leva {item:Convince Creature Rune|Convince Creature Runes} (cerca de 2 por jogador) antes de entrares: são obrigatórias na 3.ª fase da luta."
+  ]
+}

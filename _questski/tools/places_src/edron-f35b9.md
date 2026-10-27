@@ -93,6 +93,12 @@ coords: [{'x': 33173, 'y': 31900, 'z': 7, 'label': 'Entrada da Edron Orc Cave'}]
 [berserker-treasure-quest 2-2] Sair da Edron Orc Cave
 Volta pelo mesmo caminho: em cada andar regressa ao buraco por onde caíste e usa a {item:Rope} para subires (seguindo os mesmos mapas ao contrário). No primeiro andar volta para **norte** até à entrada e sai para a superfície, a sudoeste do castelo. No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades.
 coords: [{'x': 33173, 'y': 31900, 'z': 7, 'label': 'Entrada/saída da Edron Orc Cave'}, {'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[between-the-lines-quest 1-12] Ir à biblioteca do castelo de Edron
+Fica-te a terceira página, a do castelo. Vai ao **castelo de Edron**, a noroeste das Ivory Towers, onde está o {npc:Daniel Steelsoul}. A biblioteca fica a **oeste** dele.
+coords: [{'x': 33191, 'y': 31795, 'z': 7, 'label': 'Daniel Steelsoul (castelo de Edron)'}]
+[bloody-tusks-quest 0-0] Chegar a Edron
+Apanha um barco para **Edron** ({key:hi}, {key:edron}, {key:yes}). Chegas ao porto do {npc:Captain Seahorse}; daí segue para **leste** pela cidade até à zona da casa do {npc:Telas}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}]
 [cartography-101-quest 3-0] Chegar a Edron
 Apanha o barco para **Edron** ({key:hi}, {key:edron}, {key:yes}); chegas junto ao {npc:Captain Seahorse}. Para ires a {wiki:Cormaya} (Lair of the Treeling Witch e Dryad Gardens), diz-lhe {key:cormaya} (20 gp); para voltares, apanha o barco de Cormaya para Edron.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
@@ -117,30 +123,66 @@ coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seah
 [double-hero-quest 0-0] Chegar a Edron
 Se não estás em Edron, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de **Edron**, junto ao {npc:Captain Seahorse}.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}]
+[feaster-of-souls-quest 6-1] Chegar à Edron Vampire Crypt
+Apanha um barco para **Edron**: de Venore, o {npc:Captain Fearless} leva-te ({key:hi}, {key:edron}, {key:yes}, 40 gp). Chegas junto ao {npc:Captain Seahorse}. A {wiki:Edron Vampire Crypt} fica a **norte** da cidade: entra pela pequena gruta da entrada e desce.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de Edron)'}, {'x': 33109, 'y': 31722, 'z': 7, 'label': 'Entrada da Edron Vampire Crypt'}]
+[fiend-slayer-outfits-quest 0-0] Ir para Edron
+Apanha um barco para **Edron** num dos portos principais, por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}]
 [fire-axe-quest 0-0] Sair do castelo de Edron
 Se não estás em **Edron**, apanha um barco (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}); chegas ao porto de Edron, junto ao {npc:Captain Seahorse}. Sai do {wiki:Edron Castle|Edron Castle} pelo **sul** e segue o caminho para **leste**, na direção de {wiki:Stonehome|Stonehome}.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de Edron)'}]
 [fire-axe-quest 2-4] Sair do Edron Dragon Lair
 Volta pelo mesmo caminho: sobe com a {item:Rope} pelo buraco do Fire Axe e pelo buraco por onde chegaste à sala dos Dragon Lords, passa outra vez a porta de nível 60 e sobe pelo buraco do Dragon Lord solitário. Sobe a rampa, atravessa a zona principal para **sul** e desce pelo sítio onde tinhas subido com a corda; segue para **sul**, sobe pelo primeiro buraco e sobe a rampa até sair da montanha. Depois regressa a Edron pela passagem de montanha e pela ponte, como vieste.
 coords: [{'x': 33097, 'y': 31703, 'z': 7, 'label': 'Entrada/saída do Edron Dragon Lair'}]
+[fire-fighter-outfits-quest 0-0] Ir a Edron
+Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[grave-danger-quest 1-0] Chegar ao cemitério a norte de Edron
+Vai a **Edron** de barco (em Thais, {npc:Captain Bluebear}: {key:hi}, {key:edron}, {key:yes}; chegas junto ao {npc:Captain Seahorse}). Sai da cidade para **norte**, a pé, até ao cemitério que fica em cima de um monte.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}, {'x': 33197, 'y': 31693, 'z': 7, 'label': 'Cemitério no monte a norte de Edron'}]
+[grave-danger-quest 1-5] Sair do cemitério de Edron
+O spoiler não descreve a saída da sala do boss. Depois da luta, volta pelo caminho por onde entraste até à superfície (sobe os 2 andares) e regressa a pé para **sul** até ao porto de Edron, onde o {npc:Captain Seahorse} te leva a outras cidades.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
 [grimvale-quest 3-5] Sair da gruta dos licantropos de Edron
 Volta pelo mesmo caminho: no 2.º andar usa a {item:Rope} no rope spot ao lado da planta para subires, regressa à entrada e passa outra vez pela {item:Sewer Grate} do edifício Edron Flats para voltares à cidade.
 coords: [{'x': 33179, 'y': 31922, 'z': 7, 'label': 'Entrada/saída da gruta'}]
+[hand-of-the-inquisition-outfits-quest 1-2] Chegar à campa de Edron (Count Vlarkorth)
+Viaja até **Edron** (de barco: no capitão da tua cidade diz {key:hi}, {key:edron} e {key:yes}; chegas ao porto do {npc:Captain Seahorse}). Sai da cidade para **norte** até ao cemitério numa colina ({coord:33197,31693,7}). Desce dois andares, passa a porta de quest e entra no vórtice: do outro lado estão a alavanca e os lugares para **5 jogadores**. Coloquem-se nos tiles e puxem a alavanca.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}, {'x': 33197, 'y': 31693, 'z': 7, 'label': 'Cemitério a norte de Edron'}]
+[hand-of-the-inquisition-outfits-quest 1-4] Sair do cemitério de Edron
+A wiki não descreve a saída da sala do boss. Depois de saíres dela, volta pela porta de quest, sobe os dois andares até ao cemitério e anda para **sul** até Edron. No porto, o {npc:Captain Seahorse} leva-te de barco para a tua cidade.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[illuminator-outfits-quest 0-3] Ir a Edron e falar com o Wyrdin
+No porto de Carlin diz ao {npc:Captain Greyhound} {key:hi}, {key:edron}, {key:yes}. Em Edron vai às Ivory Towers da {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}, na parte **leste** da cidade. O {npc:Wyrdin} está na torre do meio, **1 andar acima** do chão. Diz {key:hi} e {key:book}: ele pede-te três páginas de livros que estão a servir de portais.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}, {'x': 33268, 'y': 31838, 'z': 6, 'label': 'Wyrdin'}]
+[no-rest-for-the-wicked-quest 0-0] Ir para Edron
+Apanha um barco para **Edron** num dos portos principais, por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}]
 [parchment-room-quest 0-0] Chegar a Edron
 Se não estás em Edron, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de **Edron**, junto ao {npc:Captain Seahorse}. Do porto, vai para **norte** até à entrada da {wiki:Hero Cave|Hero Cave}, a norte da cidade.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Porto de Edron (Captain Seahorse)'}]
+[podzilla-quest 0-0] Chegar a Edron
+Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, a **norte** da cidade, junto ao barco do {npc:Captain Seahorse}. O {npc:Gunther} está no castelo de Edron, um pouco a **sul** do porto.
+coords: [{'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear (porto de Thais)'}, {'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de Edron)'}, {'x': 33172, 'y': 31777, 'z': 7, 'label': 'Gunther (castelo de Edron)'}]
 [poison-daggers-quest 0-0] Chegar a Edron
 Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
 [poison-daggers-quest 3-1] Voltar a Edron
 No primeiro andar segue para **norte** e **leste** até à entrada e usa outra vez a {item:Rope} para saíres à superfície. Refaz depois o caminho do esgoto até à cave dos **Edron Flats** (com a {item:Shovel}, se a passagem estiver tapada). No porto de Edron, o {npc:Captain Seahorse} leva-te a outras cidades.
 coords: [{'x': 33173, 'y': 31900, 'z': 7, 'label': 'Entrada/saída da Edron Orc Cave'}, {'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[primal-ordeal-quest 0-0] Ir a Edron
+Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
 [rest-in-hallowed-ground-quest 1-0] Ir de Edron a Carlin
 A Isle of the Kings fica a oeste de **Carlin**. No porto de Edron fala com o {npc:Captain Seahorse}: {key:hi}, {key:carlin}, {key:yes} (110 gp).
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
 [rest-in-hallowed-ground-quest 1-4] Voltar a Edron
 Em Carlin, vai ao porto e fala com o {npc:Captain Greyhound}: {key:hi}, {key:edron}, {key:yes} (110 gp). Chegas ao porto de Edron; o templo da {npc:Amanda} fica na cidade.
 coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}]
+[rootwalker-outfits-quest 0-0] Ir a Edron
+Se não estás em **Edron**, apanha um barco: fala com o capitão do porto da tua cidade (por exemplo o {npc:Captain Bluebear} em Thais) e diz {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, a **norte** da cidade, junto ao {npc:Captain Seahorse}.
+coords: [{'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear, porto de Thais'}, {'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
 [sea-of-light-quest 0-0] Chegar à Noodles Academy (Edron)
 Apanha um barco para **Edron** (por exemplo, com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}). Chegas ao porto do {npc:Captain Seahorse}. A {wiki:Noodles Academy of Modern Magic} são as sete torres de marfim na parte **leste** da cidade; a torre **central** é a mais alta (nove andares). Para sair, desce pelas mesmas escadas.
 coords: [{'x': 33267, 'y': 31849, 'z': 7, 'label': 'Torres da Noodles Academy (Ivory Towers)'}]

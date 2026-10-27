@@ -1,6 +1,6 @@
 # PLACE: Drefia
 slug: drefia-95404
-mentioned in 12 guides: killing-in-the-name-of-quest, koshei-the-deathless-quest, medusa-shield-quest, nightmare-teddy-quest, rise-of-devovorga, shadows-of-yalahar-quest, small-sapphire-quest, spirithunters-quest, the-explorer-society-quest, the-gravedigger-of-drefia-quest, the-lightbearer, vampire-hunter-quest
+mentioned in 14 guides: decaying-defender-outfits-quest, killing-in-the-name-of-quest, koshei-the-deathless-quest, medusa-shield-quest, nightmare-teddy-quest, rise-of-devovorga, rotten-blood-quest, shadows-of-yalahar-quest, small-sapphire-quest, spirithunters-quest, the-explorer-society-quest, the-gravedigger-of-drefia-quest, the-lightbearer, vampire-hunter-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Drefia 
@@ -42,6 +42,12 @@ Beyond the Medusa Shield Quest there is also a large Wyrm spawn, more informatio
 
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[decaying-defender-outfits-quest 0-1] Chegar a Drefia
+{wiki:Drefia|Drefia} fica a **oeste** de Darashia ({coord:33018,32443,7}), do outro lado das montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Sai de Darashia para oeste e usa a {item:Rope} para subires a montanha neste sítio {coord:33048,32429,7} (ou vem pela passagem entre Darashia e Ankrahmun). Na montanha há muitos {creature:Scorpion|Scorpions}.
+coords: [{'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda para subir para Drefia'}, {'x': 33018, 'y': 32443, 'z': 7, 'label': 'Drefia'}]
+[decaying-defender-outfits-quest 0-8] Sair do templo e de Drefia
+Da sala do A Bloodshade, refaz o caminho ao contrário: sai pela porta entre os pilares de calcário, segue para **nordeste** até às escadas e sobe-as, sobe pelo buraco com a {item:Rope}, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate}, onde desces com *exani hur down*. Depois volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia, onde apanhas o barco do {npc:Petros} ou o tapete do {npc:Chemar}.
+coords: [{'x': 32989, 'y': 32393, 'z': 7, 'label': 'Sítio de Levitate (desce com exani hur down)'}, {'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda (caminho para Darashia)'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}]
 [medusa-shield-quest 0-0] Chegar a Drefia
 Vai primeiro a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia} e {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}). {wiki:Drefia|Drefia} fica a **oeste** de Darashia ({coord:33018,32443,7}), do outro lado das montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Há vários caminhos: por exemplo, usa a {item:Rope} para subires a montanha aqui {coord:33048,32429,7}, ou vem pela passagem entre Darashia e Ankrahmun.
 coords: [{'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda para subir para Drefia'}, {'x': 33018, 'y': 32443, 'z': 7, 'label': 'Drefia'}]
@@ -51,6 +57,9 @@ coords: [{'x': 32996, 'y': 32413, 'z': 7, 'label': 'Entrada do dungeon principal
 [medusa-shield-quest 1-4] Sair de Drefia
 Não há atalho de saída: volta pelo mesmo caminho. Passa outra vez o {item:Gate of Expertise}, volta ao buraco que abriste com a {item:Shovel} e usa a {item:Rope} para subires ao 3.º piso. Depois sobe os pisos do dungeon principal até à entrada ({coord:32996,32413,7}) e atravessa a montanha de volta para **Darashia**.
 coords: [{'x': 32996, 'y': 32413, 'z': 7, 'label': 'Entrada/saída do dungeon principal'}]
+[rotten-blood-quest 8-5] Sair do templo e de Drefia
+Da sala do A Bloodshade em Drefia, refaz o caminho ao contrário: sai pela porta entre os pilares, segue para **nordeste** até às escadas e sobe-as, sobe pelo buraco com a {item:Rope}, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate}, onde desces com *exani hur down*. Depois volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia, onde apanhas o barco do {npc:Petros} ou o tapete do {npc:Chemar}.
+coords: [{'x': 32956, 'y': 32398, 'z': 9, 'label': 'A Bloodshade (Drefia)'}, {'x': 32989, 'y': 32393, 'z': 7, 'label': 'Sítio de Levitate'}, {'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda (descida para Darashia)'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete voador de Darashia'}]
 [the-gravedigger-of-drefia-quest 0-0] Chegar a Drefia
 Vai primeiro a **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia} e {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}). {wiki:Drefia|Drefia} fica a **oeste** de Darashia ({coord:33018,32443,7}), do outro lado das montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Há vários caminhos: por exemplo, usa a {item:Rope} para subires a montanha aqui {coord:33048,32429,7}, ou vem pela passagem entre Darashia e Ankrahmun. Na montanha há muitos {creature:Scorpion|Scorpions}: guarda mana para curar o veneno.
 coords: [{'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda para subir para Drefia'}, {'x': 33018, 'y': 32443, 'z': 7, 'label': 'Drefia'}]
@@ -62,15 +71,15 @@ Não há atalho de saída: regressa à superfície (pela saída do esconderijo d
 coords: [{'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda entre Drefia e Darashia'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-[grimvale-quest 6-1] Falar com o Domizian
-Em **Darashia**, o {npc:Domizian} está no 1.º andar do edifício logo a oeste do barco. Diz {key:hi} e {key:lion} (ou {key:curse}). Ele pede-te que investigues os {wiki:Hyaena Lairs}, cuja entrada fica a norte da cidade, junto a uma grande pedra em pé. Para chegares a Darashia a partir de Edron, apanha o barco para **Venore** ({npc:Captain Seahorse}, {key:venore}) e aí o do {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes} (60 gp). Chegas ao porto do {npc:Petros}.
-coords: [{'x': 33261, 'y': 32465, 'z': 6, 'label': 'Domizian, a oeste do barco de Darashia'}]
-[grimvale-quest 6-7] Falar com A Skull (só de noite)
-Volta ao 4.º andar e vai para **sul** até ao NPC {npc:A Skull}. Só responde quando for **noite** no Tibia. Diz {key:hi}, {key:undead} e {key:leader}.
+[decaying-defender-outfits-quest 0-2] Falar com o Torkada
+Em Drefia, fala com o {npc:Torkada}: diz {key:hi}, {key:expedition}, {key:mission} e {key:yes}. Ele conta que uma expedição da Inquisição encontrou a entrada de um templo maligno, abençoa-te e deixa-te entrar no templo.
+coords: [{'x': 33033, 'y': 32428, 'z': 7, 'label': 'Torkada, em Drefia'}]
+[decaying-defender-outfits-quest 0-7] Sair do Blood Vestibule
+O wiki não descreve a saída do Blood Vestibule. Volta ao sítio onde chegaste pela poça de sangue e regressa por aí à sala do {npc:A Bloodshade} em Drefia; se não encontrares a saída, usa um {item:Temple Teleport Scroll} (vais para o templo e já não precisas do passo seguinte).
+coords: [{'x': 32956, 'y': 32398, 'z': 9, 'label': 'A Bloodshade (Drefia, entrada do templo)'}]
+[decaying-defender-outfits-quest 1-2] Ir para o Putrefactory
+Chega ao Blood Vestibule como na secção 1 (Darashia, Drefia, sítio de Levitate, A Bloodshade e poça de sangue). Lá dentro, entra na sala do {item:Spheric Teleporter} do {wiki:Putrefactory|Putrefactory} e usa-o. Os monstros daqui dão dano de **Death**, **Ice** e **Energy** (e **Earth** a quem tem 3+ taints) e são fracos a **Holy**, **Earth** e **Fire**. Equipa proteção contra Death, Ice e Earth.
+coords: [{'x': 34100, 'y': 31688, 'z': 14, 'label': 'Putrefactory (zona de caça)'}]
+[decaying-defender-outfits-quest 1-7] Sair do Putrefactory
+O wiki não descreve a saída da sala do Ichgahal nem do Putrefactory: depois da luta, volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres do Blood Vestibule e de Drefia, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 1.
 coords: []
-[killing-in-the-name-of-quest 12-1] Entregar e enfrentar Necropharus
-Volta e diz {key:task}. O Lugri lança-te um feitiço que te deixa passar o portão de {creature:Necropharus}, nas Halls of Sacrifice, por baixo de Drefia. Vai a {wiki:Drefia}, a oeste de Darashia ({coord:33018,32443,7}), e desce ao dungeon: o teleporte fica a sudeste da star room, perto da {wiki:Medusa Shield Quest}. Entra e mata-o; depois volta pelo mesmo caminho até Darashia.
-coords: [{'x': 33018, 'y': 32443, 'z': 7, 'label': 'Drefia'}, {'x': 33046, 'y': 32439, 'z': 11, 'label': 'Teleporte de Necropharus'}]
-[koshei-the-deathless-quest 0-3] Peça 4: Eye (Drefia)
-Vai a **Drefia** e desce alguns andares na parte sul. Na sala com um único {creature:Vampire}, abre o {item:Stone Coffin|caixão de pedra} para obteres a {item:Piece of a Broken Amulet (Eye)}. {wiki:Drefia} fica a **oeste** de Darashia, do outro lado das montanhas: sobe com a {item:Rope} no sítio de corda indicado ou vem pela passagem entre Darashia e Ankrahmun. Para sair, sobe pelos mesmos andares (usa a Rope onde desceste por buracos) e volta pelas montanhas até Darashia.
-coords: [{'x': 33054, 'y': 32468, 'z': 11, 'label': 'Stone Coffin na sala do Vampire (Drefia)'}, {'x': 33018, 'y': 32443, 'z': 7, 'label': 'Drefia'}, {'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda para subir para Drefia'}]

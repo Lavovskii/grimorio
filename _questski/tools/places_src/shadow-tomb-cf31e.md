@@ -1,6 +1,6 @@
 # PLACE: Shadow Tomb
 slug: shadow-tomb-cf31e
-mentioned in 3 guides: a-fathers-burden-quest, the-ancient-tombs-quest, the-ape-city-quest
+mentioned in 4 guides: a-fathers-burden-quest, feaster-of-souls-quest, the-ancient-tombs-quest, the-ape-city-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 See also: Ankrahmun Tombs 
@@ -47,6 +47,12 @@ coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Escava aqui a entrada da Sha
 [a-fathers-burden-quest 5-2] Sair da Shadow Tomb
 Volta pelo mesmo caminho: sobe os 5 pisos da {wiki:Shadow Tomb} até à entrada e usa a {item:Rope} no buraco que escavaste para saíres para o deserto ({coord:33255,32833,7}). Depois regressa a **Ankrahmun** pela rampa **nordeste** da cidade.
 coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada/saída da Shadow Tomb'}]
+[feaster-of-souls-quest 6-7] Chegar à Shadow Tomb (Ankrahmun)
+Em **Ankrahmun** desembarcas junto ao {npc:Captain Sinbeard}. Sai da cidade pela rampa **nordeste** e segue as muralhas para **sul**: a entrada da {wiki:Shadow Tomb} fica no deserto a sudeste da cidade. Usa a {item:Shovel} no ponto da coordenada para abrires o buraco e desce.
+coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de Ankrahmun)'}, {'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada da Shadow Tomb (cava aqui)'}]
+[feaster-of-souls-quest 6-9] Sair da Shadow Tomb
+Volta pelo mesmo caminho até ao início do túmulo e sobe com a {item:Rope} pelo buraco que abriste. Regressa a Ankrahmun pela rampa **nordeste**: o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes}).
+coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada/saída da Shadow Tomb'}]
 [the-ape-city-quest 4-3] Sair do Shadow Tomb
 Volta pelo mesmo caminho: sobe os pisos da {wiki:Shadow Tomb} até à entrada e usa a {item:Rope} no buraco que escavaste para saíres para o deserto. Depois regressa a **Ankrahmun** pela rampa **nordeste** da cidade e apanha o barco para Port Hope.
 coords: [{'x': 33255, 'y': 32834, 'z': 7, 'label': 'Entrada do Shadow Tomb (sobe com a Rope)'}]
@@ -55,12 +61,12 @@ coords: [{'x': 33255, 'y': 32834, 'z': 7, 'label': 'Entrada do Shadow Tomb (sobe
 [a-fathers-burden-quest 5-1] Abrir o sarcófago
 Desce até ao **5.º piso** e vai à parte **norte** desse piso, onde há uma {item:Door (Sealed)|porta de quest}. Entra e usa o sarcófago do lado **norte** da sala para obteres o {item:Magic Crystal}.
 coords: [{'x': 33235, 'y': 32808, 'z': 12, 'label': 'Porta de quest no 5.º piso'}]
+[feaster-of-souls-quest 6-0] Os três sítios
+Resumo da segunda ronda de sinos:
+coords: []
+[feaster-of-souls-quest 6-8] Sino 6: Shadow Tomb
+Desce o túmulo até ao **6.º andar** (6 pisos abaixo do deserto). Lá, vai para **leste** até ao ponto da coordenada e toca o {item:Death Knell}.
+coords: [{'x': 33297, 'y': 32861, 'z': 13, 'label': 'Shadow Tomb, 6.º andar (sino 6)'}]
 [nomads-mini-world-change 1-0] Locais possíveis
 Percorre os quatro locais. Em cada um há nómadas diferentes a guardar o acampamento. Para lá chegares, apanha um barco para **Ankrahmun** ({key:hi}, {key:ankrahmun}, {key:yes} ao capitão) e sai da cidade para o deserto. Os quatro locais ficam todos à superfície: para voltares, basta regressares a pé a Ankrahmun.
 coords: [{'x': 33298, 'y': 32777, 'z': 7, 'label': 'Nordeste da Shadow Tomb'}, {'x': 33247, 'y': 32747, 'z': 7, 'label': 'Sul da Tarpit Tomb'}, {'x': 33201, 'y': 32617, 'z': 7, 'label': 'Sul da Ancient Ruins Tomb'}, {'x': 33236, 'y': 32570, 'z': 7, 'label': 'Nordeste da Ancient Ruins Tomb'}]
-[nomads-mini-world-change 2-1] Chest Robber
-Volta noutros dias em que o world change esteja ativo até teres aberto os **três** baús (Shadow Tomb, sul e nordeste da Ancient Ruins Tomb). Ao abrires o terceiro ganhas o achievement **Chest Robber**.
-coords: []
-[the-ancient-tombs-quest 0-0] O que cada faraó dá
-Guarda esta tabela: diz-te que item de passe precisas para chegar a cada peça do capacete.
-coords: []

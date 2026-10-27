@@ -1,6 +1,6 @@
 # PLACE: Knightwatch Tower
 slug: knightwatch-tower-4bf2a
-mentioned in 7 guides: brotherhood-outfits-quest, deeper-fibula-quest, dreamers-challenge-quest, nightmare-outfits-quest, the-lightbearer, the-pits-of-inferno-quest, the-postman-missions-quest
+mentioned in 10 guides: brotherhood-outfits-quest, deeper-fibula-quest, dreamers-challenge-quest, nightmare-outfits-quest, the-demon-oak-quest, the-lightbearer, the-pits-of-inferno-quest, the-postman-missions-quest, the-roost-of-the-graveborn-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 Knightwatch Tower is used as the Nightmare Knights ' outpost in southern Plains of Havoc . In the past, Key 3702 used to open this tower.

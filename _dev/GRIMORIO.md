@@ -417,3 +417,13 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   leva ao Questski. Sem guia, fica o `questCardHTML`. No bloco Acesso das hunts, `questReqTag` torna clicável cada 'Quest: …'.
   `build_guias.py`: os nomes principais dos guias ganham aos `aka` (o 'The New Frontier' ia para o Tomes of Knowledge).
 - Ferramentas do Questski: `_questski/tools/*.py` escrevem em `../quests/` (antes `site/`); `tools/cache/` não vai para o Git.
+- Quests só no Questski (r27, outubro de 2026): a página Progresso → Quests do Grimório saiu (marcação `data-p="quests"`,
+  `renderQuests`, `QG`, `opensHunt` e os estilos `.q`/`.qgrid`/`.qgroup`/`.qchk`/`.qtitle`); o menu tem `["guias","Quests","quests/"]`
+  e o `route()` manda o `#quests` antigo para `quests/`. Toda a quest com guia abre o Questski: o clique em `[data-qopen2]`
+  (depois de `guiasLoad`), o `openQuestW`, o resultado `q` da pesquisa e o `guiaPair` (com guia devolve só o link `guiaBtn`, com o
+  nome que o botão mostrava). Só uma quest sem guia continua a abrir a janela do Grimório (`initQuests`/`questCardHTML`).
+  O `G.quests` fica (hunts, acessos, `c.done`, sugestões do Início); a classificação solo/parcial/grupo dele passou para o
+  campo `team` dos guias (`_questski/tools/GUIDE_FORMAT.md`), com filtro "Equipa" e etiqueta no Questski.
+- Âmbito do Questski (r27): todas as quests que existem no jogo, de qualquer nível (`fetch_wiki.py` `in_scope` só tira as
+  retiradas do jogo); faixas novas 101–150, 151–200, 201–300 e 300+ (`BANDS` em `quests/js/app.js`, `--band-14`); região
+  nova `Bounac` (`validate.py` e `build.py`).

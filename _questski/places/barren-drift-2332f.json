@@ -1,0 +1,45 @@
+{
+  "title": "Barren Drift",
+  "type": "gruta",
+  "near": "Edron",
+  "summary": "Gruta de cristais **no subsolo, sob o mar a leste de Oramond**, a que se chega por um portal escondido numa formação rochosa **a norte de Edron**, mesmo ao lado da taberna do {npc:The Thaian}; é aqui que mineras os Luminescent Crystals da parte do Thaian da {wiki:Feaster of Souls Quest}.",
+  "entrance": {"x": 33221, "y": 31704, "z": 7, "label": "Portal da Barren Drift (formação rochosa a norte de Edron)"},
+  "requirements": [
+    "Acesso obtido na parte do Thaian da {wiki:Feaster of Souls Quest} (conta **Premium**, nível **250**; esta parte exige a {wiki:Sea of Light Quest} completa). Só entras depois de tocares os três últimos sinos (Kilmaresh Catacombs, Ramoa e Lion's Rock) e de entregares ao {npc:The Thaian} as **3** {item:Skull Coin|Skull Coins} do {wiki:Netherworld}.",
+    "Uma {item:Small Sapphire} para usares na parede da formação rochosa (é negociável no Market).",
+    "Uma {item:Pick} (ou uma ferramenta de agente secreto equivalente) para minerares os cristais.",
+    "Zona de caça para nível **300+** (Paladins **350+**)."
+  ],
+  "items": ["Small Sapphire", "Pick"],
+  "arrive": [
+    "Viaja até **Edron**: por exemplo, de Venore o {npc:Captain Fearless} ({key:hi}, {key:edron}, {key:yes}, 40 gp), de Thais o {npc:Captain Bluebear} (160 gp) ou de Port Hope o {npc:Charles} (150 gp). Chegas ao porto de Edron, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Sai de Edron para **norte**: a taberna do {npc:The Thaian} fica na floresta a **norte da montanha** ({coord:33232,31696,7}).",
+    "A gruta fica dentro da montanha, mesmo ao lado da taberna: o portal está dentro de uma formação rochosa ({coord:33221,31704,7}). Usa a {item:Small Sapphire} na parede da formação rochosa para entrares.",
+    "Lá dentro, minera os {item:Large Luminescent Crystal|Large Luminescent Crystals} das paredes com a {item:Pick} para obteres {item:Luminescent Crystal|Luminescent Crystals} (1, 5 ou 10 de cada vez; voltam a aparecer depressa). A wiki situa a gruta em {coord:33859,31834,8}.",
+    "Para a luta contra o {creature:Thaian}: depois de fundires o cristal grande e receberes o {item:Raw Eye of the Chasm}, volta à taberna e diz {key:hi} ao {npc:The Thaian}: ele manda-te automaticamente para a sala da alavanca (equipas de até 5 jogadores)."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída: volta pelo caminho por onde entraste até ao portal da formação rochosa, que te deixa junto à taberna do {npc:The Thaian}, a norte de Edron ({coord:33221,31704,7}).",
+    "Luta contra o {creature:Thaian}: se a equipa não o matar em **10 minutos**, é teleportada para fora da gruta. Se venceres, a wiki não descreve a saída da sala do boss: procura a saída da sala e, já na Barren Drift, sai pelo portal por onde entraste.",
+    "Da taberna, volta a Edron para **sul**, pelo mesmo caminho por onde vieste.",
+    "No porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a outras cidades: {key:hi}, o nome da cidade e {key:yes}. Por exemplo {key:venore} (40 gp), {key:ab'dendriel} (70 gp), {key:carlin} (110 gp), {key:port hope} (150 gp), {key:thais} (160 gp), {key:ankrahmun} (160 gp) ou {key:liberty bay} (170 gp).",
+    "Também podes sair de tapete mágico: o {npc:Pino}, no castelo de Edron, por cima do portão **norte** ({coord:33192,31783,3}), leva-te a Darashia ({key:hi}, {key:darashia}, {key:yes}, 40 gp).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33232, "y": 31696, "z": 7, "label": "The Thaian (taberna a norte de Edron)"},
+    {"x": 33221, "y": 31704, "z": 7, "label": "Portal da Barren Drift (usa a Small Sapphire na parede)"},
+    {"x": 33859, "y": 31834, "z": 8, "label": "Barren Drift (localização indicada pela wiki)"},
+    {"x": 33192, "y": 31783, "z": 3, "label": "Pino (tapete mágico de Edron)"}
+  ],
+  "images": [
+    {"file": "Feaster of Souls Quest - Large Crystals.png", "caption": "Large Luminescent Crystals nas paredes da Barren Drift"}
+  ],
+  "warnings": [
+    "Quando tiveres os {item:Luminescent Crystal|Luminescent Crystals} para entregar, volta ao {npc:The Thaian} **pelo caminho mais curto**: a wiki avisa que, se andares para **sul**, os cristais desaparecem.",
+    "Minerar cristais desencadeia raids de {creature:Evil Prospector|Evil Prospectors}: aparecem muitos de uma vez por toda a gruta e, quanto mais cristais se mineram, mais raids pode haver. Cuidado redobrado se houver vários jogadores a fazer a quest ao mesmo tempo.",
+    "Os {creature:Evil Prospector|Evil} e {creature:Cursed Prospector|Cursed Prospectors} atacam à distância com uma bola de energia que bate mais quando apanha vários jogadores juntos, têm um ataque de *parry* que castiga quem usa dano em área e refletem dano de **terra**.",
+    "Na pequena sala do cristal grande, quando o fundires és logo teleportado para fora, a **sul** da sala, onde aparecem as criaturas: vai preparado."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Court of Summer",
+  "type": "zona",
+  "near": "Feyrist",
+  "summary": "A corte de verão dos Dreamelves, escondida a **nordeste de Feyrist**: só se entra por um portal nos prados a nordeste da Fae Village, com o encantamento da {npc:Myzzi} da {wiki:The Dream Courts Quest}. Aqui está a {npc:Vanys}.",
+  "entrance": {"x": 33584, "y": 32207, "z": 7, "label": "Portal da Court of Summer (prados de Feyrist, nordeste da Fae Village)"},
+  "requirements": [
+    "Encantamento da {npc:Myzzi}, a nordeste de Edron ({key:hi}, {key:entrances}, {key:yes}): é o primeiro passo da {wiki:The Dream Courts Quest} (quest Premium de nível 250). Sem ele o portal não te deixa passar.",
+    "Acesso a {wiki:Feyrist}: missão *Troubled Animals* da {wiki:Threatened Dreams Quest} completa (é o {npc:Alkestios}, a sudoeste dos portões de Ab'Dendriel, que te dá passagem)."
+  ],
+  "items": ["Small Emerald"],
+  "arrive": [
+    "Se ainda não tens o encantamento: vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes}) e sai da cidade para **nordeste**. A {npc:Myzzi} anda por uma zona grande a norte de Stonehome ({coord:33275,31701,7}); diz-lhe {key:hi}, {key:entrances} e {key:yes}.",
+    "Arranja uma {item:Small Emerald}. Numa cidade, vai ao corredor dos quatro arcos (gelo, terra, fogo e energia) que levam aos Holy Shrines: em Thais fica no 2.º andar do templo, em Carlin 2 andares abaixo do templo, em Venore 2 andares acima do templo, em Svargrond por baixo do templo e em Edron no piso de baixo da torre central da Noodles Academy. Entra no arco de **terra**: chegas a um santuário de terra. **Usa** lá a Small Emerald (a gema gasta-se) e és teleportado para o Earth Shrine de Feyrist ({coord:33540,32208,7}).",
+    "Do Earth Shrine segue para **leste** até ao portal a nordeste da Fae Village ({coord:33584,32207,7}) e entra nele. Com o encantamento da Myzzi passas para a Court of Summer.",
+    "Dentro da corte, vai para **norte** até umas escadas e desce um andar: a {npc:Vanys} está nesse piso subterrâneo ({coord:33686,32180,8}).",
+    "O portal para o {wiki:Dream Labyrinth} fica 2 andares acima do piso de entrada, ao lado do baú do Rosebush ({coord:33703,32185,5}); só funciona depois de carregares as 8 Ward Stones e de a Vanys te dar acesso ({key:hi}, {key:task}, {key:keys})."
+  ],
+  "leave": [
+    "Volta ao piso de entrada da corte (se desceste à Vanys, sobe as escadas) e vai para **sul** pelo caminho por onde vieste, até ao sítio onde chegaste. A wiki não descreve a passagem de regresso da Court of Summer aos prados de Feyrist: procura-a junto a esse ponto de chegada.",
+    "Já em Feyrist, **usa** qualquer um dos quatro Holy Shrines (o mais perto é o Earth Shrine, {coord:33540,32208,7}). Para sair **não precisas de gema** e és teleportado de volta ao continente.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine de Feyrist (chegada com Small Emerald, e saída)"},
+    {"x": 33584, "y": 32207, "z": 7, "label": "Portal da Court of Summer (nordeste da Fae Village)"},
+    {"x": 33693, "y": 32207, "z": 7, "label": "Court of Summer (localização da wiki)"},
+    {"x": 33686, "y": 32180, "z": 8, "label": "Vanys (1 piso abaixo)"},
+    {"x": 33703, "y": 32185, "z": 5, "label": "Portal para o Dream Labyrinth (2 andares acima, baú do Rosebush)"},
+    {"x": 33275, "y": 31701, "z": 7, "label": "Myzzi (nordeste de Edron; anda pela zona)"}
+  ],
+  "images": [
+    {"file": "The Dream Courts Quest - Court of Summer.png", "caption": "Court of Summer, piso de entrada (mapa do spoiler da The Dream Courts Quest)"},
+    {"file": "Dream Labyrinth Map 1.png", "caption": "Court of Summer por andares: piso de entrada (1.1), 1.º andar (1.2) e 2.º andar com o portal para o Dream Labyrinth (1.3)"}
+  ],
+  "warnings": [
+    "A caminho da Vanys há muitos {creature:Crazed Summer Rearguard|Crazed Summer Rearguards} e {creature:Crazed Summer Vanguard|Crazed Summer Vanguards} (até 1300 de dano); na corte também há {creature:Insane Siren|Insane Sirens}, {creature:Arachnophobica} e {creature:Thanatursus}. A wiki recomenda nível 150 ou mais para caçar aqui.",
+    "As {creature:Lacewing Moth|Lacewing Moths} só aparecem aqui durante o dia."
+  ]
+}

@@ -38,10 +38,10 @@ coords: [{'x': 33492, 'y': 31317, 'z': 7, 'label': 'Ominous Trashcan em Quirefan
 [20-years-a-cook-quest 7-5] Sair de Quirefang
 Sai da cave do professor pelo mesmo sítio por onde entraste, volta a Gray Beach e faz a passagem subterrânea ao contrário até à {wiki:Gray Island}. Fala com o {npc:Scrutinon}: ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, {key:venore}, {key:yes}).
 coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}]
+[decaying-defender-outfits-quest 0-0] Chegar a Darashia
+Viaja até **Darashia**: de barco (o {npc:Petros} liga Darashia a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi, Krailos e Gray Island; no capitão dessa cidade diz {key:hi}, {key:darashia} e {key:yes} e chegas ao porto do Petros) ou de tapete voador (chegas ao {npc:Chemar}).
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete voador de Darashia'}]
 [deeplings-world-change 1-0] Chegar a Fiehonja
 Vai a {wiki:Gray Island|Gray Island} (só tem barco a partir de Ab'Dendriel, Venore, Darashia e Edron). Lá podes falar com o {npc:Scrutinon} sobre Quirefang. Segue depois a primeira parte do guia da {wiki:Liquid Black Quest|Liquid Black Quest} (The First Visitor) para chegares a {wiki:Gray Beach|Gray Beach} e receberes o equipamento que te deixa entrar debaixo de água em Fiehonja.
 Resumo do caminho: no porto diz {key:hi}, {key:gray island}, {key:yes} (150 gp); na Gray Island entra no buraco a **sul** do Scrutinon, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}; do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até Gray Beach. Para Fiehonja, entra no buraco mais a **sudeste** de Gray Beach e desce a escadaria gigante (ou, depois de teres feito o atalho da Liquid Black Quest, usa o teleporte de Gray Beach, que te deixa junto à estátua de Qjell).
 coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}, {'x': 33514, 'y': 31323, 'z': 7, 'label': 'Buraco a sudeste de Gray Beach (para Fiehonja)'}]
-[hive-born-world-change 0-0] Viajar até Gray Island
-Apanha um barco para **Gray Island** num dos portos de {wiki:Ab'Dendriel}, {wiki:Edron}, {wiki:Venore} ou {wiki:Darashia} (150 gp): diz ao capitão {key:hi}, {key:gray island}, {key:yes}.
-coords: [{'x': 33189, 'y': 31985, 'z': 7, 'label': 'Gray Island'}]

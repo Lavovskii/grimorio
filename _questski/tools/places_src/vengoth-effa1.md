@@ -1,6 +1,6 @@
 # PLACE: Vengoth
 slug: vengoth-effa1
-mentioned in 7 guides: blood-brothers-quest, devovorgas-essence-mini-world-change, grimvale-quest, killing-in-the-name-of-quest, rise-of-devovorga, spirit-grounds-mini-world-change, yalaharian-outfits-quest
+mentioned in 14 guides: blood-brothers-quest, bloody-tusks-quest, devovorgas-essence-mini-world-change, feaster-of-souls-quest, grave-danger-quest, grimvale-quest, hand-of-the-inquisition-outfits-quest, killing-in-the-name-of-quest, poltergeist-outfits-quest, revenant-outfits-quest, rise-of-devovorga, soul-war-quest, spirit-grounds-mini-world-change, yalaharian-outfits-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Vengoth 
@@ -39,12 +39,36 @@ coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow (chegada no oeste de 
 [devovorgas-essence-mini-world-change 1-4] Sair de Vengoth
 O wiki não descreve a saída do covil: depois da luta, volta pelo caminho por onde entraste até à Energy Gate ({coord:32949,31520,7}) e regressa a pé para **oeste** até ao {npc:Harlow}. Diz {key:hi}, {key:yalahar} e {key:yes} (50 gp) para voltares às docas do Trade Quarter de Yalahar.
 coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow (barco de volta a Yalahar)'}]
+[feaster-of-souls-quest 12-0] Chegar a Vengoth
+Apanha um barco para **Yalahar**. De Edron não há barco direto: vai de tapete com o {npc:Pino} para Darashia ({key:hi}, {key:darashia}, {key:yes}) e lá o {npc:Petros} leva-te a Yalahar ({key:hi}, {key:yalahar}, {key:yes}, 210 gp); também há barco em Thais e em Ankrahmun. Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (porto de Darashia)'}, {'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth (chegada e regresso)'}]
+[feaster-of-souls-quest 13-8] Sair de Zarganash e de Vengoth
+A wiki não descreve a saída: volta pelo caminho por onde vieste até ao teleporte por onde entraste e sai para Vengoth. Lá, anda para **sudoeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares ao Trade Quarter de Yalahar.
+coords: [{'x': 32962, 'y': 31497, 'z': 7, 'label': 'Teleporte de Zarganash (Vengoth)'}, {'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth'}]
+[grave-danger-quest 8-0] Chegar a Vengoth
+Apanha um barco para **Yalahar** (por exemplo em Thais, {npc:Captain Bluebear}: {key:hi}, {key:yalahar}, {key:yes}; o barco de Venore não vai a Yalahar). Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Só te leva se já tiveres começado a missão 4 da {wiki:Blood Brothers Quest}. Ele deixa-te no **oeste** de {wiki:Vengoth}.
+coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow (chegada no oeste de Vengoth)'}]
+[grave-danger-quest 8-2] Sair de Vengoth
+Volta para **oeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): ele leva-te às docas do Trade Quarter de Yalahar. Daí apanha um barco para a tua cidade.
+coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow (barco de volta a Yalahar)'}]
+[poltergeist-outfits-quest 3-1] Chegar a Vengoth
+Em Yalahar, vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.
+coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth (chegada e regresso)'}]
+[poltergeist-outfits-quest 3-8] Sair de Zarganash e de Vengoth
+A wiki não descreve a saída: volta pelo caminho por onde vieste até ao teleporte por onde entraste e sai para Vengoth. Lá, anda para **sudoeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares às docas do Trade Quarter de Yalahar. Para saíres de Yalahar, vai ao porto: o {npc:Karith} (no barco, 1 andar acima) leva-te a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais ou Venore, mas só depois de fazeres a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}. Sem essa missão, usa o {npc:Captain Cookie}, no barco à esquerda do do Karith: leva-te a Liberty Bay (400 gp) ou a Thais (800 gp).
+coords: [{'x': 32962, 'y': 31497, 'z': 7, 'label': 'Teleporte de Zarganash (Vengoth)'}, {'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth'}, {'x': 32818, 'y': 31278, 'z': 5, 'label': 'Karith (porto de Yalahar)'}, {'x': 32804, 'y': 31276, 'z': 6, 'label': 'Captain Cookie (porto de Yalahar)'}]
+[revenant-outfits-quest 0-1] Ir para Vengoth com o Harlow
+Vai às docas do **Trade Quarter** de Yalahar (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.
+coords: [{'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth (chegada e regresso)'}]
 [rise-of-devovorga 0-0] Chegar a Vengoth
 Apanha um barco para **Yalahar** (por exemplo em Thais, Darashia ou Ankrahmun). Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}. Daí anda para **leste** até à montanha onde está o portão de energia.
 coords: [{'x': 32857, 'y': 31550, 'z': 7, 'label': 'Harlow em Vengoth (chegada)'}, {'x': 32948, 'y': 31521, 'z': 7, 'label': 'Portão de energia'}]
 [rise-of-devovorga 0-4] Sair do covil e de Vengoth
 Para saíres, volta pelo mesmo caminho até ao portão de energia e à superfície de Vengoth. Anda para **oeste** até ao {npc:Harlow} e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp) para voltares a Yalahar.
 coords: [{'x': 32857, 'y': 31550, 'z': 7, 'label': 'Harlow em Vengoth (regresso a Yalahar)'}]
+[soul-war-quest 1-0] Chegar a Vengoth
+Primeiro chega a **Yalahar** de barco ({key:hi}, {key:yalahar}, {key:yes}): de Thais com o {npc:Captain Bluebear} (200 gp), de Carlin com o {npc:Captain Greyhound} (185 gp), de Darashia com o {npc:Petros} (210 gp), de Ankrahmun com o {npc:Captain Sinbeard} (230 gp) ou de Liberty Bay com o **Jack Fate** (275 gp). De Venore e de Edron não há barco direto para Yalahar. Em Yalahar, vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth}.
+coords: [{'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear (Thais)'}, {'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound (Carlin)'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (Darashia)'}, {'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (Ankrahmun)'}, {'x': 32856, 'y': 31548, 'z': 7, 'label': 'Harlow em Vengoth (chegada e regresso)'}]
 [spirit-grounds-mini-world-change 1-2] Chegar ao portal de Vengoth
 Apanha um barco para **Yalahar**. Nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth|Vengoth}; o portal fica na costa **sul** ({coord:32909,31540,7}).
 coords: [{'x': 32857, 'y': 31550, 'z': 7, 'label': 'Harlow em Vengoth (chegada)'}, {'x': 32909, 'y': 31540, 'z': 7, 'label': 'Portal de Vengoth'}]

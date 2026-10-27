@@ -1,0 +1,579 @@
+{
+  "slug": "the-cradle-of-monsters-quest",
+  "category": "historia",
+  "region": "Edron",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Vários dias (100 Rhindeers, 5 tarefas com alavanca e um boss com cooldown de 20 h)",
+  "summary": "A {npc:Ysbasra}, numa tenda em Cormaya, procura o irmão, raptado e vendido ao cientista **Doctor Marrow**, que faz experiências abomináveis em seres humanos na ilha de {wiki:Ingol|Ingol}. Desce piso a piso pelo laboratório dele, ajudando os assistentes e as vítimas (9 missões, várias delas tarefas de equipa com alavanca), e no fim enfrenta o {creature:Doctor Marrow} e a sua criação, {creature:The Monster}. A recompensa é a montada **Mutated Abomination** e o achievement **Strangest Thing**.",
+  "legend_pt": "Um cientista de reputação duvidosa anda a fazer experiências abomináveis em seres humanos. Vais pôr fim a esta loucura?",
+  "start": {"x": 33318, "y": 32008, "z": 7, "label": "Teleporte para a tenda da Ysbasra (Cormaya)"},
+  "requirements": [
+    "Nível **250** (mínimo e recomendado).",
+    "Conta **Premium**.",
+    "Missão **Hungry New World** da {wiki:Krailos Quest} concluída (acesso ao depot de Krailos, onde está a {npc:Kaya}, precisa na missão 7).",
+    "Equipa: as tarefas com alavanca levam até 5 jogadores; a do {creature:Hazard Golem} exige **pelo menos 2**, a do Collection Container é muito mais fácil com 2+ e o boss final é para uma equipa até 5."
+  ],
+  "items_needed": [
+    {"item": "Mushroom Pie", "qty": 1, "note": "para o Vasko (missão 1); vem de {item:Gnomish Supply Package|Gnomish Supply Packages}, cai de alguns fungos (ex.: {creature:Hideous Fungus}, {creature:Humongous Fungus}) ou compra-se ao {npc:Gnomission} por 150 gp depois de matares 20 bosses das Warzones; também se vende no Market"},
+    {"item": "Bug Meat", "qty": 10, "note": "para o Vasko (missão 1); nenhum NPC vende (mas está no Market), cai de {creature:Orclops Doomhauler|Orclops Doomhaulers}, {creature:Orclops Ravager|Orclops Ravagers}, {creature:Orc Cult Inquisitor|Orc Cult Inquisitors} e {creature:Ancient Lion Knight|Ancient Lion Knights}"},
+    {"item": "Spoon", "qty": 1, "note": "para recolher as gemas dos ovos (missão 9); vende-se por 10 gp ao {npc:Chephan} (Venore) e ao {npc:Maro} (Rathleton), ou no Market"},
+    {"text": "Dinheiro para os barcos: Edron ↔ Cormaya 20 gp ({npc:Captain Seahorse} / {npc:Pemaret}) e, na missão 7, Edron ↔ Krailos 100 gp ({npc:Captain Seahorse} / {npc:Captain Pelagia})"},
+    {"item": "Blank Paper", "qty": 3, "note": "encontram-se no próprio laboratório (missão 5)"},
+    {"item": "Might Ring", "note": "recomendado para entrar na sala do Doctor Marrow"},
+    {"item": "Sacred Tree Amulet", "note": "recomendado para o Doctor Marrow (dano de terra)"},
+    {"item": "Magic Wall Rune", "note": "para te protegeres quando ficas Feared e para guiar The Monster"},
+    {"item": "Fire Bomb Rune", "note": "ou outra bomba de campo, para o blocker não fugir quando fica Feared"}
+  ],
+  "rewards": [
+    {"text": "Montada **Mutated Abomination** (+10 de velocidade, pode ser colorida)"},
+    {"text": "Achievement **Strangest Thing** (3 pontos)"},
+    {"text": "Achievement opcional **Mutagenius** (2 pontos): termina a tarefa dos Mutagens com os 16 Mutagens da mesma cor"},
+    {"text": "Loot de {creature:The Monster} (30.000 de experiência; boss **Archfoe** no Bosstiary): platinum coins, poções, gemas e, raramente, peças como {item:Mutant Bone Kilt}, {item:Antler-Horn Helmet}, {item:Mutated Skin Armor} ou {item:Alchemist's Boots}"}
+  ],
+  "achievements": ["Strangest Thing", "Mutagenius"],
+  "unlocks": [
+    {"what": "Ilha de Ingol", "kind": "zona", "place": "Ingol", "when": "Ao aceitares a missão da {npc:Ysbasra} ({key:passage}, {key:yes}).", "note": "Precisas de nível 250 e Premium."},
+    {"what": "Barco do Hawkhurst entre Cormaya e Ingol", "kind": "transporte", "place": "Hawkhurst", "when": "Depois de aceitares a missão da {npc:Ysbasra}, o {npc:Hawkhurst} leva-te a Ingol ({key:passage})."},
+    {"what": "Pisos do laboratório do Doctor Marrow (Deeper Ingol)", "kind": "zona", "place": "Ingol", "when": "Missão a missão: o {npc:Vasko}, o {npc:Avan}, a {npc:Aletta}, a {npc:Ivora} e o {npc:Geoffray} abrem-te as portas seguintes."},
+    {"what": "Boss Doctor Marrow / The Monster", "kind": "funcionalidade", "place": "The Monster", "when": "Ao entregares a missão Anti-Mutagen ao {npc:Geoffray}: abre-se a porta a sudoeste dele.", "note": "Até 5 jogadores, cooldown de 20 h."},
+    {"what": "Montada Mutated Abomination", "kind": "funcionalidade", "place": "Mutated Abomination", "when": "Alavanca da sala de recompensa, depois de matares {creature:The Monster} pela primeira vez."}
+  ],
+  "dangers": ["Rhindeer", "Harpy", "Carnivostrich", "Crape Man", "Boar Man", "Liodile", "Positive Spark", "Negative Spark", "Lab Assistant", "Guardian Golem", "Antenna", "Doctor Marrow", "The Monster"],
+  "npcs": ["Ysbasra", "Hawkhurst", "Vasko", "Avan", "Aletta", "Ivora", "Kaya", "Geoffray", "Captain Seahorse", "Pemaret", "Captain Pelagia", "Larek"],
+  "tips": [
+    "As missões com alavanca (Dangerous Apparatus, Mutagens, Collection Container e Hazard Golem) têm um **cooldown de 4 horas**; o boss final tem **20 horas**.",
+    "Traz o {item:Mushroom Pie}, as 10 {item:Bug Meat} e a {item:Spoon} logo na primeira viagem: Ingol fica longe e só se chega de barco a partir de Cormaya.",
+    "Ingol está cheia de criaturas fortes ({creature:Rhindeer|Rhindeers}, {creature:Harpy|Harpies}, {creature:Carnivostrich|Carnivostriches}, {creature:Crape Man|Crape Men}, {creature:Boar Man|Boar Men} e {creature:Liodile|Liodiles}) em todos os pisos. Leva poções suficientes.",
+    "O {npc:Avan} compra os produtos das criaturas da ilha ({item:Rhindeer Antlers}, {item:Harpy Feathers}, {item:Carnivostrich Feather}, {item:Boar Man Hoof}, {item:Crab Man Claws} e {item:Liodile Fang}).",
+    "Os pisos do laboratório estão empilhados: 1.º piso z=8 ({npc:Vasko}), 2.º z=9 ({npc:Avan}), 3.º z=10 ({npc:Aletta}), 4.º z=11 ({npc:Ivora}, nas grutas) e 5.º z=12 ({npc:Geoffray})."
+  ],
+  "sections": [
+    {
+      "title": "1. Acesso a Ingol",
+      "intro": "A quest começa numa tenda escondida em Cormaya, a ilha a sul de Edron. A Ysbasra conta-te a história e combina a viagem com um contrabandista, o Hawkhurst, que te leva à ilha de Ingol.",
+      "steps": [
+        {
+          "title": "Chegar a Cormaya",
+          "text": "Vai ao porto de **Edron** e fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}.",
+          "coords": [
+            {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+            {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"}
+          ]
+        },
+        {
+          "title": "Entrar na tenda da Ysbasra",
+          "text": "Em Cormaya, vai até à tenda no ponto indicado ({coord:33318,32008,7}) e entra no **teleporte** que está junto dela. Apareces dentro da tenda da {npc:Ysbasra}.",
+          "coords": [
+            {"x": 33318, "y": 32008, "z": 7, "label": "Teleporte junto à tenda"},
+            {"x": 33394, "y": 31917, "z": 8, "label": "Ysbasra (dentro da tenda)"}
+          ]
+        },
+        {
+          "title": "Aceitar a missão da Ysbasra",
+          "text": "Diz {key:hi}, depois {key:passage} e responde {key:yes}. Se quiseres a história completa, pergunta antes por {key:trouble}, {key:purposes}, {key:scientist}, {key:reputation} e {key:disregard}. Ela combina a viagem com um contrabandista de Cormaya e ficas com acesso a Ingol.",
+          "npc": "Ysbasra",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings my friend. It's a relief to see a friendly face in times of trouble."},
+            {"you": "passage"},
+            {"npc": "A smuggler on Cormaya was the only one, brave enough to set sail to such a remote isle in unknown waters. I will instruct him to ferry you safely to that island. [...] Will you accept this mission? Yes or No?"},
+            {"you": "yes"},
+            {"npc": "Thank you so much. I beg you though, please hurry!"}
+          ],
+          "reward": "Acesso a Ingol (barco do Hawkhurst)."
+        },
+        {
+          "title": "Sair da tenda",
+          "text": "A wiki não descreve a saída da tenda: sai pelo mesmo sítio por onde entraste e, já em Cormaya, segue para a costa **nordeste** da ilha ({coord:33356,31985,7})."
+        },
+        {
+          "title": "Viajar para Ingol com o Hawkhurst",
+          "text": "Na costa **nordeste** de Cormaya está o capitão {npc:Hawkhurst}. Diz {key:hi} e pede-lhe uma {key:passage} para Ingol (se ele pedir confirmação, responde {key:yes}). Só te leva depois de aceitares a missão da Ysbasra. Desembarcas no cais de Ingol ({coord:33709,32602,6}), a **oeste** do laboratório.",
+          "npc": "Hawkhurst",
+          "coords": [
+            {"x": 33356, "y": 31985, "z": 7, "label": "Hawkhurst em Cormaya"},
+            {"x": 33709, "y": 32602, "z": 6, "label": "Hawkhurst no cais de Ingol"}
+          ],
+          "images": [{"file": "Ingol Map.png", "caption": "Mapa de Ingol"}]
+        },
+        {
+          "title": "Como sair de Ingol (sempre que precisares)",
+          "text": "Para voltares, sobe do laboratório até à superfície e caminha para **oeste** até ao cais onde chegaste: o {npc:Hawkhurst} também está em Ingol ({coord:33709,32602,6}) e leva-te de volta a Cormaya (pede-lhe a viagem da mesma forma, com {key:hi} e {key:passage}). Em Cormaya, o {npc:Pemaret} no porto norte ({coord:33287,31956,6}) leva-te a Edron por 20 gp ({key:hi}, {key:edron}, {key:yes}).",
+          "tip": "A wiki não transcreve a conversa de regresso com o Hawkhurst; se {key:passage} não funcionar, experimenta {key:cormaya}."
+        }
+      ]
+    },
+    {
+      "title": "2. Missão 1: Access to the Laboratory (Vasko)",
+      "intro": "O laboratório do Doctor Marrow fica no centro da ilha e estende-se por 5 pisos subterrâneos.",
+      "steps": [
+        {
+          "title": "Ir ao laboratório",
+          "text": "Do cais de Ingol caminha para **leste** até ao edifício do laboratório ({coord:33800,32574,7}) e desce as escadas. No 1.º piso (z=8) encontras o {npc:Vasko}.",
+          "coords": [
+            {"x": 33800, "y": 32574, "z": 7, "label": "Edifício do laboratório (superfície)"},
+            {"x": 33783, "y": 32571, "z": 8, "label": "Vasko (1.º piso)"}
+          ],
+          "warning": "Pelo caminho há {creature:Rhindeer|Rhindeers}, {creature:Harpy|Harpies}, {creature:Carnivostrich|Carnivostriches}, {creature:Crape Man|Crape Men}, {creature:Boar Man|Boar Men} e {creature:Liodile|Liodiles}: tudo criaturas de nível alto."
+        },
+        {
+          "title": "Pedir a missão ao Vasko",
+          "text": "Diz {key:hi} e {key:mission}. O Vasko tem fome: quer 10 {item:Bug Meat} e um {item:Mushroom Pie} para te abrir a porta.",
+          "npc": "Vasko",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Hello, small one."},
+            {"you": "mission"},
+            {"npc": "Doctor told me not to open the door for anyone. [...] Bring me some food and I will open the door for you. [...] I want the meat of ten bugs and a mushroom pie."}
+          ]
+        },
+        {
+          "title": "Entregar a comida",
+          "text": "Com o {item:Mushroom Pie} e as 10 {item:Bug Meat} no inventário, diz {key:mission} outra vez. Ficas com acesso à sala diretamente a **sul** do Vasko.",
+          "npc": "Vasko",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Mmmm, smells delicious! Thank you! You can pass now - and I can eat now."}
+          ],
+          "reward": "Acesso à sala da tarefa Dangerous Apparatus."
+        }
+      ]
+    },
+    {
+      "title": "3. Missão 2: Dangerous Apparatus",
+      "intro": "Primeira tarefa com alavanca: até 5 jogadores, 15 minutos para carregar a Strange Machine. Cooldown de 4 horas.",
+      "steps": [
+        {
+          "title": "Entrar na tarefa",
+          "text": "Na sala a **sul** do {npc:Vasko}, puxa a alavanca (até 5 jogadores podem entrar juntos). Tens **15 minutos** para carregar a {creature:Strange Machine (Creature)|Strange Machine} reposicionando os {creature:Dangerous Apparatus}."
+        },
+        {
+          "title": "Controlar os pontos de carga",
+          "text": "Com o tempo aparece um número a subir ao lado do nome de cada jogador. Se chegar a **40**, és expulso da sala. Para o baixar, pisa o {item:Decharger}, um pouco a **sudoeste** na sala.",
+          "warning": "Vigia o teu número durante toda a tarefa: chegar a 40 tira-te da sala."
+        },
+        {
+          "title": "Perceber o objetivo",
+          "text": "A máquina só carrega quando é atingida pelos ataques da {creature:Positive Spark}. Como a Positive Spark não sai da zona **nordeste** da sala, tens de alinhar os aparelhos ({creature:Dangerous Apparatus}) para que os raios saiam do aparelho de nordeste e cheguem, aparelho a aparelho, até à máquina."
+        },
+        {
+          "title": "Alinhar os aparelhos",
+          "text": "Para rodar um aparelho, põe-te ao lado dele com a {creature:Negative Spark} junto de ti: é o ataque dela que acaba por colocar o aparelho na posição certa. Usa a imagem como esquema recomendado e começa pelo **fim** (aparelhos junto à sala da Strange Machine) em direção ao **início** (zona da Positive Spark).",
+          "images": [{"file": "The Cradle of Monster Quest - Apparatus Task.png", "caption": "Posição recomendada dos aparelhos"}]
+        },
+        {
+          "title": "Disparar os raios",
+          "text": "Quando estiver tudo alinhado, um jogador vai para a zona **nordeste** da sala para que a {creature:Positive Spark} ataque o primeiro aparelho e crie os raios. Ao fim de alguns raios a equipa atinge o objetivo e é teleportada para fora da sala.",
+          "reward": "Missão concluída; segue para o piso de baixo."
+        }
+      ]
+    },
+    {
+      "title": "4. Missão 3: Rhindeers (Avan)",
+      "steps": [
+        {
+          "title": "Falar com o Avan",
+          "text": "Desce ao 2.º piso do laboratório (z=9) e fala com o {npc:Avan}: {key:hi}, {key:mission}. Ele quer que mates **100** {creature:Rhindeer|Rhindeers}.",
+          "npc": "Avan",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings, dear ... visitor?"},
+            {"you": "mission"},
+            {"npc": "[...] I'm talking about the rhindeers in particular. [...] Please kill one hundred of them and I will open the door for you."}
+          ]
+        },
+        {
+          "title": "Matar 100 Rhindeers",
+          "text": "Mata 100 {creature:Rhindeer|Rhindeers} à volta de Ingol. As mortes que fizeste **antes** de aceitares a missão também contam.",
+          "warning": "Para uma morte contar no quest log tens de ser quem deu **mais dano**, ou estar em party com experiência partilhada ativa com quem deu mais dano."
+        },
+        {
+          "title": "Reportar ao Avan",
+          "text": "Volta ao {npc:Avan} e diz {key:mission}.",
+          "npc": "Avan",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "Thank you for your assistance. Feel free to pass now and discuss all possible scientific discrepancies with Doctor Marrow himself."}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Missão 4: Mutagens",
+      "intro": "Também dada pelo Avan. Até 5 jogadores, mas faz-se bem sozinho. Tens 10 minutos.",
+      "steps": [
+        {
+          "title": "Entrar na tarefa",
+          "text": "No piso do {npc:Avan} (z=9), entra na sala a **sul** e passa o teleporte. Tens **10 minutos** antes de seres expulso."
+        },
+        {
+          "title": "Como mudam as cores",
+          "text": "O objetivo é ter pelo menos **11 Mutagens da mesma cor**. Cada Mutagen começa numa cor aleatória. Cada alavanca dispara um raio que muda a cor de **todos** os Mutagens dessa linha, sempre por esta ordem:",
+          "table": {
+            "head": ["Cor atual", "Passa a"],
+            "rows": [
+              ["{creature:Black Mutagen|Black}", "{creature:Yellow Mutagen|Yellow}"],
+              ["{creature:Yellow Mutagen|Yellow}", "{creature:Blue Mutagen|Blue}"],
+              ["{creature:Blue Mutagen|Blue}", "{creature:Purple Mutagen|Purple}"],
+              ["{creature:Purple Mutagen|Purple}", "{creature:Green Mutagen|Green}"],
+              ["{creature:Green Mutagen|Green}", "{creature:Red Mutagen|Red}"],
+              ["{creature:Red Mutagen|Red}", "{creature:Black Mutagen|Black}"]
+            ]
+          }
+        },
+        {
+          "title": "Estratégia",
+          "text": "Escolhe uma cor-alvo, por exemplo **Black**. Usa as alavancas das linhas que **não** têm nenhum Mutagen preto. Repete até teres 11 iguais. Repara também na cor anterior à tua (para Black é a **Red**): às vezes compensa usar uma alavanca e perder 1 preto se isso transformar 2 vermelhos em pretos. Tens de estar **à frente** de uma alavanca para a puxar, por isso vais andar sempre de uma para a outra."
+        },
+        {
+          "title": "Terminar a tarefa",
+          "text": "Com os 11 Mutagens iguais, usa a alavanca **isolada a norte** para concluir a tarefa.",
+          "tip": "Se conseguires os **16** Mutagens da mesma cor antes de puxar a alavanca norte ganhas o achievement **Mutagenius**.",
+          "reward": "Missão concluída (e, opcionalmente, o achievement Mutagenius)."
+        }
+      ]
+    },
+    {
+      "title": "6. Missão 5: Research Notes (Aletta)",
+      "intro": "A Aletta, no 3.º piso, quer as notas de investigação que o Doctor Marrow lhe esconde: notas copiadas de 3 quadros, um livro com transcrições e uns registos deitados ao lixo.",
+      "steps": [
+        {
+          "title": "Falar com a Aletta",
+          "text": "Desce ao 3.º piso do laboratório (z=10) e fala com a {npc:Aletta}: {key:hi}, {key:mission}.",
+          "npc": "Aletta",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings, dear guest."},
+            {"you": "mission"},
+            {"npc": "[...] There are three smaller labs out there in the caves where you can find some important information. [...] Please take the inkwell and feather from my writing desk and copy the research notes on the note boards there. Additionally, there has to be a book with transcripts that I need, too. [...] there are some research records he considered worthless and ignorantly threw them away. [...]"}
+          ]
+        },
+        {
+          "title": "Apanhar 3 Blank Papers",
+          "text": "Precisas de 3 {item:Blank Paper|Blank Papers}. Há um no 1.º piso, um no 2.º e um no 3.º piso do laboratório, nos pontos indicados.",
+          "coords": [
+            {"x": 33781, "y": 32560, "z": 8, "label": "Blank Paper (1.º piso)"},
+            {"x": 33779, "y": 32572, "z": 9, "label": "Blank Paper (2.º piso)"},
+            {"x": 33789, "y": 32560, "z": 10, "label": "Blank Paper (3.º piso)"}
+          ]
+        },
+        {
+          "title": "Apanhar o Feather and Inkwell",
+          "text": "Tira o {item:Feather and Inkwell} da secretária mesmo ao lado da {npc:Aletta}."
+        },
+        {
+          "title": "Copiar os 3 quadros de notas",
+          "text": "Sai para as grutas a **norte** neste mesmo piso e visita as 3 pequenas salas marcadas no mapa. Em cada uma, põe-te à frente do quadro de notas e usa o {item:Feather and Inkwell} num {item:Blank Paper}: recebes umas {item:Copied Research Notes}.",
+          "map": {"x": 33735, "y": 32509, "z": 10, "marks": [
+            {"x": 33692, "y": 32457, "label": "Sala de notas 1"},
+            {"x": 33792, "y": 32509, "label": "Sala de notas 2"},
+            {"x": 33703, "y": 32534, "label": "Sala de notas 3"}
+          ]}
+        },
+        {
+          "title": "Apanhar o Book with Transcripts",
+          "text": "Vai ao toco de árvore marcado e tira de lá o {item:Book with Transcripts}.",
+          "coords": [{"x": 33697, "y": 32506, "z": 10, "label": "Toco de árvore com o livro"}]
+        },
+        {
+          "title": "Apanhar os Research Records",
+          "text": "Nas grutas a **sul**, procura o monte de lixo marcado e tira de lá os registos de investigação (research records).",
+          "coords": [{"x": 33760, "y": 32588, "z": 10, "label": "Monte de lixo com os registos"}]
+        },
+        {
+          "title": "Entregar tudo à Aletta",
+          "text": "Volta à {npc:Aletta} com as 3 notas copiadas, o livro e os registos e diz {key:hi}, {key:mission}.",
+          "npc": "Aletta",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "There they are! Thank you very much! Now you may pass."}
+          ],
+          "reward": "A Aletta deixa-te passar pela porta seguinte."
+        }
+      ]
+    },
+    {
+      "title": "7. Missão 6: The Collection Container",
+      "intro": "Tarefa com alavanca para até 5 jogadores. Por causa da aleatoriedade, é fortemente recomendado ir com pelo menos 2.",
+      "steps": [
+        {
+          "title": "Entrar e conhecer a sala",
+          "text": "Passa a porta que a {npc:Aletta} te abriu, puxa a alavanca da tarefa e entra (a wiki não indica a posição exata desta sala nem da alavanca). Na sala há 3 unidades: {creature:Blue Collector Unit|Blue} (esquerda), {creature:Green Collector Unit|Green} (meio) e {creature:Red Collector Unit|Red} (direita). O objetivo é levar os contadores das três a **50** mais ou menos ao mesmo tempo.",
+          "images": [{"file": "The Cradle of Monsters Quest - Collector Units.png", "caption": "As três Collector Units"}]
+        },
+        {
+          "title": "Regra das dezenas",
+          "text": "Se os contadores estiverem em **dezenas diferentes** (por exemplo dois entre 10 e 20 e um entre 20 e 30), sobe o contador do {creature:The Collection Container} no centro da sala. As dezenas também aparecem nos tubos atrás das unidades ({creature:Blue Tube|Blue}, {creature:Green Tube|Green} e {creature:Red Tube|Red}).",
+          "warning": "Se o contador do Collection Container chegar a **100**, falhas a tarefa."
+        },
+        {
+          "title": "Encontrar a unidade mais lenta",
+          "text": "Os contadores sobem sozinhos, mas a velocidades diferentes, e um deles é bem mais rápido do que os outros. Identifica a unidade **mais lenta**: é nela que te vais concentrar."
+        },
+        {
+          "title": "Empurrar contentores",
+          "text": "Para subir uma unidade à mão, empurra um contentor da mesma cor ({creature:Blue Container|Blue}, {creature:Green Container|Green} ou {creature:Red Container|Red}) até ficar ao lado dela. Há duas fontes de contentores: aparece um de cada cor a **sul** da unidade correspondente, e os {creature:Lab Assistant|Lab Assistants} transformam-se num contentor de cor aleatória quando os matas.",
+          "tip": "Os contentores andam muito devagar: mata os Lab Assistants **ao lado** da unidade com o contador mais baixo. Usa também os contentores que aparecem sozinhos, mesmo que pareçam longe, porque os Lab Assistants podem não dar a cor de que precisas."
+        },
+        {
+          "title": "Concluir",
+          "text": "Quando as três unidades chegam a 50 aparece uma mensagem laranja na sala: *\"YOU MANAGED TO POWER THE DOORS AND MAKE THEM OPERATIONABLE.\"* A tarefa está feita.",
+          "reward": "As portas do laboratório ficam a funcionar."
+        }
+      ]
+    },
+    {
+      "title": "8. Missão 7: Find Kaya (Ivora)",
+      "intro": "A Ivora foi transformada contra a vontade pelo Doctor Marrow e quer que a família saiba. Esta missão obriga-te a ir a Krailos e voltar.",
+      "steps": [
+        {
+          "title": "Encontrar a Ivora",
+          "text": "A {npc:Ivora} não está no edifício, mas nas grutas do 4.º piso (z=11). Sai pela saída **leste** e caminha para **norte**, junto à montanha, até encontrares a cabana dela.",
+          "coords": [{"x": 33800, "y": 32543, "z": 11, "label": "Ivora (cabana nas grutas)"}]
+        },
+        {
+          "title": "Receber a carta",
+          "text": "Diz {key:hi} e {key:mission}. A Ivora dá-te uma {item:Letter (Ingol)|Letter} para a irmã, a {npc:Kaya}. Ela pensa que a Kaya vive em Port Hope, mas agora está em Krailos.",
+          "npc": "Ivora",
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "The lab assistants like to call us monsters. But Doctor Marrow is the real monster here: He transformed me against my will! [...]"},
+            {"npc": "They must be so worried. Please deliver this letter to my sister Kaya. She lives in Port Hope. [...] If you do, I will open the door for you."}
+          ]
+        },
+        {
+          "title": "Viajar até Krailos",
+          "text": "Sai de Ingol com o {npc:Hawkhurst} (cais oeste, {coord:33709,32602,6}) até Cormaya e daí com o {npc:Pemaret} até Edron ({key:hi}, {key:edron}, {key:yes}). No porto de Edron fala com o {npc:Captain Seahorse}: {key:hi}, {key:krailos}, {key:yes} (100 gp). Chegas ao barco da {npc:Captain Pelagia}, em Krailos; ela avisa que, por causa dos recifes, não consegue chegar mais perto da costa e que **tens de nadar** até terra. Depois caminha para **leste** pela estepe até à aldeia (Krailos Village), onde fica a tenda do {npc:Larek}.",
+          "coords": [
+            {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (Edron)"},
+            {"x": 33492, "y": 31710, "z": 6, "label": "Porto de Krailos (Captain Pelagia)"}
+          ],
+          "images": [{"file": "Map krailos.jpg", "caption": "Mapa de Krailos"}]
+        },
+        {
+          "title": "Descer ao depot de Krailos",
+          "text": "Na Krailos Village entra na tenda do {npc:Larek} e usa a {item:Grille|grelha} para desceres ao depot (precisas da missão Hungry New World da {wiki:Krailos Quest}). Lá em baixo está a {npc:Kaya}.",
+          "coords": [
+            {"x": 33658, "y": 31663, "z": 7, "label": "Tenda do Larek (grelha)"},
+            {"x": 33636, "y": 31678, "z": 8, "label": "Kaya (depot de Krailos)"}
+          ]
+        },
+        {
+          "title": "Entregar a carta à Kaya",
+          "text": "Diz {key:hi} e depois {key:Ivora}.",
+          "npc": "Kaya",
+          "dialogue": [
+            {"you": "Ivora"},
+            {"npc": "Oh no! This is horrible. But at least, I know what happened to my sister. Thank you for delivering this letter!"}
+          ]
+        },
+        {
+          "title": "Voltar a Ingol",
+          "text": "Sobe do depot para a tenda do {npc:Larek} pelo mesmo caminho, volta a nado ao barco da {npc:Captain Pelagia} ({coord:33492,31710,6}) e pede-lhe a viagem para Edron ({key:hi}, {key:edron}, {key:yes}; 100 gp). Em Edron, {npc:Captain Seahorse} para Cormaya ({key:hi}, {key:cormaya}, {key:yes}; 20 gp) e, na costa nordeste de Cormaya ({coord:33356,31985,7}), {npc:Hawkhurst} para Ingol ({key:hi}, {key:passage}). Desce de novo pelo laboratório até às grutas do 4.º piso (z=11), onde está a {npc:Ivora}."
+        },
+        {
+          "title": "Reportar à Ivora",
+          "text": "Volta à cabana da {npc:Ivora} e diz {key:hi}, {key:mission} para reportar que entregaste a carta. Ela tinha prometido abrir-te a porta em troca.",
+          "npc": "Ivora",
+          "tip": "A wiki não transcreve esta conversa de regresso; {key:mission} é a palavra usada com todos os NPCs do laboratório.",
+          "reward": "A Ivora abre-te a porta seguinte."
+        }
+      ]
+    },
+    {
+      "title": "9. Missão 8: Hazard Golem",
+      "intro": "Tarefa com alavanca para 2 a 5 jogadores (são **obrigatórios pelo menos 2**). A comunicação dentro da equipa é essencial.",
+      "steps": [
+        {
+          "title": "Matar o Guardian Golem",
+          "text": "Passa a porta que a {npc:Ivora} te abriu e entra na tarefa pela alavanca (a wiki não indica a posição exata desta sala). Lá dentro, mata o {creature:Guardian Golem} que aparece a **noroeste** na sala. O corpo dele são umas {item:Some Golem Parts}."
+        },
+        {
+          "title": "Montar o Hazard Golem",
+          "text": "Atira as {item:Some Golem Parts} para o alçapão aberto a **sul** do balcão com as alavancas. À **terceira** vez aparece um {creature:Hazard Golem} na zona de enxofre.",
+          "tip": "Vais precisar de **pelo menos 4 golems** para acabar: o golem perde muita vida a destruir as Ice Barricades. Continua a matar Guardian Golems e a atirar as peças."
+        },
+        {
+          "title": "As alavancas do balcão",
+          "text": "Um jogador fica nas alavancas do balcão. A alavanca **norte** faz o golem andar mais depressa (importante, porque ele sofre dano constante na zona de enxofre). As outras três protegem-no dos obstáculos. Só pode estar **uma alavanca ativa de cada vez**, por isso tens de as ligar e desligar constantemente.",
+          "table": {
+            "head": ["Obstáculo", "Efeito", "Como resolver"],
+            "rows": [
+              ["{item:Energy Field (Field)|Energy Field}", "125 de dano ao golem", "Alavanca em frente ao {item:Steel Shield}"],
+              ["{item:Fire|Fire Field}", "102 de dano ao golem", "Alavanca em frente ao {item:Bucket of Water}"],
+              ["{creature:Ice Barricade}", "Bloqueia o caminho", "Alavanca em frente ao {item:Fire Portal} (cada barricada só se destrói uma vez, não volta a aparecer)"],
+              ["{item:Blades}", "Dano ao golem", "Um jogador pisa o botão fora do caminho, mesmo em frente às lâminas"]
+            ]
+          }
+        },
+        {
+          "title": "Distribuir os papéis",
+          "text": "Um jogador nas alavancas; pelo menos outro a anunciar os obstáculos e a pisar os botões das lâminas. É recomendado um terceiro jogador para cobrir com facilidade todos os botões (do caminho interior e do exterior)."
+        },
+        {
+          "title": "Levar o golem até à máquina",
+          "text": "Guia o {creature:Hazard Golem} até ao fim do caminho. Quando ele chega à máquina, a tarefa está concluída.",
+          "reward": "Missão concluída; segue para o 5.º piso."
+        }
+      ]
+    },
+    {
+      "title": "10. Missão 9: Anti-Mutagen (Geoffray)",
+      "intro": "O Geoffray, no 5.º piso, quer que cures as 5 vítimas dos tubos de ensaio com 5 Flasks with Anti-Mutagen. Cada frasco precisa de 3 ingredientes, por isso vais precisar de 5 de cada.",
+      "steps": [
+        {
+          "title": "Falar com o Geoffray",
+          "text": "Desce ao 5.º piso do laboratório (z=12) e fala com o {npc:Geoffray}: {key:hi}, {key:mission}.",
+          "npc": "Geoffray",
+          "coords": [{"x": 33782, "y": 32572, "z": 12, "label": "Geoffray (5.º piso)"}],
+          "dialogue": [
+            {"you": "mission"},
+            {"npc": "[...] Prove your honesty by healing some of the creatures down here. [...] the five victims in the test tubes in this part of the laboratory can still be saved. You need an anti-mutagen and luckily, the ingredients are not too intricate. [...]"}
+          ]
+        },
+        {
+          "title": "Ingrediente 1: Fresh Hydra Herbs",
+          "text": "Usa as {item:Hydra Corms} espalhadas pelas grutas de Ingol para obteres {item:Fresh Hydra Herbs}. Precisas de 5. No 5.º piso só há uma ({coord:33724,32489,12}); no 4.º piso (z=11) há várias, nos pontos do mapa.",
+          "map": {"x": 33777, "y": 32520, "z": 11, "marks": [
+            {"x": 33803, "y": 32538, "label": "Hydra Corms"},
+            {"x": 33804, "y": 32499, "label": "Hydra Corms"},
+            {"x": 33807, "y": 32458, "label": "Hydra Corms"},
+            {"x": 33752, "y": 32455, "label": "Hydra Corms"},
+            {"x": 33749, "y": 32462, "label": "Hydra Corms"},
+            {"x": 33739, "y": 32566, "label": "Hydra Corms"},
+            {"x": 33781, "y": 32541, "label": "Hydra Corms"}
+          ]},
+          "coords": [{"x": 33724, "y": 32489, "z": 12, "label": "Hydra Corms (única do 5.º piso)"}]
+        },
+        {
+          "title": "Arranjar 5 Empty Flasks",
+          "text": "Os {item:Empty Flask|Empty Flasks} saem das {item:Pile of Ominous Flasks|Piles of Ominous Flasks} do laboratório. Há uma por piso; todas partilham o mesmo cooldown de **5 minutos**.",
+          "coords": [
+            {"x": 33789, "y": 32566, "z": 8, "label": "Pile of Ominous Flasks (1.º piso)"},
+            {"x": 33800, "y": 32571, "z": 9, "label": "Pile of Ominous Flasks (2.º piso)"},
+            {"x": 33779, "y": 32560, "z": 10, "label": "Pile of Ominous Flasks (3.º piso)"},
+            {"x": 33798, "y": 32560, "z": 11, "label": "Pile of Ominous Flasks (4.º piso)"},
+            {"x": 33793, "y": 32560, "z": 12, "label": "Pile of Ominous Flasks (5.º piso)"}
+          ]
+        },
+        {
+          "title": "Ingrediente 2: Nutrient Solution",
+          "text": "Sobe ao piso acima do Geoffray (z=11) e usa um {item:Empty Flask} no contentor mais a **sul** do meio da sala para obteres {item:Nutrient Solution}.",
+          "coords": [{"x": 33790, "y": 32569, "z": 11, "label": "Contentor da Nutrient Solution"}],
+          "warning": "O frasco não fica cheio muito tempo. Se o líquido desaparecer, ficas com o frasco vazio e podes voltar a enchê-lo."
+        },
+        {
+          "title": "Apanhar o Egg Cracker",
+          "text": "Tira um {item:Egg Cracker} do caixote a **nordeste** do Geoffray.",
+          "coords": [{"x": 33799, "y": 32560, "z": 12, "label": "Caixote com o Egg Cracker"}]
+        },
+        {
+          "title": "Ingrediente 3: Bottled Yolk",
+          "text": "Procura {item:Some Eggs} pelas grutas (há vários neste piso, nos pontos do mapa). Usa o {item:Egg Cracker} num ovo para o transformar em {item:Broken Eggs} e depois usa a {item:Spoon} nos ovos partidos para recolheres a {item:Bottled Yolk}.",
+          "map": {"x": 33764, "y": 32529, "z": 12, "marks": [
+            {"x": 33763, "y": 32594, "label": "Some Eggs"},
+            {"x": 33714, "y": 32595, "label": "Some Eggs"},
+            {"x": 33734, "y": 32550, "label": "Some Eggs"},
+            {"x": 33730, "y": 32529, "label": "Some Eggs"},
+            {"x": 33715, "y": 32477, "label": "Some Eggs"},
+            {"x": 33788, "y": 32456, "label": "Some Eggs"},
+            {"x": 33776, "y": 32503, "label": "Some Eggs"},
+            {"x": 33807, "y": 32520, "label": "Some Eggs"}
+          ]},
+          "warning": "A gema desaparece pouco tempo depois de a recolheres: corre logo para o caldeirão."
+        },
+        {
+          "title": "Preparar o Anti-Mutagen",
+          "text": "Usa os ingredientes no {item:Suspicious Cauldron} ao lado do Geoffray, **por esta ordem**: 1) {item:Nutrient Solution}, 2) {item:Bottled Yolk}, 3) {item:Fresh Hydra Herbs}. Recebes um {item:Flask with Anti-Mutagen}. Repete mais 4 vezes até teres 5 frascos.",
+          "tip": "Segundo o Geoffray, a Nutrient Solution vai primeiro para o caldeirão e só depois juntas a gema e, por fim, as ervas. Como a gema desaparece depressa, convém já teres as {item:Fresh Hydra Herbs} contigo quando a recolheres."
+        },
+        {
+          "title": "Curar as 5 vítimas",
+          "text": "Usa um {item:Flask with Anti-Mutagen} em cada um dos 5 frascos de conservação: um na prateleira mesmo a **norte** do Geoffray, dois no canto **nordeste** dessa mesma sala e outros dois na sala de **nordeste**.",
+          "coords": [
+            {"x": 33786, "y": 32571, "z": 12, "label": "Frasco 1 (a norte do Geoffray)"},
+            {"x": 33794, "y": 32571, "z": 12, "label": "Frascos 2 e 3 (canto nordeste da sala)"},
+            {"x": 33797, "y": 32560, "z": 12, "label": "Frascos 4 e 5 (sala de nordeste)"}
+          ]
+        },
+        {
+          "title": "Reportar ao Geoffray",
+          "text": "Volta ao {npc:Geoffray} e diz {key:mission}. Ganhas acesso à porta a **sudoeste** dele: a sala do boss.",
+          "npc": "Geoffray",
+          "reward": "Acesso à sala do boss final."
+        }
+      ]
+    },
+    {
+      "title": "11. Batalha final: Doctor Marrow e The Monster",
+      "intro": "Até 5 jogadores, cooldown de 20 horas. A luta tem duas fases: primeiro o Doctor Marrow e depois a sua criação, The Monster.",
+      "steps": [
+        {
+          "title": "Preparar a equipa",
+          "text": "O {creature:Doctor Marrow} tem ataques fortíssimos que podem dar {wiki:Critical Hits|golpes críticos} de até cerca de **10.000** de dano, matando de uma vez até jogadores de nível alto. Também te pode deixar {wiki:Drunk|Drunk}, {wiki:Rooted|Rooted} e {wiki:Feared|Feared}. Entrem todos com {item:Might Ring} e {item:Sacred Tree Amulet}; os mages devem ter {spell:Magic Shield} ligado pelo menos até a equipa estar posicionada.",
+          "tip": "Contra o Doctor Marrow usa equipamento de proteção contra **Earth**; contra The Monster, proteção contra **Energy**."
+        },
+        {
+          "title": "Entrar e puxar a alavanca",
+          "text": "Passa a porta a **sudoeste** do {npc:Geoffray} e puxa a alavanca. Logo ao início podem ficar todos Feared, Rooted ou Drunk.",
+          "warning": "Feared: protege-te a ti e à equipa com {item:Magic Wall Rune|Magic Walls}. Rooted (o pior): prepara-te para aguentar o boss uns segundos. Drunk: anda com cuidado para não saíres da sala do boss."
+        },
+        {
+          "title": "Fase 1: Doctor Marrow",
+          "text": "Há duas formas populares de fazer esta fase. **A)** O blocker usa {spell:Challenge} e fica num canto enquanto os shooters matam as quatro {creature:Antenna|Antennas}; depois o blocker anda para trás e para a frente na parte de **cima** da sala, a fazer Challenge sempre que pode para o boss não mudar de alvo, e os shooters ficam mais a **sul** a bater. **B)** O blocker faz Challenge rápido, leva o boss para um canto e usa uma bomba de campo (ex.: {item:Fire Bomb Rune}) debaixo dos pés, para não fugir se ficar Feared; os shooters matam primeiro as quatro Antennas e depois atacam o boss à distância.",
+          "warning": "As {creature:Antenna|Antennas} (10.000 de vida cada) **curam** o boss: matem-nas primeiro. Os shooters devem manter-se longe por causa do forte ataque de área de Earth."
+        },
+        {
+          "title": "Passagem para a fase 2",
+          "text": "Quando o Doctor Marrow chega a cerca de **60%** da vida, foge e liberta {creature:The Monster}."
+        },
+        {
+          "title": "Fase 2: The Monster",
+          "text": "The Monster começa **invulnerável**, com um contador **20** junto ao nome. Destrói os {creature:Alchemistical Container|Alchemistical Containers} da sala: cada um deixa uma pequena poça à frente. Faz The Monster passar por cima da poça para baixar o contador em 1. Quanto mais baixo o contador, mais fraco fica o boss. Podes usar {item:Magic Wall Rune|Magic Walls} para o guiar, mas tens de as colocar no momento certo porque ele parte-as depressa.",
+          "warning": "The Monster aplica {wiki:Hexed|Lesser Hexed} ao blocker."
+        },
+        {
+          "title": "Acabar com The Monster",
+          "text": "O contador volta a subir devagar, por isso continua a andar pela sala a fazer dano e a repetir a mecânica das poças. Quando a vida e o contador estiverem baixos, foquem tudo no boss. É comum concentrar-se no dano quando o contador está abaixo de **7**, mas depende do número de jogadores e do dano da equipa.",
+          "table": {
+            "head": ["Loot de The Monster", "Frequência"],
+            "rows": [
+              ["{item:Platinum Coin} (20-33)", "100%"],
+              ["{item:Ultimate Health Potion} (6-8)", "43%"],
+              ["{item:Ultimate Mana Potion} (5-7) / {item:Yellow Gem} (4-5)", "32%"],
+              ["{item:Bullseye Potion}, {item:Berserk Potion}, {item:Mastermind Potion}", "27-30%"],
+              ["{item:Ultimate Spirit Potion} (2-6) / {item:Red Gem} (2-3)", "24-25%"],
+              ["{item:Blue Gem}, {item:Green Gem}, {item:Giant Emerald}", "15,9-17,5%"],
+              ["{item:Transcendence Potion} (2-3)", "14,3%"],
+              ["{item:Violet Gem}, {item:Giant Topaz}, {item:Giant Amethyst}", "9,5%"],
+              ["{item:Watermelon Tourmaline}", "4,8%"],
+              ["{item:Mutant Bone Kilt}", "1,6%"],
+              ["{item:Alchemist's Notepad}, {item:Antler-Horn Helmet}, {item:Mutated Skin Armor}, {item:Mutated Skin Legs}, {item:Stitched Mutant Hide Legs}, {item:Alchemist's Boots}, {item:Mutant Bone Boots}, {item:Mutant Hide Trousers}", "muito raro"]
+            ]
+          },
+          "reward": "30.000 de experiência e o loot do boss."
+        }
+      ]
+    },
+    {
+      "title": "12. Recompensa e regresso",
+      "steps": [
+        {
+          "title": "Puxar a alavanca da recompensa",
+          "text": "Depois de matares {creature:The Monster} pela **primeira** vez, volta ao piso do {npc:Geoffray} (a wiki não descreve a saída da sala do boss: sai pela porta a sudoeste do Geoffray por onde entraste), entra na outra sala desse mesmo piso, a **sul** do Geoffray, e puxa a alavanca. Recebes a montada **Mutated Abomination** e o achievement **Strangest Thing**.",
+          "images": [{"file": "Mutated Abomination.gif", "caption": "Montada Mutated Abomination"}],
+          "reward": "Montada Mutated Abomination + achievement Strangest Thing."
+        },
+        {
+          "title": "Sair de Ingol",
+          "text": "Sobe os 5 pisos do laboratório até à superfície pelo caminho por onde desceste e caminha para **oeste** até ao cais do {npc:Hawkhurst} ({coord:33709,32602,6}). Ele leva-te de volta a Cormaya (a wiki não transcreve esta conversa: experimenta {key:hi} e {key:passage}, ou {key:cormaya}); desembarcas na costa nordeste de Cormaya ({coord:33356,31985,7}). Daí vai ao porto norte, onde o {npc:Pemaret} ({coord:33287,31956,6}) te leva a Edron por 20 gp ({key:hi}, {key:edron}, {key:yes})."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "As tarefas com alavanca (Dangerous Apparatus, Mutagens, Collection Container e Hazard Golem) têm cooldown de 4 horas; o boss tem cooldown de 20 horas e pode ser repetido para mais loot.",
+    "Depois da quest, se voltares à tenda da {npc:Ysbasra} em Cormaya, encontras uma versão abandonada da tenda com notas que revelam que ela trabalhava infiltrada para os Shiron'Fal."
+  ]
+}

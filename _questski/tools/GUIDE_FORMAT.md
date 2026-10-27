@@ -80,8 +80,10 @@ each with a PT `caption`. Do **not** list plain item/creature sprites as images 
   "region": "Thais",                           // required, one of: Rookgaard, Dawnport, Thais, Carlin, Ab'Dendriel,
                                                //   Kazordoon, Venore, Edron, Darashia, Ankrahmun, Port Hope, Liberty Bay,
                                                //   Svargrond, Yalahar, Farmine, Gray Beach, Rathleton, Roshamuul, Krailos,
-                                               //   Issavi, Feyrist, Marapur, Vários   (closest city / main area)
+                                               //   Issavi, Feyrist, Marapur, Bounac, Vários   (closest city / main area)
   "difficulty": 2,                             // required 1..5 for a player at the recommended level
+  "team": "solo",                              // optional (set it in every new guide): solo (one player can do it all) |
+                                               //   parcial (solo until the final boss/fight) | grupo (needs a team)
   "duration": "30–45 min",                     // required, PT estimate
   "summary": "...",                            // required, 2–4 sentences PT: story + what you get
   "legend_pt": "...",                          // PT translation of the infobox "legend" (if any)

@@ -1,0 +1,37 @@
+{
+  "title": "Carnivora's Rocks",
+  "type": "gruta",
+  "near": "Port Hope",
+  "summary": "Gruta de três pisos **por baixo do norte da selva de Tiquanda**, a sul de {wiki:Banuta} e a nordeste de Port Hope, selada por um sarcófago que o {npc:Andrew Lyze} guarda; casa dos Carnivors e da missão *Unsafe Release* da {wiki:The Dream Courts Quest}.",
+  "entrance": {"x": 32759, "y": 32631, "z": 7, "label": "Andrew Lyze e o sarcófago que sela a gruta (sul de Banuta)"},
+  "requirements": [
+    "Nível **250** (restrição da zona desde fevereiro de 2019).",
+    "A entrada está selada por um sarcófago: o {npc:Andrew Lyze} abre-ta quando lhe perguntas por {key:materials} (missão *Unsafe Release* da {wiki:The Dream Courts Quest})."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope**: diz ao capitão {key:hi}, {key:port hope}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais, {coord:32310,32210,6}, 160 gp). Chegas ao cais do {npc:Charles}, no extremo **oeste** da cidade ({coord:32529,32785,6}).",
+    "Atravessa a selva de {wiki:Tiquanda} a pé para **nordeste** até ao pequeno edifício de pedra a **sul de Banuta**, onde está o {npc:Andrew Lyze}, ao lado do sarcófago que sela a gruta ({coord:32759,32631,7}).",
+    "Atalho: com o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope ({coord:32679,32775,7}), leva-te a Banuta por 30 gp ({key:hi} e {key:banuta}); de Banuta segue para **sul** até ao Andrew.",
+    "Diz ao Andrew {key:hi} e {key:materials}: ele abre a entrada. Desce pelo buraco junto a ele para o 1.º piso da gruta ({coord:32760,32628,8}); a gruta tem 3 pisos e o centro do 3.º piso tem a Ward Stone ({coord:32769,32621,10}).",
+    "A pedra logo a **norte** do buraco é o {item:Magic Portal}: usa nela o {item:Charged Compass (Violet)|Charged Compass} e vais parar a uma pequena sala com o {item:Brass-Shod Chest}."
+  ],
+  "leave": [
+    "Sobe pelos pisos pelo mesmo caminho até à entrada, junto ao {npc:Andrew Lyze} ({coord:32759,32631,7}).",
+    "Volta a pé para **sudoeste**, pela selva, até Port Hope.",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te a outras cidades: {key:hi}, o nome da cidade e {key:yes}. Por exemplo {key:thais} (160 gp), {key:venore} (160 gp), {key:edron} (150 gp), {key:ankrahmun} (110 gp) ou {key:liberty bay} (50 gp).",
+    "Da pequena sala do Brass-Shod Chest a wiki não descreve a saída; o passo seguinte da quest é voltar a falar com o Andrew Lyze."
+  ],
+  "coords": [
+    {"x": 32760, "y": 32628, "z": 8, "label": "Carnivora's Rocks (1.º piso)"},
+    {"x": 32769, "y": 32621, "z": 10, "label": "Ward Stone (centro do 3.º piso)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek (ferry para Banuta, rank Ranger)"},
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta (superfície)"}
+  ],
+  "warnings": [
+    "A wiki chama *buraco* à descida para a gruta: leva uma {item:Rope} por precaução para voltares a subir.",
+    "Os Carnivors ({creature:Lumbering Carnivor|Lumbering}, {creature:Spiky Carnivor|Spiky} e {creature:Menacing Carnivor|Menacing}) batem entre 700 e mais de 900 por turno.",
+    "Com o isco do Andrew, as aranhas {creature:Lucifuga Aranea} aparecem no 3.º piso quando passas junto aos pontos de spawn: não atraias muitas de uma vez. O isco dura 10 minutos; repô-lo custa 5000 gp.",
+    "A selva de Tiquanda entre Port Hope e a gruta tem muitos monstros ({creature:Terror Bird|Terror Birds}, {creature:Tarantula|Tarantulas}, {creature:Carniphila|Carniphilas})."
+  ]
+}

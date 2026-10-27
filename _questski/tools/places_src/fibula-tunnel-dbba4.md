@@ -1,6 +1,6 @@
 # PLACE: Fibula Tunnel
 slug: fibula-tunnel-dbba4
-mentioned in 5 guides: beggar-outfits-quest, deeper-fibula-quest, the-great-expedition, the-postman-missions-quest, what-a-foolish-quest
+mentioned in 6 guides: beggar-outfits-quest, deeper-fibula-quest, the-great-expedition, the-postman-missions-quest, the-secret-library-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 The Fibula Tunnel is a tunnel connection between the mainland of Tibia and the island of Fibula . It consists of five small caves, which are all but the lowest one artificially lit. The lowest of the caves only consists of a single platform surrounded by lava instead of walls and is therefore naturally lit. The two highest floors of the tunnel are inhabited by some Cave Rats .

@@ -1,6 +1,6 @@
 # PLACE: Fields of Glory
 slug: fields-of-glory-3fdfb
-mentioned in 6 guides: crystal-wand-quest, demona-ring-quest, griffin-shield-quest, lumberjack-mini-world-change, pilgrimage-of-ashes-quest, purple-tome-quest
+mentioned in 8 guides: between-the-lines-quest, crystal-wand-quest, demona-ring-quest, griffin-shield-quest, lumberjack-mini-world-change, pilgrimage-of-ashes-quest, purple-tome-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Fields of Glory 
@@ -31,18 +31,20 @@ Once opon a time there was a major battle here between humans and orcs, the huma
  Fields of Glory -1 Fields of Glory -2 |
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[the-way-of-the-monk-quest 5-0] Chegar aos Fields of Glory
+Apanha um barco para **Carlin** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:carlin}, {key:yes}; 110 gp); chegas junto ao {npc:Captain Greyhound}. Sai da cidade para **norte** pelos {wiki:Fields of Glory} até ao ponto de descida da entrada do labirinto e desce aí.
+coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}, {'x': 32490, 'y': 31697, 'z': 7, 'label': 'Descida para a entrada do Maze of Lost Souls'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [barbarian-outfits-quest 1-0] Falar com o Bron
 Vai à cabana do {npc:Bron}, nos Fields of Glory, perto de Northport: de **Carlin** vai a pé para **nordeste**. Diz {key:hi}, {key:outfit} e depois {key:violence}. Ele quer que o irmão aprenda que a violência nem sempre é a resposta. Aceita com {key:yes} e confirma outra vez com {key:yes}.
 coords: [{'x': 32364, 'y': 31626, 'z': 7, 'label': 'Cabana do Bron'}]
+[between-the-lines-quest 0-3] Chegar ao Inkwing
+Lá em baixo, segue os corredores **até ao fim** e pisa a **poça de tinta** que está no chão. É assim que enfrentas o {creature:Inkwing}, que fica nas grutas por baixo dos {wiki:Fields of Glory|Fields of Glory} (piso z=9).
+coords: [{'x': 32532, 'y': 31777, 'z': 9, 'label': 'Inkwing'}]
 [crystal-wand-quest 0-0] Ir à gruta a sul de Northport
 Parte de **Carlin** (se vens de barco, no capitão da tua cidade diz {key:hi}, {key:carlin}, {key:yes}; chegas ao {npc:Captain Greyhound}). Sai da cidade para **norte**, pelos {wiki:Fields of Glory}, e segue para **nordeste** até {wiki:Northport}, uma pequena aldeia a nordeste de Carlin. A gruta fica um pouco a **sul** de Northport.
 coords: [{'x': 32362, 'y': 31683, 'z': 7, 'label': 'Fields of Glory (norte de Carlin)'}, {'x': 32488, 'y': 31610, 'z': 7, 'label': 'Gruta a sul de Northport'}]
 [crystal-wand-quest 3-0] Rota de saída mais segura
 Para saíres do MoLS segue o caminho deste mapa: há outras saídas, mas esta é a mais segura e a mais curta. Depois sai da gruta pelo **mesmo caminho** por onde entraste (mapas da secção 1 ao contrário), usando a {item:Rope} para subires pelos buracos, até à superfície perto de Northport. Daí volta para **sudoeste**, pelos Fields of Glory, até Carlin.
 coords: []
-[crystal-wand-quest 3-1] Alternativa: teleporte para os Fields of Glory
-Se estás à vontade a caçar em Demona, vai para **noroeste** da Star Room (a sala com os Warlocks) e desce estas escadas (não aparece nada mesmo junto às escadas). Das escadas anda para **norte** e depois para **oeste**: encontras 2 {creature:Warlock|Warlocks} e 2 {creature:Elf Arcanist|Elf Arcanists}. Continua para oeste até ao fim do túnel e depois vai para **sul**. No fim desse corredor há um teleporte que te leva de volta aos {wiki:Fields of Glory}. Daí regressa a pé para **sul** até Carlin.
-coords: [{'x': 32451, 'y': 31655, 'z': 14, 'label': 'Escadas a noroeste da Star Room'}, {'x': 32400, 'y': 31657, 'z': 15, 'label': 'Teleporte para os Fields of Glory'}]

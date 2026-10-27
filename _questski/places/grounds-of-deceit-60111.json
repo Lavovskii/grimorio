@@ -1,0 +1,45 @@
+{
+  "title": "Grounds of Deceit",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Zamulosh}, servo de Bazir, **por baixo do mar a sul de Roshamuul**; é o seal de Bazir da {wiki:Ferumbras' Ascension Quest} e só se chega pelo teleporte **norte** da sala dos portais do {wiki:Hell Hub}, a que se acede pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33328, "y": 32321, "z": 14, "label": "Teleporte norte da sala dos portais do Hell Hub (entrada das Grounds of Deceit)"},
+  "requirements": [
+    "Conta **Premium** e acesso ao {wiki:Hell Hub}: ter aceitado a missão do {npc:Mazarius} e ter-lhe entregado **30 {item:Demonic Essence|Demonic Essences}** (ele só fala com personagens de nível **150** ou mais).",
+    "A wiki recomenda nível **300** para mages e paladins e **350** para knights; o {creature:Zamulosh} luta-se com até **5 jogadores** (alavanca de 5 tiles).",
+    "{item:Teleportation Rod} (dado pelo Mazarius) para enviares a peça da Godbreaker no fim — é isso que completa o seal."
+  ],
+  "items": ["Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi ou Krailos diz ao capitão {key:hi}, {key:darashia}, {key:yes}; de Venore, no {npc:Captain Fearless}, custa 60 gp; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi; chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** de Darashia ({coord:33271,32395,7}), desce ao piso -1 e entra no portal a **norte** dele. Apareces na sala segura (zona de proteção) do {wiki:Hell Hub}.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons} e desce as escadas no fim, até à sala dos portais.",
+    "Na sala dos portais, segue o caminho até ao teleporte **norte** ({coord:33328,32321,14}) e entra.",
+    "Chegas à parte **sul** das Grounds of Deceit. Segue para **norte** até à alavanca, que **cada membro da equipa** tem de puxar; depois entra no teleporte logo a **sul** dela.",
+    "Resolve o puzzle das 8 salas (os monstros solitários) e entra no teleporte a **sul**. Apareces na sala mais a **noroeste** do labirinto de paredes que se atravessam: segue até ao teleporte a **sudeste**, que te leva à última sala antes do boss (5 tiles e a alavanca do Zamulosh)."
+  ],
+  "leave": [
+    "Depois de matares o Zamulosh, sai pelo teleporte **verde** e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída devolve-te à sala segura antes da entrada do Hell Hub (a zona de proteção a que chegaste pelo portal do Mazarius). Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do Mazarius.",
+    "Se quiseres sair antes do boss, faz o caminho ao contrário até à sala dos portais do Hell Hub e sobe pelas grutas até à zona de proteção (a wiki não descreve esta volta em pormenor).",
+    "Da sala segura volta pelo mesmo caminho à sala do {npc:Mazarius}, em Darashia; daí sobe à rua e apanha o barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou o tapete do {npc:Chemar} ({key:hi}, o destino, {key:yes}).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (Darashia), portal para o Hell Hub no piso -1"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub (grutas)"},
+    {"x": 33328, "y": 32321, "z": 14, "label": "Teleporte norte do Hell Hub (Grounds of Deceit)"},
+    {"x": 33642, "y": 32686, "z": 11, "label": "Grounds of Deceit (ponto indicado pela wiki)"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascendant - Path to Zamulosh.png", "caption": "Caminho na sala dos portais do Hell Hub até ao teleporte norte"},
+    {"file": "Ferumbras Ascendant - Zamulosh 1.png", "caption": "Linha azul da chegada até à alavanca (bandeira) e ao teleporte (ponto de exclamação)"},
+    {"file": "Ferumbras Ascendant - Zamulosh 2.png", "caption": "As 8 salas do puzzle dos monstros"},
+    {"file": "Ferumbras Ascendant - Zamulosh 3.png", "caption": "Mapa do labirinto (começas a noroeste)"},
+    {"file": "Ferumbras Ascendant - Zamulosh 4.png", "caption": "Linha azul pelas paredes que se atravessam até ao teleporte sudeste"}
+  ],
+  "warnings": [
+    "Não há zonas de proteção depois da sala segura do Hell Hub. Aqui caçam {creature:Phantasm|Phantasms}, {creature:Nightmare|Nightmares}, Vexclaws, Hellflayers e Grimeleeches.",
+    "No labirinto, os monstros das outras salas só te atacam se estiveres na mesma sala que eles ou dentro da parede.",
+    "A missão só conta quando usas o Teleportation Rod na peça, não quando matas o boss: sai logo da sala depois da luta, senão podes ser teleportado para fora quando o tempo acabar e ter de o matar outra vez. O Zamulosh só pode ser tentado de 44 em 44 horas."
+  ]
+}

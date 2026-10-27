@@ -1,0 +1,1244 @@
+{
+  "slug": "royal-bounacean-advisor-outfits-quest",
+  "category": "outfit",
+  "region": "Bounac",
+  "difficulty": 5,
+  "team": "parcial",
+  "duration": "Vários dias: a missão Lost Queen faz-se numa tarde, mas a Order of the Stag depende dos raids noturnos das Night Harpies, que não aparecem todas as noites",
+  "summary": "As {wiki:Royal Bounacean Advisor Outfits|Royal Bounacean Advisor Outfits} são as vestes cerimoniais dos conselheiros do rei {npc:Kesar the Younger}, em **Bounac**. O outfit base ganha-se ao terminar a missão **Galthen and the Lost Queen** da {wiki:Adventures of Galthen Quest|Adventures of Galthen Quest} (derrotar a {creature:Megasylvan Yselda}). O 1.º addon dá-o o carpinteiro {npc:John (Bounac)}, à noite, mas só se mantiveres vivos os quatro Saplings da Yselda durante a luta. O 2.º addon é a recompensa final da {wiki:The Order of the Stag Quest|The Order of the Stag Quest}, no Isle of Ada. Com os dois addons recebes o achievement **King's Council**.",
+  "legend_pt": "Prova o teu valor ao Kesar the Younger para te tornares o seu Conselheiro Real.",
+  "start": {
+    "x": 32365,
+    "y": 32478,
+    "z": 2,
+    "label": "Kesar the Younger, sala do trono de Bounac (de dia)"
+  },
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível mínimo **250** (recomendado **350**). Para a Order of the Stag o wiki recomenda nível **400+ em equipa** ou **600+ a solo**.",
+    "Ter completado a {wiki:The Order of the Lion Quest|The Order of the Lion Quest} (que por sua vez exige o acesso à Order of the Falcon, da {wiki:The Secret Library Quest|The Secret Library Quest}, e o acesso à Order of the Cobra, da {wiki:Grave Danger Quest|Grave Danger Quest}).",
+    "**Outfit base:** completar a missão *Galthen and the Lost Queen* da {wiki:Adventures of Galthen Quest|Adventures of Galthen Quest} e relatar ao {npc:Kesar the Younger}.",
+    "**1.º addon:** derrotar a {creature:Megasylvan Yselda} com os **quatro Megasylvan Saplings vivos** e depois falar com o {npc:John (Bounac)} **à noite**.",
+    "**2.º addon:** completar a {wiki:The Order of the Stag Quest|The Order of the Stag Quest} e voltar a falar com o {npc:Kesar the Younger} sobre {key:help}.",
+    "Spell {spell:Levitate} (rampa da Yselda e vários pontos do Isle of Ada).",
+    "Equipa: a sala da Yselda aceita **até 5 jogadores** e salvar os Saplings pede uma equipa completa; o resto da quest faz-se sozinho, exceto o {creature:Court Warlock}, que a níveis normais se faz em equipa."
+  ],
+  "items_needed": [
+    {
+      "item": "Carnisylvan Finger",
+      "qty": 20,
+      "note": "sopa da Forest of Life; cai dos Carnisylvans (Dark, Poisonous e Hulking) e vende-se no Market"
+    },
+    {
+      "item": "Carnisylvan Bark",
+      "qty": 10,
+      "note": "sopa da Forest of Life; cai dos Carnisylvans (Dark, Poisonous e Hulking) e vende-se no Market"
+    },
+    {
+      "item": "Human Teeth",
+      "qty": 2,
+      "note": "sopa da Forest of Life; cai dos Carnisylvans (Dark, Poisonous e Hulking) e vende-se no Market"
+    },
+    {
+      "item": "Ultimate Healing Rune",
+      "qty": 100,
+      "note": "por jogador, para curar os Saplings da Yselda (1.º addon)"
+    },
+    {
+      "item": "Frozen Starlight",
+      "note": "abre o buraco por baixo da catedral (Order of the Stag); vem da {wiki:Pits of Inferno Quest|Pits of Inferno Quest} ou do Market"
+    },
+    {
+      "item": "Pick",
+      "note": "ou ferramenta equivalente; pedida nos requisitos da Order of the Stag"
+    },
+    {
+      "item": "Obsidian Knife",
+      "note": "para esfolar as Night Harpies e tirar os bicos"
+    },
+    {
+      "item": "Tender Venison",
+      "qty": 20,
+      "note": "só para a missão opcional *Supplies for the Steadfast*"
+    },
+    {
+      "item": "Temple Teleport Scroll",
+      "note": "opcional: o wiki não documenta o regresso do Isle of Ada"
+    }
+  ],
+  "rewards": [
+    {
+      "text": "{wiki:Royal Bounacean Advisor Outfits|Royal Bounacean Advisor Outfit} base (fim da missão Galthen and the Lost Queen)"
+    },
+    {
+      "text": "1.º addon das Royal Bounacean Advisor Outfits (John, à noite, só se salvaste os Saplings)"
+    },
+    {
+      "text": "2.º addon das Royal Bounacean Advisor Outfits (Kesar, depois da Order of the Stag)"
+    },
+    {
+      "text": "Achievement **King's Council** (2 pontos), ao teres os dois addons"
+    },
+    {
+      "text": "Pelo caminho: achievement **Woodcarver** (3 pontos) ao derrotares a Yselda"
+    },
+    {
+      "item": "Violet Tulip",
+      "note": "só se salvaste os quatro Saplings; usada ao lado da Yselda dá o achievement Bounacean Chivalry"
+    },
+    {
+      "item": "Galthen's Satchel",
+      "note": "com um {item:Artefact Box} lá dentro"
+    },
+    {
+      "item": "The Broken Sword of Eldoran Etzel",
+      "note": "fim da Order of the Stag"
+    },
+    {
+      "item": "Brass-Shod Chest (Order of the Stag)",
+      "note": "recompensa da Order of the Stag"
+    },
+    {
+      "text": "Achievement **Bastard** (5 pontos), ao terminares a Order of the Stag"
+    }
+  ],
+  "achievements": [
+    "King's Council",
+    "Woodcarver",
+    "Bastard",
+    "Bounacean Chivalry"
+  ],
+  "unlocks": [
+    {
+      "what": "Royal Bounacean Advisor Outfit (base)",
+      "kind": "funcionalidade",
+      "place": "Royal Bounacean Advisor Outfits",
+      "when": "Ao relatares ao {npc:Kesar the Younger} ({key:yselda}) depois de derrotares a {creature:Megasylvan Yselda}."
+    },
+    {
+      "what": "1.º addon das Royal Bounacean Advisor Outfits",
+      "kind": "funcionalidade",
+      "place": "Royal Bounacean Advisor Outfits",
+      "when": "Ao falares com o {npc:John (Bounac)} à noite sobre {key:yselda}.",
+      "note": "Só se mantiveste vivos os quatro Megasylvan Saplings durante a luta contra a Yselda."
+    },
+    {
+      "what": "2.º addon das Royal Bounacean Advisor Outfits",
+      "kind": "funcionalidade",
+      "place": "Royal Bounacean Advisor Outfits",
+      "when": "Ao dizeres {key:help} ao {npc:Kesar the Younger} depois de terminares a Order of the Stag Quest."
+    },
+    {
+      "what": "Bounacean Lion e Forest of Life",
+      "kind": "zona",
+      "place": "Forest of Life",
+      "when": "Na missão Galthen and the Lost Queen, quando o Kesar te dá acesso ao Bounacean Lion."
+    },
+    {
+      "what": "Atalho entre a Forest of Life e a superfície de Bounac",
+      "kind": "transporte",
+      "place": "Forest of Life",
+      "when": "Depois de derrotares a {creature:Megasylvan Yselda} e saíres pelo teleporte da sala dela."
+    },
+    {
+      "what": "Trocas com o John (Bounac): Folded Artefact Carpets",
+      "kind": "loja",
+      "when": "Depois da missão Galthen and the Lost Queen, dizendo {key:fragments} ao {npc:John (Bounac)}."
+    },
+    {
+      "what": "Isle of Ada",
+      "kind": "zona",
+      "place": "Isle of Ada",
+      "when": "Na Order of the Stag, depois de entregares o writ da família Etzel ao Kesar."
+    }
+  ],
+  "dangers": [
+    "Crypt Warrior",
+    "Dark Carnisylvan",
+    "Hulking Carnisylvan",
+    "Poisonous Carnisylvan",
+    "Megasylvan Yselda",
+    "Night Harpy",
+    "Raubritter Chastener",
+    "Raubritter Marksman",
+    "Raubritter Skirmisher",
+    "Poisoned Raubritter",
+    "Frozen Raubritter",
+    "Raging Raubritter",
+    "Energised Raubritter",
+    "Falcon Paladin",
+    "Falcon Knight",
+    "Court Warlock"
+  ],
+  "npcs": [
+    "Kesar the Younger",
+    "Bounac Guard",
+    "Lesh the Seer",
+    "Spectulus",
+    "An Idol",
+    "Innkeeper Alphonse",
+    "Yselda",
+    "John (Bounac)",
+    "Second In Command Demeron",
+    "Lieutenant Harlan",
+    "Guard Captain Hartford",
+    "Eldoran the Ambitious",
+    "Captain Marie-Denise Banner"
+  ],
+  "tips": [
+    "Quase tudo em Bounac depende do ciclo dia/noite: é **dia** no Tibia entre hh:15 e hh:45 (hora real) e **noite** entre hh:45 e hh:15. O {npc:Kesar the Younger} só está na sala do trono de dia; o {npc:John (Bounac)} só dá o addon à noite; as {creature:Night Harpy|Night Harpies} só aparecem à noite.",
+    "Decide **antes** da luta contra a Yselda se queres o 1.º addon: se um Sapling morrer, perdes o addon do John e a {item:Violet Tulip}. Vai com uma equipa de 5, com o máximo de magos possível.",
+    "Compra os ingredientes da sopa no Market se não quiseres caçar {creature:Dark Carnisylvan|Dark Carnisylvans}.",
+    "Os bicos das Night Harpies **não** se podem comprar: cada personagem tem de esfolar os seus 20 com a {item:Obsidian Knife}.",
+    "Leva um {item:Temple Teleport Scroll} para o Isle of Ada: o wiki não descreve como se volta de lá."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a Bounac e ao Kesar",
+      "intro": "Bounac é a fortaleza secreta da Order of the Lion, numa ilha entre Thais e Meriana. Já lá estiveste na Order of the Lion Quest, que é obrigatória para esta quest.",
+      "steps": [
+        {
+          "title": "Viajar até Bounac",
+          "text": "Vai a **Edron** e procura o pequeno barco a **norte** da passagem da montanha: é por aí que se viaja para Bounac. Só entras com nível **250** ou mais. **Como voltar:** o wiki não descreve a viagem de regresso de Bounac para Edron; volta ao sítio onde desembarcaste e procura aí o barco de volta. Se não o encontrares, usa um {item:Temple Teleport Scroll} (leva-te ao teu templo; não funciona em No-Logout Zones nem com Logout Block ou Protection Zone Block).",
+          "coords": [
+            {
+              "x": 33183,
+              "y": 31757,
+              "z": 7,
+              "label": "Pequeno barco para Bounac (Edron)"
+            },
+            {
+              "x": 32355,
+              "y": 32473,
+              "z": 7,
+              "label": "Bounac"
+            },
+            {
+              "x": 32391,
+              "y": 32489,
+              "z": 7,
+              "label": "Depot de Bounac (depois da Order of the Lion)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Bounac Map.png",
+              "caption": "Mapa de Bounac"
+            }
+          ]
+        },
+        {
+          "title": "Ver se é dia ou noite",
+          "text": "Os NPCs de Bounac mudam de sítio conforme a hora do Tibia. O {npc:Kesar the Younger} está na **sala do trono de dia** e, de noite, nos aposentos **1 andar abaixo**. É dia entre **hh:15 e hh:45** (hora real) e noite entre **hh:45 e hh:15**.",
+          "images": [
+            {
+              "file": "Day and Night Cycle.png",
+              "caption": "Ciclo de dia e noite do Tibia"
+            }
+          ]
+        },
+        {
+          "title": "Subir à sala do trono",
+          "text": "Dentro de Bounac, sobe ao **3.º andar** pelas escadas onde está o {npc:Onfroi} durante o dia, segue para **norte** e depois para **oeste** até ao {npc:Bounac Guard}. Diz {key:hi}, {key:pass}, {key:yes} e sobe mais **2 andares**: chegas à sala do trono.",
+          "npc": "Bounac Guard",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "pass"
+            },
+            {
+              "you": "yes"
+            }
+          ],
+          "tip": "Para saíres do castelo, desce ao andar por baixo da sala do trono, segue a rampa para **sul** e entra no elevador. Depois de o usares uma vez, serve também de atalho para voltares a subir."
+        }
+      ]
+    },
+    {
+      "title": "2. Outfit base: Galthen and the Lost Queen (investigação)",
+      "intro": "O outfit base é a recompensa da missão *Galthen and the Lost Queen*, a primeira da {wiki:Adventures of Galthen Quest|Adventures of Galthen Quest}. A rainha Yselda, mulher do Kesar, desapareceu e tu vais seguir os passos do velho cavaleiro Galthen.",
+      "steps": [
+        {
+          "title": "Falar com o Kesar sobre a Yselda",
+          "text": "De dia, na sala do trono, diz ao {npc:Kesar the Younger} {key:hi} e {key:yselda}. Quando ele te perguntar o que sabes, responde qualquer coisa. Ele conta que a mulher lhe foi tirada e que o vidente Lesh lhe mostrou o destino dela.",
+          "npc": "Kesar the Younger",
+          "images": [
+            {
+              "file": "Galthen Lost Queen.png",
+              "caption": "Galthen and the Lost Queen"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "Yselda... my Yselda. What do you know about her, hero of Bounac?"
+            },
+            {
+              "you": "<qualquer coisa>"
+            },
+            {
+              "npc": "[...] Yselda, my beloved wife has been taken from me. [...] I visited a seer, Lesh, he showed me her dark fate. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Lesh the Seer",
+          "text": "Desce à cidade e procura o {npc:Lesh the Seer}, **1 andar acima** do chão. Diz {key:hi} e {key:yselda}. Ele manda-te seguir o rasto do cavaleiro Galthen, que partiu de Bounac para **Edron** para se aconselhar com os magos.",
+          "npc": "Lesh the Seer",
+          "coords": [
+            {
+              "x": 32406,
+              "y": 32470,
+              "z": 6,
+              "label": "Lesh the Seer"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "[...] Find the trace of the knight Galthen. [...] He left Bounac for Edron to council the mages, follow him."
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Spectulus (Edron)",
+          "text": "Vai a **Edron** (regresso de Bounac: ver o passo *Viajar até Bounac*) e sobe à **Magic Academy**, onde está o {npc:Spectulus}. Diz {key:hi}, {key:yselda} e {key:yes}. Ele explica-te a maldição que transforma as mulheres em árvores e manda-te procurar em Bounac os vestígios do Galthen. Depois, regressa a Bounac pelo pequeno barco a norte da passagem da montanha de Edron.",
+          "npc": "Spectulus",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "That name... it means something to you, yes? Do you want to tell me about it?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] her disappearance seems to be connected to a curse. [...] At first you should try to find out what Galthen discovered. Maybe he left some traces in Bounac. [...]"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33268,
+              "y": 31832,
+              "z": 1,
+              "label": "Spectulus (Magic Academy, Edron)"
+            },
+            {
+              "x": 33183,
+              "y": 31757,
+              "z": 7,
+              "label": "Pequeno barco para Bounac (Edron)"
+            }
+          ]
+        },
+        {
+          "title": "Ler as notas à frente do An Idol",
+          "text": "Na parte **sul** de Bounac, anda para **oeste** até uma casa onde está o {npc:An Idol}. Usa as notas rituais que estão no chão à frente dele. Recebes a mensagem: *\"Staring at the writing you begin to decipher a letter. Then another and another. The symbols seem to wriggle and move: VBOX\"*.",
+          "coords": [
+            {
+              "x": 32398,
+              "y": 32510,
+              "z": 7,
+              "label": "Casa do An Idol"
+            }
+          ],
+          "images": [
+            {
+              "file": "Adventures of Galthen - An Idol.png",
+              "caption": "O An Idol e as notas no chão à frente dele"
+            }
+          ]
+        },
+        {
+          "title": "Dizer VBOX ao ídolo",
+          "text": "Cumprimenta o {npc:An Idol} dizendo {key:VBOX} (significa 'Morte' em Jekhr). És teleportado para uma pequena gruta.",
+          "npc": "An Idol",
+          "dialogue": [
+            {
+              "you": "VBOX"
+            },
+            {
+              "npc": "J-T B^C J^BXT°"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar a Galthen's Satchel",
+          "text": "Dentro da gruta anda sempre para **sul** até uma árvore morta. Usa-a para receberes a {item:Galthen's Satchel}, com um {item:Artefact Box} e um {item:Parchment} lá dentro (notas antigas do Galthen sobre o desaparecimento de uma mulher em Bounac). Passados alguns segundos és teleportado automaticamente para fora da gruta.",
+          "images": [
+            {
+              "file": "Adventures of Galthen - Satchel.png",
+              "caption": "A árvore morta onde está a mochila do Galthen"
+            }
+          ],
+          "reward": "Galthen's Satchel com Artefact Box e Parchment",
+          "tip": "Podes tirar uma nova {item:Galthen's Satchel} desta árvore a cada **30 dias**."
+        },
+        {
+          "title": "Falar com o Innkeeper Alphonse",
+          "text": "A **nordeste** do An Idol está o {npc:Innkeeper Alphonse}. Pergunta-lhe pelo Galthen ({key:galthen}; no diálogo registado no wiki foi usada a palavra {key:yselda}) e responde {key:yes} a todas as perguntas (três vezes). No fim ele dá-te as {item:Ritual Notes} do velho cavaleiro.",
+          "npc": "Innkeeper Alphonse",
+          "dialogue": [
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "I know why you're asking this. Is it because of the tragedy of her life? [...]"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "There was a knight, Galthen, [...] Tell me if you want to continue, alright?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] She fell in love with Kesar the Younger and undoubtedly the king told you the rest of the story himself, am I right?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] The old knight left some of his notes while he stayed in the inn. [...] You can have them if you want, here. [...]"
+            }
+          ],
+          "reward": "Ritual Notes"
+        },
+        {
+          "title": "Relatar ao Kesar",
+          "text": "Volta à sala do trono (de dia) e diz ao {npc:Kesar the Younger} {key:hi} e {key:yselda}. Ele dá-te acesso ao **Bounacean Lion**, uma caverna selada por baixo do castelo.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "You found what? [...] I will grant you access to the Bounacean Lion but promise me, for the safety of Bounac, never to let anything out of there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Forest of Life e Megasylvan Yselda (outfit base e condição do 1.º addon)",
+      "intro": "Esta luta decide o 1.º addon: só o recebes se os quatro Megasylvan Saplings sobreviverem até a Yselda morrer.",
+      "steps": [
+        {
+          "title": "Juntar os ingredientes da sopa",
+          "text": "Precisas de 20 {item:Carnisylvan Finger|Carnisylvan Fingers}, 10 {item:Carnisylvan Bark|Carnisylvan Barks} e 2 {item:Human Teeth}. Os três caem dos {creature:Dark Carnisylvan|Dark Carnisylvans}, {creature:Poisonous Carnisylvan|Poisonous Carnisylvans} e {creature:Hulking Carnisylvan|Hulking Carnisylvans} da própria Forest of Life (os Human Teeth são raros), e todos se vendem no **Market**.",
+          "tip": "Se os comprares antes de desceres, poupas a caça e fazes a sopa logo à chegada."
+        },
+        {
+          "title": "Entrar no Bounacean Lion",
+          "text": "Passa pelo portão **1 andar abaixo do chão** para entrares na masmorra do **Bounacean Lion**. Desce as escadas, vai para **sudoeste** e desce outra vez. Para saíres antes de chegares à Forest of Life, volta pelo mesmo caminho.",
+          "coords": [
+            {
+              "x": 32470,
+              "y": 32493,
+              "z": 8,
+              "label": "Portão do Bounacean Lion"
+            },
+            {
+              "x": 32469,
+              "y": 32494,
+              "z": 9,
+              "label": "Bounacean Lion"
+            }
+          ],
+          "warning": "A caverna está cheia de {creature:Crypt Warrior|Crypt Warriors} (7 800 de vida cada). O wiki recomenda nível **350** para o Bounacean Lion e para a Forest of Life."
+        },
+        {
+          "title": "Chegar à Sulphur Pool",
+          "text": "Dá a volta à caverna até à **Sulphur Pool** (piso -3). Ao entrares nela és teleportado para a **Forest of Life**.",
+          "map": {
+            "x": 32423,
+            "y": 32502,
+            "z": 10,
+            "marks": []
+          },
+          "images": [
+            {
+              "file": "Adventures of Galthen - Forest.png",
+              "caption": "A Sulphur Pool que te leva à Forest of Life"
+            }
+          ]
+        },
+        {
+          "title": "Fazer a sopa no Soup Kettle",
+          "text": "Na Forest of Life desce até ao **andar mais baixo** e vai até ao fundo a **sudeste**, onde está o {item:Soup Kettle}. Usa nele, um a um, os 20 {item:Carnisylvan Finger|Carnisylvan Fingers}, os 10 {item:Carnisylvan Bark|Carnisylvan Barks} e os 2 {item:Human Teeth}. Depois usa o próprio Kettle.",
+          "coords": [
+            {
+              "x": 32592,
+              "y": 32486,
+              "z": 13,
+              "label": "Soup Kettle"
+            }
+          ],
+          "images": [
+            {
+              "file": "Adventures of Galthen - Kettle.png",
+              "caption": "O Soup Kettle no fundo da Forest of Life"
+            },
+            {
+              "file": "Adventures of Galthen - Soup.png",
+              "caption": "Sopa pronta depois de usares os ingredientes e o Kettle"
+            }
+          ],
+          "warning": "A floresta tem {creature:Hulking Carnisylvan|Hulking Carnisylvans}, {creature:Dark Carnisylvan|Dark Carnisylvans} e {creature:Poisonous Carnisylvan|Poisonous Carnisylvans}."
+        },
+        {
+          "title": "Chegar à sala da Yselda",
+          "text": "A partir do Kettle vai à sala grande ao lado e usa {spell:Levitate} para subir a rampa. Vai para **sul** e caminha junto às árvores (a Sleeping Carnisylvan): és teleportado para uma pequena sala onde está a {creature:Megasylvan Yselda}. Podes entrar com uma equipa de **até 5 jogadores**.",
+          "coords": [
+            {
+              "x": 32581,
+              "y": 32483,
+              "z": 12,
+              "label": "Sleeping Carnisylvan (entrada da sala da Yselda)"
+            }
+          ]
+        },
+        {
+          "title": "Escolher o método de luta",
+          "text": "Há dois finais possíveis. No **método simples** matas a Yselda e deixas morrer pelo menos um dos quatro **Megasylvan Saplings** (há um em cada canto da sala): recebes o outfit base, mas não o 1.º addon. No **método da cura** manténs os quatro Saplings vivos durante toda a luta: recebes também a {item:Violet Tulip} e o direito ao 1.º addon.",
+          "table": {
+            "head": [
+              "Método",
+              "O que fazer",
+              "Recompensa"
+            ],
+            "rows": [
+              [
+                "Simples",
+                "Mata a Yselda; os Saplings podem morrer",
+                "Outfit base + Woodcarver"
+              ],
+              [
+                "Cura",
+                "Cura os 4 Saplings sem parar até a Yselda morrer",
+                "Outfit base + Woodcarver + Violet Tulip + 1.º addon (John)"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Preparar a equipa para salvar os Saplings",
+          "text": "Para o 1.º addon vai com uma equipa completa de **5**, com o máximo de magos possível. Cada jogador deve levar pelo menos **100** {item:Ultimate Healing Rune|Ultimate Healing Runes}; um druida pode também curá-los com {spell:Mass Healing}. Combina antes quem cura: os melhores curadores (magos) ficam nos Saplings do **sul**, os restantes alternam entre atacar a Yselda e curar os Saplings do **norte**.",
+          "tip": "Todos devem atacar a Yselda algumas vezes para terem participação e loot."
+        },
+        {
+          "title": "Tornar a Yselda vulnerável",
+          "text": "No início a Yselda não pode ser ferida. Diz no **NPC Chat** ou no **Local Chat** as palavras {key:DEMIHBOULDR}, {key:SOMMBHA} e {key:WITHER} para lhe baixares as defesas.",
+          "tip": "São as palavras rituais: escreve-as exatamente assim."
+        },
+        {
+          "title": "Derrotar a Megasylvan Yselda",
+          "text": "A Yselda tem **32 000** pontos de vida, dá **19 900** de experiência, **não se mexe**, ataca corpo a corpo e invoca {creature:Carnisylvan Sapling|Carnisylvan Saplings}. Segundo o wiki (valores em parte por confirmar), recebe dano total (100%) de **holy** e **drown** e muito pouco do resto: só 40% de fire, 30% de death, 20% de energy, 15% de físico e 10% de ice e de earth. No método da cura, os Saplings levam cerca de **1000 de dano** constante durante quase toda a luta: curem-nos sem parar até ela morrer.",
+          "warning": "Se um Sapling morrer, já não consegues o 1.º addon nem a Violet Tulip nesta tentativa.",
+          "tip": "Segundo o wiki, uma equipa com muito dano pode matá-la tão depressa que a vida inicial dos Saplings chega para sobreviverem sem cura. A Yselda tem **20 horas** de cooldown: se falhares os Saplings, podes tentar outra vez no dia seguinte."
+        },
+        {
+          "title": "Falar com a Yselda",
+          "text": "Depois da luta diz {key:hi} à {npc:Yselda}, agora em forma de NPC. O diálogo muda conforme o método: se salvaste os Saplings ela agradece por teres salvo os \"filhos\" dela. Recebes o achievement **Woodcarver**.",
+          "npc": "Yselda",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "You freed me, brave warrior... and you even saved my... children. [...] (se salvaste os Saplings)"
+            },
+            {
+              "npc": "You freed me... yet my children had to die. [...] (se algum Sapling morreu)"
+            }
+          ],
+          "reward": "Achievement Woodcarver"
+        },
+        {
+          "title": "Sair da sala e da Forest of Life",
+          "text": "Sai da sala da Yselda pelo teleporte, um pouco escondido, a **sul**. A partir de agora tens um atalho entre a Forest of Life e a superfície de Bounac, **1 andar acima** da saída da sala: usa-o para voltares a Bounac (e mais tarde para desceres de novo sem passares pelo Bounacean Lion).",
+          "coords": [
+            {
+              "x": 32528,
+              "y": 32489,
+              "z": 11,
+              "label": "Atalho Forest of Life ↔ superfície"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Receber o outfit base e o 1.º addon",
+      "steps": [
+        {
+          "title": "Receber o outfit do Kesar",
+          "text": "De dia, volta à sala do trono e diz ao {npc:Kesar the Younger} {key:hi} e {key:yselda}. Ele torna-te conselheiro real e dá-te as {wiki:Royal Bounacean Advisor Outfits|Royal Bounacean Advisor Outfits}. Se salvaste os Saplings, dá-te também uma {item:Violet Tulip} (pede-te que a leves à Yselda) e manda-te falar com o John, o carpinteiro.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yselda"
+            },
+            {
+              "npc": "Tell me... everything. [...]"
+            },
+            {
+              "npc": "[...] As a token of my gratitude, you are now joining the circle of my royal advisors, ceremonial garb and all. Please also visit John, the Carpenter afterwards and tell him I sent you. [...]"
+            },
+            {
+              "npc": "[...] Please, take this tulip and bring it to my beloved Yselda while I muster my men. There is no time to lose. [...]"
+            }
+          ],
+          "reward": "Royal Bounacean Advisor Outfit base (+ Violet Tulip se salvaste os Saplings)"
+        },
+        {
+          "title": "Opcional: entregar a Violet Tulip à Yselda",
+          "text": "Só se salvaste os quatro Saplings: o Kesar pede-te que leves a {item:Violet Tulip} à Yselda. Volta à Forest of Life pelo atalho entre a superfície e a floresta (a ponta da floresta fica em {coord:32528,32489,11}) e vai até à {npc:Yselda}, agora em forma de NPC (o mapa mostra onde está; se for preciso, volta a entrar pela Sleeping Carnisylvan, {coord:32581,32483,12}). Usa a tulipa ao lado dela: recebes o achievement **Bounacean Chivalry** (2 pontos, secreto). Para saíres, volta a Bounac pelo mesmo atalho.",
+          "npc": "Yselda",
+          "reward": "Achievement Bounacean Chivalry"
+        },
+        {
+          "title": "1.º addon com o John (à noite)",
+          "text": "Só se salvaste os quatro Saplings: espera pela **noite** (hh:45 a hh:15, hora real) e vai à casa do {npc:John (Bounac)}, **4 andares acima** do chão. Diz {key:hi} e {key:yselda}. Ele dá-te o **1.º addon**.",
+          "npc": "John (Bounac)",
+          "coords": [
+            {
+              "x": 32442,
+              "y": 32488,
+              "z": 3,
+              "label": "Casa do John (só à noite)"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yselda"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Royal Bounacean Advisor Male Addon 1.gif",
+              "caption": "1.º addon (masculino)"
+            },
+            {
+              "file": "Outfit Royal Bounacean Advisor Female Addon 1.gif",
+              "caption": "1.º addon (feminino)"
+            }
+          ],
+          "tip": "De dia o John não está em casa: aparece noutro sítio como John the Carpenter.",
+          "reward": "1.º addon das Royal Bounacean Advisor Outfits"
+        }
+      ]
+    },
+    {
+      "title": "5. 2.º addon: The Order of the Stag — o writ da família Etzel",
+      "intro": "O 2.º addon só se ganha no fim da {wiki:The Order of the Stag Quest|The Order of the Stag Quest}. O Kesar mandou os seus cavaleiros ao Isle of Ada e não tem notícias deles.",
+      "steps": [
+        {
+          "title": "Pedir a missão ao Kesar",
+          "text": "De dia, diz ao {npc:Kesar the Younger} {key:hi} e {key:help}. Ele pede-te que vás buscar um writ da família Etzel guardado num baú, numa sala selada **por baixo da catedral** de Bounac. Tens de entrar a partir das salas sagradas mesmo por cima dela.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Hail, what can I do for the hero of Bounac? The siege is finally under control, thanks to you. Meanwhile, another problem has left me in dismay."
+            },
+            {
+              "you": "help"
+            },
+            {
+              "npc": "My knights embarked on the Emmanuelle, our flagship. They were to set sail for the Isle of Ada [...]"
+            },
+            {
+              "npc": "[...] I want you to retrieve it and bring it to me. You will have to find a way from the sacred halls directly above it."
+            }
+          ]
+        },
+        {
+          "title": "Abrir o buraco na catedral",
+          "text": "Vai à **catedral** de Bounac (3 andares acima do chão). Coloca a {item:Frozen Starlight} no suporte (stand) para abrires o buraco e desce para a sala selada.",
+          "coords": [
+            {
+              "x": 32402,
+              "y": 32468,
+              "z": 4,
+              "label": "Catedral de Bounac"
+            }
+          ],
+          "tip": "Leva também uma {item:Pick} (ou ferramenta equivalente): o spoiler pede-a como requisito da Order of the Stag, sem dizer exatamente onde a usas."
+        },
+        {
+          "title": "Tirar o writ do baú gelado",
+          "text": "Lá em baixo, abre o **baú gelado** (frozen chest) e tira o writ da família Etzel. O wiki não descreve a saída desta sala: volta a subir pelo mesmo buraco até à catedral.",
+          "reward": "Writ da família Etzel"
+        },
+        {
+          "title": "Entregar o writ e aceitar a viagem",
+          "text": "Leva o writ ao {npc:Kesar the Younger} (de dia) e diz {key:hi} e {key:help}. Ele pede-te que o mostres à **Captain Banner**, chefe da expedição no Isle of Ada, e explica que há um barco a **sul**, junto à velha cabana do pescador. Responde {key:yes}.",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {
+              "you": "help"
+            },
+            {
+              "npc": "Now that you know our family secret, I want you to take the writ with you and show it to Captain Banner, leader of this expedition."
+            },
+            {
+              "npc": "[...] find a boat to the south near the old fisherman's hut. Say no word to anyone besides the captain and make utmost haste. Are you prepared?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Then make it so. Find Captain Banner on the Isle of Ada [...]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Isle of Ada: das minas ao castelo",
+      "intro": "O Isle of Ada é confuso: tem muitas escadas, portas e pontos de Levitate, e está cheio de monstros. À noite os raids de Night Harpies tornam-no ainda mais cheio.",
+      "steps": [
+        {
+          "title": "Viajar para o Isle of Ada",
+          "text": "Sai do castelo pelo elevador (andar por baixo da sala do trono, rampa para **sul**) e vai à costa a **sul** do castelo de Bounac, junto à velha cabana do pescador. Usa a **corda** dentro de um pequeno barco de pesca: és levado para o Isle of Ada, onde está o acampamento da expedição de Bounac.",
+          "coords": [
+            {
+              "x": 32394,
+              "y": 32513,
+              "z": 7,
+              "label": "Corda no barco de pesca (Bounac)"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Second In Command Demeron",
+          "text": "No acampamento onde chegas, diz ao {npc:Second In Command Demeron} {key:hi}, {key:mission}, {key:tell}, {key:yes}, {key:yes}, {key:yes}. Ele dá-te autorização para entrares nas **minas a noroeste**.",
+          "npc": "Second In Command Demeron",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "you": "tell"
+            },
+            {
+              "npc": "[...] So you say Kesar himself sent you, giving you details he did not disclose, even to us? And do you have any proof for that outrageous claim?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] Fight your way through the mines and further into the isle. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Explorar as minas",
+          "text": "Entra nas minas e explora-as até chegares ao ponto marcado: o teu quest log é atualizado.",
+          "coords": [
+            {
+              "x": 33872,
+              "y": 32193,
+              "z": 7,
+              "label": "Ponto das minas que atualiza o quest log"
+            }
+          ]
+        },
+        {
+          "title": "Opcional: Lieutenant Harlan (Supplies for the Steadfast)",
+          "text": "Na primeira visita, ao atravessares as minas chegas ao primeiro acampamento. Diz ao {npc:Lieutenant Harlan} {key:hi}, {key:yes}, {key:yes}, {key:no}: ele abre um caminho para **nordeste**. Se te ofereceres para ajudar, pede-te 20 {item:Tender Venison} para o acampamento e dá-te **10 000 de experiência**.",
+          "npc": "Lieutenant Harlan",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "no"
+            }
+          ],
+          "tip": "Os {creature:Stag|Stags} do Isle of Ada deixam cair {item:Tender Venison} com frequência."
+        },
+        {
+          "title": "Subir até aos portões do castelo",
+          "text": "Volta à entrada das minas: agora já podes usar as escadas. Sobe as escadas no primeiro ponto, usa {spell:Levitate} para subir no segundo, sobe as escadas no terceiro e segue até aos **portões** do castelo. Se estiverem abertos, entra.",
+          "coords": [
+            {
+              "x": 33858,
+              "y": 32237,
+              "z": 7,
+              "label": "1. Escadas para cima"
+            },
+            {
+              "x": 33887,
+              "y": 32202,
+              "z": 6,
+              "label": "2. Levitate para cima"
+            },
+            {
+              "x": 33888,
+              "y": 32156,
+              "z": 5,
+              "label": "3. Escadas para cima"
+            },
+            {
+              "x": 33888,
+              "y": 32114,
+              "z": 4,
+              "label": "4. Portões do castelo"
+            }
+          ]
+        },
+        {
+          "title": "Se os portões estiverem fechados",
+          "text": "Usa {spell:Levitate} para **descer duas vezes** nos dois primeiros pontos, sobe as escadas no terceiro e outra vez no quarto, e entra na zona dos NPCs pela porta do último ponto.",
+          "coords": [
+            {
+              "x": 33896,
+              "y": 32114,
+              "z": 4,
+              "label": "Levitate para baixo (1)"
+            },
+            {
+              "x": 33901,
+              "y": 32112,
+              "z": 5,
+              "label": "Levitate para baixo (2)"
+            },
+            {
+              "x": 33872,
+              "y": 32117,
+              "z": 6,
+              "label": "Escadas para cima (1)"
+            },
+            {
+              "x": 33861,
+              "y": 32115,
+              "z": 5,
+              "label": "Escadas para cima (2)"
+            },
+            {
+              "x": 33882,
+              "y": 32105,
+              "z": 4,
+              "label": "Porta para a zona dos NPCs"
+            }
+          ]
+        },
+        {
+          "title": "Abrir os portões (alternativa)",
+          "text": "Se ainda não consegues abrir essas portas, ou se queres abrir os portões: a **sul** dos portões usa {spell:Levitate} para descer; depois sobe **três vezes** com Levitate nos pontos seguintes, desce uma vez com Levitate e sobe as escadas. Aí estão **dois mecanismos de corrente** que trancam o portão: usa os dois **quase ao mesmo tempo**.",
+          "coords": [
+            {
+              "x": 33887,
+              "y": 32141,
+              "z": 4,
+              "label": "Levitate para baixo, a sul dos portões"
+            },
+            {
+              "x": 33883,
+              "y": 32141,
+              "z": 5,
+              "label": "Levitate para cima (1)"
+            },
+            {
+              "x": 33880,
+              "y": 32139,
+              "z": 4,
+              "label": "Levitate para cima (2)"
+            },
+            {
+              "x": 33880,
+              "y": 32136,
+              "z": 3,
+              "label": "Levitate para cima (3)"
+            },
+            {
+              "x": 33890,
+              "y": 32130,
+              "z": 2,
+              "label": "Levitate para baixo, depois sobe as escadas"
+            }
+          ],
+          "tip": "Um jogador rápido consegue fazê-lo sozinho; a níveis mais baixos pode ser preciso uma segunda pessoa para usar o outro mecanismo."
+        },
+        {
+          "title": "Chegar ao Guard Captain Hartford",
+          "text": "Dentro do castelo, vai ter com o {npc:Guard Captain Hartford}.",
+          "npc": "Guard Captain Hartford",
+          "coords": [
+            {
+              "x": 33882,
+              "y": 32113,
+              "z": 4,
+              "label": "Guard Captain Hartford"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Os bicos das Night Harpies",
+      "steps": [
+        {
+          "title": "Aceitar a tarefa do Hartford",
+          "text": "Diz ao {npc:Guard Captain Hartford} {key:hi}, {key:business}, {key:explain}, {key:yes}. Ele pede-te **20** {item:Night Harpy Beak|Night Harpy Beaks} como prova de que ajudaste contra as harpias, e em troca dá-te acesso ao salão de cima, onde está o Eldoran.",
+          "npc": "Guard Captain Hartford",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "HALT! Outsider, state your business!"
+            },
+            {
+              "you": "business"
+            },
+            {
+              "you": "explain"
+            },
+            {
+              "npc": "[...] I say we continue to stick to that plan. Say, are you in for another round?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "[...] If you can help us with those night harpies, we would be grateful and far in your debt. Just bring me a few of their beaks. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Caçar e esfolar Night Harpies",
+          "text": "As {creature:Night Harpy|Night Harpies} só aparecem **à noite**, num raid que **não acontece todas as noites**; quando começa, dura várias horas (sempre só de noite). Mata-as e usa a {item:Obsidian Knife} nos corpos: há uma hipótese de tirares um bico. Repete até teres **20 bicos**.",
+          "warning": "Comprar bicos no Market ou a outros jogadores **não conta**: cada personagem tem de esfolar os seus.",
+          "tip": "As Night Harpies (14 000 de vida, 21 000 de experiência) recebem mais dano de ice (112%), death e holy (109%) e menos de fire (70%) e earth (60%). Segundo o Hartford, o ninho delas fica nas montanhas, bem a sul da ilha."
+        },
+        {
+          "title": "Entregar os bicos",
+          "text": "Volta ao {npc:Guard Captain Hartford} e diz {key:hi}, {key:news}, {key:yes}. Ganhas acesso ao andar de cima, onde está o {npc:Eldoran the Ambitious}. Os bicos **não** te são tirados.",
+          "npc": "Guard Captain Hartford",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "news"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Limpar o castelo para o Eldoran",
+      "steps": [
+        {
+          "title": "Partir a tapeçaria",
+          "text": "Sobe as escadas nos dois primeiros pontos. A porta para o Eldoran está **escondida atrás de uma tapeçaria**: usa uma arma na tapeçaria para a partires e passa pela porta.",
+          "coords": [
+            {
+              "x": 33875,
+              "y": 32114,
+              "z": 4,
+              "label": "Escadas para cima (1)"
+            },
+            {
+              "x": 33870,
+              "y": 32114,
+              "z": 3,
+              "label": "Escadas para cima (2)"
+            },
+            {
+              "x": 33868,
+              "y": 32115,
+              "z": 2,
+              "label": "Porta atrás da tapeçaria"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Eldoran the Ambitious",
+          "text": "Diz ao {npc:Eldoran the Ambitious} {key:hi}, {key:word}, {key:yes}, {key:yes}. Ele pede-te que limpes alguns cadáveres no castelo.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "word"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Usar os três cadáveres",
+          "text": "Há **três cadáveres** no piso marcado, junto a pilhas a arder. Distinguem-se dos outros corpos porque estão virados para a **direita** (os normais estão virados para oeste). Usa cada um deles.",
+          "coords": [
+            {
+              "x": 33858,
+              "y": 32118,
+              "z": 5,
+              "label": "Cadáver 1"
+            },
+            {
+              "x": 33869,
+              "y": 32114,
+              "z": 5,
+              "label": "Cadáver 2"
+            },
+            {
+              "x": 33869,
+              "y": 32135,
+              "z": 5,
+              "label": "Cadáver 3"
+            }
+          ]
+        },
+        {
+          "title": "Relatar ao Eldoran",
+          "text": "Volta ao {npc:Eldoran the Ambitious} e diz {key:hi}, {key:news}, {key:yes}.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "news"
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Court Warlock",
+      "intro": "A parte final da Order of the Stag. O {creature:Court Warlock} é um boss Archfoe com 120 000 de vida que dá 147 000 de experiência.",
+      "steps": [
+        {
+          "title": "Pedir a última missão",
+          "text": "Diz ao {npc:Eldoran the Ambitious} {key:hi} e {key:mission}. Ele pede-te que acabes com o {creature:Court Warlock}.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            }
+          ]
+        },
+        {
+          "title": "Atravessar a Blood Gorge até à torre oeste",
+          "text": "Desce alguns andares até à cave dos **Tamed Frazzlemaws**: agora já tens acesso às portas. Atravessa a **Blood Gorge** e sobe para a **torre oeste** pelo ponto marcado.",
+          "coords": [
+            {
+              "x": 33870,
+              "y": 32132,
+              "z": 6,
+              "label": "Cave dos Tamed Frazzlemaws"
+            },
+            {
+              "x": 33834,
+              "y": 32146,
+              "z": 8,
+              "label": "Subida para a torre oeste"
+            }
+          ]
+        },
+        {
+          "title": "Falar com a Captain Marie-Denise Banner",
+          "text": "Na torre, diz à {npc:Captain Marie-Denise Banner} {key:hi} e {key:wall}. Ela dá-te acesso ao teleporte: usa a **parede** marcada e és levado para a sala das alavancas da luta.",
+          "npc": "Captain Marie-Denise Banner",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "wall"
+            }
+          ],
+          "coords": [
+            {
+              "x": 33833,
+              "y": 32140,
+              "z": 4,
+              "label": "Parede-teleporte para a sala das alavancas"
+            }
+          ]
+        },
+        {
+          "title": "Entrar na sala das alavancas",
+          "text": "O **primeiro jogador a entrar** na sala das alavancas vai ter Raubritters a nascer continuamente na sua posição durante toda a luta. Põe o **Knight** a entrar primeiro.",
+          "warning": "Se fores sozinho, todos os Raubritters vão nascer em cima de ti: o wiki recomenda nível 600+ para fazer isto a solo."
+        },
+        {
+          "title": "Fase 1: os Raubritters",
+          "text": "A luta começa com vagas contínuas de Raubritters, cada um imune a um elemento. Matem-nos sem parar. Se o vosso dano em área não chegar, concentrem-se num alvo de cada vez para **nunca terem quatro do mesmo tipo vivos**: se isso acontecer, transformam-se numa versão mais forte que bate muito mais.",
+          "table": {
+            "head": [
+              "Raubritter",
+              "Imune a",
+              "Nota"
+            ],
+            "rows": [
+              [
+                "{creature:Poisoned Raubritter}",
+                "Earth",
+                "—"
+              ],
+              [
+                "{creature:Frozen Raubritter}",
+                "Ice",
+                "—"
+              ],
+              [
+                "{creature:Raging Raubritter}",
+                "Fire",
+                "—"
+              ],
+              [
+                "{creature:Energised Raubritter}",
+                "Energy",
+                "Ataca à distância e foge do Knight"
+              ]
+            ]
+          },
+          "warning": "De tempos a tempos **todos os jogadores são teleportados** pela sala. Há terreno \"especial\", com aspeto diferente do chão normal: **não pises** nele, cada passo tira muito dano de **death**.",
+          "tip": "O {spell:Chivalrous Challenge} não funciona em salas de boss, por isso os {creature:Energised Raubritter|Energised Raubritters} ficam longe do Knight: os atacantes à distância devem tratar deles."
+        },
+        {
+          "title": "Fase 2: Falcon Paladins e Falcon Knights",
+          "text": "Depois de algumas vagas a sala enche-se de {creature:Falcon Paladin|Falcon Paladins} e {creature:Falcon Knight|Falcon Knights}, e todo o terreno especial desaparece: já te podes mexer à vontade. Matem todos os lacaios."
+        },
+        {
+          "title": "Fase 3: derrotar o Court Warlock",
+          "text": "Quando todos os lacaios morrerem nasce o {creature:Court Warlock}. Nasce com **menos vida** quanto melhor tiver corrido a luta até aí. Acaba com ele.",
+          "tip": "O cooldown do Court Warlock pode ser reposto com uma {item:Twisted Marionette}, que ele próprio pode deixar cair. Também pode deixar cair (muito raramente) peças de equipamento Stag, como {item:Stag Plate}, {item:Stag Helmet} ou {item:Stag Shield}."
+        },
+        {
+          "title": "Sair da sala do Court Warlock",
+          "text": "O wiki não descreve a saída da sala do boss. Se depois da luta não encontrares um teleporte de saída, usa um {item:Temple Teleport Scroll} (espera que o Logout Block passe) e regressa ao Eldoran pelo caminho normal: barco de Edron para Bounac, barco de pesca a sul do castelo, minas e subida até aos portões (secção 6) e escadas até ao andar do Eldoran (secção 8)."
+        },
+        {
+          "title": "Relatar ao Eldoran",
+          "text": "Volta ao {npc:Eldoran the Ambitious} e diz {key:hi} e {key:news}. Recebes {item:The Broken Sword of Eldoran Etzel} e o achievement **Bastard**: a Order of the Stag Quest está terminada. A página da quest lista também o {item:Brass-Shod Chest (Order of the Stag)} como recompensa, sem dizer em que momento exato o recebes.",
+          "npc": "Eldoran the Ambitious",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "news"
+            }
+          ],
+          "reward": "The Broken Sword of Eldoran Etzel, Brass-Shod Chest (Order of the Stag) e achievement Bastard"
+        },
+        {
+          "title": "Sair do Isle of Ada",
+          "text": "O wiki não descreve a viagem de volta do Isle of Ada para Bounac. Procura primeiro o barco em que chegaste, junto ao acampamento do {npc:Second In Command Demeron}. Se não houver viagem de volta, usa um {item:Temple Teleport Scroll}: leva-te ao templo da tua cidade (não funciona em No-Logout Zones nem com Logout Block ou Protection Zone Block). Depois volta a Bounac pelo pequeno barco de Edron (secção 1).",
+          "coords": [
+            {
+              "x": 33872,
+              "y": 32243,
+              "z": 7,
+              "label": "Second In Command Demeron (acampamento de chegada)"
+            },
+            {
+              "x": 33183,
+              "y": 31757,
+              "z": 7,
+              "label": "Pequeno barco para Bounac (Edron)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10. 2.º addon e achievement King's Council",
+      "steps": [
+        {
+          "title": "Falar com o Kesar",
+          "text": "De dia, sobe à sala do trono de Bounac e diz ao {npc:Kesar the Younger} {key:hi} e {key:help}. Ele dá-te o **2.º addon** das Royal Bounacean Advisor Outfits. Se já tens também o 1.º addon, recebes o achievement **King's Council** (2 pontos).",
+          "npc": "Kesar the Younger",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "help"
+            }
+          ],
+          "images": [
+            {
+              "file": "Outfit Royal Bounacean Advisor Male Addon 2.gif",
+              "caption": "2.º addon (masculino)"
+            },
+            {
+              "file": "Outfit Royal Bounacean Advisor Female Addon 2.gif",
+              "caption": "2.º addon (feminino)"
+            }
+          ],
+          "reward": "2.º addon + achievement King's Council (com os dois addons)"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O achievement **King's Council** saiu no Summer Update 2021, mas só passou a ser possível obtê-lo com o Winter Update 2025, quando a Order of the Stag trouxe o 2.º addon.",
+    "Depois da Lost Queen podes trocar com o {npc:John (Bounac)} dizendo {key:fragments} (vende Folded Artefact Carpets).",
+    "Missão opcional da Order of the Stag, *Emmanuelle's Boat Repair*: o {npc:Second In Command Demeron} pede 30 {item:Salvaged Iron Parts}, 20 {item:Salvaged Bronze Parts} e 10 {item:Salvaged Silver Parts} e dá-te {item:The Mariner's Compass From the Antoinette}.",
+    "Guia completo das missões de que este outfit depende: {wiki:Adventures of Galthen Quest|Adventures of Galthen Quest} e {wiki:The Order of the Stag Quest|The Order of the Stag Quest}."
+  ]
+}

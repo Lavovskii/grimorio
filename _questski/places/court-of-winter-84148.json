@@ -1,0 +1,49 @@
+{
+  "title": "Court of Winter",
+  "type": "zona",
+  "near": "Svargrond",
+  "summary": "A corte de inverno dos Dreamelves, a que se chega por um portal no **topo da montanha de Tyrsung** (a sudeste de Svargrond), com o encantamento da {npc:Myzzi} da {wiki:The Dream Courts Quest}. Aqui está o {npc:Undal}.",
+  "entrance": {"x": 32356, "y": 31248, "z": 3, "label": "Portal da Court of Winter (topo da montanha de Tyrsung)"},
+  "requirements": [
+    "Encantamento da {npc:Myzzi}, a nordeste de Edron ({key:hi}, {key:entrances}, {key:yes}): é o primeiro passo da {wiki:The Dream Courts Quest} (quest Premium de nível 250). Sem ele o portal não te deixa passar.",
+    "Acesso a {wiki:Tyrsung}: o {npc:Buddel} só te leva depois da {wiki:Barbarian Test Quest} e de teres pelo menos começado a missão *Nibelor 2: Ecological Terrorism* da {wiki:The Ice Islands Quest}."
+  ],
+  "arrive": [
+    "Se ainda não tens o encantamento: vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes}) e sai da cidade para **nordeste**. A {npc:Myzzi} anda por uma zona grande a norte de Stonehome ({coord:33275,31701,7}); diz-lhe {key:hi}, {key:entrances} e {key:yes}.",
+    "Viaja de barco até **Svargrond** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:svargrond}, {key:yes}; também há barco em Carlin e em Venore).",
+    "Vai ao barco a **sul** de Svargrond e fala com o {npc:Buddel} ({coord:32254,31195,7}): {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Desembarcas no cais de Tyrsung ({coord:32332,31230,7}); se ele te deixar noutra ilha, pede outra vez.",
+    "Vai até à montanha no centro da ilha ({wiki:Jotunar}) e sobe-a andar a andar pelos pontos que a wiki marca: {coord:32425,31277,7} (rés-do-chão, lado **leste**), {coord:32372,31245,6}, {coord:32375,31265,5} e {coord:32367,31259,4}, até ao topo (4 andares acima do chão). A wiki só dá estes pontos, sem descrever o caminho entre eles.",
+    "No topo, entra no portal ({coord:32356,31248,3}): com o encantamento da Myzzi passas para a Court of Winter.",
+    "Na corte, vai para o lado **leste** e sobe até ao andar do {npc:Undal} ({coord:33710,32116,4}).",
+    "O portal para o {wiki:Dream Labyrinth} fica num andar da corte logo acima do sítio da Orc Skull (mapa 6 da wiki); a wiki não diz que andar é nem o caminho até lá. Só te deixa passar depois de carregares as 8 Ward Stones e de o Undal (ou a {npc:Vanys}) te dar acesso ({key:hi}, {key:task})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até ao sítio onde chegaste à corte. A wiki não descreve a passagem de regresso da Court of Winter ao topo da montanha de Tyrsung: procura-a junto a esse ponto de chegada.",
+    "Já em Tyrsung, desce a montanha pelos mesmos pontos (do topo até ao rés-do-chão) e vai ao cais no **norte** da ilha ({coord:32332,31230,7}).",
+    "Diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:svargrond} (50 gp). Chegas ao cais a **sul** de Svargrond; se ele te deixar noutra ilha, pede outra vez {key:svargrond}.",
+    "Em Svargrond, a {npc:Captain Breezelda}, no porto ({coord:32347,31108,6}), leva-te a Carlin, Venore ou Thais ({key:hi}, o nome da cidade, {key:yes}).",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 32254, "y": 31195, "z": 7, "label": "Buddel (sul de Svargrond)"},
+    {"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung"},
+    {"x": 32425, "y": 31277, "z": 7, "label": "1.º ponto da subida (rés-do-chão)"},
+    {"x": 32372, "y": 31245, "z": 6, "label": "2.º ponto (1 andar acima)"},
+    {"x": 32375, "y": 31265, "z": 5, "label": "3.º ponto (2 andares acima)"},
+    {"x": 32367, "y": 31259, "z": 4, "label": "4.º ponto (3 andares acima)"},
+    {"x": 32356, "y": 31248, "z": 3, "label": "Portal da Court of Winter (topo)"},
+    {"x": 33698, "y": 32127, "z": 7, "label": "Court of Winter (localização da wiki)"},
+    {"x": 33710, "y": 32116, "z": 4, "label": "Undal (lado leste, andares de cima)"}
+  ],
+  "images": [
+    {"file": "Jotunar 0.png", "caption": "Jotunar, a montanha de Tyrsung: rés-do-chão"},
+    {"file": "Jotunar 1.png", "caption": "Jotunar: 1 andar acima"},
+    {"file": "Dream Labyrinth Map 6.png", "caption": "Portal entre o Dream Labyrinth e a Court of Winter (6.1); na corte, o andar desse portal (6.2) e o andar de baixo (6.3)"}
+  ],
+  "warnings": [
+    "Na corte há {creature:Crazed Winter Vanguard|Crazed Winter Vanguards}, {creature:Crazed Winter Rearguard|Crazed Winter Rearguards}, {creature:Soul-Broken Harbinger|Soul-Broken Harbingers}, {creature:Arachnophobica} e {creature:Thanatursus} (até 1100 de dano). A wiki recomenda nível 150 ou mais para caçar aqui.",
+    "Na subida da montanha há {creature:Frost Giant|Frost Giants}, {creature:Frost Giantess|Frost Giantesses} e {creature:Mammoth|Mammoths}.",
+    "O {npc:Buddel} está sempre bêbedo e pode deixar-te na ilha errada. Se tiveres um {item:Dwarven Ring} na mochila ele leva-te ao sítio certo e não cobra os 50 gp, mas fica com o anel (diz {key:no} quando ele o pedir se o quiseres guardar).",
+    "As {creature:Hibernal Moth|Hibernal Moths} só aparecem aqui durante a noite."
+  ]
+}

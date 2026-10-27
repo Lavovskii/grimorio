@@ -1,6 +1,6 @@
 # PLACE: Kha'zeel Dragon Lairs/Kha'labal
 slug: kha-zeel-dragon-lairs-kha-labal-72a07
-mentioned in 1 guides: realm-of-dreams-quest
+mentioned in 2 guides: realm-of-dreams-quest, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Kha'zeel Dragon Lairs Kha'labal 
@@ -57,3 +57,6 @@ coords: [{'x': 33116, 'y': 32606, 'z': 7, 'label': 'Entrada do dragon lair norte
 [realm-of-dreams-quest 1-2] Pisar o interruptor
 Pisa o interruptor. A pilha de pedras que está acima dele desaparece e revela uma alavanca.
 coords: []
+[the-roost-of-the-graveborn-quest 5-1] Ir ao dragon lair do meio
+Sai de Ankrahmun e caminha para **norte** pelo deserto até à entrada do dragon lair do meio de {wiki:Kha'zeel Dragon Lairs/Kha'labal|Kha'zeel} (o *Ank 3x spawn*).
+coords: [{'x': 33095, 'y': 32690, 'z': 7, 'label': 'Entrada do dragon lair'}]

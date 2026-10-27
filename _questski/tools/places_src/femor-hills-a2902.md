@@ -1,6 +1,6 @@
 # PLACE: Femor Hills
 slug: femor-hills-a2902
-mentioned in 7 guides: kissing-a-pig-quest, overhunting-world-change, power-ring-quest, the-inquisition-quest, tower-defence-quest, unnatural-selection-quest, warpath-mini-world-change
+mentioned in 9 guides: grave-danger-quest, hand-of-the-inquisition-outfits-quest, kissing-a-pig-quest, overhunting-world-change, power-ring-quest, the-inquisition-quest, tower-defence-quest, unnatural-selection-quest, warpath-mini-world-change
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Femor Hills 
@@ -45,6 +45,12 @@ The Femor Hills have very many Goblins as many Tibians know. But not every Tibia
  Magic Carpet
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[grave-danger-quest 5-0] Chegar a Femor Hills
+As {wiki:Femor Hills} ficam entre **Carlin**, **Ab'Dendriel** e **Kazordoon**. O caminho mais simples é apanhar um barco para Carlin ({key:hi}, {key:carlin}, {key:yes}) e seguir a pé para **leste**. Leva uma {item:Rope}.
+coords: [{'x': 32569, 'y': 31803, 'z': 7, 'label': 'Femor Hills'}]
+[grave-danger-quest 5-2] Sair de Femor Hills
+Desce pelo mesmo caminho até ao chão e volta a pé para **oeste** até Carlin (ou para **sul** até Kazordoon).
+coords: []
 [kissing-a-pig-quest 1-3] Chegar à torre de Femor Hills
 {wiki:Femor Hills} ficam entre **Carlin**, **Ab'Dendriel** e **Kazordoon** (a leste de Carlin). Apanha um barco para Carlin (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}) e segue a pé para **leste**; leva uma {item:Rope} (e, para alguns caminhos, {item:Shovel}). Agora que sabes cortar erva, consegues cortar a erva que cresce depressa em {wiki:Femor Hills}. Procura a {wiki:Femor Hills Tower|torre} bloqueada pela erva, corta-a com a machete e sobe até ao último andar.
 coords: [{'x': 32569, 'y': 31803, 'z': 7, 'label': 'Femor Hills'}, {'x': 32588, 'y': 31786, 'z': 1, 'label': 'Caramellia (último andar da torre)'}]
@@ -68,12 +74,12 @@ coords: [{'x': 32569, 'y': 31803, 'z': 7, 'label': 'Femor Hills'}]
 [bigfoots-burden-quest 0-0] Chegar ao Xelvar
 Vai a **Kazordoon** e procura o {npc:Xelvar}, na parte norte da rua do Templo, perto do NPC de blessing do norte. Caminho: viaja até Kazordoon de {wiki:Magic Carpet}, compra um bilhete de vagoneta (250 gp) ao {npc:Gewen}, gestor do tapete, e vai a noroeste do tapete até à vagoneta. Usa-a para ires à zona das lojas. Vai para oeste até à linha principal de vagonetas e usa-as para ires até ao **templo** (lê as placas nas paredes para saberes para onde vai cada uma). Das vagonetas do templo vai para oeste e depois sempre para norte. Os tapetes voadores (só Premium) partem de Darashia, Edron, Svargrond, Femor Hills, Farmine e Issavi: fala com o gestor do tapete e diz {key:hi}, {key:kazordoon} e {key:yes}. Chegas ao tapete de Kazordoon, no topo da montanha.
 coords: [{'x': 32587, 'y': 31941, 'z': 0, 'label': 'Tapete voador de Kazordoon (Gewen)'}]
-[measuring-tibia-quest 3-1] Lista das 20 áreas
-Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
+[grave-danger-quest 0-3] Pedir a lista das sepulturas
+Diz {key:report} e depois {key:locations}. O Jack diz-te onde ficam as **12 sepulturas** que tens de proteger. A tabela resume-as e indica a secção deste guia de cada uma.
 coords: []
-[oriental-outfits-quest 0-0] Chegar a Darashia
-Viaja até **Darashia**: de barco (por exemplo de Venore, {key:hi}, {key:darashia}, {key:yes} ao capitão do porto) chegas junto ao {npc:Petros}; de {wiki:Magic Carpet|tapete voador} (Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi: {key:hi}, {key:darashia}, {key:yes}) chegas ao tapete de Darashia. O Habdel, a Ishina, o Razan e a Miraia estão todos na cidade.
-coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (porto de Darashia)'}, {'x': 33269, 'y': 32441, 'z': 6, 'label': 'Tapete voador de Darashia'}]
-[overhunting-world-change 2-1] Encontrar os Starving Wolves
-Os {creature:Starving Wolf|Starving Wolves} andam pelos lados **leste** e **oeste** das {wiki:Femor Hills}.
+[grave-danger-quest 5-1] Santificar a sepultura
+Sobe **1 andar** e procura a sepultura dentro da montanha do **sudoeste**. Usa o {item:Vial of Potent Holy Water} nela. Esta sepultura já foi profanada: não há mais nada a fazer aqui.
+coords: [{'x': 32543, 'y': 31847, 'z': 6, 'label': 'Sepultura (1 andar acima, montanha do sudoeste)'}]
+[hand-of-the-inquisition-outfits-quest 0-2] Comprar a Vial of Potent Holy Water
+Ainda com o {npc:Jack Springer}, diz {key:trade} e compra a {item:Vial of Potent Holy Water} (100 gp cada). Se precisares de mais, volta a pedir {key:trade}. Se te esqueceres de onde ficam as campas, diz {key:report} e depois {key:locations}: ele dá-te a lista.
 coords: []

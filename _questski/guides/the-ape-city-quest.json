@@ -3,6 +3,7 @@
   "category": "historia",
   "region": "Port Hope",
   "difficulty": 4,
+  "team": "solo",
   "duration": "Várias horas (9 missões e muitas viagens)",
   "summary": "O xamã {npc:Hairycles}, de Banuta, quer encontrar verdadeiros amigos entre os humanos. Ao longo de 9 missões vais a Trapwood, Carlin, Chor, Ankrahmun, Fibula, às Forbidden Lands e às profundezas de Banuta para curar a praga dos macacos e destruir o monumento do deus serpente. No fim ganhas as {wiki:Shaman Outfits|Shaman Outfits}, as estátuas de macaco para a casa e acesso às Forbidden Lands e a Deeper Banuta.",
   "legend_pt": "O famoso Merlkin Hairycles está a tentar encontrar verdadeiros amigos entre os humanos. Para provares que podes ser um desses amigos, tens de ajudar os macacos.",
@@ -38,6 +39,7 @@
     {"what": "Bananas à venda no Hairycles", "kind": "loja", "when": "Na missão 6 (Witches' Cap Spot), quando passas a ser *friend of the apes*.", "note": "Custam 2 gp cada."},
     {"what": "Forbidden Lands (transporte do The Blind Prophet)", "kind": "zona", "place": "Forbidden Lands", "when": "Na missão 8, quando o {npc:Hairycles} te dá autorização: o {npc:The Blind Prophet} passa a levar-te lá ({key:transport})."},
     {"what": "Deeper Banuta", "kind": "zona", "place": "Deeper Banuta", "when": "Na missão 9 (The Deepest Catacombs), quando o {npc:Hairycles} te dá o {item:Snake Destroyer}."},
+    {"what": "Túnel secreto de Tiquanda para Deeper Banuta", "kind": "zona", "place": "Deeper Banuta", "when": "Depois da missão 8, quando usas um {item:Egg of The Many} na cabeça de lagarto mesmo a leste do teleporte do andar da quest, em Deeper Banuta (secção «Extra: atalho secreto para Deeper Banuta»).", "note": "Opcional. O {item:Egg of The Many} cai do boss {creature:The Many} e compra-se no Market."},
     {"what": "Estátuas de macaco para a casa (Monkey Statues) à venda no Hairycles", "kind": "loja", "when": "No fim da quest, depois de receberes as Shaman Outfits.", "note": "Vendidas em {item:Furniture Kit|Furniture Kits}."}
   ],
   "dangers": ["Kongra", "Merlkin", "Sibang", "Dworc Fleshhunter", "Dworc Venomsniper", "Dworc Voodoomaster", "Carniphila", "Spit Nettle", "Lizard Snakecharmer", "Lizard Templar", "Cobra", "Skeleton", "Ghoul", "Scarab", "Crypt Shambler", "Fire Devil", "Bonelord", "Elder Bonelord", "Green Djinn", "Efreet", "Gargoyle", "Stone Golem", "Demon Skeleton", "Bonebeast", "Giant Spider", "Behemoth", "Massive Earth Elemental", "Hydra", "Serpent Spawn", "Medusa"],
@@ -534,6 +536,29 @@
             {"npc": "Friend of the ape people! Take my gift and become me apprentice! Here is shaman clothing for you!"}
           ],
           "reward": "Shaman Outfits + acesso às Monkey Statues"
+        }
+      ]
+    },
+    {
+      "title": "Extra: atalho secreto para Deeper Banuta",
+      "intro": "Opcional. Depois de acabares a missão 8 podes desbloquear um túnel secreto em Tiquanda que te leva mais depressa a Deeper Banuta. Para isso precisas de um {item:Egg of The Many}.",
+      "steps": [
+        {
+          "title": "Arranjar um Egg of The Many",
+          "text": "O {item:Egg of The Many} cai do boss {creature:The Many} (cerca de 35% das vezes). Nenhum NPC o vende, mas é negociável no **Market**: o mais simples é comprá-lo lá. Se o quiseres apanhar tu, {creature:The Many} é o boss da task de **650** {creature:Hydra|Hydras} do {npc:Grizzly Adams}, em Port Hope (tasks de nível 130+ da {wiki:Killing in the Name of... Quest|Killing in the Name of... Quest}): quando acabares a task, diz-lhe outra vez {key:task} para receberes o boss e entra no teleporte dele em {wiki:Chor|Chor}, 1 andar abaixo do chão. Para ires a Chor e voltares usa os passos «Chegar a Chor» e «Sair de Chor» da missão 3; a wiki não descreve a saída da sala do boss.",
+          "coords": [{"x": 32920, "y": 32883, "z": 8, "label": "Teleporte para The Many (Chor)"}],
+          "warning": "{creature:The Many} é uma Hydra com 5.000 de vida que se cura com frequência e paralisa; é imune a dano de terra."
+        },
+        {
+          "title": "Usar o ovo na cabeça de lagarto",
+          "text": "Leva o ovo para {wiki:Deeper Banuta|Deeper Banuta} como na missão 9 (passo «Entrar em Deeper Banuta»). A cabeça **não** está no primeiro andar: parte os 4 Canopic Jars e desce pelo Magic Forcefield do centro até ao andar da quest (passos «Partir os 4 Canopic Jars» e «Descer ao andar da quest»). Nesse andar, a cabeça de lagarto (a wiki também lhe chama cabeça de serpente) está **mesmo a leste** do teleporte. **Usa** o {item:Egg of The Many} nessa cabeça para desbloqueares o túnel secreto.",
+          "warning": "No andar da quest há {creature:Hydra|Hydras}, {creature:Serpent Spawn|Serpent Spawns}, {creature:Medusa|Medusae} e {creature:Bonebeast|Bonebeasts}; ao chegares podes ser logo perseguido por uma {creature:Serpent Spawn}.",
+          "reward": "Acesso, a partir daí, ao túnel secreto de Tiquanda para Deeper Banuta"
+        },
+        {
+          "title": "Usar o túnel e sair",
+          "text": "A partir de agora podes entrar em Deeper Banuta mais depressa pelo túnel secreto, na selva de Tiquanda a **sul** de Banuta (um pouco para leste). Para lá chegares, sai de Port Hope e atravessa a selva para **leste** (um pouco para norte); se vieres de Banuta, desce para **sul**. A wiki não diz em que andar de Deeper Banuta o túnel vai dar nem se serve para voltar. Para saíres de Deeper Banuta usa o caminho do passo «Sair de Deeper Banuta»: o portal do início do andar da quest leva-te ao segundo andar de Banuta e daí sobes as escadas até à superfície.",
+          "coords": [{"x": 32853, "y": 32669, "z": 7, "label": "Entrada do túnel secreto (Tiquanda)"}]
         }
       ]
     }

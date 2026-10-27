@@ -64,6 +64,12 @@ coords: [{'x': 32683, 'y': 31604, 'z': 7, 'label': "Buraco a norte de Ab'Dendrie
 [overhunting-world-change 1-0] Chegar às florestas de Ab'Dendriel
 Apanha um barco para **Ab'Dendriel** (por exemplo, com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:ab'dendriel}, {key:yes}). Chegas ao porto do {npc:Captain Seagull}, que também te leva de volta. Sai da cidade a pé: as florestas onde andam os veados começam logo à volta de Ab'Dendriel.
 coords: []
+[the-roost-of-the-graveborn-quest 0-0] Ir a Ab'Dendriel
+Apanha um barco para **Ab'Dendriel** em Carlin, Edron, Thais ou Venore (diz ao capitão {key:hi}, {key:ab'dendriel}, {key:yes}). Chegas ao porto do {npc:Captain Seagull}, no lado **leste** da cidade.
+coords: [{'x': 32735, 'y': 31668, 'z': 6, 'label': "Porto de Ab'Dendriel (Captain Seagull)"}]
+[the-way-of-the-monk-quest 4-0] Chegar a Ab'Dendriel
+Apanha um barco para **Ab'Dendriel** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:ab'dendriel}, {key:yes}; 130 gp). Chegas ao porto, junto ao {npc:Captain Seagull}.
+coords: [{'x': 32735, 'y': 31668, 'z': 6, 'label': "Captain Seagull, porto de Ab'Dendriel"}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [20-years-a-cook-quest 7-0] O trashcan de Quirefang

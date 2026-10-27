@@ -1,0 +1,46 @@
+{
+  "title": "Zarganash",
+  "type": "dungeon",
+  "near": "Yalahar",
+  "summary": "Lugar entre o mundo dos vivos e o dos mortos, **no subsolo, sob o mar a norte de Krailos**, onde, segundo a lenda, as almas descansavam antes de seguirem para o mundo dos mortos; entra-se por um teleporte **invisível** em {wiki:Vengoth}. Tem os três minibosses e o {creature:The Pale Worm} da {wiki:Feaster of Souls Quest} e o teleporte para o hub da {wiki:Soul War Quest}.",
+  "entrance": {"x": 32962, "y": 31497, "z": 7, "label": "Teleporte invisível para Zarganash (Vengoth)"},
+  "requirements": [
+    "Acesso a {wiki:Vengoth}: o {npc:Harlow} só te leva depois de começares a missão 4 (The Dark Lands) da {wiki:Blood Brothers Quest}.",
+    "O acesso a Zarganash obtém-se na {wiki:Feaster of Souls Quest} (conta **Premium**, nível **250**): é a última parte da quest, depois da parte do Thaian. A {wiki:Soul War Quest} exige a Feaster of Souls Quest completa.",
+    "Zona de caça para nível **300+** (Paladins **350+**)."
+  ],
+  "arrive": [
+    "Viaja de barco até **Yalahar** ({key:hi}, {key:yalahar}, {key:yes}): de Thais com o {npc:Captain Bluebear} (200 gp), de Carlin com o {npc:Captain Greyhound} (185 gp), de Darashia com o {npc:Petros} (210 gp), de Ankrahmun com o {npc:Captain Sinbeard} (230 gp), de Port Hope com o {npc:Charles} (260 gp) ou de Liberty Bay com o **Jack Fate** (275 gp). De Venore e de Edron **não** há barco direto: vai primeiro a Darashia (de Edron, tapete mágico do {npc:Pino}: {key:hi}, {key:darashia}, {key:yes}, 40 gp; de Venore, o {npc:Captain Fearless}, 60 gp, com 10% de hipótese de acabares no {wiki:Ghostship}). Chegas ao porto de Yalahar.",
+    "Em Yalahar vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp).",
+    "Ele deixa-te no **oeste** de {wiki:Vengoth} ({coord:32856,31548,7}). Daí anda para **nordeste** até ao teleporte **invisível** de Zarganash ({coord:32962,31497,7}) e entra nele.",
+    "Chegas a Zarganash, no subsolo (a wiki situa a zona em {coord:33604,31495,10}). Usa o mapa para chegares à sala de cada miniboss e ao labirinto do boss final.",
+    "Para a {wiki:Soul War Quest}: atravessa Zarganash até ao extremo **sudoeste** e entra no teleporte que lá está ({coord:33568,31538,10}). Chegas ao hub de teleportes, com o {npc:Flickering Soul} e os Fog Portals para as cinco zonas."
+  ],
+  "leave": [
+    "Depois do boss final da Soul War: entra no portal atrás de um {npc:Flickering Soul}, na sala principal do hub, até à sala de recompensa. O {wiki:Magic Forcefield} dessa sala leva-te diretamente ao **depot de Thais**.",
+    "Em qualquer outro caso a wiki não descreve a saída: volta pelo caminho por onde vieste (do hub, pelo teleporte do sudoeste) até ao sítio onde chegaste a Zarganash e sai por onde entraste, para Vengoth ({coord:32962,31497,7}).",
+    "Em Vengoth, anda para **sudoeste** até ao {npc:Harlow} ({coord:32856,31548,7}) e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): ele leva-te de volta às docas do Trade Quarter de Yalahar.",
+    "Para saíres de Yalahar: se já fizeste a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, o {npc:Karith} (no porto, num barco 1 andar acima) leva-te a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes}). Se não, o {npc:Captain Cookie}, no barco à esquerda do do Karith, leva-te a **Liberty Bay** (400 gp) ou a **Thais** (800 gp).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+  ],
+  "coords": [
+    {"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32962, "y": 31497, "z": 7, "label": "Teleporte invisível para Zarganash (Vengoth)"},
+    {"x": 33604, "y": 31495, "z": 10, "label": "Zarganash (localização indicada pela wiki)"},
+    {"x": 33568, "y": 31538, "z": 10, "label": "Teleporte para o hub da Soul War (extremo sudoeste)"},
+    {"x": 33621, "y": 31418, "z": 10, "label": "Flickering Soul (hub da Soul War)"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"}
+  ],
+  "images": [
+    {"file": "Vengoth Map.png", "caption": "Mapa de Vengoth"},
+    {"file": "Feaster of Souls Quest - Zarganash.png", "caption": "Mapa de Zarganash: caminho até cada miniboss e ao boss final"},
+    {"file": "Soul War Quest - Goshnar's Taint map.png", "caption": "Hub da Soul War: os Fog Portals e o boss de cada zona"}
+  ],
+  "warnings": [
+    "O teleporte de Vengoth é **invisível**: só o encontras pela coordenada.",
+    "Zarganash está cheio de {creature:Flimsy Lost Soul|Flimsy}, {creature:Mean Lost Soul|Mean} e {creature:Freakish Lost Soul|Freakish Lost Souls}; à superfície de Vengoth há {creature:War Wolf|War Wolves}, {creature:Haunted Treeling|Haunted Treelings} e {creature:Demon Skeleton|Demon Skeletons}.",
+    "Para entrares no labirinto antes do {creature:The Pale Worm} precisas de **2** {item:Death Toll|Death Tolls} por cada entrada; se fores mandado de volta à entrada, gastas mais.",
+    "A wiki não descreve a saída das salas dos bosses (minibosses, The Pale Worm e bosses das zonas da Soul War): conta voltar a pé pelo caminho por onde vieste."
+  ]
+}

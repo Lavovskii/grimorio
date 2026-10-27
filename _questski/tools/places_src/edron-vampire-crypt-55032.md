@@ -1,6 +1,6 @@
 # PLACE: Edron Vampire Crypt
 slug: edron-vampire-crypt-55032
-mentioned in 2 guides: cartography-101-quest, the-first-dragon-quest
+mentioned in 3 guides: cartography-101-quest, feaster-of-souls-quest, the-first-dragon-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Edron Vampire Crypt 
@@ -39,12 +39,17 @@ mentioned in 2 guides: cartography-101-quest, the-first-dragon-quest
  Name Exp HP Max. Damage Loot | Vampire 305 475 350 ( 150 , 200 ) 0-60× Gold Coin (common) Vampire Teeth (uncommon) Blood Preservation (semi-rare) Grave Flower (semi-rare) Black Pearl (semi-rare) Strong Health Potion (semi-rare) Katana (semi-rare) Skull (Item) (rare) Spike Sword (rare) Ice Rapier (rare) Strange Helmet (very rare) Vampire Shield (very rare) Emerald Bangle (very rare) Bronze Amulet (very rare) Stone Skin Amulet (very rare) | Vampire Viscount 800 1,200 258? 1-50× Gold Coin (common) Strong Health Potion (uncommon) Strong Mana Potion (uncommon) Vampire Teeth (uncommon) Tooth File (semi-rare) 1-2× Small Ruby (semi-rare) Vampire's Cape Chain (semi-rare) Blood Preservation (semi-rare) Black Pearl (semi-rare) Ice Rapier (rare) Red Gem (very rare) Vampire Shield (very rare) Red Piece of Cloth (very rare) Stone Skin Amulet (very rare) | Vampire Bride 1,050 1,200 620 ( 190 , 150 , 150 , 130 ) 1-149× Gold Coin (common) Platinum Coin (uncommon) Strong Mana Potion (uncommon) Vampire Teeth (uncommon) Moonlight Rod (semi-rare) Blood Preservation (semi-rare) Strong Health Potion (semi-rare) Emerald Bangle (rare) Hibiscus Dress (rare) Rusted Ar
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[feaster-of-souls-quest 6-1] Chegar à Edron Vampire Crypt
+Apanha um barco para **Edron**: de Venore, o {npc:Captain Fearless} leva-te ({key:hi}, {key:edron}, {key:yes}, 40 gp). Chegas junto ao {npc:Captain Seahorse}. A {wiki:Edron Vampire Crypt} fica a **norte** da cidade: entra pela pequena gruta da entrada e desce.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de Edron)'}, {'x': 33109, 'y': 31722, 'z': 7, 'label': 'Entrada da Edron Vampire Crypt'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [cartography-101-quest 3-3] Blood Shrine
 É a {wiki:Edron Vampire Crypt}, a **norte** de Edron (entra por uma pequena gruta, em {coord:33109,31722,7}). Desce ao **piso -4** e procura uma sala com poças de sangue. Usa o mapa lá. Para sair, usa o teleporte do último piso ({coord:33019,31605,11}): leva-te aos Stone Blocks junto à entrada da gruta ({coord:33052,31698,8}); daí sobe pelo caminho da entrada.
 coords: [{'x': 32999, 'y': 31611, 'z': 11, 'label': 'Sala com poças de sangue, piso -4'}, {'x': 33109, 'y': 31722, 'z': 7, 'label': 'Entrada da Edron Vampire Crypt'}, {'x': 33019, 'y': 31605, 'z': 11, 'label': 'Teleporte de saída'}]
+[feaster-of-souls-quest 6-0] Os três sítios
+Resumo da segunda ronda de sinos:
+coords: []
 [the-first-dragon-quest 5-1] Entrar no covil do Zorvorax
 A {wiki:Edron Vampire Crypt|Edron Vampire Crypt} fica a **norte** de Edron. Desce até ao último piso e pisa a {item:Large Glowing Amethyst} para seres teleportado para o covil do {creature:Zorvorax}.
 coords: [{'x': 33109, 'y': 31722, 'z': 7, 'label': 'Entrada da Edron Vampire Crypt'}, {'x': 33004, 'y': 31593, 'z': 11, 'label': 'Large Glowing Amethyst (Edron Vampire Crypt)'}]

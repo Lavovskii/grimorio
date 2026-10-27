@@ -1,6 +1,6 @@
 # PLACE: Banuta
 slug: banuta-681e5
-mentioned in 12 guides: a-fathers-burden-quest, grimvale-quest, killing-in-the-name-of-quest, knight-outfits-quest, shaman-outfits-quest, spirithunters-quest, the-ape-city-quest, the-explorer-society-quest, treasure-hunt-quest, waterfall-quest, what-a-foolish-quest, wrath-of-the-emperor-quest
+mentioned in 15 guides: a-fathers-burden-quest, feaster-of-souls-quest, grimvale-quest, killing-in-the-name-of-quest, knight-outfits-quest, shaman-outfits-quest, spirithunters-quest, the-ape-city-quest, the-explorer-society-quest, the-secret-library-quest, the-way-of-the-monk-quest, treasure-hunt-quest, waterfall-quest, what-a-foolish-quest, wrath-of-the-emperor-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Banuta 
@@ -95,9 +95,9 @@ coords: [{'x': 32826, 'y': 32576, 'z': 7, 'label': 'Escadas mais a sul de Banuta
 [a-fathers-burden-quest 6-2] Abrir a caixa
 Vai sempre para **norte** até à {item:Door (Sealed)|porta de quest}. Entra e abre a caixa para obteres a {item:Mystic Root}.
 coords: [{'x': 32815, 'y': 32505, 'z': 8, 'label': 'Porta de quest da Mystic Root'}]
-[grimvale-quest 4-11] Purificar os 3 Dark Stone Totems
-Vai à origem de cada ley line (Krailos, Banuta e Vengoth) e usa o {item:Golden Symbol of Suon} junto ao {item:Dark Stone Totem}. Recebes *"You remove the curse that was put on this statue."*
-coords: [{'x': 33680, 'y': 31630, 'z': 7, 'label': 'Totem de Krailos'}, {'x': 32809, 'y': 32583, 'z': 7, 'label': 'Totem de Banuta'}, {'x': 32949, 'y': 31489, 'z': 6, 'label': 'Totem de Vengoth'}]
-[grimvale-quest 4-13] Totem de Banuta: ir e voltar
-Apanha um barco para **Port Hope** (de Edron, {npc:Captain Seahorse}: {key:hi}, {key:port hope}, {key:yes}). De Port Hope, atravessa a selva de Tiquanda para **norte/nordeste** até {wiki:Banuta}, a cidade dos macacos. O totem está dentro do edifício mais a **sul** da cidade. Para voltar, faz o caminho ao contrário pela selva até Port Hope, onde o {npc:Charles} te leva de barco ({key:edron}, 150 gp).
-coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Porto de Port Hope (Charles)'}, {'x': 32807, 'y': 32542, 'z': 7, 'label': 'Banuta'}, {'x': 32809, 'y': 32583, 'z': 7, 'label': 'Totem de Banuta'}]
+[feaster-of-souls-quest 7-1] Chegar à entrada do Netherworld
+Apanha um barco para **Port Hope**: de Ankrahmun, o {npc:Captain Sinbeard} ({key:hi}, {key:port hope}, {key:yes}, 80 gp); de Edron, o {npc:Captain Seahorse} (150 gp). Atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta}. A entrada do {wiki:Netherworld} fica logo a **leste** de Banuta: tal como o portal das Brain Grounds, é invisível e só se nota por uma pequena parede.
+coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Charles (porto de Port Hope)'}, {'x': 32807, 'y': 32542, 'z': 7, 'label': 'Banuta'}, {'x': 32885, 'y': 32520, 'z': 7, 'label': 'Entrada invisível do Netherworld'}]
+[feaster-of-souls-quest 7-7] Sair do Netherworld
+Volta pelos quadrados de caveira até ao sítio onde chegaste e sai por onde entraste, a leste de Banuta (a wiki não descreve outra saída). Depois atravessa a selva para **sudoeste** até Port Hope, onde o {npc:Charles} te leva de barco a **Venore**, a cidade mais perto do Para Norbert ({key:hi}, {key:venore}, {key:yes}, 160 gp).
+coords: []

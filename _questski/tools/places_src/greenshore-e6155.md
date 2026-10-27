@@ -1,6 +1,6 @@
 # PLACE: Greenshore
 slug: greenshore-e6155
-mentioned in 2 guides: a-fathers-burden-quest, insectoid-invasion-world-change
+mentioned in 3 guides: a-fathers-burden-quest, insectoid-invasion-world-change, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Greenshore 
@@ -29,7 +29,12 @@ mentioned in 2 guides: a-fathers-burden-quest, insectoid-invasion-world-change
  Name Exp HP Max. Damage Loot | Insectoid Scout 150 230 75 1-80× Gold Coin (common) Ripper Lance (very rare) Health Potion (very rare) Club Ring (very rare)
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[the-roost-of-the-graveborn-quest 2-0] Ir a Greenshore
+Vai a **Thais** (de Ab'Dendriel, o {npc:Captain Seagull} leva-te: {key:hi}, {key:thais}, {key:yes}). Sai da cidade e caminha para **norte** até {wiki:Greenshore|Greenshore}, uma pequena península com uma passagem pela montanha. A entrada do covil fica neste ponto e a sala do boss está **2 andares abaixo**.
+coords: [{'x': 32301, 'y': 32098, 'z': 7, 'label': 'Entrada do covil (Greenshore)'}, {'x': 32269, 'y': 32125, 'z': 9, 'label': 'Sala do Adventurer Group'}]
+[the-roost-of-the-graveborn-quest 2-6] Sair de Greenshore
+O wiki não descreve a saída da sala da relíquia. Volta pelo caminho por onde entraste: sobe os 2 andares até à entrada do covil e caminha para **sul** até Thais. Se não encontrares saída, usa um {item:Temple Teleport Scroll}.
+coords: [{'x': 32301, 'y': 32098, 'z': 7, 'label': 'Entrada/saída do covil'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [a-fathers-burden-quest 8-0] Encontrar o buraco escondido

@@ -1,6 +1,6 @@
 # PLACE: Museum of Tibian Arts
 slug: museum-of-tibian-arts-5223f
-mentioned in 2 guides: cults-of-tibia-quest, measuring-tibia-quest
+mentioned in 3 guides: cults-of-tibia-quest, measuring-tibia-quest, the-secret-library-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Museum of Tibian Arts 
@@ -35,3 +35,9 @@ coords: [{'x': 32395, 'y': 32193, 'z': 8, 'label': 'Teleporte para o museu (Thai
 [measuring-tibia-quest 2-0] Casos a ter em conta
 Estas subáreas têm particularidades que convém conhecer antes de começar:
 coords: [{'x': 33010, 'y': 31437, 'z': 7, 'label': 'Rampa para a encosta de Vengoth'}, {'x': 32081, 'y': 31375, 'z': 8, 'label': 'Gruta de Stone Golems de Ragnir (Krimhorn)'}]
+[the-secret-library-quest 0-1] Perguntar ao Dedoras pela busca
+Diz {key:hi} e {key:search}. O Dedoras explica que precisa de mais informação e dá-te seis pistas. Podes perguntar por cada uma ({key:museum}, {key:desert}, {key:fishmen}, {key:order}, {key:asuri}, {key:isle}) para ouvires o que ele sabe. A tabela diz que parte do guia corresponde a cada pista.
+coords: []
+[the-secret-library-quest 7-0] Chegar ao museu
+Em **Thais**, a oeste da Knights Guild, desce um andar por baixo do Games Hall e entra no teleporte para o {wiki:Museum of Tibian Arts} (só funciona com conta Premium).
+coords: [{'x': 32394, 'y': 32194, 'z': 8, 'label': 'Teleporte para o museu (Thais)'}]

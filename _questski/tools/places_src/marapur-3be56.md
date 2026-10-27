@@ -1,6 +1,6 @@
 # PLACE: Marapur
 slug: marapur-3be56
-mentioned in 2 guides: shards-of-a-broken-moon-quest, within-the-tides-quest
+mentioned in 6 guides: fire-fighter-outfits-quest, illuminated-warrior-outfits-quest, primal-ordeal-quest, shards-of-a-broken-moon-quest, the-lost-brother-quest, within-the-tides-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Marapur 
@@ -55,6 +55,15 @@ mentioned in 2 guides: shards-of-a-broken-moon-quest, within-the-tides-quest
  Name Job Buy/Sell Location | Amra Postman ✓ Moonfall 's post office. | Asphota Equipment Shopkeeper ✓ Silvertides | Candra Monarch ✗ Palace of the Raja at Silvertides | Captain Corsarah Unknown. ✗ | Dhira Unknown. ✗ | G'Ezkho Unknown. ✗ | Giri Jewelry Shopkeeper ✓ Moonfalls marketplace | Goldro Unknown. ✗ | Haani Furniture Shopkeeper ✓ Moonfalls marketplace. | Isika Shopkeeper ✓ Silvertides marketplace. | Jata Informer ✗ Silvertides, east of depot | Javala Unknown. ✗ | Kaumudi Unknown. ✗ | Mayor Pocaro Unknown. ✗ Salgadara | Nagging Naga Unknown. ✗ | Nekaret Unknown. ✗ | Nihaka Unknown. ✗ | Nilavarna Monarch ✗ Palace of the Raja at Silvertides | Nipuna Magic Shopkeeper ✓ Silvertides marketplace. | Omar Unknown. ✗ | Pescadu Unknown. ✗ | Praline Unknown. ✗ | Saraki Unknown. ✗ | Sessek Food Shopkeeper ✓ | Sharai Unknown. ✗ | Sissek Banker ✗ Moonfall 's bank. | Sundara Magic Shopkeeper ✓ Moonfall 's marketplace | Taris
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[fire-fighter-outfits-quest 1-10] Sair de Marapur e voltar a Gnomprona
+Para saíres de Marapur, vai ao tapete mágico de **Moonfall** e fala com o {npc:Ziyad}: diz {key:hi} e pergunta-lhe pelos destinos (os tapetes só servem jogadores Premium); escolhe **Edron**, se estiver disponível, ou uma cidade com barco para Edron. Depois repete o caminho da secção 1: {npc:Captain Seahorse} ({key:cormaya}) → escadas do Cormaya Garden → {npc:Gurbasch} ({key:gnomprona}). Fala com o {npc:Gnominer} ({key:challenger}) para entregares a missão e receberes a seguinte.
+coords: [{'x': 33805, 'y': 32768, 'z': 2, 'label': 'Tapete mágico de Moonfall (Ziyad)'}, {'x': 33313, 'y': 31989, 'z': 15, 'label': 'Gurbasch (Steamship de Cormaya)'}]
+[primal-ordeal-quest 5-2] Entrar no portal para Marapur
+Sobe ao alto da montanha (piso +5) e entra no **portal**: és teletransportado para {wiki:Marapur|Marapur}. É o acesso que ganhaste na Within the Tides Quest.
+coords: [{'x': 33037, 'y': 32738, 'z': 2, 'label': "Portal para Marapur (Kha'zeel Mountains)"}]
+[primal-ordeal-quest 5-4] Sair de Marapur
+Vai ao **tapete mágico de Moonfall** e fala com o {npc:Ziyad}: diz {key:hi} e pergunta-lhe pelos destinos (os tapetes mágicos só servem jogadores Premium). Escolhe **Edron**, se estiver na lista, ou uma cidade com barco para Edron.
+coords: [{'x': 33805, 'y': 32768, 'z': 2, 'label': 'Tapete mágico de Moonfall (Ziyad)'}]
 [shards-of-a-broken-moon-quest 0-0] Chegar a Marapur
 Vai às {wiki:Kha'zeel Mountains|Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, e entra no portal no alto da montanha (piso +5). És teletransportado para {wiki:Marapur|Marapur}.
 coords: [{'x': 33037, 'y': 32738, 'z': 2, 'label': "Portal para Marapur (Kha'zeel)"}]
@@ -63,15 +72,15 @@ Para voltares ao continente, vai ao tapete mágico de **Moonfall** e fala com o 
 coords: [{'x': 33805, 'y': 32768, 'z': 2, 'label': 'Tapete mágico de Moonfall (Ziyad)'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[fire-fighter-outfits-quest 1-6] Snakes on a Plain! — sair de Gnomprona
+O artefacto dos gnomes está velho e partido, e os **nagas** de Marapur têm um. O Gnominer pede-te para negociares com eles. Para saíres de Gnomprona, volta ao cais onde chegaste e fala com o capitão {npc:Urks The Mute} ({key:hi}) para apanhares o barco de volta a Cormaya (a wiki não regista a conversa dele; pergunta-lhe pelos destinos). Em Cormaya, sobe as escadas do Cormaya Garden até à superfície e vai ao porto **norte**: o {npc:Pemaret} leva-te a Edron ({key:hi}, {key:edron}, {key:yes}; 20 gp).
+coords: [{'x': 33519, 'y': 32856, 'z': 14, 'label': 'Urks The Mute (cais de Gnomprona)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret, porto norte de Cormaya'}]
+[fire-fighter-outfits-quest 1-8] Snakes on a Plain! — entrar no portal para Marapur
+Sobe ao alto da montanha (piso +5) e entra no **portal**: és teletransportado para {wiki:Marapur|Marapur}. É o acesso a Marapur que ganhaste na {wiki:Within the Tides Quest|Within the Tides Quest}.
+coords: [{'x': 33037, 'y': 32738, 'z': 2, 'label': "Portal para Marapur (Kha'zeel Mountains)"}]
+[fire-fighter-outfits-quest 1-9] Snakes on a Plain! — falar com o Nagging Naga
+Em Marapur, procura o {npc:Nagging Naga} e pergunta-lhe pelo {key:artifact}. Se já provaste a tua lealdade aos nagas (na {wiki:Within the Tides Quest|Within the Tides Quest}), eles aceitam enviar o artefacto aos gnomes: responde {key:yes} à pergunta dele.
+coords: [{'x': 33906, 'y': 32760, 'z': 7, 'label': 'Nagging Naga (Marapur)'}]
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
-[shards-of-a-broken-moon-quest 0-1] Falar com a Saraki
-Em **Marapur**, fala com a {npc:Saraki}: {key:hi}, {key:moon}. Ela abre a quest e diz que a {npc:Sundara} e o {npc:Tarisu} podem ter pistas.
-coords: []
-[shards-of-a-broken-moon-quest 1-2] Entrar na zona de caça
-Usa as **pedras** neste ponto para seres transportado para a zona de caça. Dá alguns passos: o Quest Log atualiza e pede-te para explorares a zona e investigares os Asuri. A wiki não descreve outra saída desta zona: para voltares a Marapur, regressa ao ponto onde as pedras te deixaram.
-coords: [{'x': 33894, 'y': 32714, 'z': 7, 'label': 'Pedras de acesso à gruta escondida'}]
-[shards-of-a-broken-moon-quest 3-0] Falar com o Niral
-Vai a {wiki:Oskayaat}: sai de Marapur pelo tapete mágico do {npc:Ziyad} até **Ankrahmun** (ou outro destino de onde chegues lá) e pede {key:passage} ao barqueiro {npc:Tonar}; desembarcas no barco dele em Oskayaat (precisas da parte Paradise Lost da {wiki:Grimvale Quest}). O {npc:Niral} está no subsolo: entra na gruta dos Weretigers, passa pelo {item:Fog Portal} e vai para **nordeste** até à sala dele (o mesmo caminho da Grimvale Quest). Fala com o {npc:Niral}: {key:hi}, {key:moon}. Ele pede ajuda para eliminar um lobisomem infundido pela lua, {creature:Rakesh Moonfang}.
-coords: [{'x': 33182, 'y': 32883, 'z': 7, 'label': 'Tonar em Ankrahmun'}, {'x': 33067, 'y': 32918, 'z': 7, 'label': 'Chegada: Tonar em Oskayaat'}, {'x': 32999, 'y': 32932, 'z': 7, 'label': 'Gruta dos Weretigers (Fog Portal)'}]

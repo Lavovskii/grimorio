@@ -1,6 +1,6 @@
 # PLACE: Cormaya
 slug: cormaya-ac7ea
-mentioned in 19 guides: 20-years-a-cook-quest, a-fathers-burden-quest, an-interest-in-botany-quest, an-uneasy-alliance-quest, awash-world-change, battle-mage-outfits-quest, cartography-101-quest, dangerous-depths-quest, elementalist-outfits-quest, emperors-cookies-quest, grimvale-quest, makeshift-warrior-outfits-quest, marlin-trophy-quest, mystery-of-the-valley-quest, opticording-sphere-quest, the-isle-of-evil-quest, the-mages-tower-world-change, the-new-frontier-quest, the-scatterbrained-sorcerer-quest
+mentioned in 27 guides: 20-years-a-cook-quest, a-fathers-burden-quest, an-interest-in-botany-quest, an-uneasy-alliance-quest, awash-world-change, battle-mage-outfits-quest, between-the-lines-quest, cartography-101-quest, dangerous-depths-quest, elementalist-outfits-quest, emperors-cookies-quest, fire-fighter-outfits-quest, grave-danger-quest, grimvale-quest, hand-of-the-inquisition-outfits-quest, heart-of-destruction-quest, makeshift-warrior-outfits-quest, marlin-trophy-quest, mystery-of-the-valley-quest, opticording-sphere-quest, primal-ordeal-quest, the-dream-courts-quest, the-isle-of-evil-quest, the-mages-tower-world-change, the-new-frontier-quest, the-scatterbrained-sorcerer-quest, the-secret-library-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Cormaya 
@@ -44,15 +44,42 @@ coords: [{'x': 32735, 'y': 31668, 'z': 6, 'label': "Captain Seagull (Ab'Dendriel
 [druid-outfits-quest 5-3] Sair da gruta e de Cormaya
 Sobe pelo mesmo sítio por onde desceste para a gruta e volta ao porto **norte** de Cormaya. O {npc:Pemaret} leva-te a Edron ({key:hi}, {key:edron}, {key:yes}, 20 gp).
 coords: [{'x': 33364, 'y': 31975, 'z': 7, 'label': 'Entrada/saída da gruta'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret (porto norte de Cormaya)'}]
+[fire-fighter-outfits-quest 0-2] Ir para Cormaya
+Volta ao porto de Edron e fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de {wiki:Cormaya}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[grave-danger-quest 4-0] Chegar ao cemitério de Cormaya
+{wiki:Cormaya} é uma pequena ilha a sul de **Edron**. No barco a norte de Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}; daí vai a pé até ao cemitério.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret, porto norte de Cormaya'}, {'x': 33262, 'y': 31991, 'z': 7, 'label': 'Cemitério de Cormaya'}]
+[grave-danger-quest 4-5] Sair de Cormaya
+O spoiler não descreve a saída da sala do boss. Volta pelo caminho por onde entraste e usa a {item:Rope} no buraco do cemitério para subires. Depois vai ao porto **norte** e fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp).
+coords: [{'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret (barco para Edron)'}]
 [grimvale-quest 4-0] Chegar a Cormaya
 {wiki:Cormaya} é uma pequena ilha a sul de **Edron**. No barco a **norte** de Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (barco de Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Porto norte de Cormaya (Pemaret)'}]
+[hand-of-the-inquisition-outfits-quest 1-8] Chegar à campa de Cormaya (Earl Osam)
+Em **Edron**, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de {wiki:Cormaya}, junto ao {npc:Pemaret}. Vai ao cemitério de Cormaya ({coord:33262,31991,7}), desce pelo buraco e entra no vórtice para a sala do boss (até 5 jogadores).
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret, porto norte de Cormaya'}, {'x': 33262, 'y': 31991, 'z': 7, 'label': 'Cemitério de Cormaya'}]
+[hand-of-the-inquisition-outfits-quest 1-10] Sair de Cormaya
+A wiki não descreve a saída da sala do boss. Depois de saíres dela, sobe pelo buraco do cemitério (leva {item:Rope}) e volta ao porto norte de Cormaya: o {npc:Pemaret} leva-te a Edron ({key:hi}, {key:edron}, {key:yes}).
+coords: [{'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret, porto norte de Cormaya'}]
 [marlin-trophy-quest 1-0] Chegar a Cormaya
 {wiki:Cormaya|Cormaya} é uma pequena ilha a sul de **Edron**. No barco a **norte** de Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). O {npc:Pemaret} está no porto **norte** de Cormaya, junto à Cormaya Street.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (barco de Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret (porto norte de Cormaya)'}]
 [marlin-trophy-quest 1-2] Sair de Cormaya
 Para voltares a **Edron**, pede a viagem ao próprio {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp).
 coords: []
+[primal-ordeal-quest 0-2] Ir para Cormaya
+Volta ao porto de Edron e fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de {wiki:Cormaya}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[the-cradle-of-monsters-quest 0-0] Chegar a Cormaya
+Vai ao porto de **Edron** e fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (porto de Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret (porto norte de Cormaya)'}]
+[the-secret-library-quest 0-0] Chegar a Cormaya
+O {npc:Dedoras} não está na cidade de Edron mas no **sudeste** da ilha de {wiki:Cormaya}, a sul de Edron. No porto **norte** de Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de Cormaya, junto ao {npc:Pemaret}; daí segue a pé para **sudeste** até ao Dedoras.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (barco de Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Porto norte de Cormaya (Pemaret)'}, {'x': 33337, 'y': 32020, 'z': 7, 'label': 'Dedoras, sudeste de Cormaya'}]
+[the-secret-library-quest 0-2] Sair de Cormaya
+Para voltares a Edron, regressa ao porto **norte** de Cormaya e fala com o {npc:Pemaret}: {key:hi}, {key:edron}, {key:yes} (20 gp). De Edron apanhas barco para qualquer outra cidade.
+coords: [{'x': 33287, 'y': 31956, 'z': 6, 'label': 'Pemaret, porto norte de Cormaya'}]
 [threatened-dreams-quest 1-1] Chegar a Cormaya
 Cormaya é a ilha a sul de Edron. No porto norte de Edron fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya} e {key:yes} (20 gp). Desembarcas no porto norte de Cormaya, junto ao {npc:Pemaret}; daí vai a pé para **sul** até à pedra com cara zangada.
 coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse (barco de Edron)'}, {'x': 33287, 'y': 31956, 'z': 6, 'label': 'Porto norte de Cormaya (Pemaret)'}]

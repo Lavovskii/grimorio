@@ -1,0 +1,49 @@
+{
+  "title": "Grounds of Plague",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Plagirath}, servo de Verminor, **por baixo da Zao Steppe**; é o seal de Verminor da {wiki:Ferumbras' Ascension Quest} e só se chega pelo teleporte **noroeste** da sala dos portais do {wiki:Hell Hub}, a que se acede pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33292, "y": 32322, "z": 14, "label": "Teleporte noroeste da sala dos portais do Hell Hub (entrada das Grounds of Plague)"},
+  "requirements": [
+    "Conta **Premium** e acesso ao {wiki:Hell Hub}: ter aceitado a missão do {npc:Mazarius} e ter-lhe entregado **30 {item:Demonic Essence|Demonic Essences}** (ele só fala com personagens de nível **150** ou mais).",
+    "A wiki recomenda nível **300** para mages e paladins e **350** para knights; o {creature:The Lord of the Lice} e o {creature:Plagirath} lutam-se com até **5 jogadores** (alavanca de 5 tiles).",
+    "{item:Teleportation Rod} (dado pelo Mazarius) para enviares a peça da Godbreaker no fim — é isso que completa o seal."
+  ],
+  "items": ["Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi ou Krailos diz ao capitão {key:hi}, {key:darashia}, {key:yes}; de Venore, no {npc:Captain Fearless}, custa 60 gp; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi; chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** de Darashia ({coord:33271,32395,7}), desce ao piso -1 e entra no portal a **norte** dele. Apareces na sala segura (zona de proteção) do {wiki:Hell Hub}.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons} e desce as escadas no fim, até à sala dos portais.",
+    "Na sala dos portais, segue o caminho até ao teleporte **noroeste** ({coord:33292,32322,14}) e entra.",
+    "Começas no canto **nordeste** das Grounds of Plague. Segue o caminho da imagem até ao teleporte a **sudoeste**: entras numa salinha com 5 tiles e uma alavanca. Ao puxá-la, a equipa vai para o **norte** de uma sala grande, com o {creature:The Lord of the Lice} a **sul**.",
+    "Depois de o matares, sai pelo teleporte **sul** da sala: apareces noutro piso ({coord:33238,31479,13}). Vai para **noroeste** e entra no teleporte ({coord:33199,31439,13}) para a sala da alavanca do {creature:Plagirath}.",
+    "Atalho: depois de matares o Lord of the Lice **pela primeira vez**, podes usar o teleporte em {coord:33201,31425,11} quando voltares para lutar com o Plagirath ou para caçar no segundo piso, sem repetir o miniboss."
+  ],
+  "leave": [
+    "Depois de matares o Plagirath, sai da sala do boss e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída devolve-te à sala segura antes da entrada do Hell Hub (a zona de proteção a que chegaste pelo portal do Mazarius). Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do Mazarius.",
+    "Se quiseres sair antes do boss, faz o caminho ao contrário até à sala dos portais do Hell Hub e sobe pelas grutas até à zona de proteção (a wiki não descreve esta volta em pormenor).",
+    "Da sala segura volta pelo mesmo caminho à sala do {npc:Mazarius}, em Darashia; daí sobe à rua e apanha o barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou o tapete do {npc:Chemar} ({key:hi}, o destino, {key:yes}).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (Darashia), portal para o Hell Hub no piso -1"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub (grutas)"},
+    {"x": 33292, "y": 32322, "z": 14, "label": "Teleporte noroeste do Hell Hub (Grounds of Plague)"},
+    {"x": 33231, "y": 31441, "z": 11, "label": "Grounds of Plague (ponto indicado pela wiki)"},
+    {"x": 33201, "y": 31425, "z": 11, "label": "Teleporte de atalho (depois do primeiro Lord of the Lice)"},
+    {"x": 33238, "y": 31479, "z": 13, "label": "Chegada ao segundo piso (depois do Lord of the Lice)"},
+    {"x": 33199, "y": 31439, "z": 13, "label": "Teleporte para a sala da alavanca do Plagirath"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascendant - Path to Plagirath.png", "caption": "Caminho na sala dos portais do Hell Hub até ao teleporte noroeste"},
+    {"file": "Ferumbras Ascencion - Plagirath 1.jpg", "caption": "Caminho desde a chegada (nordeste) até à sala do The Lord of the Lice"},
+    {"file": "Ferumbras Ascencion - Plagirath 2.jpg", "caption": "Segundo piso: caminho até à sala da alavanca do Plagirath"},
+    {"file": "Grounds of Plague 1.png", "caption": "Mapa das Grounds of Plague (1)"},
+    {"file": "Grounds of Plague 2.png", "caption": "Mapa das Grounds of Plague (2)"},
+    {"file": "Grounds of Plague 3.png", "caption": "Mapa das Grounds of Plague (3)"}
+  ],
+  "warnings": [
+    "Não há zonas de proteção depois da sala segura do Hell Hub. Aqui caçam {creature:Plaguesmith|Plaguesmiths}, {creature:Defiler|Defilers}, Vexclaws, Hellflayers e Grimeleeches; na luta com o Plagirath nascem sem parar {creature:Disgusting Ooze|Disgusting Oozes}, que paralisam com força e não desaparecem depois da luta.",
+    "A missão só conta quando usas o Teleportation Rod na peça, não quando matas o boss: sai logo da sala depois da luta, senão podes ser teleportado para fora quando o tempo acabar e ter de o matar outra vez. O Plagirath só pode ser tentado de 44 em 44 horas."
+  ]
+}

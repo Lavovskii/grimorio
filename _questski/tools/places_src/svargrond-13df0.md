@@ -40,6 +40,9 @@ coords: [{'x': 32347, 'y': 31108, 'z': 6, 'label': 'Barco da Captain Breezelda (
 [frost-dragon-quest 2-5] Voltar a Svargrond
 No barco de Okolnir fala outra vez com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond} (50 gp). Como ele está bêbedo, podes ir parar a outra ilha; nesse caso pede de novo {key:svargrond} até chegares.
 coords: [{'x': 32224, 'y': 31382, 'z': 7, 'label': 'Buddel em Okolnir'}]
+[heart-of-destruction-quest 0-2] Chegar à entrada de Svargrond
+Vai a **Svargrond** de barco a partir de **Carlin**, **Thais** ou **Venore** ({key:hi}, {key:svargrond}, {key:yes}); chegas ao barco da {npc:Captain Breezelda}, na parte leste da cidade. Sai da cidade para **sudoeste**, a pé pelo {wiki:Formorgar Glacier}, em direção a {wiki:Ragnir}. O Messenger e o vórtice ficam **1 andar acima** do chão. Este vórtice leva ao caminho do **Realityquake**.
+coords: [{'x': 32166, 'y': 31294, 'z': 6, 'label': 'Messenger of Heaven e Glowing Vortex, a sudoeste de Svargrond'}]
 [inukaya-quest 1-3] Voltar a Svargrond
 Em Nibelor, vai para oeste do círculo de pedras e fala com o {npc:Nilsor}: {key:hi}, {key:passage}. Ele leva-te de volta a **Svargrond**.
 coords: [{'x': 32329, 'y': 31044, 'z': 7, 'label': 'Nilsor (trenó Nibelor → Svargrond)'}]
@@ -70,6 +73,12 @@ coords: [{'x': 32347, 'y': 31108, 'z': 6, 'label': 'Captain Breezelda (barco de 
 [the-ice-islands-quest 0-0] Chegar a Svargrond
 Se ainda não estás em **Svargrond**, apanha um barco até lá (por exemplo em Carlin ou com o {npc:Captain Bluebear} em Thais): fala com o capitão do porto e diz {key:hi}, {key:svargrond}, {key:yes}. Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade. O {npc:Iskan} está no gelo a **norte** da cidade.
 coords: [{'x': 32347, 'y': 31108, 'z': 6, 'label': 'Barco da Captain Breezelda (Svargrond)'}]
+[the-roost-of-the-graveborn-quest 4-0] Ir a Svargrond
+Apanha um barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); de Ab'Dendriel, o {npc:Captain Seagull} leva-te a qualquer uma dessas cidades. Chegas ao barco da {npc:Captain Breezelda}.
+coords: [{'x': 32347, 'y': 31108, 'z': 6, 'label': 'Captain Breezelda (Svargrond)'}]
+[the-way-of-the-monk-quest 3-0] Chegar a Svargrond
+Apanha um barco para **Svargrond** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:svargrond}, {key:yes}). Depois vai ao pequeno barco a **sul** da cidade, onde está o {npc:Buddel}.
+coords: [{'x': 32254, 'y': 31195, 'z': 7, 'label': 'Buddel, sul de Svargrond'}]
 [waterskin-of-mead-quest 0-1] Chegar a Svargrond
 Apanha o barco para **Svargrond** em **Carlin**, **Thais** ou **Venore** (diz ao capitão {key:hi}, {key:svargrond}, {key:yes}). Chegas ao barco da {npc:Captain Breezelda}, na parte **leste** da cidade.
 coords: [{'x': 32347, 'y': 31108, 'z': 6, 'label': 'Barco de Svargrond (Captain Breezelda)'}]

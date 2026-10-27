@@ -1,6 +1,6 @@
 # PLACE: Calassa
 slug: calassa-fd8e1
-mentioned in 4 guides: killing-in-the-name-of-quest, the-explorer-society-quest, the-travelling-trader-quest, what-a-foolish-quest
+mentioned in 5 guides: killing-in-the-name-of-quest, the-dream-courts-quest, the-explorer-society-quest, the-travelling-trader-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Calassa 
@@ -28,7 +28,7 @@ mentioned in 4 guides: killing-in-the-name-of-quest, the-explorer-society-quest,
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
 [oriental-outfits-quest 0-9] Sair de Calassa
 Com o pente, volta pelo mesmo caminho (para **oeste**) até à zona onde caíste no fundo do mar, por baixo do barco do {npc:Captain Max}. Regressa ao barco dele e pede-lhe para te levar de volta a **Liberty Bay**. Depois apanha o barco do {npc:Jack Fate} para Darashia ({key:hi}, {key:darashia}, {key:yes}).
-coords: [{'x': 31914, 'y': 32717, 'z': 12, 'label': 'Onde caíste (por baixo do barco)'}, {'x': 31915, 'y': 32709, 'z': 6, 'label': 'Barco do Captain Max sobre Calassa'}, {'x': 32161, 'y': 32556, 'z': 6, 'label': 'Jack Fate (porto de Liberty Bay)'}]
+coords: [{'x': 31914, 'y': 32717, 'z': 12, 'label': 'Onde caíste (por baixo do barco)'}, {'x': 31915, 'y': 32709, 'z': 6, 'label': 'Barco do Captain Max sobre Calassa'}]
 [the-explorer-society-quest 15-5] Sair de Calassa
 Com o logbook, sobe a escada do navio afundado e volta pelo mesmo caminho (para **norte** e um pouco para **oeste**) até à zona onde caíste no fundo do mar, por baixo do barco do {npc:Captain Max}. Regressa ao barco dele e pede-lhe para te levar de volta a **Liberty Bay**.
 coords: [{'x': 31914, 'y': 32717, 'z': 12, 'label': 'Onde caíste (por baixo do barco)'}, {'x': 31915, 'y': 32709, 'z': 6, 'label': 'Barco do Captain Max sobre Calassa'}]

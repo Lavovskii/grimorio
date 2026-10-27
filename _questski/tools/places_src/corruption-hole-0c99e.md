@@ -1,6 +1,6 @@
 # PLACE: Corruption Hole
 slug: corruption-hole-0c99e
-mentioned in 1 guides: tomes-of-knowledge-quest
+mentioned in 2 guides: the-way-of-the-monk-quest, tomes-of-knowledge-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Corruption Hole 
@@ -28,7 +28,17 @@ mentioned in 1 guides: tomes-of-knowledge-quest
  32pxd This Geography-related article is a stub. You can help TibiaWiki by expanding it .
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[the-way-of-the-monk-quest 8-6] Sair do Corruption Hole e de Zao
+Volta ao sítio onde caíste e sobe outra vez (o wiki não descreve a saída; leva {item:Rope}); sobe as rampas do lado leste do templo e refaz o caminho até ao teleporte das Muggy Plains, que te devolve à Zao Steppe. Para voltares a Farmine, vai à passagem pelas montanhas ({coord:33085,31532,7}), sobe com {spell:Levitate} (ou parcels) e segue para **oeste** até ao elevador. Em Farmine, o {npc:Thorgrin} leva-te de steamship a Kazordoon ({key:hi}, {key:kazordoon}, {key:yes}; 210 gp, 160 gp com o desconto da The New Frontier) e o tapete do {npc:Melian}, no cimo da montanha de Farmine, voa para outras cidades.
+coords: [{'x': 33085, 'y': 31532, 'z': 7, 'label': 'Passagem pelas montanhas (para Farmine)'}, {'x': 33025, 'y': 31553, 'z': 14, 'label': 'Thorgrin, steamship de Farmine'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-(none)
+[the-way-of-the-monk-quest 0-3] Os 10 santuários
+Os santuários estão espalhados pelo mapa e têm de ser usados **por esta ordem**. Cada um tem um nível mínimo e dá uma recompensa; os Monks recebem recompensas próprias. Para usares um santuário, chega ao local e **usa-o** (Use).
+coords: []
+[the-way-of-the-monk-quest 8-4] Descer ao Corruption Hole
+Do lado **leste** do templo há rampas de madeira: desce-as e segue o caminho até um **buraco escondido**. Desce por ele. Se ainda não entregaste 8 {item:Tome of Knowledge|Tomes of Knowledge} ao {npc:Cael}, não consegues entrar.
+coords: []
+[the-way-of-the-monk-quest 8-5] Usar o Shrine of Knowledge
+Estás no primeiro piso do Corruption Hole (1 andar abaixo do chão), com {creature:Lizard Legionnaire|Lizard Legionnaires}, {creature:Lizard High Guard|Lizard High Guards}, {creature:Lizard Dragon Priest|Lizard Dragon Priests} e {creature:Lizard Chosen}. O Shrine of Knowledge fica neste piso: vai até lá e usa-o.
+coords: [{'x': 33369, 'y': 31156, 'z': 8, 'label': 'Shrine of Knowledge'}]

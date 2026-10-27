@@ -1,6 +1,6 @@
 # PLACE: Shadow Caves
 slug: shadow-caves-1b202
-mentioned in 3 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest
+mentioned in 4 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Shadow Caves 
@@ -42,3 +42,9 @@ coords: []
 [realm-of-dreams-quest 0-0] Chegar a Draconia
 {wiki:Draconia} é uma ilha ao largo de Ab'Dendriel sem barco: só se chega pelo {wiki:Hellgate}. Em **Ab'Dendriel** desce às {wiki:Shadow Caves} (no subsolo a **noroeste** do depot), desce mais 2 andares e segue para **sul** e **leste** até à porta do Hellgate; abre-a com a {item:Key 3012} (o guarda {npc:Elathriel}, ali perto, vende-a por 5000 gp). Entra no teleporte **norte** e segue a rota até ao {wiki:Redbone Castle}; daí o caminho é de **sentido único** até à superfície de Draconia. O caminho completo, com mapas, está na {wiki:Draconia Quest}.
 coords: [{'x': 32655, 'y': 31670, 'z': 8, 'label': "Shadow Caves (Ab'Dendriel)"}, {'x': 32676, 'y': 31671, 'z': 10, 'label': 'Porta do Hellgate (Key 3012)'}, {'x': 32684, 'y': 31671, 'z': 9, 'label': 'Elathriel (vende a Key 3012)'}, {'x': 32666, 'y': 31672, 'z': 15, 'label': 'Redbone Castle'}, {'x': 32802, 'y': 31589, 'z': 7, 'label': 'Ilha de Draconia'}]
+[the-roost-of-the-graveborn-quest 1-0] Arranjar a Key 3012
+Se ainda não tens a {item:Key 3012}, compra-a ao {npc:Elathriel}, o guarda da prisão da Shadow Caves Street, **2 andares abaixo** da superfície (fica no caminho para o Hellgate). Diz {key:hi}, {key:key} e {key:yes}: custa **5000 gp**.
+coords: [{'x': 32684, 'y': 31671, 'z': 9, 'label': 'Elathriel (vende a Key 3012)'}]
+[the-roost-of-the-graveborn-quest 1-1] Descer às Shadow Caves
+Em Ab'Dendriel desce **1 andar**, ao piso das lojas: estás nas {wiki:Shadow Caves|Shadow Caves}, no subsolo a **noroeste** do depot. Desce mais **2 andares** (o primeiro junto às casinhas) e segue a gruta para **sul** e depois para **leste** até uma porta normalmente fechada: é a entrada do Hellgate, 3 andares abaixo da superfície.
+coords: [{'x': 32655, 'y': 31670, 'z': 8, 'label': 'Shadow Caves'}]

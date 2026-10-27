@@ -1,6 +1,6 @@
 # PLACE: Elvenbane
 slug: elvenbane-09210
-mentioned in 1 guides: to-blind-the-enemy-quest
+mentioned in 2 guides: the-way-of-the-monk-quest, to-blind-the-enemy-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Elvenbane 
@@ -37,6 +37,12 @@ mentioned in 1 guides: to-blind-the-enemy-quest
 [elvenbane-quest 2-2] Sair de Elvenbane
 Volta pelo mesmo caminho: desce a torre central pelas mesmas escadas (cuidado outra vez com o {creature:Dragon} e os campos de veneno), atravessa a cave de volta (para **leste** e depois para **sul**) até ao buraco por onde caíste e usa a {item:Rope} para subir. Depois regressa a Ab'Dendriel (**sul**, **leste** e **norte** até ao portão).
 coords: [{'x': 32579, 'y': 31680, 'z': 7, 'label': 'Saída: buraco da entrada (usa a Rope)'}]
+[the-way-of-the-monk-quest 4-1] Entrar na gruta para Elvenbane
+{wiki:Elvenbane} é uma ilha a **oeste** de Ab'Dendriel e só se chega lá por uma gruta subterrânea. Sai da cidade para oeste até à entrada da gruta e segue-a até à ilha.
+coords: [{'x': 32579, 'y': 31680, 'z': 7, 'label': 'Entrada da gruta para Elvenbane'}, {'x': 32590, 'y': 31645, 'z': 7, 'label': 'Ilha de Elvenbane'}]
+[the-way-of-the-monk-quest 4-3] Sair de Elvenbane
+Volta pela mesma gruta subterrânea até à entrada ({coord:32579,31680,7}) e caminha para **leste** até Ab'Dendriel.
+coords: []
 [to-blind-the-enemy-quest 1-0] Chegar a Elvenbane
 Sai pelo portão de **Ab'Dendriel** e vai para **sul**, depois **oeste** e depois **norte** até à {wiki:Elvenbane Fortress}, que fica numa ilha a oeste da cidade. Só se entra por uma gruta subterrânea: desce pelo buraco rodeado de **quatro pedras** na entrada. Na cave, corre para **norte** e depois para **oeste** até à abertura e contorna até à **torre central**. Na entrada vais precisar de uma {item:Destroy Field Rune}.
 coords: [{'x': 32579, 'y': 31680, 'z': 7, 'label': 'Entrada de Elvenbane (buraco)'}, {'x': 32590, 'y': 31645, 'z': 7, 'label': 'Castelo de Elvenbane'}]

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Tibia Grimoire">
+  <defs>
+    <linearGradient id="tgCover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6A3CCB"/>
+      <stop offset=".5" stop-color="#3D1D86"/>
+      <stop offset="1" stop-color="#1C0C45"/>
+    </linearGradient>
+    <linearGradient id="tgGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF0BE"/>
+      <stop offset=".45" stop-color="#EBC066"/>
+      <stop offset="1" stop-color="#A86F24"/>
+    </linearGradient>
+    <linearGradient id="tgTail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7D27A"/>
+      <stop offset="1" stop-color="#B07A2C"/>
+    </linearGradient>
+    <linearGradient id="tgPages" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F1E3BC"/>
+      <stop offset="1" stop-color="#C2A56C"/>
+    </linearGradient>
+    <linearGradient id="tgSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tgMedal" cx=".45" cy=".38" r=".65">
+      <stop offset="0" stop-color="#2F86A6"/>
+      <stop offset=".5" stop-color="#17325E"/>
+      <stop offset="1" stop-color="#0B1030"/>
+    </radialGradient>
+    <radialGradient id="tgGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7DE8FF" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#7DE8FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- páginas -->
+  <path d="M30 20h70a6 6 0 0 1 6 6v82a6 6 0 0 1-6 6H30z" fill="url(#tgPages)"/>
+  <path d="M101 28v78M97 29v76M93 30v74" stroke="#9C8150" stroke-width="1" opacity=".5"/>
+  <!-- marcador -->
+  <path d="M70 108v17l5-4.5 5 4.5v-17z" fill="#D81B60"/>
+  <path d="M75 120.5V108" stroke="#8E0F3E" stroke-width="1" opacity=".6"/>
+  <!-- capa -->
+  <rect x="12" y="12" width="84" height="98" rx="7" fill="url(#tgCover)"/>
+  <rect x="12" y="12" width="84" height="98" rx="7" fill="url(#tgSheen)"/>
+  <rect x="12" y="12" width="84" height="98" rx="7" fill="none" stroke="url(#tgGold)" stroke-width="2.6"/>
+  <!-- lombada -->
+  <path d="M20 13.5v95" stroke="#12062E" stroke-width="11" opacity=".5"/>
+  <path d="M14.5 28h11M14.5 32.5h11M14.5 89.5h11M14.5 94h11" stroke="url(#tgGold)" stroke-width="2"/>
+  <!-- moldura interior com pontos -->
+  <rect x="31" y="21" width="56" height="80" rx="4" fill="none" stroke="#E7BC62" stroke-width="1.2" opacity=".6"/>
+  <rect x="34.5" y="24.5" width="49" height="73" rx="2.5" fill="none" stroke="#E7BC62" stroke-width="1" stroke-dasharray="1 3" opacity=".55"/>
+  <!-- cantos -->
+  <path d="M96 12H80l16 16zM96 110H80l16-16zM27 12h13L27 25zM27 110h13L27 97z" fill="url(#tgGold)"/>
+  <circle cx="91" cy="17" r="1.6" fill="#7DE8FF"/><circle cx="91" cy="105" r="1.6" fill="#7DE8FF"/>
+  <!-- fecho -->
+  <path d="M92 52h16a3.5 3.5 0 0 1 3.5 3.5v13a3.5 3.5 0 0 1-3.5 3.5H92z" fill="url(#tgGold)" stroke="#7A5418" stroke-width="1"/>
+  <circle cx="104.5" cy="62" r="3.6" fill="#7DE8FF" stroke="#1B6E86" stroke-width="1.1"/>
+  <circle cx="103.4" cy="60.9" r="1" fill="#fff" opacity=".9"/>
+  <!-- medalhão -->
+  <circle cx="59" cy="61" r="29" fill="url(#tgGlow)"/>
+  <circle cx="59" cy="61" r="24" fill="none" stroke="#E7BC62" stroke-width="1.4" stroke-dasharray="1.2 2.6" opacity=".75"/>
+  <circle cx="59" cy="61" r="21" fill="url(#tgMedal)" stroke="url(#tgGold)" stroke-width="3.2"/>
+  <!-- esquilo (de perfil, sentado, com uma gema nas patas) -->
+  <g transform="translate(40 42) scale(.375)">
+    <path d="M50 88C29 90 15 76 17 57C19 41 26 27 40 19C52 12 67 14 68 25C69 32 60 35 56 29C53 25 45 27 41 33C37 42 41 53 47 60C50 64 51 72 53 80z" fill="url(#tgTail)" stroke="#0B1030" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M24 58c2-12 8-23 18-30M23 70c3 6 8 10 14 12M46 22c6-3 13-3 17 1" fill="none" stroke="#8C5A1C" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+    <g fill="url(#tgGold)" stroke="#0B1030" stroke-width="2.2" stroke-linejoin="round">
+      <ellipse cx="63" cy="68" rx="13" ry="16" transform="rotate(-8 63 68)"/>
+      <ellipse cx="55" cy="77" rx="12" ry="9.5"/>
+      <path d="M60 33L62 17L71 30z"/>
+      <circle cx="69" cy="42" r="13"/>
+      <ellipse cx="63" cy="87" rx="15" ry="4.8"/>
+    </g>
+    <ellipse cx="81" cy="46" rx="8" ry="6" fill="url(#tgGold)" stroke="#0B1030" stroke-width="2.2"/>
+    <circle cx="68" cy="45" r="7" fill="url(#tgGold)"/>
+    <ellipse cx="64" cy="69" rx="6.5" ry="9.5" fill="#FFF3CF" opacity=".5" transform="rotate(-8 64 69)"/>
+    <circle cx="78" cy="61" r="6.6" fill="#7DE8FF" stroke="#1B6E86" stroke-width="1.6"/>
+    <circle cx="76.2" cy="59.2" r="1.9" fill="#fff"/>
+    <path d="M69 58c3-2 6-2 8 0M70 66c2 2 5 2 7 0" fill="none" stroke="#C88E36" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="73" cy="39.5" r="2.6" fill="#0B1030"/>
+    <circle cx="73.8" cy="38.6" r=".9" fill="#fff"/>
+    <circle cx="88.4" cy="45" r="1.7" fill="#5A3A14"/>
+  </g>
+  <!-- brilhos -->
+  <path d="M41 29l1.5 3.7L46.2 34l-3.7 1.4L41 39l-1.4-3.6L36 34l3.6-1.3z" fill="#FFF3C4" opacity=".95"/>
+  <path d="M79 94l1 2.5 2.6 1-2.6 1-1 2.6-1-2.6-2.5-1 2.5-1z" fill="#C9B3FF" opacity=".9"/>
+</svg>

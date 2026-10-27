@@ -1,0 +1,38 @@
+{
+  "title": "Falcon Outpost",
+  "type": "edificio",
+  "near": "Edron",
+  "summary": "Posto avançado da {wiki:Order of the Falcon} **nas montanhas de Edron**, com uma espécie de biblioteca; é aqui que se faz o ritual da {wiki:The Secret Library Quest} que leva os jogadores de nível 250+ à {wiki:Falcon Bastion}, em Zao.",
+  "entrance": {"x": 33212, "y": 31748, "z": 7, "label": "Rampa a norte da Wyvern Mountain (início da subida)"},
+  "requirements": [
+    "{spell:Levitate} ({key:exani hur up}; feitiço de nível 12, 50 de mana) para o último lanço da subida.",
+    "Só para o ritual que leva à {wiki:Falcon Bastion}: nível **250**, parte *The Order of the Falcon* da {wiki:The Secret Library Quest} (Premium), começada **à noite**, um {item:Bucket} e mais dois recipientes, um com {wiki:Blood|sangue} e outro com {wiki:Water|água}."
+  ],
+  "items": ["Bucket", "Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Edron** de barco (por exemplo em Thais, no {npc:Captain Bluebear}: {key:hi}, {key:edron}, {key:yes}, 160 gp); desembarcas junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}). De tapete voador (só Premium; por exemplo do {npc:Chemar}, em Darashia: {key:hi}, {key:edron}, {key:yes}, 40 gp) chegas ao {npc:Pino}, no castelo de Edron, por cima da porta norte da cidade ({coord:33192,31783,3}).",
+    "Sobe a rampa logo a **norte** da Wyvern Mountain ({coord:33212,31748,7}), um pouco a **leste** do porto, e atravessa a ponte para **sul**. Vais ver um monte de giz ({item:Chalk}) no chão: se vais fazer o ritual, usa aqui o {item:Bucket} no giz para obteres um {item:Bucket Filled with Chalk (Fine)}.",
+    "No canto **sudeste**, vira-te para **sul** e usa {spell:Levitate} para cima ({key:exani hur up}) neste ponto ({coord:33202,31761,4}).",
+    "Sobe as escadas até à Falcon Outpost. No baú está a {item:Page from a Mystic Book}, com as instruções do ritual."
+  ],
+  "leave": [
+    "A wiki não descreve a descida. Volta pelo mesmo caminho: desce as escadas até ao sítio onde levitaste e usa {spell:Levitate} para baixo ({key:exani hur down}), virado para **norte** (ao contrário da subida); depois atravessa a ponte para **norte** e desce a rampa ({coord:33212,31748,7}).",
+    "No porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a outras cidades: {key:hi}, o destino (por exemplo {key:thais}) e {key:yes}.",
+    "Se fizeres o ritual, não voltas a Edron: o balde de giz teleporta-te para a {wiki:Falcon Bastion}, em Zao. A wiki não descreve outra saída de lá: com a {wiki:The New Frontier Quest} e o atalho ativado, o pequeno barco a sul da zona de natação do castelo leva-te ao barco a nordeste da {wiki:Zao Steppe} ({coord:33326,31351,7}); daí volta à passagem pelas montanhas ({coord:33085,31532,7}), sobe com {spell:Levitate} e segue para **oeste** até ao elevador, que te leva a **Farmine**, onde o {npc:Thorgrin} te leva de {wiki:Steamship} a Kazordoon ou Cormaya ({key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}). Sem a New Frontier, usa um {item:Temple Teleport Scroll} (leva-te ao templo da tua cidade; não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33192, "y": 31783, "z": 3, "label": "Tapete voador do Pino (Edron)"},
+    {"x": 33212, "y": 31748, "z": 7, "label": "Rampa a norte da Wyvern Mountain"},
+    {"x": 33202, "y": 31761, "z": 4, "label": "Ponto para levitar (virado para sul)"},
+    {"x": 33326, "y": 31351, "z": 7, "label": "Barco a nordeste da Zao Steppe (atalho da Falcon Bastion)"}
+  ],
+  "images": [
+    {"file": "Screenshot 143.png", "caption": "Ritual: usa o balde de giz no quadrado de cima à direita do símbolo da Order of the Falcon"}
+  ],
+  "warnings": [
+    "A parte *The Order of the Falcon* só pode ser começada **à noite** (entre as 18:00 e as 06:00 de Tibia; na hora real, entre o minuto :45 de uma hora e o minuto :15 da seguinte).",
+    "Ritual: deita primeiro o sangue e depois a água no lado **sudeste** do símbolo pintado no chão (em cima do pauzinho de incenso aceso) e usa o balde de giz no lado **nordeste** (o quadrado de cima à direita). Só um jogador precisa de deitar o sangue e a água; o resto da equipa só usa o giz.",
+    "Do outro lado do ritual estás na Falcon Bastion, uma zona para nível 250+ com {creature:Falcon Knight|Falcon Knights} e {creature:Falcon Paladin|Falcon Paladins}."
+  ]
+}

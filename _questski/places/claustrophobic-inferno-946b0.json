@@ -1,0 +1,53 @@
+{
+  "title": "Claustrophobic Inferno",
+  "type": "dungeon",
+  "near": "Yalahar",
+  "summary": "Zona de caça da {wiki:Soul War Quest} **no subsolo, sob o mar a nordeste de {wiki:Quirefang}**, com três raids seguidas antes do {creature:Goshnar's Malice}; entra-se pelo **1.º Fog Portal** (o primeiro da esquerda) do hub da Soul War, a partir de {wiki:Zarganash}.",
+  "entrance": {"x": 33621, "y": 31418, "z": 10, "label": "Hub da Soul War (Flickering Soul): a fila de Fog Portals"},
+  "requirements": [
+    "Conta **Premium** e nível mínimo **250** (requisitos da {wiki:Soul War Quest}); é uma zona de caça para nível **600+**.",
+    "{wiki:Feaster of Souls Quest} completa: é ela que te dá acesso a {wiki:Zarganash}.",
+    "Acesso a {wiki:Vengoth}: o {npc:Harlow} só te leva a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest}.",
+    "Aceitar a tarefa do {npc:Flickering Soul} no hub ({key:hi}, {key:task}, {key:yes})."
+  ],
+  "arrive": [
+    "Viaja de barco até **Yalahar** ({key:hi}, {key:yalahar}, {key:yes}): de Thais com o {npc:Captain Bluebear} (200 gp), de Carlin com o {npc:Captain Greyhound} (185 gp), de Darashia com o {npc:Petros} (210 gp), de Ankrahmun com o {npc:Captain Sinbeard} (230 gp), de Port Hope com o {npc:Charles} (260 gp) ou de Liberty Bay com o **Jack Fate** (275 gp). De Venore e de Edron **não** há barco direto: vai primeiro a Darashia (de Edron, tapete mágico do {npc:Pino}: {key:hi}, {key:darashia}, {key:yes}, 40 gp; de Venore, o {npc:Captain Fearless}, 60 gp, com 10% de hipótese de acabares no {wiki:Ghostship}). Chegas ao porto de Yalahar.",
+    "Em Yalahar vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth} ({coord:32856,31548,7}).",
+    "Anda para **nordeste** até ao teleporte **invisível** de {wiki:Zarganash} ({coord:32962,31497,7}) e entra nele.",
+    "Atravessa Zarganash até ao extremo **sudoeste** e entra no teleporte que lá está ({coord:33568,31538,10}): chegas ao hub da Soul War. Na primeira vez, fala com o {npc:Flickering Soul} ({coord:33621,31418,10}): {key:hi}, {key:task}, {key:yes}.",
+    "No hub há uma fila de {wiki:Fog Portal|Fog Portals}. Contando da **esquerda para a direita**, entra no **1.º** (o primeiro da esquerda): chegas à zona segura do Claustrophobic Inferno.",
+    "Para avançares tens de sobreviver a **três raids** de 2 minutos. Entrem todos juntos: o primeiro jogador que passa pelo {item:Sandtimer} da entrada liga o temporizador e, segundos depois, uma parede fecha a entrada. No fim de cada raid és teleportado para a área seguinte; para continuares, desce sempre pelas **escadas** ali perto (as caixas costumam fazer-se em {coord:33989,31061,9}, {coord:33990,31050,10} e {coord:34040,31063,11}).",
+    "Depois da terceira raid, a equipa vai para uma sala com um **Fog Portal** que leva à sala da alavanca do {creature:Goshnar's Malice}."
+  ],
+  "leave": [
+    "Antes da primeira raid, volta pelo Fog Portal por onde entraste. Depois de cada raid, o {wiki:Magic Forcefield|teleporte} que fica mesmo ao lado do ponto onde és deixado é a **saída** da zona (a wiki não diz para onde te leva). Sair apaga o progresso das raids.",
+    "A wiki não descreve a saída da sala do {creature:Goshnar's Malice}: volta por onde entraste.",
+    "Do hub, a wiki não descreve o caminho de volta: volta pelo caminho por onde vieste (do hub para o teleporte do extremo sudoeste de Zarganash, {coord:33568,31538,10}), atravessa Zarganash até ao sítio onde chegaste e sai por onde entraste, para Vengoth ({coord:32962,31497,7}).",
+    "Em Vengoth, anda para **sudoeste** até ao {npc:Harlow} ({coord:32856,31548,7}) e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): voltas às docas do Trade Quarter de Yalahar.",
+    "Para saíres de Yalahar: com a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, o {npc:Karith} (no porto, num barco 1 andar acima) leva-te a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes}); sem ela, o {npc:Captain Cookie}, no barco à esquerda do do Karith, leva-te a **Liberty Bay** (400 gp) ou a **Thais** (800 gp).",
+    "Atalhos: depois de matares o boss final ({creature:Goshnar's Megalomania}), o portal atrás de um {npc:Flickering Soul}, na sala principal do hub, leva à sala de recompensa, cujo {wiki:Magic Forcefield} te manda para o **depot de Thais**. Em qualquer altura, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32962, "y": 31497, "z": 7, "label": "Teleporte invisível para Zarganash (Vengoth)"},
+    {"x": 33568, "y": 31538, "z": 10, "label": "Teleporte do sudoeste de Zarganash para o hub da Soul War"},
+    {"x": 33621, "y": 31418, "z": 10, "label": "Flickering Soul (hub da Soul War)"},
+    {"x": 34011, "y": 31014, "z": 9, "label": "Claustrophobic Inferno (localização indicada pela wiki)"},
+    {"x": 33989, "y": 31061, "z": 9, "label": "Caixa da 1.ª raid"},
+    {"x": 33990, "y": 31050, "z": 10, "label": "Caixa da 2.ª raid"},
+    {"x": 34040, "y": 31063, "z": 11, "label": "Caixa da 3.ª raid"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar, 1 andar acima)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"}
+  ],
+  "images": [
+    {"file": "Claustrophobic Inferno Map.png", "caption": "Mapa da Claustrophobic Inferno"},
+    {"file": "Soul War Quest - Goshnar's Taint map.png", "caption": "Hub da Soul War: os Fog Portals e o boss de cada zona"},
+    {"file": "Feaster of Souls Quest - Zarganash.png", "caption": "Mapa de Zarganash, para chegares ao teleporte do sudoeste"}
+  ],
+  "warnings": [
+    "O progresso do acesso (as três raids) **perde-se** se saíres da zona: da próxima vez repetes as três.",
+    "Depois de saíres de uma das áreas de raid, cada jogador tem **3 minutos** de espera antes de poder voltar a entrar nessa área.",
+    "Raids com vagas de {creature:Brachiodemon|Brachiodemons} e {creature:Infernal Phantom|Infernal Phantoms}; os {creature:Infernal Demon|Infernal Demons} atacam sempre a personagem com **menos vida máxima**.",
+    "O teleporte de Vengoth para Zarganash é **invisível**: só o encontras pela coordenada. Os {wiki:Goshnar's Taints|Goshnar's Taints} só te afetam dentro das zonas da Soul War."
+  ]
+}
