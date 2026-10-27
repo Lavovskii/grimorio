@@ -451,3 +451,20 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   máscara, só a opacidade muda), brilho a varrer nos botões, mola no marcador do menu e nos separadores, moeda a virar no
   anel e no emblema, folhas e janelas em perspetiva, cascata só nos 12 primeiros cartões de cada grelha. Tudo desligado
   com `fx-lite`; o `md-calm` pausa a tocha e o brilho do anel.
+
+## Informação atualizada (r30, 27/10/2026)
+- Balanceamentos oficiais de 20/10 e 27/10 aplicados com `_dev/balance_2026_10.py` (XP e sensibilidades em G.mon, eficácia
+  dos elementos, XP/h e lucro/h estimados em G.hunts e G.ha, frase em G.places[pid].note). Para patches futuros, copiar
+  o script e trocar as tabelas XP/GOLD/SENS; o texto oficial lê-se em `https://api.tibiadata.com/v5/news/id/<id>`.
+- TibiaData na v5 (`API`; a v4 acaba a 31/12/2026). Endpoints usados: character, highscores, creatures (criatura em
+  destaque), boostablebosses (boss em destaque), killstatistics/{world} (mortes de ontem na ficha da hunt), news/archive
+  e news/id (página Novidades).
+- Início → "Hoje no Tibia" (`renderToday`): destaques guardados por dia de jogo em `localStorage` "grimorio-today",
+  Rashid (`rashidToday`), server save e `EVENTS` (calendário escrito à mão: acrescentar os eventos novos).
+- Páginas novas: Novidades (`NEWS_PT` escrito à mão + notícias oficiais ao vivo, com as hunts e criaturas referidas),
+  Sistemas novos (`SYSN`: Echo Raids, Proficiency, bosses escaláveis, Discovery, Newhaven, Task Board) e Calculadoras
+  (divisão de loot do Party Hunt Analyser, treino com exercise weapons com os preços de 06/10/2026, simulador de fusões
+  do forge sobre `data/forge.json`). Charms → cartão "Bestiário" (marcas por personagem em `c.best`, charm points e
+  mortes de `data/creatures.json`).
+- Questski: o Dawnport Quest e o Tutorial avisam que Dawnport foi removida (Newhaven Update, 21/10/2025).
+- Os textos novos destas páginas estão só em português (traduções em pausa).
