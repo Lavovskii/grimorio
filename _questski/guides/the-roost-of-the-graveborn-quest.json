@@ -1,0 +1,1249 @@
+{
+  "slug": "the-roost-of-the-graveborn-quest",
+  "category": "historia",
+  "region": "Ab'Dendriel",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Vários dias (5 bosses em 5 regiões do mapa; cada boss tem 20 h de cooldown)",
+  "summary": "O {npc:S'Zallar M'Andar}, em Ab'Dendriel, sente que os espíritos dos dragões ancestrais não descansam. Com o talismã {item:Jade Dragon Head} visitas o cemitério dos dragões em Draconia e percorres quatro covis (Greenshore, Pits of Inferno, Okolnir e Kha'zeel), derrotas os seus guardiões e tocas nas relíquias dos quatro ancestrais. No fim enfrentas o necromante {creature:Bone Overlord} na Forgotten Crypt, debaixo de Draconia, e recebes uma {item:Crypt Rune} aleatória, um talismã que se recarrega a cada 14 dias e acesso às novas criptas de caça.",
+  "legend_pt": "Um misterioso necromante surge e põe em perigo os dragões de Tibia.",
+  "start": {
+    "x": 32702,
+    "y": 31594,
+    "z": 7,
+    "label": "S'Zallar M'Andar, Ab'Dendriel"
+  },
+  "requirements": [
+    "Nível **450** e conta **Premium**.",
+    "Os bosses fazem-se **por ordem**: Adventurer Group → Eldritch Dragon Lord → Ice Horror → The Gravedigger → Bone Overlord. Cada um pede o anterior derrotado **e** a relíquia tocada.",
+    "{wiki:Barbarian Test Quest} completa, para o {npc:Buddel} te levar a Okolnir (boss Ice Horror).",
+    "{item:Key 3012} para entrar no {wiki:Hellgate} na primeira visita a Draconia (o {npc:Elathriel} vende-a por 5000 gp).",
+    "Para chegar ao {wiki:Pits of Inferno Dragon Lair}: {item:Blood}, {item:Oil} e {item:The Holy Tible}, como na entrada da {wiki:The Pits of Inferno Quest}. Para apanhar a Holy Tible precisas de {spell:Levitate} ou de 3 {item:Parcel|Parcels}.",
+    "Equipa: o spoiler descreve todos os combates para vários jogadores (*party*); vai em grupo."
+  ],
+  "items_needed": [
+    {
+      "item": "Jade Dragon Head",
+      "note": "recebida no início; tem de estar contigo ao tocar em cada relíquia e serve para reportar"
+    },
+    {
+      "item": "Key 3012",
+      "note": "porta do Hellgate (primeira visita a Draconia)"
+    },
+    {
+      "item": "Rope"
+    },
+    {
+      "item": "Shovel",
+      "note": "Loose Stone Pile do cemitério das Plains of Havoc"
+    },
+    {
+      "item": "Pick",
+      "note": "abrir o buraco e arrefecer a lava no caminho para o dragon lair das Pits of Inferno"
+    },
+    {
+      "item": "Blood",
+      "note": "campa de Goshnar; leva vários frascos"
+    },
+    {
+      "item": "Oil",
+      "note": "alavanca da ponte das Pits of Inferno"
+    },
+    {
+      "item": "The Holy Tible",
+      "note": "para passar o Shrine of Wonders"
+    },
+    {
+      "item": "Destroy Field Rune",
+      "note": "útil se houver campos em cima do buraco das Pits of Inferno"
+    },
+    {
+      "item": "Fire Bomb Rune",
+      "note": "Ice Horror (contra o Fear) e Bone Overlord"
+    },
+    {
+      "item": "Dwarven Ring",
+      "note": "obrigatório para The Gravedigger; cuidado com o Buddel, que fica com ele se o levares na mochila (ver secção 5)"
+    },
+    {
+      "item": "Parcel",
+      "qty": 6,
+      "note": "ou o feitiço Levitate: para sair de Draconia pelo Hellgate (e 3 para a Holy Tible)"
+    },
+    {
+      "item": "White Mushroom",
+      "note": "opcional: troca-se por um Dragonfetish para sair de Draconia"
+    },
+    {
+      "text": "Equipamento de proteção para cada boss: energia, terra, fogo, sagrado, gelo e físico no Adventurer Group; fogo no Eldritch Dragon Lord; gelo e morte no Ice Horror; morte e energia no Gravedigger; morte e energia (fase 1) e Life Drain e morte (fase 2) no Bone Overlord."
+    }
+  ],
+  "rewards": [
+    {
+      "item": "Crypt Rune",
+      "note": "uma aleatória: Ancient, Deathly, Fiery, Icy ou Necromantic"
+    },
+    {
+      "item": "Jade Dragon Head (Charged)",
+      "note": "a cada 14 dias dá 1 Ancestral Charge e 1 Favour of the Ancients"
+    },
+    {
+      "text": "Acesso à {wiki:Forgotten Crypt|Forgotten Crypt}, à {wiki:Forsaken Crypt|Forsaken Crypt} e à {wiki:Unhallowed Crypt|Unhallowed Crypt}"
+    },
+    {
+      "text": "Depois da quest, os bosses podem deixar cair Crypt Runes, que se trocam por armas Crypt"
+    },
+    {
+      "text": "Loot e experiência dos cinco bosses: {creature:Fatal Bug}, {creature:Eldritch Dragon Lord} e {creature:The Gravedigger} dão 750 000 de experiência cada, o {creature:Ice Horror} 259 000 e a {creature:Bonelords's Phylactery} 1 000 000"
+    }
+  ],
+  "unlocks": [
+    {
+      "what": "Forgotten Crypt (cripta exterior por baixo de Draconia)",
+      "kind": "zona",
+      "place": "Forgotten Crypt",
+      "when": "Na missão final, depois dos quatro bosses: o {npc:S'Zallar M'Andar} leva-te de canoa ({key:passage}).",
+      "note": "Entrada livre; é o caminho para o Bone Overlord. Os Crypt Constructs deixam cair {item:Fetid Heart|Fetid Hearts}."
+    },
+    {
+      "what": "Forsaken Crypt",
+      "kind": "zona",
+      "place": "Forsaken Crypt",
+      "when": "Com a quest feita, gastando {wiki:Ancestral Charge|Ancestral Charges}.",
+      "note": "Cada entrada gasta 1 Ancestral Charge. Zona pensada para caçar sozinho."
+    },
+    {
+      "what": "Unhallowed Crypt",
+      "kind": "zona",
+      "place": "Unhallowed Crypt",
+      "when": "Com a quest feita, gastando {wiki:Favour of the Ancients|Favour of the Ancients}.",
+      "note": "Cada entrada gasta 1 Favour of the Ancients."
+    },
+    {
+      "what": "Talismã carregado: Ancestral Charge e Favour of the Ancients a cada 14 dias",
+      "kind": "funcionalidade",
+      "place": "Jade Dragon Head (Charged)",
+      "when": "Ao usares a {item:Jade Dragon Head} depois de acabares a quest."
+    },
+    {
+      "what": "Troca de Crypt Runes por armas Crypt",
+      "kind": "loja",
+      "place": "Dragon Ancestor Spirit",
+      "when": "Depois de acabares a quest: os cinco bosses passam a poder deixar cair Crypt Runes.",
+      "note": "Uma runa de cada tipo ao {npc:Dragon Ancestor Spirit} ({key:trade}) dá uma arma Crypt aleatória."
+    }
+  ],
+  "dangers": [
+    "Dragon",
+    "Dragon Lord",
+    "Skeleton",
+    "Ghoul",
+    "Demon Skeleton",
+    "Bonelord",
+    "Adventurer Group",
+    "Fiona Firstdream",
+    "Grendel Greenlunch",
+    "Percy Peacetinker",
+    "Yorik Youngbook",
+    "Nigel Neverguess",
+    "Bright Crystal",
+    "Fatal Bug",
+    "Eldritch Dragon Lord",
+    "Pulsating Lava",
+    "Eruption",
+    "Flame Totem",
+    "Ice Horror",
+    "Ice Crawler",
+    "Ice Blockade",
+    "The Gravedigger",
+    "Bonelord Totem",
+    "Crypt Construct",
+    "Haunted Hunter",
+    "Walking Dread",
+    "Bone Overlord",
+    "Zharvorin's Soulcage",
+    "Myzareth's Soulcage",
+    "Scarith's Soulcage",
+    "Elyrax's Soulcage",
+    "Myzareth's Spirit",
+    "An Eye",
+    "Bone Barrier",
+    "Bonelords's Phylactery",
+    "Enthralled Dragon"
+  ],
+  "npcs": [
+    "S'Zallar M'Andar",
+    "Dragon Ancestor Spirit",
+    "Elathriel",
+    "An Old Dragonlord",
+    "Captain Seagull",
+    "Buddel",
+    "Captain Breezelda",
+    "Captain Sinbeard"
+  ],
+  "tips": [
+    "Leva **sempre** a {item:Jade Dragon Head}: tens de a ter contigo quando usas cada relíquia, e é usando-a que reportas ao S'Zallar e descobres o covil seguinte.",
+    "Cada boss tem **20 horas** de cooldown. Se falhares, só podes voltar a tentar no dia seguinte (ou usar o item de reset desse boss, ver secção 8).",
+    "Depois de cada boss há um **teleporte verde** que leva à relíquia. Esse teleporte **não serve para fugir**: só funciona depois de o boss morrer, mesmo que já tenhas feito o combate antes.",
+    "Se perderes o talismã, diz {key:talisman} ao {npc:S'Zallar M'Andar}: ele faz outro, mas avisa que tens de lhe pagar o que gastou (o wiki não diz quanto).",
+    "O wiki não documenta a saída das salas das relíquias. Um {item:Temple Teleport Scroll} leva-te ao teu templo (não funciona em zonas de no-logout nem com logout block)."
+  ],
+  "sections": [
+    {
+      "title": "1. O pedido do S'Zallar M'Andar (Ab'Dendriel)",
+      "intro": "A quest começa e acaba com o S'Zallar M'Andar, em Ab'Dendriel. Ele dá-te o talismã que vais usar em todas as etapas.",
+      "steps": [
+        {
+          "title": "Ir a Ab'Dendriel",
+          "text": "Apanha um barco para **Ab'Dendriel** em Carlin, Edron, Thais ou Venore (diz ao capitão {key:hi}, {key:ab'dendriel}, {key:yes}). Chegas ao porto do {npc:Captain Seagull}, no lado **leste** da cidade.",
+          "coords": [
+            {
+              "x": 32735,
+              "y": 31668,
+              "z": 6,
+              "label": "Porto de Ab'Dendriel (Captain Seagull)"
+            }
+          ],
+          "images": [
+            {
+              "file": "Map abdendriel.jpg",
+              "caption": "Mapa de Ab'Dendriel"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o S'Zallar M'Andar",
+          "text": "Vai ter com o {npc:S'Zallar M'Andar}, a **norte/nordeste** do centro da cidade. Diz {key:hi}, {key:unrest} e {key:yes}. Ele conta que os espíritos do cemitério dos dragões estão inquietos e que a causa está num sítio onde os seres de escamas não podem entrar. Dá-te um talismã, a {item:Jade Dragon Head}, para falares com ele à distância.",
+          "npc": "S'Zallar M'Andar",
+          "coords": [
+            {
+              "x": 32702,
+              "y": 31594,
+              "z": 7,
+              "label": "S'Zallar M'Andar"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "Human! The ancient spirits are in unrest."
+            },
+            {
+              "you": "unrest"
+            },
+            {
+              "npc": "I have felt tremors in the spirit wind. [...] Are you willing to assist me in my quest and travel where the scaled children can't? Yes or no?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Take this totem. Through it, the elder spirits may heed your call, and through it, you may speak to me, wherever your steps may lead. [...]"
+            }
+          ],
+          "reward": "Jade Dragon Head",
+          "tip": "Guarda bem o talismã. Se o perderes, diz {key:talisman} ao S'Zallar: ele faz outro, mas tens de lhe pagar o que gastou."
+        }
+      ]
+    },
+    {
+      "title": "2. Visitar Draconia e o Dragon Cemetery",
+      "intro": "Nesta primeira visita vais a {wiki:Draconia|Draconia} pelo {wiki:Hellgate|Hellgate}, por baixo de Ab'Dendriel (a canoa do S'Zallar só aparece na missão final). Draconia é uma ilha a nordeste de Ab'Dendriel sem barco: lê os passos de saída antes de ires.",
+      "steps": [
+        {
+          "title": "Arranjar a Key 3012",
+          "text": "Se ainda não tens a {item:Key 3012}, compra-a ao {npc:Elathriel}, o guarda da prisão da Shadow Caves Street, **2 andares abaixo** da superfície (fica no caminho para o Hellgate). Diz {key:hi}, {key:key} e {key:yes}: custa **5000 gp**.",
+          "npc": "Elathriel",
+          "coords": [
+            {
+              "x": 32684,
+              "y": 31671,
+              "z": 9,
+              "label": "Elathriel (vende a Key 3012)"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "key"
+            },
+            {
+              "npc": "If you are that curious, do you want to buy a key for 5000 gold? Don't blame me if you get sucked in."
+            },
+            {
+              "you": "yes"
+            }
+          ]
+        },
+        {
+          "title": "Descer às Shadow Caves",
+          "text": "Em Ab'Dendriel desce **1 andar**, ao piso das lojas: estás nas {wiki:Shadow Caves|Shadow Caves}, no subsolo a **noroeste** do depot. Desce mais **2 andares** (o primeiro junto às casinhas) e segue a gruta para **sul** e depois para **leste** até uma porta normalmente fechada: é a entrada do Hellgate, 3 andares abaixo da superfície.",
+          "coords": [
+            {
+              "x": 32655,
+              "y": 31670,
+              "z": 8,
+              "label": "Shadow Caves"
+            }
+          ],
+          "images": [
+            {
+              "file": "Way to Hellgate1.png",
+              "caption": "Caminho até ao Hellgate (1)"
+            },
+            {
+              "file": "Way to Hellgate2.png",
+              "caption": "Caminho até ao Hellgate (2)"
+            },
+            {
+              "file": "Way to Hellgate3.png",
+              "caption": "Caminho até ao Hellgate (3): a porta fica a leste"
+            }
+          ]
+        },
+        {
+          "title": "Abrir a porta do Hellgate",
+          "text": "Abre a porta com a {item:Key 3012} e entra no teleporte **norte** para entrares no Hellgate.",
+          "coords": [
+            {
+              "x": 32676,
+              "y": 31671,
+              "z": 10,
+              "label": "Porta do Hellgate (Key 3012)"
+            },
+            {
+              "x": 32675,
+              "y": 31647,
+              "z": 10,
+              "label": "Teleporte do Hellgate"
+            }
+          ]
+        },
+        {
+          "title": "Atravessar o Hellgate até ao Redbone Castle",
+          "text": "Segue a rota da imagem até ao {wiki:Redbone Castle|Redbone Castle}, uma ilha num lago de lava no fim do Hellgate. O mapa acaba aí, mas a partir do castelo só há **um caminho**, que te leva até à superfície de Draconia.",
+          "coords": [
+            {
+              "x": 32666,
+              "y": 31672,
+              "z": 15,
+              "label": "Redbone Castle (fim do mapa da rota)"
+            },
+            {
+              "x": 32802,
+              "y": 31589,
+              "z": 7,
+              "label": "Ilha de Draconia"
+            }
+          ],
+          "images": [
+            {
+              "file": "Draconia Route.png",
+              "caption": "Rota pelo Hellgate até Draconia"
+            }
+          ],
+          "warning": "Pelo caminho há {creature:Skeleton|Skeletons}, {creature:Spider|Spiders}, {creature:Poison Spider|Poison Spiders}, {creature:Ghoul|Ghouls}, {creature:Rotworm|Rotworms}, {creature:Carrion Worm|Carrion Worms}, {creature:Slime|Slimes}, {creature:Bonelord|Bonelords}, {creature:Demon Skeleton|Demon Skeletons} e às vezes {creature:Elder Bonelord|Elder Bonelords} atraídos. Se encontrares outra coisa, enganaste-te no caminho."
+        },
+        {
+          "title": "Usar a Jade Dragon Head",
+          "text": "Já na superfície de Draconia, usa a {item:Jade Dragon Head}. Recebes: *\"You arrived. Great! Now investigate the Dragon Cemetery for a hint about what is going on there.\"*",
+          "images": [
+            {
+              "file": "Draconia Map.png",
+              "caption": "Mapa de Draconia"
+            }
+          ]
+        },
+        {
+          "title": "Descer ao Dragon Cemetery",
+          "text": "Vai para **norte** e desce **duas vezes** pelo buraco neste ponto para chegares ao cemitério dos dragões.",
+          "coords": [
+            {
+              "x": 32814,
+              "y": 31562,
+              "z": 7,
+              "label": "Buraco para o Dragon Cemetery (desce 2 vezes)"
+            }
+          ]
+        },
+        {
+          "title": "Falar com o Dragon Ancestor Spirit",
+          "text": "Diz {key:hi} e {key:spirit}. O espírito explica que as almas de quatro dragões ancestrais (**Myzareth**, **Zharvorin**, **Elyrax** e **Scarith**) estão presas por um necromante escondido nas profundezas. Cada dragão ligou a sua essência a um covil e a uma relíquia: só através delas os espíritos podem ser libertados.",
+          "npc": "Dragon Ancestor Spirit",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "npc": "This one knows you came here for the disturbance of the spirit world!"
+            },
+            {
+              "you": "spirit"
+            },
+            {
+              "npc": "[...] Every great dragon bound its essence to a place, a hoard, a relic of its might. Seek these places, for only through their tokens may the spirits be freed and cleansed. [...]"
+            },
+            {
+              "npc": "[...] He can only be defeated, if he is denied the souls he has stolen and bound. [...] The soul-essence of the ancients Myzareth, Zharvorin, Elyrax and Scarith is at stake. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Sair de Draconia (opção 1: Dragonfetish)",
+          "text": "Volta a subir pelos buracos do cemitério (leva uma {item:Rope}). Se trouxeste um {item:White Mushroom}, sobe ao topo da montanha do **norte** da ilha e diz {key:hi} ao {npc:An Old Dragonlord}: com o cogumelo na mochila, ele troca-o logo por um {item:Dragonfetish}. Sacrifica o fetiche na sala do teleporte de saída, no covil de {creature:Dragon|Dragons} por baixo do **sudeste** da ilha, e és teleportado para **Ab'Dendriel**.",
+          "npc": "An Old Dragonlord",
+          "coords": [
+            {
+              "x": 32796,
+              "y": 31557,
+              "z": 2,
+              "label": "An Old Dragonlord (topo da montanha)"
+            }
+          ],
+          "warning": "Na sala do teleporte há um Dragon. Não percas o Dragonfetish antes de o usares: não recebes outro. A página de Draconia diz que só recebes um por personagem (se voltares a falar com ele, manda-te embora); a página do item diz que só recebes um novo depois de usares o anterior. Para a viagem final (secção 7), conta também com a saída a pé."
+        },
+        {
+          "title": "Sair de Draconia (opção 2: a pé pelo Hellgate)",
+          "text": "Desce outra vez até ao Redbone Castle e segue a rota normal de saída do Hellgate ({wiki:Route:Hellgate|Route:Hellgate}), que passa muito perto da entrada de Draconia. Precisas de {item:Rope} e de **6 {item:Parcel|Parcels} ou do feitiço {spell:Levitate}**: no troço sem criaturas a **noroeste** sobe 2 andares com parcels/Levitate e depois a escada; vai para **sudoeste** e sobe pelo buraco; se a ponte do andar de cima estiver fechada, puxa a alavanca; daí só há um caminho para cima (muitas {creature:Wasp|Wasps}). Sais à superfície perto de Ab'Dendriel.",
+          "coords": [
+            {
+              "x": 32603,
+              "y": 31705,
+              "z": 7,
+              "label": "Saída do Hellgate (perto de Ab'Dendriel)"
+            }
+          ],
+          "images": [
+            {
+              "file": "RouteHellgate1.png",
+              "caption": "Saída do Hellgate: mapa 1"
+            },
+            {
+              "file": "RouteHellgate2.png",
+              "caption": "Saída do Hellgate: mapa 2"
+            },
+            {
+              "file": "RouteHellgate3.png",
+              "caption": "Saída do Hellgate: mapa 3"
+            },
+            {
+              "file": "RouteHellgate4&5.png",
+              "caption": "Saída do Hellgate: mapas 4 e 5"
+            },
+            {
+              "file": "RouteHellgate7.png",
+              "caption": "Saída do Hellgate: mapa 7"
+            },
+            {
+              "file": "RouteHellgate8.png",
+              "caption": "Saída do Hellgate: mapa 8"
+            },
+            {
+              "file": "RouteHellgate9.png",
+              "caption": "Saída do Hellgate: mapa 9 (até à superfície)"
+            }
+          ],
+          "tip": "Uma terceira saída é acabar a {wiki:Draconia Quest} e usar o portal do topo da pirâmide, que te deixa em Ab'Dendriel."
+        },
+        {
+          "title": "Reportar ao S'Zallar",
+          "text": "De volta a Ab'Dendriel, fala com o {npc:S'Zallar M'Andar}: {key:hi}, {key:mission}.",
+          "npc": "S'Zallar M'Andar",
+          "coords": [
+            {
+              "x": 32702,
+              "y": 31594,
+              "z": 7,
+              "label": "S'Zallar M'Andar"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Primeiro covil: Adventurer Group (Greenshore)",
+      "intro": "O primeiro guardião é um grupo de cinco aventureiros, um de cada vocação, num covil por baixo de Greenshore, a norte de Thais. Cooldown: 20 horas.",
+      "steps": [
+        {
+          "title": "Ir a Greenshore",
+          "text": "Vai a **Thais** (de Ab'Dendriel, o {npc:Captain Seagull} leva-te: {key:hi}, {key:thais}, {key:yes}). Sai da cidade e caminha para **norte** até {wiki:Greenshore|Greenshore}, uma pequena península com uma passagem pela montanha. A entrada do covil fica neste ponto e a sala do boss está **2 andares abaixo**.",
+          "coords": [
+            {
+              "x": 32301,
+              "y": 32098,
+              "z": 7,
+              "label": "Entrada do covil (Greenshore)"
+            },
+            {
+              "x": 32269,
+              "y": 32125,
+              "z": 9,
+              "label": "Sala do Adventurer Group"
+            }
+          ],
+          "images": [
+            {
+              "file": "Greenshore.gif",
+              "caption": "Mapa de Greenshore"
+            }
+          ]
+        },
+        {
+          "title": "Preparar a equipa",
+          "text": "O {creature:Adventurer Group} mistura quase todos os tipos de dano: o wiki recomenda proteção contra **energia, terra, fogo, sagrado, gelo e físico**. Os cinco atacam ao mesmo tempo:",
+          "table": {
+            "head": [
+              "Aventureiro",
+              "Vocação",
+              "Avatar",
+              "Ataca",
+              "Dano"
+            ],
+            "rows": [
+              [
+                "{creature:Fiona Firstdream}",
+                "Sorcerer",
+                "Avatar of Storm",
+                "À distância",
+                "Fogo e energia"
+              ],
+              [
+                "{creature:Grendel Greenlunch}",
+                "Druid",
+                "Avatar of Nature",
+                "À distância",
+                "Terra e gelo"
+              ],
+              [
+                "{creature:Percy Peacetinker}",
+                "Paladin",
+                "Avatar of Light",
+                "À distância",
+                "Físico e sagrado"
+              ],
+              [
+                "{creature:Yorik Youngbook}",
+                "Knight",
+                "Avatar of Steel",
+                "Corpo-a-corpo",
+                "Físico"
+              ],
+              [
+                "{creature:Nigel Neverguess}",
+                "Monk",
+                "Avatar of Balance",
+                "Corpo-a-corpo",
+                "Físico"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Combate: os cinco aventureiros",
+          "text": "Enfrentas os cinco **ao mesmo tempo**. Quando um deles chega a vida **vermelha**, transforma-se no seu avatar: fica com mais proteção contra dano e passa a dar **golpes críticos**.",
+          "warning": "Na sala há 3 {creature:Bright Crystal|Bright Crystals}. Se lhes deres dano, explodem com um ataque de dreno de mana e aplicam um hex: evita atingi-los (cuidado com feitiços de área)."
+        },
+        {
+          "title": "Matar o Fatal Bug",
+          "text": "Quando os cinco aventureiros morrem aparece o boss final, o {creature:Fatal Bug}. Mata-o: é ele que tem o loot."
+        },
+        {
+          "title": "Tocar na relíquia: Charred Skull",
+          "text": "Entra no {item:Magic Forcefield (Green)|teleporte verde} a **sul** da sala e usa o {item:Charred Skull}, com a {item:Jade Dragon Head} contigo.",
+          "warning": "O teleporte verde não te deixa fugir antes de o boss morrer, mesmo que já tenhas feito este combate antes."
+        },
+        {
+          "title": "Reportar com a Jade Dragon Head",
+          "text": "Usa a {item:Jade Dragon Head}. Recebes: *\"S'Zallar: That was only the first step. Now find the hidden hoard beneath the Plains of Havoc. Attune to the prize possession there while while having the jade talisman with you.\"* O próximo covil é por baixo das Plains of Havoc."
+        },
+        {
+          "title": "Sair de Greenshore",
+          "text": "O wiki não descreve a saída da sala da relíquia. Volta pelo caminho por onde entraste: sobe os 2 andares até à entrada do covil e caminha para **sul** até Thais. Se não encontrares saída, usa um {item:Temple Teleport Scroll}.",
+          "coords": [
+            {
+              "x": 32301,
+              "y": 32098,
+              "z": 7,
+              "label": "Entrada/saída do covil"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Segundo covil: Eldritch Dragon Lord (Pits of Inferno Dragon Lair)",
+      "intro": "O segundo covil é o {wiki:Pits of Inferno Dragon Lair|Pits of Inferno Dragon Lair}, por baixo das Plains of Havoc. Para lá chegar fazes a entrada da {wiki:The Pits of Inferno Quest|The Pits of Inferno Quest}: precisas de {item:Shovel}, {item:Pick}, {item:Blood}, {item:Oil} e {item:The Holy Tible}. Cooldown: 20 horas.",
+      "steps": [
+        {
+          "title": "Ir às Plains of Havoc",
+          "text": "Vai a **Venore** de barco ({key:hi}, {key:venore}, {key:yes} no capitão de Ab'Dendriel ou Thais) e sai da cidade para **sudoeste** até às {wiki:Plains of Havoc|Plains of Havoc}.",
+          "coords": [
+            {
+              "x": 32735,
+              "y": 32297,
+              "z": 7,
+              "label": "Plains of Havoc"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar The Holy Tible (se ainda não a tens)",
+          "text": "Na pequena montanha muito perto da {wiki:Knightwatch Tower|Knightwatch Tower}, a sul do templo das Plains of Havoc, há um baú com a {item:The Holy Tible}. Para subires à montanha precisas de {spell:Levitate} ou de 3 {item:Parcel|Parcels}; desce pelo mesmo sítio.",
+          "coords": [
+            {
+              "x": 32828,
+              "y": 32340,
+              "z": 7,
+              "label": "Baú da Holy Tible"
+            }
+          ],
+          "images": [
+            {
+              "file": "Pits of Inferno Quest Items.jpg",
+              "caption": "Itens da Pits of Inferno Quest: para esta quest só precisas da Holy Tible (junto à Knightwatch Tower)"
+            }
+          ],
+          "reward": "The Holy Tible"
+        },
+        {
+          "title": "Entrar na gruta do cemitério",
+          "text": "Vai ao cemitério das Plains of Havoc, junto à {wiki:Necromant House|Necromant House}, e usa a {item:Shovel} numa {item:Loose Stone Pile} (há várias e todas levam à mesma gruta estreita).",
+          "coords": [
+            {
+              "x": 32781,
+              "y": 32330,
+              "z": 7,
+              "label": "Necromant House"
+            }
+          ]
+        },
+        {
+          "title": "Abrir o buraco com o Pick",
+          "text": "Na parte **leste** da gruta há uma sala de 3x4. Usa o {item:Pick} no **canto noroeste** dessa sala e desce pelo buraco que se abre.",
+          "coords": [
+            {
+              "x": 32775,
+              "y": 32344,
+              "z": 7,
+              "label": "Canto noroeste: usa o Pick aqui"
+            }
+          ]
+        },
+        {
+          "title": "Usar sangue na campa de Goshnar",
+          "text": "A campa de {wiki:Goshnar|Goshnar} fica logo a **oeste** de onde cais. Põe-te **1 sqm a sul** da lápide e usa o {item:Blood} nela: todos os jogadores nesse tile são levados para as catacumbas.",
+          "images": [
+            {
+              "file": "Pits of Inferno Quest Entrance.jpg",
+              "caption": "Entrada: sangue na lápide de Goshnar, Shrine of Wonders com a Holy Tible, buraco para as Pits of Inferno, ponte com óleo e pedra a partir com o Pick"
+            }
+          ],
+          "tip": "Leva vários frascos de sangue. Em Optional PvP a equipa pode empilhar-se no mesmo tile e passar com um só frasco; em Open PvP sem dove e em Hardcore PvP cada jogador precisa do seu."
+        },
+        {
+          "title": "Passar o Shrine of Wonders",
+          "text": "Vai para **norte** (a sul há {creature:Demon Skeleton|Demon Skeletons} e {creature:Ghost|Ghosts}, que não interessam). Antes da parede mágica há um tile com inscrições: pisa-o com a {item:The Holy Tible} na mochila e passas para o outro lado."
+        },
+        {
+          "title": "Descer para as Pits of Inferno",
+          "text": "A **leste** há uma placa *\"To the Pits of Inferno\"* (há uma porta de expertise de nível 30). Desce por esse buraco e segue para **sul** até uma ponte.",
+          "tip": "Se houver campos em cima do buraco, usa uma {item:Destroy Field Rune}."
+        },
+        {
+          "title": "Abrir a ponte com Oil",
+          "text": "Se a ponte estiver inteira, atravessa. Se estiver partida, usa o {item:Oil} na alavanca que fica a **sul da ponte, do lado oeste**, puxa-a e atravessa.",
+          "warning": "Se a ponte se desfizer contigo do outro lado, a única forma de voltar é pelo dragon lair. Podes atirar óleo para o outro lado se a equipa precisar."
+        },
+        {
+          "title": "Arrefecer a lava e descer ao lair",
+          "text": "A seguir há um rio de lava ou chão de lava já arrefecida. Se houver lava, usa o {item:Pick} na pedra ao lado para a arrefecer. Atravessa até aos **3 buracos**: todos levam ao Pits of Inferno Dragon Lair."
+        },
+        {
+          "title": "Chegar à sala do boss",
+          "text": "Desces para o dragon lair, cheio de {creature:Dragon Lord|Dragon Lords} e {creature:Dragon|Dragons}. A sala do {creature:Eldritch Dragon Lord} fica a **noroeste** do centro do lair, neste ponto.",
+          "coords": [
+            {
+              "x": 32788,
+              "y": 32335,
+              "z": 12,
+              "label": "Pits of Inferno Dragon Lair"
+            },
+            {
+              "x": 32755,
+              "y": 32308,
+              "z": 12,
+              "label": "Sala do Eldritch Dragon Lord"
+            }
+          ],
+          "images": [
+            {
+              "file": "Pits of Inferno Dragon Lair.png",
+              "caption": "Pits of Inferno Dragon Lair"
+            }
+          ]
+        },
+        {
+          "title": "Mecânica: Pulsating Lavas e Flame Totems",
+          "text": "Há 4 {creature:Pulsating Lava|Pulsating Lavas}, uma em cada canto da sala. Quando recuperam vida suficiente transformam-se em {creature:Eruption} e depois em {creature:Flame Totem}. Cada totem faz dano de fogo em área que **cura o boss**, com alcance maior a cada fase. Com um Flame Totem ativo o boss recebe menos dano; com **3 ou mais** fica **invulnerável**. O objetivo é manter **pelo menos 2** no estado de Pulsating Lava para o boss continuar vulnerável.",
+          "warning": "Não uses dano de **fogo**; ataca com **gelo** e equipa proteção contra **fogo**. À medida que a vida do boss desce, há momentos em que as Pulsating Lavas recuperam vida e voltam a ser Flame Totems: fica atento."
+        },
+        {
+          "title": "Tocar na relíquia: Molten Throne",
+          "text": "Depois de matares o boss, entra no {item:Magic Forcefield (Green)|teleporte verde} a **sudoeste** da sala e usa o {item:Molten Throne}, com a {item:Jade Dragon Head} contigo.",
+          "warning": "O teleporte verde não te deixa fugir antes de o boss morrer."
+        },
+        {
+          "title": "Reportar com a Jade Dragon Head",
+          "text": "Usa a {item:Jade Dragon Head}. Recebes: *\"S'Zallar: Well done. Now seek the hoard in the deadly ice caves around the island of Okolnir. Attune to the prize possession there while while having the jade talisman with you.\"*"
+        },
+        {
+          "title": "Sair das Pits of Inferno",
+          "text": "O wiki não descreve a saída da sala da relíquia nem do lair. Volta pelo mesmo caminho: sobe do dragon lair, atravessa a ponte e regressa pelas catacumbas e pela gruta do cemitério até às Plains of Havoc. Venore fica a **nordeste**. Se a ponte se tiver desfeito, o spoiler da Pits of Inferno Quest diz apenas que o único caminho de volta é pelo dragon lair (sem o descrever); nesse caso usa um {item:Temple Teleport Scroll}.",
+          "coords": [
+            {
+              "x": 32781,
+              "y": 32330,
+              "z": 7,
+              "label": "Necromant House (superfície)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Terceiro covil: Ice Horror (Okolnir)",
+      "intro": "O terceiro covil fica nas grutas geladas de {wiki:Okolnir|Okolnir}, uma ilha a sudeste de Hrodmir. Uns rat-men piratas têm um navio com canhões que disparam contra tudo o que mexe, e vais usar isso a teu favor. Cooldown: 20 horas.",
+      "steps": [
+        {
+          "title": "Ir a Svargrond",
+          "text": "Apanha um barco para **Svargrond** em Carlin, Thais ou Venore ({key:hi}, {key:svargrond}, {key:yes}); de Ab'Dendriel, o {npc:Captain Seagull} leva-te a qualquer uma dessas cidades. Chegas ao barco da {npc:Captain Breezelda}.",
+          "coords": [
+            {
+              "x": 32347,
+              "y": 31108,
+              "z": 6,
+              "label": "Captain Breezelda (Svargrond)"
+            }
+          ]
+        },
+        {
+          "title": "Apanhar o Buddel para Okolnir",
+          "text": "O {npc:Buddel} está a **sul** de Svargrond. Diz {key:hi}, {key:passage} e {key:okolnir}: a viagem custa **50 gp**. Ele só te leva se já fizeste a {wiki:Barbarian Test Quest}.",
+          "npc": "Buddel",
+          "coords": [
+            {
+              "x": 32254,
+              "y": 31195,
+              "z": 7,
+              "label": "Buddel (sul de Svargrond)"
+            },
+            {
+              "x": 32224,
+              "y": 31382,
+              "z": 7,
+              "label": "Chegada a Okolnir"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "you": "okolnir"
+            }
+          ],
+          "warning": "O Buddel anda sempre bêbedo e muitas vezes leva-te ao sítio errado. Com um {item:Dwarven Ring} na mochila ele leva-te ao sítio certo, mas fica com o anel (e não pagas os 50 gp). Como vais precisar do anel para o The Gravedigger, se não o quiseres perder diz {key:no} quando ele o pedir, ou põe-no no dedo (com mais de um anel na mochila, só o {key:no} evita que ele fique com um)."
+        },
+        {
+          "title": "Ir ao covil gelado",
+          "text": "Do cais de Okolnir, caminha para **sudoeste** até às grutas geladas do Ice Horror, neste ponto. Na ilha há {creature:Frost Dragon|Frost Dragons} e {creature:Frost Dragon Hatchling|Frost Dragon Hatchlings}.",
+          "coords": [
+            {
+              "x": 32151,
+              "y": 31453,
+              "z": 7,
+              "label": "Covil do Ice Horror"
+            }
+          ],
+          "images": [
+            {
+              "file": "Map of Okolnir.jpg",
+              "caption": "Mapa de Okolnir"
+            }
+          ]
+        },
+        {
+          "title": "(Opcional) Ouvir o Drunken Sailor",
+          "text": "O NPC **Drunken Sailor** explica a mecânica (o wiki não diz onde ele está; a conversa vem na parte do Ice Horror): diz {key:hi}, {key:listen up}, {key:ice}, {key:drunks}, {key:die} e {key:hoard}. Em resumo: os rat-men têm canhões no navio e disparam contra qualquer coisa que se mexa, e o gelo deixa-te a cambalear como se estivesses bêbedo.",
+          "dialogue": [
+            {
+              "you": "listen up"
+            },
+            {
+              "npc": "Them rat-men <hic>! Damn pirats they are. They got cannons on that cursed ship. [...] So they fire at anything that moves. Even ya."
+            },
+            {
+              "you": "ice"
+            },
+            {
+              "npc": "The ice'll trick yer legs, lad! Makes ye stagger 'n' stumble like ye downed a whole barrel. [...]"
+            }
+          ]
+        },
+        {
+          "title": "Preparar a equipa",
+          "text": "Equipa proteção contra **gelo** e **morte**. Leva {item:Fire Bomb Rune|Fire Bomb Runes}: o wiki recomenda-as para lidar com o {wiki:Fear|Fear}. Durante o combate cada jogador fica {wiki:Drunk|Drunk} (não dá para tirar) e sofre {wiki:Rooted|Rooted} e Fear com frequência."
+        },
+        {
+          "title": "Perceber os canhões",
+          "text": "Na sala do boss, o navio à **direita** dispara contra jogadores ao acaso: aparece um alvo vermelho no chão e a mensagem *\"You are targeted!\"*. Cerca de **3 segundos** depois há uma pequena explosão que fere todas as criaturas à volta e deixa por algum tempo um **buraco no gelo**.",
+          "warning": "Se pisares um buraco no gelo ficas congelado e {wiki:Rooted|Rooted}."
+        },
+        {
+          "title": "Abrir caminho pelos Ice Blockades",
+          "text": "Para **norte** há dois {creature:Ice Blockade|Ice Blockades}. Quando fores o alvo, põe-te junto a um deles: a explosão destrói-o e abre a passagem. Repete no segundo. Pelo caminho aparecem {creature:Ice Crawler|Ice Crawlers}: não percas tempo a matá-los, os canhões tratam deles."
+        },
+        {
+          "title": "Ferir o Ice Horror com os canhões",
+          "text": "Ao início o {creature:Ice Horror} é quase invulnerável: a equipa tem de o ferir com as explosões dos canhões. Por volta de **metade da vida**, a carapaça parte-se (*\"The ice carpace breaks and the Ice Horror becomes vullnerable to ordinary attacks!\"*), aparece uma vaga grande (cerca de **20**) de Ice Crawlers e o boss passa a levar dano normal. Mata-o."
+        },
+        {
+          "title": "Tocar na relíquia: Draconic Rattle",
+          "text": "Entra no {item:Magic Forcefield (Green)|teleporte verde} a **norte** da sala. **Fica parado** até o Drunk passar e só depois usa o {item:Draconic Rattle}, com a {item:Jade Dragon Head} contigo.",
+          "warning": "Se te mexeres ainda bêbedo podes sair da sala sem querer antes de usares a relíquia. O teleporte verde também não te deixa fugir antes de o boss morrer."
+        },
+        {
+          "title": "Reportar com a Jade Dragon Head",
+          "text": "Usa a {item:Jade Dragon Head}. Recebes: *\"S'Zallar: Again you were successful. The last hoard is located in the Mountain that seperates destert and jungle in Darama. Attune to the prize possession there while while having the jade talsiman with you.\"* É a montanha de {wiki:Kha'zeel|Kha'zeel}."
+        },
+        {
+          "title": "Sair de Okolnir",
+          "text": "O wiki não descreve a saída da sala da relíquia: volta pelo caminho por onde entraste até ao cais de Okolnir. Diz ao {npc:Buddel} {key:hi}, {key:passage} e {key:svargrond}; em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin, Thais ou Venore.",
+          "coords": [
+            {
+              "x": 32224,
+              "y": 31382,
+              "z": 7,
+              "label": "Cais de Okolnir (Buddel)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Quarto covil: The Gravedigger (Kha'zeel, Ankrahmun)",
+      "intro": "O último covil fica em {wiki:Kha'zeel|Kha'zeel}, a cordilheira que separa o deserto de Ankrahmun da selva de Tiquanda: é o dragon lair do meio, a norte de Ankrahmun. O {item:Dwarven Ring} é obrigatório. Cooldown: 20 horas.",
+      "steps": [
+        {
+          "title": "Ir a Ankrahmun",
+          "text": "Apanha um barco para **Ankrahmun** em Darashia, Edron, Liberty Bay, Port Hope ou Venore ({key:hi}, {key:ankrahmun}, {key:yes}); de Ab'Dendriel, o {npc:Captain Seagull} leva-te a Edron ou Venore. Chegas ao barco do {npc:Captain Sinbeard}.",
+          "coords": [
+            {
+              "x": 33094,
+              "y": 32884,
+              "z": 6,
+              "label": "Captain Sinbeard (Ankrahmun)"
+            }
+          ]
+        },
+        {
+          "title": "Ir ao dragon lair do meio",
+          "text": "Sai de Ankrahmun e caminha para **norte** pelo deserto até à entrada do dragon lair do meio de {wiki:Kha'zeel Dragon Lairs/Kha'labal|Kha'zeel} (o *Ank 3x spawn*).",
+          "coords": [
+            {
+              "x": 33095,
+              "y": 32690,
+              "z": 7,
+              "label": "Entrada do dragon lair"
+            }
+          ],
+          "warning": "Nos andares do lair há {creature:Dragon|Dragons} e {creature:Dragon Lord|Dragon Lords}."
+        },
+        {
+          "title": "Subir até à sala das alavancas",
+          "text": "Atravessa o lair e sobe até ao piso indicado (**3 andares acima** da entrada): é aí que fica a entrada da sala das alavancas do boss.",
+          "coords": [
+            {
+              "x": 33049,
+              "y": 32683,
+              "z": 4,
+              "label": "Entrada da sala das alavancas (The Gravedigger)"
+            }
+          ]
+        },
+        {
+          "title": "Preparar a equipa",
+          "text": "Põe o {item:Dwarven Ring}. Não uses dano de **morte**; ataca com **terra**; equipa proteção contra **morte** e **energia**. O {spell:Challenge} **não funciona** no {creature:The Gravedigger}: ele costuma atacar o jogador mais próximo. Dentro da sala a velocidade de todos os jogadores baixa muito."
+        },
+        {
+          "title": "Evitar os Bonelord Totems",
+          "text": "A cada **10 segundos** aparecem 2 {creature:Bonelord Totem|Bonelord Totems} em posições aleatórias, substituindo os anteriores. Deixam {wiki:Drunk|Drunk} quem estiver perto (área pequena) e {wiki:Rooted|Rooted} quem estiver encostado a eles: mantém distância."
+        },
+        {
+          "title": "Sobreviver às ondas",
+          "text": "A cada **30 segundos** atravessa a sala uma onda, de **norte para sul** ou de **oeste para leste**. Cada onda tem 2 sqm de largura, avança 1 sqm por segundo e vem aos pares, separadas por 5 sqm livres. Cada vez que uma onda te atravessa ganhas um stack, que aumenta o dano que recebes. O boss também ganha stacks se a onda passar por ele (mais dano e menos dano recebido), por isso tenta que ele não as atravesse.",
+          "warning": "O **21.º stack mata-te logo**. Usa as aberturas das ondas (tabela seguinte) para não as atravessares."
+        },
+        {
+          "title": "As 4 variantes das ondas",
+          "text": "Segundo os diagramas do wiki, cada parede de uma onda tem uma abertura onde podes ficar sem seres atingido. Posição das aberturas (contada a partir de oeste nas ondas norte→sul, com 18 sqm de largura, e a partir de norte nas ondas oeste→leste, com 20 sqm de altura):",
+          "table": {
+            "head": [
+              "Variante",
+              "Abertura na 1.ª parede",
+              "Abertura na 2.ª parede"
+            ],
+            "rows": [
+              [
+                "Norte → sul, variante 1",
+                "Parede norte: sqm 10 a 12 (ligeiramente a leste do meio)",
+                "Parede sul: sqm 5 e 6 (lado oeste)"
+              ],
+              [
+                "Norte → sul, variante 2",
+                "Parede norte: sqm 5 a 7 (lado oeste)",
+                "Parede sul: sqm 12 a 14 (lado leste)"
+              ],
+              [
+                "Oeste → leste, variante 1",
+                "Parede oeste: sqm 6 a 8 (metade norte)",
+                "Parede leste: sqm 14 a 16 (metade sul)"
+              ],
+              [
+                "Oeste → leste, variante 2",
+                "Parede oeste: sqm 1 a 4 (ponta norte)",
+                "Parede leste: sqm 9 a 11 (meio)"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Tocar na relíquia: Gilded Wig",
+          "text": "Depois de matares o boss, entra no {item:Magic Forcefield (Green)|teleporte verde} a **sudeste** da sala e usa o {item:Gilded Wig}, com a {item:Jade Dragon Head} contigo.",
+          "warning": "O teleporte verde não te deixa fugir antes de o boss morrer."
+        },
+        {
+          "title": "Reportar com a Jade Dragon Head",
+          "text": "Usa a {item:Jade Dragon Head}. Recebes: *\"S'Zallar: You have attuned to all four ancients. Return to me in Ab'Dendriel and use my canoe to travel to the dragon cemetery again and confront the necromancer who is responsible for this atrocity.\"*"
+        },
+        {
+          "title": "Sair de Kha'zeel",
+          "text": "O wiki não descreve a saída da sala da relíquia. Volta pelo caminho por onde subiste: desce os 3 andares, sai pela entrada do lair e caminha para **sul** até Ankrahmun. O {npc:Captain Sinbeard} não vai a Ab'Dendriel: apanha um barco para Venore ou Edron e daí outro para Ab'Dendriel.",
+          "coords": [
+            {
+              "x": 33095,
+              "y": 32690,
+              "z": 7,
+              "label": "Entrada/saída do dragon lair"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Boss final: Bone Overlord (Forgotten Crypt)",
+      "intro": "Com os quatro ancestrais sintonizados, o S'Zallar leva-te de canoa a Draconia para enfrentares o necromante na {wiki:Forgotten Crypt|Forgotten Crypt}. Cooldown: 20 horas; combate com limite de **15 minutos**.",
+      "steps": [
+        {
+          "title": "Pedir a canoa ao S'Zallar",
+          "text": "Volta a Ab'Dendriel e fala com o {npc:S'Zallar M'Andar}: {key:hi}, {key:mission}, {key:passage} e {key:yes}. A canoa dele, preparada com magia antiga, atravessa as brumas que protegem a ilha.",
+          "npc": "S'Zallar M'Andar",
+          "coords": [
+            {
+              "x": 32702,
+              "y": 31594,
+              "z": 7,
+              "label": "S'Zallar M'Andar"
+            }
+          ],
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "You are now prepared to face the vile necromancer. [...] If you are ready to face the threat, just ask me for a passage."
+            },
+            {
+              "you": "passage"
+            },
+            {
+              "npc": "Do you want to use my canoe for a passage to draconia? Yes or no?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Safe travels."
+            }
+          ]
+        },
+        {
+          "title": "Chegar à sala do Bone Overlord",
+          "text": "A canoa leva-te de volta a Draconia (o S'Zallar fala em voltar ao cemitério dos dragões). A sala do {creature:Bone Overlord} fica na {wiki:Forgotten Crypt|Forgotten Crypt}, por baixo de Draconia: o {npc:Dragon Ancestor Spirit} já tinha avisado que o necromante está *\"Deep beneath us\"*. O wiki não descreve o caminho entre o sítio onde a canoa te deixa e a sala: guia-te pela coordenada.",
+          "coords": [
+            {
+              "x": 32925,
+              "y": 31779,
+              "z": 11,
+              "label": "Sala do Bone Overlord"
+            }
+          ],
+          "warning": "Na Forgotten Crypt há {creature:Crypt Construct|Crypt Constructs}, {creature:Haunted Hunter|Haunted Hunters} e {creature:Walking Dread|Walking Dreads} (23 000 a 25 000 de vida cada)."
+        },
+        {
+          "title": "Preparar a equipa",
+          "text": "Leva {item:Fire Bomb Rune|Fire Bomb Runes} (sugeridas pelo wiki). Na fase 1 equipa proteção contra **morte** e **energia**; na fase 2 contra **Life Drain** e **morte**. Durante todo o combate podes ficar {wiki:Feared|Feared}, {wiki:Rooted|Rooted}, {wiki:Slowed|Slowed} ou {wiki:Drunk|Drunk} a qualquer momento: prepara-te para os quatro.",
+          "warning": "Tens **15 minutos** para acabar o combate."
+        },
+        {
+          "title": "Os olhares do Bone Overlord",
+          "text": "Durante todo o combate o boss escolhe um jogador (que vê *\"The bonelord gazes!\"*) e lança um destes efeitos:",
+          "table": {
+            "head": [
+              "Mensagem",
+              "Efeito"
+            ],
+            "rows": [
+              [
+                "THE BONELORD DISPLACES YOU!",
+                "És teleportado para outra sala: parte as {creature:Bone Barrier|Bone Barriers} (10 000 de vida cada) para abrir o caminho até ao teleporte que te devolve à sala principal. As barreiras renascem: se ficares em cima do ponto onde renascem, aparecem ao lado e podem já não tapar o caminho."
+              ],
+              [
+                "AN EYE IS CAST ON YOU!",
+                "Aparece {creature:An Eye} perto de ti. Ao fim de uns segundos explode em área e tira **20 a 30% da vida máxima** de cada jogador em dano de agonia. Pode haver vários ao mesmo tempo: afasta-te deles."
+              ],
+              [
+                "THE BONELORD CASTS WRAITHFIRE AT YOU!",
+                "Wraithfire debaixo dos teus pés: **15% da vida atual** em dano de agonia."
+              ],
+              [
+                "THE BONELORD DRAINS YOU!",
+                "Dreno de mana: perdes **5% da mana máxima a cada 2 segundos**, 5 vezes."
+              ],
+              [
+                "THE BONELORD CURSES YOU!",
+                "Maldição: explodes num raio pequeno com dano físico a cada 4 segundos, 4 vezes. A explosão também fere os outros jogadores: afasta-te da equipa."
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Fase 1: destruir as quatro Soulcages",
+          "text": "Na sala há quatro Soulcages, cada uma ligada a um espírito de dragão (como o {creature:Myzareth's Spirit}) e a uma condição que é aplicada ao acaso a todos os jogadores. Os espíritos são **imunes a dano**; as Soulcages podem ser destruídas (o wiki indica que a vida é partilhada). Usa o elemento certo em cada uma:",
+          "table": {
+            "head": [
+              "Posição",
+              "Soulcage",
+              "Fraco contra",
+              "Condição",
+              "Onde aparece o espírito"
+            ],
+            "rows": [
+              [
+                "Nordeste",
+                "{creature:Zharvorin's Soulcage}",
+                "Morte e físico",
+                "Rooted",
+                "A sudeste da Soulcage"
+              ],
+              [
+                "Noroeste",
+                "{creature:Myzareth's Soulcage}",
+                "Energia",
+                "Feared",
+                "A sul da Soulcage"
+              ],
+              [
+                "Sudoeste",
+                "{creature:Scarith's Soulcage}",
+                "Gelo",
+                "Drunk",
+                "A oeste da Soulcage"
+              ],
+              [
+                "Sudeste",
+                "{creature:Elyrax's Soulcage}",
+                "Morte e sagrado",
+                "Slowed",
+                "A norte da Soulcage"
+              ]
+            ]
+          },
+          "warning": "Nunca deixes um espírito chegar perto da sua Soulcage: ela cura **5000+ por turno**. Quando a vida de uma Soulcage desce até certos pontos, o espírito teleporta-se para junto dela (última coluna), o que torna mais difícil evitar a cura."
+        },
+        {
+          "title": "Fase 2: Bonelords's Phylactery",
+          "text": "Quando as quatro Soulcages forem destruídas aparecem, a **sul** da sala, a {creature:Bonelords's Phylactery} e 4 {creature:Enthralled Dragon|Enthralled Dragons}. Destrói a Phylactery para ganhar: o Bone Overlord não é uma criatura de verdade e o loot sai da Phylactery.",
+          "warning": "Os Enthralled Dragons **não são afetados pelo {spell:Challenge}** e é vital teres proteção contra **Life Drain** contra eles."
+        },
+        {
+          "title": "Sair de Draconia",
+          "text": "O wiki não descreve a saída da sala do boss nem um regresso de canoa. Usa as saídas de Draconia da secção 2 (Dragonfetish, rota a pé pelo Hellgate com {item:Rope} e 6 {item:Parcel|Parcels} ou {spell:Levitate}, ou o portal da {wiki:Draconia Quest}) ou um {item:Temple Teleport Scroll}, e volta ao S'Zallar em Ab'Dendriel."
+        }
+      ]
+    },
+    {
+      "title": "8. Recompensa e o que fica desbloqueado",
+      "steps": [
+        {
+          "title": "Receber a recompensa",
+          "text": "Fala com o {npc:S'Zallar M'Andar}: {key:hi}, {key:mission}, {key:reward} e {key:yes}. Ele dá-te uma das runas necromânticas que encontrou, uma {item:Crypt Rune} aleatória, e diz que o talismã te vai dar uma pequena parte do poder dos ancestrais a cada duas semanas.",
+          "npc": "S'Zallar M'Andar",
+          "dialogue": [
+            {
+              "you": "hi"
+            },
+            {
+              "you": "mission"
+            },
+            {
+              "npc": "You vanquished the eldritch necromantic evil! The ancestor spirits are at peace once again. [...] Please allow me to grant you a reward."
+            },
+            {
+              "you": "reward"
+            },
+            {
+              "npc": "I will grant you one of the vile necromantic runes, that I found in my quest. The dragon ancestor on the cemetery might reward you for its destruction. Are you ready to receive it? Yes or no?"
+            },
+            {
+              "you": "yes"
+            },
+            {
+              "npc": "Here is your reward, my unscaled friend and with it come the boons of the ancestors. [...] The talisman I bestowed upon you shall grant you a small share of their grave each fortnight."
+            }
+          ],
+          "reward": "Uma Crypt Rune aleatória"
+        },
+        {
+          "title": "Carregar o talismã",
+          "text": "Usa a {item:Jade Dragon Head}: transforma-se em {item:Jade Dragon Head (Charged)}. Podes usá-la **a cada 14 dias**: cada uso dá 1 {wiki:Ancestral Charge|Ancestral Charge} e 1 {wiki:Favour of the Ancients|Favour of the Ancients} (*\"You have gained Ancestral Charges and Favour of the Ancients!\"*) e o talismã passa a {item:Inert Dragon Head} enquanto recarrega. Se ainda for cedo aparece *\"It is too early to use this again!\"*.",
+          "tip": "Vês as tuas cargas no Quest Log, em *The Spirits Are At Ease*."
+        },
+        {
+          "title": "As criptas de caça",
+          "text": "A quest abre três zonas de caça perto de Ab'Dendriel. A Forgotten Crypt é a cripta exterior, por baixo de Draconia, onde está o Bone Overlord; o wiki não indica onde ficam as entradas da Forsaken Crypt e da Unhallowed Crypt.",
+          "table": {
+            "head": [
+              "Cripta",
+              "Entrada",
+              "Notas"
+            ],
+            "rows": [
+              [
+                "{wiki:Forgotten Crypt|Forgotten Crypt}",
+                "Livre (cripta exterior)",
+                "Caminho para o Bone Overlord. Os {creature:Crypt Construct|Crypt Constructs} deixam cair {item:Fetid Heart|Fetid Hearts} (cada um dá 5 Ancestral Charges)."
+              ],
+              [
+                "{wiki:Forsaken Crypt|Forsaken Crypt}",
+                "1 Ancestral Charge por entrada",
+                "Pensada para caçar sozinho: o {creature:Cyclursus} aplica um debuff de skills se houver mais de um jogador perto. Os {creature:Crypt Mage|Crypt Mages} deixam cair {item:Cryptic Fossil|Cryptic Fossils} (1 Favour of the Ancients cada)."
+              ],
+              [
+                "{wiki:Unhallowed Crypt|Unhallowed Crypt}",
+                "1 Favour of the Ancients por entrada",
+                "O {creature:Creepy Crawler} pode causar Fear durante 2 segundos."
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Trocar Crypt Runes por uma arma Crypt",
+          "text": "Depois de acabares a quest, cada boss pode deixar cair uma Crypt Rune. Junta **uma de cada** e entrega-as ao {npc:Dragon Ancestor Spirit}, no cemitério de Draconia: {key:hi}, {key:trade}, {key:yes}. Recebes uma arma aleatória entre {item:Crypt Bile}, {item:Crypt Breaker}, {item:Crypt Jaw}, {item:Crypt Slicer}, {item:Crypt Spine}, {item:Crypt Splitter} e {item:Crypt Strike}.",
+          "npc": "Dragon Ancestor Spirit",
+          "table": {
+            "head": [
+              "Runa",
+              "Cai de"
+            ],
+            "rows": [
+              [
+                "{item:Ancient Crypt Rune}",
+                "{creature:Fatal Bug} (Adventurer Group)"
+              ],
+              [
+                "{item:Fiery Crypt Rune}",
+                "{creature:Eldritch Dragon Lord}"
+              ],
+              [
+                "{item:Icy Crypt Rune}",
+                "{creature:Ice Horror}"
+              ],
+              [
+                "{item:Deathly Crypt Rune}",
+                "{creature:The Gravedigger}"
+              ],
+              [
+                "{item:Necromantic Crypt Rune}",
+                "{creature:Bonelords's Phylactery} (Bone Overlord)"
+              ]
+            ]
+          },
+          "tip": "As Crypt Runes podem ser vendidas no Market."
+        },
+        {
+          "title": "Repetir os bosses",
+          "text": "Todos os bosses têm **20 horas** de cooldown. Cada um pode deixar cair um item que, ao ser usado, gasta-se e põe o cooldown desse boss a zero:",
+          "table": {
+            "head": [
+              "Boss",
+              "Item de reset",
+              "Destaques do loot"
+            ],
+            "rows": [
+              [
+                "{creature:Adventurer Group}",
+                "{item:Worn Guide Book} (do Fatal Bug)",
+                "{item:Composite Hornbow}, {item:Traditional Sai}, {item:Mercenary Sword}, {item:Wand of Everblazing}, {item:Muck Rod}, anéis e colar de plasma"
+              ],
+              [
+                "{creature:Eldritch Dragon Lord}",
+                "{item:Golden Claw}",
+                "{item:Wand of Inferno}, {item:Fire Sword}, {item:Dragon Shield}, {item:Dragonbone Staff}, {item:Dragon Slayer}"
+              ],
+              [
+                "{creature:Ice Horror}",
+                "{item:Icy Horns} (usa em ti)",
+                "{item:Ice Rapier}, {item:Crystal Ring}, {item:Glacier Amulet}, {item:Glacier Mask}, {item:Crystalline Armor}"
+              ],
+              [
+                "{creature:The Gravedigger}",
+                "{item:Shrunken Head}",
+                "{item:Terra Rod}, {item:Necrotic Rod}, {item:Bonelord Shield}, {item:Assassin Dagger}"
+              ],
+              [
+                "{creature:Bone Overlord}",
+                "{item:Soul Trap} (da Phylactery)",
+                "{item:Haunted Blade}, {item:Death Ring}, {item:Skullcracker Armor}, {item:Spellweaver's Robe}, {item:Skull Staff}, {item:Skull Helmet}, {item:Skull Tendril}"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O {creature:Adventurer Group} conta como um único boss no Bosstiary e pode ser o boss boosted do dia. O {creature:Bone Overlord} também pode ser boosted, mas o loot sai da {creature:Bonelords's Phylactery}.",
+    "As Crypt Runes só caem a quem já acabou a quest; segundo o test server, são afetadas pelo bónus de boss slot do Bosstiary.",
+    "O wiki não documenta para onde levam os teleportes verdes depois das relíquias, nem o regresso da Forgotten Crypt: segue as indicações de saída de cada secção.",
+    "Se perderes a {item:Jade Dragon Head}, diz {key:talisman} ao {npc:S'Zallar M'Andar}."
+  ]
+}

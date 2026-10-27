@@ -1,0 +1,639 @@
+{
+  "slug": "rotten-blood-quest",
+  "category": "historia",
+  "region": "Darashia",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Vários dias: cerca de 33 min de Rotten Charges + até 15 min de luta por cada um dos quatro bosses (20 h de cooldown cada) e até 25 min para o Bakragore (cooldown de 2 dias e 20 horas)",
+  "summary": "Em {wiki:Drefia|Drefia}, o {npc:Torkada} conta que uma expedição da Inquisição encontrou um templo maligno e deixa-te entrar. Lá dentro, o {npc:A Bloodshade} abre-te a passagem para o reino de sangue do deus de sangue, o {wiki:Blood Vestibule|Blood Vestibule}, em troca de um sacrifício. Mata os dois pares de gémeos nascidos do {creature:Bakragore} ({creature:Murcion}, {creature:Vemiath}, {creature:Chagorz} e {creature:Ichgahal}) nas quatro zonas de caça e, com os quatro taints, derrota o próprio Bakragore. Recebes o outfit base {wiki:Decaying Defender Outfits|Decaying Defender} e a permissão para fazer {wiki:Crimson Offering|Crimson Offerings} em troca de equipamento do {wiki:Sanguine Set|Sanguine Set}.",
+  "legend_pt": "Ajuda o deus de sangue: entra no seu reino sagrado de sangue e limpa-o da descendência purulenta de decadência e podridão.",
+  "start": {"x": 33033, "y": 32428, "z": 7, "label": "Torkada, em Drefia (a oeste de Darashia)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível **250** (recomendado **800+**).",
+    "2× {item:Bloody Tears} **ou** 5.000.000 gp para o sacrifício que abre a passagem para o reino de sangue.",
+    "Feitiço {spell:Levitate} para chegares à entrada do templo, em Drefia.",
+    "Uma equipa organizada: os bosses foram pensados para um **Paladin** como bloqueador principal, um **Knight** para segurar os {creature:Elder Bloodjaw|Elder Bloodjaws} e atiradores (Druid e Sorcerer).",
+    "Para o {creature:Bakragore}: cada membro tem de ter matado os quatro filhos dele e ter os **quatro** {wiki:Bakragore's Taints|Bakragore's Taints}."
+  ],
+  "items_needed": [
+    {"item": "Bloody Tears", "qty": 2, "note": "ou 5.000.000 gp (opção {key:detour}); caem do boss {creature:The Fear Feaster} e compram-se no Market"},
+    {"item": "Rope", "note": "para subir a montanha até Drefia e para voltar a subir pelo buraco do templo à saída"},
+    {"item": "Magic Wall Rune", "note": "para bloquear as ondas dos Radicular Totems no Putrefactory"},
+    {"item": "Destroy Field Rune", "note": "a única forma de destruir os Darkfields no Darklight Core"},
+    {"item": "Necklace of the Deep", "note": "para o Knight, por causa do Life Drain dos Elder Bloodjaws"},
+    {"text": "Imbuement {wiki:Powerful Vibrancy|Powerful Vibrancy} para o Paladin (todos os bosses paralisam sem parar)"},
+    {"text": "Muitas poções e equipamento com proteções elementais adequadas a cada zona (ver as tabelas de cada secção)"}
+  ],
+  "rewards": [
+    {"text": "Outfit base {wiki:Decaying Defender Outfits|Decaying Defender} (masculino e feminino), ao derrotares o Bakragore"},
+    {"text": "Permissão para fazer {wiki:Crimson Offering|Crimson Offerings} no {npc:Altar (NPC)} do Blood Vestibule (peças do {wiki:Sanguine Set|Sanguine Set})"},
+    {"text": "Taint final do Bakragore: +4,5% de experiência e mais loot nas zonas da Rotten Blood, sem penalizações por si só"},
+    {"item": "Bag You Covet", "note": "chance aumentada no primeiro kill do Bakragore; transforma-se numa peça do Sanguine Set"},
+    {"text": "3.250.000 de experiência por cada filho do Bakragore e 15.000.000 pelo Bakragore"}
+  ],
+  "unlocks": [
+    {"what": "Blood Vestibule e as quatro zonas de caça (Jaded Roots, Darklight Core, Gloom Pillars e Putrefactory)", "kind": "zona", "place": "Blood Vestibule", "when": "Depois de aceitares a missão do {npc:Torkada} e de fazeres o sacrifício ao {npc:A Bloodshade} (2 {item:Bloody Tears} ou 5.000.000 gp): a poça de sangue passa a levar-te ao Blood Vestibule."},
+    {"what": "Luta contra o Bakragore", "kind": "funcionalidade", "place": "Bakragore", "when": "Depois de matares os quatro filhos dele ({creature:Murcion}, {creature:Vemiath}, {creature:Chagorz} e {creature:Ichgahal}) e teres os quatro taints.", "note": "Cooldown de 2 dias e 20 horas; 25 minutos de luta."},
+    {"what": "Crimson Offerings no Altar do Blood Vestibule", "kind": "loja", "place": "Crimson Offering", "when": "Depois de derrotares o {creature:Bakragore} pela primeira vez.", "note": "Cada oferta pede 5 {item:Tainted Heart|Tainted Hearts}, 5 {item:Darklight Heart|Darklight Hearts} e 50.000.000 gp e dá uma {item:Bag You Covet} (uma peça do Sanguine Set)."},
+    {"what": "Outfit base Decaying Defender (e acesso aos addons)", "kind": "funcionalidade", "place": "Decaying Defender Outfits", "when": "Ao derrotares o {creature:Bakragore}.", "note": "Os addons pedem uma {item:Cursed Wood} (Ichgahal) e uma {item:Darklight Geode} (Chagorz)."},
+    {"what": "Decaying Defender Outfits Quest (addons 1 e 2)", "kind": "missao", "place": "Decaying Defender Outfits Quest", "when": "Depois de derrotares o {creature:Bakragore}: só com o outfit base podes usar a {item:Cursed Wood} e a {item:Darklight Geode}."},
+    {"what": "Bakragore's Burden e essências dos filhos do Bakragore", "kind": "funcionalidade", "place": "Bakragore's Burden", "when": "Com o taint final (depois de matares o Bakragore) os quatro filhos podem deixar cair as suas essências, que podes sacrificar antes de lutares outra vez contra o Bakragore.", "note": "A única forma de conseguir as versões Grand Sanguine das armas."}
+  ],
+  "dangers": ["Sopping Corpus", "Oozing Corpus", "Mycobiontic Beetle", "Bloated Man-Maggot", "Decaying Totem", "Murcion", "Walking Pillar", "Darklight Matter", "Darklight Source", "Darklight Striker", "Vemiath", "Darklight Emitter", "Darklight Construct", "Wandering Pillar", "Converter", "Chagorz", "Oozing Carcass", "Sopping Carcass", "Rotten Man-Maggot", "Meandering Mushroom", "Radicular Totem", "Ichgahal", "Elder Bloodjaw", "Bloodjaw", "Pillar of Dark Energy", "Mushroom", "Bakragore", "Echo of Murcion", "Echo of Vemiath", "Echo of Chagorz", "Echo of Ichgahal", "Scorpion", "Ghoul"],
+  "npcs": ["Torkada", "A Bloodshade", "Altar (NPC)", "Petros", "Chemar"],
+  "tips": [
+    "Os quatro filhos podem ser mortos por **qualquer ordem** (os taints chegam sempre pela mesma ordem). A ordem que a maioria dos jogadores considera melhor: **Murcion** (Jaded Roots) → **Vemiath** (Darklight Core) → **Chagorz** (Gloom Pillars) → **Ichgahal** (Putrefactory), deixando o boss mais fácil para quando já tens três taints.",
+    "Cada filho do Bakragore tem **20 horas** de cooldown e **15 minutos** de luta; o Bakragore tem **2 dias e 20 horas** de cooldown e **25 minutos** de luta. Planeia vários dias com a mesma equipa.",
+    "Em cada zona e **antes de cada luta**, o contador de Rotten Charges de **todos** os membros tem de chegar a 100. Sozinho demora 33 minutos; usa as mecânicas de cada zona para acelerar.",
+    "O nível de taints da equipa é o do membro com **menos** taints. Para ganhares um taint numa luta tens de ter esse mesmo número mínimo, ainda não ter o taint desse boss e causar dano ao boss. Tenta fazer a quest sempre com a mesma equipa.",
+    "Paladins: evita passos na diagonal e usa {wiki:Powerful Vibrancy|Powerful Vibrancy}; todos os bosses lançam {wiki:Paralyse|Paralyse} constantemente e alguns curam-se muito se ficarem parados. Knights: usa o {item:Necklace of the Deep} quase sempre, por causa do muito Life Drain dos {creature:Elder Bloodjaw|Elder Bloodjaws}.",
+    "As mecânicas são essenciais: falhá-las torna o boss mais difícil de matar ou prejudica toda a equipa. Quanto mais baixo for o nível da equipa, mais importante é cumpri-las."
+  ],
+  "sections": [
+    {
+      "title": "1. Chegar a Drefia e falar com o Torkada",
+      "intro": "A quest começa em Drefia, a antiga cidade dos necromantes a oeste de Darashia. O {npc:Torkada}, ao serviço da Inquisição, está logo à entrada, na montanha.",
+      "steps": [
+        {
+          "title": "Chegar a Darashia",
+          "text": "Viaja até **Darashia**: de barco (o {npc:Petros} liga Darashia a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi, Krailos e Gray Island; no capitão dessa cidade diz {key:hi}, {key:darashia} e {key:yes} e chegas ao porto do Petros) ou de tapete voador (chegas ao {npc:Chemar}). De Thais, Carlin, Edron ou Ab'Dendriel não há barco direto: passa primeiro por Venore.",
+          "coords": [
+            {"x": 33289, "y": 32481, "z": 6, "label": "Petros, porto de Darashia"},
+            {"x": 33270, "y": 32439, "z": 6, "label": "Chemar, tapete voador de Darashia"}
+          ]
+        },
+        {
+          "title": "Subir a montanha até Drefia",
+          "text": "Sai de Darashia para **oeste**, em direção às montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Usa a {item:Rope} neste sítio {coord:33048,32429,7} para subires (também podes vir pela passagem entre Darashia e Ankrahmun). {wiki:Drefia|Drefia} fica do outro lado, a oeste ({coord:33018,32443,7}).",
+          "coords": [
+            {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda para subir para Drefia"},
+            {"x": 33018, "y": 32443, "z": 7, "label": "Drefia"}
+          ],
+          "images": [{"file": "Drefia Map.gif", "caption": "Mapa de Drefia"}],
+          "tip": "Na montanha há muitos {creature:Scorpion|Scorpions}; a este nível não são perigosos, mas envenenam."
+        },
+        {
+          "title": "Aceitar a missão do Torkada",
+          "text": "Fala com o {npc:Torkada}: diz {key:hi}, {key:expedition}, {key:mission} e {key:yes}. Ele conta que uns aventureiros de uma expedição da Inquisição encontraram a entrada de um templo maligno, demasiado imundo até para os padrões de Drefia, e que selaram a entrada para conter a corrupção. Ao aceitares a missão de erradicar o mal lá dentro, ele abençoa-te e passas a poder entrar no templo.",
+          "npc": "Torkada",
+          "coords": [{"x": 33033, "y": 32428, "z": 7, "label": "Torkada"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "expedition"},
+            {"you": "mission"},
+            {"you": "yes"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Entrar no Blood Vestibule",
+      "intro": "O templo fica a noroeste do Torkada e só se entra com {spell:Levitate}. Lá dentro, o {npc:A Bloodshade} guarda a poça de sangue que serve de portal para o reino de sangue.",
+      "steps": [
+        {
+          "title": "Subir pelo sítio de Levitate",
+          "text": "Vai ao sítio de {spell:Levitate} a **noroeste** do Torkada e sobe com *exani hur up*.",
+          "coords": [{"x": 32989, "y": 32393, "z": 7, "label": "Sítio de Levitate (entrada do templo)"}]
+        },
+        {
+          "title": "Descer até à porta entre os pilares",
+          "text": "Passa pelos 2 {creature:Ghoul|Ghouls}, desce as escadas e depois desce pelo buraco. Desce outra vez pelas escadas que estão logo a **nordeste** e segue para **sudoeste** até uma porta entre dois pilares de calcário. Passa a porta: logo à entrada da sala está o {npc:A Bloodshade}.",
+          "coords": [{"x": 32956, "y": 32398, "z": 9, "label": "A Bloodshade (piso -2, dois andares abaixo do sítio de Levitate)"}],
+          "tip": "Guarda a {item:Rope}: vais precisar dela para voltar a subir por este buraco quando saíres."
+        },
+        {
+          "title": "Pedir a passagem ao A Bloodshade",
+          "text": "Fala com o {npc:A Bloodshade}: diz {key:hi} e {key:quest}. Ele explica que o templo guarda a entrada para o reino sanguíneo do deus de sangue, o seu mestre, que está a ser corrompido por uma descendência purulenta, uma paródia da antiga glória do deus. Para entrares tens de sacrificar **2 {item:Bloody Tears}** ou **5.000.000 gp**.",
+          "npc": "A Bloodshade",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "quest"}
+          ],
+          "warning": "**Não** entres na poça de sangue antes de fazeres o sacrifício: levas {wiki:Agony Damage|Agony Damage} que tira uma percentagem da tua vida."
+        },
+        {
+          "title": "Fazer o sacrifício",
+          "text": "**Com lágrimas:** com as 2 {item:Bloody Tears} contigo, usa o prato de sacrifício **duas vezes** (pode ser preciso clicar várias vezes até as lágrimas serem consumidas). **Com ouro:** escolhe a opção {key:detour} na conversa com o {npc:A Bloodshade} para pagares os 5.000.000 gp. Depois disso, a poça de sangue passa a funcionar como portal.",
+          "npc": "A Bloodshade",
+          "reward": "Passagem para o Blood Vestibule"
+        },
+        {
+          "title": "Atravessar a poça de sangue",
+          "text": "Entra na poça de sangue. Chegas ao {wiki:Blood Vestibule|Blood Vestibule}, a entrada das quatro zonas de caça da Rotten Blood, parte do reino de sangue do Sanguine Lord, o deus de sangue."
+        },
+        {
+          "title": "Falar outra vez com o A Bloodshade",
+          "text": "Logo à entrada do Blood Vestibule fala de novo com o {npc:A Bloodshade}: diz {key:hi} e {key:quest}. Tens de matar os **dois pares de gémeos malignos** que espreitam nas zonas à frente; só depois das quatro vitórias se abre o caminho até ao {creature:Bakragore}, a presença imunda que dessacraliza este reino. Se quiseres a explicação toda, continua com {key:twins}, {key:beginning}, {key:sacrifice}, {key:decay}, {key:prevail} e {key:cost}: cada vitória deixa em ti um taint, uma corrupção que traz penalizações, mas só dentro das zonas contaminadas.",
+          "npc": "A Bloodshade",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Mortal! If you are on a quest to serve the blood god, my master - be greeted!"},
+            {"you": "quest"},
+            {"npc": "First, you must fight the two pairs of evil twins that lurk in the realm beyond here. [...] Only when you are victorious over all four of them, your path to the source of vileness, the path to Bakragore will be opened. [...]"},
+            {"you": "twins"},
+            {"npc": "Two sets of twins. Two represent the rot that spreads, tarnishes and dissolves. [...] The other pair represent the absence of light, the darkness that devours, the anti-light."},
+            {"you": "sacrifice"},
+            {"npc": "You will acquire a taint, a certain corruption, a touch of decay when you kill the festering spawn and Bakragore, its source."},
+            {"you": "cost"},
+            {"npc": "There are hindrances and weaknesses that come with the taint. [...] Only as long as you are in the contaminated areas, but still."}
+          ]
+        },
+        {
+          "title": "Encontrar os Spheric Teleporters",
+          "text": "Explora o Blood Vestibule: à frente há **quatro salas**, cada uma com um {item:Spheric Teleporter}. Usa o de cada sala para ires a uma das quatro zonas de caça (Jaded Roots, Darklight Core, Gloom Pillars e Putrefactory). As coordenadas gerais de cada zona estão nas secções seguintes, para confirmares onde chegaste.",
+          "coords": [{"x": 34070, "y": 32009, "z": 14, "label": "Blood Vestibule (Altar)"}]
+        }
+      ]
+    },
+    {
+      "title": "3. Mecânicas comuns: Rotten Charges e Bakragore's Taints",
+      "intro": "Antes de começares a matar os bosses é muito importante perceberes estas duas mecânicas. O wiki não indica a posição exata das salas das alavancas dentro de cada zona, nem as saídas das zonas e das salas de boss; em cada secção ficam as coordenadas gerais da zona.",
+      "steps": [
+        {
+          "title": "Encher o contador de Rotten Charges",
+          "text": "Em cada zona, e **sempre que a equipa quer lutar contra um boss**, o contador de {wiki:Rotten Charge (Counter)|Rotten Charges} de **todos** os membros tem de chegar a **100** para poderem entrar na sala da alavanca do boss. O contador aparece ao lado do nome do personagem (ícone da seta para cima), mesmo acima do contador de taints (ícone da gota de sangue). Sobe sozinho enquanto estás na zona de caça: 1 carga a cada 20 segundos, cheio em **33 minutos**. Cada zona tem mecânicas próprias para acelerar (ver cada secção).",
+          "images": [
+            {"file": "Quest Condition Arrow Up.png", "caption": "Ícone do contador de Rotten Charges"},
+            {"file": "Quest Condition Red Blood.png", "caption": "Ícone do contador de Bakragore's Taints"}
+          ]
+        },
+        {
+          "title": "Os quatro Bakragore's Taints",
+          "text": "Cada filho do Bakragore que matas dá um {wiki:Bakragore's Taints|Bakragore's Taint} a toda a equipa. Matar o mesmo boss outra vez **não** dá novo taint, por isso para teres os quatro tens de matar os quatro bosses. Os taints chegam **sempre pela mesma ordem**, seja qual for o boss morto, e só fazem efeito dentro das zonas da Rotten Blood:",
+          "table": {
+            "head": ["Taint", "Penalização"],
+            "rows": [
+              ["1.º", "Monstros corpo-a-corpo têm 6% de hipótese de trocar de posição contigo (num certo raio). Um efeito no teu tile avisa 2 segundos antes."],
+              ["2.º", "Quando um monstro morre, há 6,25% de hipótese de nascer um {creature:Bloodjaw} do cadáver. Nas lutas de boss aparece mais um {creature:Elder Bloodjaw}."],
+              ["3.º", "Os monstros podem prender-te (root) e atacam com um 4.º elemento: Death (Jaded Roots), Earth (Putrefactory), Energy (Gloom Pillars) ou Fire (Darklight Core)."],
+              ["4.º", "Recebes **+14%** de dano de todas as fontes na Rotten Blood."]
+            ]
+          }
+        },
+        {
+          "title": "Como os taints funcionam em equipa",
+          "text": "O nível de taints da equipa é o do membro com **menos** taints. Para ganhares um taint numa luta tens de: ter esse número mínimo de taints, ainda não ter o taint desse boss e **causar dano** ao boss. Exemplo: se quatro jogadores têm dois taints (Murcion e Vemiath) e um quinto não tem nenhum, a equipa luta sem taints e, ao matar o Ichgahal, só o quinto jogador ganha um taint.",
+          "warning": "Quem não acerta no boss não recebe o taint dessa luta. Garante que todos causam dano."
+        },
+        {
+          "title": "Bónus dos taints",
+          "text": "Os taints também trazem vantagens: cada um dá 7,8% de hipótese de uma segunda rolagem de loot nos monstros normais (7,8% → 15,6% → 23,4% → 31,2% → 39%), aumenta a experiência dos monstros da zona, dá hipótese de loot de {item:Tainted Heart|Tainted Hearts} e {item:Darklight Heart|Darklight Hearts} nos monstros normais e aumenta a hipótese de os quatro filhos do Bakragore deixarem cair uma {item:Bag You Covet}."
+        },
+        {
+          "title": "Ordem recomendada dos bosses",
+          "text": "Podes matar os bosses pela ordem que quiseres. Por causa da dificuldade das zonas e dos bosses, a ordem mais usada é esta:",
+          "table": {
+            "head": ["Ordem", "Zona", "Boss", "Gémeo de"],
+            "rows": [
+              ["1", "{wiki:Jaded Roots|Jaded Roots}", "{creature:Murcion}", "{creature:Ichgahal}"],
+              ["2", "{wiki:Darklight Core|Darklight Core}", "{creature:Vemiath}", "{creature:Chagorz}"],
+              ["3", "{wiki:Gloom Pillars|Gloom Pillars}", "{creature:Chagorz}", "{creature:Vemiath}"],
+              ["4", "{wiki:Putrefactory|Putrefactory}", "{creature:Ichgahal}", "{creature:Murcion}"]
+            ]
+          }
+        },
+        {
+          "title": "Regras gerais para todos os bosses",
+          "text": "Ao contrário da maioria das lutas antigas, aqui o **Paladin** é o bloqueador principal. Todos os bosses lutam com pelo menos dois {creature:Elder Bloodjaw|Elder Bloodjaws} (mais, conforme os taints da equipa), e todos lançam {wiki:Paralyse|Paralyse} constantemente. Paladins: evitem passos na diagonal e usem {wiki:Powerful Vibrancy|Powerful Vibrancy}. Knights: usem o {item:Necklace of the Deep} quase sempre por causa do Life Drain dos Elder Bloodjaws. Cada filho do Bakragore tem **20 horas** de cooldown e **15 minutos** de luta."
+        }
+      ]
+    },
+    {
+      "title": "4. Jaded Roots: Murcion",
+      "intro": "Uma das lutas mais difíceis, por causa da sala pequena. Os monstros desta zona causam dano Earth, Physical e Fire (e Death a quem tem 3+ taints) e são fracos a Energy, Ice e Holy.",
+      "steps": [
+        {
+          "title": "Ir para a Jaded Roots",
+          "text": "No Blood Vestibule, usa o {item:Spheric Teleporter} que leva à {wiki:Jaded Roots|Jaded Roots}. Aqui caças {creature:Sopping Corpus}, {creature:Oozing Corpus}, {creature:Mycobiontic Beetle} e {creature:Bloated Man-Maggot}.",
+          "coords": [{"x": 33842, "y": 31664, "z": 14, "label": "Jaded Roots"}],
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Earth, Physical, Fire (e Death com 3+ taints)"],
+              ["Ataca com", "Energy, Ice, Holy"]
+            ]
+          }
+        },
+        {
+          "title": "Cuidado com os Decaying Totems",
+          "text": "Quando um monstro morre, há uma hipótese de aparecer um {creature:Decaying Totem}. Ele lança **quatro anéis seguidos** em ondas que se alargam, cada um com bastante dano, e depois desaparece. Afasta-te dele assim que aparece."
+        },
+        {
+          "title": "Acelerar o contador de Rotten Charges",
+          "text": "Para encheres os 100 Rotten Charges mais depressa:",
+          "table": {
+            "head": ["Ação", "Cargas", "Tempo poupado"],
+            "rows": [
+              ["Usar {item:Organic Acid} num {item:Small Spore Reservoir}", "+1", "20 segundos"],
+              ["Usar um {item:Spore Reservoir}", "+15", "5 minutos"]
+            ]
+          },
+          "tip": "O {item:Organic Acid} cai dos monstros da zona ({creature:Sopping Corpus}, {creature:Oozing Corpus}, {creature:Mycobiontic Beetle} e {creature:Bloated Man-Maggot}). Cada jogador só pode usar o mesmo {item:Spore Reservoir} uma vez a cada 10 minutos."
+        },
+        {
+          "title": "Entrar na sala do Murcion",
+          "text": "Com o contador de **todos** a 100, entrem na sala da alavanca do boss e usem a alavanca para enfrentar o {creature:Murcion} (600.000 HP). Têm **15 minutos**; o boss tem **20 horas** de cooldown.",
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Life Drain, Death"]
+            ]
+          }
+        },
+        {
+          "title": "Não pisar os rastos de Mould",
+          "text": "O Murcion deixa rastos de {item:Mould (Field)|Mould} no chão por onde passa ou fica parado. Se um jogador pisar ou ficar num rasto, perde **12,5% da vida máxima por segundo** em {wiki:Agony Damage|Agony Damage}. Se o **boss** pisar ou ficar nos seus próprios rastos, **cura-se muito** (15.000+). O boss tem de andar sempre para terreno limpo.",
+          "warning": "Nunca deixes o Murcion parado em cima dos rastos: equipas de nível mais baixo não aguentam várias curas destas e ficam sem tempo para o matar."
+        },
+        {
+          "title": "Elder Bloodjaws e Mushrooms",
+          "text": "O boss luta com dois {creature:Elder Bloodjaw|Elder Bloodjaws} (sem contar com os extra dos taints). Durante toda a luta invoca {creature:Mushroom|Mushrooms} ao acaso à volta dele, até 8 de cada vez. Explodem passado um tempo ou quando alguém se aproxima, com **2.500+ de Life Drain** numa área pequena."
+        },
+        {
+          "title": "Estratégia: o Paladin",
+          "text": "O **Paladin** puxa logo o alvo do Murcion e corre em círculo, o mais largo possível. O ritmo é tudo: se correr depressa demais, completa a volta antes de os rastos de Mould desaparecerem; se correr devagar demais, o boss acaba por se curar em cima do próprio rasto."
+        },
+        {
+          "title": "Estratégia: os atiradores",
+          "text": "Os atiradores nunca se aproximam do boss, para não lhe chamarem o alvo. Se o boss mudar de alvo para um atirador, esse jogador corre **imediatamente na mesma direção** em que o Paladin corria, para o Murcion continuar a andar no sentido certo."
+        },
+        {
+          "title": "Estratégia: o Knight",
+          "text": "O **Knight** usa {spell:Challenge} nos Elder Bloodjaws assim que aparecem e corre à volta da sala no mesmo sentido do Paladin, cerca de **meia volta atrás**, para estar sempre do lado oposto. Pelo caminho passa perto dos Mushrooms para os rebentar e limpar o caminho da próxima volta do Paladin.",
+          "tip": "Encontra um equilíbrio: o boss tem um limite de Mushrooms ativos. Deixar alguns vivos evita que ele invoque tantos que fique preso entre eles, parado e a curar-se várias vezes seguidas."
+        },
+        {
+          "title": "Lootar e receber o taint",
+          "text": "Abre o corpo do Murcion. Recebes um Bakragore's Taint (o 1.º, se for o teu primeiro boss) e 3.250.000 de experiência. Além de Crystal Coins, poções, gemas e âmbares, pode deixar cair {item:Putrefactive Figurine}, {item:Spiritual Horseshoe}, {item:Bag You Covet} e, com o taint final, {item:The Essence of Murcion}.",
+          "reward": "1 Bakragore's Taint e 3.250.000 de experiência"
+        },
+        {
+          "title": "Voltar ao Blood Vestibule",
+          "text": "O wiki não descreve a saída da sala do boss nem da Jaded Roots. Volta ao ponto onde o {item:Spheric Teleporter} te deixou na zona e regressa por aí ao Blood Vestibule; se não encontrares saída, usa um {item:Temple Teleport Scroll} para voltares ao templo da tua cidade. Para saíres de vez, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 9.",
+          "tip": "O {item:Temple Teleport Scroll} leva-te ao teu templo, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block: espera que o bloqueio de combate passe antes de o usares."
+        }
+      ]
+    },
+    {
+      "title": "5. Darklight Core: Vemiath",
+      "intro": "Os monstros desta zona causam dano Energy, Physical e Ice (e Fire a quem tem 3+ taints) e são fracos a Earth, Fire e Physical.",
+      "steps": [
+        {
+          "title": "Ir para o Darklight Core",
+          "text": "No Blood Vestibule, usa o {item:Spheric Teleporter} que leva ao {wiki:Darklight Core|Darklight Core}. Aqui caças {creature:Walking Pillar}, {creature:Darklight Matter}, {creature:Darklight Source} e {creature:Darklight Striker}.",
+          "coords": [{"x": 34118, "y": 31880, "z": 14, "label": "Darklight Core"}],
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Energy, Physical, Ice (e Fire com 3+ taints)"],
+              ["Ataca com", "Earth, Fire, Physical"]
+            ]
+          }
+        },
+        {
+          "title": "Cuidado com os Darkfields",
+          "text": "Os monstros desta zona podem pôr um {item:Darkfield} debaixo de ti. É parecido com um Fire Field, mas causa bastante {wiki:Agony Damage|Agony Damage}. Só se destrói com {item:Destroy Field Rune|Destroy Field Runes}, e acerta sempre no alvo inicial."
+        },
+        {
+          "title": "Acelerar o contador de Rotten Charges",
+          "text": "Para encheres os 100 Rotten Charges mais depressa:",
+          "table": {
+            "head": ["Ação", "Cargas", "Tempo poupado"],
+            "rows": [
+              ["Usar {item:Unstable Darklight Matter} em poças de sangue", "+1", "20 segundos"],
+              ["Usar {item:Yellow Darklight Matter} em poças de sangue", "+3", "1 minuto"],
+              ["Usar um {item:Darklight Obelisk}", "+15", "5 minutos"]
+            ]
+          },
+          "tip": "A {item:Unstable Darklight Matter} cai dos {creature:Darklight Striker|Darklight Strikers} e das {creature:Darklight Matter}; a {item:Yellow Darklight Matter} cai dos {creature:Walking Pillar|Walking Pillars} e das {creature:Darklight Source|Darklight Sources}. Usa-as logo: desaparecem passados alguns minutos. O {item:Darklight Obelisk} parte-se quando alguém o usa e volta 10 segundos depois; cada jogador só pode usar o mesmo obelisco uma vez a cada 10 minutos."
+        },
+        {
+          "title": "Entrar na sala do Vemiath",
+          "text": "Com o contador de **todos** a 100, entrem na sala da alavanca e usem a alavanca para enfrentar o {creature:Vemiath} (600.000 HP), o gémeo do Chagorz. Têm **15 minutos**; o boss tem **20 horas** de cooldown. Protege-te de **Energy**."
+        },
+        {
+          "title": "Controlar o teu contador de cargas",
+          "text": "Durante a luta tens um contador ao lado do nome (ícone do X branco) que sobe **2 por segundo** até **21**. No máximo, levas **15% da vida máxima** em Agony Damage por segundo. Cada passo que dás \"larga\" uma carga no chão como {item:Darklight Spark} e baixa o contador em 1. Pisar ou ficar numa Darklight Spark tira **3% da vida máxima** por segundo. Passados 3 segundos, as Sparks viram {item:Darklight Field|Darklight Fields}, que duram 2 segundos e também tiram 3% logo que as pisas. Podes levar até 18% por segundo se não tiveres cuidado: anda sempre, mas não pises os teus rastos.",
+          "images": [{"file": "Quest Condition White X.png", "caption": "Ícone do contador de cargas durante a luta"}],
+          "warning": "O Vemiath cura **200 HP** por cada Darklight Spark e **400 HP** por cada Darklight Field que pisa."
+        },
+        {
+          "title": "Evitar os Pillars of Dark Energy",
+          "text": "O boss invoca até 8 {creature:Pillar of Dark Energy|Pillars of Dark Energy}. Cada um acorrenta quem estiver ao lado dele com dano de **Energy**: nunca fiques junto de um, e muito menos de vários (as correntes disparam ao mesmo tempo, com picos de dano enormes). Quem leva a corrente ganha outro contador (ícone da bola vermelha, máximo 11) que baixa 1 por segundo e tira cerca de **1.200 de Energy** em cada tick.",
+          "images": [{"file": "Quest Condition Red Ball.png", "caption": "Ícone do contador das correntes dos Pillars"}],
+          "warning": "O raio (beam) do Vemiath faz disparar **todas** as cargas desse contador de uma só vez. Se tiveres muitas, fica fora da frente do boss."
+        },
+        {
+          "title": "Levar um Elder Bloodjaw à Rotten Charge",
+          "text": "A cada **90 segundos** aparece uma {wiki:Rotten Charge|Rotten Charge} no centro da sala, que dura 15 segundos. Tens de levar um {creature:Elder Bloodjaw} a pisá-la. **Se nenhum a pisar:** a sala avisa aos 6 segundos (*\"The rotten charge is going to explode!\"*) e aos 10 (*\"THE ROTTEN CHARGE WILL EXPLODE SOON!\"*); aos 15 explode e cada jogador perde **40% da vida máxima**. **Se um Elder Bloodjaw a pisar**, durante 15 segundos: quem está perto não larga Sparks nem Fields, o boss não se cura nos rastos, todos os Elder Bloodjaws saem da sala e as resistências do boss baixam bastante. Em troca, o boss prepara um golpe devastador no alvo atual, aos 6 e aos 12 segundos.",
+          "table": {
+            "head": ["Alvo do golpe", "1.º golpe", "2.º golpe"],
+            "rows": [
+              ["Knight", "5% da vida máxima", "10% da vida máxima"],
+              ["Paladin, Druid ou Sorcerer", "20% da vida máxima", "40% da vida máxima"]
+            ]
+          },
+          "tip": "O boss grita *\"WILL ... PUNISH ... YOU!\"* no início da mecânica e de novo depois do 1.º golpe, e *\"RAAAR!\"* no 2.º golpe."
+        },
+        {
+          "title": "Estratégia da equipa",
+          "text": "A estratégia mais usada: o **Paladin** corre em círculos com o boss na parte **norte** da sala e os atiradores dividem-se pelos lados **oeste** e **leste**. O **Knight** fica com os Elder Bloodjaws e corre em círculos com eles na parte **sul**. Quando aparece a Rotten Charge, o Knight leva os Bloodjaws para cima dela e depois puxa o boss para aguentar os dois golpes. A seguir o Paladin volta a pegar no boss e repete-se tudo até o Vemiath morrer."
+        },
+        {
+          "title": "Lootar e receber o taint",
+          "text": "Abre o corpo do Vemiath. Recebes o taint seguinte e 3.250.000 de experiência. Além de Crystal Coins, poções e gemas, pode deixar cair {item:Vemiath's Infused Basalt}, {item:Darklight Figurine}, {item:Bag You Covet} e, com o taint final, {item:The Essence of Vemiath}.",
+          "reward": "1 Bakragore's Taint e 3.250.000 de experiência"
+        },
+        {
+          "title": "Voltar ao Blood Vestibule",
+          "text": "Tal como na Jaded Roots, o wiki não descreve a saída: volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres de vez, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 9."
+        }
+      ]
+    },
+    {
+      "title": "6. Gloom Pillars: Chagorz",
+      "intro": "Os monstros desta zona causam dano Holy, Fire e Earth (e Energy a quem tem 3+ taints) e são fracos a Physical, Death e Energy.",
+      "steps": [
+        {
+          "title": "Ir para as Gloom Pillars",
+          "text": "No Blood Vestibule, usa o {item:Spheric Teleporter} que leva às {wiki:Gloom Pillars|Gloom Pillars}. Aqui caças {creature:Darklight Emitter}, {creature:Darklight Construct}, {creature:Wandering Pillar} e {creature:Converter}.",
+          "coords": [{"x": 33810, "y": 31824, "z": 14, "label": "Gloom Pillars"}],
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Holy, Fire, Earth (e Energy com 3+ taints)"],
+              ["Ataca com", "Physical, Death, Energy"]
+            ]
+          }
+        },
+        {
+          "title": "Cuidado com a energia escura",
+          "text": "Nesta zona absorves energia escura, num contador próprio ao lado do nome. Quando chega a **100**, dispara uma corrente dolorosa em cima de ti (distância inicial de 3 tiles, saltos até 6 tiles) que pode saltar para até **5 alvos** próximos, com mais dano a cada salto.",
+          "table": {
+            "head": ["Primeiro alvo", "Dano base (Energy)", "Aumento por salto"],
+            "rows": [
+              ["Knight ou Paladin", "2.250", "+37%"],
+              ["Sorcerer ou Druid", "900", "+90%"]
+            ]
+          },
+          "warning": "Quando o teu contador estiver perto de 100, afasta-te dos colegas."
+        },
+        {
+          "title": "Acelerar o contador de Rotten Charges",
+          "text": "Para encheres os 100 Rotten Charges mais depressa:",
+          "table": {
+            "head": ["Ação", "Cargas", "Tempo poupado"],
+            "rows": [
+              ["Usar um {item:Darklight Obsidian Axe} nos pilares", "+1", "20 segundos"],
+              ["Usar um {item:Darklight Obelisk}", "+15", "5 minutos"]
+            ]
+          },
+          "tip": "O {item:Darklight Obsidian Axe} cai dos quatro monstros da zona e desaparece passados alguns minutos se não o usares; usa-o nos pilares de pedra. A página do item fala em 3 cargas (60 segundos) por uso, o spoiler em 1. Cada jogador só pode usar o mesmo {item:Darklight Obelisk} uma vez a cada 10 minutos."
+        },
+        {
+          "title": "Entrar na sala do Chagorz",
+          "text": "Com o contador de **todos** a 100, entrem na sala da alavanca e usem a alavanca para enfrentar o {creature:Chagorz} (600.000 HP), o gémeo do Vemiath. Têm **15 minutos**; o boss tem **20 horas** de cooldown. Protege-te de **Fire** e **Energy**."
+        },
+        {
+          "title": "Controlar o teu contador de cargas",
+          "text": "Como no Vemiath, tens um contador (ícone do X branco) que sobe **2 por segundo** até **21**; no máximo levas **15% da vida máxima** por segundo. Cada passo larga uma carga no chão como {item:Darkfield} e baixa o contador em 1. Os Darkfields duram 3 segundos e tiram **3% da vida máxima** quando os pisas, ou por segundo enquanto estás em cima. Anda sempre, sem pisar os teus rastos.",
+          "warning": "O Chagorz cura **375 HP** por cada Darkfield que pisa."
+        },
+        {
+          "title": "Evitar os Pillars of Dark Energy",
+          "text": "O boss invoca até 8 {creature:Pillar of Dark Energy|Pillars of Dark Energy}, que acorrentam quem estiver ao lado deles com dano de **Fire**. Nunca fiques junto de um (e muito menos de vários). Quem leva a corrente ganha o contador da bola vermelha (máximo 11), que baixa 1 por segundo e tira cerca de **1.200 de Fire** em cada tick.",
+          "warning": "O raio (beam) do Chagorz faz disparar **todas** essas cargas de uma vez."
+        },
+        {
+          "title": "Levar um Elder Bloodjaw à Rotten Charge",
+          "text": "A cada **90 segundos** o Chagorz larga uma {wiki:Rotten Charge|Rotten Charge} no centro da sala, que dura 15 segundos. **Se nenhum Elder Bloodjaw a pisar:** avisos aos 6 e aos 10 segundos e, aos 15, explosão que tira **40% da vida máxima** a cada jogador. **Se um Elder Bloodjaw a pisar**, durante 15 segundos: quem está perto não larga Darkfields, o boss não se cura nos campos, os Elder Bloodjaws saem da sala e as resistências do boss baixam bastante; em troca, o boss dá dois golpes devastadores no alvo atual, aos 6 e aos 12 segundos (Knight: 5% e 10% da vida máxima; Paladin, Druid ou Sorcerer: 20% e 40%).",
+          "tip": "Os gritos são os mesmos do Vemiath: *\"WILL ... PUNISH ... YOU!\"* no início e depois do 1.º golpe, *\"RAAAR!\"* no 2.º."
+        },
+        {
+          "title": "Estratégia da equipa",
+          "text": "Igual à do Vemiath: o **Paladin** corre em círculos com o boss na parte **norte**, os atiradores dividem-se por **oeste** e **leste**, e o **Knight** corre com os Elder Bloodjaws na parte **sul**. Quando aparece a Rotten Charge, o Knight leva os Bloodjaws para cima dela e depois puxa o boss para aguentar os dois golpes; a seguir o Paladin volta a pegar no boss."
+        },
+        {
+          "title": "Lootar e receber o taint",
+          "text": "Abre o corpo do Chagorz. Recebes o taint seguinte e 3.250.000 de experiência. Além de Crystal Coins, poções e gemas, pode deixar cair {item:Chagorz Igneous Obsidian}, {item:Darklight Figurine}, {item:Darklight Geode} (2.º addon do Decaying Defender), {item:Bag You Covet} e, com o taint final, {item:The Essence of Chagorz}.",
+          "reward": "1 Bakragore's Taint e 3.250.000 de experiência"
+        },
+        {
+          "title": "Voltar ao Blood Vestibule",
+          "text": "O wiki não descreve a saída: volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres de vez, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 9."
+        }
+      ]
+    },
+    {
+      "title": "7. Putrefactory: Ichgahal",
+      "intro": "Provavelmente o boss mais fácil da quest, por isso fica para o fim, já com três taints. Os monstros desta zona causam dano Death, Ice e Energy (e Earth a quem tem 3+ taints) e são fracos a Holy, Earth e Fire.",
+      "steps": [
+        {
+          "title": "Ir para o Putrefactory",
+          "text": "No Blood Vestibule, usa o {item:Spheric Teleporter} que leva ao {wiki:Putrefactory|Putrefactory}. Aqui caças {creature:Oozing Carcass}, {creature:Sopping Carcass}, {creature:Rotten Man-Maggot} e {creature:Meandering Mushroom}.",
+          "coords": [{"x": 34100, "y": 31688, "z": 14, "label": "Putrefactory"}],
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Death, Ice e Earth (Earth por causa dos totems e dos ataques do 3.º taint)"],
+              ["Ataca com", "Holy, Earth, Fire"]
+            ]
+          }
+        },
+        {
+          "title": "Cuidado com os Radicular Totems",
+          "text": "Há {creature:Radicular Totem|Radicular Totems} indestrutíveis em todas as salas grandes. Lançam ondas enormes de **4.500 de dano Earth** que chegam muito longe (mesmo fora do teu ecrã), em momentos certos e rodando de direção: leste, sul, oeste e depois norte. Cada criatura que morre perto de um totem dá-lhe uma carga (vês o número ao lado do nome), e cada carga soma **+10%** ao dano.",
+          "tip": "Podes bloquear as ondas com {item:Magic Wall Rune|Magic Walls}, mas os monstros também partem as paredes: não contes sempre com elas."
+        },
+        {
+          "title": "Acelerar o contador de Rotten Charges",
+          "text": "Para encheres os 100 Rotten Charges mais depressa:",
+          "table": {
+            "head": ["Ação", "Cargas", "Tempo poupado"],
+            "rows": [
+              ["Usar {item:Lichen Gobbler} em certos tiles do **piso de baixo** da zona", "+1", "20 segundos"],
+              ["Usar um {item:Spore Reservoir}", "+15", "5 minutos"]
+            ]
+          },
+          "tip": "O {item:Lichen Gobbler} cai dos quatro monstros da zona. Nem sempre funciona: às vezes não come o tile e pode partir-se ao acaso. Cada jogador só pode usar o mesmo {item:Spore Reservoir} uma vez a cada 10 minutos."
+        },
+        {
+          "title": "Entrar na sala do Ichgahal",
+          "text": "Com o contador de **todos** a 100, entrem na sala da alavanca e usem a alavanca para enfrentar o {creature:Ichgahal}, o gémeo do Murcion. Têm **15 minutos**; o boss tem **20 horas** de cooldown. Protege-te de **Life Drain** e **Death**."
+        },
+        {
+          "title": "Não deixar o boss pisar os fungos",
+          "text": "O Ichgahal deixa rastos de {item:Spores} por onde passa ou fica. Neste 1.º estado, tocar-lhes dá pouco Agony Damage e um {wiki:Hexed|lesser hex}. Passados uns segundos viram {item:Volatile Funghi}: tocar-lhes dá muito Agony Damage e um **greater hex** durante 15 segundos, e o funghi transforma-se numa {item:Spore Cloud}, ainda mais perigosa.",
+          "warning": "O boss cura **13.500 HP** por cada Volatile Funghi que pisa e **27.000 HP** por cada Spore Cloud. Leva-o sempre para terreno limpo."
+        },
+        {
+          "title": "Elder Bloodjaws e Mushrooms",
+          "text": "Luta com dois {creature:Elder Bloodjaw|Elder Bloodjaws} (mais os dos taints) e invoca {creature:Mushroom|Mushrooms} ao acaso à volta dele durante toda a luta (até 8), que explodem passado um tempo ou quando alguém se aproxima, com **2.500+ de Life Drain** numa área pequena."
+        },
+        {
+          "title": "Escolher a estratégia",
+          "text": "Há duas estratégias comuns:",
+          "table": {
+            "head": ["Estratégia", "Como se faz"],
+            "rows": [
+              ["Knight no canto", "O Knight usa {spell:Challenge} em todos os Elder Bloodjaws e fica num canto, com um Druid perto a curá-lo. A sala é grande: o Paladin corre meia volta do outro lado com o boss, e os atiradores ficam o tempo todo fora da vista dos Elder Bloodjaws (evitam as trocas de posição do 1.º taint)."],
+              ["Volta completa", "Como no Murcion: o Paladin corre em círculo com o boss e o Knight corre a volta inteira com os Elder Bloodjaws, sempre meia volta atrás do Paladin."]
+            ]
+          }
+        },
+        {
+          "title": "Lootar e receber o 4.º taint",
+          "text": "Abre o corpo do Ichgahal. Recebes o último taint e 3.250.000 de experiência. Além de Crystal Coins, poções, gemas e âmbares, pode deixar cair {item:Ichgahal's Fungal Infestation}, {item:Putrefactive Figurine}, {item:Cursed Wood} (1.º addon do Decaying Defender), {item:Bag You Covet} e, com o taint final, {item:The Essence of Ichgahal}.",
+          "reward": "4.º Bakragore's Taint e 3.250.000 de experiência"
+        },
+        {
+          "title": "Voltar ao Blood Vestibule",
+          "text": "O wiki não descreve a saída: volta ao ponto onde o {item:Spheric Teleporter} te deixou e regressa por aí ao Blood Vestibule (ou usa um {item:Temple Teleport Scroll}). Para saíres de vez, segue os passos «Sair do Blood Vestibule» e «Sair do templo e de Drefia» da secção 9."
+        }
+      ]
+    },
+    {
+      "title": "8. Luta final: Bakragore",
+      "intro": "Tal como na {wiki:Soul War Quest|Soul War Quest}, só podes enfrentar o {creature:Bakragore} depois de matares os quatro filhos e juntares os quatro taints. A informação abaixo é para o modo mais fácil (sem taint final nem burden); com quatro taints recebes sempre **+14%** de dano, por isso conta com isso em todos os valores.",
+      "steps": [
+        {
+          "title": "Preparar a luta",
+          "text": "Confirma que **todos** os membros têm os quatro taints. O Bakragore está no Blood Vestibule e entra-se por uma alavanca (o wiki não indica a posição exata dela). Têm **25 minutos** para o matar; o boss tem 660.000 HP e **2 dias e 20 horas** de cooldown.",
+          "table": {
+            "head": ["", "Elementos"],
+            "rows": [
+              ["Protege-te de", "Death, Energy, Physical (Paladin e Knight), Life Drain (Knight)"],
+              ["Ataca com", "Death, Physical, Holy"]
+            ]
+          },
+          "warning": "Se a equipa **falhar** a luta, perde os **dois últimos taints** e o progresso de **dois bosses ao acaso** (os mesmos para toda a equipa). Terás de os matar outra vez."
+        },
+        {
+          "title": "Elder Bloodjaws, Mushrooms e rastos de Mould",
+          "text": "O Bakragore luta com **quatro** {creature:Elder Bloodjaw|Elder Bloodjaws} e junta mecânicas dos filhos, com mudanças importantes. Invoca até 4 {creature:Mushroom|Mushrooms} e deixa rastos de {item:Mould (Field)|Mould} por onde anda: pisar ou ficar nesses rastos tira **3% da vida máxima** por segundo."
+        },
+        {
+          "title": "Controlar o teu contador de cargas",
+          "text": "Tens o contador do X branco, que sobe **2 por segundo** até **21**; no máximo levas **15% da vida máxima** por segundo. Cada passo larga um {item:Darkfield} (dura 3 segundos) e baixa o contador em 1; ficar em cima de um Darkfield tira **3% da vida máxima** por segundo.",
+          "warning": "O Bakragore cura **500 HP** por cada Darkfield que pisa."
+        },
+        {
+          "title": "Evitar os Pillars of Dark Energy",
+          "text": "O boss invoca até 4 {creature:Pillar of Dark Energy|Pillars of Dark Energy}, que acorrentam quem estiver ao lado com dano de **Death**. Quem leva a corrente ganha o contador da bola vermelha (máximo 11), que baixa 1 por segundo e tira **1.500+ de Death** em cada tick.",
+          "warning": "O raio (beam) do Bakragore faz disparar todas essas cargas de uma vez: uma explosão enorme de Death."
+        },
+        {
+          "title": "A Rotten Charge do Bakragore",
+          "text": "A cada **90 segundos** o Bakragore larga uma {wiki:Rotten Charge|Rotten Charge} no centro da sala, que tira logo **1.250 de Agony Damage** a toda a gente e dura 15 segundos. **Se nenhum Elder Bloodjaw a pisar:** avisos aos 5 segundos (*\"The rotten charge is going to explode!\"*) e aos 10 (*\"THE ROTTEN CHARGE WILL EXPLODE SOON!\"*); aos 15 explode (*\"THE ROTTEN ENERGY EXPLODES!\"*) e cada jogador perde **80% da vida máxima**. **Se um Elder Bloodjaw a pisar**, durante 15 segundos: quem está perto não larga Darkfields, o boss não se cura nos campos, os Elder Bloodjaws saem da sala e as resistências do boss baixam bastante; em troca, o boss dá dois golpes no alvo atual, aos 6 e aos 12 segundos.",
+          "table": {
+            "head": ["Alvo do golpe", "1.º golpe", "2.º golpe"],
+            "rows": [
+              ["Knight", "5% da vida máxima", "10% da vida máxima"],
+              ["Paladin, Druid ou Sorcerer", "40% da vida máxima", "80% da vida máxima"]
+            ]
+          },
+          "warning": "Ao contrário dos filhos, o Bakragore **não grita** a avisar os golpes. Prestem muita atenção: o Knight tem de ser o alvo durante esses 12 segundos."
+        },
+        {
+          "title": "Derrotar o Bakragore e receber as recompensas",
+          "text": "Quando o Bakragore morrer, recebes o **outfit base** {wiki:Decaying Defender Outfits|Decaying Defender}, a permissão para fazer {wiki:Crimson Offering|Crimson Offerings} no Altar do Blood Vestibule, o **taint final** e 15.000.000 de experiência. Os teus taints normais são repostos a zero. No primeiro kill tens uma hipótese **aumentada** de lootar uma {item:Bag You Covet}; a hipótese continua a subir a cada kill até a lootares e depois volta ao valor normal, bem mais baixo. Também pode deixar cair {item:Bakragore's Amalgamation}, {item:Figurine of Bakragore}, Promotion Scrolls, {item:Spiritual Horseshoe}, {item:Royal Almandine}, {item:Fiery Tear} e {item:Cobalt Ridge}, além de Crystal Coins, poções, gemas e giant gems.",
+          "images": [
+            {"file": "Outfit Decaying Defender Male.gif", "caption": "Decaying Defender Outfit (masculino)"},
+            {"file": "Outfit Decaying Defender Female.gif", "caption": "Decaying Defender Outfit (feminino)"}
+          ],
+          "reward": "Outfit base Decaying Defender, permissão para Crimson Offerings, taint final e 15.000.000 de experiência"
+        }
+      ]
+    },
+    {
+      "title": "9. Depois da quest: Crimson Offerings, Burden, taints e saída",
+      "intro": "Com o Bakragore derrotado podes continuar a farmar a zona com o taint final, trocar corações por peças do Sanguine Set e repetir o Bakragore com mais dificuldade e melhores recompensas.",
+      "steps": [
+        {
+          "title": "Fazer uma Crimson Offering",
+          "text": "Enquanto caças nas zonas da Rotten Blood com taints, junta {item:Tainted Heart|Tainted Hearts} e {item:Darklight Heart|Darklight Hearts} (drops muito raros). Com **5 Tainted Hearts**, **5 Darklight Hearts** e **50.000.000 gp**, fala com o {npc:Altar (NPC)} no Blood Vestibule: {key:hi}, {key:kneel}, {key:offer} e {key:yes}. Recebes uma {item:Bag You Covet}, que se transforma numa peça do {wiki:Sanguine Set|Sanguine Set}.",
+          "npc": "Altar (NPC)",
+          "coords": [{"x": 34070, "y": 32009, "z": 14, "label": "Altar, no Blood Vestibule"}],
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Kneel before the all-devouring power of blooded decay!"},
+            {"you": "kneel"},
+            {"npc": "Prepare your offer and cling to the sanctity of this place."},
+            {"you": "offer"},
+            {"npc": "Five tainted hearts and five darklight hearts drowned in a worldly wealth of 50000000 gold pieces for the righteous. Are you prepared?"},
+            {"you": "yes"},
+            {"npc": "Your sacrifice has been accepted, mortal. Embrace your reward!"}
+          ],
+          "warning": "Só quem já derrotou o Bakragore pelo menos uma vez pode fazer ofertas."
+        },
+        {
+          "title": "O taint final e os taints extra",
+          "text": "O taint final dá +4,5% de experiência e loot só a ti, sem penalizações, e não conta para o nível de taints da equipa. Com ele, os quatro filhos podem deixar cair as suas essências ({item:The Essence of Murcion}, {item:The Essence of Vemiath}, {item:The Essence of Chagorz} e {item:The Essence of Ichgahal}); quantos mais taints normais tiveres por cima, maior a hipótese. Nas lutas de boss, **toda a equipa** tem de ter o taint final para isto contar.",
+          "table": {
+            "head": ["Penalização", "Só taints normais", "Taints normais + taint final"],
+            "rows": [
+              ["Troca de posição", "6%", "9%"],
+              ["Bloodjaw a nascer do cadáver", "6,25%", "9,375%"],
+              ["Elder Bloodjaws extra nas lutas de boss", "+1", "+3 (máximo 5)"],
+              ["Medo (fear) do Bakragore", "Não", "Sim"],
+              ["Dano recebido na Rotten Blood", "+14%", "+21%"]
+            ]
+          }
+        },
+        {
+          "title": "Remover os teus taints",
+          "text": "Se quiseres limpar os taints (por exemplo para caçar com outra equipa), fala com o {npc:A Bloodshade}: {key:hi}, {key:manage}, depois {key:lesser} (só os taints normais) ou {key:great} (também o taint final, e com ele todos os normais) e confirma com {key:yes}.",
+          "npc": "A Bloodshade",
+          "dialogue": [
+            {"you": "manage"},
+            {"npc": "I can lift the lesser taints from you, all at once. I also can lift the great taint from you. Choose wisely, as your mortal body can only handle this procedure once every 68 hours."},
+            {"you": "lesser"},
+            {"npc": "[...] Are you sure that you want to have ALL the taints you bear removed now, NOT being able to remove a taint afterwards for 68 hours? Is it yes or no?"},
+            {"you": "yes"},
+            {"npc": "So be it! All taints are now lifted from you! [...]"}
+          ],
+          "warning": "Só podes fazer isto **uma vez a cada 68 horas** (e só 68 horas depois de teres recebido um taint) e remove **todos** os taints desse tipo de uma vez. Lembra-te também de que vencer o Bakragore repõe os taints normais a zero e que perder a luta contra ele tira os dois últimos à equipa."
+        },
+        {
+          "title": "Repetir o Bakragore com Bakragore's Burden",
+          "text": "Quando **todos** os membros têm os quatro taints **mais** o taint final, puxar a alavanca do Bakragore leva a equipa a uma antecâmara (outra sala de alavanca). Têm **3 minutos** para se preparar (*\"You have only 3 minutes to prepare for the fight. To reset your sacrifice you will have to leave this room and reenter!\"*). Quem já consumiu uma essência (usa-a para a absorveres) pode usar o {wiki:Bakragore's Burden|Essence Devourer} desse tipo para a sacrificar (*\"The difficulty of the upcoming battle has increased!\"*). Para recuperar uma essência consumida, usa o Essence Extractor respetivo: ela volta para a tua mochila.",
+          "images": [{"file": "Bakragore's Burden - Sacrificing Essence of Ichgahal.png", "caption": "Jogador a sacrificar a Essence of Ichgahal"}],
+          "table": {
+            "head": ["Burden", "Fase 1", "Fase 2", "Fase 3", "Fase 4"],
+            "rows": [
+              ["Dano causado", "-10%", "-20%", "-30%", "-40%"],
+              ["Dano recebido", "+25%", "+50%", "+75%", "+100%"],
+              ["Loot adicional", "+5%", "+15%", "+35%", "+75%"],
+              ["Experiência adicional", "+15%", "+45%", "+105%", "+225%"]
+            ]
+          },
+          "tip": "Cada essência sacrificada troca um Elder Bloodjaw por um eco do filho respetivo ({creature:Echo of Murcion}, {creature:Echo of Vemiath}, {creature:Echo of Chagorz}, {creature:Echo of Ichgahal}). Os ecos não interagem com os rastos nem com a Rotten Charge, atrapalham a mecânica dos Elder Bloodjaws e não saem da sala com eles. O burden só vale para a luta seguinte. É a única forma de conseguir as armas **Grand Sanguine** e aumenta a hipótese de peças do Sanguine Set e de Promotion Scrolls melhores."
+        },
+        {
+          "title": "Sair do Blood Vestibule",
+          "text": "O wiki não descreve a saída do Blood Vestibule. Volta ao sítio onde chegaste pela poça de sangue (junto ao {npc:A Bloodshade}) e regressa por aí à sala do A Bloodshade em Drefia; se não encontrares saída, usa um {item:Temple Teleport Scroll} (vais para o teu templo e já não precisas do passo seguinte).",
+          "warning": "O {item:Temple Teleport Scroll} não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block."
+        },
+        {
+          "title": "Sair do templo e de Drefia",
+          "text": "Da sala do A Bloodshade em Drefia, refaz o caminho ao contrário: sai pela porta entre os pilares, segue para **nordeste** até às escadas e sobe-as, sobe pelo buraco com a {item:Rope}, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate}, onde desces com *exani hur down*. Depois volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia, onde apanhas o barco do {npc:Petros} ou o tapete do {npc:Chemar}.",
+          "coords": [
+            {"x": 32956, "y": 32398, "z": 9, "label": "A Bloodshade (Drefia)"},
+            {"x": 32989, "y": 32393, "z": 7, "label": "Sítio de Levitate"},
+            {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda (descida para Darashia)"},
+            {"x": 33289, "y": 32481, "z": 6, "label": "Petros, porto de Darashia"},
+            {"x": 33270, "y": 32439, "z": 6, "label": "Chemar, tapete voador de Darashia"}
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Podes voltar ao Blood Vestibule e às quatro zonas (Jaded Roots, Darklight Core, Gloom Pillars e Putrefactory) sempre que quiseres, mesmo depois de acabares a quest.",
+    "Se disseres {key:blessing} ao {npc:A Bloodshade} sem teres todos os taints, ele responde que o teu corpo e a tua mente não estão preparados para receber as bênçãos do deus de sangue.",
+    "Os addons do outfit vêm da {item:Cursed Wood} (Ichgahal) e da {item:Darklight Geode} (Chagorz): só os podes usar depois de teres o outfit base (vê a {wiki:Decaying Defender Outfits Quest|Decaying Defender Outfits Quest}). Ao juntares os dois addons recebes o achievement **Fully Decayed**.",
+    "A {item:Bag You Covet} transforma-se numa peça do Sanguine Set quando abres o contentor de recompensa. Pôr bosses da Rotten Blood no slot de boss do Bosstiary aumenta a hipótese de a lootar.",
+    "As {item:Bloody Tears} caem do boss {creature:The Fear Feaster}, compram-se no Market e o {npc:Yasir} compra-as por 70.000 gp."
+  ]
+}

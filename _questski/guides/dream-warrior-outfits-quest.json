@@ -1,0 +1,321 @@
+{
+  "slug": "dream-warrior-outfits-quest",
+  "category": "outfit",
+  "region": "Feyrist",
+  "difficulty": 4,
+  "team": "grupo",
+  "duration": "10–20 min com os itens na mão (a base exige a Dream Courts Quest; farmar os itens pode levar vários dias)",
+  "summary": "O {wiki:Dream Warrior Outfits|Dream Warrior Outfit} é a recompensa das cortes dos sonhos por teres derrotado {creature:The Nightmare Beast}: depois de completares a {wiki:The Dream Courts Quest}, reporta a {key:task} ao {npc:Vanys} (Court of Summer) ou ao {npc:Undal} (Court of Winter) e recebes o outfit base. Os dois addons pedem-se ao mesmo NPC: o primeiro custa 5 {item:Pomegranate|Pomegranates} e o segundo um {item:Ice Shield}, ambos loot dos bosses da Dream Scar (o Ice Shield também cai da Nightmare Beast) ou comprados no Market. Com os dois addons ganhas o achievement **Dream Warrior**.",
+  "start": {"x": 33691, "y": 32184, "z": 8, "label": "Vanys, piso subterrâneo da Court of Summer (Feyrist)"},
+  "requirements": [
+    "Conta **Premium** (outfit e addons são Premium).",
+    "Nível **250** (o mesmo mínimo da Dream Courts Quest); nível recomendado **300+**.",
+    "Outfit base: ter completado a {wiki:The Dream Courts Quest}, incluindo matar {creature:The Nightmare Beast}.",
+    "Acesso a uma das cortes: a Court of Summer fica em {wiki:Feyrist} (acesso a Feyrist pela {wiki:Threatened Dreams Quest}, missão *Troubled Animals*); a Court of Winter fica no topo da montanha de {wiki:Tyrsung}. Para passares os portais das cortes precisas do encantamento da {npc:Myzzi}, que recebes no início da Dream Courts Quest.",
+    "Só para a rota da Court of Winter: {wiki:Barbarian Test Quest} feita e a missão *Nibelor 2: Ecological Terrorism* da {wiki:The Ice Islands Quest} pelo menos iniciada, para o {npc:Buddel} te levar a Tyrsung.",
+    "1.º addon: 5 {item:Pomegranate|Pomegranates}. 2.º addon: 1 {item:Ice Shield}."
+  ],
+  "items_needed": [
+    {"item": "Pomegranate", "qty": 5, "note": "1.º addon; loot dos bosses da Dream Scar ou compra no Market"},
+    {"item": "Ice Shield", "qty": 1, "note": "2.º addon; loot do Izcandar Champion of Winter e da Nightmare Beast, ou compra no Market"},
+    {"item": "Small Emerald", "note": "para o santuário de terra, o Holy Shrine de Feyrist mais perto do portal da Court of Summer (a gema gasta-se)"},
+    {"item": "Dwarven Ring", "note": "opcional, só na rota da Court of Winter: faz o Buddel levar-te ao sítio certo (o anel gasta-se)"},
+    {"text": "50 gp para o barco do {npc:Buddel} (só na rota da Court of Winter)"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Dream Warrior Outfits|Dream Warrior Outfit} base (masculino e feminino)"},
+    {"text": "1.º addon Dream Warrior (5 Pomegranates)"},
+    {"text": "2.º addon Dream Warrior (Ice Shield)"},
+    {"text": "Achievement **Dream Warrior** (6 pontos), ao teres os dois addons"}
+  ],
+  "achievements": ["Dream Warrior"],
+  "unlocks": [
+    {"what": "Dream Warrior Outfit (base e 2 addons)", "kind": "funcionalidade", "place": "Dream Warrior Outfits", "when": "Base: ao reportares a {key:task} ao {npc:Vanys} ou ao {npc:Undal} depois de matares {creature:The Nightmare Beast}. Addons: ao entregares 5 {item:Pomegranate|Pomegranates} (1.º) e 1 {item:Ice Shield} (2.º) ao mesmo NPC.", "note": "Precisas de Premium."}
+  ],
+  "dangers": [
+    "Crazed Summer Rearguard",
+    "Crazed Summer Vanguard",
+    "Insane Siren",
+    "Arachnophobica",
+    "Thanatursus",
+    "Crazed Winter Rearguard",
+    "Crazed Winter Vanguard",
+    "Soul-Broken Harbinger",
+    "Plagueroot",
+    "Malofur Mangrinder",
+    "Maxxenius",
+    "Alptramun",
+    "Izcandar the Banished",
+    "Izcandar Champion of Summer",
+    "Izcandar Champion of Winter",
+    "The Nightmare Beast",
+    "Frost Giant"
+  ],
+  "npcs": ["Vanys", "Undal", "Myzzi", "Buddel", "Shirtalis of the Summer Court", "Farhilorn of the Winter Court"],
+  "tips": [
+    "Junta os itens **antes** de ires ao NPC: o {item:Pomegranate} e o {item:Ice Shield} são negociáveis no Market, e nenhum NPC os vende nem os compra.",
+    "O {item:Pomegranate} **não é empilhável**: as 5 ocupam 5 espaços na mochila (1.00 oz cada). O {item:Ice Shield} pesa 35.00 oz.",
+    "O {npc:Vanys} e o {npc:Undal} dão o mesmo outfit e os mesmos addons. A Court of Summer (Vanys), em Feyrist, é a de acesso mais fácil.",
+    "Para farmares o Ice Shield, nos dias do Izcandar mata-o no lado **oeste** da arena (lado do inverno): assim morre como {creature:Izcandar Champion of Winter}, o único dos campeões diários que pode deixar cair o Ice Shield."
+  ],
+  "sections": [
+    {
+      "title": "1. Pré-requisito: The Dream Courts Quest",
+      "intro": "O outfit base não se compra: só o recebes depois de terminares a Dream Courts Quest e matares a Nightmare Beast.",
+      "steps": [
+        {
+          "title": "Completar a Dream Courts Quest",
+          "text": "Completa a {wiki:The Dream Courts Quest} (nível 250, Premium). Em resumo: falas com a {npc:Myzzi}, a nordeste de Edron, para teres acesso às cortes; carregas as 8 Ward Stones com o {item:Dream Talisman}; abres as 7 Dream Doors do {wiki:Dream Labyrinth}; ganhas 5 combates na {wiki:Dream Scar}; e matas {creature:The Nightmare Beast}. Segue o guia dessa quest para os detalhes de cada parte.",
+          "table": {
+            "head": ["Parte", "O que tens de fazer"],
+            "rows": [
+              ["Ward Stones", "Carregar 4 Ice Ward Stones e 4 Sun Ward Stones com o {item:Dream Talisman} que o Vanys ou o Undal te dão ({key:task})."],
+              ["Dream Labyrinth", "Resolver os puzzles das 7 Dream Doors (achievement **Keeper of the 7 Keys**)."],
+              ["Dream Scar", "5 vitórias contra o campeão do dia ({creature:Plagueroot}, {creature:Malofur Mangrinder}, {creature:Maxxenius}, {creature:Alptramun} e {creature:Izcandar the Banished}), em equipas de até 5 jogadores."],
+              ["The Nightmare Beast", "Boss final, para equipas de até 10 jogadores. Um jogador fica amaldiçoado e é expulso da sala ao fim de 25 segundos se outro jogador não lhe usar um {item:Dream Catcher} (tira-se do {item:Dream Catcher Pole} no centro da sala); não te podes curar a ti próprio."]
+            ]
+          },
+          "warning": "A Nightmare Beast não se faz sozinho: a maldição só pode ser retirada por **outro** jogador. Precisas de equipa para chegares ao outfit base."
+        }
+      ]
+    },
+    {
+      "title": "2. Chegar ao Vanys (Court of Summer)",
+      "intro": "A Court of Summer fica nos prados de Feyrist e é a corte mais fácil de alcançar. Se preferires ir ao Undal, na Court of Winter, segue a secção 7.",
+      "steps": [
+        {
+          "title": "Ir para Feyrist",
+          "text": "Arranja uma {item:Small Emerald}. Na cidade, vai ao corredor com os quatro arcos (gelo, terra, fogo e energia) que levam aos {wiki:Holy Shrines|Holy Shrines} (vê a tabela). Entra no arco de **terra**: és levado a um santuário de terra. **Usa** lá a {item:Small Emerald} no santuário (a gema gasta-se) e és teleportado para o Earth Shrine de Feyrist.",
+          "table": {
+            "head": ["Cidade", "Onde fica o corredor dos arcos"],
+            "rows": [
+              ["Ab'Dendriel", "Último andar da torre do depot"],
+              ["Ankrahmun", "Último andar do edifício das lojas, a norte do depot"],
+              ["Carlin", "2 andares abaixo do templo"],
+              ["Darashia", "Parte de cima do castelo"],
+              ["Edron", "Piso de baixo da torre central da Noodles Academy"],
+              ["Kazordoon", "Templo"],
+              ["Liberty Bay", "Por baixo do depot"],
+              ["Port Hope", "4.º andar do edifício do depot e das lojas"],
+              ["Rathleton", "Por cima do templo, subindo as escadas"],
+              ["Svargrond", "Por baixo do templo"],
+              ["Thais", "2.º andar do templo"],
+              ["Venore", "2 andares acima do templo"],
+              ["Yalahar", "Por cima do depot"]
+            ]
+          },
+          "coords": [{"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine de Feyrist (onde chegas)"}],
+          "images": [{"file": "Teleporters.jpg", "caption": "Corredor dos Holy Shrines em Liberty Bay, com os quatro arcos"}],
+          "tip": "Também podes entrar com outra gema pelo santuário do seu elemento ({item:Small Sapphire} gelo, {item:Small Ruby} fogo, {item:Small Amethyst} energia), mas apareces noutro ponto de Feyrist, mais longe do portal da corte."
+        },
+        {
+          "title": "Entrar no portal da Court of Summer",
+          "text": "O portal fica a **leste** do Earth Shrine, nos prados a nordeste da Fae Village ({coord:33584,32207,7}). Vai até lá e entra no portal: com o encantamento da {npc:Myzzi} passas para a Court of Summer.",
+          "coords": [
+            {"x": 33584, "y": 32207, "z": 7, "label": "Portal da Court of Summer (nordeste da Fae Village)"},
+            {"x": 33693, "y": 32207, "z": 7, "label": "Court of Summer (zona da corte)"}
+          ],
+          "images": [{"file": "Fae Village.png", "caption": "Fae Village, no centro de Feyrist"}]
+        },
+        {
+          "title": "Descer até ao Vanys",
+          "text": "Dentro da corte, vai para **norte** até encontrares umas escadas e desce um andar. O {npc:Vanys} está nesse piso subterrâneo.",
+          "coords": [{"x": 33691, "y": 32184, "z": 8, "label": "Vanys (1 andar abaixo)"}],
+          "images": [{"file": "The Dream Courts Quest - Court of Summer.png", "caption": "Court of Summer, a corte do Vanys"}],
+          "warning": "Pelo caminho encontras muitos {creature:Crazed Summer Rearguard|Crazed Summer Rearguards} e {creature:Crazed Summer Vanguard|Crazed Summer Vanguards}; na corte também há {creature:Insane Siren|Insane Sirens}, {creature:Arachnophobica|Arachnophobicas} e {creature:Thanatursus}."
+        }
+      ]
+    },
+    {
+      "title": "3. Outfit base",
+      "steps": [
+        {
+          "title": "Reportar a task ao Vanys",
+          "text": "Depois de matares a Nightmare Beast, diz ao {npc:Vanys} {key:hi} e {key:task}. Ele confirma que a fera foi morta e dá-te o Dream Warrior Outfit base, em nome das cortes do verão e do inverno.",
+          "npc": "Vanys",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings hero. I guess you came to talk."},
+            {"you": "task"},
+            {"npc": "The Nightmare Beast is slain. You have done well. [...] For your efforts I want to reward you with our traditional dream warrior outfit. May it suit you well!"}
+          ],
+          "images": [{"file": "Dream Warrior Artwork.jpg", "caption": "Arte oficial do Dream Warrior"}],
+          "reward": "Dream Warrior Outfit (base)"
+        }
+      ]
+    },
+    {
+      "title": "4. Juntar os itens dos addons",
+      "intro": "Precisas de 5 Pomegranates (1.º addon) e de 1 Ice Shield (2.º addon). Nenhum NPC os vende: ou os compras no Market, ou os farmas nos bosses da Dream Scar.",
+      "steps": [
+        {
+          "title": "Opção rápida: comprar no Market",
+          "text": "Os dois itens são negociáveis. Em qualquer depot, abre o {wiki:Market|Market}, procura {item:Pomegranate} e {item:Ice Shield} e compra 5 Pomegranates e 1 Ice Shield. Leva-os contigo ao Vanys (ou ao Undal) e passa à secção 5."
+        },
+        {
+          "title": "Chegar à Dream Scar (se fores farmar)",
+          "text": "Os itens caem dos bosses da {wiki:Dream Scar}. Na Court of Summer, volta ao piso de entrada e sobe dois andares até ao portal do {wiki:Dream Labyrinth} (ao lado do baú onde estava a Rosebush). Atravessa o labirinto pelo caminho que fizeste na {wiki:The Dream Courts Quest}, pelas 7 Dream Doors, até à sala com um mosaico no centro: o mosaico é o portal para a Dream Scar. Na arena, antes de cada combate, fala com um dos dois Dreamelves ({npc:Shirtalis of the Summer Court} ou {npc:Farhilorn of the Winter Court}) e junta-te ao lado dele para lutares sob a bandeira dele (a wiki não tem a transcrição destes NPCs).",
+          "coords": [{"x": 33703, "y": 32185, "z": 5, "label": "Junto ao portal do Dream Labyrinth (Court of Summer, 2 andares acima)"}],
+          "images": [
+            {"file": "Dream Labyrinth Map 1.png", "caption": "Court of Summer: subida de dois andares até ao portal do Dream Labyrinth (ao lado do baú da Rosebush)"},
+            {"file": "Dream Labyrinth Map 9.png", "caption": "Última sala do Dream Labyrinth: o mosaico no centro leva à Dream Scar"}
+          ],
+          "warning": "Cada dia (a cada Server Save) há um campeão diferente na arena, para equipas de até 5 jogadores. São bosses muito fortes: vai em equipa e prepara-te para o boss do dia.",
+          "tip": "A Court of Winter também tem um portal para o Dream Labyrinth, se estiveres do lado do Undal."
+        },
+        {
+          "title": "Farmar as Pomegranates",
+          "text": "Qualquer campeão da Dream Scar pode deixar cair **1** {item:Pomegranate} por morte. As percentagens abaixo são estimativas das estatísticas de loot da wiki; contas com várias mortes para juntares 5.",
+          "table": {
+            "head": ["Boss", "Chance aproximada de Pomegranate"],
+            "rows": [
+              ["{creature:Plagueroot}", "≈ 10%"],
+              ["{creature:Malofur Mangrinder}", "≈ 22%"],
+              ["{creature:Maxxenius}", "≈ 14%"],
+              ["{creature:Alptramun}", "≈ 20%"],
+              ["{creature:Izcandar the Banished} (morre no centro)", "≈ 24%"],
+              ["{creature:Izcandar Champion of Summer} (morre a leste)", "≈ 12%"],
+              ["{creature:Izcandar Champion of Winter} (morre a oeste)", "≈ 18%"]
+            ]
+          },
+          "tip": "Os bosses aparecem sempre por esta ordem, um por dia: Plagueroot, Malofur Mangrinder, Maxxenius, Alptramun e Izcandar."
+        },
+        {
+          "title": "Farmar o Ice Shield",
+          "text": "Só dois bosses deixam cair o {item:Ice Shield}: {creature:Izcandar Champion of Winter} (≈ 4,5%) e {creature:The Nightmare Beast} (≈ 6,8%). O Izcandar muda de forma conforme o sítio da arena onde morre: no lado **oeste** (inverno) transforma-se em Champion of Winter; no lado **leste** (verão) transforma-se em Champion of Summer; perto do **centro** fica Izcandar the Banished. Estas duas últimas formas não deixam cair o escudo, por isso, nos dias do Izcandar, acaba-o sempre no lado oeste. A Nightmare Beast fica para lá do teleporte a **sudoeste** da arena da Dream Scar (já passas por ele, porque tens as 5 vitórias da Dream Courts Quest); é para equipas de até 10 jogadores e tem cooldown de 20 horas.",
+          "tip": "A forma de inverno é fraca a fogo e recupera vida com gelo: não uses gelo contra ela e equipa proteção de gelo. As {item:Sudden Death Rune|Sudden Death Runes} são boa opção a alvo único."
+        },
+        {
+          "title": "Sair da Dream Scar",
+          "text": "Ao acabares o combate, sai da sala do boss pelo teleporte de saída que lá existe (a wiki não diz para onde te leva). Depois volta pelo mesmo caminho: na pequena sala do mosaico, o portal a **sul** devolve-te ao Dream Labyrinth; atravessa o labirinto até ao portal da Court of Summer (ou da Court of Winter), entra nele e, já na corte, desce os dois andares até ao piso de entrada e depois até ao {npc:Vanys}.",
+          "warning": "O portal a sul da sala do mosaico só funciona num sentido: depois de o usares, para voltares ao mosaico tens de refazer o caminho do labirinto a pé. Não o uses por engano se ainda quiseres lutar."
+        }
+      ]
+    },
+    {
+      "title": "5. Addons",
+      "intro": "O NPC pergunta-te qual dos dois itens trazes, por isso podes entregar primeiro o que já tiveres.",
+      "steps": [
+        {
+          "title": "1.º addon: entregar as Pomegranates",
+          "text": "Com as 5 {item:Pomegranate|Pomegranates} na mochila, fala com o {npc:Vanys}: {key:hi}, {key:addon}, {key:yes} (queres um ou dois addons), {key:yes} (queres um destes addons) e {key:pomegranate}.",
+          "npc": "Vanys",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "Greetings hero. I guess you came to talk."},
+            {"you": "addon"},
+            {"npc": "Are you interested in one or two addons to your dream warrior outfit?"},
+            {"you": "yes"},
+            {"npc": "I provide two addons. For the first one I need you to bring me five pomegranates. For the second addon you need an ice shield. Do you want one of these addons?"},
+            {"you": "yes"},
+            {"npc": "What do you have for me: the pomegranates or the ice shield?"},
+            {"you": "pomegranate"},
+            {"npc": "Very good! You gained the first addon to the dream warrior outfit."}
+          ],
+          "reward": "1.º addon Dream Warrior"
+        },
+        {
+          "title": "2.º addon: entregar o Ice Shield",
+          "text": "Com o {item:Ice Shield} na mochila, fala outra vez com o {npc:Vanys}: {key:hi}, {key:addon}, {key:yes}, {key:yes} e {key:shield}. Quando ficas com os dois addons ganhas o achievement **Dream Warrior**.",
+          "npc": "Vanys",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "addon"},
+            {"npc": "Are you interested in one or two addons to your dream warrior outfit?"},
+            {"you": "yes"},
+            {"npc": "[...] Do you want one of these addons?"},
+            {"you": "yes"},
+            {"npc": "What do you have for me: the pomegranates or the ice shield?"},
+            {"you": "shield"},
+            {"npc": "Very good! You gained the second addon to the dream warrior outfit."}
+          ],
+          "reward": "2.º addon Dream Warrior + achievement Dream Warrior (com os dois addons)"
+        }
+      ]
+    },
+    {
+      "title": "6. Sair da Court of Summer",
+      "steps": [
+        {
+          "title": "Voltar ao continente",
+          "text": "Sobe as escadas do piso do Vanys e volta para **sul** pelo caminho por onde vieste, até ao sítio onde chegaste à corte. A wiki não descreve a passagem de regresso da Court of Summer aos prados de Feyrist: procura-a junto a esse ponto de chegada. Já em Feyrist, **usa** qualquer um dos quatro Holy Shrines (não importa por qual entraste e **não precisas de outra gema**) e és teleportado de volta ao continente.",
+          "tip": "Se não encontrares a saída, uma {item:Temple Teleport Scroll} leva-te ao teu templo (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block).",
+          "coords": [
+            {"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine (o mais perto da corte)"},
+            {"x": 33587, "y": 32262, "z": 7, "label": "Fire Shrine"},
+            {"x": 33430, "y": 32279, "z": 7, "label": "Ice Shrine"},
+            {"x": 33528, "y": 32300, "z": 4, "label": "Energy Shrine"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Alternativa: Undal na Court of Winter",
+      "intro": "O {npc:Undal} dá exatamente o mesmo outfit e os mesmos addons que o Vanys. Usa esta rota se te der mais jeito partir de Svargrond.",
+      "steps": [
+        {
+          "title": "Chegar a Tyrsung",
+          "text": "Viaja de barco até **Svargrond**. Vai ao barco a **sul** da cidade e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Desembarcas no cais de {wiki:Tyrsung} ({coord:32332,31230,7}).",
+          "npc": "Buddel",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "passage"},
+            {"npc": "Where are we at the moment? Is this Svargrond? Ahh yes!*HICKS* Where do you want to go?"},
+            {"you": "tyrsung"},
+            {"npc": "*HICKS* Big, big island east of here. Venorian hunters settled there ..... I could bring you north of their camp."}
+          ],
+          "coords": [{"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung"}],
+          "tip": "O Buddel está sempre bêbedo e pode levar-te ao sítio errado. Com um {item:Dwarven Ring} na mochila leva-te ao destino certo e não cobra os 50 gp, mas fica com o anel. Se não o quiseres perder, diz {key:no} quando ele o pedir (ou usa o anel no slot do anel, se só tiveres um)."
+        },
+        {
+          "title": "Subir ao topo da montanha de Tyrsung",
+          "text": "Vai até à montanha no centro da ilha ({wiki:Jotunar|Jotunar}, a montanha de rocha e gelo dos {creature:Frost Giant|Frost Giants}) e sobe-a passando pelos pontos marcados abaixo, andar a andar, até ao topo (z=3, 4 andares acima do chão). Aí está o portal da Court of Winter ({coord:32356,31248,3}). A wiki só dá estes pontos de passagem, sem descrever o caminho entre eles.",
+          "coords": [
+            {"x": 32425, "y": 31277, "z": 7, "label": "1.º ponto do caminho (rés-do-chão)"},
+            {"x": 32372, "y": 31245, "z": 6, "label": "2.º ponto (1 andar acima)"},
+            {"x": 32375, "y": 31265, "z": 5, "label": "3.º ponto (2 andares acima)"},
+            {"x": 32367, "y": 31259, "z": 4, "label": "4.º ponto (3 andares acima)"},
+            {"x": 32356, "y": 31248, "z": 3, "label": "Portal da Court of Winter (topo)"}
+          ],
+          "images": [
+            {"file": "Map tyrsung.jpg", "caption": "Mapa de Tyrsung"},
+            {"file": "Jotunar 0.png", "caption": "Mapa de Jotunar, a montanha no centro de Tyrsung"}
+          ]
+        },
+        {
+          "title": "Entrar na Court of Winter e ir ao Undal",
+          "text": "Entra no portal (com o encantamento da {npc:Myzzi}). Na Court of Winter, vai para o lado **leste** e sobe até ao andar do {npc:Undal}.",
+          "coords": [
+            {"x": 33698, "y": 32127, "z": 7, "label": "Court of Winter"},
+            {"x": 33710, "y": 32113, "z": 4, "label": "Undal (lado leste, andares de cima)"}
+          ],
+          "warning": "Na corte há {creature:Crazed Winter Rearguard|Crazed Winter Rearguards}, {creature:Crazed Winter Vanguard|Crazed Winter Vanguards} e {creature:Soul-Broken Harbinger|Soul-Broken Harbingers}, além de {creature:Arachnophobica|Arachnophobicas} e {creature:Thanatursus}."
+        },
+        {
+          "title": "Falar com o Undal",
+          "text": "O spoiler diz que a {key:task} e o {key:addon} se fazem com o Vanys **ou** com o Undal; a wiki só tem a transcrição do Vanys, por isso usa as mesmas palavras: {key:hi} e {key:task} para o outfit base (depois da Nightmare Beast); {key:hi}, {key:addon}, {key:yes}, {key:yes} e depois {key:pomegranate} (5 Pomegranates) ou {key:shield} (Ice Shield) para cada addon.",
+          "npc": "Undal",
+          "dialogue": [
+            {"you": "hi"},
+            {"you": "addon"},
+            {"you": "yes"},
+            {"you": "yes"},
+            {"you": "pomegranate (ou shield)"}
+          ],
+          "reward": "Outfit base e addons, como com o Vanys"
+        },
+        {
+          "title": "Sair da Court of Winter e de Tyrsung",
+          "text": "Volta pelo mesmo caminho até ao sítio onde chegaste à corte. A wiki não descreve a passagem de regresso da Court of Winter ao topo da montanha de Tyrsung: procura-a junto a esse ponto de chegada. Já em Tyrsung, desce a montanha pelos mesmos pontos, vai até ao cais e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond} (Svargrond é um dos destinos dele, 50 gp) para voltares ao cais a sul de Svargrond.",
+          "coords": [{"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung"}],
+          "tip": "Também na volta o Buddel pode levar-te ao sítio errado; o {item:Dwarven Ring} na mochila resolve, como na ida. Se não encontrares a saída da corte, uma {item:Temple Teleport Scroll} leva-te ao teu templo (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "O achievement **Dream Warrior** (6 pontos, Premium) só aparece quando tens **os dois** addons. A descrição diz que ficaste a conhecer as cortes dos sonhos e ganhaste o direito ao título de *dream warrior*.",
+    "Cada passo (outfit base, 1.º addon e 2.º addon) pode ser feito com o {npc:Vanys} **ou** com o {npc:Undal}.",
+    "Este outfit e os addons foram adicionados no Winter Update 2018 (versão 12.00)."
+  ]
+}

@@ -20,14 +20,15 @@ CATEGORIES = {"historia", "tesouro", "outfit", "acesso", "tarefas", "troca",
 REGIONS = {"Rookgaard", "Dawnport", "Thais", "Carlin", "Ab'Dendriel", "Kazordoon", "Venore",
            "Edron", "Darashia", "Ankrahmun", "Port Hope", "Liberty Bay", "Svargrond",
            "Yalahar", "Farmine", "Gray Beach", "Rathleton", "Roshamuul", "Krailos", "Issavi",
-           "Feyrist", "Marapur", "Vários"}
+           "Feyrist", "Marapur", "Bounac", "Vários"}
 BOUNDS = dict(xmin=31744, xmax=34303, ymin=30976, ymax=33023)
 TOKEN_RE = re.compile(r"\{(npc|item|creature|spell|wiki|key|coord):([^{}]+)\}")
 STEP_KEYS = {"title", "text", "npc", "dialogue", "coords", "map", "images", "table",
              "warning", "tip", "reward"}
 TOP_KEYS = {"slug", "category", "region", "difficulty", "duration", "summary", "legend_pt",
             "start", "requirements", "items_needed", "rewards", "achievements", "dangers",
-            "npcs", "tips", "sections", "notes", "unlocks"}
+            "npcs", "tips", "sections", "notes", "unlocks", "team"}
+TEAMS = {"solo", "parcial", "grupo"}
 UNLOCK_KINDS = {"zona", "transporte", "npc", "loja", "funcionalidade", "missao"}
 
 
@@ -128,6 +129,8 @@ def validate(path, npcs):
         errors.append(f"region must be one of {sorted(REGIONS)}")
     if g.get("difficulty") not in (1, 2, 3, 4, 5):
         errors.append("difficulty must be an integer 1..5")
+    if "team" in g and g["team"] not in TEAMS:
+        errors.append(f"team must be one of {sorted(TEAMS)}")
     for k in ("summary", "duration"):
         if not isinstance(g.get(k), str) or not g.get(k).strip():
             errors.append(f"'{k}' is required (non-empty string)")

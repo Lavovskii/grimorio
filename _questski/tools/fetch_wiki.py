@@ -5,7 +5,7 @@ Produces:
   tools/cache/pages/<slug>.wiki          raw wikitext of each quest overview page
   tools/cache/spoilers/<slug>.wiki       raw wikitext of "<quest>/Spoiler" (when it exists)
   tools/cache/index.json                 parsed Infobox Quest fields for every quest
-  tools/cache/selected.json              quests that fall in the level 1-100 scope
+  tools/cache/selected.json              quests in scope (every quest not deprecated, any level)
 """
 import json
 import os
@@ -147,20 +147,23 @@ def to_int(v):
     return int(m.group(0)) if m else None
 
 
+# quests with an Infobox Quest page that is missing from "Category:Quest Overview Pages" (checked 2026-10-27 against
+# TibiaWiki BR, TibiaPal, Exevo Pan and the OpenTibiaBR quest log)
+EXTRA_QUESTS = ["Ravenous Madness Quest"]
+
+
 def in_scope(q):
-    """Level 1-100 scope: every quest a level <= 100 character may start, i.e. minimum level
-    requirement <= 100 or no requirement at all (whatever the recommended level)."""
+    """Every quest that still exists in the game, at any level; only deprecated quests stay out.
+    (Until 2026-10 the scope was level 1-100: minimum level <= 100 or no requirement.)"""
     status = (q["fields"].get("status") or "").lower()
-    if "deprecated" in status:
-        return False
-    lvl = q["lvl"]
-    return not lvl or lvl <= 100
+    return "deprecated" not in status
 
 
 def main():
     os.makedirs(PAGES, exist_ok=True)
     os.makedirs(SPOILERS, exist_ok=True)
     titles = category_members("Category:Quest Overview Pages")
+    titles += [t for t in EXTRA_QUESTS if t not in titles]
     print(len(titles), "quest overview pages")
     texts = fetch_wikitext(titles)
     index = []
@@ -179,7 +182,7 @@ def main():
             "fields": info,
         })
     selected = [q for q in index if q["has_infobox"] and in_scope(q)]
-    print(len(selected), "quests in level 1-100 scope")
+    print(len(selected), "quests in scope (all levels, not deprecated)")
 
     spoilers = fetch_wikitext([q["title"] + "/Spoiler" for q in selected])
     for q in selected:

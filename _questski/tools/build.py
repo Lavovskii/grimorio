@@ -216,7 +216,7 @@ def main():
             "slug": meta["slug"], "name": meta["name"], "aka": meta["aka"],
             "lvl": meta["lvl"], "rec": meta["rec"], "rec_raw": meta["rec_raw"],
             "premium": meta["premium"], "category": full.get("category"),
-            "region": full.get("region"), "difficulty": full.get("difficulty"),
+            "region": full.get("region"), "difficulty": full.get("difficulty"), "team": full.get("team"),
             "duration": full.get("duration"), "summary": full.get("summary", ""),
             "location": meta["location"], "start": full.get("start"),
             "rewards": [r.get("item") or r.get("text") for r in full.get("rewards", [])] or
@@ -314,11 +314,11 @@ def build_images(sprites, files):
 
 REGION_CITIES = ["Rookgaard", "Dawnport", "Thais", "Carlin", "Ab'Dendriel", "Kazordoon", "Venore", "Edron", "Darashia",
                  "Ankrahmun", "Port Hope", "Liberty Bay", "Svargrond", "Yalahar", "Farmine", "Gray Beach", "Rathleton",
-                 "Roshamuul", "Krailos", "Issavi", "Feyrist", "Marapur"]
+                 "Roshamuul", "Krailos", "Issavi", "Feyrist", "Marapur", "Bounac"]
 TRANSIT = re.compile(r"barco|captain|capit|tapete|carpet|navio|ferry|steamship|porto\b|boat|ship", re.I)
 # island / far-away regions: a point belongs to them only within this many tiles of the city
 REGION_RADIUS = {"Rookgaard": 150, "Dawnport": 80, "Feyrist": 140, "Marapur": 170, "Gray Beach": 180, "Krailos": 210,
-                 "Roshamuul": 180, "Issavi": 240, "Rathleton": 230, "Yalahar": 260, "Farmine": 330, "Svargrond": 330}
+                 "Roshamuul": 180, "Bounac": 200, "Issavi": 240, "Rathleton": 230, "Yalahar": 260, "Farmine": 330, "Svargrond": 330}
 
 
 def city_centres(npcs):

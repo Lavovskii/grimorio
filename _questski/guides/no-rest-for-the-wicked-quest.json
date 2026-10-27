@@ -1,0 +1,459 @@
+{
+  "slug": "no-rest-for-the-wicked-quest",
+  "category": "historia",
+  "region": "Edron",
+  "difficulty": 5,
+  "team": "grupo",
+  "duration": "Várias horas (juntar as 100 essências e os dedos depende da sorte; as tarefas dos trolls e dos imps duram no máximo 10 min cada)",
+  "summary": "O {npc:Fernlor}, High Scryer da Arcane Academy (na Noodles Academy de Edron), descobriu uma perturbação numa ilha esquecida a leste e montou um teleporte até lá: é {wiki:Azzilon Castle|Azzilon}, uma fortaleza tomada pelos Inferniarchs. Ajuda a {npc:Lai} a afastar a névoa mortal com {item:Demonic Core Essence|Demonic Core Essences}, liberta o {npc:Ortelio}, sabota as operações dos demónios em três tarefas de equipa e derrota o demon prince {creature:Arbaziloth}. Ganhas o {wiki:Fiend Slayer Outfits|Fiend Slayer Outfit} base e, se vences o boss em modo difícil, o acesso à {wiki:Doomforge|Doomforge}.",
+  "legend_pt": "Uma perturbação mágica apareceu numa ilha remota e ameaça o equilíbrio do mundo. Investiga a perturbação e combate os poderosos Inferniarchs para descobrires a verdade.",
+  "start": {"x": 33281, "y": 31848, "z": 8, "label": "Fernlor e o teleporte laranja (Noodles Academy, Edron, piso -1)"},
+  "requirements": [
+    "Conta **Premium**.",
+    "Nível mínimo **250**; recomendado **500+**.",
+    "World change: os pisos subterrâneos de Azzilon (as catacumbas) estão bloqueados por uma névoa até os jogadores do teu mundo entregarem {item:Demonic Core Essence|Demonic Core Essences} suficientes à {npc:Lai}. Quando isso acontece aparece a mensagem de servidor *\"The mists in Azzilon have retreated!\"*. A quantidade exata não é conhecida.",
+    "Equipa: a partir da tarefa dos trolls, todas as tarefas usam uma **alavanca para 5 jogadores** e é muito recomendado levar o máximo de jogadores possível. O boss final também é para equipa."
+  ],
+  "items_needed": [
+    {"item": "Demonic Core Essence", "qty": 100, "note": "loot dos Inferniarchs de Azzilon; também se compra no Market"},
+    {"item": "Mummified Demon Finger", "note": "a quantidade depende da sorte; 10 a 20 costumam chegar. Loot raro dos Inferniarchs ou Market"},
+    {"item": "Fishing Rod", "note": "para a tarefa da pesca e, **um por jogador**, para a luta com o Arbaziloth"},
+    {"text": "Proteção contra **energy** (tarefa dos imps) e contra **death**, **energy** e **life drain** (luta com o Arbaziloth)"},
+    {"text": "Muitas poções de vida: nas catacumbas levas Agony Damage a cada 20 segundos"}
+  ],
+  "rewards": [
+    {"text": "{wiki:Fiend Slayer Outfits|Fiend Slayer Outfit} base (masculino e feminino)"},
+    {"text": "Acesso à {wiki:Doomforge|Doomforge} (só quando vences o {creature:Arbaziloth} em modo difícil)"},
+    {"text": "Ranks da Lai: cada rank reduz o Agony Damage nas catacumbas; o rank 5 (1.600 essências) dá acesso ao último piso das catacumbas"},
+    {"text": "Achievement **Tear the Toxic Veil** (7 pontos) no rank 10 (51.200 essências entregues)"},
+    {"text": "Loot do {creature:Arbaziloth} (500.000 de experiência): armas do {wiki:Inferniarch Set|Inferniarch Set} e {item:Demon Claws} em modo fácil; {item:Demonfang Mask}, {item:Dreadfire Headpiece}, {item:Hellstalker Visor}, {item:Maliceforged Helmet}, {item:Demon Mengu}, {item:Demon Skull} e {item:Demon in a Green Box} (item da montada) em modo difícil"},
+    {"text": "Ao fim de **10 vitórias em modo difícil**: sala extra da Doomforge onde escolhes a versão base de qualquer arma do Inferniarch Set"}
+  ],
+  "achievements": ["Tear the Toxic Veil"],
+  "unlocks": [
+    {"what": "Azzilon Castle", "kind": "zona", "place": "Azzilon Castle", "when": "Missão *To boldly go...*: depois de aceitares a missão do {npc:Fernlor}, entra no teleporte laranja da Noodles Academy, em Edron."},
+    {"what": "Azzilon Catacombs (pisos subterrâneos)", "kind": "zona", "place": "Azzilon Catacombs", "when": "Missão *Evil to the core*: ao entregares as primeiras 100 {item:Demonic Core Essence|Demonic Core Essences} à {npc:Lai}.", "note": "Só abrem no teu mundo depois de a névoa recuar (world change: *\"The mists in Azzilon have retreated!\"*)."},
+    {"what": "Último piso das catacumbas de Azzilon", "kind": "zona", "place": "Azzilon Catacombs", "when": "No **rank 5** da Lai (1.600 essências entregues)."},
+    {"what": "Usar Demonic Core Essences sem voltar à Lai", "kind": "funcionalidade", "place": "Demonic Core Essence", "when": "Depois da primeira entrega de 100 essências: passas a poder usar as essências tu mesmo para subir de rank."},
+    {"what": "Fiend Slayer Outfit base", "kind": "funcionalidade", "place": "Fiend Slayer Outfits", "when": "Ao reportares a missão à {npc:Lai} depois de derrotares o {creature:Arbaziloth} pela primeira vez."},
+    {"what": "Doomforge", "kind": "zona", "place": "Doomforge", "when": "Depois de venceres o {creature:Arbaziloth} em **modo difícil** (poupando {creature:The Forgemaster (Creature)|The Forgemaster}), pelo teleporte laranja da sala do boss.", "note": "Com 10 vitórias em modo difícil abre uma sala extra onde escolhes uma arma base do Inferniarch Set."},
+    {"what": "Fiend Slayer Outfits Quest (addons)", "kind": "missao", "place": "Fiend Slayer Outfits Quest", "when": "Os addons ({item:Demon Claws} e {item:Demon Skull}) só se podem usar depois de teres o outfit base desta quest."}
+  ],
+  "dangers": ["Broodrider Inferniarch", "Gorger Inferniarch", "Sineater Inferniarch", "Hellhunter Inferniarch", "Spellreaper Inferniarch", "Brinebrute Inferniarch", "Gralvalon", "Malvaroth", "Twisterror", "Charged Imp", "Imp Warden", "Worker Imp", "Overcharged Demon", "Imp Minion", "The Forgemaster (Creature)", "Arbaziloth"],
+  "npcs": ["Fernlor", "Lai", "Ortelio", "A Vision of the Past", "The Forgemaster"],
+  "tips": [
+    "O {wiki:Agony Damage|Agony Damage} das catacumbas **não** se reduz com equipamento nem itens: só os ranks da {npc:Lai} o baixam. É uma percentagem da vida que tens nesse momento e junta-se ao dano dos monstros.",
+    "As {item:Demonic Core Essence|Demonic Core Essences} e os {item:Mummified Demon Finger|Mummified Demon Fingers} são empilháveis e vendem-se no **Market**: comprar poupa muitas horas de hunt.",
+    "Leva a {item:Fishing Rod} sempre contigo: precisas dela na tarefa da pesca e na luta com o {creature:Arbaziloth}, e **cada jogador** da equipa deve ter a sua.",
+    "Combina a equipa antes de começares as tarefas de alavanca (trolls, imps, pesca e boss): todas são para até 5 jogadores e, com menos gente, ficam muito mais difíceis.",
+    "Depois de cada etapa volta à {npc:Lai} (torre interior sudeste, piso +3) e diz {key:mission}: é sempre ela quem dá e recebe as missões."
+  ],
+  "sections": [
+    {
+      "title": "1. To boldly go... — de Edron até Azzilon",
+      "intro": "A quest começa com o Fernlor, na cave de uma das torres da Noodles Academy, em Edron. Daí um teleporte leva-te para a ilha-fortaleza de Azzilon, onde fica a Lai.",
+      "steps": [
+        {
+          "title": "Ir para Edron",
+          "text": "Apanha um barco para **Edron** num dos portos principais, por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:edron}, {key:yes}. Chegas ao porto de Edron, junto ao {npc:Captain Seahorse}.",
+          "dialogue": [{"you": "hi"}, {"you": "edron"}, {"you": "yes"}],
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}]
+        },
+        {
+          "title": "Chegar à Noodles Academy",
+          "text": "Do porto, caminha para **sudeste** até às sete torres de marfim na parte **leste** de Edron: é a {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}. O {npc:Fernlor} está no **piso subterrâneo (-1)**, junto a um teleporte laranja.",
+          "npc": "Fernlor",
+          "coords": [
+            {"x": 33267, "y": 31849, "z": 7, "label": "Torres da Noodles Academy"},
+            {"x": 33281, "y": 31848, "z": 8, "label": "Fernlor e teleporte laranja (piso -1)"}
+          ]
+        },
+        {
+          "title": "Falar com o Fernlor",
+          "text": "Diz {key:hi}, {key:mission} e {key:yes}. O Fernlor precisa de alguém para investigar uma anomalia: encontrou uma perturbação recente numa ilha remota e desconhecida a **leste** e montou uma ligação por teleporte até lá.",
+          "npc": "Fernlor",
+          "dialogue": [
+            {"you": "hi"},
+            {"npc": "I am the High Scryer of the Arcane Academy. I need your help on a mission to investigate an anomaly that I discovered."},
+            {"you": "mission"},
+            {"npc": "[...] I need someone with your skill set to find out what's going on there. Are you up to it? Yes or no?"},
+            {"you": "yes"},
+            {"npc": "Excellent! [...] I found a recent disturbance at some remote, uncharted isle in the east. I established a teleport connection to that place. [...] Take the teleporter over there!"}
+          ]
+        },
+        {
+          "title": "Entrar no teleporte laranja",
+          "text": "Entra no **teleporte laranja** ao lado do Fernlor. Chegas ao {wiki:Azzilon Castle|Azzilon Castle}, na ilha de {wiki:Azzilon|Azzilon}. É por aqui que entras sempre que voltares a Azzilon.",
+          "coords": [{"x": 33281, "y": 31848, "z": 8, "label": "Teleporte laranja para Azzilon"}],
+          "images": [{"file": "Map Azzilon.jpg", "caption": "Mapa de Azzilon"}]
+        },
+        {
+          "title": "Entrar no castelo e chegar à torre da Lai",
+          "text": "Desce as escadas e sobe outro lanço de escadas para entrares no castelo. Lá dentro, segue sempre para **norte** até à **torre interior sudeste**.",
+          "coords": [{"x": 33843, "y": 32360, "z": 6, "label": "Torre interior sudeste"}],
+          "warning": "À superfície do castelo já há {creature:Broodrider Inferniarch|Broodrider}, {creature:Gorger Inferniarch|Gorger} e {creature:Sineater Inferniarch|Sineater Inferniarchs}: entra preparado para lutar."
+        },
+        {
+          "title": "Falar com a Lai",
+          "text": "Sobe a torre até ao **piso +3**: a {npc:Lai} está no centro desse piso. Diz {key:hi} e {key:mission}. Ela pede-te que juntes {item:Demonic Core Essence|Demonic Core Essences}, que vai usar para afastar a névoa mortal das catacumbas e para te dar alguma proteção contra os efeitos que a névoa deixa.",
+          "npc": "Lai",
+          "dialogue": [{"you": "hi"}, {"you": "mission"}],
+          "coords": [{"x": 33834, "y": 32352, "z": 4, "label": "Lai (centro do piso +3)"}]
+        }
+      ]
+    },
+    {
+      "title": "2. Evil to the core — 100 Demonic Core Essences",
+      "steps": [
+        {
+          "title": "Juntar 100 Demonic Core Essences",
+          "text": "Mata os Inferniarchs de Azzilon até teres **100** {item:Demonic Core Essence|Demonic Core Essences}. Antes da primeira entrega só podes caçar à superfície do castelo, onde andam {creature:Broodrider Inferniarch|Broodrider}, {creature:Gorger Inferniarch|Gorger} e {creature:Sineater Inferniarch|Sineater Inferniarchs}. As essências são um drop *semi-rare*; também as podes comprar no Market.",
+          "tip": "Guarda os {item:Mummified Demon Finger|Mummified Demon Fingers} que caírem enquanto caças: vais precisar deles mais à frente."
+        },
+        {
+          "title": "Entregar as essências à Lai",
+          "text": "Volta à {npc:Lai} (torre interior sudeste, piso +3) e diz {key:essences}. Ela explica que, quanto mais essências lhe trouxeres, mais resistente ficas à corrupção demoníaca. A partir de agora passas a poder **usar as essências tu mesmo** para subir de rank, sem teres de voltar à Lai, e as catacumbas ficam abertas para ti.",
+          "npc": "Lai",
+          "dialogue": [{"you": "hi"}, {"you": "essences"}],
+          "reward": "Rank 1 contra a corrupção e acesso às catacumbas de Azzilon"
+        },
+        {
+          "title": "Os ranks e o Agony Damage",
+          "text": "Enquanto estás em **qualquer piso subterrâneo** de Azzilon levas dano de corrupção (Agony Damage) **a cada 20 segundos**, calculado sobre a vida que tens nesse momento. Exemplo: com rank 1 e 10.000 de vida levas 450 de dano. Cada rank baixa esse dano:",
+          "table": {
+            "head": ["Rank", "Essências entregues", "Dano a cada 20 s", "Recompensa"],
+            "rows": [
+              ["1", "100", "4,5%", ""],
+              ["2", "200", "4,0%", ""],
+              ["3", "400", "3,5%", ""],
+              ["4", "800", "3,0%", ""],
+              ["5", "1.600", "2,5%", "Acesso ao último piso das catacumbas"],
+              ["6", "3.200", "2,0%", ""],
+              ["7", "6.400", "1,5%", ""],
+              ["8", "12.800", "1,0%", ""],
+              ["9", "25.600", "0,5%", ""],
+              ["10", "51.200", "0,0%", "Achievement **Tear the Toxic Veil**"]
+            ]
+          },
+          "images": [{"file": "Achievement Grade Symbol.gif", "caption": "Tear the Toxic Veil é um achievement de grau 3 (7 pontos)"}],
+          "tip": "Para a quest basta o rank 1. Os ranks seguintes servem para caçar com menos dano e para o achievement."
+        }
+      ]
+    },
+    {
+      "title": "3. A ward winning — os cristais das torres",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} à {npc:Lai}. Ela pede-te que atives os **cristais antigos** que estão nas torres do castelo.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        },
+        {
+          "title": "Ativar o cristal da torre noroeste",
+          "text": "Vai à torre **noroeste** do castelo e ativa o cristal antigo que lá está. Tem de ser o **primeiro**: a partir daqui o cristal começa a perder energia."
+        },
+        {
+          "title": "Ativar os outros três cristais",
+          "text": "Sem perderes tempo, ativa os cristais das torres **nordeste**, **sudeste** e **sudoeste**, todos **antes** de o cristal noroeste ficar sem energia.",
+          "warning": "Se o cristal noroeste se apagar antes de ativares os outros três, tens de recomeçar pela torre noroeste.",
+          "tip": "Planeia o caminho entre as torres antes de ativares o primeiro cristal e limpa os monstros que estiverem no percurso."
+        }
+      ]
+    },
+    {
+      "title": "4. A troubled soul e The key person — libertar o Ortelio",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Volta à {npc:Lai} e diz {key:mission}. A névoa venenosa está a recuar e ela sentiu uma alma pura em grande desespero algures **lá em baixo**, nas catacumbas.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}],
+          "warning": "Os monstros dos pisos de baixo são mais fortes: {creature:Hellhunter Inferniarch|Hellhunter}, {creature:Spellreaper Inferniarch|Spellreaper} e {creature:Brinebrute Inferniarch|Brinebrute Inferniarchs}. Se a névoa ainda não recuou no teu mundo, não consegues descer."
+        },
+        {
+          "title": "Descer ao piso -1 e ir ao teleporte",
+          "text": "Desce as escadas das catacumbas até à zona de caça do **piso -1** e caminha para **sudeste** até ao teleporte. A partir daqui levas Agony Damage a cada 20 segundos.",
+          "coords": [{"x": 33883, "y": 32406, "z": 8, "label": "Teleporte para a cela do Ortelio (piso -1)"}]
+        },
+        {
+          "title": "Falar com o Ortelio",
+          "text": "Entra no teleporte e encontras o {npc:Ortelio}, que te pede logo para o ajudares a sair ({key:out}) da prisão. Pergunta-lhe como abrir ({key:open}) a cela: ele diz que a chave pode estar em qualquer lado, mas que já viu um {item:Mummified Demon Finger} ser usado para a abrir, e sugere que procures alguns desses dedos.",
+          "npc": "Ortelio",
+          "dialogue": [{"you": "hi"}, {"you": "out"}, {"you": "open"}]
+        },
+        {
+          "title": "Lootar Mummified Demon Fingers",
+          "text": "Caça os Inferniarchs da zona até teres vários {item:Mummified Demon Finger|Mummified Demon Fingers}. Caem (como drop raro) de {creature:Broodrider Inferniarch|Broodrider}, {creature:Gorger Inferniarch|Gorger}, {creature:Sineater Inferniarch|Sineater}, {creature:Hellhunter Inferniarch|Hellhunter}, {creature:Spellreaper Inferniarch|Spellreaper} e {creature:Brinebrute Inferniarch|Brinebrute Inferniarchs}. O número necessário depende da sorte, mas **10 a 20** costumam chegar. Também se compram no Market."
+        },
+        {
+          "title": "Usar os dedos na porta da cela",
+          "text": "Usa os {item:Mummified Demon Finger|Mummified Demon Fingers}, um de cada vez, na **porta da cela** do Ortelio, até seres teleportado para dentro da cela.",
+          "warning": "Cada dedo parte-se quer resulte quer não: leva dedos de sobra."
+        },
+        {
+          "title": "Reportar à Lai",
+          "text": "Sai da cela do Ortelio pelo caminho por onde entraste (a wiki não descreve a saída da cela) e volta ao piso -1. Sobe pelas escadas das catacumbas até ao castelo e vai à {npc:Lai} (torre interior sudeste, piso +3). Diz {key:mission}: ela diz que há muito a aprender com o que o Ortelio descobriu sobre os Inferniarchs, e que se sincronizou com as ressonâncias do passado do castelo e está disposta a partilhar contigo a visão do que já aprendeu.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        }
+      ]
+    },
+    {
+      "title": "5. Vision of the Past",
+      "steps": [
+        {
+          "title": "Aceitar a harmonização",
+          "text": "Diz outra vez {key:mission} à {npc:Lai} e aceita a oferta dela ({key:yes}) para te harmonizar com a *Essence of Azzilon*. És teleportado para uma sala nova.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}, {"you": "yes"}]
+        },
+        {
+          "title": "Falar com a visão",
+          "text": "Na sala nova, diz {key:hi} a {npc:A Vision of the Past}.",
+          "npc": "A Vision of the Past",
+          "dialogue": [{"you": "hi"}]
+        },
+        {
+          "title": "Voltar à Lai",
+          "text": "Entra no **portal a sul** da sala: ele leva-te de volta à {npc:Lai}."
+        }
+      ]
+    },
+    {
+      "title": "6. Blast from the past e Feeding the trolls",
+      "intro": "A partir daqui todas as tarefas usam uma alavanca para 5 jogadores. Junta a equipa: é muito recomendado ir com o máximo de jogadores possível.",
+      "steps": [
+        {
+          "title": "Pedir a missão",
+          "text": "Diz {key:mission} à {npc:Lai}. Com base no que o Ortelio descobriu, tens de perturbar as operações dos demónios, e a maneira mais eficaz é **libertar os trolls escravos** deles. Vai ter com o {npc:Ortelio} ao **piso -2** das catacumbas.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        },
+        {
+          "title": "Chegar à sala dos trolls",
+          "text": "Desce pelas escadas das catacumbas até ao **piso -2**, onde te espera o {npc:Ortelio}. Daí segue para **sudeste** e entra no teleporte. Puxa a **alavanca** com a equipa (até 5 jogadores) para começar a tarefa.",
+          "coords": [{"x": 33893, "y": 32386, "z": 9, "label": "Teleporte da tarefa dos trolls (piso -2)"}],
+          "warning": "A tarefa dura no máximo **600 segundos (10 minutos)**. O cooldown é de cerca de 10 a 12 minutos."
+        },
+        {
+          "title": "Pegar na comida dos trolls",
+          "text": "Usa o **distribuidor de comida** no **canto sudoeste** da sala para pegares em {item:Some Troll Food}.",
+          "tip": "A comida pesa 85 oz: guarda espaço de capacidade."
+        },
+        {
+          "title": "Alimentar os trolls",
+          "text": "Usa a {item:Some Troll Food} num **Hungry Slave Troll**. Ele transforma-se num **Fed Slave Troll** durante alguns segundos e começa a andar para **norte**, mas depois volta a ter fome. Volta a alimentá-lo (e aos outros) sempre que pararem."
+        },
+        {
+          "title": "Levar 20 trolls ao portal verde",
+          "text": "Repete o processo até **20 trolls** chegarem ao **portal verde** na zona **norte** da sala. A tarefa fica concluída.",
+          "tip": "Divide a equipa: uns jogadores vão buscar comida ao distribuidor e outros acompanham os trolls a caminho do norte."
+        },
+        {
+          "title": "Reportar à Lai",
+          "text": "Sai da sala dos trolls pelo caminho por onde entraste (a wiki não descreve a saída da sala), sobe pelas escadas das catacumbas até ao castelo, volta à {npc:Lai} e diz {key:mission} para receberes a missão seguinte.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        }
+      ]
+    },
+    {
+      "title": "7. Imp-ossible Mission — os Charged Imps",
+      "steps": [
+        {
+          "title": "Chegar ao portal dos imps",
+          "text": "Desce outra vez ao **piso -2** e vai para a parte **nordeste** da gruta, onde está um portal. Puxa a **alavanca** com a equipa (até 5 jogadores).",
+          "coords": [{"x": 33868, "y": 32287, "z": 9, "label": "Portal da tarefa dos imps (piso -2)"}],
+          "images": [{"file": "Charged Imp.gif", "caption": "Charged Imp"}],
+          "warning": "A tarefa dura no máximo **600 segundos (10 minutos)**; o cooldown é de cerca de 10 minutos. Leva proteção contra **energy**."
+        },
+        {
+          "title": "O objetivo",
+          "text": "Tens de matar **25** {creature:Charged Imp|Charged Imps} sem deixar o contador do **Powercollector**, no **meio da sala**, chegar a **25**. Cada Charged Imp que mates conta 1 para a tarefa. Cada Charged Imp que passe pelo chão à volta do Powercollector desaparece e soma 1 ao contador dele.",
+          "tip": "Os Charged Imps são imunes a dano **energy** (0%) e usam Strong Haste: ataca-os com outro elemento ou dano físico."
+        },
+        {
+          "title": "Matar os Imp Wardens",
+          "text": "Mata os {creature:Imp Warden|Imp Wardens}: isso aumenta a probabilidade de aparecerem novos Charged Imps.",
+          "tip": "Os Imp Wardens levam mais dano de **earth** (120%), **holy** (115%) e **energy** (115%)."
+        },
+        {
+          "title": "Bloquear o caminho para o Powercollector",
+          "text": "Cada Charged Imp que nasce vai **direito ao Powercollector**. Tu e a tua equipa têm de lhe cortar o caminho: ficar à frente dele, ou ter **dois jogadores** rodeados de Imp Wardens perto do Powercollector, a fazer de barreira. Mata os imps antes de chegarem ao chão à volta do Powercollector.",
+          "warning": "À medida que a equipa mata Charged Imps e o contador sobe, aparecem mais inimigos e a tarefa fica mais difícil."
+        },
+        {
+          "title": "Reportar à Lai",
+          "text": "Quando tiverem morto Charged Imps suficientes, sai da sala pelo caminho por onde entraste (a wiki não descreve a saída), sobe pelas escadas das catacumbas até ao castelo, volta à {npc:Lai} e diz {key:mission}.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        }
+      ]
+    },
+    {
+      "title": "8. Teach a man to fish... — pescar Energy Spheres",
+      "steps": [
+        {
+          "title": "Chegar à sala da pesca",
+          "text": "Desce ao **piso -2** e procura o teleporte para a tarefa da pesca. Leva a tua {item:Fishing Rod}. Como nas tarefas anteriores, a tarefa usa uma **alavanca** para até 5 jogadores: junta a equipa e puxa-a.",
+          "tip": "A wiki não dá a posição exata deste teleporte: procura-o no piso -2, tal como os teleportes das tarefas dos trolls (sudeste) e dos imps (nordeste)."
+        },
+        {
+          "title": "Pescar 25 Energy Spheres",
+          "text": "Usa a {item:Fishing Rod} para pescar **25 Energy Spheres**. Cada esfera apanhada soma 1 ponto ao total da equipa e aparece a mensagem *\"GOT ONE!\"*.",
+          "warning": "Há {creature:Worker Imp|Worker Imps} na sala. Não precisas de os matar, mas cuidado com os ataques deles."
+        },
+        {
+          "title": "Reportar à Lai",
+          "text": "Quando terminares, sai da sala pelo caminho por onde entraste (a wiki não descreve a saída), sobe pelas escadas das catacumbas até ao castelo, volta à {npc:Lai} e reporta a {key:mission}.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}]
+        }
+      ]
+    },
+    {
+      "title": "9. With friends like these... — o boss Arbaziloth",
+      "intro": "O boss final. Antes de entrares decide com a equipa em que modo vais lutar: o modo muda o loot e decide se tens acesso à Doomforge.",
+      "steps": [
+        {
+          "title": "Preparar a equipa",
+          "text": "Junta a equipa. **Cada jogador** traz uma {item:Fishing Rod}. Equipa proteção contra **death** e **energy**, e contra **life drain** para os demónios e a Forgemaster.",
+          "images": [{"file": "Arbaziloth.gif", "caption": "Arbaziloth"}],
+          "warning": "Não te esqueças da {item:Fishing Rod}! Sem ela não consegues tornar o Arbaziloth vulnerável.",
+          "tip": "O {creature:Arbaziloth} (360.000 de vida) leva 100% de dano **holy** e **earth**, 85% de **fire**, 80% de **ice** e **death** e só 70% de dano **físico**. Não pode ser paralisado, vê através de invisibilidade, ataca corpo a corpo e pode causar **Powerless**. Desde 25 de fevereiro de 2025 já não é afetado por Damage Reflection."
+        },
+        {
+          "title": "Entrar na sala do boss",
+          "text": "Desce até ao **piso -3** das catacumbas e usa o **portal** para o covil do {creature:Arbaziloth}. Lá dentro estão o Arbaziloth, dois {creature:Overcharged Demon|Overcharged Demons} e {creature:The Forgemaster (Creature)|The Forgemaster}.",
+          "coords": [{"x": 34033, "y": 32334, "z": 14, "label": "Sala do Arbaziloth (posição da Forgemaster)"}]
+        },
+        {
+          "title": "Escolher o modo",
+          "text": "A Forgemaster está lá para a equipa decidir que luta quer:",
+          "table": {
+            "head": ["Modo", "Como", "O que acontece", "Loot especial"],
+            "rows": [
+              ["Fácil", "Matar {creature:The Forgemaster (Creature)|The Forgemaster} durante a luta", "O Arbaziloth não se cura no fim; a Doomforge **não** fica acessível", "Armas do {wiki:Inferniarch Set|Inferniarch Set} e {item:Demon Claws} (1.º addon do Fiend Slayer)"],
+              ["Difícil", "Poupar a Forgemaster", "Depois da 4.ª mecânica a Forgemaster sai, o Arbaziloth cura-se por completo e fica mais forte", "{item:Demonfang Mask}, {item:Dreadfire Headpiece}, {item:Hellstalker Visor}, {item:Maliceforged Helmet}, {item:Demon Mengu}, {item:Demon Skull} (2.º addon), {item:Demon in a Green Box} (montada) e acesso à {wiki:Doomforge|Doomforge}"]
+            ]
+          }
+        },
+        {
+          "title": "Tratar dos Overcharged Demons",
+          "text": "Os dois {creature:Overcharged Demon|Overcharged Demons} são invocações que renascem sempre que morrem, e **cada um que matas cura o Arbaziloth**. Duas estratégias comuns: puxá-los para longe na sala até perderem o alvo, ou pôr um jogador que **não** seja o blocker principal a aguentá-los.",
+          "warning": "Não mates os Overcharged Demons: só estás a curar o boss."
+        },
+        {
+          "title": "\"Open fire you fools!\"",
+          "text": "Ataca o {creature:Arbaziloth}. Em **quatro** momentos da luta ele grita *\"Open fire you fools!\"* e fica **invulnerável**: continua a levar dano, mas a vida não desce. Os {creature:Imp Minion|Imp Minions} disparam a fisga e cria-se um **campo de fogo roxo** num sítio aleatório da sala.",
+          "tip": "Fica atento a esta mensagem: enquanto ele está invulnerável, estás a gastar supplies à toa."
+        },
+        {
+          "title": "Puxar o boss para o fogo roxo",
+          "text": "O blocker leva o Arbaziloth para cima do **campo de fogo roxo** e mantém-no lá até ouvires *\"CRAAAACK!\"*."
+        },
+        {
+          "title": "Usar as Fishing Rods no boss",
+          "text": "Logo a seguir ao *\"CRAAAACK!\"*, **todos** usam a {item:Fishing Rod} no Arbaziloth para o tornar vulnerável outra vez. O boss pode esquivar-se (Dodge) a uma cana, por isso é recomendado que toda a equipa use a sua. Quando resulta, aparece um efeito de corações no boss, toda a gente perde o alvo e ele perde uma das esferas de energia do braço. Pelo que ele diz sabes em que volta vais:",
+          "table": {
+            "head": ["Volta", "O Arbaziloth diz"],
+            "rows": [
+              ["1.ª", "*UH? WHAT ... ? HOW... ?*"],
+              ["2.ª", "*AHHH! HOW DARE YOU!?*"],
+              ["3.ª", "*YOU WILL PAY FOR THIS INSOLENCE*"],
+              ["4.ª", "*NOOO! AHHHH! THE POWER!!*"]
+            ]
+          },
+          "tip": "Depois de cada volta tens de voltar a selecionar o boss como alvo."
+        },
+        {
+          "title": "Modo fácil: matar a Forgemaster",
+          "text": "Se escolheram o modo fácil, matem {creature:The Forgemaster (Creature)|The Forgemaster} durante a luta. Assim o Arbaziloth **não se cura**: façam as quatro voltas da mecânica e matem-no.",
+          "warning": "Se a Forgemaster morrer, não tens acesso à Doomforge nesse kill."
+        },
+        {
+          "title": "Modo difícil: a fase final",
+          "text": "Se pouparam a Forgemaster, pouco depois da **4.ª mecânica** ela sai da luta e o Arbaziloth **cura-se por completo**. Já não há mais mecânicas: é só atacá-lo até morrer, mas nesta fase ele faz **mais dano**.",
+          "warning": "Guarda supplies para esta fase: o boss volta à vida cheia e bate mais forte."
+        },
+        {
+          "title": "Lootar o Arbaziloth",
+          "text": "Abre o corpo do Arbaziloth (500.000 de experiência). Além de crystal e platinum coins, poções e gemas, pode trazer itens como {item:Giant Sword}, {item:Ice Rapier}, {item:Stone Skin Amulet}, {item:Devil Helmet}, {item:Demonrage Sword} ou {item:Arbaziloth Shoulder Piece}, mais o loot especial do modo que escolheram (ver a tabela acima).",
+          "reward": "Loot do Arbaziloth"
+        },
+        {
+          "title": "Entrar na Doomforge (só modo difícil)",
+          "text": "Se pouparam a Forgemaster, usa o **teleporte laranja** da sala para entrares na {wiki:Doomforge|Doomforge}. Aí, {npc:The Forgemaster} troca uma arma base do {wiki:Inferniarch Set|Inferniarch Set} e vários produtos de criaturas por uma versão melhorada:",
+          "npc": "The Forgemaster",
+          "table": {
+            "head": ["Versão", "Itens necessários (além da arma base)"],
+            "rows": [
+              ["Rending", "1 {item:Skin of Gralvalon}, 1 {item:Demonic Finger}, 100 {item:Vexclaw Talon}, 500 {item:Demonic Matter}, 50 {item:Demon Horn}, 350 {item:Demonic Essence}, 350 {item:Flask of Demonic Blood}"],
+              ["Siphoning", "1 {item:Skin of Twisterror}, 100 {item:Some Grimeleech Wings}, 500 {item:Demonic Matter}, 750 {item:Demonic Essence}, 200 {item:Demonic Skeletal Hand}"],
+              ["Draining", "1 {item:Skin of Malvaroth}, 100 {item:Piece of Dead Brain}, 500 {item:Demonic Matter}, 750 {item:Flask of Demonic Blood}, 50 {item:Demon Dust}"]
+            ]
+          },
+          "tip": "Armas base com tier **não** podem ser usadas na Doomforge (as versões melhoradas podem receber tier normalmente). Armas que se melhoram: Inferniarch Arbalest, Battleaxe, Blade, Bow, Claws, Flail, Greataxe, Rod, Slayer, Wand e Warhammer."
+        }
+      ]
+    },
+    {
+      "title": "10. Recompensa e saída de Azzilon",
+      "steps": [
+        {
+          "title": "Reportar à Lai e receber o outfit",
+          "text": "Depois de derrotares o {creature:Arbaziloth}, sai da sala do boss (ou da Doomforge) pelo caminho por onde entraste — a wiki não descreve a saída —, sobe pelas escadas das catacumbas até ao castelo e reporta a {key:mission} à {npc:Lai} uma última vez. Recebes o {wiki:Fiend Slayer Outfits|Fiend Slayer Outfit} base.",
+          "npc": "Lai",
+          "dialogue": [{"you": "mission"}],
+          "images": [
+            {"file": "Outfit Fiend Slayer Male.gif", "caption": "Fiend Slayer masculino (base)"},
+            {"file": "Outfit Fiend Slayer Female.gif", "caption": "Fiend Slayer feminino (base)"}
+          ],
+          "reward": "Fiend Slayer Outfit (base)"
+        },
+        {
+          "title": "Depois da quest: addons e sala extra da Doomforge",
+          "text": "Os dois addons vêm do próprio Arbaziloth: {item:Demon Claws} (modo fácil) e {item:Demon Skull} (modo difícil); vê o guia {wiki:Fiend Slayer Outfits Quest|Fiend Slayer Outfits Quest}. Se matares o boss **10 vezes em modo difícil**, ganhas acesso a uma sala extra da {wiki:Doomforge|Doomforge} onde podes ficar com a versão base de qualquer arma do {wiki:Inferniarch Set|Inferniarch Set} à tua escolha."
+        },
+        {
+          "title": "Sair de Azzilon",
+          "text": "A wiki não descreve a saída da sala do boss nem o regresso de Azzilon a Edron. Volta pelo caminho por onde vieste: sobe os pisos das catacumbas pelas mesmas escadas até ao castelo e regressa ao sítio onde o teleporte do {npc:Fernlor} te deixou; a wiki não diz se aí há um teleporte de regresso. Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao teu templo (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block). Em Edron, apanha o barco no porto do {npc:Captain Seahorse} para voltares à tua cidade.",
+          "coords": [{"x": 33176, "y": 31764, "z": 6, "label": "Porto de Edron (Captain Seahorse)"}],
+          "warning": "Enquanto estás nos pisos subterrâneos continuas a levar Agony Damage a cada 20 segundos: não fiques parado lá em baixo com pouca vida."
+        }
+      ]
+    },
+    {
+      "title": "11. Extra: os minibosses das catacumbas",
+      "intro": "Opcional. Três minibosses Inferniarch aparecem quando usas 10 itens de criaturas num Sacrificial Altar. As peles que deixam cair são precisas para as receitas da Doomforge.",
+      "steps": [
+        {
+          "title": "Invocar os minibosses",
+          "text": "Usa os 10 itens no **Sacrificial Altar** do piso indicado para invocares cada miniboss:",
+          "table": {
+            "head": ["Miniboss", "Piso", "Itens para invocar", "Pele (para a Doomforge)"],
+            "rows": [
+              ["{creature:Malvaroth}", "-1 ({coord:33770,32393,8})", "10 {item:Bloodstained Scythe}", "{item:Skin of Malvaroth} (Draining)"],
+              ["{creature:Twisterror}", "-2 ({coord:33824,32296,9})", "10 {item:Spellreaper Staff Totem}", "{item:Skin of Twisterror} (Siphoning)"],
+              ["{creature:Gralvalon}", "-3 ({coord:33809,32296,10})", "10 {item:Hellhunter Eye}", "{item:Skin of Gralvalon} (Rending)"]
+            ]
+          },
+          "coords": [
+            {"x": 33770, "y": 32393, "z": 8, "label": "Altar do Malvaroth (piso -1)"},
+            {"x": 33824, "y": 32296, "z": 9, "label": "Altar do Twisterror (piso -2)"},
+            {"x": 33809, "y": 32296, "z": 10, "label": "Altar do Gralvalon (piso -3)"}
+          ],
+          "tip": "Os itens de invocação são loot dos Inferniarchs: {item:Bloodstained Scythe} (Brinebrute), {item:Spellreaper Staff Totem} (Spellreaper) e {item:Hellhunter Eye} (Hellhunter). As peles são drops raros."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "A quest depende de uma world change: as catacumbas de Azzilon ficam fechadas por uma névoa até os jogadores do mundo entregarem essências suficientes à {npc:Lai}. Quando a névoa recua, aparece a mensagem de servidor *\"The mists in Azzilon have retreated!\"* e as escadas ficam livres.",
+    "O Agony Damage das catacumbas é aplicado a cada 20 segundos em qualquer piso subterrâneo e é uma percentagem da vida atual; só os ranks da Lai o reduzem (0% no rank 10).",
+    "As tarefas de equipa (trolls e imps) duram no máximo 10 minutos e têm um cooldown de cerca de 10 a 12 minutos.",
+    "A tabela de loot do {creature:Arbaziloth} muda consoante o modo: as {item:Demon Claws} e as armas do Inferniarch Set só no modo fácil; o {item:Demon Skull}, os capacetes e a {item:Demon in a Green Box} só no modo difícil.",
+    "A {npc:Lai} também aparece (como passo opcional) na {wiki:Mystery of the Valley Quest|Mystery of the Valley Quest}."
+  ]
+}
