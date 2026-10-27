@@ -1,0 +1,42 @@
+{
+  "title": "Norcferatu Fortress",
+  "type": "edificio",
+  "near": "Yalahar",
+  "summary": "Fortaleza dos Norcferatu (orcs vampiros) em {wiki:Vengoth}, a **norte** do cais do {npc:Harlow}; é zona de caça de nível alto e o cenário da {wiki:Bloody Tusks Quest}, por cima das {wiki:Norcferatu Dungeons}.",
+  "entrance": {"x": 32914, "y": 31451, "z": 7, "label": "Ponto de Levitate à entrada da fortaleza, logo depois da névoa"},
+  "requirements": [
+    "Conta **Premium**: a {wiki:Blood Brothers Quest}, que abre o caminho para Vengoth, e a {wiki:Bloody Tusks Quest} são Premium.",
+    "O {npc:Harlow} só te leva a Vengoth a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest} (a página de Vengoth diz que basta teres começado essa missão).",
+    "Feitiço {spell:Levitate}: entra-se na fortaleza levitando para **cima** (*exani hur up*) e sai-se levitando para **baixo** (*exani hur down*).",
+    "Na {wiki:Bloody Tusks Quest} (nível **250**), é a magia que a {npc:Anaztassja Moroia} te dá na missão *Into the Grave* (na sala da campa, em Edron) que te deixa atravessar a proteção dos orcs e entrar no covil. A wiki não diz se a fortaleza se pode visitar sem essa missão.",
+    "As portas de quest do interior (a da sala do {npc:An Orchish Ancestor Spirit} e a da sala da {creature:Blind Monstrosity}) abrem com as missões da Bloody Tusks Quest."
+  ],
+  "arrive": [
+    "Chega a **Yalahar**: de Liberty Bay com o {npc:Captain Max}, num dos barcos a **leste** do cais ({key:hi}, {key:yalahar}, {key:yes}, 400 gp; só depois de começares a {wiki:In Service of Yalahar Quest}). Depois da missão *Searoutes around Yalahar* dessa quest também há barco direto de Thais, Carlin, Venore, Ab'Dendriel, Ankrahmun, Darashia, Liberty Bay e Port Hope ({key:hi}, {key:yalahar}, {key:yes}).",
+    "Em Yalahar vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de Vengoth ({coord:32857,31550,7}).",
+    "Caminha para **norte** em direção à fortaleza. Pelo caminho atravessas uma **névoa**.",
+    "**Não subas as escadas.** Logo depois da névoa, um pouco a **leste** das escadas, usa {spell:Levitate} para **cima** (*exani hur up*) neste ponto ({coord:32914,31451,7}). Sobes para o andar de cima (piso 6), onde a {npc:Anaztassja Moroia} espera durante a quest.",
+    "Lá dentro: a **leste** da Anaztassja, depois de duas portas de quest, fica o {npc:An Orchish Ancestor Spirit} ({coord:32956,31420,6}); **um andar acima** (piso 5) fica a porta da sala da {creature:Blind Monstrosity} e do {creature:Blood Totem} ({coord:32909,31432,5}); um pouco a **noroeste** da Anaztassja, um corredor estreito dá vista para o {creature:Blood Guardian}, que guarda no andar de baixo o teleporte para as {wiki:Norcferatu Dungeons}."
+  ],
+  "leave": [
+    "Se estás no andar de cima (piso 6, onde a Anaztassja estava), volta ao sítio por onde subiste e usa {spell:Levitate} para **baixo** (*exani hur down*) junto ao ponto onde levitaste para cima ({coord:32914,31451,7}).",
+    "Da entrada da fortaleza caminha para **sul**, pelo mesmo caminho e pela névoa, até ao {npc:Harlow} no **oeste** de Vengoth ({coord:32857,31550,7}). Diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): ele leva-te de volta às docas do Trade Quarter de Yalahar.",
+    "Em Yalahar, vai ao porto: o {npc:Karith} (1 andar acima do cais, {coord:32818,31278,5}) leva-te a várias cidades depois da missão *Searoutes around Yalahar* ({key:hi}, o nome da cidade, {key:yes}); sem essa missão, o {npc:Captain Cookie} ({coord:32804,31276,6}) leva-te a Liberty Bay (400 gp) ou Thais (800 gp).",
+    "Se vens das {wiki:Norcferatu Dungeons} depois de acabares a Bloody Tusks Quest, a Mysterious Machine do piso mais alto teleporta-te para a entrada da fortaleza; daí segue os passos acima."
+  ],
+  "coords": [
+    {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (chegada e regresso a Yalahar)"},
+    {"x": 32914, "y": 31451, "z": 7, "label": "Ponto de Levitate (entrada e saída da fortaleza)"},
+    {"x": 32951, "y": 31419, "z": 6, "label": "Segunda porta de quest (a leste da Anaztassja)"},
+    {"x": 32956, "y": 31420, "z": 6, "label": "An Orchish Ancestor Spirit"},
+    {"x": 32909, "y": 31432, "z": 5, "label": "Porta de quest da sala da Blind Monstrosity (piso 5)"},
+    {"x": 32912, "y": 31428, "z": 8, "label": "Chegada do teleporte às Norcferatu Dungeons (piso -1)"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith, porto de Yalahar"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie, porto de Yalahar"}
+  ],
+  "warnings": [
+    "As criaturas da fortaleza são muito fortes: {creature:Dworc Shadowstalker|Dworc Shadowstalkers}, {creature:Gloom Maw|Gloom Maws}, {creature:Norcferatu Heartless}, {creature:Norcferatu Nightweaver|Norcferatu Nightweavers}, {creature:Orclops Bloodbreaker|Orclops Bloodbreakers} (até 1900 de dano) e {creature:Varg|Vargs}, com 5 400 a 10 300 de HP. A wiki recomenda nível 550 para as masmorras por baixo.",
+    "Não subas as escadas à entrada: a wiki manda levitar ao lado delas, depois da névoa.",
+    "Todas estas criaturas deixam cair {item:Norcferatu Talisman|Norcferatu Talismans}; precisas de pelo menos **17** para a missão *Breaking in* da Bloody Tusks Quest."
+  ]
+}

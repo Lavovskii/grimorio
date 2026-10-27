@@ -1,0 +1,36 @@
+{
+  "title": "Radiant Ascendancy",
+  "type": "edificio",
+  "near": "Marapur",
+  "summary": "Zona da base do culto da moonsilver em {wiki:Thalassara} onde está o falso deus {creature:Phosphorus}; chega-se lá pela {wiki:Radiant Skyhold}, depois de matares o {creature:Maior Domus}, que guarda a chave espiritual do *inner sanctum*. Tem a sala dos {creature:Elite Fanatic|Elite Fanatics}, a batalha final e uma zona de caça feita para XP (sem loot nem dinheiro).",
+  "entrance": {"x": 33989, "y": 32623, "z": 1, "label": "Teleportes a norte da sala do Maior Domus"},
+  "requirements": [
+    "Acesso da {wiki:Make Believe Quest|Make Believe Quest}: precisas de ter morto o {creature:Maior Domus}, que guarda a chave espiritual do inner sanctum. Antes disso, o {creature:Mimar Haffar} dá o acesso à {wiki:Radiant Skyhold}, por onde se passa.",
+    "A quest pede conta **Premium** e nível **300** (recomendado 800+); as criaturas daqui têm entre 34 800 e 37 000 de vida."
+  ],
+  "items": ["Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Venore** de barco ({key:hi}, {key:venore}, {key:yes}) e chega a {wiki:Thalassara}: na primeira vez pelo armazém do {npc:Wayland Smythers} ({coord:32960,32075,6}), disfarçado de caixote até ao teleporte no noroeste (a conversa completa está na página de {wiki:Thalassara}); nas seguintes com o {npc:Captain Fearless} ({coord:32955,32022,6}; {key:hi}, {key:thalassara}, {key:yes}; 500 gp).",
+    "Em Thalassara, entra na base do culto, a **sudoeste** da ilha e a **sul** de {wiki:Salgadara} ({coord:34067,32655,7}; só abre depois de venceres o {creature:Mimar Haffar}): caminha para **sul** e usa o teleporte a **leste** para entrares na {wiki:Radiant Skyhold}.",
+    "Sobe **5 andares** até à sala do {creature:Maior Domus} ({coord:33974,32637,1}). Com ele morto, sai da sala e atravessa os teleportes que ficam a **norte** ({coord:33989,32623,1}).",
+    "Na sala seguinte puxas a alavanca dos {creature:Elite Fanatic|Elite Fanatics}; quando todos os Petrified Fanatics estiverem nos sqm ornamentados aparece um teleporte **laranja** a **norte**, que leva à sala da alavanca do {creature:Phosphorus} ({coord:33990,32623,1}).",
+    "**Visitas seguintes:** depois de venceres o Phosphorus (em qualquer dificuldade), ganhas acesso a um teleporte a **sudoeste**, no rés-do-chão, que leva à sala do {npc:Wayland Smythers}, aqui na Radiant Ascendancy: tem teleportes de atalho para todos os bosses."
+  ],
+  "leave": [
+    "A wiki não descreve a saída da Radiant Ascendancy nem da sala do Phosphorus: volta pelos teleportes por onde vieste e desce a {wiki:Radiant Skyhold} até à entrada da base do culto ({coord:34067,32655,7}).",
+    "Para saíres de Thalassara não há barco nem teleporte documentados: usa um {item:Temple Teleport Scroll} ou o {wiki:Temple Teleport|Temple Teleport} da Store, que te levam ao templo da tua cidade (o scroll não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Em {wiki:Salgadara} há uma NPC com título de capitã, a {npc:Captain Corsarah} ({coord:34010,32475,6}), mas a wiki não descreve as rotas dela."
+  ],
+  "coords": [
+    {"x": 33989, "y": 32623, "z": 1, "label": "Teleportes para a sala dos Elite Fanatics"},
+    {"x": 33990, "y": 32623, "z": 1, "label": "Phosphorus (Radiant Ascendancy)"},
+    {"x": 33974, "y": 32637, "z": 1, "label": "Sala da alavanca do Maior Domus (Radiant Skyhold)"},
+    {"x": 34067, "y": 32655, "z": 7, "label": "Entrada da base do culto"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto norte de Venore; Thalassara 500 gp)"}
+  ],
+  "warnings": [
+    "As criaturas ({creature:Radiant Templar|Radiant Templars}, {creature:Radiant Inquisitor|Radiant Inquisitors} e {creature:Radiant Zealot|Radiant Zealots}) passam às versões **Devoted**, mais fortes, durante **1 hora** depois de **3 000** kills de criaturas normais.",
+    "Cooldown do {creature:Phosphorus}: 2 dias e 20 h (máximo 20 minutos de luta).",
+    "A wiki não documenta saída de Thalassara: leva sempre um {item:Temple Teleport Scroll}."
+  ]
+}

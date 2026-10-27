@@ -1,0 +1,53 @@
+{
+  "title": "Blood Vestibule",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Átrio do reino de sangue do Sanguine Lord e entrada das quatro zonas de caça da {wiki:Rotten Blood Quest|Rotten Blood Quest} (o wiki situa-o no norte de Darama); chega-se por uma **poça de sangue** no fundo de um templo de **Drefia**, a oeste de Darashia. Aqui estão o {npc:A Bloodshade}, o {npc:Altar (NPC)} e o boss {creature:Bakragore}.",
+  "entrance": {"x": 32956, "y": 32398, "z": 9, "label": "A Bloodshade e a poça de sangue que leva ao Blood Vestibule (templo de Drefia, piso -2)"},
+  "requirements": [
+    "Conta **Premium** (Darashia e Drefia).",
+    "Nível **250** (requisito da {wiki:Rotten Blood Quest|Rotten Blood Quest}; recomendado 800+ para as zonas de caça).",
+    "Aceitar a missão do {npc:Torkada} em Drefia ({key:hi}, {key:expedition}, {key:mission}, {key:yes}): é a bênção dele que te deixa entrar no templo.",
+    "Feitiço {spell:Levitate} para subir ao templo (*exani hur up*) e para voltar a descer à saída (*exani hur down*).",
+    "Sacrifício ao {npc:A Bloodshade}: **2 {item:Bloody Tears}** ou **5.000.000 gp** (opção {key:detour}). Só depois disso a poça de sangue funciona como portal."
+  ],
+  "items": ["Rope", "Bloody Tears", "Temple Teleport Scroll"],
+  "arrive": [
+    "Viaja até **Darashia**. **De barco:** em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Krailos ou Issavi diz ao capitão {key:hi}, {key:darashia}, {key:yes} e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}). **De tapete voador:** em Edron, Kazordoon, Svargrond, Femor Hills, Issavi ou Farmine diz ao gestor do tapete {key:hi}, {key:darashia}, {key:yes} e chegas ao tapete do {npc:Chemar} ({coord:33270,32439,6}). De Thais, Carlin ou Ab'Dendriel não há ligação direta: apanha primeiro o barco para Venore.",
+    "Sai de Darashia para **oeste**, em direção às montanhas que separam Ankrahmun, Darashia, Drefia e Tiquanda. Usa a {item:Rope} no sítio de corda ({coord:33048,32429,7}) para subires (ou vem pela passagem entre Darashia e Ankrahmun). {wiki:Drefia|Drefia} fica do outro lado, a oeste ({coord:33018,32443,7}).",
+    "Em Drefia fala com o {npc:Torkada} ({coord:33033,32428,7}): {key:hi}, {key:expedition}, {key:mission}, {key:yes}. Ele abençoa-te e passas a poder entrar no templo.",
+    "Vai ao sítio de {spell:Levitate} a **noroeste** do Torkada ({coord:32989,32393,7}) e sobe com *exani hur up*.",
+    "Passa pelos 2 {creature:Ghoul|Ghouls}, desce as escadas e depois desce pelo buraco. Desce outra vez pelas escadas que estão logo a **nordeste** e segue para **sudoeste** até uma porta entre dois pilares de calcário. Passa a porta: logo à entrada da sala está o {npc:A Bloodshade} ({coord:32956,32398,9}).",
+    "Fala com o {npc:A Bloodshade} ({key:hi}, {key:quest}) e faz o sacrifício: com as 2 {item:Bloody Tears} contigo, usa o prato de sacrifício **duas vezes** (pode ser preciso clicar várias vezes até as lágrimas serem consumidas), ou diz {key:detour} para pagares os 5.000.000 gp.",
+    "Entra na poça de sangue: funciona como portal e chegas ao **Blood Vestibule**. Lá dentro também está o {npc:A Bloodshade} ({key:hi}, {key:quest}); há **quatro salas**, cada uma com um {item:Spheric Teleporter} para uma das zonas de caça. O {npc:Altar (NPC)} fica em {coord:34070,32009,14}."
+  ],
+  "leave": [
+    "O wiki não descreve a saída do Blood Vestibule. Volta ao sítio onde chegaste pela poça de sangue (junto ao {npc:A Bloodshade}) e regressa por aí à sala do A Bloodshade em Drefia ({coord:32956,32398,9}). Se não encontrares saída, usa um {item:Temple Teleport Scroll}: vais para o templo da tua cidade e já não precisas dos passos seguintes.",
+    "Da sala do A Bloodshade, refaz o caminho ao contrário: sai pela porta entre os pilares de calcário, segue para **nordeste** até às escadas e sobe-as, usa a {item:Rope} no buraco para subires, sobe as escadas e passa pelos Ghouls até ao sítio de {spell:Levitate} ({coord:32989,32393,7}), onde desces com *exani hur down*.",
+    "Volta para **leste** pela montanha até ao sítio de corda ({coord:33048,32429,7}) e segue até Darashia.",
+    "Em Darashia apanha o barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou o tapete voador do {npc:Chemar} ({key:hi}, o destino, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33048, "y": 32429, "z": 7, "label": "Sítio de corda entre Darashia e Drefia"},
+    {"x": 33033, "y": 32428, "z": 7, "label": "Torkada (missão de acesso ao templo)"},
+    {"x": 32989, "y": 32393, "z": 7, "label": "Sítio de Levitate (entrada do templo)"},
+    {"x": 32956, "y": 32398, "z": 9, "label": "A Bloodshade, prato de sacrifício e poça de sangue (Drefia, piso -2)"},
+    {"x": 34070, "y": 32009, "z": 14, "label": "Altar (NPC), no Blood Vestibule"},
+    {"x": 33842, "y": 31664, "z": 14, "label": "Jaded Roots (Murcion)"},
+    {"x": 34118, "y": 31880, "z": 14, "label": "Darklight Core (Vemiath)"},
+    {"x": 33810, "y": 31824, "z": 14, "label": "Gloom Pillars (Chagorz)"},
+    {"x": 34100, "y": 31688, "z": 14, "label": "Putrefactory (Ichgahal)"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"}
+  ],
+  "images": [
+    {"file": "Drefia Map.gif", "caption": "Mapa de Drefia (caminho entre Darashia e o templo)"}
+  ],
+  "warnings": [
+    "**Não** entres na poça de sangue antes de fazeres o sacrifício: levas {wiki:Agony Damage|Agony Damage} que pode tirar uma percentagem da tua vida.",
+    "O wiki não diz qual das quatro salas leva a cada zona: confirma pelas coordenadas da zona onde chegaste.",
+    "O {creature:Bakragore} está no Blood Vestibule e entra-se por uma alavanca, mas o wiki não indica a posição dela nem a saída da sala do boss.",
+    "Na montanha entre Darashia e Drefia há muitos {creature:Scorpion|Scorpions}: guarda mana para curar o veneno.",
+    "O {item:Temple Teleport Scroll} leva-te ao teu templo, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block: espera que o bloqueio de combate passe antes de o usares. Não se compra no Market: vem das recompensas diárias ou da Store."
+  ]
+}

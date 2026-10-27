@@ -1,0 +1,51 @@
+{
+  "title": "Grounds of Destruction",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Razzagorn}, servo do Apocalypse, **debaixo do mar a leste de Darashia**: é um dos sete seals da {wiki:Ferumbras' Ascension Quest} e entra-se pelo teleporte **leste** da sala dos portais do {wiki:Hell Hub}, a que se chega pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33356, "y": 32366, "z": 14, "label": "Teleporte leste do Hell Hub (entrada das Grounds of Destruction)"},
+  "requirements": [
+    "Conta **Premium** e **nível 150** para falares com o {npc:Mazarius}, em Darashia.",
+    "As portas do inferno têm de estar abertas para ti: aceita a missão do Mazarius e entrega-lhe 30 {item:Demonic Essence|Demonic Essences} ({key:hi}, {key:short}, {key:yes}, {key:demonic essence}, {key:yes}).",
+    "{item:Teleportation Rod} (dado pelo Mazarius; se o perderes, vende-te outro por 1.000 gp) para enviares a peça da Godbreaker no fim: é isso que completa o seal.",
+    "Nível recomendado pela wiki para esta zona: **knights 400**, paladins e mages 350.",
+    "Para teres acesso à sala do {creature:Razzagorn} tens de matar o miniboss {creature:The Shatterer} pelo menos uma vez. O boss é para até **5 jogadores** e só pode ser tentado de 44 em 44 horas."
+  ],
+  "items": ["Demonic Essence", "Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco, por exemplo em Venore ao {npc:Captain Fearless} ({key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}), e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}); ou de tapete voador, por exemplo em Edron ao {npc:Pino} ({key:hi}, {key:darashia}, {key:yes}, 40 gp), e chegas à plataforma do {npc:Chemar} ({coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** da cidade ({coord:33271,32395,7}), e desce 1 andar (subsolo): ele está aí ({coord:33275,32392,8}).",
+    "Com o acesso aberto (as 30 Demonic Essences entregues), entra no portal a **norte** do Mazarius. Apareces numa zona de proteção (sala segura): prepara-te aqui.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}; no fim da gruta, desce as escadas até à sala dos portais do {wiki:Hell Hub}.",
+    "Na sala dos portais, segue o caminho até ao teleporte **leste** ({coord:33356,32366,14}) e entra: estás nas Grounds of Destruction.",
+    "Segue o caminho da imagem até à bandeira azul: é uma salinha com 5 tiles e uma alavanca. Põe a equipa nas tiles e puxa-a. Na sala seguinte, {creature:The Fettered Shatterer} está preso por 4 correntes: puxa as 4 alavancas (**norte**, guardada por 4 {creature:Destroyer|Destroyers}; **oeste**, guardada por 4 {creature:Fury|Furies}; **sul** e **leste**, com o caminho tapado por rochas e escondido por campos de fogo) e mata {creature:The Shatterer}.",
+    "Quando o Shatterer morre, a equipa é teleportada para a sala seguinte. Segue o caminho até à bandeira azul para entrares na sala da alavanca do {creature:Razzagorn}.",
+    "Atalho: depois de matares o Shatterer **pela primeira vez**, nas visitas seguintes podes usar o teleporte em {coord:33395,32460,13} para voltares a lutar contra o Razzagorn."
+  ],
+  "leave": [
+    "Depois de matares o {creature:Razzagorn}, sai da sala e usa o {item:Teleportation Rod} na peça da {wiki:The Godbreaker}: o teleporte de saída devolve-te à sala segura (zona de proteção) antes da entrada do Hell Hub. Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do {npc:Mazarius}.",
+    "Se quiseres sair antes do boss: a wiki não descreve o regresso das Grounds à sala dos portais (nem diz se há um teleporte de volta onde chegaste). Faz o caminho ao contrário até ao sítio onde chegaste e daí à sala dos portais; depois sobe as escadas e atravessa as grutas até à zona de proteção.",
+    "Da zona de proteção volta à sala do {npc:Mazarius}, em Darashia, pelo caminho por onde entraste (a wiki não descreve esta passagem de regresso em pormenor). Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Da casa do Mazarius sobe à rua: no porto, o {npc:Petros} ({coord:33289,32481,6}) leva-te de barco, por exemplo, a Venore ({key:hi}, {key:venore}, {key:yes}, 60 gp) ou Ankrahmun (100 gp); na plataforma dos tapetes, o {npc:Chemar} ({coord:33270,32439,6}) leva-te, por exemplo, a Edron ({key:hi}, {key:edron}, {key:yes}, 40 gp)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (subsolo), com o portal a norte"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub"},
+    {"x": 33356, "y": 32366, "z": 14, "label": "Teleporte leste (Grounds of Destruction)"},
+    {"x": 33426, "y": 32447, "z": 13, "label": "Grounds of Destruction (ponto indicado pela wiki)"},
+    {"x": 33395, "y": 32460, "z": 13, "label": "Teleporte de atalho (depois do primeiro Shatterer)"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção, pelas grutas, até às escadas da sala dos portais"},
+    {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete teleportes da sala dos portais (começas no círculo branco); o 4 é o das Grounds of Destruction"},
+    {"file": "Ferumbras Ascencion - Path to Razzagorn 1.png", "caption": "À esquerda, o caminho na sala dos portais até ao teleporte leste; à direita, o caminho lá dentro até à sala do miniboss"},
+    {"file": "Ferumbras Ascencion - Razzagorn Puzzle.png", "caption": "As 4 alavancas do Fettered Shatterer e os caminhos escondidos (linhas brancas)"},
+    {"file": "Ferumbras Ascencion - Path to Razzagorn 2.gif", "caption": "Caminho até à sala da alavanca do Razzagorn"}
+  ],
+  "warnings": [
+    "Depois da sala segura não há mais zonas de proteção. Ao aproximares-te do centro das salas grandes podes ser cercado por muitos {creature:Juggernaut|Juggernauts}, {creature:Vexclaw|Vexclaws}, {creature:Grimeleech|Grimeleeches} e {creature:Hellflayer|Hellflayers}: anda junto às bordas.",
+    "Assim que o Shatterer morre, a equipa é teleportada para a sala seguinte, que tem as mesmas criaturas que já enfrentaste: vai pronto.",
+    "Não fiques na sala do boss depois de o matares: se o tempo acabar és teleportado para fora e, como a missão só conta quando usas o {item:Teleportation Rod}, terias de matar o boss outra vez."
+  ]
+}

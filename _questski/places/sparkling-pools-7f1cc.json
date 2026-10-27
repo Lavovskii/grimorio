@@ -1,0 +1,44 @@
+{
+  "title": "Sparkling Pools",
+  "type": "zona",
+  "near": "Edron",
+  "summary": "Uma das três zonas de caça de {wiki:Gnomprona}, a ilha subterrânea dos gnomes por baixo de Marapur. Chega-se pelo **vagão da direita** do hub; aqui fica a entrada do vulcão do {creature:Magma Bubble} ({wiki:Primal Ordeal Quest|Primal Ordeal Quest}).",
+  "entrance": {"x": 33529, "y": 32902, "z": 14, "label": "Gnomfurry e gruta para os vagões (hub de Gnomprona)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Gnomprona}: antes da primeira viagem alista-te com o {npc:Gnomcruiter} na Noodles Academy de Edron ({key:hi}, {key:talented}, {key:yes}, {key:join}).",
+    "A {wiki:Primal Ordeal Quest|Primal Ordeal Quest} pede nível **250**; para caçar aqui a wiki recomenda nível **600** (knights 110/110 de ataque/defesa, paladins 115/100, mages magic level 110).",
+    "Vulcão do {creature:Magma Bubble}: equipa de **até 5 jogadores**, na missão *Magmageddon!* da Primal Ordeal Quest."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes} no porto da tua cidade; de Thais, com o {npc:Captain Bluebear}) e daí ao hub de {wiki:Gnomprona}: no porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a Cormaya ({key:hi}, {key:cormaya}, {key:yes}; 20 gp). Desce ao {wiki:Steamship} de Cormaya, **8 andares abaixo** da ilha (escadas por baixo do **Cormaya Garden**, a sul do cais), e diz ao {npc:Gurbasch} ({coord:33313,31989,15}) {key:hi}, {key:gnomprona}, {key:yes}. Chegas ao cais do hub, junto ao {npc:Urks The Mute} ({coord:33519,32856,14}).",
+    "No hub (zona segura), vai para **sul** até ao {npc:Gnomfurry} ({coord:33529,32902,14}), entra na gruta junto a ele e segue para **sul** até aos **ore wagons**.",
+    "Usa o **vagão da direita**: leva-te às passagens de pedra **sem criaturas** do lado das Sparkling Pools (por exemplo {coord:33596,32872,15}). A excavation site **Firefoot** ({coord:33556,32883,15}) e o site **GT-M-01** ({coord:33658,32969,15}) da Primal Ordeal Quest também se alcançam por este vagão.",
+    "A zona de caça fica no **piso de cima** dessas passagens, o mesmo piso do hub (por exemplo {coord:33562,32982,14}). A wiki não descreve o caminho exato entre o vagão e a zona.",
+    "A entrada do vulcão do {creature:Magma Bubble} fica nesta zona, no piso de caça ({coord:33660,32896,14})."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: desce às passagens de pedra, apanha o **vagão da direita** de volta e sai pela gruta do {npc:Gnomfurry} até ao hub (zona segura).",
+    "A wiki não descreve a saída da arena do {creature:Magma Bubble}: depois da luta, sai do vulcão pelo mesmo caminho por onde entraste e volta pelas Sparkling Pools e pelo **vagão da direita** até ao hub (zona segura).",
+    "Para saíres de Gnomprona, fala com o capitão {npc:Urks The Mute} no cais onde chegaste ({key:hi}) e pergunta-lhe para onde te leva: a wiki não regista a conversa nem os destinos dele (o barco de ida vem de Cormaya). Se te deixar no Steamship de Cormaya, o {npc:Gurbasch} leva-te a **Kazordoon** ({key:hi}, {key:kazordoon}, {key:yes}; 160 gp); ou sobe as escadas do Cormaya Garden até ao porto **norte**, onde o {npc:Pemaret} ({coord:33287,31956,6}) te leva a Edron ({key:hi}, {key:edron}, {key:yes}; 20 gp).",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33519, "y": 32856, "z": 14, "label": "Urks The Mute — cais de Gnomprona"},
+    {"x": 33529, "y": 32902, "z": 14, "label": "Gnomfurry e gruta para os vagões"},
+    {"x": 33596, "y": 32872, "z": 15, "label": "Passagens de pedra do vagão da direita (uma das Lazyfairies)"},
+    {"x": 33562, "y": 32982, "z": 14, "label": "Sparkling Pools, piso de caça (uma das Lazyfairies)"},
+    {"x": 33661, "y": 32894, "z": 14, "label": "Sparkling Pools, junto ao vulcão (outra Lazyfairy)"},
+    {"x": 33660, "y": 32896, "z": 14, "label": "Entrada do vulcão (Magma Bubble)"},
+    {"x": 33556, "y": 32883, "z": 15, "label": "Excavation site Firefoot (vagão da direita)"},
+    {"x": 33658, "y": 32969, "z": 15, "label": "Site GT-M-01 (vagão da direita)"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship de Cormaya"}
+  ],
+  "images": [
+    {"file": "Gnomprona Map.png", "caption": "Mapa do piso das zonas de caça de Gnomprona: Monster Graveyard, Crystal Enigma, Sparkling Pools, o vulcão do Magma Bubble e a Primal Menace"}
+  ],
+  "warnings": [
+    "Criaturas muito fortes ({creature:Emerald Tortoise}, {creature:Gore Horn}, {creature:Gorerilla}, {creature:Hulking Prehemoth}, {creature:Sabretooth (Creature)|Sabretooth}): fazem dano **físico** (também à distância), de **energia** (o mais forte contra shooters) e de **fogo**, e uma delas pode deixar-te **enraizado** (rooted).",
+    "Se ativaste um nível de hazard com o {npc:Gnomadness} (depois do {creature:Magma Bubble}), as criaturas de Gnomprona passam a poder dar golpes críticos e a esquivar-se, e começam a nascer Primal Pods; em grupo conta o hazard mais baixo da equipa. Em troca dão mais loot e experiência (+4% por hazard).",
+    "A wiki não documenta a conversa do {npc:Urks The Mute}: leva uma {item:Temple Teleport Scroll} como plano B para saíres de Gnomprona."
+  ]
+}

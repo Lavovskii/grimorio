@@ -1,0 +1,45 @@
+{
+  "title": "Ingol",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Ilha entre {wiki:Roshamuul} e {wiki:Marapur}, habitada por criaturas bizarras saídas das experiências do {creature:Doctor Marrow}, que tem o laboratório no centro da ilha (os pisos de baixo são a *Deeper Ingol*). É o palco da {wiki:The Cradle of Monsters Quest}; só se chega de barco a partir de {wiki:Cormaya}.",
+  "entrance": {"x": 33709, "y": 32602, "z": 6, "label": "Cais de Ingol (Hawkhurst)"},
+  "requirements": [
+    "Acesso pela {wiki:The Cradle of Monsters Quest}: o {npc:Hawkhurst} só te leva depois de aceitares a missão da {npc:Ysbasra} ({key:passage}, {key:yes}).",
+    "A quest pede conta **Premium** e nível **250**."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, com o {npc:Captain Bluebear}, custa 160 gp). Chegas ao porto a **norte** da cidade, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Diz ao {npc:Captain Seahorse} {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de {wiki:Cormaya}, junto ao {npc:Pemaret} ({coord:33287,31956,6}).",
+    "**Só na primeira vez:** em Cormaya vai até à tenda no ponto {coord:33318,32008,7} e entra no **teleporte** que está junto dela; apareces dentro da tenda da {npc:Ysbasra} ({coord:33394,31917,8}). Diz {key:hi}, {key:passage} e {key:yes}. A wiki não descreve a saída da tenda: sai pelo mesmo sítio por onde entraste.",
+    "Vai à costa **nordeste** de Cormaya, onde está o capitão {npc:Hawkhurst} ({coord:33356,31985,7}). Diz {key:hi} e pede-lhe uma {key:passage} para Ingol (se ele pedir confirmação, responde {key:yes}).",
+    "Desembarcas no cais de Ingol ({coord:33709,32602,6}), a **oeste** do laboratório. Para o laboratório, caminha para **leste** até ao edifício ({coord:33800,32574,7}) e desce as escadas: o 1.º piso (z=8) tem o {npc:Vasko}, o 2.º (z=9) o {npc:Avan}, o 3.º (z=10) a {npc:Aletta} e o 5.º (z=12) o {npc:Geoffray}. A {npc:Ivora} não está no edifício: no 4.º piso (z=11) sai pela saída **leste** e caminha para **norte**, junto à montanha, até à cabana dela ({coord:33800,32543,11})."
+  ],
+  "leave": [
+    "Sobe do laboratório até à superfície pelo caminho por onde desceste e caminha para **oeste** até ao cais ({coord:33709,32602,6}).",
+    "Fala com o {npc:Hawkhurst}, que também está no cais de Ingol: leva-te de volta à costa nordeste de Cormaya ({coord:33356,31985,7}). A wiki não transcreve esta conversa: experimenta {key:hi} e {key:passage}, ou {key:cormaya}.",
+    "Em Cormaya, vai ao porto **norte** e fala com o {npc:Pemaret} ({coord:33287,31956,6}): {key:hi}, {key:edron}, {key:yes} (20 gp). Em Edron, o {npc:Captain Seahorse} leva-te às outras cidades ({key:hi}, o nome da cidade, {key:yes}).",
+    "Para **Kazordoon** ou **Farmine**: em Cormaya desce 8 andares até ao {wiki:Steamship} (escadas por baixo do jardim de Cormaya, a sul do cais) e fala com o {npc:Gurbasch} ({coord:33313,31989,15}): {key:hi}, {key:kazordoon} (160 gp) ou {key:farmine} (110 gp), {key:yes}."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse (porto de Edron)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret (porto norte de Cormaya)"},
+    {"x": 33318, "y": 32008, "z": 7, "label": "Teleporte junto à tenda da Ysbasra (Cormaya)"},
+    {"x": 33394, "y": 31917, "z": 8, "label": "Ysbasra (dentro da tenda)"},
+    {"x": 33356, "y": 31985, "z": 7, "label": "Hawkhurst (costa nordeste de Cormaya)"},
+    {"x": 33709, "y": 32602, "z": 6, "label": "Hawkhurst (cais de Ingol)"},
+    {"x": 33800, "y": 32574, "z": 7, "label": "Edifício do laboratório (superfície)"},
+    {"x": 33783, "y": 32571, "z": 8, "label": "Vasko (1.º piso do laboratório)"},
+    {"x": 33782, "y": 32572, "z": 9, "label": "Avan (2.º piso)"},
+    {"x": 33797, "y": 32567, "z": 10, "label": "Aletta (3.º piso)"},
+    {"x": 33800, "y": 32543, "z": 11, "label": "Ivora (4.º piso, grutas)"},
+    {"x": 33782, "y": 32572, "z": 12, "label": "Geoffray (5.º piso)"}
+  ],
+  "images": [
+    {"file": "Ingol Map.png", "caption": "Mapa de Ingol"}
+  ],
+  "warnings": [
+    "Toda a ilha, incluindo o caminho do cais ao laboratório, tem criaturas de nível alto em todos os pisos: {creature:Rhindeer|Rhindeers}, {creature:Harpy|Harpies}, {creature:Carnivostrich|Carnivostriches}, {creature:Crape Man|Crape Men}, {creature:Boar Man|Boar Men} e {creature:Liodile|Liodiles}.",
+    "Ingol fica longe e só se chega de barco a partir de Cormaya: leva tudo o que precisas logo na primeira viagem."
+  ]
+}

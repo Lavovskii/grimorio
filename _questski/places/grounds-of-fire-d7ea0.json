@@ -1,0 +1,46 @@
+{
+  "title": "Grounds of Fire",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Mazoran}, servo de Infernatil, **por baixo do mar a sul de Roshamuul**; é o seal de Infernatil da {wiki:Ferumbras' Ascension Quest} e só se chega pelo teleporte **nordeste** da sala dos portais do {wiki:Hell Hub}, a que se acede pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33612, "y": 32630, "z": 14, "label": "Chegada às Grounds of Fire (pelo teleporte nordeste do Hell Hub)"},
+  "requirements": [
+    "Conta **Premium** e acesso ao {wiki:Hell Hub}: ter aceitado a missão do {npc:Mazarius} e ter-lhe entregado **30 {item:Demonic Essence|Demonic Essences}** (ele só fala com personagens de nível **150** ou mais).",
+    "A wiki recomenda nível **300** para mages e paladins e **350** para knights; o {creature:Mazoran} luta-se com até **5 jogadores** (alavanca de 5 tiles).",
+    "{item:Teleportation Rod} (dado pelo Mazarius) para enviares a peça da Godbreaker no fim — é isso que completa o seal."
+  ],
+  "items": ["Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi ou Krailos diz ao capitão {key:hi}, {key:darashia}, {key:yes}; de Venore, no {npc:Captain Fearless}, custa 60 gp; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi; chegas ao {npc:Chemar}, {coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** de Darashia ({coord:33271,32395,7}), desce ao piso -1 e entra no portal a **norte** dele. Apareces na sala segura (zona de proteção) do {wiki:Hell Hub}.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons} e desce as escadas no fim, até à sala dos portais.",
+    "Na sala dos portais, vai ao teleporte mais a **nordeste** ({coord:33355,32336,14}) e entra.",
+    "Apareces em {coord:33612,32630,14}. Mantém-te **junto às paredes** e segue o caminho até às escadas a **sudeste** ({coord:33663,32706,14}); desce-as para o piso do puzzle.",
+    "No piso do puzzle, pisa um dos tiles coloridos junto às 3 fontes, puxa as alavancas inundadas de lava pela ordem de cores que recebes e ficas com um elemento (*blood*, *ice* ou *grass*). Depois vai às 3 alavancas juntas perto das escadas, põe-te no tile a **sul** da alavanca do teu elemento e puxa-a: entras na sala da alavanca do Mazoran. Os 3 tiles coloridos têm de ser pisados para as 3 alavancas inundadas ficarem acessíveis; se puxares as alavancas pela ordem errada, pisa outra vez um tile colorido para receberes uma nova sequência."
+  ],
+  "leave": [
+    "Depois de matares o Mazoran, sai da sala e usa o {item:Teleportation Rod} na peça da Godbreaker. O teleporte de saída devolve-te à sala segura antes da entrada do Hell Hub (a zona de proteção a que chegaste pelo portal do Mazarius). Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do Mazarius.",
+    "Se quiseres sair antes do boss, sobe as escadas por onde desceste ({coord:33663,32706,14}), volta ao sítio onde chegaste ({coord:33612,32630,14}) e faz o caminho ao contrário até à sala dos portais do Hell Hub; depois sobe pelas grutas até à zona de proteção (a wiki não descreve esta volta em pormenor, nem se há um teleporte de regresso no ponto de chegada).",
+    "Da sala segura volta pelo mesmo caminho à sala do {npc:Mazarius}, em Darashia; daí sobe à rua e apanha o barco do {npc:Petros} ({key:hi}, o nome da cidade, {key:yes}) ou o tapete do {npc:Chemar} ({key:hi}, o destino, {key:yes}).",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (Darashia), portal para o Hell Hub no piso -1"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub (grutas)"},
+    {"x": 33355, "y": 32336, "z": 14, "label": "Teleporte nordeste do Hell Hub (Grounds of Fire)"},
+    {"x": 33612, "y": 32630, "z": 14, "label": "Chegada às Grounds of Fire"},
+    {"x": 33663, "y": 32706, "z": 14, "label": "Escadas a sudeste (para o piso do puzzle)"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascencion - Path to Mazoran.png", "caption": "À esquerda, o caminho no Hell Hub até ao teleporte nordeste; à direita, da chegada às escadas a sudeste"},
+    {"file": "Grounds of Fire 1.png", "caption": "Piso de chegada das Grounds of Fire"},
+    {"file": "Mazoranpuzzle.jpg", "caption": "Piso do puzzle: alavancas inundadas (círculos), fontes (cruzes) e alavancas finais (bandeira)"},
+    {"file": "Grounds of Fire 2.png", "caption": "Mapa do piso do puzzle"}
+  ],
+  "warnings": [
+    "Segundo a wiki, é de longe o seal mais difícil: estás sempre a lutar e o acesso pelo puzzle só se faz **3 jogadores de cada vez**. Se ninguém da equipa o fez antes, vai preparado para o repetir várias vezes.",
+    "Não há zonas de proteção depois da sala segura do Hell Hub. Aqui caçam {creature:Hellfire Fighter|Hellfire Fighters}, {creature:Hellhound|Hellhounds}, {creature:Fury|Furies}, Vexclaws, Hellflayers e Grimeleeches; no centro do piso de chegada podes ser cercado por mais de 8 criaturas.",
+    "As alavancas inundadas voltam a encher-se de lava cerca de 5 minutos depois de escoarem: se estiveres dentro da poça nessa altura, és teleportado para o centro do piso, provavelmente com os monstros já renascidos.",
+    "A missão só conta quando usas o Teleportation Rod na peça, não quando matas o boss: sai logo da sala depois da luta, senão podes ser teleportado para fora quando o tempo acabar e ter de o matar outra vez. O Mazoran só pode ser tentado de 44 em 44 horas."
+  ]
+}

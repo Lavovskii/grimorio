@@ -1,0 +1,49 @@
+{
+  "title": "Grounds of Damnation",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Esconderijo do {creature:Shulgrax}, servo de Tafariel, **debaixo do mar a leste de Darama**: é um dos sete seals da {wiki:Ferumbras' Ascension Quest} e entra-se pelo teleporte **oeste** da sala dos portais do {wiki:Hell Hub}, a que se chega pela cave do {npc:Mazarius}, em Darashia.",
+  "entrance": {"x": 33288, "y": 32353, "z": 14, "label": "Teleporte oeste do Hell Hub (entrada das Grounds of Damnation)"},
+  "requirements": [
+    "Conta **Premium** e **nível 150** para falares com o {npc:Mazarius}, em Darashia.",
+    "As portas do inferno têm de estar abertas para ti: aceita a missão do Mazarius e entrega-lhe 30 {item:Demonic Essence|Demonic Essences} ({key:hi}, {key:short}, {key:yes}, {key:demonic essence}, {key:yes}).",
+    "{item:Teleportation Rod} (dado pelo Mazarius; se o perderes, vende-te outro por 1.000 gp) para enviares a peça da Godbreaker no fim: é isso que completa o seal.",
+    "Nível recomendado pela wiki para esta zona: knights 350, paladins e mages 300.",
+    "Para chegares ao boss tens de resolver o puzzle das flores do Puzzle Garden. O boss é para até **5 jogadores** e só pode ser tentado de 44 em 44 horas."
+  ],
+  "items": ["Demonic Essence", "Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco, por exemplo em Venore ao {npc:Captain Fearless} ({key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}), e chegas ao porto do {npc:Petros} ({coord:33289,32481,6}); ou de tapete voador, por exemplo em Edron ao {npc:Pino} ({key:hi}, {key:darashia}, {key:yes}, 40 gp), e chegas à plataforma do {npc:Chemar} ({coord:33270,32439,6}).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** da cidade ({coord:33271,32395,7}), e desce 1 andar (subsolo): ele está aí ({coord:33275,32392,8}).",
+    "Com o acesso aberto (as 30 Demonic Essences entregues), entra no portal a **norte** do Mazarius. Apareces numa zona de proteção (sala segura): prepara-te aqui.",
+    "Atravessa as grutas a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}; no fim da gruta, desce as escadas até à sala dos portais do {wiki:Hell Hub}.",
+    "Na sala dos portais, segue o caminho até ao teleporte **oeste** ({coord:33288,32353,14}) e entra: estás nas Grounds of Damnation.",
+    "Segue o caminho para **sudeste** e desce as escadas. O piso seguinte é grande e tem o puzzle: vai para **oeste** e depois **norte**, passa a porta a **leste** e segue para **norte** e **oeste** até ao Puzzle Garden.",
+    "Iguala as cores dos tiles a **sul** às rosas dos três jardins. Com os tiles certos, **cada jogador** puxa a alavanca e, dentro de 10 minutos, entra no portão para a sala da alavanca do {creature:Shulgrax}."
+  ],
+  "leave": [
+    "Depois de matares o {creature:Shulgrax}, usa o {item:Teleportation Rod} na peça da {wiki:The Godbreaker}: o teleporte de saída devolve-te à sala segura (zona de proteção) antes da entrada do Hell Hub. Se esta for a tua **sétima** peça, o último portal leva-te diretamente à sala do {npc:Mazarius}.",
+    "Se quiseres sair antes do boss: a wiki não descreve o regresso das Grounds à sala dos portais (nem diz se há um teleporte de volta onde chegaste). Sobe as escadas por onde desceste, faz o caminho ao contrário até ao sítio onde chegaste e daí à sala dos portais; depois sobe as escadas e atravessa as grutas até à zona de proteção.",
+    "Da zona de proteção volta à sala do {npc:Mazarius}, em Darashia, pelo caminho por onde entraste (a wiki não descreve esta passagem de regresso em pormenor). Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Da casa do Mazarius sobe à rua: no porto, o {npc:Petros} ({coord:33289,32481,6}) leva-te de barco, por exemplo, a Venore ({key:hi}, {key:venore}, {key:yes}, 60 gp) ou Ankrahmun (100 gp); na plataforma dos tapetes, o {npc:Chemar} ({coord:33270,32439,6}) leva-te, por exemplo, a Edron ({key:hi}, {key:edron}, {key:yes}, 40 gp)."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (subsolo), com o portal a norte"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub"},
+    {"x": 33288, "y": 32353, "z": 14, "label": "Teleporte oeste (Grounds of Damnation)"},
+    {"x": 33420, "y": 32685, "z": 13, "label": "Grounds of Damnation (ponto indicado pela wiki)"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção, pelas grutas, até às escadas da sala dos portais"},
+    {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete teleportes da sala dos portais (começas no círculo branco); o 7, a oeste, é o das Grounds of Damnation"},
+    {"file": "Ferumbras Ascension - Path to Shulgrax 1.png", "caption": "À esquerda, o caminho na sala dos portais até ao teleporte oeste; à direita, o caminho lá dentro até às escadas"},
+    {"file": "Ferumbras Ascension - Shulgrax Puzzle Map.png", "caption": "Mapa do piso do puzzle"}
+  ],
+  "warnings": [
+    "O spoiler da wiki fala no teleporte **leste**, mas a página da zona, as coordenadas ({coord:33288,32353,14}) e a imagem da sala dos portais (n.º 7) indicam o teleporte **oeste**.",
+    "Depois da sala segura não há mais zonas de proteção. Há muitas criaturas no caminho ({creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Dark Torturer|Dark Torturers}): usa {item:Energy Wall Rune|Energy Walls} ou {item:Energy Bomb Rune|Energy Bombs} para as afastar dos corredores por onde não vais passar.",
+    "Não pises os tiles de metal do puzzle ao acaso: não dá para voltar a pôr um tile em branco e, se errares, tens de esperar que o puzzle volte ao início (10 minutos).",
+    "Não fiques na sala do boss depois de o matares: se o tempo acabar és teleportado para fora e, como a missão só conta quando usas o {item:Teleportation Rod}, terias de matar o boss outra vez."
+  ]
+}

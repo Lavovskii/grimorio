@@ -1,0 +1,32 @@
+{
+  "title": "Haunted Tomb",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Túmulo assombrado **por baixo do deserto de Darama, a oeste de Darashia**, habitado por {creature:Burster Spectre|Burster Spectres}; é uma das três zonas do {wiki:Haunted Nexus}, onde restauras a passagem do deserto na {wiki:The Dream Courts Quest}.",
+  "entrance": {"x": 33093, "y": 32389, "z": 7, "label": "Zona da entrada (deserto a oeste de Darashia)"},
+  "requirements": [
+    "Zona de caça recomendada pela wiki para nível **250+** (todas as vocações)."
+  ],
+  "arrive": [
+    "Viaja até **Darashia**. De barco, por exemplo de Venore com o {npc:Captain Fearless} ({key:hi}, {key:darashia}, {key:yes}, 60 gp): chegas junto ao {npc:Petros} ({coord:33289,32481,6}). De tapete voador (só Premium), de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi ({key:hi}, {key:darashia}, {key:yes}; de Edron são 40 gp): chegas junto ao {npc:Chemar} ({coord:33270,32439,6}).",
+    "Sai da cidade para **oeste**, pelo deserto, até à zona marcada ({coord:33093,32389,7}; a wiki dá este ponto como aproximado) e desce: o túmulo fica por baixo ({coord:33096,32396,8}).",
+    "Para a missão: usa os {item:Sarcophagus (Ectoplasm)|sarcófagos cobertos de ectoplasma} até teres 2 {item:Strangely Ornamented Key|Strangely Ornamented Keys}; os dois {item:Large Pillar With a Lock|Large Pillars With a Lock} ficam no **centro** da masmorra e levam-te a uma pequena sala a **norte**, com o {item:Onyx}.",
+    "Depois de restaurares as três passagens do Haunted Nexus ({wiki:Haunted Cellar}, {wiki:Haunted Temple} e este túmulo), a wiki diz que podes viajar entre as três zonas pelos portais de energia, gastando um ectoplasma da cor que corresponde à zona de onde partes ({item:Green Ectoplasm}, {item:Red Ectoplasm} ou {item:Blue Ectoplasm}). Os Burster Spectres deste túmulo deixam cair o Blue Ectoplasm. A wiki não indica onde ficam os portais."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho até à entrada e sobe à superfície ({coord:33093,32389,7}). Regressa a pé para **leste** até Darashia.",
+    "Na pequena sala do Onyx não precisas de procurar saída: ao usares o Onyx és mandado para fora da sala.",
+    "Em Darashia: barco do {npc:Petros} ({coord:33289,32481,6}): {key:hi}, o nome da cidade (por exemplo {key:venore} 60 gp ou {key:ankrahmun} 100 gp) e {key:yes}; ou tapete voador do {npc:Chemar} ({coord:33270,32439,6}, só Premium): {key:hi}, o destino (por exemplo {key:edron} 40 gp ou {key:kazordoon} 80 gp) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 33096, "y": 32396, "z": 8, "label": "Haunted Tomb (subsolo)"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros (porto de Darashia)"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar (tapete voador de Darashia)"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "warnings": [
+    "Abrir um sarcófago pode correr mal: toda a gente na sala leva 50–600 de dano de terra e aparece uma {creature:Mummy}, ou ficam todos amaldiçoados (e aparece também uma Mummy). Há 30 segundos de espera entre sarcófagos e as chaves desaparecem ao fim de 30 minutos.",
+    "Os {creature:Burster Spectre|Burster Spectres} batem mais de 1800 de dano máximo.",
+    "Na viagem de Venore para Darashia com o {npc:Captain Fearless} há 10% de hipótese de ires parar ao {wiki:Ghostship}."
+  ]
+}

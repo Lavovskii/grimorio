@@ -1,0 +1,50 @@
+{
+  "title": "Dream Labyrinth",
+  "type": "dungeon",
+  "near": "Feyrist",
+  "summary": "Labirinto mágico de três pisos, no fundo do oceano a **oeste**, que protege a {wiki:Dream Scar}; só se entra pelos portais da {wiki:Court of Summer} ou da {wiki:Court of Winter}, durante a {wiki:The Dream Courts Quest}.",
+  "entrance": {"x": 32062, "y": 31978, "z": 13, "label": "Dream Labyrinth (localização da wiki)"},
+  "requirements": [
+    "Conta **Premium**: a {wiki:The Dream Courts Quest} pede nível **250**, e a wiki recomenda também nível 250 para caçar no labirinto.",
+    "Encantamento da {npc:Myzzi} (para passares os portais das cortes) e acesso a {wiki:Feyrist} ou a {wiki:Tyrsung}: vê as fichas da {wiki:Court of Summer} e da {wiki:Court of Winter}.",
+    "Na {wiki:The Dream Courts Quest}, carregar as 8 Ward Stones e depois dizer à {npc:Vanys} (ou ao {npc:Undal}) {key:hi}, {key:task}, {key:keys}: só então o portal do labirinto de cada corte te deixa passar.",
+    "Para te moveres livremente lá dentro tens de abrir as 7 Dream Doors. A wiki pede que cada membro da equipa leve a sua {item:Ghostsilver Lantern}, o seu {item:Flask of Medusa's Ointment} e a sua {item:Magical Paint}; os outros itens das portas apanham-se pelo caminho."
+  ],
+  "items": ["Small Emerald"],
+  "arrive": [
+    "Pela Court of Summer (o caminho mais fácil): arranja uma {item:Small Emerald} e, numa cidade, vai ao corredor dos quatro arcos dos Holy Shrines (em Thais fica no 2.º andar do templo, em Carlin 2 andares abaixo do templo, em Venore 2 andares acima do templo, em Edron no piso de baixo da torre central da Noodles Academy). Entra no arco de **terra** e **usa** a gema no santuário (gasta-se): chegas ao Earth Shrine de Feyrist ({coord:33540,32208,7}). Segue para **leste** até ao portal a nordeste da Fae Village ({coord:33584,32207,7}) e entra nele.",
+    "Na Court of Summer, sobe dois andares a partir do piso de entrada e entra no portal ao lado do baú do Rosebush ({coord:33703,32185,5}).",
+    "Chegas ao 1.º piso do labirinto, no **noroeste**, na zona dos Dreamelves do verão (o portal *to/from Summer Court* do mapa 2 da wiki).",
+    "Pela Court of Winter: no cais a **sul** de Svargrond, diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:tyrsung} (50 gp); em Tyrsung, sobe a montanha até ao portal do topo ({coord:32356,31248,3}) e entra na corte (vê a ficha da Court of Winter). Na corte há um portal para o labirinto um andar acima do sítio da Orc Skull (mapa 6 da wiki); a wiki não descreve o caminho dentro da corte até ele. Chegas ao **norte** do 1.º piso, na zona dos Dreamelves do inverno (mapa 5)."
+  ],
+  "leave": [
+    "Volta ao portal por onde entraste: o da Court of Summer fica no **noroeste** do 1.º piso (mapa 2) e o da Court of Winter no **norte** do mesmo piso (mapas 5 e 6). Os dois são de ida e volta. Para passares de uma zona à outra precisas das Dream Doors já abertas.",
+    "Pela Court of Summer: na corte, desce os dois andares até ao piso de entrada e volta para **sul** até ao sítio onde chegaste. A wiki não descreve a passagem de regresso aos prados de Feyrist: procura-a junto a esse ponto. Em Feyrist, **usa** qualquer Holy Shrine (o mais perto é o Earth Shrine, {coord:33540,32208,7}); não precisas de gema e és teleportado de volta ao continente.",
+    "Pela Court of Winter: volta ao sítio onde chegaste à corte (a wiki também não descreve essa passagem de regresso), desce a montanha de Tyrsung até ao cais ({coord:32332,31230,7}) e diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:svargrond} (50 gp). Chegas ao cais a **sul** de Svargrond, onde a {npc:Captain Breezelda} ({coord:32347,31108,6}) te leva a Carlin, Venore ou Thais.",
+    "Se vens da {wiki:Dream Scar}: sai da sala do boss pelo teleporte de saída (a wiki não diz para onde leva). Na pequena sala do mosaico há dois portais para o labirinto (mapa 9): o de **norte**, por onde entraste, e o de **sul**, que te leva à zona mista mas é só de ida. Daí atravessa o labirinto até ao portal de uma das cortes.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33540, "y": 32208, "z": 7, "label": "Earth Shrine de Feyrist"},
+    {"x": 33584, "y": 32207, "z": 7, "label": "Portal da Court of Summer (Feyrist)"},
+    {"x": 33703, "y": 32185, "z": 5, "label": "Portal do labirinto na Court of Summer (baú do Rosebush)"},
+    {"x": 32356, "y": 31248, "z": 3, "label": "Portal da Court of Winter (topo da montanha de Tyrsung)"},
+    {"x": 32062, "y": 31978, "z": 13, "label": "Dream Labyrinth (localização da wiki)"},
+    {"x": 32332, "y": 31230, "z": 7, "label": "Cais do Buddel em Tyrsung (saída pelo inverno)"}
+  ],
+  "images": [
+    {"file": "Dream Labyrinth Map 1.png", "caption": "Court of Summer: o portal para o labirinto fica no 2.º andar, junto ao baú do Rosebush (1.3)"},
+    {"file": "Dream Labyrinth Map 2.png", "caption": "1.º piso: portal de ida e volta para a Court of Summer (noroeste)"},
+    {"file": "Dream Labyrinth Map 5.png", "caption": "1.º piso: portal de ida e volta para a Court of Winter (norte)"},
+    {"file": "Dream Labyrinth Map 6.png", "caption": "Portal para a Court of Winter (6.1) e, na corte, o andar do portal (6.2) e o andar de baixo, com a Orc Skull (6.3)"},
+    {"file": "Dream Labyrinth Map 9.png", "caption": "Sala do mosaico: portal a norte para o labirinto, mosaico para a Dream Scar e portal a sul, só de ida, para a zona mista do labirinto"},
+    {"file": "Dream Labyrinth 1.png", "caption": "Dream Labyrinth: 1.º piso"},
+    {"file": "Dream Labyrinth 2.png", "caption": "Dream Labyrinth: 2.º piso"},
+    {"file": "Dream Labyrinth 3.png", "caption": "Dream Labyrinth: 3.º piso"}
+  ],
+  "warnings": [
+    "O labirinto está cheio de Dreamelves do verão e do inverno ({creature:Crazed Summer Vanguard}, {creature:Crazed Summer Rearguard}, {creature:Crazed Winter Vanguard}, {creature:Crazed Winter Rearguard}), além de {creature:Arachnophobica} e {creature:Thanatursus}. A wiki aconselha dano de energia (os elfos do verão refletem fogo e os do inverno refletem gelo).",
+    "O portal a **sul** da sala do mosaico (antes da Dream Scar) é só de ida: se entrares nele, tens de voltar a pé pelo labirinto.",
+    "Junto à Invisible Door há muitas criaturas: tem a {item:Ghostsilver Lantern} acesa e sabe qual pedra usar antes de chegares."
+  ]
+}

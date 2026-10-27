@@ -1,0 +1,46 @@
+{
+  "title": "Azzilon",
+  "type": "ilha",
+  "near": "Edron",
+  "summary": "Ilha-fortaleza antiga e esquecida, algures numa zona por mapear a **leste** (segundo o {npc:Fernlor}), a que se chega pelo teleporte laranja do Fernlor no subsolo da Noodles Academy, em **Edron** (a única entrada documentada). À superfície fica o {wiki:Azzilon Castle} e por baixo as {wiki:Azzilon Catacombs}; é o palco da {wiki:No Rest for the Wicked Quest}.",
+  "entrance": {"x": 33281, "y": 31848, "z": 8, "label": "Teleporte laranja do Fernlor para Azzilon (Noodles Academy, Edron, piso -1)"},
+  "requirements": [
+    "Conta **Premium** e nível **250** (requisitos da {wiki:No Rest for the Wicked Quest}; recomendado 500+).",
+    "O acesso a Azzilon vem da {wiki:No Rest for the Wicked Quest}: na primeira vez fala com o {npc:Fernlor} ({key:hi}, {key:mission}, {key:yes}) antes de entrares no teleporte.",
+    "Catacumbas: só abrem depois de os jogadores do teu mundo entregarem essências suficientes à {npc:Lai} (world change, mensagem *\"The mists in Azzilon have retreated!\"*) **e** de tu próprio lhe entregares as primeiras 100 {item:Demonic Core Essence|Demonic Core Essences}. O último piso das catacumbas só abre no **rank 5** da Lai (1.600 essências entregues)."
+  ],
+  "items": ["Demonic Core Essence"],
+  "arrive": [
+    "Vai a **Edron** de barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, com o {npc:Captain Bluebear}). Chegas ao porto de Edron, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Do porto, caminha para **sudeste** até às sete torres de marfim da {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}, na parte **leste** de Edron ({coord:33267,31849,7}). Desce ao **piso subterrâneo (-1)**: o {npc:Fernlor} está junto a um teleporte laranja ({coord:33281,31848,8}).",
+    "Só na primeira vez: diz ao Fernlor {key:hi}, {key:mission} e {key:yes}. Ele conta que encontrou uma perturbação numa ilha remota a leste e que montou um teleporte até lá.",
+    "Entra no **teleporte laranja**. Chegas ao {wiki:Azzilon Castle|Azzilon Castle}: desce as escadas e sobe outro lanço de escadas para entrares no castelo.",
+    "Para a {npc:Lai}: dentro do castelo segue sempre para **norte** até à **torre interior sudeste** ({coord:33843,32360,6}) e sobe a torre até ao **piso +3**; ela está no centro desse piso ({coord:33834,32352,4}).",
+    "Para as {wiki:Azzilon Catacombs|Azzilon Catacombs}: desce pelas escadas das catacumbas a partir do castelo (pisos -1, -2 e -3). A wiki não marca onde ficam essas escadas; enquanto o world change não estiver ativo, estão tapadas por uma névoa."
+  ],
+  "leave": [
+    "A wiki não descreve o regresso de Azzilon a Edron. Volta pelo caminho por onde vieste: das catacumbas sobe pelas mesmas escadas até ao castelo, faz ao contrário o caminho das escadas por onde entraste no castelo e regressa ao sítio onde o teleporte do {npc:Fernlor} te deixou; a wiki não diz se aí há um teleporte de regresso.",
+    "Da sala da {npc:A Vision of the Past} (missão *Vision of the Past*), o **portal a sul** da sala leva-te de volta à {npc:Lai}. As saídas da cela do {npc:Ortelio}, das salas das tarefas, da sala do {creature:Arbaziloth} e da {wiki:Doomforge|Doomforge} não estão documentadas: sai pelo caminho por onde entraste.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block).",
+    "Em Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te de barco a Thais, Carlin, Venore, Ab'Dendriel, Ankrahmun, Port Hope, Liberty Bay e outras cidades ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"},
+    {"x": 33267, "y": 31849, "z": 7, "label": "Torres da Noodles Academy (leste de Edron)"},
+    {"x": 33281, "y": 31848, "z": 8, "label": "Fernlor e teleporte laranja para Azzilon (piso -1)"},
+    {"x": 33843, "y": 32360, "z": 6, "label": "Torre interior sudeste do Azzilon Castle"},
+    {"x": 33834, "y": 32352, "z": 4, "label": "Lai (centro do piso +3 da torre)"},
+    {"x": 33883, "y": 32406, "z": 8, "label": "Catacumbas -1: teleporte para a cela do Ortelio"},
+    {"x": 33893, "y": 32386, "z": 9, "label": "Catacumbas -2: teleporte da tarefa dos trolls"},
+    {"x": 33868, "y": 32287, "z": 9, "label": "Catacumbas -2: portal da tarefa dos imps"},
+    {"x": 34033, "y": 32334, "z": 14, "label": "Covil do Arbaziloth (posição da Forgemaster; portal no piso -3)"}
+  ],
+  "images": [
+    {"file": "Map Azzilon.jpg", "caption": "Mapa de Azzilon"}
+  ],
+  "warnings": [
+    "Em **qualquer piso subterrâneo** de Azzilon levas **Agony Damage** a cada 20 segundos, uma percentagem da vida que tens nesse momento: 4,5% no rank 1 da {npc:Lai}, menos 0,5% por cada rank, até 0% no rank 10. Leva muitas poções de vida.",
+    "Os Inferniarchs do castelo ({creature:Broodrider Inferniarch|Broodrider}, {creature:Gorger Inferniarch|Gorger}, {creature:Sineater Inferniarch|Sineater}) já são fortes, e os das catacumbas ({creature:Hellhunter Inferniarch|Hellhunter}, {creature:Spellreaper Inferniarch|Spellreaper}, {creature:Brinebrute Inferniarch|Brinebrute}) ainda mais: quanto mais fundo, mais fortes.",
+    "Não há caminho de regresso documentado: leva uma {item:Temple Teleport Scroll} como plano B."
+  ]
+}

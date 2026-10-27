@@ -1,0 +1,43 @@
+{
+  "title": "Haunted Cellar",
+  "type": "gruta",
+  "near": "Venore",
+  "summary": "Cave assombrada por baixo de uma casa abandonada a **leste do {wiki:Outlaw Camp}**, nas {wiki:Plains of Havoc} (entre Thais e Venore), cheia de {creature:Ripper Spectre|Ripper Spectres} e {creature:Arachnophobica|Arachnophobicas}; é uma das três zonas do {wiki:Haunted Nexus} e o caminho para o {wiki:Buried Cathedral}.",
+  "entrance": {"x": 32686, "y": 32236, "z": 7, "label": "Descida para a cave (casa abandonada a leste do Outlaw Camp)"},
+  "requirements": [
+    "Zona de caça recomendada pela wiki para nível **200+** (todas as vocações).",
+    "A sala selada a **oeste** da sala do esqueleto (onde fica o Magic Forcefield verde para o {wiki:Buried Cathedral}) só se abre na missão *Haunted House* da {wiki:The Dream Courts Quest}: precisas de um {item:Bucket Full of Ectoplasm} usado em ti próprio."
+  ],
+  "items": ["Rope", "Strange Empty Bucket"],
+  "arrive": [
+    "A partir de **Venore**: sai da cidade e vai a pé para **sudoeste** até à casa abandonada a **leste** do Outlaw Camp ({coord:32688,32236,7}). A partir de **Thais**: segue a pé para **leste**, passando o Outlaw Camp.",
+    "Na casa, desce para a cave ({coord:32686,32236,7}). No subsolo está o fantasma {npc:Stricken Soul} ({coord:32699,32247,8}), que dá a missão: {key:hi}, {key:yes}, {key:yes} e depois escreve o teu nome.",
+    "A sala do esqueleto, rodeado de {item:Spider Egg|Spider Eggs}, fica no **sudeste** da cave ({coord:32736,32281,8}): é aí que recebes o {item:Strange Empty Bucket}. A porta coberta de energia fica logo a **oeste** dela ({coord:32729,32281,8}).",
+    "Para entrares na sala selada: enche o balde nos {item:Mutated Egg|Mutated Eggs} da cave até ficar {item:Bucket Full of Ectoplasm}, volta à sala do esqueleto, usa o balde **em ti próprio** (transformas-te num {creature:Slime}) e caminha com as setas contra a porta a oeste. Não uses a porta: anda contra ela e és teleportado para dentro.",
+    "Depois de restaurares as três passagens do Haunted Nexus (aqui, no {wiki:Haunted Temple} e no {wiki:Haunted Tomb}), a wiki diz que podes viajar entre as três zonas pelos portais de energia, gastando um ectoplasma da cor que corresponde à zona de onde partes ({item:Green Ectoplasm}, {item:Red Ectoplasm} ou {item:Blue Ectoplasm}). Os Ripper Spectres desta cave deixam cair o Green Ectoplasm. A wiki não indica onde ficam os portais."
+  ],
+  "leave": [
+    "Da parte normal da cave: volta às escadas da casa abandonada ({coord:32686,32236,7}) e sobe à superfície.",
+    "Se desceste ao piso de baixo da cave, o caminho mais a **sul** desse piso acaba num sítio de corda que te leva de volta para junto da sala do esqueleto: usa a {item:Rope}.",
+    "Sala selada: a wiki não descreve como se sai. Tenta voltar pela porta coberta de energia e refazer o caminho até às escadas da casa abandonada; com as três passagens restauradas também podes usar os portais de energia para outra zona do Nexus, gastando um {item:Green Ectoplasm}. Se não encontrares saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block).",
+    "Da casa abandonada, volta a pé para **nordeste** até Venore, onde o {npc:Captain Fearless} ({coord:32955,32022,6}) te leva de barco a outras cidades ({key:hi}, o nome da cidade e {key:yes}); ou para **oeste** até Thais, onde está o {npc:Captain Bluebear} ({coord:32310,32210,6})."
+  ],
+  "coords": [
+    {"x": 32688, "y": 32236, "z": 7, "label": "Casa abandonada (leste do Outlaw Camp)"},
+    {"x": 32699, "y": 32247, "z": 8, "label": "Stricken Soul (cave)"},
+    {"x": 32736, "y": 32281, "z": 8, "label": "Sala do esqueleto (sudeste da cave)"},
+    {"x": 32729, "y": 32281, "z": 8, "label": "Porta coberta de energia (entrada da sala selada)"},
+    {"x": 32720, "y": 32270, "z": 8, "label": "Magic Forcefield verde para o Buried Cathedral (sala selada)"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"}
+  ],
+  "images": [
+    {"file": "The Dream Courts - Haunted House - Cellar 1.png", "caption": "Sala do esqueleto (à direita) e a porta coberta de energia que leva à sala selada"},
+    {"file": "The Dream Courts - Haunted House - Cellar 2.png", "caption": "Tirar ectoplasma de um Mutated Egg"}
+  ],
+  "warnings": [
+    "As {creature:Arachnophobica|Arachnophobicas} e os {creature:Ripper Spectre|Ripper Spectres} batem até cerca de 1100–1200 por turno: limpa o caminho antes de começares a encher o balde.",
+    "O ectoplasma escorre do balde ao fim de 3, 2 ou 1 minuto, conforme o quão cheio está: não demores entre ovos ou o balde volta ao início. Nem todas as tentativas resultam (conta com 5 a 15 ovos).",
+    "Os ectoplasmas para os portais desaparecem **10 minutos** depois de caírem."
+  ]
+}

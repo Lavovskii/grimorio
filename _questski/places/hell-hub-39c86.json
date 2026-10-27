@@ -1,0 +1,51 @@
+{
+  "title": "Hell Hub",
+  "type": "dungeon",
+  "near": "Darashia",
+  "summary": "Masmorra infernal **por baixo do mar, a leste de Darashia**, que liga os sete reinos dos {wiki:The Ruthless Seven Minions|Ruthless Seven Minions}; é o centro da {wiki:Ferumbras' Ascension Quest} e entra-se pelo portal da sala do {npc:Mazarius}, na cave de uma casa de Darashia.",
+  "entrance": {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub (grutas por baixo do mar, a leste de Darashia)"},
+  "requirements": [
+    "Conta **Premium** (Darashia e a {wiki:Ferumbras' Ascension Quest} são só para Premium).",
+    "Nível **150**: desde julho de 2018 o {npc:Mazarius} não fala com personagens abaixo deste nível (quem já tinha acesso antes não foi afetado). A wiki recomenda nível **300** para mages e paladins e **350** para knights nesta zona.",
+    "Aceitar a missão do Mazarius e entregar-lhe **30 {item:Demonic Essence|Demonic Essences}** ({key:hi}, {key:short}, {key:yes}, {key:demonic essence}, {key:yes}): é isto que te abre as portas do inferno."
+  ],
+  "items": ["Demonic Essence", "Teleportation Rod"],
+  "arrive": [
+    "Viaja até **Darashia**: de barco (em Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi ou Krailos diz ao capitão {key:hi}, {key:darashia}, {key:yes}; de Venore, no {npc:Captain Fearless}, custa 60 gp; chegas ao porto do {npc:Petros}, {coord:33289,32481,6}) ou de tapete voador (de Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi; chegas ao {npc:Chemar}, {coord:33270,32439,6}). De Thais, Carlin, Edron ou Ab'Dendriel não há barco direto para Darashia: passa primeiro por Venore (de Edron também podes apanhar o tapete).",
+    "Vai à casa do {npc:Mazarius}, na parte **nordeste** de Darashia ({coord:33271,32395,7}), e desce 1 andar: ele está no piso -1 ({coord:33275,32392,8}).",
+    "Na primeira vez, diz {key:hi}, {key:short} e {key:yes} para aceitares a missão e, com as 30 {item:Demonic Essence|Demonic Essences} no inventário, {key:demonic essence} e {key:yes}. Ele dá-te o {item:Teleportation Rod} (se o perderes, vende-te outro por 1.000 gp).",
+    "Entra no portal a **norte** do Mazarius. Apareces numa {wiki:Protection Zone|zona de proteção} (a sala segura): prepara-te aqui.",
+    "Segue pelas grutas (caminho na imagem) a lutar contra {creature:Vexclaw|Vexclaws}, {creature:Hellflayer|Hellflayers}, {creature:Grimeleech|Grimeleeches} e {creature:Demon|Demons}. No fim da gruta, desce as escadas.",
+    "Chegas à sala dos portais (começas no círculo branco da imagem). Cada caminho leva ao teleporte de um seal: **noroeste** {wiki:Grounds of Plague}, **norte** {wiki:Grounds of Deceit}, **nordeste** {wiki:Grounds of Fire}, **leste** {wiki:Grounds of Destruction}, **sudeste** {wiki:Grounds of Undeath}, **sudoeste** {wiki:Grounds of Despair} e **oeste** {wiki:Grounds of Damnation}. Podes fazê-los por qualquer ordem."
+  ],
+  "leave": [
+    "Depois de matares o boss de um seal e usares o {item:Teleportation Rod} na peça da Godbreaker, o teleporte de saída devolve-te à sala segura antes da entrada (a zona de proteção onde chegaste pelo portal do Mazarius). Depois da **sétima** peça, o último portal leva-te diretamente à sala do {npc:Mazarius}.",
+    "Se quiseres sair a meio de um seal, faz o caminho ao contrário até à sala dos portais, sobe as escadas e atravessa as grutas até à zona de proteção (a wiki não descreve como se volta de dentro dos Grounds até à sala dos portais).",
+    "Da sala segura volta pelo mesmo caminho à sala do Mazarius, em Darashia (a wiki não descreve esta passagem de regresso em pormenor). Se não a encontrares, usa um {item:Temple Teleport Scroll}: leva-te ao templo da tua cidade, mas não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block (na sala segura, espera que o bloqueio de combate passe).",
+    "Da casa do Mazarius sobe à rua e vai ao porto: o {npc:Petros} ({coord:33289,32481,6}) leva-te a Ankrahmun (100 gp), Gray Island (150), Issavi (130), Krailos (110), Liberty Bay (200), Port Hope (180), Venore (60) ou Yalahar (210) — {key:hi}, o nome da cidade, {key:yes}. Também podes apanhar o tapete do {npc:Chemar} ({coord:33270,32439,6}): {key:hi}, o destino, {key:yes}."
+  ],
+  "coords": [
+    {"x": 33271, "y": 32395, "z": 7, "label": "Casa do Mazarius (nordeste de Darashia)"},
+    {"x": 33275, "y": 32392, "z": 8, "label": "Mazarius (piso -1); o portal para o Hell Hub fica a norte dele"},
+    {"x": 33303, "y": 32387, "z": 13, "label": "Hell Hub (grutas)"},
+    {"x": 33292, "y": 32322, "z": 14, "label": "Teleporte noroeste — Grounds of Plague"},
+    {"x": 33328, "y": 32321, "z": 14, "label": "Teleporte norte — Grounds of Deceit"},
+    {"x": 33355, "y": 32336, "z": 14, "label": "Teleporte nordeste — Grounds of Fire"},
+    {"x": 33356, "y": 32366, "z": 14, "label": "Teleporte leste — Grounds of Destruction"},
+    {"x": 33325, "y": 32400, "z": 14, "label": "Teleporte sudeste — Grounds of Undeath"},
+    {"x": 33297, "y": 32403, "z": 14, "label": "Teleporte sudoeste — Grounds of Despair"},
+    {"x": 33288, "y": 32353, "z": 14, "label": "Teleporte oeste — Grounds of Damnation"},
+    {"x": 33289, "y": 32481, "z": 6, "label": "Petros — barco de Darashia"},
+    {"x": 33270, "y": 32439, "z": 6, "label": "Chemar — tapete voador de Darashia"}
+  ],
+  "images": [
+    {"file": "Ferumbras Ascension - Path to hub.png", "caption": "Caminho da zona de proteção, pelas grutas, até às escadas da sala dos portais"},
+    {"file": "Ferumbras Ascension Quest 02.png", "caption": "Os sete teleportes da sala dos portais (começas no círculo branco): 1 Plague, 2 Deceit, 3 Fire, 4 Destruction, 5 Undeath, 6 Despair, 7 Damnation"},
+    {"file": "Hell Hub 1.png", "caption": "Mapa das grutas do Hell Hub"}
+  ],
+  "warnings": [
+    "Depois da sala segura já não há zonas de proteção: as grutas e a sala dos portais estão cheias de Vexclaws, Hellflayers, Grimeleeches e Demons.",
+    "A missão de cada seal só conta quando usas o {item:Teleportation Rod} na peça da Godbreaker, não quando matas o boss. Se ficares na sala do boss até o tempo acabar, és teleportado para fora e tens de o matar outra vez. Cada boss só pode ser tentado de 44 em 44 horas.",
+    "Depois de cada boss, o teleporte de saída leva-te de volta à sala segura: não precisas de guardar mantimentos para a volta, desde que chegues a um dos bosses."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Sunken Temple",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Templo afundado que serve de esconderijo aos {wiki:Deathlings}, **debaixo do mar a noroeste de {wiki:Tiquanda}**, perto de {wiki:Banuta}; entra-se por um vórtice de água e é aqui que descobres os planos dos Deathlings na parte *Liquid Death* da {wiki:The Secret Library Quest}.",
+  "entrance": {"x": 32872, "y": 32520, "z": 7, "label": "Vórtice de água (entrada do Sunken Temple, perto de Banuta)"},
+  "requirements": [
+    "Segundo a wiki, o acesso é dado pela {wiki:The Secret Library Quest} (Premium, nível 250): na parte *Liquid Death*, fala primeiro com o {npc:Spectulus} em Edron ({key:hi}, {key:rumours}, {key:yes}). Esta parte também pede a primeira missão da {wiki:Liquid Black Quest} completa (*The First Visitor*).",
+    "A wiki recomenda nível **250** para caçar aqui.",
+    "{spell:Levitate} ({key:exani hur up}) para chegares à salinha dos planos dos Deathlings."
+  ],
+  "items": ["Temple Teleport Scroll"],
+  "arrive": [
+    "Apanha um barco para **Port Hope**: diz {key:hi}, {key:port hope}, {key:yes} ao capitão (por exemplo o {npc:Captain Seahorse} em Edron, 150 gp, ou o {npc:Captain Bluebear} em Thais, 160 gp). Chegas ao porto do {npc:Charles} ({coord:32529,32785,6}), no extremo **oeste** de Port Hope.",
+    "Atravessa a selva de Tiquanda para **nordeste** até {wiki:Banuta} ({coord:32807,32542,7}). Atalho: com o rank **Ranger** na {wiki:Paw and Fur Society}, o {npc:Lorek}, no extremo **leste** de Port Hope ({coord:32679,32775,7}), leva-te a Banuta por **30 gp**.",
+    "O {item:Water Vortex|vórtice de água} fica junto a Banuta, a **norte** segundo a {wiki:The Secret Library Quest} (outras páginas da wiki dizem a leste ou a noroeste de Banuta, por isso guia-te pela coordenada {coord:32872,32520,7}): entra nele e chegas ao Sunken Temple (recebes o achievement secreto *Spectulation*).",
+    "Lá dentro, sobe as escadas e abre caminho até à sala central do piso de baixo, a das {wiki:Twines|twines}. Para os planos dos Deathlings, põe-te no quadrado a **leste** das twines, vira-te para **oeste** e usa {spell:Levitate} para cima ({coord:32881,32438,9})."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída própria do Sunken Temple: volta pelo caminho por onde entraste até ao sítio onde chegaste depois do vórtice de água e procura aí o regresso à superfície, junto a Banuta.",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block) e já não precisas do passo seguinte.",
+    "Da superfície, atravessa a selva para **sudoeste** até Port Hope. No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te de barco: {key:hi}, o destino (por exemplo {key:edron}, {key:thais} ou {key:liberty bay}) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles — porto de Port Hope"},
+    {"x": 32679, "y": 32775, "z": 7, "label": "Lorek — ferry para Banuta (rank Ranger)"},
+    {"x": 32807, "y": 32542, "z": 7, "label": "Banuta"},
+    {"x": 32872, "y": 32520, "z": 7, "label": "Vórtice de água (entrada do Sunken Temple)"},
+    {"x": 32881, "y": 32438, "z": 9, "label": "Ponto para levitar (salinha dos planos dos Deathlings)"}
+  ],
+  "images": [
+    {"file": "The Secret Library Quest - Liquid Death Plans.png", "caption": "Salinha com o Large Seashell Book (planos dos Deathlings)"}
+  ],
+  "warnings": [
+    "Esconderijo dos Deathlings: {creature:Deathling Scout|Deathling Scouts} e {creature:Deathling Spellsinger|Deathling Spellsingers} (7200 HP, batem até 1250–1300) e {creature:Deepling Warrior|Deepling Warriors}. Zona para nível 250+.",
+    "O {item:Temple Teleport Scroll} não funciona com Logout Block ou Protection Zone Block: espera que o bloqueio de combate passe antes de o usares."
+  ]
+}

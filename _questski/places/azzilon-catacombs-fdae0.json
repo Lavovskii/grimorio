@@ -1,0 +1,52 @@
+{
+  "title": "Azzilon Catacombs",
+  "type": "dungeon",
+  "near": "Edron",
+  "summary": "Catacumbas por baixo do {wiki:Azzilon Castle}, na ilha de {wiki:Azzilon} (teleporte do {npc:Fernlor} em Edron), cheias de Inferniarchs e com Agony Damage constante; aqui ficam as tarefas, os altares dos minibosses e o portal para o covil do {creature:Arbaziloth} da {wiki:No Rest for the Wicked Quest}.",
+  "entrance": {"x": 33281, "y": 31848, "z": 8, "label": "Teleporte laranja do Fernlor para Azzilon (Edron, piso -1), a única entrada documentada"},
+  "requirements": [
+    "Conta **Premium** e nível **250** (recomendado 500+).",
+    "Ter começado a {wiki:No Rest for the Wicked Quest} e terminado a primeira missão (*To boldly go...*: falar com o {npc:Fernlor} e chegar à {npc:Lai}).",
+    "Ter entregado à {npc:Lai}, pela primeira vez, {item:Demonic Core Essence|Demonic Core Essences} (missão *Evil to the core*: 100 essências, {key:essences}). Depois disso passas a usar as essências tu mesmo para subir de rank, sem voltares à Lai.",
+    "World change: as escadas para as catacumbas estão tapadas por uma névoa até os jogadores do teu mundo entregarem essências suficientes à Lai; quando isso acontece aparece a mensagem *\"The mists in Azzilon have retreated!\"*.",
+    "O **último piso** das catacumbas só abre no **rank 5** da Lai (1.600 essências entregues)."
+  ],
+  "items": ["Demonic Core Essence"],
+  "arrive": [
+    "Vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes} no porto da tua cidade; de Thais, com o {npc:Captain Bluebear}). Chegas ao porto, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Caminha para **sudeste** até às torres da {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}, na parte **leste** de Edron ({coord:33267,31849,7}), e desce ao **piso -1**, onde está o {npc:Fernlor} ({coord:33281,31848,8}). Na primeira vez diz-lhe {key:hi}, {key:mission}, {key:yes}.",
+    "Entra no **teleporte laranja** ao lado dele. Em Azzilon, desce as escadas e sobe outro lanço para entrares no castelo.",
+    "Se ainda não entregaste essências: segue para **norte** até à torre interior sudeste ({coord:33843,32360,6}), sobe ao **piso +3** e fala com a {npc:Lai} ({coord:33834,32352,4}): {key:hi}, {key:mission}. Caça Inferniarchs à superfície do castelo até teres 100 {item:Demonic Core Essence|Demonic Core Essences} (também se compram no Market) e entrega-lhas com {key:essences}.",
+    "Desce pelas escadas das catacumbas a partir do castelo (a wiki não marca a posição delas). **Piso -1**: zona de caça, com o teleporte para a cela do {npc:Ortelio} a **sudeste** ({coord:33883,32406,8}) e o altar do {creature:Malvaroth} ({coord:33770,32393,8}).",
+    "**Piso -2**: o teleporte da tarefa dos trolls fica a **sudeste** ({coord:33893,32386,9}) e o portal da tarefa dos imps na parte **nordeste** da gruta ({coord:33868,32287,9}); há também um teleporte para a tarefa da pesca (sem coordenada na wiki) e o altar do {creature:Twisterror} ({coord:33824,32296,9}).",
+    "**Piso -3**: aqui estão o portal para o covil do {creature:Arbaziloth} e o altar do {creature:Gralvalon} ({coord:33809,32296,10})."
+  ],
+  "leave": [
+    "Sobe pelas mesmas escadas, piso a piso, até ao castelo: o Agony Damage só te atinge nos pisos subterrâneos.",
+    "Das salas a que chegas por teleporte ou portal (cela do {npc:Ortelio}, tarefas dos trolls, dos imps e da pesca, covil do {creature:Arbaziloth} e {wiki:Doomforge|Doomforge}) a wiki não descreve a saída: sai pelo caminho por onde entraste e volta ao piso das catacumbas de onde vieste.",
+    "Para voltares a Edron a wiki também não descreve o caminho. Do castelo, faz ao contrário o caminho das escadas por onde entraste e regressa ao sítio onde o teleporte do {npc:Fernlor} te deixou; a wiki não diz se aí há um teleporte de regresso.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block). Em Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te de barco a Thais, Carlin, Venore, Ab'Dendriel, Ankrahmun, Port Hope, Liberty Bay e outras cidades ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 33281, "y": 31848, "z": 8, "label": "Fernlor e teleporte laranja para Azzilon (Edron, piso -1)"},
+    {"x": 33843, "y": 32360, "z": 6, "label": "Torre interior sudeste do Azzilon Castle"},
+    {"x": 33834, "y": 32352, "z": 4, "label": "Lai (piso +3 da torre)"},
+    {"x": 33883, "y": 32406, "z": 8, "label": "Piso -1: teleporte para a cela do Ortelio"},
+    {"x": 33770, "y": 32393, "z": 8, "label": "Piso -1: altar do Malvaroth"},
+    {"x": 33893, "y": 32386, "z": 9, "label": "Piso -2: teleporte da tarefa dos trolls"},
+    {"x": 33868, "y": 32287, "z": 9, "label": "Piso -2: portal da tarefa dos imps"},
+    {"x": 33824, "y": 32296, "z": 9, "label": "Piso -2: altar do Twisterror"},
+    {"x": 33809, "y": 32296, "z": 10, "label": "Piso -3: altar do Gralvalon"},
+    {"x": 34033, "y": 32334, "z": 14, "label": "Covil do Arbaziloth (posição da Forgemaster)"},
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"}
+  ],
+  "images": [
+    {"file": "Map Azzilon.jpg", "caption": "Mapa de Azzilon"}
+  ],
+  "warnings": [
+    "Enquanto estás em **qualquer piso** das catacumbas levas **Agony Damage** a cada 20 segundos, calculado sobre a vida que tens nesse momento: 4,5% no rank 1 da {npc:Lai} (ex.: 450 de dano com 10.000 de vida), menos 0,5% por cada rank, até 0% no rank 10 (51.200 essências).",
+    "As criaturas dos pisos de baixo são mais fortes do que as do castelo: nas catacumbas andam {creature:Hellhunter Inferniarch|Hellhunter}, {creature:Spellreaper Inferniarch|Spellreaper} e {creature:Brinebrute Inferniarch|Brinebrute Inferniarchs} (estes últimos com 32.000 de vida).",
+    "As tarefas dos trolls e dos imps usam uma alavanca para **até 5 jogadores** e duram no máximo **10 minutos**.",
+    "Não há caminho de regresso a Edron documentado: leva uma {item:Temple Teleport Scroll} como plano B."
+  ]
+}

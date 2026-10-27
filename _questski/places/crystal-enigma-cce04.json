@@ -1,0 +1,37 @@
+{
+  "title": "Crystal Enigma",
+  "type": "zona",
+  "near": "Edron",
+  "summary": "Uma das três zonas de caça de {wiki:Gnomprona}, a ilha subterrânea dos gnomes por baixo de Marapur. Chega-se pelo **vagão do meio** do hub; faz parte da {wiki:Primal Ordeal Quest|Primal Ordeal Quest}.",
+  "entrance": {"x": 33529, "y": 32902, "z": 14, "label": "Gnomfurry e gruta para os vagões (hub de Gnomprona)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Gnomprona}: antes da primeira viagem alista-te com o {npc:Gnomcruiter} na Noodles Academy de Edron ({key:hi}, {key:talented}, {key:yes}, {key:join}).",
+    "A {wiki:Primal Ordeal Quest|Primal Ordeal Quest} pede nível **250**; para caçar aqui a wiki recomenda nível **600** (knights 110/110 de ataque/defesa, paladins 115/100, mages magic level 110)."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco ({key:hi}, {key:edron}, {key:yes} no porto da tua cidade; de Thais, com o {npc:Captain Bluebear}) e daí ao hub de {wiki:Gnomprona}: no porto de Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te a Cormaya ({key:hi}, {key:cormaya}, {key:yes}; 20 gp). Desce ao {wiki:Steamship} de Cormaya, **8 andares abaixo** da ilha (escadas por baixo do **Cormaya Garden**, a sul do cais), e diz ao {npc:Gurbasch} ({coord:33313,31989,15}) {key:hi}, {key:gnomprona}, {key:yes}. Chegas ao cais do hub, junto ao {npc:Urks The Mute} ({coord:33519,32856,14}).",
+    "No hub (zona segura), vai para **sul** até ao {npc:Gnomfurry} ({coord:33529,32902,14}), entra na gruta junto a ele e segue para **sul** até aos **ore wagons**.",
+    "Usa o **vagão do meio**: leva-te às passagens de pedra **sem criaturas** do lado do Crystal Enigma (por exemplo {coord:33706,32919,15}).",
+    "A zona de caça fica no **piso de cima** dessas passagens, o mesmo piso do hub (por exemplo {coord:33777,32903,14}). A wiki não descreve o caminho exato entre o vagão e a zona."
+  ],
+  "leave": [
+    "Volta pelo mesmo caminho: desce às passagens de pedra, apanha o **vagão do meio** de volta e sai pela gruta do {npc:Gnomfurry} até ao hub (zona segura).",
+    "Para saíres de Gnomprona, fala com o capitão {npc:Urks The Mute} no cais onde chegaste ({key:hi}) e pergunta-lhe para onde te leva: a wiki não regista a conversa nem os destinos dele (o barco de ida vem de Cormaya). Se te deixar no Steamship de Cormaya, o {npc:Gurbasch} leva-te a **Kazordoon** ({key:hi}, {key:kazordoon}, {key:yes}; 160 gp); ou sobe as escadas do Cormaya Garden até ao porto **norte**, onde o {npc:Pemaret} ({coord:33287,31956,6}) te leva a Edron ({key:hi}, {key:edron}, {key:yes}; 20 gp).",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33519, "y": 32856, "z": 14, "label": "Urks The Mute — cais de Gnomprona"},
+    {"x": 33529, "y": 32902, "z": 14, "label": "Gnomfurry e gruta para os vagões"},
+    {"x": 33706, "y": 32919, "z": 15, "label": "Passagens de pedra do vagão do meio (uma das Lazyfairies)"},
+    {"x": 33777, "y": 32903, "z": 14, "label": "Crystal Enigma, piso de caça (uma das Lazyfairies)"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship de Cormaya"}
+  ],
+  "images": [
+    {"file": "Gnomprona Map.png", "caption": "Mapa do piso das zonas de caça de Gnomprona: Monster Graveyard, Crystal Enigma, Sparkling Pools, o vulcão do Magma Bubble e a Primal Menace"}
+  ],
+  "warnings": [
+    "Criaturas muito fortes ({creature:Headpecker}, {creature:Mantosaurus}, {creature:Mercurial Menace}, {creature:Noxious Ripptor}, {creature:Shrieking Cry-Stal}): fazem dano de **terra**, de **energia** e muito dano **físico** corpo a corpo, e uma delas pode deixar-te com **medo** (feared).",
+    "Se ativaste um nível de hazard com o {npc:Gnomadness} (depois do {creature:Magma Bubble}), as criaturas de Gnomprona passam a poder dar golpes críticos e a esquivar-se, e começam a nascer Primal Pods; em grupo conta o hazard mais baixo da equipa. Em troca dão mais loot e experiência (+4% por hazard).",
+    "A wiki não documenta a conversa do {npc:Urks The Mute}: leva uma {item:Temple Teleport Scroll} como plano B para saíres de Gnomprona."
+  ]
+}

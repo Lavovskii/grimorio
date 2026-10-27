@@ -1,0 +1,50 @@
+{
+  "title": "Gnomprona",
+  "type": "zona",
+  "near": "Edron",
+  "summary": "Hub dos gnomes (*Primal Gnome Hub*) numa ilha subterrânea junto a um vulcão, **por baixo de Marapur**, onde decorre a {wiki:Primal Ordeal Quest|Primal Ordeal Quest}. O hub é uma **zona segura** e dele partem os vagões para as três zonas de caça: {wiki:Monster Graveyard}, {wiki:Crystal Enigma} e {wiki:Sparkling Pools}. Chega-se pelo {wiki:Steamship} de Cormaya, a sul de Edron.",
+  "entrance": {"x": 33519, "y": 32856, "z": 14, "label": "Cais de Gnomprona, onde o barco te deixa (Urks The Mute)"},
+  "requirements": [
+    "Conta **Premium** (requisito da {wiki:Primal Ordeal Quest|Primal Ordeal Quest}, que pede também nível **250**; recomendado 400).",
+    "Antes da primeira viagem, alista-te com o {npc:Gnomcruiter} na Noodles Academy, em Edron ({key:hi}, {key:talented}, {key:yes}, {key:join}): é ele que te manda ao Steamship de Cormaya pedir a passagem para Gnomprona."
+  ],
+  "arrive": [
+    "Vai a **Edron** de barco: no porto da tua cidade diz {key:hi}, {key:edron}, {key:yes} (de Thais, com o {npc:Captain Bluebear}, custa 160 gp). Chegas ao porto a **norte** da cidade, junto ao {npc:Captain Seahorse} ({coord:33176,31764,6}).",
+    "Só na primeira vez: vai às sete torres da {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic}, na parte **leste** de Edron, e sobe **1 andar** até ao {npc:Gnomcruiter} ({coord:33256,31842,6}). Diz {key:hi}, {key:talented}, {key:yes} e {key:join}.",
+    "Volta ao porto e fala com o {npc:Captain Seahorse}: {key:hi}, {key:cormaya}, {key:yes} (20 gp). Desembarcas no porto **norte** de {wiki:Cormaya}.",
+    "Desce ao {wiki:Steamship} de Cormaya, **8 andares abaixo** da ilha: as escadas estão por baixo do **Cormaya Garden**, o jardim a **sul** do cais, por trás e logo a **leste** do guildhall *Castle of the White Dragon*. No fundo, o {npc:Gurbasch} está no fim da Cormaya Street, em frente à casa *Cormaya 11* ({coord:33313,31989,15}).",
+    "Diz ao {npc:Gurbasch} {key:hi}, {key:gnomprona}, {key:yes}. O barco deixa-te no cais do hub de Gnomprona, junto ao capitão {npc:Urks The Mute} ({coord:33519,32856,14}). O {npc:Gnominer} está logo a **sul** do barco ({coord:33520,32881,14}).",
+    "Alternativa a partir de **Kazordoon** ou **Farmine**: o {npc:Brodrosch} (Steamship de Kazordoon, muito abaixo da cidade, {coord:32661,31957,15}; 160 gp) ou o {npc:Thorgrin} (Steamship de Farmine; 110 gp) levam-te de Steamship a Cormaya ({key:hi}, {key:cormaya}, {key:yes}). Chegas junto ao {npc:Gurbasch} e pedes-lhe a passagem para Gnomprona como no passo anterior.",
+    "Para as zonas de caça: no hub vai para **sul** até ao {npc:Gnomfurry} ({coord:33529,32902,14}), entra na gruta junto a ele e segue para **sul** até aos **ore wagons**: o **da esquerda** vai para o {wiki:Monster Graveyard}, o **do meio** para o {wiki:Crystal Enigma} e o **da direita** para as {wiki:Sparkling Pools}."
+  ],
+  "leave": [
+    "Volta ao cais onde chegaste e fala com o capitão {npc:Urks The Mute} ({coord:33519,32856,14}): diz {key:hi} e pergunta-lhe para onde te leva. A wiki não regista a conversa nem os destinos dele; o barco de ida vem do Steamship de **Cormaya**.",
+    "Se te deixar no Steamship de Cormaya, o {npc:Gurbasch} leva-te a **Kazordoon** ({key:hi}, {key:kazordoon}, {key:yes}; 160 gp) ou a **Farmine** ({key:farmine}; 110 gp). Para Edron, sobe as escadas do Cormaya Garden até à superfície e vai ao porto **norte**: o {npc:Pemaret} ({coord:33287,31956,6}) leva-te a Edron ({key:hi}, {key:edron}, {key:yes}; 20 gp).",
+    "Em Edron, o {npc:Captain Seahorse} ({coord:33176,31764,6}) leva-te de barco a Thais, Carlin, Venore, Ab'Dendriel, Ankrahmun, Port Hope, Liberty Bay e outras cidades ({key:hi}, o nome da cidade, {key:yes}).",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 33176, "y": 31764, "z": 6, "label": "Captain Seahorse — porto de Edron"},
+    {"x": 33256, "y": 31842, "z": 6, "label": "Gnomcruiter (Noodles Academy, 1 andar acima)"},
+    {"x": 33287, "y": 31956, "z": 6, "label": "Pemaret — porto norte de Cormaya"},
+    {"x": 33313, "y": 31989, "z": 15, "label": "Gurbasch — Steamship de Cormaya (8 andares abaixo)"},
+    {"x": 32661, "y": 31957, "z": 15, "label": "Brodrosch — Steamship de Kazordoon"},
+    {"x": 33519, "y": 32856, "z": 14, "label": "Urks The Mute — cais de Gnomprona"},
+    {"x": 33520, "y": 32881, "z": 14, "label": "Gnominer (hub)"},
+    {"x": 33537, "y": 32872, "z": 14, "label": "Gnomadness (hub; Hazard System)"},
+    {"x": 33529, "y": 32902, "z": 14, "label": "Gnomfurry e gruta para os vagões"},
+    {"x": 33682, "y": 32843, "z": 15, "label": "Passagens de pedra do vagão da esquerda (lado do Monster Graveyard)"},
+    {"x": 33706, "y": 32919, "z": 15, "label": "Passagens de pedra do vagão do meio (lado do Crystal Enigma)"},
+    {"x": 33596, "y": 32872, "z": 15, "label": "Passagens de pedra do vagão da direita (lado das Sparkling Pools)"},
+    {"x": 33660, "y": 32896, "z": 14, "label": "Entrada do vulcão (Magma Bubble), lado das Sparkling Pools"},
+    {"x": 33714, "y": 32798, "z": 14, "label": "Teleporte da Primal Menace (norte do Monster Graveyard)"}
+  ],
+  "images": [
+    {"file": "Steam Ship Cormaya.jpg", "caption": "Entrada do Steamship em Cormaya"},
+    {"file": "Gnomprona Map.png", "caption": "Mapa de Gnomprona (piso das zonas de caça): Monster Graveyard, Crystal Enigma, Sparkling Pools, o vulcão do Magma Bubble e a Primal Menace"}
+  ],
+  "warnings": [
+    "O hub é uma **zona segura**, mas as três zonas de caça têm criaturas fortíssimas (a wiki recomenda nível **600**) e podem deixar-te enraizado (rooted) ou com medo (feared).",
+    "A wiki não documenta a conversa do {npc:Urks The Mute}: leva uma {item:Temple Teleport Scroll} como plano B para saíres."
+  ]
+}

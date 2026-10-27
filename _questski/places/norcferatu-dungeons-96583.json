@@ -1,0 +1,46 @@
+{
+  "title": "Norcferatu Dungeons",
+  "type": "dungeon",
+  "near": "Yalahar",
+  "summary": "Masmorras de quatro pisos (do -1 ao -4) por baixo da {wiki:Norcferatu Fortress}, em {wiki:Vengoth}: covil do {creature:Vladrukh} e zona de caça de nível muito alto; chega-se por um teleporte da fortaleza durante a {wiki:Bloody Tusks Quest}.",
+  "entrance": {"x": 32912, "y": 31428, "z": 8, "label": "Chegada do teleporte da fortaleza (piso -1)"},
+  "requirements": [
+    "Conta **Premium** e acesso a {wiki:Vengoth}: o {npc:Harlow} só te leva a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest} (basta tê-la começado, segundo a página de Vengoth).",
+    "{wiki:Bloody Tusks Quest} (nível **250**) feita até à missão *Breaking in*: precisas do batismo de sangue da missão *Bloodbath* (engana as proteções das masmorras mais fundas) e de pelo menos **17** {item:Norcferatu Talisman|Norcferatu Talismans} para o {creature:Behemoth} partir a defesa do {creature:Blood Guardian}, que guarda o teleporte.",
+    "Feitiço {spell:Levitate} para entrares e saíres da {wiki:Norcferatu Fortress}.",
+    "A wiki não diz como se volta a entrar nas masmorras depois da missão *Breaking in* (se o teleporte fica livre ou se o Blood Guardian volta a guardá-lo)."
+  ],
+  "items": ["Norcferatu Talisman"],
+  "arrive": [
+    "Chega a **Yalahar** de barco ({key:hi}, {key:yalahar}, {key:yes}): por exemplo de Liberty Bay com o {npc:Captain Max}, num dos barcos a **leste** do cais (400 gp, depois de começares a {wiki:In Service of Yalahar Quest}); depois da missão *Searoutes around Yalahar* também há barco de Thais, Carlin, Venore, Ab'Dendriel, Ankrahmun, Darashia e Port Hope. Vai à **Norcferatu Fortress**: em Yalahar, nas docas do **Trade Quarter** (a direito para **sul** a partir do portão principal), fala com o {npc:Harlow} ({key:hi}, {key:vengoth}, {key:yes}, 100 gp). Em Vengoth ({coord:32857,31550,7}) caminha para **norte**, atravessa a névoa e, **sem subires as escadas**, usa {spell:Levitate} para **cima** um pouco a **leste** delas ({coord:32914,31451,7}).",
+    "No andar de cima (piso 6), a partir da {npc:Anaztassja Moroia}, caminha um pouco para **noroeste** e entra no corredor estreito de onde se vê o {creature:Blood Guardian} no andar de baixo. Segue o corredor até ao fim, para **leste**.",
+    "Atira os {item:Norcferatu Talisman|Norcferatu Talismans} para o andar de baixo, **quadrado a quadrado**, começando pelo quadrado **mais a leste**, e vai atraindo o {creature:Behemoth} até ao extremo **oeste** (pelo menos 17 talismãs).",
+    "Quando o Behemoth partir a parede, tu e quem quiser avançar na quest têm **5 minutos** para correr para baixo e entrar no teleporte, agora desprotegido. Chegas ao **piso -1** das masmorras ({coord:32912,31428,8}).",
+    "Para chegares à Anaztassja no **piso -3**: no piso -1 vai para **sul** até {coord:32906,31444,8} e desce; no piso -2 vai para **noroeste** até {coord:32877,31411,9} e desce; no piso -3 caminha um pouco para **sul** até à Anaztassja ({coord:32882,31423,10}). É daí que se entra no teleporte da missão *The Blood Ritual*.",
+    "Para o **piso -4** (Vladrukh): do sítio da Anaztassja no piso -3 volta para **norte** e sobe; no piso -2 vai para **sudeste** e sobe; no piso -1 vai para **nordeste** até {coord:32929,31421,8} e desce; no piso -2 dá alguns passos para **sudeste** até {coord:32935,31425,9} e desce; no piso -3 vai para **sudoeste** até {coord:32911,31440,10} e desce; no piso -4 caminha para **noroeste** até à Anaztassja ({coord:32893,31417,11}). A sala do {creature:Vladrukh} fica a **oeste** dela e a poça de sangue da missão *The Belly of the Beast* a **leste**."
+  ],
+  "leave": [
+    "Depois de acabares a {wiki:Bloody Tusks Quest} (último relatório à Anaztassja, depois do Vladrukh), podes usar a **Mysterious Machine** do piso mais alto: teleporta-te para a entrada da {wiki:Norcferatu Fortress}. A wiki não dá a posição exata da máquina.",
+    "A pé, volta para cima pelo caminho por onde desceste: no piso -4 vai até {coord:32911,31440,11} e sobe; no piso -3 vai até {coord:32935,31425,10} e sobe; no piso -2 vai até {coord:32929,31421,9} e sobe para o piso -1. Estás outra vez na zona onde chegaste pelo teleporte ({coord:32912,31428,8}).",
+    "A wiki não descreve como se sai do piso -1 para a fortaleza sem a Mysterious Machine. Se não encontrares saída, usa um {item:Temple Teleport Scroll}: vais para o templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block).",
+    "Da entrada da fortaleza: se estiveres no piso 6, desce com {spell:Levitate} (*exani hur down*) junto ao ponto onde levitaste para cima ({coord:32914,31451,7}); depois caminha para **sul** até ao {npc:Harlow} ({key:hi}, {key:yalahar}, {key:yes}, 50 gp), que te leva às docas do Trade Quarter de Yalahar. Aí apanha o barco do {npc:Karith} (depois da missão *Searoutes around Yalahar*) ou do {npc:Captain Cookie} (Liberty Bay ou Thais)."
+  ],
+  "coords": [
+    {"x": 32914, "y": 31451, "z": 7, "label": "Ponto de Levitate da Norcferatu Fortress"},
+    {"x": 32912, "y": 31428, "z": 8, "label": "Chegada do teleporte (piso -1)"},
+    {"x": 32906, "y": 31444, "z": 8, "label": "Descida do piso -1 para o -2 (caminho para o piso -3)"},
+    {"x": 32877, "y": 31411, "z": 9, "label": "Descida do piso -2 para o -3"},
+    {"x": 32882, "y": 31423, "z": 10, "label": "Anaztassja Moroia (piso -3, teleporte do Blood Ritual)"},
+    {"x": 32929, "y": 31421, "z": 8, "label": "Descida do piso -1 (caminho para o piso -4)"},
+    {"x": 32935, "y": 31425, "z": 9, "label": "Descida do piso -2 (caminho para o piso -4)"},
+    {"x": 32911, "y": 31440, "z": 10, "label": "Descida do piso -3 para o -4"},
+    {"x": 32893, "y": 31417, "z": 11, "label": "Anaztassja Moroia (piso -4, entre o Vladrukh e o Vampiric Heart)"},
+    {"x": 32857, "y": 31550, "z": 7, "label": "Harlow em Vengoth (regresso a Yalahar)"}
+  ],
+  "warnings": [
+    "A wiki recomenda nível **550** (Knights 120/110 de ataque/defesa, Paladins 115/105, magos magic level 110) e classifica a experiência e o loot como fracos. Criaturas: {creature:Dworc Shadowstalker|Dworc Shadowstalkers}, {creature:Gloom Maw|Gloom Maws}, {creature:Norcferatu Heartless}, {creature:Norcferatu Nightweaver|Norcferatu Nightweavers}, {creature:Orclops Bloodbreaker|Orclops Bloodbreakers} (até 1900 de dano) e {creature:Varg|Vargs}.",
+    "Depois de o Behemoth partir a parede só tens **5 minutos** para entrar no teleporte.",
+    "O {creature:Vladrukh} tem cooldown de **20 horas** e o combate dura no máximo **15 minutos**; vê invisibilidade. *The Belly of the Beast* tem limite de **10 minutos** (és expulso no fim) e dano refletido e Agony; se falhares *The Blood Ritual*, só a podes repetir **1 hora** depois.",
+    "A wiki não descreve a saída da sala do Vladrukh nem da sala do ritual; da barriga do xamã sai-se pelo teleporte a **sul** do sítio onde estava o {creature:Vampiric Heart}."
+  ]
+}

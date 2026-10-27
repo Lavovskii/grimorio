@@ -1,0 +1,47 @@
+{
+  "title": "Ancient Ancestorial Grounds",
+  "type": "zona",
+  "near": "Gray Beach",
+  "summary": "Local sagrado dos {creature:Deepling|Deeplings} **por baixo de {wiki:Quirefang}**, atacado pelos seus inimigos, os {wiki:Deathlings}: zona de caça de nível alto em 2 pisos, aberta pela parte *Liquid Death* da {wiki:The Secret Library Quest}, onde também se luta contra o {creature:Brokul}.",
+  "entrance": {"x": 33584, "y": 31388, "z": 13, "label": "Teleporte para as Ancient Ancestorial Grounds"},
+  "requirements": [
+    "Conta **Premium** e nível **250** ({wiki:The Secret Library Quest}). A wiki recomenda nível **300** para knights e **250** para paladins e mages para caçar aqui.",
+    "Primeira missão da {wiki:Liquid Black Quest} completa (*The First Visitor*).",
+    "Ordem da parte *Liquid Death*: fala com o {npc:Spectulus} em Edron ({key:hi}, {key:rumours}, {key:yes}), lê os planos dos Deathlings no {wiki:Sunken Temple} e volta ao Spectulus ({key:rumours}, {key:Njey}). Depois disso encontras nas Deepling Ancestorial Grounds a passagem nova para esta zona."
+  ],
+  "items": ["Rope", "Temple Teleport Scroll"],
+  "arrive": [
+    "Apanha um barco para a {wiki:Gray Island} em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): {key:hi}, {key:gray island}, {key:yes} (por exemplo o {npc:Captain Fearless} em Venore ou o {npc:Petros} em Darashia). Desembarcas junto ao {npc:Scrutinon} ({coord:33189,31982,7}).",
+    "Entra no buraco a **sul** do Scrutinon, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}. Do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até {wiki:Gray Beach} ({coord:33471,31304,7}).",
+    "Segue a costa para **leste** e entra no buraco mais a **sudeste** de Gray Beach ({coord:33514,31323,7}). Desce as rampas da escadaria grande.",
+    "Segue o mapa do percurso (imagem abaixo) até às Deepling Ancestorial Grounds: segundo a wiki, desces vários lanços de escadas e depois sobes **dois pisos** para **leste** até um teleporte ({coord:33584,31388,13}).",
+    "Entra no teleporte: chegas às Ancient Ancestorial Grounds ({coord:33572,31417,14}). O portal do {creature:Brokul} fica no lado mais a **oeste** desta gruta ({coord:33524,31463,14})."
+  ],
+  "leave": [
+    "A wiki não descreve a saída das Ancient Ancestorial Grounds nem da sala do Brokul. Volta ao sítio onde chegaste pelo teleporte e faz o percurso ao contrário até à escadaria grande e ao buraco a sudeste de Gray Beach ({coord:33514,31323,7}); usa a {item:Rope} onde for preciso.",
+    "Se não encontrares a saída, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block) e já não precisas dos passos seguintes.",
+    "Em Gray Beach tens depot e templo no subsolo, a **noroeste** da vila. Para saíres da ilha, faz a passagem subterrânea ao contrário até à Gray Island: volta para **sul** até ao ponto onde subiste com a {item:Rope}, desce por ele e procura daí o caminho de volta ao buraco a sul do Scrutinon (a wiki só descreve a ida, pelo {item:Water Vortex}, e não diz como se faz o regresso).",
+    "Na Gray Island, o {npc:Scrutinon} ({coord:33189,31982,7}) leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore: diz {key:hi}, {key:travel} e o nome da cidade (por exemplo {key:edron})."
+  ],
+  "coords": [
+    {"x": 33189, "y": 31982, "z": 7, "label": "Scrutinon (Gray Island) — buraco a sul dele"},
+    {"x": 33471, "y": 31304, "z": 7, "label": "Gray Beach"},
+    {"x": 33514, "y": 31323, "z": 7, "label": "Buraco a sudeste de Gray Beach (escadaria grande)"},
+    {"x": 33584, "y": 31388, "z": 13, "label": "Teleporte para as Ancient Ancestorial Grounds"},
+    {"x": 33572, "y": 31417, "z": 14, "label": "Ancient Ancestorial Grounds"},
+    {"x": 33524, "y": 31463, "z": 14, "label": "Portal do Brokul (lado oeste)"},
+    {"x": 33458, "y": 31302, "z": 6, "label": "Rock in a Hard Place (Gray Beach) — compra o loot desta zona"}
+  ],
+  "images": [
+    {"file": "The Secret Library Quest - Liquid Death Route.png", "caption": "Percurso do buraco de Gray Beach até às Deepling Ancestorial Grounds"},
+    {"file": "The Secret Library Quest - Liquid Death Map.png", "caption": "Percurso pelos 2 pisos da zona, com os Broken Idols da The Secret Library Quest"},
+    {"file": "Ancient Ancestorial Grounds 1.png", "caption": "Mapa das Ancient Ancestorial Grounds (1)"},
+    {"file": "Ancient Ancestorial Grounds 2.png", "caption": "Mapa das Ancient Ancestorial Grounds (2)"}
+  ],
+  "warnings": [
+    "Os {creature:Deathling Scout|Deathling Scouts} e {creature:Deathling Spellsinger|Deathling Spellsingers} têm 7200 HP e batem até 1250–1300: a wiki aconselha equipas ou um duo druid + knight.",
+    "A zona tem 2 pisos de caça; segundo a wiki, nos sítios assinalados no mapa podes descer do primeiro para o segundo com {spell:Levitate}.",
+    "Segundo a {wiki:Liquid Black Quest}, no fundo da escadaria de Gray Beach a gruta para **sul** leva a um caminho de **sentido único** até {wiki:Fiehonja}: segue o mapa do percurso e não contes voltar por esse lado.",
+    "O {creature:Brokul} aceita equipas de até **5 jogadores**; quantos mais {item:Broken Idol|Broken Idols} reparares (até 45), menos vida ele tem no início da luta."
+  ]
+}

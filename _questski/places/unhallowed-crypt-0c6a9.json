@@ -1,0 +1,31 @@
+{
+  "title": "Unhallowed Crypt",
+  "type": "dungeon",
+  "near": "Ab'Dendriel",
+  "summary": "Zona de caça perto de Ab'Dendriel que faz parte da {wiki:The Roost of the Graveborn Quest}; cada entrada gasta 1 {wiki:Favour of the Ancients}.",
+  "requirements": [
+    "{wiki:The Roost of the Graveborn Quest} (nível **450**, conta **Premium**): a cripta faz parte da quest e as tuas cargas aparecem no Quest Log depois de a acabares, em *The Spirits Are At Ease*.",
+    "**1 {wiki:Favour of the Ancients}** por entrada. Cada {item:Cryptic Fossil} dá **1** (cai dos {creature:Crypt Mage|Crypt Mages} da {wiki:Forsaken Crypt} e pode ser comprado no Market); a {item:Jade Dragon Head (Charged)} dá **1** a cada 14 dias (e também 1 {wiki:Ancestral Charge})."
+  ],
+  "items": ["Cryptic Fossil", "Jade Dragon Head (Charged)", "Temple Teleport Scroll"],
+  "arrive": [
+    "Vai a **Ab'Dendriel** de barco: o {npc:Captain Greyhound} (Carlin), o {npc:Captain Seahorse} (Edron), o {npc:Captain Bluebear} (Thais) ou o {npc:Captain Fearless} (Venore) levam-te lá com {key:hi}, {key:ab'dendriel}, {key:yes}. Chegas ao porto do {npc:Captain Seagull}, a **leste** do centro, 1 andar acima do chão ({coord:32735,31668,6}).",
+    "Garante que tens pelo menos 1 Favour of the Ancients: usa um {item:Cryptic Fossil} (+1) ou a {item:Jade Dragon Head (Charged)} (+1, a cada 14 dias). Se ainda for cedo para usar o talismã aparece *\"It is too early to use this again!\"*.",
+    "O wiki não indica onde fica a entrada da Unhallowed Crypt. Diz apenas que fica perto de Ab'Dendriel; das três criptas da quest, só a {wiki:Forgotten Crypt} (a cripta **exterior**, por baixo de {wiki:Draconia}) tem acesso descrito: a missão final da quest leva-te lá pela canoa do {npc:S'Zallar M'Andar} ({coord:32702,31594,7}).",
+    "Ao entrares, gastas 1 Favour of the Ancients."
+  ],
+  "leave": [
+    "O wiki não descreve a saída da Unhallowed Crypt: volta pelo caminho por onde entraste.",
+    "Se ficares sem saída, uma {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem enquanto tiveres Logout Block ou Protection Zone Block).",
+    "Em Ab'Dendriel, o {npc:Captain Seagull} ({coord:32735,31668,6}) leva-te a Carlin, Edron, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes})."
+  ],
+  "coords": [
+    {"x": 32702, "y": 31594, "z": 7, "label": "S'Zallar M'Andar (canoa para Draconia e a Forgotten Crypt)"},
+    {"x": 32735, "y": 31668, "z": 6, "label": "Captain Seagull (porto de Ab'Dendriel)"}
+  ],
+  "warnings": [
+    "O {creature:Creepy Crawler} pode causar {wiki:Feared|Fear} durante 2 segundos.",
+    "Cada vez que entras gastas 1 Favour of the Ancients: se saíres e voltares a entrar, gastas outro. Desde a atualização de 9 de dezembro de 2025, cada Cryptic Fossil dá só 1 Favour (antes dava 2), mas cai mais do dobro das vezes.",
+    "Criaturas fortes: {creature:Crypt Fiend|Crypt Fiends} (30 000 de vida), {creature:Creepy Crawler|Creepy Crawlers} (27 000) e {creature:Crypt Construct|Crypt Constructs} (25 000, curam em área). Os Crypt Constructs deixam cair {item:Fetid Heart|Fetid Hearts}, que dão acesso à {wiki:Forsaken Crypt}."
+  ]
+}

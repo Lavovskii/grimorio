@@ -1,0 +1,51 @@
+{
+  "title": "Furious Crater",
+  "type": "dungeon",
+  "near": "Yalahar",
+  "summary": "Rocha oca **a sul de Kilmaresh e a leste de Oramond**, com 5 pisos (3 de caça, a sala da alavanca e o piso do fundo com o {creature:Goshnar's Cruelty}); não se chega por terra, só pelo **4.º Fog Portal** do hub da {wiki:Soul War Quest}, a partir de {wiki:Zarganash}.",
+  "entrance": {"x": 33621, "y": 31418, "z": 10, "label": "Hub da Soul War (Flickering Soul): a fila de Fog Portals"},
+  "requirements": [
+    "Conta **Premium** e nível mínimo **250** (requisitos da {wiki:Soul War Quest}); é uma zona de caça para nível **600+**.",
+    "{wiki:Feaster of Souls Quest} completa: é ela que te dá acesso a {wiki:Zarganash}.",
+    "Acesso a {wiki:Vengoth}: o {npc:Harlow} só te leva a partir da missão 4 (*The Dark Lands*) da {wiki:Blood Brothers Quest}.",
+    "Aceitar a tarefa do {npc:Flickering Soul} no hub ({key:hi}, {key:task}, {key:yes}).",
+    "Para descer de piso, **cada jogador** tem de juntar **40**, **55** e **70** {item:Pulsating Energy|Pulsating Energies} no 1.º, 2.º e 3.º pisos (vês o progresso no {wiki:Quest Log}); repete-se sempre que entras."
+  ],
+  "arrive": [
+    "Viaja de barco até **Yalahar** ({key:hi}, {key:yalahar}, {key:yes}): de Thais com o {npc:Captain Bluebear} (200 gp), de Carlin com o {npc:Captain Greyhound} (185 gp), de Darashia com o {npc:Petros} (210 gp), de Ankrahmun com o {npc:Captain Sinbeard} (230 gp), de Port Hope com o {npc:Charles} (260 gp) ou de Liberty Bay com o **Jack Fate** (275 gp). De Venore e de Edron **não** há barco direto: vai primeiro a Darashia (de Edron, tapete mágico do {npc:Pino}: {key:hi}, {key:darashia}, {key:yes}, 40 gp; de Venore, o {npc:Captain Fearless}, 60 gp, com 10% de hipótese de acabares no {wiki:Ghostship}). Chegas ao porto de Yalahar.",
+    "Em Yalahar vai às docas do **Trade Quarter** (a direito para **sul** a partir do portão principal) e fala com o {npc:Harlow}: {key:hi}, {key:vengoth}, {key:yes} (100 gp). Ele deixa-te no **oeste** de {wiki:Vengoth} ({coord:32856,31548,7}).",
+    "Anda para **nordeste** até ao teleporte **invisível** de {wiki:Zarganash} ({coord:32962,31497,7}) e entra nele.",
+    "Atravessa Zarganash até ao extremo **sudoeste** e entra no teleporte que lá está ({coord:33568,31538,10}): chegas ao hub da Soul War. Na primeira vez, fala com o {npc:Flickering Soul} ({coord:33621,31418,10}): {key:hi}, {key:task}, {key:yes}.",
+    "No hub há uma fila de {wiki:Fog Portal|Fog Portals}. Contando da **esquerda para a direita**, entra no **4.º**: chegas à zona segura do Furious Crater. Os pisos contam-se de **cima para baixo**: entra no respawn do 1.º piso.",
+    "Junta as energias batendo nas criaturas até deixarem energias no chão e passando por cima delas. No **1.º piso**, com todos carregados, desce pelo **Fog teleporter** do lado **leste** da área; no **2.º piso**, pelo Fog teleporter **mesmo ao lado da entrada**; no **3.º piso**, o Fog teleporter **ao lado da entrada** leva à **sala da alavanca** (4.º piso).",
+    "A alavanca leva a equipa (até 5 jogadores) ao piso do fundo, onde está o {creature:Goshnar's Cruelty}. Também se chega ao piso do fundo com {spell:Levitate} (para baixo) a partir do ponto {coord:33841,31867,6}; nesse piso há criaturas e um baú no corredor **oeste** ({coord:33810,31868,7})."
+  ],
+  "leave": [
+    "A wiki não descreve a saída da zona: volta à zona segura por onde entraste e regressa ao hub. Sair apaga as energias juntas.",
+    "A wiki também não descreve a saída da sala do {creature:Goshnar's Cruelty}: volta por onde entraste.",
+    "Do hub, a wiki não descreve o caminho de volta: volta pelo caminho por onde vieste (do hub para o teleporte do extremo sudoeste de Zarganash, {coord:33568,31538,10}), atravessa Zarganash até ao sítio onde chegaste e sai por onde entraste, para Vengoth ({coord:32962,31497,7}).",
+    "Em Vengoth, anda para **sudoeste** até ao {npc:Harlow} ({coord:32856,31548,7}) e diz {key:hi}, {key:yalahar}, {key:yes} (50 gp): voltas às docas do Trade Quarter de Yalahar.",
+    "Para saíres de Yalahar: com a missão *Searoutes around Yalahar* da {wiki:In Service of Yalahar Quest}, o {npc:Karith} (no porto, num barco 1 andar acima) leva-te a Ab'Dendriel, Ankrahmun, Carlin, Darashia, Liberty Bay, Port Hope, Thais ou Venore ({key:hi}, o nome da cidade, {key:yes}); sem ela, o {npc:Captain Cookie}, no barco à esquerda do do Karith, leva-te a **Liberty Bay** (400 gp) ou a **Thais** (800 gp).",
+    "Atalhos: depois de matares o boss final ({creature:Goshnar's Megalomania}), o portal atrás de um {npc:Flickering Soul}, na sala principal do hub, leva à sala de recompensa, cujo {wiki:Magic Forcefield} te manda para o **depot de Thais**. Em qualquer altura, um {item:Temple Teleport Scroll} manda-te para o templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block ou Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 32856, "y": 31548, "z": 7, "label": "Harlow em Vengoth (chegada e regresso)"},
+    {"x": 32962, "y": 31497, "z": 7, "label": "Teleporte invisível para Zarganash (Vengoth)"},
+    {"x": 33568, "y": 31538, "z": 10, "label": "Teleporte do sudoeste de Zarganash para o hub da Soul War"},
+    {"x": 33621, "y": 31418, "z": 10, "label": "Flickering Soul (hub da Soul War)"},
+    {"x": 33860, "y": 31833, "z": 3, "label": "Furious Crater (localização indicada pela wiki)"},
+    {"x": 33841, "y": 31867, "z": 6, "label": "Ponto de Levitate para o piso do fundo"},
+    {"x": 33810, "y": 31868, "z": 7, "label": "Baú no corredor oeste do piso do fundo"},
+    {"x": 32818, "y": 31278, "z": 5, "label": "Karith (porto de Yalahar, 1 andar acima)"},
+    {"x": 32804, "y": 31276, "z": 6, "label": "Captain Cookie (porto de Yalahar)"}
+  ],
+  "images": [
+    {"file": "Soul War Quest - Goshnar's Taint map.png", "caption": "Hub da Soul War: os Fog Portals e o boss de cada zona"},
+    {"file": "Feaster of Souls Quest - Zarganash.png", "caption": "Mapa de Zarganash, para chegares ao teleporte do sudoeste"}
+  ],
+  "warnings": [
+    "As energias juntas **perdem-se** se saíres da zona: o acesso repete-se sempre que entras.",
+    "Ao chegares ao 2.º e ao 3.º pisos ficas logo de frente para vários monstros. O sangue dos {creature:Cloak of Terror|Cloaks of Terror} ({item:The Blood of Cloak of Terror}) funciona como um campo de energia muito mais forte (até cerca de 20% da tua vida máxima) e cura-os quando passam por ele.",
+    "O teleporte de Vengoth para Zarganash é **invisível**: só o encontras pela coordenada. Os {wiki:Goshnar's Taints|Goshnar's Taints} só te afetam dentro das zonas da Soul War."
+  ]
+}

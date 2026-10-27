@@ -1,0 +1,41 @@
+{
+  "title": "Brain Grounds",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Zona de caça orgânica de **três pisos**, que parece ser controlada por um cérebro central, **no subsolo sob o mar ocidental**; entra-se por um portal invisível ao lado do {npc:Para Norbert}, a norte do {wiki:Jakundaf Desert} (a oeste de Venore). É aqui a primeira parte da {wiki:Feaster of Souls Quest} e a luta contra o {creature:Brain Head}.",
+  "entrance": {"x": 32630, "y": 32074, "z": 7, "label": "Portal invisível ao lado do Para Norbert (parece areia)"},
+  "requirements": [
+    "Acesso obtido na primeira missão (Drain the Brain) da {wiki:Feaster of Souls Quest} (conta **Premium**, nível **250**): aceita a missão do {npc:Para Norbert} ({key:hi}, {key:yes}), toca o {item:Death Knell} no {wiki:Carlin Graveyard}, nas {wiki:Ghostlands} e na {wiki:Dark Cathedral} e bebe o {item:Vial with a Skull Cork} (Bone Meal + Grave Flower Extract). Só então passas o portal.",
+    "A sala do {creature:Brain Head}, 2 pisos abaixo, só abre depois de entregares ao Para Norbert as 20 amostras e as 20 almas purificadas.",
+    "Zona de caça para nível **300+** (Paladins **350+**); a dificuldade aumenta a cada piso que desces."
+  ],
+  "arrive": [
+    "Vai a **Venore**: por exemplo, de Edron o {npc:Captain Seahorse} ({key:hi}, {key:venore}, {key:yes}, 40 gp) ou de Thais o {npc:Captain Bluebear} (170 gp). Chegas ao porto do **norte** de Venore, junto ao {npc:Captain Fearless} ({coord:32955,32022,6}).",
+    "Sai de Venore para **oeste** e segue a pé até ao {npc:Para Norbert}, a **norte** do {wiki:Jakundaf Desert} ({coord:32627,32076,7}). De Thais também lá chegas a pé, para **nordeste**.",
+    "Mesmo ao lado dele está o portal invisível para as Brain Grounds: parece **areia** ({coord:32630,32074,7}). Entra nele.",
+    "Lá dentro há três pisos (a wiki situa a zona em {coord:31965,32328,8}); para a luta contra o Brain Head desce **2 pisos**. Usa os mapas de cada piso."
+  ],
+  "leave": [
+    "A wiki não descreve outra saída: sobe os pisos pelo mesmo caminho até ao ponto onde chegaste e sai por onde entraste, de volta ao {npc:Para Norbert} ({coord:32627,32076,7}).",
+    "Daí volta a pé para **leste** até Venore (ou para **sudoeste** até Thais).",
+    "Em Venore, no porto do **norte**, o {npc:Captain Fearless} leva-te a outras cidades: {key:hi}, o nome da cidade (por exemplo {key:edron}, 40 gp; {key:port hope}, 160 gp; {key:thais}, 170 gp) e {key:yes}."
+  ],
+  "coords": [
+    {"x": 32627, "y": 32076, "z": 7, "label": "Para Norbert"},
+    {"x": 32630, "y": 32074, "z": 7, "label": "Portal invisível para as Brain Grounds"},
+    {"x": 31965, "y": 32328, "z": 8, "label": "Brain Grounds (localização indicada pela wiki)"},
+    {"x": 31904, "y": 32347, "z": 9, "label": "Portal para o Netherworld (2.º piso)"},
+    {"x": 32955, "y": 32022, "z": 6, "label": "Captain Fearless (porto de Venore)"}
+  ],
+  "images": [
+    {"file": "Brain Grounds -1.png", "caption": "Brain Grounds, 1.º piso"},
+    {"file": "Brain Grounds -2.png", "caption": "Brain Grounds, 2.º piso"},
+    {"file": "Brain Grounds -3.png", "caption": "Brain Grounds, 3.º piso"}
+  ],
+  "warnings": [
+    "Cuidado com o chão amarelo (o *ulcer*): de vez em quando tira-te uma percentagem da vida máxima em dano de terra, cada vez maior à medida que desces (**15%**, **20%** e **25%**).",
+    "Criaturas: {creature:Grim Reaper|Grim Reapers}, {creature:Flimsy Lost Soul|Flimsy}, {creature:Mean Lost Soul|Mean} e (no 3.º piso) {creature:Freakish Lost Soul|Freakish Lost Souls}.",
+    "O portal do 2.º piso ({coord:31904,32347,9}) leva ao {wiki:Netherworld}; a wiki não descreve o caminho de volta por aí.",
+    "Na luta contra o {creature:Brain Head} tens **5 minutos**: se o tempo acabar és teleportado para fora da sala e só voltas a tentar **20 horas** depois."
+  ]
+}

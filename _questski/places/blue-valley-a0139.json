@@ -1,0 +1,36 @@
+{
+  "title": "Blue Valley",
+  "type": "ilha",
+  "near": "Krailos",
+  "summary": "Ilha isolada a **norte de {wiki:Krailos}**, casa dos monges Merudri (os Enpa) e ponto de partida da {wiki:The Way of the Monk Quest}; a wiki não documenta barco: chega-se pela esfera de cristal da {wiki:Adventurers' Guild|Adventurers' Guild}.",
+  "entrance": {"x": 33603, "y": 31469, "z": 7, "label": "Chegada a Blue Valley (ao lado da Enpa-Deia Pema)"},
+  "requirements": [
+    "Precisas de uma {item:Adventurer's Stone} para ires à {wiki:Adventurers' Guild|Adventurers' Guild}; se não tiveres, pede-a a um NPC do templo de qualquer cidade ({key:hi}, {key:adventurer's stone}, {key:yes}).",
+    "A wiki não indica nível nem quest para usar a esfera de Blue Valley. A {wiki:The Way of the Monk Quest}, que começa aqui, é **Premium**."
+  ],
+  "items": ["Adventurer's Stone"],
+  "arrive": [
+    "Vai ao **templo** de qualquer cidade e usa uma {item:Adventurer's Stone}: és teleportado para a {wiki:Adventurers' Guild|Adventurers' Guild}.",
+    "Na guilda, sobe ao **piso de cima**. Ao lado do Reward Shrine está a {wiki:Enchanted Guarded Crystal Sphere}: usa-a.",
+    "És teleportado para Blue Valley ({coord:33603,31469,7}), mesmo ao lado da {npc:Enpa-Deia Pema}, no templo da ilha."
+  ],
+  "leave": [
+    "Usa uma das {wiki:Guarded Crystal Sphere|Guarded Crystal Spheres} perto do templo: levam-te de volta à {wiki:Adventurers' Guild|Adventurers' Guild}.",
+    "Na guilda, pisa o teleporte de saída: devolve-te ao templo da cidade de onde vieste. Se preferires aparecer noutra cidade, o {npc:Charos} ({coord:32210,32296,6}) muda o destino do teleporte: {key:hi}, {key:service}, {key:yes} e o nome da cidade (Thais, Carlin, Ab'Dendriel, Kazordoon, Venore, Ankrahmun, Edron, Darashia, Liberty Bay ou Port Hope). O número de mudanças é limitado."
+  ],
+  "coords": [
+    {"x": 33603, "y": 31468, "z": 7, "label": "Enpa-Deia Pema (templo; peregrinação da The Way of the Monk Quest)"},
+    {"x": 33573, "y": 31453, "z": 7, "label": "Bodh The Kan (a oeste do templo)"},
+    {"x": 33601, "y": 31459, "z": 6, "label": "Saih The Guardian (1 andar acima, à porta do templo do Enpa Rudra)"},
+    {"x": 33606, "y": 31459, "z": 6, "label": "Chesa The Guardian (1 andar acima)"},
+    {"x": 33604, "y": 31447, "z": 6, "label": "Enpa Rudra (1 andar acima)"},
+    {"x": 33604, "y": 31454, "z": 4, "label": "Último piso do edifício principal, entre as duas estátuas"},
+    {"x": 32210, "y": 32296, "z": 6, "label": "Charos, na Adventurers' Guild (muda o destino do teleporte de saída)"}
+  ],
+  "images": [
+    {"file": "Blue Valley Map.png", "caption": "Mapa de Blue Valley"}
+  ],
+  "warnings": [
+    "As {wiki:Guarded Crystal Sphere|Guarded Crystal Spheres} são o único caminho de saída que a wiki descreve: levam sempre à Adventurers' Guild, não a uma cidade."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Haunted Temple",
+  "type": "dungeon",
+  "near": "Port Hope",
+  "summary": "Templo assombrado **por baixo da selva de Tiquanda, a norte de Port Hope**, com {creature:Gazer Spectre|Gazer Spectres} e {creature:Thanatursus}; é uma das três zonas do {wiki:Haunted Nexus}, onde restauras a passagem de Tiquanda na {wiki:The Dream Courts Quest}.",
+  "entrance": {"x": 32676, "y": 32654, "z": 7, "label": "Entrada (selva a norte de Port Hope)"},
+  "requirements": [
+    "Zona de caça recomendada pela wiki para nível **200+** (Knights e Mages) ou **250+** (Paladins)."
+  ],
+  "arrive": [
+    "Apanha um barco para **Port Hope**: diz ao capitão {key:hi}, {key:port hope}, {key:yes} (por exemplo o {npc:Captain Bluebear} em Thais, {coord:32310,32210,6}, 160 gp). Chegas ao cais do {npc:Charles}, no extremo **oeste** da cidade ({coord:32529,32785,6}).",
+    "Sai de Port Hope para **norte**, pela selva, até à entrada marcada ({coord:32676,32654,7}) e desce: chegas ao templo, no 1.º piso subterrâneo ({coord:32677,32651,8}).",
+    "Para a missão dos ídolos: na parte **noroeste** da gruta há escadas para o piso de baixo; a sala dos 4 encaixes fica a **oeste** ({coord:32596,32629,9}) e entra-se pela porta de **sudoeste**.",
+    "Depois de restaurares as três passagens do Haunted Nexus ({wiki:Haunted Cellar}, este templo e {wiki:Haunted Tomb}), a wiki diz que podes viajar entre as três zonas pelos portais de energia, gastando um ectoplasma da cor que corresponde à zona de onde partes ({item:Green Ectoplasm}, {item:Red Ectoplasm} ou {item:Blue Ectoplasm}). Os Gazer Spectres deste templo deixam cair o Red Ectoplasm. A wiki não indica onde ficam os portais."
+  ],
+  "leave": [
+    "Volta às escadas por onde desceste, sobe até à superfície ({coord:32676,32654,7}) e regressa a pé para **sul**, pela selva, até Port Hope.",
+    "Se acabaste de pôr os ídolos na sala dos encaixes, já não podes sair pela porta de sudoeste por onde entraste: dá a volta pelo **norte** (cuidado com as trepadeiras, ver avisos) e volta depois pelo mesmo caminho até às escadas da parte noroeste.",
+    "No porto, o {npc:Charles} ({coord:32529,32785,6}) leva-te a outras cidades: {key:hi}, o nome da cidade e {key:yes}. Por exemplo {key:thais} (160 gp), {key:venore} (160 gp), {key:edron} (150 gp), {key:darashia} (180 gp) ou {key:liberty bay} (50 gp)."
+  ],
+  "coords": [
+    {"x": 32677, "y": 32651, "z": 8, "label": "Haunted Temple (1.º piso subterrâneo)"},
+    {"x": 32596, "y": 32629, "z": 9, "label": "Sala dos encaixes dos ídolos (entra pela porta sudoeste)"},
+    {"x": 32529, "y": 32785, "z": 6, "label": "Charles (porto de Port Hope)"},
+    {"x": 32310, "y": 32210, "z": 6, "label": "Captain Bluebear (porto de Thais)"}
+  ],
+  "warnings": [
+    "No caminho à volta pelo norte, as trepadeiras (Vines) que crescem na passagem tiram **exatamente metade da tua vida total** se as pisares enquanto estão a crescer. Anda devagar: dois passos errados seguidos matam-te. Os mages podem usar {spell:Magic Shield} por segurança.",
+    "Os {item:Golden Idol of Tukh|Golden Idols of Tukh} desaparecem **10 minutos** depois de caírem, tal como os ectoplasmas.",
+    "Os {creature:Thanatursus} e os {creature:Gazer Spectre|Gazer Spectres} batem até 1100–1200 por turno. Na selva de {wiki:Tiquanda}, entre Port Hope e a entrada, há {creature:Terror Bird|Terror Birds}, {creature:Tarantula|Tarantulas} e {creature:Carniphila|Carniphilas}."
+  ]
+}

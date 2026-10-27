@@ -1,0 +1,42 @@
+{
+  "title": "Buried Cathedral",
+  "type": "dungeon",
+  "near": "Venore",
+  "summary": "Catedral enterrada de três pisos, **debaixo do mar a sul de Roshamuul**; só se entra pelo Magic Forcefield verde da {wiki:Haunted Cellar}, por baixo de uma casa abandonada a leste do {wiki:Outlaw Camp} (entre Thais e Venore). É aqui que lutas contra o {creature:Faceless Bane} na {wiki:The Dream Courts Quest}.",
+  "entrance": {"x": 32720, "y": 32270, "z": 8, "label": "Magic Forcefield verde (sala selada da Haunted Cellar)"},
+  "requirements": [
+    "As **três passagens** do {wiki:Haunted Nexus} restauradas na missão *Haunted House* da {wiki:The Dream Courts Quest} (conta Premium, nível 250): a sala selada da {wiki:Haunted Cellar}, os 4 ídolos do {wiki:Haunted Temple} e o Onyx do {wiki:Haunted Tomb}.",
+    "Para chegares ao Magic Forcefield tens de entrar na sala selada da Haunted Cellar: {item:Bucket Full of Ectoplasm} usado em ti próprio e caminhar contra a porta coberta de energia.",
+    "{spell:Levitate}, para desceres à ala principal da catedral.",
+    "Zona recomendada pela wiki para nível **250+**; o {creature:Faceless Bane} aceita até **5** jogadores."
+  ],
+  "items": ["Strange Empty Bucket", "Bucket Full of Ectoplasm"],
+  "arrive": [
+    "Vai à casa abandonada a **leste** do Outlaw Camp, nas {wiki:Plains of Havoc}: a pé de **Venore** para **sudoeste**, ou de **Thais** para **leste** ({coord:32688,32236,7}). Desce à cave ({coord:32686,32236,7}): estás na {wiki:Haunted Cellar}.",
+    "Se ainda não tens o {item:Strange Empty Bucket}, usa o esqueleto da sala de **sudeste** da cave ({coord:32736,32281,8}) para o receberes. Enche-o nos {item:Mutated Egg|Mutated Eggs} da cave até ficar {item:Bucket Full of Ectoplasm}. Volta à sala do esqueleto, usa o balde **em ti próprio** (ficas {creature:Slime}) e caminha com as setas contra a porta coberta de energia, a **oeste** ({coord:32729,32281,8}): és teleportado para a sala selada.",
+    "Na sala selada entra no **Magic Forcefield verde** ({coord:32720,32270,8}). Chegas ao 1.º piso da catedral, ao ponto marcado *Entrance* no mapa.",
+    "Para o boss: depois de encontrares as 4 palavras do feitiço, dá a volta pelo lado **oeste** da catedral até ao sítio onde desces com {spell:Levitate} à ala principal. Clica no livro pequeno ao lado da caveira, no centro da sala, e usa os livros grandes por esta ordem: **noroeste**, **sudeste**, **sudoeste**, **nordeste**. És transportado para a sala do {creature:Faceless Bane} (alavanca, até 5 jogadores)."
+  ],
+  "leave": [
+    "A wiki não descreve uma saída própria da catedral. Volta pelo mesmo caminho, subindo os pisos, até à entrada do 1.º piso onde chegaste pelo Magic Forcefield verde e regressa por aí à sala selada da {wiki:Haunted Cellar}.",
+    "Sala do {creature:Faceless Bane}: a wiki não diz como se sai dela nem para onde és mandado; diz só que tens **10 minutos** para o matar antes de seres expulso da sala. Depois do boss, a Ward Stone fica no 3.º piso, logo a **norte** da poça de ácido ({coord:33576,32536,15}); daí sai pelo caminho acima.",
+    "Na Haunted Cellar, a wiki também não descreve como se sai da sala selada: tenta a porta coberta de energia e refaz o caminho até às escadas da casa abandonada ({coord:32686,32236,7}); com as três passagens restauradas, os portais de energia da cave levam-te ao {wiki:Haunted Temple} (Port Hope) ou ao {wiki:Haunted Tomb} (Darashia), gastando um {item:Green Ectoplasm} (cai dos {creature:Ripper Spectre|Ripper Spectres}; a wiki não indica onde ficam os portais).",
+    "Da casa abandonada, volta a pé para **nordeste** até Venore ({npc:Captain Fearless}, {coord:32955,32022,6}) ou para **oeste** até Thais ({npc:Captain Bluebear}, {coord:32310,32210,6}).",
+    "Se ficares sem caminho, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block)."
+  ],
+  "coords": [
+    {"x": 32688, "y": 32236, "z": 7, "label": "Casa abandonada (leste do Outlaw Camp)"},
+    {"x": 32736, "y": 32281, "z": 8, "label": "Sala do esqueleto (Haunted Cellar)"},
+    {"x": 32729, "y": 32281, "z": 8, "label": "Porta coberta de energia (entrada da sala selada)"},
+    {"x": 33618, "y": 32546, "z": 13, "label": "Buried Cathedral, 1.º piso (localização da wiki)"},
+    {"x": 33576, "y": 32536, "z": 15, "label": "Ward Stone (3.º piso, a norte da poça de ácido)"}
+  ],
+  "images": [
+    {"file": "The Dream Courts - Haunted House Catedral.png", "caption": "Mapa da Buried Cathedral: *Entrance* (1.º piso) é onde chegas pelo Magic Forcefield; os livros do boss e a Ward Stone ficam no 3.º piso"}
+  ],
+  "warnings": [
+    "Vivem aqui os três tipos de spectre ({creature:Ripper Spectre|Ripper}, {creature:Gazer Spectre|Gazer} e {creature:Burster Spectre|Burster}, este último com mais de 1800 de dano máximo) e {creature:Arachnophobica|Arachnophobicas}.",
+    "O ectoplasma escorre do balde ao fim de 3, 2 ou 1 minuto, conforme o quão cheio está: enche-o depressa e vai logo para a porta.",
+    "Contra o Faceless Bane, se lhe bateres depois de passar o minuto de vulnerabilidade, ele recupera a vida toda: pisa outra vez todos os Iron Floors antes de continuares."
+  ]
+}
