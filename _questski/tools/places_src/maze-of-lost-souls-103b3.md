@@ -1,6 +1,6 @@
 # PLACE: Maze of Lost Souls
 slug: maze-of-lost-souls-103b3
-mentioned in 5 guides: crystal-wand-quest, demona-ring-quest, griffin-shield-quest, purple-tome-quest, the-ice-islands-quest
+mentioned in 6 guides: crystal-wand-quest, demona-ring-quest, griffin-shield-quest, purple-tome-quest, the-ice-islands-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Maze of Lost Souls 
@@ -34,6 +34,9 @@ Desfaz o caminho até à sala do pentagrama e desce para o MoLS. Para saíres do
 coords: []
 [griffin-shield-quest 3-0] Sair do Maze of Lost Souls
 Tens de sair do Maze of Lost Souls. Segue o caminho deste mapa: há outras saídas, mas esta é a mais segura e mais curta.
+coords: []
+[the-way-of-the-monk-quest 5-5] Sair do Maze of Lost Souls
+Como há túneis de sentido único, nem sempre consegues voltar pelo caminho por onde vieste. Refaz o percurso até ao buraco de entrada ({coord:32483,31633,9}) usando as tuas marcas e a {item:Rope}, e sobe até aos Fields of Glory; daí volta para **sul**, até Carlin. Se te perderes, usa um {item:Temple Teleport Scroll}, como o próprio wiki aconselha para este labirinto.
 coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)

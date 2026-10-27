@@ -28,6 +28,12 @@ coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Escava aqui a entrada da Sha
 [a-fathers-burden-quest 5-2] Sair da Shadow Tomb
 Volta pelo mesmo caminho: sobe os 5 pisos da {wiki:Shadow Tomb} até à entrada e usa a {item:Rope} no buraco que escavaste para saíres para o deserto ({coord:33255,32833,7}). Depois regressa a **Ankrahmun** pela rampa **nordeste** da cidade.
 coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada/saída da Shadow Tomb'}]
+[feaster-of-souls-quest 6-7] Chegar à Shadow Tomb (Ankrahmun)
+Em **Ankrahmun** desembarcas junto ao {npc:Captain Sinbeard}. Sai da cidade pela rampa **nordeste** e segue as muralhas para **sul**: a entrada da {wiki:Shadow Tomb} fica no deserto a sudeste da cidade. Usa a {item:Shovel} no ponto da coordenada para abrires o buraco e desce.
+coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de Ankrahmun)'}, {'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada da Shadow Tomb (cava aqui)'}]
+[feaster-of-souls-quest 6-9] Sair da Shadow Tomb
+Volta pelo mesmo caminho até ao início do túmulo e sobe com a {item:Rope} pelo buraco que abriste. Regressa a Ankrahmun pela rampa **nordeste**: o {npc:Captain Sinbeard} leva-te a Darashia, Edron, Liberty Bay, Port Hope, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes}).
+coords: [{'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada/saída da Shadow Tomb'}]
 [opticording-sphere-quest 1-10] Chegar à Horestis Tomb
 A {wiki:Horestis Tomb} fica no deserto a **noroeste** de **Ankrahmun**. A entrada é no andar de cima do spawn de dragões mais perto da cidade. Entra e desce até ao primeiro piso subterrâneo da tumba.
 coords: [{'x': 33062, 'y': 32731, 'z': 6, 'label': 'Entrada da Horestis Tomb'}]
@@ -37,6 +43,12 @@ coords: []
 [the-ape-city-quest 4-3] Sair do Shadow Tomb
 Volta pelo mesmo caminho: sobe os pisos da {wiki:Shadow Tomb} até à entrada e usa a {item:Rope} no buraco que escavaste para saíres para o deserto. Depois regressa a **Ankrahmun** pela rampa **nordeste** da cidade e apanha o barco para Port Hope.
 coords: [{'x': 33255, 'y': 32834, 'z': 7, 'label': 'Entrada do Shadow Tomb (sobe com a Rope)'}]
+[the-dream-courts-quest 7-0] Chegar ao Haunted Tomb
+Viaja até **Darashia** ({key:darashia}). O {wiki:Haunted Tomb} fica a **oeste** da cidade, no deserto: vai ao ponto marcado e desce.
+coords: [{'x': 33093, 'y': 32389, 'z': 7, 'label': 'Entrada (oeste de Darashia)'}, {'x': 33096, 'y': 32396, 'z': 8, 'label': 'Haunted Tomb'}]
+[the-dream-courts-quest 7-4] Sair do Haunted Tomb
+Volta pelo mesmo caminho até à entrada e sobe à superfície. Regressa a pé para **leste** até Darashia.
+coords: [{'x': 33093, 'y': 32389, 'z': 7, 'label': 'Entrada/saída (oeste de Darashia)'}]
 [the-mummys-curse-world-change 2-2] Sair do Horestis Tomb
 Volta pelo mesmo caminho: sobe pelas escadas de cada andar do túmulo até à entrada, desce a rampa e regressa a **Ankrahmun**, onde o {npc:Captain Sinbeard} tem barcos para outras cidades.
 coords: [{'x': 33061, 'y': 32740, 'z': 7, 'label': 'Rampa (saída para Ankrahmun)'}]
@@ -45,12 +57,12 @@ coords: [{'x': 33061, 'y': 32740, 'z': 7, 'label': 'Rampa (saída para Ankrahmun
 [a-fathers-burden-quest 5-1] Abrir o sarcófago
 Desce até ao **5.º piso** e vai à parte **norte** desse piso, onde há uma {item:Door (Sealed)|porta de quest}. Entra e usa o sarcófago do lado **norte** da sala para obteres o {item:Magic Crystal}.
 coords: [{'x': 33235, 'y': 32808, 'z': 12, 'label': 'Porta de quest no 5.º piso'}]
-[killing-in-the-name-of-quest 2-2] Bosses desta faixa
-Teleportes dos bosses: {creature:Shardhead} (Ice Golems), {creature:Esmeralda} (Mutated Rats, nos esgotos de Yalahar), {creature:Fleshcrawler} (Ancient Scarabs), {creature:Ribstride} (Bonebeasts) e {creature:The Bloodweb} (Crystal Spiders).
-coords: [{'x': 32141, 'y': 31144, 'z': 3, 'label': 'Teleporte de Shardhead'}, {'x': 32758, 'y': 31245, 'z': 9, 'label': 'Teleporte de Esmeralda'}, {'x': 33072, 'y': 32760, 'z': 7, 'label': 'Entrada da Larva Cave (Fleshcrawler)'}, {'x': 33044, 'y': 32794, 'z': 11, 'label': 'Teleporte de Fleshcrawler'}, {'x': 33027, 'y': 32870, 'z': 7, 'label': 'Entrada do Peninsula Tomb (Ribstride)'}, {'x': 33109, 'y': 32803, 'z': 13, 'label': 'Teleporte de Ribstride'}, {'x': 32122, 'y': 31185, 'z': 4, 'label': 'Teleporte de The Bloodweb'}]
-[kilmaresh-quest 0-4] Voltar ao Eshaya
-Volta ao {npc:Eshaya} e diz {key:mission}. Como não há provas, ele quer que vejas as memórias do Embaixador com um {item:Ring of Secret Thoughts}, que está na posse do monstro **Urmahlullu**.
+[feaster-of-souls-quest 6-0] Os três sítios
+Resumo da segunda ronda de sinos:
 coords: []
-[kingsday-mini-world-change 2-1] Possíveis raids
-Cada raid é anunciada com uma mensagem do servidor *"The King's mages have summoned some ... in the knight's arena for your enjoyment."*. Possíveis raids:
+[feaster-of-souls-quest 6-8] Sino 6: Shadow Tomb
+Desce o túmulo até ao **6.º andar** (6 pisos abaixo do deserto). Lá, vai para **leste** até ao ponto da coordenada e toca o {item:Death Knell}.
+coords: [{'x': 33297, 'y': 32861, 'z': 13, 'label': 'Shadow Tomb, 6.º andar (sino 6)'}]
+[grave-danger-quest 13-11] Receber a recompensa
+Volta a **Thais**, à sede da Inquisição, e reporta ao {npc:Jack Springer} para receberes as recompensas: o outfit base **Hand of the Inquisition** e o achievement **Inquisition's Hand**.
 coords: []

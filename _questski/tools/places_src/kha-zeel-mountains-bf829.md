@@ -1,6 +1,6 @@
 # PLACE: Kha'zeel Mountains
 slug: kha-zeel-mountains-bf829
-mentioned in 2 guides: shards-of-a-broken-moon-quest, within-the-tides-quest
+mentioned in 5 guides: fire-fighter-outfits-quest, primal-ordeal-quest, shards-of-a-broken-moon-quest, the-lost-brother-quest, within-the-tides-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Kha'zeel Mountains 
@@ -71,18 +71,20 @@ mentioned in 2 guides: shards-of-a-broken-moon-quest, within-the-tides-quest
 - The small hill [COORD x=32988 y=32682 z=6] with 4 Hydras.
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[primal-ordeal-quest 5-1] Ir às Kha'zeel Mountains
+Em Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:ankrahmun}, {key:yes} (160 gp). De **Ankrahmun** sai da cidade para **oeste** e sobe a pé às {wiki:Kha'zeel Mountains|Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, pelo mesmo caminho que fizeste na {wiki:Within the Tides Quest|Within the Tides Quest}.
+coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[fire-fighter-outfits-quest 1-7] Snakes on a Plain! — ir às Kha'zeel Mountains
+Em Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:ankrahmun}, {key:yes} (160 gp). De **Ankrahmun** sai da cidade para **oeste** e sobe a pé às {wiki:Kha'zeel Mountains|Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, pelo mesmo caminho que fizeste na {wiki:Within the Tides Quest|Within the Tides Quest}.
+coords: []
+[fire-fighter-outfits-quest 1-8] Snakes on a Plain! — entrar no portal para Marapur
+Sobe ao alto da montanha (piso +5) e entra no **portal**: és teletransportado para {wiki:Marapur|Marapur}. É o acesso a Marapur que ganhaste na {wiki:Within the Tides Quest|Within the Tides Quest}.
+coords: [{'x': 33037, 'y': 32738, 'z': 2, 'label': "Portal para Marapur (Kha'zeel Mountains)"}]
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
 [mystery-of-the-valley-quest 4-0] Pista da Lai (opcional)
 Se perguntares à {npc:Lai} {key:fragment of a statue} depois de teres os três pedaços, ela dá-te os parabéns e diz-te onde estava a estátua original. Avisa que há fendas na pedra: leva uma {item:Shovel} ou {item:Pick}.
-coords: []
-[shards-of-a-broken-moon-quest 0-0] Chegar a Marapur
-Vai às {wiki:Kha'zeel Mountains|Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, e entra no portal no alto da montanha (piso +5). És teletransportado para {wiki:Marapur|Marapur}.
-coords: [{'x': 33037, 'y': 32738, 'z': 2, 'label': "Portal para Marapur (Kha'zeel)"}]
-[shards-of-a-broken-moon-quest 4-0] Os 4 Large Crystal Apparatus
-Volta a Marapur (de Oskayaat, o {npc:Tonar} leva-te a Ankrahmun; daí sobe ao portal das Kha'zeel Mountains) e entra outra vez na {wiki:Asura Citadel} pelas pedras junto à {npc:Sharai}. Desce ao **andar mais baixo** e vai para **oeste**, pela porta, até à sala com o moon shard. Há 4 **Large Crystal Apparatus**: usa o {item:Crystal Flask with Blessed Blue Lava} no azulejo a **sul** de cada um para revelar um glifo de estrela caída. Depois dos 4 glifos, ganhas acesso ao boss.
 coords: []

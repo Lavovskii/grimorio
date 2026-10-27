@@ -1,6 +1,6 @@
 # PLACE: Jakundaf Desert
 slug: jakundaf-desert-13bae
-mentioned in 1 guides: warpath-mini-world-change
+mentioned in 3 guides: feaster-of-souls-quest, poltergeist-outfits-quest, warpath-mini-world-change
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Jakundaf Desert 
@@ -38,17 +38,12 @@ coords: [{'x': 32633, 'y': 32113, 'z': 7, 'label': 'Jakundaf Desert'}, {'x': 326
 [demons-lullaby 0-0] Encontrar a Demon Mother
 Viaja até ao **Jakundaf Desert**, que fica a **oeste** de Venore e a **sul** de Kazordoon: de Venore segue a pé para **oeste**. Está tudo à superfície, por isso para voltares basta regressares a pé a Venore. A {npc:Demon Mother} está à superfície, a **sudoeste** da entrada do Desert Dungeon e a **oeste** do templo do {npc:Adrenius}.
 coords: [{'x': 32634, 'y': 32121, 'z': 7, 'label': 'Demon Mother'}]
+[feaster-of-souls-quest 0-0] Chegar ao Para Norbert
+O {npc:Para Norbert} está a **norte** do {wiki:Jakundaf Desert}, o deserto a **sul** de Kazordoon e a **oeste** de Venore. A cidade mais perto é **Venore**: sai da cidade para **oeste** e segue a pé até ele (de Thais, anda para **leste**). Para voltares, faz o mesmo caminho a pé até à cidade.
+coords: [{'x': 32627, 'y': 32076, 'z': 7, 'label': 'Para Norbert'}, {'x': 32633, 'y': 32113, 'z': 7, 'label': 'Jakundaf Desert'}]
+[feaster-of-souls-quest 13-9] Reportar ao Para Norbert
+Volta ao {npc:Para Norbert}, a norte do Jakundaf Desert. Em Yalahar, o {npc:Karith} leva-te a Venore se tiveres as rotas da In Service of Yalahar; senão, o {npc:Captain Cookie} leva-te a Thais (800 gp) ou a Liberty Bay (400 gp), e de Liberty Bay o {npc:Jack Fate} leva-te a Venore. De Venore anda para **oeste** (de Thais, para **leste**). Reporta-lhe para completares a quest e receberes o achievement **Beyonder**.
+coords: []
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
-[panpipe-quest 2-3] Sair do Desert Dungeon pelo teleporte
-A partir do andar das aranhas segue o caminho curto da {wiki:The Desert Dungeon Quest|Desert Dungeon Quest} (Vocation Quest) até ao {item:Gate of Expertise}:
-- Vai para **norte**, vira para **leste** assim que puderes e segue a gruta para **sul** até à escada; sobe.
-- Vai para **oeste** até outra escada e sobe (**não** desças o buraco a sul com a placa de aviso).
-- Vai para **sul** e sobe a escada seguinte.
-- Vai para **leste** e **norte** (há um buraco: **não** desças), depois **leste** e **norte** outra vez até à última escada; sobe.
-Ao lado do Gate of Expertise está o **teleporte de saída**: entra nele e apareces junto ao {npc:Adrenius}, no templo do Jakundaf Desert. Daí sai para a superfície do deserto e volta a pé para Venore (a leste).
-coords: []
-[the-desert-dungeon-quest 0-0] Abrir a entrada
-O **Jakundaf Desert** fica entre Thais e Venore (a nordeste de Thais e a oeste de Venore). No meio do deserto procura o {item:Loose Stone Pile}. Usa a {item:Shovel} para o abrir e desce pelo buraco.
-coords: [{'x': 32649, 'y': 32093, 'z': 7, 'label': 'Loose Stone Pile (entrada)'}]

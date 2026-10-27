@@ -1,6 +1,6 @@
 # PLACE: Muggy Plains
 slug: muggy-plains-e9ea4
-mentioned in 10 guides: 20-years-a-cook-quest, an-uneasy-alliance-quest, forgotten-knowledge-quest, killing-in-the-name-of-quest, mystery-of-the-valley-quest, the-new-frontier-quest, the-spirit-will-get-you-quest, tomes-of-knowledge-quest, wayfarer-outfits-quest, wrath-of-the-emperor-quest
+mentioned in 11 guides: 20-years-a-cook-quest, an-uneasy-alliance-quest, forgotten-knowledge-quest, killing-in-the-name-of-quest, mystery-of-the-valley-quest, the-new-frontier-quest, the-spirit-will-get-you-quest, the-way-of-the-monk-quest, tomes-of-knowledge-quest, wayfarer-outfits-quest, wrath-of-the-emperor-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Muggy Plains 
@@ -34,6 +34,9 @@ Vai a **Farmine** de {wiki:Steamship}: o {npc:Brodrosch}, no fundo de Kazordoon,
 coords: [{'x': 32661, 'y': 31957, 'z': 15, 'label': 'Brodrosch (Steamship de Kazordoon)'}, {'x': 33025, 'y': 31553, 'z': 14, 'label': 'Thorgrin (Steamship de Farmine)'}, {'x': 33085, 'y': 31532, 'z': 7, 'label': 'Saída da montanha para a Zao Steppe'}]
 [mystery-of-the-valley-quest 2-3] Sair das Muggy Plains
 Desce as escadas e volta pelo mesmo caminho: teleporte lagarto até à estepe de Zao, montanha (sobe com {spell:Levitate} onde desceste) e elevador até Farmine. No porto de Farmine, fala com o {npc:Thorgrin}: {key:hi}, {key:kazordoon} ou {key:cormaya}, {key:yes}.
+coords: []
+[the-way-of-the-monk-quest 8-2] Entrar nas Muggy Plains
+Entra no antigo teleporte dos lagartos: chegas às {wiki:Muggy Plains}. Só funciona para quem já fez as 8 primeiras missões da The New Frontier Quest.
 coords: []
 [tomes-of-knowledge-quest 2-1] Ir às Muggy Plains
 Usa o teleporte para as {wiki:Muggy Plains|Muggy Plains} e sobe. Há apenas um caminho possível até à torre. O teleporte é um antigo teleporte lagarto no **norte** da estepe de Zao, a sul dos {wiki:Dragonblaze Peaks|Dragonblaze Peaks}, e só funciona para quem já fez as primeiras 8 missões da {wiki:The New Frontier Quest|The New Frontier Quest}. Para voltares, faz o mesmo caminho ao contrário até ao teleporte e regressa pela estepe a Farmine.

@@ -1,6 +1,6 @@
 # PLACE: Kha'zeel Pass
 slug: kha-zeel-pass-bc425
-mentioned in 9 guides: asura-palace-quest, cartography-101-quest, druid-outfits-quest, elephant-tusk-quest, the-explorer-society-quest, the-great-dragon-hunt-quest, the-lost-brother-quest, the-travelling-trader-quest, within-the-tides-quest
+mentioned in 10 guides: asura-palace-quest, cartography-101-quest, druid-outfits-quest, elephant-tusk-quest, the-explorer-society-quest, the-great-dragon-hunt-quest, the-lost-brother-quest, the-secret-library-quest, the-travelling-trader-quest, within-the-tides-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 This is the above ground route to cross Kha'zeel mountain range. Note that there is also an underground route via the Darama Terramite Cave .

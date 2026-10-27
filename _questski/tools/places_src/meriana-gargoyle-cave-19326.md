@@ -31,3 +31,6 @@ mentioned in 1 guides: killing-in-the-name-of-quest
 [killing-in-the-name-of-quest 1-1] Onde caçar e dicas
 Melhores locais e conselhos para cada task desta faixa:
 coords: []
+[the-dream-courts-quest 3-8] Meriana: ir e voltar
+Em **Liberty Bay**, na pequena península a **sudeste** do depot, diz ao {npc:Captain Waverider} {key:hi}, {key:peg leg}, {key:yes} (50 gp). Em {wiki:Meriana}, vai à Ward Stone marcada, perto da entrada da Meriana Gargoyle Cave, e usa o Dream Talisman. Para voltares, o {npc:Sebastian}, a **sul** de Sabrehaven, leva-te a Liberty Bay ({key:hi}, {key:liberty bay}, {key:yes}, 50 gp).
+coords: [{'x': 32347, 'y': 32859, 'z': 7, 'label': 'Captain Waverider (Liberty Bay)'}, {'x': 32381, 'y': 32611, 'z': 7, 'label': 'Ward Stone de Meriana'}, {'x': 32389, 'y': 32604, 'z': 7, 'label': 'Entrada da Meriana Gargoyle Cave (referência)'}, {'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (regresso a Liberty Bay)'}]

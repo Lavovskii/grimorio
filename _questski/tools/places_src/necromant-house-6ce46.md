@@ -1,6 +1,6 @@
 # PLACE: Necromant House
 slug: necromant-house-6ce46
-mentioned in 3 guides: 20-years-a-cook-quest, ornamented-shield-quest, the-pits-of-inferno-quest
+mentioned in 5 guides: 20-years-a-cook-quest, ornamented-shield-quest, the-pits-of-inferno-quest, the-roost-of-the-graveborn-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 A large building located east of the Dark Cathedral ( here [COORD x=32781 y=32330 z=7] , entrance is through the underground cave from the south). A man named Arcian built the house to research the art of Necromancy. He made several attempts to reanimate the dead, and develop a portal that would lead to the Pits of Inferno .

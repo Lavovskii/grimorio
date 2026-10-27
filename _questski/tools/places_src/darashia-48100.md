@@ -1,6 +1,6 @@
 # PLACE: Darashia
 slug: darashia-48100
-mentioned in 2 guides: hive-born-world-change, liquid-black-quest
+mentioned in 3 guides: grave-danger-quest, hive-born-world-change, liquid-black-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Darashia 
@@ -59,9 +59,30 @@ mentioned in 2 guides: hive-born-world-change, liquid-black-quest
 [darashia-dragon-quest 0-0] Chegar a Darashia
 Viaja até **Darashia**: de barco (no capitão da tua cidade diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas ao {npc:Chemar}).
 coords: []
+[decaying-defender-outfits-quest 0-0] Chegar a Darashia
+Viaja até **Darashia**: de barco (o {npc:Petros} liga Darashia a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi, Krailos e Gray Island; no capitão dessa cidade diz {key:hi}, {key:darashia} e {key:yes} e chegas ao porto do Petros) ou de tapete voador (chegas ao {npc:Chemar}).
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete voador de Darashia'}]
+[ferumbras-ascension-quest 0-0] Chegar a Darashia
+Viaja até **Darashia**: de barco (ao capitão diz {key:hi}, {key:darashia}, {key:yes}; chegas ao porto do {npc:Petros}) ou de tapete voador (chegas à plataforma do {npc:Chemar}). O Petros liga Darashia a Ankrahmun (100 gp), Gray Island (150), Issavi (130), Krailos (110), Liberty Bay (200), Port Hope (180), Venore (60) e Yalahar (210 gp): é por ele que voltas no fim (ou pelo tapete do Chemar).
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (barco de Darashia)'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar (tapete voador)'}]
+[grave-danger-quest 9-0] Chegar ao cemitério de Darashia
+Viaja até **Darashia** de barco (de Venore, {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes}; chegas junto ao {npc:Petros}) ou de tapete mágico. O cemitério fica a **leste** da cidade: é a entrada das {wiki:Deeper Catacombs}, no sudeste de Darashia, ao lado do tapete e do barco.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33280, 'y': 32445, 'z': 7, 'label': 'Entrada do cemitério'}]
+[grave-danger-quest 9-6] Sair das catacumbas de Darashia
+O spoiler não descreve a saída a partir do piso de baixo, e as escadas secretas do caixão desaparecem depois de desceres. Volta pelo caminho por onde vieste até à entrada do cemitério, no sudeste de Darashia (leva uma {item:Rope} por precaução); se precisares de voltar a abrir as escadas, repete as estátuas e o relógio de sol. O {npc:Petros} leva-te de barco a outras cidades.
+coords: [{'x': 33280, 'y': 32445, 'z': 7, 'label': 'Entrada/saída do cemitério'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}]
+[hand-of-the-inquisition-outfits-quest 1-11] Chegar à campa de Darashia (Sir Baeloc)
+Viaja até **Darashia**: de barco (por exemplo em Venore, com o {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}) chegas ao porto do {npc:Petros}; de tapete voador, ao {npc:Chemar}. Vai ao cemitério a **leste** da cidade ({coord:33280,32445,7}). **Desliga** as {item:Sacred Statue|Sacred Statues} de **oeste**, **sudeste** e **sul**, mas deixa **ligadas** as de **norte** e **nordeste**. Depois usa o {item:Sundial} para revelar as escadas secretas e desce até ao segundo andar subterrâneo. Segue sempre para **sul** e **leste** até à campa e à alavanca ({coord:33288,32472,9}).
+coords: [{'x': 32955, 'y': 32022, 'z': 6, 'label': 'Captain Fearless, porto de Venore'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete de Darashia'}, {'x': 33280, 'y': 32445, 'z': 7, 'label': 'Cemitério de Darashia (estátuas e Sundial)'}, {'x': 33288, 'y': 32472, 'z': 9, 'label': 'Campa do Sir Baeloc e do Sir Nictros'}]
+[hand-of-the-inquisition-outfits-quest 1-13] Sair do cemitério de Darashia
+A wiki não descreve a saída da sala do boss. Depois de saíres dela, refaz o caminho para **norte** e **oeste** até às escadas e sobe até ao cemitério. Daí volta a pé a Darashia e apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}.
+coords: [{'x': 33280, 'y': 32445, 'z': 7, 'label': 'Cemitério de Darashia'}]
 [oriental-outfits-quest 0-0] Chegar a Darashia
 Viaja até **Darashia**: de barco (por exemplo de Venore, {key:hi}, {key:darashia}, {key:yes} ao capitão do porto) chegas junto ao {npc:Petros}; de {wiki:Magic Carpet|tapete voador} (Edron, Kazordoon, Svargrond, Femor Hills, Farmine ou Issavi: {key:hi}, {key:darashia}, {key:yes}) chegas ao tapete de Darashia. O Habdel, a Ishina, o Razan e a Miraia estão todos na cidade.
 coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros (porto de Darashia)'}, {'x': 33269, 'y': 32441, 'z': 6, 'label': 'Tapete voador de Darashia'}]
+[rotten-blood-quest 0-0] Chegar a Darashia
+Viaja até **Darashia**: de barco (o {npc:Petros} liga Darashia a Venore, Ankrahmun, Port Hope, Liberty Bay, Yalahar, Issavi, Krailos e Gray Island; no capitão dessa cidade diz {key:hi}, {key:darashia} e {key:yes} e chegas ao porto do Petros) ou de tapete voador (chegas ao {npc:Chemar}). De Thais, Carlin, Edron ou Ab'Dendriel não há barco direto: passa primeiro por Venore.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete voador de Darashia'}]
 [small-sapphire-quest 1-2] Voltar a Darashia
 Não há atalho de saída: volta pelo mesmo caminho até Drefia e atravessa a montanha de volta para **Darashia** (pelo sítio de corda ou pela passagem entre Darashia e Ankrahmun). Em Darashia apanha o barco do {npc:Petros} ou o tapete do {npc:Chemar}.
 coords: [{'x': 33048, 'y': 32429, 'z': 7, 'label': 'Sítio de corda entre Drefia e Darashia'}]

@@ -1,6 +1,6 @@
 # PLACE: Ancient Temple
 slug: ancient-temple-ec2dc
-mentioned in 19 guides: bank-robbery-mini-world-change, cults-of-tibia-quest, devil-helmet-quest, forgotten-knowledge-quest, ghoul-room-quest, into-the-bone-pit-quest, kingdom-of-kormarak-quest, life-ring-quest, mad-mage-room-quest, mintwallin-cyclops-quest, scale-armor-quest, shadows-of-yalahar-quest, six-rubies-quest, small-ruby-quest, steamship-world-change, the-ice-islands-quest, the-paradox-tower-quest, throwing-star-quest, what-a-foolish-quest
+mentioned in 21 guides: bank-robbery-mini-world-change, cults-of-tibia-quest, devil-helmet-quest, forgotten-knowledge-quest, ghoul-room-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, into-the-bone-pit-quest, kingdom-of-kormarak-quest, life-ring-quest, mad-mage-room-quest, mintwallin-cyclops-quest, scale-armor-quest, shadows-of-yalahar-quest, six-rubies-quest, small-ruby-quest, steamship-world-change, the-ice-islands-quest, the-paradox-tower-quest, throwing-star-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Ancient Temple 
@@ -42,6 +42,18 @@ coords: [{'x': 32356, 'y': 32171, 'z': 7, 'label': 'Ancient Temple'}]
 [ghoul-room-quest 0-0] Entrar no Ancient Temple
 Sai de **Thais** pela porta **norte** e vai ao {wiki:Ancient Temple}, logo a noroeste dessa porta. Desce **2 andares** e segue para **norte**, até ao extremo norte da sala grande.
 coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Ancient Temple (entrada)'}]
+[grave-danger-quest 10-0] Chegar ao Ancient Temple
+Sai de **Thais** pela porta **norte**: o {wiki:Ancient Temple} fica logo a **noroeste** dessa porta. Entra e desce pelos andares do templo até à sala principal com {creature:Rotworm|Rotworms} (**4 pisos** abaixo do chão). Leva uma {item:Rope}.
+coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Entrada do Ancient Temple'}]
+[grave-danger-quest 10-4] Sair do Ancient Temple
+O spoiler não descreve a saída da sala do boss. Volta pelo caminho por onde entraste até à sala dos Rotworms e sobe os 4 andares do templo (usa a {item:Rope} onde desceste por buracos). Sais a noroeste da porta norte de Thais.
+coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Saída do Ancient Temple'}]
+[hand-of-the-inquisition-outfits-quest 1-14] Chegar à campa do Ancient Temple (Duke Krule)
+Em **Thais**, sai pela porta **norte**: o {wiki:Ancient Temple} fica logo a **noroeste** dessa porta ({coord:32356,32170,7}). Desce pelos andares do templo até à sala principal dos {creature:Rotworm|Rotworms}, **4 andares** abaixo do chão (leva uma {item:Rope}). A **sul** dessa sala estão a campa e o vórtice que leva à sala do {creature:Duke Krule} ({coord:32355,32165,11}), para até 5 jogadores.
+coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Entrada do Ancient Temple (norte de Thais)'}, {'x': 32355, 'y': 32165, 'z': 11, 'label': 'Campa e vórtice do Duke Krule'}]
+[hand-of-the-inquisition-outfits-quest 1-16] Sair do Ancient Temple
+A wiki não descreve a saída da sala do boss. Depois de saíres dela, sobe os 4 andares do {wiki:Ancient Temple} pelo mesmo caminho até à superfície (usa a {item:Rope} onde desceste por buracos) e volta a Thais pela porta norte.
+coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Saída do Ancient Temple'}]
 [into-the-bone-pit-quest 1-0] Chegar ao Ancient Temple
 O Cursed Bone Pit fica nos subterrâneos do {wiki:Ancient Temple}. Sai de **Thais** pela porta **norte**: o templo fica logo a **noroeste** dessa porta. Entra e desce pelos degraus do templo.
 coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Ancient Temple (entrada)'}]

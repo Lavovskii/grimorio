@@ -1,6 +1,6 @@
 # PLACE: Dark Cathedral
 slug: dark-cathedral-78949
-mentioned in 7 guides: mage-outfits-quest, secret-service-quest, shadows-of-yalahar-quest, spirithunters-quest, summoner-outfits-quest, the-thieves-guild-quest, what-a-foolish-quest
+mentioned in 11 guides: feaster-of-souls-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, mage-outfits-quest, secret-service-quest, shadows-of-yalahar-quest, spirithunters-quest, summoner-outfits-quest, the-demon-oak-quest, the-thieves-guild-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Dark Cathedral 
@@ -31,6 +31,18 @@ According to Lorbas , there are no riches or treasures left in the ruins, the go
  First Floor Respawns | A 2 Bandits , 2 Smugglers K 3 Wild Warriors | B 2 Bandits , 2 Wild Warriors L 2 Bandits | C 3 Bandits , 2 Smugglers , 3 Wild Warriors M 2 Centipedes | D 3 Slimes N 6 Bandits , 2 Wild Warriors | E 3 Poison Spiders O 2 Bandits , 3 Wild Warriors | F 2 Bats , 1 Wild Warrior P 3 Bandits , 3 Smugglers | G Rotworm cave Q 3 Bandits | H Lots of Poison Spider , 1 Scorpion , Tarantula cave R 3 Bandits | I Undead cave S 1 Assassin , 3 Bandits | J 1 Slime , Slime and Bonelord cave T 2 Assassins , 4 Bandits , 1 Dark Monk
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[feaster-of-souls-quest 1-5] Chegar à Dark Cathedral
+De **Venore**, sai para **sudoeste**: a {wiki:Dark Cathedral} fica a sul do pântano de Venore e do Outlaw Camp, a **oeste** das {wiki:Plains of Havoc}, e só lá chegas atravessando as planícies. Entra nas ruínas e desce as escadas até ao **2.º andar subterrâneo**.
+coords: [{'x': 32664, 'y': 32344, 'z': 7, 'label': 'Dark Cathedral (superfície)'}]
+[feaster-of-souls-quest 1-7] Sair da Dark Cathedral
+Sobe pelas mesmas escadas até à superfície e volta a **Venore** pelo mesmo caminho, para **nordeste** através das planícies.
+coords: []
+[grave-danger-quest 2-0] Chegar à Dark Cathedral
+A {wiki:Dark Cathedral} fica a **oeste** das {wiki:Plains of Havoc}, a **sul** do Outlaw Camp e do pântano de Venore, e só lá chegas atravessando as planícies. Vai a **Venore** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:venore}, {key:yes}; chegas junto ao {npc:Captain Fearless}), sai da cidade para **sudoeste**, atravessa as Plains of Havoc e segue até à entrada.
+coords: [{'x': 32955, 'y': 32022, 'z': 6, 'label': 'Captain Fearless, porto de Venore'}, {'x': 32664, 'y': 32344, 'z': 7, 'label': 'Dark Cathedral (superfície)'}]
+[grave-danger-quest 2-2] Sair da Dark Cathedral
+Sobe pelas mesmas escadas até à superfície e volta pelas planícies para **nordeste** até Venore, onde o {npc:Captain Fearless} te leva a outras cidades.
+coords: []
 [mage-outfits-quest 2-0] Chegar à Dark Cathedral
 Vai a **Venore** e sai da cidade para **sudoeste**: a {wiki:Dark Cathedral} fica a sul do pântano de Venore e do Outlaw Camp, a **oeste** das {wiki:Plains of Havoc}, e só lá chegas atravessando as planícies. Os dois primeiros andares descem-se por escadas; o andar mais fundo, onde está a Angelina, só se alcança pelo teleporte. A partir das escadas do 2.º andar segue para **sul** até uma sala grande: o teleporte está no fim dela e as 6 alavancas estão nas 5 salas à volta.
 coords: [{'x': 32664, 'y': 32344, 'z': 7, 'label': 'Dark Cathedral (superfície)'}, {'x': 32615, 'y': 32473, 'z': 9, 'label': 'Alavancas e teleporte (2.º andar)'}]
@@ -54,15 +66,15 @@ A {wiki:Dark Cathedral} fica a **oeste** das Plains of Havoc, a **sul** do Outla
 coords: [{'x': 32664, 'y': 32344, 'z': 7, 'label': 'Dark Cathedral (superfície)'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-[mage-outfits-quest 2-1] Resgatar a Angelina na Dark Cathedral
-Vai à {wiki:Dark Cathedral|Dark Cathedral}, desce **2 andares** e puxa as **6 alavancas**. Depois entra no teleporte. Para encontrares a {npc:Angelina}, vai o mais possível para **norte** e depois para **leste**.
+[feaster-of-souls-quest 0-1] Aceitar a missão
+Diz {key:hi}. Ele fala-te do portal inativo que está ao lado dele e pergunta se pode contar contigo. Responde {key:yes}. Recebes o {item:Death Knell} e a lista dos três sítios onde o tens de tocar. Ele pede-te também que bebas uma poção feita com **bone meal** e **grave flower extract**.
 coords: []
-[measuring-tibia-quest 3-1] Lista das 20 áreas
-Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
-coords: []
-[secret-service-quest 19-0] Pedir a missão
-Diz {key:mission} à {npc:Emma}. Tens de investigar as ruínas da **Dark Cathedral**, a sudoeste de Venore.
-coords: []
-[secret-service-quest 19-2] Ativar o teleporte da Dark Cathedral
-Entra na {wiki:Dark Cathedral}. Tens de puxar todas as alavancas para ativar o teleporte que leva ao nível mais fundo (o mesmo andar da {npc:Angelina}). É muito mais fácil com alguns amigos. A partir das escadas do segundo andar, segue para **sul** até uma sala grande: o teleporte está no fim dela e as 6 alavancas estão nas 5 salas à volta. Há um limite de tempo depois de puxares as alavancas, por isso entra logo no teleporte.
-coords: [{'x': 32615, 'y': 32473, 'z': 9, 'label': 'Alavancas e teleporte (2.º andar)'}]
+[feaster-of-souls-quest 0-2] Os três sítios do sino
+Usa (toca) o {item:Death Knell} em cada um destes três sítios para impregnares a tua aura com energia fantasmagórica. A wiki não indica uma ordem obrigatória; a secção 2 explica como chegar e sair de cada um.
+coords: [{'x': 32408, 'y': 31781, 'z': 7, 'label': 'Sino 1: Carlin Graveyard'}, {'x': 32178, 'y': 31836, 'z': 8, 'label': 'Sino 2: Ghostlands'}, {'x': 32629, 'y': 32416, 'z': 9, 'label': 'Sino 3: Dark Cathedral'}]
+[feaster-of-souls-quest 1-4] Sair das Ghostlands
+Volta ao sítio onde caíste e sobe pelo buraco com a {item:Rope}. Depois sai das Ghostlands pela gruta da entrada e anda para **leste** até Carlin. No porto, o {npc:Captain Greyhound} leva-te a **Venore** ({key:hi}, {key:venore}, {key:yes}), a cidade mais perto da Dark Cathedral.
+coords: [{'x': 32222, 'y': 31767, 'z': 7, 'label': 'Gruta de entrada/saída das Ghostlands'}, {'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound (porto de Carlin)'}]
+[feaster-of-souls-quest 1-6] Sino 3: o altar com caveiras
+No 2.º andar subterrâneo vai para **leste** e entra na primeira sala a **norte**. Toca o {item:Death Knell} junto ao altar, no ponto da coordenada. Não precisas das alavancas nem do teleporte da catedral: esses só servem para o 3.º andar.
+coords: [{'x': 32629, 'y': 32416, 'z': 9, 'label': 'Altar com caveiras (sino 3)'}]

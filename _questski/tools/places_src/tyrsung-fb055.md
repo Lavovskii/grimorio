@@ -1,6 +1,6 @@
 # PLACE: Tyrsung
 slug: tyrsung-fb055
-mentioned in 3 guides: skeleton-decoration-quest, the-explorer-society-quest, the-ice-islands-quest
+mentioned in 6 guides: dream-warrior-outfits-quest, skeleton-decoration-quest, the-dream-courts-quest, the-explorer-society-quest, the-ice-islands-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Tyrsung 
@@ -31,26 +31,44 @@ mentioned in 3 guides: skeleton-decoration-quest, the-explorer-society-quest, th
  Name Exp HP Max. Damage Loot | Dire Penguin 119 173 115 0-10× Gold Coin (common) 0-4× Fish (uncommon) Green Perch (very rare) Rainbow Trout (very rare) Dragon Hammer (very rare)
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[dream-warrior-outfits-quest 6-0] Chegar a Tyrsung
+Viaja de barco até **Svargrond**. Vai ao barco a **sul** da cidade e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Desembarcas no cais de {wiki:Tyrsung} ({coord:32332,31230,7}).
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
+[dream-warrior-outfits-quest 6-4] Sair da Court of Winter e de Tyrsung
+Volta pelo mesmo caminho até ao sítio onde chegaste à corte. A wiki não descreve a passagem de regresso da Court of Winter ao topo da montanha de Tyrsung: procura-a junto a esse ponto de chegada. Já em Tyrsung, desce a montanha pelos mesmos pontos, vai até ao cais e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond} (Svargrond é um dos destinos dele, 50 gp) para voltares ao cais a sul de Svargrond.
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
 [skeleton-decoration-quest 0-0] Ir para Tyrsung
 Em **Svargrond**, vai ao barco a **sul** da cidade e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} e confirma com {key:yes}. A viagem custa 50 gp. Desembarcas no cais de {wiki:Tyrsung} ({coord:32332,31230,7}).
 coords: [{'x': 32254, 'y': 31195, 'z': 7, 'label': 'Buddel, a sul de Svargrond'}, {'x': 32332, 'y': 31230, 'z': 7, 'label': 'Buddel em Tyrsung (cais)'}]
 [skeleton-decoration-quest 1-2] Sair de Tyrsung
 Volta pelo mesmo caminho: sobe as escadas das duas grutas, sai da gruta pela encosta, contorna a falésia de volta para **leste**, desce a escada e contorna a montanha até ao cais. Fala com o {npc:Buddel} em Tyrsung: {key:hi}, {key:passage}, {key:svargrond}, {key:yes} para voltares ao cais a sul de Svargrond.
 coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Buddel em Tyrsung (regresso)'}, {'x': 32254, 'y': 31195, 'z': 7, 'label': 'Chegada: a sul de Svargrond'}]
+[the-dream-courts-quest 2-0] Chegar a Tyrsung
+Viaja de barco até **Svargrond** (por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:svargrond}, {key:yes}). No cais a **sul** de Svargrond fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Desembarcas no cais de {wiki:Tyrsung}.
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
+[the-dream-courts-quest 2-3] Sair da Court of Winter e de Tyrsung
+A wiki não descreve uma saída própria da corte: volta pelo caminho por onde entraste até ao portal do topo da montanha, desce pelos mesmos pontos até ao cais e diz ao {npc:Buddel} {key:hi}, {key:passage}, {key:svargrond} para voltares a Svargrond.
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
 [the-ice-islands-quest 2-6] Sair de Tyrsung
 Sobe do convés inferior, sai do navio e volta pela costa até ao sítio onde o Buddel te deixou. Para regressar, diz ao {npc:Buddel} {key:hi} e {key:svargrond}; quando ele pedir o {item:Dwarven Ring} diz {key:no} e paga 50 gp (se te deixar na ilha errada, pede outra vez). De Svargrond, pede {key:passage} ao {npc:Iskan} para voltares a Nibelor.
 coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Buddel em Tyrsung'}]
+[the-way-of-the-monk-quest 3-1] Ir para Tyrsung com o Buddel
+Fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:tyrsung} (50 gp). Só te leva se tiveres feito a {wiki:Barbarian Test Quest} e iniciado a missão *Nibelor 2* da {wiki:The Ice Islands Quest}. Desembarcas no cais de Tyrsung.
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
+[the-way-of-the-monk-quest 3-4] Sair de Tyrsung
+Desce a montanha pelos mesmos pontos, vai até ao cais e fala com o {npc:Buddel}: {key:hi}, {key:passage}, {key:svargrond}. Voltas ao cais a sul de Svargrond, de onde apanhas um barco para outras cidades.
+coords: [{'x': 32332, 'y': 31230, 'z': 7, 'label': 'Cais do Buddel em Tyrsung'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[dream-warrior-outfits-quest 6-1] Subir ao topo da montanha de Tyrsung
+Vai até à montanha no centro da ilha ({wiki:Jotunar|Jotunar}, a montanha de rocha e gelo dos {creature:Frost Giant|Frost Giants}) e sobe-a passando pelos pontos marcados abaixo, andar a andar, até ao topo (z=3, 4 andares acima do chão). Aí está o portal da Court of Winter ({coord:32356,31248,3}). A wiki só dá estes pontos de passagem, sem descrever o caminho entre eles.
+coords: [{'x': 32425, 'y': 31277, 'z': 7, 'label': '1.º ponto do caminho (rés-do-chão)'}, {'x': 32372, 'y': 31245, 'z': 6, 'label': '2.º ponto (1 andar acima)'}, {'x': 32375, 'y': 31265, 'z': 5, 'label': '3.º ponto (2 andares acima)'}, {'x': 32367, 'y': 31259, 'z': 4, 'label': '4.º ponto (3 andares acima)'}, {'x': 32356, 'y': 31248, 'z': 3, 'label': 'Portal da Court of Winter (topo)'}]
 [measuring-tibia-quest 3-1] Lista das 20 áreas
 Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
 coords: []
-[the-explorer-society-quest 16-0] Aceitar a missão
-Em **Svargrond**, fala com o {npc:Lurik}: {key:hi}, {key:mission}, {key:yes}. Pede-te para descobrires o que aconteceu a um explorador desaparecido na Frozen Trench.
+[the-dream-courts-quest 0-1] Pedir acesso às cortes
+Diz {key:hi}, {key:entrances} e {key:yes}. A Myzzi dá-te o seu encantamento: a partir de agora passas os portais da Court of Summer (nos prados de Feyrist) e da Court of Winter (no alto das montanhas de Tyrsung). Se quiseres a história toda, pergunta também por {key:good}, {key:help}, {key:threat} e {key:courts}.
 coords: []
-[the-explorer-society-quest 16-1] O barco dos caçadores
-Vai a **Tyrsung** com o {npc:Buddel}. Lá, segue muito para **sul**, passa por um acampamento de contrabandistas e chega a um barco atracado. Sobe ao barco e mata os 3 {creature:Smuggler|Smugglers} e o {creature:Pirate Cutthroat}. O {npc:Buddel} está no barco a **sul** de Svargrond: diz {key:hi}, {key:passage}, {key:tyrsung} (50 gp) e desembarcas no barco dele em Tyrsung.
-coords: [{'x': 32254, 'y': 31195, 'z': 7, 'label': 'Buddel (sul de Svargrond)'}, {'x': 32332, 'y': 31230, 'z': 7, 'label': 'Buddel em Tyrsung (chegada)'}]
-[the-explorer-society-quest 16-5] Sair da Frozen Trench
-Volta pelo mesmo caminho: segue a gruta para **sul** e depois para **leste** até à falésia, sobe-a com {spell:Levitate} e regressa para **norte** até à zona onde saltaste para a água, junto ao barco dos caçadores. Depois atravessa Tyrsung para **norte** até ao barco do {npc:Buddel} e diz {key:hi}, {key:passage}, {key:svargrond} para voltares a Svargrond.
-coords: [{'x': 32385, 'y': 31423, 'z': 11, 'label': 'Falésia (levitate para cima)'}, {'x': 32366, 'y': 31372, 'z': 6, 'label': 'Barco dos caçadores'}, {'x': 32332, 'y': 31230, 'z': 7, 'label': 'Buddel em Tyrsung'}]
+[the-dream-courts-quest 2-1] Subir ao portal da Court of Winter
+Vai à montanha no centro da ilha e sobe-a andar a andar pelos pontos marcados até ao topo, onde está o portal da {wiki:Court of Winter}. Entra no portal.
+coords: [{'x': 32425, 'y': 31277, 'z': 7, 'label': '1.º ponto (rés-do-chão)'}, {'x': 32372, 'y': 31245, 'z': 6, 'label': '2.º ponto (1 andar acima)'}, {'x': 32375, 'y': 31265, 'z': 5, 'label': '3.º ponto (2 andares acima)'}, {'x': 32367, 'y': 31259, 'z': 4, 'label': '4.º ponto (3 andares acima)'}, {'x': 32356, 'y': 31248, 'z': 3, 'label': 'Portal da Court of Winter (topo)'}]

@@ -1,6 +1,6 @@
 # PLACE: Ulderek's Rock
 slug: ulderek-s-rock-97822
-mentioned in 10 guides: druid-outfits-quest, machinery-of-war-quest, orc-fortress-quest, overhunting-world-change, sams-old-backpack-quest, shadows-of-yalahar-quest, the-djinn-war-efreet-faction, the-djinn-war-marid-faction, the-explorer-society-quest, what-a-foolish-quest
+mentioned in 12 guides: druid-outfits-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, machinery-of-war-quest, orc-fortress-quest, overhunting-world-change, sams-old-backpack-quest, shadows-of-yalahar-quest, the-djinn-war-efreet-faction, the-djinn-war-marid-faction, the-explorer-society-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Ulderek's Rock 
@@ -61,6 +61,6 @@ coords: [{'x': 32939, 'y': 31776, 'z': 9, 'label': 'Sala escondida com o colar'}
 [forgotten-knowledge-quest 0-0] Ir às Halls of Hope
 Caminha até às **Halls of Hope**, a norte de **Thais**: sai da cidade pela saída **norte** e continua para norte até ao templo dos Astral Shapers, onde estão o {npc:Albinius} e a {npc:Ivalisse}. Para voltares, faz o mesmo caminho para **sul** até Thais.
 coords: [{'x': 32326, 'y': 32090, 'z': 7, 'label': 'Halls of Hope'}, {'x': 32335, 'y': 32091, 'z': 7, 'label': 'Albinius'}]
-[machinery-of-war-quest 0-0] Pedir a guerra dos orcs
-Vai a **Thais** e procura o {npc:Baxter}, fora do {wiki:Rain Castle}. Diz {key:hello}, {key:mission} e depois {key:orc war}. Ele explica as 3 tarefas: estabelecer postos, incendiar equipamento de guerra e descobrir os planos de guerra.
-coords: []
+[grave-danger-quest 11-0] Chegar à montanha dos Wyverns
+A sepultura fica a caminho da Orc Fortress ({wiki:Ulderek's Rock}). Vai a **Venore** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:venore}, {key:yes}) e segue a pé para **noroeste** (ou de Kazordoon para **nordeste**) até à montanha dos {creature:Wyvern|Wyverns} indicada. Leva uma {item:Rope}.
+coords: [{'x': 32777, 'y': 31828, 'z': 7, 'label': 'Buraco na montanha dos Wyverns'}]

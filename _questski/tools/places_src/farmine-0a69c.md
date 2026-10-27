@@ -44,6 +44,9 @@ coords: [{'x': 33025, 'y': 31537, 'z': 6, 'label': 'Trepadeiras (desce por aqui)
 [the-new-frontier-quest 4-1] Sair de Farmine para as cidades
 Os seis NPCs estão em Thais, Venore, Port Hope, Edron e Kazordoon. Sai de Farmine pelo Steamship do {npc:Thorgrin}: {key:kazordoon} (210 gp) ou {key:cormaya} (110 gp); de Cormaya, apanha o barco para Edron e daí apanhas barcos para as outras cidades ({key:hi}, nome da cidade, {key:yes}). Para voltares a Farmine, usa o Steamship de Kazordoon ({npc:Brodrosch}) ou de Cormaya ({npc:Gurbasch}) e diz {key:farmine}.
 coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Thorgrin (porto de Farmine)'}, {'x': 33313, 'y': 31989, 'z': 15, 'label': 'Gurbasch (Steamship de Cormaya)'}, {'x': 32661, 'y': 31957, 'z': 15, 'label': 'Brodrosch (Steamship de Kazordoon)'}]
+[the-way-of-the-monk-quest 8-0] Chegar a Farmine de tapete
+Com a {wiki:The New Frontier Quest} completa, o mais rápido é o {wiki:Magic Carpet|tapete mágico}: no tapete de Darashia, Edron, Svargrond, Kazordoon, Femor Hills ou Issavi diz {key:hi}, {key:farmine}, {key:yes} (também aceita {key:zao}). Custa 60 gp. Chegas ao tapete do {npc:Melian}, no cimo da montanha de Farmine.
+coords: [{'x': 32984, 'y': 31540, 'z': 1, 'label': 'Tapete do Melian (Farmine)'}]
 [tomes-of-knowledge-quest 0-0] Chegar a Farmine
 Farmine fica no subsolo de Zao. Vai a **Kazordoon**, desce até ao porto subterrâneo do {wiki:Steamship} e fala com o {npc:Brodrosch}: diz {key:hi}, {key:farmine}, {key:yes}. Chegas ao porto de Farmine, junto ao {npc:Thorgrin}. O {npc:Cael} está a **norte** do steamship e da armaria, uns andares acima. Todos os tomos ficam em Zao: de Farmine sai para a estepe de Zao e segue daí para cada local.
 coords: [{'x': 32661, 'y': 31957, 'z': 15, 'label': 'Brodrosch (steamship em Kazordoon)'}, {'x': 33025, 'y': 31553, 'z': 14, 'label': 'Thorgrin (porto de Farmine)'}, {'x': 33028, 'y': 31513, 'z': 10, 'label': 'Cael'}]

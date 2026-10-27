@@ -1,6 +1,6 @@
 # PLACE: Barbarian Settlements
 slug: barbarian-settlements-6c166
-mentioned in 2 guides: fishing-box-quest, the-ice-islands-quest
+mentioned in 3 guides: barbarian-test-quest, fishing-box-quest, the-ice-islands-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Barbarian Settlements 

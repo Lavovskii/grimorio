@@ -1,6 +1,6 @@
 # PLACE: Deeper Catacombs
 slug: deeper-catacombs-8b559
-mentioned in 1 guides: koshei-the-deathless-quest
+mentioned in 2 guides: grave-danger-quest, koshei-the-deathless-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Deeper Catacombs 
@@ -42,4 +42,6 @@ Para sair, volta para trás pelo caminho por onde vieste até à entrada das cat
 coords: [{'x': 33281, 'y': 32445, 'z': 7, 'label': 'Entrada das Deeper Catacombs'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-(none)
+[grave-danger-quest 9-0] Chegar ao cemitério de Darashia
+Viaja até **Darashia** de barco (de Venore, {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes}; chegas junto ao {npc:Petros}) ou de tapete mágico. O cemitério fica a **leste** da cidade: é a entrada das {wiki:Deeper Catacombs}, no sudeste de Darashia, ao lado do tapete e do barco.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33280, 'y': 32445, 'z': 7, 'label': 'Entrada do cemitério'}]

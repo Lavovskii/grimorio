@@ -1,6 +1,6 @@
 # PLACE: Targuna
 slug: targuna-1f5ce
-mentioned in 2 guides: newhaven-quest, targuna-quest
+mentioned in 3 guides: newhaven-quest, targuna-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Targuna 
@@ -36,6 +36,12 @@ It's a reward of the Targuna Quest . | Charred Mask | Gold Tooth This item is us
 [targuna-quest 2-7] Sair de Targuna
 Quando quiseres ir para o continente, fala com o {npc:Captain Indigo} no barco de Targuna: diz {key:hi}, {key:thais} e {key:yes}. Ele só te leva a **Thais** e a viagem custa **5000 gold** (ou um Sail Pass).
 coords: [{'x': 31973, 'y': 31892, 'z': 6, 'label': 'Captain Indigo (barco para Thais)'}]
+[the-way-of-the-monk-quest 1-0] Chegar a Targuna
+Vai ao porto de **Thais** e fala com o {npc:Captain Bluebear}: {key:hi}, {key:targuna}, {key:yes}. Na tabela do wiki esta rota aparece com 0 gp «depois de pagares 5.000 gp ou entregares um Sail Pass», por isso leva os 5.000 gp ou um {item:Sail Pass}. Chegas ao barco da {npc:Captain Indigo}, em {wiki:Targuna}, a ilha onde chegam os jogadores novos depois de Newhaven.
+coords: [{'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear, porto de Thais'}, {'x': 31973, 'y': 31892, 'z': 6, 'label': 'Captain Indigo, barco de Targuna (chegada)'}]
+[the-way-of-the-monk-quest 1-2] Sair de Targuna
+Volta ao barco e fala com a {npc:Captain Indigo}: {key:hi}, {key:thais}, {key:yes}. Ela só navega para Thais. A tabela do wiki mostra a mesma condição (0 gp depois de pagares 5.000 gp ou entregares um {item:Sail Pass}); os Sail Pass caem de {creature:Infernoid Blob|Infernoid Blobs}, {creature:Lizard Henchman|Lizard Henchmen} e {creature:Pirate Navigator|Pirate Navigators}, criaturas da zona de Targuna.
+coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [measuring-tibia-quest 3-1] Lista das 20 áreas

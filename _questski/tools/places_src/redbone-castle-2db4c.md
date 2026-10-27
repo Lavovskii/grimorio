@@ -1,6 +1,6 @@
 # PLACE: Redbone Castle
 slug: redbone-castle-2db4c
-mentioned in 5 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest, the-explorer-society-quest, the-repenters-quest
+mentioned in 6 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest, the-explorer-society-quest, the-repenters-quest, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 Redbone Castle is an island in the middle of a lava lake located at the end of Hellgate . This castle marks the entrance to Draconia , and it's guarded by Demon Skeletons , Skeletons and Ghouls .

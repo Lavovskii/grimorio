@@ -1,6 +1,6 @@
 # PLACE: Kha'zeel
 slug: kha-zeel-7c67e
-mentioned in 3 guides: spirit-grounds-mini-world-change, the-great-dragon-hunt-quest, waterfall-quest
+mentioned in 5 guides: spirit-grounds-mini-world-change, the-great-dragon-hunt-quest, the-roost-of-the-graveborn-quest, the-way-of-the-monk-quest, waterfall-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 Browse Map [COORD x=33031 y=32677 z=7] 
@@ -11,6 +11,12 @@ Browse Map [COORD x=33031 y=32677 z=7]
  They are called Deathwish Mountains by The Orc King .
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[primal-ordeal-quest 5-1] Ir às Kha'zeel Mountains
+Em Edron, fala com o {npc:Captain Seahorse}: {key:hi}, {key:ankrahmun}, {key:yes} (160 gp). De **Ankrahmun** sai da cidade para **oeste** e sobe a pé às {wiki:Kha'zeel Mountains|Kha'zeel Mountains}, entre Tiquanda e Ankrahmun, pelo mesmo caminho que fizeste na {wiki:Within the Tides Quest|Within the Tides Quest}.
+coords: []
+[the-roost-of-the-graveborn-quest 5-9] Sair de Kha'zeel
+O wiki não descreve a saída da sala da relíquia. Volta pelo caminho por onde subiste: desce os 3 andares, sai pela entrada do lair e caminha para **sul** até Ankrahmun. O {npc:Captain Sinbeard} não vai a Ab'Dendriel: apanha um barco para Venore ou Edron e daí outro para Ab'Dendriel.
+coords: [{'x': 33095, 'y': 32690, 'z': 7, 'label': 'Entrada/saída do dragon lair'}]
 [within-the-tides-quest 0-0] Chegar ao Tarun (Kha'zeel Pass)
 O {npc:Tarun} está em Tiquanda, junto ao {wiki:Kha'zeel Pass|Kha'zeel Pass}, perto da ponte de madeira do pass. O caminho mais simples é a partir de **Ankrahmun**: sai da cidade para **oeste** e sobe as montanhas ({creature:Hyaena|Hyaenas}), atravessa a ponte lá em cima (há um {creature:Nomad} e alguns {creature:Bandit|Bandits}) e desce até chegares a uma escada que te leva para o lado da selva. Também podes vir a pé de **Port Hope**, para leste através da selva de Tiquanda.
 coords: [{'x': 32976, 'y': 32715, 'z': 7, 'label': 'Tarun'}]

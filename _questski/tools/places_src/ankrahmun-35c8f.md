@@ -37,6 +37,12 @@ mentioned in 1 guides: the-djinn-war-efreet-faction
 [cartography-101-quest 4-0] Chegar a Ankrahmun
 Apanha o barco para **Ankrahmun** ({key:hi}, {key:ankrahmun}, {key:yes}); chegas junto ao {npc:Captain Sinbeard}. Os três locais ficam no deserto a norte e leste da cidade. Leva {item:Shovel}: algumas entradas têm de ser escavadas.
 coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard, porto de Ankrahmun'}]
+[feaster-of-souls-quest 6-7] Chegar à Shadow Tomb (Ankrahmun)
+Em **Ankrahmun** desembarcas junto ao {npc:Captain Sinbeard}. Sai da cidade pela rampa **nordeste** e segue as muralhas para **sul**: a entrada da {wiki:Shadow Tomb} fica no deserto a sudeste da cidade. Usa a {item:Shovel} no ponto da coordenada para abrires o buraco e desce.
+coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de Ankrahmun)'}, {'x': 33255, 'y': 32833, 'z': 7, 'label': 'Entrada da Shadow Tomb (cava aqui)'}]
+[heart-of-destruction-quest 0-1] Chegar à entrada de Ankrahmun (Kha'labal)
+Vai a **Ankrahmun** de barco (por exemplo de Venore, com o {npc:Captain Fearless}: {key:hi}, {key:ankrahmun}, {key:yes}); chegas ao porto junto ao {npc:Captain Sinbeard}. Sai da cidade para **norte** e atravessa o deserto de {wiki:Kha'labal} até ao {npc:Messenger of Heaven}. O vórtice desta entrada leva ao caminho do **Anomaly**.
+coords: [{'x': 33171, 'y': 32633, 'z': 7, 'label': 'Messenger of Heaven e Glowing Vortex, a norte de Ankrahmun'}]
 [hot-cuisine-quest 1-0] Chegar a Ankrahmun
 Viaja até **Ankrahmun** de barco: no porto da tua cidade fala com o capitão e diz {key:hi}, {key:ankrahmun} e {key:yes} (há barcos para Ankrahmun em Darashia, Edron, Liberty Bay, Port Hope, Venore e Yalahar). Chegas ao porto de Ankrahmun, junto ao {npc:Captain Sinbeard}.
 coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de Ankrahmun)'}]
@@ -49,6 +55,9 @@ coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de A
 [the-mummys-curse-world-change 0-0] Sair de Ankrahmun
 Viaja até **Ankrahmun** de barco (no porto da tua cidade, {key:hi}, {key:ankrahmun}, {key:yes}; chegas junto ao {npc:Captain Sinbeard}). Sai de **Ankrahmun** até à rampa neste ponto.
 coords: [{'x': 33061, 'y': 32740, 'z': 7, 'label': 'Rampa para o túmulo'}, {'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (porto de Ankrahmun)'}]
+[the-roost-of-the-graveborn-quest 5-0] Ir a Ankrahmun
+Apanha um barco para **Ankrahmun** em Darashia, Edron, Liberty Bay, Port Hope ou Venore ({key:hi}, {key:ankrahmun}, {key:yes}); de Ab'Dendriel, o {npc:Captain Seagull} leva-te a Edron ou Venore. Chegas ao barco do {npc:Captain Sinbeard}.
+coords: [{'x': 33094, 'y': 32884, 'z': 6, 'label': 'Captain Sinbeard (Ankrahmun)'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [20-years-a-cook-quest 9-0] Falar com o Secretive Rascoohan

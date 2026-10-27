@@ -1,6 +1,6 @@
 # PLACE: Gray Beach
 slug: gray-beach-29b5f
-mentioned in 5 guides: deeplings-world-change, hive-born-world-change, liquid-black-quest, opticording-sphere-quest, war-against-the-hive-quest
+mentioned in 6 guides: deeplings-world-change, hive-born-world-change, liquid-black-quest, opticording-sphere-quest, the-secret-library-quest, war-against-the-hive-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Gray Beach 
@@ -47,6 +47,9 @@ coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {
 [opticording-sphere-quest 9-3] Sair da forja de Gray Beach
 O wiki não descreve uma saída própria desta forja: volta pelo mesmo caminho até Gray Beach. Para deixares a ilha, faz a passagem subterrânea ao contrário até à Gray Island e fala com o {npc:Scrutinon}: ele leva-te **de graça** a Ab'Dendriel, Darashia, Edron ou Venore ({key:hi}, o nome da cidade e {key:yes}).
 coords: []
+[the-secret-library-quest 3-6] Chegar a Gray Beach
+Apanha o barco para a **Gray Island** (150 gp): só há barco a partir de Ab'Dendriel, Darashia ({npc:Petros}), Edron e Venore ({key:hi}, {key:gray island}, {key:yes}). Na ilha entra no buraco a **sul** do {npc:Scrutinon}, segue para **nordeste** no piso -1 e entra no {item:Water Vortex}. Do outro lado usa a {item:Rope} no ponto do chão e vai para **norte** até {wiki:Gray Beach}.
+coords: [{'x': 33189, 'y': 31982, 'z': 7, 'label': 'Scrutinon (Gray Island)'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]
 [war-against-the-hive-quest 0-0] Chegar a Gray Beach
 Gray Beach fica na ilha de {wiki:Quirefang}, que só se alcança através da {wiki:Gray Island}. Apanha um barco para a Gray Island em **Ab'Dendriel**, **Venore**, **Darashia** ou **Edron** (150 gp): diz ao capitão {key:hi}, {key:gray island}, {key:yes}. Na Gray Island desce pelo **único buraco**, a **sul** do {npc:Scrutinon}. No piso -1 segue para **nordeste** pela passagem subterrânea e entra no {item:Water Vortex}. Do outro lado, usa a {item:Rope} no ponto do chão para subir e vai para **norte** até **Gray Beach**, a pequena vila no sul da ilha (depot e templo no subsolo, a noroeste).
 coords: [{'x': 33189, 'y': 31985, 'z': 7, 'label': 'Gray Island'}, {'x': 33471, 'y': 31304, 'z': 7, 'label': 'Gray Beach'}]

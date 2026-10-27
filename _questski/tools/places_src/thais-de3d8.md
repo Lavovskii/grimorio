@@ -40,6 +40,9 @@ coords: []
 [ghoul-room-quest 2-0] Voltar a Thais
 Para sair, volta pelo mesmo caminho: regressa da sala dos ghouls à sala dos esqueletos (por cima, onde está o poço), segue o túnel para **sul** e **oeste**, sobe a escada, atravessa outra vez os {item:Poison Field|campos de veneno} e sobe a escada dos {creature:Rotworm|Rotworms}. Depois sobe os andares do {wiki:Ancient Temple} até à superfície e regressa a Thais pela porta norte. Leva uma {item:Rope}, que é sempre útil para subir em grutas.
 coords: [{'x': 32356, 'y': 32170, 'z': 7, 'label': 'Ancient Temple (saída)'}]
+[hand-of-the-inquisition-outfits-quest 0-0] Chegar à sede da Inquisição (Thais)
+Viaja até **Thais** (de barco: no capitão da tua cidade diz {key:hi}, {key:thais} e {key:yes}; chegas ao porto do {npc:Captain Bluebear}). A sede da Inquisição fica por baixo da cidade: desce aqui {coord:32317,32269,7} e procura o {npc:Jack Springer} numa sala **dois andares abaixo** do chão. Para saíres, sobe pelas mesmas escadas até à rua.
+coords: [{'x': 32317, 'y': 32269, 'z': 7, 'label': 'Descida para a sede da Inquisição'}, {'x': 32329, 'y': 32259, 'z': 9, 'label': 'Jack Springer (2 andares abaixo)'}, {'x': 32310, 'y': 32210, 'z': 6, 'label': 'Captain Bluebear, porto de Thais'}]
 [insectoid-invasion-world-change 0-0] Ir para norte de Thais
 Vai a {wiki:Greenshore}, a **norte** de Thais. Vais a pé: sai de Thais e segue o caminho de terra para **norte**, pela passagem na montanha, até à aldeia.
 coords: [{'x': 32262, 'y': 32074, 'z': 7, 'label': 'Greenshore'}]
@@ -61,6 +64,9 @@ coords: [{'x': 32503, 'y': 32267, 'z': 7, 'label': 'Entrada traseira (meio da mo
 [small-ruby-quest 2-1] Voltar a Thais
 Sai pelo portão de Mintwallin e faz a rota ao contrário até ao {wiki:Ancient Temple} (sobe com a {item:Rope} onde for preciso). Na volta podes usar um atalho: segue a linha **vermelha** até um buraco com 2 {creature:Bonelord|Bonelords} e depois a linha **azul** até à saída. Do Ancient Temple voltas a Thais pela porta norte.
 coords: []
+[soul-war-quest 14-2] Sair para Thais
+Na mesma sala do baú há um {wiki:Magic Forcefield}: entra nele e és enviado para o **depot de Thais**.
+coords: []
 [thais-lighthouse-quest 2-2] Sair e voltar a Thais
 A wiki não descreve uma saída própria da sala dos cyclopes: volta pelo mesmo caminho até à cave do farol (as escadas que usaste para descer) e sobe até ao rés-do-chão. Sais no farol, dentro de Thais, a sudoeste do depot.
 coords: [{'x': 32226, 'y': 32277, 'z': 7, 'label': 'Farol de Thais'}]
@@ -76,6 +82,12 @@ coords: [{'x': 32955, 'y': 32022, 'z': 6, 'label': 'Captain Fearless (porto de V
 [the-scatterbrained-sorcerer-quest 11-4] Voltar a Thais
 Desce do castelo e volta ao porto de Carlin. Diz ao {npc:Captain Greyhound} {key:hi}, {key:thais}, {key:yes} (110 gp) e regressa a pé à casa do Eclesius.
 coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Porto de Carlin (Captain Greyhound)'}, {'x': 32297, 'y': 32293, 'z': 7, 'label': 'Casa do Eclesius'}]
+[the-way-of-the-monk-quest 2-0] Ir para sul de Thais
+Sai de **Thais** pela saída sul e caminha para **sul** até à zona do {wiki:White Flower Temple} ({coord:32346,32364,7}) e da entrada da {wiki:Thais Bat Dungeon} ({coord:32331,32383,7}). O Shrine of Tranquility fica ali perto, a sudoeste do templo, **1 andar acima do chão** (z=6).
+coords: [{'x': 32346, 'y': 32364, 'z': 7, 'label': 'White Flower Temple'}, {'x': 32331, 'y': 32383, 'z': 7, 'label': 'Entrada da Thais Bat Dungeon'}]
+[the-way-of-the-monk-quest 2-2] Voltar a Thais
+Desce pelo mesmo sítio por onde subiste e volta a pé para **norte** até Thais.
+coords: []
 [tibia-anniversary 1-3] Voltar a Thais
 De Nostalgia, volta para **oeste** pela mesma ponte até Vigintia. Em Vigintia, fala outra vez com a {npc:Kendra} (ela também está na ilha): diz {key:hi} e {key:passage} para regressares a Thais.
 coords: []

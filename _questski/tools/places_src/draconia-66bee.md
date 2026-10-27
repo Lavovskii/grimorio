@@ -1,6 +1,6 @@
 # PLACE: Draconia
 slug: draconia-66bee
-mentioned in 5 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest, the-explorer-society-quest, the-repenters-quest
+mentioned in 6 guides: demons-lullaby, draconia-quest, realm-of-dreams-quest, the-explorer-society-quest, the-repenters-quest, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Draconia 
@@ -42,8 +42,20 @@ coords: [{'x': 32655, 'y': 31670, 'z': 8, 'label': "Shadow Caves (Ab'Dendriel)"}
 [realm-of-dreams-quest 0-2] Sair de Draconia
 Draconia não tem saída normal. Tens duas opções: **(1)** leva um {item:White Mushroom} ao {npc:An Old Dragonlord}, no topo da montanha do norte da ilha, e cumprimenta-o ({key:hi}) para o trocares por um {item:Dragonfetish}; sacrifica-o na sala do teleporte de saída, no covil de dragões por baixo do **sudeste** da ilha, e és teleportado para **Ab'Dendriel**. **(2)** Volta a pé: desce até ao Redbone Castle e sai pela rota normal do Hellgate ({wiki:Route:Hellgate|Route:Hellgate}), com {item:Rope} e {spell:Levitate} (ou 6 {item:Parcel|Parcels}) para subir 2 andares; sais à superfície perto de Ab'Dendriel. (O portal do 7.º andar da pirâmide só se abre com as chaves da {wiki:Draconia Quest}.)
 coords: [{'x': 32796, 'y': 31557, 'z': 2, 'label': 'An Old Dragonlord (troca o Dragonfetish)'}, {'x': 32603, 'y': 31705, 'z': 7, 'label': "Saída do Hellgate (perto de Ab'Dendriel)"}]
+[the-roost-of-the-graveborn-quest 1-7] Sair de Draconia (opção 1: Dragonfetish)
+Volta a subir pelos buracos do cemitério (leva uma {item:Rope}). Se trouxeste um {item:White Mushroom}, sobe ao topo da montanha do **norte** da ilha e diz {key:hi} ao {npc:An Old Dragonlord}: com o cogumelo na mochila, ele troca-o logo por um {item:Dragonfetish}. Sacrifica o fetiche na sala do teleporte de saída, no covil de {creature:Dragon|Dragons} por baixo do **sudeste** da ilha, e és teleportado para **Ab'Dendriel**.
+coords: [{'x': 32796, 'y': 31557, 'z': 2, 'label': 'An Old Dragonlord (topo da montanha)'}]
+[the-roost-of-the-graveborn-quest 1-8] Sair de Draconia (opção 2: a pé pelo Hellgate)
+Desce outra vez até ao Redbone Castle e segue a rota normal de saída do Hellgate ({wiki:Route:Hellgate|Route:Hellgate}), que passa muito perto da entrada de Draconia. Precisas de {item:Rope} e de **6 {item:Parcel|Parcels} ou do feitiço {spell:Levitate}**: no troço sem criaturas a **noroeste** sobe 2 andares com parcels/Levitate e depois a escada; vai para **sudoeste** e sobe pelo buraco; se a ponte do andar de cima estiver fechada, puxa a alavanca; daí só há um caminho para cima (muitas {creature:Wasp|Wasps}). Sais à superfície perto de Ab'Dendriel.
+coords: [{'x': 32603, 'y': 31705, 'z': 7, 'label': "Saída do Hellgate (perto de Ab'Dendriel)"}]
+[the-roost-of-the-graveborn-quest 6-6] Sair de Draconia
+O wiki não descreve a saída da sala do boss nem um regresso de canoa. Usa as saídas de Draconia da secção 2 (Dragonfetish, rota a pé pelo Hellgate com {item:Rope} e 6 {item:Parcel|Parcels} ou {spell:Levitate}, ou o portal da {wiki:Draconia Quest}) ou um {item:Temple Teleport Scroll}, e volta ao S'Zallar em Ab'Dendriel.
+coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[between-the-lines-quest 0-4] Boss: Inkwing
+Mata o {creature:Inkwing}: tem **12.000 de vida**, ataca corpo a corpo (dano máximo estimado de 935) e invoca 1–2 {creature:Vicious Ink Splash|Vicious Ink Splashes}. Recebe mais dano de **gelo** (110%) e **terra** (105%) e menos de **fogo** (80%) e de físico/sagrado (95%).
+coords: []
 [demons-lullaby 1-1] Cumprir o pedido
 Com o bebé atento, usa-o na criatura, item ou local pedido (ou usa o item pedido nele). Procura a frase dele na tabela abaixo para saberes o que fazer. Se resultar, aparece a frase de sucesso e o bebé adormece durante 20 horas.
 coords: []
@@ -52,7 +64,4 @@ Entra no teleporte **norte** para entrares no Hellgate e segue a rota da imagem.
 coords: [{'x': 32666, 'y': 31672, 'z': 15, 'label': 'Redbone Castle (fim do mapa da rota)'}]
 [draconia-quest 1-0] Key 3001
 A partir do buraco por onde entraste, vai para o lado **noroeste** da pirâmide. Abre os corpos de esqueleto até encontrares a {item:Key 3001}. Pode ser preciso afastar alguns corpos até encontrares o certo.
-coords: []
-[draconia-quest 1-1] Key 3002: o tapete vermelho
-Volta ao buraco e vai para **sul**. Abre a porta **leste** com a Key 3001 e anda para **norte** até um tapete vermelho. Caminha pela fila **sul** do tapete. Do outro lado, abre o **segundo** caixão do lado norte da sala para tirares a {item:Key 3002}.
 coords: []

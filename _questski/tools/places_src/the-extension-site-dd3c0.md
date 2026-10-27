@@ -1,6 +1,6 @@
 # PLACE: The Extension Site
 slug: the-extension-site-dd3c0
-mentioned in 1 guides: killing-in-the-name-of-quest
+mentioned in 3 guides: killing-in-the-name-of-quest, the-dream-courts-quest, the-secret-library-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 32pxd This article is a stub. You can help TibiaWiki by expanding it . 
@@ -36,3 +36,12 @@ Upon the extension of the Museum of Tibian Arts , dangerous monsters entered the
 [killing-in-the-name-of-quest 4-1] Onde caçar e dicas
 Melhores locais e conselhos para cada task desta faixa:
 coords: []
+[the-dream-courts-quest 4-1] Arranjar o Broken Compass
+Se não trouxeste um {item:Broken Compass} da {wiki:The Extension Site}, compra-o ao Andrew: {key:hi}, {key:compass}, {key:sell}, {key:yes} (10.000 gp).
+coords: []
+[the-secret-library-quest 0-1] Perguntar ao Dedoras pela busca
+Diz {key:hi} e {key:search}. O Dedoras explica que precisa de mais informação e dá-te seis pistas. Podes perguntar por cada uma ({key:museum}, {key:desert}, {key:fishmen}, {key:order}, {key:asuri}, {key:isle}) para ouvires o que ele sabe. A tabela diz que parte do guia corresponde a cada pista.
+coords: []
+[the-secret-library-quest 7-2] Entrar na Extension Site
+Passa a {item:Door (Sealed)|porta selada}. Atrás dela há um {wiki:Fire Portal} que leva à {wiki:The Extension Site}, onde há {creature:Floating Savant|Floating Savants}, {creature:Retching Horror|Retching Horrors}, {creature:Fury|Furies} e {creature:Hellhound|Hellhounds}.
+coords: [{'x': 33248, 'y': 32126, 'z': 8, 'label': 'Porta selada'}, {'x': 33246, 'y': 32098, 'z': 8, 'label': 'Portal para a Extension Site'}]

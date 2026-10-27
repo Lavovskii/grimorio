@@ -1,6 +1,6 @@
 # PLACE: Okolnir
 slug: okolnir-ec3dc
-mentioned in 2 guides: frost-dragon-quest, the-explorer-society-quest
+mentioned in 4 guides: frost-dragon-quest, the-dream-courts-quest, the-explorer-society-quest, the-roost-of-the-graveborn-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Okolnir 
@@ -35,6 +35,9 @@ coords: [{'x': 32224, 'y': 31382, 'z': 7, 'label': 'Buddel em Okolnir'}]
 [the-first-dragon-quest 4-0] Ir até Okolnir
 Vai a **Svargrond** (de barco, por exemplo com o {npc:Captain Bluebear} em Thais: {key:hi}, {key:svargrond}, {key:yes}). Em Svargrond, vai para **sul** até ao barco do {npc:Buddel} e diz {key:hi}, {key:passage}, {key:okolnir}, {key:yes} (50 gp). Desembarcas em Okolnir. A partir do Buddel, sobe **3 vezes** para chegares ao teleporte e à NPC {npc:Gelidrazah's Thirst}.
 coords: [{'x': 32254, 'y': 31195, 'z': 7, 'label': 'Buddel (sul de Svargrond)'}, {'x': 32224, 'y': 31382, 'z': 7, 'label': 'Barco do Buddel em Okolnir'}, {'x': 32275, 'y': 31366, 'z': 4, 'label': "Gelidrazah's Thirst (Okolnir)"}]
+[the-roost-of-the-graveborn-quest 4-10] Sair de Okolnir
+O wiki não descreve a saída da sala da relíquia: volta pelo caminho por onde entraste até ao cais de Okolnir. Diz ao {npc:Buddel} {key:hi}, {key:passage} e {key:svargrond}; em Svargrond, a {npc:Captain Breezelda} leva-te a Carlin, Thais ou Venore.
+coords: [{'x': 32224, 'y': 31382, 'z': 7, 'label': 'Cais de Okolnir (Buddel)'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [frost-dragon-quest 0-0] Falar com o Buddel

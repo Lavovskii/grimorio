@@ -1,6 +1,6 @@
 # PLACE: Hidden Lizard Temple
 slug: hidden-lizard-temple-c4576
-mentioned in 1 guides: targuna-quest
+mentioned in 2 guides: targuna-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Hidden Lizard Temple 
@@ -25,4 +25,6 @@ Vai para **norte** e entra no {wiki:Hidden Lizard Temple|Hidden Lizard Temple} p
 coords: [{'x': 31936, 'y': 31863, 'z': 7, 'label': 'Entrada do Hidden Lizard Temple'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-(none)
+[the-way-of-the-monk-quest 1-1] Usar o Shrine of Guidance
+Vai para **norte** da ilha, até às escadas que descem para o {wiki:Hidden Lizard Temple} ({coord:31936,31863,7}). O Shrine of Guidance fica mesmo ao lado: usa-o.
+coords: [{'x': 31931, 'y': 31867, 'z': 7, 'label': 'Shrine of Guidance'}, {'x': 31936, 'y': 31863, 'z': 7, 'label': 'Escadas do Hidden Lizard Temple'}]

@@ -1,6 +1,6 @@
 # PLACE: Pits of Inferno Dragon Lair
 slug: pits-of-inferno-dragon-lair-a7571
-mentioned in 1 guides: the-pits-of-inferno-quest
+mentioned in 3 guides: the-pits-of-inferno-quest, the-roost-of-the-graveborn-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Pits of Inferno Dragon Lair 
@@ -39,3 +39,6 @@ coords: []
 [the-pits-of-inferno-quest 6-6] Throne of Deceit (Bazir): avisos antes do labirinto
 No domínio de {wiki:Bazir|Bazir} tens de atravessar um {wiki:Maze of Bazir|labirinto} cheio de armadilhas, com 3 andares. Lê estes avisos antes de começar:
 coords: [{'x': 32806, 'y': 32328, 'z': 15, 'label': 'Início do labirinto de Bazir'}]
+[the-roost-of-the-graveborn-quest 3-8] Arrefecer a lava e descer ao lair
+A seguir há um rio de lava ou chão de lava já arrefecida. Se houver lava, usa o {item:Pick} na pedra ao lado para a arrefecer. Atravessa até aos **3 buracos**: todos levam ao Pits of Inferno Dragon Lair.
+coords: []

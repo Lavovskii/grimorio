@@ -1,6 +1,6 @@
 # PLACE: Hellgate
 slug: hellgate-c9c80
-mentioned in 9 guides: draconia-quest, realm-of-dreams-quest, secret-service-quest, shadows-of-yalahar-quest, the-explorer-society-quest, the-lightbearer, the-paradox-tower-quest, the-repenters-quest, vampire-hunter-quest
+mentioned in 10 guides: draconia-quest, realm-of-dreams-quest, secret-service-quest, shadows-of-yalahar-quest, the-explorer-society-quest, the-lightbearer, the-paradox-tower-quest, the-repenters-quest, the-roost-of-the-graveborn-quest, vampire-hunter-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Hellgate 
@@ -135,6 +135,9 @@ coords: []
 [the-repenters-quest 6-3] Sair de Hellgate 4: até à superfície
 Vai para **sudoeste** e sobe pelo buraco (não vás pelo buraco a **sudeste**: leva-te para baixo, até ao andar da lava). Talvez tenhas de puxar uma alavanca: baixa a ponte que tens de atravessar um andar acima (pode já estar aberta). Daqui há muitas {creature:Wasp|Wasps}, mas só há um caminho para cima: segue-o até saíres à superfície, perto de Ab'Dendriel. Na cidade, o {npc:Captain Seagull} leva-te a Carlin, Edron, Thais, Venore ou Yalahar ({key:hi}, o nome da cidade, {key:yes}).
 coords: [{'x': 32603, 'y': 31705, 'z': 7, 'label': "Saída de Hellgate (superfície, perto de Ab'Dendriel)"}, {'x': 32735, 'y': 31668, 'z': 6, 'label': "Captain Seagull (barco de Ab'Dendriel)"}]
+[the-roost-of-the-graveborn-quest 1-8] Sair de Draconia (opção 2: a pé pelo Hellgate)
+Desce outra vez até ao Redbone Castle e segue a rota normal de saída do Hellgate ({wiki:Route:Hellgate|Route:Hellgate}), que passa muito perto da entrada de Draconia. Precisas de {item:Rope} e de **6 {item:Parcel|Parcels} ou do feitiço {spell:Levitate}**: no troço sem criaturas a **noroeste** sobe 2 andares com parcels/Levitate e depois a escada; vai para **sudoeste** e sobe pelo buraco; se a ponte do andar de cima estiver fechada, puxa a alavanca; daí só há um caminho para cima (muitas {creature:Wasp|Wasps}). Sais à superfície perto de Ab'Dendriel.
+coords: [{'x': 32603, 'y': 31705, 'z': 7, 'label': "Saída do Hellgate (perto de Ab'Dendriel)"}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [demons-lullaby 1-1] Cumprir o pedido

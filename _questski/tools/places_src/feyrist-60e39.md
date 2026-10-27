@@ -1,6 +1,6 @@
 # PLACE: Feyrist
 slug: feyrist-60e39
-mentioned in 2 guides: cults-of-tibia-quest, threatened-dreams-quest
+mentioned in 4 guides: cults-of-tibia-quest, dream-warrior-outfits-quest, the-dream-courts-quest, threatened-dreams-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 This page is about the Feyrist village, for the hunting information, see Feyrist Meadows . 
@@ -33,6 +33,15 @@ coords: []
 [cults-of-tibia-quest 0-2] Sair de Feyrist
 Para voltares ao continente (e ires aos esconderijos dos cultos), **usa** qualquer um dos quatro santuários de Feyrist e és teleportado de volta. Para sair **não precisas de gema**; só para voltar a entrar. Repete o passo «Chegar a Feyrist» sempre que tiveres de entregar um culto ao Gerimor.
 coords: []
+[dream-warrior-outfits-quest 1-0] Ir para Feyrist
+Arranja uma {item:Small Emerald}. Na cidade, vai ao corredor com os quatro arcos (gelo, terra, fogo e energia) que levam aos {wiki:Holy Shrines|Holy Shrines} (vê a tabela). Entra no arco de **terra**: és levado a um santuário de terra. **Usa** lá a {item:Small Emerald} no santuário (a gema gasta-se) e és teleportado para o Earth Shrine de Feyrist.
+coords: [{'x': 33540, 'y': 32208, 'z': 7, 'label': 'Earth Shrine de Feyrist (onde chegas)'}]
+[the-dream-courts-quest 1-0] Ir para Feyrist
+Arranja uma {item:Small Emerald}. Numa das cidades da tabela, vai ao corredor com quatro arcos (gelo, terra, fogo e energia) e entra no arco de **terra**: chegas a um santuário de terra. **Usa** lá a Small Emerald (a gema gasta-se) e és teleportado para o Earth Shrine de {wiki:Feyrist}.
+coords: [{'x': 33540, 'y': 32208, 'z': 7, 'label': 'Earth Shrine de Feyrist (onde chegas)'}]
+[the-dream-courts-quest 1-5] Sair de Feyrist
+Usa qualquer um dos quatro Holy Shrines de Feyrist: voltas ao continente sem gastar outra gema (não importa por qual entraste). O mais perto é o Earth Shrine.
+coords: [{'x': 33540, 'y': 32208, 'z': 7, 'label': 'Earth Shrine'}, {'x': 33587, 'y': 32262, 'z': 7, 'label': 'Fire Shrine'}, {'x': 33430, 'y': 32279, 'z': 7, 'label': 'Ice Shrine'}, {'x': 33528, 'y': 32300, 'z': 4, 'label': 'Energy Shrine'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [cults-of-tibia-quest 0-1] Pedir as missões ao Gerimor

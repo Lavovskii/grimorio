@@ -1,6 +1,6 @@
 # PLACE: Isle of the Kings
 slug: isle-of-the-kings-29106
-mentioned in 7 guides: a-fathers-burden-quest, rest-in-hallowed-ground-quest, secret-service-quest, the-explorer-society-quest, the-queen-of-the-banshees-quest, the-white-raven-monastery-quest, wizard-outfits-quest
+mentioned in 10 guides: a-fathers-burden-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, rest-in-hallowed-ground-quest, secret-service-quest, the-explorer-society-quest, the-queen-of-the-banshees-quest, the-secret-library-quest, the-white-raven-monastery-quest, wizard-outfits-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Isle of the Kings 
@@ -40,6 +40,18 @@ coords: [{'x': 32211, 'y': 31755, 'z': 6, 'label': 'Barco do Dalbrect (Carlin)'}
 [a-fathers-burden-quest 3-4] Sair da Isle of the Kings
 Volta pelo mesmo caminho: regressa para **leste** até ao buraco que abriste com a {item:Pick} e usa a {item:Rope} para subires ao 6.º piso. Depois sobe todos os pisos das catacumbas até ao edifício dos monges e vai ao barco. Fala com o {npc:Dalbrect} ({key:hi}, {key:passage}, {key:yes}) para voltares a Carlin.
 coords: [{'x': 32162, 'y': 31921, 'z': 13, 'label': 'Buraco aberto com a Pick (sobe com Rope)'}]
+[grave-danger-quest 13-1] Chegar à Isle of the Kings
+Vai a **Carlin** e depois à cabana e ao barco do {npc:Dalbrect}, no porto a **norte e oeste** da cidade (a norte das Ghostlands). Diz {key:hi}, {key:passage}, {key:yes}: ele leva-te à {wiki:Isle of the Kings} por 10 gp (só se já fores amigo dele, pela {wiki:The White Raven Monastery Quest}).
+coords: [{'x': 32211, 'y': 31755, 'z': 6, 'label': 'Dalbrect (barco para a Isle of the Kings)'}, {'x': 32173, 'y': 31938, 'z': 7, 'label': 'Isle of the Kings'}]
+[grave-danger-quest 13-10] Sair da Isle of the Kings
+Se não matares o rei em 24 minutos, és expulso da sala. O spoiler não descreve a saída da sala do boss: volta pelo caminho por onde entraste até à porta selada do piso -1 e sobe à superfície. Para voltares ao continente, vai ao barco atracado na ilha e fala com o {npc:Captain Jack}, amigo do Dalbrect: diz {key:hi} e {key:tibia}. Ele leva-te para o lado de Carlin; daí o {npc:Captain Greyhound} leva-te a Thais ({key:hi}, {key:thais}, {key:yes}).
+coords: [{'x': 32172, 'y': 31922, 'z': 8, 'label': 'Porta selada (piso -1)'}, {'x': 32189, 'y': 31957, 'z': 6, 'label': 'Captain Jack (barco de regresso)'}]
+[hand-of-the-inquisition-outfits-quest 0-6] Chegar à Isle of the Kings
+Viaja até **Carlin** (de barco: no capitão da tua cidade diz {key:hi}, {key:carlin} e {key:yes}; chegas ao porto do {npc:Captain Greyhound}). Vai à cabana e ao barco do {npc:Dalbrect}, no porto a **norte e oeste** da cidade (a norte das {wiki:Ghostlands}). Diz {key:hi}, {key:passage} e {key:yes}: ele leva-te à {wiki:Isle of the Kings} por 10 gp, se já fores amigo dele (Family Brooch da {wiki:The White Raven Monastery Quest}).
+coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}, {'x': 32211, 'y': 31755, 'z': 6, 'label': 'Dalbrect (barco para a Isle of the Kings)'}, {'x': 32173, 'y': 31938, 'z': 7, 'label': 'Isle of the Kings'}]
+[hand-of-the-inquisition-outfits-quest 0-14] Sair da Isle of the Kings
+Se não matares o rei em 24 minutos, és expulso da sala. A wiki não descreve a saída da sala do boss: depois de saíres dela, volta pela porta selada do piso -1 ({coord:32172,31922,8}), sobe as catacumbas até ao edifício dos monges e vai ao barco atracado na ilha. Diz ao {npc:Captain Jack} {key:hi} e {key:tibia}: ele leva-te de volta ao continente, para o lado de Carlin (segundo a wiki, só o faz se o {npc:Costello} já te tiver dado autorização; ver o passo «Descer até à porta selada do King Zelos»). Daí apanha o barco do {npc:Captain Greyhound} para **Thais** ({key:hi}, {key:thais}, {key:yes}).
+coords: [{'x': 32172, 'y': 31922, 'z': 8, 'label': 'Porta selada (piso -1)'}, {'x': 32189, 'y': 31957, 'z': 6, 'label': 'Captain Jack (barco de regresso)'}]
 [rest-in-hallowed-ground-quest 1-1] Chegar à Isle of the Kings
 Em Carlin, vai até à cabana e ao barco do {npc:Dalbrect}, no porto a **norte e oeste** da cidade (a norte das {wiki:Ghostlands|Ghostlands}). Diz {key:hi}, {key:passage}, {key:yes}: ele leva-te à {wiki:Isle of the Kings|Isle of the Kings} por 10 gp. Só aceita se já tiveres feito a {wiki:Family Brooch Quest|Family Brooch Quest} (parte da White Raven Monastery Quest).
 coords: [{'x': 32211, 'y': 31755, 'z': 6, 'label': 'Dalbrect (barco para a Isle of the Kings)'}, {'x': 32173, 'y': 31938, 'z': 7, 'label': 'Isle of the Kings'}]
@@ -61,6 +73,9 @@ coords: [{'x': 32189, 'y': 31957, 'z': 6, 'label': 'Captain Jack (barco de regre
 [the-explorer-society-quest 12-1] Chegar à Isle of the Kings
 Em **Carlin**, vai ao barco do {npc:Dalbrect}, no porto a **norte e oeste** da cidade (a norte das {wiki:Ghostlands|Ghostlands}). Diz {key:hi}, {key:passage}, {key:yes}: ele leva-te à {wiki:Isle of the Kings} por 10 gp (só depois da {wiki:The White Raven Monastery Quest}). Na ilha, a entrada das catacumbas fica no edifício grande dos monges.
 coords: [{'x': 32211, 'y': 31755, 'z': 6, 'label': 'Barco do Dalbrect (Carlin)'}, {'x': 32173, 'y': 31938, 'z': 7, 'label': 'Isle of the Kings'}]
+[the-secret-library-quest 9-0] Chegar à Isle of the Kings
+Vai a **Carlin** e depois à cabana e ao barco do {npc:Dalbrect}, no porto a **norte e oeste** da cidade (a norte das Ghostlands). Diz {key:hi}, {key:passage}, {key:yes}: ele leva-te à {wiki:Isle of the Kings} por 10 gp (só se já fores amigo dele, por lhe teres entregado o {item:Family Brooch} na {wiki:The White Raven Monastery Quest}).
+coords: [{'x': 32211, 'y': 31755, 'z': 6, 'label': 'Dalbrect (barco para a Isle of the Kings)'}, {'x': 32173, 'y': 31938, 'z': 7, 'label': 'Isle of the Kings'}]
 [the-white-raven-monastery-quest 1-1] Sair da Isle of the Kings
 Para voltares ao continente, vai ao barco atracado na ilha e fala com o {npc:Captain Jack}, amigo do Dalbrect: diz {key:hi} e {key:tibia}. Ele leva-te de volta ao continente, para o lado de Carlin.
 coords: [{'x': 32189, 'y': 31957, 'z': 6, 'label': 'Captain Jack (barco de regresso)'}]
@@ -75,6 +90,6 @@ coords: [{'x': 32162, 'y': 31921, 'z': 13, 'label': 'Usa a Pick atrás do pilar'
 [a-fathers-burden-quest 3-3] Abrir o baú
 Desce pelo buraco até ao **7.º piso** e vai para **oeste** até encontrares a {item:Door (Sealed)|porta de quest}. Entra e abre o baú para receberes o {item:Spectral Cloth}.
 coords: []
-[measuring-tibia-quest 3-1] Lista das 20 áreas
-Descobre todas as subáreas de cada área para receberes o achievement correspondente. Os números entre parênteses retos são o nível exigido por portas de nível; o asterisco indica que podes contornar a exigência repondo os pontos.
+[grave-danger-quest 13-0] Reportar ao Jack Springer
+Volta à sede da Inquisição em Thais (secção 1) e diz ao {npc:Jack Springer} {key:report}, {key:ultimate} e {key:threat}. Ele manda-te à {wiki:Isle of the Kings}.
 coords: []

@@ -53,6 +53,12 @@ coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Barco de Port Hope (Charles)
 [stampede-mini-world-change 1-0] Chegar a Port Hope
 Apanha o barco para **Port Hope** (há barcos a partir de Thais, Venore, Darashia, Ankrahmun, Liberty Bay e Edron): fala com o capitão do porto e diz {key:hi}, {key:port hope}, {key:yes}. Chegas ao cais do {npc:Charles}, em Port Hope.
 coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Barco de Port Hope (Charles)'}]
+[the-secret-library-quest 1-0] Chegar a Port Hope
+Apanha um barco para **Port Hope** (no capitão da tua cidade diz {key:hi}, {key:port hope}, {key:yes}; de Edron é o {npc:Captain Seahorse}). Chegas ao barco do {npc:Charles}, no extremo **oeste** de Port Hope.
+coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Charles (barco de Port Hope)'}]
+[the-way-of-the-monk-quest 6-0] Chegar a Port Hope
+Apanha um barco para **Port Hope** (por exemplo com o {npc:Captain Bluebear}, em Thais: {key:hi}, {key:port hope}, {key:yes}). Chegas ao porto, junto ao {npc:Charles}.
+coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Charles, porto de Port Hope'}]
 [waterfall-quest 0-0] Chegar a Port Hope
 Se ainda não estás em **Port Hope**, apanha um barco para lá (por exemplo com o {npc:Captain Bluebear} no porto de Thais): diz {key:hi}, {key:port hope}, {key:yes}. Chegas ao porto da cidade, junto ao {npc:Charles}.
 coords: [{'x': 32529, 'y': 32785, 'z': 6, 'label': 'Porto de Port Hope (Charles)'}]

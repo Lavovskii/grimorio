@@ -1,6 +1,6 @@
 # PLACE: Plains of Havoc
 slug: plains-of-havoc-b4d66
-mentioned in 20 guides: 20-years-a-cook-quest, a-pirates-tail-quest, brotherhood-outfits-quest, down-the-drain-mini-world-change, dreamers-challenge-quest, giant-smithhammer-quest, iron-helmet-quest, isle-of-the-mists-quest, killing-in-the-name-of-quest, mage-outfits-quest, nightmare-outfits-quest, ornamented-shield-quest, power-bolts-quest, rise-of-devovorga, secret-service-quest, shadows-of-yalahar-quest, the-explorer-society-quest, the-outlaw-camp-quest, the-pits-of-inferno-quest, the-travelling-trader-quest
+mentioned in 27 guides: 20-years-a-cook-quest, a-pirates-tail-quest, brotherhood-outfits-quest, down-the-drain-mini-world-change, dreamers-challenge-quest, feaster-of-souls-quest, giant-smithhammer-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, iron-helmet-quest, isle-of-the-mists-quest, killing-in-the-name-of-quest, mage-outfits-quest, nightmare-outfits-quest, ornamented-shield-quest, power-bolts-quest, rise-of-devovorga, secret-service-quest, shadows-of-yalahar-quest, the-demon-oak-quest, the-dream-courts-quest, the-explorer-society-quest, the-outlaw-camp-quest, the-pits-of-inferno-quest, the-roost-of-the-graveborn-quest, the-travelling-trader-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Plains of Havoc 
@@ -58,9 +58,15 @@ coords: [{'x': 32747, 'y': 32258, 'z': 7, 'label': 'Plains of Havoc'}]
 [power-bolts-quest 0-0] Chegar às Plains of Havoc
 As {wiki:Plains of Havoc} ficam a **sudoeste** de **Venore** (e a sudeste de Kazordoon). Sai de Venore e segue para sudoeste até ao templo das Plains of Havoc (o número 1 no mapa), onde está o {npc:Oldrak}.
 coords: []
+[the-demon-oak-quest 1-0] Chegar às Plains of Havoc
+As {wiki:Plains of Havoc|Plains of Havoc} ficam no sul do continente, a **sudoeste de Venore** e a sudeste de Kazordoon. Se não estiveres em Venore, apanha um barco até lá (por exemplo, no porto de Thais diz {key:hi}, {key:venore}, {key:yes} ao capitão). Sai de **Venore** e caminha para **sudoeste** até às planícies. O templo das Plains of Havoc, onde está o {npc:Oldrak} (1 andar acima do chão), é o teu ponto de referência e sítio de descanso.
+coords: [{'x': 32735, 'y': 32297, 'z': 7, 'label': 'Plains of Havoc'}, {'x': 32816, 'y': 32260, 'z': 6, 'label': 'Templo das Plains of Havoc (Oldrak)'}]
 [the-pits-of-inferno-quest 0-3] Chegar às Plains of Havoc
 As {wiki:Plains of Havoc|Plains of Havoc} ficam a **sudoeste de Venore**: sai da cidade e caminha para sudoeste. O templo das Plains of Havoc (onde está o {npc:Oldrak}) é o ponto de referência: a {wiki:Knightwatch Tower|Knightwatch Tower} fica no sul das Plains e a {wiki:Necromant House|Necromant House} a leste da Dark Cathedral.
 coords: [{'x': 32735, 'y': 32297, 'z': 7, 'label': 'Plains of Havoc'}, {'x': 32781, 'y': 32330, 'z': 7, 'label': 'Necromant House'}]
+[the-roost-of-the-graveborn-quest 3-0] Ir às Plains of Havoc
+Vai a **Venore** de barco ({key:hi}, {key:venore}, {key:yes} no capitão de Ab'Dendriel ou Thais) e sai da cidade para **sudoeste** até às {wiki:Plains of Havoc|Plains of Havoc}.
+coords: [{'x': 32735, 'y': 32297, 'z': 7, 'label': 'Plains of Havoc'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [20-years-a-cook-quest 8-0] O trashcan perto das Pits of Inferno

@@ -1,6 +1,6 @@
 # PLACE: Green Claw Swamp
 slug: green-claw-swamp-f83b0
-mentioned in 6 guides: bewitched, blood-herb-quest, silver-brooch-quest, skull-of-ratha-quest, the-tainted-souls-quest, voodoo-doll-quest
+mentioned in 7 guides: between-the-lines-quest, bewitched, blood-herb-quest, silver-brooch-quest, skull-of-ratha-quest, the-tainted-souls-quest, voodoo-doll-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Green Claw Swamp 
@@ -37,6 +37,9 @@ Volta pelo mesmo caminho: desce as duas escadas de mão até à Venore Rotworm C
 coords: [{'x': 32699, 'y': 32018, 'z': 7, 'label': 'Entrada/saída da Venore Rotworm Cave'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[between-the-lines-quest 2-5] Druid: arranjar as duas ervas
+Precisas de 1 {item:Sling Herb} e 1 {item:Star Herb}. A **Sling Herb** não se compra: apanha-se em daily respawns, como a quinta do {wiki:Donald McRonald|Donald McRonald} em Thais ({coord:32405,32241,7}), Greenshore e {wiki:Green Claw Swamp|Green Claw Swamp}, ou como loot (por exemplo de {creature:Carniphila}, {creature:Elf Arcanist}, {creature:Priestess} e {creature:Spit Nettle}). A **Star Herb** compra-se à {npc:Luna} por 21 gp, na torre **oeste** das Ivory Towers, 2 pisos acima do rés-do-chão (também cai de {creature:Witch|Witches} e {creature:Pixie|Pixies}).
+coords: [{'x': 32405, 'y': 32241, 'z': 7, 'label': 'Sling Herb (quinta do Donald McRonald, Thais)'}, {'x': 33254, 'y': 31840, 'z': 5, 'label': 'Luna (Star Herb)'}]
 [bewitched 0-2] Sair da zona do evento
 Para saíres, volta pelo mesmo caminho: sobe os andares por onde desceste (usa a {item:Rope} nos buracos, se for preciso) até à entrada no Green Claw Swamp e segue para **leste** até Venore.
 coords: []
@@ -45,7 +48,4 @@ Começa uma nova fase a cada **8 horas** a partir do Server Save de 21 de junho.
 coords: []
 [blood-herb-quest 0-0] Encontrar a entrada
 Se não estás em **Venore**, apanha um barco (por exemplo o {npc:Captain Bluebear} em Thais: {key:hi}, {key:venore}, {key:yes}). Sai de **Venore** pela saída **sudoeste** e segue a estrada para **noroeste**. Mais ou menos a 3/4 do caminho para a {wiki:Dwarf Bridge}, desvia para **norte** e procura o buraco da Venore Rotworm Cave ({wiki:Green Claw Swamp}). Abre a {item:Loose Stone Pile} com a {item:Shovel} e entra.
-coords: [{'x': 32699, 'y': 32018, 'z': 7, 'label': 'Entrada da Venore Rotworm Cave'}]
-[bored-mini-world-change 1-0] Chegar à Venore Rotworm Cave
-A casa da {npc:Wyda} fica no **Green Claw Swamp**, a oeste de Venore. Sai de **Venore** pela saída **sudoeste** e segue a estrada para **noroeste**. Mais ou menos a 3/4 do caminho para a {wiki:Dwarf Bridge}, desvia para **norte** e procura o buraco da Venore Rotworm Cave. Abre a {item:Loose Stone Pile} com a {item:Shovel} e entra. No pântano há {creature:Snake|Snakes} e {creature:Rotworm|Rotworms}.
 coords: [{'x': 32699, 'y': 32018, 'z': 7, 'label': 'Entrada da Venore Rotworm Cave'}]

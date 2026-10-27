@@ -1,6 +1,6 @@
 # PLACE: Noodles Academy of Modern Magic
 slug: noodles-academy-of-modern-magic-3d797
-mentioned in 9 guides: elemental-spheres-quest, grimvale-quest, loose-ends-quest, mage-outfits-quest, research-and-development-quest, sea-of-light-quest, the-new-frontier-quest, unnatural-selection-quest, what-a-foolish-quest
+mentioned in 18 guides: between-the-lines-quest, elemental-spheres-quest, feaster-of-souls-quest, fiend-slayer-outfits-quest, fire-fighter-outfits-quest, grimvale-quest, illuminator-outfits-quest, loose-ends-quest, mage-outfits-quest, no-rest-for-the-wicked-quest, primal-ordeal-quest, research-and-development-quest, sea-of-light-quest, the-dream-courts-quest, the-new-frontier-quest, the-secret-library-quest, unnatural-selection-quest, what-a-foolish-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 In the East part of Edron are seven ivory towers [COORD x=33267 y=31849 z=7] . These towers are a place of learning and development. The premium spells can be bought here. There are unmovable coal basins on most floors of each tower. In each tower, but the middle one, are six floors. The middle tower has nine floors. 
@@ -65,18 +65,20 @@ You read: The one and only Armageddon spell. Sorry, we're currently looking for 
  Name Job Buy/Sell Location | Alexander Magic Shopkeeper ✓ Edron , Ivory Towers (four floors above ground level in the west tower). | Arkulius Headmaster ✓ Edron , Ivory Towers south-eastern tower | Eliza Necromancer ✓ Edron Ivory Towers , southern tower | Fiona Shopkeeper ✓ Edron Ivory Towers , in the southeastern tower, one floor up | Gundralph Druid Guild Leader ✓ Edron Ivory Towers , southern tower, one floor up | Lailene Necromancer ✓ Edron Ivory Towers , in the south-eastern tower, two floors up | Luna Shopkeeper ✓ Edron Ivory Towers , two floors up in the western tower | Milos Scientist ✗ Edron Ivory Towers , north-western tower 4 floors up | Puffels Knight Guild Leader ✓ Edron Ivory Towers , southern tower | Sandra Shopkeeper ✓ Edron Ivory Towers , western tower, one floor down. | Thomas Shopkeeper ✓ Edron , Ivory Towers three floors up in the western tower | Ursula Paladin Guild Leader ✓ Edron , Ivory Towers , southern tower | Wyrdin Mage ✗ Edron Ivory Towers , central tower | Zoltan Druid Guild Leader ✓ Edron Ivory Towers , two floors up in southern tower.
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
-(none)
+[between-the-lines-quest 1-1] Ir às Ivory Towers
+A {wiki:Noodles Academy of Modern Magic|Noodles Academy of Modern Magic} (as sete Ivory Towers) fica na parte **leste** de Edron. O {npc:Wyrdin} está na torre do meio (a quarta torre), **1 piso acima** do rés-do-chão.
+coords: [{'x': 33267, 'y': 31849, 'z': 7, 'label': 'Ivory Towers'}, {'x': 33268, 'y': 31838, 'z': 6, 'label': 'Wyrdin'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
-[elemental-spheres-quest 0-0] Falar com o Arkulius
-Junta as 20 gemas encantadas da tua vocação e vai ao **último andar da torre sudeste** das Ivory Towers, em **Edron**. Chega a Edron de barco (por exemplo, em Thais diz ao {npc:Captain Bluebear} {key:hi}, {key:edron}, {key:yes}). As sete Ivory Towers ({wiki:Noodles Academy of Modern Magic}) ficam na parte **leste** de Edron: entra na torre sudeste e sobe até ao último andar. O {npc:Arkulius} está ao lado do Alverus congelado. Diz {key:hi}, {key:Alverus}, {key:shrines}, {key:sphere}, {key:mission} e confirma com {key:yes}.
-coords: [{'x': 33267, 'y': 31849, 'z': 7, 'label': 'Ivory Towers (parte leste de Edron)'}, {'x': 33280, 'y': 31845, 'z': 3, 'label': 'Arkulius (torre sudeste, último andar)'}]
-[elemental-spheres-quest 1-0] Descer aos santuários
-Desce ao **piso mais baixo da torre central** das Ivory Towers, onde estão os quatro santuários elementais. Para lá chegares, volta ao rés-do-chão e entra na torre central; desce até ao fim.
-coords: [{'x': 33267, 'y': 31835, 'z': 10, 'label': 'Santuários elementais (torre central, piso mais baixo)'}]
-[elemental-spheres-quest 3-0] Pôr cada jogador no seu santuário
-Vai ao piso mais baixo da torre central das Ivory Towers. Há 4 {item:Strange Carving|Strange Carvings} no chão (como na {wiki:Desert Dungeon Quest}). Cada jogador fica no santuário da sua vocação: **Fire – Sorcerer**, **Earth – Druid**, **Ice – Paladin**, **Energy – Knight**. Puxa a alavanca.
-coords: [{'x': 33267, 'y': 31835, 'z': 10, 'label': 'Santuários (torre central)'}]
-[grimvale-quest 3-1] Falar com o Milos
-Vai às Ivory Towers ({wiki:Noodles Academy of Modern Magic}) e sobe aos andares superiores da torre **noroeste** até ao {npc:Milos}. Diz {key:hi} e {key:curse}. Ele fala-te das ley lines e pede-te que encontres as notas antigas dele.
+[between-the-lines-quest 1-12] Ir à biblioteca do castelo de Edron
+Fica-te a terceira página, a do castelo. Vai ao **castelo de Edron**, a noroeste das Ivory Towers, onde está o {npc:Daniel Steelsoul}. A biblioteca fica a **oeste** dele.
+coords: [{'x': 33191, 'y': 31795, 'z': 7, 'label': 'Daniel Steelsoul (castelo de Edron)'}]
+[between-the-lines-quest 2-0] Falar com o Wyrdin
+Volta ao {npc:Wyrdin} e diz {key:hi} e {key:book}. Ele pede desculpa pelo efeito inesperado do feitiço e diz-te que podes salvar o teu familiar **entrando no livro**, mas que antes tens de te preparar conforme a tua vocação.
 coords: []
+[between-the-lines-quest 2-1] Knight: comprar a Sword e o Inkwell
+Compra uma {item:Sword} ao {npc:Willard}, na parte **leste** do castelo de Edron (1 piso acima do rés-do-chão), e um {item:Inkwell} ao {npc:Thomas}, na loja de livros da torre **oeste** das Ivory Towers, 3 pisos acima do rés-do-chão (10 gp). Usa o tinteiro na espada (ou a espada no tinteiro): recebes a {item:Ink-Coated Sword}.
+coords: [{'x': 33214, 'y': 31793, 'z': 6, 'label': 'Willard (Sword)'}, {'x': 33256, 'y': 31838, 'z': 4, 'label': 'Thomas (Inkwell)'}]
+[between-the-lines-quest 2-5] Druid: arranjar as duas ervas
+Precisas de 1 {item:Sling Herb} e 1 {item:Star Herb}. A **Sling Herb** não se compra: apanha-se em daily respawns, como a quinta do {wiki:Donald McRonald|Donald McRonald} em Thais ({coord:32405,32241,7}), Greenshore e {wiki:Green Claw Swamp|Green Claw Swamp}, ou como loot (por exemplo de {creature:Carniphila}, {creature:Elf Arcanist}, {creature:Priestess} e {creature:Spit Nettle}). A **Star Herb** compra-se à {npc:Luna} por 21 gp, na torre **oeste** das Ivory Towers, 2 pisos acima do rés-do-chão (também cai de {creature:Witch|Witches} e {creature:Pixie|Pixies}).
+coords: [{'x': 32405, 'y': 32241, 'z': 7, 'label': 'Sling Herb (quinta do Donald McRonald, Thais)'}, {'x': 33254, 'y': 31840, 'z': 5, 'label': 'Luna (Star Herb)'}]

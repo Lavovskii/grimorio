@@ -1,6 +1,6 @@
 # PLACE: Ghostship
 slug: ghostship-4472a
-mentioned in 2 guides: plate-armor-quest, shadows-of-yalahar-quest
+mentioned in 3 guides: hand-of-the-inquisition-outfits-quest, plate-armor-quest, shadows-of-yalahar-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Ghostship 
@@ -31,12 +31,15 @@ The Plate Armor Quest is located here.
 (none)
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[grave-danger-quest 9-0] Chegar ao cemitério de Darashia
+Viaja até **Darashia** de barco (de Venore, {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes}; chegas junto ao {npc:Petros}) ou de tapete mágico. O cemitério fica a **leste** da cidade: é a entrada das {wiki:Deeper Catacombs}, no sudeste de Darashia, ao lado do tapete e do barco.
+coords: [{'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33280, 'y': 32445, 'z': 7, 'label': 'Entrada do cemitério'}]
+[hand-of-the-inquisition-outfits-quest 1-11] Chegar à campa de Darashia (Sir Baeloc)
+Viaja até **Darashia**: de barco (por exemplo em Venore, com o {npc:Captain Fearless}: {key:hi}, {key:darashia}, {key:yes}, 60 gp; há 10% de hipótese de ires parar ao {wiki:Ghostship}) chegas ao porto do {npc:Petros}; de tapete voador, ao {npc:Chemar}. Vai ao cemitério a **leste** da cidade ({coord:33280,32445,7}). **Desliga** as {item:Sacred Statue|Sacred Statues} de **oeste**, **sudeste** e **sul**, mas deixa **ligadas** as de **norte** e **nordeste**. Depois usa o {item:Sundial} para revelar as escadas secretas e desce até ao segundo andar subterrâneo. Segue sempre para **sul** e **leste** até à campa e à alavanca ({coord:33288,32472,9}).
+coords: [{'x': 32955, 'y': 32022, 'z': 6, 'label': 'Captain Fearless, porto de Venore'}, {'x': 33289, 'y': 32481, 'z': 6, 'label': 'Petros, porto de Darashia'}, {'x': 33270, 'y': 32439, 'z': 6, 'label': 'Chemar, tapete de Darashia'}, {'x': 33280, 'y': 32445, 'z': 7, 'label': 'Cemitério de Darashia (estátuas e Sundial)'}, {'x': 33288, 'y': 32472, 'z': 9, 'label': 'Campa do Sir Baeloc e do Sir Nictros'}]
 [plate-armor-quest 0-0] Viajar de Venore para Darashia
 Vai ao barco de **Venore** e viaja para **Darashia** com o capitão ({npc:Captain Fearless}). Repete até o barco ser sequestrado pelo {wiki:Ghostship}. O NPC avisa-te da ameaça do navio fantasma.
 coords: []
 [plate-armor-quest 1-1] Descer ao porão
 No barco do sul, desce pela escada **oeste** (a da recompensa). Lá em baixo estão 2 {creature:Vampire|Vampires}, 1 {creature:Demon Skeleton} e 1 {creature:Ghost}. Mata-os.
-coords: []
-[shadows-of-yalahar-quest 9-2] Ler os livros
-Há 8 livros {item:Yalahari Folio} na biblioteca. Lê entre **1 e 5 livros seguidos** sem apanhar dor de cabeça. O número de livros necessário é variável: podes ter sorte logo ao primeiro. Se fores teleportado para o {wiki:Ghostship}: desce a escada, segue a ponte para **sul** (há {creature:Ghoul|Ghouls} e {creature:Skeleton|Skeletons}), sobe a escada no canto **nordeste** e entra no portal (guardado por um {creature:Ghost}): vais parar a **Darashia**. Daí tens de voltar a Yalahar.
 coords: []

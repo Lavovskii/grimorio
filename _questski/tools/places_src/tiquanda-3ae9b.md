@@ -1,6 +1,6 @@
 # PLACE: Tiquanda
 slug: tiquanda-3ae9b
-mentioned in 10 guides: asura-palace-quest, chakoya-iceberg-mini-world-change, elephant-tusk-quest, forgotten-knowledge-quest, hot-cuisine-quest, hydra-egg-quest, the-great-dragon-hunt-quest, the-ice-islands-quest, the-lost-brother-quest, the-travelling-trader-quest
+mentioned in 13 guides: asura-palace-quest, chakoya-iceberg-mini-world-change, elephant-tusk-quest, forgotten-knowledge-quest, hot-cuisine-quest, hydra-egg-quest, the-dream-courts-quest, the-great-dragon-hunt-quest, the-ice-islands-quest, the-lost-brother-quest, the-secret-library-quest, the-travelling-trader-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Tiquanda 
@@ -53,6 +53,9 @@ coords: [{'x': 32624, 'y': 32586, 'z': 7, 'label': 'Chakoya Iceberg'}]
 [the-great-dragon-hunt-quest 0-0] Chegar aos lairs de Tiquanda
 Os {wiki:Kha'zeel Dragon Lairs/Tiquanda|lairs de Tiquanda} ficam no lado de **Tiquanda** (a selva de Port Hope) das montanhas de {wiki:Kha'zeel}, a norte do {wiki:Kha'zeel Pass}. Há dois caminhos:
 coords: [{'x': 32983, 'y': 32646, 'z': 7, 'label': 'Entrada dos lairs do sul'}, {'x': 33009, 'y': 32604, 'z': 7, 'label': 'Entrada dos lairs do norte'}]
+[the-way-of-the-monk-quest 6-4] Sair da gruta e de Tiquanda
+Volta pelo mesmo caminho: desce pelos buracos, regressa pela gruta até ao buraco escondido e sai para a selva. Atravessa o rio pelo tronco e volta a **Port Hope** (ou para o lado de Kha'Zeel, se vieste por aí). Se continuares a Waterfall Quest até ao fim (atiras-te da cascata e nadas 1 casa para norte), sais da gruta atrás da cascata por um teleporte a norte; o wiki não diz onde esse teleporte te deixa.
+coords: [{'x': 32950, 'y': 32645, 'z': 7, 'label': 'Tronco sobre o rio'}, {'x': 32529, 'y': 32785, 'z': 6, 'label': 'Charles, porto de Port Hope'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [a-fathers-burden-quest 6-0] Ir a Banuta

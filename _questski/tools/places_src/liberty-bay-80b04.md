@@ -34,6 +34,12 @@ mentioned in 2 guides: hunter-outfits-quest, lone-medusa-quest
 [cartography-101-quest 2-0] Chegar a Liberty Bay
 Apanha o barco para **Liberty Bay** no porto da tua cidade ({key:hi}, {key:liberty bay}, {key:yes}). Os três locais desta secção ficam à volta da cidade.
 coords: []
+[illuminator-outfits-quest 1-0] Ir a Liberty Bay
+Em **Edron**, fala com o {npc:Captain Seahorse} no porto: {key:hi}, {key:liberty bay}, {key:yes} (170 gp). Desembarcas no porto de **Liberty Bay**.
+coords: [{'x': 33176, 'y': 31764, 'z': 6, 'label': 'Captain Seahorse, porto de Edron'}]
+[illuminator-outfits-quest 1-6] Sair da sala e de Liberty Bay
+A wiki não descreve como se sai da sala do quadro: procura a saída na própria sala. Se não a encontrares, um {item:Temple Teleport Scroll} leva-te ao templo da tua cidade (não funciona em zonas No-Logout nem com Logout Block / Protection Zone Block). Para seguires para o 2.º addon, apanha um barco para Yalahar no porto de Liberty Bay: o {npc:Jack Fate} ({key:hi}, {key:yalahar}, {key:yes}; 275 gp) ou o {npc:Captain Max}, num dos barcos a **leste** do cais ({key:hi}, {key:yalahar}, {key:yes}; 400 gp, só depois de começares a {wiki:In Service of Yalahar Quest|In Service of Yalahar Quest}). Para voltares a Edron, o {npc:Jack Fate} leva-te por 170 gp ({key:hi}, {key:edron}, {key:yes}).
+coords: [{'x': 32298, 'y': 32896, 'z': 6, 'label': 'Captain Max (barco para Yalahar)'}]
 [treasure-island-quest 0-0] Chegar a Liberty Bay
 Se ainda não estás em **Liberty Bay**, apanha um barco até lá (por exemplo com o {npc:Captain Bluebear} em Thais): fala com o capitão do porto e diz {key:hi}, {key:liberty bay}, {key:yes}.
 coords: []
@@ -47,7 +53,7 @@ Vai a **Liberty Bay** (de Venore, barco do {npc:Captain Fearless}: {key:hi}, {ke
 coords: [{'x': 32302, 'y': 32538, 'z': 7, 'label': 'Rascalio em Meriana'}, {'x': 32346, 'y': 32860, 'z': 7, 'label': 'Captain Waverider (Liberty Bay)'}]
 [20-years-a-cook-quest 10-3] Sair de Meriana
 Quando acabares, sai da zona da tarefa pelo mesmo sítio por onde entraste. Para voltares a **Liberty Bay**, vai ao {npc:Sebastian}, a **sul** de Sabrehaven, e diz {key:hi}, {key:liberty bay} e {key:yes} (50 gp). Em Liberty Bay apanha o barco do {npc:Jack Fate} para Venore ({key:hi}, {key:venore}, {key:yes}).
-coords: [{'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (sul de Sabrehaven)'}, {'x': 32161, 'y': 32556, 'z': 6, 'label': 'Jack Fate (porto de Liberty Bay)'}]
+coords: [{'x': 32347, 'y': 32623, 'z': 7, 'label': 'Sebastian (sul de Sabrehaven)'}]
 [a-piece-of-cake 0-0] Encontrar uma máquina de extração
 Junto de cada {item:Cake Extraction Machine} está um padeiro da Magic Bakery Alliance e uma cópia do livro {item:A Piece of Cake I (Book)}, que explica esta fase.
 coords: []

@@ -1,6 +1,6 @@
 # PLACE: Pits of Inferno
 slug: pits-of-inferno-ee371
-mentioned in 2 guides: killing-in-the-name-of-quest, the-pits-of-inferno-quest
+mentioned in 3 guides: killing-in-the-name-of-quest, the-pits-of-inferno-quest, the-way-of-the-monk-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Pits of Inferno 
@@ -52,6 +52,12 @@ Espera **2 horas**, volta à Amber e diz {key:hi} e {key:addon}. Ela dá-te a mo
 coords: []
 [the-pits-of-inferno-quest 7-3] Sair das Pits of Inferno
 Para sair tens duas opções: volta pelo reino dos Ruthless Seven e segue as placas que indicam a saída, **ou** fala com o NPC {npc:A Ghostly Sage}, que está mesmo antes da sala das recompensas, e pede-lhe um teletransporte. Em ambos os casos apareces na gruta dos {creature:Slime|Slimes} debaixo das Plains of Havoc; daí sobe à superfície e caminha para **nordeste** até Venore.
+coords: []
+[the-roost-of-the-graveborn-quest 3-13] Sair das Pits of Inferno
+O wiki não descreve a saída da sala da relíquia nem do lair. Volta pelo mesmo caminho: sobe do dragon lair, atravessa a ponte e regressa pelas catacumbas e pela gruta do cemitério até às Plains of Havoc. Venore fica a **nordeste**. Se a ponte se tiver desfeito, o spoiler da Pits of Inferno Quest diz apenas que o único caminho de volta é pelo dragon lair (sem o descrever); nesse caso usa um {item:Temple Teleport Scroll}.
+coords: [{'x': 32781, 'y': 32330, 'z': 7, 'label': 'Necromant House (superfície)'}]
+[the-way-of-the-monk-quest 7-8] Sair das Pits of Inferno
+Volta pelo mesmo caminho: Hall of the Five Ways, dragon lair, lava, ponte, Shrine of Wonders e catacumbas, até ao cemitério das Plains of Havoc; daí segue para **nordeste** até Venore. Se as paredes de fogo já tiverem fechado, usa a saída de emergência no lado **leste** das chamas: leva-te ao lado oeste e sais pelo dragon lair. Também podes usar um {item:Temple Teleport Scroll}.
 coords: []
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)

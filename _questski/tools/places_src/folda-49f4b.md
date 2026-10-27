@@ -1,6 +1,6 @@
 # PLACE: Folda
 slug: folda-49f4b
-mentioned in 4 guides: measuring-tibia-quest, rise-of-devovorga, the-explorer-society-quest, within-the-tides-quest
+mentioned in 7 guides: grave-danger-quest, hand-of-the-inquisition-outfits-quest, measuring-tibia-quest, rise-of-devovorga, the-dream-courts-quest, the-explorer-society-quest, within-the-tides-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Folda 
@@ -42,6 +42,12 @@ mentioned in 4 guides: measuring-tibia-quest, rise-of-devovorga, the-explorer-so
 [adventures-of-galthen-quest 2-5] Sair de Folda
 Volta à superfície pelo mesmo caminho por onde desceste (leva uma {item:Rope} para subires pelos buracos) e regressa à doca. Fala com o {npc:Svenson}: {key:hi}, {key:tibia}, {key:yes}. A viagem de volta ao continente é gratuita.
 coords: [{'x': 32045, 'y': 31580, 'z': 7, 'label': 'Svenson (doca de Folda)'}]
+[grave-danger-quest 12-0] Chegar a Folda
+{wiki:Folda} é a maior das ilhas geladas, a oeste de Carlin. Vai a **Carlin** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}) e depois ao barqueiro {npc:Nielson}, a **noroeste** da cidade: {key:hi}, {key:folda}, {key:yes} (20 gp). Desembarcas na doca de Folda, junto ao {npc:Svenson}.
+coords: [{'x': 32235, 'y': 31675, 'z': 7, 'label': 'Nielson (barco para Folda)'}, {'x': 32045, 'y': 31580, 'z': 7, 'label': 'Svenson, doca de Folda'}]
+[grave-danger-quest 12-2] Sair de Folda
+Sai da montanha pelo mesmo caminho e volta à doca. Fala com o {npc:Svenson}: {key:hi}, {key:tibia}, {key:yes}. A viagem de volta ao continente é gratuita.
+coords: []
 [the-explorer-society-quest 2-2] Chegar à sala gelada de Folda
 Vai a {wiki:Folda} e entra na gruta principal (a entrada principal fica dentro da montanha; também se entra pelo buraco no gelo a sul da montanha). Segue os mapas até uma pequena sala gelada no **segundo piso subterrâneo**, com {creature:Minotaur|Minotaurs} e {creature:Minotaur Archer|Minotaur Archers}. Mata tudo pelo caminho: no regresso não podes perder tempo.
 coords: [{'x': 32133, 'y': 31686, 'z': 9, 'label': 'Sala gelada com as estalagmites'}]
@@ -62,6 +68,6 @@ coords: []
 [alawars-vault-quest 1-0] Viajar até Folda
 Apanha o barco a **norte de Carlin** até **Folda** (20 gp) e entra nas grutas de Folda. Fala com o barqueiro {npc:Nielson}: {key:hi}, {key:folda}, {key:yes}. Desembarcas na doca de Folda, junto ao {npc:Svenson}.
 coords: [{'x': 31999, 'y': 31571, 'z': 7, 'label': 'Entrada das grutas de Folda'}]
-[measuring-tibia-quest 2-0] Casos a ter em conta
-Estas subáreas têm particularidades que convém conhecer antes de começar:
-coords: [{'x': 33010, 'y': 31437, 'z': 7, 'label': 'Rampa para a encosta de Vengoth'}, {'x': 32081, 'y': 31375, 'z': 8, 'label': 'Gruta de Stone Golems de Ragnir (Krimhorn)'}]
+[grave-danger-quest 0-3] Pedir a lista das sepulturas
+Diz {key:report} e depois {key:locations}. O Jack diz-te onde ficam as **12 sepulturas** que tens de proteger. A tabela resume-as e indica a secção deste guia de cada uma.
+coords: []

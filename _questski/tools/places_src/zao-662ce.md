@@ -58,6 +58,9 @@ coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorg
 [an-uneasy-alliance-quest 0-7] Sair da Zao Orc Land
 Volta pelo mesmo caminho: sobe as rampas até ao forte de bambu, sai pela parede que partiste e segue a montanha até ao sítio onde levitaste. Desce aí com {spell:Levitate} (ou parcels), desce as rampas da montanha até à estepe e regressa para **sudeste** até ao acampamento do Curos.
 coords: [{'x': 33066, 'y': 31306, 'z': 6, 'label': 'Sítio do levitate (entrada das traseiras do forte)'}, {'x': 33060, 'y': 31328, 'z': 7, 'label': 'Última rampa na Zao Orc Land'}]
+[heart-of-destruction-quest 0-3] Chegar à entrada da Zao Steppe
+Apanha o {wiki:Steamship} para **Farmine** com o {npc:Brodrosch} (muito abaixo de Kazordoon) ou o {npc:Gurbasch} (8 andares abaixo de {wiki:Cormaya}; o {npc:Captain Seahorse} leva-te de Edron a Cormaya com {key:hi}, {key:cormaya}, {key:yes}): {key:hi}, {key:farmine}, {key:yes}. Chegas junto ao {npc:Thorgrin}. Em Farmine, vai para **leste** do {npc:Ongulf}, passa as portas seladas, põe-te em cima do interruptor e usa a **alavanca da direita**: o elevador leva-te à superfície da montanha. Segue a passagem para **leste**, descendo a montanha com {spell:Levitate} (ou parcels/caixas), até saíres na {wiki:Zao Steppe}. Depois segue para **norte**, pelo lado **oeste** da estepe, até ao Messenger. Este vórtice leva ao caminho do **Rupture**.
+coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorgrin)'}, {'x': 33085, 'y': 31532, 'z': 7, 'label': 'Saída da passagem da montanha para a Zao Steppe'}, {'x': 33036, 'y': 31374, 'z': 7, 'label': 'Messenger of Heaven e Glowing Vortex, oeste da Zao Steppe'}]
 [river-runs-deep-mini-world-change 1-3] Ir ao rio da Zao Steppe
 Na estepe, procura o leito do rio seco da {wiki:Zao Steppe}, que agora tem água a correr. A estepe fica a leste da montanha de Farmine e a sul dos {wiki:Dragonblaze Peaks}.
 coords: []
@@ -73,6 +76,9 @@ coords: [{'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorg
 [the-spirit-will-get-you-quest 2-1] Sair de Northern Zao
 Desce das Souleater Mountains pelo mesmo caminho até ao Rebel Camp. Na sala do {npc:Chartan}, a chama azul a **sul** dele leva-te às {wiki:Muggy Plains} (disponível depois da missão 2 da Wrath of the Emperor Quest); aí volta à Zao Steppe pelo teleporte e segue para **sudoeste** até à passagem pela montanha. Sobe-a com {spell:Levitate} (ou parcels/caixas) e vai para **oeste** até ao elevador de Farmine. No Steamship, o {npc:Thorgrin} leva-te a Kazordoon ou Cormaya ({key:hi}, o destino, {key:yes}).
 coords: [{'x': 33085, 'y': 31532, 'z': 7, 'label': 'Passagem pela montanha (volta a Farmine)'}, {'x': 33025, 'y': 31553, 'z': 14, 'label': 'Steamship de Farmine (Thorgrin)'}]
+[the-way-of-the-monk-quest 8-6] Sair do Corruption Hole e de Zao
+Volta ao sítio onde caíste e sobe outra vez (o wiki não descreve a saída; leva {item:Rope}); sobe as rampas do lado leste do templo e refaz o caminho até ao teleporte das Muggy Plains, que te devolve à Zao Steppe. Para voltares a Farmine, vai à passagem pelas montanhas ({coord:33085,31532,7}), sobe com {spell:Levitate} (ou parcels) e segue para **oeste** até ao elevador. Em Farmine, o {npc:Thorgrin} leva-te de steamship a Kazordoon ({key:hi}, {key:kazordoon}, {key:yes}; 210 gp, 160 gp com o desconto da The New Frontier) e o tapete do {npc:Melian}, no cimo da montanha de Farmine, voa para outras cidades.
+coords: [{'x': 33085, 'y': 31532, 'z': 7, 'label': 'Passagem pelas montanhas (para Farmine)'}, {'x': 33025, 'y': 31553, 'z': 14, 'label': 'Thorgrin, steamship de Farmine'}]
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
 [20-years-a-cook-quest 11-1] Acesso ao Breeding Ground

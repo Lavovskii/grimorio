@@ -1,6 +1,6 @@
 # PLACE: Ghostlands
 slug: ghostlands-63c15
-mentioned in 12 guides: 20-years-a-cook-quest, a-fathers-burden-quest, bank-robbery-mini-world-change, rest-in-hallowed-ground-quest, rise-of-devovorga, secret-service-quest, spirit-grounds-mini-world-change, spirithunters-quest, the-explorer-society-quest, the-queen-of-the-banshees-quest, the-white-raven-monastery-quest, wizard-outfits-quest
+mentioned in 15 guides: 20-years-a-cook-quest, a-fathers-burden-quest, bank-robbery-mini-world-change, feaster-of-souls-quest, grave-danger-quest, hand-of-the-inquisition-outfits-quest, rest-in-hallowed-ground-quest, rise-of-devovorga, secret-service-quest, spirit-grounds-mini-world-change, spirithunters-quest, the-explorer-society-quest, the-queen-of-the-banshees-quest, the-white-raven-monastery-quest, wizard-outfits-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Ghostlands 
@@ -54,6 +54,24 @@ The conclave of druids decided to seal the area with magic wards and magically e
  Name Exp HP Max. Damage Loot | Slime 160 150 110 + 330 This creature drops no loot. | Demon Skeleton 240 400 235 ( 185 , 50 ) 1-75× Gold Coin (common) Demonic Skeletal Hand (uncommon) 1-3× Throwing Star (uncommon) 1-2× Health Potion (semi-rare) Mana Potion (semi-rare) Torch (semi-rare) Battle Shield (semi-rare) Iron Helmet (semi-rare) Battle Hammer (semi-rare) Black Pearl (semi-rare) Small Ruby (semi-rare) Mysterious Fetish (rare) Mind Stone (rare) Guardian Shield (very rare) Stone Skin Amulet (ver
 
 ## EXISTING ARRIVE/LEAVE STEPS IN OUR GUIDES (already researched — reuse them)
+[feaster-of-souls-quest 1-2] Chegar às Ghostlands
+As {wiki:Ghostlands} ficam a **oeste** de Carlin, fechadas por uma sebe mágica. Sai de Carlin para oeste e entra pela gruta de entrada das Ghostlands (coordenada abaixo). Lá dentro, vai para **sul** até ao **segundo buraco** (a sudoeste) e desce por ele.
+coords: [{'x': 32222, 'y': 31767, 'z': 7, 'label': 'Gruta de entrada das Ghostlands'}, {'x': 32190, 'y': 31839, 'z': 7, 'label': 'Segundo buraco (desce aqui)'}]
+[feaster-of-souls-quest 1-4] Sair das Ghostlands
+Volta ao sítio onde caíste e sobe pelo buraco com a {item:Rope}. Depois sai das Ghostlands pela gruta da entrada e anda para **leste** até Carlin. No porto, o {npc:Captain Greyhound} leva-te a **Venore** ({key:hi}, {key:venore}, {key:yes}), a cidade mais perto da Dark Cathedral.
+coords: [{'x': 32222, 'y': 31767, 'z': 7, 'label': 'Gruta de entrada/saída das Ghostlands'}, {'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound (porto de Carlin)'}]
+[grave-danger-quest 3-0] Chegar às Ghostlands
+Vai a **Carlin** (de Thais, {npc:Captain Bluebear}: {key:hi}, {key:carlin}, {key:yes}; chegas junto ao {npc:Captain Greyhound}). As {wiki:Ghostlands} ficam a **oeste** da cidade: entra nelas passando por baixo da muralha pelo buraco indicado.
+coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}, {'x': 32219, 'y': 31768, 'z': 7, 'label': 'Buraco sob a muralha para as Ghostlands'}]
+[grave-danger-quest 3-5] Sair das Ghostlands
+O spoiler não descreve a saída da sala do boss. Volta pelo caminho por onde entraste até à cripta e usa a {item:Rope} no buraco da entrada para subires à superfície. Depois regressa para **nordeste** até ao buraco sob a muralha e a Carlin. O {npc:Captain Greyhound} leva-te de volta a Thais ({key:hi}, {key:thais}, {key:yes}).
+coords: [{'x': 32190, 'y': 31837, 'z': 7, 'label': 'Buraco da cripta (sobe com a Rope)'}, {'x': 32219, 'y': 31768, 'z': 7, 'label': 'Buraco sob a muralha (volta a Carlin)'}]
+[hand-of-the-inquisition-outfits-quest 1-5] Chegar à campa das Ghostlands (Lord Azaram)
+Viaja até **Carlin** (chegas ao porto do {npc:Captain Greyhound}). As {wiki:Ghostlands} ficam a **oeste** da cidade: entra pela gruta de entrada ({coord:32222,31767,7}). Procura a cripta pequena ({coord:32190,31837,7}), desce e encontra a campa a **norte** ({coord:32190,31818,8}). Entra no vórtice para chegares à sala da alavanca (até 5 jogadores).
+coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}, {'x': 32222, 'y': 31767, 'z': 7, 'label': 'Gruta de entrada das Ghostlands'}, {'x': 32190, 'y': 31837, 'z': 7, 'label': 'Cripta pequena'}, {'x': 32190, 'y': 31818, 'z': 8, 'label': 'Campa e vórtice (a norte)'}]
+[hand-of-the-inquisition-outfits-quest 1-7] Sair das Ghostlands
+A wiki não descreve a saída da sala do boss. Depois de saíres dela, sobe pela cripta até à superfície das Ghostlands, segue para **nordeste** até à gruta de entrada ({coord:32222,31767,7}) e entra em Carlin. O {npc:Captain Greyhound} leva-te de barco para a tua cidade.
+coords: [{'x': 32222, 'y': 31767, 'z': 7, 'label': 'Gruta de entrada das Ghostlands'}, {'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound, porto de Carlin'}]
 [kissing-a-pig-quest 7-1] Sair das Ghostlands
 Se depois do beijo fores teletransportado para uma salinha com um *"your dead body"*, sobe as escadas: voltas à superfície das Ghostlands. Se não, volta pelo mesmo caminho, usando a {item:Rope} nos buracos. Das Ghostlands anda para **leste** até Carlin e apanha o barco do {npc:Captain Greyhound} para Thais ({key:thais}).
 coords: [{'x': 32388, 'y': 31822, 'z': 6, 'label': 'Captain Greyhound (porto de Carlin)'}]

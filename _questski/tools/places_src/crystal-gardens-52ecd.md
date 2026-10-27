@@ -1,6 +1,6 @@
 # PLACE: Crystal Gardens
 slug: crystal-gardens-52ecd
-mentioned in 1 guides: the-cursed-crystal-quest
+mentioned in 2 guides: feaster-of-souls-quest, the-cursed-crystal-quest
 
 ## WIKI PAGE (location, how to get there, exits; [COORD] = map link)
 ## Crystal Gardens 
@@ -28,6 +28,9 @@ mentioned in 1 guides: the-cursed-crystal-quest
 (none)
 
 ## OTHER GUIDE STEPS MENTIONING IT (context)
+[feaster-of-souls-quest 2-0] Bone Meal
+Usa o {item:Skull (Item)|Skull} num {item:Wooden Grinder} para obteres {item:Bone Meal}. Há um na {wiki:Noodles Academy of Modern Magic|academia de Edron}: na segunda torre, **dois andares abaixo** do {npc:Milos}. Também há Wooden Grinders nos {wiki:Crystal Gardens}.
+coords: []
 [the-cursed-crystal-quest 2-2] (Opcional) Ler o papel dos Crystal Gardens
 Vai para **oeste**, vira para **norte** no cruzamento e depois outra vez para **oeste**. Segue a gruta para **sul** até encontrares uma {item:Pile of Bones (Quest)} do lado esquerdo. Procura nela para encontrares um papel ({item:Crystal Gardens (Book)}). Depois volta à escada.
 coords: [{'x': 31976, 'y': 32908, 'z': 8, 'label': 'Pile of Bones com o papel (opcional)'}]
