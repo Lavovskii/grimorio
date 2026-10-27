@@ -3460,6 +3460,93 @@ html.fx-lite[data-ui="modern"] .md-rv{opacity:1;transform:none}
 html.fx-lite[data-ui="modern"] :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>*{animation:none}
 html.fx-lite[data-ui="modern"] .md-ind{transition:none}
 @media (prefers-reduced-motion:reduce){html[data-ui="modern"] .ring::before{animation:none} .tb-bar::before{animation-duration:2s}}
+
+
+
+
+/* r30: sistemas novos, calculadoras e bestiário */
+.sy h3{font-size:20px;margin:2px 0 6px}
+.sy>p{margin:0 0 8px;max-width:none}
+.sy ul{margin:0;padding-left:20px;display:grid;gap:5px;font-size:15px}
+.calc{display:grid;gap:10px;margin-bottom:14px}
+.calc h3{font-size:20px}
+.calc textarea{width:100%;font:13px/1.4 var(--mono)}
+.calc-f{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;align-items:end}
+.calc-f label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.calc-f label.chk{display:flex;gap:8px;align-items:center;min-height:44px;color:var(--ink-2)}
+.calc-f input[type=number],.calc-f input[type=text],.calc-f select{width:100%}
+.ls-sum{display:flex;flex-wrap:wrap;gap:10px}
+.ls-sum div{display:grid;padding:8px 14px;border:1px solid var(--line);border-radius:var(--r1);min-width:150px}
+.ls-sum b{font-size:20px}
+.ls-sum span{font-size:12.5px;color:var(--muted)}
+.ls-t{width:100%;font-size:14px}
+.ls-t td,.ls-t th{text-align:right}
+.ls-t td:first-child,.ls-t th:first-child{text-align:left}
+.ls-t .neg{color:var(--warn)}
+.ls-tr{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ls-tr li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r1)}
+.ls-tr li span{flex:1;min-width:220px}
+.ls-tr code{font-size:13px}
+.bst-c summary{cursor:pointer}
+.bst{list-style:none;margin:8px 0;padding:0;display:grid;gap:4px}
+.bst li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.bst li span{color:var(--muted);font-size:13px;text-align:right}
+.bst li small{grid-column:1/-1;color:var(--muted);font-size:12.5px;padding-left:26px}
+.bst label{display:flex;gap:8px;align-items:center;min-height:32px}
+html[data-ui="modern"] .ls-sum div{background:rgba(0,0,0,.22);border-color:#3E3122}
+html[data-ui="modern"] .ls-sum b{color:#F4DE9E}
+html[data-ui="modern"] .ls-tr li{background:rgba(0,0,0,.18);border-color:#3E3122}
+/* r30: Novidades */
+.nw-list{display:grid;gap:12px}
+.nw h3{font-size:19px;margin:2px 0 8px}
+.nw ul{margin:0;padding-left:20px;display:grid;gap:5px;font-size:15px}
+.nw-d{font-size:12px;letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.nw-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.nw-h .tag{cursor:pointer;font:inherit;font-size:13px}
+.nw-live{display:grid;gap:6px}
+.nw-o{border:1px solid var(--line);border-radius:var(--r1);background:var(--surface);padding:8px 12px}
+.nw-o summary{cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.nw-o summary b{flex:1;min-width:200px;font-weight:600;font-size:15px}
+.nw-t{display:grid;gap:6px;margin-top:8px}
+.nw-t p{margin:0}
+html[data-ui="modern"] .nw-o{background:rgba(0,0,0,.22);border-color:#3E3122}
+html[data-ui="modern"] .nw-d{color:#C9A45A}
+/* r30: mortes de ontem na ficha da hunt */
+.kstat:empty{display:none}
+.ks{border:1px solid var(--line);border-radius:var(--r1);padding:8px 12px;background:var(--surface)}
+.ks summary{cursor:pointer;font-size:14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}
+.ks-h{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.ks-d{color:var(--warn)}
+.ks-l{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px 14px;font-size:13px}
+.ks-l li{display:flex;gap:6px;align-items:baseline}
+.ks-l li span{flex:1;color:var(--ink-2)}
+.ks-l em{font-style:normal;color:var(--warn)}
+html[data-ui="modern"] .ks{background:rgba(0,0,0,.22);border-color:#3E3122}
+/* r30: "Hoje no Tibia" no Início */
+.td-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:10px}
+.td-t{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r1);background:var(--surface);color:inherit;text-decoration:none;min-height:72px}
+a.td-t:hover{border-color:var(--accent)}
+.td-t>div{display:grid;gap:1px;min-width:0}
+.td-t b{font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+.td-l{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.td-s{font-size:13px;color:var(--muted)}
+.td-ic{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:50%;background:var(--sunk);color:var(--accent)}
+.td-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.td-t .cr{flex:none}
+.td-ev{margin-top:12px}
+.td-ev h4{font-size:14px;margin:0 0 6px}
+.td-ev ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.td-ev li{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;padding:8px 12px;border-left:3px solid var(--line);background:var(--surface)}
+.td-ev li.on{border-left-color:var(--ok)}
+.td-ev li span{color:var(--muted);font-size:13px;align-self:center}
+.td-ev li small{grid-column:1/-1;color:var(--muted);font-size:13px}
+html[data-ui="modern"] .td-t{background:var(--glass);border:1px solid var(--tb-dark);box-shadow:var(--tb-win),0 2px 0 rgba(0,0,0,.4);transition:transform var(--d2) var(--e-out),box-shadow var(--d2)}
+html[data-ui="modern"] a.td-t:hover{border-color:var(--tb-dark);transform:translateY(-2px);box-shadow:inset 0 0 0 1px #A8844A,0 3px 0 rgba(0,0,0,.45)}
+html[data-ui="modern"] .td-ic{background:radial-gradient(circle at 50% 35%,#3A2E1F,#16110B 70%);box-shadow:inset 0 0 0 1px #8C6D3A,inset 0 0 0 3px #1A140E;color:#F2D68C}
+html[data-ui="modern"] .td-t b{color:#F4DE9E}
+html[data-ui="modern"] .td-ev li{background:rgba(0,0,0,.22);border-left-color:#5A4627}
+html[data-ui="modern"] .td-ev li.on{border-left-color:#8CD072}
+html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
 </style>
 
 <div class="tb-bar" aria-hidden="true"></div><div class="tb-par" aria-hidden="true"></div>
@@ -3524,6 +3611,10 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
           <div class="hsum" id="heroSet" aria-live="polite"></div>
         </div>
         <div class="bis" id="bis"></div>
+      </div>
+      <div class="sec today-sec">
+        <h3>Hoje no Tibia</h3>
+        <div class="today" id="today" aria-live="polite"></div>
       </div>
       <div class="sec">
         <h3>Para o teu nível, agora</h3>
@@ -3692,6 +3783,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
           <div class="callout"><h4>Como ganhar charm points</h4><p class="small">Completa entradas do Bestiary: Harmless 1, Trivial 5, Easy 15, Medium 25, Hard 50, Challenging 100 pontos. Os majors pedem a criatura completa; os minors chegam com o estágio 2. Mudar um charm de criatura custa nível × 100 gp. As criaturas Very Rare completam-se com 5 kills e dão o dobro; a primeira vitória contra cada Echo Warden também dá pontos.</p></div>
         </div>
       </div>
+      <details class="card bst-c" id="bestCard"><summary><h3 style="display:inline;font-size:20px">Bestiário: onde ganhar charm points</h3></summary><div id="bestBody"></div></details>
       <div class="lsbar" data-ls="charms" style="margin:16px 0 12px"></div>
       <div class="card cm-all" id="charmAll"></div>
     </section>
@@ -3767,6 +3859,42 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
     <section class="panel" data-p="wiki2"><div id="wikiPage"></div></section>
 
     <!-- FONTES -->
+    <section class="panel" data-p="novidades">
+      <div class="ph"><span class="eyebrow">Início</span><h2>Novidades</h2><p>O que mudou no jogo nas últimas semanas, em português, e o que já atualizámos no Grimório.</p></div>
+      <div id="newsBody"></div>
+    </section>
+
+    <section class="panel" data-p="sistemas">
+      <div class="ph"><span class="eyebrow">Wiki</span><h2>Sistemas novos</h2><p>Como funcionam as mecânicas que chegaram com os últimos updates: Echo Raids, Weapon Proficiency, bosses com dificuldade escalável, Discovery, Newhaven e o Task Board.</p></div>
+      <div class="nw-list" id="sysBody"></div>
+    </section>
+
+    <section class="panel" data-p="calc">
+      <div class="ph"><span class="eyebrow">Mais</span><h2>Calculadoras</h2><p>Dividir o loot da party, quanto custa treinar um skill e quanto custa chegar a um tier no Exaltation Forge.</p></div>
+      <div class="card calc" id="lsCard"><h3>Divisão do loot da party</h3>
+        <p class="small">No jogo, abre o Party Hunt Analyser, carrega em <b>Copy to clipboard</b> e cola aqui.</p>
+        <textarea id="lsIn" rows="7" placeholder="Session data: From ... Session: 01:20h Loot Type: Leader ..." aria-label="Texto do Party Hunt Analyser"></textarea>
+        <div id="lsOut"></div></div>
+      <div class="card calc"><h3>Treino com exercise weapons</h3>
+        <div class="calc-f" id="trForm">
+          <label>Vocação<select id="trVoc"></select></label>
+          <label>Skill<select id="trSk"></select></label>
+          <label>Nível atual<input type="number" id="trFrom" min="0" max="200" value="10"></label>
+          <label>% que falta<input type="number" id="trLeft" min="0" max="100" value="100"></label>
+          <label>Chegar a<input type="number" id="trTo" min="1" max="200" value="15"></label>
+          <label class="chk"><input type="checkbox" id="trDummy"> Dummy de casa (+10%)</label>
+          <label class="chk"><input type="checkbox" id="trDouble"> Evento de skill a dobrar</label>
+        </div><div id="trOut"></div></div>
+      <div class="card calc"><h3>Exaltation Forge: custo até um tier</h3>
+        <div class="calc-f" id="fgForm">
+          <label>Classificação do item<select id="fgCls"><option value="1">1 (tier máx. 1)</option><option value="2">2 (tier máx. 2)</option><option value="3">3 (tier máx. 3)</option><option value="4" selected>4 (tier máx. 10)</option></select></label>
+          <label>Tier a atingir<input type="number" id="fgTier" min="1" max="10" value="3"></label>
+          <label>Preço do item base (gp)<input type="text" id="fgPrice" inputmode="numeric" placeholder="opcional"></label>
+          <label class="chk"><input type="checkbox" id="fgCh"> Core para 65% de sucesso</label>
+          <label class="chk"><input type="checkbox" id="fgPr"> Core de proteção</label>
+        </div><div id="fgOut"></div></div>
+    </section>
+
     <section class="panel" data-p="fontes">
       <div class="ph"><span class="eyebrow">Mais</span><h2>Fontes e método</h2><p>Dados de 7 de outubro de 2026; stats dos itens confirmados na TibiaWiki a 17 de outubro de 2026. O rebalanceamento de vocações (15.25, 16 jun) e os ajustes de 7 jul e 1 set mudaram muitos números: confirma sempre antes de gastar dinheiro.</p></div>
       <div class="grid2">
@@ -11220,7 +11348,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"lostbrother",
    "d":3,
    "acc":"Usa o espelho no rés-do-chão do Asura Palace (Tiquanda, perto do Kha'zeel Pass). Só entra quem tem nível 250+ e fez a Asura Palace Quest e a The Lost Brother Quest.",
-   "note":"Usa energia: todos os asuras recebem 110% (cada tipo é imune a fogo, morte ou gelo). O primeiro piso ainda tem muitos asuras normais; os True Asuras ficam nos pisos de baixo e no último há Hellhounds, cuidado com combos.",
+   "note":"Usa energia: todos os asuras recebem 110% (cada tipo é imune a fogo, morte ou gelo). O primeiro piso ainda tem muitos asuras normais; os True Asuras ficam nos pisos de baixo e no último há Hellhounds, cuidado com combos. Balanceamento de 20/10/2026: True Midnight Asura dá mais XP (7 313 → 8 200); True Midnight Asura dá cerca de 10% menos ouro; True Frost Flower Asura dá cerca de 10% menos ouro; True Dawnfire Asura dá mais XP (7 475 → 8 100); True Dawnfire Asura dá cerca de 14% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":102,"fire":58,"ice":76,"earth":92,"energy":103,"holy":84,"death":66,"min":{"physical":90,"fire":0,"ice":0,"earth":20,"energy":90,"holy":70,"death":0}},
    "city":"Port Hope",
@@ -11841,7 +11969,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"bloodbros",
    "d":3,
    "acc":"Em Vengoth: o Harlow, nas docas do Trade Quarter de Yalahar, leva-te depois da missão 4 da Blood Brothers Quest. A fortaleza fica no norte de Vengoth, depois da névoa.",
-   "note":"Todos resistem a morte; terra, gelo ou fogo funcionam bem (o TibiaPal usa gelo/terra para knights e fogo para sorcerers). Com a Bloody Tusks Quest feita, a máquina do último piso leva-te de volta à entrada.",
+   "note":"Todos resistem a morte; terra, gelo ou fogo funcionam bem (o TibiaPal usa gelo/terra para knights e fogo para sorcerers). Com a Bloody Tusks Quest feita, a máquina do último piso leva-te de volta à entrada. Balanceamento de 20/10/2026: Gloom Maw dá menos XP (8 770 → 7 550); Dworc Shadowstalker dá menos XP (8 930 → 7 680); Orclops Bloodbreaker dá menos XP (10 250 → 8 820). O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":96,"fire":104,"ice":104,"earth":103,"energy":98,"holy":100,"death":71,"min":{"physical":90,"fire":100,"ice":100,"earth":95,"energy":90,"holy":95,"death":60}},
    "city":"Yalahar",
@@ -11937,7 +12065,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"bloodytusks",
    "d":3,
    "acc":"Vengoth (Harlow em Yalahar, depois da missão 4 da Blood Brothers Quest). Para descer aos calabouços faz a missão Breaking In da Bloody Tusks Quest: 17 Norcferatu Talismans para atrair o Behemoth que parte a guarda.",
-   "note":"Duas alas: West (paladin desde 600) e East (desde 700, cerca de 9,5 kk/h). Todos resistem a morte: usa terra, gelo ou fogo. O Vladrukh é o boss final da Bloody Tusks Quest.",
+   "note":"Duas alas: West (paladin desde 600) e East (desde 700, cerca de 9,5 kk/h). Todos resistem a morte: usa terra, gelo ou fogo. O Vladrukh é o boss final da Bloody Tusks Quest. Balanceamento de 20/10/2026: Gloom Maw dá menos XP (8 770 → 7 550); Dworc Shadowstalker dá menos XP (8 930 → 7 680); Orclops Bloodbreaker dá menos XP (10 250 → 8 820). O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":96,"fire":104,"ice":104,"earth":103,"energy":98,"holy":100,"death":71,"min":{"physical":90,"fire":100,"ice":100,"earth":95,"energy":90,"holy":95,"death":60}},
    "boss":["Vladrukh"],
@@ -11981,7 +12109,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"cook20",
    "d":3,
    "acc":"Por um caixote do lixo debaixo de um cemitério nas Plains of Havoc, junto ao atalho para os Pits of Inferno (perto de Venore). Abre com a 20 Years a Cook Quest.",
-   "note":"Brutes e Alchemists são fracos a terra (120%) e resistem a físico; os Forgepriests são fracos a morte e gelo. Batem até ~650 por golpe: só para níveis muito altos.",
+   "note":"Brutes e Alchemists são fracos a terra (120%) e resistem a físico; os Forgepriests são fracos a morte e gelo. Batem até ~650 por golpe: só para níveis muito altos. Balanceamento de 20/10/2026: Bulltaur Brute dá cerca de 10% menos ouro; Bulltaur Alchemist dá cerca de 10% menos ouro; Bulltaur Forgepriest dá cerca de 10% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":73,"fire":92,"ice":95,"earth":113,"energy":102,"holy":105,"death":105,"min":{"physical":70,"fire":85,"ice":85,"earth":100,"energy":100,"holy":100,"death":100}},
    "city":"Venore",
@@ -14150,7 +14278,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"shards",
    "d":3,
    "acc":"Em Marapur, na Shards of a Broken Moon Quest (pede a Within the Tides Quest e a Grimvale – Paradise Lost): depois de falares com a Saraki e com o Udu, a Sharai, a nordeste dos Emerald Gardens, abre-te a gruta escondida a sudeste. As pedras da gruta levam-te à citadel.",
-   "note":"Usa terra ou energia: os True Asuras levam 110% de ambos e o Winged Jaracal 105%. Evita gelo e morte (a True Frost Flower Asura é imune a gelo e a True Midnight Asura a morte). A TibiaWiki compara a dificuldade à da Asura Mirror.",
+   "note":"Usa terra ou energia: os True Asuras levam 110% de ambos e o Winged Jaracal 105%. Evita gelo e morte (a True Frost Flower Asura é imune a gelo e a True Midnight Asura a morte). A TibiaWiki compara a dificuldade à da Asura Mirror. Balanceamento de 20/10/2026: True Midnight Asura dá mais XP (7 313 → 8 200); True Midnight Asura dá cerca de 10% menos ouro; True Frost Flower Asura dá cerca de 10% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":98,"fire":95,"ice":67,"earth":108,"energy":108,"holy":77,"death":57,"min":{"physical":95,"fire":85,"ice":0,"earth":105,"energy":105,"holy":70,"death":0}},
    "w":1,
@@ -14166,7 +14294,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"shards",
    "d":3,
    "acc":"Piso −1 da Asura Citadel, em Marapur (Shards of a Broken Moon Quest): entra pela gruta escondida que a Sharai te abre, a nordeste dos Emerald Gardens, e desce um piso.",
-   "note":"Usa terra: todas as criaturas levam 105-110%. A energia rende menos aqui (os Silverfrost Sentinels e os Iceplume Striders levam 90%); evita gelo e morte. O boss The Moonsnow Magnolia fica no piso de baixo.",
+   "note":"Usa terra: todas as criaturas levam 105-110%. A energia rende menos aqui (os Silverfrost Sentinels e os Iceplume Striders levam 90%); evita gelo e morte. O boss The Moonsnow Magnolia fica no piso de baixo. Balanceamento de 20/10/2026: True Midnight Asura dá mais XP (7 313 → 8 200); True Midnight Asura dá cerca de 10% menos ouro; True Frost Flower Asura dá cerca de 10% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":104,"fire":102,"ice":66,"earth":109,"energy":100,"holy":80,"death":74,"min":{"physical":100,"fire":90,"ice":0,"earth":105,"energy":90,"holy":70,"death":0}},
    "w":1,
@@ -14267,9 +14395,9 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"rotten",
    "d":3,
    "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
-   "note":"Hunt de equipa (TibiaPal 800+): usa energia ou gelo (110-125%) e evita terra e físico. As criaturas batem terra, físico e fogo (e morte a quem tem 3 ou mais Bakragore's Taints). Quando uma criatura morre pode aparecer um Decaying Totem, que solta quatro anéis de dano seguidos.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa energia ou gelo (110-125%) e evita terra e físico. As criaturas batem terra, físico e fogo (e morte a quem tem 3 ou mais Bakragore's Taints). Quando uma criatura morre pode aparecer um Decaying Totem, que solta quatro anéis de dano seguidos. Balanceamento de 27/10/2026: Sopping Corpus dá cerca de 12% menos ouro; Bloated Man-Maggot dá cerca de 12% menos ouro; Mycobiontic Beetle dá cerca de 12% menos ouro; Mycobiontic Beetle leva menos dano de energia (115% → 110%); Oozing Corpus dá cerca de 12% menos ouro; Oozing Corpus leva menos dano de energia (125% → 115%). O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
-   "eff":{"physical":65,"fire":74,"ice":115,"earth":52,"energy":119,"holy":106,"death":96,"min":{"physical":55,"fire":65,"ice":110,"earth":40,"energy":115,"holy":105,"death":90}},
+   "eff":{"physical":65,"fire":74,"ice":115,"earth":52,"energy":115,"holy":106,"death":96,"min":{"physical":55,"fire":65,"ice":110,"earth":40,"energy":110,"holy":105,"death":90}},
    "w":1,
    "xs":null,
    "ls":null,
@@ -14285,7 +14413,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"rotten",
    "d":3,
    "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
-   "note":"Hunt de equipa (TibiaPal 800+): usa morte, físico ou energia (105-120%) e evita fogo e holy. As criaturas batem holy, fogo e terra (e energia a quem tem 3 ou mais Bakragore's Taints). Vais acumulando energia escura: aos 100, cai-te um raio em cadeia que salta para até 5 jogadores perto e fica mais forte a cada salto.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa morte, físico ou energia (105-120%) e evita fogo e holy. As criaturas batem holy, fogo e terra (e energia a quem tem 3 ou mais Bakragore's Taints). Vais acumulando energia escura: aos 100, cai-te um raio em cadeia que salta para até 5 jogadores perto e fica mais forte a cada salto. Balanceamento de 27/10/2026: Darklight Emitter dá cerca de 12% menos ouro; Darklight Construct dá cerca de 12% menos ouro; Wandering Pillar dá cerca de 12% menos ouro; Converter dá cerca de 12% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":116,"fire":55,"ice":101,"earth":94,"energy":109,"holy":62,"death":118,"min":{"physical":115,"fire":40,"ice":100,"earth":90,"energy":105,"holy":50,"death":115}},
    "w":1,
@@ -14321,9 +14449,9 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"rotten",
    "d":3,
    "acc":"No norte de Darama (Rotten Blood Quest, nível 250): em Drefia, fala com o Torkada ('expedition', 'mission', 'yes') e entra no templo pelo ponto de levitate a noroeste. À entrada do Blood Vestibule, a Bloodshade pede 2 Bloody Tears ou 5 milhões de gp para te deixar passar a poça de sangue; lá dentro, os teleportes esféricos levam às quatro hunts.",
-   "note":"Hunt de equipa (TibiaPal 800+): usa fogo ou terra (110-120%) e evita energia e gelo. As criaturas batem energia, físico e gelo (e fogo a quem tem 3 ou mais Bakragore's Taints). Os Darkfields que deixam debaixo de ti tiram muita vida (dano agony) e só desaparecem com a Destroy Field Rune.",
+   "note":"Hunt de equipa (TibiaPal 800+): usa fogo ou terra (110-120%) e evita energia e gelo. As criaturas batem energia, físico e gelo (e fogo a quem tem 3 ou mais Bakragore's Taints). Os Darkfields que deixam debaixo de ti tiram muita vida (dano agony) e só desaparecem com a Destroy Field Rune. Balanceamento de 27/10/2026: Darklight Source leva menos dano de fogo (115% → 110%); Darklight Striker leva menos dano de fogo (120% → 115%). O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
-   "eff":{"physical":105,"fire":118,"ice":66,"earth":112,"energy":52,"holy":98,"death":98,"min":{"physical":90,"fire":115,"ice":55,"earth":110,"energy":40,"holy":90,"death":90}},
+   "eff":{"physical":105,"fire":115,"ice":66,"earth":112,"energy":52,"holy":98,"death":98,"min":{"physical":90,"fire":110,"ice":55,"earth":110,"energy":40,"holy":90,"death":90}},
    "w":1,
    "xs":null,
    "ls":null,
@@ -14339,7 +14467,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    "q":"lostbrother",
    "d":3,
    "acc":"A partir de Port Hope, vai ao Asura Palace, em Tiquanda (jangadas do Old Adall e do Lorek). O espelho do palácio leva às Asura Vaults (só a partir do nível 250); as True Asuras ficam nos pisos de baixo. Pede a Asura Palace Quest e a The Lost Brother Quest.",
-   "note":"Usa energia: as três True Asuras levam 110%. Evita fogo (True Dawnfire imune), morte (True Midnight imune) e gelo (True Frost Flower imune). No piso mais fundo há Hellhounds.",
+   "note":"Usa energia: as três True Asuras levam 110%. Evita fogo (True Dawnfire imune), morte (True Midnight imune) e gelo (True Frost Flower imune). No piso mais fundo há Hellhounds. Balanceamento de 20/10/2026: True Midnight Asura dá mais XP (7 313 → 8 200); True Midnight Asura dá cerca de 10% menos ouro; True Frost Flower Asura dá cerca de 10% menos ouro; True Dawnfire Asura dá mais XP (7 475 → 8 100); True Dawnfire Asura dá cerca de 14% menos ouro. O XP/h e o lucro/h já têm este ajuste estimado.",
    "unc":false,
    "eff":{"physical":100,"fire":52,"ice":82,"earth":84,"energy":102,"holy":85,"death":73,"min":{"physical":90,"fire":0,"ice":0,"earth":20,"energy":90,"holy":70,"death":0}},
    "city":"Port Hope",
@@ -15127,7 +15255,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    {"c":"bookworld2","place":"Book World: Chapter II","l":200,"xp":2600000.0,"lo":200000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"bookworld3","place":"Book World: Chapter III","l":200,"xp":3900000.0,"lo":400000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"bookworld4","place":"Book World: Chapter IV","l":230,"xp":4200000.0,"lo":400000.0,"how":"Diamond Arrows, Ethereal"},
-   {"c":"asuramirror","place":"Asura Mirror","l":250,"xp":5300000.0,"lo":600000.0,"how":"Diamond Arrows, Ethereal"},
+   {"c":"asuramirror","place":"Asura Mirror","l":250,"xp":5490000.0,"lo":570000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"warzone5","place":"Warzone 5","l":230,"xp":4300000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"fury","place":"Oramond Fury Dungeon","l":300,"xp":3900000.0,"lo":300000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"warzone4","place":"Warzone 4","l":230,"xp":3500000.0,"lo":1200000.0,"how":"Diamond Arrows, Ethereal"},
@@ -15166,7 +15294,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    {"c":"warzone1","place":"Warzone 1","l":500,"xp":4300000.0,"lo":1200000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"warzone2","place":"Warzone 2","l":500,"xp":5200000.0,"lo":1300000.0,"how":"Diamond Arrows, Divine"},
    {"c":"warzone3","place":"Warzone 3","l":500,"xp":5000000.0,"lo":1500000.0,"how":"Diamond Arrows, Divine"},
-   {"c":"norcferatu","place":"Norcferatu Fortress","l":600,"xp":8800000.0,"lo":1100000.0,"how":"Diamond Arrows, Ethereal"},
+   {"c":"norcferatu","place":"Norcferatu Fortress","l":600,"xp":8050000.0,"lo":1100000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"azzwalls","place":"Azzilon Walls","l":600,"xp":5500000.0,"lo":700000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"azzwalls","place":"Azzilon Castle","l":600,"xp":8600000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"ogres","place":"Issavi Ogres","l":500,"xp":4600000.0,"lo":1200000.0,"how":"Diamond Arrows, Divine"},
@@ -15185,8 +15313,8 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    {"c":"feruseals","place":"Feru Pumin","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"flimsy","place":"Venore Flimsies -1, -2 and -3","l":800,"xp":10500000.0,"lo":2000000.0,"how":"Firestorm Arrows, Divine"},
    {"c":"issavisurf","place":"Issavi Surface","l":600,"xp":6500000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
-   {"c":"norcdungeons","place":"Norcferatu Dungeons West","l":600,"xp":9000000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
-   {"c":"norcdungeons","place":"Norcferatu Dungeons East","l":700,"xp":9500000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
+   {"c":"norcdungeons","place":"Norcferatu Dungeons West","l":600,"xp":8230000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
+   {"c":"norcdungeons","place":"Norcferatu Dungeons East","l":700,"xp":8690000.0,"lo":800000.0,"how":"Diamond Arrows, Ethereal"},
    {"c":"feruseals","place":"Feru Undead Dragons","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"bulltaurs","place":"Bulltaur Lair","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
    {"c":"feruseals","place":"Ferumbras Way","l":800,"xp":null,"lo":null,"how":"Diamond Arrows, Ethereal"},
@@ -15473,7 +15601,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    {"c":"banuta6","place":"Deeper Banuta -8","l":300,"xp":2700000.0,"lo":250000.0,"how":"Energy"},
    {"c":"diremaw","place":"Diremaw Task Area","l":275,"xp":2800000.0,"lo":800000.0,"how":"Fire"},
    {"c":"asurapalace","place":"Asura Palace","l":275,"xp":3100000.0,"lo":500000.0,"how":"Energy"},
-   {"c":"asuramirror","place":"Asura Mirror","l":300,"xp":4400000.0,"lo":400000.0,"how":"Energy"},
+   {"c":"asuramirror","place":"Asura Mirror","l":300,"xp":4560000.0,"lo":380000.0,"how":"Energy"},
    {"c":"candia","place":"Candia Nibblemaws","l":300,"xp":3000000.0,"lo":300000.0,"how":"Energy"},
    {"c":"bursters","place":"Burster Spectres","l":275,"xp":4000000.0,"lo":300000.0,"how":"Fire"},
    {"c":"wildlife","place":"Oramond Wildlife Raid","l":275,"xp":4099999.9999999995,"lo":800000.0,"how":"Fire"},
@@ -29628,7 +29756,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    22465,
    249,
    ["paralyze","invisible"],
-   {"physical":-10,"energy":55,"earth":-10,"fire":-15,"ice":40},
+   {"physical":-10,"energy":55,"earth":-10,"fire":-10,"ice":40},
    [[326,"twiceslicer",11.6,28000],[219,"white gem",13.96,12000],[166,"blue gem",12.91,5000],[322,"dark obsidian splinter",13.21,4400]],
    0
   ],
@@ -29638,7 +29766,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    22200,
    250,
    ["paralyze","invisible"],
-   {"physical":10,"energy":35,"earth":-15,"fire":-20,"ice":30,"holy":10},
+   {"physical":10,"energy":35,"earth":-15,"fire":-15,"ice":30,"holy":10},
    [[327,"zaoan helmet",5.57,45000],[182,"crystal mace",8.81,12000],[166,"blue gem",7.36,5000],[322,"dark obsidian splinter",14.19,4400]],
    0
   ],
@@ -32427,7 +32555,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    21175,
    807,
    ["invisible"],
-   {"physical":25,"energy":-15,"earth":60,"fire":35,"ice":-25,"holy":-5},
+   {"physical":25,"energy":-10,"earth":60,"fire":35,"ice":-25,"holy":-5},
    [[20,"violet gem",18.92,10000],[543,"buckle",22.92,7000],[166,"blue gem",15.92,5000],[602,"rotten vermin ichor",22.92,4500]],
    0
   ],
@@ -32735,7 +32863,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
    20600,
    854,
    ["paralyze","outfit","invisible"],
-   {"physical":30,"energy":-25,"earth":40,"fire":25,"ice":-10,"holy":-10},
+   {"physical":30,"energy":-15,"earth":40,"fire":25,"ice":-10,"holy":-10},
    [[198,"jade hammer",3.07,25000],[20,"violet gem",5.08,10000],[166,"blue gem",9.81,5000],[561,"worm sponge",7.27,4200]],
    0
   ],
@@ -34277,7 +34405,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "true dawnfire asura":[
    "True Dawnfire Asura",
    8500,
-   7475,
+   8100,
    1202,
    ["paralyze","invisible"],
    {"physical":-10,"energy":-10,"fire":100,"ice":-5,"holy":-10,"death":20},
@@ -34297,7 +34425,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "true midnight asura":[
    "True Midnight Asura",
    9000,
-   7313,
+   8200,
    1204,
    ["paralyze","invisible"],
    {"energy":-10,"earth":-10,"fire":10,"ice":10,"holy":30,"death":100},
@@ -35014,7 +35142,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "devoted radiant zealot":["Devoted Radiant Zealot",41980,50500,0,[],{"physical":-15,"earth":10,"fire":-5,"death":-10,"energy":40,"holy":20,"ice":-5},[],0],
   "diblis the fair":["Diblis the Fair",1500,1800,0,[],{"physical":40,"earth":100,"death":100,"holy":-5,"lifedrain":100},[],1],
   "dreadful disruptor":["Dreadful Disruptor",10000,14000,0,[],{"physical":10,"earth":10,"fire":25,"death":15,"energy":80,"ice":25},[],1],
-  "dworc shadowstalker":["Dworc Shadowstalker",8900,8930,0,[],{"physical":5,"earth":5,"fire":-5,"death":40,"energy":-5,"ice":-5},[],0],
+  "dworc shadowstalker":["Dworc Shadowstalker",8900,7680,0,[],{"physical":5,"earth":5,"fire":-5,"death":40,"energy":-5,"ice":-5},[],0],
   "earth overlord":["Earth Overlord",4000,2800,0,[],{"earth":100,"fire":-25,"death":20,"ice":20},[],1],
   "ekatrix":["Ekatrix",500,200,0,[],{"physical":-5,"earth":20,"energy":100,"holy":-5},[],1],
   "energy overlord":["Energy Overlord",4000,2800,0,[],{"physical":50,"earth":-10,"fire":20,"energy":100,"ice":100},[],1],
@@ -35027,7 +35155,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "furyosa":["Furyosa",25000,11500,0,[],{"physical":10,"fire":100,"death":10,"energy":10,"holy":40,"ice":40},[],0],
   "general murius":["General Murius",550,450,0,[],{"fire":20},[],1],
   "ghulosh":["Ghulosh",0,45000,0,[],{"earth":-5,"death":10,"energy":5,"holy":-5,"ice":20,"fire":200},[],0],
-  "gloom maw":["Gloom Maw",8700,8770,0,[],{"earth":-10,"fire":-5,"death":25,"energy":-10,"holy":-5},[],0],
+  "gloom maw":["Gloom Maw",8700,7550,0,[],{"earth":-10,"fire":-5,"death":25,"energy":-10,"holy":-5},[],0],
   "goldhanded cultist bride":["Goldhanded Cultist Bride",3000,2000,0,[],{"fire":10,"death":15,"energy":17,"ice":15},[],0],
   "gorzindel":["Gorzindel",350000,55000,0,[],{"energy":5,"fire":200},[],0],
   "gralvalon":["Gralvalon",33000,24000,0,[],{},[],1],
@@ -35063,7 +35191,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "norcferatu heartless":["Norcferatu Heartless",5700,5900,0,[],{"physical":10,"earth":-10,"death":30,"energy":5,"holy":-5},[],0],
   "norcferatu nightweaver":["Norcferatu Nightweaver",6100,6370,0,[],{"earth":-5,"death":25,"energy":10,"holy":5,"ice":-10},[],0],
   "oodok witchmaster":["Oodok Witchmaster",450,550,0,[],{"earth":100,"fire":-5,"holy":35,"ice":20},[],1],
-  "orclops bloodbreaker":["Orclops Bloodbreaker",10300,10250,0,[],{"physical":5,"fire":-10,"death":30,"ice":-5},[],0],
+  "orclops bloodbreaker":["Orclops Bloodbreaker",10300,8820,0,[],{"physical":5,"fire":-10,"death":30,"ice":-5},[],0],
   "overseer osverger":["Overseer Osverger",75000,75000,0,[],{"physical":-6,"earth":-6,"fire":-6,"energy":15,"ice":25},[],1],
   "pirate cook":["Pirate Cook",90,105,0,[],{"earth":-5,"death":-5,"ice":5},[],0],
   "pirate gunner":["Pirate Gunner",68,80,0,[],{"physical":-5,"earth":5,"fire":5,"death":-5,"energy":-5,"ice":-5},[],0],
@@ -44520,9 +44648,9 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "warzone3":{"s":4,"t":0,"v":{"monk":[1,571,571,6715440,2258450],"knight":[3,790,791,6554587,2165575]}},
   "cobras":{"s":15,"t":8,"v":{"knight":[15,587,1196,10009492,2137060]}},
   "ingol":{"s":21,"t":10,"v":{"druid":[8,716,1227,7695319,1460940],"paladin":[3,1164,1202,11987334,3088374],"sorcerer":[10,707,864,8612007,2250823]}},
-  "norcferatu":{"s":8,"t":19,"v":{"druid":[8,864,1317,10843698,1714886]}},
+  "norcferatu":{"s":8,"t":19,"v":{"druid":[8,864,1317,9921333,1714886]}},
   "warzone6":{"s":7,"t":0,"v":{"knight":[1,568,568,2615581,794902],"druid":[4,315,369,2557207,1074949],"paladin":[2,664,676,6671100,1477221]}},
-  "asuramirror":{"s":6,"t":1,"v":{"knight":[3,527,567,4512445,949586],"paladin":[3,531,531,5196536,964851]}},
+  "asuramirror":{"s":6,"t":1,"v":{"knight":[3,527,567,4673943,924628],"paladin":[3,531,531,5382518,936109]}},
   "summercourt":{"s":5,"t":0,"v":{"paladin":[1,592,592,4847830,771762],"druid":[3,487,504,4902880,948132],"knight":[1,678,678,4815086,1208376]}},
   "prison":{"s":0,"t":4,"v":{}},
   "w_brain_grounds":{"s":8,"t":0,"v":{"paladin":[8,645,822,7788578,1486985]}},
@@ -44541,7 +44669,7 @@ html.fx-lite[data-ui="modern"] .md-ind{transition:none}
   "medusa":{"s":3,"t":0,"v":{"paladin":[1,266,266,2313280,509324],"knight":[1,265,265,1568429,245824],"druid":[1,407,407,1661025,435184]}},
   "w_claustrophobic_inferno":{"s":0,"t":1,"v":{}},
   "upperrosh":{"s":3,"t":0,"v":{"monk":[1,921,921,7374528,2385834],"paladin":[2,793,816,7630182,1868511]}},
-  "norcdungeons":{"s":1,"t":0,"v":{"druid":[1,653,653,5899732,958374]}},
+  "norcdungeons":{"s":1,"t":0,"v":{"druid":[1,653,653,5397901,958374]}},
   "carnivoras":{"s":1,"t":0,"v":{"druid":[1,324,324,1540661,209471]}},
   "w_furious_crater":{"s":0,"t":5,"v":{}},
   "deathlings":{"s":6,"t":0,"v":{"paladin":[6,662,678,6274931,1259758]}},
@@ -44652,6 +44780,9 @@ const chip = e => `<span class="chip c-${e}">${ELN[e]||e}</span>`;
 /* ---------- icons ---------- */
 const S = (p,vb) => `<svg viewBox="${vb||"0 0 24 24"}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const IC = {
+ sistemas:S('<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>'),
+ calc:S('<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h2M12 18h4"/>'),
+ novidades:S('<path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5M8 17h3"/>'),
  inicio:S('<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-3H4zM14 7h6V4h-6z"/>'),
  tarefas:S('<path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/>'),
  bosses:S('<path d="M4 17 3 7l5 4 4-7 4 7 5-4-1 10z"/><path d="M5 21h14"/>'),
@@ -44699,12 +44830,12 @@ const VIX={}; G.items.forEach(it=>{ const k=it.n.toLowerCase(); Object.entries(V
 const VI = (v,cls) => { const ix=VIX[v]; return ix==null ? (IC[v]||"") : `<span class="vi ${cls||""}" style="--x:${ix%G.spriteCols};--y:${Math.floor(ix/G.spriteCols)}" aria-hidden="true"></span>`; };
 /* ---------- navigation ---------- */
 const SECS = [
- {id:"inicio",t:"Início",subs:[["inicio","Início"]]},
+ {id:"inicio",t:"Início",subs:[["inicio","Início"],["novidades","Novidades"]]},
  {id:"hunts",t:"Hunts",subs:[["hunts","Hunts"],["bosses","Bosses"],["tarefas","Tarefas"]]},
  {id:"build",t:"Build",subs:[["rotacao","Rotação e hotkeys"],["wheel","Wheel"],["equip","Equipamento"]]},
  {id:"prog",t:"Progresso",subs:[["charms","Charms"],["guias","Quests","quests/"]]},
- {id:"wiki",t:"Wiki",subs:[["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
- {id:"mais",t:"Mais",subs:[["defesa","Defesa"],["ask","Perguntar"],["perso","Personagens"],["fontes","Fontes"]]}
+ {id:"wiki",t:"Wiki",subs:[["sistemas","Sistemas novos"],["itens","Itens"],["criaturas","Criaturas"],["feiticos","Feitiços"],["npcs","NPCs"],["colecoes","Coleções"]]},
+ {id:"mais",t:"Mais",subs:[["calc","Calculadoras"],["defesa","Defesa"],["ask","Perguntar"],["perso","Personagens"],["fontes","Fontes"]]}
 ];
 const HAS_AI = !!(window.claude && typeof window.claude.use==="function");
 if(!HAS_AI){ SECS.forEach(sc=>{ sc.subs=sc.subs.filter(x=>x[0]!=="ask"); }); document.documentElement.classList.add("noai"); }
@@ -45396,7 +45527,7 @@ function sheetInert(on){ document.querySelectorAll("header.bar,body>.shell,#bott
 function openSheet(html){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"); clearTimeout(sh._shT); sh.classList.remove("closing"); if(typeof mdTipHide==="function") mdTipHide();
   if(!was){ let op=document.activeElement; if(op&&op.closest&&op.closest("#gsPop")) op=$("gsBtn"); SHEET_OPENER=op&&op!==document.body?op:null;
     if(!(history.state&&history.state.sheet)){ try{ history.pushState({sheet:1,gd:NAVD+1},""); NAVD++; }catch(e){} } sheetInert(true); }
-  $("sheetBody").innerHTML=html; initRoutes($("sheetBody")); sh.classList.add("on"); document.body.classList.add("noscroll"); $("sheetBody").scrollTop=0; $("sheetX").focus({preventScroll:true}); const shc=sh.querySelector(".sh"); if(shc) shc.scrollLeft=0; }
+  $("sheetBody").innerHTML=html; initRoutes($("sheetBody")); initKstat($("sheetBody")); sh.classList.add("on"); document.body.classList.add("noscroll"); $("sheetBody").scrollTop=0; $("sheetX").focus({preventScroll:true}); const shc=sh.querySelector(".sh"); if(shc) shc.scrollLeft=0; }
 function closeSheet(o){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"), pop=!!(o&&o.fromPop===true), nav=!!(o&&o.nav===true);
   if(was){ sheetInert(false); const op=SHEET_OPENER; SHEET_OPENER=null; if(!nav&&op&&op.isConnected){ try{ op.focus({preventScroll:true}); }catch(e){} }
     const st=history.state; if(st&&st.sheet){ if(nav){ try{ history.replaceState(Object.assign({},st,{sheet:0}),""); }catch(e){} } else if(!pop){ SHEET_BACK=true; history.back(); } } }
@@ -45448,6 +45579,7 @@ function huntSheet(h){
     ${h.boost?`<p class="small" style="margin:0;color:var(--ok)">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</p>`:""}
     <div class="pills"><span class="compat ${cmp.cls}">${esc(cmp.txt)}</span>${cmp.alt?`<span class="tag acc">${esc(cmp.alt)}</span>`:""}${cmp.imm&&cmp.imm.length?`<span class="tag warn">imune a ${esc(cmp.imm.join(" e "))}</span>`:""}${acc}</div>
     ${haHTML(h.r.c,h.voc)}
+    ${h.r.c?`<div class="kstat" data-kstat="${h.r.c}"></div>`:""}
     <div class="whatb"><h5>Setup para ${esc(G.voc[h.voc].n)} ${c.level}</h5>${setupHTML(h.voc,c.level,p,h)}<details><summary class="small">Dano de cada elemento</summary>${elemHTML(h.voc,p)}</details></div>
     ${h.r.c?hsetsHTML(h.r.c):""}
     ${h.r.c?hwheelHTML(h.r.c,h.d):""}
@@ -45619,7 +45751,7 @@ function renderNav(){
   { const sg=$("subtabs").querySelector(".seg"), st=sg&&sg.querySelector('[aria-pressed="true"]'); if(st&&sg.scrollWidth>sg.clientWidth+1){ const r=sg.getBoundingClientRect(), b=st.getBoundingClientRect(); if(b.left<r.left||b.right>r.right) sg.scrollLeft+=b.left-r.left-(r.width-b.width)/2; } } // menu lateral e separadores com scroll: o item ativo fica à vista
   if(typeof mdInd==="function") mdInd();
 }
-function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:true}); ST.ui.p=p; save(); renderNav(); if(p==="tarefas") renderTasks(); if(p==="bosses") renderBosses(); if(p==="itens") renderItemList(); if(p==="criaturas") renderMonList(); if(p==="feiticos") renderSpellList(); if(p==="npcs") renderNpcList(); if(p==="colecoes") renderColList();
+function go(p, scroll){ if($("sheet").classList.contains("on")) closeSheet({nav:true}); ST.ui.p=p; save(); renderNav(); if(p==="tarefas") renderTasks(); if(p==="bosses") renderBosses(); if(p==="itens") renderItemList(); if(p==="criaturas") renderMonList(); if(p==="feiticos") renderSpellList(); if(p==="npcs") renderNpcList(); if(p==="colecoes") renderColList(); if(p==="novidades") renderNews(); if(p==="sistemas") renderSys(); if(p==="calc") renderCalc();
   if(location.hash!=="#"+p) history.replaceState(history.state,"","#"+p); if(scroll!==false) window.scrollTo({top:0}); if(typeof mdPanel==="function") mdPanel(p); }
 $("side").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
 $("subtabs").addEventListener("click", e=>{ const b=e.target.closest("button[data-p]"); if(b) mdVT(()=>go(b.dataset.p)); });
@@ -45702,7 +45834,40 @@ function renderInicio(){
   const youRow=`<li class="you"><span class="lv">${L}</span><span class="dt"></span><div><b>Estás aqui</b></div></li>`;
   lv.forEach(x=>{ if(!you && x>L){ out+=youRow; you=true; } out+=`<li class="${x<=L?"past":""}"><span class="lv">${x}</span><span class="dt"></span><div style="display:grid;gap:3px">${ev.filter(e=>e.l===x).map(e=>`<div class="small"><span class="tag">${e.k}</span> ${esc(e.t)}</div>`).join("")}</div></li>`; });
   if(!you) out+=youRow; $("timeline").innerHTML=out;
+  renderToday(); todayLoad().then(renderToday);
 }
+/* r30 */ // "Hoje no Tibia" (Início): criatura e boss em destaque (TibiaData /creatures e /boostablebosses, guardados por dia de jogo),
+// cidade do Rashid, tempo até ao server save (10:00 de Berlim) e eventos do calendário (EVENTS: [início, fim, nome, nota]; atualizar à mão).
+const EVENTS=[["2026-10-31","2026-11-03","Halloween","Criaturas e boss de Halloween, com a Halloween Hare"],
+  ["2026-11-11","2026-11-15","Lightbearer","Acende os basins espalhados pelo mundo antes que se apaguem"],
+  ["2026-11-20","2026-11-23","A Pirate's Death to Me","Invasões de piratas e o boss pirata"]];
+function berlinNow(){ const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Berlin",year:"numeric",month:"2-digit",day:"2-digit",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+  return {date:`${p.year}-${p.month}-${p.day}`, min:+p.hour*60+ +p.minute}; }
+function gameDay(){ const b=berlinNow(); if(b.min>=600) return b.date; const d=new Date(b.date+"T12:00:00Z"); d.setUTCDate(d.getUTCDate()-1); return d.toISOString().slice(0,10); }
+let TODAY=null, TODAY_T=0;
+async function todayLoad(){ const day=gameDay(); if(TODAY&&TODAY.day===day&&!TODAY.err) return TODAY;
+  try{ const c=JSON.parse(localStorage.getItem("grimorio-today")||"null"); if(c&&c.day===day) return TODAY=c; }catch(e){}
+  try{ const [a,b]=await Promise.all([getJSON(`${API}/creatures`,9000),getJSON(`${API}/boostablebosses`,9000)]);
+    const bm=a&&a.creatures&&a.creatures.boosted, bb=b&&b.boostable_bosses&&b.boostable_bosses.boosted;
+    TODAY={day, mon:bm&&bm.name||null, boss:bb&&bb.name||null}; try{ localStorage.setItem("grimorio-today",JSON.stringify(TODAY)); }catch(e){} }
+  catch(e){ TODAY={day,err:1}; }
+  return TODAY; }
+function ssText(){ const m=600-berlinNow().min, left=m>0?m:m+1440; return left<60?`${left} min`:`${Math.floor(left/60)} h ${String(left%60).padStart(2,"0")} min`; }
+function todayMon(name,lab,ic){ const T=TODAY||{};
+  if(!name) return `<div class="td-t"><span class="td-ic">${ic}</span><div><span class="td-l">${lab}</span><b class="muted">${T.err?"Sem ligação à TibiaData":"A carregar…"}</b></div></div>`;
+  const k=name.toLowerCase(), has=G.mon&&G.mon[k];
+  return `<a class="td-t" href="${monHref(name)}">${G.cr&&G.cr[k]!=null?crSpr(k,44):`<span class="td-ic">${ic}</span>`}<div><span class="td-l">${lab}</span><b>${esc(has?G.mon[k][0]:name)}</b><span class="td-s">${lab==="Boss em destaque"?"+ Bosstiary e loot":"+ loot, XP e bestiário"}</span></div></a>`; }
+function renderToday(){ const el=$("today"); if(!el) return; const T=TODAY||{}, R=rashidToday(), today=berlinNow().date;
+  const fmt=d=>d.slice(8,10)+"/"+d.slice(5,7);
+  const ev=EVENTS.filter(e=>e[1]>=today).slice(0,3).map(e=>{ const on=e[0]<=today;
+    return `<li class="${on?"on":""}"><b>${esc(e[2])}</b><span>${on?`a decorrer até ${fmt(e[1])}`:`${fmt(e[0])} a ${fmt(e[1])}`}</span><small>${esc(e[3])}</small></li>`; }).join("");
+  el.innerHTML=`<div class="td-grid">
+    ${todayMon(T.mon,"Criatura em destaque",IC.criaturas||"")}
+    ${todayMon(T.boss,"Boss em destaque",IC.bosses||"")}
+    <a class="td-t" href="${wkHref("npc","Rashid")}"><span class="td-ic">${IC.npcs||""}</span><div><span class="td-l">Rashid hoje</span><b>${esc(R.city)}</b><span class="td-s">compra itens de loot a bom preço</span></div></a>
+    <div class="td-t"><span class="td-ic td-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span class="td-l">Server save</span><b data-ss>${ssText()}</b><span class="td-s">todos os dias às 10:00 (Berlim)</span></div></div>
+  </div>${ev?`<div class="td-ev"><h4>Próximos eventos</h4><ul>${ev}</ul></div>`:""}`;
+  clearInterval(TODAY_T); TODAY_T=setInterval(()=>{ const b=document.querySelector("#today [data-ss]"); if(!b||!b.isConnected){ clearInterval(TODAY_T); return; } b.textContent=ssText(); if(gameDay()!==(TODAY&&TODAY.day)) todayLoad().then(renderToday); },60000); }
 /* r7: Início — guias do Questski para o nível da personagem: nível mínimo até ao dela e recomendado perto (abaixo conta menos do que acima);
    fora os já feitos (no Grimório pelo q2s, todas as quests do guia; no Questski pelo localStorage "tq-progress"), os tutoriais e Rookgaard/Dawnport.
    Os começados no Questski vêm primeiro; depois histórias e acessos, tarefas, tesouros, outfits... e os eventos no fim. */
@@ -47353,6 +47518,142 @@ function itemAdvHTML(key,w,d,info){ const W=esc(w), p=priceOf(key,w), np=p.npc?`
 /* r4-t2 */ // separador 'Loot e lucro' da ficha (solo e grupo): <div class="lp" data-lootp="pid" data-xp data-lo data-how [data-g data-sb]> preenchido por initLoot
 function gpx(v){ v=+v||0; return v<=0 ? "—" : v<1 ? "< 1 gp" : v<10 ? `${v.toFixed(1).replace(/\.0$/,"").replace(".",DECSEP)} gp` : gp(v); }
 function ozTxt(r){ return r>=10 ? nf(r) : r>=0.1 ? r.toFixed(1).replace(".",DECSEP) : "< 0,1"; }
+/* r30 */ // Novidades: as mudanças recentes do jogo resumidas em português (NEWS_PT, à mão, com as hunts que mudaram no Grimório)
+// e, por baixo, as notícias oficiais de desenvolvimento das últimas semanas (TibiaData /news/archive; texto oficial em inglês,
+// aberto aqui mesmo), com as hunts e criaturas do Grimório que cada notícia refere.
+const NEWS_PT=[
+ {d:"2026-10-28",t:"Três mundos novos",li:["Quirina (Europa, Optional PvP), Nebulera (América do Norte, Open PvP) e Farsabra (América do Sul, Open PvP).","Com BattlEye, fechados a transferências durante bastante tempo e, no início, só para contas Premium.","Os preços do Market destes mundos aparecem no Grimório assim que o TibiaMarket os começar a seguir (a lista de mundos atualiza-se sozinha todos os dias)."]},
+ {d:"2026-10-27",t:"Rotten Blood mais pobre e menos sensível",h:["jadedroots","gloompillars","darklightcore"],li:["Jaded Roots: Oozing Corpus, Mycobiontic Beetle, Bloated Man-Maggot e Sopping Corpus dão cerca de 12% menos ouro.","Gloom Pillars: todas as criaturas dão cerca de 12% menos ouro.","Sensibilidades mais baixas: Oozing Corpus a energia 125% → 115%, Mycobiontic Beetle a energia 115% → 110%, Darklight Striker a fogo 120% → 115% e Darklight Source a fogo 115% → 110%.","Matar criaturas em Rookgaard já não abre echo raids; os lion knights deixam de ferir os aliados com feitiços.","No Grimório: sensibilidades, eficácia dos elementos e lucro estimado destas hunts já atualizados."]},
+ {d:"2026-10-27",t:"Winter Update 2026 a caminho",li:["Saiu o primeiro de dois teasers (\"One for the Stray\"). A CipSoft já guardou as personagens para o servidor de teste do Winter Update.","Quando o update sair, entra aqui e no Questski."]},
+ {d:"2026-10-22",t:"Mundos fundidos",li:["Jambra (Xybra e Cantabra), Deslumbra (Luzibra, Yubra e Etebra), Mortabra (Sombra e Gladibra), Nociva (Noctalia e Citra), Ulmyra (Sonira e Bravoria), Westera (Ignitera, Aethera e Xymera) e Faunera (Kalimera e Blumera).","Se a tua personagem estava num destes mundos, o Grimório passa para o mundo novo na próxima atualização da personagem (preços e mortes de ontem incluídos)."]},
+ {d:"2026-10-20",t:"Asuras com mais XP, Norcferatu com menos",h:["asuramirror","asuravaults","asuracitadel","asuracitadel1","norcferatu","norcdungeons","bulltaurs"],li:["Asura Vaults, Asura Citadel e Forbidden Gardens: True Dawnfire Asura 7 475 → 8 100 XP (−14% ouro), True Midnight Asura 7 313 → 8 200 XP (−10% ouro), True Frost Flower Asura −10% ouro, True Feverbloom Asura 7 850 → 8 600 XP.","Norcferatu Dungeons: Dworc Shadowstalker 8 930 → 7 680 XP, Orclops Bloodbreaker 10 250 → 8 820 XP, Gloom Maw 8 770 → 7 550 XP.","Bulltaur Lair: Brute, Alchemist e Forgepriest dão cerca de 10% menos ouro.","Make Believe: os devoted radiants ficam 2 horas em vez de 1.","Os charms Overpower e Overflux deixam de ser afetados pela Aura of Exposed Weakness; o perk Battle Instinct do knight atualiza-se sem trocar de equipamento.","No Grimório: XP das criaturas e XP/h e lucro estimados destas hunts já atualizados."]},
+ {d:"2026-10-13",t:"Correções",li:["Mirrored Nightmare: as imagens do espelho voltam a transformar-se numa só aparição.","Janela de troca com NPCs: já não compras o item escolhido antes por engano.","Hive: deixa de ser possível fazer logout nas zonas subterrâneas com acesso restrito."]},
+ {d:"2026-10-06",t:"Market mais caro, exercise weapons mais caras",li:["Taxa do Market de 2% para 2,5%, com limite de 2 500 000 gp (antes 1 000 000).","Exercise weapons 25% mais caras: normal 434 028 gp, durable 1 562 500 gp, lasting 12 500 000 gp (a calculadora de treino já usa estes preços).","Echo Wardens outra vez com 4 criaturas normais, bónus de dano de 20% e 50 de dust.","Swift Foot com o cooldown certo: 4 s (grupo 2 s). Deixa de ser possível usar dados nos depots."]},
+ {d:"2026-09-29",t:"Correções",li:["Lightning com alcance 7, como devia.","Bibby Bloodbath: tentar entrar durante o tempo de espera já não o reinicia. The Welter passa a dar o bónus de loot de boss."]}
+];
+let NEWS_LIVE=null;
+async function newsLoad(){ if(NEWS_LIVE) return NEWS_LIVE;
+  try{ const j=await getJSON(`${API}/news/archive/45`,10000); NEWS_LIVE=((j&&j.news)||[]).filter(n=>n.category==="development"); }catch(e){ NEWS_LIVE=[]; NEWS_LIVE.err=1; }
+  return NEWS_LIVE; }
+const newsDate = d => `${d.slice(8,10)}/${d.slice(5,7)}/${d.slice(0,4)}`;
+function newsHunts(pids){ const L=(pids||[]).filter(k=>G.places[k]); return L.length?`<div class="nw-h"><span class="tiny muted">Hunts afetadas:</span>${L.map(k=>`<button type="button" class="tag" data-gs="h:${esc(k)}">${esc(G.places[k].n)}</button>`).join("")}</div>`:""; }
+// hunts e criaturas do Grimório que o texto oficial refere (nomes inteiros; criaturas em singular ou plural)
+function newsMatch(txt){ const t=" "+txt.toLowerCase().replace(/[^a-z0-9' -]+/g," ")+" ", pl=new Set(), mons=[];
+  Object.entries(G.places).forEach(([k,p])=>{ const n=(p.n||"").toLowerCase().replace(/ [−-].*$/,""); if(n.length>4&&t.includes(" "+n+" ")) pl.add(k); });
+  Object.entries(G.mon).forEach(([k,m])=>{ if(k.length>4&&(t.includes(" "+k+" ")||t.includes(" "+kPlural(k)+" "))){ mons.push(m[0]); Object.entries(G.places).forEach(([pk,p])=>{ if((p.mons||[]).some(x=>typeof x==="string"&&x.toLowerCase()===k)) pl.add(pk); }); } });
+  return {pl:[...pl].slice(0,10), mons:[...new Set(mons)].slice(0,10)}; }
+function renderNews(){ const el=$("newsBody"); if(!el) return;
+  el.innerHTML=`<div class="nw-list">${NEWS_PT.map(n=>`<article class="card nw"><div class="nw-d">${newsDate(n.d)}</div><h3>${esc(n.t)}</h3><ul>${n.li.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>${newsHunts(n.h)}</article>`).join("")}</div>
+    <div class="sec"><h3>Notícias oficiais de desenvolvimento</h3><p class="small muted">Últimas seis semanas do tibia.com (texto oficial, em inglês). Abre uma para a leres aqui; por baixo aparecem as hunts e criaturas do Grimório que refere.</p><div id="newsLive"><p class="small muted">A carregar…</p></div></div>`;
+  newsLoad().then(L=>{ const box=$("newsLive"); if(!box) return;
+    if(L.err||!L.length){ box.innerHTML=`<p class="small muted">${L.err?"Sem ligação à TibiaData de momento.":"Sem notícias de desenvolvimento nas últimas semanas."}</p>`; return; }
+    box.innerHTML=`<div class="nw-live">${L.map(n=>`<details class="nw-o" data-nid="${n.id}"><summary><span class="nw-d">${newsDate(n.date)}</span><b>${esc(String(n.news).replace(/\s+/g," ").trim())}</b><span class="tag">${n.type==="news"?"notícia":"ticker"}</span></summary><div class="nw-t"><p class="small muted">A carregar…</p></div></details>`).join("")}</div>`; }); }
+document.addEventListener("toggle",async e=>{ const d=e.target; if(!(d instanceof HTMLDetailsElement)||!d.open||!d.dataset.nid||d.dataset.ok) return; d.dataset.ok="1"; const box=d.querySelector(".nw-t");
+  try{ const j=await getJSON(`${API}/news/id/${d.dataset.nid}`,10000), n=j&&j.news; const html=String(n&&(n.content_html||n.content)||"");
+    const tmp=document.createElement("div"); tmp.innerHTML=html.replace(/<(script|style)[\s\S]*?<\/\1>/gi,"").replace(/<br\s*\/?>/gi,"\n").replace(/<\/(p|li|div|h\d)>/gi,"\n");
+    const txt=(tmp.textContent||"").replace(/\n{3,}/g,"\n\n").trim(), m=newsMatch(txt);
+    box.innerHTML=`${txt.split(/\n+/).filter(x=>x.trim()).map(x=>`<p class="small">${esc(x.trim())}</p>`).join("")}${m.mons.length?`<div class="nw-h"><span class="tiny muted">Criaturas:</span>${m.mons.map(x=>`<a class="tag" href="${monHref(x)}">${esc(x)}</a>`).join("")}</div>`:""}${newsHunts(m.pl)}`; }
+  catch(err){ box.innerHTML=`<p class="small muted">Não consegui abrir esta notícia agora.</p>`; delete d.dataset.ok; } },true);
+/* r30 */ // Sistemas novos do jogo (Echo Raids, Weapon Proficiency, bosses com dificuldade escalável, Discovery, Newhaven, Task Board),
+// resumidos da TibiaWiki e das notícias oficiais em outubro de 2026.
+const SYSN=[{"id": "echo-raids", "t": "Echo Raids e Echo Wardens", "s": "As Echo Raids são mini-raids que nascem a partir de uma criatura comum em qualquer subárea: ao ativares o eco aparece um grupo de criaturas da mesma espécie e, por vezes, um Echo Warden, uma versão reforçada que fortalece as criaturas à volta.", "p": ["Em cada subárea, uma spawn comum ou incomum transforma-se em Echo Raid no Server Save; depois de ativada, volta a aparecer nessa área ao fim de cerca de 20-30 minutos.", "Qualquer criatura que morra (às tuas mãos, por uma armadilha, um campo ou outra criatura) tem uma pequena hipótese de deixar o gatilho da raid em cima do corpo. Desde a 15.31 também a podes ativar à mão (clique direito + Usar).", "Ao ativares a raid nascem 8 criaturas normais ou 4 criaturas influenciadas; as criaturas ficam 10 minutos e depois desaparecem.", "Há 10% de hipótese de aparecer um Echo Warden como líder da raid (20% se já tiveres completado o Bestiário dessa criatura; o bónus só passou a funcionar com a correção de 04/08/2026).", "O Echo Warden dura até 10 minutos, é mais forte do que a criatura original e fortalece as criaturas próximas (nomes marcados como 'Empowered').", "Cada Echo Warden deixa sempre 1 Basic Imbuement Scroll e 1 catalisador de proficiência aleatório (Lesser, normal ou Greater Proficiency Catalyst).", "A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30. Todos os que causarem dano recebem o bónus; o progresso aparece no Bestiário.", "Desde 06/10/2026 os Echo Wardens voltam a nascer com 4 criaturas normais (em vez de 2 normais e 2 influenciadas), dão +20% de dano às outras criaturas (em vez de 50%) e deixam 50 de dust (em vez de 15). Desde 27/10/2026 matar criaturas em Rookgaard já não abre echo raids."], "u": "Summer Update 2026 (15.30.a30dad)", "d": "2026-07-13"}, {"id": "proficiency", "t": "Weapon Proficiency", "s": "Cada arma ganha experiência de proficiência quando matas criaturas com ela equipada; ao subir de nível desbloqueias perks (um por nível) e, desde o Summer Update 2026, podes substituir até 2 perks por outros à escolha.", "p": ["Ganhas progresso ao matar criaturas com entrada no Bestiário/Bosstiário com a arma equipada (basta teres contribuído com dano; runas e campos também contam). Summons e criaturas sem entrada no Bestiário não contam.", "XP por morte segundo a dificuldade: Harmless 1, Trivial 30, Easy 70, Medium 100, Hard 165, Challenging 240; +10% por stack de influência (fiendish: 2/75/175/250/412/600). Bosses: Bane 500, Archfoe 5.000, Nemesis 15.000.", "Há 7 níveis com perks; os níveis 8 e 9 são de Mastery (só títulos e conquistas). Nível 7 pede 30.000.000 XP (armas normais), 20.000.000 (armas de knight) ou 10.000.000 (bestas).", "Só podes ter 1 perk ativo por nível. Escolher um perk pela primeira vez faz-se em qualquer lado; trocar ou remover só numa zona de proteção.", "O progresso fica preso à personagem e não se transfere.", "Personalização (Summer Update 2026): o 1.º perk substituído custa 250 de dust e exige proficiência nível 3; o 2.º custa 1.000 de dust e exige a arma em Mastery.", "Um slot alterado recebe um efeito aleatório no valor mínimo: podes refiná-lo (custo crescente em dust), maximizá-lo com um item de loot negociável, 'reshape' (3 efeitos novos à escolha) ou limpá-lo de graça para voltar ao perk original.", "Proficiency Catalyst: usa-o numa arma para ganhar 25.000 XP de proficiência. Existem também as versões Lesser e Greater; os Echo Wardens deixam sempre um."], "u": "Summer Update 2025 (15.10.46b862); personalização no Summer Update 2026 (15.30.a30dad)", "d": "2026-07-13"}, {"id": "scalable-bosses", "t": "Bosses com dificuldade escalável (Make Believe)", "s": "Os bosses da Make Believe Quest (Mimar Haffar, Maior Domus e Phosphorus) usam o Boss Difficulty System: cada grupo escolhe a dificuldade da luta, desde um modo de aprendizagem seguro até níveis muito altos com mecânicas novas e melhores recompensas.", "p": ["Bosses: Mimar Haffar, Maior Domus e Phosphorus (o boss final), com formas finais Mimar Haffar (Final), Maior Domus (Final) e Phosphorus (Final). Quest para premium, nível 300 mínimo, recomendado 800+.", "Ao puxares a alavanca abre-se uma janela onde escolhes a dificuldade; a luta só começa a partir dessa janela.", "O nível mais baixo é um modo de aprendizagem 'seguro', mas mesmo aí podes morrer.", "Cada dificuldade superior tem de ser desbloqueada vencendo a anterior; o desbloqueio é individual, por isso o grupo sobe em conjunto.", "Não há limite máximo; há registos confirmados até à dificuldade 25 (Mimar Haffar), 15 (Maior Domus) e 28 (Phosphorus). O Phosphorus Record é um highscore com a dificuldade mais alta vencida.", "Dificuldades altas aumentam a probabilidade de loot e são obrigatórias para algumas recompensas. A chance de drop de Moonsilver vai subindo até te sair uma peça.", "Recompensas: armas e capacetes Moonsilver (best-in-slot), Cloud In a Bottle para a montaria Radiant Nimbus (Mimar Haffar e Phosphorus, dificuldade 15+), Illuminated Warrior Outfits e títulos.", "As armas Stellar Moonsilver fabricam-se com o Wayland Smythers (Radiant Skyhold): 1 arma Soul + 1 Sanguine + 1 Moonsilver do mesmo tipo, todas tier 0, e 1 Auric Moon Sigil."], "u": "Summer Update 2026 (15.30.a30dad)", "d": "2026-07-13"}, {"id": "discovery", "t": "Sistema de Discovery", "s": "O sistema de Discovery do Cyclopedia regista os pontos de interesse de cada subárea; desde o Summer Update 2026 todas as subáreas ficam ativas automaticamente e descobrir uma área por completo dá-te velocidade extra lá dentro.", "p": ["Já não precisas de iniciar manualmente as descobertas de cada área no Cyclopedia: todas as subáreas estão ativas.", "Continuas a poder reiniciar os pontos de interesse no Cyclopedia (botão 'Reset Points of Interest').", "Descobrir uma área a 100% dá velocidade de movimento extra dentro dessa área, entre 100 e 195 de speed.", "O bónus de velocidade da descoberta não afeta a mecânica de paralyze em PvP (correção posterior ao update)."], "u": "Summer Update 2026 (15.30.a30dad)", "d": "2026-07-13"}, {"id": "newhaven", "t": "Newhaven (ilha inicial)", "s": "Newhaven é a ilha de iniciação a leste de Bounac que substituiu Dawnport: escolhes a vocação logo ao chegar, fazes as missões de tutorial e sais definitivamente quando chegares ao nível 8.", "p": ["Substituiu Dawnport no Newhaven Update (15.12.c7d92c, 21/10/2025), um mês antes do Winter Update 2025; Dawnport foi removida.", "Escolhes a vocação ao chegar à ilha principal; a Newhaven Quest começa logo a seguir.", "Na aldeia tens comerciante (compra loot, vende poções e munição), banqueiro, quem dê quests e um professor com alguns feitiços básicos por vocação.", "A saída norte leva à zona de caça (Corrupted Ghost, Corrupted Skeleton, Muglex Clan Assassin, Muglex Clan Footman, Deer; bosses Muglex Clan Chief e The Corruptor).", "A saída oeste tem uma porta de nível que só abre a partir do nível 8; o barco leva a maioria das vocações para a península de Thais e os Monks para Blue Valley. A Newhaven Quest fala em viajar para Targuna.", "A viagem é só de ida: depois de saíres nunca mais podes voltar a Newhaven.", "Personagens novas podem ir para Rookgaard a partir de Newhaven; as personagens já existentes deixaram de poder voltar a Rookgaard."], "u": "Newhaven Update (15.12.c7d92c)", "d": "2025-10-21"}, {"id": "task-system", "t": "Task Board: Bounty Tasks e Weekly Tasks", "s": "O Task Board substituiu as antigas Hunting Tasks: as Bounty Tasks dão experiência, Bounty Points e Reroll Tokens para melhorares o Bounty Talisman, e as Weekly Tasks dão Hunting Task Points e Soulseals no fim da semana.", "p": ["Bounty Tasks por dificuldade: Beginner 50-100 mortes (3 Bounty Points), Adept 100-200 (7), Expert 200-400 (16), Master 300-600 (27); cada uma dá também 1 Reroll Token e experiência.", "Podem sair Silver Tasks (experiência e Bounty Points x2) ou Gold Tasks (x4). As mortes de summons não contam.", "O Bounty Talisman (slot extra, 5.000 gp nos NPCs) melhora-se com Bounty Points: dano contra a criatura até 50%, Life Leech até 50%, mais loot até 50% e hipótese de progresso duplo no Bestiário até 100%.", "Weekly Tasks: renovam à segunda-feira; há Kill Tasks e Delivery Tasks, 6 de cada por semana (9 com a Permanent Weekly Task Expansion da Store).", "Cada Weekly Task dá experiência na hora (até ao nível 82, metade de um nível; a partir do 1000, 4% de um nível). Kill tasks têm teto: Beginner 200.000, Adept 800.000, Expert 3.000.000, Master sem teto.", "Hunting Task Points no fim da semana: 75 por Delivery Task e 25/50/100/110 por Kill Task Beginner/Adept/Expert/Master, multiplicados por x2 (4 tasks), x3 (8), x5 (12) ou x8 (16).", "Ganhas também 1 Soulseal por task concluída, para usar no Soulpit.", "Os pontos gastam-se na loja de Hunting Tasks: por exemplo outfit Falconer ou Feral Trapper (100.000 + 35.000 por addon) e montarias a 145.000."], "u": "Winter Update 2025 (15.20.7a5cc9)", "d": "2025-11-24"}];
+function renderSys(){ const el=$("sysBody"); if(!el||el.dataset.ok) return; el.dataset.ok="1";
+  el.innerHTML=SYSN.map(x=>`<article class="card sy" id="sys-${x.id}"><div class="nw-d">${esc(x.u)} · ${newsDate(x.d)}</div><h3>${esc(x.t)}</h3><p>${esc(x.s)}</p><ul>${x.p.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></article>`).join(""); }
+/* r30 */ // Calculadoras: divisão do loot da party (texto do Party Hunt Analyser), treino com exercise weapons e Exaltation Forge.
+// A divisão é a do jogo: o saldo total dividido por todos; quem ficou acima paga a quem ficou abaixo, sempre do maior devedor
+// para o maior credor (poucas transferências), com o comando "transfer" pronto a copiar para o banco.
+function lsParse(txt){ const lines=String(txt||"").replace(/\r/g,"").split("\n"); const num=s=>{ const v=parseInt(String(s).replace(/[^\d-]/g,""),10); return isNaN(v)?0:v; };
+  const out=[]; let cur=null, sess="";
+  lines.forEach(raw=>{ const l=raw.trim(); if(!l) return; let m;
+    if((m=l.match(/^Session:\s*(.+)$/i))){ sess=m[1]; return; }
+    if((m=l.match(/^(Loot|Supplies|Balance|Damage|Healing)\s*:\s*(-?[\d,.\s]+)$/i))){ if(cur) cur[m[1].toLowerCase()]=num(m[2]); return; }
+    if(/^(Session data|Loot Type)\b/i.test(l)) return;
+    if(!/^\s/.test(raw)||/\(Leader\)\s*$/i.test(l)){ cur={name:l.replace(/\s*\(Leader\)\s*$/i,"").trim(),loot:0,supplies:0,balance:null}; out.push(cur); } });
+  // a primeira "pessoa" é o resumo da party quando o texto começa por Loot/Supplies/Balance sem nome: só ficam as linhas com nome
+  const players=out.filter(p=>p.name&&!/^(Loot|Supplies|Balance)$/i.test(p.name)).map(p=>({...p,balance:p.balance==null?p.loot-p.supplies:p.balance}));
+  return {sess, players}; }
+function lsSplit(players){ const tot=players.reduce((a,p)=>a+p.balance,0), share=Math.floor(tot/(players.length||1));
+  const d=players.map(p=>({name:p.name,v:p.balance-share})), pay=d.filter(x=>x.v>0).sort((a,b)=>b.v-a.v), get=d.filter(x=>x.v<0).map(x=>({...x,v:-x.v})).sort((a,b)=>b.v-a.v), tr=[];
+  let i=0,j=0; while(i<pay.length&&j<get.length){ const v=Math.min(pay[i].v,get[j].v); if(v>0) tr.push({from:pay[i].name,to:get[j].name,v}); pay[i].v-=v; get[j].v-=v; if(pay[i].v<=0) i++; if(get[j].v<=0) j++; }
+  return {tot, share, tr}; }
+function lsRender(){ const ta=$("lsIn"), out=$("lsOut"); if(!ta||!out) return; const {sess,players}=lsParse(ta.value);
+  if(players.length<2){ out.innerHTML=ta.value.trim()?`<p class="small" style="color:var(--warn)">Não encontrei pelo menos duas pessoas. Copia o texto inteiro do Party Hunt Analyser (botão "Copy to clipboard").</p>`:""; return; }
+  const S=lsSplit(players);
+  out.innerHTML=`<div class="ls-sum"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:""}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.length})</span></div></div>
+    <table class="ls-t"><thead><tr><th>Jogador</th><th>Loot</th><th>Supplies</th><th>Saldo</th></tr></thead><tbody>${players.map(p=>`<tr><td>${esc(p.name)}</td><td>${nf(p.loot)}</td><td>${nf(p.supplies)}</td><td class="${p.balance<0?"neg":""}">${nf(p.balance)}</td></tr>`).join("")}</tbody></table>
+    <h4>Transferências</h4>${S.tr.length?`<ul class="ls-tr">${S.tr.map(t=>`<li><span><b>${esc(t.from)}</b> paga <b>${nf(t.v)}</b> a <b>${esc(t.to)}</b></span><code>transfer ${t.v} to ${esc(t.to)}</code><button type="button" class="btn small ghost" data-copy="transfer ${t.v} to ${esc(t.to)}">Copiar</button></li>`).join("")}</ul>`:`<p class="small">Ninguém precisa de transferir nada.</p>`}
+    <p class="tiny muted">O comando "transfer" diz-se ao NPC do banco, depois de "hi" e antes de "yes".</p>`; }
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-copy]"); if(!b) return; const t=b.dataset.copy; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ const o=b.textContent; b.textContent="Copiado ✓"; setTimeout(()=>{ b.textContent=o; },1400); },()=>{}); });
+document.addEventListener("input",e=>{ if(e.target.id==="lsIn") lsRender(); });
+// treino com exercise weapons: pontos até ao próximo nível P = A · b^(skill − c) (A e c do skill, b da vocação; TibiaWiki "Formulae"),
+// pontos por carga (TibiaWiki "Exercise Weapons") e preços em ouro desde 06/10/2026 (+25%).
+const TRN={A:{magic:1600,melee:50,fist:50,distance:30,shielding:100},c:{magic:0,melee:10,fist:10,distance:10,shielding:10},
+  b:{knight:{magic:3,melee:1.1,fist:1.1,distance:1.4,shielding:1.1},paladin:{magic:1.4,melee:1.2,fist:1.2,distance:1.1,shielding:1.1},sorcerer:{magic:1.1,melee:2,fist:1.5,distance:2,shielding:1.5},druid:{magic:1.1,melee:1.8,fist:1.5,distance:1.8,shielding:1.5},monk:{magic:1.25,melee:1.4,fist:1.1,distance:1.5,shielding:1.15}},
+  per:{magic:600,melee:7.2,fist:7.2,distance:4.32,shielding:14.4},
+  w:[["lasting","Lasting",14400,12500000],["durable","Durable",1800,1562500],["regular","Normal",500,434028]],
+  lab:{magic:"Magic level",melee:"Espada, machado ou clava",fist:"Fist (monk)",distance:"Distância",shielding:"Shielding"}};
+const trnTot=(k,b,s)=>TRN.A[k]*(Math.pow(b,s-TRN.c[k])-1)/(b-1);
+function trnRender(){ const g=id=>$(id), out=g("trOut"); if(!out) return; const voc=g("trVoc").value, k=g("trSk").value; if(!TRN.b[voc]) return; const b=TRN.b[voc][k];
+  const from=Math.max(TRN.c[k],+g("trFrom").value||0), left=Math.min(100,Math.max(0,+g("trLeft").value||100)), to=+g("trTo").value||0, bonus=(g("trDummy").checked?1.1:1)*(g("trDouble").checked?2:1);
+  if(to<=from){ out.innerHTML=`<p class="small muted">Escolhe um nível de destino acima do atual.</p>`; return; }
+  const need=trnTot(k,b,to)-trnTot(k,b,from)-(1-left/100)*TRN.A[k]*Math.pow(b,from-TRN.c[k]), charges=Math.ceil(need/(TRN.per[k]*bonus));
+  let rest=charges; const use=TRN.w.map(([id,n,ch,pr])=>{ const q=id==="regular"?Math.ceil(rest/ch):Math.floor(rest/ch); rest-=q*ch; return {n,q,pr}; }).filter(x=>x.q>0);
+  const gold=use.reduce((a,x)=>a+x.q*x.pr,0), onlyReg=Math.ceil(charges/500)*434028, h=charges*2/3600;
+  out.innerHTML=`<div class="ls-sum"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.round(h*60)+" min":String(Math.round(h*10)/10).replace(".",DECSEP)+" h"}</b><span>de treino (1 carga a cada 2 s)</span></div></div>
+    <p class="small">${use.map(x=>`<b>${x.q}×</b> ${x.n} (${nf(x.pr)} gp)`).join(" + ")}${use.length>1||(use[0]&&use[0].n!=="Normal")?` · só com normais seriam ${nf(onlyReg)} gp`:""}.</p>
+    <p class="tiny muted">${esc(TRN.lab[k])} ${from} → ${to} para ${esc(G.voc[voc].n)}: ${nf(Math.round(need))} ${k==="magic"?"de mana":"pontos"}. ${g("trDummy").checked?"Dummy de casa (+10%). ":""}${g("trDouble").checked?"Com evento de skill a dobrar. ":""}Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.</p>`; }
+// simulador do Exaltation Forge: quantos itens base, fusões, gold, dust e cores para chegar a um tier, por fusão (data/forge.json).
+// Estratégia: fundir sempre o par mais alto disponível e comprar itens base quando falta par. Falhanço: o segundo item desce 1 tier
+// (destruído no tier 0); com o core de proteção só em 50% das vezes. Os efeitos bónus da fusão não entram (o resultado real é um pouco melhor).
+let FGS=null;
+function forgeSim(F,cls,T,useChance,useProt,runs){ const cost=F.fusion.cost[cls], p=(useChance?F.fusion.coreOpts.chance.to:F.fusion.chance)/100, lossP=useProt?F.fusion.coreOpts.protect.lossChance/100:1, R=[];
+  for(let r=0;r<runs;r++){ const inv=new Array(T+1).fill(0); let base=0,fus=0,gold=0,dust=0,cores=0,guard=0;
+    while(!inv[T]&&guard++<200000){ let t=-1; for(let i=T-1;i>=0;i--){ if(inv[i]>=2){ t=i; break; } } if(t<0){ inv[0]++; base++; continue; }
+      const c=cost[t+1]; fus++; gold+=c.gold; dust+=c.dust; cores+=c.cores+(useChance?1:0)+(useProt?1:0);
+      if(Math.random()<p){ inv[t]-=2; inv[t+1]++; } else if(Math.random()<lossP){ inv[t]--; if(t>0) inv[t-1]++; } }
+    R.push({base,fus,gold,dust,cores}); }
+  const q=(k,f)=>{ const a=R.map(x=>x[k]).sort((x,y)=>x-y); return a[Math.min(a.length-1,Math.floor(a.length*f))]; };
+  return ["base","fus","gold","dust","cores"].reduce((o,k)=>(o[k]={m:R.reduce((a,x)=>a+x[k],0)/R.length,p50:q(k,.5),p90:q(k,.9)},o),{}); }
+async function forgeRender(){ const out=$("fgOut"); if(!out) return; if(!FGS){ out.innerHTML=`<p class="small muted">A carregar…</p>`; try{ FGS=await dload("forge"); }catch(e){ out.innerHTML=`<p class="small muted">Não consegui carregar os dados do forge.</p>`; return; } }
+  const cls=$("fgCls").value, mx=FGS.maxTier[cls]; if(+$("fgTier").value>mx) $("fgTier").value=mx; const T=Math.max(1,Math.min(+$("fgTier").value||1,mx)), price=+String($("fgPrice").value).replace(/\D/g,"")||0, runs=T>=8?150:600;
+  const S=forgeSim(FGS,cls,T,$("fgCh").checked,$("fgPr").checked,runs), row=(lab,k,f)=>`<tr><th scope="row">${lab}</th><td>${f(S[k].m)}</td><td>${f(S[k].p50)}</td><td>${f(S[k].p90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v);
+  out.innerHTML=`<div class="scroll-x"><table class="ls-t"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody>
+    ${row("Itens base","base",n0)}${row("Fusões","fus",n0)}${row("Gold das fusões","gold",gp)}${row("Dust","dust",n0)}${row("Exalted cores","cores",n0)}</tbody></table></div>
+    ${price?`<p class="small">Com o item base a ${fmt(price)}: cerca de <b>${fmt(S.gold.m+S.base.m*price)}</b> no total (média).</p>`:""}
+    <p class="tiny muted">Classificação ${cls}: tier máximo ${mx}. ${runs} simulações com as regras da fusão (${$("fgCh").checked?"65% com core":"50%"}${$("fgPr").checked?", core de proteção":""}); sem os efeitos bónus raros, por isso o custo real tende a ser um pouco menor. Os cores contam os gastos em chance e proteção.</p>`; }
+document.addEventListener("input",e=>{ const t=e.target; if(!t.closest) return; if(t.closest("#trForm")) trnRender(); if(t.closest("#fgForm")) forgeRender(); });
+document.addEventListener("change",e=>{ const t=e.target; if(!t.closest) return; if(t.closest("#trForm")) trnRender(); if(t.closest("#fgForm")) forgeRender(); });
+function renderCalc(){ const c=C(), tv=$("trVoc"); if(tv&&!tv.dataset.ok){ tv.dataset.ok="1"; tv.innerHTML=Object.keys(TRN.b).map(v=>`<option value="${v}">${esc(G.voc[v].n)}</option>`).join(""); $("trSk").innerHTML=Object.entries(TRN.lab).map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+    if(c){ tv.value=c.voc; $("trSk").value=c.voc==="knight"?"melee":c.voc==="paladin"?"distance":c.voc==="monk"?"fist":"magic"; const mg=$("trSk").value==="magic", sk=mg?(c.ml||0):(c.skill||10); $("trFrom").value=sk; $("trTo").value=sk+5; } }
+  trnRender(); lsRender(); forgeRender(); }
+// bestiário (cartão nos Charms): criaturas das hunts do teu nível que dão mais charm points por morte; marca as que já completaste
+let CRD=null;
+async function bestRender(){ const box=$("bestBody"), c=C(); if(!box||!c) return; if(!CRD){ box.innerHTML=`<p class="small muted">A carregar o bestiário…</p>`; try{ CRD=await dload("creatures"); }catch(e){ box.innerHTML=`<p class="small muted">Não consegui carregar o bestiário.</p>`; return; } }
+  c.best=c.best||{}; const seen=new Map(); huntRows(c.voc).filter(h=>h.r.c&&h.l<=c.level+20).forEach(h=>{ const p=G.places[h.r.c]; (p&&p.mons||[]).forEach(n=>{ if(typeof n!=="string") return; const k=n.toLowerCase(), d=CRD[k]; if(!d||!d.charm||!d.kills||d.boss) return; if(!seen.has(k)) seen.set(k,{k,n:d.n,ch:d.charm,ki:d.kills,lv:d.blvl,h:p.n}); }); });
+  const all=[...seen.values()].sort((a,b)=>b.ch/b.ki-a.ch/a.ki||b.ch-a.ch), done=all.filter(x=>c.best[x.k]), todo=all.filter(x=>!c.best[x.k]).slice(0,15), pts=Object.keys(c.best).reduce((a,k)=>a+((CRD[k]&&CRD[k].charm)||0),0);
+  box.innerHTML=`<p class="small">Marcaste <b>${Object.keys(c.best).length}</b> criaturas completas: <b>${nf(pts)}</b> charm points. Estas são as que mais rendem por morte nas hunts até ao nível ${c.level+20}:</p>
+    <ul class="bst">${todo.map(x=>`<li><label><input type="checkbox" data-best="${esc(x.k)}"> <b>${esc(x.n)}</b></label><span>${esc(x.lv||"")} · ${nf(x.ki)} mortes → <b>${x.ch}</b> pontos</span><small>${esc(x.h)}</small></li>`).join("")||`<li class="small muted">Já marcaste todas as criaturas destas hunts.</li>`}</ul>
+    ${done.length?`<details><summary class="small">Já completas (${done.length})</summary><ul class="bst">${done.map(x=>`<li><label><input type="checkbox" data-best="${esc(x.k)}" checked> ${esc(x.n)}</label><span>${x.ch} pontos</span></li>`).join("")}</ul></details>`:""}
+    <p class="tiny muted">Marcas guardadas neste browser, por personagem (o tibia.com não mostra o bestiário de cada um).</p>`; }
+document.addEventListener("change",e=>{ const b=e.target.closest&&e.target.closest("[data-best]"); if(!b) return; const c=C(); if(!c) return; c.best=c.best||{}; if(b.checked) c.best[b.dataset.best]=1; else delete c.best[b.dataset.best]; save(); bestRender(); });
+document.addEventListener("toggle",e=>{ if(e.target.id==="bestCard"&&e.target.open) bestRender(); },true);
+/* r30 */ // mortes de ontem no mundo da personagem (TibiaData /killstatistics, guardado por mundo e dia de jogo): quantas criaturas
+// da hunt foram mortas e quantos jogadores morreram lá. Serve de sinal de hunt cheia ou perigosa; não diz quem lá está agora.
+const KSTAT={};
+async function kstatLoad(w){ const day=gameDay(), key=w+"|"+day; if(KSTAT[key]) return KSTAT[key];
+  return KSTAT[key]=getJSON(`${API}/killstatistics/${encodeURIComponent(w)}`,10000).then(j=>{ const m={}; ((j&&j.killstatistics&&j.killstatistics.entries)||[]).forEach(e=>{ m[String(e.race).toLowerCase()]=e; }); return m; }).catch(()=>{ delete KSTAT[key]; return null; }); }
+const kPlural = n => n.replace(/y$/,"ies").replace(/([^s])$/,"$1s");
+function initKstat(root){ const c=C(), w=c&&c.world; (root||document).querySelectorAll("[data-kstat]:not([data-ksok])").forEach(async el=>{ el.dataset.ksok="1";
+  if(!w){ el.remove(); return; } const p=G.places[el.dataset.kstat]; const mons=(p&&p.mons||[]).filter(x=>typeof x==="string"); if(!mons.length){ el.remove(); return; }
+  el.innerHTML=`<p class="small muted" style="margin:0">A ver as mortes de ontem em ${esc(w)}…</p>`;
+  const m=await kstatLoad(w); if(!m){ el.innerHTML=`<p class="small muted" style="margin:0">Sem ligação à TibiaData para as mortes de ontem.</p>`; return; }
+  const find=n=>{ const k=n.toLowerCase(); return m[k]||m[kPlural(k)]||null; };
+  let kd=0, pk=0, kw=0, known=0; const rows=mons.map(n=>{ const e=find(n); if(!e) return ""; known++; kd+=e.last_day_killed; pk+=e.last_day_players_killed; kw+=e.last_week_killed;
+    return `<li><span>${esc(n)}</span><b>${nf(e.last_day_killed)}</b>${e.last_day_players_killed?`<em>${nf(e.last_day_players_killed)} ✝</em>`:""}</li>`; }).join("");
+  if(!known){ el.remove(); return; }
+  const avg=kw/7, lvl=kd>avg*1.4&&kd>500?["warn","mais cheia do que o costume"]:kd<avg*.6?["ok","mais calma do que o costume"]:["","movimento normal"];
+  el.innerHTML=`<details class="ks"><summary><span class="ks-h">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class="ks-d">${nf(pk)}</b> jogadores mortos aqui`:""} <span class="tag ${lvl[0]}">${lvl[1]}</span></summary>
+    <ul class="ks-l">${rows}</ul><p class="tiny muted" style="margin:6px 0 0">Kill statistics oficiais do dia anterior (média da semana: ${nf(Math.round(avg))} por dia). ✝ = jogadores mortos por essa criatura.</p></details>`; }); }
 function initLoot(root){ (root||document).querySelectorAll("[data-lootp]:not([data-lpok])").forEach(el=>{ el.dataset.lpok="1"; const c=C(), w=c&&c.world||"";
   el.innerHTML=`<div class="lp-sk" aria-hidden="true"><i></i><i></i><i></i></div><p class="small muted">A calcular os preços${w?` do Market de ${esc(w)}`:""}…</p>`;
   Promise.all([dsafe("items"),dsafe("creatures"),mktLoad(w),npcData().catch(()=>({})),linkIdxLoad()]).then(([items,crs,,np])=>{ if(!ITV&&items&&Object.keys(items).length) ITV=items; if(!el.isConnected) return;
@@ -48164,7 +48465,7 @@ function renderDefesa(){
 /* ---------- Tibia (TibiaData) ---------- */
 // Dados públicos do tibia.com. Um nome que não existe dá 502 sem CORS, por isso
 // confirma-se com o /ping se a API está viva antes de dizer "não encontrei".
-const API = "https://api.tibiadata.com/v4";
+const API = "https://api.tibiadata.com/v5"; // r30: v5 desde 23/10/2026 (a v4 deixa de funcionar a 31/12/2026)
 const NAME_RE = /^[A-Za-z][A-Za-z' .\-]{1,29}$/;
 const vocKey = s => { s=String(s||"").toLowerCase(); return VOCS.find(v=>s.includes(v)) || null; };
 const clampL = L => Math.max(8, Math.min(LVMAX, Math.round(L)||8));
@@ -49180,7 +49481,7 @@ renderAll();
 lsInit();
 guiasLoad().then(()=>{ if(!ST.chars.length) return; renderGuiasHome(); const b=$("nextSteps").querySelector("[data-qopen2]"); if(b&&!b.parentElement.querySelector(".gbtn")) b.insertAdjacentHTML("afterend",guiaBtn(guiaOf(b.dataset.qopen2))); }); // r7
 bootSync();
-route(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
+route(); if(ST.ui.p==="novidades") renderNews(); if(ST.ui.p==="sistemas") renderSys(); if(ST.ui.p==="calc") renderCalc(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
 setUI("modern", false);
 linkIdxLoad();
 

@@ -87,6 +87,10 @@
   "c": "index.html:  && !wt.some(x=>x[0]===d.wtype)) d.wtype=wt[0][0]; return `<form id=\"charForm\" novalidate style=\"display:grid;gap:14px\"> <div style=\"display:grid;gap:6px\"><span class=\"small muted\">Vocação</span><div class=\"vocpick\" role",
   "k": "x"
  },
+ "% que falta": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "%LOCALAPPDATA%TibiapackagesTibiaconf": {
   "c": "index.html: h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `<div class=\"card rx-cmp\">${head}<p class=\"small\">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windo",
   "k": "x"
@@ -263,6 +267,10 @@
   "c": "index.html: \"}`, open=box.classList.contains(\"open\"); box.innerHTML = `<button type=\"button\" class=\"csw-btn\" aria-haspopup=\"listbox\" aria-expanded=\"${open}\" aria-controls=\"cswList\" aria-label=\"Personagem ativa: ${nm(c)}. Mudar de pe",
   "k": "x"
  },
+ "+ Bosstiary e loot": {
+  "c": "index.html: [0]:name)}</b><span class=\"td-s\">${lab===\"Boss em destaque\"?\"+ Bosstiary e loot\":\"+ loot, XP e besti",
+  "k": "x"
+ },
  "+ Juntar alguém": {
   "c": "index.html: s=\"linkbtn\" data-pmclose=\"1\">Cancelar</button></div>` : `<button type=\"button\" class=\"btn small ghost\" data-pmopen=\"1\">+ Juntar alguém</button>`; const info = ms.",
   "k": "x"
@@ -274,6 +282,10 @@
  "+ as que passam por lá ({0})": {
   "c": "quests/js/app.js: [[true, `Só as de ${esc(reg.name)} (${reg.main})`], [false, `+ as que passam por lá (${reg.total})`]].map(([v, l]) => `",
   "k": "p"
+ },
+ "+ loot, XP e bestiário": {
+  "c": "index.html: lass=\"td-s\">${lab===\"Boss em destaque\"?\"+ Bosstiary e loot\":\"+ loot, XP e bestiário\"}</span></div></a>`;",
+  "k": "x"
  },
  "+ munição": {
   "c": "index.html: } ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+ ${mb[1]} munição`:am?\"+ munição\":\"\"]); } kv.push([",
@@ -395,6 +407,10 @@
   "c": "index.html: ldowns`:k===\"legs\"?`${ftN(v)}% de virar Avatar`:k===\"boots\"?`+${ftN(v)}% na chance dos outros tiers`:\"\"; function ftStat",
   "k": "p"
  },
+ ", core de proteção": {
+  "c": "index.html: {$(\"fgCh\").checked?\"65% com core\":\"50%\"}${$(\"fgPr\").checked?\", core de proteção\":\"\"}); sem os efeito",
+  "k": "x"
+ },
  ", e o XP é estimado": {
   "c": "index.html: n)}: o nível vem da TibiaWiki ou das outras vocações${h.est?\", e o XP é estimado\":\"\"}.</p>`:\"\"} $",
   "k": "x"
@@ -491,6 +507,10 @@
   "c": "index.html: .add(\"md-in\"); MD_IO.unobserve(en.target); } }),{rootMargin:\"0px 0px -8% 0px\"}) : null; function ",
   "k": "x"
  },
+ "1 (tier máx. 1)": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "1 300+ peças equipáveis (capacetes, amuletos, armaduras, calças, botas, anéis, armas, escudos, spellbooks, aljavas e extras) com imagem e stats. Marca \"tenho\" no que está no teu depot: as sugestões dos sets passam a usar isso.": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -523,6 +543,10 @@
   "c": "index.html: ><b>+${t.crit}%</b><span>dano crítico</span><small>${t.crit?\"10% de chance de crítico\":\"sem Strike\"}</smal",
   "k": "x"
  },
+ "2 (tier máx. 2)": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "2 básicos": {
   "c": "index.html: p(t=>`<tr><th scope=\"row\">${nm(t)}</th><td>${[\"\",\"1 básico\",\"2 básicos\",\"2 básicos e 1 supr",
   "k": "x"
@@ -540,15 +564,23 @@
   "k": "x"
  },
  "2-digit": {
-  "c": "index.html: rmat(\"en-GB\",{timeZone:\"Europe/Lisbon\",year:\"numeric\",month:\"2-digit\",day:\"2-digit\",hour:",
+  "c": "index.html: rmat(\"en-GB\",{timeZone:\"Europe/Berlin\",year:\"numeric\",month:\"2-digit\",day:\"2-digit\",hour:",
   "k": "x"
  },
  "250 000 gp": {
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "3 (tier máx. 3)": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "3Barquinho nas ruínas da ponte (marcador 'Towards Cobra Bastion');": {
   "c": "recolhida: /grimorio/#hunts · ex.: 3Barquinho nas ruínas da ponte (marcador 'Towards Cobra Bastion');",
+  "k": "x"
+ },
+ "4 (tier máx. 10)": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "60 000 gp": {
@@ -559,12 +591,20 @@
   "c": "index.html: t fl=window.I18N?I18N.tr(floorTxt(z)):floorTxt(z); g.font=\"600 12px system-ui\"; g.fillStyle=\"rgba(",
   "k": "x"
  },
+ "65% com core": {
+  "c": "index.html: uns} simulações com as regras da fusão (${$(\"fgCh\").checked?\"65% com core\":\"50%\"}${$(\"fgPr\").c",
+  "k": "x"
+ },
  "7 500 gp": {
   "c": "index.html (HTML)",
   "k": "x"
  },
  "700 11px system-ui": {
   "c": "index.html: eStyle=\"#FFD84D\"; g.stroke(); g.fillStyle=\"#FFD84D\"; g.font=\"700 11px system-ui\"; g.textAlign=\"cente",
+  "k": "x"
+ },
+ "9 em 10 vezes até": {
+  "c": "index.html: 90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v); out.innerHTML=`<div class=\"scroll-x\"><table class=\"ls-t\"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"It",
   "k": "x"
  },
  ": fora do top 1000 de {0}, escreve o valor acima.": {
@@ -617,6 +657,10 @@
  },
  "A % para o próximo nível não é pública: ajusta-a quando quiseres.": {
   "c": "index.html: e o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próximo nível não é pública: ajusta-a quando quiseres.\"); } function hsLine",
+  "k": "x"
+ },
+ "A Pirate's Death to Me": {
+  "c": "index.html:  mundo antes que se apaguem\"], [\"2026-11-20\",\"2026-11-23\",\"A Pirate's Death to Me\",\"Invasões de pirata",
   "k": "x"
  },
  "A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.": {
@@ -681,6 +725,10 @@
  },
  "A carregar as rotações…": {
   "c": "index.html: ndow.GrimRot?\"Não consegui carregar os dados das rotações.\":\"A carregar as rotações…\"}</p>`; if(!RXER",
+  "k": "x"
+ },
+ "A carregar o bestiário…": {
+  "c": "index.html: Body\"), c=C(); if(!box||!c) return; if(!CRD){ box.innerHTML=`<p class=\"small muted\">A carregar o bestiário…</p>`; try{ CRD=await dlo",
   "k": "x"
  },
  "A carregar o item…": {
@@ -751,6 +799,10 @@
   "c": "index.html: \"><h5>Wheel, gemas e charms</h5></div><p class=\"small\">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:\"\"}</p>${ch}</div>`",
   "k": "p"
  },
+ "A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30. Todos os que causarem dano recebem o bónus; o progresso aparece no Bestiário.": {
+  "c": "index.html: eatório (Lesser, normal ou Greater Proficiency Catalyst).\", \"A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30",
+  "k": "x"
+ },
  "A procurar nos highscores…": {
   "c": "index.html: \" ? `<span class=\"tkload\">A atualizar…</span>` : b===\"hs\" ? `<span class=\"tkload\">A procurar nos highscores…</span>` : \"\"; el.innerHTM",
   "k": "x"
@@ -769,6 +821,14 @@
  },
  "A runa": {
   "c": "index.html: }</tbody></table></div></section>`:\"\"} ${rune&&s.rn?`<section class=\"card ip-wide\"><h3>A runa</h3><p class=\"small\" style=\"margin:0 0 8px\"><a href=\"${itemHref(s.rn)}\">${itemSpr(String(s.rn).toLowerCase())} <b>${esc(s.rn)}",
+  "k": "x"
+ },
+ "A saída norte leva à zona de caça (Corrupted Ghost, Corrupted Skeleton, Muglex Clan Assassin, Muglex Clan Footman, Deer; bosses Muglex Clan Chief e The Corruptor).": {
+  "c": "index.html: s e um professor com alguns feitiços básicos por vocação.\", \"A saída norte leva à zona de caça (Corrupted Ghost, Corrupted Skeleton, Muglex Clan Assassin, Muglex Clan Footman, Deer; bosses Muglex Clan Chief e The Corrupt",
+  "k": "x"
+ },
+ "A saída oeste tem uma porta de nível que só abre a partir do nível 8; o barco leva a maioria das vocações para a península de Thais e os Monks para Blue Valley. A Newhaven Quest fala em viajar para Targuna.": {
+  "c": "index.html: Footman, Deer; bosses Muglex Clan Chief e The Corruptor).\", \"A saída oeste tem uma porta de nível que só abre a partir do nível 8; o barco leva a maioria das vocações para a península de Thais e os Monks para Blue Valley",
   "k": "x"
  },
  "A seguir: faltam {0} pontos": {
@@ -799,9 +859,17 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "A ver as mortes de ontem em {0}…": {
+  "c": "index.html: \"); if(!mons.length){ el.remove(); return; } el.innerHTML=`<p class=\"small muted\" style=\"margin:0\">A ver as mortes de ontem em ${esc(w)}…</p>`; const m=await ks",
+  "k": "p"
+ },
  "A ver o Market de {0}…": {
   "c": "index.html: kk(mk[0])}–${kkk(mk[1])} gp`:gp(mk[0])):\"\"; if(wld) adv = `A ver o Market de ${wld}…`; else if(mkr && b",
   "k": "p"
+ },
+ "A viagem é só de ida: depois de saíres nunca mais podes voltar a Newhaven.": {
+  "c": "index.html: lue Valley. A Newhaven Quest fala em viajar para Targuna.\", \"A viagem é só de ida: depois de saíres nunca mais podes voltar a Newhaven.\", \"Personagens novas",
+  "k": "x"
  },
  "A {0} cai sobretudo de bosses Archfoe com loot cooperativo e, às vezes, de criaturas fiendish. Também se compra no Market: até ser revelada é um item como os outros.": {
   "c": "index.html: ket: até ser revelada é um item como os outros.` :t===2?`A ${nm} cai sobretudo de bosses Archfoe com loot cooperativo e, às vezes, de criaturas fiendish. Também se compra no Market: até ser revelada é um item como os out",
@@ -881,6 +949,10 @@
  },
  "Absorve até 7 × ML + 7,6 × nível + 300 de dano, dura 180 s e tem 14 s de cooldown. Voltar a lançar repõe-no; em cooldown usa uma Magic Shield Potion. Liga-o antes de puxar nas hunts duras.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Acende os basins espalhados pelo mundo antes que se apaguem": {
+  "c": "index.html: alloween Hare\"], [\"2026-11-11\",\"2026-11-15\",\"Lightbearer\",\"Acende os basins espalhados pelo mundo antes que se apaguem\"], [\"2026-11-20\",\"",
   "k": "x"
  },
  "Acesso": {
@@ -1195,6 +1267,14 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Ao ativares a raid nascem 8 criaturas normais ou 4 criaturas influenciadas; as criaturas ficam 10 minutos e depois desaparecem.": {
+  "c": "index.html: 5.31 também a podes ativar à mão (clique direito + Usar).\", \"Ao ativares a raid nascem 8 criaturas normais ou 4 criaturas influenciadas; as criaturas ficam 10 minutos e depois desaparecem.\", \"Há 10% de hipótes",
+  "k": "x"
+ },
+ "Ao puxares a alavanca abre-se uma janela onde escolhes a dificuldade; a luta só começa a partir dessa janela.": {
+  "c": "index.html: . Quest para premium, nível 300 mínimo, recomendado 800+.\", \"Ao puxares a alavanca abre-se uma janela onde escolhes a dificuldade; a luta só começa a partir dessa janela.\", \"O nível mais baix",
+  "k": "x"
+ },
  "Apagar": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
@@ -1347,6 +1427,14 @@
   "c": "index.html: \"mageBox\").hidden = !isMage(c); $(\"blessSum\").innerHTML = `<div class=\"bs-t\"><span class=\"tiny muted\">As 7 blessings no nível ${L}</span><b>${nf(total)} gp</b></div><p class=\"small\">Cada uma tira 8 % à perda de XP e skil",
   "k": "p"
  },
+ "As Echo Raids são mini-raids que nascem a partir de uma criatura comum em qualquer subárea: ao ativares o eco aparece um grupo de criaturas da mesma espécie e, por vezes, um Echo Warden, uma versão reforçada que fortalece as criaturas à volta.": {
+  "c": "index.html: {\"id\": \"echo-raids\", \"t\": \"Echo Raids e Echo Wardens\", \"s\": \"As Echo Raids são mini-raids que nascem a partir de uma criatura comum em qualquer subárea: ao ativares o eco aparece um grupo de criaturas da mesma espécie e,",
+  "k": "x"
+ },
+ "As armas Stellar Moonsilver fabricam-se com o Wayland Smythers (Radiant Skyhold): 1 arma Soul + 1 Sanguine + 1 Moonsilver do mesmo tipo, todas tier 0, e 1 Auric Moon Sigil.": {
+  "c": "index.html:  dificuldade 15+), Illuminated Warrior Outfits e títulos.\", \"As armas Stellar Moonsilver fabricam-se com o Wayland Smythers (Radiant Skyhold): 1 arma Soul + 1 Sanguine + 1 Moonsilver do mesmo tipo, todas tier 0, e 1 Auri",
+  "k": "x"
+ },
  "As gemas de": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
@@ -1401,6 +1489,14 @@
  },
  "Asura Palace + The Lost Brother": {
   "c": "index.html:  !!(id && c.done[id]); const qName = id => id===\"marapur\" ? \"Asura Palace + The Lost Brother\" : (QBY[id] ? QBY[id",
+  "k": "x"
+ },
+ "Asura Vaults, Asura Citadel e Forbidden Gardens: True Dawnfire Asura 7 475 → 8 100 XP (−14% ouro), True Midnight Asura 7 313 → 8 200 XP (−10% ouro), True Frost Flower Asura −10% ouro, True Feverbloom Asura 7 850 → 8 600 XP.": {
+  "c": "index.html: asuracitadel1\",\"norcferatu\",\"norcdungeons\",\"bulltaurs\"],li:[\"Asura Vaults, Asura Citadel e Forbidden Gardens: True Dawnfire Asura 7 475 → 8 100 XP (−14% ouro), True Midnight Asura 7 313 → 8 200 XP (−10% ouro), True Frost",
+  "k": "x"
+ },
+ "Asuras com mais XP, Norcferatu com menos": {
+  "c": "index.html: preços e mortes de ontem incluídos).\"]}, {d:\"2026-10-20\",t:\"Asuras com mais XP, Norcferatu com menos\",h:[\"asuramirror\",\"a",
   "k": "x"
  },
  "Ataca com": {
@@ -1659,6 +1755,14 @@
   "c": "r13: site todo em inglês (rótulos curtos e elementos com %)",
   "k": "x"
  },
+ "Bestiário: onde ganhar charm points": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Bibby Bloodbath: tentar entrar durante o tempo de espera já não o reinicia. The Welter passa a dar o bónus de loot de boss.": {
+  "c": "index.html: 9\",t:\"Correções\",li:[\"Lightning com alcance 7, como devia.\",\"Bibby Bloodbath: tentar entrar durante o tempo de espera já não o reinicia. The Welter passa a dar o bónus de loot de boss.\"]} ]; let NEWS_LIVE=",
+  "k": "x"
+ },
  "Blessing": {
   "c": "index.html: {\"<i></i>\".repeat(7)}</div>`; $(\"blessTable\").innerHTML = `<thead><tr><th>Blessing</th><th>NPC</th><th>Onde</th><th>Preço</th></tr></thead><tbody>` + rows.map(r=>`<tr>",
   "k": "x"
@@ -1699,12 +1803,24 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
+ "Boss em destaque": {
+  "c": "index.html: >${esc(has?G.mon[k][0]:name)}</b><span class=\"td-s\">${lab===\"Boss em destaque\"?\"+ Bosstiary e loot",
+  "k": "x"
+ },
  "Boss ou um monstro só: carrega sempre nesta.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
  "Bosses": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Bosses com dificuldade escalável (Make Believe)": {
+  "c": "index.html: 30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"scalable-bosses\", \"t\": \"Bosses com dificuldade escalável (Make Believe)\", \"s\": \"Os bosses da",
+  "k": "x"
+ },
+ "Bosses: Mimar Haffar, Maior Domus e Phosphorus (o boss final), com formas finais Mimar Haffar (Final), Maior Domus (Final) e Phosphorus (Final). Quest para premium, nível 300 mínimo, recomendado 800+.": {
+  "c": "index.html: o altos com mecânicas novas e melhores recompensas.\", \"p\": [\"Bosses: Mimar Haffar, Maior Domus e Phosphorus (o boss final), com formas finais Mimar Haffar (Final), Maior Domus (Final) e Phosphorus (Final). Quest para pre",
   "k": "x"
  },
  "Bosstiary": {
@@ -1741,6 +1857,10 @@
  },
  "Bounac": {
   "c": "index.html: 921,31477],[\"Feyrist\",33490,32221],[\"Marapur\",33783,32850],[\"Bounac\",32424,32445],[\"Oska",
+  "k": "x"
+ },
+ "Bounty Tasks por dificuldade: Beginner 50-100 mortes (3 Bounty Points), Adept 100-200 (7), Expert 200-400 (16), Master 300-600 (27); cada uma dá também 1 Reroll Token e experiência.": {
+  "c": "index.html: o Hunting Task Points e Soulseals no fim da semana.\", \"p\": [\"Bounty Tasks por dificuldade: Beginner 50-100 mortes (3 Bounty Points), Adept 100-200 (7), Expert 200-400 (16), Master 300-600 (27); cada uma dá também 1 Rerol",
   "k": "x"
  },
  "Bounty e weekly: escolhe o monstro ou o item e vê onde caçar.": {
@@ -1783,6 +1903,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Bulltaur Lair: Brute, Alchemist e Forgepriest dão cerca de 10% menos ouro.": {
+  "c": "index.html: loodbreaker 10 250 → 8 820 XP, Gloom Maw 8 770 → 7 550 XP.\",\"Bulltaur Lair: Brute, Alchemist e Forgepriest dão cerca de 10% menos ouro.\",\"Make Believe: os d",
+  "k": "x"
+ },
  "Burst": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
@@ -1807,8 +1931,24 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
+ "Cada Echo Warden deixa sempre 1 Basic Imbuement Scroll e 1 catalisador de proficiência aleatório (Lesser, normal ou Greater Proficiency Catalyst).": {
+  "c": "index.html:  as criaturas próximas (nomes marcados como 'Empowered').\", \"Cada Echo Warden deixa sempre 1 Basic Imbuement Scroll e 1 catalisador de proficiência aleatório (Lesser, normal ou Greater Proficiency Catalyst).\", \"A primeir",
+  "k": "x"
+ },
+ "Cada Weekly Task dá experiência na hora (até ao nível 82, metade de um nível; a partir do 1000, 4% de um nível). Kill tasks têm teto: Beginner 200.000, Adept 800.000, Expert 3.000.000, Master sem teto.": {
+  "c": "index.html: emana (9 com a Permanent Weekly Task Expansion da Store).\", \"Cada Weekly Task dá experiência na hora (até ao nível 82, metade de um nível; a partir do 1000, 4% de um nível). Kill tasks têm teto: Beginner 200.000, Adept 8",
+  "k": "x"
+ },
+ "Cada arma ganha experiência de proficiência quando matas criaturas com ela equipada; ao subir de nível desbloqueias perks (um por nível) e, desde o Summer Update 2026, podes substituir até 2 perks por outros à escolha.": {
+  "c": "index.html: 13\"}, {\"id\": \"proficiency\", \"t\": \"Weapon Proficiency\", \"s\": \"Cada arma ganha experiência de proficiência quando matas criaturas com ela equipada; ao subir de nível desbloqueias perks (um por nível) e, desde o Summer Upda",
+  "k": "x"
+ },
  "Cada criatura leva um major e um minor. Premium: até 6 charms atribuídos (Charm Expansion tira o limite). Os majors dão echoes (50/100/200) para os minors; a promoção dá 100.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Cada dificuldade superior tem de ser desbloqueada vencendo a anterior; o desbloqueio é individual, por isso o grupo sobe em conjunto.": {
+  "c": "index.html: modo de aprendizagem 'seguro', mas mesmo aí podes morrer.\", \"Cada dificuldade superior tem de ser desbloqueada vencendo a anterior; o desbloqueio é individual, por isso o grupo sobe em conjunto.\", \"Não há limite máx",
   "k": "x"
  },
  "Cada mod precisa de um Vessel Resonance cheio nesse domínio; com tantos VR como mods, a gema dá ainda +1 de Damage and Healing (+2 com a greater).": {
@@ -1869,6 +2009,10 @@
  },
  "Calculadora de lucro": {
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
+  "k": "x"
+ },
+ "Calculadoras": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Calças": {
@@ -2019,6 +2163,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Chegar a": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Chop (axe)": {
   "c": "index.html: ly:\"Demon Presence (holy)\", s_sword:\"Slash (sword)\",s_axe:\"Chop (axe)\",s_club:\"Bash (club)",
   "k": "x"
@@ -2059,8 +2207,16 @@
   "c": "quests/js/app.js: neral properties\": \"Propriedades gerais\", \"classification\": \"Classificação\", \"pickupable\": \"Pod",
   "k": "x"
  },
+ "Classificação do item": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Classificação {0}: até tier {1}.": {
   "c": "index.html: tens + ${kkk(m.gold)} gp, se todas as fusões correrem bem.`:`Classificação ${it.up}: até tier ${mx}.`}</small></div>`; } ",
+  "k": "p"
+ },
+ "Classificação {0}: tier máximo {1}. {2} simulações com as regras da fusão ({3}{4}); sem os efeitos bónus raros, por isso o custo real tende a ser um pouco menor. Os cores contam os gastos em chance e proteção.": {
+  "c": "index.html: 90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v); out.innerHTML=`<div class=\"scroll-x\"><table class=\"ls-t\"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"It",
   "k": "p"
  },
  "Clica no mapa para ver as coordenadas · ▲▼ ou PageUp/PageDown mudam de piso · os marcadores mostram o nível de cada quest (respeitam os filtros da barra lateral).": {
@@ -2147,6 +2303,10 @@
   "c": "index.html: up?P.sbis.map(g=>li(g,1)).join(\"\"):\"\"}</ul> ${G3.length?`<p class=\"wsel-d\">Com 3 VR (Greater gem) junta-se um supremo: ${esc(gName(G3[0]))}.</p>`:\"\"} ${P.alt.len",
   "k": "p"
  },
+ "Com BattlEye, fechados a transferências durante bastante tempo e, no início, só para contas Premium.": {
+  "c": "index.html: do Norte, Open PvP) e Farsabra (América do Sul, Open PvP).\",\"Com BattlEye, fechados a transferências durante bastante tempo e, no início, só para contas Premium.\",\"Os preços do Marke",
+  "k": "x"
+ },
  "Com Ruse, {0}% dos golpes nem chegam.": {
   "c": "index.html: lter(e=>(t.ab[e]||0)+(t.abi[e]||0)>0); const ruse=ft.ruse?` <span>Com Ruse, ${ftN(ft.ruse)}% dos golpes nem chegam.</span>`:\"\"; const prot=el",
   "k": "p"
@@ -2159,8 +2319,16 @@
   "c": "index.html: n:0\">${share?`Partilha de XP: +${Math.round(bonus*100)}%. `:`<span class=\"warnt\">Com estes níveis não partilham XP (o mais baixo precisa de ${shareMin(ms)}).</span> `}A estimativa em par",
   "k": "p"
  },
+ "Com evento de skill a dobrar.": {
+  "c": "index.html: checked?\"Dummy de casa (+10%). \":\"\"}${g(\"trDouble\").checked?\"Com evento de skill a dobrar. \":\"\"}Preços do NPC de",
+  "k": "x"
+ },
  "Com o evento ({0}): +{1}% XP, de {2} para {3} por hora.": {
   "c": "index.html: pela parte do XP: ${esc(comp)}</p>`:\"\"; })()} ${h.boost?`<p class=\"small\" style=\"margin:0;color:var(--ok)\">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</",
+  "k": "p"
+ },
+ "Com o item base a {0}: cerca de {1} no total (média).": {
+  "c": "index.html: alted cores\",\"cores\",n0)}</tbody></table></div> ${price?`<p class=\"small\">Com o item base a ${fmt(price)}: cerca de <b>${fmt(S.gold.m+S.base.m*price)}</b> no total (média).</p>`:\"\"} <p class=\"t",
   "k": "p"
  },
  "Com {0} pontos (nível {1}): {2}.": {
@@ -2217,6 +2385,10 @@
  },
  "Como contamos": {
   "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "k": "x"
+ },
+ "Como funcionam as mecânicas que chegaram com os últimos updates: Echo Raids, Weapon Proficiency, bosses com dificuldade escalável, Discovery, Newhaven e o Task Board.": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Como ganhar charm points": {
@@ -2411,6 +2583,10 @@
   "c": "index.html: length?`<details class=\"qguide\"><summary><span>${nd&&nd<tot?`Continuar o guia · ${nd} de ${tot} passos`:\"Guia passo a passo",
   "k": "p"
  },
+ "Continuas a poder reiniciar os pontos de interesse no Cyclopedia (botão 'Reset Points of Interest').": {
+  "c": "index.html:  cada área no Cyclopedia: todas as subáreas estão ativas.\", \"Continuas a poder reiniciar os pontos de interesse no Cyclopedia (botão 'Reset Points of Interest').\", \"Descobrir uma áre",
+  "k": "x"
+ },
  "Control": {
   "c": "index.html: e(); } function hkName(e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsL",
   "k": "x"
@@ -2515,8 +2691,20 @@
   "c": "index.html: cation\",\"d\",w.ded,([k,v])=>k+\" \"+v); const lab = w => esc(`Copiar o código da build ${w.t} (${w.p} pontos)`); const b0=cur?cu",
   "k": "p"
  },
+ "Copy to clipboard": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Cor": {
   "c": "index.html: só tua e mostra a cor e os mods, que saem ao acaso.`], [\"Cor\",`Só entra no vessel",
+  "k": "x"
+ },
+ "Core de proteção": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Core para 65% de sucesso": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Coroa": {
@@ -2525,6 +2713,10 @@
  },
  "Corpo a corpo": {
   "c": "index.html: head><tbody>${atk.map(([t,n,d,e,x])=>`<tr><td>${t===\"melee\"?\"Corpo a corpo\":esc(n)}${x?`<span c",
+  "k": "x"
+ },
+ "Correções": {
+  "c": "index.html: timados destas hunts já atualizados.\"]}, {d:\"2026-10-13\",t:\"Correções\",li:[\"Mirrored Night",
   "k": "x"
  },
  "Costumas partir de": {
@@ -2551,6 +2743,10 @@
   "c": "index.html: loot-Math.round(loot0/1000)*1000:0; const evNote=evPlus>0?`<p class=\"lp-ev small\">Criatura do dia (loot ×2): +<span data-lpv=\"${evPlus}\">${nf(evPlus)}</span> gp/h <span class=\"muted\">· ${esc(hasKey(G.mon,evk)?G.mon[evk][",
   "k": "p"
  },
+ "Criatura em destaque": {
+  "c": "index.html:  el.innerHTML=`<div class=\"td-grid\"> ${todayMon(T.mon,\"Criatura em destaque\",IC.criaturas||\"\")} ",
+  "k": "x"
+ },
  "Criatura não encontrada": {
   "c": "index.html: ll; if(!crs[key] && !g){ el.innerHTML=pageHead(\"Criatura\",\"Criatura não encontrada\",\"\",null)+`<p class=",
   "k": "x"
@@ -2565,6 +2761,10 @@
  },
  "Criaturas com bónus de XP": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
+  "k": "x"
+ },
+ "Criaturas e boss de Halloween, com a Halloween Hare": {
+  "c": "index.html:  mão). const EVENTS=[[\"2026-10-31\",\"2026-11-03\",\"Halloween\",\"Criaturas e boss de Halloween, com a Halloween Hare\"], [\"2026-11-11\",\"",
   "k": "x"
  },
  "Criaturas que o largam": {
@@ -2760,7 +2960,7 @@
   "k": "x"
  },
  "Defesa": {
-  "c": "index.html: lecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"",
+  "c": "index.html: {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"",
   "k": "x"
  },
  "Defesa e blessings": {
@@ -2871,8 +3071,16 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Descobrir uma área a 100% dá velocidade de movimento extra dentro dessa área, entre 100 e 195 de speed.": {
+  "c": "index.html: teresse no Cyclopedia (botão 'Reset Points of Interest').\", \"Descobrir uma área a 100% dá velocidade de movimento extra dentro dessa área, entre 100 e 195 de speed.\", \"O bónus de veloci",
+  "k": "x"
+ },
  "Descrição": {
   "c": "quests/js/app.js:  \"armor\": \"Armadura\", \"speed\": \"Velocidade\", \"description\": \"Descrição\", \"grade\": \"Grau",
+  "k": "x"
+ },
+ "Desde 06/10/2026 os Echo Wardens voltam a nascer com 4 criaturas normais (em vez de 2 normais e 2 influenciadas), dão +20% de dano às outras criaturas (em vez de 50%) e deixam 50 de dust (em vez de 15). Desde 27/10/2026 matar criaturas em Rookgaard já não abre echo raids.": {
+  "c": "index.html: m dano recebem o bónus; o progresso aparece no Bestiário.\", \"Desde 06/10/2026 os Echo Wardens voltam a nascer com 4 criaturas normais (em vez de 2 normais e 2 influenciadas), dão +20% de dano às outras criaturas (em vez ",
   "k": "x"
  },
  "Desligar": {
@@ -2919,6 +3127,10 @@
   "c": "quests/js/app.js: b}</small></span></span>`; }; const skulls = (n) => n ? `<span class=\"skulls\" title=\"Dificuldade ${n}/5\">${[1, 2, 3, 4, 5].map((i) => icon(\"skull\", i <= n ? \"on\" : \"\")).join(\"\")}</span>` : \"\"; const premC",
   "k": "p"
  },
+ "Dificuldades altas aumentam a probabilidade de loot e são obrigatórias para algumas recompensas. A chance de drop de Moonsilver vai subindo até te sair uma peça.": {
+  "c": "index.html: ecord é um highscore com a dificuldade mais alta vencida.\", \"Dificuldades altas aumentam a probabilidade de loot e são obrigatórias para algumas recompensas. A chance de drop de Moonsilver vai subindo até te sair uma peç",
+  "k": "x"
+ },
  "Disponível só com a página aberta no claude.ai.": {
   "c": "index.html: d.querySelector(\".tkans\"); if(!sampleFn){ out.innerHTML='<p class=\"small muted\">Disponível só com a página aberta no claude.ai.</p>'; return; } a.di",
   "k": "x"
@@ -2951,12 +3163,24 @@
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "x"
  },
+ "Distância": {
+  "c": "index.html: elee:\"Espada, machado ou clava\",fist:\"Fist (monk)\",distance:\"Distância\",shielding:\"Shieldin",
+  "k": "x"
+ },
+ "Dividir o loot da party, quanto custa treinar um skill e quanto custa chegar a um tier no Exaltation Forge.": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Divine Caldera Base Damage": {
   "c": "index.html:  Mastery\":[\"Knight_RevelationMastery_ExecutionersThrow\"], \"Divine Caldera Base Damage\":[\"Paladin_DivineCal",
   "k": "x"
  },
  "Divine Empowerment Mastery": {
   "c": "index.html: dera Base Damage\":[\"Paladin_DivineCaldera_DamageIncrease\"], \"Divine Empowerment Mastery\":[\"Paladin_Revelatio",
+  "k": "x"
+ },
+ "Divisão do loot da party": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Do código que colaste": {
@@ -3027,12 +3251,28 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Dummy de casa (+10%)": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Dummy de casa (+10%).": {
+  "c": "index.html: } ${k===\"magic\"?\"de mana\":\"pontos\"}. ${g(\"trDummy\").checked?\"Dummy de casa (+10%). \":\"\"}${g(\"trDouble\").",
+  "k": "x"
+ },
  "Duplicar": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
  },
+ "Durable": {
+  "c": "index.html: 14.4}, w:[[\"lasting\",\"Lasting\",14400,12500000],[\"durable\",\"Durable\",1800,1562500],[\"reg",
+  "k": "x"
+ },
  "Duração": {
   "c": "index.html: g) rows.push([\"Cargas\",it.chg]); else if(it.dur) rows.push([\"Duração\",`${Math.round(it.du",
+  "k": "x"
+ },
+ "Dust": {
+  "c": "index.html: \"Fusões\",\"fus\",n0)}${row(\"Gold das fusões\",\"gold\",gp)}${row(\"Dust\",\"dust\",n0)}${row(\"E",
   "k": "x"
  },
  "Dá acesso a (detalhes)": {
@@ -3062,6 +3302,14 @@
  "E mais {0}: escolhe outra lista ou escreve o nome na pesquisa.": {
   "c": "index.html: Nenhum boss nesta lista.</p>`}</div> ${shown.length>120?`<p class=\"small muted\">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:\"\"} <details cl",
   "k": "p"
+ },
+ "Echo Raids e Echo Wardens": {
+  "c": "index.html: s em outubro de 2026. const SYSN=[{\"id\": \"echo-raids\", \"t\": \"Echo Raids e Echo Wardens\", \"s\": \"As Echo Raid",
+  "k": "x"
+ },
+ "Echo Wardens outra vez com 4 criaturas normais, bónus de dano de 20% e 50 de dust.": {
+  "c": "index.html:  500 000 gp (a calculadora de treino já usa estes preços).\",\"Echo Wardens outra vez com 4 criaturas normais, bónus de dano de 20% e 50 de dust.\",\"Swift Foot com o c",
+  "k": "x"
  },
  "Edala": {
   "c": "index.html: ds of Glory, norte de Carlin\",reg],[\"The Fire of the Suns\",[\"Edala\"],\"Suntower, sul de ",
@@ -3117,6 +3365,10 @@
  },
  "Elemento: todos": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Em cada subárea, uma spawn comum ou incomum transforma-se em Echo Raid no Server Save; depois de ativada, volta a aparecer nessa área ao fim de cerca de 20-30 minutos.": {
+  "c": "index.html: ersão reforçada que fortalece as criaturas à volta.\", \"p\": [\"Em cada subárea, uma spawn comum ou incomum transforma-se em Echo Raid no Server Save; depois de ativada, volta a aparecer nessa área ao fim de cerca de 20-30 ",
   "k": "x"
  },
  "Em caixa": {
@@ -3311,6 +3563,10 @@
   "c": "index.html: ria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML = `<div class=\"pk-h\"><div><b>${esc(SLOTNAME[slot])}</b><span>Escolhe o que usas · ordenado por pontuação</span></div><button type=\"button\" class=\"pk-x\" data-pkx=\"1\"",
   "k": "x"
  },
+ "Escolhe um nível de destino acima do atual.": {
+  "c": "index.html: *(g(\"trDouble\").checked?2:1); if(to<=from){ out.innerHTML=`<p class=\"small muted\">Escolhe um nível de destino acima do atual.</p>`; return; } const ",
+  "k": "x"
+ },
  "Escolhe um objetivo acima do teu nível.": {
   "c": "index.html: ).textContent=\"—\"; $(\"calcSub\").textContent = opts.length ? \"Escolhe um objetivo acima do teu nível.\" : \"Sem hunts com XP",
   "k": "x"
@@ -3342,6 +3598,10 @@
  "Escolher {0}": {
   "c": "index.html: hild(pop); bindPick(pop); } pop.setAttribute(\"aria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML =",
   "k": "p"
+ },
+ "Escolhes a vocação ao chegar à ilha principal; a Newhaven Quest começa logo a seguir.": {
+  "c": "index.html: m mês antes do Winter Update 2025; Dawnport foi removida.\", \"Escolhes a vocação ao chegar à ilha principal; a Newhaven Quest começa logo a seguir.\", \"Na aldeia tens co",
+  "k": "x"
  },
  "Esconde as quests com nível mínimo acima do teu ou recomendadas para mais de 30 níveis acima": {
   "c": "quests/js/app.js: ocaleCompare(b.name)); $(\"#sidebarFilters\").innerHTML = ` <details class=\"filters\" ${f.open ? \"open\" : \"\"}> <summary class=\"filter-summary\"><span><b id=\"fcount\"></b></span><span class=\"link-btn\">Filtros</span></summary> ",
@@ -3413,6 +3673,10 @@
  },
  "Espada": {
   "c": "index.html: de druid e sorcerer ficam 'Wand / rod'). const IKIND={sword:\"Espada\",axe:\"Machado\",club:",
+  "k": "x"
+ },
+ "Espada, machado ou clava": {
+  "c": "index.html: ar\",\"Normal\",500,434028]], lab:{magic:\"Magic level\",melee:\"Espada, machado ou clava\",fist:\"Fist (monk)\",",
   "k": "x"
  },
  "Esquecer": {
@@ -3515,6 +3779,10 @@
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
   "k": "x"
  },
+ "Evento de skill a dobrar": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Evento: {0}": {
   "c": "index.html: dir\"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class=\"hc-ev\" title=\"Evento: ${esc(evLabel())}\">+${Math.round(h.boost*100)}%</span>`:\"\"} · <b>${fmt(h.lo",
   "k": "p"
@@ -3526,6 +3794,10 @@
  "Evita {0}": {
   "c": "index.html: walk=[ci.thru?`Atravessa ${esc(cpTr(ci.thru))}`:\"\", ci.walk?`Evita ${esc(cpTr(ci.walk))}`:\"\"].filter(Boolean)",
   "k": "p"
+ },
+ "Exaltation Forge: custo até um tier": {
+  "c": "index.html (HTML)",
+  "k": "x"
  },
  "Exaltation Forge{0}": {
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
@@ -3539,12 +3811,20 @@
   "c": "index.html: t.core)), s=val(row(+pr.dataset.sliver)); pr.textContent=[c?`Exalted core ≈ ${gp(c)}`:\"\", s?`sliver ≈ ${g",
   "k": "p"
  },
+ "Exalted cores": {
+  "c": "index.html: (\"Gold das fusões\",\"gold\",gp)}${row(\"Dust\",\"dust\",n0)}${row(\"Exalted cores\",\"cores\",n0)}</tbody",
+  "k": "x"
+ },
  "Executioner's Throw Mastery": {
   "c": "index.html: astery Mastery\":[\"Knight_RevelationMastery_CombatMastery\"], \"Executioner's Throw Mastery\":[\"Knight_Revelation",
   "k": "x"
  },
  "Executioner's Throw acaba as criaturas mais depressa": {
   "c": "index.html:  dá mais segurança\":bw===\"fast\"&&/Executioner/.test(best.t)?\"Executioner's Throw acaba as criaturas mais depressa\":e!=null?`as criatur",
+  "k": "x"
+ },
+ "Exercise weapons 25% mais caras: normal 434 028 gp, durable 1 562 500 gp, lasting 12 500 000 gp (a calculadora de treino já usa estes preços).": {
+  "c": "index.html: % para 2,5%, com limite de 2 500 000 gp (antes 1 000 000).\",\"Exercise weapons 25% mais caras: normal 434 028 gp, durable 1 562 500 gp, lasting 12 500 000 gp (a calculadora de treino já usa estes preços).\",\"Echo Wardens o",
   "k": "x"
  },
  "Experiência": {
@@ -3771,6 +4051,10 @@
   "c": "index.html: st AMMOA={bow:[[50,\"Shatterstorm Arrow\",\"physical\",27],[125,\"Firestorm Arrow\",\"fire\",21],[125,\"Fr",
   "k": "x"
  },
+ "Fist (monk)": {
+  "c": "index.html: :{magic:\"Magic level\",melee:\"Espada, machado ou clava\",fist:\"Fist (monk)\",distance:\"Distância",
+  "k": "x"
+ },
  "Fist Fighting Weapons": {
   "c": "index.html: \":\"Comida\",\"Rods\":\"Rod\",\"Wands\":\"Wand\",\"Tools\":\"Ferramenta\",\"Fist Fighting Weapons\":\"Arma de monk\",\"Spe",
   "k": "x"
@@ -3939,6 +4223,10 @@
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "x"
  },
+ "Fusões": {
+  "c": "index.html: /tr></thead><tbody> ${row(\"Itens base\",\"base\",n0)}${row(\"Fusões\",\"fus\",n0)}${row(\"Go",
+  "k": "x"
+ },
  "Físico {0}": {
   "c": "recolhida: /grimorio/#hunts · ex.: Físico 13%",
   "k": "p"
@@ -3977,6 +4265,14 @@
  },
  "Gancho": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Ganhas progresso ao matar criaturas com entrada no Bestiário/Bosstiário com a arma equipada (basta teres contribuído com dano; runas e campos também contam). Summons e criaturas sem entrada no Bestiário não contam.": {
+  "c": "index.html:  podes substituir até 2 perks por outros à escolha.\", \"p\": [\"Ganhas progresso ao matar criaturas com entrada no Bestiário/Bosstiário com a arma equipada (basta teres contribuído com dano; runas e campos também contam). S",
+  "k": "x"
+ },
+ "Ganhas também 1 Soulseal por task concluída, para usar no Soulpit.": {
+  "c": "index.html: ltiplicados por x2 (4 tasks), x3 (8), x5 (12) ou x8 (16).\", \"Ganhas também 1 Soulseal por task concluída, para usar no Soulpit.\", \"Os pontos gastam-",
   "k": "x"
  },
  "Garra": {
@@ -4051,12 +4347,20 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "Gloom Pillars: todas as criaturas dão cerca de 12% menos ouro.": {
+  "c": "index.html: d Man-Maggot e Sopping Corpus dão cerca de 12% menos ouro.\",\"Gloom Pillars: todas as criaturas dão cerca de 12% menos ouro.\",\"Sensibilidades mai",
+  "k": "x"
+ },
  "Gold (mod básico)": {
   "c": "index.html: ts</td></tr>`).join(\"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (mod básico)\",\"Gold (mod supremo)",
   "k": "x"
  },
  "Gold (mod supremo)": {
   "c": "index.html: \"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (mod básico)\",\"Gold (mod supremo)\"], [[\"II\",5,2000000,",
+  "k": "x"
+ },
+ "Gold das fusões": {
+  "c": "index.html: {row(\"Itens base\",\"base\",n0)}${row(\"Fusões\",\"fus\",n0)}${row(\"Gold das fusões\",\"gold\",gp)}${row(\"D",
   "k": "x"
  },
  "Golpe mais forte": {
@@ -4231,6 +4535,10 @@
   "c": "index.html: ))} por turno</span>`:\"\"}</h3>${atkT} ${othL.length?`<p class=\"pt-ab\"><b>Habilidades</b> ${othL.join(\" · \")}</p>`:\"\"} ${props",
   "k": "x"
  },
+ "Halloween": {
+  "c": "index.html:  atualizar à mão). const EVENTS=[[\"2026-10-31\",\"2026-11-03\",\"Halloween\",\"Criaturas e boss d",
+  "k": "x"
+ },
  "Haste": {
   "c": "index.html: t===\"heal\"?`Cura${d?` (${esc(cpEn(d))})`:\"\"}` : t===\"haste\"?\"Haste\" : t===\"debuff\"?`${e",
   "k": "x"
@@ -4259,6 +4567,10 @@
   "c": "index.html: \",\"Lesser gem\",\"Regular gem\",\"Greater gem\"]; const GEMPT = {\"Hit Points\":\"Vida\",\"Mitigation\"",
   "k": "x"
  },
+ "Hive: deixa de ser possível fazer logout nas zonas subterrâneas com acesso restrito.": {
+  "c": "index.html: om NPCs: já não compras o item escolhido antes por engano.\",\"Hive: deixa de ser possível fazer logout nas zonas subterrâneas com acesso restrito.\"]}, {d:\"2026-10-06\"",
+  "k": "x"
+ },
  "Hoje ({0}) está em {1}; muda de cidade todos os dias no server save.": {
   "c": "index.html:  if(lk===\"rashid\"){ const R=rashidToday(); city=R.city; loc=`Hoje (${R.dia}) está em ${R.city}; muda de cidade todos os dias no server save.`; } const pr=(p,",
   "k": "p"
@@ -4266,6 +4578,10 @@
  "Hoje ({0}) está em {1}; muda todos os dias no server save.": {
   "c": "index.html: ()===\"rashid\"){ const R=rashidToday(); o.city=R.city; o.loc=`Hoje (${R.dia}) está em ${R.city}; muda todos os dias no server save.`; o.x=null; } const ",
   "k": "p"
+ },
+ "Hoje no Tibia": {
+  "c": "index.html (HTML)",
+  "k": "x"
  },
  "Holy Build": {
   "c": "index.html: de ${ELN[bw]}`:\"\"; return {w:best, why}; } const WNOTE = {\"Holy Build\":\"build holy\",\"Physi",
@@ -4315,6 +4631,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Hunting Task Points no fim da semana: 75 por Delivery Task e 25/50/100/110 por Kill Task Beginner/Adept/Expert/Master, multiplicados por x2 (4 tasks), x3 (8), x5 (12) ou x8 (16).": {
+  "c": "index.html: 00.000, Adept 800.000, Expert 3.000.000, Master sem teto.\", \"Hunting Task Points no fim da semana: 75 por Delivery Task e 25/50/100/110 por Kill Task Beginner/Adept/Expert/Master, multiplicados por x2 (4 tasks), x3 (8), ",
+  "k": "x"
+ },
  "Hunting place da TibiaWiki{0}: nível recomendado e notas de XP e loot de 1 a 5.": {
   "c": "index.html: riantes no TibiaPal</h4>${vars}`:\"\"}`]]:[])])} ${h.wiki?`<p class=\"tiny muted\">Hunting place da TibiaWiki${p.city?` (perto de ${esc(p.city)})`:\"\"}: nível recomendado e notas de XP e loot de 1 a 5. ${h.xp==null?\"Ainda sem",
   "k": "p"
@@ -4325,6 +4645,10 @@
  },
  "Hunts": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Hunts afetadas:": {
+  "c": "index.html:  const L=(pids||[]).filter(k=>G.places[k]); return L.length?`<div class=\"nw-h\"><span class=\"tiny muted\">Hunts afetadas:</span>${L.map(k=>`<button type=\"button\" class=\"tag\" data-gs=\"h:${esc(k)}\">${esc(G.places[k].n)}</but",
   "k": "x"
  },
  "Hunts de": {
@@ -4389,6 +4713,14 @@
  },
  "Há": {
   "c": "index.html: \"hmore\"><span class=\"small muted\">${list.length?\"Também há\":\"Há\"} <span>${n}</span> ",
+  "k": "x"
+ },
+ "Há 10% de hipótese de aparecer um Echo Warden como líder da raid (20% se já tiveres completado o Bestiário dessa criatura; o bónus só passou a funcionar com a correção de 04/08/2026).": {
+  "c": "index.html: adas; as criaturas ficam 10 minutos e depois desaparecem.\", \"Há 10% de hipótese de aparecer um Echo Warden como líder da raid (20% se já tiveres completado o Bestiário dessa criatura; o bónus só passou a funcionar com a ",
+  "k": "x"
+ },
+ "Há 7 níveis com perks; os níveis 8 e 9 são de Mastery (só títulos e conquistas). Nível 7 pede 30.000.000 XP (armas normais), 20.000.000 (armas de knight) ou 10.000.000 (bestas).": {
+  "c": "index.html: 12/600). Bosses: Bane 500, Archfoe 5.000, Nemesis 15.000.\", \"Há 7 níveis com perks; os níveis 8 e 9 são de Mastery (só títulos e conquistas). Nível 7 pede 30.000.000 XP (armas normais), 20.000.000 (armas de knight) ou 10",
   "k": "x"
  },
  "Há dois tipos: os {0} saem das Lesser e Regular Gems; os {1} saem das Greater Gems.": {
@@ -4575,6 +4907,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Invasões de piratas e o boss pirata": {
+  "c": "index.html: em\"], [\"2026-11-20\",\"2026-11-23\",\"A Pirate's Death to Me\",\"Invasões de piratas e o boss pirata\"]]; function berlinN",
+  "k": "x"
+ },
  "Inventário {0}": {
   "c": "index.html (HTML)",
   "k": "p"
@@ -4604,7 +4940,7 @@
   "k": "x"
  },
  "Início": {
-  "c": "quests/index.html (HTML)",
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Ir": {
@@ -4647,6 +4983,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Itens base": {
+  "c": "index.html: th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"Itens base\",\"base\",n0)}${row(\"F",
+  "k": "x"
+ },
  "Itens do set": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4661,6 +5001,22 @@
  },
  "Itens raros também aparecem:": {
   "c": "recolhida: /grimorio/#inicio · ex.: Itens raros também aparecem:",
+  "k": "x"
+ },
+ "Jaded Roots: Oozing Corpus, Mycobiontic Beetle, Bloated Man-Maggot e Sopping Corpus dão cerca de 12% menos ouro.": {
+  "c": "index.html: nsível\",h:[\"jadedroots\",\"gloompillars\",\"darklightcore\"],li:[\"Jaded Roots: Oozing Corpus, Mycobiontic Beetle, Bloated Man-Maggot e Sopping Corpus dão cerca de 12% menos ouro.\",\"Gloom Pillars: tod",
+  "k": "x"
+ },
+ "Jambra (Xybra e Cantabra), Deslumbra (Luzibra, Yubra e Etebra), Mortabra (Sombra e Gladibra), Nociva (Noctalia e Citra), Ulmyra (Sonira e Bravoria), Westera (Ignitera, Aethera e Xymera) e Faunera (Kalimera e Blumera).": {
+  "c": "index.html: e no Questski.\"]}, {d:\"2026-10-22\",t:\"Mundos fundidos\",li:[\"Jambra (Xybra e Cantabra), Deslumbra (Luzibra, Yubra e Etebra), Mortabra (Sombra e Gladibra), Nociva (Noctalia e Citra), Ulmyra (Sonira e Bravoria), Westera (Ig",
+  "k": "x"
+ },
+ "Janela de troca com NPCs: já não compras o item escolhido antes por engano.": {
+  "c": "index.html: agens do espelho voltam a transformar-se numa só aparição.\",\"Janela de troca com NPCs: já não compras o item escolhido antes por engano.\",\"Hive: deixa de ser",
+  "k": "x"
+ },
+ "Jogador": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
   "k": "x"
  },
  "Jogador português no Tibia oficial; joga sobretudo sozinho; prefere hunts sem risco de morrer; gosta de quests com história.": {
@@ -4715,6 +5071,10 @@
   "c": "index.html: t np = nearPlace(x,y,z); if (np && G.routes[np.k]) return `<p class=\"small muted\" style=\"margin:0 0 6px\">Junto a ${esc(G.places[np.k].n)}: mesmo caminho.</p>${routeHTML(np.k)}`; const c=nearCity",
   "k": "p"
  },
+ "Já completas ({0})": {
+  "c": "index.html: as as criaturas destas hunts.</li>`}</ul> ${done.length?`<details><summary class=\"small\">Já completas (${done.length})</summary><ul class=\"bst\">${done.map(x=>`<li><label><input type=\"checkbox\" data-best=\"${esc(x.k)}\" che",
+  "k": "p"
+ },
  "Já está na tua lista.": {
   "c": "index.html: in ${ago(ch.last_login)}`:\"\"}</div></div></div> ${dup?`<div class=\"controls\"><span class=\"small muted\">Já está na tua lista.</span><button class=\"btn\" type=\"button\" data-lkopen=\"${dup.id}\">Abrir</button></div>` : v?`<div",
   "k": "x"
@@ -4725,6 +5085,14 @@
  },
  "Já fizeste os guias que sugerimos para o teu nível.": {
   "c": "index.html: hidden=\"true\">›</span></a></li>`; }).join(\"\")}</ul>` :`<p class=\"small\" style=\"margin:0\">Já fizeste os guias que sugerimos para o teu nível.</p>`}`; } $(\"calcHunt\").",
+  "k": "x"
+ },
+ "Já marcaste todas as criaturas destas hunts.": {
+  "c": "index.html: b> pontos</span><small>${esc(x.h)}</small></li>`).join(\"\")||`<li class=\"small muted\">Já marcaste todas as criaturas destas hunts.</li>`}</ul> ${done.le",
+  "k": "x"
+ },
+ "Já não precisas de iniciar manualmente as descobertas de cada área no Cyclopedia: todas as subáreas estão ativas.": {
+  "c": "index.html: área por completo dá-te velocidade extra lá dentro.\", \"p\": [\"Já não precisas de iniciar manualmente as descobertas de cada área no Cyclopedia: todas as subáreas estão ativas.\", \"Continuas a poder",
   "k": "x"
  },
  "Kabuto": {
@@ -4751,6 +5119,10 @@
   "c": "index.html: ndriel\",reg],[\"The Spark of the Phoenix\",[\"Kawill\",\"Pydar\"],\"Kazordoon (por esta ordem)\",reg],[\"The Wisdom o",
   "k": "x"
  },
+ "Kill statistics oficiais do dia anterior (média da semana: {0} por dia). ✝ = jogadores mortos por essa criatura.": {
+  "c": "index.html:  do que o costume\"]:[\"\",\"movimento normal\"]; el.innerHTML=`<details class=\"ks\"><summary><span class=\"ks-h\">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class=\"ks-d\">${nf(pk)}</b> jogadores mortos",
+  "k": "p"
+ },
  "Kills Bestiary": {
   "c": "index.html: com\",ci.run!=null?(runN?nf(runN)+\" vida\":\"não foge\"):null],[\"Kills Bestiary\",cr.kills?nf(cr.kill",
   "k": "x"
@@ -4769,6 +5141,10 @@
  },
  "Largado por": {
   "c": "quests/js/app.js: ades\", \"version\": \"Versão\", \"notes\": \"Notas\", \"dropped by\": \"Largado por\", \"trade details",
+  "k": "x"
+ },
+ "Lasting": {
+  "c": "index.html: 7.2,fist:7.2,distance:4.32,shielding:14.4}, w:[[\"lasting\",\"Lasting\",14400,12500000],[\"d",
   "k": "x"
  },
  "Leech": {
@@ -4883,6 +5259,14 @@
   "c": "index.html: t Fighting Weapons\":\"Arma de monk\",\"Spellbooks\":\"Spellbook\",\"Light Sources\":\"Fonte de luz\",\"Tro",
   "k": "x"
  },
+ "Lightbearer": {
+  "c": "index.html: oween, com a Halloween Hare\"], [\"2026-11-11\",\"2026-11-15\",\"Lightbearer\",\"Acende os basins e",
+  "k": "x"
+ },
+ "Lightning com alcance 7, como devia.": {
+  "c": "index.html: ar dados nos depots.\"]}, {d:\"2026-09-29\",t:\"Correções\",li:[\"Lightning com alcance 7, como devia.\",\"Bibby Bloodbath: t",
+  "k": "x"
+ },
  "Limpar": {
   "c": "index.html: bel\",\"Hunts para comparar\"); t.hidden=true; t.innerHTML='<div class=\"hcmp-cs\"></div><div class=\"hcmp-act\"><button type=\"button\" class=\"btn small\" data-hcmpopen=\"1\">Comparar</button><button type=\"button\" class=\"btn small ",
   "k": "x"
@@ -4968,7 +5352,7 @@
   "k": "x"
  },
  "Loot": {
-  "c": "quests/js/app.js: ginas relacionadas\", \"location\": \"Localização\", \"loot\": \"Loot\", \"abilities\": \"Habi",
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
   "k": "x"
  },
  "Loot aos preços de NPC{0}.": {
@@ -5167,6 +5551,10 @@
   "c": "index.html: ha de cada hunt diz qual usar em cada criatura).</p>` + `<h4 class=\"cm-h\">Majors <span class=\"muted\">· charm points</span></h4><ul class=\"cm-list\">${ma.map(li).join(\"\")}</ul>` + `<h4 class=\"c",
   "k": "p"
  },
+ "Make Believe: os devoted radiants ficam 2 horas em vez de 1.": {
+  "c": "index.html: rute, Alchemist e Forgepriest dão cerca de 10% menos ouro.\",\"Make Believe: os devoted radiants ficam 2 horas em vez de 1.\",\"Os charms Overpowe",
+  "k": "x"
+ },
  "Mamíferos": {
   "c": "index.html: mentais\",Lycanthrope:\"Licantropos\",Magical:\"Mágicos\",Mammal:\"Mamíferos\",Reptile:\"Répteis\",V",
   "k": "x"
@@ -5251,6 +5639,14 @@
   "c": "quests/js/app.js: ug); const checked = !!(p.s && p.s[id]); let html = `<div class=\"step ${checked ? \"checked\" : \"\"}\" id=\"step-${id}\" data-step=\"${id}\"> <label class=\"step-check\"><input type=\"checkbox\" ${checked ? \"checked\" : \"\"} data-chec",
   "k": "p"
  },
+ "Marcas guardadas neste browser, por personagem (o tibia.com não mostra o bestiário de cada um).": {
+  "c": "index.html: ce((a,k)=>a+((CRD[k]&&CRD[k].charm)||0),0); box.innerHTML=`<p class=\"small\">Marcaste <b>${Object.keys(c.best).length}</b> criaturas completas: <b>${nf(pts)}</b> charm points. Estas são as que mais rendem por morte nas hu",
+  "k": "x"
+ },
+ "Marcaste {0} criaturas completas: {1} charm points. Estas são as que mais rendem por morte nas hunts até ao nível {2}:": {
+  "c": "index.html: ce((a,k)=>a+((CRD[k]&&CRD[k].charm)||0),0); box.innerHTML=`<p class=\"small\">Marcaste <b>${Object.keys(c.best).length}</b> criaturas completas: <b>${nf(pts)}</b> charm points. Estas são as que mais rendem por morte nas hu",
+  "k": "p"
+ },
  "Market": {
   "c": "index.html: = it&&c&&can ? scoreItem(c,it,\"combat\",\"\") : null; return `<div class=\"lk-h\"><span class=\"lk-spr\">${it?sprOr(it,it.s):itemSpr(key)}</span><div><b>${esc(name)}</b><span>${esc(typ)}</span></div></div> ${req} ${rows.length?",
   "k": "x"
@@ -5283,6 +5679,10 @@
   "c": "index.html: ócios\" : \"Sem dados agora\"; if(sp) sp.textContent = s ? `Market em ${w} · ${s.lab}${s.ok?\"\":\" · pouco fiável\"}` : d ? `em ${w} este",
   "k": "p"
  },
+ "Market mais caro, exercise weapons mais caras": {
+  "c": "index.html: as subterrâneas com acesso restrito.\"]}, {d:\"2026-10-06\",t:\"Market mais caro, exercise weapons mais caras\",li:[\"Taxa do Market",
+  "k": "x"
+ },
  "Market · {0} · média do mês": {
   "c": "index.html: 100)} % do loot desta hunt</span></p>`:\"\"; const src=mkOk?`Market · ${esc(w)} · média do mês`:\"preços de NPC\", ag",
   "k": "p"
@@ -5301,6 +5701,10 @@
  },
  "Mastery (revelation)": {
   "c": "index.html: }; const supPT = s => String(s).replace(/ Mastery Mastery$/,\" Mastery (revelation)\").replace(/^(.*) Bas",
+  "k": "x"
+ },
+ "Matar criaturas em Rookgaard já não abre echo raids; os lion knights deixam de ferir os aliados com feitiços.": {
+  "c": "index.html:  a fogo 120% → 115% e Darklight Source a fogo 115% → 110%.\",\"Matar criaturas em Rookgaard já não abre echo raids; os lion knights deixam de ferir os aliados com feitiços.\",\"No Grimório: sensi",
   "k": "x"
  },
  "Matar: a vida do boss ÷ 70% do teu dano por segundo de boss (o resto do tempo vai para mexer, curar e fugir), no elemento a que o boss é mais fraco, até 2,5 min (Bane), 5 min (Archfoe) ou 10 min (Nemesis) sozinho; em equipa, com 4 como tu e mais 50% de tempo.": {
@@ -5363,6 +5767,10 @@
   "c": "index.html: hkName(e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"D",
   "k": "x"
  },
+ "Metade das vezes até": {
+  "c": "index.html: 90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v); out.innerHTML=`<div class=\"scroll-x\"><table class=\"ls-t\"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"It",
+  "k": "x"
+ },
  "Metal": {
   "c": "index.html: es\":\"Runa de apoio\",\"Healing Runes\":\"Runa de cura\",\"Metals\":\"Metal\",\"Rocks\":\"Pedra\"}; ",
   "k": "x"
@@ -5382,6 +5790,10 @@
  "Minors {0}": {
   "c": "index.html: </h4><ul class=\"cm-list\">${ma.map(li).join(\"\")}</ul>` + `<h4 class=\"cm-h\">Minors <span class=\"muted\">· echoes</span></h4><ul class=\"cm-list\">${mi.map(li).join(\"\")}</ul>`; } [\"charmList\",\"mi",
   "k": "p"
+ },
+ "Mirrored Nightmare: as imagens do espelho voltam a transformar-se numa só aparição.": {
+  "c": "index.html: unts já atualizados.\"]}, {d:\"2026-10-13\",t:\"Correções\",li:[\"Mirrored Nightmare: as imagens do espelho voltam a transformar-se numa só aparição.\",\"Janela de troca co",
+  "k": "x"
  },
  "Mitigation": {
   "c": "index.html: lar gem\",\"Greater gem\"]; const GEMPT = {\"Hit Points\":\"Vida\",\"Mitigation\":\"Mitigação\",\"Mana\":",
@@ -5551,6 +5963,10 @@
   "c": "index.html: l\">${row(\"Vocação\",esc(t.voc))}${row(\"Nível\",t.level)}${row(\"Mundo\",esc(c.world))}${row",
   "k": "x"
  },
+ "Mundos fundidos": {
+  "c": "index.html: date sair, entra aqui e no Questski.\"]}, {d:\"2026-10-22\",t:\"Mundos fundidos\",li:[\"Jambra (Xybra ",
+  "k": "x"
+ },
  "Munição": {
   "c": "index.html: w?`<p class=\"small\" style=\"margin:0\"><b>${h.voc===\"paladin\"?\"Munição\":h.voc===\"knight\"||h",
   "k": "x"
@@ -5611,6 +6027,10 @@
   "c": "index.html: ift(); } hcmpSave(l); const on=l.includes(pid), msg=out?`Máximo de 3 hunts: saiu ${hcmpName(out)}`:\"\"; b.setAttrib",
   "k": "p"
  },
+ "Média": {
+  "c": "index.html: 90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v); out.innerHTML=`<div class=\"scroll-x\"><table class=\"ls-t\"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"It",
+  "k": "x"
+ },
  "Média do mês menos a taxa de 2 % do Market": {
   "c": "index.html: \"><thead><tr><th>Item</th><th>Chance</th><th>NPC</th>${mkOk?`<th title=\"Média do mês menos a taxa de 2 % do Market\">Market −2 %</th>`:\"\"}<th>gp por kill<",
   "k": "x"
@@ -5645,6 +6065,10 @@
  },
  "NPCs vendem por": {
   "c": "quests/js/app.js:  \"Valor\", \"sold for\": \"NPCs compram por\", \"bought for\": \"NPCs vendem por\", \"field properties\"",
+  "k": "x"
+ },
+ "Na aldeia tens comerciante (compra loot, vende poções e munição), banqueiro, quem dê quests e um professor com alguns feitiços básicos por vocação.": {
+  "c": "index.html:  à ilha principal; a Newhaven Quest começa logo a seguir.\", \"Na aldeia tens comerciante (compra loot, vende poções e munição), banqueiro, quem dê quests e um professor com alguns feitiços básicos por vocação.\", \"A saída ",
   "k": "x"
  },
  "Na roda": {
@@ -5807,9 +6231,25 @@
   "c": "quests/js/app.js: ).join(\"\"); }); $(\"#questList\").innerHTML = html || `<div class=\"empty-list\">Nenhuma quest corresponde aos filtros.<br><button class=\"link-btn\" id=\"fReset2\">Limpar filtros</button></div>`; const r2 = $(\"",
   "k": "p"
  },
+ "Newhaven (ilha inicial)": {
+  "c": "index.html: 15.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"newhaven\", \"t\": \"Newhaven (ilha inicial)\", \"s\": \"Newhaven é a",
+  "k": "x"
+ },
+ "Newhaven Update (15.12.c7d92c)": {
+  "c": "index.html: já existentes deixaram de poder voltar a Rookgaard.\"], \"u\": \"Newhaven Update (15.12.c7d92c)\", \"d\": \"2025-10-21\"}",
+  "k": "x"
+ },
+ "Newhaven é a ilha de iniciação a leste de Bounac que substituiu Dawnport: escolhes a vocação logo ao chegar, fazes as missões de tutorial e sais definitivamente quando chegares ao nível 8.": {
+  "c": "index.html: \"}, {\"id\": \"newhaven\", \"t\": \"Newhaven (ilha inicial)\", \"s\": \"Newhaven é a ilha de iniciação a leste de Bounac que substituiu Dawnport: escolhes a vocação logo ao chegar, fazes as missões de tutorial e sais definitivament",
+  "k": "x"
+ },
  "Nimmersatt's (Dragões) — {0}": {
   "c": "recolhida: /grimorio/#hunts · ex.: Nimmersatt's (Dragões) — 8.5kk/h ≈",
   "k": "p"
+ },
+ "Ninguém precisa de transferir nada.": {
+  "c": "index.html: .v} to ${esc(t.to)}\">Copiar</button></li>`).join(\"\")}</ul>`:`<p class=\"small\">Ninguém precisa de transferir nada.</p>`} <p class=\"tiny",
+  "k": "x"
  },
  "No Fragment Workshop (no Gem Atelier) os mods sobem do grau I ao IV. Os {0} gastam {1}; os {2}, {3}; e todos gastam gold.": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
@@ -5821,6 +6261,14 @@
  },
  "No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo.": {
   "c": "index.html: r ${nf(GEMCOST.rot[t])} gold de cada vez.`], [\"Colocar\",\"No Gem Atelier escolhe a gema e carrega em «Place in Vessel». Como as outras mudanças na Wheel, faz-se num templo.\"], [\"Ativar\",`Ca",
+  "k": "x"
+ },
+ "No Grimório: XP das criaturas e XP/h e lucro estimados destas hunts já atualizados.": {
+  "c": "index.html:  Instinct do knight atualiza-se sem trocar de equipamento.\",\"No Grimório: XP das criaturas e XP/h e lucro estimados destas hunts já atualizados.\"]}, {d:\"2026-10-13\"",
+  "k": "x"
+ },
+ "No Grimório: sensibilidades, eficácia dos elementos e lucro estimado destas hunts já atualizados.": {
+  "c": "index.html: ; os lion knights deixam de ferir os aliados com feitiços.\",\"No Grimório: sensibilidades, eficácia dos elementos e lucro estimado destas hunts já atualizados.\"]}, {d:\"2026-10-27\"",
   "k": "x"
  },
  "No Market costuma valer mais do que nos NPCs.": {
@@ -5849,6 +6297,10 @@
  },
  "No jogo {0}": {
   "c": "index.html: nst best=rows.reduce((m,r)=>Math.max(m,r.save),0); return `<div class=\"ims img-g\"><h4>No jogo <span class=\"tiny muted\">com a tua rotação e o set ${esc(set.name)}</span></h4><div class=\"img-ts\">${tiles}</div>${prot} <p cl",
+  "k": "p"
+ },
+ "No jogo, abre o Party Hunt Analyser, carrega em {0} e cola aqui.": {
+  "c": "index.html (HTML)",
   "k": "p"
  },
  "No terreno da hunt": {
@@ -5891,12 +6343,20 @@
   "c": "index.html: .level, voc:c.vocation, sex:c.sex, title:c.title&&c.title!==\"None\"?c.title:\"\", res:c.r",
   "k": "x"
  },
+ "Norcferatu Dungeons: Dworc Shadowstalker 8 930 → 7 680 XP, Orclops Bloodbreaker 10 250 → 8 820 XP, Gloom Maw 8 770 → 7 550 XP.": {
+  "c": "index.html: r Asura −10% ouro, True Feverbloom Asura 7 850 → 8 600 XP.\",\"Norcferatu Dungeons: Dworc Shadowstalker 8 930 → 7 680 XP, Orclops Bloodbreaker 10 250 → 8 820 XP, Gloom Maw 8 770 → 7 550 XP.\",\"Bulltaur Lair: Bru",
+  "k": "x"
+ },
  "Nordeste de {0}": {
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
  "Norf": {
   "c": "index.html: 0*(L-20) : 50000; const rows=[[\"The Spiritual Shielding\",[\"Norf\"],\"White Flower Temp",
+  "k": "x"
+ },
+ "Normal": {
+  "c": "index.html: 400,12500000],[\"durable\",\"Durable\",1800,1562500],[\"regular\",\"Normal\",500,434028]], lab",
   "k": "x"
  },
  "Noroeste de {0}": {
@@ -5947,7 +6407,15 @@
   "c": "quests/js/app.js: oin(\"\")}</ul>`); const notes = (d.notes || []).length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"book\")}Notas e perguntas frequentes</h2><div class=\"box-body\"><ul class=\"notes-list\">${d.notes.map((x) => `<li",
   "k": "x"
  },
+ "Notícias oficiais de desenvolvimento": {
+  "c": "index.html: s(){ const el=$(\"newsBody\"); if(!el) return; el.innerHTML=`<div class=\"nw-list\">${NEWS_PT.map(n=>`<article class=\"card nw\"><div class=\"nw-d\">${newsDate(n.d)}</div><h3>${esc(n.t)}</h3><ul>${n.li.map(x=>`<li>${esc(x)}</li>",
+  "k": "x"
+ },
  "Nova personagem": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Novidades": {
   "c": "index.html (HTML)",
   "k": "x"
  },
@@ -5967,8 +6435,16 @@
   "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "x"
  },
+ "Não consegui abrir esta notícia agora.": {
+  "c": "index.html: div>`:\"\"}${newsHunts(m.pl)}`; } catch(err){ box.innerHTML=`<p class=\"small muted\">Não consegui abrir esta notícia agora.</p>`; delete d.dataset.o",
+  "k": "x"
+ },
  "Não consegui calcular o teu dano de boss.": {
   "c": "index.html: y{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class=\"small muted\">Não consegui calcular o teu dano de boss.</p>`; return; } const ",
+  "k": "x"
+ },
+ "Não consegui carregar o bestiário.": {
+  "c": "index.html: try{ CRD=await dload(\"creatures\"); }catch(e){ box.innerHTML=`<p class=\"small muted\">Não consegui carregar o bestiário.</p>`; return; } } c.be",
   "k": "x"
  },
  "Não consegui carregar o motor dos bosses.": {
@@ -5981,6 +6457,10 @@
  },
  "Não consegui carregar os dados das rotações.": {
   "c": "index.html: .innerHTML=`<p class=\"small muted\">${RXERR||!window.GrimRot?\"Não consegui carregar os dados das rotações.\":\"A carregar as rota",
+  "k": "x"
+ },
+ "Não consegui carregar os dados do forge.": {
+  "c": "index.html: >`; try{ FGS=await dload(\"forge\"); }catch(e){ out.innerHTML=`<p class=\"small muted\">Não consegui carregar os dados do forge.</p>`; return; } } cons",
   "k": "x"
  },
  "Não consegui comparar a tua barra.": {
@@ -6047,6 +6527,10 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
  },
+ "Não encontrei pelo menos duas pessoas. Copia o texto inteiro do Party Hunt Analyser (botão \"Copy to clipboard\").": {
+  "c": "index.html: lue); if(players.length<2){ out.innerHTML=ta.value.trim()?`<p class=\"small\" style=\"color:var(--warn)\">Não encontrei pelo menos duas pessoas. Copia o texto inteiro do Party Hunt Analyser (botão \"Copy to clipboard\").</p>`:",
+  "k": "x"
+ },
  "Não encontrei “{0}” no Tibia. Confirma o nome tal como aparece no jogo.": {
   "c": "index.html: (r.ok) look.res=r; else look.err = r.why===\"notfound\" ? `Não encontrei “${esc(q)}” no Tibia. Confirma o nome tal como aparece no jogo.` : \"Não consegui con",
   "k": "p"
@@ -6086,6 +6570,10 @@
  "Não há hunts recomendadas para {0} ao mesmo tempo.": {
   "c": "index.html: n(\"\")}</div>`; } const empty = grp && !allRows.length ? `Não há hunts recomendadas para ${ms.map(m=>G.voc[m.voc].n).join(\" e \")} ao mesmo tempo.` : \"Nada com estes f",
   "k": "p"
+ },
+ "Não há limite máximo; há registos confirmados até à dificuldade 25 (Mimar Haffar), 15 (Maior Domus) e 28 (Phosphorus). O Phosphorus Record é um highscore com a dificuldade mais alta vencida.": {
+  "c": "index.html: bloqueio é individual, por isso o grupo sobe em conjunto.\", \"Não há limite máximo; há registos confirmados até à dificuldade 25 (Mimar Haffar), 15 (Maior Domus) e 28 (Phosphorus). O Phosphorus Record é um highscore com a",
+  "k": "x"
  },
  "Não há nenhuma página \"{0}\" na wiki do Questski. {1}": {
   "c": "quests/js/app.js:  = wikiEntry(title); if (!e) { view().innerHTML = `<div class=\"note-box\">Não há nenhuma página \"${esc(title)}\" na wiki do Questski. <a href=\"#/wiki\">Procurar na wiki</a></div>`; return; ",
@@ -6187,6 +6675,10 @@
   "c": "quests/js/app.js: vel 70–79\", \"\"], [80, 89, \"Nível 80–89\", \"\"], [90, 100, \"Nível 90–100\", \"\"], [101, 150",
   "k": "x"
  },
+ "Nível atual": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Nível da hunt mais próxima": {
   "c": "index.html: ss=\"tag ${r.l>c.level?\"warn\":\"ok\"}\" title=\"${r.src===\"hunt\"?\"Nível da hunt mais próxima\":\"Estimado pela XP d",
   "k": "x"
@@ -6263,12 +6755,24 @@
   "c": "index.html: tx)||{}, vn=v=>esc(G.voc[v].n); let t=\"\"; if(e===\"old\") t=\"Número do TibiaPal de antes do rebalance de junho de 2026: ainda não voltou a ser medido.\"; else if(e===\"hao",
   "k": "x"
  },
+ "O Bounty Talisman (slot extra, 5.000 gp nos NPCs) melhora-se com Bounty Points: dano contra a criatura até 50%, Life Leech até 50%, mais loot até 50% e hipótese de progresso duplo no Bestiário até 100%.": {
+  "c": "index.html:  x2) ou Gold Tasks (x4). As mortes de summons não contam.\", \"O Bounty Talisman (slot extra, 5.000 gp nos NPCs) melhora-se com Bounty Points: dano contra a criatura até 50%, Life Leech até 50%, mais loot até 50% e hipótes",
+  "k": "x"
+ },
+ "O Echo Warden dura até 10 minutos, é mais forte do que a criatura original e fortalece as criaturas próximas (nomes marcados como 'Empowered').": {
+  "c": "index.html: ónus só passou a funcionar com a correção de 04/08/2026).\", \"O Echo Warden dura até 10 minutos, é mais forte do que a criatura original e fortalece as criaturas próximas (nomes marcados como 'Empowered').\", \"Cada Echo Wa",
+  "k": "x"
+ },
  "O Market não mostra preços separados por tier, por isso aqui está o custo de os fazer. \"Mínimo\" quer dizer que todas as fusões correm bem; com falhas custa mais. Dados: TibiaWiki (Equipment Upgrade), {0}.": {
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "p"
  },
  "O Reddit e o fórum oficial não deixam ler automaticamente; o feedback recente veio do TibiaQA, dos relatórios do TibiaRoute e das atualizações do TibiaPal.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "O Task Board substituiu as antigas Hunting Tasks: as Bounty Tasks dão experiência, Bounty Points e Reroll Tokens para melhorares o Bounty Talisman, e as Weekly Tasks dão Hunting Task Points e Soulseals no fim da semana.": {
+  "c": "index.html: stem\", \"t\": \"Task Board: Bounty Tasks e Weekly Tasks\", \"s\": \"O Task Board substituiu as antigas Hunting Tasks: as Bounty Tasks dão experiência, Bounty Points e Reroll Tokens para melhorares o Bounty Talisman, e as Weekly",
   "k": "x"
  },
  "O TibiaPal mede {0}/h aqui": {
@@ -6315,6 +6819,14 @@
   "c": "index.html: unta primeiro.\"; return; } if(!sampleFn){ out.textContent=\"O assistente só funciona quando abres esta página no claude.ai.\"; return; } $(\"ask",
   "k": "x"
  },
+ "O bónus de velocidade da descoberta não afeta a mecânica de paralyze em PvP (correção posterior ao update).": {
+  "c": "index.html: imento extra dentro dessa área, entre 100 e 195 de speed.\", \"O bónus de velocidade da descoberta não afeta a mecânica de paralyze em PvP (correção posterior ao update).\"], \"u\": \"Summer Upda",
+  "k": "x"
+ },
+ "O comando \"transfer\" diz-se ao NPC do banco, depois de \"hi\" e antes de \"yes\".": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
+  "k": "x"
+ },
  "O evento ({0}) já está incluído.": {
   "c": "index.html:  porque puxam mais criaturas de cada vez.</p> ${g.boost?`<p class=\"small\" style=\"margin:0;color:var(--ok)\">O evento (${esc(evLabel())}) já está incluído.</p>`:\"\"} <div class=",
   "k": "p"
@@ -6355,6 +6867,10 @@
   "c": "index.html:  top 1000 de ${h.w}, escreve o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próx",
   "k": "x"
  },
+ "O nível mais baixo é um modo de aprendizagem 'seguro', mas mesmo aí podes morrer.": {
+  "c": "index.html: es a dificuldade; a luta só começa a partir dessa janela.\", \"O nível mais baixo é um modo de aprendizagem 'seguro', mas mesmo aí podes morrer.\", \"Cada dificuldade ",
+  "k": "x"
+ },
  "O nível tem de estar entre 8 e {0}.": {
   "c": "index.html: nagem.\",\"#f-name\"); if(!(L>=8 && L<=LVMAX)) return fail(`O nível tem de estar entre 8 e ${LVMAX}.`,\"#f-level\"); co",
   "k": "p"
@@ -6379,12 +6895,20 @@
   "c": "quests/js/app.js: e(q.slug) && stepsDone(q.slug) > 0); view().innerHTML = ` <div class=\"toolbar\"><h1>O meu progresso</h1> <button class=\"btn btn-ghost btn-sm\" id=\"expP\">${icon(\"download\")}Exportar</button> <label class=\"btn btn-ghost btn-",
   "k": "x"
  },
+ "O progresso fica preso à personagem e não se transfere.": {
+  "c": "index.html: ualquer lado; trocar ou remover só numa zona de proteção.\", \"O progresso fica preso à personagem e não se transfere.\", \"Personalização (S",
+  "k": "x"
+ },
  "O quadrado com brilho és tu (ou o alvo, nas runas).": {
   "c": "index.html: b}</dd>`).join(\"\")}</dl></section> ${areaHTML(s.ar)?`<section class=\"card\"><h3>Área</h3>${areaHTML(s.ar)}<p class=\"tiny muted\" style=\"margin:8px 0 0\">O quadrado com brilho és tu (ou o alvo, nas runas).</p></section>`:\"\"}",
   "k": "x"
  },
  "O que apanhar": {
   "c": "index.html: \">${mkList.map(lnk).join(\", \")}</span></div>`:\"\"); return `${notes?`<div class=\"lp-note\">${notes}</div>`:\"\"}${kp}${(()=>{ const l=A.kills.filter(x=>x.nd); return l.length?`<p class=\"lp-nd tiny muted\">Sem loot conhecido: ",
+  "k": "x"
+ },
+ "O que mudou no jogo nas últimas semanas, em português, e o que já atualizámos no Grimório.": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "O que o TibiaPal recomenda por nível para a tua vocação. Stats: base de dados do cliente oficial 15.25 e do projeto Canary; itens do verão de 2026 (Moonsilver, Flamingo) ainda sem stats.": {
@@ -6398,6 +6922,10 @@
  "O set {0} está vazio — imbuements para o BiS do teu nível": {
   "c": "index.html: |x)).join(\" + \"):\"—\"}</b></div></div></div>`); }); bisH=`<div class=\"imbis\"><p class=\"imbis-h\"><b>O set ${esc(set.name)} está vazio — imbuements para o BiS do teu nível</b></p>${br.join(\"\")||'<p class=\"small muted\" style",
   "k": "p"
+ },
+ "O sistema de Discovery do Cyclopedia regista os pontos de interesse de cada subárea; desde o Summer Update 2026 todas as subáreas ficam ativas automaticamente e descobrir uma área por completo dá-te velocidade extra lá dentro.": {
+  "c": "index.html: 13\"}, {\"id\": \"discovery\", \"t\": \"Sistema de Discovery\", \"s\": \"O sistema de Discovery do Cyclopedia regista os pontos de interesse de cada subárea; desde o Summer Update 2026 todas as subáreas ficam ativas automaticamente ",
+  "k": "x"
  },
  "O teu equipamento": {
   "c": "index.html: v> <div class=\"bisdoll\" role=\"group\" aria-label=\"${mine?\"O teu equipamento\":\"Melhor equipamento",
@@ -6515,6 +7043,14 @@
   "c": "index.html: . Strike: 10% dos golpes com +${t.crit||0}% de dano.${ft.on?` <span>Onslaught: ${ftN(ft.on)}% dos golpes com +60%.</span>`:\"\"} Taxas do altar ",
   "k": "p"
  },
+ "Ontem em": {
+  "c": "index.html:  do que o costume\"]:[\"\",\"movimento normal\"]; el.innerHTML=`<details class=\"ks\"><summary><span class=\"ks-h\">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class=\"ks-d\">${nf(pk)}</b> jogadores mortos",
+  "k": "x"
+ },
+ "Ontem em {0}": {
+  "c": "index.html:  do que o costume\"]:[\"\",\"movimento normal\"]; el.innerHTML=`<details class=\"ks\"><summary><span class=\"ks-h\">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class=\"ks-d\">${nf(pk)}</b> jogadores mortos",
+  "k": "p"
+ },
  "Onyx Arrow": {
   "c": "index.html: rrow\"],[20,28,\"Sniper Arrow\"],[30,33,\"Tarsal Arrow\"],[40,38,\"Onyx Arrow\"],[90,65,\"Crystallin",
   "k": "x"
@@ -6563,6 +7099,14 @@
   "c": "index.html: Npc*1.1 ? \"No Market costuma valer mais do que nos NPCs.\" : \"Os NPCs pagam perto do valor de referência: vende ao NPC e poupa a taxa do Market.\"; else if(bestNpc)",
   "k": "x"
  },
+ "Os bosses da Make Believe Quest (Mimar Haffar, Maior Domus e Phosphorus) usam o Boss Difficulty System: cada grupo escolhe a dificuldade da luta, desde um modo de aprendizagem seguro até níveis muito altos com mecânicas novas e melhores recompensas.": {
+  "c": "index.html: t\": \"Bosses com dificuldade escalável (Make Believe)\", \"s\": \"Os bosses da Make Believe Quest (Mimar Haffar, Maior Domus e Phosphorus) usam o Boss Difficulty System: cada grupo escolhe a dificuldade da luta, desde um modo",
+  "k": "x"
+ },
+ "Os charms Overpower e Overflux deixam de ser afetados pela Aura of Exposed Weakness; o perk Battle Instinct do knight atualiza-se sem trocar de equipamento.": {
+  "c": "index.html: ke Believe: os devoted radiants ficam 2 horas em vez de 1.\",\"Os charms Overpower e Overflux deixam de ser afetados pela Aura of Exposed Weakness; o perk Battle Instinct do knight atualiza-se sem trocar de equipamento.\",\"",
+  "k": "x"
+ },
  "Os dados do site têm um erro. Avisa quem mexeu por último.": {
   "c": "index.html: = \"warnt\"; warn.style.margin = \"16px\"; warn.textContent = \"Os dados do site têm um erro. Avisa quem mexeu por último.\"; host.insertBefor",
   "k": "x"
@@ -6585,6 +7129,14 @@
  },
  "Os nomes do Tibia só têm letras, espaços, apóstrofos e hífenes.": {
   "c": "index.html: turn redrawLook(host); } if(!NAME_RE.test(q)){ look.err=\"Os nomes do Tibia só têm letras, espaços, apóstrofos e hífenes.\"; return redrawLook(",
+  "k": "x"
+ },
+ "Os pontos gastam-se na loja de Hunting Tasks: por exemplo outfit Falconer ou Feral Trapper (100.000 + 35.000 por addon) e montarias a 145.000.": {
+  "c": "index.html: mbém 1 Soulseal por task concluída, para usar no Soulpit.\", \"Os pontos gastam-se na loja de Hunting Tasks: por exemplo outfit Falconer ou Feral Trapper (100.000 + 35.000 por addon) e montarias a 145.000.\"], \"u\": \"Winter ",
+  "k": "x"
+ },
+ "Os preços do Market destes mundos aparecem no Grimório assim que o TibiaMarket os começar a seguir (a lista de mundos atualiza-se sozinha todos os dias).": {
+  "c": "index.html: rante bastante tempo e, no início, só para contas Premium.\",\"Os preços do Market destes mundos aparecem no Grimório assim que o TibiaMarket os começar a seguir (a lista de mundos atualiza-se sozinha todos os dias).\"]}, {",
   "k": "x"
  },
  "Os que duram menos de 15 minutos (Ring of healing, Death ring…) contam pouco e ficam fora dos sets sugeridos.": {
@@ -6863,6 +7415,14 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Personagens novas podem ir para Rookgaard a partir de Newhaven; as personagens já existentes deixaram de poder voltar a Rookgaard.": {
+  "c": "index.html: ida: depois de saíres nunca mais podes voltar a Newhaven.\", \"Personagens novas podem ir para Rookgaard a partir de Newhaven; as personagens já existentes deixaram de poder voltar a Rookgaard.\"], \"u\": \"Newhaven Up",
+  "k": "x"
+ },
+ "Personalização (Summer Update 2026): o 1.º perk substituído custa 250 de dust e exige proficiência nível 3; o 2.º custa 1.000 de dust e exige a arma em Mastery.": {
+  "c": "index.html:  \"O progresso fica preso à personagem e não se transfere.\", \"Personalização (Summer Update 2026): o 1.º perk substituído custa 250 de dust e exige proficiência nível 3; o 2.º custa 1.000 de dust e exige a arma em Mastery",
+  "k": "x"
+ },
  "Peruca": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
@@ -6969,6 +7529,10 @@
  },
  "Pode ser paralisado": {
   "c": "quests/js/app.js:  \"sense invisible\": \"Deteta invisíveis\", \"paralysable\": \"Pode ser paralisado\", \"see also\": \"Ver t",
+  "k": "x"
+ },
+ "Podem sair Silver Tasks (experiência e Bounty Points x2) ou Gold Tasks (x4). As mortes de summons não contam.": {
+  "c": "index.html: 00 (27); cada uma dá também 1 Reroll Token e experiência.\", \"Podem sair Silver Tasks (experiência e Bounty Points x2) ou Gold Tasks (x4). As mortes de summons não contam.\", \"O Bounty Talisman",
   "k": "x"
  },
  "Ponto": {
@@ -7143,6 +7707,10 @@
   "c": "index.html: ara usar\",s.ml!=null?s.ml:\"\"],[\"Cargas por runa\",s.ra||\"\"],[\"Preço da runa\",s.rp?gp(s.rp):\"\"]);",
   "k": "x"
  },
+ "Preço do item base (gp)": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Preço no Market, onde cai, hunts e mais, no Grimório": {
   "c": "quests/js/app.js: .t].x != null ? S.npcs[p.t] : null); view().innerHTML = ` <article class=\"wiki-page\"> <header class=\"box wiki-head\"><div class=\"box-body\"> <span class=\"slot wiki-sprite\">${p.i ? `<img src=\"${p.i}\" alt=\"\">` : icon(kind[1]",
   "k": "x"
@@ -7299,6 +7867,10 @@
   "c": "index.html: {city:C[d], dia:D[d]}; } const CLS_IT={\"Creature Products\":\"Produto de criatura\",\"Quest Items\":\"Item",
   "k": "x"
  },
+ "Proficiency Catalyst: usa-o numa arma para ganhar 25.000 XP de proficiência. Existem também as versões Lesser e Greater; os Echo Wardens deixam sempre um.": {
+  "c": "index.html: colha) ou limpá-lo de graça para voltar ao perk original.\", \"Proficiency Catalyst: usa-o numa arma para ganhar 25.000 XP de proficiência. Existem também as versões Lesser e Greater; os Echo Wardens deixam sempre um.\"], \"",
+  "k": "x"
+ },
  "Profissão": {
   "c": "quests/js/app.js: e\": \"Grau\", \"points\": \"Pontos\", \"secret\": \"Secreto\", \"job\": \"Profissão\", \"city\": \"Cidade\", ",
   "k": "x"
@@ -7354,6 +7926,10 @@
  "Próxima build com {0} pontos (nível {1}).": {
   "c": "index.html: ; if (cw) steps.push({t:`Wheel: <b>${esc(cw.t)}</b>`,d:nw?`Próxima build com ${nw.p} pontos (nível ${nw.p+50}).`:\"Build completa par",
   "k": "p"
+ },
+ "Próximos eventos": {
+  "c": "index.html: s os dias às 10:00 (Berlim)</span></div></div> </div>${ev?`<div class=\"td-ev\"><h4>Próximos eventos</h4><ul>${ev}</ul></div>`:\"\"}`; clearInterv",
+  "k": "x"
  },
  "Próximos marcos": {
   "c": "index.html (HTML)",
@@ -7419,6 +7995,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Qualquer criatura que morra (às tuas mãos, por uma armadilha, um campo ou outra criatura) tem uma pequena hipótese de deixar o gatilho da raid em cima do corpo. Desde a 15.31 também a podes ativar à mão (clique direito + Usar).": {
+  "c": "index.html: a a aparecer nessa área ao fim de cerca de 20-30 minutos.\", \"Qualquer criatura que morra (às tuas mãos, por uma armadilha, um campo ou outra criatura) tem uma pequena hipótese de deixar o gatilho da raid em cima do corpo",
+  "k": "x"
+ },
  "Qualquer templo": {
   "c": "index.html: pc\">${npcSpr(n,true)}${elink(\"npc\",n)}</span>`).join(\" → \"):`<span class=\"bnpc\">${npcSpr(\"\",true)}Qualquer templo</span>`}</td><td class=\"sma",
   "k": "x"
@@ -7433,6 +8013,10 @@
  },
  "Quando o resto está em cooldown.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "x"
+ },
+ "Quando o update sair, entra aqui e no Questski.": {
+  "c": "index.html:  as personagens para o servidor de teste do Winter Update.\",\"Quando o update sair, entra aqui e no Questski.\"]}, {d:\"2026-10-22\"",
   "k": "x"
  },
  "Quantidade": {
@@ -7591,12 +8175,24 @@
   "c": "index.html: ton>`:\"\"}${guiaBtn(gs)}</div>`; /* r11 */ const ttl=n=>gs?`<a class=\"qtl\" href=\"${guiaHref(gs)}\" title=\"Abrir esta quest no Questski\">${esc(n)}<span class=\"qtl-go\">Questski ›</span></a>`:esc(n); if(!q) re",
   "k": "x"
  },
+ "Quirina (Europa, Optional PvP), Nebulera (América do Norte, Open PvP) e Farsabra (América do Sul, Open PvP).": {
+  "c": "index.html:  const NEWS_PT=[ {d:\"2026-10-28\",t:\"Três mundos novos\",li:[\"Quirina (Europa, Optional PvP), Nebulera (América do Norte, Open PvP) e Farsabra (América do Sul, Open PvP).\",\"Com BattlEye, fech",
+  "k": "x"
+ },
  "Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; vendem-se nos NPCs por 400 gp)": {
   "c": "index.html:  stats): as simples não têm nível nem bónus const quivTip = \"Quiver, Red Quiver ou Blue Quiver (sem nível nem bónus; vendem-se nos NPCs por 400 gp)\"; /* r10 */ // palad",
   "k": "x"
  },
  "Quivers": {
   "c": "index.html: Items\":\"Item mágico\",\"Books\":\"Livro\",\"Ammunition\":\"Munição\",\"Quivers\":\"Aljava\",\"Support R",
+  "k": "x"
+ },
+ "Rashid": {
+  "c": "index.html: e\",IC.bosses||\"\")} <a class=\"td-t\" href=\"${wkHref(\"npc\",\"Rashid\")}\"><span class=\"td-",
+  "k": "x"
+ },
+ "Rashid hoje": {
+  "c": "index.html: all>${esc(e[3])}</small></li>`; }).join(\"\"); el.innerHTML=`<div class=\"td-grid\"> ${todayMon(T.mon,\"Criatura em destaque\",IC.criaturas||\"\")} ${todayMon(T.boss,\"Boss em destaque\",IC.bosses||\"\")} <a class=\"td-t\" href=\"${wkH",
   "k": "x"
  },
  "Rathleton": {
@@ -7669,6 +8265,10 @@
  },
  "Recompensas da quest": {
   "c": "quests/js/app.js: <h4>${icon(ic)}${title}</h4>${body}</div>` : \"\"; return ` <section class=\"quest-scroll ${UNROLLED.has(d.slug) ? \"open unrolled\" : \"\"}\" data-slug=\"${d.slug}\" aria-label=\"Recompensas da quest\"> <div class=\"qs-roll\"></div> ",
+  "k": "x"
+ },
+ "Recompensas: armas e capacetes Moonsilver (best-in-slot), Cloud In a Bottle para a montaria Radiant Nimbus (Mimar Haffar e Phosphorus, dificuldade 15+), Illuminated Warrior Outfits e títulos.": {
+  "c": "index.html: e de drop de Moonsilver vai subindo até te sair uma peça.\", \"Recompensas: armas e capacetes Moonsilver (best-in-slot), Cloud In a Bottle para a montaria Radiant Nimbus (Mimar Haffar e Phosphorus, dificuldade 15+), Illumi",
   "k": "x"
  },
  "Recursos": {
@@ -7827,6 +8427,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Rotten Blood mais pobre e menos sensível": {
+  "c": "index.html:  atualiza-se sozinha todos os dias).\"]}, {d:\"2026-10-27\",t:\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gl",
+  "k": "x"
+ },
  "Ruas": {
   "c": "quests/js/app.js: llery\": \"Galeria\", \"buildings\": \"Edifícios\", \"streets\": \"Ruas\", \"attributes\": \"Atr",
   "k": "x"
@@ -7895,8 +8499,16 @@
   "c": "index.html: s para comparar\"}</h3></div></div>`; if(gone.length) out+=`<p class=\"small warnt\" style=\"margin:0\">Saiu da comparação: ${esc(gone.map(hcmpName).join(\", \"))} (já não há ${gone.length>1?\"estas hunts\":\"esta hunt\"} para ${vn",
   "k": "p"
  },
+ "Saiu o primeiro de dois teasers (\"One for the Stray\"). A CipSoft já guardou as personagens para o servidor de teste do Winter Update.": {
+  "c": "index.html: .\"]}, {d:\"2026-10-27\",t:\"Winter Update 2026 a caminho\",li:[\"Saiu o primeiro de dois teasers (\\\"One for the Stray\\\"). A CipSoft já guardou as personagens para o servidor de teste do Winter Update.\",\"Quando o update sa",
+  "k": "x"
+ },
  "Sala com alavanca: até 5 jogadores, normalmente.": {
   "c": "index.html: l?`, recomendado ${b.qr}`:\"\"})`:\"\"}.`); if(b.lv) why.push(\"Sala com alavanca: até 5 jogadores, normalmente.\"); if(b.sp===\"r\") ",
+  "k": "x"
+ },
+ "Saldo": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
   "k": "x"
  },
  "Salvation Healing": {
@@ -7909,6 +8521,10 @@
  },
  "Scorch (fogo)": {
   "c": "index.html: ding)\",s_fist:\"Punch (fist)\", e_ice:\"Frost (gelo)\",e_fire:\"Scorch (fogo)\",e_earth:\"Venom (ter",
+  "k": "x"
+ },
+ "Se a tua personagem estava num destes mundos, o Grimório passa para o mundo novo na próxima atualização da personagem (preços e mortes de ontem incluídos).": {
+  "c": "index.html: gnitera, Aethera e Xymera) e Faunera (Kalimera e Blumera).\",\"Se a tua personagem estava num destes mundos, o Grimório passa para o mundo novo na próxima atualização da personagem (preços e mortes de ontem incluídos).\"]},",
   "k": "x"
  },
  "Se tiveres cap {0}": {
@@ -8035,6 +8651,18 @@
   "c": "index.html:  err=c.syncErr?`<span class=\"warnt\">${c.syncErr===\"offline\"?\"Sem ligação ao Tibia agora.\":\"Não encontrei esta",
   "k": "x"
  },
+ "Sem ligação à TibiaData": {
+  "c": "index.html: iv><span class=\"td-l\">${lab}</span><b class=\"muted\">${T.err?\"Sem ligação à TibiaData\":\"A carregar…\"}</b><",
+  "k": "x"
+ },
+ "Sem ligação à TibiaData de momento.": {
+  "c": "index.html: ||!L.length){ box.innerHTML=`<p class=\"small muted\">${L.err?\"Sem ligação à TibiaData de momento.\":\"Sem notícias de de",
+  "k": "x"
+ },
+ "Sem ligação à TibiaData para as mortes de ontem.": {
+  "c": "index.html: }…</p>`; const m=await kstatLoad(w); if(!m){ el.innerHTML=`<p class=\"small muted\" style=\"margin:0\">Sem ligação à TibiaData para as mortes de ontem.</p>`; return; } const ",
+  "k": "x"
+ },
  "Sem loot conhecido.": {
   "c": "index.html: ice(14).map(lr).join(\"\")}</tbody></table></details>`:\"\"}` : `<p class=\"small muted\" style=\"margin:0\">Sem loot conhecido.</p>`; // separadores ",
   "k": "x"
@@ -8058,6 +8686,10 @@
  "Sem negócios em {0} este mês.": {
   "c": "index.html:  por · ${esc(sv.lab)}${sv.ok?\"\":\" · pouco fiável\"}</small>`:`<small>Sem negócios em ${esc(w)} este mês.</small>`}${bv?`<b class=\"lk-",
   "k": "p"
+ },
+ "Sem notícias de desenvolvimento nas últimas semanas.": {
+  "c": "index.html: \"small muted\">${L.err?\"Sem ligação à TibiaData de momento.\":\"Sem notícias de desenvolvimento nas últimas semanas.\"}</p>`; return; } ",
+  "k": "x"
  },
  "Sem ofertas registadas em {0}.": {
   "c": "index.html:  = info.mkt===false ? `<small>Não vai ao Market.</small>` : `<small>Sem ofertas registadas em ${esc(w)}.</small>`; else { const {",
@@ -8101,6 +8733,14 @@
  },
  "Sem zonas conhecidas.": {
   "c": "index.html: \"small\" style=\"margin:10px 0 0\">${esc(cr.loc)}</p>`:\"\"}` || `<p class=\"small muted\">Sem zonas conhecidas.</p>`; const nmL=String",
+  "k": "x"
+ },
+ "Sensibilidades mais baixas: Oozing Corpus a energia 125% → 115%, Mycobiontic Beetle a energia 115% → 110%, Darklight Striker a fogo 120% → 115% e Darklight Source a fogo 115% → 110%.": {
+  "c": "index.html: m Pillars: todas as criaturas dão cerca de 12% menos ouro.\",\"Sensibilidades mais baixas: Oozing Corpus a energia 125% → 115%, Mycobiontic Beetle a energia 115% → 110%, Darklight Striker a fogo 120% → 115% e Darklight Sou",
+  "k": "x"
+ },
+ "Server save": {
+  "c": "index.html: all>${esc(e[3])}</small></li>`; }).join(\"\"); el.innerHTML=`<div class=\"td-grid\"> ${todayMon(T.mon,\"Criatura em destaque\",IC.criaturas||\"\")} ${todayMon(T.boss,\"Boss em destaque\",IC.bosses||\"\")} <a class=\"td-t\" href=\"${wkH",
   "k": "x"
  },
  "Sessão ({0} h)": {
@@ -8179,6 +8819,10 @@
   "c": "index.html: iamond 37 no 150). As bestas não têm. const AMMOA={bow:[[50,\"Shatterstorm Arrow\",\"physical\",27],[125",
   "k": "x"
  },
+ "Shielding": {
+  "c": "index.html: ou clava\",fist:\"Fist (monk)\",distance:\"Distância\",shielding:\"Shielding\"}}; const trnTot=(k,",
+  "k": "x"
+ },
  "Shields": {
   "c": "index.html: ia\",\"Valuables\":\"Valioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\":\"Escudo\",\"Legs\":\"Ca",
   "k": "x"
@@ -8209,6 +8853,14 @@
  },
  "Sino": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Sistema de Discovery": {
+  "c": "index.html: 5.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"discovery\", \"t\": \"Sistema de Discovery\", \"s\": \"O sistema de",
+  "k": "x"
+ },
+ "Sistemas novos": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Skill": {
@@ -8455,6 +9107,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Substituiu Dawnport no Newhaven Update (15.12.c7d92c, 21/10/2025), um mês antes do Winter Update 2025; Dawnport foi removida.": {
+  "c": "index.html:  e sais definitivamente quando chegares ao nível 8.\", \"p\": [\"Substituiu Dawnport no Newhaven Update (15.12.c7d92c, 21/10/2025), um mês antes do Winter Update 2025; Dawnport foi removida.\", \"Escolhes a vocaçã",
+  "k": "x"
+ },
  "Sudden Death": {
   "c": "index.html: +rot; if(voc===\"druid\"){ const X={gfb:\"Great Fireball\",sd:\"Sudden Death\",stoneshower:\"Stone ",
   "k": "x"
@@ -8487,8 +9143,16 @@
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "p"
  },
+ "Summer Update 2025 (15.10.46b862); personalização no Summer Update 2026 (15.30.a30dad)": {
+  "c": "index.html: Lesser e Greater; os Echo Wardens deixam sempre um.\"], \"u\": \"Summer Update 2025 (15.10.46b862); personalização no Summer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}",
+  "k": "x"
+ },
  "Summer Update 2026": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Summer Update 2026 (15.30.a30dad)": {
+  "c": "index.html: atar criaturas em Rookgaard já não abre echo raids.\"], \"u\": \"Summer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}",
   "k": "x"
  },
  "Sun": {
@@ -8521,6 +9185,10 @@
  },
  "Sweeping Takedown Base Damage": {
   "c": "index.html:  \"FoB Base Damage\":[\"Monk_FlurryOfBlows_DamageIncrease\"], \"Sweeping Takedown Base Damage\":[\"Monk_SweepingTake",
+  "k": "x"
+ },
+ "Swift Foot com o cooldown certo: 4 s (grupo 2 s). Deixa de ser possível usar dados nos depots.": {
+  "c": "index.html: om 4 criaturas normais, bónus de dano de 20% e 50 de dust.\",\"Swift Foot com o cooldown certo: 4 s (grupo 2 s). Deixa de ser possível usar dados nos depots.\"]}, {d:\"2026-09-29\"",
   "k": "x"
  },
  "Swiftness": {
@@ -8613,6 +9281,10 @@
  },
  "Só para a vocação desta personagem": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Só podes ter 1 perk ativo por nível. Escolher um perk pela primeira vez faz-se em qualquer lado; trocar ou remover só numa zona de proteção.": {
+  "c": "index.html: is), 20.000.000 (armas de knight) ou 10.000.000 (bestas).\", \"Só podes ter 1 perk ativo por nível. Escolher um perk pela primeira vez faz-se em qualquer lado; trocar ou remover só numa zona de proteção.\", \"O progresso fic",
   "k": "x"
  },
  "Só premium": {
@@ -8769,6 +9441,14 @@
  },
  "Task Board": {
   "c": "index.html: }, async montaria(k,m){ const SRC={item:\"item\",tarefa:\"Task Board\",loja:\"Loja\",quest:\"",
+  "k": "x"
+ },
+ "Task Board: Bounty Tasks e Weekly Tasks": {
+  "c": "index.html: 12.c7d92c)\", \"d\": \"2025-10-21\"}, {\"id\": \"task-system\", \"t\": \"Task Board: Bounty Tasks e Weekly Tasks\", \"s\": \"O Task Board",
+  "k": "x"
+ },
+ "Taxa do Market de 2% para 2,5%, com limite de 2 500 000 gp (antes 1 000 000).": {
+  "c": "index.html: 0-06\",t:\"Market mais caro, exercise weapons mais caras\",li:[\"Taxa do Market de 2% para 2,5%, com limite de 2 500 000 gp (antes 1 000 000).\",\"Exercise weapons 2",
   "k": "x"
  },
  "Taxa no altar": {
@@ -8967,6 +9647,10 @@
   "c": "index.html: selected\":\"\"}>${i?`Tier ${i} · ${esc(ftShort(k,B.v[i-1]))}`:\"Tier 0 · sem bónus\"}</option>`).join(\"\"",
   "k": "x"
  },
+ "Tier a atingir": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "Tier {0} ·": {
   "c": "index.html: +1},(_,i)=>`<option value=\"${i}\" ${t===i?\"selected\":\"\"}>${i?`Tier ${i} · ${esc(ftShort(k,B.v[i-1]))}`:\"Tier 0 · sem bónus",
   "k": "p"
@@ -9143,8 +9827,16 @@
   "c": "quests/js/app.js: \", \"items\": \"Itens\", \"quests\": \"Quests\", \"transcripts\": \"Transcrições\", \"properties\": \"Pro",
   "k": "x"
  },
+ "Transferências": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
+  "k": "x"
+ },
  "Transportes": {
   "c": "quests/js/app.js: t UNLOCK_KINDS = { zona: [\"Zonas\", \"map\"], transporte: [\"Transportes\", \"swap\"], npc: [\"NP",
+  "k": "x"
+ },
+ "Treino com exercise weapons": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Troca": {
@@ -9157,6 +9849,10 @@
  },
  "Trophies": {
   "c": "index.html: nk\",\"Spellbooks\":\"Spellbook\",\"Light Sources\":\"Fonte de luz\",\"Trophies\":\"Troféu\",\"Documents",
+  "k": "x"
+ },
+ "Três mundos novos": {
+  "c": "index.html: que cada notícia refere. const NEWS_PT=[ {d:\"2026-10-28\",t:\"Três mundos novos\",li:[\"Quirina (Europ",
   "k": "x"
  },
  "Tu:": {
@@ -9222,6 +9918,10 @@
  "Um golpe de 1000 fica: {0}{1}.{2}": {
   "c": "index.html:  dos golpes nem chegam.</span>`:\"\"; const prot=els.length?`<p class=\"small\" style=\"margin:8px 0 0\">Um golpe de 1000 fica: ${els.map(e=>{ const v=Math.min(100,(t.ab[e]||0)+(t.abi[e]||0)); return `${chip(e)} <b>${nf(1000*(",
   "k": "p"
+ },
+ "Um slot alterado recebe um efeito aleatório no valor mínimo: podes refiná-lo (custo crescente em dust), maximizá-lo com um item de loot negociável, 'reshape' (3 efeitos novos à escolha) ou limpá-lo de graça para voltar ao perk original.": {
+  "c": "index.html: l 3; o 2.º custa 1.000 de dust e exige a arma em Mastery.\", \"Um slot alterado recebe um efeito aleatório no valor mínimo: podes refiná-lo (custo crescente em dust), maximizá-lo com um item de loot negociável, 'reshape' (",
+  "k": "x"
  },
  "Uma criatura (ex.: a boosted do dia)": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
@@ -9615,8 +10315,16 @@
   "c": "index.html: \"Boots\":\"Botas\",\"Rings\":\"Anel\",\"Food\":\"Comida\",\"Rods\":\"Rod\",\"Wands\":\"Wand\",\"Tools\":\"Fer",
   "k": "x"
  },
+ "Weapon Proficiency": {
+  "c": "index.html: 30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"proficiency\", \"t\": \"Weapon Proficiency\", \"s\": \"Cada arma ga",
+  "k": "x"
+ },
  "Wed": {
   "c": "index.html: te()).map(x=>[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].",
+  "k": "x"
+ },
+ "Weekly Tasks: renovam à segunda-feira; há Kill Tasks e Delivery Tasks, 6 de cada por semana (9 com a Permanent Weekly Task Expansion da Store).": {
+  "c": "index.html:  50% e hipótese de progresso duplo no Bestiário até 100%.\", \"Weekly Tasks: renovam à segunda-feira; há Kill Tasks e Delivery Tasks, 6 de cada por semana (9 com a Permanent Weekly Task Expansion da Store).\", \"Cada Weekly ",
   "k": "x"
  },
  "Weekly: entregar": {
@@ -9687,6 +10395,14 @@
   "c": "quests/js/app.js: nts[p.k] = (counts[p.k] || 0) + 1)); view().innerHTML = ` <div class=\"toolbar\"><h1>Wiki do Questski <span class=\"muted\" style=\"font-size:18px\">(${S.wiki.pages.length.toLocaleString(LOC)} páginas)</span></h1></div> <p cla",
   "k": "p"
  },
+ "Winter Update 2025 (15.20.7a5cc9)": {
+  "c": "index.html: (100.000 + 35.000 por addon) e montarias a 145.000.\"], \"u\": \"Winter Update 2025 (15.20.7a5cc9)\", \"d\": \"2025-11-24\"}",
+  "k": "x"
+ },
+ "Winter Update 2026 a caminho": {
+  "c": "index.html: stimado destas hunts já atualizados.\"]}, {d:\"2026-10-27\",t:\"Winter Update 2026 a caminho\",li:[\"Saiu o primeir",
+  "k": "x"
+ },
  "World Change": {
   "c": "quests/js/app.js: abel: \"Troca\", icon: \"swap\" }, \"world-change\": { label: \"World Change\", icon: \"globe\" }, ",
   "k": "x"
@@ -9713,6 +10429,10 @@
  },
  "XP express": {
   "c": "index.html:  }; } const CATS = {segura:\"Segura\",lucro:\"Melhor lucro\",xp:\"XP express\",livre:\"Sem quest\",m",
+  "k": "x"
+ },
+ "XP por morte segundo a dificuldade: Harmless 1, Trivial 30, Easy 70, Medium 100, Hard 165, Challenging 240; +10% por stack de influência (fiendish: 2/75/175/250/412/600). Bosses: Bane 500, Archfoe 5.000, Nemesis 15.000.": {
+  "c": "index.html:  Summons e criaturas sem entrada no Bestiário não contam.\", \"XP por morte segundo a dificuldade: Harmless 1, Trivial 30, Easy 70, Medium 100, Hard 165, Challenging 240; +10% por stack de influência (fiendish: 2/75/175/25",
   "k": "x"
  },
  "XP por vida": {
@@ -9830,6 +10550,14 @@
  "a congelar": {
   "c": "index.html: b/gi,\"preso\"],[/\\bfeared\\b/gi,\"com medo\"],[/\\bfreezing\\b/gi,\"a congelar\"],[/\\bbleeding\\b/gi,",
   "k": "x"
+ },
+ "a decorrer até": {
+  "c": "index.html: rn `<li class=\"${on?\"on\":\"\"}\"><b>${esc(e[2])}</b><span>${on?`a decorrer até ${fmt(e[1])}`:`${fmt(e[0])} a ${f",
+  "k": "x"
+ },
+ "a decorrer até {0}": {
+  "c": "index.html: rn `<li class=\"${on?\"on\":\"\"}\"><b>${esc(e[2])}</b><span>${on?`a decorrer até ${fmt(e[1])}`:`${fmt(e[0])} a ${f",
+  "k": "p"
  },
  "a sangrar": {
   "c": "index.html: om medo\"],[/\\bfreezing\\b/gi,\"a congelar\"],[/\\bbleeding\\b/gi,\"a sangrar\"],[/\\bdazzled\\b/gi,\"",
@@ -10079,6 +10807,22 @@
   "c": "index.html: 1.3 4 3.7 1.3-3.7 1.3L16 20.5l-1.3-3.9-3.7-1.3 3.7-1.3z\", \"ascetic\":\"M12 5c2 2.2 3 4.6 ",
   "k": "x"
  },
+ "asuracitadel": {
+  "c": "index.html: is XP, Norcferatu com menos\",h:[\"asuramirror\",\"asuravaults\",\"asuracitadel\",\"asuracitadel1\",\"no",
+  "k": "x"
+ },
+ "asuracitadel1": {
+  "c": "index.html: tu com menos\",h:[\"asuramirror\",\"asuravaults\",\"asuracitadel\",\"asuracitadel1\",\"norcferatu\",\"norcd",
+  "k": "x"
+ },
+ "asuramirror": {
+  "c": "index.html: 2026-10-20\",t:\"Asuras com mais XP, Norcferatu com menos\",h:[\"asuramirror\",\"asuravaults\",\"asur",
+  "k": "x"
+ },
+ "asuravaults": {
+  "c": "index.html: \"Asuras com mais XP, Norcferatu com menos\",h:[\"asuramirror\",\"asuravaults\",\"asuracitadel\",\"asu",
+  "k": "x"
+ },
  "ataque": {
   "c": "index.html: `<li>${esc(t)}</li>`).join(\"\")}</ul>`:\"\"}`; const KK={aoe:\"ataque\",target:\"ataque\",hea",
   "k": "x"
@@ -10161,6 +10905,10 @@
  },
  "balancing de gold (1 set)": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "base": {
+  "c": "index.html: [Math.min(a.length-1,Math.floor(a.length*f))]; }; return [\"base\",\"fus\",\"gold\",\"dust\"",
   "k": "x"
  },
  "baseada em": {
@@ -10287,6 +11035,10 @@
   "c": "quests/js/app.js: section class=\"box\"> <h2 class=\"box-caption\">${icon(\"bulb\")}Como usar</h2> ",
   "k": "x"
  },
+ "bulltaurs": {
+  "c": "index.html: ,\"asuracitadel\",\"asuracitadel1\",\"norcferatu\",\"norcdungeons\",\"bulltaurs\"],li:[\"Asura Vaults,",
+  "k": "x"
+ },
  "burst": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
@@ -10312,7 +11064,7 @@
   "k": "x"
  },
  "calc": {
-  "c": "index.html: ${oth.map(x=>`<button type=\"button\" class=\"whx-chip${x.calc?\" calc\":\"\"}\" data-wsel=\"${a",
+  "c": "index.html: Cs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"d",
   "k": "x"
  },
  "calcas": {
@@ -10332,7 +11084,7 @@
   "k": "x"
  },
  "cargas": {
-  "c": "index.html: .is===1?\"slot\":\"slots\"} de imbuement`); if(it.chg) p.push(`${it.chg} cargas`); else if(it.dur) p",
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
   "k": "x"
  },
  "carrega sempre no {0}.": {
@@ -10591,6 +11343,10 @@
   "c": "index.html: olean).join(\" · \"); const cnt=[x.s?`vende ${x.s}`:\"\", x.b?`compra ${x.b}`:\"\", x.t?`ensina ${x",
   "k": "x"
  },
+ "compra itens de loot a bom preço": {
+  "c": "index.html: all>${esc(e[3])}</small></li>`; }).join(\"\"); el.innerHTML=`<div class=\"td-grid\"> ${todayMon(T.mon,\"Criatura em destaque\",IC.criaturas||\"\")} ${todayMon(T.boss,\"Boss em destaque\",IC.bosses||\"\")} <a class=\"td-t\" href=\"${wkH",
+  "k": "x"
+ },
  "compra {0}": {
   "c": "index.html: olean).join(\" · \"); const cnt=[x.s?`vende ${x.s}`:\"\", x.b?`compra ${x.b}`:\"\", x.t?`ensina ${x",
   "k": "p"
@@ -10679,6 +11435,10 @@
   "c": "index.html: f(k===\"f\"){ const tools=[...(s[3]||\"\")].map(c=>c===\"p\"?\"pá\":\"corda\"); return {i:s[2]?\"u",
   "k": "x"
  },
+ "cores": {
+  "c": "index.html: loor(a.length*f))]; }; return [\"base\",\"fus\",\"gold\",\"dust\",\"cores\"].reduce((o,k)=>(o[k",
+  "k": "x"
+ },
  "crdmg": {
   "c": "index.html: ll, CRDP=null; function crdLoad(){ return CRDP||(CRDP=dsafe(\"crdmg\").then(d=>{ CRDV=d||",
   "k": "x"
@@ -10704,7 +11464,7 @@
   "k": "x"
  },
  "criaturas": {
-  "c": "index.html: \"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feit",
+  "c": "index.html: iki\",subs:[[\"sistemas\",\"Sistemas novos\"],[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feit",
   "k": "x"
  },
  "criaturas fiendish (raramente, bosses Archfoe)": {
@@ -10831,6 +11591,10 @@
   "c": "quests/js/app.js: > { const dark = document.documentElement.dataset.theme === \"dark\"; themeBtn.innerHTML",
   "k": "x"
  },
+ "darklightcore": {
+  "c": "index.html: mais pobre e menos sensível\",h:[\"jadedroots\",\"gloompillars\",\"darklightcore\"],li:[\"Jaded Roots: ",
+  "k": "x"
+ },
  "data-map=\"{0},{1},{2}\" data-maplabel=\"{3}\"": {
   "c": "index.html: oFixed(3)}% ${(row/(nrows-1)*100).toFixed(3)}%`; const ml=`data-map=\"${x},${y},${z}\" data-maplabel=\"${esc((G.places[h.r.c]||{}).n||\"\")}\"`; if(mini===\"thumb",
   "k": "p"
@@ -10843,8 +11607,16 @@
   "c": "index.html: t.imbs.length*TFEE[imTier(c)]/20; const tiles=rows.map(r=>`<div class=\"img-t\"><span class=\"tiny muted\">${nm[r.sc]}</span> <b>${r.d1>r.d0+0.5?`+${nf(r.d1-r.d0)}`:\"±0\"} <small>de dano/s</small></b><span class=\"small\">${nf(",
   "k": "x"
  },
+ "de mana": {
+  "c": "index.html: ${esc(G.voc[voc].n)}: ${nf(Math.round(need))} ${k===\"magic\"?\"de mana\":\"pontos\"}. ${g(\"trD",
+  "k": "x"
+ },
  "de raio": {
   "c": "index.html: \\b/gi,\"ofuscado\"],[/\\bpoints\\b/gi,\"pontos\"],[/\\bradius\\b/gi,\"de raio\"]]; const cpEn = s =",
+  "k": "x"
+ },
+ "de treino (1 carga a cada 2 s)": {
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
   "k": "x"
  },
  "de vida": {
@@ -10900,7 +11672,7 @@
   "k": "x"
  },
  "defesa": {
-  "c": "index.html: Cs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"defesa\",\"Defesa\"],[\"ask\",\"P",
+  "c": "index.html: es\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"P",
   "k": "x"
  },
  "deliv": {
@@ -10931,8 +11703,16 @@
   "c": "quests/js/app.js: ary)}</p>` : \"\"} ${(d.unlocks || []).length ? `<div class=\"unlock-strip\">${icon(\"key\")}<b>Dá acesso a:</b> ${d.unlocks.map((u) => `<a class=\"unlock-chip\" href=\"${u.place && wikiHref(u.place) ? wikiHref(u.place) : `#/aces",
   "k": "x"
  },
+ "development": {
+  "c": "index.html: ,10000); NEWS_LIVE=((j&&j.news)||[]).filter(n=>n.category===\"development\"); }catch(e){ NEWS_L",
+  "k": "x"
+ },
  "dice": {
   "c": "quests/js/app.js: andom() * S.quests.length)]?.slug}\" id=\"randomQuest\">${icon(\"dice\")}Quest aleatória</a",
+  "k": "x"
+ },
+ "discovery": {
+  "c": "index.html: mer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"discovery\", \"t\": \"Sistema de D",
   "k": "x"
  },
  "dist": {
@@ -11075,12 +11855,16 @@
   "c": "index.html: (it.chg) p.push(`${it.chg} cargas`); else if(it.dur) p.push(`dura ${Math.round(it.dur/60)} min`); if(it.cu) p.pus",
   "k": "p"
  },
+ "durable": {
+  "c": "index.html: shielding:14.4}, w:[[\"lasting\",\"Lasting\",14400,12500000],[\"durable\",\"Durable\",1800,1562",
+  "k": "x"
+ },
  "duration": {
   "c": "quests/js/app.js: esistência\", \"protection\": \"Proteção\", \"charges\": \"Cargas\", \"duration\": \"Duração\", \"slot\":",
   "k": "x"
  },
  "dust": {
-  "c": "index.html: esources||{}, cvn=(r.convert||[]).map(x=>`${x.n} ${x.from===\"dust\"?\"dust\":\"slivers\"} →",
+  "c": "index.html: ,Math.floor(a.length*f))]; }; return [\"base\",\"fus\",\"gold\",\"dust\",\"cores\"].reduce((o,",
   "k": "x"
  },
  "dust · 100%": {
@@ -11188,7 +11972,7 @@
   "k": "x"
  },
  "en-GB": {
-  "c": "index.html: sOff(t){ const p=Object.fromEntries(new Intl.DateTimeFormat(\"en-GB\",{timeZone:\"Europe/L",
+  "c": "index.html: inNow(){ const p=Object.fromEntries(new Intl.DateTimeFormat(\"en-GB\",{timeZone:\"Europe/B",
   "k": "x"
  },
  "enche uma fatia Vessel Resonance deste domínio para abrir o vessel": {
@@ -11472,7 +12256,7 @@
   "k": "x"
  },
  "feiticos": {
-  "c": "index.html: t:\"Wiki\",subs:[[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\"",
+  "c": "index.html: stemas novos\"],[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\"",
   "k": "x"
  },
  "feitiço": {
@@ -11588,7 +12372,7 @@
   "k": "p"
  },
  "forge": {
-  "c": "index.html: oad(){ if(FORGE||FORGE_LOAD) return; FORGE_LOAD=true; dsafe(\"forge\").then(d=>{ FORGE=d;",
+  "c": "index.html:  class=\"small muted\">A carregar…</p>`; try{ FGS=await dload(\"forge\"); }catch(e){ out.in",
   "k": "x"
  },
  "fraco": {
@@ -11735,8 +12519,16 @@
   "c": "quests/js/app.js: swap\" }, \"world-change\": { label: \"World Change\", icon: \"globe\" }, evento: { la",
   "k": "x"
  },
+ "gloompillars": {
+  "c": "index.html: :\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gloompillars\",\"darklightcore\"],li",
+  "k": "x"
+ },
  "gold": {
   "c": "index.html: conquistas, montarias e outfits.</p><div class=\"gsp-sug\">${[\"gold\",\"dragon\",\"exura\",\"s",
+  "k": "x"
+ },
+ "gold (combinação mais barata)": {
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
   "k": "x"
  },
  "gold coin": {
@@ -11810,6 +12602,10 @@
  "guias": {
   "c": "index.html: o\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"guias\",\"Quests\",\"quests/\"]",
   "k": "x"
+ },
+ "h {0} min": {
+  "c": "index.html: nNow().min, left=m>0?m:m+1440; return left<60?`${left} min`:`${Math.floor(left/60)} h ${String(left%60).padStart(2,\"0\")} min`; } function todayMo",
+  "k": "p"
  },
  "h2, h3, h4, th, .pi-data-label, .mw-headline": {
   "c": "quests/js/app.js: \": \"Conteúdo\", }; function translateWiki(root) { $$(\"h2, h3, h4, th, .pi-data-label, .mw-headline\", root).forEach((el)",
@@ -11924,7 +12720,7 @@
   "k": "x"
  },
  "hunts": {
-  "c": "index.html:  {id:\"inicio\",t:\"Início\",subs:[[\"inicio\",\"Início\"]]}, {id:\"hunts\",t:\"Hunts\",subs:[[\"h",
+  "c": "index.html: subs:[[\"inicio\",\"Início\"],[\"novidades\",\"Novidades\"]]}, {id:\"hunts\",t:\"Hunts\",subs:[[\"h",
   "k": "x"
  },
  "hunts lado a lado": {
@@ -12052,7 +12848,7 @@
   "k": "x"
  },
  "itens": {
-  "c": "index.html: [\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"itens\",\"Itens\"],[\"criatura",
+  "c": "index.html: , {id:\"wiki\",t:\"Wiki\",subs:[[\"sistemas\",\"Sistemas novos\"],[\"itens\",\"Itens\"],[\"criatura",
   "k": "x"
  },
  "itens + {0} gp{1}": {
@@ -12070,6 +12866,10 @@
  "itens · {0} Swiftness": {
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
   "k": "p"
+ },
+ "jadedroots": {
+  "c": "index.html: 2026-10-27\",t:\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gloompillars\",\"dar",
+  "k": "x"
  },
  "já não se consegue": {
   "c": "index.html: n>`:\"\", a.prem?`<span class=\"tag\">premium</span>`:\"\", a.rem?`<span class=\"tag warn\">já não se consegue</span>`:\"\"].join(\"\"); r",
@@ -12098,6 +12898,10 @@
  "largado por {0} criatura{1}": {
   "c": "quests/js/app.js: s\" : \"\"}`); if (h.drops && h.drops.length) summary.push(`largado por ${h.drops.length} criatura${h.drops.length > 1 ? \"s\" : \"\"}`); if (h.spots &",
   "k": "p"
+ },
+ "lasting": {
+  "c": "index.html: 600,melee:7.2,fist:7.2,distance:4.32,shielding:14.4}, w:[[\"lasting\",\"Lasting\",14400,125",
+  "k": "x"
  },
  "later": {
   "c": "index.html: ot.`; } const BSF=[[\"solo\",\"Sozinho\"],[\"team\",\"Em equipa\"],[\"later\",\"Mais tarde\"],[\"all",
@@ -12236,7 +13040,7 @@
   "k": "x"
  },
  "magic": {
-  "c": "index.html: 1000 do mundo) */ const busy = {}; const HSCAT = {sorcerer:[\"magic\"], druid:[\"magic\"], ",
+  "c": "index.html: o} para ${esc(G.voc[voc].n)}: ${nf(Math.round(need))} ${k===\"magic\"?\"de mana\":\"pontos\"}",
   "k": "x"
  },
  "magic level": {
@@ -12252,7 +13056,15 @@
   "k": "x"
  },
  "mais": {
-  "c": "index.html: \"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"de",
+  "c": "index.html: \"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"ca",
+  "k": "x"
+ },
+ "mais calma do que o costume": {
+  "c": "index.html: >500?[\"warn\",\"mais cheia do que o costume\"]:kd<avg*.6?[\"ok\",\"mais calma do que o costume\"]:[\"\",\"movimento nor",
+  "k": "x"
+ },
+ "mais cheia do que o costume": {
+  "c": "index.html:  return; } const avg=kw/7, lvl=kd>avg*1.4&&kd>500?[\"warn\",\"mais cheia do que o costume\"]:kd<avg*.6?[\"ok\",\"m",
   "k": "x"
  },
  "major": {
@@ -12360,7 +13172,7 @@
   "k": "x"
  },
  "melee": {
-  "c": "index.html:  // ataques const ab=ci.ab||[], atk=ab.filter(a=>a[0]===\"melee\"||a[0]===\"atk\"), oth",
+  "c": "index.html:  if(c){ tv.value=c.voc; $(\"trSk\").value=c.voc===\"knight\"?\"melee\":c.voc===\"paladin\"?\"",
   "k": "x"
  },
  "melhor": {
@@ -12491,6 +13303,10 @@
   "c": "index.html:  (o rato continua a abrir a página com o clique) let LASTPT=\"mouse\"; document.addEventL",
   "k": "x"
  },
+ "movimento normal": {
+  "c": "index.html: ostume\"]:kd<avg*.6?[\"ok\",\"mais calma do que o costume\"]:[\"\",\"movimento normal\"]; el.innerHTML=`<",
+  "k": "x"
+ },
  "mseg": {
   "c": "index.html: x.lo!=null)||fr[0]||null; if(h){ used.add(h.i); picks.push([\"mseg\",h]); return; } } ",
   "k": "x"
@@ -12611,6 +13427,14 @@
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "p"
  },
+ "newhaven": {
+  "c": "index.html: mer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"newhaven\", \"t\": \"Newhaven (il",
+  "k": "x"
+ },
+ "news": {
+  "c": "index.html: eplace(/\\s+/g,\" \").trim())}</b><span class=\"tag\">${n.type===\"news\"?\"notícia\":\"ticker\"}",
+  "k": "x"
+ },
  "next": {
   "c": "index.html: b)=>a.it.l-b.it.l).slice(0,10); const tab = [\"top\",\"mine\",\"next\"].includes(ST.ui.slt",
   "k": "x"
@@ -12647,6 +13471,14 @@
   "c": "index.html: \"true\"); nav.prepend(ind); if(MD_IND){ ind.style.transition=\"none\"; ind.style.transfor",
   "k": "x"
  },
+ "norcdungeons": {
+  "c": "index.html: \",\"asuravaults\",\"asuracitadel\",\"asuracitadel1\",\"norcferatu\",\"norcdungeons\",\"bulltaurs\"],li:[\"A",
+  "k": "x"
+ },
+ "norcferatu": {
+  "c": "index.html: [\"asuramirror\",\"asuravaults\",\"asuracitadel\",\"asuracitadel1\",\"norcferatu\",\"norcdungeons\",\"bul",
+  "k": "x"
+ },
  "nordeste": {
   "c": "index.html: ria-hidden=\"true\">›</span></button>`; } const DIRS=[\"norte\",\"nordeste\",\"leste\",\"sudeste\",\"",
   "k": "x"
@@ -12679,6 +13511,14 @@
   "c": "index.html: d.character&&d.character.name ? {ok:true,d} : {ok:false,why:\"notfound\"}; } catch(e){ if(",
   "k": "x"
  },
+ "notícia": {
+  "c": "index.html: /\\s+/g,\" \").trim())}</b><span class=\"tag\">${n.type===\"news\"?\"notícia\":\"ticker\"}</span></s",
+  "k": "x"
+ },
+ "novidades": {
+  "c": "index.html: ECS = [ {id:\"inicio\",t:\"Início\",subs:[[\"inicio\",\"Início\"],[\"novidades\",\"Novidades\"]]}, {i",
+  "k": "x"
+ },
  "npcpos": {
   "c": "index.html: ta(){ return NPCM || (NPCM=Promise.all([dsafe(\"npcs\"),dsafe(\"npcpos\")]).then(([a,b])=>{ ",
   "k": "x"
@@ -12688,11 +13528,11 @@
   "k": "x"
  },
  "null": {
-  "c": "index.html: ase(); try{ const x=JSON.parse(localStorage.getItem(key)||\"null\"); if(x && Date.now(",
+  "c": "index.html:  const c=JSON.parse(localStorage.getItem(\"grimorio-today\")||\"null\"); if(c&&c.day===day",
   "k": "x"
  },
  "numeric": {
-  "c": "index.html:  Intl.DateTimeFormat(\"en-GB\",{timeZone:\"Europe/Lisbon\",year:\"numeric\",month:\"2-digit\",day",
+  "c": "index.html:  Intl.DateTimeFormat(\"en-GB\",{timeZone:\"Europe/Berlin\",year:\"numeric\",month:\"2-digit\",day",
   "k": "x"
  },
  "não": {
@@ -12887,6 +13727,10 @@
   "c": "index.html: me.toLowerCase()).map(o=>({n:o.name,w:o.world,on:o.status===\"online\"})) }; }; // O nível",
   "k": "x"
  },
+ "opcional": {
+  "c": "index.html (HTML)",
+  "k": "x"
+ },
  "open": {
   "c": "index.html: box) return; if(!c){ box.innerHTML=\"\"; box.classList.remove(\"open\"); return; } const",
   "k": "x"
@@ -12962,6 +13806,10 @@
  "para bosses": {
   "c": "index.html:  holy\",\"Physical Build\":\"build física\",\"Base Bossing Build\":\"para bosses\",\"Base Ranged Spawn ",
   "k": "x"
+ },
+ "para cada um ({0})": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
+  "k": "p"
  },
  "para este": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
@@ -13080,7 +13928,7 @@
   "k": "x"
  },
  "perso": {
-  "c": "index.html: is\",t:\"Mais\",subs:[[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"],[\"perso\",\"Personagens\"],[\"fo",
+  "c": "index.html: c\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"],[\"perso\",\"Personagens\"],[\"fo",
   "k": "x"
  },
  "perto de": {
@@ -13327,6 +14175,10 @@
   "c": "quests/js/app.js:  \"magic level\": \"Magic level\", \"spell id\": \"ID do feitiço\", \"price for vocations\": \"Preço\", \"summ",
   "k": "x"
  },
+ "proficiency": {
+  "c": "index.html: mer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"proficiency\", \"t\": \"Weapon Profi",
+  "k": "x"
+ },
  "prog": {
   "c": "index.html: hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:",
   "k": "x"
@@ -13473,6 +14325,10 @@
  },
  "region": {
   "c": "index.html: =\"hcmpTray\"; t.className=\"hcmp-tray\"; t.setAttribute(\"role\",\"region\"); t.setAttribute(\"a",
+  "k": "x"
+ },
+ "regular": {
+  "c": "index.html: asting\",14400,12500000],[\"durable\",\"Durable\",1800,1562500],[\"regular\",\"Normal\",500,434028",
   "k": "x"
  },
  "related achievements": {
@@ -13711,6 +14567,14 @@
   "c": "index.html: .assign({},C()||{},{voc,level}); if(p&&p.d>=3) rows.push([\"safe\",\"Segurança\", `<span",
   "k": "x"
  },
+ "saldo da party": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
+  "k": "x"
+ },
+ "saldo da party{0}": {
+  "c": "index.html: `:\"\"; return; } const S=lsSplit(players); out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(S.tot)}</b><span>saldo da party${sess?` · ${esc(sess)}`:\"\"}</span></div><div><b>${nf(S.share)}</b><span>para cada um (${players.le",
+  "k": "p"
+ },
  "sample": {
   "c": "index.html: typeof window.claude.use===\"function\"){ window.claude.use(\"sample\").then(fn=>{ sampleF",
   "k": "x"
@@ -13901,6 +14765,10 @@
  },
  "single": {
   "c": "quests/js/app.js: ) { html += `<div class=\"shots ${shots.length === 1 ? \"single\" : \"\"}\">` + shots.ma",
+  "k": "x"
+ },
+ "sistemas": {
+  "c": "index.html: [\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"sistemas\",\"Sistemas novos\"],[",
   "k": "x"
  },
  "skill": {
@@ -14339,8 +15207,12 @@
   "c": "index.html: death rune\"],[\"avalanche\",\"avalanche rune\"],[\"thunderstorm\",\"thunderstorm rune\"],[\"stoneshower\",\"st",
   "k": "x"
  },
+ "ticker": {
+  "c": "index.html: ).trim())}</b><span class=\"tag\">${n.type===\"news\"?\"notícia\":\"ticker\"}</span></summary><d",
+  "k": "x"
+ },
  "timeline": {
-  "c": "index.html: div>`).join(\"\")}</div></li>`; }); if(!you) out+=youRow; $(\"timeline\").innerHTML=out; } /",
+  "c": "index.html: div>`).join(\"\")}</div></li>`; }); if(!you) out+=youRow; $(\"timeline\").innerHTML=out; r",
   "k": "x"
  },
  "tipo": {
@@ -14366,6 +15238,14 @@
  "todas até {0} nível": {
   "c": "index.html: \"?`${grp?\"o vosso\":\"o teu\"} nível (${lo}–${hi})`:b===\"upto\"?`todas até ${grp?\"ao vosso\":\"ao teu\"} nível`:bandLabel(BANDS[b])",
   "k": "p"
+ },
+ "today": {
+  "c": "index.html: o\"}</span></div></a>`; } function renderToday(){ const el=$(\"today\"); if(!el) return; c",
+  "k": "x"
+ },
+ "todos os dias às 10:00 (Berlim)": {
+  "c": "index.html: all>${esc(e[3])}</small></li>`; }).join(\"\"); el.innerHTML=`<div class=\"td-grid\"> ${todayMon(T.mon,\"Criatura em destaque\",IC.criaturas||\"\")} ${todayMon(T.boss,\"Boss em destaque\",IC.bosses||\"\")} <a class=\"td-t\" href=\"${wkH",
+  "k": "x"
  },
  "todos podem": {
   "c": "index.html: \"}). Só aparecem hunts onde ${ms.length===2?\"os dois podem\":\"todos podem\"} ir.${ms.length<5&&",
@@ -14410,6 +15290,14 @@
  "transcripts": {
   "c": "quests/js/app.js: , \"npcs\": \"NPCs\", \"items\": \"Itens\", \"quests\": \"Quests\", \"transcripts\": \"Transcrições\", \"p",
   "k": "x"
+ },
+ "transfer {0} to": {
+  "c": "index.html: erências</h4>${S.tr.length?`<ul class=\"ls-tr\">${S.tr.map(t=>`<li><span><b>${esc(t.from)}</b> paga <b>${nf(t.v)}</b> a <b>${esc(t.to)}</b></span><code>transfer ${t.v} to ${esc(t.to)}</code><button type=\"button\" class=\"btn",
+  "k": "p"
+ },
+ "transfer {0} to {1}": {
+  "c": "index.html: erências</h4>${S.tr.length?`<ul class=\"ls-tr\">${S.tr.map(t=>`<li><span><b>${esc(t.from)}</b> paga <b>${nf(t.v)}</b> a <b>${esc(t.to)}</b></span><code>transfer ${t.v} to ${esc(t.to)}</code><button type=\"button\" class=\"btn",
+  "k": "p"
  },
  "trash": {
   "c": "quests/js/app.js: one ? `<button class=\"btn btn-ghost\" id=\"resetSteps\">${icon(\"trash\")}Recomeçar</button>",
@@ -14508,7 +15396,7 @@
   "k": "x"
  },
  "use strict": {
-  "c": "index.html:  (function(){ \"use strict\"; let NPCIX2={}; // ",
+  "c": "index.html:  (function(){ \"use strict\"; /* r29 */ // filet",
   "k": "x"
  },
  "user": {
@@ -14756,7 +15644,7 @@
   "k": "p"
  },
  "wiki": {
-  "c": "index.html: s:[[\"charms\",\"Charms\"],[\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"it",
+  "c": "index.html: s:[[\"charms\",\"Charms\"],[\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"si",
   "k": "x"
  },
  "wiki2": {
@@ -15219,6 +16107,10 @@
   "c": "index.html: tra.label)}</span></span>`:\"\"}</td>`:\"\"}<td class=\"num\">${f?`${kkk(f.gold)} gp<span class=\"pt-s\">${f.dust||0} dust · ${F.fusion.chance}%</span>`:\"—\"}</td>${cv?`<td ",
   "k": "p"
  },
+ "{0} h {1} min": {
+  "c": "index.html: nNow().min, left=m>0?m:m+1440; return left<60?`${left} min`:`${Math.floor(left/60)} h ${String(left%60).padStart(2,\"0\")} min`; } function todayMo",
+  "k": "p"
+ },
  "{0} hunts em {1}": {
   "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
@@ -15284,7 +16176,7 @@
   "k": "p"
  },
  "{0} min": {
-  "c": "index.html: => s==null?\"—\":s<60?`${Math.max(1,Math.round(s))} s`:s<3600?`${Math.round(s/60)} min`:`${Math.round(s/360",
+  "c": "index.html: st m=600-berlinNow().min, left=m>0?m:m+1440; return left<60?`${left} min`:`${Math.floor(left/",
   "k": "p"
  },
  "{0} morte": {
@@ -15309,6 +16201,10 @@
  },
  "{0} oz": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
+  "k": "p"
+ },
+ "{0} paga {1} a {2}": {
+  "c": "index.html: erências</h4>${S.tr.length?`<ul class=\"ls-tr\">${S.tr.map(t=>`<li><span><b>${esc(t.from)}</b> paga <b>${nf(t.v)}</b> a <b>${esc(t.to)}</b></span><code>transfer ${t.v} to ${esc(t.to)}</code><button type=\"button\" class=\"btn",
   "k": "p"
  },
  "{0} para ficarem exatas.": {
@@ -15503,6 +16399,10 @@
   "c": "index.html: hscores…\"; const h=c.hs; if(!h) return \"\"; return [h.sk?`${skName(c)} ${h.sk.v} (#${h.sk.r} em ${esc(h.w)})`:`${skName(c)} fora ",
   "k": "p"
  },
+ "{0} {1} ({2} gp)": {
+  "c": "index.html: a 2 s)</span></div></div> <p class=\"small\">${use.map(x=>`<b>${x.q}×</b> ${x.n} (${nf(x.pr)} gp)`).join(\" + \")}${use.",
+  "k": "p"
+ },
  "{0} {1} Fragments": {
   "c": "index.html: 2–10\",\"Lesser\"],[3,\"1–4\",\"1–5\",\"Greater\"]].map(([t,a,b,f])=>`<tr><th scope=\"row\">${nm(t)}</th><td>${a} ${f} Fragments</td><td>${b} ${f} Fragments</td></tr>`).join(\"\")); const",
   "k": "p"
@@ -15549,6 +16449,10 @@
  },
  "{0} {1} · hunt a partir do {2}": {
   "c": "index.html: n(\"\"); const rows=g.hs.map((h,i)=>{ const m=ms[i]; return `<div class=\"gmem\"><div class=\"gmem-h\">${VI(h.voc,\"lg\")}<div><b>${esc(m.name)}</b><div class=\"tiny muted\">${esc(G.voc[h.voc].n)} ${m.level} · hunt a partir do ${h",
+  "k": "p"
+ },
+ "{0} {1} → {2} para {3}: {4} {5}. {6}{7}Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.": {
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
   "k": "p"
  },
  "{0} {1}: tirado dos highscores de {2} (#{3}).": {
@@ -15639,6 +16543,10 @@
   "c": "recolhida: /grimorio/#inicio · ex.: {0} XP/h · {1} lucro · {2}",
   "k": "p"
  },
+ "{0} · {1} mortes → {2} pontos": {
+  "c": "index.html:  nível ${c.level+20}:</p> <ul class=\"bst\">${todo.map(x=>`<li><label><input type=\"checkbox\" data-best=\"${esc(x.k)}\"> <b>${esc(x.n)}</b></label><span>${esc(x.lv||\"\")} · ${nf(x.ki)} mortes → <b>${x.ch}</b> pontos</span><sma",
+  "k": "p"
+ },
  "{0} · {1} · só durante o evento": {
   "c": "recolhida: /grimorio/#hunts · ex.: {0} · Carlin · só durante o evento",
   "k": "p"
@@ -15657,6 +16565,10 @@
  },
  "{0} — sphinxes à superfície — {1}": {
   "c": "recolhida: /grimorio/#hunts · ex.: Issavi — sphinxes à superfície — 7.02kk/h ≈",
+  "k": "p"
+ },
+ "{0} → {1} para {2}: {3} {4}. {5}{6}Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.": {
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
   "k": "p"
  },
  "{0}% da tua vida": {
@@ -16167,6 +17079,10 @@
   "c": "index.html:  class=\"hcx\">${starsTxt(p)||\"XP e lucro por medir\"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class=\"hc-ev\" title=\"Evento: ${esc(evLabel())}\">+${Math.round(h.boost*100)}%</span>`:\"\"} · <b>${fmt(h.lo)}",
   "k": "p"
  },
+ "{0}{1} criaturas mortas{2} {3}": {
+  "c": "index.html:  do que o costume\"]:[\"\",\"movimento normal\"]; el.innerHTML=`<details class=\"ks\"><summary><span class=\"ks-h\">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class=\"ks-d\">${nf(pk)}</b> jogadores mortos",
+  "k": "p"
+ },
  "{0}{1} escolher": {
   "c": "index.html: bute(\"aria-label\",\"Pesquisar no Grimório\"); p.innerHTML=`<div class=\"gsp-in\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-4-4\"/></svg><input id=\"gsQ\" type=\"search\" autocomple",
   "k": "p"
@@ -16447,6 +17363,10 @@
   "c": "index.html: ath.abs(a-z)-Math.abs(b-z))[0]; openMap(x,y,bz==null?z:bz,`${G.places[pid].n} · spawns`,bz==null?[]:byZ[bz]",
   "k": "x"
  },
+ "· só com normais seriam {0} gp": {
+  "c": "index.html: ).join(\" + \")}${use.length>1||(use[0]&&use[0].n!==\"Normal\")?` · só com normais seriam ${nf(onlyReg)} gp`:\"\"}.</p> <p cla",
+  "k": "p"
+ },
  "· só durante o evento": {
   "c": "index.html: .city)}${o.sub&&o.sub!==o.city?` (${esc(o.sub)})`:\"\"}${o.ev?\" · só durante o evento\":o.iti?\" · muda de s",
   "k": "x"
@@ -16477,6 +17397,14 @@
  },
  "· {0} dá {1} % do loot desta hunt": {
   "c": "index.html: loot-Math.round(loot0/1000)*1000:0; const evNote=evPlus>0?`<p class=\"lp-ev small\">Criatura do dia (loot ×2): +<span data-lpv=\"${evPlus}\">${nf(evPlus)}</span> gp/h <span class=\"muted\">· ${esc(hasKey(G.mon,evk)?G.mon[evk][",
+  "k": "p"
+ },
+ "· {0} jogadores mortos aqui": {
+  "c": "index.html: em em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class=\"ks-d\">${nf(pk)}</b> jogadores mortos aqui`:\"\"} <span class=\"ta",
+  "k": "p"
+ },
+ "· {0} mortes → {1} pontos": {
+  "c": "index.html:  nível ${c.level+20}:</p> <ul class=\"bst\">${todo.map(x=>`<li><label><input type=\"checkbox\" data-best=\"${esc(x.k)}\"> <b>${esc(x.n)}</b></label><span>${esc(x.lv||\"\")} · ${nf(x.ki)} mortes → <b>${x.ch}</b> pontos</span><sma",
   "k": "p"
  },
  "· {0} não pode usar": {
@@ -16545,6 +17473,10 @@
  },
  "× Void": {
   "c": "index.html: ms-t\"><b>${t.mana}%</b><span>mana leech</span>${counts.void?`<small>${counts.void}× Void</small>`:\"\"}</div> <di",
+  "k": "x"
+ },
+ "Últimas seis semanas do tibia.com (texto oficial, em inglês). Abre uma para a leres aqui; por baixo aparecem as hunts e criaturas do Grimório que refere.": {
+  "c": "index.html: s(){ const el=$(\"newsBody\"); if(!el) return; el.innerHTML=`<div class=\"nw-list\">${NEWS_PT.map(n=>`<article class=\"card nw\"><div class=\"nw-d\">${newsDate(n.d)}</div><h3>${esc(n.t)}</h3><ul>${n.li.map(x=>`<li>${esc(x)}</li>",
   "k": "x"
  },
  "Último login": {
