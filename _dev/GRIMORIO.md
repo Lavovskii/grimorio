@@ -445,3 +445,9 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   tocha, elevações e sombras desfocadas.
 - O Questski voltou ao visual Original (pedra e ouro, `quests/css/style.css`), que já era o do Tibia; o `css/modern.css`
   ficou no repositório mas deixou de ser carregado. Lê a mesma escolha `grimorio-fx`.
+- r29 (acabamento premium, mesmo dia): parallax do fundo numa só camada fixa (`.tb-par`, `animation-timeline:scroll()` com
+  fallback JS de um transform por frame), filete de ouro a carregar (`.tb-bar`, `html.tb-busy` contado num wrapper do
+  `fetch`), arranque (filete desenha-se, barra e menu entram), hover 3D fixo nos cartões com moldura de ouro (pseudo com
+  máscara, só a opacidade muda), brilho a varrer nos botões, mola no marcador do menu e nos separadores, moeda a virar no
+  anel e no emblema, folhas e janelas em perspetiva, cascata só nos 12 primeiros cartões de cada grelha. Tudo desligado
+  com `fx-lite`; o `md-calm` pausa a tocha e o brilho do anel.

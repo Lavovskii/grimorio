@@ -2399,7 +2399,7 @@ html[data-ui="modern"] .mview::after{content:"";position:absolute;left:0;right:0
 /* ======================= entradas ======================= */
 html[data-ui="modern"] .panel.on{animation:mdPanel .55s var(--e-out)}
 @keyframes mdPanel{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-html[data-ui="modern"] .hunts>.hc,html[data-ui="modern"] .picks>.hc,html[data-ui="modern"] .wgrid>.wcard,html[data-ui="modern"] .spw>.spa{animation:mdIn .6s var(--e-out) both}
+/* r29: a entrada dos cartões passou para a cascata tbRise (só os 12 primeiros; antes animavam todos) */
 @keyframes mdIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1}}
 html[data-ui="modern"] .hunts>:nth-child(2),html[data-ui="modern"] .picks>:nth-child(2),html[data-ui="modern"] .wgrid>:nth-child(2){animation-delay:.04s}
 html[data-ui="modern"] .hunts>:nth-child(3),html[data-ui="modern"] .picks>:nth-child(3),html[data-ui="modern"] .wgrid>:nth-child(3){animation-delay:.08s}
@@ -3309,8 +3309,160 @@ html.fx-lite[data-ui="modern"] #sheet.on .sh,html.fx-lite[data-ui="modern"] #she
 html.fx-lite::view-transition-group(*),html.fx-lite::view-transition-old(*),html.fx-lite::view-transition-new(*){animation:none}
 html.md-calm[data-ui="modern"] .brand::before{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){html[data-ui="modern"] .brand::before{animation:none}}
+/* ======================= r29: acabamento premium =======================
+   Regra: só transform e opacity, em camadas pequenas (um botão, um cartão, um pseudo-elemento com o brilho já pintado),
+   nunca a página inteira em ciclo e nada que siga o rato. O que é decorativo pára em repouso (md-calm) e desliga-se
+   com html.fx-lite ou prefers-reduced-motion. */
+
+/* --- profundidade: uma camada fixa atrás de tudo que anda mais devagar do que a página (parallax) --- */
+html[data-ui="modern"] .tb-par{position:fixed;left:0;right:0;top:0;height:150vh;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 60% 34vh at 50% 4vh,rgba(220,150,60,.17),transparent 70%),
+    radial-gradient(ellipse 38% 42vh at 2% 70vh,rgba(140,95,40,.11),transparent 70%),
+    radial-gradient(ellipse 38% 42vh at 98% 100vh,rgba(140,95,40,.09),transparent 70%),
+    radial-gradient(1.6px 1.6px at 12% 24vh,rgba(255,220,150,.5),transparent),radial-gradient(1.4px 1.4px at 78% 18vh,rgba(255,220,150,.45),transparent),
+    radial-gradient(1.2px 1.2px at 58% 62vh,rgba(255,220,150,.35),transparent),radial-gradient(1.6px 1.6px at 30% 88vh,rgba(255,220,150,.4),transparent),
+    radial-gradient(1.2px 1.2px at 90% 76vh,rgba(255,220,150,.35),transparent),radial-gradient(1.4px 1.4px at 44% 128vh,rgba(255,220,150,.4),transparent);
+  transform:translate3d(0,var(--tb-py,0px),0)}
+@supports (animation-timeline:scroll()){
+  @media (prefers-reduced-motion:no-preference){
+    html[data-ui="modern"]:not(.fx-lite) .tb-par{animation:tbPar linear both;animation-timeline:scroll(root)}
+  }
+}
+@keyframes tbPar{to{transform:translate3d(0,-34vh,0)}}
+
+/* --- arranque: o filete de ouro desenha-se a partir do centro, a barra e o menu entram --- */
+@media (prefers-reduced-motion:no-preference){
+  html[data-ui="modern"]:not(.fx-lite) header.bar::after{transform-origin:50% 50%;animation:tbLine .9s var(--e-out) .1s backwards}
+  html[data-ui="modern"]:not(.fx-lite) header.bar .in{animation:tbDown .55s var(--e-out) backwards}
+  html[data-ui="modern"]:not(.fx-lite) nav.side>*{animation:tbSide .5s var(--e-out) backwards}
+  html[data-ui="modern"]:not(.fx-lite) nav.side>:nth-child(2){animation-delay:40ms} html[data-ui="modern"]:not(.fx-lite) nav.side>:nth-child(3){animation-delay:80ms}
+  html[data-ui="modern"]:not(.fx-lite) nav.side>:nth-child(4){animation-delay:120ms} html[data-ui="modern"]:not(.fx-lite) nav.side>:nth-child(n+5){animation-delay:160ms}
+  html[data-ui="modern"]:not(.fx-lite){scroll-behavior:smooth}
+}
+@keyframes tbLine{from{transform:scaleX(0)}}
+@keyframes tbDown{from{opacity:0;transform:translateY(-8px)}}
+@keyframes tbSide{from{opacity:0;transform:translateX(-10px)}}
+
+/* --- a carregar: filete de ouro a correr no topo enquanto há pedidos à rede (TibiaData, preços, dados) --- */
+.tb-bar{position:fixed;left:0;right:0;top:0;height:3px;z-index:200;pointer-events:none;opacity:0;transition:opacity .25s;overflow:hidden}
+.tb-bar::before{content:"";position:absolute;left:0;top:0;width:38%;height:100%;border-radius:2px;background:linear-gradient(90deg,transparent,#B08034 20%,#F2D68C 50%,#B08034 80%,transparent);transform:translateX(-100%)}
+html.tb-busy .tb-bar{opacity:1}
+html.tb-busy .tb-bar::before{animation:tbBar 1.3s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes tbBar{to{transform:translateX(280%)}}
+html[data-ui="modern"] .tkload::before{box-shadow:none;border-width:2px}
+html[data-ui="modern"] .save{transition:opacity .3s}
+
+/* --- hover: os cartões levantam-se com uma inclinação 3D fixa e a moldura acende em ouro --- */
+html[data-ui="modern"] .hc::before,html[data-ui="modern"] .wcard::before,html[data-ui="modern"] .spa::before,html[data-ui="modern"] .gmem::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;z-index:1;
+  background:linear-gradient(135deg,#F2D68C,#8C6728 38%,#F2D68C 68%,#B08034);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity var(--d2)}
+html[data-ui="modern"] :is(.hc,.wcard,.spa,.gmem):hover::before,html[data-ui="modern"] :is(.hc,.wcard,.spa,.gmem):focus-within::before{opacity:1}
+html[data-ui="modern"] .hc,html[data-ui="modern"] .wcard,html[data-ui="modern"] .spa{transform-origin:50% 100%;transition:transform .28s var(--e-out),box-shadow .28s}
+html[data-ui="modern"] .hc:hover,html[data-ui="modern"] .wcard:hover,html[data-ui="modern"] .spa:hover{transform:perspective(900px) rotateX(2deg) translateY(-4px) scale(1.012)}
+html[data-ui="modern"] .hc:active,html[data-ui="modern"] .wcard:active,html[data-ui="modern"] .spa:active{transform:perspective(900px) translateY(-1px) scale(.995);transition-duration:var(--d1)}
+html[data-ui="modern"] .hc .hc-th .hthumb{transition:transform .5s var(--e-out)}
+html[data-ui="modern"] .hc:hover .hc-th .hthumb{transform:scale(1.06) rotate(-.6deg)}
+html[data-ui="modern"] .hg,html[data-ui="modern"] .def-tips li,html[data-ui="modern"] .hidx-a{transition:transform var(--d2) var(--e-out),box-shadow var(--d2)}
+html[data-ui="modern"] .hg:hover,html[data-ui="modern"] .def-tips li:hover,html[data-ui="modern"] .hidx-a:hover{transform:translateY(-2px)}
+html[data-ui="modern"] :is(.hero,#defStats) .stat{transition:transform var(--d2) var(--e-out),box-shadow var(--d2)}
+html[data-ui="modern"] :is(.hero,#defStats) .stat:hover{transform:translateY(-2px)}
+html[data-ui="modern"] .bslot,html[data-ui="modern"] .slot{transition:transform var(--d2) var(--e-spring),box-shadow var(--d2)}
+html[data-ui="modern"] .bslot:hover,html[data-ui="modern"] .slot:hover{transform:translateY(-2px) scale(1.07)}
+html[data-ui="modern"] .bslot:active,html[data-ui="modern"] .slot:active{transform:scale(.96)}
+html[data-ui="modern"] tbody tr{transition:background var(--d1)}
+html[data-ui="modern"] tbody tr:hover td{background:rgba(230,192,106,.05)}
+html[data-ui="modern"] a{transition:color var(--d1)}
+html[data-ui="modern"] a:hover{color:#FFE7A8}
+
+/* --- botões: brilho de metal que varre ao passar; separadores e etiquetas com mola --- */
+html[data-ui="modern"] .btn::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,transparent 30%,rgba(255,242,205,.38) 50%,transparent 70%);transform:translateX(-130%);transition:transform .65s var(--e-out)}
+html[data-ui="modern"] .btn:hover::after{transform:translateX(130%)}
+html[data-ui="modern"] .btn{transition:transform var(--d2) var(--e-spring),box-shadow var(--d2),background var(--d2)}
+html[data-ui="modern"] .btn:hover{transform:translateY(-1px)}
+html[data-ui="modern"] .btn:active{transform:translateY(1px) scale(.98)}
+html[data-ui="modern"] .seg button,html[data-ui="modern"] .seg a.navx{transition:transform var(--d2) var(--e-spring),background var(--d2),color var(--d2),box-shadow var(--d2)}
+html[data-ui="modern"] .seg button:hover,html[data-ui="modern"] .seg a.navx:hover{transform:translateY(-1px)}
+html[data-ui="modern"] .seg button:active{transform:scale(.95)}
+html[data-ui="modern"] .tag,html[data-ui="modern"] .chip{transition:transform var(--d2) var(--e-spring),border-color var(--d2),background var(--d2)}
+html[data-ui="modern"] .tag:hover,html[data-ui="modern"] .chip:hover{transform:translateY(-1px) scale(1.04)}
+html[data-ui="modern"] .cchip,html[data-ui="modern"] .csw-btn,html[data-ui="modern"] .srchbtn{transition:transform var(--d2) var(--e-spring),box-shadow var(--d2),border-color var(--d2)}
+html[data-ui="modern"] .csw-btn:hover,html[data-ui="modern"] .srchbtn:hover{transform:translateY(-1px)}
+html[data-ui="modern"] .srchbtn:active,html[data-ui="modern"] .csw-btn:active{transform:scale(.97)}
+html[data-ui="modern"] .srchbtn svg{transition:transform var(--d2) var(--e-spring)}
+html[data-ui="modern"] .srchbtn:hover svg{transform:scale(1.15) rotate(-8deg);animation:none}
+html[data-ui="modern"] input[type=checkbox],html[data-ui="modern"] input[type=radio]{accent-color:#C9A45A;transition:transform var(--d1)}
+html[data-ui="modern"] input[type=checkbox]:checked{animation:tbPop .32s var(--e-spring)}
+html[data-ui="modern"] input[type=checkbox]:active{transform:scale(.9)}
+html[data-ui="modern"] .check li{transition:background var(--d2),transform var(--d2) var(--e-out)}
+html[data-ui="modern"] .check li:hover{background:rgba(230,192,106,.05)}
+html[data-ui="modern"] .check li.done .t{transition:color var(--d3),text-decoration-color var(--d3)}
+html[data-ui="modern"] select,html[data-ui="modern"] input[type=number],html[data-ui="modern"] input[type=text],html[data-ui="modern"] input[type=search],html[data-ui="modern"] textarea{transition:border-color var(--d2),box-shadow var(--d3),background-color var(--d2),transform var(--d2)}
+html[data-ui="modern"] input:focus,html[data-ui="modern"] select:focus,html[data-ui="modern"] textarea:focus{transform:translateY(-1px)}
+@keyframes tbPop{0%{transform:scale(.8)}55%{transform:scale(1.14)}100%{transform:none}}
+
+/* --- menu: o marcador desliza com mola, o ícone cresce e o item avança --- */
+html[data-ui="modern"] .md-ind{transition:transform .55s var(--e-spring),height .25s var(--e-out),opacity .2s}
+html[data-ui="modern"] nav.side button,html[data-ui="modern"] nav.side a.navx{transition:color var(--d2),background var(--d2),transform var(--d2) var(--e-out)}
+html[data-ui="modern"] nav.side button:hover,html[data-ui="modern"] nav.side a.navx:hover{transform:translateX(3px)}
+html[data-ui="modern"] nav.side button svg,html[data-ui="modern"] nav.side a.navx svg{transition:transform var(--d3) var(--e-spring),color var(--d2)}
+html[data-ui="modern"] nav.side button:hover svg,html[data-ui="modern"] nav.side a.navx:hover svg{transform:scale(1.18) rotate(-6deg)}
+html[data-ui="modern"] nav.side button[aria-current="true"] svg{transform:scale(1.1)}
+html[data-ui="modern"] nav.bottom button svg{transition:transform var(--d3) var(--e-spring)}
+html[data-ui="modern"] nav.bottom button[aria-current="true"] svg{transform:translateY(-2px) scale(1.15)}
+html[data-ui="modern"] nav.bottom button:active svg{transform:scale(.85)}
+html[data-ui="modern"] .tabs button,html[data-ui="modern"] .eqtabs button,html[data-ui="modern"] .settabs button{transition:color var(--d2),background var(--d2),transform var(--d2) var(--e-spring)}
+html[data-ui="modern"] .tabs button:hover,html[data-ui="modern"] .eqtabs button:hover,html[data-ui="modern"] .settabs button:hover{transform:translateY(-1px)}
+
+/* --- 3D: o cartão do herói e o anel do nível entram como uma moeda a virar; folhas e janelas abrem em perspetiva --- */
+@media (prefers-reduced-motion:no-preference){
+  html[data-ui="modern"]:not(.fx-lite) .panel.on>.card.hero{animation:tbHero .75s var(--e-out) backwards}
+  html[data-ui="modern"]:not(.fx-lite) .panel.on .hero .ring{animation:tbCoin 1s var(--e-out) .12s backwards}
+  html[data-ui="modern"]:not(.fx-lite) .panel.on .hero .bis{animation:tbRise .6s var(--e-out) .25s backwards}
+  html[data-ui="modern"]:not(.fx-lite) .ph-emb{animation:tbCoin .8s var(--e-out) backwards}
+  html[data-ui="modern"]:not(.fx-lite) .ip-spr{animation:tbCoin .9s var(--e-out) .1s backwards}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(-n+12){animation:tbRise .5s var(--e-out) backwards}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(2){animation-delay:45ms}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(3){animation-delay:90ms}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(4){animation-delay:135ms}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(5){animation-delay:180ms}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(6){animation-delay:225ms}
+  html[data-ui="modern"]:not(.fx-lite) :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>:nth-child(n+7){animation-delay:270ms}
+  html[data-ui="modern"]:not(.fx-lite) .charsw.open .csw-pop{animation:tbWin .34s var(--e-out)}
+  html[data-ui="modern"]:not(.fx-lite) .gsp{animation:tbWin .36s var(--e-out)}
+  html[data-ui="modern"]:not(.fx-lite) .gs-r button{animation:mdFade .3s var(--e-out) both}
+}
+@keyframes tbHero{from{opacity:0;transform:perspective(1200px) rotateX(-7deg) translateY(16px)}}
+@keyframes tbCoin{from{opacity:0;transform:perspective(700px) rotateY(-75deg)}60%{opacity:1}to{transform:perspective(700px) rotateY(0)}}
+@keyframes tbWin{from{opacity:0;transform:perspective(900px) rotateX(-6deg) translateY(-8px) scale(.97)}}
+@keyframes mdSheet{from{opacity:0;transform:perspective(1200px) rotateX(6deg) translateY(48px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes mdSheetOut{to{opacity:0;transform:perspective(1200px) rotateX(3deg) translateY(36px) scale(.98)}}
+@keyframes mdVtOut{to{opacity:0;transform:perspective(1400px) rotateX(3deg) translateY(-10px)}}
+@keyframes mdVtIn{from{opacity:0;transform:perspective(1400px) rotateX(-4deg) translateY(20px)}}
+::view-transition-old(mdmain){animation:mdVtOut .16s ease-in both}
+::view-transition-new(mdmain){animation:mdVtIn .4s var(--e-out) both}
+html[data-ui="modern"] .md-rv{opacity:0;transform:translateY(20px) scale(.985)}
+html[data-ui="modern"] .md-rv.md-in{opacity:1;transform:none;transition:opacity .7s var(--e-out),transform .7s var(--e-out)}
+html[data-ui="modern"] .ring::before{inset:-14px;background:radial-gradient(circle,rgba(255,190,90,.30),rgba(255,170,60,.10) 50%,transparent 70%);-webkit-mask:none;mask:none;animation:tbGlow 2.8s ease-in-out infinite alternate;animation-play-state:running}
+html[data-ui="modern"] .ring::after{transition:transform .6s var(--e-out)}
+html[data-ui="modern"] .card:hover .ring::after{transform:rotate(90deg)}
+@keyframes tbGlow{from{opacity:.45;transform:scale(.96)}to{opacity:1;transform:scale(1.04)}}
+.md-tip{transform:translateY(6px) scale(.94);transition:opacity .16s var(--e-out),transform .26s var(--e-spring)}
+.md-tip.on{transform:none}
+
+/* --- efeitos leves: nada disto corre --- */
+html.fx-lite[data-ui="modern"] .tb-par{display:none}
+html.fx-lite[data-ui="modern"] .btn::after,html.fx-lite[data-ui="modern"] :is(.hc,.wcard,.spa,.gmem)::before{content:none}
+html.fx-lite[data-ui="modern"] .ring::before{animation:none;opacity:.7}
+html.fx-lite[data-ui="modern"] .hero .ring,html.fx-lite[data-ui="modern"] .ph-emb,html.fx-lite[data-ui="modern"] .ip-spr,html.fx-lite[data-ui="modern"] .hero .bis,html.fx-lite[data-ui="modern"] input[type=checkbox]:checked{animation:none}
+html.fx-lite[data-ui="modern"] :is(.btn,.seg button,.tag,.chip,.bslot,.slot,.stat,.hg,.csw-btn,.srchbtn,nav.side button,nav.side a.navx):hover{transform:none}
+html.fx-lite[data-ui="modern"] :is(nav.side button,nav.side a.navx,.srchbtn):hover svg{transform:none}
+html.fx-lite[data-ui="modern"] .md-rv{opacity:1;transform:none}
+html.fx-lite[data-ui="modern"] :is(.hunts,.picks,.wgrid,.mlist,.bs-list,.gmems,.ip-grid)>*{animation:none}
+html.fx-lite[data-ui="modern"] .md-ind{transition:none}
+@media (prefers-reduced-motion:reduce){html[data-ui="modern"] .ring::before{animation:none} .tb-bar::before{animation-duration:2s}}
 </style>
 
+<div class="tb-bar" aria-hidden="true"></div><div class="tb-par" aria-hidden="true"></div>
 <div class="mdbg" aria-hidden="true">
   <div class="aur"></div><div class="grid"></div><div class="stars"></div><div class="moon"></div>
   <canvas id="mdFx"></canvas><div class="shoot"></div>
@@ -44468,6 +44620,10 @@ html.md-calm[data-ui="modern"] .brand::before{animation-play-state:paused}
 <script>
 (function(){
 "use strict";
+/* r29 */ // filete de ouro no topo enquanto há pedidos à rede: conta os fetch em curso → html.tb-busy
+(function(){ const f=window.fetch; if(!f) return; let n=0,t=0; const d=document.documentElement;
+  window.fetch=function(){ n++; clearTimeout(t); d.classList.add("tb-busy"); const done=()=>{ if(--n<=0){ n=0; clearTimeout(t); t=setTimeout(()=>d.classList.remove("tb-busy"),200); } };
+    let r; try{ r=f.apply(this,arguments); }catch(e){ done(); throw e; } r.then(done,done); return r; }; })();
 let NPCIX2={}; // r2-t3: ix2 de cada NPC (imagem da 2.ª folha de NPCs), cheio quando data/npcs.json carrega (npcIxFill)
 let G0; // r4-t1: se o JSON do G estiver estragado (ex.: um conflito mal resolvido), avisa em vez de deixar a página em branco
 try { G0 = JSON.parse(document.getElementById("G").textContent); }
@@ -48457,6 +48613,8 @@ mdWake();
 addEventListener("resize",()=>{ if(isMd()) mdInd(); },{passive:true});
 /* r28 */ // sem paralaxe, luz do cursor, inclinação dos cartões nem íman: cada movimento do rato voltava a calcular estilos e a pintar cartões
 addEventListener("scroll",mdTipHide,{passive:true});
+/* r29 */ // parallax do fundo (.tb-par): no CSS com animation-timeline; nos browsers sem isso, um transform por frame numa só camada fixa
+if(!(window.CSS&&CSS.supports&&CSS.supports("animation-timeline:scroll()"))){ let pr=0; addEventListener("scroll",()=>{ if(pr||!mdMotion()) return; pr=requestAnimationFrame(()=>{ pr=0; const el=document.querySelector(".tb-par"); if(el) el.style.setProperty("--tb-py",(-Math.min(scrollY*.14,innerHeight*.34)).toFixed(0)+"px"); }); },{passive:true}); }
 // ondulação a partir do ponto do clique
 document.addEventListener("pointerdown", e=>{ if(!mdMotion()) return; // (mdMotion já é falso com fx-lite) const b=e.target.closest(".btn,.seg button,.cchip,nav.side button,nav.bottom button,.srchbtn,.bslot,.tabs button"); if(!b) return;
   const r=b.getBoundingClientRect(), s=Math.max(r.width,r.height)*2.2, sp=document.createElement("span"); sp.className="md-rip"; sp.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;
