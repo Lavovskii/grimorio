@@ -1,25 +1,36 @@
 /* =========================================================
-   Tibia Questski — estilo inspirado no site oficial do Tibia
-   Tema claro = pergaminho · Tema escuro = pedra e ouro
+   Tibia Questski — veste o tema Tibia do Grimório (r31): pedra, bronze e ouro, a mesma letra
+   (Tahoma/Verdana no texto, Palatino nos títulos, letra do sistema: nada para descarregar),
+   o mesmo topo e o mesmo menu principal (shared/nav.js). Só há o tema escuro, como no Grimório.
    ========================================================= */
 
 :root {
-  --font-body: "Alegreya Sans", "Segoe UI", Verdana, sans-serif;
-  --font-head: "Cinzel", "Times New Roman", serif;
-  --font-deco: "Cinzel Decorative", "Cinzel", serif;
+  --font-body: Tahoma, Verdana, "Segoe UI", system-ui, sans-serif;
+  --font-head: "Palatino Linotype", "Book Antiqua", Palatino, "URW Palladio L", Georgia, serif;
+  --font-deco: var(--font-head);
+  --font-num: Verdana, Tahoma, "Segoe UI", system-ui, sans-serif;
   --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
   --font-game: Verdana, Tahoma, sans-serif;
 
-  --radius: 6px;
-  --sidebar-w: 340px;
-  --topbar-h: 68px;
+  --radius: 4px;
+  --sidebar-w: 380px;
+  --topbar-h: 67px;
+  --nav-h: 64px;
 
   /* constant (both themes): the dark chrome around the content, like tibia.com */
-  --chrome-1: #1a120b;
-  --chrome-2: #2b1d11;
-  --chrome-gold: #c99a3e;
-  --chrome-gold-2: #f3d27d;
-  --chrome-text: #f2e3c4;
+  --chrome-1: #19130D;
+  --chrome-2: #2C2319;
+  --chrome-gold: #9C7A42;
+  --chrome-gold-2: #F2D68C;
+  --chrome-text: #F0E6CE;
+
+  /* as peças do tema Tibia do Grimório (index.html, "Tema TIBIA (r28)") */
+  --tb-dark: #070504; --tb-frame: #5A4627; --tb-frame-hi: #9C7A42; --tb-bevel: rgba(255, 232, 180, .09);
+  --tb-win: inset 0 0 0 1px var(--tb-frame), inset 0 2px 0 1px var(--tb-bevel);
+  --tb-metal: linear-gradient(180deg, #9A7434 0%, #76551F 46%, #5E4216 54%, #4A3311 100%);
+  --tb-metal-hi: linear-gradient(180deg, #B68C44 0%, #8C6728 46%, #704F1B 54%, #5A3E14 100%);
+  --tb-stone: linear-gradient(180deg, #3A3127 0%, #28211A 100%);
+  --glass: linear-gradient(180deg, #282017 0%, #1D1711 100%);
 
   --chat-bg: #232323;
   --chat-you: #f5f066;
@@ -32,98 +43,68 @@
   --band-9: #6e3a8e; --band-10: #4b3f9e; --band-11: #2f4f8f; --band-12: #245f7a; --band-13: #3a3a3a; --band-14: #5a2f2f;
 }
 
-/* ---------- light theme: parchment ---------- */
-:root, :root[data-theme="light"] {
-  --bg: #e7d3ac;
-  --bg-deep: #d9c094;
-  --panel: #f6ead2;
-  --panel-2: #ecdcbc;
-  --panel-3: #e2cda6;
-  --border: #6b3a14;
-  --border-soft: #b8915c;
-  --caption-1: #6d3312;
-  --caption-2: #4a1f08;
-  --caption-text: #fff1d2;
-  --text: #2b1a0c;
-  --text-soft: #5c4227;
-  --muted: #6b5236;
-  --link: #0b4ea2;
-  --link-hover: #8b1a1a;
-  --gold: #7a540c;
-  --accent: #8b1a1a;
-  --accent-soft: #f3d9c9;
-  --ok: #286a24;
-  --ok-soft: #dbeccd;
-  --warn: #a5251c;
-  --warn-soft: #f6d8cf;
-  --tip: #1f6b62;
-  --tip-soft: #d4ece6;
-  --reward-soft: #f6e7b3;
-  --shadow: 0 2px 0 rgba(74, 31, 8, .25), 0 6px 18px rgba(74, 31, 8, .18);
-  --input-bg: #fffaf0;
-  --hover: rgba(139, 26, 26, .08);
-  --selected: rgba(168, 117, 22, .2);
-  --noise-opacity: .35;
-  color-scheme: light;
-}
-
-/* ---------- dark theme: stone + gold ---------- */
-:root[data-theme="dark"] {
-  --bg: #100d0a;
-  --bg-deep: #0a0806;
-  --panel: #1d1712;
-  --panel-2: #251d16;
-  --panel-3: #30261c;
-  --border: #6b5130;
-  --border-soft: #4a3a26;
-  --caption-1: #3d2a17;
-  --caption-2: #22170c;
-  --caption-text: #f4cd78;
-  --text: #ece0c8;
-  --text-soft: #cdbb9b;
-  --muted: #9c8a6d;
-  --link: #f0b45a;
-  --link-hover: #ffd88f;
-  --gold: #e2b452;
-  --accent: #e06a4f;
-  --accent-soft: #3a1d16;
-  --ok: #7fcf6a;
-  --ok-soft: #1d2d18;
-  --warn: #ff7b66;
-  --warn-soft: #3a1914;
-  --tip: #6fd0c0;
-  --tip-soft: #142a27;
-  --reward-soft: #33290f;
-  --shadow: 0 2px 0 rgba(0, 0, 0, .5), 0 10px 24px rgba(0, 0, 0, .45);
-  --input-bg: #120e0a;
-  --hover: rgba(226, 180, 82, .08);
-  --selected: rgba(226, 180, 82, .16);
+/* ---------- cores: as do Grimório (pedra, bronze e ouro) ---------- */
+:root, :root[data-theme] {
+  --bg: #0E0B08;
+  --bg-deep: #0A0806;
+  --panel: #211A12;
+  --panel-2: #2B2318;
+  --panel-3: #3A3127;
+  --border: #5A4627;
+  --border-soft: #3E3122;
+  --caption-1: #3A2E1F;
+  --caption-2: #1E1811;
+  --caption-text: #F2D68C;
+  --text: #F0E6CE;
+  --text-soft: #D8CAAA;
+  --muted: #AC9D7E;
+  --link: #F0C870;
+  --link-hover: #FFE7A8;
+  --gold: #E6C06A;
+  --accent: #E8956A;
+  --accent-soft: rgba(232, 149, 106, .15);
+  --ok: #8CD072;
+  --ok-soft: rgba(110, 180, 80, .15);
+  --warn: #EC7A62;
+  --warn-soft: rgba(200, 68, 46, .17);
+  --tip: #6FD0C0;
+  --tip-soft: rgba(80, 180, 160, .13);
+  --reward-soft: rgba(230, 192, 106, .14);
+  --shadow: 0 2px 0 rgba(0, 0, 0, .5), 0 8px 16px rgba(0, 0, 0, .3);
+  --input-bg: #0B0806;
+  --hover: rgba(230, 192, 106, .07);
+  --selected: rgba(230, 192, 106, .16);
   --noise-opacity: .55;
   color-scheme: dark;
+  scrollbar-color: #6B5226 #0E0B08;
 }
+html.fx-lite { --shadow: 0 2px 0 rgba(0, 0, 0, .5); }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-padding-top: calc(var(--topbar-h) + 60px); }
 body {
   font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
   background-color: var(--bg);
-  background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(255, 220, 150, .10), transparent 60%),
-    radial-gradient(ellipse at 100% 100%, rgba(0, 0, 0, .18), transparent 55%),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .2  0 0 0 0 .1  0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  background-attachment: fixed;
+  /* a parede de pedra do Grimório */
+  background-image: radial-gradient(ellipse 80% 420px at 50% 0,rgba(170,110,40,.20),transparent 75%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='192' height='96'><rect width='192' height='96' fill='%230E0B08'/><g fill='%23151009'><rect x='1' y='1' width='62' height='30'/><rect x='129' y='1' width='62' height='30'/><rect x='33' y='33' width='62' height='30'/><rect x='161' y='33' width='31' height='30'/><rect x='0' y='33' width='31' height='30'/><rect x='1' y='65' width='94' height='30'/><rect x='161' y='65' width='31' height='30'/></g><g fill='%23130E09'><rect x='65' y='1' width='62' height='30'/><rect x='97' y='33' width='62' height='30'/><rect x='97' y='65' width='62' height='30'/></g><g fill='%23ffffff' fill-opacity='.025'><rect x='1' y='1' width='62' height='1'/><rect x='65' y='1' width='62' height='1'/><rect x='129' y='1' width='62' height='1'/><rect x='33' y='33' width='62' height='1'/><rect x='97' y='33' width='62' height='1'/><rect x='1' y='65' width='94' height='1'/><rect x='97' y='65' width='62' height='1'/></g></svg>");
   min-height: 100vh;
 }
+::selection { background: rgba(230, 192, 106, .38); color: #fff; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: #0B0806; box-shadow: inset 1px 0 0 #2A2118; }
+::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #7A5E30, #5A4424); border-radius: 2px; border: 2px solid #0B0806; }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(90deg, #9C7A42, #6E5430); }
 img { max-width: 100%; }
 a { color: var(--link); text-decoration: none; }
 a:hover { color: var(--link-hover); text-decoration: underline; }
 button { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; margin: 0 0 .5em; letter-spacing: .02em; }
+:focus-visible { outline: 2px solid #F2D68C; outline-offset: 2px; border-radius: 3px; }
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.2; margin: 0 0 .5em; letter-spacing: .01em; }
 kbd { font-family: var(--font-mono); }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -132,71 +113,80 @@ kbd { font-family: var(--font-mono); }
 .ico { display: inline-block; width: 1em; height: 1em; vertical-align: -.14em; flex: none; }
 .ico svg { width: 100%; height: 100%; display: block; }
 
-/* =================== TOP BAR =================== */
+/* =================== TOP BAR (r31: o mesmo do Grimório) =================== */
 .topbar {
-  position: sticky; top: 0; z-index: 50;
-  height: var(--topbar-h);
-  display: flex; align-items: center; gap: 18px;
-  padding: 0 18px;
-  color: var(--chrome-text);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .06), transparent 40%),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, .12) 0 2px, transparent 2px 7px),
-    linear-gradient(180deg, var(--chrome-2), var(--chrome-1));
-  border-bottom: 3px solid var(--chrome-gold);
-  box-shadow: 0 1px 0 #000, 0 4px 14px rgba(0, 0, 0, .45);
+  position: sticky; top: 0; z-index: 50; color: var(--chrome-text);
+  background: linear-gradient(180deg, #2C2319 0%, #19130D 100%);
+  border-bottom: 1px solid #6B5226; box-shadow: 0 1px 0 #000, 0 4px 10px rgba(0, 0, 0, .45);
 }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--chrome-text); flex: none; }
+.topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(230, 192, 106, .45) 18%, rgba(230, 192, 106, .45) 82%, transparent); }
+.topbar .in { position: relative; max-width: 1240px; margin: 0 auto; padding: 10px 16px; min-height: 66px; display: flex; align-items: center; gap: 14px; }
+.brand { position: relative; display: flex; align-items: center; gap: 10px; min-width: 0; flex: none; color: var(--chrome-text); }
 .brand:hover { text-decoration: none; color: var(--chrome-text); }
-.brand-logo { height: 58px; width: auto; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .7)); transition: transform .25s; }
-.brand:hover .brand-logo { transform: translateX(4px) rotate(-3deg); }
-.brand-text { display: flex; flex-direction: column; line-height: .95; }
-.brand-tibia { font-family: var(--font-head); font-weight: 700; font-size: 13px; letter-spacing: .5em; color: var(--chrome-gold); text-transform: uppercase; }
-.brand-quest {
-  font-family: var(--font-deco); font-weight: 900; font-size: 28px; letter-spacing: .02em;
-  background: linear-gradient(180deg, #fff3c4 0%, var(--chrome-gold-2) 45%, #b47b23 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 0 #000);
-}
-.mainnav { display: flex; gap: 4px; margin-left: 8px; }
-.mainnav a {
-  font-family: var(--font-head); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--chrome-text); padding: 8px 12px; border-radius: var(--radius); border: 1px solid transparent;
-}
-.mainnav a:hover { text-decoration: none; color: var(--chrome-gold-2); background: rgba(255, 255, 255, .05); }
-.mainnav a.active { color: var(--chrome-gold-2); border-color: rgba(201, 154, 62, .55); background: rgba(201, 154, 62, .12); }
+/* a tocha atrás do emblema */
+.brand::before { content: ""; position: absolute; left: -14px; top: 50%; width: 58px; height: 58px; margin-top: -29px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 168, 60, .30), rgba(255, 140, 40, .08) 45%, transparent 70%); animation: tbTorch 2.6s ease-in-out infinite alternate; }
+@keyframes tbTorch { 0% { opacity: .55; transform: scale(.94); } 35% { opacity: .85; } 60% { opacity: .7; transform: scale(1.04); } 100% { opacity: 1; transform: scale(.98); } }
+html.fx-lite .brand::before { animation: none; opacity: .8; }
+.brand .sig { position: relative; width: 28px; height: 28px; flex: none; color: #E6C06A; }
+.brand b { position: relative; font-family: var(--font-head); font-size: 22px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; color: #F2D68C; text-shadow: 0 1px 0 #000, 0 2px 6px rgba(0, 0, 0, .6); }
 .search {
-  margin-left: auto; position: relative; display: flex; align-items: center;
-  background: rgba(0, 0, 0, .35); border: 1px solid rgba(201, 154, 62, .5); border-radius: 999px;
-  padding: 0 10px 0 34px; width: min(360px, 34vw); height: 38px;
+  margin-left: auto; position: relative; display: flex; align-items: center; gap: 10px;
+  width: 300px; height: 38px; padding: 0 10px 0 36px;
+  background: #0E0A07; border: 1px solid #3E3122; border-radius: 3px; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .7);
 }
-.search:focus-within { border-color: var(--chrome-gold-2); box-shadow: 0 0 0 3px rgba(243, 210, 125, .2); }
-.search-ico { position: absolute; left: 12px; width: 16px; height: 16px; color: var(--chrome-gold); }
-.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--chrome-text); font: inherit; font-size: 15px; }
-.search input::placeholder { color: rgba(242, 227, 196, .55); }
-.search kbd { font-size: 12px; color: rgba(242, 227, 196, .6); border: 1px solid rgba(242, 227, 196, .3); border-radius: 4px; padding: 0 5px; }
+.search:hover { border-color: #9C7A42; }
+.search:focus-within { border-color: #C9A45A; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .7), 0 0 0 2px rgba(230, 192, 106, .22); }
+.search-ico { position: absolute; left: 12px; width: 16px; height: 16px; color: #C9A45A; }
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--chrome-text); font: inherit; font-size: 15px; caret-color: #E6C06A; }
+.search input::placeholder { color: #8A7B60; }
+.search kbd { font-size: 12px; color: #AC9D7E; border: 1px solid #3E3122; border-radius: 3px; padding: 0 5px; }
 .icon-btn {
   display: inline-grid; place-items: center; width: 38px; height: 38px; flex: none;
-  border-radius: 50%; border: 1px solid rgba(201, 154, 62, .55); background: rgba(0, 0, 0, .3);
-  color: var(--chrome-gold-2); cursor: pointer; transition: transform .15s, background .15s;
+  border-radius: 4px; border: 1px solid var(--tb-dark); background: var(--tb-stone); color: #F2D68C; cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 232, 180, .1), inset 0 0 0 1px rgba(90, 70, 39, .7); transition: box-shadow .15s;
 }
-.icon-btn:hover { background: rgba(201, 154, 62, .2); transform: translateY(-1px); }
+.icon-btn:hover { box-shadow: inset 0 1px 0 rgba(255, 232, 180, .14), inset 0 0 0 1px #9C7A42; }
 .icon-btn .ico { width: 18px; height: 18px; }
-.menu-btn { display: none; }
 
-/* =================== LAYOUT =================== */
-.layout { display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr); min-height: calc(100vh - var(--topbar-h)); }
-.sidebar {
-  position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h));
-  display: flex; flex-direction: column;
-  background: var(--panel);
-  border-right: 2px solid var(--border);
-  box-shadow: inset -1px 0 0 var(--border-soft);
-}
+/* =================== LAYOUT (r31: o do Grimório: menu principal à esquerda, conteúdo com 956 px) =================== */
+.shell { max-width: 1240px; margin: 0 auto; padding: 22px 16px 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
 .main { min-width: 0; display: flex; flex-direction: column; }
-.view { flex: 1; padding: 22px clamp(14px, 3vw, 36px) 40px; max-width: 1280px; width: 100%; margin: 0 auto; }
-.footer { padding: 18px 24px 28px; text-align: center; font-size: 14px; color: var(--muted); }
+.view { flex: 1; width: 100%; padding: 0 0 20px; }
+.footer { padding: 26px 0 8px; margin-top: 20px; text-align: center; font-size: 14px; color: var(--muted); border-top: 1px solid rgba(201, 164, 90, .2); }
 .scrim { display: none; }
+/* a lista de quests e os filtros: painel que desliza da esquerda (botão "Lista de quests" nos separadores) */
+.sidebar {
+  position: fixed; top: var(--topbar-h); left: 0; bottom: 0; z-index: 60; width: min(var(--sidebar-w), 92vw);
+  display: flex; flex-direction: column;
+  background: linear-gradient(180deg, #2A2218, #19140E); border-right: 1px solid var(--tb-dark);
+  box-shadow: inset -1px 0 0 #9C7A42, inset -2px 0 0 #1A140E, inset -3px 0 0 #5A4627;
+  transform: translateX(-102%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s;
+}
+body.drawer-open .sidebar { transform: none; visibility: visible; transition: transform .25s ease; box-shadow: inset -1px 0 0 #9C7A42, inset -2px 0 0 #1A140E, inset -3px 0 0 #5A4627, 10px 0 40px rgba(0, 0, 0, .55); }
+body.drawer-open .scrim { display: block; position: fixed; inset: var(--topbar-h) 0 0 0; z-index: 55; background: rgba(5, 3, 2, .6); }
+
+/* =================== MENU PRINCIPAL (r31: igual ao do Grimório; desenhado pelo shared/nav.js) =================== */
+nav.side { position: sticky; top: 76px; align-self: start; max-height: calc(100vh - 92px); overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(201, 164, 90, .35) transparent; }
+nav.side ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+nav.side .grp { display: flex; align-items: center; gap: 8px; margin: 14px 12px 2px; font-family: var(--font-body); font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A; }
+nav.side .grp::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(201, 164, 90, .4), transparent); }
+nav.side a { position: relative; display: flex; align-items: center; gap: 11px; width: 100%; padding: 8px 12px; border-radius: 3px; color: var(--text-soft); font-size: 16px; line-height: 24px; text-decoration: none; transition: color .2s, background .2s; }
+nav.side a svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
+nav.side a:hover { color: #FFF0CC; background: rgba(230, 192, 106, .07); text-decoration: none; }
+nav.side a:hover svg { color: #F2D68C; }
+nav.side a[aria-current="page"] { color: #FFE7A8; font-weight: 700; background: linear-gradient(90deg, rgba(230, 192, 106, .20), rgba(230, 192, 106, .03)); box-shadow: inset 0 0 0 1px rgba(201, 164, 90, .28); }
+nav.side a[aria-current="page"]::after { content: ""; position: absolute; left: 0; top: 20%; bottom: 20%; width: 3px; background: linear-gradient(180deg, #F2D68C, #B08034); }
+nav.side a[aria-current="page"] svg { color: #F2D68C; }
+nav.bottom { display: none; }
+.gsub { display: none; }
+.gseg { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+.gseg a { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 5px 13px; border-radius: 3px; font-size: 15px; color: var(--text-soft); text-decoration: none;
+  background: linear-gradient(180deg, #2F271E, #211B14); border: 1px solid var(--tb-dark); box-shadow: inset 0 1px 0 rgba(255, 232, 180, .08), inset 0 0 0 1px rgba(90, 70, 39, .55); }
+.gseg a:hover { color: #FFF0CC; text-decoration: none; background: linear-gradient(180deg, #3B3125, #28211A); }
+.gseg a[aria-current="page"] { color: #FFF4D6; background: linear-gradient(180deg, #8E6D33, #5E4520); border-color: #160F06; text-shadow: 0 1px 0 #000; box-shadow: inset 0 1px 0 rgba(255, 232, 170, .42), 0 0 0 1px rgba(230, 192, 106, .22); }
+
 /* interruptor do visual Original / Modern no rodapé (o mesmo do Grimório; o Modern está em css/modern.css) */
 .ui-mode {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 12px; margin: 2px 0;
@@ -996,32 +986,33 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
 @media (max-width: 1100px) {
   .guide-layout { grid-template-columns: minmax(0, 1fr); }
   .toc { display: none; }
-  .mainnav a { padding: 8px 8px; }
 }
-@media (max-width: 920px) {
-  :root { --topbar-h: 60px; }
-  .layout { grid-template-columns: minmax(0, 1fr); }
-  .menu-btn { display: inline-grid; }
-  .sidebar {
-    position: fixed; top: var(--topbar-h); left: 0; bottom: 0; height: auto; width: min(360px, 88vw); z-index: 60;
-    transform: translateX(-102%); transition: transform .25s ease;
-  }
-  body.drawer-open .sidebar { transform: none; box-shadow: 10px 0 40px rgba(0, 0, 0, .5); }
-  body.drawer-open .scrim { display: block; position: fixed; inset: var(--topbar-h) 0 0 0; z-index: 55; background: rgba(0, 0, 0, .5); }
-  .mainnav { display: none; }
-  .brand-text { display: none; }
-  .brand-logo { height: 48px; }
-  .search { width: auto; flex: 1; }
+/* até 960 px, como no Grimório: sem menu lateral; barra de secções em baixo e as páginas da secção em separadores */
+@media (max-width: 960px) {
+  .shell { grid-template-columns: minmax(0, 1fr); padding: 16px 16px calc(var(--nav-h) + 30px + env(safe-area-inset-bottom, 0px)); }
+  nav.side { display: none; }
+  nav.bottom { display: grid; grid-template-columns: repeat(6, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    background: linear-gradient(180deg, #241C14, #15100B); border-top: 1px solid #6B5226; box-shadow: 0 -1px 0 #000; padding-bottom: env(safe-area-inset-bottom, 0px); }
+  nav.bottom a { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: var(--nav-h); padding: 1px 6px;
+    font-size: 12px; line-height: 18px; color: var(--muted); text-decoration: none; transition: color .2s; }
+  nav.bottom a svg { width: 22px; height: 22px; }
+  nav.bottom a:hover { text-decoration: none; color: var(--text); }
+  nav.bottom a[aria-current="page"] { color: #fff; font-weight: 700; text-shadow: 0 0 12px var(--gold); }
+  nav.bottom a[aria-current="page"] svg { color: var(--gold); transform: translateY(-2px) scale(1.15); }
+  nav.bottom a[aria-current="page"]::after { content: ""; position: absolute; top: 6px; left: 50%; width: 28px; height: 28px; margin-left: -14px; border-radius: 50%; pointer-events: none;
+    background: radial-gradient(circle, rgba(230, 192, 106, .45), transparent 70%); }
+  .gsub { display: block; margin-bottom: 16px; }
+  .brand b { font-size: 18px; }
+  .search { width: auto; flex: 1; max-width: 300px; }
   .search kbd { display: none; }
+  .toast { bottom: calc(var(--nav-h) + 16px + env(safe-area-inset-bottom, 0px)); }
   .hero { grid-template-columns: 1fr; text-align: center; padding: 22px 16px; }
   .hero-logo { width: min(280px, 80vw); margin: 0 auto; }
   .hero p { margin-left: auto; margin-right: auto; }
   .hero-form { justify-content: center; }
 }
 @media (max-width: 600px) {
-  body { font-size: 16px; }
-  .topbar { gap: 8px; padding: 0 10px; }
-  .view { padding: 14px 12px 30px; }
+  .view { padding: 0 0 20px; }
   .quest-hero .hero-inner { grid-template-columns: 1fr; padding: 16px; }
   .quest-hero .lvl-shield.lg { display: none; }
   .step { grid-template-columns: 36px minmax(0, 1fr); padding: 12px 12px 12px 8px; gap: 8px; }
@@ -1031,22 +1022,6 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
   .progress-row { grid-template-columns: 90px 1fr 56px; }
   .lightbox { padding: 20px 10px; }
   .lb-nav { display: none; }
-}
-/* topo: tem de caber em qualquer largura sem a página sair para o lado (a 375 px e a 320 px no telemóvel,
-   e entre 921 e 1400 px, onde o menu principal e o interruptor de sites disputam o espaço).
-   A pesquisa encolhe; até 480 px (e entre 921 e 1100 px) vira um botão redondo que, ao tocar, abre uma barra por cima do topo. */
-@media (min-width: 921px) and (max-width: 1400px) {
-  .search { min-width: 0; }
-}
-@media (min-width: 921px) and (max-width: 1280px) {
-  .brand-text { display: none; }
-}
-@media (min-width: 921px) and (max-width: 1100px) {
-  .topbar { gap: 12px; }
-  .topbar .sitesw a { padding: 4px 9px; }
-  .topbar .sitesw a span { display: none; }
-}
-@media (max-width: 600px) {
   /* grelhas com mínimo fixo: nunca mais largas do que o ecrã (ex.: "Como usar" a 320 px) */
   .split { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
   .acc-grid { grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
@@ -1056,33 +1031,26 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
   /* nomes compridos de itens/NPCs no texto podem partir de linha (ex.: "Gingerbread Key (Moon Melon, …)" nos Acessos) */
   .ent { white-space: normal; max-width: 100%; }
   .list-clean li > * { min-width: 0; }
-  .topbar { gap: 6px; padding: 0 8px; }
-  .brand { min-width: 0; }
-  .brand-logo { height: 42px; }
-  .icon-btn { width: 36px; height: 36px; }
-  .search { min-width: 0; padding-left: 32px; }
-  .search-ico { left: 10px; }
 }
-@media (max-width: 480px), (min-width: 921px) and (max-width: 1100px) {
-  .search { flex: none; width: 38px; height: 38px; padding: 0; justify-content: center; border-radius: 50%; cursor: pointer; }
+/* topo no telemóvel, como no Grimório: só o emblema; a pesquisa vira um botão que, ao tocar, abre uma barra por cima do topo */
+@media (max-width: 520px) {
+  .topbar .in { gap: 10px; }
+  .brand b { display: none; }
+  .search { flex: none; width: 44px; height: 44px; padding: 0; justify-content: center; cursor: pointer; margin-left: auto; }
   .search-ico { position: static; }
-  .search kbd { display: none; }
   .search input { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; opacity: 0; cursor: pointer; font-size: 16px; }
   .search:focus-within {
-    position: absolute; z-index: 5; left: auto; right: 8px; top: 50%; width: min(420px, calc(100% - 16px)); height: 42px; margin: -21px 0 0;
-    padding: 0 12px 0 38px; justify-content: flex-start; border-radius: 999px; background: var(--chrome-1);
+    position: absolute; z-index: 5; left: 16px; right: 16px; top: 50%; width: auto; height: 44px; margin: -22px 0 0;
+    padding: 0 12px 0 38px; justify-content: flex-start; background: #0E0A07;
   }
   .search:focus-within .search-ico { position: absolute; left: 13px; }
   .search:focus-within input { position: static; width: auto; height: auto; opacity: 1; cursor: text; }
   /* pesquisa fechada mas com texto escrito: um ponto avisa que a lista está filtrada */
   .search:has(input:not(:placeholder-shown))::after {
-    content: ""; position: absolute; top: 2px; right: 2px; width: 9px; height: 9px; border-radius: 50%;
+    content: ""; position: absolute; top: 3px; right: 3px; width: 9px; height: 9px; border-radius: 50%;
     background: var(--chrome-gold-2); box-shadow: 0 0 0 2px var(--chrome-1);
   }
   .search:focus-within::after { display: none; }
-}
-@media (max-width: 480px) {
-  .search { width: 36px; height: 36px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -1094,3 +1062,156 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
   .cat-pill, .qcard h3 a { position: relative; }
   .cat-pill::after, .qcard h3 a::after { content: ""; position: absolute; left: -2px; right: -2px; top: 50%; height: 44px; transform: translateY(-50%); }
 }
+
+/* =================== r31: as peças do Grimório (tema Tibia) =================== 
+   Janelas com moldura escura por fora e bronze por dentro, botões de metal, separadores de pedra, rótulos em
+   Tahoma maiúsculo dourado, títulos em Palatino. Os valores são os do index.html ("Tema TIBIA (r28)"). */
+.box { background: var(--glass); border: 1px solid var(--tb-dark); border-radius: 4px; box-shadow: var(--tb-win), var(--shadow); }
+.box::before, .box::after { content: none; }
+.box-caption, .band-head, .tbl th, .modal-head {
+  font-family: var(--font-body); font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: #E6C06A; background: linear-gradient(180deg, #30261A, #231B13); border-bottom: 1px solid var(--tb-frame); text-shadow: 0 1px 0 #000;
+}
+.box-caption { font-size: 13px; padding: 10px 16px; border-radius: 3px 3px 0 0; }
+.band-head { font-size: 12px; }
+.tbl th { font-size: 13px; letter-spacing: .02em; text-transform: none; }
+.modal-head { letter-spacing: .02em; text-transform: none; }
+.modal-head h3 { font-family: var(--font-head); }
+.box-caption .cap-extra, .band-head .count { letter-spacing: 0; text-transform: none; color: var(--text-soft); }
+.filter-label, .fact dt, .stat span, .callout b.k, .prep h4, .travel-cols h5 {
+  font-family: var(--font-body); font-weight: 700; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A;
+}
+.stat span { font-size: 12px; }
+
+/* botões de metal e de pedra */
+.btn { font-family: var(--font-body); font-weight: 700; font-size: 15px; letter-spacing: .02em; height: 40px; border-radius: 3px;
+  color: #FFF4D6; background: var(--tb-metal); border: 1px solid #160F06; text-shadow: 0 1px 0 rgba(0, 0, 0, .75);
+  box-shadow: inset 0 1px 0 rgba(255, 232, 170, .45), inset 0 -1px 0 rgba(0, 0, 0, .35), 0 1px 0 rgba(0, 0, 0, .6); }
+.btn:hover { filter: none; color: #FFF4D6; background: var(--tb-metal-hi); box-shadow: inset 0 1px 0 rgba(255, 240, 190, .55), inset 0 -1px 0 rgba(0, 0, 0, .35), 0 1px 0 rgba(0, 0, 0, .6), 0 0 0 1px rgba(230, 192, 106, .2); }
+.btn:active { transform: translateY(1px); box-shadow: inset 0 2px 4px rgba(0, 0, 0, .5); }
+.btn-ghost { color: var(--text); background: var(--tb-stone); border-color: var(--tb-dark); text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 232, 180, .12), inset 0 0 0 1px rgba(90, 70, 39, .7), 0 1px 0 rgba(0, 0, 0, .5); }
+.btn-ghost:hover { color: var(--text); background: linear-gradient(180deg, #463B2E, #30281F); box-shadow: inset 0 1px 0 rgba(255, 232, 180, .16), inset 0 0 0 1px #9C7A42, 0 1px 0 rgba(0, 0, 0, .5); }
+.btn-ok { color: #F2FFE8; background: linear-gradient(180deg, #5E9A3E 0%, #437A2A 50%, #305E1C 100%); border-color: #0E1A08; }
+.btn-ok:hover { color: #F2FFE8; background: linear-gradient(180deg, #6EAC4A 0%, #4E8A32 50%, #386A22 100%); }
+.btn-sm { height: 32px; font-size: 13px; }
+
+/* filtros: grupos de botões, etiquetas e campos */
+.seg { border: 1px solid var(--tb-dark); border-radius: 3px; background: linear-gradient(180deg, #2F271E, #211B14); box-shadow: inset 0 0 0 1px rgba(90, 70, 39, .55); }
+.seg button { color: var(--text-soft); font-weight: 700; }
+.seg button + button { border-left: 1px solid rgba(90, 70, 39, .55); }
+.seg button:hover { color: #FFF0CC; background: rgba(230, 192, 106, .07); }
+.seg button.on { color: #FFF4D6; background: linear-gradient(180deg, #8E6D33, #5E4520); text-shadow: 0 1px 0 #000; }
+.cat-pill { border-radius: 3px; border-color: var(--tb-dark); background: linear-gradient(180deg, #2F271E, #211B14); box-shadow: inset 0 0 0 1px rgba(90, 70, 39, .55); }
+.cat-pill:hover { color: #FFF0CC; }
+.cat-pill.on { color: #FFF4D6; background: linear-gradient(180deg, #8E6D33, #5E4520); border-color: #160F06; }
+.input, select.input { border-radius: 3px; border-color: #3E3122; background-color: #0B0806; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .75); caret-color: #E6C06A; }
+.input:hover { border-color: #6B5226; }
+.input:focus { outline: none; border-color: #C9A45A; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .75), 0 0 0 2px rgba(230, 192, 106, .22); }
+select option { background: #1A140E; color: #F0E6CE; }
+.check input { accent-color: #C9A45A; }
+.chip { border-radius: 3px; }
+.chip-premium { color: #FFF4D6; background: linear-gradient(180deg, #8E6D33, #5E4520); border-color: #160F06; text-shadow: 0 1px 0 #000; }
+.sidebar-filters { background: transparent; border-bottom: 1px solid var(--tb-frame); }
+.qitem.active::before { background: linear-gradient(180deg, #F2D68C, #B08034); width: 3px; }
+.lvl-shield, .tab .tab-lvl, .step-num, .qmarker { font-family: var(--font-num); }
+
+/* separadores (lista, início, quests, mapa…, e as quests abertas) */
+.tabstrip { top: var(--topbar-h); margin: 0 0 20px; padding: 8px 0 0; gap: 4px; background: #0E0B08; border-bottom: 1px solid var(--tb-frame); }
+.tab { height: 36px; border-radius: 3px 3px 0 0; border: 1px solid var(--tb-dark); border-bottom: 0; top: 1px; font-size: 14px; color: var(--text-soft);
+  background: linear-gradient(180deg, #2F271E, #211B14); box-shadow: inset 0 1px 0 rgba(255, 232, 180, .08), inset 0 0 0 1px rgba(90, 70, 39, .55); }
+.tab:hover { color: #FFF0CC; background: linear-gradient(180deg, #3B3125, #28211A); }
+.tab.active { color: #FFE7A8; background: linear-gradient(180deg, #3A2E1F, #282017); border-color: var(--tb-dark); border-bottom: 1px solid #282017; box-shadow: inset 0 0 0 1px #9C7A42; }
+.tab.active::after { left: 0; right: 0; top: 0; height: 2px; border-radius: 0; background: linear-gradient(90deg, #B08034, #F2D68C, #B08034); }
+.tab-list { cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; color: #F2D68C; }
+.tab-list[aria-expanded="true"] { color: #FFF4D6; background: linear-gradient(180deg, #8E6D33, #5E4520); }
+.tab-list .ico { width: 16px; height: 16px; }
+.qtab { font-family: var(--font-body); border-radius: 3px 3px 0 0; }
+.qtab.active { color: #FFE7A8; }
+
+/* início do Questski: a faixa com o logótipo numa janela como a do herói do Grimório */
+.hero { border: 1px solid var(--tb-dark); border-radius: 4px; color: var(--text);
+  background: radial-gradient(ellipse 60% 90% at 8% 20%, rgba(200, 130, 50, .17), transparent 65%), linear-gradient(180deg, #2C2319, #1A150F);
+  box-shadow: inset 0 0 0 1px #9C7A42, inset 0 0 0 2px #1A140E, inset 0 0 0 3px #5A4627, inset 0 4px 0 3px rgba(255, 232, 180, .06), var(--shadow); }
+.hero::after { content: none; }
+.hero h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(30px, 4vw, 44px); letter-spacing: .01em; line-height: 1.1;
+  background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #F4DE9E; filter: none; text-shadow: 0 2px 0 #000, 0 0 14px rgba(0, 0, 0, .6); }
+.hero p { font-size: 17px; color: var(--text-soft); }
+.hero-form label { font-family: var(--font-body); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A; }
+.hero-form .input { height: 40px; font-size: 17px; background: #0B0806; color: var(--text); border-color: #3E3122; }
+
+/* cartões: números, faixas de nível, categorias e quests */
+.stat, .band-card, .cat-card, .qcard { background: var(--glass); border: 1px solid var(--tb-dark); border-radius: 4px; box-shadow: var(--tb-win), var(--shadow); }
+.stat b { font-family: var(--font-num); font-size: 28px; font-weight: 700; color: #F2D68C; text-shadow: 0 2px 0 #000; }
+.band-card b { font-family: var(--font-head); }
+.band-card:hover, .cat-card:hover, .qcard:hover { border-color: var(--tb-dark); background: var(--glass); box-shadow: inset 0 0 0 1px #A8844A, inset 0 2px 0 1px rgba(255, 232, 180, .13), 0 3px 0 rgba(0, 0, 0, .5), 0 10px 18px rgba(0, 0, 0, .35); }
+.qcard.done { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ok) 55%, var(--tb-frame)), var(--shadow); }
+.qcard h3 { font-weight: 700; font-size: 17px; }
+.qcard p { font-size: 15px; }
+html.fx-lite .qcard:hover, html.fx-lite .band-card:hover { transform: none; }
+.grid-band > h2, .section-head h2, .toolbar h1, .wiki-head h1 { font-family: var(--font-head); color: #F2D68C; text-shadow: 0 1px 0 #000; }
+.grid-band > h2 { border-bottom: 1px solid var(--tb-frame); }
+
+/* página da quest */
+.quest-hero h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.4vw, 36px); color: #F4DE9E; text-shadow: 0 2px 0 #000; }
+.quest-hero .summary { font-size: 17px; }
+.section-intro, .step-text { font-size: 16px; }
+.callout { border-radius: 4px; background: var(--glass); box-shadow: var(--tb-win); border-left-width: 3px; }
+.toc a { font-size: 14px; border-radius: 3px; }
+.toc a.current { background: linear-gradient(90deg, rgba(230, 192, 106, .20), rgba(230, 192, 106, .03)); }
+.npc-card { border-radius: 4px; }
+.modal-box { border: 1px solid var(--tb-dark); border-radius: 5px; background: linear-gradient(180deg, #2A2218, #19140E);
+  box-shadow: inset 0 0 0 1px #9C7A42, inset 0 0 0 2px #1A140E, inset 0 0 0 3px #5A4627, 0 16px 36px rgba(0, 0, 0, .6); }
+.toast { border-radius: 3px; background: #16110B; border-color: #6B5226; }
+.lang-pick { background: #0E0A07; border-color: #3E3122; border-radius: 3px; color: #F0E6CE; box-shadow: inset 0 1px 3px rgba(0, 0, 0, .7); }
+.lang-pick svg { color: #E6C06A; }
+
+/* passos: janela do Grimório; o passo feito fica verde e fecha-se até ao título (r31) */
+.step { border: 1px solid var(--tb-dark); border-radius: 4px; background: var(--glass); box-shadow: var(--tb-win), var(--shadow); }
+.step:target { border-color: var(--tb-dark); box-shadow: inset 0 0 0 1px #F2D68C, 0 0 0 2px rgba(230, 192, 106, .35); }
+.step.checked { border-color: var(--tb-dark); background: linear-gradient(180deg, #1E2416 0%, #171A10 100%); box-shadow: inset 0 0 0 1px #4E6A30, inset 0 2px 0 1px rgba(200, 255, 170, .05), var(--shadow); }
+.step-head { align-items: center; }
+.step-head h4 { font-weight: 700; font-size: 17px; }
+.step-fold { display: none; flex: none; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 3px; cursor: pointer; color: var(--text-soft);
+  border: 1px solid var(--tb-dark); background: var(--tb-stone); box-shadow: inset 0 1px 0 rgba(255, 232, 180, .1), inset 0 0 0 1px rgba(90, 70, 39, .7); }
+.step-fold:hover { color: #FFF0CC; box-shadow: inset 0 1px 0 rgba(255, 232, 180, .14), inset 0 0 0 1px #9C7A42; }
+.step-fold .ico { width: 18px; height: 18px; transition: transform .2s; }
+.step.checked .step-fold { display: inline-grid; }
+.step.checked .step-link { margin-left: auto; }
+.step.checked .step-head h4 { cursor: pointer; }
+.step.checked.open .step-fold .ico { transform: rotate(180deg); }
+.step.checked:not(.open) { padding-top: 10px; padding-bottom: 10px; align-items: center; }
+.step.checked:not(.open) .step-body > :not(.step-head) { display: none; }
+.step.checked:not(.open) .step-head h4 { margin: 0; color: var(--text-soft); }
+.step.checked:not(.open) .step-check { flex-direction: row; gap: 8px; }
+.step.checked:not(.open) .step-num { width: 32px; height: 32px; font-size: 14px; }
+.step.checked:not(.open) .tick { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .step.checked.open .step-body > :not(.step-head) { animation: stepOpen .22s ease-out; }
+  .step.checked:not(.open) { animation: stepFold .22s ease-out; }
+}
+@keyframes stepOpen { from { opacity: 0; transform: translateY(-4px); } }
+@keyframes stepFold { from { opacity: .6; } }
+@media (pointer: coarse) { .step-fold { width: 44px; height: 44px; } }
+nav.side ul + ul { margin-top: 14px; } /* visitante: páginas soltas (Início, Quests, Fontes) separadas como no Grimório */
+
+/* r31: a personagem ativa no topo, como no Grimório (.csw-btn do index.html) */
+:root { --v-knight: #EE8F64; --v-paladin: #E2BE5C; --v-sorcerer: #B39CF0; --v-druid: #7FCB93; --v-monk: #72BFE6; }
+.qchar { display: flex; align-items: center; gap: 10px; height: 46px; max-width: 310px; min-width: 0; margin-left: auto; padding: 4px 12px 4px 5px;
+  border-radius: 4px; border: 1px solid var(--tb-dark); background: var(--tb-stone); color: var(--text); text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255, 232, 180, .1), inset 0 0 0 1px rgba(90, 70, 39, .7); }
+.qchar[hidden] { display: none; }
+.qchar:hover { color: var(--text); text-decoration: none; box-shadow: inset 0 1px 0 rgba(255, 232, 180, .14), inset 0 0 0 1px #9C7A42; }
+.qchar + .search { margin-left: 0; }
+.csw-av { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; flex: none;
+  background: radial-gradient(circle, rgba(16, 12, 8, .96) 57%, transparent 59%), conic-gradient(var(--vc) calc(var(--p) * 1%), rgba(201, 164, 90, .2) 0); box-shadow: 0 0 0 1px #5A4627; }
+.csw-av .vi { --s: 24px; width: var(--s); height: var(--s); display: block; background-repeat: no-repeat; image-rendering: pixelated;
+  background-size: calc(var(--s) * var(--cols)) auto; background-position: calc(var(--x) * var(--s) * -1) calc(var(--y) * var(--s) * -1); }
+.csw-tx { display: grid; min-width: 0; text-align: left; line-height: 1.18; }
+.csw-tx b { font-family: var(--font-num); font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.csw-tx small { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 960px) { .qchar { max-width: 240px; } }
+@media (max-width: 520px) { .qchar { height: 42px; max-width: 220px; padding-right: 10px; } .qchar .csw-tx small { display: none; } .qchar + .search { margin-left: 0; } }
+/* r31: "MARCAR"/"FEITO" em Tahoma é mais largo: coluna do número maior; no telemóvel só o número (o rótulo fica no aria-label) */
+.step { grid-template-columns: 58px minmax(0, 1fr); }
+@media (max-width: 600px) { .step { grid-template-columns: 36px minmax(0, 1fr); } .step-check .tick { display: none; } }

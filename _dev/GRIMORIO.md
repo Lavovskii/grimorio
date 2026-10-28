@@ -410,7 +410,7 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - Questski: `quests/js/ponte.js` (`window.QPonte`: `char()`, `grimDone(slug)`, `setGrimDone(slug,v)`, `grimHref(tipo,título)`,
   lê `grimorio-tibia-v4`, `../data/guias.json` e `../data/search.json`); em `app.js`, `QP` usa-o no `isDone`, no "Marcar como
   concluída", no filtro "O meu nível" (`S.filters.lvlChar` = nível vem da personagem) e na wiki ("Ver no Grimório" e o switch).
-- O Original/Modern é o mesmo nos dois (`grimorio-ui`); o Modern do Questski está em `quests/css/modern.css`.
+- Desde a r31 o Questski veste o tema Tibia do Grimório e tem o mesmo menu principal (ver "Um só site" mais abaixo).
 - Janela da quest (r11): `initQuests` usa o guia do Questski quando há (`guiaOf` → `guiaQ(slug)` lê `quests/data/quests/<slug>.json`):
   `guiaCardHTML` com o lore (`legend_pt`) em destaque (`.qlore`), requisitos, recompensas fechadas e, num `details.qguide` sempre fechado
   ('tem spoilers'), o resumo e o passo a passo (`qmd` converte `{npc:}`, `{item:}`, `{creature:}`, `{spell:}`, `{key:}`, `**`/`*`). O título
@@ -468,3 +468,29 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   mortes de `data/creatures.json`).
 - Questski: o Dawnport Quest e o Tutorial avisam que Dawnport foi removida (Newhaven Update, 21/10/2025).
 - Os textos novos destas páginas estão só em português (traduções em pausa).
+
+## Um só site: Questski com o aspeto e o menu do Grimório (r31, 28/10/2026)
+- **Menu principal partilhado**: `shared/nav.js` (`window.GNAV`, carregado no `<head>` dos dois sites, depois do `shared/i18n.js`)
+  tem as secções (`GNAV.secs()` devolve uma cópia), os ícones do menu (`GNAV.ic`), as páginas públicas (`GNAV.pub`) e o menu do
+  visitante (`GNAV.guest(secs)`: Início, Quests, Wiki e Fontes; as entradas com endereço, como o Questski, são sempre públicas).
+  No `index.html`: `SECS = GNAV.secs()`, `PUBP = GNAV.pub`, `navSecs()` usa `GNAV.guest`, e os ícones do menu saíram do `IC`
+  (`Object.assign(IC, GNAV.ic)`). Mudar o menu = mudar só o `shared/nav.js`. "Quests" deixou de ter a seta de outro site.
+  Um grupo do visitante com uma só entrada que é um link (Progresso → Quests) desenha-se como link (`navX`) e, na barra de baixo,
+  vai para o endereço.
+- **Questski** (`quests/index.html`): o mesmo topo do Grimório (emblema e "Grimório de Tibia", o switch, a personagem ativa
+  `#qchar` e a pesquisa), a mesma grelha (`.shell`: 1240 px, menu de 220 px à esquerda) e, até 960 px, a barra de secções em
+  baixo e as páginas da secção em separadores (`#gsub`, "Charms | Quests"). `GNAV.render({side, bottom, sub, base:"../",
+  cur:"guias", guest})` desenha-o em links (`navDraw()` no `app.js`, em cada rota e no `storage`). O menu de cima do Questski
+  (Início, Quests, Mapa…) saiu: são os separadores (`renderTabs`, com "Progresso" e o botão "Lista").
+- A lista de quests com os filtros (`#sidebar`) é agora um painel que desliza da esquerda, aberto pelo botão "Lista" dos
+  separadores (`drawer(open)`; fecha com Esc, com o fundo ou ao mudar de página).
+- Personagem no topo do Questski: `QPonte.char()` dá também `promo`, `pct` e `world`; o desenho vem de `QPonte.avatar(voc)`,
+  que lê "grimorio-av" — o Grimório guarda aí, ao arrancar, a folha `allitems.png` (com a versão) e a posição de cada vocação (`VIX`).
+- **Aspeto**: `quests/css/style.css` usa as cores, a letra (Tahoma/Verdana no texto, Palatino nos títulos, Verdana nos números;
+  sem Google Fonts) e as peças do tema Tibia (`--tb-*`, janelas `--glass` + `--tb-win`, botões de metal, separadores de pedra,
+  rótulos em maiúsculas douradas). Só há tema escuro (o botão claro/escuro e o `tq-theme` saíram); `<html data-ui="modern">`
+  para o `shared/sites.css` dar o mesmo switch e o mesmo seletor de língua. Bloco "r31: as peças do Grimório" no fim do CSS.
+- **Passos feitos fecham-se**: ao marcar um passo, `toggleStep` fecha-o até ao título (`.step.checked:not(.open)`); o botão
+  `.step-fold` (ou um clique no título) abre e fecha (`foldStep`, `aria-expanded`). Uma ligação direta a um passo feito abre-o.
+- Corrigido de passagem: no `pointerdown` da ondulação um comentário `//` engolia o `const b=…` (erro "b is not defined" a cada clique).
+

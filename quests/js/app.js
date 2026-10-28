@@ -75,6 +75,7 @@
     clock: P('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
     hash: P('<path d="M5 9h14M5 15h14M10 3 8 21M16 3l-2 18"/>'),
     list: P('<path d="M9 6h11M9 12h11M9 18h11M4 6h.5M4 12h.5M4 18h.5"/>'),
+    chev: P('<path d="m6 9 6 6 6-6"/>'),
     layers: P('<path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/>'),
     dice: P('<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="16" r="1"/><circle cx="12" cy="12" r="1"/>'),
     upload: P('<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>'),
@@ -452,11 +453,14 @@
     const active = S.route.name === "quest" ? S.route.args[0] : null;
     const tabs = S.tabs.filter((s) => S.bySlug[s]);
     $("#tabstrip").innerHTML =
+      // r31: a lista de quests e os filtros abrem num painel (o lado esquerdo é o menu principal, como no Grimório)
+      `<button type="button" class="tab tab-list" id="listBtn" aria-controls="sidebar" aria-expanded="${document.body.classList.contains("drawer-open")}" title="Lista de quests e filtros">${icon("menu")}<span class="tab-name">Lista</span></button>` +
       `<a class="tab tab-home ${S.route.name === "home" ? "active" : ""}" href="#/" title="Início">${icon("home")}</a>` +
       `<a class="tab ${S.route.name === "quests" ? "active" : ""}" href="#/quests" title="Todas as quests">${icon("list")}<span class="tab-name">Quests</span></a>` +
       `<a class="tab ${S.route.name === "mapa" ? "active" : ""}" href="#/mapa" title="Mapa">${icon("map")}<span class="tab-name">Mapa</span></a>` +
       `<a class="tab ${S.route.name === "acessos" ? "active" : ""}" href="#/acessos" title="Que quests dão acesso a quê">${icon("key")}<span class="tab-name">Acessos</span></a>` +
       `<a class="tab ${S.route.name === "wiki" ? "active" : ""}" href="#/wiki" title="Wiki">${icon("book")}<span class="tab-name">Wiki</span></a>` +
+      `<a class="tab ${S.route.name === "progresso" ? "active" : ""}" href="#/progresso" title="Progresso">${icon("trophy")}<span class="tab-name">Progresso</span></a>` +
       tabs.map((s) => {
         const q = S.bySlug[s];
         return `<a class="tab ${s === active ? "active" : ""}" href="#/quest/${s}" data-tab="${s}" role="tab" aria-selected="${s === active}" title="${esc(q.name)}">
@@ -840,7 +844,7 @@
     let html = `<div class="step ${checked ? "checked" : ""}" id="step-${id}" data-step="${id}">
       <label class="step-check"><input type="checkbox" ${checked ? "checked" : ""} data-check="${id}" aria-label="Marcar passo ${n} como feito"><span class="step-num">${checked ? "✓" : n}</span><span class="tick">${checked ? "feito" : "marcar"}</span></label>
       <div class="step-body">
-        <div class="step-head">${st.title ? `<h4>${rich(st.title)}</h4>` : `<h4>Passo ${n}</h4>`}<a class="step-link" href="#/quest/${slug}/guia/${id}" title="Link para este passo">${icon("hash")}</a></div>
+        <div class="step-head">${st.title ? `<h4>${rich(st.title)}</h4>` : `<h4>Passo ${n}</h4>`}<a class="step-link" href="#/quest/${slug}/guia/${id}" title="Link para este passo">${icon("hash")}</a><button type="button" class="step-fold" data-fold aria-expanded="false" aria-controls="step-${id}" title="Mostrar o passo">${icon("chev")}</button></div>
         <div class="step-text">${rich(st.text)}</div>`;
     if (st.npc) {
       const npc = S.npcs[st.npc];
@@ -1077,7 +1081,7 @@
     }
     if (anchor) {
       const el = document.getElementById(anchor.startsWith("sec-") ? anchor : "step-" + anchor);
-      if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+      if (el) { if (el.classList.contains("checked")) foldStep(el, true); setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
     } else if (!same) window.scrollTo(0, 0);
     setupTocSpy();
     renderList();
@@ -1105,6 +1109,9 @@
     secs.forEach((s) => tocObserver.observe(s));
   }
 
+  // r31: passo feito: só o título; abre e fecha pelo botão (ou a clicar no título)
+  function foldSync(el) { const b = $(".step-fold", el), o = el.classList.contains("open"); if (b) { b.setAttribute("aria-expanded", String(o)); b.title = o ? "Esconder o passo" : "Mostrar o passo"; } }
+  function foldStep(el, open) { el.classList.toggle("open", open); foldSync(el); }
   function toggleStep(id, on) {
     const slug = S.route.args[0];
     const meta = S.bySlug[slug];
@@ -1119,6 +1126,8 @@
     const el = $(`[data-step="${id}"]`);
     if (el) {
       el.classList.toggle("checked", on);
+      el.classList.remove("open"); // r31: passo feito fecha-se até ao título (o botão ao lado volta a abri-lo)
+      foldSync(el);
       $(".step-num", el).textContent = on ? "✓" : $$(".step").indexOf(el) + 1;
       $(".tick", el).textContent = on ? "feito" : "marcar";
     }
@@ -1469,7 +1478,7 @@
     S.route = parseRoute();
     document.body.classList.remove("drawer-open");
     const sw = $("#swGrimorio"); if (sw) sw.href = "../";
-    $$("#mainnav a").forEach((a) => a.classList.toggle("active", a.dataset.nav === (S.route.name === "quest" ? "quests" : S.route.name)));
+    navDraw();
     if (S.route.name !== "quest") { delete view().dataset.slug; document.title = "Tibia Questski"; }
     if (questMap && !(S.route.name === "quest" && S.route.args[1] === "mapa")) { questMap.map.remove(); questMap = null; }
     if (pageMap && S.route.name !== "mapa") { pageMap.map.remove(); pageMap = null; }
@@ -1479,7 +1488,7 @@
         const sameView = prev.name === "quest" && prev.args[0] === slug && (prev.args[1] || "guia") === (tab || "guia");
         if (sameView && anchor) {
           const el = document.getElementById(anchor.startsWith("sec-") ? anchor : "step-" + anchor);
-          if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+          if (el) { if (el.classList.contains("checked")) foldStep(el, true); el.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
         }
         renderQuest(slug, tab, anchor);
         return;
@@ -1505,19 +1514,25 @@
   }
 
   // ---------------------------------------------------------------- global events
+  // r31: o menu principal do Grimório (shared/nav.js), com "Quests" aberto; sem personagem no Grimório, o menu curto do visitante
+  function navDraw() {
+    const ch = QP.char(), el = $("#qchar");
+    if (window.GNAV) GNAV.render({ side: $("#gside"), bottom: $("#gbottom"), sub: $("#gsub"), base: "../", cur: "guias", guest: !ch });
+    // a personagem ativa no topo, como no Grimório (aqui é um link para ela no Grimório)
+    el.hidden = !ch;
+    if (ch) {
+      el.title = "Abre a personagem no Grimório";
+      el.innerHTML = `<span class="csw-av" style="--vc:var(--v-${esc(ch.voc)});--p:${Math.max(0, Math.min(99, ch.pct))}">${QP.avatar(ch.voc)}</span><span class="csw-tx"><b>${esc(ch.name || ch.promo)}</b><small>${esc(ch.promo)} · nível ${ch.level}${ch.world ? ` · ${esc(ch.world)}` : ""}</small></span>`;
+    }
+  }
+  // o painel da lista de quests e dos filtros (botão "Lista" nos separadores)
+  function drawer(open) {
+    document.body.classList.toggle("drawer-open", open);
+    const b = $("#listBtn"); if (b) b.setAttribute("aria-expanded", String(open));
+    if (open) { const a = $("#questList .qitem.active"); if (a) a.scrollIntoView({ block: "center" }); }
+  }
   function bindGlobal() {
-    const themeBtn = $("#themeToggle");
-    const paintTheme = () => { const dark = document.documentElement.dataset.theme === "dark"; themeBtn.innerHTML = icon(dark ? "sun" : "moon"); themeBtn.title = dark ? "Mudar para tema claro" : "Mudar para tema escuro"; };
-    paintTheme();
-    themeBtn.onclick = () => {
-      const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = t;
-      try { localStorage.setItem("tq-theme", t); } catch (e) { /* ignore */ }
-      paintTheme();
-    };
-    $("#menuBtn").innerHTML = icon("menu");
-    $("#menuBtn").onclick = () => document.body.classList.toggle("drawer-open");
-    $("#scrim").onclick = () => document.body.classList.remove("drawer-open");
+    $("#scrim").onclick = () => drawer(false);
     $(".search-ico").innerHTML = ICONS.search;
     $$("[data-close]").forEach((b) => (b.innerHTML = icon("close")));
 
@@ -1546,6 +1561,9 @@
       const t = e.target;
       const closeTabBtn = t.closest("[data-close-tab]");
       if (closeTabBtn) { e.preventDefault(); e.stopPropagation(); closeTab(closeTabBtn.dataset.closeTab); return; }
+      if (t.closest("#listBtn")) { drawer(!document.body.classList.contains("drawer-open")); return; }
+      const fold = t.closest("[data-fold]") || (!t.closest("a, button, [data-npc], [data-say], [data-coord]") && t.closest(".step.checked .step-head h4"));
+      if (fold) { const st = fold.closest(".step"); foldStep(st, !st.classList.contains("open")); return; }
       if (t.closest("#tabsClear")) { const keep = S.route.name === "quest" ? [S.route.args[0]] : []; S.tabs = keep; save("tq-tabs", S.tabs); renderTabs(); return; }
       const npc = t.closest("[data-npc]");
       if (npc && !e.ctrlKey && !e.metaKey && S.npcs[npc.dataset.npc] && S.npcs[npc.dataset.npc].x != null) { e.preventDefault(); openNpc(npc.dataset.npc); return; }
@@ -1581,7 +1599,7 @@
       if (e.key === "Escape") {
         if (!$("#lightbox").hidden) $("#lightbox").hidden = true;
         else if (!$("#mapModal").hidden) closeModal();
-        else document.body.classList.remove("drawer-open");
+        else drawer(false);
       } else if (!$("#lightbox").hidden && (e.key === "ArrowLeft" || e.key === "ArrowRight")) lbStep(e.key === "ArrowLeft" ? -1 : 1);
       else if (e.key === "/" && !typing) { e.preventDefault(); search.focus(); search.select(); }
       else if (e.key === "Enter" && e.target.matches(".minimap")) e.target.click();
@@ -1594,7 +1612,7 @@
       if (e.key !== "grimorio-tibia-v4" || grimSig() === lastSig) return;
       lastSig = grimSig();
       const ch = QP.char(); if (ch && ch.level && S.filters.lvlChar) S.filters.level = ch.level;
-      const y = window.scrollY; renderFilters(); render(); window.scrollTo(0, y);
+      const y = window.scrollY; renderFilters(); render(); navDraw(); window.scrollTo(0, y);
     });
   }
 

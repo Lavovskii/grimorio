@@ -1,31 +1,22 @@
 <!doctype html>
-<html lang="pt-PT" data-theme="dark">
+<html lang="pt-PT" data-theme="dark" data-ui="modern">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- línguas: decide a língua e carrega os dicionários antes de tudo (partilhado com o Grimório) -->
-<script src="../shared/i18n.js?v=20261027a" data-q></script>
+<script src="../shared/i18n.js?v=20261028a" data-q></script>
+<!-- o menu principal, o mesmo do Grimório -->
+<script src="../shared/nav.js?v=20261028a"></script>
 <title>Tibia Questski</title>
 <meta name="description" content="Guias passo-a-passo de todas as quests do Tibia, do nível 1 ao endgame, com mapas, coordenadas e capturas.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="css/style.css?v=20261027t">
+<link rel="stylesheet" href="css/style.css?v=20261028a">
 <link rel="stylesheet" href="../shared/sites.css?v=20261027t">
 <script>
-  (function () {
-    var t = null;
-    try { t = localStorage.getItem("tq-theme"); } catch (e) {}
-    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", t);
-  })();
-</script>
-<script>
-  /* r28: volta o visual Original (pedra e ouro), que já é o do cliente do Tibia e combina com o tema Tibia do Grimório;
-     o Modern "Neon Arcano" (css/modern.css) saiu por pesar nas placas gráficas antigas.
+  /* r31: o Questski veste o tema Tibia do Grimório (css/style.css: as mesmas cores, letra, topo e menu; só tema escuro).
+     O Modern "Neon Arcano" (css/modern.css) saiu na r28 por pesar nas placas gráficas antigas.
      html.fx-lite: a mesma escolha de efeitos do Grimório ("grimorio-fx", rodapé do Grimório) ou um PC fraco. */
   (function () {
     var d = document.documentElement, n = navigator, f = "";
@@ -36,35 +27,22 @@
 </head>
 <body>
 <header class="topbar">
-  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Lista de quests" title="Lista de quests"></button>
-  <a class="brand" href="#/" aria-label="Tibia Questski — início">
-    <img src="assets/logo-mark.webp" alt="" class="brand-logo" width="84" height="56">
-    <span class="brand-text"><span class="brand-tibia">Tibia</span><span class="brand-quest">Questski</span></span>
-  </a>
+  <div class="in">
+  <a class="brand" href="../" aria-label="Grimório de Tibia — início"><svg class="sig" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h15a5 5 0 0 1 5 5v17H11a5 5 0 0 1-5-5z"/><path d="M6 22a5 5 0 0 1 5-5h15"/><path d="M15 8l1.5 3 3 .4-2.2 2 .6 3-2.9-1.5-2.9 1.5.6-3-2.2-2 3-.4z" fill="currentColor" stroke="none"/></svg><b>Grimório de Tibia</b></a>
   <nav class="sitesw" aria-label="Mudar de site"><a href="../" id="swGrimorio" title="Hunts, builds, equipamento e wiki"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M5 16a4 4 0 0 1 4-4h11"/></svg><span>Grimório</span></a><a href="./" aria-current="page" title="Guias de quests passo a passo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg><span>Questski</span></a></nav>
-  <nav class="mainnav" id="mainnav">
-    <a href="#/" data-nav="home">Início</a>
-    <a href="#/quests" data-nav="quests">Quests</a>
-    <a href="#/mapa" data-nav="mapa">Mapa</a>
-    <a href="#/acessos" data-nav="acessos">Acessos</a>
-    <a href="#/wiki" data-nav="wiki">Wiki</a>
-    <a href="#/progresso" data-nav="progresso">Progresso</a>
-  </nav>
+  <a class="qchar" id="qchar" href="../#inicio" hidden></a>
   <label class="search">
     <span class="search-ico" aria-hidden="true"></span>
     <input id="search" type="search" placeholder="Procurar quest, item, NPC…" autocomplete="off" spellcheck="false">
     <kbd>/</kbd>
   </label>
-  <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Mudar entre tema claro e escuro" title="Tema claro / escuro"></button>
+  </div>
 </header>
 
-<div class="layout">
-  <aside class="sidebar" id="sidebar" aria-label="Lista de quests">
-    <div class="sidebar-filters" id="sidebarFilters"></div>
-    <div class="sidebar-list" id="questList"></div>
-  </aside>
-  <div class="scrim" id="scrim"></div>
+<div class="shell">
+  <nav class="side" id="gside" aria-label="Secções"></nav>
   <main class="main" id="main">
+    <div class="gsub" id="gsub"></div>
     <div class="tabstrip" id="tabstrip" role="tablist" aria-label="Quests abertas"></div>
     <div class="view" id="view"></div>
     <footer class="footer">
@@ -73,6 +51,12 @@
     </footer>
   </main>
 </div>
+<nav class="bottom" id="gbottom" aria-label="Secções"></nav>
+<aside class="sidebar" id="sidebar" aria-label="Lista de quests">
+  <div class="sidebar-filters" id="sidebarFilters"></div>
+  <div class="sidebar-list" id="questList"></div>
+</aside>
+<div class="scrim" id="scrim"></div>
 
 <div class="modal" id="mapModal" hidden>
   <div class="modal-box">
@@ -95,7 +79,7 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="vendor/leaflet/leaflet.js"></script>
-<script src="js/ponte.js"></script>
-<script src="js/app.js"></script>
+<script src="js/ponte.js?v=20261028a"></script>
+<script src="js/app.js?v=20261028a"></script>
 </body>
 </html>
