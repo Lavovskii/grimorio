@@ -907,12 +907,12 @@
   "c": "index.html: eps.push({q:keyQ.q,t:`Fazer <b>${esc(qName(keyQ.q))}</b>`,d:`Abre ${keyQ.p.n}${q?(q.s===\"solo\"?\" — fazes sozinho.\":q.s===\"parcial\"?\" — sozinho até à luta final.\":\" — pede grupo.\"):\"\"}`}); } const ws=(G.",
   "k": "x"
  },
- "Abre o Hunt Analyzer e compara loot com supplies a cada sessão.": {
-  "c": "index.html (HTML)",
+ "Abre a personagem no Grimório": {
+  "c": "quests/js/app.js: imório) el.hidden = !ch; if (ch) { el.title = \"Abre a personagem no Grimório\"; el.innerHTML",
   "k": "x"
  },
- "Abre o Questski, o site dos guias de quests": {
-  "c": "index.html: ara outro site, não painéis const navX = (id,t,href,cls) => `<a class=\"navx${cls||\"\"}\" href=\"${href}\" title=\"Abre o Questski, o site dos guias de quests\">${cls?\"\":IC[id]||\"\"}${t}<svg class=\"nx-go\" viewBox=\"0 0 24 24\" fil",
+ "Abre o Hunt Analyzer e compara loot com supplies a cada sessão.": {
+  "c": "index.html (HTML)",
   "k": "x"
  },
  "Abre outras quests": {
@@ -992,7 +992,7 @@
   "k": "p"
  },
  "Acessos": {
-  "c": "quests/index.html (HTML)",
+  "c": "quests/js/app.js: icon(\"map\")}<span class=\"tab-name\">Mapa</span></a>` + `<a class=\"tab ${S.route.name === \"acessos\" ? \"active\" : \"\"}\" href=\"#/acessos\" title=\"Que quests dão acesso a quê\">${icon(\"key\")}<span class=\"tab-name\">Acessos</span>",
   "k": "x"
  },
  "Achievements": {
@@ -1408,7 +1408,7 @@
   "k": "x"
  },
  "ArrowLeft": {
-  "c": "quests/js/app.js: en\"); } else if (!$(\"#lightbox\").hidden && (e.key === \"ArrowLeft\" || e.key === \"Arrow",
+  "c": "quests/js/app.js: lse); } else if (!$(\"#lightbox\").hidden && (e.key === \"ArrowLeft\" || e.key === \"Arrow",
   "k": "x"
  },
  "ArrowRight": {
@@ -1872,7 +1872,7 @@
   "k": "x"
  },
  "Build": {
-  "c": "index.html: [\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"R",
+  "c": "index.html: s=\"wsep\">.</span></p></div>`; $(\"wheelTable\").innerHTML = `<thead><tr><th>Pontos</th><th>Nível</th><th>Build</th><th>Código</th></tr></thead><tbody>` + ws.map((w,i)=>{ c",
   "k": "x"
  },
  "Build completa para os teus pontos.": {
@@ -2960,7 +2960,7 @@
   "k": "x"
  },
  "Defesa": {
-  "c": "index.html: {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"",
+  "c": "index.html: t kv=[[\"arm\",\"Armadura\",t.arm]]; if(t.def) kv.push([\"def\",\"Defesa\",t.def]); if(t.wd)",
   "k": "x"
  },
  "Defesa e blessings": {
@@ -3343,6 +3343,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Elder Druid": {
+  "c": "quests/js/ponte.js: ladin: \"Royal Paladin\", sorcerer: \"Master Sorcerer\", druid: \"Elder Druid\", monk: \"Exalted Mon",
+  "k": "x"
+ },
  "Electrify (energia)": {
   "c": "index.html: o)\",e_fire:\"Scorch (fogo)\",e_earth:\"Venom (terra)\",e_energy:\"Electrify (energia)\",e_death:\"Reap (mort",
   "k": "x"
@@ -3365,6 +3369,10 @@
  },
  "Elemento: todos": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Elite Knight": {
+  "c": "quests/js/ponte.js: , druid: \"Druid\", monk: \"Monk\" }; const PROMO = { knight: \"Elite Knight\", paladin: \"Royal Pa",
   "k": "x"
  },
  "Em cada subárea, uma spawn comum ou incomum transforma-se em Echo Raid no Server Save; depois de ativada, volta a aparecer nessa área ao fim de cerca de 20-30 minutos.": {
@@ -3607,6 +3615,10 @@
   "c": "quests/js/app.js: ocaleCompare(b.name)); $(\"#sidebarFilters\").innerHTML = ` <details class=\"filters\" ${f.open ? \"open\" : \"\"}> <summary class=\"filter-summary\"><span><b id=\"fcount\"></b></span><span class=\"link-btn\">Filtros</span></summary> ",
   "k": "x"
  },
+ "Esconder o passo": {
+  "c": "quests/js/app.js: { b.setAttribute(\"aria-expanded\", String(o)); b.title = o ? \"Esconder o passo\" : \"Mostrar o passo\"",
+  "k": "x"
+ },
  "Escreve as coordenadas como x, y, z": {
   "c": "quests/js/app.js: p.focusOn(n[0], n[1], n[2] ?? 7, \"\", 2.5); else toast(\"Escreve as coordenadas como x, y, z\"); }; $(\"#sh",
   "k": "x"
@@ -3802,6 +3814,10 @@
  "Exaltation Forge{0}": {
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "p"
+ },
+ "Exalted Monk": {
+  "c": "quests/js/ponte.js: \", sorcerer: \"Master Sorcerer\", druid: \"Elder Druid\", monk: \"Exalted Monk\" }; const GK = { i",
+  "k": "x"
  },
  "Exalted core ≈": {
   "c": "index.html: t.core)), s=val(row(+pr.dataset.sliver)); pr.textContent=[c?`Exalted core ≈ ${gp(c)}`:\"\", s?`sliver ≈ ${g",
@@ -4123,10 +4139,6 @@
   "c": "index.html: ns\":\"Arma de monk\",\"Spellbooks\":\"Spellbook\",\"Light Sources\":\"Fonte de luz\",\"Trophies\":\"Troféu\"",
   "k": "x"
  },
- "Fontes": {
-  "c": "index.html: esa\"],[\"ask\",\"Perguntar\"],[\"perso\",\"Personagens\"],[\"fontes\",\"Fontes\"]]} ]; const HAS_AI ",
-  "k": "x"
- },
  "Fontes e método": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4429,6 +4441,10 @@
  },
  "Grimório de Tibia": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Grimório de Tibia — início": {
+  "c": "quests/index.html (HTML)",
   "k": "x"
  },
  "Grupo": {
@@ -5295,6 +5311,10 @@
   "c": "index.html: Documents and Papers\":\"Documento\",\"Extra Slot\":\"Slot extra\",\"Liquids\":\"Líquido\",\"Plants a",
   "k": "x"
  },
+ "Lista": {
+  "c": "quests/js/app.js: o lado esquerdo é o menu principal, como no Grimório) `<button type=\"button\" class=\"tab tab-list\" id=\"listBtn\" aria-controls=\"sidebar\" aria-expanded=\"${document.body.classList.contains(\"drawer-open\")}\" title=\"Lista de qu",
+  "k": "x"
+ },
  "Lista anti-prejuízo": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5305,6 +5325,10 @@
  },
  "Lista de quests": {
   "c": "quests/index.html (HTML)",
+  "k": "x"
+ },
+ "Lista de quests e filtros": {
+  "c": "quests/js/app.js: o lado esquerdo é o menu principal, como no Grimório) `<button type=\"button\" class=\"tab tab-list\" id=\"listBtn\" aria-controls=\"sidebar\" aria-expanded=\"${document.body.classList.contains(\"drawer-open\")}\" title=\"Lista de qu",
   "k": "x"
  },
  "Livro": {
@@ -5695,6 +5719,10 @@
   "c": "index.html: ular/Greater Gem) const GEMVN = {knight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", d",
   "k": "x"
  },
+ "Master Sorcerer": {
+  "c": "quests/js/ponte.js: knight: \"Elite Knight\", paladin: \"Royal Paladin\", sorcerer: \"Master Sorcerer\", druid: \"Elder Drui",
+  "k": "x"
+ },
  "Mastery": {
   "c": "index.html: ath\",holy:\"p_holy\"}; const BSSTG=[\"—\",\"Prowess\",\"Expertise\",\"Mastery\"]; const bsT = s => ",
   "k": "x"
@@ -5844,7 +5872,7 @@
   "k": "x"
  },
  "Monk": {
-  "c": "quests/js/ponte.js: din: \"Paladin\", sorcerer: \"Sorcerer\", druid: \"Druid\", monk: \"Monk\" }; const GK = { i",
+  "c": "quests/js/ponte.js: din: \"Paladin\", sorcerer: \"Sorcerer\", druid: \"Druid\", monk: \"Monk\" }; const PROMO = ",
   "k": "x"
  },
  "Monk Adjustments (1 set 2026)": {
@@ -5927,6 +5955,10 @@
   "c": "quests/js/app.js: a>`).join(\"\")}</div> ${list.length > shown.length ? `<p style=\"text-align:center;margin-top:16px\"><button class=\"btn btn-ghost\" id=\"wikiMore\">Mostrar mais (${list.length - shown.length})</button></p>` : \"\"}`; const",
   "k": "p"
  },
+ "Mostrar o passo": {
+  "c": "quests/js/app.js: ug); const checked = !!(p.s && p.s[id]); let html = `<div class=\"step ${checked ? \"checked\" : \"\"}\" id=\"step-${id}\" data-step=\"${id}\"> <label class=\"step-check\"><input type=\"checkbox\" ${checked ? \"checked\" : \"\"} data-chec",
+  "k": "x"
+ },
  "Mostrar só": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
   "k": "x"
@@ -5941,18 +5973,6 @@
  },
  "Mudar de site": {
   "c": "index.html (HTML)",
-  "k": "x"
- },
- "Mudar entre tema claro e escuro": {
-  "c": "quests/index.html (HTML)",
-  "k": "x"
- },
- "Mudar para tema claro": {
-  "c": "quests/js/app.js: HTML = icon(dark ? \"sun\" : \"moon\"); themeBtn.title = dark ? \"Mudar para tema claro\" : \"Mudar para tema ",
-  "k": "x"
- },
- "Mudar para tema escuro": {
-  "c": "quests/js/app.js:  \"moon\"); themeBtn.title = dark ? \"Mudar para tema claro\" : \"Mudar para tema escuro\"; }; paintTheme(",
   "k": "x"
  },
  "Multi Action Button": {
@@ -8140,7 +8160,7 @@
   "k": "p"
  },
  "Quests": {
-  "c": "quests/index.html (HTML)",
+  "c": "index.html: ens\",\"item\"],s:[\"Feitiços\",\"feitiço\"],r:[\"Runas\",\"runa\"],q:[\"Quests\",\"quest\"],g:[\"Guias ",
   "k": "x"
  },
  "Quests abertas": {
@@ -8429,6 +8449,10 @@
  },
  "Rotten Blood mais pobre e menos sensível": {
   "c": "index.html:  atualiza-se sozinha todos os dias).\"]}, {d:\"2026-10-27\",t:\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gl",
+  "k": "x"
+ },
+ "Royal Paladin": {
+  "c": "quests/js/ponte.js: Monk\" }; const PROMO = { knight: \"Elite Knight\", paladin: \"Royal Paladin\", sorcerer: \"Master ",
   "k": "x"
  },
  "Ruas": {
@@ -9471,10 +9495,6 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
- "Tema claro / escuro": {
-  "c": "quests/index.html (HTML)",
-  "k": "x"
- },
  "Templo de": {
   "c": "index.html:  · ~${r.c} sqm a pé</span>`; const steps=[[-1,{i:\"home\",t:`Templo de ${r.s}`,d:t?`${t[0]}, ${t[1",
   "k": "x"
@@ -9563,10 +9583,6 @@
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
- "Tibia": {
-  "c": "quests/index.html (HTML)",
-  "k": "x"
- },
  "Tibia Coins": {
   "c": "index.html: d.length>1?`+${x.speed} de velocidade`:\"\", x.store&&x.price?`${nf(x.price)} Tibia Coins`:\"\", x.prem?\"premium",
   "k": "x"
@@ -9581,10 +9597,6 @@
  },
  "Tibia Questski — feiticeira num jetski": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
-  "k": "x"
- },
- "Tibia Questski — início": {
-  "c": "quests/index.html (HTML)",
   "k": "x"
  },
  "TibiaMaps — Charm Optimizer": {
@@ -10340,7 +10352,7 @@
   "k": "x"
  },
  "Wheel": {
-  "c": "index.html: d\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipame",
+  "c": "index.html: .voc]||[]).forEach(w=>{ if(w.p+50<=520) ev.push({l:w.p+50,k:\"Wheel\",t:`${w.p} pontos: $",
   "k": "x"
  },
  "Wheel of Destiny": {
@@ -10574,6 +10586,10 @@
  "a um NPC por {0} gp": {
   "c": "r13: npcTo + \" por N gp\" (página do item, Loot e lucro)",
   "k": "p"
+ },
+ "a, button, [data-npc], [data-say], [data-coord]": {
+  "c": "quests/js/app.js:  const fold = t.closest(\"[data-fold]\") || (!t.closest(\"a, button, [data-npc], [data-say], [data-coord]\") && t.closest(\".ste",
+  "k": "x"
  },
  "abilities": {
   "c": "quests/js/app.js: lacionadas\", \"location\": \"Localização\", \"loot\": \"Loot\", \"abilities\": \"Habilidades\", \"be",
@@ -11011,10 +11027,6 @@
   "c": "index.html: get:\"alvo\",heal_self:\"cura\",heal_party:\"cura de grupo\",buff:\"buff\",stance:\"stance\",uti",
   "k": "x"
  },
- "build": {
-  "c": "index.html: ,\"Hunts\"],[\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"r",
-  "k": "x"
- },
  "build física": {
   "c": "index.html: } const WNOTE = {\"Holy Build\":\"build holy\",\"Physical Build\":\"build física\",\"Base Bossing Build",
   "k": "x"
@@ -11064,7 +11076,7 @@
   "k": "x"
  },
  "calc": {
-  "c": "index.html: Cs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"d",
+  "c": "index.html: ades\") renderNews(); if(p===\"sistemas\") renderSys(); if(p===\"calc\") renderCalc(); if",
   "k": "x"
  },
  "calcas": {
@@ -11124,7 +11136,7 @@
   "k": "x"
  },
  "charms": {
-  "c": "index.html: [\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"guias\",",
+  "c": "index.html: cation.hash=x; } // r5-t2 else if(t===\"ch\") mdVT(()=>{ go(\"charms\"); charmFocus(k); })",
   "k": "x"
  },
  "chars": {
@@ -11145,6 +11157,10 @@
  },
  "chest": {
   "c": "quests/js/app.js: \", icon: \"scroll\" }, tesouro: { label: \"Tesouro\", icon: \"chest\" }, outfit: { la",
+  "k": "x"
+ },
+ "chev": {
+  "c": "quests/js/app.js: \" aria-controls=\"step-${id}\" title=\"Mostrar o passo\">${icon(\"chev\")}</button></div> ",
   "k": "x"
  },
  "cidade": {
@@ -11216,7 +11232,7 @@
   "k": "x"
  },
  "colecoes": {
-  "c": "index.html: uras\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\",\"Coleções\"]]}, {id",
+  "c": "index.html:  !m?\"itens\":m[1]===\"feitico\"?\"feiticos\":m[1]===\"npc\"?\"npcs\":\"colecoes\"; } const secOf = p ",
   "k": "x"
  },
  "com Shift: para criaturas que resistem a": {
@@ -11464,7 +11480,7 @@
   "k": "x"
  },
  "criaturas": {
-  "c": "index.html: iki\",subs:[[\"sistemas\",\"Sistemas novos\"],[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feit",
+  "c": "index.html: ){ if(p===\"item\") return \"itens\"; if(p===\"criatura\") return \"criaturas\"; if(p!==\"wiki2\") re",
   "k": "x"
  },
  "criaturas fiendish (raramente, bosses Archfoe)": {
@@ -11500,7 +11516,7 @@
   "k": "x"
  },
  "crusader helmet": {
-  "c": "index.html: 2-7-5l-2-4a2 2 0 0 1 3-2l2 2\"/>') }; const VOCITEM={knight:\"crusader helmet\",paladin:\"royal cros",
+  "c": "index.html: \"/>') }; Object.assign(IC, GNAV.ic); const VOCITEM={knight:\"crusader helmet\",paladin:\"royal cros",
   "k": "x"
  },
  "crystal coin": {
@@ -11587,10 +11603,6 @@
   "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
   "k": "x"
  },
- "dark": {
-  "c": "quests/js/app.js: > { const dark = document.documentElement.dataset.theme === \"dark\"; themeBtn.innerHTML",
-  "k": "x"
- },
  "darklightcore": {
   "c": "index.html: mais pobre e menos sensível\",h:[\"jadedroots\",\"gloompillars\",\"darklightcore\"],li:[\"Jaded Roots: ",
   "k": "x"
@@ -11672,7 +11684,7 @@
   "k": "x"
  },
  "defesa": {
-  "c": "index.html: es\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"calc\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"P",
+  "c": "index.html: -kv\"><div><b>${T.arm}</b><span>armadura</span></div>${T.def?`<div><b>${T.def}</b><span>defesa</span></div>`:\"\"}${sk.map(([x,v])",
   "k": "x"
  },
  "deliv": {
@@ -12052,7 +12064,7 @@
   "k": "x"
  },
  "equip": {
-  "c": "index.html: d\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, ",
+  "c": "index.html: s\") s.ui.p=\"rotacao\"; /* r13 */ if(s.ui.p===\"imbu\"){ s.ui.p=\"equip\"; s.ui.eqv=\"imbu\"; }",
   "k": "x"
  },
  "equipa": {
@@ -12256,7 +12268,7 @@
   "k": "x"
  },
  "feiticos": {
-  "c": "index.html: stemas novos\"],[\"itens\",\"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\"",
+  "c": "index.html: exec(location.hash||\"\"); return !m?\"itens\":m[1]===\"feitico\"?\"feiticos\":m[1]===\"npc\"?\"npcs\"",
   "k": "x"
  },
  "feitiço": {
@@ -12353,10 +12365,6 @@
  },
  "foi preenchida à mão. Liga-a ao Tibia para o nível, o mundo e as skills se atualizarem sozinhos.": {
   "c": "index.html: nction profHTML(c){ if(!c) return \"\"; if(!c.tib) return `<div class=\"card\" style=\"display:grid;gap:8px\"><h3 style=\"font-size:20px\">Perfil no Tibia</h3><p class=\"small muted\">${esc(c.name)} foi preenchida à mão. Liga-a ao",
-  "k": "x"
- },
- "fontes": {
-  "c": "index.html: esa\",\"Defesa\"],[\"ask\",\"Perguntar\"],[\"perso\",\"Personagens\"],[\"fontes\",\"Fontes\"]]} ]; cons",
   "k": "x"
  },
  "fora": {
@@ -12600,7 +12608,7 @@
   "k": "x"
  },
  "guias": {
-  "c": "index.html: o\"]]}, {id:\"prog\",t:\"Progresso\",subs:[[\"charms\",\"Charms\"],[\"guias\",\"Quests\",\"quests/\"]",
+  "c": "index.html:  GUIASP=null; const guiasLoad = () => GUIASP||(GUIASP=dsafe(\"guias\").then(d=>{ if(d&&Ar",
   "k": "x"
  },
  "h {0} min": {
@@ -12616,7 +12624,7 @@
   "k": "x"
  },
  "hash": {
-  "c": "quests/js/app.js: est/${slug}/guia/${id}\" title=\"Link para este passo\">${icon(\"hash\")}</a></div> ",
+  "c": "quests/js/app.js: est/${slug}/guia/${id}\" title=\"Link para este passo\">${icon(\"hash\")}</a><button type=\"",
   "k": "x"
  },
  "hashchange": {
@@ -12720,7 +12728,7 @@
   "k": "x"
  },
  "hunts": {
-  "c": "index.html: subs:[[\"inicio\",\"Início\"],[\"novidades\",\"Novidades\"]]}, {id:\"hunts\",t:\"Hunts\",subs:[[\"h",
+  "c": "index.html:  ST.ui.hf.city=hit; else ST.ui.hf.cls=[hit]; } save(); go(\"hunts\"); if(ST.chars.lengt",
   "k": "x"
  },
  "hunts lado a lado": {
@@ -12796,7 +12804,7 @@
   "k": "x"
  },
  "inicio": {
-  "c": "index.html:  /* ---------- navigation ---------- */ const SECS = [ {id:\"inicio\",t:\"Início\",subs:[[\"",
+  "c": "index.html: lts(){ return {v:4, active:null, chars:[], custom:[], ui:{p:\"inicio\",band:null,cat:\"all\"",
   "k": "x"
  },
  "inkborn": {
@@ -12848,7 +12856,7 @@
   "k": "x"
  },
  "itens": {
-  "c": "index.html: , {id:\"wiki\",t:\"Wiki\",subs:[[\"sistemas\",\"Sistemas novos\"],[\"itens\",\"Itens\"],[\"criatura",
+  "c": "index.html:  lista de onde vêm function navOf(p){ if(p===\"item\") return \"itens\"; if(p===\"criatura\")",
   "k": "x"
  },
  "itens + {0} gp{1}": {
@@ -12951,10 +12959,6 @@
   "c": "index.html: sh(`+${it.wel[1]} ${ELN[it.wel[0]]}`); if(it.bond) p.push(`ligação elemental: ${(ELN[it.bond]||it.bond).toLowerCase()}`); if(it.wd) p.pus",
   "k": "p"
  },
- "light": {
-  "c": "quests/js/app.js: nst t = document.documentElement.dataset.theme === \"dark\" ? \"light\" : \"dark\"; doc",
-  "k": "x"
- },
  "linha principal": {
   "c": "index.html: rx-row\"><h4>${chip(r.el)}<span class=\"small muted\">${r.main?\"linha principal\":\"com Shift: para cr",
   "k": "x"
@@ -13053,10 +13057,6 @@
  },
  "maior": {
   "c": "index.html: |{}).forEach(([k,c])=>add(\"ch\",k,c.n,`Charm ${c.t===\"major\"?\"maior\":\"menor\"}`)); Obje",
-  "k": "x"
- },
- "mais": {
-  "c": "index.html: \"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\",\"Coleções\"]]}, {id:\"mais\",t:\"Mais\",subs:[[\"ca",
   "k": "x"
  },
  "mais calma do que o costume": {
@@ -13188,7 +13188,7 @@
   "k": "x"
  },
  "menu": {
-  "c": "quests/js/app.js:  paintTheme(); }; $(\"#menuBtn\").innerHTML = icon(\"menu\"); $(\"#menuBtn\")",
+  "c": "quests/js/app.js: s(\"drawer-open\")}\" title=\"Lista de quests e filtros\">${icon(\"menu\")}<span class=\"tab-n",
   "k": "x"
  },
  "mesma vocação": {
@@ -13245,10 +13245,6 @@
  },
  "month": {
   "c": "index.html: if(s<86400*365) return RTF.format(-Math.round(s/86400/30.4),\"month\"); return RTF.format",
-  "k": "x"
- },
- "moon": {
-  "c": "quests/js/app.js: .theme === \"dark\"; themeBtn.innerHTML = icon(dark ? \"sun\" : \"moon\"); themeBtn.title = ",
   "k": "x"
  },
  "more": {
@@ -13516,7 +13512,7 @@
   "k": "x"
  },
  "novidades": {
-  "c": "index.html: ECS = [ {id:\"inicio\",t:\"Início\",subs:[[\"inicio\",\"Início\"],[\"novidades\",\"Novidades\"]]}, {i",
+  "c": "index.html: renderNpcList(); if(p===\"colecoes\") renderColList(); if(p===\"novidades\") renderNews(); if(p",
   "k": "x"
  },
  "npcpos": {
@@ -13524,7 +13520,7 @@
   "k": "x"
  },
  "npcs": {
-  "c": "index.html: \"Itens\"],[\"criaturas\",\"Criaturas\"],[\"feiticos\",\"Feitiços\"],[\"npcs\",\"NPCs\"],[\"colecoes\"",
+  "c": "index.html:  return !m?\"itens\":m[1]===\"feitico\"?\"feiticos\":m[1]===\"npc\"?\"npcs\":\"colecoes\"; } const",
   "k": "x"
  },
  "null": {
@@ -13928,7 +13924,7 @@
   "k": "x"
  },
  "perso": {
-  "c": "index.html: c\",\"Calculadoras\"],[\"defesa\",\"Defesa\"],[\"ask\",\"Perguntar\"],[\"perso\",\"Personagens\"],[\"fo",
+  "c": "index.html: ) return; if(b.dataset.add){ draft=null; look=newLook(); go(\"perso\"); renderPerso(); co",
   "k": "x"
  },
  "perto de": {
@@ -14179,12 +14175,8 @@
   "c": "index.html: mer Update 2026 (15.30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"proficiency\", \"t\": \"Weapon Profi",
   "k": "x"
  },
- "prog": {
-  "c": "index.html: hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"Equipamento\"]]}, {id:\"prog\",t:\"Progresso\",subs:",
-  "k": "x"
- },
  "progresso": {
-  "c": "quests/js/app.js: = null; } renderMapPage(S.route.args[0]); break; case \"progresso\": renderProgress(); ",
+  "c": "quests/js/app.js: >Wiki</span></a>` + `<a class=\"tab ${S.route.name === \"progresso\" ? \"active\" : \"\"}\" h",
   "k": "x"
  },
  "properties": {
@@ -14496,7 +14488,7 @@
   "k": "x"
  },
  "rotacao": {
-  "c": "index.html: es\"],[\"tarefas\",\"Tarefas\"]]}, {id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"",
+  "c": "index.html: bject.assign(s.ui, d.ui||{}); if(s.ui.p===\"hotkeys\") s.ui.p=\"rotacao\"; /* r13 */ if(s.ui.",
   "k": "x"
  },
  "rotacoes": {
@@ -14516,7 +14508,7 @@
   "k": "x"
  },
  "royal crossbow": {
-  "c": "index.html:  2\"/>') }; const VOCITEM={knight:\"crusader helmet\",paladin:\"royal crossbow\",sorcerer:\"wand of i",
+  "c": "index.html:  GNAV.ic); const VOCITEM={knight:\"crusader helmet\",paladin:\"royal crossbow\",sorcerer:\"wand of i",
   "k": "x"
  },
  "rtsel": {
@@ -14768,7 +14760,7 @@
   "k": "x"
  },
  "sistemas": {
-  "c": "index.html: [\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"sistemas\",\"Sistemas novos\"],[",
+  "c": "index.html: ) renderColList(); if(p===\"novidades\") renderNews(); if(p===\"sistemas\") renderSys(); if(p=",
   "k": "x"
  },
  "skill": {
@@ -14880,7 +14872,7 @@
   "k": "p"
  },
  "span": {
-  "c": "index.html: pg=card.querySelector(\".qprog\"); if(pg){ pg.querySelector(\"span\").textContent=`${nd}",
+  "c": "index.html:  está o de cada vocação try{ const t=document.createElement(\"span\"); t.className=\"vi\";",
   "k": "x"
  },
  "spark": {
@@ -15104,7 +15096,7 @@
   "k": "x"
  },
  "tarefas": {
-  "c": "index.html: nts\",t:\"Hunts\",subs:[[\"hunts\",\"Hunts\"],[\"bosses\",\"Bosses\"],[\"tarefas\",\"Tarefas\"]]}, {id:",
+  "c": "index.html: seSheet({nav:true}); ST.ui.p=p; save(); renderNav(); if(p===\"tarefas\") renderTasks(); if(",
   "k": "x"
  },
  "taxas do altar para {0} imbuement {1}": {
@@ -15312,7 +15304,7 @@
   "k": "x"
  },
  "trophy": {
-  "c": "quests/js/app.js: -glow qs-glow-ico\">${icon(unl.length ? \"key\" : ach.length ? \"trophy\" : \"chest\")}</div><s",
+  "c": "quests/js/app.js: \"active\" : \"\"}\" href=\"#/progresso\" title=\"Progresso\">${icon(\"trophy\")}<span class=\"tab-n",
   "k": "x"
  },
  "true": {
@@ -15628,7 +15620,7 @@
   "k": "x"
  },
  "wheel": {
-  "c": "index.html: id:\"build\",t:\"Build\",subs:[[\"rotacao\",\"Rotação e hotkeys\"],[\"wheel\",\"Wheel\"],[\"equip\",\"",
+  "c": "index.html: pr?`<span class=\"tag\">precisa de promoção</span>`:\"\", s.o===\"wheel\"?`<span class=\"tag a",
   "k": "x"
  },
  "wheelopt": {
@@ -15644,7 +15636,7 @@
   "k": "p"
  },
  "wiki": {
-  "c": "index.html: s:[[\"charms\",\"Charms\"],[\"guias\",\"Quests\",\"quests/\"]]}, {id:\"wiki\",t:\"Wiki\",subs:[[\"si",
+  "c": "quests/js/app.js: pos ? icon(\"pin\", \"pin\") : \"\"}${close}`; } case \"wiki\": return hre",
   "k": "x"
  },
  "wiki2": {

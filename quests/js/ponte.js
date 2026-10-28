@@ -14,6 +14,7 @@ window.QPonte = (() => {
     document.head.appendChild(st); } catch (e) { /* sem DOM */ }
   const LS = "grimorio-tibia-v4"; // estado do Grimório (versão 4: {v, active, chars:[{id,name,voc,level,done,...}]})
   const VN = { knight: "Knight", paladin: "Paladin", sorcerer: "Sorcerer", druid: "Druid", monk: "Monk" };
+  const PROMO = { knight: "Elite Knight", paladin: "Royal Paladin", sorcerer: "Master Sorcerer", druid: "Elder Druid", monk: "Exalted Monk" };
   const GK = { item: ["i", "item"], creature: ["c", "criatura"], npc: ["n", "npc"], spell: ["s", "feitico"], achievement: ["a", "conquista"] };
   const s2q = {};
   let ready = null, SXP = null, SX = null;
@@ -23,7 +24,11 @@ window.QPonte = (() => {
   // carrega a ligação quest ↔ guia antes do primeiro desenho (52 KB)
   const load = () => ready || (ready = fetch("../data/guias.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {}))
     .then((g) => { Object.entries((g && g.q2s) || {}).forEach(([id, s]) => { s2q[s] = id; }); }).catch(() => {}));
-  function char() { const c = activeOf(read()); return c ? { name: c.name || "", voc: c.voc, vn: VN[c.voc] || c.voc || "", level: +c.level || 0 } : null; }
+  function char() { const c = activeOf(read()); return c ? { name: c.name || "", voc: c.voc, vn: VN[c.voc] || c.voc || "", promo: PROMO[c.voc] || "", level: +c.level || 0, pct: +c.pct || 0, world: c.world || "" } : null; }
+  // r31: o desenho da vocação (o mesmo do topo do Grimório; a folha e as posições ficam guardadas pelo Grimório em "grimorio-av")
+  function avatar(voc) { try { const a = JSON.parse(localStorage.getItem("grimorio-av") || "null"), ix = a && a.x && a.x[voc];
+    const m = ix != null && /^url\("?([^"']*?)"?\)$/.exec(a.u); if (!m) return "";
+    return `<span class="vi" style="background-image:url('${m[1].replace(/[<>\\]/g, "")}');--x:${ix % a.c};--y:${Math.floor(ix / a.c)};--cols:${a.c}" aria-hidden="true"></span>`; } catch (e) { return ""; } }
   function grimDone(sl) { const id = s2q[sl], c = id && activeOf(read()); return !!(c && c.done && c.done[id]); }
   function setGrimDone(sl, v) { const id = s2q[sl], d = read(), c = activeOf(d); if (!id || !c) return false;
     c.done = c.done || {}; if (v) c.done[id] = true; else delete c.done[id];
@@ -33,5 +38,5 @@ window.QPonte = (() => {
   // link para a página do Grimório (ou null se o Grimório não a tem); kind = tipo da página da wiki do Questski
   async function grimHref(kind, title) { const k = GK[kind]; if (!k) return null; await sx(); const n = SX[k[0] + "|" + String(title || "").trim().toLowerCase()];
     return n ? `../#${k[1]}/${slug(n)}` : null; }
-  return { load, char, grimDone, setGrimDone, grimHref, paired: (sl) => !!s2q[sl] };
+  return { load, char, avatar, grimDone, setGrimDone, grimHref, paired: (sl) => !!s2q[sl] };
 })();
