@@ -271,8 +271,8 @@
   "c": "index.html: [0]:name)}</b><span class=\"td-s\">${lab===\"Boss em destaque\"?\"+ Bosstiary e loot\":\"+ loot, XP e besti",
   "k": "x"
  },
- "+ Juntar alguém": {
-  "c": "index.html: s=\"linkbtn\" data-pmclose=\"1\">Cancelar</button></div>` : `<button type=\"button\" class=\"btn small ghost\" data-pmopen=\"1\">+ Juntar alguém</button>`; const info = ms.",
+ "+ Juntar personagem": {
+  "c": "index.html: s=\"linkbtn\" data-pmclose=\"1\">Cancelar</button></div>` : `<button type=\"button\" class=\"btn small ghost\" data-pmopen=\"1\">+ Juntar personagem</button>`; pmRefresh(); c",
   "k": "x"
  },
  "+ Tecla": {
@@ -298,10 +298,6 @@
  "+ viagem": {
   "c": "index.html: até ${esc(r.s)} · ~${pre.c} sqm${pre.st.some(x=>x[0]===\"n\")?\" + viagem\":\"\"}</summary><ol>${",
   "k": "x"
- },
- "+ {0} do equipamento": {
-  "c": "index.html: (${base} ${src?\"da personagem\":\"estimado pelo nível\"}${gear?` + ${gear} do equipamento`:\"\"})</span>`; con",
-  "k": "p"
  },
  "+ {0} munição": {
   "c": "index.html: [1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+ ${mb[1]} munição`:am?\"+ munição\":\"\"])",
@@ -607,10 +603,6 @@
   "c": "index.html: 90)}</td></tr>`, n0=v=>nf(v), gp=v=>fmt(v); out.innerHTML=`<div class=\"scroll-x\"><table class=\"ls-t\"><thead><tr><th></th><th>Média</th><th>Metade das vezes até</th><th>9 em 10 vezes até</th></tr></thead><tbody> ${row(\"It",
   "k": "x"
  },
- ": fora do top 1000 de {0}, escreve o valor acima.": {
-  "c": "index.html: ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fora do top 1000 de ${h.w}, escreve o valor acima.`) + (h.xp ? \" O ",
-  "k": "p"
- },
  ": preço de cada": {
   "c": "index.html: el><label class=\"lp-f\"><span>preço (gp)</span>${inp(\"p\",x.n+\": preço de cada\",b.v||\"\",\"preço\")}</",
   "k": "x"
@@ -656,7 +648,7 @@
   "k": "x"
  },
  "A % para o próximo nível não é pública: ajusta-a quando quiseres.": {
-  "c": "index.html: e o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próximo nível não é pública: ajusta-a quando quiseres.\"); } function hsLine",
+  "c": "index.html: an>`) + (h.xp ? \" <span>O nível e a % também.</span>\" : \" <span>A % para o próximo nível não é pública: ajusta-a quando quiseres.</span>\"); } function hsLine",
   "k": "x"
  },
  "A Pirate's Death to Me": {
@@ -771,12 +763,20 @@
   "c": "index.html: ng){again=true;return;} writing=true; $(\"save\").textContent=\"A guardar…\"; try{ await dbRef",
   "k": "x"
  },
+ "A little bit battered but it will do. [...] If you think you are ready, ask for another butterfly hunt.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: A little bit battered but it will do. [...] If you think you are ready, ask for another butterfly hunt.",
+  "k": "x"
+ },
  "A mostrar 40. Escreve mais letras para afinar.": {
   "c": "index.html: el,x.it,x.s,{score:1})).join(\"\")}</ul>`:\"\"}${list.length>40?`<p class=\"small muted\">A mostrar 40. Escreve mais letras para afinar.</p>`:\"\"}`; body.hidden",
   "k": "x"
  },
  "A partir do nível": {
   "c": "index.html: \"}):\"\"}${esc(t)}</span>` : \"—\"; $(\"potTable\").innerHTML = `<thead><tr><th>A partir do nível</th><th>Vida</th><th>Mana</th></tr></thead><tbody>` + vd.pots.map(p=>`<",
+  "k": "x"
+ },
+ "A party já tem 5 pessoas.": {
+  "c": "index.html: o tem vocação.`,w:1}; return; } if(P.length>=4){ PMMSG={t:\"A party já tem 5 pessoas.\",w:1}; return; } P",
   "k": "x"
  },
  "A pensar…": {
@@ -801,6 +801,10 @@
  },
  "A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30. Todos os que causarem dano recebem o bónus; o progresso aparece no Bestiário.": {
   "c": "index.html: eatório (Lesser, normal ou Greater Proficiency Catalyst).\", \"A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30",
+  "k": "x"
+ },
+ "A procurar no Tibia…": {
+  "c": "index.html: ); const inp=$(\"pmName\"), name=inp?inp.value:\"\"; PMMSG={t:\"A procurar no Tibia…\"}; const bt=e.target",
   "k": "x"
  },
  "A procurar nos highscores…": {
@@ -893,6 +897,10 @@
  },
  "A {0} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.": {
   "c": "index.html: revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a partires por revelar, ou 2–10 se a desmontares depois de revelada.`:`A ${nm} dá 1–4 Les",
+  "k": "p"
+ },
+ "A {0} guards the castle gates (you no longer need to kill it). Along the way there are {1}, {2}, {3}, {4}, {5} and sometimes {6}.{7}Se encontrares criaturas diferentes destas no Hellgate, enganaste-te no caminho.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: A {0} guards the castle gates (you no longer need to kill it). Along the way there are {1}, {2}, {3}, {4}, {5} and somet",
   "k": "p"
  },
  "Ab'Dendriel": {
@@ -1159,6 +1167,14 @@
   "c": "index.html: hips\">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!==\"quiver\"?` <span class=\"tiny muted\">Aljava: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ",
   "k": "p"
  },
+ "Also available to Free Accounts. You do not need to accept the mission. Recommended level: {0}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Also available to Free Accounts. You do not need to accept the mission. Recommended level: 40.",
+  "k": "p"
+ },
+ "Also available to Free Accounts. You do not need to accept the mission: {0}: {1}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Also available to Free Accounts. You do not need to accept the mission: just pick up the item and hand it in. Recommende",
+  "k": "p"
+ },
  "Alt": {
   "c": "index.html: ), u.slice(m.length)]; }; const layers=[\"\",\"Shift\",\"Ctrl\",\"Alt\"].filter(L=>used.som",
   "k": "x"
@@ -1207,12 +1223,24 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Amuleto: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Amuleto: Enchanted theurgic amulet",
+  "k": "p"
+ },
  "Amuletos": {
   "c": "index.html (HTML)",
   "k": "x"
  },
  "Amulets and Necklaces": {
   "c": "index.html: Distance Weapons\":\"Arma de distância\",\"Valuables\":\"Valioso\",\"Amulets and Necklaces\":\"Amuleto\",\"Shields\"",
+  "k": "x"
+ },
+ "Analyse the team's vocations and plan the order. Killing {0} first is recommended, so you don't end up with several bosses with his self-heal. Since he is immune to physical, Royal Paladins should bring a cheap secondary crossbow (e.g. {1}) with a strong elemental imbuement such as {2}. If you have lower-level Elder Druids and Master Sorcerers, avoid killing Greedok first.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: Analyse the team's vocations and plan the order. Killing {0} first is recommended, so you don't end up with several boss",
+  "k": "p"
+ },
+ "And what is it you want? Do you bring news from the undead, or do you seek a dark artefact?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: And what is it you want? Do you bring news from the undead, or do you seek a dark artefact?",
   "k": "x"
  },
  "Andar abaixo": {
@@ -1226,6 +1254,10 @@
  "Anel": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Anel: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Anel: Charged arcanomancer sigil",
+  "k": "p"
  },
  "Anfíbios": {
   "c": "index.html: feros\",Reptile:\"Répteis\",Vermin:\"Vermes e insetos\",Amphibic:\"Anfíbios\",Aquatic:\"Aquáticos\"",
@@ -1363,6 +1395,10 @@
   "c": "index.html:  no G mas já não aparecem) */ $(\"weaponNote\").innerHTML = `<h4>Arma e equipamento de combate</h4><p class=\"small\">${esc(vd.weapon)}</p>${vd.tips&&vd.tips.length?`<ul class=\"small\" style=\"margin:4px 0 0;padding-left:18px\"",
   "k": "x"
  },
+ "Arma: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Arma: Crypt bile",
+  "k": "p"
+ },
  "Arma: {0} · ligação": {
   "c": "index.html: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
   "k": "p"
@@ -1374,6 +1410,10 @@
  "Armadura": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Armadura: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Armadura: Soulmantle",
+  "k": "p"
  },
  "Armaduras": {
   "c": "index.html (HTML)",
@@ -1623,6 +1663,10 @@
   "c": "index.html: x.p}</span></button>`).join(\"\")}</div>`:\"\"; box.innerHTML=`<div class=\"whx-win\"><div class=\"whx-title\">Wheel of Destiny</div> <div class=\"whx-stage\"> <aside class=\"whx-side whx-l\">${whPtsHTML(c,E,free,E.sug)} <section cl",
   "k": "p"
  },
+ "Avalanche (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Avalanche (runa)",
+  "k": "x"
+ },
  "Aves": {
   "c": "index.html: mes e insetos\",Amphibic:\"Anfíbios\",Aquatic:\"Aquáticos\",Bird:\"Aves\",Construct:\"Construc",
   "k": "x"
@@ -1847,6 +1891,10 @@
   "c": "index.html: os.\":\"\"}${[\"boots\",\"helmet\",\"weapon\",\"extra\"].includes(sel)?\" Botas, capacetes e armas que acabam contam menos.\":\"\"}${wg&&c.voc===\"k",
   "k": "x"
  },
+ "Botas: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Botas: Sanguine boots",
+  "k": "p"
+ },
  "Bottom Left": {
   "c": "index.html: xo\"}; const WHVR = {green:\"Top Left\", red:\"Top Right\", blue:\"Bottom Left\", purple:\"Bottom Rig",
   "k": "x"
@@ -2044,7 +2092,7 @@
   "k": "x"
  },
  "Cancelar": {
-  "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"small muted\">Junta uma vocação:</span>${V",
+  "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<form class=\"pm-nm\" data-pmform=\"1\"><input type=\"text\"",
   "k": "x"
  },
  "Capa": {
@@ -2058,6 +2106,10 @@
  "Capacete": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Capacete: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Capacete: Arcanomancer regalia",
+  "k": "p"
  },
  "CapaceteVoid + Chop/Slash/Bash (o skill da tua arma)": {
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: CapaceteVoid + Chop/Slash/Bash (o skill da tua arma)",
@@ -2114,6 +2166,10 @@
  "Casas": {
   "c": "index.html:  ${row(\"Conquistas\",t.ach?`${nf(t.ach)} pontos`:\"\")}${row(\"Casas\",t.houses.map(esc).j",
   "k": "x"
+ },
+ "Casper only gives you {0} Shapechanger ever. Do not lose it.": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: Casper only gives you {0} Shapechanger ever. Do not lose it.",
+  "k": "p"
  },
  "Centrar": {
   "c": "index.html: (y1-y0+24)); MV.s=[8,4,2,1].find(v=>v<=k)||1; } openSheet(`<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">Mapa</span><h3>${esc(label||\"Mapa\")}</h3></div></div> <div class=\"mview\"><canvas id=\"mvC\" width=\"76",
@@ -2189,6 +2245,10 @@
  },
  "Cinto (feminino)": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Cinto (feminino):": {
+  "c": "recolhida: /grimorio/#outfit/mage · ex.: Cinto (feminino):",
   "k": "x"
  },
  "Cinto (masculino)": {
@@ -2320,7 +2380,7 @@
   "k": "p"
  },
  "Com evento de skill a dobrar.": {
-  "c": "index.html: checked?\"Dummy de casa (+10%). \":\"\"}${g(\"trDouble\").checked?\"Com evento de skill a dobrar. \":\"\"}Preços do NPC de",
+  "c": "index.html: n>Dummy de casa (+10%).</span> \":\"\"}${g(\"trDouble\").checked?\"<span>Com evento de skill a dobrar.</span> \":\"\"}<span>Preços do ",
   "k": "x"
  },
  "Com o evento ({0}): +{1}% XP, de {2} para {3} por hora.": {
@@ -2503,6 +2563,10 @@
   "c": "index.html: !==\"1\"){ e.target.dataset.confirm=\"1\"; e.target.textContent=\"Confirmar apagar\"; e.target.classList",
   "k": "x"
  },
+ "Congratulations on finding your soul melody. And a pretty one as far as I can tell. Now you are a true recruit of the Bigfoot company! Commander Stone might have some tasks for you to do! [...]": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Congratulations on finding your soul melody. And a pretty one as far as I can tell. Now you are a true recruit of the Bi",
+  "k": "x"
+ },
  "Conquista": {
   "c": "index.html: ts\"}; const WK_EYE = {feitico:\"Feitiço\",npc:\"NPC\",conquista:\"Conquista\",montaria:\"Montaria\"",
   "k": "x"
@@ -2554,6 +2618,10 @@
  "Contas com o teu dano de boss (≈ {0} por segundo no nível {1}, da {2} com {3}) e a tua vida. {4} Toca no Bosstiary de cada boss para marcares o teu progresso.": {
   "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
   "k": "p"
+ },
+ "Contas feitas com:": {
+  "c": "recolhida: /grimorio/#hunts · ex.: Contas feitas com:",
+  "k": "x"
  },
  "Contas feitas com: {0}. Bónus {1}.": {
   "c": "index.html: ) bits.push(part(\"ML\",s.mlBase,false,s.mlGear)); } return `<p class=\"small muted rx-st\">Contas feitas com: ${bits.join(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ",
@@ -3183,6 +3251,14 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Do NOT go down these stairs (Grim Reapers)": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do NOT go down these stairs (Grim Reapers)",
+  "k": "x"
+ },
+ "Do NOT go down this hole (Giant Spiders)": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do NOT go down this hole (Giant Spiders)",
+  "k": "x"
+ },
  "Do código que colaste": {
   "c": "index.html: filter(x=>!same.includes(x))), free) : null; const eb=E.t?\"Do código que colaste\":E.dirty?\"Build edit",
   "k": "x"
@@ -3191,9 +3267,57 @@
   "c": "index.html: minor\"), n=ma.length+mi.length; $(\"charmAll\").innerHTML = `<h3>Todos os charms (${n})</h3><p class=\"small muted\">Do mais barato para o mais caro. O selo <b>na tua ordem</b> marca os das listas de cima; os outros servem e",
   "k": "p"
  },
+ "Do not kill the snake! You have to use the flask on it while it is alive.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: Do not kill the snake! You have to use the flask on it while it is alive.",
+  "k": "x"
+ },
+ "Do not stray: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do not stray: in another hole on this floor there is a",
+  "k": "p"
+ },
+ "Do not take off the {0} while you are underwater.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do not take off the {0} while you are underwater.",
+  "k": "p"
+ },
+ "Do not use the shovel: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: Do not use the shovel: you have to use the sand directly.",
+  "k": "p"
+ },
+ "Do not waste time on the way: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do not waste time on the way: the icicle's 10-minute clock keeps counting during the trip.",
+  "k": "p"
+ },
  "Do templo de {0} · ~{1} sqm a pé": {
   "c": "index.html: ).join(\"\")}</div><span class=\"tag\">~${r.c} sqm a pé</span>`:`<span class=\"tag\">Do templo de ${esc(r.s)} · ~${r.c} sqm a pé</span>`; const steps=[[-1",
   "k": "p"
+ },
+ "Do the underground passage in reverse: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: Do the underground passage in reverse: head back {0} to the rope spot, go down and enter the {1} to return to Gray Islan",
+  "k": "p"
+ },
+ "Do this task at the same time as Raiders of the Lost Spark (Rank {0}) and Matchmaker (Rank II): {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Do this task at the same time as Raiders of the Lost Spark (Rank 0) and Matchmaker (Rank II): they are all in the Crysta",
+  "k": "p"
+ },
+ "Do you have a bucket of milk for me?": {
+  "c": "recolhida: /grimorio/quests/#/quest/an-uneasy-alliance-quest · ex.: Do you have a bucket of milk for me?",
+  "k": "x"
+ },
+ "Do you have some collected ectoplasm with you?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do you have some collected ectoplasm with you?",
+  "k": "x"
+ },
+ "Do you realy want to trade {0} minor tokens for {1} renown?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Do you realy want to trade 2 minor tokens for 10 renown?",
+  "k": "p"
+ },
+ "Do you want some mushroom beer for {0} gold?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Do you want some mushroom beer for 10 gold?",
+  "k": "p"
+ },
+ "Do you want to join the explorer society?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Do you want to join the explorer society?",
+  "k": "x"
  },
  "Documento": {
   "c": "index.html: \":\"Fonte de luz\",\"Trophies\":\"Troféu\",\"Documents and Papers\":\"Documento\",\"Extra Slot\":\"Slot ",
@@ -3256,7 +3380,7 @@
   "k": "x"
  },
  "Dummy de casa (+10%).": {
-  "c": "index.html: } ${k===\"magic\"?\"de mana\":\"pontos\"}. ${g(\"trDummy\").checked?\"Dummy de casa (+10%). \":\"\"}${g(\"trDouble\").",
+  "c": "index.html: \"magic\"?\"de mana\":\"pontos\")}</span>. ${g(\"trDummy\").checked?\"<span>Dummy de casa (+10%).</span> \":\"\"}${g(\"trDouble\").",
   "k": "x"
  },
  "Duplicar": {
@@ -3301,6 +3425,10 @@
  },
  "E mais {0}: escolhe outra lista ou escreve o nome na pesquisa.": {
   "c": "index.html: Nenhum boss nesta lista.</p>`}</div> ${shown.length>120?`<p class=\"small muted\">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:\"\"} <details cl",
+  "k": "p"
+ },
+ "Each task can be repeated {0} after the last hand-in and gives reputation, tokens and a {1}. The first time you do each one you earn an achievement. You can accept all the tasks at once and do them together to save time.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Each task can be repeated {0} after the last hand-in and gives reputation, tokens and a {1}. The first time you do each ",
   "k": "p"
  },
  "Echo Raids e Echo Wardens": {
@@ -3624,7 +3752,7 @@
   "k": "x"
  },
  "Escreve o nome da personagem.": {
-  "c": "index.html:  look.q=q; look.res=null; look.err=\"\"; if(!q){ look.err=\"Escreve o nome da personagem.\"; return redrawLook(",
+  "c": "index.html: name||\"\").trim().replace(/\\s+/g,\" \"); if(!name){ PMMSG={t:\"Escreve o nome da personagem.\",w:1}; return; } c",
   "k": "x"
  },
  "Escreve o nome do item.": {
@@ -3636,11 +3764,11 @@
   "k": "x"
  },
  "Escreve o teu": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> <span>para ficarem exatas.</span>`:\"\"}</p>`; } // tecl",
   "k": "x"
  },
  "Escreve o teu {0}": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> <span>para ficarem exatas.</span>`:\"\"}</p>`; } // tecl",
   "k": "p"
  },
  "Escreve um nome.": {
@@ -3659,6 +3787,14 @@
   "c": "index.html: eld\"||!c) return SLOTNAME[k]||k; return c.voc===\"paladin\"?\"Escudo / aljava\":isMage(c)?\"Livro / ",
   "k": "x"
  },
+ "Escudo / aljava:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Escudo / aljava:",
+  "k": "x"
+ },
+ "Escudo / aljava: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Escudo / aljava: Alicorn quiver",
+  "k": "p"
+ },
  "Escudo / lança": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
@@ -3675,6 +3811,10 @@
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
+ "Escudo: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/extra-dimensional · ex.: Escudo: Refined stag shield",
+  "k": "p"
+ },
  "Escudos / livros / aljavas": {
   "c": "index.html: ots\",\"Botas\"],[\"ring\",\"Anéis\"],[\"weapon\",\"Armas\"],[\"shield\",\"Escudos / livros / aljavas\"],[\"extra\",\"Extra\"]]",
   "k": "x"
@@ -3690,6 +3830,10 @@
  "Espada, machado ou clava": {
   "c": "index.html: ar\",\"Normal\",500,434028]], lab:{magic:\"Magic level\",melee:\"Espada, machado ou clava\",fist:\"Fist (monk)\",",
   "k": "x"
+ },
+ "Espada, machado ou clava {0} → {1} para Knight:": {
+  "c": "recolhida: /grimorio/#calc · ex.: Espada, machado ou clava 10 → 15 para Knight:",
+  "k": "p"
  },
  "Esquecer": {
   "c": "index.html: o o que a recomendada tem, pela ordem certa.</p>`; return `<div class=\"card rx-cmp\">${head}<div class=\"rx-cmph\">${pick}<div class=\"rx-bbtn\">${file(\"Ler outra vez\")}<button type=\"button\" class=\"btn small ghost\" data-rxfor",
@@ -4023,6 +4167,10 @@
   "c": "index.html: ManaDrainResistance_LifeDrainResistance\"]]; const GEMSUP = {\"Fierce Berserk Base Damage\":[\"Knight_Fierce_Ber",
   "k": "x"
  },
+ "Fight your way to the teleport with bars. Lure an {0} (you find one along the way) and keep it next to the bars. When it summons {1}, kill them {2}. If you do it right, the bars get damaged. Do this {3} in a short time and the wall is destroyed.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Fight your way to the teleport with bars. Lure an {0} (you find one along the way) and keep it next to the bars. When it",
+  "k": "p"
+ },
  "Filtrar feitiços": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4049,6 +4197,10 @@
  },
  "Filtros: {0}{0}": {
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
+  "k": "p"
+ },
+ "Find a spawn of {0}. {1} has many, and some {2} do too. The fastest is probably the {3}, just east of the Ankrahmun depot, behind a {4} sacrifice. Kill the Ghost and use the container on the body after the {5} seconds of protected loot. You receive the {6}. In the Library Tomb, the entrance is beneath the Ankrahmun library ({7}); to get past the teleport stand on the {8} and place a {9} on the {10} (the Ghosts are on the 3rd floor, after the teleport). With the ectoplasm, go back the same way to the library.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Find a spawn of {0}. {1} has many, and some {2} do too. The fastest is probably the {3}, just east of the Ankrahmun depo",
   "k": "p"
  },
  "Fire (Solo)": {
@@ -4094,6 +4246,10 @@
  "Fist fighting: fora do top 1000 de {0}, escreve o valor acima.": {
   "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
+ },
+ "Five Frost Dragons at once is very dangerous; go with a team if you do not have the recommended level.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Five Frost Dragons at once is very dangerous; go with a team if you do not have the recommended level.",
+  "k": "x"
  },
  "Fixo aqui: clica outra vez (ou fora da roda) para soltar.": {
   "c": "index.html: tra vez ou fora da roda solta const whPinHTML = () => WHPIN?`<p class=\"wpin-n\">Fixo aqui: clica outra vez (ou fora da roda) para soltar.</p>`:\"\"; const WHTGT = \"",
@@ -4203,6 +4359,10 @@
   "c": "index.html: >[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].indexOf(p.we",
   "k": "x"
  },
+ "From Rank II you can also do this task in the {0}, but it's not worth it: in the Truffels Garden you do Exterminators and Mushroom Digger at the same time.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: From Rank II you can also do this task in the {0}, but it's not worth it: in the Truffels Garden you do Exterminators an",
+  "k": "p"
+ },
  "Front Sweep Base Damage": {
   "c": "index.html: serk Base Damage\":[\"Knight_Fierce_Berserk_DamageIncrease\"], \"Front Sweep Base Damage\":[\"Knight_Front_Swee",
   "k": "x"
@@ -4234,6 +4394,10 @@
  "Fusão (cada)": {
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "x"
+ },
+ "Fusão {0} itens iguais com o mesmo tier dão {1} tier.": {
+  "c": "recolhida: /grimorio/#item/pair-of-monk-fists · ex.: Fusão 2 itens iguais com o mesmo tier dão +1 tier.",
+  "k": "p"
  },
  "Fusões": {
   "c": "index.html: /tr></thead><tbody> ${row(\"Itens base\",\"base\",n0)}${row(\"Fusões\",\"fus\",n0)}${row(\"Go",
@@ -4363,6 +4527,26 @@
   "c": "index.html: d Man-Maggot e Sopping Corpus dão cerca de 12% menos ouro.\",\"Gloom Pillars: todas as criaturas dão cerca de 12% menos ouro.\",\"Sensibilidades mai",
   "k": "x"
  },
+ "Go down {0} more floors and follow the cave {1} and then {2} to the Hellgate door ({3}); open it with the {4}. If you do not have it, buy it from {5}, nearby (": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Go down 2 more floors and follow the cave {0} and then {1} to the Hellgate door ({2}); open it with the {3}. If you do n",
+  "k": "p"
+ },
+ "Go down {0} more floors and follow the cave {1} and then {2} to the Hellgate door ({3}); open it with the {4}. If you do not have it, buy it from {5}, nearby ({6}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Go down 2 more floors and follow the cave {0} and then {1} to the Hellgate door ({2}); open it with the {3}. If you do n",
+  "k": "p"
+ },
+ "Go through the north door and enter the portal to {0}. Do not use the portal on the {1} side of the room: {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Go through the north door and enter the portal to {0}. Do not use the portal on the {1} side of the room: that one takes",
+  "k": "p"
+ },
+ "Go {0} and climb up through the hole. Do not take the other hole, to the {1}: {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Go {0} and climb up through the hole. Do not take the other hole, to the {1}: that one takes you down, to the lava floor",
+  "k": "p"
+ },
+ "Go {0} and go up through the hole (do not take the hole to the {1}: {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Go {0} and go up through the hole (do not take the hole to the {1}: it goes down to the lava floor).",
+  "k": "p"
+ },
  "Gold (mod básico)": {
   "c": "index.html: ts</td></tr>`).join(\"\")); const up=tb([\"Grau\",\"Fragments\",\"Gold (mod básico)\",\"Gold (mod supremo)",
   "k": "x"
@@ -4409,6 +4593,14 @@
  },
  "Great Fireball": {
   "c": "index.html: */).filter(Boolean))+rot; if(voc===\"druid\"){ const X={gfb:\"Great Fireball\",sd:\"Sudden Death\",s",
+  "k": "x"
+ },
+ "Great Fireball (runa": {
+  "c": "recolhida: /grimorio/#hunts/tipo/construct · ex.: Great Fireball (runa",
+  "k": "x"
+ },
+ "Great Fireball (runa)": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Great Fireball (runa)",
   "k": "x"
  },
  "Great Mana Potion": {
@@ -4567,6 +4759,14 @@
   "c": "index.html: [\"Blood of the Mountain\",[\"Kais\"],\"Norte de Tiquanda\",enh],[\"Heart of the Mountain\",[\"Nomad\"],\"Hrodmir ",
   "k": "x"
  },
+ "Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task first.": {
+  "c": "recolhida: /grimorio/quests/#/quest/oriental-outfits-quest · ex.: Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task fi",
+  "k": "x"
+ },
+ "Hello, young apprentice. Do you have that scroll piece from the priestess?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: Hello, young apprentice. Do you have that scroll piece from the priestess?",
+  "k": "x"
+ },
  "Helmets": {
   "c": "index.html: a de club\",\"Sword Weapons\":\"Espada\",\"Axe Weapons\":\"Machado\",\"Helmets\":\"Capacete\",\"Distanc",
   "k": "x"
@@ -4613,6 +4813,10 @@
  },
  "Horas de sessão": {
   "c": "index.html: reço de cada\",b.v||\"\",\"preço\")}</label></div>`; }; return `<div class=\"lp-calc card\" data-hcalc=\"${esc(pid)}\" data-fee=\"${feeH}\"> <h5>Calculadora de lucro</h5> <div class=\"lp-tot\"><label class=\"lp-f\" for=\"${u}h\"><span>Ho",
+  "k": "x"
+ },
+ "How many tokens do you want to trade?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: How many tokens do you want to trade?",
   "k": "x"
  },
  "Hrodmir (Buddel → Camp)": {
@@ -4811,6 +5015,30 @@
   "c": "quests/js/app.js: \"group\": \"Grupo\", \"magic level\": \"Magic level\", \"spell id\": \"ID do feitiço\", \"price for vocatio",
   "k": "x"
  },
+ "If the icicle melts you do not lose the mission: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: If the icicle melts you do not lose the mission: go to the representative, say {0}, {1} and {2} and he gives you another",
+  "k": "p"
+ },
+ "If you do not use the amulet in time, Koshei is reborn at once in the north, next to the altar, shouting {0} and you have to kill him again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: If you do not use the amulet in time, Koshei is reborn at once in the north, next to the altar, shouting {0} and you hav",
+  "k": "p"
+ },
+ "If you haven't finished the Exterminators task in the Truffels Garden yet, you can do the last Wiggler kills here.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: If you haven't finished the Exterminators task in the Truffels Garden yet, you can do the last Wiggler kills here.",
+  "k": "x"
+ },
+ "If you lose the heart, say {0} to Omrabas and he lets you fetch another. If you want to keep a spare heart, do not have it in your inventory when you talk to him: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: If you lose the heart, say {0} to Omrabas and he lets you fetch another. If you want to keep a spare heart, do not have ",
+  "k": "p"
+ },
+ "If you manage to do {0} of the {1} during the event, you earn the {2} achievement.": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: If you manage to do {0} of the {1} during the event, you earn the {2} achievement.",
+  "k": "p"
+ },
+ "If you plan to do the Warzones many times, it's worth buying the {0} (always dropped by Deathstrike) to get permanent access to Warzone {1}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: If you plan to do the Warzones many times, it's worth buying the {0} (always dropped by Deathstrike) to get permanent ac",
+  "k": "p"
+ },
  "Igual ao {0} para o teu nível.": {
   "c": "index.html: ===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:\"\"}</p> <div ",
   "k": "p"
@@ -4891,6 +5119,18 @@
   "c": "quests/js/app.js: Propriedades\", \"resistances\": \"Resistências\", \"immunities\": \"Imunidades\", \"bosses\": \"Bos",
   "k": "x"
  },
+ "In the {0} desert, above the {1}, there is a special {2}. {3} the sand (do not dig with the shovel) to get the {4}. Kha'labal is the desert between Darashia and Ankrahmun (north of Ankrahmun): {5}: {6}": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: In the {0} desert, above the {1}, there is a special {2}. {3} the sand (do not dig with the shovel) to get the {4}. Kha'",
+  "k": "p"
+ },
+ "In the {0}, kill {1} (they're everywhere) and use the {2} on their corpses. Do this": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: In the {0}, kill {1} (they're everywhere) and use the {2} on their corpses. Do this",
+  "k": "p"
+ },
+ "In the {0}, kill {1} (they're everywhere) and use the {2} on their corpses. Do this {3}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: In the {0}, kill {1} (they're everywhere) and use the {2} on their corpses. Do this {3}.",
+  "k": "p"
+ },
  "Incluir itens sem efeito (decorativos)": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -4969,6 +5209,14 @@
  },
  "Isto não parece um código da Wheel (começa por K0, P0, S0, D0 ou M0).": {
   "c": "index.html: -]{8,})$/.exec(String(code||\"\").trim()); if(!m) return {err:\"Isto não parece um código da Wheel (começa por K0, P0, S0, D0 ou M0).\"}; if(typeof Decom",
+  "k": "x"
+ },
+ "It is commonly known that orcs of Uldereks Rock use some sort of powder to increase the fierceness of their war wolves and berserkers [...] Do you want to accept this mission?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: It is commonly known that orcs of Uldereks Rock use some sort of powder to increase the fierceness of their war wolves a",
+  "k": "x"
+ },
+ "It's a bit wrinkled but it will do. Thanks again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: It's a bit wrinkled but it will do. Thanks again.",
   "k": "x"
  },
  "Item": {
@@ -5071,12 +5319,8 @@
   "c": "index.html:  carrega em ＋ Comparar (até 3).</p>`; if(H.length<2) out+=`<p class=\"small muted\" style=\"margin:0\">Junta pelo menos mais uma hunt com o botão ＋ Comparar na ficha.</p>`; // melhor célula",
   "k": "x"
  },
- "Junta uma vocação:": {
-  "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"small muted\">Junta uma vocação:</span>${V",
-  "k": "x"
- },
  "Juntar": {
-  "c": "index.html: en)}</p></div>`; } const RXTIP={warn:[\"Atenção\",\"bad\"],add:[\"Juntar\",\"\"],order:[\"MAB\",\"a",
+  "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<form class=\"pm-nm\" data-pmform=\"1\"><input type=\"text\"",
   "k": "x"
  },
  "Juntar personagem": {
@@ -5086,6 +5330,10 @@
  "Junto a {0}: mesmo caminho.": {
   "c": "index.html: t np = nearPlace(x,y,z); if (np && G.routes[np.k]) return `<p class=\"small muted\" style=\"margin:0 0 6px\">Junto a ${esc(G.places[np.k].n)}: mesmo caminho.</p>${routeHTML(np.k)}`; const c=nearCity",
   "k": "p"
+ },
+ "Just in time. Sadly not much ice is left over but it will do. Thank you again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Just in time. Sadly not much ice is left over but it will do. Thank you again.",
+  "k": "x"
  },
  "Já completas ({0})": {
   "c": "index.html: as as criaturas destas hunts.</li>`}</ul> ${done.length?`<details><summary class=\"small\">Já completas (${done.length})</summary><ul class=\"bst\">${done.map(x=>`<li><label><input type=\"checkbox\" data-best=\"${esc(x.k)}\" che",
@@ -5339,6 +5587,14 @@
   "c": "index.html: ||k; return c.voc===\"paladin\"?\"Escudo / aljava\":isMage(c)?\"Livro / escudo\":c.voc===\"knight\"?\"E",
   "k": "x"
  },
+ "Livro / escudo:": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Livro / escudo:",
+  "k": "x"
+ },
+ "Livro / escudo: {0}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Livro / escudo: Arcanomancer folio",
+  "k": "p"
+ },
  "Lixo": {
   "c": "index.html: a de ataque\",\"Taming Items\":\"Item para montarias\",\"Rubbish\":\"Lixo\",\"Containers\":\"Conte",
   "k": "x"
@@ -5503,6 +5759,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Magic Wall (runa": {
+  "c": "recolhida: /grimorio/#hunts/tipo/construct · ex.: Magic Wall (runa",
+  "k": "x"
+ },
  "Magic level": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5651,6 +5911,10 @@
   "c": "index.html: }<small>nível ${x.it.l||0}</small></span>${c.owned[x.it.id]?'<span class=\"pk-own\" title=\"Marcado como teu\" aria-label=\"tens este item\">✓</span>':\"\"}</button>`; po",
   "k": "x"
  },
+ "Marcar Shards of a Broken Moon como feita": {
+  "c": "recolhida: /grimorio/#wheel · ex.: Marcar Shards of a Broken Moon como feita",
+  "k": "x"
+ },
  "Marcar como concluída": {
   "c": "quests/js/app.js: ata-mark-done>${icon(\"check\")}${done ? \"Quest concluída!\" : \"Marcar como concluída\"}</button> ",
   "k": "x"
@@ -5661,6 +5925,10 @@
  },
  "Marcar passo {0} como feito": {
   "c": "quests/js/app.js: ug); const checked = !!(p.s && p.s[id]); let html = `<div class=\"step ${checked ? \"checked\" : \"\"}\" id=\"step-${id}\" data-step=\"${id}\"> <label class=\"step-check\"><input type=\"checkbox\" ${checked ? \"checked\" : \"\"} data-chec",
+  "k": "p"
+ },
+ "Marcar {0} Years a Cook como feita": {
+  "c": "recolhida: /grimorio/#wheel · ex.: Marcar 20 Years a Cook como feita",
   "k": "p"
  },
  "Marcas guardadas neste browser, por personagem (o tibia.com não mostra o bestiário de cada um).": {
@@ -5742,6 +6010,10 @@
  "Maça": {
   "c": "index.html: and / rod'). const IKIND={sword:\"Espada\",axe:\"Machado\",club:\"Maça\",bow:\"Arco\",crossbow",
   "k": "x"
+ },
+ "Me can do unbroken but Big Ben want gold {0} and Big Ben need a lil' time to make it unbroken. Yes or no??": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: Me can do unbroken but Big Ben want gold 5000 and Big Ben need a lil' time to make it unbroken. Yes or no??",
+  "k": "p"
  },
  "Mediana de sessões solo reais desde junho": {
   "c": "index.html: t?`<span title=\"${esc(t)}\">≈</span>`:\"≈\"):\"\"}${h.src===\"ha\"?'<sup class=\"rl\" title=\"Mediana de sessões solo reais desde junho\">r</sup>':\"\"}${h.src===\"old\"?",
@@ -6147,6 +6419,10 @@
   "c": "quests/js/app.js: isas dele\", mention: \"Aparece no passo\" }; parts.push(`<div class=\"howto-block\"><h3>${icon(\"scroll\")}Nas quests do Questski</h3><ul class=\"howto-list\">${h.quests.map((q) => { const href = q.step ? `#/quest/${q.slug}/guia",
   "k": "x"
  },
+ "Nebulera (NA, Open PvP)": {
+  "c": "recolhida: /grimorio/#novidades · ex.: Nebulera (NA, Open PvP)",
+  "k": "x"
+ },
  "Nenhum NPC com esses filtros.": {
   "c": "index.html: join(\"\")}</div>${wlMore('data-npmore=\"1\"',f.n,L.length)}` : `<p class=\"muted\">Nenhum NPC com esses filtros.</p>`; } // separador ati",
   "k": "x"
@@ -6165,6 +6441,10 @@
  },
  "Nenhum NPC compra.": {
   "c": "index.html: l?`<b>${gp(sell[1])}</b><small>${esc(sell[0])}</small>`:ITV?`<small>Nenhum NPC compra.</small>`:`<small class=\"tklo",
+  "k": "x"
+ },
+ "Nenhum NPC compra:": {
+  "c": "recolhida: /grimorio/#item/abyssador-s-lash · ex.: Nenhum NPC compra:",
   "k": "x"
  },
  "Nenhum NPC compra: vende no Market de {0} (≈ {1}).": {
@@ -6344,7 +6624,7 @@
   "k": "x"
  },
  "Nome da personagem": {
-  "c": "index.html:  && !wt.some(x=>x[0]===d.wtype)) d.wtype=wt[0][0]; return `<form id=\"charForm\" novalidate style=\"display:grid;gap:14px\"> <div style=\"display:grid;gap:6px\"><span class=\"small muted\">Vocação</span><div class=\"vocpick\" role",
+  "c": "index.html: i); const add = party.length>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<form class=\"pm-nm\" data-pmform=\"1\"><input type=\"text\"",
   "k": "x"
  },
  "Nome da personagem no Tibia": {
@@ -6526,6 +6806,10 @@
  "Não encontrado": {
   "c": "index.html: vras mágicas if(!key){ el.innerHTML=pageHead(WK_EYE[kind],\"Não encontrado\",\"\",null)+`<p class=",
   "k": "x"
+ },
+ "Não encontrei a personagem {0}.": {
+  "c": "index.html: O site do Tibia não está a responder. Tenta daqui a pouco.\":`Não encontrei a personagem ${name}.`,w:1}; return; } c",
+  "k": "p"
  },
  "Não encontrei esta personagem no Tibia. Mudou de nome?": {
   "c": "index.html: arnt\">${c.syncErr===\"offline\"?\"Sem ligação ao Tibia agora.\":\"Não encontrei esta personagem no Tibia. Mudou de nome?\"}</span>`:\"\"; cons",
@@ -6736,7 +7020,7 @@
   "k": "x"
  },
  "Nível {0}": {
-  "c": "index.html: ear?` + ${gear} do equipamento`:\"\"})</span>`; const bits=[`Nível <b>${c.level}</b>`]; if(mage) bits.p",
+  "c": "index.html: r} <span>do equipamento</span>`:\"\"})</span>`; const bits=[`Nível <b>${c.level}</b>`]; if(mage) bits.p",
   "k": "p"
  },
  "Nível {0} · {1}{2} ·": {
@@ -6884,7 +7168,7 @@
   "k": "x"
  },
  "O nível e a % também.": {
-  "c": "index.html:  top 1000 de ${h.w}, escreve o valor acima.`) + (h.xp ? \" O nível e a % também.\" : \" A % para o próx",
+  "c": "index.html:  ${esc(h.w)}, escreve o valor acima.</span>`) + (h.xp ? \" <span>O nível e a % também.</span>\" : \" <span>A % para ",
   "k": "x"
  },
  "O nível mais baixo é um modo de aprendizagem 'seguro', mas mesmo aí podes morrer.": {
@@ -6947,6 +7231,10 @@
   "c": "index.html: 13\"}, {\"id\": \"discovery\", \"t\": \"Sistema de Discovery\", \"s\": \"O sistema de Discovery do Cyclopedia regista os pontos de interesse de cada subárea; desde o Summer Update 2026 todas as subáreas ficam ativas automaticamente ",
   "k": "x"
  },
+ "O site do Tibia não está a responder. Tenta daqui a pouco.": {
+  "c": "index.html: it fetchChar(name); if(!r.ok){ PMMSG={t:r.why===\"offline\"?\"O site do Tibia não está a responder. Tenta daqui a pouco.\":`Não encontrei a pe",
+  "k": "x"
+ },
  "O teu equipamento": {
   "c": "index.html: v> <div class=\"bisdoll\" role=\"group\" aria-label=\"${mine?\"O teu equipamento\":\"Melhor equipamento",
   "k": "x"
@@ -6982,6 +7270,18 @@
  "Ombreira / asas": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
+ },
+ "On reaching {0} reputation you rank up to Rank I and earn the achievement {1}. Both tasks are done in the {2} (north teleport in the Gnomebase), so do them together.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: On reaching 30 reputation you rank up to Rank I and earn the achievement {0}. Both tasks are done in the {1} (north tele",
+  "k": "p"
+ },
+ "On the 3rd floor down, mines A, B, E and F are connected by the {0}. The mines that can only be reached from inside Kazordoon start from the central area under the city (": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: On the 3rd floor down, mines A, B, E and F are connected by the {0}. The mines that can only be reached from inside Kazo",
+  "k": "p"
+ },
+ "On the 3rd floor down, mines A, B, E and F are connected by the {0}. The mines that can only be reached from inside Kazordoon start from the central area under the city ({1}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: On the 3rd floor down, mines A, B, E and F are connected by the {0}. The mines that can only be reached from inside Kazo",
+  "k": "p"
  },
  "Onda / feixe": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
@@ -7239,6 +7539,10 @@
   "c": "index.html: TYPES.knight.find(x=>x[0]===b)||[,b])[1]; return {b,n,lab:`Outros tipos de arma · o set automático usa ${n}`}; } /* r4-t5 */ // ",
   "k": "p"
  },
+ "Outside the city the desert and mountains have {0} (mountains to the west) and tombs full of undead; do not go out unprepared if you are a low level.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: Outside the city the desert and mountains have {0} (mountains to the west) and tombs full of undead; do not go out unpre",
+  "k": "p"
+ },
  "Paga": {
   "c": "index.html: s=\"card ip-wide\"><h3>Compra (${buys.length})</h3>${tbl(buys,\"Paga\")}</section>`:\"\"} ",
   "k": "x"
@@ -7300,7 +7604,7 @@
   "k": "p"
  },
  "Para partilhar XP, quem se juntar tem de ter {0}.": {
-  "c": "index.html: ngth>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<span class=\"sma",
+  "c": "index.html: ngth>=4 ? \"\" : ST.ui.pmOpen ? `<div class=\"pmadd\">${okR?`<p class=\"pm-rng small\">Para partilhar XP, quem se juntar tem de ter ${rng}.</p>`:\"\"}<form class=\"pm-",
   "k": "p"
  },
  "Para {0}": {
@@ -7481,6 +7785,10 @@
  },
  "Physical Build": {
   "c": "index.html: n {w:best, why}; } const WNOTE = {\"Holy Build\":\"build holy\",\"Physical Build\":\"build física\",\"Bas",
+  "k": "x"
+ },
+ "Physical Resistant Build, e.g.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Physical Resistant Build, e.g.",
   "k": "x"
  },
  "Physical Resistant Build, e.g. Rosh": {
@@ -7738,6 +8046,14 @@
  "Preço para aprender": {
   "c": "index.html: {s.el}\">${esc(elName(s.el))}</span>`:\"\"],[\"Área\",s.ak||\"\"],[\"Preço para aprender\",s.pc?gp(s.pc):\"\"]];",
   "k": "x"
+ },
+ "Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.": {
+  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
+  "k": "x"
+ },
+ "Preços do NPC desde {0}/{1}/{2};": {
+  "c": "recolhida: /grimorio/#calc · ex.: Preços do NPC desde 06/10/2026;",
+  "k": "p"
  },
  "Preços para o teu nível (TibiaWiki). Perdes-as todas ao morrer; com a Twist of Fate, numa morte em PvP só perdes essa.": {
   "c": "index.html (HTML)",
@@ -8551,6 +8867,10 @@
   "c": "index.html: gnitera, Aethera e Xymera) e Faunera (Kalimera e Blumera).\",\"Se a tua personagem estava num destes mundos, o Grimório passa para o mundo novo na próxima atualização da personagem (preços e mortes de ontem incluídos).\"]},",
   "k": "x"
  },
+ "Se falhar, um dos itens desce {0} tier (ou desaparece se for tier {1});": {
+  "c": "recolhida: /grimorio/#item/pair-of-monk-fists · ex.: Se falhar, um dos itens desce 1 tier (ou desaparece se for tier 0);",
+  "k": "p"
+ },
  "Se tiveres cap {0}": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "p"
@@ -9047,8 +9367,8 @@
   "c": "index.html: agic Shield)\":\"\"} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscado: golpes até ${nf(b.md)} por turno e tens ≈ ${nf(r.eff)} de vida efetiva${isMage(c)?\" (vida + Magic Shield)\":\"\"} (pedimos o dobro do golpe).",
   "k": "p"
  },
- "Sozinho. Podes fazer party com XP partilhada {0}. Junta outra vocação para ver as hunts onde podem ir juntos.": {
-  "c": "index.html: \"1\">+ Juntar alguém</button>`; const info = ms.length<2 ? `Sozinho. Podes fazer party com XP partilhada ${rng}. Junta outra vocação para ver as hunts onde podem ir juntos.` : canShare(ms) ",
+ "Sozinho. Podes fazer party com XP partilhada {0}. Junta outra personagem pelo nome para ver as hunts onde podem ir juntos.": {
+  "c": "index.html: agem</button>`; pmRefresh(); const info = ms.length<2 ? `Sozinho. Podes fazer party com XP partilhada ${rng}. Junta outra personagem pelo nome para ver as hunts onde podem ir juntos.` : canShare(ms) ",
   "k": "p"
  },
  "Space": {
@@ -9111,6 +9431,10 @@
   "c": "index.html: const X={gfb:\"Great Fireball\",sd:\"Sudden Death\",stoneshower:\"Stone Shower\"}; return s.spli",
   "k": "x"
  },
+ "Stone Shower (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Stone Shower (runa)",
+  "k": "x"
+ },
  "Strike": {
   "c": "index.html: onk:\"m\"}; const IMBL = {vamp:\"Vampirism\",void:\"Void\",strike:\"Strike\",swift:\"Swiftness\",v",
   "k": "x"
@@ -9137,6 +9461,10 @@
  },
  "Sudden Death": {
   "c": "index.html: +rot; if(voc===\"druid\"){ const X={gfb:\"Great Fireball\",sd:\"Sudden Death\",stoneshower:\"Stone ",
+  "k": "x"
+ },
+ "Sudden Death (runa": {
+  "c": "recolhida: /grimorio/#hunts/tipo/construct · ex.: Sudden Death (runa",
   "k": "x"
  },
  "Sudeste de {0}": {
@@ -9227,6 +9555,10 @@
   "c": "index.html: tomático (o teu skill mais alto)\"],[\"club\",\"Club\"],[\"sword\",\"Sword\"],[\"axe\",\"Axe\"]], pa",
   "k": "x"
  },
+ "Sword (o que dá o melhor set no teu nível;": {
+  "c": "recolhida: /grimorio/#hunts · ex.: Sword (o que dá o melhor set no teu nível;",
+  "k": "x"
+ },
  "Sword (o teu skill mais alto;": {
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: Sword (o teu skill mais alto;",
   "k": "x"
@@ -9315,6 +9647,18 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "T1 Beam Mastery + T1 E-Wave": {
+  "c": "recolhida: /grimorio/#inicio · ex.: T1 Beam Mastery + T1 E-Wave",
+  "k": "x"
+ },
+ "T1 Beam Mastery + T1 E-Wave + T1 Death Echo": {
+  "c": "recolhida: /grimorio/#inicio · ex.: T1 Beam Mastery + T1 E-Wave + T1 Death Echo",
+  "k": "x"
+ },
+ "T1 Beam Mastery + T1 E-Wave + T1 Death Echo + T1 Avatar": {
+  "c": "recolhida: /grimorio/#inicio · ex.: T1 Beam Mastery + T1 E-Wave + T1 Death Echo + T1 Avatar",
+  "k": "x"
+ },
  "T1 Ethereal Barrage + T1 CarpetPróxima build com {0} pontos (nível {1}).": {
   "c": "recolhida: /grimorio/#defesa · ex.: T1 Ethereal Barrage + T1 CarpetPróxima build com 450 pontos (nível 500).",
   "k": "p"
@@ -9323,9 +9667,17 @@
   "c": "recolhida: /grimorio/#defesa · ex.: T1 Forks + T1 Ulu'sPróxima build com 350 pontos (nível 400).",
   "k": "p"
  },
+ "T2 Beam Mastery + T2 E-Wave + 1x Greater Gem + T1 Avatar + T1 GoL": {
+  "c": "recolhida: /grimorio/#inicio · ex.: T2 Beam Mastery + T2 E-Wave + 1x Greater Gem + T1 Avatar + T1 GoL",
+  "k": "x"
+ },
  "T2 Death Echo + T1 LoD + T1 Beam MasteryPróxima build com {0} pontos (nível {1}).": {
   "c": "recolhida: /grimorio/#inicio · ex.: T2 Death Echo + T1 LoD + T1 Beam MasteryPróxima build com 650 pontos (nível 700).",
   "k": "p"
+ },
+ "T2 E-Wave + T1 Beam Mastery": {
+  "c": "recolhida: /grimorio/#inicio · ex.: T2 E-Wave + T1 Beam Mastery",
+  "k": "x"
  },
  "T2 Executioner's Throw + T1 Combat Mastery + 1x Greater GemPróxima build com {0} pontos (nível {1}).": {
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: T2 Executioner's Throw + T1 Combat Mastery + 1x Greater GemPróxima build com 925 pontos (nível 975).",
@@ -9539,8 +9891,52 @@
   "c": "quests/js/app.js:  label: \"História\", icon: \"scroll\" }, tesouro: { label: \"Tesouro\", icon: \"chest\" }, ",
   "k": "x"
  },
+ "Teste Druid": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Druid",
+  "k": "x"
+ },
+ "Teste Druid · {0}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Druid · 300",
+  "k": "p"
+ },
+ "Teste Knight": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Knight",
+  "k": "x"
+ },
+ "Teste Knight · {0}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Knight · 812",
+  "k": "p"
+ },
+ "Teste Monk": {
+  "c": "recolhida: /grimorio/quests/ · ex.: Teste Monk",
+  "k": "x"
+ },
+ "Teste Monk · {0}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Monk · 15",
+  "k": "p"
+ },
+ "Teste Pally": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Pally",
+  "k": "x"
+ },
+ "Teste Pally · {0}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Pally · 455",
+  "k": "p"
+ },
+ "Teste Sorc": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Sorc",
+  "k": "x"
+ },
+ "Teste Sorc · {0}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Teste Sorc · 570",
+  "k": "p"
+ },
  "Texto": {
   "c": "quests/js/app.js: ação\", \"slot\": \"Slot\", \"sounds\": \"Sons\", \"flavor text\": \"Texto\", \"book text\": \"Text",
+  "k": "x"
+ },
+ "Texto do Party Hunt Analyser": {
+  "c": "recolhida: /grimorio/#hunts · ex.: Texto do Party Hunt Analyser",
   "k": "x"
  },
  "Texto do livro": {
@@ -9551,6 +9947,10 @@
   "c": "index.html: deste\",\"sul\",\"sudoeste\",\"oeste\",\"noroeste\"]; const CITIES=[[\"Thais\",32369,32241],[\"Carl",
   "k": "x"
  },
+ "The Draccoon paid a mad scientist to decipher the {0}. Task with a {1} ({2} s) time limit, to do all {3} floors.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: The Draccoon paid a mad scientist to decipher the {0}. Task with a {1} (540 s) time limit, to do all 3 floors.",
+  "k": "p"
+ },
  "The Embrace of Tibia": {
   "c": "index.html: ielding\",[\"Norf\"],\"White Flower Temple, sul de Thais\",reg],[\"The Embrace of Tibia\",[\"Humphrey\"],\"Field",
   "k": "x"
@@ -9558,6 +9958,14 @@
  "The Fire of the Suns": {
   "c": "index.html: ibia\",[\"Humphrey\"],\"Fields of Glory, norte de Carlin\",reg],[\"The Fire of the Suns\",[\"Edala\"],\"Suntower",
   "k": "x"
+ },
+ "The Pirats invade the area and you have to defeat them. Each Pirat you attack gives {0} (you don't need to do the most damage). The raid ends when {1} die (": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: The Pirats invade the area and you have to defeat them. Each Pirat you attack gives {0} (you don't need to do the most d",
+  "k": "p"
+ },
+ "The Pirats invade the area and you have to defeat them. Each Pirat you attack gives {0} (you don't need to do the most damage). The raid ends when {1} die ({2}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: The Pirats invade the area and you have to defeat them. Each Pirat you attack gives {0} (you don't need to do the most d",
+  "k": "p"
  },
  "The Spark of the Phoenix": {
   "c": "index.html: of the Suns\",[\"Edala\"],\"Suntower, sul de Ab'Dendriel\",reg],[\"The Spark of the Phoenix\",[\"Kawill\",\"Pydar\"],",
@@ -9570,6 +9978,42 @@
  "The Wisdom of Solitude": {
   "c": "index.html: enix\",[\"Kawill\",\"Pydar\"],\"Kazordoon (por esta ordem)\",reg],[\"The Wisdom of Solitude\",[\"Eremo\"],\"Eremo's ",
   "k": "x"
+ },
+ "The beams of the {0} and the {1} do a lot of damage: do not pull more than {2} or {3} monsters at a time and bring company if you can.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: The beams of the {0} and the {1} do a lot of damage: do not pull more than 3 or 4 monsters at a time and bring company i",
+  "k": "p"
+ },
+ "The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) ...": {
+  "c": "recolhida: /grimorio/#novidades · ex.: The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) ...",
+  "k": "x"
+ },
+ "The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) are now up and running!": {
+  "c": "recolhida: /grimorio/#novidades · ex.: The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) are now up and running!",
+  "k": "x"
+ },
+ "The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) are now up and running! As announced, they are blocked for character world transfers for a significant amount of time. Moreover, only Premium accounts are able to play there at the moment. Have fun!": {
+  "c": "recolhida: /grimorio/#novidades · ex.: The new game worlds Quirina(EU), Nebulera (NA), and Farsabra (SA) are now up and running! As announced, they are blocked",
+  "k": "x"
+ },
+ "The {0} appear in the water near the coast. Use the {1} on the water to create an underwater platform and build a path of platforms to them. Each Spyrat you attack gives {2} (you don't need to do the most damage). The raid ends when {3} die (": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: The {0} appear in the water near the coast. Use the {1} on the water to create an underwater platform and build a path o",
+  "k": "p"
+ },
+ "The {0} appear in the water near the coast. Use the {1} on the water to create an underwater platform and build a path of platforms to them. Each Spyrat you attack gives {2} (you don't need to do the most damage). The raid ends when {3} die ({4}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: The {0} appear in the water near the coast. Use the {1} on the water to create an underwater platform and build a path o",
+  "k": "p"
+ },
+ "The {0} entrance ({1}) is the {2} one (green, E), which also leads to the": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The {0} entrance ({1}) is the {2} one (green, E), which also leads to the",
+  "k": "p"
+ },
+ "The {0} entrance ({1}) is the {2} one (green, E), which also leads to the {3}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The {0} entrance ({1}) is the {2} one (green, E), which also leads to the {3}.",
+  "k": "p"
+ },
+ "The {0} in each pharaoh's room, used {1} the pass item in your inventory, takes you to the start of the tomb. In the {2} there is an exit teleport that leaves you at the entrance; in the others, if you do not see an exit teleport, go back the way you came.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The {0} in each pharaoh's room, used {1} the pass item in your inventory, takes you to the start of the tomb. In the {2}",
+  "k": "p"
  },
  "Thu": {
   "c": "index.html: map(x=>[x.type,x.value])); let d=[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"].indexO",
@@ -9728,7 +10172,7 @@
   "k": "x"
  },
  "Tirar {0}": {
-  "c": "index.html: .voc].n} ${m.level}</span></span></span>` : m.cid ? `<span class=\"pmc\">${VI(m.voc)}<span><b>${esc(m.name)}</b> <span class=\"tiny muted\">${G.voc[m.voc].n} ${m.level}</span></span><button type=\"button\" data-pmdel=\"${m.id}\"",
+  "c": "index.html: n} ${m.level}</span></span></span>` : m.cid||m.nm ? `<span class=\"pmc\">${VI(m.voc)}<span><b>${esc(m.name)}</b> <span class=\"tiny muted\">${G.voc[m.voc].n} ${m.level}</span></span><button type=\"button\" data-pmdel=\"${m.id}\"",
   "k": "p"
  },
  "Tirar {0} da comparação": {
@@ -9983,6 +10427,10 @@
   "c": "index.html: \")}</select>`; }).join(\"\")}</div> ${!same&&rec.length?`<button class=\"btn small ghost fix\" data-imfix=\"${k}\">Usar o recomendado</button>`:\"\"}${ft}</div>`); ",
   "k": "x"
  },
+ "Use the levers and defeat {0}, one at a time, within {1}. Each dragon has a special trait. When you kill one, its trait {2} (e.g. if you kill {3} first, the other six start casting Fear). {4}: {5}": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: Use the levers and defeat {0}, one at a time, within {1}. Each dragon has a special trait. When you kill one, its trait ",
+  "k": "p"
+ },
  "Vai até à casa do {0}": {
   "c": "recolhida: /grimorio/#hunts · ex.: Vai até à casa do {0}",
   "k": "p"
@@ -10025,6 +10473,10 @@
  },
  "Varinha (masculino)": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
+  "k": "x"
+ },
+ "Varinha (masculino):": {
+  "c": "recolhida: /grimorio/#outfit/mage · ex.: Varinha (masculino):",
   "k": "x"
  },
  "Variável (depende da criatura)": {
@@ -10327,6 +10779,10 @@
   "c": "index.html: \"Boots\":\"Botas\",\"Rings\":\"Anel\",\"Food\":\"Comida\",\"Rods\":\"Rod\",\"Wands\":\"Wand\",\"Tools\":\"Fer",
   "k": "x"
  },
+ "We acquired some knowledge about special magic stones. [...] the ruins found in the north-west of Edron were once inhabited by beings who used such stones. Do you have the heart to go there and to get us such a stone?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: We acquired some knowledge about special magic stones. [...] the ruins found in the north-west of Edron were once inhabi",
+  "k": "x"
+ },
  "Weapon Proficiency": {
   "c": "index.html: 30.a30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"proficiency\", \"t\": \"Weapon Proficiency\", \"s\": \"Cada arma ga",
   "k": "x"
@@ -10349,6 +10805,18 @@
  },
  "Weekly: matar": {
   "c": "index.html:  let BIDX=null; const TKT=[[\"bounty\",\"Bounty task\"],[\"kill\",\"Weekly: matar\"],[\"deliv\",\"Weekly: ",
+  "k": "x"
+ },
+ "Welcome, welcome! Finally! The last scroll piece.... you do have it, haven't you?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: Welcome, welcome! Finally! The last scroll piece.... you do have it, haven't you?",
+  "k": "x"
+ },
+ "Well, well, I do that! [...] Come back after sun hits the horizon {0} times and ask me for amulet.": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: Well, well, I do that! [...] Come back after sun hits the horizon 24 times and ask me for amulet.",
+  "k": "p"
+ },
+ "What to do": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: What to do",
   "k": "x"
  },
  "Wheel": {
@@ -10393,6 +10861,10 @@
  },
  "Wheel: {0}": {
   "c": "index.html: op(), nw=ws.find(w=>w.p>wpOf(c,L)); if (cw) steps.push({t:`Wheel: <b>${esc(cw.t)}</b>`,d:nw?`Próxima build",
+  "k": "p"
+ },
+ "Which mission do you want to report: {0}": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: Which mission do you want to report: crystal keeper, spark hunting, extermination or mushroom digging?",
   "k": "p"
  },
  "White Flower Temple, sul de Thais": {
@@ -10487,6 +10959,30 @@
   "c": "index.html: 745],[\"Liberty Bay\",32317,32826],[\"Svargrond\",32212,31132],[\"Yalahar\",32787,31276],[\"Farm",
   "k": "x"
  },
+ "Ye'll have to be sneaky and resourceful. [...] Ye might even have to do some climbing. If ye are not agile enough, better bring some parcels.": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: Ye'll have to be sneaky and resourceful. [...] Ye might even have to do some climbing. If ye are not agile enough, bette",
+  "k": "x"
+ },
+ "You can do the {0} at the same time: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: You can do the {0} at the same time: the rewards are in two coffins on the {1} floor.",
+  "k": "p"
+ },
+ "You do not need to talk to Uzgod if you have a {0} by other means: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: You do not need to talk to Uzgod if you have a {0} by other means: it appears as a {1} in several {2} (see the {3} page ",
+  "k": "p"
+ },
+ "You held out for a long time. I think you earned our trust. [...] There is a teleporter in the east of the island. [...] For {0} trust points, I will cast a permanent entchantment on you [...] Do you want to advance?": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: You held out for a long time. I think you earned our trust. [...] There is a teleporter in the east of the island. [...]",
+  "k": "p"
+ },
+ "You need access to the GCTS (the gnomes' teleport system) through the {0}; each time you enter or leave the GCTS you use up a {1} ({2} sells them with {3}, as do {4} and": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: You need access to the GCTS (the gnomes' teleport system) through the {0}; each time you enter or leave the GCTS you use",
+  "k": "p"
+ },
+ "You start with no rank. Each rank has its own missions; when you finish all those of your rank, you rank up automatically. Use this table to plan (recommended level to do the mission solo, with the full spawn).": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: You start with no rank. Each rank has its own missions; when you finish all those of your rank, you rank up automaticall",
+  "k": "x"
+ },
  "Zona de caça": {
   "c": "index.html: ; if(R.o.tgt) steps.push([r.st.length,{i:\"end\",t:R.o.end||\"Zona de caça\",d:floorTxt(R.o.tgt[",
   "k": "x"
@@ -10510,6 +11006,34 @@
  "Zonas no TibiaPal: {0}": {
   "c": "index.html: b> ${h.r.how?esc(h.r.how):\"\"}${h.r.how&&vars?\". \":\"\"}${vars?`Zonas no TibiaPal: ${vars}`:\"\"}</li>`:\"\"; }).jo",
   "k": "p"
+ },
+ "[...] Do you think you could get one for me so I can give it to her? I really would appreciate it.": {
+  "c": "recolhida: /grimorio/quests/#/quest/oriental-outfits-quest · ex.: [...] Do you think you could get one for me so I can give it to her? I really would appreciate it.",
+  "k": "x"
+ },
+ "[...] Our scientists think a spectral dress would be a perfect object for their studies [...] the only source to got such a dress is the queen of the banshees. Do you dare to seek her out?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: [...] Our scientists think a spectral dress would be a perfect object for their studies [...] the only source to got suc",
+  "k": "x"
+ },
+ "[...] The society offers a substantial reward for the retrieval of Ratha or his remains. Do you have any news about Ratha?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: [...] The society offers a substantial reward for the retrieval of Ratha or his remains. Do you have any news about Rath",
+  "k": "x"
+ },
+ "[...] Would you be willing to go on a special mission in an underwater ice cave? It's pretty risky, I know. [...] Do you agree?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: [...] Would you be willing to go on a special mission in an underwater ice cave? It's pretty risky, I know. [...] Do you",
+  "k": "x"
+ },
+ "[...] You need to spill some vials of blood tincture for this task. Probably means killing blood priests to get those vials. Ready to do this?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: [...] You need to spill some vials of blood tincture for this task. Probably means killing blood priests to get those vi",
+  "k": "x"
+ },
+ "[...] Your renown amongst us gnomes is currently {0}. Do you want to improve your standing by sacrificing tokens? One token will raise your renown by {1} points.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: [...] Your renown amongst us gnomes is currently 20. Do you want to improve your standing by sacrificing tokens? One tok",
+  "k": "p"
+ },
+ "[...] we need you to collect some ectoplasm from the corpse of a ghost. [...] Do you think you are ready for that mission?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: [...] we need you to collect some ectoplasm from the corpse of a ghost. [...] Do you think you are ready for that missio",
+  "k": "x"
  },
  "[data-wmode],[data-wed],.whs.edit [data-ws]": {
   "c": "index.html: er(\"click\", e=>{ const t=e.target.closest&&e.target.closest(\"[data-wmode],[data-wed],.whs.edit [data-ws]\"); if(!t||!WED) retu",
@@ -10631,6 +11155,10 @@
   "c": "quests/js/app.js: essos\"}` : ach.length ? `${ach.length} ${ach.length === 1 ? \"achievement\" : \"achievements\"}` ",
   "k": "x"
  },
+ "achievement (if you do all the disguises during the event)": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: achievement (if you do all the disguises during the event)",
+  "k": "x"
+ },
  "achievements": {
   "c": "index.html: - */ const WK_FILE = {feitico:\"spells\",npc:\"npcs\",conquista:\"achievements\",montaria:\"mounts\",o",
   "k": "x"
@@ -10653,6 +11181,10 @@
  },
  "agora mesmo": {
   "c": "index.html: =(Date.now()-new Date(t).getTime())/1000; if(s<60) return \"agora mesmo\"; if(s<3600) return ",
+  "k": "x"
+ },
+ "ainda não tem vocação.": {
+  "c": "index.html: ch=r.d.character, v=vocKey(ch.vocation); if(!v){ PMMSG={t:`${ch.name} ainda não tem vocação.`,w:1}; return; } i",
   "k": "x"
  },
  "ainda sem pontosA primeira build chega com {0} pontos (nível {1}).": {
@@ -11089,6 +11621,14 @@
  },
  "capacete": {
   "c": "index.html: ate. */ const FTSLOT={weapon:\"arma\",armor:\"armadura\",helmet:\"capacete\",legs:\"calcas\",boots",
+  "k": "x"
+ },
+ "capacete, arma, armadura, botas.": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: capacete, arma, armadura, botas.",
+  "k": "x"
+ },
+ "capacete, arma, armadura, escudo / livro, botas.": {
+  "c": "recolhida: /grimorio/#inicio · ex.: capacete, arma, armadura, escudo / livro, botas.",
   "k": "x"
  },
  "capacidade": {
@@ -11576,7 +12116,7 @@
   "k": "x"
  },
  "da personagem": {
-  "c": "index.html: c(lab)} ${base+gear}</b> <span class=\"muted\">(${base} ${src?\"da personagem\":\"estimado pelo níve",
+  "c": "index.html: } ${base+gear}</b> <span class=\"muted\">(${base} <span>${src?\"da personagem\":\"estimado pelo níve",
   "k": "x"
  },
  "da região · {0} no total": {
@@ -11593,6 +12133,10 @@
  },
  "danger": {
   "c": "index.html: rget.textContent=\"Confirmar apagar\"; e.target.classList.add(\"danger\"); return; } c.sets=",
+  "k": "x"
+ },
+ "dano base": {
+  "c": "recolhida: /grimorio/#hunts/tipo/extra-dimensional · ex.: dano base",
   "k": "x"
  },
  "dano crítico": {
@@ -11620,7 +12164,7 @@
   "k": "x"
  },
  "de mana": {
-  "c": "index.html: ${esc(G.voc[voc].n)}: ${nf(Math.round(need))} ${k===\"magic\"?\"de mana\":\"pontos\"}. ${g(\"trD",
+  "c": "index.html: ].n)} · ${nf(Math.round(need))} <span>${I18N.tr(k===\"magic\"?\"de mana\":\"pontos\")}</span>. ",
   "k": "x"
  },
  "de raio": {
@@ -11754,6 +12298,10 @@
  "do Market de {0}": {
   "c": "index.html: <i></i></div><p class=\"small muted\">A calcular os preços${w?` do Market de ${esc(w)}`:\"\"}…</p>`; Promis",
   "k": "p"
+ },
+ "do equipamento": {
+  "c": "index.html: n>${src?\"da personagem\":\"estimado pelo nível\"}</span>${gear?` + ${gear} <span>do equipamento</span>`:\"\"})</span>`; con",
+  "k": "x"
  },
  "do melhor set para o nível {0} (BiS)": {
   "c": "index.html: n.id]; return {g, skn, src:mine?`do teu set «${my.name}»`:`do melhor set para o nível ${L} (BiS)`, mine, set, shield:",
@@ -12071,6 +12619,10 @@
   "c": "index.html:  \":\"\"}<span class=\"lk\">quest</span>`:\"\"}${g.hs.some(isTeam)?` · <span class=\"tag acc\" title=\"Só em equipa para ${esc(g.hs.filter(isTeam).map(h=>G.voc[h.voc].n).join(\", \"))}\">equipa</span>`:\"\"}<span class=\"dan",
   "k": "x"
  },
+ "equipamento · botão direito:": {
+  "c": "recolhida: /grimorio/#inicio · ex.: equipamento · botão direito:",
+  "k": "x"
+ },
  "escolhe uma cidade para ver só as quests de lá": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "x"
@@ -12120,7 +12672,7 @@
   "k": "p"
  },
  "estimado pelo nível": {
-  "c": "index.html: ear}</b> <span class=\"muted\">(${base} ${src?\"da personagem\":\"estimado pelo nível\"}${gear?` + ${gear} ",
+  "c": "index.html: b> <span class=\"muted\">(${base} <span>${src?\"da personagem\":\"estimado pelo nível\"}</span>${gear?` + $",
   "k": "x"
  },
  "estrela": {
@@ -12377,6 +12929,10 @@
  },
  "fora do top 1000 de {0}": {
   "c": "index.html:  [h.sk?`${skName(c)} ${h.sk.v} (#${h.sk.r} em ${esc(h.w)})`:`${skName(c)} fora do top 1000 de ${esc(h.w)}`, h.xp?`experiência ",
+  "k": "p"
+ },
+ "fora do top 1000 de {0}, escreve o valor acima.": {
+  "c": "index.html: irado dos highscores de ${esc(h.w)} (#${h.sk.r}).</span>` : `${esc(I18N.tr(skName(c)))}: <span>fora do top 1000 de ${esc(h.w)}, escreve o valor acima.</span>`) + (h.xp ? \" <s",
   "k": "p"
  },
  "forge": {
@@ -12835,6 +13391,10 @@
   "c": "quests/js/app.js: ull; function renderMapPage(arg) { view().innerHTML = `<div class=\"map-page\"> <div class=\"toolbar\"><h1>Mapa do Tibia</h1> <form id=\"gotoForm\" class=\"map-toolbar\" style=\"margin:0\"> <input class=\"input\" id=\"gotoInput\" plac",
   "k": "x"
  },
+ "is always drunk and often takes you to the wrong place. If you have a {0} in your backpack he always gets it right (and you do not pay), but he keeps the ring; say {1} when he asks for it if you want to keep it.{2}On the glacier there are {3}, {4}, {5} and": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: is always drunk and often takes you to the wrong place. If you have a {0} in your backpack he always gets it right (and ",
+  "k": "p"
+ },
  "isso": {
   "c": "index.html: e)} gp/h${best>=500?`; as poções poupadas pagam ${best>=fee?\"isso\":\"parte disso\"}`:\"\"}",
   "k": "x"
@@ -12877,6 +13437,10 @@
  },
  "jadedroots": {
   "c": "index.html: 2026-10-27\",t:\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gloompillars\",\"dar",
+  "k": "x"
+ },
+ "já está na party.": {
+  "c": "index.html: id===m.cid)||{}).name||\"\").toLowerCase()===low))){ PMMSG={t:`${name} já está na party.`,w:1}; return; } c",
   "k": "x"
  },
  "já não se consegue": {
@@ -13039,12 +13603,16 @@
   "c": "index.html: lemHTML(h.voc,g.p)}</details></div>`; }).join(\"\"); return `<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">Em grupo · ${ms.map(m=>VOC_SHORT[m.voc]).join(\" + \")}</span><h3>${esc(name)}</h3></div></div> <div ",
   "k": "x"
  },
+ "lucro/h ≈": {
+  "c": "recolhida: /grimorio/#hunts/tipo/extra-dimensional · ex.: lucro/h ≈",
+  "k": "x"
+ },
  "lycanthrope": {
   "c": "r12: percorrer o site em inglês (Grimório)",
   "k": "x"
  },
  "magic": {
-  "c": "index.html: o} para ${esc(G.voc[voc].n)}: ${nf(Math.round(need))} ${k===\"magic\"?\"de mana\":\"pontos\"}",
+  "c": "index.html: .voc[voc].n)} · ${nf(Math.round(need))} <span>${I18N.tr(k===\"magic\"?\"de mana\":\"pontos\")",
   "k": "x"
  },
  "magic level": {
@@ -13700,7 +14268,7 @@
   "k": "x"
  },
  "offline": {
-  "c": "index.html: ()=>true,()=>false); return {ok:false,why:up?\"notfound\":\"offline\"}; } } const snap = ",
+  "c": "index.html: onst r=await fetchChar(name); if(!r.ok){ PMMSG={t:r.why===\"offline\"?\"O site do Tibia nã",
   "k": "x"
  },
  "ofuscado": {
@@ -13764,7 +14332,7 @@
   "k": "x"
  },
  "ou uma personagem tua:": {
-  "c": "index.html: \">${VI(v)}${G.voc[v].n}</button>`).join(\"\")}${others.length?`<span class=\"small muted\">ou uma personagem tua:</span>${others.map(x=>`<button type=\"button\" class=\"btn small ghost${outR(x.level)?\" pm-out\":\"\"}\" data-pmaddc=",
+  "c": "index.html: }\" role=\"status\">${esc(PMMSG.t)}</span>`:\"\"}${others.length?`<span class=\"small muted\">ou uma personagem tua:</span>${others.map(x=>`<button type=\"button\" class=\"btn small ghost${outR(x.level)?\" pm-out\":\"\"}\" data-pmaddc=",
   "k": "x"
  },
  "ou {0}": {
@@ -13809,6 +14377,10 @@
  },
  "para este": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "x"
+ },
+ "para ficarem exatas.": {
+  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> <span>para ficarem exatas.</span>`:\"\"}</p>`; } // tecl",
   "k": "x"
  },
  "para leste": {
@@ -13926,6 +14498,10 @@
  "perso": {
   "c": "index.html: ) return; if(b.dataset.add){ draft=null; look=newLook(); go(\"perso\"); renderPerso(); co",
   "k": "x"
+ },
+ "personalização no Summer Update {0} ({1}.a30dad) · {2}/{3}/{4}": {
+  "c": "recolhida: /grimorio/#sistemas · ex.: personalização no Summer Update 2026 (15.30.a30dad) · 13/07/2026",
+  "k": "p"
  },
  "perto de": {
   "c": "quests/js/app.js: como sair<span class=\"cap-extra\">${esc(placeFor(p.t).near ? \"perto de \" + placeFor(p.t).nea",
@@ -15212,7 +15788,7 @@
   "k": "x"
  },
  "tirado dos highscores de {0} (#{1}).": {
-  "c": "r12: percorrer o site em inglês (Grimório)",
+  "c": "index.html: n=true; return; } n.hidden=false; n.innerHTML = (h.sk ? `${esc(I18N.tr(skName(c)))} ${h.sk.v}: <span>tirado dos highscores de ${esc(h.w)} (#${h.sk.r}).</span>` : `${esc(I18N.tr(sk",
   "k": "p"
  },
  "title": {
@@ -15301,6 +15877,10 @@
  },
  "trivia": {
   "c": "quests/js/app.js: , \"city\": \"Cidade\", \"sells\": \"Vende\", \"buys\": \"Compra\", \"trivia\": \"Curiosidades\", \"p",
+  "k": "x"
+ },
+ "trocar item": {
+  "c": "recolhida: /grimorio/#inicio · ex.: trocar item",
   "k": "x"
  },
  "trophy": {
@@ -15755,6 +16335,10 @@
   "c": "index.html: .v]||0); } const evLabel = () => { const e=ST.ui.ev; return `${e.t===\"mon\"?(hasKey(G.mon,e.v)?G.mon[e.v][0]:cap1(e.v)):clsName(e.v)} +${e.p}% XP`; }; /* r6-t2 */ // ",
   "k": "p"
  },
+ "{0} - I hope this veil will turn out as beautiful as you are. Here, I'll do it for you.": {
+  "c": "recolhida: /grimorio/quests/#/quest/oriental-outfits-quest · ex.: Ah! Congratulations - I hope this veil will turn out as beautiful as you are. Here, I'll do it for you.",
+  "k": "p"
+ },
  "{0} 2 itens iguais com o mesmo tier dão +1 tier. {1}% de sucesso{2}. Se falhar, um dos itens desce 1 tier (ou desaparece se for tier 0){3}.": {
   "c": "index.html: ed core\"}`).join(\" · \"), co=F.fusion.coreOpts||{}; return `<section class=\"card forge ip-wide\"><h3>Exaltation Forge<span class=\"h3s\">classe ${cl} · até tier ${mx}</span></h3> ${B?`<p class=\"small fz-b\"><b>${esc(B.name)}<",
   "k": "p"
@@ -15867,8 +16451,16 @@
   "c": "quests/js/app.js: N.stringify({ x, y, z, marks: marks || null })); return `<div class=\"minimap\" data-mm=\"${data}\" role=\"button\" tabindex=\"0\" title=\"${esc(title || \"Abrir no mapa\")}\"> <canvas></canvas><span class=\"mm-floor\">${floorLabel(z)",
   "k": "p"
  },
+ "{0} achievement (if you do all the disguises during the event)": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: {0} achievement (if you do all the disguises during the event)",
+  "k": "p"
+ },
  "{0} adicionado e marcado como teu.": {
   "c": "index.html: ote\").value=\"\"; $(\"cuLvl\").value=\"\"; $(\"cuMsg\").textContent=`${it.n} adicionado e marcado como teu.`; save(); renderEqui",
+  "k": "p"
+ },
+ "{0} ainda não tem vocação.": {
+  "c": "index.html: ch=r.d.character, v=vocKey(ch.vocation); if(!v){ PMMSG={t:`${ch.name} ainda não tem vocação.`,w:1}; return; } i",
   "k": "p"
  },
  "{0} ao começar, depois carrega sempre no {1}.": {
@@ -15885,6 +16477,10 @@
  },
  "{0} cada quest abre numa aba própria no topo — podes ter várias abertas e saltar entre elas.{1} {2} marca cada passo como feito; fica guardado neste navegador.": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
+  "k": "p"
+ },
+ "{0} capacete, arma, armadura, escudo / livro, botas. {1}": {
+  "c": "recolhida: /grimorio/#item/pair-of-monk-fists · ex.: {0} capacete, arma, armadura, escudo / livro, botas. {1}",
   "k": "p"
  },
  "{0} cargas": {
@@ -16135,6 +16731,10 @@
   "c": "index.html: t||0} dust · 100%</span>`:\"—\"}</td>`:\"\"}<td class=\"num\">${m?`${m.items} itens + ${kkk(m.gold)} gp<span class=\"pt-s fz-est\" data-ft=\"${t}\" data-fi=\"${m.items}\" data-fg=\"${m.gold}\"></span>`:\"—\"}</td></tr>`); }",
   "k": "p"
  },
+ "{0} itens iguais com o mesmo tier dão {1} tier.": {
+  "c": "recolhida: /grimorio/#item/pair-of-monk-fists · ex.: 2 itens iguais com o mesmo tier dão +1 tier.",
+  "k": "p"
+ },
  "{0} itens · do que mais rende ao que menos": {
   "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
   "k": "p"
@@ -16145,6 +16745,10 @@
  },
  "{0} itens · {1} Swiftness": {
   "c": "index.html: =>counts[x.k]=(counts[x.k]||0)+1); $(\"imSum\").innerHTML = `<div class=\"im-h\"><h3>Resumo do set</h3><span class=\"tag\">${esc(set.name)} · ${TIERS[ti][1]}</span></div> <div class=\"ims-tiles\"> <div class=\"ims-t\"><b>${t.life}",
+  "k": "p"
+ },
+ "{0} já está na party.": {
+  "c": "index.html: id===m.cid)||{}).name||\"\").toLowerCase()===low))){ PMMSG={t:`${name} já está na party.`,w:1}; return; } c",
   "k": "p"
  },
  "{0} já está no MAB {1}: a tecla {2} fica livre para outra coisa.": {
@@ -16199,10 +16803,6 @@
   "c": "index.html: erências</h4>${S.tr.length?`<ul class=\"ls-tr\">${S.tr.map(t=>`<li><span><b>${esc(t.from)}</b> paga <b>${nf(t.v)}</b> a <b>${esc(t.to)}</b></span><code>transfer ${t.v} to ${esc(t.to)}</code><button type=\"button\" class=\"btn",
   "k": "p"
  },
- "{0} para ficarem exatas.": {
-  "c": "index.html: in(\" · \")}. Bónus ${esc(gr.src)}.${(mage?!s.mlSrc:!s.skSrc)?` <a href=\"#\" data-go=\"perso\">Escreve o teu ${mage?\"ML\":esc(sk)}</a> para ficarem exatas.`:\"\"}</p>`; } // tecl",
-  "k": "p"
- },
  "{0} para veres o preço do Market no teu mundo.": {
   "c": "index.html: NPC compra: vende no Market.\"; if(!wld) adv+=(adv?\" \":\"\")+`${c?\"Liga a personagem ao Tibia\":\"Junta a tua personagem\"} para veres o preço do Market no teu mundo.`; const npcLine = ",
   "k": "p"
@@ -16241,6 +16841,10 @@
  },
  "{0} pontos · nível {1}": {
   "c": "index.html: ${whGemName(c.voc,S.vr[d])}</span>`).join(\"\"); return `<article class=\"wopt${x===w?\" on\":\"\"}\"><div class=\"wopt-w\">${whSVG(c.voc,b,{size:\"sm\",label:`${x.t}: ${x.p} pontos`})}</div><div class=\"wopt-b\"><span class=\"tag ${cl",
+  "k": "p"
+ },
+ "{0} pontos.": {
+  "c": "recolhida: /grimorio/#calc · ex.: 305 pontos.",
   "k": "p"
  },
  "{0} pontos:": {
@@ -16411,6 +17015,10 @@
   "c": "index.html: )} vida/${nfdec(it.rg[1])} mana por s`); if(it.is) p.push(`${it.is} ${it.is===1?\"slot\":\"slots\"} de imbuement`); if(it.chg) p.pu",
   "k": "p"
  },
+ "{0} {1} itens iguais com o mesmo tier dão {2} tier.": {
+  "c": "recolhida: /grimorio/#npc/eremo · ex.: {0} 2 itens iguais com o mesmo tier dão +1 tier.",
+  "k": "p"
+ },
  "{0} {1} no set consistente desta hunt: {2} por hora, sem os materiais": {
   "c": "index.html: ed\":\" disabled\"}><span>Contar as taxas do altar <small>${ns?`${ns} ${ns===1?\"imbuement\":\"imbuements\"} ${esc(tn)} no set consistente desta hunt: ${gp(feeH)} por hora, sem os materiais`:\"o set consistente ",
   "k": "p"
@@ -16441,14 +17049,6 @@
  },
  "{0} {1} · hunt a partir do {2}": {
   "c": "index.html: n(\"\"); const rows=g.hs.map((h,i)=>{ const m=ms[i]; return `<div class=\"gmem\"><div class=\"gmem-h\">${VI(h.voc,\"lg\")}<div><b>${esc(m.name)}</b><div class=\"tiny muted\">${esc(G.voc[h.voc].n)} ${m.level} · hunt a partir do ${h",
-  "k": "p"
- },
- "{0} {1} → {2} para {3}: {4} {5}. {6}{7}Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.": {
-  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
-  "k": "p"
- },
- "{0} {1}: tirado dos highscores de {2} (#{3}).": {
-  "c": "index.html: true; return; } n.hidden=false; n.textContent = (h.sk ? `${skName(c)} ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fo",
   "k": "p"
  },
  "{0} {1}{2}{3} que já {4} fazer noutras faixas:": {
@@ -16555,12 +17155,16 @@
   "c": "recolhida: /grimorio/quests/#/acessos · ex.: Spectral Cloth — abrir na wiki",
   "k": "p"
  },
- "{0} — sphinxes à superfície — {1}": {
-  "c": "recolhida: /grimorio/#hunts · ex.: Issavi — sphinxes à superfície — 7.02kk/h ≈",
+ "{0} — do whatever is safest for your character.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: Similar to the previous one, but with {0}, which look like {1}: slightly lower reflection but more health. It may be via",
   "k": "p"
  },
- "{0} → {1} para {2}: {3} {4}. {5}{6}Preços do NPC desde 06/10/2026; na Store custam 25, 90 e 720 Tibia Coins.": {
-  "c": "index.html: ceil(charges/500)*434028, h=charges*2/3600; out.innerHTML=`<div class=\"ls-sum\"><div><b>${nf(charges)}</b><span>cargas</span></div><div><b>${nf(gold)}</b><span>gold (combinação mais barata)</span></div><div><b>${h<1?Math.",
+ "{0} — it is the first mission of the {1}.{2}If you enter the restricted area on the 3rd floor of the monastery and do not pay the fine to {3} ({4} or {5}), Dalbrect stops transporting you.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: only takes you after you hand him the {0} — it is the first mission of the {1}.{2}If you enter the restricted area on th",
+  "k": "p"
+ },
+ "{0} — sphinxes à superfície — {1}": {
+  "c": "recolhida: /grimorio/#hunts · ex.: Issavi — sphinxes à superfície — 7.02kk/h ≈",
   "k": "p"
  },
  "{0}% da tua vida": {
@@ -16687,6 +17291,10 @@
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "p"
  },
+ "{0}: Avalanche (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: 3: Avalanche (runa)",
+  "k": "p"
+ },
  "{0}: Entrega {1} Chicken Feathers, {2} Honeycombs e {3} Legion Helmet à Hanna (Thais).": {
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: {0}: Entrega 100 Chicken Feathers, 50 Honeycombs e 1 Legion Helmet à Hanna (Thais).",
   "k": "p"
@@ -16695,8 +17303,52 @@
   "c": "recolhida: /grimorio/#outfit/citizen · ex.: {0}: Entrega 100 Minotaur Leathers ao Lubo (Thais) e volta 2 horas depois.",
   "k": "p"
  },
+ "{0}: Great Fireball (runa)": {
+  "c": "recolhida: /grimorio/#inicio · ex.: Shift+5: Great Fireball (runa)",
+  "k": "p"
+ },
+ "{0}: Magic Wall (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: 9: Magic Wall (runa)",
+  "k": "p"
+ },
+ "{0}: Paralyze (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: 8: Paralyze (runa)",
+  "k": "p"
+ },
+ "{0}: Stone Shower (runa)": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: 4: Stone Shower (runa)",
+  "k": "p"
+ },
+ "{0}: Sudden Death (runa)": {
+  "c": "recolhida: /grimorio/#inicio · ex.: 5: Sudden Death (runa)",
+  "k": "p"
+ },
+ "{0}: after this one you can no longer do": {
+  "c": "recolhida: /grimorio/quests/#/acessos · ex.: You can only ally with {0} faction: after this one you can no longer do",
+  "k": "p"
+ },
+ "{0}: after this one you can no longer do {1}.": {
+  "c": "recolhida: /grimorio/quests/#/acessos · ex.: You can only ally with {0} faction: after this one you can no longer do {1}.",
+  "k": "p"
+ },
+ "{0}: after this you can no longer do": {
+  "c": "recolhida: /grimorio/quests/#/acessos · ex.: You can only choose one faction: after this you can no longer do",
+  "k": "p"
+ },
+ "{0}: after this you can no longer do {1}.": {
+  "c": "recolhida: /grimorio/quests/#/acessos · ex.: You can only choose one faction: after this you can no longer do {0}.",
+  "k": "p"
+ },
+ "{0}: bring a {1} and {2}.{3}To go deeper in the blue mine (F) you pass a {4} {5}; in the green mine (E) the door is {6}. On the deeper floors there are {7} and access to the {8}, with much stronger dwarves.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: There are hidden holes on the paths around Kazordoon: bring a {0} and {1}.{2}To go deeper in the blue mine (F) you pass ",
+  "k": "p"
+ },
  "{0}: carrega por esta ordem; se uma estiver em cooldown, passa à seguinte.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
+  "k": "p"
+ },
+ "{0}: climb the stairs you came down by ({1}, then {2} and finally {3}) up to the ground floor of the pyramid. You do not need any item.": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: Go back the same way: climb the stairs you came down by ({0}, then {1} and finally {2}) up to the ground floor of the py",
   "k": "p"
  },
  "{0}: cura": {
@@ -16707,6 +17359,30 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "{0}: do not chase them and bring health potions.{1}On the surface, in the jungle around Banuta, there are {2}, {3} and {4}; in {5} there are {6}, {7} and": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The apes ({0}, {1}, {2}) use haste and attack in groups: do not chase them and bring health potions.{3}On the surface, i",
+  "k": "p"
+ },
+ "{0}: do not chase them and bring health potions.{1}On the surface, in the jungle around Banuta, there are {2}, {3} and {4}; in {5} there are {6}, {7} and {8}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}The apes ({1}, {2}, {3}) use haste and attack in groups: do not chase them and bring health potions.{4}On the surface",
+  "k": "p"
+ },
+ "{0}: do not count on coming back through it without knowing the Hellgate route.{1}{2} only gives you {3} Dragonfetish; if you talk to him again he tells you to leave the island.{4}Since {5}, {6} can no longer be pulled up to the surface with a rope. On the Hellgate route there are {7}, {8} and sometimes {9} and {10} brought by other players.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The way from the Redbone Castle to Draconia is {0}: do not count on coming back through it without knowing the Hellgate ",
+  "k": "p"
+ },
+ "{0}: do not go without a shovel or a rope. The hole in the centre ({1}) leads to the room with the sealed door of": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Inside the prison there are small holes that open with the {0} and open holes with creatures: do not go without a shovel",
+  "k": "p"
+ },
+ "{0}: do not go without a shovel or a rope. The hole in the centre ({1}) leads to the room with the sealed door of {2}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: Inside the prison there are small holes that open with the {0} and open holes with creatures: do not go without a shovel",
+  "k": "p"
+ },
+ "{0}: do not wander too far if you are a low level.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: North of the city's mountains there are strong creatures (Dragons, Dragon Lords, Heroes, Behemoths and Demons): do not w",
+  "k": "p"
+ },
  "{0}: este MAB junta {1} e {2}. Se a criatura resistir a um, metade dos toques perde força.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
@@ -16715,12 +17391,36 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
- "{0}: fora do top 1000 de {1}, escreve o valor acima.": {
-  "c": "index.html: ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fora do top 1000 de ${h.w}, escreve o valor acima.`) + (h.xp ? \" O ",
+ "{0}: exura gran sio \"nome": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: F5: exura gran sio \"nome",
+  "k": "p"
+ },
+ "{0}: exura sio \"nome": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: F4: exura sio \"nome",
+  "k": "p"
+ },
+ "{0}: ghost corpses that do not decay will not work.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: It has to be a {0} Ghost: ghost corpses that do not decay will not work.",
+  "k": "p"
+ },
+ "{0}: head {1} of {2}, go through the sealed doors, stand on the switch and use the {3}; the elevator takes you to the surface of the mountain. Head {4}, going down with {5} (or parcels/boxes), until you come out onto the steppe at {6}. To go back, do the route in reverse (go up with Levitate and head {7} to the elevator).": {
+  "c": "recolhida: /grimorio/quests/#/quest/an-uneasy-alliance-quest · ex.: To the {0}: head {1} of {2}, go through the sealed doors, stand on the switch and use the {3}; the elevator takes you to",
   "k": "p"
  },
  "{0}: imbuement {0}": {
   "c": "index.html: rom({length:it.is}).map((_,i)=>{ const v=cur[i]||\"\"; return `<select data-imsel=\"${i}\" data-v=\"${v}\" class=\"${rec[i]&&v&&v!==rec[i]&&!rec.includes(v)?\"off\":\"\"}\" style=\"--imc:${v?imColor(v):\"var(--line)\"}\" aria-label=\"${e",
+  "k": "p"
+ },
+ "{0}: it has small holes that open with the {1} and open holes with creatures, so do not go without a shovel or rope.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: is near the {0}. You need a {1}, {2} (or Magic Rope) and the {3} (the prison key; according to Uzgod it is in the genera",
+  "k": "p"
+ },
+ "{0}: it is a requirement on the AVIN branch; on the CGB branch you can do it before or during mission {1}.": {
+  "c": "recolhida: /grimorio/quests/#/acessos · ex.: You need mission 1 (to reach the Isle of the Kings): it is a requirement on the AVIN branch; on the CGB branch you can d",
+  "k": "p"
+ },
+ "{0}: it stays still. If you find one you do not need yet, you can trap it or kill it and take the body — {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: If the butterfly runs away, use a {0} or {1}: it stays still. If you find one you do not need yet, you can trap it or ki",
   "k": "p"
  },
  "{0}: marcação solo/duo por vocação e relatos de jogadores.": {
@@ -16729,6 +17429,10 @@
  },
  "{0}: menos cooldown": {
   "c": "r13: site todo em inglês (percorrer com o motor)",
+  "k": "p"
+ },
+ "{0}: mines A, B, E and F connect through the Mine Hub": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: 3rd floor down: mines A, B, E and F connect through the Mine Hub",
   "k": "p"
  },
  "{0}: os monks usam as duas mãos": {
@@ -16763,8 +17467,16 @@
   "c": "index.html: cost[String(it.up)]:null, m=t?forgeMin(fu,t):null; return `<div class=\"ftr\"><label><span class=\"tiny muted\">${esc(B.name)}</span><select data-ftsel data-v=\"${t}\" aria-label=\"${esc(it.n)}: tier\">${Array.from({length:mx+1}",
   "k": "p"
  },
- "{0}: tirado dos highscores de {1} (#{2}).": {
-  "c": "index.html: true; return; } n.hidden=false; n.textContent = (h.sk ? `${skName(c)} ${h.sk.v}: tirado dos highscores de ${h.w} (#${h.sk.r}).` : `${skName(c)}: fo",
+ "{0}: you do not dig, you enter {1} floor above the dragon spawn north-west of the city (": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The {0} is different: you do not dig, you enter 1 floor above the dragon spawn north-west of the city (",
+  "k": "p"
+ },
+ "{0}: you do not dig, you enter {1} floor above the dragon spawn north-west of the city ({2}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: The {0} is different: you do not dig, you enter 1 floor above the dragon spawn north-west of the city ({1}).",
+  "k": "p"
+ },
+ "{0}: you have to do all {1} floors within the time.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: If you are taking too long, it is better to give up and regroup after the 20-hour cooldown: you have to do all 3 floors ",
   "k": "p"
  },
  "{0}: {0}. Menu de contexto para trocar": {
@@ -16807,8 +17519,28 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
+ "{0}: {1}: also accept the Plant Collection and do both at the same time in Tiquanda.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: You have to hand in three butterflies, one at a time and in this order: {0}. Tip: also accept the Plant Collection and d",
+  "k": "p"
+ },
  "{0}A estimativa em party soma o XP/h solo de cada um, aplica o bónus e divide pelo grupo. Em grupo costuma render mais, porque puxam mais criaturas de cada vez.": {
   "c": "index.html: lemHTML(h.voc,g.p)}</details></div>`; }).join(\"\"); return `<div class=\"sh-h\"><div><span class=\"eyebrow\" style=\"margin:0\">Em grupo · ${ms.map(m=>VOC_SHORT[m.voc]).join(\" + \")}</span><h3>${esc(name)}</h3></div></div> <div ",
+  "k": "p"
+ },
+ "{0}A little bit battered but it will do. [...] If you think you are ready, ask for another butterfly hunt.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}A little bit battered but it will do. [...] If you think you are ready, ask for another butterfly hunt.",
+  "k": "p"
+ },
+ "{0}A {1} guards the castle gates (you no longer need to kill it). Along the way there are {2}, {3}, {4}, {5}, {6} and sometimes {7}.{8}Se encontrares criaturas diferentes destas no Hellgate, enganaste-te no caminho.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}A {1} guards the castle gates (you no longer need to kill it). Along the way there are {2}, {3}, {4}, {5}, {6} and so",
+  "k": "p"
+ },
+ "{0}Analyse the team's vocations and plan the order. Killing {1} first is recommended, so you don't end up with several bosses with his self-heal. Since he is immune to physical, Royal Paladins should bring a cheap secondary crossbow (e.g. {2}) with a strong elemental imbuement such as {3}. If you have lower-level Elder Druids and Master Sorcerers, avoid killing Greedok first.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: {0}Analyse the team's vocations and plan the order. Killing {1} first is recommended, so you don't end up with several b",
+  "k": "p"
+ },
+ "{0}And what is it you want? Do you bring news from the undead, or do you seek a dark artefact?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}And what is it you want? Do you bring news from the undead, or do you seek a dark artefact?",
   "k": "p"
  },
  "{0}Antes de começares{1}": {
@@ -16825,6 +17557,10 @@
  },
  "{0}Atualizado {1}": {
   "c": "index.html: \" prem\":\"\"}\">${tmi(\"p\")}${premium(t.status)}</span>${state||`<span class=\"tm-u\">${tmi(\"u\")}Atualizado ${ago(c.syncedAt)}</span><button class=\"btn small ghost tm-sync\" data-sync=\"${c.id}\">${tmi(\"s\")}Atualizar</button>`}${",
+  "k": "p"
+ },
+ "{0}Casper only gives you {1} Shapechanger ever. Do not lose it.": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: {0}Casper only gives you {1} Shapechanger ever. Do not lose it.",
   "k": "p"
  },
  "{0}Como chegar": {
@@ -16859,6 +17595,10 @@
   "c": "quests/js/app.js: e(q.slug) && stepsDone(q.slug) > 0); view().innerHTML = ` <div class=\"toolbar\"><h1>O meu progresso</h1> <button class=\"btn btn-ghost btn-sm\" id=\"expP\">${icon(\"download\")}Exportar</button> <label class=\"btn btn-ghost btn-",
   "k": "p"
  },
+ "{0}Congratulations on finding your soul melody. And a pretty one as far as I can tell. Now you are a true recruit of the Bigfoot company! Commander Stone might have some tasks for you to do! [...]": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}Congratulations on finding your soul melody. And a pretty one as far as I can tell. Now you are a true recruit of the",
+  "k": "p"
+ },
  "{0}Continua onde ficaste": {
   "c": "quests/js/app.js: s por ti</span></div> </div> ${inProg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"clock\")}Continua onde ficaste</h2><div class=\"box-body\"><div class=\"qgrid\">${inProg.map(questCard).join(\"\")}</div></div",
   "k": "p"
@@ -16875,6 +17615,50 @@
   "c": "quests/js/app.js: div></section>`); if ((d.tips || []).length) parts.push(`<section class=\"box\"><h2 class=\"box-caption\">${icon(\"bulb\")}Dicas antes de começar</h2><div class=\"box-body\"><ul class=\"notes-list\">${d.tips.map((t) => `<li>${rich",
   "k": "p"
  },
+ "{0}Do not kill the snake! You have to use the flask on it while it is alive.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}Do not kill the snake! You have to use the flask on it while it is alive.",
+  "k": "p"
+ },
+ "{0}Do not stray: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Do not stray: in another hole on this floor there is a {1}.",
+  "k": "p"
+ },
+ "{0}Do not take off the {1} while you are underwater.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Do not take off the {1} while you are underwater.",
+  "k": "p"
+ },
+ "{0}Do not use the shovel: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: {0}Do not use the shovel: you have to use the sand directly.",
+  "k": "p"
+ },
+ "{0}Do not waste time on the way: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Do not waste time on the way: the icicle's 10-minute clock keeps counting during the trip.",
+  "k": "p"
+ },
+ "{0}Do this task at the same time as Raiders of the Lost Spark (Rank {1}) and Matchmaker (Rank II): {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}Do this task at the same time as Raiders of the Lost Spark (Rank 0) and Matchmaker (Rank II): they are all in the Cry",
+  "k": "p"
+ },
+ "{0}Do you have a bucket of milk for me?": {
+  "c": "recolhida: /grimorio/quests/#/quest/an-uneasy-alliance-quest · ex.: {0}Do you have a bucket of milk for me?",
+  "k": "p"
+ },
+ "{0}Do you have some collected ectoplasm with you?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Do you have some collected ectoplasm with you?",
+  "k": "p"
+ },
+ "{0}Do you realy want to trade {1} minor tokens for {2} renown?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}Do you realy want to trade 2 minor tokens for 10 renown?",
+  "k": "p"
+ },
+ "{0}Do you want some mushroom beer for {1} gold?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}Do you want some mushroom beer for 10 gold?",
+  "k": "p"
+ },
+ "{0}Do you want to join the explorer society?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Do you want to join the explorer society?",
+  "k": "p"
+ },
  "{0}Dá acesso a (detalhes)": {
   "c": "quests/js/app.js: ardScroll(d)]; if ((d.unlocks || []).length) parts.push(`<section class=\"box\"><h2 class=\"box-caption\">${icon(\"key\")}Dá acesso a (detalhes)</h2><div class=\"box-body\"><ul class=\"list-clean unlock-list\">${d.unlocks.map(unlo",
   "k": "p"
@@ -16887,12 +17671,64 @@
   "c": "quests/js/app.js: .t].x != null ? S.npcs[p.t] : null); view().innerHTML = ` <article class=\"wiki-page\"> <header class=\"box wiki-head\"><div class=\"box-body\"> <span class=\"slot wiki-sprite\">${p.i ? `<img src=\"${p.i}\" alt=\"\">` : icon(kind[1]",
   "k": "p"
  },
+ "{0}Five Frost Dragons at once is very dangerous; go with a team if you do not have the recommended level.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Five Frost Dragons at once is very dangerous; go with a team if you do not have the recommended level.",
+  "k": "p"
+ },
+ "{0}From Rank II you can also do this task in the {1}, but it's not worth it: in the Truffels Garden you do Exterminators and Mushroom Digger at the same time.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}From Rank II you can also do this task in the {1}, but it's not worth it: in the Truffels Garden you do Exterminators",
+  "k": "p"
+ },
  "{0}Greater gems (mais tarde)": {
   "c": "index.html: 6.5 12 12 16.5 7.5 12z\"/></svg>'; $(\"gemBox\").innerHTML = `<div class=\"card\"><h4>${gi}Lesser gems (a partir dos 100 pontos)</h4><p class=\"small\">Por ordem: ${gl(gm.lesser_gems)}<span class=\"wsep\">.</span> Revelar custa 1",
   "k": "p"
  },
+ "{0}Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task first.": {
+  "c": "recolhida: /grimorio/quests/#/quest/oriental-outfits-quest · ex.: {0}Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task",
+  "k": "p"
+ },
+ "{0}Hello, young apprentice. Do you have that scroll piece from the priestess?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}Hello, young apprentice. Do you have that scroll piece from the priestess?",
+  "k": "p"
+ },
+ "{0}How many tokens do you want to trade?": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}How many tokens do you want to trade?",
+  "k": "p"
+ },
+ "{0}If the icicle melts you do not lose the mission: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}If the icicle melts you do not lose the mission: go to the representative, say {1}, {2} and {3} and he gives you anot",
+  "k": "p"
+ },
+ "{0}If you do not use the amulet in time, Koshei is reborn at once in the north, next to the altar, shouting {1} and you have to kill him again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: {0}If you do not use the amulet in time, Koshei is reborn at once in the north, next to the altar, shouting {1} and you ",
+  "k": "p"
+ },
+ "{0}If you haven't finished the Exterminators task in the Truffels Garden yet, you can do the last Wiggler kills here.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}If you haven't finished the Exterminators task in the Truffels Garden yet, you can do the last Wiggler kills here.",
+  "k": "p"
+ },
+ "{0}If you lose the heart, say {1} to Omrabas and he lets you fetch another. If you want to keep a spare heart, do not have it in your inventory when you talk to him: {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}If you lose the heart, say {1} to Omrabas and he lets you fetch another. If you want to keep a spare heart, do not ha",
+  "k": "p"
+ },
+ "{0}If you plan to do the Warzones many times, it's worth buying the {1} (always dropped by Deathstrike) to get permanent access to Warzone {2}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}If you plan to do the Warzones many times, it's worth buying the {1} (always dropped by Deathstrike) to get permanent",
+  "k": "p"
+ },
+ "{0}It is commonly known that orcs of Uldereks Rock use some sort of powder to increase the fierceness of their war wolves and berserkers [...] Do you want to accept this mission?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}It is commonly known that orcs of Uldereks Rock use some sort of powder to increase the fierceness of their war wolve",
+  "k": "p"
+ },
+ "{0}It's a bit wrinkled but it will do. Thanks again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}It's a bit wrinkled but it will do. Thanks again.",
+  "k": "p"
+ },
  "{0}Itens necessários": {
   "c": "quests/js/app.js: ction>`); if ((d.items_needed || []).length) parts.push(`<section class=\"box\"><h2 class=\"box-caption\">${icon(\"bag\")}Itens necessários</h2><div class=\"box-body\"><div class=\"ent-grid\">${d.items_needed.map((it) => it.item ?",
+  "k": "p"
+ },
+ "{0}Just in time. Sadly not much ice is left over but it will do. Thank you again.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}Just in time. Sadly not much ice is left over but it will do. Thank you again.",
   "k": "p"
  },
  "{0}Lesser gems (a partir dos 100 pontos)": {
@@ -16905,6 +17741,10 @@
  },
  "{0}Locais exatos indicados na wiki": {
   "c": "quests/js/app.js:  } if (h.spots && h.spots.length) { parts.push(`<div class=\"howto-block\"><h3>${icon(\"pin\")}Locais exatos indicados na wiki</h3><div class=\"coords\">${h.spots.map((s) => miniCoord(s, s.text)).join(\"\")}</div></div>`); } if ",
+  "k": "p"
+ },
+ "{0}Me can do unbroken but Big Ben want gold {1} and Big Ben need a lil' time to make it unbroken. Yes or no??": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: {0}Me can do unbroken but Big Ben want gold 5000 and Big Ben need a lil' time to make it unbroken. Yes or no??",
   "k": "p"
  },
  "{0}NPCs envolvidos": {
@@ -16937,6 +17777,10 @@
  },
  "{0}Onde recebes cada coisa": {
   "c": "quests/js/app.js: eward)}</li>`); })); if (rewardSteps.length) parts.push(`<section class=\"box\"><h2 class=\"box-caption\">${icon(\"list\")}Onde recebes cada coisa</h2><div class=\"box-body\"><ul class=\"notes-list\">${rewardSteps.join(\"\")}</ul></",
+  "k": "p"
+ },
+ "{0}Outside the city the desert and mountains have {1} (mountains to the west) and tombs full of undead; do not go out unprepared if you are a low level.": {
+  "c": "recolhida: /grimorio/quests/#/quest/20-years-a-cook-quest · ex.: {0}Outside the city the desert and mountains have {1} (mountains to the west) and tombs full of undead; do not go out un",
   "k": "p"
  },
  "{0}Perigos (criaturas)": {
@@ -16983,6 +17827,30 @@
   "c": "quests/js/app.js: oin(\"\")}</div></div></section>` : \"\"} ${sugg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"flag\")}Sugestões para o nível ${lvl}<span class=\"cap-extra\"><a href=\"#/quests\" style=\"color:inherit\">ver todas →",
   "k": "p"
  },
+ "{0}Teste Druid {1}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: {0}Teste Druid {1}",
+  "k": "p"
+ },
+ "{0}Teste Knight {1}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: {0}Teste Knight {1}",
+  "k": "p"
+ },
+ "{0}Teste Monk {1}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: {0}Teste Monk {1}",
+  "k": "p"
+ },
+ "{0}Teste Pally {1}": {
+  "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: {0}Teste Pally {1}",
+  "k": "p"
+ },
+ "{0}Teste Sorc {1}": {
+  "c": "recolhida: /grimorio/#inicio · ex.: {0}Teste Sorc {1}",
+  "k": "p"
+ },
+ "{0}The beams of the {1} and the {2} do a lot of damage: do not pull more than {3} or {4} monsters at a time and bring company if you can.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}The beams of the {1} and the {2} do a lot of damage: do not pull more than 3 or 4 monsters at a time and bring compan",
+  "k": "p"
+ },
  "{0}Tipos de quest": {
   "c": "quests/js/app.js: = k).length]).filter(([, n]) => n); view().innerHTML = ` <section class=\"hero\"> <img class=\"hero-logo\" src=\"assets/logo-full.webp\" alt=\"Tibia Questski — feiticeira num jetski\"> <div> <h1>Guia de Quests</h1> <p>Todas as q",
   "k": "p"
@@ -17013,6 +17881,66 @@
  },
  "{0}Ver todas as {1} quests de {2}": {
   "c": "quests/js/app.js: c || a.lvl || 1) - (b.rec || b.lvl || 1)); return `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"scroll\")}Quests de ${esc(r.name)}<span class=\"cap-extra\">${r.main} da região · ${r.total} no total</span></h2><div c",
+  "k": "p"
+ },
+ "{0}We acquired some knowledge about special magic stones. [...] the ruins found in the north-west of Edron were once inhabited by beings who used such stones. Do you have the heart to go there and to get us such a stone?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}We acquired some knowledge about special magic stones. [...] the ruins found in the north-west of Edron were once inh",
+  "k": "p"
+ },
+ "{0}Welcome, welcome! Finally! The last scroll piece.... you do have it, haven't you?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}Welcome, welcome! Finally! The last scroll piece.... you do have it, haven't you?",
+  "k": "p"
+ },
+ "{0}Well, well, I do that! [...] Come back after sun hits the horizon {1} times and ask me for amulet.": {
+  "c": "recolhida: /grimorio/quests/#/quest/koshei-the-deathless-quest · ex.: {0}Well, well, I do that! [...] Come back after sun hits the horizon 24 times and ask me for amulet.",
+  "k": "p"
+ },
+ "{0}Which mission do you want to report: {1}": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}Which mission do you want to report: crystal keeper, spark hunting, extermination or mushroom digging?",
+  "k": "p"
+ },
+ "{0}Ye'll have to be sneaky and resourceful. [...] Ye might even have to do some climbing. If ye are not agile enough, better bring some parcels.": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: {0}Ye'll have to be sneaky and resourceful. [...] Ye might even have to do some climbing. If ye are not agile enough, be",
+  "k": "p"
+ },
+ "{0}You can do the {1} at the same time: {2}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}You can do the {1} at the same time: the rewards are in two coffins on the {2} floor.",
+  "k": "p"
+ },
+ "{0}You held out for a long time. I think you earned our trust. [...] There is a teleporter in the east of the island. [...] For {1} trust points, I will cast a permanent entchantment on you [...] Do you want to advance?": {
+  "c": "recolhida: /grimorio/quests/#/quest/a-pirates-tail-quest · ex.: {0}You held out for a long time. I think you earned our trust. [...] There is a teleporter in the east of the island. [.",
+  "k": "p"
+ },
+ "{0}You need access to the GCTS (the gnomes' teleport system) through the {1}; each time you enter or leave the GCTS you use up a {2} ({3} sells them with {4}, as do {5} and {6}).": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}You need access to the GCTS (the gnomes' teleport system) through the {1}; each time you enter or leave the GCTS you ",
+  "k": "p"
+ },
+ "{0}[...] Do you think you could get one for me so I can give it to her? I really would appreciate it.": {
+  "c": "recolhida: /grimorio/quests/#/quest/oriental-outfits-quest · ex.: {0}[...] Do you think you could get one for me so I can give it to her? I really would appreciate it.",
+  "k": "p"
+ },
+ "{0}[...] Our scientists think a spectral dress would be a perfect object for their studies [...] the only source to got such a dress is the queen of the banshees. Do you dare to seek her out?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}[...] Our scientists think a spectral dress would be a perfect object for their studies [...] the only source to got ",
+  "k": "p"
+ },
+ "{0}[...] The society offers a substantial reward for the retrieval of Ratha or his remains. Do you have any news about Ratha?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}[...] The society offers a substantial reward for the retrieval of Ratha or his remains. Do you have any news about R",
+  "k": "p"
+ },
+ "{0}[...] Would you be willing to go on a special mission in an underwater ice cave? It's pretty risky, I know. [...] Do you agree?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}[...] Would you be willing to go on a special mission in an underwater ice cave? It's pretty risky, I know. [...] Do ",
+  "k": "p"
+ },
+ "{0}[...] You need to spill some vials of blood tincture for this task. Probably means killing blood priests to get those vials. Ready to do this?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: {0}[...] You need to spill some vials of blood tincture for this task. Probably means killing blood priests to get those",
+  "k": "p"
+ },
+ "{0}[...] Your renown amongst us gnomes is currently {1}. Do you want to improve your standing by sacrificing tokens? One token will raise your renown by {2} points.": {
+  "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: {0}[...] Your renown amongst us gnomes is currently 20. Do you want to improve your standing by sacrificing tokens? One ",
+  "k": "p"
+ },
+ "{0}[...] we need you to collect some ectoplasm from the corpse of a ghost. [...] Do you think you are ready for that mission?": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}[...] we need you to collect some ectoplasm from the corpse of a ghost. [...] Do you think you are ready for that mis",
   "k": "p"
  },
  "{0}dano quase todo físico: não há imbuement de proteção física": {
@@ -17091,12 +18019,20 @@
   "c": "index.html: =\"hunts\") HFMISS=\"\"; // r5-t2 $(\"huntLead\").textContent = `${HFMISS?HFMISS+\" \":\"\"}${filt?`${list.length} de ${rows.length}`:rows.length} hunts${f.city?` em ${f.city}`:\"\"}${grp?` para ${ms.length===2?\"os dois\":\"o grupo\"}`",
   "k": "p"
  },
+ "{0}{1} is always drunk and often takes you to the wrong place. If you have a {2} in your backpack he always gets it right (and you do not pay), but he keeps the ring; say {3} when he asks for it if you want to keep it.{4}On the glacier there are {5}, {6}, {7} and {8}.": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}{1} is always drunk and often takes you to the wrong place. If you have a {2} in your backpack he always gets it righ",
+  "k": "p"
+ },
  "{0}{1} pontos": {
   "c": "quests/js/app.js: f=\"#/mapa\">mapa geral</a> para explorar.</div>`; return `<div class=\"map-split\"> <div class=\"map-host\" id=\"questMapHost\" tabindex=\"0\"></div> <section class=\"box map-points\"><h2 class=\"box-caption\">${icon(\"pin\")}${pts.len",
   "k": "p"
  },
  "{0}{1} quests": {
   "c": "quests/js/app.js:  : \"\"} </div> ${groups.map((g, i) => g.length ? `<section class=\"grid-band\" id=\"band-${i}\"><h2><span class=\"band-dot\" style=\"--c:${bandColor(i)}\"></span>${BANDS[i][2]}<small>${BANDS[i][3] ? BANDS[i][3] + \" · \" : \"\"}${g.l",
+  "k": "p"
+ },
+ "{0}{1} — Rank {2} ({3} pontos).{4}{5} — {6} — {7}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}{1} — Rank {2} (20 pontos).{3}{4} — In the last mission, {5} (Explorer rank).{6}{7} — On reaching the {8} rank (300 v",
   "k": "p"
  },
  "{0}{1}Abre o site através do servidor local ({2}) e não diretamente pelo ficheiro.{3}{4}": {
@@ -17487,6 +18423,10 @@
   "c": "index.html: ; const wld=c&&c.world, mkr=mk&&mk[0]?(mk[1]&&mk[1]!==mk[0]?`${kkk(mk[0])}–${kkk(mk[1])} gp`:gp(mk[0])):\"\"; if",
   "k": "p"
  },
+ "— Rank {0} ({1} pontos).{2}{3} — {4} — {5}": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: — Rank {0} (20 pontos).{1}{2} — In the last mission, {3} (Explorer rank).{4}{5} — On reaching the {6} rank (300 votes in",
+  "k": "p"
+ },
  "— abrir na wiki": {
   "c": "quests/js/app.js: e \"spell\": return `${open(`ent ent-${kind}`, name + \" — abrir na wiki\")}${spriteImg(name)}",
   "k": "x"
@@ -17497,6 +18437,14 @@
  },
  "— fazes sozinho.": {
   "c": "index.html: c(qName(keyQ.q))}</b>`,d:`Abre ${keyQ.p.n}${q?(q.s===\"solo\"?\" — fazes sozinho.\":q.s===\"parcial\"?\" —",
+  "k": "x"
+ },
+ "— given by Casper; you only get one, do not lose it": {
+  "c": "recolhida: /grimorio/quests/#/quest/last-creep-standing · ex.: — given by Casper; you only get one, do not lose it",
+  "k": "x"
+ },
+ "— only if you do not have the Levitate spell": {
+  "c": "recolhida: /grimorio/quests/#/quest/the-gravedigger-of-drefia-quest · ex.: — only if you do not have the Levitate spell",
   "k": "x"
  },
  "— passo {0}:": {
