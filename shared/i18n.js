@@ -52,7 +52,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261028a";
+    var DV = "?v=20261028b";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');

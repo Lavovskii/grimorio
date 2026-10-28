@@ -494,3 +494,11 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   `.step-fold` (ou um clique no título) abre e fecha (`foldStep`, `aria-expanded`). Uma ligação direta a um passo feito abre-o.
 - Corrigido de passagem: no `pointerdown` da ondulação um comentário `//` engolia o `const b=…` (erro "b is not defined" a cada clique).
 
+
+## r32 (28/10/2026): party pelo nome e interface toda em inglês
+- **Hunts › Quem vai**: "+ Juntar personagem" abre um campo de nome; `pmAddName` vai buscar vocação e nível à TibiaData
+  (`fetchChar`, `vocKey`) e guarda `{nm, voc, level, t}` em `ST.ui.party`. `pmRefresh` atualiza o nível dos que têm mais de 6 h.
+  Os botões de vocação genérica saíram (os membros antigos só com vocação continuam a aparecer e a poder mudar-se).
+- **Inglês**: frases do r30 traduzidas (interface e conteúdo); recolha (`harvest`) feita com o site em inglês e as frases
+  que juntavam texto fixo a valores (`hsNote`, `part` das rotações, treino) partidas em `<span>` ou passadas por `I18N.tr`.
+  As outras línguas continuam em pausa. `?v=` do i18n.js em 20261028b.
