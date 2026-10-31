@@ -170,7 +170,7 @@ body.drawer-open .scrim { display: block; position: fixed; inset: var(--topbar-h
 /* =================== MENU PRINCIPAL (r31: igual ao do Grimório; desenhado pelo shared/nav.js) =================== */
 nav.side { position: sticky; top: 76px; align-self: start; max-height: calc(100vh - 92px); overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(201, 164, 90, .35) transparent; }
 nav.side ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-nav.side .grp { display: flex; align-items: center; gap: 8px; margin: 14px 12px 2px; font-family: var(--font-body); font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A; }
+nav.side .grp { display: flex; align-items: center; gap: 8px; margin: 14px 12px 2px; font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A; }
 nav.side .grp::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(201, 164, 90, .4), transparent); }
 nav.side a { position: relative; display: flex; align-items: center; gap: 11px; width: 100%; padding: 8px 12px; border-radius: 3px; color: var(--text-soft); font-size: 16px; line-height: 24px; text-decoration: none; transition: color .2s, background .2s; }
 nav.side a svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
@@ -1028,8 +1028,7 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
   .drop-list { grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); }
   .wiki-side-grid { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
   .prep, .travel-cols { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
-  /* nomes compridos de itens/NPCs no texto podem partir de linha (ex.: "Gingerbread Key (Moon Melon, …)" nos Acessos) */
-  .ent { white-space: normal; max-width: 100%; }
+ /* .ent parte a linha em qualquer largura (r33, ver o fim do ficheiro) */
   .list-clean li > * { min-width: 0; }
 }
 /* topo no telemóvel, como no Grimório: só o emblema; a pesquisa vira um botão que, ao tocar, abre uma barra por cima do topo */
@@ -1079,7 +1078,7 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
 .modal-head h3 { font-family: var(--font-head); }
 .box-caption .cap-extra, .band-head .count { letter-spacing: 0; text-transform: none; color: var(--text-soft); }
 .filter-label, .fact dt, .stat span, .callout b.k, .prep h4, .travel-cols h5 {
-  font-family: var(--font-body); font-weight: 700; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A;
+  font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C9A45A;
 }
 .stat span { font-size: 12px; }
 
@@ -1215,3 +1214,7 @@ nav.side ul + ul { margin-top: 14px; } /* visitante: páginas soltas (Início, Q
 /* r31: "MARCAR"/"FEITO" em Tahoma é mais largo: coluna do número maior; no telemóvel só o número (o rótulo fica no aria-label) */
 .step { grid-template-columns: 58px minmax(0, 1fr); }
 @media (max-width: 600px) { .step { grid-template-columns: 36px minmax(0, 1fr); } .step-check .tick { display: none; } }
+/* r33: nomes compridos de itens/NPCs no texto partem de linha em qualquer largura (ex.: "Gingerbread Key (Moon Melon, …)"
+   nos Acessos saía 108 px da página a 1024 px: com a Tahoma, mais larga do que a Alegreya, já não cabia numa linha) */
+.ent { white-space: normal; max-width: 100%; }
+
