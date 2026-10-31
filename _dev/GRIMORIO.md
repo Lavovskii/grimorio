@@ -502,3 +502,15 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - **Inglês**: frases do r30 traduzidas (interface e conteúdo); recolha (`harvest`) feita com o site em inglês e as frases
   que juntavam texto fixo a valores (`hsNote`, `part` das rotações, treino) partidas em `<span>` ou passadas por `I18N.tr`.
   As outras línguas continuam em pausa. `?v=` do i18n.js em 20261028b.
+
+## r33 (31/10/2026): validação dos dois sites
+- Rastreio no browser (Grimório: 23 páginas × 5 vocações × 1440/390 px, com cliques nos botões, menu e pesquisa; Questski: todas
+  as rotas e 12 quests com os separadores, passos, mapa, imagens, lista e pesquisa, a 1440/1024/390 px e sem personagem):
+  sem erros de JS, de consola ou ficheiros em falta.
+- Letra mínima de 12 px: seis regras com 11,5 px no `index.html` (grupos do menu, "Efeitos", "Hoje no Tibia", teclas, Wheel) e
+  duas no Questski passaram a 12 px; `sup.rl` (as marcas "r"/"a" da XP das hunts) desciam a 10,8 px e ficam com 12 px.
+- Questski › Acessos a 1024 px saía 108 px para o lado: um `.ent` comprido ("Gingerbread Key (…)") não partia a linha; a regra
+  `.ent { white-space: normal }` passou a valer em qualquer largura (com a Tahoma da r31 o nome já não cabia).
+- Falas do jogador nos guias (`you`, nunca traduzidas por serem o que se escreve no jogo) com notas em PT: "(o teu nome)",
+  "(a tua vocação)", "(a tua palavra-passe)", "<nome de uma personagem>" e "pomegranate (ou shield)" juntaram-se ao
+  `ui-extra.json` (como "(o número do A Prisoner)") e traduzem-se no ecrã nas 7 línguas. `?v=` do i18n.js em 20261031a.
