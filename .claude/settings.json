@@ -4,7 +4,8 @@
     "example-skills@anthropic-agent-skills": true,
     "taste-skill@taste-skill": true,
     "app-store-screenshots@grimorio-extra": true,
-    "transitions-dev@grimorio-extra": true
+    "transitions-dev@grimorio-extra": true,
+    "superpowers@superpowers-marketplace": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {
@@ -29,6 +30,12 @@
       "source": {
         "source": "directory",
         "path": "./.claude/marketplace"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
       }
     }
   }
