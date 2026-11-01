@@ -21,7 +21,7 @@ Endereço público: https://tibiagrimoire.me/
    ```
 3. Liga o Apache no XAMPP Control Panel e abre `http://localhost/grimorio/`.
 
-Não é preciso compilar nada: é uma página estática (`index.html`). O único código de servidor é `api/market.php`, um proxy com cache para os preços do Market por mundo (precisa do PHP do XAMPP).
+Não é preciso compilar nada: é uma página estática (`index.html`). O código de servidor é `api/market.php`, um proxy com cache para os preços do Market por mundo, e `api/stats.php`, as estatísticas (precisam do PHP do XAMPP).
 
 ## Estrutura
 
@@ -38,6 +38,8 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
 | `shared/sites.css` | O switch Grimório ⇄ Questski, igual nos dois sites, e a transição entre eles. |
 | `shared/pub.js`, `shared/pub.css` | Publicidade (Google AdSense) e aviso de cookies dos dois sites. Configura-se no topo do `pub.js`. |
 | `privacidade.html` | Política de privacidade e cookies (ligada nos rodapés). |
+| `api/stats.php` | Estatísticas próprias, sem cookies (lê-se com `_dev/estatisticas.py`). |
+| `robots.txt`, `sitemap.xml` | Para os motores de busca. |
 | `ads.txt` | Quem pode vender os anúncios do domínio (preenche-se com o código de editor do AdSense). |
 | `data/guias.json` | Os guias do Questski e a ligação às quests do Grimório (gerado por `_dev/build_guias.py`). |
 | `data/wheel.json` | As 36 fatias da Wheel por vocação e os pontos de cada build (gerado por `_dev/build_wheel.py`). |
@@ -57,6 +59,7 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O único
 - `build_wheel.py`: refaz `data/wheel.json` (o que dá cada fatia da Wheel, por vocação) e confirma que bate com todas as builds do `G.wheel`.
 - `build_guias.py`: refaz `data/guias.json` depois de mudar os guias do Questski ou as quests do Grimório.
 - `reap.ps1`: fecha browsers de testes que ficaram abertos.
+- `estatisticas.py`: resumo das estatísticas próprias (visitantes, páginas, origem, língua, aparelho): `python -I _dev/estatisticas.py --dias 30`.
 - `visitas.ps1`: visitantes por dia a partir do registo do Apache (`-Dias 30`; `-Limpar 365` apaga registos com mais de 12 meses).
 
 As ferramentas usam caminhos `C:\xampp\...`. Se o teu XAMPP estiver noutro sítio, ajusta-os. Corridas a partir de `_dev/` sem indicar a raiz, usam a pasta do teu clone; os registos vão para a pasta da variável `GRIM_WORK` ou para a pasta temporária.

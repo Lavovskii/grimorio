@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- línguas: a mesma escolha do Grimório e do Questski (os textos estão em i18n/src/ui-extra.json) -->
-<script src="shared/i18n.js?v=20261101a"></script>
+<script src="shared/i18n.js?v=20261101b"></script>
 <title>Privacidade e cookies · Grimório de Tibia</title>
 <meta name="description" content="Que dados o Grimório de Tibia e o Questski usam, que cookies há e como mudar a tua escolha.">
 <meta name="theme-color" content="#11181a">
-<link rel="stylesheet" href="shared/pub.css?v=20261101a">
+<link rel="stylesheet" href="shared/pub.css?v=20261101b">
 <style>
 /* r34: página própria, com as cores do tema Tibia dos dois sites */
 :root { color-scheme: dark; }
@@ -61,8 +61,8 @@ a { color: #E6C06A; text-underline-offset: 3px; }
       <ul>
         <li>Não tens de criar conta nem de dar o teu nome, e-mail ou palavra-passe.</li>
         <li>O que escolhes no site (personagens, quests feitas, língua) fica só no teu browser. Não chega até nós.</li>
-        <li>O site não usa cookies próprios nem ferramentas de estatísticas.</li>
-        <li>Os anúncios são da Google e só carregam se aceitares. Se recusares, o site funciona igual, sem anúncios.</li>
+        <li>O site não usa cookies próprios. Conta as visitas sem cookies e sem guardar o teu endereço IP.</li>
+        <li>O site mostra sempre anúncios da Google, que pagam o servidor. Tu escolhes se são personalizados (com cookies de publicidade) ou não.</li>
       </ul>
       <div class="cta"><button type="button" class="pub-cc-b pub-prefs-btn" data-pub-prefs>Definições de cookies</button></div>
     </div>
@@ -89,7 +89,7 @@ a { color: #E6C06A; text-underline-offset: 3px; }
           <tr><td><code>grimorio-lang</code></td><td>A língua do site.</td><td>Até as apagares.</td></tr>
           <tr><td><code>grimorio-ui</code>, <code>grimorio-ui-hint</code>, <code>grimorio-fx</code>, <code>grimorio-gpu</code></td><td>O aspeto e os efeitos visuais.</td><td>Até as apagares.</td></tr>
           <tr><td><code>grimorio-av</code>, <code>grimorio-today</code>, <code>grimorio-mkt-…</code></td><td>A imagem da personagem, a criatura e o boss do dia e os preços do Market já descarregados, para abrir mais depressa.</td><td>Até as apagares.</td></tr>
-          <tr><td><code>grimorio-consent</code></td><td>A tua escolha sobre cookies de publicidade.</td><td>12 meses. Depois perguntamos outra vez.</td></tr>
+          <tr><td><code>grimorio-consent</code></td><td>A tua escolha sobre anúncios personalizados.</td><td>12 meses. Depois perguntamos outra vez.</td></tr>
         </tbody>
       </table>
       <p>Isto é necessário para o site funcionar como pediste, por isso não pede autorização. Podes apagar tudo nas definições do browser (dados do site).</p>
@@ -99,9 +99,11 @@ a { color: #E6C06A; text-underline-offset: 3px; }
   <section>
     <h2>Publicidade da Google</h2>
     <div class="in">
-      <p>O site paga-se com anúncios do Google AdSense. Se aceitares, a Google e os parceiros dela guardam cookies e identificadores no teu aparelho para mostrar anúncios, limitar quantas vezes vês o mesmo, medir resultados e evitar fraudes. Fora da Europa, também os usam para escolher anúncios do teu interesse.</p>
-      <p>Nessa altura a Google recebe o teu endereço IP, o browser que usas e a página que estás a ver. A Google trata esses dados como responsável próprio, segundo a política de privacidade dela.</p>
-      <p>Se recusares, nenhum script de publicidade é carregado. Podes mudar a tua escolha quando quiseres, no botão Definições de cookies, no rodapé de cada página.</p>
+      <p>O site paga-se com anúncios do Google AdSense, que aparecem a toda a gente. Não é preciso aceitar cookies para usar o site: o que escolhes é o tipo de anúncio.</p>
+      <p>Se aceitares anúncios personalizados, a Google e os parceiros dela guardam cookies e identificadores no teu aparelho para escolher anúncios do teu interesse, limitar quantas vezes vês o mesmo e medir resultados.</p>
+      <p>Se não aceitares, vês anúncios não personalizados ou limitados, escolhidos só pela página e pela tua região aproximada. Mesmo assim, a Google pode usar cookies para evitar fraudes e contar os anúncios vistos.</p>
+      <p>Para mostrar qualquer anúncio, a Google recebe o teu endereço IP, o browser que usas e a página que estás a ver. A Google trata esses dados como responsável próprio, segundo a política de privacidade dela.</p>
+      <p>Podes mudar a tua escolha quando quiseres, no botão Definições de cookies, no rodapé de cada página. Se usares um bloqueador de anúncios, pedimos-te que abras uma exceção para o site.</p>
       <ul>
         <li><a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Como a Google usa os dados dos sites que mostram os seus anúncios</a></li>
         <li><a href="https://adssettings.google.com" rel="noopener">Definições de anúncios da tua conta Google</a></li>
@@ -116,6 +118,7 @@ a { color: #E6C06A; text-underline-offset: 3px; }
       <ul>
         <li>Quando adicionas ou atualizas uma personagem, o teu browser pede os dados dela ao TibiaData (api.tibiadata.com), um serviço público de terceiros. Esse pedido leva o teu endereço IP e o nome da personagem.</li>
         <li>Os preços do Market chegam pelo nosso servidor, que os pede ao TibiaMarket. O teu endereço IP não lhes é enviado.</li>
+        <li>Estatísticas: cada página que abres manda ao nosso servidor a página, o site de onde vieste, a língua e se usas telemóvel ou computador. Para contar visitantes, o teu endereço IP vira um código que muda todos os dias; o IP não é guardado. Serve para sabermos que páginas são úteis.</li>
         <li>As letras, imagens, mapas e dados do site estão no nosso servidor. Não usamos letras nem bibliotecas carregadas de outros sites.</li>
       </ul>
     </div>
@@ -133,7 +136,7 @@ a { color: #E6C06A; text-underline-offset: 3px; }
     <div class="in">
       <p>Pelo RGPD (e pela LGPD, no Brasil) podes pedir para ver, corrigir ou apagar os teus dados, opor-te a que os usemos e retirar a autorização que deste. Escreve-nos para o contacto acima.</p>
       <p>Se achares que não respeitámos os teus direitos, podes queixar-te à autoridade de proteção de dados. Em Portugal é a CNPD (cnpd.pt).</p>
-      <p>O site é para jogadores de todas as idades. Se tens menos de 13 anos, pede a um adulto que decida contigo se aceitas os cookies de publicidade.</p>
+      <p>O site é para jogadores de todas as idades. Se tens menos de 13 anos, pede a um adulto que decida contigo se aceitas anúncios personalizados.</p>
     </div>
   </section>
 
@@ -149,6 +152,6 @@ a { color: #E6C06A; text-underline-offset: 3px; }
     <div class="ui-lang" data-lang-picker></div>
   </div>
 </div>
-<script src="shared/pub.js?v=20261101a" defer></script>
+<script src="shared/pub.js?v=20261101b" defer></script>
 </body>
 </html>

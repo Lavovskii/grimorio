@@ -518,16 +518,21 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 
 ## r34 (01/11/2026): publicidade, cookies e privacidade
 - **Domínio**: o site está em https://tibiagrimoire.me/ (a raiz do repositório é a raiz do domínio; `ads.txt` fica lá).
-- **`shared/pub.js` + `shared/pub.css`** (nos dois sites, `defer` no fim do `<body>`): configuração no topo (`CFG.client`
-  = código de editor do AdSense, `CFG.slots` = número da unidade de anúncio por espaço, `CFG.cmp`). Sem `client` não há
-  anúncios nem aviso, e os `.ad-slot` ficam escondidos (`html.pub-off`). Com `client`: aviso de cookies próprio
-  (`.pub-cc`, Aceitar/Recusar com o mesmo peso), nenhum script da Google antes de aceitar, escolha em localStorage
-  `grimorio-consent` ({v:1, ads, at}, 12 meses). Ao aceitar carrega o `adsbygoogle.js` e enche cada `.ad-slot` com um
-  `<ins class="adsbygoogle">` quando fica perto do ecrã (IntersectionObserver; um MutationObserver apanha os espaços que as
-  páginas desenham depois). Recusar depois de aceitar recarrega a página. `CFG.cmp="google"` passa a escolha para a
-  mensagem certificada do AdSense (TCF, dá anúncios personalizados na Europa). `[data-pub-prefs]` abre a escolha outra vez.
-- **Espaços**: Grimório `inicio`, `hunts`, `item`, `criatura`, `rodape`, `lateral` (já existiam); Questski `q-guia` (fim do
-  guia, `renderQuest`) e `q-rodape` (rodapé). Espaço sem número em `CFG.slots` fica escondido; anúncio sem resposta da
+- **`shared/pub.js` + `shared/pub.css`** (nos dois sites e na política, `defer` no fim do `<body>`): configuração no topo
+  (`CFG.client` = código de editor do AdSense, `CFG.slots` = número da unidade por espaço, `CFG.cmp`, `CFG.recuperar`).
+  Sem `client` não há anúncios nem aviso, e os `.ad-slot` ficam escondidos (`html.pub-off`).
+  **Toda a gente vê anúncios** (decisão do dono, para pagar o servidor); a escolha é só personalizados ou não.
+  Não há "sem cookies não entras": na UE não é consentimento válido (EDPB 05/2020); quem não aceita vê anúncios não
+  personalizados/limitados. `CFG.cmp="google"` (por omissão): a mensagem certificada do AdSense (TCF) pergunta; com os
+  "anúncios limitados" ligados no AdSense, quem não consente continua a ver anúncios. `CFG.cmp="proprio"`: o nosso aviso
+  (`.pub-cc`, "Anúncios personalizados"/"Anúncios não personalizados"); os anúncios carregam logo com
+  `adsbygoogle.requestNonPersonalizedAds=1` até a pessoa escolher personalizados (`grimorio-consent` = {v:2, personal, at},
+  12 meses; mudar de tipo recarrega a página). Os espaços enchem-se quando ficam perto do ecrã (IntersectionObserver; um
+  MutationObserver apanha os que as páginas desenham depois). Se o `adsbygoogle.js` não carregar (bloqueador), cada espaço
+  mostra um pedido curto para abrir uma exceção (`.ad-blk`); `CFG.recuperar` liga a mensagem de recuperação da Google.
+  `[data-pub-prefs]` abre a escolha outra vez.
+- **Espaços**: Grimório `inicio`, `hunts` (a cada 12 hunts, no máximo 3), `item`, `criatura`, `rodape`, `lateral`;
+  Questski `q-inicio` (início, depois das sugestões), `q-guia` (fim do guia, `renderQuest`) e `q-rodape` (rodapé). Espaço sem número em `CFG.slots` fica escondido; anúncio sem resposta da
   Google (`data-ad-status="unfilled"`) também.
 - **`privacidade.html`** (raiz): política de privacidade e cookies, com a lista das chaves de localStorage. Textos em
   `i18n/src/ui-extra.json` (7 línguas). Rodapés dos dois sites: "Privacidade e cookies" e "Definições de cookies".
@@ -536,6 +541,10 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
   em `shared/fonts/` (OFL). Pedir letras à Google mandava o IP de cada visitante para lá sem consentimento.
 - **CSP** (`.htaccess`): scripts, ligações e iframes dos domínios da Google usados pelo AdSense; imagens de qualquer `https:`.
   Se os anúncios não aparecerem e a consola falar de Content Security Policy, falta um domínio novo da Google.
+- **Estatísticas sem cookies**: o `pub.js` manda um `sendBeacon` ao `api/stats.php` em cada página (rota até 2 partes,
+  domínio de origem, língua, telemóvel/computador). O PHP conta por dia em `api/cache/stats/` (fechado ao público); visitantes
+  únicos por um sha256 com sal diário apagado no dia seguinte (o IP não fica). `python -I _dev/estatisticas.py --dias 30`
+  mostra o resumo. `robots.txt` e `sitemap.xml` na raiz; as páginas `#…` não são indexadas em separado pela Google.
 - **Visitas**: `_dev/visitas.ps1` conta visitantes únicos e aberturas por dia a partir do `access.log` do Apache
   (sem robôs, testes nem rede de casa); `-Limpar 365` apaga as linhas com mais de 12 meses (a política promete isso).
-- `?v=` do i18n.js em 20261101a.
+- `?v=` do i18n.js, pub.js, pub.css e app.js do Questski em 20261101b.

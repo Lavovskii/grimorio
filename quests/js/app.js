@@ -705,6 +705,7 @@
 
       ${inProg.length ? `<section class="box"><h2 class="box-caption">${icon("clock")}Continua onde ficaste</h2><div class="box-body"><div class="qgrid">${inProg.map(questCard).join("")}</div></div></section>` : ""}
       ${sugg.length ? `<section class="box"><h2 class="box-caption">${icon("flag")}Sugestões para o nível ${lvl}<span class="cap-extra"><a href="#/quests" style="color:inherit">ver todas →</a></span></h2><div class="box-body"><div class="qgrid">${sugg.map(questCard).join("")}</div></div></section>` : ""}
+      <div class="ad-slot" data-ad-slot="q-inicio" role="complementary" aria-label="Publicidade"><span class="ad-lab">Publicidade</span><span class="ad-size">728 × 90 · 320 × 100</span></div>
 
       <section class="box">
         <h2 class="box-caption">${icon("layers")}Quests por nível<span class="cap-extra">ordenadas do mais baixo para o mais alto</span></h2>

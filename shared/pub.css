@@ -16,6 +16,11 @@ html .ad-slot.ad-on::after, html[data-ui] .ad-slot.ad-on::after { content: none;
 html .ad-slot.ad-on .ad-lab { display: block; margin-bottom: 4px; color: #AC9D7E; text-shadow: none; text-align: center; }
 html .ad-slot.ad-on ins.adsbygoogle { width: 100%; }
 html .ad-slot.ad-side.ad-on ins.adsbygoogle { width: 160px; }
+/* sem o script da Google (bloqueador): um pedido curto no lugar do anúncio */
+html .ad-slot.ad-blk, html[data-ui] .ad-slot.ad-blk { min-height: 0; padding: 12px 16px; }
+html .ad-slot.ad-side.ad-blk { display: none !important; } /* a coluna lateral não fica com um pedido de 600 px */
+html .ad-slot.ad-blk::after, html[data-ui] .ad-slot.ad-blk::after { content: none; }
+.ad-blk-t { margin: 0; font-size: 14px; line-height: 1.5; color: #D8CAAA; text-align: center; letter-spacing: 0; text-transform: none; font-weight: 400; }
 /* a Google não tinha anúncio para este espaço: não deixa buraco */
 .ad-slot.ad-on:has(ins[data-ad-status="unfilled"]) { display: none !important; }
 
