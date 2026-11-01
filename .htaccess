@@ -40,12 +40,18 @@ AddDefaultCharset utf-8
 # Sem listagem de pastas (ex.: /grimorio/data/ ou /grimorio/maps/)
 Options -Indexes
 
-# Segurança: só carrega scripts e estilos do próprio site (e as Google Fonts); só fala com o próprio site e com o TibiaData;
+# Segurança: só carrega scripts e estilos do próprio site; só fala com o próprio site e com o TibiaData;
 # não pode ser metido dentro de outro site (clickjacking). Testado com o smoke.mjs no Grimório e no Questski.
+# (r34: mais os anúncios da Google, ver em baixo)
 <IfModule mod_headers.c>
 	Header always set X-Content-Type-Options "nosniff"
 	Header always set Referrer-Policy "strict-origin-when-cross-origin"
 	Header always set X-Frame-Options "SAMEORIGIN"
 	Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' https://api.tibiadata.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+	# r34: publicidade (Google AdSense). O shared/pub.js só carrega o AdSense depois de a pessoa aceitar; a lista abaixo
+	# são os domínios da Google que o AdSense usa (scripts, iframes dos anúncios, medições). As imagens dos anúncios vêm
+	# de servidores dos anunciantes, por isso img-src aceita https:. Se um dia os anúncios não aparecerem e a consola
+	# do browser falar de "Content Security Policy", falta aqui um domínio novo da Google.
+	# Letras e estilos só do próprio site (as Google Fonts saíram na r34).
+	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.googleadservices.com https://*.adtrafficquality.google; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https:; connect-src 'self' https://api.tibiadata.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google; frame-src https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.adtrafficquality.google; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
 </IfModule>

@@ -349,6 +349,7 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
    (3) o canvas das partículas fica a 1× (`MD.dpr=1`), e o brilho que segue o rato só em cartões até 700 px de altura.
    As letras dos títulos animam com `backwards` (com `both` ficavam com `filter:blur(0)` para sempre).
 5. **Sem links externos** em conteúdo (só texto de crédito às fontes, sem `<a href="http...">`). Tudo o que é item/criatura/NPC/feitiço deve abrir uma página ou painel interno.
+   Exceções (r34): os anúncios (`shared/pub.js`) e os links obrigatórios da política de privacidade (`privacidade.html`).
 6. **Texto** em PT-PT, curto e claro, sem jargão técnico para o jogador. Nunca mostres nomes de jogadores vindos do Hunt Analyser.
 7. **Não mexas** na configuração do Apache, do Windows, firewall ou serviços. Não instales pacotes nem executes código de terceiros descarregado.
 8. **Edições ao index.html** por scripts Python com substituições ancoradas (`assert s.count(antigo)==1`), escrita em UTF-8 com `newline=''`.
@@ -514,3 +515,36 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - Falas do jogador nos guias (`you`, nunca traduzidas por serem o que se escreve no jogo) com notas em PT: "(o teu nome)",
   "(a tua vocação)", "(a tua palavra-passe)", "<nome de uma personagem>" e "pomegranate (ou shield)" juntaram-se ao
   `ui-extra.json` (como "(o número do A Prisoner)") e traduzem-se no ecrã nas 7 línguas. `?v=` do i18n.js em 20261031a.
+
+## r34 (01/11/2026): publicidade, cookies e privacidade
+- **Domínio**: o site está em https://tibiagrimoire.me/ (a raiz do repositório é a raiz do domínio; `ads.txt` fica lá).
+- **`shared/pub.js` + `shared/pub.css`** (nos dois sites e na política, `defer` no fim do `<body>`): configuração no topo
+  (`CFG.client` = código de editor do AdSense, `CFG.slots` = número da unidade por espaço, `CFG.cmp`, `CFG.recuperar`).
+  Sem `client` não há anúncios nem aviso, e os `.ad-slot` ficam escondidos (`html.pub-off`).
+  **Toda a gente vê anúncios** (decisão do dono, para pagar o servidor); a escolha é só personalizados ou não.
+  Não há "sem cookies não entras": na UE não é consentimento válido (EDPB 05/2020); quem não aceita vê anúncios não
+  personalizados/limitados. `CFG.cmp="google"` (por omissão): a mensagem certificada do AdSense (TCF) pergunta; com os
+  "anúncios limitados" ligados no AdSense, quem não consente continua a ver anúncios. `CFG.cmp="proprio"`: o nosso aviso
+  (`.pub-cc`, "Anúncios personalizados"/"Anúncios não personalizados"); os anúncios carregam logo com
+  `adsbygoogle.requestNonPersonalizedAds=1` até a pessoa escolher personalizados (`grimorio-consent` = {v:2, personal, at},
+  12 meses; mudar de tipo recarrega a página). Os espaços enchem-se quando ficam perto do ecrã (IntersectionObserver; um
+  MutationObserver apanha os que as páginas desenham depois). Se o `adsbygoogle.js` não carregar (bloqueador), cada espaço
+  mostra um pedido curto para abrir uma exceção (`.ad-blk`); `CFG.recuperar` liga a mensagem de recuperação da Google.
+  `[data-pub-prefs]` abre a escolha outra vez.
+- **Espaços**: Grimório `inicio`, `hunts` (a cada 12 hunts, no máximo 3), `item`, `criatura`, `rodape`, `lateral`;
+  Questski `q-inicio` (início, depois das sugestões), `q-guia` (fim do guia, `renderQuest`) e `q-rodape` (rodapé). Espaço sem número em `CFG.slots` fica escondido; anúncio sem resposta da
+  Google (`data-ad-status="unfilled"`) também.
+- **`privacidade.html`** (raiz): política de privacidade e cookies, com a lista das chaves de localStorage. Textos em
+  `i18n/src/ui-extra.json` (7 línguas). Rodapés dos dois sites: "Privacidade e cookies" e "Definições de cookies".
+  Quem acrescentar uma chave de localStorage acrescenta-a também à tabela da política.
+- **Google Fonts saíram**: o tema Tibia usa Palatino/Tahoma/Verdana; só a JetBrains Mono 500 (`--mono`) era usada e está
+  em `shared/fonts/` (OFL). Pedir letras à Google mandava o IP de cada visitante para lá sem consentimento.
+- **CSP** (`.htaccess`): scripts, ligações e iframes dos domínios da Google usados pelo AdSense; imagens de qualquer `https:`.
+  Se os anúncios não aparecerem e a consola falar de Content Security Policy, falta um domínio novo da Google.
+- **Estatísticas sem cookies**: o `pub.js` manda um `sendBeacon` ao `api/stats.php` em cada página (rota até 2 partes,
+  domínio de origem, língua, telemóvel/computador). O PHP conta por dia em `api/cache/stats/` (fechado ao público); visitantes
+  únicos por um sha256 com sal diário apagado no dia seguinte (o IP não fica). `python -I _dev/estatisticas.py --dias 30`
+  mostra o resumo. `robots.txt` e `sitemap.xml` na raiz; as páginas `#…` não são indexadas em separado pela Google.
+- **Visitas**: `_dev/visitas.ps1` conta visitantes únicos e aberturas por dia a partir do `access.log` do Apache
+  (sem robôs, testes nem rede de casa); `-Limpar 365` apaga as linhas com mais de 12 meses (a política promete isso).
+- `?v=` do i18n.js, pub.js, pub.css e app.js do Questski em 20261101b.
