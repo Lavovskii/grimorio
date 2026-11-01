@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- línguas: decide a língua e carrega os dicionários antes de tudo (partilhado com o Grimório) -->
-<script src="../shared/i18n.js?v=20261031a" data-q></script>
+<script src="../shared/i18n.js?v=20261101a" data-q></script>
 <!-- o menu principal, o mesmo do Grimório -->
 <script src="../shared/nav.js?v=20261028a"></script>
 <title>Tibia Questski</title>
@@ -12,8 +12,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="css/style.css?v=20261031a">
+<link rel="stylesheet" href="css/style.css?v=20261101a">
 <link rel="stylesheet" href="../shared/sites.css?v=20261027t">
+<link rel="stylesheet" href="../shared/pub.css?v=20261101a">
 <script>
   /* r31: o Questski veste o tema Tibia do Grimório (css/style.css: as mesmas cores, letra, topo e menu; só tema escuro).
      O Modern "Neon Arcano" (css/modern.css) saiu na r28 por pesar nas placas gráficas antigas.
@@ -46,7 +47,9 @@
     <div class="tabstrip" id="tabstrip" role="tablist" aria-label="Quests abertas"></div>
     <div class="view" id="view"></div>
     <footer class="footer">
+      <div class="ad-slot" data-ad-slot="q-rodape" role="complementary" aria-label="Publicidade"><span class="ad-lab">Publicidade</span><span class="ad-size">728 × 90 · 320 × 100</span></div>
       <div class="ui-lang" data-lang-picker></div>
+      <div class="sf-priv"><a href="../privacidade.html">Privacidade e cookies</a><button type="button" class="pub-prefs" data-pub-prefs>Definições de cookies</button></div>
       <p>Tibia Questski · conteúdo baseado na TibiaWiki (tibia.fandom.com, CC BY-SA) · mapa de TibiaMaps (tibiamaps.io) · Tibia é uma marca da CipSoft GmbH. Projeto de fãs, sem afiliação.</p>
     </footer>
   </main>
@@ -81,5 +84,6 @@
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="js/ponte.js?v=20261028a"></script>
 <script src="js/app.js?v=20261028a"></script>
+<script src="../shared/pub.js?v=20261101a" defer></script>
 </body>
 </html>

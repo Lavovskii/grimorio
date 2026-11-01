@@ -154,6 +154,9 @@ html.fx-lite .brand::before { animation: none; opacity: .8; }
 .shell { max-width: 1240px; margin: 0 auto; padding: 22px 16px 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
 .main { min-width: 0; display: flex; flex-direction: column; }
 .view { flex: 1; width: 100%; padding: 0 0 20px; }
+/* r34: privacidade e cookies no rodapé (o botão vem do shared/pub.css) */
+.footer .sf-priv { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 20px; }
+.footer .sf-priv a { display: inline-flex; align-items: center; min-height: 44px; color: #E6C06A; }
 .footer { padding: 26px 0 8px; margin-top: 20px; text-align: center; font-size: 14px; color: var(--muted); border-top: 1px solid rgba(201, 164, 90, .2); }
 .scrim { display: none; }
 /* a lista de quests e os filtros: painel que desliza da esquerda (botão "Lista de quests" nos separadores) */

@@ -1,0 +1,53 @@
+/* Grimório + Questski — publicidade e aviso de cookies (r34). Ver shared/pub.js.
+   Cores do tema Tibia (pedra e ouro), com valores próprios para não depender das variáveis de cada site. */
+
+/* Espaços de anúncio: só aparecem quando há anúncios a sério (consentimento dado e unidade configurada).
+   Sem isso ficam escondidos, em vez da caixa "Publicidade" vazia. */
+html:not(.pub-ads) .ad-slot, .ad-slot.ad-none { display: none !important; }
+
+/* Questski (o Grimório tem os seus estilos de .ad-slot; :where não lhes ganha) */
+:where(.ad-slot) { display: grid; place-items: center; gap: 4px; width: 100%; min-height: 100px; margin: 16px 0;
+  border: 1px dashed rgba(201,164,90,.3); border-radius: 4px; background: rgba(0,0,0,.25); color: #C9B48A; text-align: center; contain: layout paint; }
+:where(.ad-slot) .ad-lab { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+
+/* Com anúncio: sem moldura de espera; a etiqueta fica por cima, pequena */
+html .ad-slot.ad-on, html[data-ui] .ad-slot.ad-on { display: block; border: 0; background: none; min-height: 0; padding: 0; overflow: visible; }
+html .ad-slot.ad-on::after, html[data-ui] .ad-slot.ad-on::after { content: none; }
+html .ad-slot.ad-on .ad-lab { display: block; margin-bottom: 4px; color: #AC9D7E; text-shadow: none; text-align: center; }
+html .ad-slot.ad-on ins.adsbygoogle { width: 100%; }
+html .ad-slot.ad-side.ad-on ins.adsbygoogle { width: 160px; }
+/* a Google não tinha anúncio para este espaço: não deixa buraco */
+.ad-slot.ad-on:has(ins[data-ad-status="unfilled"]) { display: none !important; }
+
+/* ---------- aviso de cookies ---------- */
+.pub-cc { position: fixed; z-index: 1000; left: 16px; bottom: 16px; width: min(440px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px); overflow: auto; box-sizing: border-box; padding: 16px 16px 14px;
+  background: #211A12; color: #F0E6CE; border: 1px solid #5E5242; border-radius: 4px;
+  box-shadow: inset 1px 1px 0 #5E5242, inset -1px -1px 0 #000, 0 8px 24px rgba(0,0,0,.55);
+  font: 14px/1.5 Tahoma, Verdana, "Segoe UI", system-ui, sans-serif; }
+.pub-cc[hidden] { display: none; }
+.pub-cc-h { margin: -16px -16px 12px; padding: 8px 16px; font: 700 15px/1.3 "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  color: #E9D9B0; background: #3B3227; border-bottom: 1px solid #000; letter-spacing: .02em; }
+.pub-cc-p { margin: 0 0 10px; color: #D8CAAA; }
+.pub-cc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 4px; }
+.pub-cc-b { min-height: 44px; min-width: 112px; padding: 0 16px; border: 1px solid #000; border-radius: 3px; cursor: pointer;
+  font: 700 14px/1 Tahoma, Verdana, sans-serif; color: #F0E6CE; background: #3A3026;
+  box-shadow: inset 1px 1px 0 #6E604C, inset -1px -1px 0 #120C06; }
+.pub-cc-b:active { box-shadow: inset 1px 1px 0 #120C06, inset -1px -1px 0 #6E604C; }
+.pub-cc-b:focus-visible, .pub-cc-a:focus-visible { outline: 2px solid #E6C06A; outline-offset: 2px; }
+/* as duas escolhas com o mesmo peso (recusar tem de ser tão fácil como aceitar) */
+.pub-cc-a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; color: #E6C06A; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 960px) {
+  /* acima da barra de baixo dos dois sites */
+  .pub-cc { left: 8px; right: 8px; width: auto; bottom: calc(64px + 8px + env(safe-area-inset-bottom, 0px)); max-height: calc(100vh - 64px - 24px); }
+  .pub-cc-b { flex: 1 1 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pub-cc { animation: pub-cc-in .2s ease-out; }
+  @keyframes pub-cc-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
+
+/* botão "Definições de cookies" dos rodapés: parece um link */
+.pub-prefs { display: inline-flex; align-items: center; min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer;
+  color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.pub-prefs[hidden] { display: none; }

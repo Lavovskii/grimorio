@@ -1051,6 +1051,7 @@
           ${QTABS.map(([k, l, ic]) => `<a class="qtab ${k === tab ? "active" : ""}" href="#/quest/${slug}/${k}" role="tab" aria-selected="${k === tab}">${icon(ic)}${l}${counts[k] ? `<span class="n">${counts[k]}</span>` : ""}</a>`).join("")}
         </nav>
         <div class="qtab-body" id="qtabBody">${tab === "guia" ? guideTab(d) : tab === "preparacao" ? prepTab(d) : tab === "recompensas" ? rewardsTab(d) : mapTab(d)}</div>
+        <div class="ad-slot" data-ad-slot="q-guia" role="complementary" aria-label="Publicidade"><span class="ad-lab">Publicidade</span><span class="ad-size">728 × 90 · 320 × 100</span></div>
       </article>`;
     hydrateMinimaps(view());
     $("#toggleDone").onclick = () => { const pp = prog(slug), v = !isDone(slug); pp.done = v; setProg(slug, pp); const g = QP.setGrimDone(slug, v); toast(v ? (g ? "Quest concluída, também no Grimório!" : "Quest marcada como concluída!") : "Quest desmarcada"); rerenderQuest(); };
