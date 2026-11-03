@@ -1,12 +1,12 @@
-/* Grimório + Questski — línguas.
+/* Tibia Grimoire + Questski — línguas.
    O código e os dados continuam escritos em PT-PT (a língua de origem). Este ficheiro traduz o que aparece no ecrã:
    - a interface (textos fixos, botões, títulos), pelo dicionário i18n/ui.<língua>.js — chaves exatas e modelos com {0}, {1}…;
-   - o conteúdo do Grimório (notas, rotas, descrições), frase a frase, pelo dicionário i18n/content.en.js (só inglês;
+   - o conteúdo do Tibia Grimoire (notas, rotas, descrições), frase a frase, pelo dicionário i18n/content.en.js (só inglês;
      as outras línguas mostram o conteúdo em inglês e o PT-BR fica com o PT-PT);
    - os dados do Questski (guias, fichas de locais), por sobreposições em i18n/en/q/… aplicadas quando o JSON chega.
    Nada na lógica dos sites muda: os dados ficam em PT-PT na memória e só o DOM (texto e title/placeholder/aria-label/alt) é traduzido.
    A língua fica em localStorage "grimorio-lang" (a mesma nos dois sites). Por omissão: inglês.
-   Carrega-se no <head>, antes de tudo: <script src="shared/i18n.js" data-c></script> (data-c = dicionário de conteúdo do Grimório,
+   Carrega-se no <head>, antes de tudo: <script src="shared/i18n.js" data-c></script> (data-c = dicionário de conteúdo do Tibia Grimoire,
    data-q = sobreposições do Questski). Ferramenta: _dev/i18n.py (extrair, construir, ver o que falta). */
 (function () {
   "use strict";
@@ -52,7 +52,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261103b";
+    var DV = "?v=20261103c";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
@@ -254,7 +254,7 @@
 
   // interface: chave exata, depois modelos
   // (os modelos curtos só entram em textos com marcas de elementos, ex.: "King em {0}" de "King em <b>Hill</b>"; num texto
-  // simples, "{0} de {1}" apanharia tudo — "Grimório de Tibia" passava a "Grimório of Tibia")
+  // simples, "{0} de {1}" apanharia tudo — "Tibia Grimoire" passava a "Tibia Grimoire of Tibia")
   function ui(k) { var t = exact(k); if (t == null) t = pattern(k); if (t == null && /\{\d+\}/.test(k)) t = short(k); return t; }
 
   // conteúdo (só inglês): o texto inteiro, senão frase a frase (as frases que faltam ficam em PT-PT).
@@ -644,7 +644,7 @@
     var s = e.target;
     if (s && s.matches && s.matches("[data-lang-set]")) setLang(s.value);
   });
-  // mudou noutro separador (Grimório ou Questski): segue
+  // mudou noutro separador (Tibia Grimoire ou Questski): segue
   window.addEventListener("storage", function (e) {
     if (e.key !== KEY) return;
     var l = e.newValue && BYCODE[e.newValue] ? e.newValue : DEF;

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- línguas: decide a língua e carrega os dicionários antes de tudo (partilhado com o Grimório) -->
-<script src="../shared/i18n.js?v=20261103b" data-q></script>
-<!-- o menu principal, o mesmo do Grimório -->
+<!-- línguas: decide a língua e carrega os dicionários antes de tudo (partilhado com o Tibia Grimoire) -->
+<script src="../shared/i18n.js?v=20261103c" data-q></script>
+<!-- o menu principal, o mesmo do Tibia Grimoire -->
 <script src="../shared/nav.js?v=20261028a"></script>
 <title>Tibia Questski</title>
 <link rel="canonical" href="https://tibiagrimoire.me/quests/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Grimório de Tibia">
+<meta property="og:site_name" content="Tibia Grimoire">
 <meta property="og:title" content="Tibia Questski: guias de quests">
 <meta property="og:description" content="Guias passo-a-passo de todas as quests do Tibia, do nível 1 ao endgame, com mapas, coordenadas e capturas.">
 <meta property="og:url" content="https://tibiagrimoire.me/quests/">
@@ -18,13 +18,13 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="css/style.css?v=20261103b">
+<link rel="stylesheet" href="css/style.css?v=20261103c">
 <link rel="stylesheet" href="../shared/sites.css?v=20261027t">
-<link rel="stylesheet" href="../shared/pub.css?v=20261103b">
+<link rel="stylesheet" href="../shared/pub.css?v=20261103c">
 <script>
-  /* r31: o Questski veste o tema Tibia do Grimório (css/style.css: as mesmas cores, letra, topo e menu; só tema escuro).
+  /* r31: o Questski veste o tema Tibia do Tibia Grimoire (css/style.css: as mesmas cores, letra, topo e menu; só tema escuro).
      O Modern "Neon Arcano" (css/modern.css) saiu na r28 por pesar nas placas gráficas antigas.
-     html.fx-lite: a mesma escolha de efeitos do Grimório ("grimorio-fx", rodapé do Grimório) ou um PC fraco. */
+     html.fx-lite: a mesma escolha de efeitos do Tibia Grimoire ("grimorio-fx", rodapé do Tibia Grimoire) ou um PC fraco. */
   (function () {
     var d = document.documentElement, n = navigator, f = "";
     try { f = localStorage.getItem("grimorio-fx") || ""; } catch (e) {}
@@ -35,8 +35,8 @@
 <body>
 <header class="topbar">
   <div class="in">
-  <a class="brand" href="../" aria-label="Grimório de Tibia — início"><svg class="sig" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h15a5 5 0 0 1 5 5v17H11a5 5 0 0 1-5-5z"/><path d="M6 22a5 5 0 0 1 5-5h15"/><path d="M15 8l1.5 3 3 .4-2.2 2 .6 3-2.9-1.5-2.9 1.5.6-3-2.2-2 3-.4z" fill="currentColor" stroke="none"/></svg><b>Grimório de Tibia</b></a>
-  <nav class="sitesw" aria-label="Mudar de site"><a href="../" id="swGrimorio" title="Hunts, builds, equipamento e wiki"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M5 16a4 4 0 0 1 4-4h11"/></svg><span>Grimório</span></a><a href="./" aria-current="page" title="Guias de quests passo a passo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg><span>Questski</span></a></nav>
+  <a class="brand" href="../" aria-label="Tibia Grimoire — início"><svg class="sig" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M6 5h15a5 5 0 0 1 5 5v17H11a5 5 0 0 1-5-5z"/><path d="M6 22a5 5 0 0 1 5-5h15"/><path d="M15 8l1.5 3 3 .4-2.2 2 .6 3-2.9-1.5-2.9 1.5.6-3-2.2-2 3-.4z" fill="currentColor" stroke="none"/></svg><b>Tibia Grimoire</b></a>
+  <nav class="sitesw" aria-label="Mudar de site"><a href="../" id="swGrimorio" title="Hunts, builds, equipamento e wiki"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M5 16a4 4 0 0 1 4-4h11"/></svg><span>Tibia Grimoire</span></a><a href="./" aria-current="page" title="Guias de quests passo a passo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg><span>Questski</span></a></nav>
   <a class="qchar" id="qchar" href="../#inicio" hidden></a>
   <label class="search">
     <span class="search-ico" aria-hidden="true"></span>
@@ -89,7 +89,7 @@
 
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="js/ponte.js?v=20261028a"></script>
-<script src="js/app.js?v=20261103b"></script>
-<script src="../shared/pub.js?v=20261103b" defer></script>
+<script src="js/app.js?v=20261103c"></script>
+<script src="../shared/pub.js?v=20261103c" defer></script>
 </body>
 </html>

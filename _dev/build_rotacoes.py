@@ -235,7 +235,7 @@ def build():
         oid.setdefault(str(i), n)
     return {
         'v': 1,
-        'fontes': 'data/spells.json do Grimório + TibiaWiki e notas oficiais das Vocation Adjustments 2026 '
+        'fontes': 'data/spells.json do Tibia Grimoire + TibiaWiki e notas oficiais das Vocation Adjustments 2026 '
                   '(16/06/2026 e 07/07/2026), outubro de 2026',
         'scen': list(SCEN),
         'ab': ab, 'runes': runes, 'auto': auto,

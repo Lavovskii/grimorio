@@ -1,9 +1,9 @@
-/* Grimório + Questski — publicidade, consentimento e estatísticas (r34).
+/* Tibia Grimoire + Questski — publicidade, consentimento e estatísticas (r34).
    Um só ficheiro para os dois sites e para a política. Carrega-se no fim do <body>:
-     Grimório:  <script src="shared/pub.js?v=…" defer></script>
+     Tibia Grimoire:  <script src="shared/pub.js?v=…" defer></script>
      Questski:  <script src="../shared/pub.js?v=…" defer></script>
    Os espaços de anúncio são <div class="ad-slot" data-ad-slot="<nome>"> (inicio, hunts, item, criatura, rodape,
-   lateral no Grimório; q-inicio, q-guia, q-rodape no Questski).
+   lateral no Tibia Grimoire; q-inicio, q-guia, q-rodape no Questski).
 
    O site vive dos anúncios: TODA a gente vê anúncios. A escolha de cada pessoa é só o tipo:
      personalizados (cookies da Google para escolher anúncios do interesse dela) ou não personalizados/limitados.
@@ -154,7 +154,7 @@
       a.textContent = "";
       var p = document.createElement("p");
       p.className = "ad-blk-t";
-      p.textContent = tr("Os anúncios pagam o servidor do Grimório. Se usas um bloqueador de anúncios, abre uma exceção para este site.");
+      p.textContent = tr("Os anúncios pagam o servidor do Tibia Grimoire. Se usas um bloqueador de anúncios, abre uma exceção para este site.");
       a.appendChild(p);
     });
   }
@@ -183,7 +183,7 @@
     box.setAttribute("role", "dialog");
     box.setAttribute("aria-label", tr("Cookies e publicidade"));
     var h = el("h2", "pub-cc-h", "Cookies e publicidade");
-    var p1 = el("p", "pub-cc-p", "O Grimório é gratuito e o servidor paga-se com anúncios, por isso há sempre anúncios. Tu escolhes o tipo.");
+    var p1 = el("p", "pub-cc-p", "O Tibia Grimoire é gratuito e o servidor paga-se com anúncios, por isso há sempre anúncios. Tu escolhes o tipo.");
     var p2 = el("p", "pub-cc-p", "Personalizados: a Google e os parceiros dela usam cookies para escolher anúncios do teu interesse. Não personalizados: os anúncios dependem só da página que estás a ver.");
     var p3 = el("p", "pub-cc-p", "Podes mudar quando quiseres em Definições de cookies, no rodapé.");
     var row = el("div", "pub-cc-row");
