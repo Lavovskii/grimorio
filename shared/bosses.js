@@ -1,4 +1,4 @@
-/* Grimório — que bosses uma personagem aguenta no seu nível (window.GrimBoss; em node, module.exports).
+/* Tibia Grimoire — que bosses uma personagem aguenta no seu nível (window.GrimBoss; em node, module.exports).
    Dados: data/bosses.json (_dev/build_bosses.py, TibiaWiki) + data/creatures.json (resistências e loot) + o dano de boss do
    motor de rotações (GrimRot.plan, cenário 'boss'). Modelo e limites: _dev/BOSSES.md.
    Para cada boss, três perguntas, com a vocação e o nível:

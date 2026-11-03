@@ -1,7 +1,7 @@
-/* Grimório + Questski — o menu principal, o mesmo nos dois sites (r31).
+/* Tibia Grimoire + Questski — o menu principal, o mesmo nos dois sites (r31).
    Aqui ficam as secções do menu (SECS), os ícones e as páginas que um visitante sem personagem pode abrir (PUB).
-   O Grimório (index.html) desenha o menu com isto e com os seus botões de página; o Questski (quests/) usa GNAV.render,
-   que desenha o mesmo menu com links para o Grimório (../#hunts…) e marca "Quests" como a página aberta.
+   O Tibia Grimoire (index.html) desenha o menu com isto e com os seus botões de página; o Questski (quests/) usa GNAV.render,
+   que desenha o mesmo menu com links para o Tibia Grimoire (../#hunts…) e marca "Quests" como a página aberta.
    Carrega-se no <head>, depois do shared/i18n.js. Cada entrada: [id da página, nome] ou [id, nome, endereço] (link para outro site). */
 window.GNAV = (function () {
   "use strict";
@@ -52,7 +52,7 @@ window.GNAV = (function () {
       return subs.length === 1 && subs[0][0] !== s.id ? { id: s.id, t: subs[0][1], ic: subs[0][0], subs: subs } : { id: s.id, t: s.t, subs: subs };
     }).filter(function (s) { return s.subs.length; });
   }
-  // Questski: o menu do Grimório em links. o = {side, bottom, sub: elementos; base: "../"; cur: id da página aberta ("guias"); guest: sem personagem}
+  // Questski: o menu do Tibia Grimoire em links. o = {side, bottom, sub: elementos; base: "../"; cur: id da página aberta ("guias"); guest: sem personagem}
   function render(o) {
     var list = secs().map(function (s) { s.subs = s.subs.filter(function (x) { return x[0] !== "ask"; }); return s; }); // "Perguntar" só existe dentro do Claude
     if (o.guest) list = guest(list);

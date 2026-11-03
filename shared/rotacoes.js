@@ -1,4 +1,4 @@
-/* Grimório — motor de rotações (hotkeys de ataque por vocação, cenário, elemento da criatura, nível e orçamento).
+/* Tibia Grimoire — motor de rotações (hotkeys de ataque por vocação, cenário, elemento da criatura, nível e orçamento).
    Dados: data/rotacoes.json (feito por _dev/build_rotacoes.py a partir do data/spells.json). Documentação: _dev/ROTACOES.md.
    Ainda não está ligado ao index.html: GrimRot.plan(D, opções) devolve um plano; GrimRot.toHK(plano) e GrimRot.toRot(plano)
    dão-no no formato de G.voc[voc].hk e G.voc[voc].rot.

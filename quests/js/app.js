@@ -24,7 +24,7 @@
     evento: { label: "Evento", icon: "spark" },
     tutorial: { label: "Tutorial", icon: "book" },
   };
-  // quem consegue fazer a quest (campo "team" dos guias; a classificação veio das quests do Grimório)
+  // quem consegue fazer a quest (campo "team" dos guias; a classificação veio das quests do Tibia Grimoire)
   const TEAMS = {
     solo: { label: "Solo", title: "Dá para fazer sozinho" },
     parcial: { label: "Solo até ao boss", title: "Sozinho até à luta final, que pede grupo" },
@@ -131,7 +131,7 @@
     route: { name: "home", args: [] },
   };
   const saveFilters = () => { const f = Object.assign({}, S.filters); delete f.q; save("tq-filters", f); };
-  // ponte com o Grimório (js/ponte.js): personagem ativa, quests concluídas nos dois sites, links para as páginas de lá
+  // ponte com o Tibia Grimoire (js/ponte.js): personagem ativa, quests concluídas nos dois sites, links para as páginas de lá
   const QP = window.QPonte || { load: () => Promise.resolve(), char: () => null, grimDone: () => false, setGrimDone: () => false, grimHref: async () => null, paired: () => false };
 
   // internal wiki ------------------------------------------------------------
@@ -321,7 +321,7 @@
         <summary class="filter-summary"><span><b id="fcount"></b></span><span class="link-btn">Filtros</span></summary>
         <div style="margin-top:10px">
           ${(() => { const ch = QP.char(); return ch ? `<div class="filter-row gp-char"><span class="gp-voc">${esc(ch.vn)}</span><span class="gp-nm"><b>${esc(ch.name)}</b> · nível ${ch.level}</span>${f.level === ch.level && f.lvlChar ? `<span class="muted gp-on">nível da tua personagem</span>` : `<button class="link-btn" data-gpchar>usar este nível</button>`}</div>`
-            : `<div class="filter-row gp-char muted">Junta a tua personagem no <a href="../#inicio">Grimório</a> e o nível dela entra aqui sozinho.</div>`; })()}
+            : `<div class="filter-row gp-char muted">Junta a tua personagem no <a href="../#inicio">Tibia Grimoire</a> e o nível dela entra aqui sozinho.</div>`; })()}
           <div class="filter-row">
             <span class="filter-label">O meu nível</span>
             <input class="input level-input" id="fLevel" type="number" min="1" max="2000" placeholder="ex. 45" value="${f.level || ""}">
@@ -453,7 +453,7 @@
     const active = S.route.name === "quest" ? S.route.args[0] : null;
     const tabs = S.tabs.filter((s) => S.bySlug[s]);
     $("#tabstrip").innerHTML =
-      // r31: a lista de quests e os filtros abrem num painel (o lado esquerdo é o menu principal, como no Grimório)
+      // r31: a lista de quests e os filtros abrem num painel (o lado esquerdo é o menu principal, como no Tibia Grimoire)
       `<button type="button" class="tab tab-list" id="listBtn" aria-controls="sidebar" aria-expanded="${document.body.classList.contains("drawer-open")}" title="Lista de quests e filtros">${icon("menu")}<span class="tab-name">Lista</span></button>` +
       `<a class="tab tab-home ${S.route.name === "home" ? "active" : ""}" href="#/" title="Início">${icon("home")}</a>` +
       `<a class="tab ${S.route.name === "quests" ? "active" : ""}" href="#/quests" title="Todas as quests">${icon("list")}<span class="tab-name">Quests</span></a>` +
@@ -1055,7 +1055,7 @@
         <div class="ad-slot" data-ad-slot="q-guia" role="complementary" aria-label="Publicidade"><span class="ad-lab">Publicidade</span><span class="ad-size">728 × 90 · 320 × 100</span></div>
       </article>`;
     hydrateMinimaps(view());
-    $("#toggleDone").onclick = () => { const pp = prog(slug), v = !isDone(slug); pp.done = v; setProg(slug, pp); const g = QP.setGrimDone(slug, v); toast(v ? (g ? "Quest concluída, também no Grimório!" : "Quest marcada como concluída!") : "Quest desmarcada"); rerenderQuest(); };
+    $("#toggleDone").onclick = () => { const pp = prog(slug), v = !isDone(slug); pp.done = v; setProg(slug, pp); const g = QP.setGrimDone(slug, v); toast(v ? (g ? "Quest concluída, também no Tibia Grimoire!" : "Quest marcada como concluída!") : "Quest desmarcada"); rerenderQuest(); };
     $$("[data-mark-done]").forEach((b) => (b.onclick = () => $("#toggleDone").click()));
     // unroll the reward scroll when it comes into view
     $$(".quest-scroll:not(.unrolled)").forEach((el) => {
@@ -1302,7 +1302,7 @@
         <header class="box wiki-head"><div class="box-body">
           <span class="slot wiki-sprite">${p.i ? `<img src="${p.i}" alt="">` : icon(kind[1])}</span>
           <div style="min-width:0">
-            <div class="meta"><a class="chip" href="#/wiki">${icon("book")}Wiki</a><span class="chip chip-cat">${icon(kind[1])}${kind[0].replace(/s$/, "")}</span><a class="chip chip-grim" id="grimLink" hidden title="Preço no Market, onde cai, hunts e mais, no Grimório">${icon("ext")}Ver no Grimório</a></div>
+            <div class="meta"><a class="chip" href="#/wiki">${icon("book")}Wiki</a><span class="chip chip-cat">${icon(kind[1])}${kind[0].replace(/s$/, "")}</span><a class="chip chip-grim" id="grimLink" hidden title="Preço no Market, onde cai, hunts e mais, no Tibia Grimoire">${icon("ext")}Ver no Tibia Grimoire</a></div>
             <h1>${esc(p.t)}</h1>
             <div class="hero-actions">
               <button class="btn btn-ghost btn-sm" id="wikiBack">‹ Voltar</button>
@@ -1516,14 +1516,14 @@
   }
 
   // ---------------------------------------------------------------- global events
-  // r31: o menu principal do Grimório (shared/nav.js), com "Quests" aberto; sem personagem no Grimório, o menu curto do visitante
+  // r31: o menu principal do Tibia Grimoire (shared/nav.js), com "Quests" aberto; sem personagem no Tibia Grimoire, o menu curto do visitante
   function navDraw() {
     const ch = QP.char(), el = $("#qchar");
     if (window.GNAV) GNAV.render({ side: $("#gside"), bottom: $("#gbottom"), sub: $("#gsub"), base: "../", cur: "guias", guest: !ch });
-    // a personagem ativa no topo, como no Grimório (aqui é um link para ela no Grimório)
+    // a personagem ativa no topo, como no Tibia Grimoire (aqui é um link para ela no Tibia Grimoire)
     el.hidden = !ch;
     if (ch) {
-      el.title = "Abre a personagem no Grimório";
+      el.title = "Abre a personagem no Tibia Grimoire";
       el.innerHTML = `<span class="csw-av" style="--vc:var(--v-${esc(ch.voc)});--p:${Math.max(0, Math.min(99, ch.pct))}">${QP.avatar(ch.voc)}</span><span class="csw-tx"><b>${esc(ch.name || ch.promo)}</b><small>${esc(ch.promo)} · nível ${ch.level}${ch.world ? ` · ${esc(ch.world)}` : ""}</small></span>`;
     }
   }
@@ -1607,7 +1607,7 @@
       else if (e.key === "Enter" && e.target.matches(".minimap")) e.target.click();
     });
     window.addEventListener("hashchange", render);
-    // o Grimório aberto noutro separador mudou de personagem ou marcou quests: atualiza o nível e as concluídas
+    // o Tibia Grimoire aberto noutro separador mudou de personagem ou marcou quests: atualiza o nível e as concluídas
     const grimSig = () => { const ch = QP.char(); return ch ? ch.name + "|" + ch.level + "|" + S.quests.filter((q) => QP.grimDone(q.slug)).length : ""; };
     let lastSig = grimSig();
     window.addEventListener("storage", (e) => {
