@@ -682,7 +682,7 @@
 
     view().innerHTML = `
       <section class="hero">
-        <img class="hero-logo" src="assets/logo-full.webp" alt="Tibia Questski — feiticeira num jetski">
+        <img class="hero-logo" src="assets/logo-full.webp?v=20261106c" width="600" height="574" alt="Tibia Questski">
         <div>
           <h1>Guia de Quests</h1>
           <p>Todas as quests do Tibia, <b>do nível 1 ao endgame</b>, explicadas passo a passo, com coordenadas, mini-mapas, capturas de ecrã, diálogos dos NPCs e progresso guardado.</p>

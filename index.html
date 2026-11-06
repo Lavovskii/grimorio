@@ -2442,6 +2442,7 @@ html[data-ui="modern"] main{view-transition-name:mdmain}
 
 /* ======================= primeira visita ======================= */
 .ob-art{width:min(280px,72%);margin:6px auto 4px;overflow:visible}
+.ob-logo{display:block;width:min(300px,78%);height:auto;margin:4px auto 8px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55))}
 .ob-art .book{animation:mdFloat 5s ease-in-out infinite;transform-origin:center}
 @keyframes mdFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .ob-art .page{transform-origin:130px 104px;animation:mdPage 6s var(--e-out) infinite}
@@ -3614,7 +3615,7 @@ html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
 
     <!-- PRIMEIRA VEZ -->
     <section id="onboard" hidden>
-      <div class="ph"><svg class="ob-art md-only" viewBox="0 0 260 150" aria-hidden="true"><defs><linearGradient id="mdBk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B08034"/><stop offset="1" stop-color="#E6C06A"/></linearGradient><radialGradient id="mdBkG"><stop offset="0" stop-color="#E6C06A" stop-opacity=".7"/><stop offset="1" stop-color="#E6C06A" stop-opacity="0"/></radialGradient></defs><ellipse cx="130" cy="96" rx="110" ry="40" fill="url(#mdBkG)"/><g class="book"><path d="M46 104c30-14 58-14 84 0V44C104 30 76 30 46 44z" fill="#2A2014" stroke="url(#mdBk)" stroke-width="3"/><path d="M214 104c-30-14-58-14-84 0V44c26-14 54-14 84 0z" fill="#3A2C1A" stroke="url(#mdBk)" stroke-width="3"/><path d="M60 58c20-7 38-7 56 0M60 72c20-7 38-7 56 0M144 58c20-7 38-7 56 0M144 72c20-7 38-7 56 0" stroke="#E6C06A" stroke-width="2" opacity=".6" fill="none"/></g><g class="orb"><circle cx="230" cy="74" r="5" fill="#F2D68C"/><circle cx="230" cy="74" r="11" fill="#F2D68C" opacity=".18"/></g><g fill="#F2D68C" font-size="20" font-family="serif" text-anchor="middle"><text class="glyph" x="92" y="28">ᚠ</text><text class="glyph" x="130" y="18">ᛟ</text><text class="glyph" x="168" y="28">ᚱ</text></g></svg><span class="eyebrow">A tua conta</span><h2>Qual é a tua personagem?</h2><p>Escreve o nome tal como aparece no jogo. O Tibia Grimoire vai buscar a vocação, o nível, o mundo e as skills ao Tibia, e o guia adapta-se a ela. Podes juntar mais personagens depois.</p></div>
+      <div class="ph"><img class="ob-logo" src="shared/logo-grimoire.webp?v=20261106c" width="600" height="565" alt="Tibia Grimoire"><span class="eyebrow">A tua conta</span><h2>Qual é a tua personagem?</h2><p>Escreve o nome tal como aparece no jogo. O Tibia Grimoire vai buscar a vocação, o nível, o mundo e as skills ao Tibia, e o guia adapta-se a ela. Podes juntar mais personagens depois.</p></div>
       <div class="card" id="obHost"></div>
       <p class="note" style="margin-top:12px">Fica guardada neste browser: da próxima vez que entrares, a tua personagem já cá está e o nível atualiza-se sozinho. Os dados públicos vêm do tibia.com através da TibiaData.</p>
     </section>
