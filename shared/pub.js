@@ -33,7 +33,7 @@
 (function () {
   "use strict";
   var CFG = {
-    client: "",            // ex.: "ca-pub-1234567890123456"
+    client: "ca-pub-2548074339290280",
     cmp: "google",         // "google" | "proprio"
     recuperar: false,      // mensagem da Google para bloqueadores (ligar também no AdSense)
     slots: {               // número da unidade de anúncio do AdSense, por espaço
