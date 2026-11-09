@@ -171,7 +171,7 @@
     return out;
   }
   function travelBody(p, opts = {}) {
-    const list = (arr) => `<ol class="travel-steps">${arr.map((s) => `<li>${rich(s)}</li>`).join("")}</ol>`;
+    const list = (arr) => arr.length ? `<ol class="travel-steps">${arr.map((s) => `<li>${rich(s)}</li>`).join("")}</ol>` : `<p class="muted">Este troço ainda está por documentar.</p>`;
     const imgs = (p.images || []).map((im) => imageFor(im.file) ? { im, f: imageFor(im.file) } : null).filter(Boolean);
     const by = accessBy(p.title);
     return `
@@ -190,7 +190,7 @@
   }
   function travelCard(p) {
     const href = wikiHref(p.title);
-    return `<details class="travel"><summary>${icon("map")}<span>Como chegar e sair: <b>${esc(p.title)}</b>${p.near ? ` <span class="muted">· perto de ${esc(p.near)}</span>` : ""}</span></summary>
+    return `<details class="travel"><summary>${icon("map")}<span>Como chegar e sair: <b>${esc(p.title)}</b></span></summary>
       <div class="travel-body">${travelBody(p, { maxCoords: 3 })}${href ? `<p><a href="${href}">${icon("book")} Página de ${esc(p.title)} na wiki</a></p>` : ""}</div></details>`;
   }
 
@@ -824,19 +824,17 @@
       <span class="slot">${slot}</span><span style="min-width:0"><b>${qty ? `<span class="qty">${qty}× </span>` : ""}${esc(name)}</b>${extra ? `<span>${extra}</span>` : ""}</span></${href ? "a" : "div"}>`;
   }
 
-  const TRAVEL_STEP = /^(chegar|entrar|ir|sair|voltar|viajar|subir|descer)\b/i;
   /** Travel cards to show under a step: places it mentions that were not covered yet in this section. */
   function travelCardsFor(st, shown) {
-    const title = (st.title || "").toLowerCase();
+    const travel = /^(chegar|entrar|ir|sair|voltar|viajar|subir|descer)\b/i.test(st.title || "");
     const cards = [];
     placesInStep(st).forEach((p) => {
       const key = p.title.toLowerCase();
-      if (shown.has(key) || p.type === "cidade") return;
-      if (TRAVEL_STEP.test(title) && title.includes(key)) return;  // this step is the travel step itself
+      if (shown.has(key) && !travel) return;
       shown.add(key);
       cards.push(travelCard(p));
     });
-    return cards.slice(0, 3).join("");
+    return cards.join("");
   }
 
   function stepHTML(slug, st, id, n, extra = "") {
@@ -891,6 +889,20 @@
   const coordActions = (x, y, z, label) => `<div class="coord-actions">
       <button data-coord="${x},${y},${z}" data-label="${esc(plainText(label || ""))}">${icon("map")}Mapa</button>
       <button data-copy="${x},${y},${z}">${icon("copy")}Copiar</button></div>`;
+
+  function questArrival(d) {
+    const first = ((d.sections || [])[0] || {}).steps?.[0];
+    // Uma menção a um local no primeiro passo pode ser só onde recolher um item.
+    // Só associar a chegada a um local identificado explicitamente no início.
+    const startPlace = d.start && placeFor(d.start.place || d.start.label);
+    const places = startPlace ? [startPlace] : [];
+    return `<details class="travel quest-arrival"><summary>${icon("flag")}<span>Início e acessos</span></summary><div class="travel-body">
+      <p>O ponto de início marca onde começa a quest. Segue as entradas e os transportes do guia para lá chegar.</p>
+      ${places.map(p => `<h4>${esc(p.title)}</h4>${travelBody(p)}`).join("")}
+      ${!places.length ? `<p class="muted">Ainda sem ficha de viagem para o início desta quest. Consulta o primeiro passo; a localização no mapa não confirma o percurso.</p>` : ""}
+      ${first ? `<p><a href="#/quest/${d.slug}/guia/0-0">Primeiro passo: ${esc(plainText(first.title || "Começar a quest"))}</a></p>` : ""}
+    </div></details>`;
+  }
 
   function guideTab(d) {
     if (!d.has_guide || !(d.sections || []).length) {
@@ -995,7 +1007,7 @@
   function mapTab(d) {
     const pts = collectPoints(d);
     if (!pts.length) return `<div class="note-box">Esta quest não tem coordenadas registadas. Usa o <a href="#/mapa">mapa geral</a> para explorar.</div>`;
-    return `<div class="map-split">
+    return `<p class="note-box">O mapa mostra os pontos do guia. Para atravessar portais, mudar de piso ou viajar, segue os passos e as fichas de acesso.</p><div class="map-split">
       <div class="map-host" id="questMapHost" tabindex="0"></div>
       <section class="box map-points"><h2 class="box-caption">${icon("pin")}${pts.length} pontos</h2><div class="box-body">
         <ol class="notes-list" style="padding-left:24px">${pts.map((p, i) => `<li><a class="coord-link" data-qpt="${i}" style="font-family:inherit">${esc(plainText(p.label) || "Ponto")}</a><br><span class="muted" style="font-size:13px;font-family:var(--font-mono)">${p.x}, ${p.y}, ${p.z} · ${floorLabel(p.z)}</span></li>`).join("")}</ol>
@@ -1048,6 +1060,7 @@
           <dl class="facts">${facts.map(([k, v]) => `<div class="fact"><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
           ${total ? `<div class="quest-progress"><span>Progresso</span><span class="bar-lg"><i id="qbar" style="width:${isDone(slug) ? 100 : Math.round(nDone / total * 100)}%"></i></span><span id="qcount">${nDone}/${total} passos</span></div>` : ""}
         </header>
+        ${questArrival(d)}
         <nav class="qtabs" role="tablist">
           ${QTABS.map(([k, l, ic]) => `<a class="qtab ${k === tab ? "active" : ""}" href="#/quest/${slug}/${k}" role="tab" aria-selected="${k === tab}">${icon(ic)}${l}${counts[k] ? `<span class="n">${counts[k]}</span>` : ""}</a>`).join("")}
         </nav>
@@ -1317,7 +1330,7 @@
             <ul class="list-clean region-quests">${qs.map((q) => `<li>${lvlShield(q)}<a href="#/quest/${q.slug}" style="align-self:center">${esc(q.name)}</a></li>`).join("")}</ul>
             <p style="margin:10px 0 0"><a class="btn btn-sm" href="#/quests/regiao/${encodeURIComponent(r.name)}">${icon("list")}Ver todas as ${r.total} quests de ${esc(r.name)}</a></p></div></section>`;
         })()}
-        ${placeFor(p.t) ? `<section class="box travel-panel"><h2 class="box-caption">${icon("map")}Como chegar e como sair<span class="cap-extra">${esc(placeFor(p.t).near ? "perto de " + placeFor(p.t).near : "")}</span></h2><div class="box-body">${travelBody(placeFor(p.t), { maxCoords: 6 })}</div></section>` : ""}
+        ${placeFor(p.t) ? `<section class="box travel-panel"><h2 class="box-caption">${icon("map")}Como chegar e como sair<span class="cap-extra">Entrada e transportes</span></h2><div class="box-body">${travelBody(placeFor(p.t), { maxCoords: 6 })}</div></section>` : ""}
         ${howtoHTML(p)}
         ${quests.length || pos ? `<div class="wiki-side-grid">
           ${pos ? `<section class="box"><h2 class="box-caption">${icon("pin")}Onde está</h2><div class="coords" style="padding:12px"><div class="coord-card">${minimapHTML(pos.x, pos.y, pos.z, null, p.t)}

@@ -42,6 +42,25 @@ Bónus de loot do boss no slot:
 - depois cada 1% pede mais 5 pontos do que o anterior (25, 30, 35…).
 
 ## Limitações
+
+### Acessos documentados (novembro de 2026)
+
+`python -I _dev/build_boss_access.py` gera `data/boss-access.json` a partir das
+fichas de locais e guias já publicados em `quests/data/`. Correr depois de mudar
+os bosses ou reconstruir o Questski; `--check` verifica se o resultado está atual.
+`node _dev/boss_access_test.mjs` verifica as ligações e a regressão dos portais.
+
+A ficha do boss carrega os acessos ao abrir: requisitos, chegada à zona, pontos
+no mapa, saída e ligações às secções dos guias que referem explicitamente o boss.
+As fichas de spawn dos bosses usam estes mesmos acessos, sem herdar a rota de
+uma hunt vizinha. Não se deduz uma entrada, cidade ou transporte pela posição
+geográfica da sala. O fallback `routeHTML` passa a dizer «Percurso por confirmar».
+
+Limites: uma ficha de local pode ter troços por confirmar. As secções dos guias
+podem conter preparativos, acesso e combate; a referência ao boss não certifica
+um percurso completo. Os dados não distinguem ainda primeira visita de acesso
+diário nem calculam uma rota pessoal em função de cada missão desbloqueada.
+
 - O modelo é uma estimativa. Ficam de fora:
   - mecânicas (fases, curas, summons, campos);
   - mitigação real;
