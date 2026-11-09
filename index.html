@@ -45482,7 +45482,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   else if(t==="hc"||t==="ht"){ const x="#hunts/"+(t==="hc"?"cidade":"tipo")+"/"+k; if(location.hash===x) route(); else location.hash=x; } // r5-t2
   else if(t==="ch") mdVT(()=>{ go("charms"); charmFocus(k); }); // r5-t5: leva ao charm no cartão dos 25
   else if(t==="im") mdVT(()=>{ ST.ui.eqv="imbu"; go("equip"); eqView(); }); });
-function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); }
+function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); (root||document).querySelectorAll("[data-haccess]").forEach(hAccessFill); }
 document.addEventListener("change",e=>{ const s=e.target.closest("[data-rthome]"); if(!s) return; const c=C(); if(!c) return; c.home=s.value||""; save();
   document.querySelectorAll("[data-rt]").forEach(b=>{ const R=RTS[b.dataset.rt]; if(!R) return; const hi=R.routes.findIndex(r=>r.s===c.home); R.sel=hi>=0?hi:R.sel; R.step=null; b.innerHTML=rtInner(b.dataset.rt); drawRoute(b.dataset.rt); }); });
 document.addEventListener("click",e=>{
@@ -45498,24 +45498,38 @@ function vRoute(pid){ const v0=G.hv&&G.hv[pid]; if(!v0||!(v0.st||v0.rq)) return 
     ${v.t?`<p class="small" style="margin:0">${elinkTxt(v.t)}</p>`:""}
     ${v.rq&&v.rq.length?`<div class="pills">${v.rq.map(r=>`<span class="tag warn">${esc(r)}</span>`).join("")}</div>`:""}
     ${v.st&&v.st.length?`<ol class="vr-st">${v.st.map(t=>`<li>${elinkTxt(t)}</li>`).join("")}</ol>`:""}</div>`; }
-function huntRoute(pid){ const m=pid&&G.hm[pid], v=G.hv&&G.hv[pid];
-  const auto = (pid&&G.ar[pid]&&G.ar[pid].length) ? routeUI(G.ar[pid],{tgt:m?m.slice(0,3):null,extra:v?null:(G.routes[pid]&&G.routes[pid][3]),end:G.places[pid]?G.places[pid].n:null}) : (v&&v.st?"":routeHTML(pid,m&&m[0],m&&m[1],m&&m[2]));
-  /* r6-t1 */ // zona sem G.hv nem G.routes (as da TibiaWiki): o texto de acesso da zona (p.acc) é o bloco 'Acesso', como no vRoute; o percurso automático fica por baixo
-  const p=pid&&!v&&!G.routes[pid]&&G.places[pid];
-  if(p&&p.acc){ const qq=p.q&&QBY[p.q], rq=[qq?`Quest: ${qName(p.q)}`:"",p.prem?"Premium":""].filter(Boolean);
-    return `<div class="vroute"><div class="vr-h"><b>Acesso</b><span class="tag">por confirmar</span></div>
-    <p class="small" style="margin:0">${elinkTxt(p.acc)}</p>
-    ${rq.length?`<div class="pills" style="align-items:center"><span class="small muted">Requisitos:</span>${rq.map(questReqTag).join("")}${qq?`<button type="button" class="btn small ghost" data-qopen2="${esc(p.q)}">Lore e guia ›</button>${guiaBtn(guiaOf(p.q))}`:""}</div>`:""}</div>${m&&auto?`<h4 class="sub" style="margin:4px 0 0">Percurso aproximado</h4>${auto}`:""}`; }
-  return vRoute(pid)+(auto?`${v&&v.st?'<h4 class="sub" style="margin:4px 0 0">Percurso no mapa</h4>':""}${auto}`:""); }
+let HACCESS=null;
+function hAccessData(){
+  return HACCESS||(HACCESS=dload("hunt-access").then(d=>{
+    if(!d||d.v!==1||!d.h||!d.places) throw new Error("Acessos indisponíveis");
+    return d;
+  }).catch(e=>{ HACCESS=null; throw e; }));
+}
+async function hAccessFill(box){
+  if(box.dataset.loaded) return;
+  box.dataset.loaded="1";
+  try{ const d=await hAccessData(), pid=box.dataset.haccess;
+    if(!box.isConnected) return;
+    const names=hasKey(d.h,pid)?d.h[pid]:[];
+    box.innerHTML=names.map(n=>d.places[n]).filter(Boolean).map(travelPlaceHTML).join("")||`<p class="small muted">Ainda sem ficha detalhada deste local. Segue as indicações registadas acima; os troços em falta estão por confirmar.</p>`;
+  }catch(e){ delete box.dataset.loaded; box.innerHTML=`<p class="small muted">Não consegui carregar os acessos.</p><button class="btn small ghost" data-hretry>Tentar de novo</button>`; }
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-hretry]"); if(b) hAccessFill(b.closest("[data-haccess]")); });
+function huntRoute(pid){
+  const p=pid&&G.places[pid]; if(!p) return `<p class="small muted">Acesso por confirmar.</p>`;
+  const v=G.hv&&G.hv[pid], m=G.hm[pid];
+  // Os traçados G.ar não comprovam portas, missões ou ligações entre salas remotas.
+  const recorded=v&&v.st&&v.st.length?vRoute(pid):G.routes[pid]?`<h4 class="sub">Indicações registadas</h4>${routeHTML(pid)}`:p.acc?`<p class="small">${elinkTxt(p.acc)}</p>`:"";
+  return `${recorded}${p.q?`<div class="pills">${questReqTag("Quest: "+qName(p.q))}</div>`:""}
+    <div data-haccess="${esc(pid)}"><p class="tkload">A carregar os acessos documentados…</p></div>
+    ${m?`<p class="small muted">Este ponto marca a zona da hunt. A entrada pode ser um portal ou transporte noutro local.</p>${mapBtn(m[0],m[1],m[2],p.n,"Ver o ponto da hunt")}`:""}`;
+}
 function routeHTML(pid,x,y,z){
   const R = pid && G.routes[pid];
   if (R){ const [from,travel,steps,req]=R;
     return `<ol class="route"><li class="st"><b>${esc(from)}</b>${travel?`<span>${elinkTxt(travel)}</span>`:""}</li>${steps.map(t=>`<li>${elinkTxt(t)}</li>`).join("")}</ol>${req?`<p class="req">Requisito: ${elinkTxt(req)}</p>`:""}`; }
   if (x==null) return `<p class="muted small">Caminho por confirmar.</p>`;
-  const np = nearPlace(x,y,z);
-  if (np && G.routes[np.k]) return `<p class="small muted" style="margin:0 0 6px">Junto a ${esc(G.places[np.k].n)}: mesmo caminho.</p>${routeHTML(np.k)}`;
-  const c=nearCity(x,y), dir=dirFrom(x,y,c.cx,c.cy);
-  return `<ol class="route"><li class="st"><b>${esc(c.n)}</b></li><li>Sai para ${dir} (~${Math.round(c.d)} sqm)</li><li>${z===7?"Zona à superfície":z>7?`Desce ao subsolo −${z-7}`:`Sobe ao andar +${7-z}`}</li></ol>`;
+  return `<p class="muted small">Percurso por confirmar. O ponto no mapa não identifica a entrada: pode ser preciso usar um portal ou transporte noutra zona.</p>`;
 }
 /* r2-t5 */ // painel de detalhe: entrada própria no histórico (o Voltar do telemóvel fecha-o), o resto da página fica inert e o foco volta a quem o abriu.
 // NAVD = profundidade da navegação dentro do site (history.state.gd): o '← Voltar' só faz history.back() se houver para onde voltar.
@@ -46406,6 +46420,44 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget
 // do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
 // personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
 let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null;
+let BSACCESS=null;
+function bsAccessData(){
+  return BSACCESS||(BSACCESS=dload("boss-access").then(d=>{
+    if(!d||d.v!==1||!d.b||!d.places) throw new Error("Acessos indisponíveis");
+    return d;
+  }).catch(e=>{ BSACCESS=null; throw e; }));
+}
+function travelTextHTML(t){
+  // Cada coordenada é um ponto documentado, não uma linha reta entre salas.
+  return String(t||"").split(/(\{coord:\d+,\d+,\d+\})/g).map(x=>{
+    const m=/^\{coord:(\d+),(\d+),(\d+)\}$/.exec(x);
+    return m?mapBtn(+m[1],+m[2],+m[3],"Ponto do acesso",`${m[1]}, ${m[2]}, ${m[3]}`):qmd(x);
+  }).join("");
+}
+function travelPlaceHTML(p){
+  const list=xs=>`<ol class="route">${xs.map(t=>`<li>${travelTextHTML(t)}</li>`).join("")}</ol>`;
+  return `<details class="rt-pre"><summary>Chegar à zona: ${esc(p.title)}</summary>
+    ${(p.requirements||[]).length?`<h5>Antes de partir</h5><ul class="small">${p.requirements.map(t=>`<li>${travelTextHTML(t)}</li>`).join("")}</ul>`:""}
+    ${(p.arrive||[]).length?list(p.arrive):`<p class="small muted">Percurso de chegada por documentar.</p>`}
+    ${(p.warnings||[]).map(t=>`<p class="small qwarn">${travelTextHTML(t)}</p>`).join("")}
+    ${p.entrance?mapBtn(p.entrance.x,p.entrance.y,p.entrance.z,p.title,"Ver o ponto de chegada à zona"):""}
+    ${(p.leave||[]).length?`<details class="rt-pre"><summary>Como sair</summary>${list(p.leave)}</details>`:""}</details>`;
+}
+function bsAccessHTML(d,k){
+  const a=hasKey(d.b,k)?d.b[k]:null;
+  if(!a) return `<p class="small muted">Acesso deste boss por documentar.</p>`;
+  const places=a.places.map(n=>d.places[n]).filter(Boolean).map(travelPlaceHTML).join("");
+  const guides=a.guides.length?`<h5>Passos dos guias que referem este boss</h5><ul class="small">${a.guides.map(g=>`<li><a href="${guiaHref(g.slug)}/guia/sec-${g.section}">${esc(g.title)}</a> <span class="muted">· ${esc(g.quest)}</span></li>`).join("")}</ul>`:"";
+  return `<h4 class="sub">Como chegar</h4><p class="small muted">Segue as entradas e os transportes descritos abaixo. A posição da sala no mapa não indica a cidade por onde se entra.</p>${places}${guides}
+    ${!places&&!guides?`<p class="small muted">Ainda não há um percurso documentado para este boss.</p>`:!guides?`<p class="small muted">O acesso acima leva à zona. O troço até à sala do boss ainda está por documentar.</p>`:""}`;
+}
+async function bsAccessFill(box){
+  if(!box||box.dataset.loaded) return;
+  box.dataset.loaded="1";
+  try{ const d=await bsAccessData(); if(box.isConnected) box.innerHTML=bsAccessHTML(d,box.dataset.baccess); }
+  catch(e){ delete box.dataset.loaded; box.innerHTML=`<p class="small muted">Não consegui carregar os acessos.</p><button class="btn small ghost" data-bsretry>Tentar de novo</button>`; }
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-bsretry]"); if(b) bsAccessFill(b.closest("[data-baccess]")); });
 // o título é sempre escrito de novo inteiro (o tradutor do site traduz a frase toda; um remendo no texto já traduzido misturava línguas)
 function bsLead(P){ if(BSLEAD) $("bsLead").textContent=`Nível ${BSLEAD.L}: ${BSLEAD.solo} sozinho, ${BSLEAD.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`; }
 const BSF=[["solo","Sozinho"],["team","Em equipa"],["later","Mais tarde"],["all","Todos"]];
@@ -46443,14 +46495,14 @@ function bsRow(c,r,b,lo,CR){
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
       <details class="bs-d"><summary>${b.pos?"Porquê, como e onde":"Porquê e como"}</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
         ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}</li>`:""}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:""}
-        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul>${bsMapHTML(b,loc)}</details></div>
+        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul>${bsMapHTML(b,loc)}<div data-baccess="${esc(r.k)}"><p class="tkload">A carregar o acesso…</p></div></details></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
 /* r24: onde está cada boss (data/bosses.json pos, de _dev/build_bosses.py): o mapa como nas quests e nos NPCs (canvas .qpos,
    desenhado com drawPos quando «Porquê, como e onde» abre) e «Abrir no mapa»; pa = 1 é a entrada da zona, não o sítio exato */
-function bsMapHTML(b,loc){ if(!b.pos) return ""; const [x,y,z]=b.pos;
+function bsMapHTML(b,loc){ if(!b.pos) return `<p class="small muted">Posição da sala por confirmar. Consulta o acesso abaixo.</p>`; const [x,y,z]=b.pos;
   return `<div class="bs-map"><canvas class="qpos" width="360" height="240" data-qpos="${x},${y},${z}" aria-label="Mapa de ${esc(b.n)}"></canvas>
-    <p class="tiny muted">${b.pa?(loc?`Entrada de ${esc(loc)}: o boss fica lá dentro.`:"Entrada da zona: o boss fica lá dentro."):(loc?`Onde aparece: ${esc(loc)}.`:"Onde aparece.")}</p>${mapBtn(x,y,z,b.n+(loc?" · "+loc:""),"Abrir no mapa")}</div>`; }
-document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("bs-d")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
+    <p class="tiny muted">${b.pa?(loc?`Ponto aproximado de ${esc(loc)}; não confirma a entrada nem a sala do boss.`:"Ponto aproximado da zona; não confirma a entrada nem a sala do boss."):(loc?`Onde aparece: ${esc(loc)}.`:"Onde aparece.")}</p>${mapBtn(x,y,z,b.n+(loc?" · "+loc:""),"Abrir no mapa")}</div>`; }
+document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("bs-d")&&d.open){ bsAccessFill(d.querySelector("[data-baccess]")); } if(d.classList&&d.classList.contains("bs-d")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
 function renderBosses(){
   const el=$("bsBody"), c=C(); if(!el||!c) return;
   if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class="small muted">Não consegui carregar o motor dos bosses.</p>`; return; }
@@ -48791,15 +48843,22 @@ function areaSheet(a){
   const c=C(), [x,y,z,n,lab,pid]=a.cl, h=recLvl(c,a.cl,a.mxp), e=a.e||{};
   let rt;
   if(e.r&&e.r.length) rt=routeUI(e.r,{tgt:[x,y,z],end:e.l,dots:a.cl[6]});
-  else if(e.p&&G.ar[e.p]&&G.ar[e.p].length) rt=`${e.a?`<p class="small muted" style="margin:0">Sem caminho direto calculado; este é o acesso à hunt mais próxima (${esc(G.places[e.p].n)}).</p>`:""}`+huntRoute(e.p);
-  else if(e.p&&G.routes[e.p]) rt=routeHTML(e.p);
+  else if(e.p&&!e.a&&G.places[e.p]) rt=huntRoute(e.p);
   else rt=routeHTML(null,x,y,z)+`<div style="margin-top:8px">${mapBtn(x,y,z,e.l||areaLabel(a.cl),"Abrir no mapa")}</div>`;
   return `<div class="sh-h"><span class="eyebrow" style="margin:0">${esc(cap1(a.mon||""))}${n?` · ${n} criaturas`:""}</span><h3>${esc(e.l||areaLabel(a.cl))}</h3></div>
     ${e.r&&e.r.length?"":`<canvas class="shmap" data-cl='${JSON.stringify(a.cl).replace(/'/g,"&#39;")}'></canvas>`}
     <div class="pills"><span class="tag">${floorTxt(z)}</span><span class="tag">${x}, ${y}, ${z}</span>${lvlTag(c,h)}${h.xp?`<span class="tag">${fmt(h.xp)} XP/h</span>`:""}</div>
     ${tabsUI([["rota","Como chegar",rt],["mons","Monstros e loot",monsPanel([[a.mon?a.mon.toLowerCase():"",n]].concat(e.mh||[]),e.mr||[],{ht:"Na zona"}),(e.mh||[]).length+1],...(e.p?[["quests","Quests",questsTab(questsForHunt(e.p,null)),questsForHunt(e.p,null).length||0]]:[])])}`;
 }
-document.addEventListener("click", e=>{ const b=e.target.closest("[data-area]"); if(!b) return; const a=AREAS[b.dataset.area]; if(!a) return;
+document.addEventListener("click", async e=>{ const b=e.target.closest("[data-area]"); if(!b) return; const a=AREAS[b.dataset.area]; if(!a) return;
+  const fromHash=location.hash;
+  try{ const d=await bsAccessData(), k=String(a.mon||"").toLowerCase();
+    if(!b.isConnected||location.hash!==fromHash) return;
+    if(hasKey(d.b,k)){ openSheet(`<div class="sh-h"><h3>${esc(cap1(a.mon))}</h3></div>${bsAccessHTML(d,k)}`); return; }
+  }catch(err){
+    if(b.isConnected&&location.hash===fromHash) openSheet(`<div class="sh-h"><h3>${esc(cap1(a.mon||"Acesso"))}</h3></div><p class="small muted">Não consegui confirmar o acesso. Fecha este painel e tenta de novo.</p>`);
+    return;
+  }
   const pid=a.cl[5]; if(pid){ const hr=huntRows(C().voc).find(r=>r.r.c===pid); if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr)); return; } }
   openSheet(areaSheet(a)); const cv=$("sheetBody").querySelector("canvas.shmap"); if(cv) drawSpawn(cv,a.cl); });
 function bestArea(c,cls){ let b=0, bs=-1; cls.forEach((cl,i)=>{ const h=recLvl(c,cl,0); const sc=cl[3]*(h.src==="hunt"&&h.l<=c.level+10?1.5:1); if(sc>bs){bs=sc;b=i;} }); return b; }
