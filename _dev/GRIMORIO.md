@@ -548,3 +548,30 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - **Visitas**: `_dev/visitas.ps1` conta visitantes únicos e aberturas por dia a partir do `access.log` do Apache
   (sem robôs, testes nem rede de casa); `-Limpar 365` apaga as linhas com mais de 12 meses (a política promete isso).
 - `?v=` do i18n.js, pub.js, pub.css e app.js do Questski em 20261101b.
+
+
+## Acessos de hunts e quests (09/11/2026)
+
+- As hunts usam os passos registados em `G.hv` / `G.routes` e fichas de locais
+  do Questski. O `G.ar` deixa de ser mostrado como caminho para a hunt: o traçado
+  não comprova requisitos, entradas, teletransportes ou salas remotas.
+- `_dev/build_hunt_access.py` gera `data/hunt-access.json` com correspondências
+  por nome exato e aliases, sem usar cidades, criaturas ou distâncias. A tabela
+  `NAMES` do script guarda as poucas correspondências explícitas entre nomes
+  diferentes. Uma ficha da zona não certifica o último troço até ao spawn.
+- Depois de mudar os nomes das hunts ou reconstruir `quests/data/places.json`,
+  correr `python -I _dev/build_hunt_access.py`; `--check` deteta dados desatualizados.
+  Não é preciso alterar o G para gerar o índice de acessos.
+- `hAccessFill` carrega as fichas quando a hunt abre. `travelPlaceHTML` e
+  `travelTextHTML` são comuns às hunts e aos bosses. Falha de carregamento permite
+  repetir o pedido, sem inventar uma rota de substituição.
+- Questski: `questArrival` mostra a ficha do local identificado explicitamente
+  no início e liga ao primeiro passo. Menções a outros locais nesse passo não
+  são tratadas como destino de chegada. `travelCardsFor` inclui cidades e os próprios passos de viagem; não corta
+  a lista a três locais. Voltar a um local num passo de viagem volta a mostrar a
+  ficha. As outras menções repetidas continuam agrupadas por secção.
+- O mapa das quests mostra pontos, sem os apresentar como percurso caminhável.
+  O campo `near` da ficha é informação geográfica: não deve aparecer como cidade
+  de partida nos títulos de acesso.
+- Regressões: `node _dev/travel_access_test.mjs`. Testar também as fichas das hunts
+  (Replica Dungeon / Old Masonry), os guias e o mapa do Questski nos dois tamanhos.

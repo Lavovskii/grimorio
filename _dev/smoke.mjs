@@ -104,7 +104,7 @@ try {
   // hscrollInner (até 10): primeiro, se a página sai para o lado, os culpados "pai>filho" (o primeiro elemento que passa da
   // largura com o pai ainda dentro, sem nada a cortá-lo; ignora camadas fixas do fundo); depois as caixas com scroll horizontal
   // próprio, sem contar as que são de propósito (abas, chips, tabelas largas...)
-  out.hscrollInner = await ev(`(()=>{ const W=${W}, X='.seg.scroll,.tabs,.chars,.gsp-cats,.eqtabs,.settabs,.sltabs,.hotbar,#hotbar,.scroll-x,.tablewrap', r=[], B=document.body;
+  out.hscrollInner = await ev(`(()=>{ const W=${W}, X='.seg.scroll,.tabs,.chars,.gsp-cats,.eqtabs,.settabs,.sltabs,.hotbar,#hotbar,.scroll-x,.tablewrap,.tabstrip,.qtabs,.tbl-wrap', r=[], B=document.body;
     const sel = e => { const c = typeof e.className === 'string' ? e.className.trim().split(/\\s+/).filter(Boolean).slice(0, 2) : []; return e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (c.length ? '.' + c.join('.') : ''); };
     if (Math.max(document.documentElement.scrollWidth, innerWidth) > W + 1) for (const e of B.querySelectorAll('*')) { if (r.length >= 10) break;
       const b = e.getBoundingClientRect(); if (!b.width || b.right + scrollX <= W + 1) continue;
