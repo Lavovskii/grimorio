@@ -672,6 +672,7 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
 .leaflet-image-layer { image-rendering: pixelated; }
 .map-split { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; align-items: start; }
 .map-points { margin: 0; }
+.map-points .coord-link { white-space: normal; overflow-wrap: anywhere; }
 .map-points .box-body { max-height: min(70vh, 640px); overflow: auto; padding: 8px; }
 @media (max-width: 1000px) {
   .map-split { grid-template-columns: minmax(0, 1fr); }
