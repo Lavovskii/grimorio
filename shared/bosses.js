@@ -10,7 +10,8 @@
      1,5 vezes isso) com o dano de 4 personagens iguais;
    - nunca abaixo do nível recomendado da quest (qr): as fases, curas e mecânicas dos bosses de quest não entram nas contas.
    Sem vida conhecida não há 'sozinho' (só equipa, pelo dano máximo e pelo qr); sem dano máximo, só bosses até 20 000 de vida.
-   Proteções (opt.prot, {elemento: %} do set da personagem): com b.dm, o md passa a ser o golpe efetivo; sem opt.prot, igual. */
+   Proteções (opt.prot, {elemento: %} do set da personagem): com o dano por elemento (opt.d, do data/crdmg.json; senão as % do
+   b.dm), o md passa a ser o golpe efetivo; sem opt.prot, igual. */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory();
   else root.GrimBoss = factory();
@@ -81,8 +82,10 @@
   // ttkT (em equipa), dps, eff, md, need (vida efetiva pedida sozinho), el (melhor elemento), why}
   function judge(b, opt) {
     var voc = opt.voc, L = opt.level, cr = opt.cr || {}, mult = laneMult(voc, cr.el), hp = b.hp || cr.hp || 0, md = b.md || 0;
-    // b.dm é a % do dano por elemento: o golpe máximo escala pela parte que as proteções deixam passar no pior elemento
-    if (md && b.dm && opt.prot) { var d0 = effHit(b.dm); if (d0 > 0) md = Math.round(md * effHit(b.dm, opt.prot) / d0); }
+    // dano por elemento (valores do crdmg.json ou as % do b.dm): o golpe máximo escala pela parte que as proteções deixam
+    // passar no pior elemento (uma razão, por isso serve para valores e para %)
+    var dd = opt.d && Object.keys(opt.d).length ? opt.d : b.dm;
+    if (md && dd && opt.prot) { var d0 = effHit(dd); if (d0 > 0) md = Math.max(1, Math.round(md * effHit(dd, opt.prot) / d0)); } // 0 seria «dano desconhecido»
     var dpsAt = function (l) { return curveAt(opt.curve, l) * mult * UPTIME; };
     var mlAt = opt.mlAt || function () { return 0; };
     var eff = function (l) { return effHP(voc, l, l === L && opt.ml > 0 ? opt.ml : mlAt(l)); };

@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110e"></script><script src="shared/fichas.js?v=20261110b"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110f"></script><script src="shared/fichas.js?v=20261110b"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -46482,7 +46482,7 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget
 // mundo (lootPerKill) e o Bosstiary (c.bst = {chave: estágio 0–3}; pontos e bónus de loot pela Cyclopedia). O dano de boss vem
 // do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
 // personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
-let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null, BSROW={}; // BSROW[k] = {b, r, lo}: o último renderBosses, para a ficha
+let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null, BSROW={}, BSCRW=false; // BSROW[k] = {b, r, lo}: o último renderBosses, para a ficha
 let BSACCESS=null;
 function bsAccessData(){
   return BSACCESS||(BSACCESS=dload("boss-access").then(d=>{
@@ -46664,7 +46664,7 @@ function renderBosses(){
     return; }
   let cv; try{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui calcular o teu dano de boss.</p>`; return; }
   const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[], prot=protOf(c).prot; BSROW={};
-  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0,prot});
+  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0,prot,d:CRDV&&hasKey(CRDV,k)?CRDV[k].d:null});
     const x={k,b,r,lo:lootPerKill(k,CR,w)}; all.push(x); BSROW[k]=x; });
   const cnt={solo:0,team:0,later:0,all:all.length}; all.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
   const f=BSF.some(x=>x[0]===ST.ui.bsf)?ST.ui.bsf:"solo";
@@ -46690,6 +46690,8 @@ function renderBosses(){
       <li>Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).</li>
       <li>Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Tibia Grimoire. ${nf(Object.keys(BSD.b).length)} bosses do Bosstiary.</li></ul></details>`;
   seg($("bsSeg"),BSF.map(([k,t])=>[k,`${t} <span class="tiny">${cnt[k]}</span>`]),f,v=>{ ST.ui.bsf=v; save(); renderBosses(); });
+  // o dano por elemento (data/crdmg.json, o mesmo das hunts) chega depois: com ele, as proteções do set contam; desenha outra vez
+  if(!CRDV&&!BSCRW){ BSCRW=true; crdLoad().then(()=>renderBosses()); }
 }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-bstier]"); if(!b) return; const c=C(), k=b.dataset.bstier, bd=BSD&&BSD.b[k]; if(!bd) return;
   if(!c.bst||typeof c.bst!=="object") c.bst={}; const s=((+c.bst[k]||0)+1)%4; if(s) c.bst[k]=s; else delete c.bst[k]; save();

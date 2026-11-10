@@ -95,6 +95,11 @@ function fxCheck(a) {
 
 // Task 5: bosses. Em cada combinação: o 1.º boss da lista e o botão do Bosstiary; em pt-PT, três bosses escolhidos
 const BOSS_LEVER = 'count vlarkorth', BOSS_RAID = 'barbaria', BOSS_NOPOS = 'abyssador';
+// boss em que o knight 812 com o set «Proteção» e com o best set dá outro nível sozinho (o golpe com as proteções, crdmg.json)
+const BOSS_PROT = 'ghazbaran';
+// espera pelo data/crdmg.json (o renderBosses desenha outra vez quando chega)
+const crdWait = p => p.waitForFunction(() => performance.getEntriesByType('resource').some(e => /data\/crdmg\.json/.test(e.name) && e.responseEnd > 0), null, { timeout: 30000 }).then(() => sleep(800));
+const lvOf = async (p, k) => { await openBoss(p, k); const t = await p.evaluate(() => (document.querySelector('#sheetBody [data-fxs="lv"] .fx-v') || {}).textContent || ''); await closeSheet(p); return t.trim(); };
 async function openBoss(p, k) {
   await p.evaluate(k => { const x = document.createElement('button'); x.dataset.boss = k; document.body.appendChild(x); x.click(); x.remove(); }, k);
   await waitSheet(p);
@@ -131,11 +136,19 @@ async function bosses(p, W, lang, r, fails) {
   await one(BOSS_NOPOS, x => { if (x.cv || !/Posição por confirmar/.test(x.map)) fails.push(`${BOSS_NOPOS}: sem «Posição por confirmar»`); });
   // o knight com o set «Proteção»: a nota diz o nome do set
   await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); s.active = 't2'; localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); });
-  await p.reload(); await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 }); await sleep(500);
+  await p.reload(); await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 }); await crdWait(p);
   await openBoss(p, BOSS_LEVER);
   const kn = await p.evaluate(() => (document.querySelector('#sheetBody [data-fxs="dif"] .fx-pl') || {}).textContent || '');
   if (!/Proteção/.test(kn)) fails.push('boss com o knight: nota sem o nome do set: ' + kn);
   await closeSheet(p);
+  // as proteções contam: o mesmo knight com o set «Proteção» e com o best set do nível
+  const lm = await lvOf(p, BOSS_PROT);
+  await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); s.chars.find(c => c.id === 't2').hset = 'bis'; localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); });
+  await p.reload(); await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 }); await crdWait(p);
+  const lb = await lvOf(p, BOSS_PROT);
+  console.log(`  ${BOSS_PROT}, knight 812: set «Proteção» «${lm}», best set «${lb}»`);
+  if (!lm || lm === lb) fails.push(`${BOSS_PROT}: o set «Proteção» e o best set dão o mesmo nível (${lm})`);
+  await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); s.active = 't1'; s.chars.find(c => c.id === 't2').hset = 'mine'; localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); });
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
