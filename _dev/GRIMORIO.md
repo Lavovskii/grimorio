@@ -659,8 +659,8 @@ dificuldade) e `PREY` (os 3 bónus). Os textos de `DIFF` e `PREY` são pt-PT e t
 **Números das hunts.** `GrimFicha.huntEst({G, voc, pid, L, pl, compatFor, avgMon})` = o motor que estava no `huntRows`
 (TibiaPal, sessões do `G.ha`, estimativas 'est'/'hao'/'mx'); devolve também `Lm` (nível da medição). O `index.html` aplica
 `estAdj(e, pl)`: fator `(pl / Lm)^CALIB.k` entre 0,7 e 1,25 no XP/h e no lucro/h positivo (o 'mx' já usa o nível do jogador);
-com `pl < 0,6 × Lm` fica sem número (`below`, «abaixo do nível da medição» no cartão e na ficha). `CALIB =
-GrimFicha.calibOf(null)` até a parte D do plano escrever o `data/calib.json`. O mesmo número aparece no cartão, na ficha e no
+com `pl < 0,6 × Lm` fica sem número (`below`, «abaixo do nível da medição» no cartão e na ficha). O `CALIB`
+começa com as omissões e passa ao `data/calib.json` quando este chega (secção «Calibração (r35-D)»). O mesmo número aparece no cartão, na ficha e no
 comparar. Teste de ouro: `node _dev/huntest_gold.mjs --k0` compara o `huntRows` sem ajuste (k = 0) com o
 `_dev/huntest_gold.json` (saída de antes da extração, 5 vocações × todas as hunts) e deve dizer «0 diferenças».
 
@@ -698,4 +698,76 @@ estão no `i18n/src/ui-extra.json` (contexto «à mão (r35)»). O «de <criatur
 `python3 -m http.server 8765 --bind 127.0.0.1` na raiz (Playwright; pt-PT, en e de a 1440 e 390 px; erros, scroll lateral,
 letra < 12 px, alvos < 44 px na ficha, estrutura fixa, Market fixo/503/sem mundo, dificuldade do sorcerer e do knight com set,
 comparar, bosses de alavanca/raid/sem posição, e em en/de nenhuma das frases pt-PT «à mão (r35)» nas fichas). Deve dizer `ok`
-nas 6 combinações. Versões: `shared/fichas.js`, `shared/i18n.js` e o `DV` em `20261110g`.
+nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110h`.
+
+## Calibração (r35-D, 10/11/2026)
+
+Parte D do plano das fichas (Tasks 18–23; spec, rondas 3–4, Q10–Q15). Afina os números das hunts sem mudar a ficha: o `k`
+do ajuste ao nível, as mortes por hora de cada zona e o perigo de cada hunt (`dz`, −1/0/+1 na dificuldade).
+
+**Ficheiros.**
+- `_dev/tibiadata.py`: pede `/v4/worlds` e o `/v4/killstatistics/<mundo>` de cada mundo normal ao TibiaData (1 pedido por
+  segundo, 3 tentativas) e grava a soma em `_dev/cache/ks-AAAA-MM-DD.json` = `{gen, mundos, falhas, c: {criatura: [jogadores
+  mortos ontem, criaturas mortas ontem, jogadores mortos na semana, criaturas mortas na semana]}}`. O TibiaData dá o plural
+  («dragon lords»); o `agrega` passa-o à chave do `data/creatures.json` e tira as linhas entre parênteses. O `_dev/cache/`
+  está no `.gitignore`. Usa a API v4 (a v4 acaba a 31/12/2026: passar para a v5, como o `API` do site, antes disso).
+- `_dev/import_sessoes.py`: valida as sessões reais de `_dev/sessoes/*.json|*.csv` e agrega-as no formato do `G.ha`
+  (formato, regras e recolha em `_dev/SESSOES.md`).
+- `_dev/calibrar.py` → `data/calib.json` e `_dev/calib_relatorio.md` (as regras de cada número estão no início do script).
+  O `huntEst` não se duplica em Python: o relatório corre-o no node pelo `_dev/calib_node.mjs` (sobre o `_dev/hunt_vm.mjs`,
+  o mesmo contexto do teste de ouro) e confirma que o `avg_mon` do Python dá o mesmo que o `avgMon` do `index.html`.
+- Testes: `_dev/calib_test.py` (dados pequenos inventados no próprio teste) e a resposta real cortada
+  `_dev/fixtures/ks_antica.json`.
+
+**Comandos.**
+```
+python3 -I _dev/tibiadata.py           # estatísticas da semana de todos os mundos (~90 pedidos, 1 por segundo)
+python3 -I _dev/import_sessoes.py      # valida _dev/sessoes/ (sai com 1 se houver um campo de nome)
+python3 -I _dev/calibrar.py            # grava data/calib.json e _dev/calib_relatorio.md e mostra o relatório
+python3 -I _dev/calibrar.py --check    # sai com 1 se o data/calib.json não for o que geraria
+python3 -I _dev/calib_test.py
+```
+O `--check` usa o `_dev/cache/ks-<gen>.json` do dia do próprio ficheiro (o `gen`): só funciona no PC (ou na sessão) que
+o gerou. Noutro sítio, corre primeiro o `tibiadata.py` e o `calibrar.py`, e o `calib.json` muda (são outros dias).
+
+**`data/calib.json`** (gerado, `sort_keys`, 1 espaço de recuo): `{v: 1, gen: "AAAA-MM-DD" (dia das estatísticas), k,
+kz: {pid: mortes/h}, dz: {pid: -1|0|1}, ha: {pid: {v: {voc: [sessões, nível mínimo, nível mediano, XP/h, lucro/h]}}},
+n: {sessoes, mundos}}`.
+- `k`: mínimos quadrados de log(XP/h) contra log(nível) na mesma hunt e vocação (TibiaPal, `G.ha` e importadas); com menos
+  de 10 pares fica 0,5; entre 0,1 e 1. Hoje 0,54 (63 pares).
+- `kz`: mediana de XP/h ÷ XP média por morte das sessões solo; uma hunt sem sessões herda a mediana das 5 mais parecidas
+  (nível recomendado, criaturas no `G.pm`, vida média).
+- `dz`: jogadores mortos ÷ criaturas mortas na semana, em todos os mundos, pesado pelo `G.pm`; os 10 % mais altos +1, os
+  30 % mais baixos −1, menos de 1000 criaturas mortas → 0.
+- `ha`: só as sessões importadas (o `G.ha` já está no `index.html`).
+- O site usa o `k` e o `dz`; o `kz` e o `ha` ainda não entram nos números do site (servem o relatório). O
+  `GrimFicha.calibOf` valida: sem ficheiro, `v` diferente de 1 ou JSON estragado → omissões (`k = 0,5`, sem `dz`); `k`
+  fora de 0,1–1 → 0,5.
+
+**No site.**
+- No fim do arranque, `dsafe("calib")` (não bloqueia; 404 ou erro → `{}` → omissões, sem erros) põe o `CALIB =
+  GrimFicha.calibOf(json)`. Com outro `k`, o `renderInicio` e o `renderHunts` voltam a desenhar os números; se o
+  `crdmg.json` já chegou, o `fxDiffSync(document)` atualiza a dificuldade dos cartões e da ficha aberta (senão fá-lo o
+  `fxDiffWait` quando ele chegar). O `diffFor` passa `adj: CALIB.dz[pid]` ao `GrimFicha.huntDiff`. Limite conhecido: uma
+  ficha já aberta quando o ficheiro chega fica com o XP/h do `k` antigo até se reabrir.
+- «Hunt muito disputada no teu mundo» (por baixo da dificuldade, em letra pequena, `.fx-kst[data-fxkst]`, só com mundo na
+  personagem): o `fxKstFill` (chamado pelo `fxInit`) usa o `kstatLoad(mundo)` (TibiaData `/killstatistics`, em memória por
+  dia de jogo). A criatura principal é a de maior XP × quantidade no `G.pm[pid].h` (sem bosses); a nota aparece quando as
+  mortes dela na semana são pelo menos o percentil 90 das criaturas do mundo (sem as linhas entre parênteses). O plural do
+  TibiaData só se procura pelo `kPlural` (cyclopes, werewolves… ficam sem nota). Sem resposta do TibiaData, não há nota.
+- Teste no browser (`_dev/fichas_browser.cjs`, pt-PT a 1440 px): `data/calib.json` com `dz[pid] = 1` sobe 1 a dificuldade
+  dessa hunt e com `k = 1` muda o XP/h dos cartões, em relação ao 404; o `killstatistics` de Bona com a criatura principal
+  nos 10 % mais mortos mostra a nota; com erro 500 não a mostra.
+
+**Regra «sem nomes».** Nunca nomes de personagens, de mundos nem de guilds em ficheiros, commits, PRs ou chats: só números
+agregados por hunt, vocação e nível. O `import_sessoes.py` recusa linhas com um campo de nome (`name`, `char`, `personagem`,
+`world`…). O `data/calib.json` tem só `pid`s, vocações e números (dos mundos, só quantos). Antes de cada commit com sessões,
+`git diff --cached` só pode ter números, `pid`s e vocações.
+
+**Rotina semanal** (Task 23; criada só depois de o dono aprovar o texto). Tarefa agendada na cloud, à segunda às 05:41 UTC,
+numa sessão nova em cada execução no ambiente `grimorio` (que já permite `api.tibiadata.com`). No `main` atualizado corre
+`python3 -I _dev/tibiadata.py`, `python3 -I _dev/import_sessoes.py`, `python3 -I _dev/calibrar.py` e os testes
+(`node _dev/fichas_test.mjs`, `python3 -I _dev/calib_test.py`). Só se o `data/calib.json` mudou e os testes passam, cria o
+ramo `calib-AAAA-MM-DD`, faz commit e abre um PR para o `main` com o `_dev/calib_relatorio.md` no texto; sem mudanças, não
+abre PR. Nunca faz merge e nunca escreve nomes. A recolha no Hunt Analyser não entra na rotina: é à mão, numa sessão local
+com o Chrome do dono (`_dev/SESSOES.md`), e a rotina usa o que já estiver em `_dev/sessoes/`.
