@@ -2,6 +2,7 @@
 import { createRequire } from "module";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import vm from "node:vm";
 const require = createRequire(import.meta.url);
 const F = require("../shared/fichas.js");
 
@@ -107,4 +108,19 @@ assert(readFileSync(new URL("../data/caminhos.json", import.meta.url)).length < 
 assert(Object.values(CAM.h).filter(c => c.st === "none").length <= 129);
 assert(CAM.b.abyssador.refs.some(r => r.slug === "bigfoots-burden-quest" && r.sec === 8));
 assert(Object.values(CAM.h).every(c => c.st !== "none" || c.legs.length === 1)); // a frase do p.acc fica como único passo
+// huntEst (motor dos números do huntRows): uma hunt que só tem linhas de 1 vocação estima-se para outra.
+// O compatFor e o avgMon vêm do index.html (node:vm, como no _dev/huntest_gold.mjs).
+assert.equal(typeof F.huntEst, "function");
+const H = readFileSync(new URL("../index.html", import.meta.url), "utf8"), A0 = H.indexOf("<script>\n(function(){");
+const cut = (a, b) => { const s = H.indexOf(a, A0); assert(s > 0, a); return H.slice(s, H.indexOf(b, s)); };
+const hctx = { G, hasKey: (o, k) => !!o && Object.prototype.hasOwnProperty.call(o, k) };
+vm.createContext(hctx);
+vm.runInContext([cut("const ELN = ", "\n"), cut("const HOWEL=", "/* o que bater:"), cut("const AVGXP={};", "function avgXp(")].join("\n"), hctx);
+const VV = ["knight", "paladin", "sorcerer", "druid", "monk"];
+const solo = Object.keys(G.places).find(k => VV.filter(v => G.hunts[v].some(r => r.c === k)).length === 1 && G.hunts[VV.find(v => G.hunts[v].some(r => r.c === k))].some(r => r.c === k && r.l >= 300));
+assert(solo, "sem hunt com linhas de 1 só vocação");
+const sv = VV.find(v => G.hunts[v].some(r => r.c === solo)), ov = VV.find(v => v !== sv);
+const he = F.huntEst({ G, voc: ov, pid: solo, L: 1000, pl: 1000, compatFor: hctx.compatFor, avgMon: hctx.avgMon });
+assert(he && he.xp !== null && he.est !== null, `huntEst ${ov} ${solo}: ${JSON.stringify(he)}`);
+assert.equal(F.huntEst({ G, voc: ov, pid: "nao-existe", L: 1000, pl: 1000, compatFor: hctx.compatFor, avgMon: hctx.avgMon }), null);
 console.log("fichas: ok");

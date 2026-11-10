@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script><script src="shared/fichas.js?v=20261110b"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -44921,7 +44921,6 @@ function questReqTag(r){ const m=/^\s*Quest:\s*(.+)$/i.exec(String(r)); if(!m) r
   const sl=guiaOf(null,nm); return sl?`<a class="tag warn qlink" href="${guiaHref(sl)}" title="Guia no Questski">${esc(r)} ›</a>`:`<span class="tag warn">${esc(r)}</span>`; }
 
 /* ---------- hunts ---------- */
-const EST_ORDER = {druid:["sorcerer","paladin","knight","monk"],sorcerer:["druid","paladin","knight","monk"],knight:["paladin","monk","sorcerer","druid"],paladin:["knight","sorcerer","druid","monk"],monk:["knight","paladin","sorcerer","druid"]};
 /* r3-t1: elementos citados no how do TibiaPal (rotação nos mages; tipo de arma ou munição no knight, paladin e monk), por palavra inteira.
    r4-t3: runas dos magos (gfb, sd, avalanche, stoneshower; thunderstorm já estava), Forked Glacier/Thorns (spells.json) e
    Shatterstorm Arrow (físico, TibiaWiki 15.25: 'Causes Physical Damage'). Palavras desconhecidas não contam. */
@@ -44996,7 +44995,8 @@ function avgMon(pid){ if(hasKey(AVGXP,pid)) return AVGXP[pid];
   let t=0, v=0, w=0; h.forEach(([k,n])=>{ const q=Math.max(+n||0,1); t+=(+G.mon[k][2]||0)*q; v+=(+G.mon[k][1]||0)*q; w+=q; });
   return AVGXP[pid] = w&&t>0 ? [t/w, v/w] : null; }
 function avgXp(pid){ const a=avgMon(pid); return a?a[0]:null; }
-const medOf = a => { const b=a.slice().sort((x,y)=>x-y), m=b.length>>1; return b.length%2 ? b[m] : (b[m-1]+b[m])/2; };
+/* Task 2b (fichas) */ // calibração dos números (data/calib.json, parte D do plano): até lá, as omissões (k = 0,5)
+let CALIB = GrimFicha.calibOf(null);
 function huntRows(voc, L, pl){
   /* r1b-t3 */ // L = nível máximo da variante (zona do TibiaPal) que conta. Quem filtra por um teto (janela, faixa) passa esse teto;
   // sem L: nível da personagem + 5, a mesma folga de myWindow e doable. Nível, XP, lucro e rotação vêm sempre da MESMA variante.
@@ -45006,40 +45006,17 @@ function huntRows(voc, L, pl){
   const rows = G.hunts[voc]||[], groups=[], byC={};
   rows.forEach(r=>{ if(r.c && byC[r.c]) byC[r.c].push(r); else { const g=[r]; if(r.c) byC[r.c]=g; groups.push(g); } });
   return groups.map((g,i)=>{
-    const ok = g.filter(x=>x.l<=L), lowest = a => a.reduce((b,x)=>x.l<b.l?x:b, a[0]);
-    const r = ok.filter(x=>x.xp!=null).sort((a,b)=>b.xp-a.xp)[0] || lowest(ok.length?ok:g);
-    const p = r.c ? G.places[r.c] : null, cmp=compatFor(voc,p,r.how);
-    // r4-t3: a XP que o TibiaPal mediu para esta vocação já conta com a resistência: no máximo 'resiste um pouco'
-    // r6-t2: menos nos números do TibiaPal de antes do rebalance de junho de 2026 (o:1), que já não são uma medição atual
-    if (r.xp!=null && !r.f && !r.w && !r.o && cmp.cls==="bad"){ cmp.cls="meh"; cmp.txt+=" (o TibiaPal mediu esta hunt para a tua vocação)"; }
-    let xp=r.xp, lo=r.lo, est=r.o?"old":null, estx=null;
-    const estMax = Math.max(r.l+20, Math.round(r.l*1.25));
-    const fOf = (ov,oc) => ((cmp.v>0&&oc.v>0)?Math.max(0.5,Math.min(1.15,cmp.v/oc.v)):1)*(((G.vr||{})[voc]||{})[ov]||1); // outra vocação → esta: dano (0,5–1,15) × G.vr
-    // r6-t2: as linhas o:1 das outras vocações só contam quando nenhuma linha atual serve (2.ª volta)
-    if (xp==null && r.c){ for(const old of [false,true]){ for(const ov of EST_ORDER[voc]){ const o=(G.hunts[ov]||[]).filter(x=>x.c===r.c && x.xp!=null && !!x.o===old && x.l<=estMax && x.l>=Math.round(r.l*0.6)).sort((a,b)=>b.xp-a.xp)[0]; if(o){
-      const f=fOf(ov,compatFor(ov,p,o.how));
-      xp=Math.round(o.xp*f/1000)*1000; lo=o.lo==null?null:Math.round(o.lo*(o.lo>0?f:1)/1000)*1000; est=ov; if(old) estx={o:1}; break; } } if(xp!=null) break; } }
-    const ha=r.c&&G.ha&&G.ha[r.c]&&G.ha[r.c].v[voc]; let src=r.xp!=null?(r.o?"old":"tp"):est?"est":null;
-    // sessões reais só contam quando o teto L chega a 3/4 do nível mediano dessas sessões (r6-t2: e ganham a um número de antes do rebalance)
-    const haOk = ha && ha[0]>=3 && L >= Math.round(ha[2]*0.75);
-    if((r.xp==null||r.o) && haOk){ xp=ha[3]; lo=ha[4]!=null?Math.round(ha[4]/1000)*1000:(r.o?null:lo); est=null; estx=null; src="ha"; }
-    /* r6-t2 */ // ainda sem número: (a) sessões reais de outras vocações (3+ sessões e pl a 3/4 do nível mediano delas), com o mesmo fator;
-    // (b) nas hunts 300+, K mortes por hora × XP média por morte × dano (K = 1000 abaixo do 600, 1400 a partir do 850, linear no meio),
-    //     sem passar de 18 000 × nível de vida por hora (o dano por hora mais alto das sessões reais: Podzilla, sorcerer 925, 32 sessões)
-    //     nem do ritmo medido nesta zona (linhas atuais do TibiaPal de outras vocações e sessões reais, com nível ≥ 0,6 × o da linha)
-    if (xp==null && r.c){ const hv=G.ha&&hasKey(G.ha,r.c)?G.ha[r.c].v:null, xs=[], ls=[], vs=[], lv=[]; let n=0;
-      if(hv) VOCS.forEach(ov=>{ const a=ov!==voc&&hasKey(hv,ov)?hv[ov]:null; if(!a||a[0]<3||pl<Math.round(a[2]*0.75)) return;
-        const o=(G.hunts[ov]||[]).find(x=>x.c===r.c), f=fOf(ov,compatFor(ov,p,o?o.how:""));
-        xs.push(a[3]*f); if(a[4]!=null&&a[4]>0) ls.push(a[4]*f); vs.push(ov); lv.push(a[2]); n+=a[0]; });
-      if(xs.length){ xp=Math.round(medOf(xs)/1000)*1000; lo=ls.length?Math.round(medOf(ls)/1000)*1000:null; est=src="hao"; estx={n, v:vs, m:Math.round(medOf(lv))}; }
-      else if(r.l>=300){ const am=avgMon(r.c), a=am&&am[0], lmin=Math.round(r.l*0.6), kz=[];
-        if(a) VOCS.forEach(ov=>{ if(ov!==voc) (G.hunts[ov]||[]).forEach(y=>{ if(y.c===r.c&&y.xp!=null&&!y.o&&!y.f&&!y.w&&y.l>=lmin) kz.push(y.xp/a); }); const z=hv&&hasKey(hv,ov)?hv[ov]:null; if(z&&z[2]>=lmin) kz.push(z[3]/a); });
-        const K0=pl<600?1000:pl>=850?1400:1000+(pl-600)*1.6, K1=kz.length?Math.min(K0,medOf(kz)):K0, K=am&&am[1]>0?Math.min(K1,18000*pl/am[1]):K1;
-        const x=a?Math.round(K*a*Math.min(1.1,Math.max(0.6,cmp.v!=null?cmp.v/100:1))/1000)*1000:0;
-        if(x>0){ xp=x; lo=null; est=src="mx"; estx={k:K, z:kz.length}; } } }
+    /* Task 2b */ // os números vêm do GrimFicha.huntEst (shared/fichas.js); aqui fica o ajuste ao nível do jogador:
+    // (pl / nível da medição)^k entre 0,7 e 1,25; abaixo de 0,6 × o nível da medição não há número (below)
+    const r = GrimFicha.pickRow(g, L), p = r.c ? G.places[r.c] : null;
+    const e = GrimFicha.huntEst({G, voc, pid:r.c, L, pl, r, compatFor, avgMon}), lf = GrimFicha.levelFactor(pl, e.Lm, CALIB.k);
+    let xp=e.xp, lo=e.lo;
+    if (!lf.ok){ xp=null; lo=null; }
+    else if (lf.f!==1 && xp!=null){ xp=Math.round(xp*lf.f/1000)*1000; if(lo>0) lo=Math.round(lo*lf.f/1000)*1000; } // lucro negativo fica, como no fator das vocações
+    const {est, src, estx, cmp} = e;
     const sh=evShare(r.c), boost=sh>0&&xp!=null ? sh*ST.ui.ev.p/100 : 0, xp0=xp;
     if (boost) xp=Math.round(xp*(1+boost)/1000)*1000;
-    return {i, voc, r, vars:g, p, l:r.l, xp, xp0, boost, lo, est, src, estx, cmp, d:p?p.d:2, q:p?p.q:null, wiki:!!(p&&p.w), fill:!!r.f};
+    return {i, voc, r, vars:g, p, l:r.l, xp, xp0, boost, lo, est, src, estx, Lm:e.Lm, below:!lf.ok, cmp, d:p?p.d:2, q:p?p.q:null, wiki:!!(p&&p.w), fill:!!r.f};
   });
 }
 // "segura": risco 1, risco 2 quando já estás 30+ níveis acima do mínimo, ou risco 3 com 1,5× o nível mínimo; e a criatura não resiste ao teu dano
