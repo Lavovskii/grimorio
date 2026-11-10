@@ -625,13 +625,7 @@ html.fx-lite .hero::after, html.fx-lite .hero-logo { animation: none; }
   background-color: #000; background-repeat: no-repeat; image-rendering: pixelated;
   border-bottom: 1px solid var(--border-soft);
 }
-.mm-mark {
-  position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
-  border: 3px solid #fff; background: #e23b2e; box-shadow: 0 0 0 2px #000, 0 0 12px 3px rgba(255, 60, 40, .8);
-  animation: pulse 1.6s ease-in-out infinite;
-}
-.mm-mark.small { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-width: 2px; animation: none; background: #f3c33b; box-shadow: 0 0 0 2px #000; }
-.mm-mark.small[data-n]::after { content: attr(data-n); position: absolute; left: 10px; top: -13px; font: 700 12px var(--font-game); color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000; }
+/* .mm-mark (marcadores do minimapa) está em ../shared/sites.css, partilhado com o Grimório (r35) */
 @keyframes pulse { 50% { box-shadow: 0 0 0 2px #000, 0 0 2px 8px rgba(255, 60, 40, .25); } }
 .mm-floor, .mm-zoom { position: absolute; font: 700 12px var(--font-game); color: #fff; background: rgba(0, 0, 0, .65); padding: 2px 6px; border-radius: 4px; }
 .mm-floor { left: 6px; top: 6px; }

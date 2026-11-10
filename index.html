@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script><script src="shared/fichas.js?v=20261110b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script><script src="shared/fichas.js?v=20261110b"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -18,7 +18,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="shared/pub.css?v=20261106b">
-<link rel="stylesheet" href="shared/sites.css?v=20261027t">
+<link rel="stylesheet" href="shared/sites.css?v=20261110c">
 <style>
 /* r34: a letra mono (JetBrains Mono 500, OFL) vem do próprio site. As Alegreya do Google Fonts saíram: o tema Tibia usa
    Palatino/Tahoma/Verdana, e pedir letras à Google mandava o IP de cada visitante para lá (RGPD). */
@@ -433,7 +433,7 @@ body.noch .hcmp-tray{display:none!important}
 .route li.st span{display:block;font-size:13px;color:var(--muted)}
 .req{font-size:14px;color:var(--warn);margin:0}
 .rt{display:grid;gap:10px}
-.vroute{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface-2)}
+/* r35 fichas: «Como lá chegar» em troços */.sh.sh-ficha{width:min(980px,100%)}.cam{display:grid;gap:8px}.cam h5{margin:6px 0 0;font-size:14px}.cam-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.cam-st{list-style:none;margin:0;padding:0;display:grid;gap:4px}.cam-st>li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px;align-items:start}.cam-tx{padding-top:11px;min-width:0;overflow-wrap:anywhere}.cam-n{display:grid;place-items:center;width:44px;height:44px;font:700 13px var(--mono);color:var(--muted)}.cam-pin{position:relative;isolation:isolate;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;color:inherit;font:700 13px var(--mono)}.cam-pin::before{content:"";position:absolute;inset:8px;z-index:-1;border-radius:50%;background:var(--surface-2);border:2px solid var(--gold)}.cam-pin.on::before{background:var(--gold)}.cam-pin.on{color:var(--surface)}.cam-pin:focus-visible{outline:2px solid var(--accent);outline-offset:-4px;border-radius:50%}.cam-npc{display:flex;align-items:center;gap:8px;margin-top:4px;flex-wrap:wrap}.cam-npc kbd{margin:0 1px}.cam-map summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}.cam-map{display:grid;gap:6px}.cam-mm{position:relative;width:100%;aspect-ratio:3/2;max-height:360px;overflow:hidden;border-radius:8px;background:var(--sunk)}.cam-cv{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.cam-map .btn{justify-self:start;min-height:44px;display:inline-flex;align-items:center}@media (pointer:coarse){.cam a:not(.btn),.fx-pre a{position:relative}.cam a:not(.btn)::after,.fx-pre a::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}}.cam-refs{margin:0;padding-left:18px}.mm-mark.small.sel{width:16px;height:16px;margin:-8px 0 0 -8px;background:#e23b2e;z-index:1}.fx-pre{margin:0;padding-left:18px;display:grid;gap:4px}.vroute{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface-2)}
 .vr-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .vr-h b{font-size:15px}
 .vr-st{margin:0;padding-left:20px;display:grid;gap:4px;font-size:15px}
@@ -45459,7 +45459,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   else if(t==="hc"||t==="ht"){ const x="#hunts/"+(t==="hc"?"cidade":"tipo")+"/"+k; if(location.hash===x) route(); else location.hash=x; } // r5-t2
   else if(t==="ch") mdVT(()=>{ go("charms"); charmFocus(k); }); // r5-t5: leva ao charm no cartão dos 25
   else if(t==="im") mdVT(()=>{ ST.ui.eqv="imbu"; go("equip"); eqView(); }); });
-function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); (root||document).querySelectorAll("[data-haccess]").forEach(hAccessFill); }
+function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); (root||document).querySelectorAll("[data-haccess]").forEach(hAccessFill); (root||document).querySelectorAll("[data-cam]").forEach(camFill); }
 document.addEventListener("change",e=>{ const s=e.target.closest("[data-rthome]"); if(!s) return; const c=C(); if(!c) return; c.home=s.value||""; save();
   document.querySelectorAll("[data-rt]").forEach(b=>{ const R=RTS[b.dataset.rt]; if(!R) return; const hi=R.routes.findIndex(r=>r.s===c.home); R.sel=hi>=0?hi:R.sel; R.step=null; b.innerHTML=rtInner(b.dataset.rt); drawRoute(b.dataset.rt); }); });
 document.addEventListener("click",e=>{
@@ -45512,7 +45512,8 @@ function routeHTML(pid,x,y,z){
 // NAVD = profundidade da navegação dentro do site (history.state.gd): o '← Voltar' só faz history.back() se houver para onde voltar.
 let NAVD=0, SHEET_OPENER=null, SHEET_BACK=false;
 function sheetInert(on){ document.querySelectorAll("header.bar,body>.shell,#bottom,body>.ad-side,body>.ui-hint,#hcmpTray").forEach(el=>{ if(on){ if(!el.hasAttribute("inert")){ el.setAttribute("inert",""); el.dataset.shInert="1"; } } else if(el.dataset.shInert){ el.removeAttribute("inert"); delete el.dataset.shInert; } }); }
-function openSheet(html){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"); clearTimeout(sh._shT); sh.classList.remove("closing"); if(typeof mdTipHide==="function") mdTipHide();
+function shCls(cls){ const shc=$("sheet").querySelector(".sh"); if(!shc) return; if(shc.dataset.cls){ shc.classList.remove(shc.dataset.cls); delete shc.dataset.cls; } if(cls){ shc.classList.add(cls); shc.dataset.cls=cls; } }
+function openSheet(html,cls){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"); clearTimeout(sh._shT); sh.classList.remove("closing"); if(typeof mdTipHide==="function") mdTipHide(); shCls(cls);
   if(!was){ let op=document.activeElement; if(op&&op.closest&&op.closest("#gsPop")) op=$("gsBtn"); SHEET_OPENER=op&&op!==document.body?op:null;
     if(!(history.state&&history.state.sheet)){ try{ history.pushState({sheet:1,gd:NAVD+1},""); NAVD++; }catch(e){} } sheetInert(true); }
   $("sheetBody").innerHTML=html; initRoutes($("sheetBody")); initKstat($("sheetBody")); sh.classList.add("on"); document.body.classList.add("noscroll"); $("sheetBody").scrollTop=0; $("sheetX").focus({preventScroll:true}); const shc=sh.querySelector(".sh"); if(shc) shc.scrollLeft=0; }
@@ -45520,8 +45521,8 @@ function closeSheet(o){ const sh=$("sheet"), was=sh.classList.contains("on")&&!s
   if(was){ sheetInert(false); const op=SHEET_OPENER; SHEET_OPENER=null; if(!nav&&op&&op.isConnected){ try{ op.focus({preventScroll:true}); }catch(e){} }
     const st=history.state; if(st&&st.sheet){ if(nav){ try{ history.replaceState(Object.assign({},st,{sheet:0}),""); }catch(e){} } else if(!pop){ SHEET_BACK=true; history.back(); } } }
   clearTimeout(sh._shT);
-  if(was && typeof mdMotion==="function" && mdMotion()){ sh.classList.add("closing"); sh._shT=setTimeout(()=>{ sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); },190); return; }
-  sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); }
+  if(was && typeof mdMotion==="function" && mdMotion()){ sh.classList.add("closing"); sh._shT=setTimeout(()=>{ sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); shCls(); },190); return; }
+  sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); shCls(); }
 const IMMN={paralyze:"paralisia",invisible:"invisível",drown:"afogamento",lifedrain:"dreno de vida",manadrain:"dreno de mana",outfit:"outfit",drunk:"embriaguez",bleed:"sangramento"};
 function crSpr(k,sz){ const i=G.cr[k]; return i==null?`<span class="cr cr-x" style="--s:${sz||52}px" aria-hidden="true">${IC.criaturas}</span>`:`<span class="cr" style="--s:${sz||52}px;--x:${i%32};--y:${Math.floor(i/32)}" aria-hidden="true"></span>`; }
 function ltSpr(n){ const i=G.lt[n]; return i==null?`<span class="lti"></span>`:`<span class="lti" style="--x:${i%32};--y:${Math.floor(i/32)}" aria-hidden="true"></span>`; }
@@ -46420,6 +46421,85 @@ function travelPlaceHTML(p){
     ${p.entrance?mapBtn(p.entrance.x,p.entrance.y,p.entrance.z,p.title,"Ver o ponto de chegada à zona"):""}
     ${(p.leave||[]).length?`<details class="rt-pre"><summary>Como sair</summary>${list(p.leave)}</details>`:""}</details>`;
 }
+/* fichas:caminho */ // r35 (fichas, Task 3): «Como lá chegar» em troços (data/caminhos.json), o mapa de cada troço (GrimMini,
+// shared/minimapa.js, o minimapa do Questski) e os pré-requisitos. Os eventos ficam depois da marca do fim (o teste corre sem document).
+let CAMP=null; const CAMPTS={};
+function camData(){
+  return CAMP||(CAMP=dload("caminhos").then(d=>{
+    if(!d||d.v!==1||!d.h||!d.b) throw new Error("Caminhos indisponíveis");
+    return d;
+  }).catch(e=>{ CAMP=null; throw e; }));
+}
+const CAMST={ok:["ok","confirmado"],rev:["acc","revisto"],part:["","falta o último troço"],none:["warn","por documentar"]};
+const camOkC=c=>Array.isArray(c)&&c.length===3&&c.every(Number.isFinite);
+function camHTML(cam,id,places){
+  cam=cam||{st:"none",pos:null,pa:0,pre:[],legs:[]}; places=places||{};
+  const st=hasKey(CAMST,cam.st)?CAMST[cam.st]:CAMST.none;
+  // troço {ref}: a ficha do local (chegar, avisos, ponto de chegada; o sair fica num <details>)
+  const legs=(cam.legs||[]).map(l=>{ if(!l.ref) return l; const p=hasKey(places,l.ref)?places[l.ref]:null; if(!p) return null;
+    const e=p.entrance, steps=(p.arrive||[]).concat(e?[{s:e.label||p.title,c:[e.x,e.y,e.z],npc:null,arr:1}]:[]);
+    return {t:"Chegar a "+p.title,steps,warn:p.warnings||[],leave:p.leave||[]}; }).filter(l=>l&&(l.steps||[]).length);
+  const list=xs=>`<ol class="cam-st">${xs.map((s,j)=>`<li><span class="cam-n">${j+1}</span><div class="cam-tx">${travelTextHTML(s.s)}</div></li>`).join("")}</ol>`;
+  const npc=n=>`<div class="cam-npc">${npcSpr(n.n,true)}<span>Fala com ${elink("npc",n.n)}${(n.say||[]).length?": "+n.say.map(k=>`<kbd>${esc(k)}</kbd>`).join(", "):""}${n.gp!=null?` · ${esc(n.gp)} gp`:""}</span></div>`;
+  const leg=(l,i)=>{ const key=id+":"+i, pts=[];
+    const lis=l.steps.map((s,j)=>{ let n=`<span class="cam-n">${j+1}</span>`;
+      if(camOkC(s.c)){ pts.push({c:s.c,n:j+1}); n=`<button type="button" class="cam-pin" data-camstep="${esc(key)}:${pts.length-1}" aria-label="Ver o passo ${j+1} no mapa">${j+1}</button>`; }
+      return `<li>${n}<div class="cam-tx">${s.arr?"<b>Chegada:</b> ":""}${travelTextHTML(s.s)}${s.npc?npc(s.npc):""}</div></li>`; });
+    CAMPTS[key]=pts;
+    return `<h5>${esc(l.t)}</h5>${pts.length?`<details class="cam-map" data-cammap="${esc(key)}"><summary>Ver no mapa</summary><div class="cam-mm"><canvas class="cam-cv"></canvas></div>
+      <p class="tiny muted"><span data-camfloor></span> · A linha mostra a ordem dos passos, não o caminho a pé.</p>
+      <a class="btn small ghost" data-camq href="quests/#/mapa">Abrir no mapa do Questski</a></details>`:""}<ol class="cam-st">${lis.join("")}</ol>
+      ${(l.warn||[]).map(t=>`<p class="small qwarn">${travelTextHTML(t)}</p>`).join("")}
+      ${(l.leave||[]).length?`<details class="rt-pre"><summary>Como sair</summary>${list(l.leave)}</details>`:""}`; };
+  const refs=cam.refs||[];
+  return `<div class="cam"><div class="cam-h"><b>Como lá chegar</b><span class="tag${st[0]?" "+st[0]:""}">${st[1]}</span>${cam.from?`<span class="small muted">A partir de ${esc(cam.from)}</span>`:""}</div>
+    ${legs.map(leg).join("")}
+    ${cam.st==="none"?`<p class="small muted">Ainda não temos este caminho passo a passo.</p>`:""}
+    ${refs.length?`<h5>Nos guias das quests</h5><ul class="small cam-refs">${refs.map(r=>`<li><a href="${guiaHref(r.slug)}/guia/sec-${esc(r.sec)}">${esc(r.t)}</a> <span class="muted">· ${esc(r.quest)}</span></li>`).join("")}</ul>`:""}
+    ${cam.pa===1&&cam.pos?`<p class="small muted">O ponto no mapa é a zona aproximada.</p>`:""}</div>`;
+}
+// box = o <details class="cam-map">; pts = CAMPTS[troço] ([{c:[x,y,z], n}]); sel = índice em pts
+async function drawCam(box,pts,sel){
+  if(!box||!pts||!pts[sel]) return;
+  const mm=box.querySelector(".cam-mm"), z=pts[sel].c[2], [x,y]=pts[sel].c;
+  const fl=box.querySelector("[data-camfloor]"); if(fl) fl.textContent=window.I18N?I18N.tr(floorTxt(z)):floorTxt(z);
+  const q=box.querySelector("[data-camq]"); if(q) q.href=`quests/#/mapa/${x},${y},${z}`;
+  document.querySelectorAll(`[data-camstep^="${box.dataset.cammap}:"]`).forEach(b=>b.classList.toggle("on",b.dataset.camstep===box.dataset.cammap+":"+sel));
+  const acc=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+  await GrimMini.draw(mm,{img:floorImg(z),sel,line:true,color:acc||undefined,marks:pts.map((p,i)=>({x:p.c[0],y:p.c[1],z:p.c[2],n:p.n,cls:"small"+(i===sel?" sel":"")}))});
+}
+function preHTML(pre,c){
+  if(!pre||!pre.length) return `<p class="small muted">Sem pré-requisitos.</p>`;
+  return `<ul class="fx-pre">${pre.map(p=>{
+    if(p.k==="quest"){ const nm=esc(p.n), a=p.slug?`<a href="${guiaHref(p.slug)}${p.sec!=null?"/guia/sec-"+esc(p.sec):""}">${nm}</a>`:nm;
+      return `<li>${a}${p.note?` <span class="muted">— ${qmd(p.note)}</span>`:""}${c&&p.id?(qDone(c,p.id)?' <span class="tag ok">✓ feita</span>':' <span class="tag warn">por fazer</span>'):""}</li>`; }
+    if(p.k==="level") return `<li>Nível ${esc(p.n)}${p.rec?" recomendado":""}${c?(c.level>=p.n?' <span class="tag ok">✓</span>':' <span class="tag warn">acima do teu nível</span>'):""}</li>`;
+    if(p.k==="premium") return `<li>Conta premium</li>`;
+    if(p.k==="item") return `<li>${qmd("{item:"+p.n+"}")}</li>`;
+    return `<li>${qmd(p.s)}</li>`; }).join("")}</ul>`;
+}
+async function camFill(box){
+  if(!box||box.dataset.loaded) return;
+  box.dataset.loaded="1";
+  const pb=box.parentElement&&box.parentElement.querySelector("[data-campre]");
+  try{ const [d]=await Promise.all([camData(),typeof linkIdxLoad==="function"?linkIdxLoad():null]); // índice dos NPCs para as ligações
+    if(!box.isConnected) return;
+    const id=String(box.dataset.cam||""), i=id.indexOf(":"), set=id.slice(0,i)==="b"?d.b:d.h, k=id.slice(i+1), cam=hasKey(set,k)?set[k]:null;
+    box.innerHTML=camHTML(cam||{st:"none",pos:null,pa:0,pre:[],legs:[]},id,d.places);
+    if(pb) pb.innerHTML=preHTML(cam?cam.pre:[],C());
+  }catch(e){ delete box.dataset.loaded; if(pb) pb.innerHTML="";
+    box.innerHTML=`<p class="small muted">Não consegui carregar o caminho.</p><button class="btn small ghost" data-camretry>Tentar de novo</button>`; }
+}
+/* fichas:caminho:fim */
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-camretry]"); if(b) camFill(b.closest("[data-cam]")); });
+// o mapa de cada troço desenha-se quando abre (1.º passo com ponto, ou o passo tocado) e muda de andar com o passo escolhido
+document.addEventListener("toggle",e=>{ const d=e.target; if(!d.matches||!d.matches(".cam-map")||!d.open) return;
+  drawCam(d,CAMPTS[d.dataset.cammap],+(d.dataset.sel||0)); },true);
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-camstep]"); if(!b) return;
+  const v=b.dataset.camstep, j=v.lastIndexOf(":"), key=v.slice(0,j), sel=+v.slice(j+1);
+  const d=[...document.querySelectorAll("[data-cammap]")].find(x=>x.dataset.cammap===key); if(!d) return;
+  d.dataset.sel=sel; if(d.open) drawCam(d,CAMPTS[key],sel); else d.open=true;
+  d.scrollIntoView({block:"nearest",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); });
 function bsAccessHTML(d,k){
   const a=hasKey(d.b,k)?d.b[k]:null;
   if(!a) return `<p class="small muted">Acesso deste boss por documentar.</p>`;

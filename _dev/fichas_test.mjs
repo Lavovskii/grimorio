@@ -123,4 +123,15 @@ const sv = VV.find(v => G.hunts[v].some(r => r.c === solo)), ov = VV.find(v => v
 const he = F.huntEst({ G, voc: ov, pid: solo, L: 1000, pl: 1000, compatFor: hctx.compatFor, avgMon: hctx.avgMon });
 assert(he && he.xp !== null && he.est !== null, `huntEst ${ov} ${solo}: ${JSON.stringify(he)}`);
 assert.equal(F.huntEst({ G, voc: ov, pid: "nao-existe", L: 1000, pl: 1000, compatFor: hctx.compatFor, avgMon: hctx.avgMon }), null);
+// minimapa (shared/minimapa.js): enquadramento puro
+const MM = require("../shared/minimapa.js");
+assert.deepEqual(MM.fit([[32000, 32000, 7]], 0, 260, 173), { z: 7, on: [0], cx: 32000.5, cy: 32000.5, s: 5 });
+const f2 = MM.fit([[32000, 32000, 7], [32010, 32004, 6], [32020, 32000, 7]], 0, 260, 173);  // 2 andares: só os do andar escolhido
+assert.equal(f2.z, 7); assert.deepEqual(f2.on, [0, 2]); assert.equal(f2.cx, 32010.5);
+assert.deepEqual(MM.fit([[32000, 32000, 7], [32010, 32004, 6]], 1, 260, 173).on, [1]);
+const fFar = MM.fit([[32000, 32000, 7], [33000, 32600, 7]], 1, 260, 173);              // longe: escala mínima, centrado no escolhido
+assert.equal(fFar.s, 0.6); assert.equal(fFar.cx, 33000.5); assert.equal(fFar.cy, 32600.5);
+const fAll = MM.fit([[32000, 32000, 7], [33000, 32600, 6]], null, 260, 173);           // sem escolhido (Questski): todos, centro da caixa
+assert.deepEqual(fAll.on, [0, 1]); assert.equal(fAll.cx, 32500.5); assert.equal(fAll.s, 0.6);
+assert.equal(MM.fit([], 0, 260, 173), null); assert.equal(MM.fit(null, 0, 260, 173), null);
 console.log("fichas: ok");
