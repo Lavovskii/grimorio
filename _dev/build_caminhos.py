@@ -115,7 +115,7 @@ class Ctx:
         return {"n": name, "say": say, "gp": int(gp.group(1).replace(".", "")) if gp else None} if say else None
 
     # --- passos -----------------------------------------------------------------------------------------
-    def steps(self, texts, z0):
+    def steps(self, texts, z0, pos=None):
         """Texto livre (G.hv, G.routes, p.acc) → [Passo]: tira as coordenadas para c e lê o diálogo do NPC."""
         zf = lambda z: "térreo" if int(z) == 7 else ("+" if int(z) < 7 else "−") + str(abs(int(z) - 7))
         out = []
@@ -135,7 +135,9 @@ class Ctx:
                 area = re.search(AREA, t)
                 t = re.sub(r"\s*\(\s*" + AREA + r"\s*\)|\s*" + AREA, "", t)
                 m = re.search(COORD, t)
-                c = [int(m[1]), int(m[2]), int(m[3]) if m[3] else z0] if m else None
+                # sem andar no texto: o da hunt só perto dela (≤ 40 sqm); longe é viagem, quase sempre à superfície (7)
+                zz = z0 if not pos or (m and max(abs(int(m[1]) - pos[0]), abs(int(m[2]) - pos[1])) <= 40) else 7
+                c = [int(m[1]), int(m[2]), int(m[3]) if m[3] else zz] if m else None
                 t = re.sub(r"\s*\(\s*(?:cerca de\s*)?" + COORD + r"\s*(?:aprox\.?)?\s*\)", "", t)
                 t = re.sub(r",\s*(?:cerca de\s*)?" + COORD + r"(?=\s*\))", "", t)
                 t = re.sub(r"(?<=\()\s*" + COORD + r"\s*,\s*", "", t)
@@ -239,12 +241,12 @@ class Ctx:
         pre, frm, st, legs = [], None, "none", []
         for r in hv.get("rq") or []:
             self.add_pre(pre, self.pre_of(r))
-        steps = self.steps(([hv["t"]] if hv.get("t") else []) + hv["st"], z0) if hv.get("st") else []
+        steps = self.steps(([hv["t"]] if hv.get("t") else []) + hv["st"], z0, pos) if hv.get("st") else []
         if steps:
             st = {"ok": "ok", "fix": "rev"}.get(hv.get("v"), "part")
         elif rt:
             de, travel, ss, req = rt
-            steps = self.steps(([travel] if travel else []) + ss, z0)
+            steps = self.steps(([travel] if travel else []) + ss, z0, pos)
             if steps:
                 st, frm = "part", de or None
             r = (req or "").strip()
