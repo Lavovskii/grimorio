@@ -97,8 +97,9 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   cada papel, e uma legenda. «Como jogar» troca as teclas sugeridas pelas do jogador (`rxKbU`; sem tecla, o nome do papel).
   O comparador do clientoptions.json continua a falar das teclas da barra do próprio jogador.
 - Mapas dos bosses (r24): cada boss com `pos` (data/bosses.json, ver `_dev/BOSSES.md`) tem o sítio no cabeçalho como
-  ligação para o mapa grande (`data-map`) e, em «Porquê, como e onde», o mapa pequeno (canvas `.qpos`, desenhado com
-  `drawPos` quando abre) e «Abrir no mapa». O andar escrito no canvas passa por `I18N.tr` (o tradutor não vê canvas).
+  ligação para o mapa grande (`data-map`) e, na ficha do boss (r35: `bossSheet`, já não há «Porquê, como e onde»), o mapa
+  pequeno (canvas `.qpos`, desenhado com `drawPos` quando a ficha abre) e «Abrir o mapa». O andar escrito no canvas passa por
+  `I18N.tr` (o tradutor não vê canvas).
 - Pesquisa nas listas (r25): hunts, bosses, quests e charms têm um campo (`.lsbar[data-ls]`, montado por `lsInit`; a
   configuração está em `LSC`: lista, itens, campos de texto, grupos e o «Procurar em todos»). Esconde os itens sem todas as
   palavras (sem acentos, no texto que se vê, por isso na língua escolhida; `data-lsx` junta texto escondido, ex.: a quest
@@ -135,10 +136,12 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   w nem o com o TibiaPal (`lote16/dl/tp_rows.json`) e deve dizer '0 linhas diferentes'. `G.ha[pid]` = {s (soma das sessões solo), t
   (em grupo), v {voc: [sessões, nível mínimo, nível mediano, XP/h, lucro/h]}}: uma sessão com mais de 4000 mortes/h (XP/h ÷
   `avgXp(pid)`) não é solo nem desta zona e sai (registo em `C:\xampp\_work\hunts\ha_clean.log`); cada chave de G.ha existe em G.places.
-- `G.hv[pid]` = {t (transporte), rq (requisitos), st (passos), v ("ok" | "fix" | outro)}: o bloco "Acesso" do separador "Como chegar" (`vRoute`; etiqueta confirmado/revisto/por confirmar).
+- `G.hv[pid]` = {t (transporte), rq (requisitos), st (passos), v ("ok" | "fix" | outro)}: desde a r35 é sobretudo entrada do
+  `_dev/build_caminhos.py` (passos do `data/caminhos.json`, que a ficha da hunt mostra); o bloco "Acesso" (`vRoute`; etiqueta
+  confirmado/revisto/por confirmar) só aparece no separador "Como chegar" da ficha de grupo e da zona de caça das tarefas (`huntRoute`).
   Só texto para o jogador: as notas da verificação (n, ed, mf, e, s, ok e o texto original de rq/st antes da limpeza) ficam em `_dev/hv_notas.json`;
   um conselho para o jogador (boss, perigo, atalho) vai para `G.places[pid].note` ("Notas").
-  r6-t1: zona sem G.hv nem G.routes (as w_ da TibiaWiki) → o `huntRoute` faz o bloco 'Acesso' com o `p.acc` ('por confirmar', 'Requisitos:'
+  r6-t1: zona sem G.hv nem G.routes (as w_ da TibiaWiki) → o `huntRoute` (r35: só ficha de grupo e zona das tarefas) faz o bloco 'Acesso' com o `p.acc` ('por confirmar', 'Requisitos:'
   com a quest, o botão 'Lore e guia ›' e 'Premium') e põe o percurso automático por baixo, com o título 'Percurso aproximado'.
 - `G.hm[pid]` coordenadas; `G.voc[voc]` (n, promo, els, pots, charms, imbs, allsp = feitiços); `G.quests`, `G.charms`, `G.wheel`, `G.equip` (TibiaPal), `G.vr`, `G.ha`.
 
@@ -173,9 +176,10 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   munição do how; as poções e munições estão em items.json desde a r5-t3: `build_supplies.py`). `lootQty(a)`, `lootPerKill(k,CR,w)` →
   `{v (gp por kill), top:[[nome,gp,pct]], miss, none}` (k = chave de creatures.json), `lootAgg(pid,CR,w)` e `gpPerXp(pid,CR,w)` = gp por
   1000 XP (criaturas de `G.places[pid].mons` sem bosses, quantidade de `G.pm[pid].h`); loot por hora ≈ XP/h × gpPerXp / 1000.
-  Separador 'Loot e lucro' da ficha: `<div class="lp" data-lootp=pid data-xp data-lo data-lsrc data-how [data-g data-sb]>` preenchido por
-  `initLoot(root)` (chamado no clique dos separadores, ao lado de `initRoutes`/`initQuests`) → `lpHTML`; calculadora só na ficha solo
-  (`[data-hcalc]`, `lpCalcRun`/`lpCalcSave`), gravada em `c.calc[pid] = {hrs, q:{chave:[quantidade, preço só se mudado, nome]}, loot (só
+  Separador 'Loot e lucro' (r35: só na ficha de grupo; a ficha solo tem o «Loot principal», ver «Fichas de hunts e bosses (r35)»):
+  `<div class="lp" data-lootp=pid data-xp data-lo data-lsrc data-how [data-g data-sb]>` preenchido por
+  `initLoot(root)` (chamado no clique dos separadores, ao lado de `initRoutes`/`initQuests`) → `lpHTML`; a calculadora era da ficha
+  solo e já não aparece (`[data-hcalc]`, `lpCalcRun`/`lpCalcSave` ficam no código; o `c.calc` gravado fica), gravada em `c.calc[pid] = {hrs, q:{chave:[quantidade, preço só se mudado, nome]}, loot (só
   se mudado), fee, t}` (no máximo 50 hunts). Página do item: `[data-mkt]` = ids separados por vírgula (`mktFill` escreve o valor e o
   `<span>` seguinte), `#itemAdv` reescrito com `itemAdvHTML` quando o Market chega. Look: `lookShow` redesenha quando cada dado chega.
   r5-t3: `data-xp` do separador Loot e lucro = XP sem evento (`h.xp0` / `g.party0` do `groupRows`); `data-evk` = criatura do dia (só na ficha
@@ -185,7 +189,11 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   quando são todas (o `gpPerXp` também): o `lpHTML` diz 'Sem dados de loot para as criaturas desta zona.' com os KPIs a '—' (nunca
   '≈ 0 gp'); com só algumas, a nota `.lp-nd` 'Sem loot conhecido: A, B, C e mais N (contam como 0 gp no loot por hora).' Os
   cartões, o filtro 'Dá lucro' e o comparar hunts não usam o g1k (usam o lo do TibiaPal).
-- Hunts: `huntRows(voc, L)` (L = nível máximo da variante do TibiaPal; sem L = nível da personagem + 5; nível/XP/lucro da mesma variante), `huntCard(h)`, `huntSheet(h)`, `setupHTML`, `hsetsHTML(pid)` (sets ofensivo/consistente/defensivo), `huntProfile(pid)` (dano da hunt).
+- Hunts: `huntRows(voc, L, pl)` (L = nível máximo da variante do TibiaPal; sem L = nível da personagem + 5; nível/XP/lucro da mesma
+  variante). r35: os números de cada linha vêm do `GrimFicha.huntEst` (`shared/fichas.js`, o motor que estava aqui, igual linha a
+  linha: `node _dev/huntest_gold.mjs`) e depois do `estAdj(e, pl)` (ajuste ao nível; `h.below` = abaixo de 0,6 × o nível da
+  medição, sem número); `h.Lm` = nível da medição. `huntCard(h)` (acaba em «dificuldade N/5», `diffFor`), `huntSheet(h)` e
+  `placeSheet(pid)` (secção r35), `huntProfile(pid)` (dano da hunt). O `setupHTML` (com o `elemHTML`) ficou sem chamadas desde a r35.
   Evento de XP (r5-t2): o de uma criatura só liga com `hasKey(G.mon,…)` (`evOn`, `evLabel`, `#evMon`); +100 % por omissão (TibiaWiki: a boosted
   dá o dobro da XP e do loot).
   Magos (r4-t3): o `HOWEL` conhece as runas (gfb, sd, avalanche, stoneshower, thunderstorm), Forked Glacier/Thorns e Shatterstorm (físico);
@@ -200,7 +208,7 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   com nível ≥ 0,6 × o da linha; lo null). `estx` = {n,v,m} ('hao') | {k,z} ('mx': mortes/h, medições) | {o:1} (estimativa de um número
   antigo). `avgMon(pid)` = [XP, vida] média por morte (G.pm.h ∩ mons, sem bosses, pesada pela quantidade; cache `AVGXP`); `avgXp`.
   Cartões: `hcEst(h)` (≈ com title, sup 'r' ou 'a' = `.rl.rla`); sem número, `<span class="hcx">` com as estrelas ou 'XP e
-  lucro por medir'; a ficha acaba com `estTxt(h)`. O Loot e lucro recebe `data-lsrc='est'` nas estimativas 'hao' e 'mx'.
+  lucro por medir'; a ficha acaba com `estTxt(h)`. O Loot e lucro (ficha de grupo) recebe `data-lsrc='est'` nas estimativas 'hao' e 'mx'.
   Charms: `G.charms` tem os 25 charms `{n,t,c,d,f}`; `f` = 'el:<elemento>' (Freeze, Zap, Wound, Poison, Enflame, Divine Wrath, Curse),
   'hp5' (Overpower), 'mana25' (Overflux) ou null. `charmFor(c,k)` → `[{k,dmg}]` dano por ativação na criatura k de `G.mon` (TibiaWiki):
   elementais e Wound = min(5 % da vida da criatura, 2 × nível) × dano %; Overpower = min(5 % de `hpOf(c)`, 8 % da vida) × físico %;
@@ -271,7 +279,7 @@ e um modo visual "Modern" muito trabalhado (neon, animações em tudo) ao lado d
   Bolt 72 (era 65). `AMMOA` = flechas de área [nível, nome, elemento, ataque] (TibiaWiki 15.25: Shatterstorm 27 no 50; Firestorm,
   Terrastorm, Froststorm e Thunderstorm 21 de dano do elemento, ataque físico 0, no 125; Diamond 37 no 150). Onyx Arrow 38 (r8). `ammoBest(b,L)` (alvo único, sem a
   Diamond), `ammoArea(b,L)`, `ammoChips(b,L,eff)` (chips 'Alvo único'/'Área'; com eff, a % que as criaturas levam e 'usa esta'; link só
-  com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem) e em cada set do `hsetsHTML` (`.hs-am`); `setTotals` dá
+  com o item no items.json). Linha 'Munição' no `setSumHTML` (com a personagem; os sets da ficha da hunt, `hsetsHTML`, saíram na r35); `setTotals` dá
   `t.sb` (tipo do item da mão do escudo). Sem aljava (abaixo do 150 não há nenhuma com stats): `quivTip` no slot vazio e no chip 'Aljava'.
   r10: `palAmmo(c,set)` (paladino com arco/besta) divide a mão do escudo em aljava + munição para o nível: no #doll `.slot-pal` com
   `.slot.half` (aljava = o slot real) e `palAmHalf` (munição, link se tiver página); no #bis e nos sets da ficha `.bslot.pal2` em diagonal.
@@ -391,8 +399,8 @@ de estar cheia (as de 50 não pedem nenhuma), `voc[v]` = vida/mana/cap por ponto
 convicções com grau, revelações e ligações) e deve dizer "builds com diferenças: 0".
 JS (antes do `/* ---------- equipment`): `whLoad`, `whGeo(i)` (anel e ângulos), `whSum(voc,pts)`, `whSVG(voc,pts,{size,edit,budget})`,
 `whSlotTxt` (dica), `whPanelHTML` (dedicação, convicção, vessels/gemas, revelação), `whGemMods`, `whPick(voc,pts,pid,risco)` (build
-para uma hunt: a variante holy/físico ou energia/fogo/morte que rende mais nas criaturas), `hwheelHTML(pid,risco)` (bloco "Wheel,
-gemas e charms" da ficha da hunt, com `charmPicks`/`hCharmsHTML`), `renderWheelX` (página da Wheel, editável: `WED`, `whEdit`,
+para uma hunt: a variante holy/físico ou energia/fogo/morte que rende mais nas criaturas), `charmPicks`/`hCharmsHTML` (os charms
+da ficha da hunt; o bloco "Wheel, gemas e charms", `hwheelHTML`, saiu na r35), `renderWheelX` (página da Wheel, editável: `WED`, `whEdit`,
 `whPrune`, `whEncode`/`whDecode` com Compression/DecompressionStream 'deflate-raw').
 
 **Páginas de item e de criatura.** `specBar([[rótulo,html]])` = faixa de números no topo (ignora os que faltam); `.pg2` = duas
@@ -552,6 +560,13 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 
 ## Acessos de hunts e quests (09/11/2026)
 
+- (r35) As fichas das hunts e dos bosses já não leem estes ficheiros: leem o
+  `data/caminhos.json` (secção seguinte), que o `_dev/build_caminhos.py` faz a partir
+  deles. O `data/hunt-access.json` ainda é lido pelo `hAccessFill`, dentro do `huntRoute`,
+  que só aparece no separador «Como chegar» da ficha de grupo (`groupSheet`) e da zona
+  de caça das tarefas (`areaSheet`, «Onde caçar»). O `data/boss-access.json` ainda é lido
+  pelo `bsAccessData` quando se toca numa zona de caça cuja criatura é um boss
+  (`bsAccessHTML`, com o `travelPlaceHTML`). Por isso os dois continuam a ser gerados.
 - As hunts usam os passos registados em `G.hv` / `G.routes` e fichas de locais
   do Questski. O `G.ar` deixa de ser mostrado como caminho para a hunt: o traçado
   não comprova requisitos, entradas, teletransportes ou salas remotas.
@@ -562,8 +577,9 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - Depois de mudar os nomes das hunts ou reconstruir `quests/data/places.json`,
   correr `python -I _dev/build_hunt_access.py`; `--check` deteta dados desatualizados.
   Não é preciso alterar o G para gerar o índice de acessos.
-- `hAccessFill` carrega as fichas quando a hunt abre. `travelPlaceHTML` e
-  `travelTextHTML` são comuns às hunts e aos bosses. Falha de carregamento permite
+- `hAccessFill` carrega as fichas quando o «Como chegar» da ficha de grupo ou da zona
+  das tarefas abre. `travelTextHTML` é comum a todas as fichas (também ao `camHTML`);
+  o `travelPlaceHTML` ficou só para o `hAccessFill` e o `bsAccessHTML`. Falha de carregamento permite
   repetir o pedido, sem inventar uma rota de substituição.
 - Questski: `questArrival` mostra a ficha do local identificado explicitamente
   no início e liga ao primeiro passo. Menções a outros locais nesse passo não
@@ -573,5 +589,185 @@ elemento; `cpEn` traduz os textos dos ataques que vêm em inglês da TibiaWiki.
 - O mapa das quests mostra pontos, sem os apresentar como percurso caminhável.
   O campo `near` da ficha é informação geográfica: não deve aparecer como cidade
   de partida nos títulos de acesso.
-- Regressões: `node _dev/travel_access_test.mjs`. Testar também as fichas das hunts
+- Regressões: `node _dev/travel_access_test.mjs` (desde a r35 testa o `camHTML`/`camFill`/
+  `preHTML` com o `data/caminhos.json` e, à parte, o Questski e o `hunt-access.json`) e
+  `node _dev/boss_access_test.mjs`. Testar também as fichas das hunts
   (Replica Dungeon / Old Masonry), os guias e o mapa do Questski nos dois tamanhos.
+
+
+## Fichas de hunts e bosses (r35, 10/11/2026)
+
+Plano e decisões: `docs/superpowers/plans/2026-11-10-fichas-hunts-bosses.md` e a spec
+`docs/superpowers/specs/2026-11-10-fichas-hunts-bosses-design.md` (secções «Decisões da ronda 1» e «Decisões das rondas 2 a 4»).
+
+**A ficha.** Uma só estrutura para hunts e bosses, `fichaHTML(m)` (`m` = {eyebrow, title, head, map, cam, stats, pre, mons,
+loot, tips, foot}), sempre por esta ordem: cabeçalho (`.sh-h`); `.fx-top` com o mapa (`.fx-map`) ao lado de «Como lá chegar»
+(`.fx-cam`; 2 colunas a partir de 760 px, uma abaixo); `.fx-stats` com 5 números (`.fx-s[data-fxs=xp|lo|lv|res|dif]`);
+«Pré-requisitos» (`[data-campre]`); «Criaturas» (`.fx-mons`); «Loot principal» (`.fx-loot`); «Charms e preys» (`.fx-tips`, só
+nas hunts); `m.foot` (notas). Abre com `openSheet(html, "sh-ficha")` (a classe vai para a `.sh` e sai no `openSheet` seguinte
+sem classe e no `closeSheet`). Saiu da ficha solo: separadores, Setup (`setupHTML`, sem chamadas), sets (`hsetsHTML`), Wheel
+(`hwheelHTML`), «Loot e lucro» com calculadora, mortes de ontem (`initKstat`), quests e variantes; nos bosses, o `<details class="bs-d">`
+(«Porquê e como», `bsMapHTML`, `bsAccessFill`). A ficha de grupo (`groupSheet`) não mudou.
+- `huntSheet(h, noCmp)`: mapa da zona (`huntMap`, «Abrir o mapa», «Ver spawns no mapa»; `G.hm[pid][3] === "a"` → «O ponto no
+  mapa é a zona aproximada.»); números: XP/h e lucro/h (`fmt`, «≈» com `hcEst` quando estimados, lucro negativo `.warnt`,
+  estrelas da TibiaWiki sem medição, «abaixo do nível da medição» com `h.below`), nível recomendado, resistências
+  (`fxResHTML`: 2 elementos que mais levam e o que menos leva, os 7 num `<details>`), dificuldade (`diffHTML(diffFor(…).n)` e
+  a nota do set `protOf(c).lbl`); criaturas do `G.pm[pid].h` (vida e XP do `G.mon`); loot (`fxLootHTML`/`fxLootFill`:
+  `GrimFicha.topLoot` com os preços do NPC do `G.mon`, refeito com o `priceOf` quando chegam o items.json e o Market do
+  mundo; nota `fxLNote`: Market com o dia e a hora do scan, sem mundo, ou «o Market não respondeu»); charms (`hCharmsHTML`)
+  e preys (`fxPreyHTML`, `GrimFicha.preyPicks`, «O 3.º slot de prey compra-se na Store.»); no fim `estTxt(h)` e a `p.note`.
+  O cabeçalho tem o «Comparar» (`hcmpBtn`).
+- `placeSheet(pid)`: hunt sem linha para a vocação (pesquisa geral `[data-gs="h:<pid>"]`): a mesma ficha com os números do
+  `GrimFicha.huntEst` para a vocação e o nível da personagem (sem personagem: `fxVoc()` e `fxRecL(pid, voc)`), sem «Comparar».
+- `bossSheet(k)`: lê `BSROW[k] = {b, r, lo}` (o último `renderBosses`). Mapa: canvas `.qpos` (`drawPos` quando a ficha abre)
+  e «Abrir o mapa», «zona aproximada» com `b.pa`, «Posição por confirmar.» sem `pos`; números: XP por kill, valor por kill
+  (`lootPerKill`), nível recomendado sozinho/em equipa (`r.soloL`/`r.teamL`, senão `b.qr`), resistências (`BSD.cr[k].el`) e
+  dificuldade `GrimFicha.bossDiff` («para o teu nível», limites `GrimBoss.TMAX`); criaturas: o boss (vida, golpe por turno,
+  dano por elemento `b.dm`) e o tipo de aparição («Sala com alavanca.», «Aparece em raids: não se marca.», «Aparece no mundo,
+  ao acaso.»). Sem charms nem preys. Na lista, `bsRow` tem o nome e «Ver ficha» com `data-boss` e o botão do Bosstiary.
+- Comparar hunts (`hcmpHTML`): a linha «Risco» passou a «Dificuldade» (`diffFor`, a mesma da ficha e do cartão).
+
+**Caminho («Como lá chegar»).** Entre `/* fichas:caminho */` e `/* fichas:caminho:fim */` no `index.html` (o
+`_dev/travel_access_test.mjs` extrai esse bloco; os `addEventListener` ficam depois da marca do fim):
+- `camData()` carrega o `data/caminhos.json` uma vez (`CAMP`; valida `v === 1`, `h`, `b`; falha → a próxima chamada tenta de novo).
+- `camFill(box)` enche `<div data-cam="h:<pid>">` ou `data-cam="b:<chave>"` (com o índice dos NPCs, `linkIdxLoad`) e o
+  `[data-campre]` da mesma ficha com `preHTML(cam.pre, C())`; falha → «Não consegui carregar o caminho.» com «Tentar de novo»
+  (`[data-camretry]`). Chamado pelo `initRoutes` quando a ficha abre (o `openSheet` chama o `initRoutes` e o `fxInit`, que enche o loot e a dificuldade).
+- `camHTML(cam, id, places)`: etiqueta do estado (`CAMST`: ok «confirmado», rev «revisto», part «falta o último troço», none
+  «por documentar»), «A partir de <cidade>», um `<h5>` por troço (troço `{ref}` = ficha do local de `places`: «Chegar a <título>»,
+  os passos do `arrive`, a chegada `entrance` como último passo «Chegada:», os `warnings` e «Como sair» com o `leave`), passos
+  numerados (`.cam-st`); passo com ponto = botão `.cam-pin[data-camstep="<id>:<troço>:<ponto>"]`; passo com NPC = bloco
+  `.cam-npc` («Fala com» + `elink` + falas em `<kbd>` + preço) e o texto perde a mesma fala (`camSayCut`); `refs` → «Nos guias
+  das quests»; `pa === 1` → «O ponto no mapa é a zona aproximada.» (nunca «entrada»); `none` → «Ainda não temos este caminho
+  passo a passo.». Os pontos de cada troço ficam em `CAMPTS["<id>:<troço>"]`.
+- `drawCam(box, pts, sel)`: o mapa do troço (`<details class="cam-map">`, desenhado quando abre ou quando se toca num
+  `.cam-pin`) com o `GrimMini.draw` (linha tracejada entre pontos seguidos do mesmo andar), o andar (`I18N.tr(floorTxt(z))`),
+  «A linha mostra a ordem dos passos, não o caminho a pé.» e «Abrir no mapa do Questski» (`quests/#/mapa/x,y,z`).
+- `preHTML(pre, c)`: quests com ligação ao guia (com `sec` → `/guia/sec-N`) e a `note`, «✓ feita»/«por fazer» com personagem;
+  nível («recomendado», ✓ ou «acima do teu nível»); «Conta premium»; itens e texto com `qmd`; vazio → «Sem pré-requisitos.».
+
+**`shared/minimapa.js`** (`window.GrimMini`, os dois sites; CSS `.mm-mark` em `shared/sites.css`): `fit(pts, sel, W, H)` (pura:
+andar do ponto escolhido, só os pontos desse andar, escala 0,6–5 com 12 sqm de margem, centra no escolhido se não couberem;
+`[]` → `null`) e `draw(el, {img, view, marks, sel, line, color})`. O Questski chama-o no `drawMinimap` (sem linha).
+
+**`shared/fichas.js`** (`window.GrimFicha`; em node `module.exports`; teste `node _dev/fichas_test.mjs`): `effHit(dm, prot)` (pior
+golpe por elemento × (1 − proteção); sem `d`, o `m` conta como físico), `huntDiff({d, hit, eff, adj})`, `bossDiff`,
+`levelFactor(L, Lm, k)`, `calibOf(x)` (`data/calib.json` validado; em falta ou estragado → `k = 0,5`, sem `dz`),
+`preyPicks(mons, L)`, `topLoot(mons, max)`, `resist(eff)`, `pickRow`, `huntEst(ctx)` e as constantes `DIFF` (nomes da
+dificuldade) e `PREY` (os 3 bónus). Os textos de `DIFF` e `PREY` são pt-PT e traduzem-se pelo `i18n/src/ui-extra.json`.
+
+**Números das hunts.** `GrimFicha.huntEst({G, voc, pid, L, pl, compatFor, avgMon})` = o motor que estava no `huntRows`
+(TibiaPal, sessões do `G.ha`, estimativas 'est'/'hao'/'mx'); devolve também `Lm` (nível da medição). O `index.html` aplica
+`estAdj(e, pl)`: fator `(pl / Lm)^CALIB.k` entre 0,7 e 1,25 no XP/h e no lucro/h positivo (o 'mx' já usa o nível do jogador);
+com `pl < 0,6 × Lm` fica sem número (`below`, «abaixo do nível da medição» no cartão e na ficha). O `CALIB`
+começa com as omissões e passa ao `data/calib.json` quando este chega (secção «Calibração (r35-D)»). O mesmo número aparece no cartão, na ficha e no
+comparar. Teste de ouro: `node _dev/huntest_gold.mjs --k0` compara o `huntRows` sem ajuste (k = 0) com o
+`_dev/huntest_gold.json` (saída de antes da extração, 5 vocações × todas as hunts) e deve dizer «0 diferenças».
+
+**Dificuldade (1–5) da personagem.** `protOf(c)` → `{prot, lbl}`: o set ativo (`c.hset === "mine"` e `c.aset`) senão o
+`bisSet(c)`; proteções = `setStats(…).ab + abi` (itens e imbuements); `lbl` = «Contas com o teu set "<nome>"» ou «Contas com o best
+set do nível N» (sem personagem: «Sem personagem: conta só a vida.»); cache `PROTC`. `diffFor(pid, c)` junta o pior
+`GrimFicha.effHit` das criaturas principais (`G.pm[pid].h` ∩ `mons`, sem bosses; dano do `data/crdmg.json`, `CRDV`), a vida efetiva
+`GrimBoss.effHP(voc, L, ml)`, o `p.d` e o `CALIB.dz[pid]`. Enquanto o crdmg.json não chega, fica a base e o `fxDiffSync` atualiza
+os cartões, a ficha e as preys quando chega (`fxDiffWait`, `[data-fxd]`, `[data-fxprey]`). Bosses: o `renderBosses` passa a
+`GrimBoss.judge(b, {…, prot: protOf(c).prot, d: CRDV[k].d})`; com `opt.prot`, o golpe máximo `md` escala pela parte que as
+proteções deixam passar no pior elemento (`opt.d` do crdmg.json, senão as % do `b.dm`); sem `opt.prot`, igual a antes.
+
+**`data/caminhos.json`** (gerado; carrega só quando uma ficha abre): `{v:1, gen, h:{pid: Caminho}, b:{chave: Caminho},
+places:{título: Local}}`, formato na secção «Modelo de dados» da spec. `python3 -I _dev/build_caminhos.py` regenera-o a partir
+de, por ordem, `_dev/caminhos_manual.json` (à mão, tem prioridade), `G.hv`, `G.routes` e `p.acc` (fica `none`), com as fichas
+de locais do Questski (`data/hunt-access.json`, `data/boss-access.json`) como troço `{ref}`. Corre-o depois de mudar o manual, o
+`G.hv`/`G.routes`, os bosses ou os acessos; `--check` sai com 1 se o ficheiro estiver desatualizado ou inválido; `--report` e
+`--lote` servem a parte C. Como escrever um caminho à mão: `_dev/CAMINHOS.md`.
+
+**Traduções (r35).** O `_dev/i18n.py` não lê o `caminhos.json`, o `hunt-access.json` nem o `boss-access.json` como os outros
+`data/*.json`: o `cam_strings()` tira deles só o texto que o site mostra (passos `s`, troços `t`, `note`/`s`/nome da quest dos
+pré-requisitos, títulos dos guias, e dos locais o título, a chegada, o `arrive`, o `leave`, os `warnings` e os `requirements`;
+nunca as falas `say`) já na forma do ecrã (`cam_render`: as marcas `{npc:}`, `{key:}`, `{item:…|…}` passam ao texto que mostram,
+cada `{coord:}` parte a frase porque é um botão, e o passo com NPC também sem a fala, `cam_say_cut` = `camSayCut`), mais o texto
+de cada negrito/itálico/rótulo (`cam_inline`). Um passo inteiro é uma chave. Muitos já têm tradução no Questski
+(`i18n/tmq/en.json`): para um lote novo, primeiro reaproveita-se essa (mesma forma do ecrã, frase a frase) e só o resto se traduz.
+No `shared/i18n.js`, um elemento dentro de uma frase traduzida (ex.: o negrito «norte») procura-se também pela tradução dele no
+conteúdo de cada língua e fica com o texto da frase. Textos montados no código, `aria-label`, `title` e os de `shared/fichas.js`
+estão no `i18n/src/ui-extra.json` (contexto «à mão (r35)»). O «de <criatura>» do loot passou a «loot de <criatura>» (o
+«de {0}» é um modelo curto que só traduz frases com elementos).
+
+**Testes.** `node _dev/fichas_test.mjs` (modelo, `GrimMini.fit`, caminhos.json); `node _dev/travel_access_test.mjs`;
+`node _dev/bosses_test.mjs` (também `opt.prot`); `node _dev/boss_access_test.mjs`; `node _dev/huntest_gold.mjs --k0`;
+`python3 -I _dev/build_caminhos.py --check`; e no browser `node _dev/fichas_browser.cjs [--url http://127.0.0.1:8765/]` com
+`python3 -m http.server 8765 --bind 127.0.0.1` na raiz (Playwright; pt-PT, en e de a 1440 e 390 px; erros, scroll lateral,
+letra < 12 px, alvos < 44 px na ficha, estrutura fixa, Market fixo/503/sem mundo, dificuldade do sorcerer e do knight com set,
+comparar, bosses de alavanca/raid/sem posição, e em en/de nenhuma das frases pt-PT «à mão (r35)» nas fichas). Deve dizer `ok`
+nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110i` (calibração e lote 1 dos caminhos).
+
+## Calibração (r35-D, 10/11/2026)
+
+Parte D do plano das fichas (Tasks 18–23; spec, rondas 3–4, Q10–Q15). Afina os números das hunts sem mudar a ficha: o `k`
+do ajuste ao nível, as mortes por hora de cada zona e o perigo de cada hunt (`dz`, −1/0/+1 na dificuldade).
+
+**Ficheiros.**
+- `_dev/tibiadata.py`: pede `/v4/worlds` e o `/v4/killstatistics/<mundo>` de cada mundo normal ao TibiaData (1 pedido por
+  segundo, 3 tentativas) e grava a soma em `_dev/cache/ks-AAAA-MM-DD.json` = `{gen, mundos, falhas, c: {criatura: [jogadores
+  mortos ontem, criaturas mortas ontem, jogadores mortos na semana, criaturas mortas na semana]}}`. O TibiaData dá o plural
+  («dragon lords»); o `agrega` passa-o à chave do `data/creatures.json` e tira as linhas entre parênteses. O `_dev/cache/`
+  está no `.gitignore`. Usa a API v4 (a v4 acaba a 31/12/2026: passar para a v5, como o `API` do site, antes disso).
+- `_dev/import_sessoes.py`: valida as sessões reais de `_dev/sessoes/*.json|*.csv` e agrega-as no formato do `G.ha`
+  (formato, regras e recolha em `_dev/SESSOES.md`).
+- `_dev/calibrar.py` → `data/calib.json` e `_dev/calib_relatorio.md` (as regras de cada número estão no início do script).
+  O `huntEst` não se duplica em Python: o relatório corre-o no node pelo `_dev/calib_node.mjs` (sobre o `_dev/hunt_vm.mjs`,
+  o mesmo contexto do teste de ouro) e confirma que o `avg_mon` do Python dá o mesmo que o `avgMon` do `index.html`.
+- Testes: `_dev/calib_test.py` (dados pequenos inventados no próprio teste) e a resposta real cortada
+  `_dev/fixtures/ks_antica.json`.
+
+**Comandos.**
+```
+python3 -I _dev/tibiadata.py           # estatísticas da semana de todos os mundos (~90 pedidos, 1 por segundo)
+python3 -I _dev/import_sessoes.py      # valida _dev/sessoes/ (sai com 1 se houver um campo de nome)
+python3 -I _dev/calibrar.py            # grava data/calib.json e _dev/calib_relatorio.md e mostra o relatório
+python3 -I _dev/calibrar.py --check    # sai com 1 se o data/calib.json não for o que geraria
+python3 -I _dev/calib_test.py
+```
+O `--check` usa o `_dev/cache/ks-<gen>.json` do dia do próprio ficheiro (o `gen`): só funciona no PC (ou na sessão) que
+o gerou. Noutro sítio, corre primeiro o `tibiadata.py` e o `calibrar.py`, e o `calib.json` muda (são outros dias).
+
+**`data/calib.json`** (gerado, `sort_keys`, 1 espaço de recuo): `{v: 1, gen: "AAAA-MM-DD" (dia das estatísticas), k,
+kz: {pid: mortes/h}, dz: {pid: -1|0|1}, ha: {pid: {v: {voc: [sessões, nível mínimo, nível mediano, XP/h, lucro/h]}}},
+n: {sessoes, mundos}}`.
+- `k`: mínimos quadrados de log(XP/h) contra log(nível) na mesma hunt e vocação (TibiaPal, `G.ha` e importadas); com menos
+  de 10 pares fica 0,5; entre 0,1 e 1. Hoje 0,54 (63 pares).
+- `kz`: mediana de XP/h ÷ XP média por morte das sessões solo; uma hunt sem sessões herda a mediana das 5 mais parecidas
+  (nível recomendado, criaturas no `G.pm`, vida média).
+- `dz`: jogadores mortos ÷ criaturas mortas na semana, em todos os mundos, pesado pelo `G.pm`; os 10 % mais altos +1, os
+  30 % mais baixos −1, menos de 1000 criaturas mortas → 0.
+- `ha`: só as sessões importadas (o `G.ha` já está no `index.html`).
+- O site usa o `k` e o `dz`; o `kz` e o `ha` ainda não entram nos números do site (servem o relatório). O
+  `GrimFicha.calibOf` valida: sem ficheiro, `v` diferente de 1 ou JSON estragado → omissões (`k = 0,5`, sem `dz`); `k`
+  fora de 0,1–1 → 0,5.
+
+**No site.**
+- No fim do arranque, `dsafe("calib")` (não bloqueia; 404 ou erro → `{}` → omissões, sem erros) põe o `CALIB =
+  GrimFicha.calibOf(json)`. Com outro `k`, o `renderInicio` e o `renderHunts` voltam a desenhar os números; se o
+  `crdmg.json` já chegou, o `fxDiffSync(document)` atualiza a dificuldade dos cartões e da ficha aberta (senão fá-lo o
+  `fxDiffWait` quando ele chegar). O `diffFor` passa `adj: CALIB.dz[pid]` ao `GrimFicha.huntDiff`. Limite conhecido: uma
+  ficha já aberta quando o ficheiro chega fica com o XP/h do `k` antigo até se reabrir.
+- «Hunt muito disputada no teu mundo» (por baixo da dificuldade, em letra pequena, `.fx-kst[data-fxkst]`, só com mundo na
+  personagem): o `fxKstFill` (chamado pelo `fxInit`) usa o `kstatLoad(mundo)` (TibiaData `/killstatistics`, em memória por
+  dia de jogo). A criatura principal é a de maior XP × quantidade no `G.pm[pid].h` (sem bosses); a nota aparece quando as
+  mortes dela na semana são pelo menos o percentil 90 das criaturas do mundo (sem as linhas entre parênteses). O plural do
+  TibiaData só se procura pelo `kPlural` (cyclopes, werewolves… ficam sem nota). Sem resposta do TibiaData, não há nota.
+- Teste no browser (`_dev/fichas_browser.cjs`, pt-PT a 1440 px): `data/calib.json` com `dz[pid] = 1` sobe 1 a dificuldade
+  dessa hunt e com `k = 1` muda o XP/h dos cartões, em relação ao 404; o `killstatistics` de Bona com a criatura principal
+  nos 10 % mais mortos mostra a nota; com erro 500 não a mostra.
+
+**Regra «sem nomes».** Nunca nomes de personagens, de mundos nem de guilds em ficheiros, commits, PRs ou chats: só números
+agregados por hunt, vocação e nível. O `import_sessoes.py` recusa linhas com um campo de nome (`name`, `char`, `personagem`,
+`world`…). O `data/calib.json` tem só `pid`s, vocações e números (dos mundos, só quantos). Antes de cada commit com sessões,
+`git diff --cached` só pode ter números, `pid`s e vocações.
+
+**Rotina semanal** (Task 23; criada só depois de o dono aprovar o texto). Tarefa agendada na cloud, à segunda às 05:41 UTC,
+numa sessão nova em cada execução no ambiente `grimorio` (que já permite `api.tibiadata.com`). No `main` atualizado corre
+`python3 -I _dev/tibiadata.py`, `python3 -I _dev/import_sessoes.py`, `python3 -I _dev/calibrar.py` e os testes
+(`node _dev/fichas_test.mjs`, `python3 -I _dev/calib_test.py`). Só se o `data/calib.json` mudou e os testes passam, cria o
+ramo `calib-AAAA-MM-DD`, faz commit e abre um PR para o `main` com o `_dev/calib_relatorio.md` no texto; sem mudanças, não
+abre PR. Nunca faz merge e nunca escreve nomes. A recolha no Hunt Analyser não entra na rotina: é à mão, numa sessão local
+com o Chrome do dono (`_dev/SESSOES.md`), e a rotina usa o que já estiver em `_dev/sessoes/`.

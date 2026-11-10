@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 const require = createRequire(import.meta.url);
 const R = require("../shared/rotacoes.js"), B = require("../shared/bosses.js");
 const J = f => JSON.parse(readFileSync(new URL("../data/" + f, import.meta.url), "utf8"));
-const D = J("rotacoes.json"), BD = J("bosses.json"), CR = J("creatures.json");
+const D = J("rotacoes.json"), BD = J("bosses.json"), CR = J("creatures.json"), CD = J("crdmg.json");
 let fails = 0, n = 0; const fail = m => { fails++; if (fails <= 30) console.log("FALHA:", m); };
 const ORD = { locked: 0, later: 1, unknown: 2, team: 2, solo: 3 };
 for (const voc of R.VOCS) {
@@ -25,6 +25,36 @@ for (const voc of R.VOCS) {
     }
   }
 }
+// proteções da personagem (ronda 3, Q7): com b.dm (% do dano por elemento) o md passa a ser o golpe efetivo; sem opt.prot, igual
+{ const voc = "knight", curve = B.makeCurve(l => { const p = R.plan(D, { voc, level: l, scen: "boss" }); return p.empty ? 1 : p.econ.dps + (p.econ.autoDps || 0); });
+  const mlAt = l => R.stats(voc, l).mlBase, t = { n: "Teste", c: "b", hp: 20000, md: 3000, dm: { fire: 100 } }, o = { k: "t", voc, level: 300, cr: {}, curve, mlAt };
+  const a = B.judge(t, o), p = B.judge(t, Object.assign({ prot: { fire: 50 } }, o)), e = B.judge(t, Object.assign({ prot: { ice: 50 } }, o));
+  if (!(p.soloL < a.soloL) || p.md !== 1500) fail(`proteção de fogo 50%: sozinho a ${p.soloL} (sem ${a.soloL}), md ${p.md}`);
+  if (JSON.stringify(e) !== JSON.stringify(a)) fail("proteção de outro elemento mudou o resultado");
+  let same = 0, diff = 0;
+  for (const [k, b] of Object.entries(BD.b)) for (const L of [150, 600]) {
+    const x = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt }), y = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt, prot: {} });
+    const z = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt, prot: { physical: 40, fire: 40, ice: 40, earth: 40, energy: 40, holy: 40, death: 40 } });
+    if (JSON.stringify(x) !== JSON.stringify(y)) fail(`${b.n}: prot vazio mudou o resultado`);
+    if (!b.dm && JSON.stringify(x) !== JSON.stringify(z)) fail(`${b.n}: sem dm e a proteção mudou o resultado`);
+    if (JSON.stringify(x) === JSON.stringify(z)) same++; else diff++;
+  }
+  console.log(`proteções de 40% só com o b.dm (knight 150 e 600): ${diff} avaliações mudam, ${same} iguais`);
+  // com o dano por elemento do crdmg.json (como o site): sem prot igual; knight 600 com 40% em tudo muda muitos bosses
+  const P40 = { physical: 40, fire: 40, ice: 40, earth: 40, energy: 40, holy: 40, death: 40 };
+  let ch = 0; const chn = [];
+  for (const [k, b] of Object.entries(BD.b)) {
+    const o = { k, voc, level: 600, cr: CR[k], curve, mlAt, d: (CD[k] || {}).d };
+    const x = B.judge(b, o), y = B.judge(b, Object.assign({ prot: P40 }, o)), w = B.judge(b, { k, voc, level: 600, cr: CR[k], curve, mlAt });
+    if (JSON.stringify(x) !== JSON.stringify(w)) fail(`${b.n}: o dano por elemento sem prot mudou o resultado`);
+    if (y.md > x.md) fail(`${b.n}: a proteção subiu o golpe`);
+    const z = B.judge(b, Object.assign({ prot: { physical: 100, fire: 100, ice: 100, earth: 100, energy: 100, holy: 100, death: 100 } }, o));
+    if (b.md && !(z.md >= 1)) fail(`${b.n}: com 100% de proteção o golpe passou a «desconhecido»`);
+    if (b.md && z.soloL != null && x.soloL != null && z.soloL > x.soloL) fail(`${b.n}: mais proteção e sozinho mais tarde (${x.soloL} → ${z.soloL})`);
+    if (x.st !== y.st || x.soloL !== y.soloL) { ch++; if (chn.length < 5) chn.push(`${b.n} ${x.st}/${x.soloL}→${y.st}/${y.soloL}`); }
+  }
+  if (ch <= 50) fail(`só ${ch} bosses mudam com 40% de proteção (knight 600, crdmg.json)`);
+  console.log(`crdmg.json, knight 600 com 40% em tudo: ${ch} de ${Object.keys(BD.b).length} bosses mudam o estado ou o nível sozinho (ex.: ${chn.join("; ")})`); }
 // Bosstiary (Cyclopedia): 25% a 0 pontos, +1% a cada 10 até 250 (50%), +1% a cada 20 até 1250 (100%), depois 25, 30, 35… pontos por 1%
 [[0, 25], [10, 26], [249, 49], [250, 50], [270, 51], [1249, 99], [1250, 100], [1274, 100], [1275, 101], [1305, 102]].forEach(([p, v]) => {
   if (B.lootBonus(p) !== v) fail(`bónus com ${p} pontos: ${B.lootBonus(p)} (esperava ${v})`); });

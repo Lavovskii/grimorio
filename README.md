@@ -43,6 +43,9 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O códig
 | `ads.txt` | Quem pode vender os anúncios do domínio (preenche-se com o código de editor do AdSense). |
 | `data/guias.json` | Os guias do Questski e a ligação às quests do Grimório (gerado por `_dev/build_guias.py`). |
 | `data/wheel.json` | As 36 fatias da Wheel por vocação e os pontos de cada build (gerado por `_dev/build_wheel.py`). |
+| `data/caminhos.json` | O «Como lá chegar» das fichas de hunts e bosses: troços, passos, pontos, NPCs e pré-requisitos (gerado por `_dev/build_caminhos.py`). |
+| `data/calib.json` | A calibração semanal dos números das hunts: o ajuste ao nível (`k`) e o perigo de cada hunt (`dz`) (gerado por `_dev/calibrar.py`). |
+| `shared/fichas.js`, `shared/minimapa.js` | As contas das fichas (dificuldade, números das hunts, preys, loot, resistências) e o minimapa partilhado com o Questski. |
 
 **Antes de mexer no código, lê `_dev/GRIMORIO.md`.** Explica os dados, as funções principais e as regras que já nos custaram bugs: nomes de funções únicos, ordem de arranque, os dois modos, telemóvel, PT-PT e sem links externos.
 
@@ -58,6 +61,14 @@ Não é preciso compilar nada: é uma página estática (`index.html`). O códig
 - `apply_hunt_fixes.py`: aplica correções de hunts verificadas, em ficheiros `fix-*.json`.
 - `build_wheel.py`: refaz `data/wheel.json` (o que dá cada fatia da Wheel, por vocação) e confirma que bate com todas as builds do `G.wheel`.
 - `build_guias.py`: refaz `data/guias.json` depois de mudar os guias do Questski ou as quests do Grimório.
+- `build_caminhos.py`: refaz `data/caminhos.json` a partir de `_dev/caminhos_manual.json`, dos acessos do `G` e das fichas de locais do Questski. `--check` confirma que está em dia e válido, `--report` conta o que falta, `--lote` dá o próximo grupo para escrever à mão (ver `_dev/CAMINHOS.md`).
+- `fichas_test.mjs`: testa as contas das fichas (`shared/fichas.js`), o minimapa e o `data/caminhos.json`: `node _dev/fichas_test.mjs`.
+- `huntest_gold.mjs`: confirma que o XP/h e o lucro/h das hunts não mudaram sem querer (compara com `_dev/huntest_gold.json`): `node _dev/huntest_gold.mjs --k0`.
+- `fichas_browser.cjs`: abre as fichas de hunts e bosses num Chromium (Playwright) em pt-PT, inglês e alemão, a 1440 e 390 px, e procura erros, texto pequeno, alvos de toque pequenos e frases por traduzir. Com `python3 -m http.server 8765 --bind 127.0.0.1` na raiz: `node _dev/fichas_browser.cjs`.
+- `tibiadata.py`: estatísticas de mortes da semana de todos os mundos (TibiaData), para a calibração: `python3 -I _dev/tibiadata.py` (grava em `_dev/cache/`, fora do Git).
+- `import_sessoes.py`: valida as sessões reais de `_dev/sessoes/` (sem nomes; formato e recolha em `_dev/SESSOES.md`).
+- `calibrar.py`: refaz `data/calib.json` e o relatório `_dev/calib_relatorio.md` com as estatísticas e as sessões; `--check` confirma que está em dia. Testes: `python3 -I _dev/calib_test.py`. Ver a secção «Calibração (r35-D)» do `_dev/GRIMORIO.md`.
+- `i18n.py`: línguas dos dois sites (`extract`, `todo`, `merge`, `build`, `status`).
 - `reap.ps1`: fecha browsers de testes que ficaram abertos.
 - `estatisticas.py`: resumo das estatísticas próprias (visitantes, páginas, origem, língua, aparelho): `python -I _dev/estatisticas.py --dias 30`.
 - `visitas.ps1`: visitantes por dia a partir do registo do Apache (`-Dias 30`; `-Limpar 365` apaga registos com mais de 12 meses).

@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261110i" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110f"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -18,7 +18,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="shared/pub.css?v=20261106b">
-<link rel="stylesheet" href="shared/sites.css?v=20261027t">
+<link rel="stylesheet" href="shared/sites.css?v=20261110c">
 <style>
 /* r34: a letra mono (JetBrains Mono 500, OFL) vem do próprio site. As Alegreya do Google Fonts saíram: o tema Tibia usa
    Palatino/Tahoma/Verdana, e pedir letras à Google mandava o IP de cada visitante para lá (RGPD). */
@@ -433,7 +433,30 @@ body.noch .hcmp-tray{display:none!important}
 .route li.st span{display:block;font-size:13px;color:var(--muted)}
 .req{font-size:14px;color:var(--warn);margin:0}
 .rt{display:grid;gap:10px}
-.vroute{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface-2)}
+/* r35 fichas: «Como lá chegar» em troços */.sh.sh-ficha{width:min(980px,100%)}.cam{display:grid;gap:8px}.cam h5{margin:6px 0 0;font-size:14px}.cam-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.cam-st{list-style:none;margin:0;padding:0;display:grid;gap:4px}.cam-st>li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px;align-items:start}.cam-tx{padding-top:11px;min-width:0;overflow-wrap:anywhere}.cam-n{display:grid;place-items:center;width:44px;height:44px;font:700 13px var(--mono);color:var(--muted)}.cam-pin{position:relative;isolation:isolate;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;color:inherit;font:700 13px var(--mono)}.cam-pin::before{content:"";position:absolute;inset:8px;z-index:-1;border-radius:50%;background:var(--surface-2);border:2px solid var(--gold)}.cam-pin.on::before{background:var(--gold)}.cam-pin.on{color:var(--surface)}.cam-pin:focus-visible{outline:2px solid var(--accent);outline-offset:-4px;border-radius:50%}.cam-npc{display:flex;align-items:center;gap:8px;margin-top:4px;flex-wrap:wrap}.cam-npc kbd{margin:0 1px}.cam-map summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}.cam-map{display:grid;gap:6px}.cam-mm{position:relative;width:100%;aspect-ratio:3/2;max-height:360px;overflow:hidden;border-radius:8px;background:var(--sunk)}.cam-cv{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.cam-map .btn{justify-self:start;min-height:44px;display:inline-flex;align-items:center}@media (pointer:coarse){.cam a:not(.btn),.fx-pre a{position:relative}.cam a:not(.btn)::after,.fx-pre a::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}}.cam-refs{margin:0;padding-left:18px}.mm-mark.small.sel{width:16px;height:16px;margin:-8px 0 0 -8px;background:#e23b2e;z-index:1}.fx-pre{margin:0;padding-left:18px;display:grid;gap:4px}
+/* r35 fichas (Task 4): ficha da hunt */
+.fx{display:grid;gap:18px;min-width:0}.fx-top{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:760px){.fx-top{grid-template-columns:minmax(0,340px) minmax(0,1fr);align-items:start}}
+.fx-map{display:grid;gap:8px;min-width:0}.fx-map p{margin:0}.fx-cam{min-width:0}
+.fx-mapb{display:flex;flex-wrap:wrap;gap:8px}.fx-mapb .btn{min-height:44px;display:inline-flex;align-items:center}
+.fx-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+@media (max-width:479px){.fx-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-s[data-fxs="dif"]{grid-column:1/-1}}
+.fx-s{display:flex;flex-direction:column;gap:4px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
+.fx-v>b{font-family:var(--serif);font-size:20px;line-height:1.15}.fx-v>b.fx-bl{font-size:14px;line-height:1.3}.fx-l{font-size:12px;color:var(--muted)}
+.fx-rs{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}.fx-rc{display:inline-flex;align-items:center;gap:4px;font-size:13px;white-space:nowrap}
+.fx-rd summary{cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;min-height:32px}.fx-rd[open] summary{margin-bottom:4px}
+.fx-diff{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.fx-diff b{font-family:var(--serif);font-size:20px;line-height:1.15}
+.fx-kst{display:block}.fx-dm{display:flex;gap:3px;flex:1 0 100%}.fx-dm i{width:10px;height:10px;border-radius:50%;border:2px solid var(--gold)}.fx-dm i.on{background:var(--gold)}
+.fx-sec{display:grid;gap:8px;min-width:0}.fx-sec h4{margin:0}.fx-sec h5{margin:0 0 6px;font-size:14px}
+.fx-ml,.fx-lt,.fx-prey{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.fx-ml{grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}.fx-ml li,.fx-prey li{display:flex;align-items:center;gap:10px;min-width:0}
+.fx-mn{display:grid;gap:2px;min-width:0}
+.fx-lt{max-width:640px}.fx-lt li{display:grid;grid-template-columns:24px minmax(0,1fr) auto auto;gap:4px 12px;align-items:center;min-height:44px}
+.fx-ln,.fx-lv{display:grid;min-width:0}.fx-lv{text-align:right}.fx-lp{font-size:13px;color:var(--muted)}.fx-lnote{margin:0}
+.fx-tg{display:grid;gap:14px}@media (min-width:760px){.fx-tg{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}}
+@media (pointer:coarse){.fx a:not(.btn){position:relative}.fx a:not(.btn)::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}.fx-rd summary{min-height:44px}}
+html[data-ui="modern"] .fx-s{background:linear-gradient(180deg,rgba(201,164,90,.10),rgba(201,164,90,.03));border-color:rgba(201,164,90,.2);border-radius:4px}
+html[data-ui="modern"] .fx-v>b,html[data-ui="modern"] .fx-diff b{font-family:var(--tb-num),var(--sans);font-weight:700}.vroute{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface-2)}
 .vr-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .vr-h b{font-size:15px}
 .vr-st{margin:0;padding-left:20px;display:grid;gap:4px;font-size:15px}
@@ -688,10 +711,6 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#F2D68C}
 .bs-st{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .bs-v{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;font-size:14px}
 .bs-v .small{flex-basis:100%}
-.bs-d summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
-.bs-d ul{margin:0 0 4px;padding-left:18px;display:grid;gap:4px}
-.bs-map{display:grid;gap:6px;justify-items:start;margin:10px 0 4px}
-.bs-map p{margin:0}
 .bs-loc{font-size:13px}
 .bs-tier{display:grid;justify-items:center;gap:1px;min-width:96px;min-height:56px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--ink);font:inherit;cursor:pointer;text-align:center}
 .bs-tier b{font-size:14px}
@@ -44921,7 +44940,6 @@ function questReqTag(r){ const m=/^\s*Quest:\s*(.+)$/i.exec(String(r)); if(!m) r
   const sl=guiaOf(null,nm); return sl?`<a class="tag warn qlink" href="${guiaHref(sl)}" title="Guia no Questski">${esc(r)} ›</a>`:`<span class="tag warn">${esc(r)}</span>`; }
 
 /* ---------- hunts ---------- */
-const EST_ORDER = {druid:["sorcerer","paladin","knight","monk"],sorcerer:["druid","paladin","knight","monk"],knight:["paladin","monk","sorcerer","druid"],paladin:["knight","sorcerer","druid","monk"],monk:["knight","paladin","sorcerer","druid"]};
 /* r3-t1: elementos citados no how do TibiaPal (rotação nos mages; tipo de arma ou munição no knight, paladin e monk), por palavra inteira.
    r4-t3: runas dos magos (gfb, sd, avalanche, stoneshower; thunderstorm já estava), Forked Glacier/Thorns (spells.json) e
    Shatterstorm Arrow (físico, TibiaWiki 15.25: 'Causes Physical Damage'). Palavras desconhecidas não contam. */
@@ -44996,7 +45014,13 @@ function avgMon(pid){ if(hasKey(AVGXP,pid)) return AVGXP[pid];
   let t=0, v=0, w=0; h.forEach(([k,n])=>{ const q=Math.max(+n||0,1); t+=(+G.mon[k][2]||0)*q; v+=(+G.mon[k][1]||0)*q; w+=q; });
   return AVGXP[pid] = w&&t>0 ? [t/w, v/w] : null; }
 function avgXp(pid){ const a=avgMon(pid); return a?a[0]:null; }
-const medOf = a => { const b=a.slice().sort((x,y)=>x-y), m=b.length>>1; return b.length%2 ? b[m] : (b[m-1]+b[m])/2; };
+/* Task 2b (fichas) */ // calibração dos números (data/calib.json, parte D do plano): as omissões (k = 0,5, sem dz) até o ficheiro chegar (fim do script)
+let CALIB = GrimFicha.calibOf(null);
+// ajuste ao nível do jogador: (pl / nível da medição)^k entre 0,7 e 1,25; abaixo de 0,6 × o nível da medição não há número (below)
+function estAdj(e, pl){ const lf=GrimFicha.levelFactor(pl, e.Lm, CALIB.k); let xp=e.xp, lo=e.lo;
+  if (!lf.ok){ xp=null; lo=null; }
+  else if (lf.f!==1 && xp!=null){ xp=Math.round(xp*lf.f/1000)*1000; if(lo>0) lo=Math.round(lo*lf.f/1000)*1000; } // lucro negativo fica, como no fator das vocações
+  return {xp, lo, below:!lf.ok}; }
 function huntRows(voc, L, pl){
   /* r1b-t3 */ // L = nível máximo da variante (zona do TibiaPal) que conta. Quem filtra por um teto (janela, faixa) passa esse teto;
   // sem L: nível da personagem + 5, a mesma folga de myWindow e doable. Nível, XP, lucro e rotação vêm sempre da MESMA variante.
@@ -45006,40 +45030,14 @@ function huntRows(voc, L, pl){
   const rows = G.hunts[voc]||[], groups=[], byC={};
   rows.forEach(r=>{ if(r.c && byC[r.c]) byC[r.c].push(r); else { const g=[r]; if(r.c) byC[r.c]=g; groups.push(g); } });
   return groups.map((g,i)=>{
-    const ok = g.filter(x=>x.l<=L), lowest = a => a.reduce((b,x)=>x.l<b.l?x:b, a[0]);
-    const r = ok.filter(x=>x.xp!=null).sort((a,b)=>b.xp-a.xp)[0] || lowest(ok.length?ok:g);
-    const p = r.c ? G.places[r.c] : null, cmp=compatFor(voc,p,r.how);
-    // r4-t3: a XP que o TibiaPal mediu para esta vocação já conta com a resistência: no máximo 'resiste um pouco'
-    // r6-t2: menos nos números do TibiaPal de antes do rebalance de junho de 2026 (o:1), que já não são uma medição atual
-    if (r.xp!=null && !r.f && !r.w && !r.o && cmp.cls==="bad"){ cmp.cls="meh"; cmp.txt+=" (o TibiaPal mediu esta hunt para a tua vocação)"; }
-    let xp=r.xp, lo=r.lo, est=r.o?"old":null, estx=null;
-    const estMax = Math.max(r.l+20, Math.round(r.l*1.25));
-    const fOf = (ov,oc) => ((cmp.v>0&&oc.v>0)?Math.max(0.5,Math.min(1.15,cmp.v/oc.v)):1)*(((G.vr||{})[voc]||{})[ov]||1); // outra vocação → esta: dano (0,5–1,15) × G.vr
-    // r6-t2: as linhas o:1 das outras vocações só contam quando nenhuma linha atual serve (2.ª volta)
-    if (xp==null && r.c){ for(const old of [false,true]){ for(const ov of EST_ORDER[voc]){ const o=(G.hunts[ov]||[]).filter(x=>x.c===r.c && x.xp!=null && !!x.o===old && x.l<=estMax && x.l>=Math.round(r.l*0.6)).sort((a,b)=>b.xp-a.xp)[0]; if(o){
-      const f=fOf(ov,compatFor(ov,p,o.how));
-      xp=Math.round(o.xp*f/1000)*1000; lo=o.lo==null?null:Math.round(o.lo*(o.lo>0?f:1)/1000)*1000; est=ov; if(old) estx={o:1}; break; } } if(xp!=null) break; } }
-    const ha=r.c&&G.ha&&G.ha[r.c]&&G.ha[r.c].v[voc]; let src=r.xp!=null?(r.o?"old":"tp"):est?"est":null;
-    // sessões reais só contam quando o teto L chega a 3/4 do nível mediano dessas sessões (r6-t2: e ganham a um número de antes do rebalance)
-    const haOk = ha && ha[0]>=3 && L >= Math.round(ha[2]*0.75);
-    if((r.xp==null||r.o) && haOk){ xp=ha[3]; lo=ha[4]!=null?Math.round(ha[4]/1000)*1000:(r.o?null:lo); est=null; estx=null; src="ha"; }
-    /* r6-t2 */ // ainda sem número: (a) sessões reais de outras vocações (3+ sessões e pl a 3/4 do nível mediano delas), com o mesmo fator;
-    // (b) nas hunts 300+, K mortes por hora × XP média por morte × dano (K = 1000 abaixo do 600, 1400 a partir do 850, linear no meio),
-    //     sem passar de 18 000 × nível de vida por hora (o dano por hora mais alto das sessões reais: Podzilla, sorcerer 925, 32 sessões)
-    //     nem do ritmo medido nesta zona (linhas atuais do TibiaPal de outras vocações e sessões reais, com nível ≥ 0,6 × o da linha)
-    if (xp==null && r.c){ const hv=G.ha&&hasKey(G.ha,r.c)?G.ha[r.c].v:null, xs=[], ls=[], vs=[], lv=[]; let n=0;
-      if(hv) VOCS.forEach(ov=>{ const a=ov!==voc&&hasKey(hv,ov)?hv[ov]:null; if(!a||a[0]<3||pl<Math.round(a[2]*0.75)) return;
-        const o=(G.hunts[ov]||[]).find(x=>x.c===r.c), f=fOf(ov,compatFor(ov,p,o?o.how:""));
-        xs.push(a[3]*f); if(a[4]!=null&&a[4]>0) ls.push(a[4]*f); vs.push(ov); lv.push(a[2]); n+=a[0]; });
-      if(xs.length){ xp=Math.round(medOf(xs)/1000)*1000; lo=ls.length?Math.round(medOf(ls)/1000)*1000:null; est=src="hao"; estx={n, v:vs, m:Math.round(medOf(lv))}; }
-      else if(r.l>=300){ const am=avgMon(r.c), a=am&&am[0], lmin=Math.round(r.l*0.6), kz=[];
-        if(a) VOCS.forEach(ov=>{ if(ov!==voc) (G.hunts[ov]||[]).forEach(y=>{ if(y.c===r.c&&y.xp!=null&&!y.o&&!y.f&&!y.w&&y.l>=lmin) kz.push(y.xp/a); }); const z=hv&&hasKey(hv,ov)?hv[ov]:null; if(z&&z[2]>=lmin) kz.push(z[3]/a); });
-        const K0=pl<600?1000:pl>=850?1400:1000+(pl-600)*1.6, K1=kz.length?Math.min(K0,medOf(kz)):K0, K=am&&am[1]>0?Math.min(K1,18000*pl/am[1]):K1;
-        const x=a?Math.round(K*a*Math.min(1.1,Math.max(0.6,cmp.v!=null?cmp.v/100:1))/1000)*1000:0;
-        if(x>0){ xp=x; lo=null; est=src="mx"; estx={k:K, z:kz.length}; } } }
+    /* Task 2b */ // os números vêm do GrimFicha.huntEst (shared/fichas.js); aqui fica o ajuste ao nível do jogador (estAdj)
+    const r = GrimFicha.pickRow(g, L), p = r.c ? G.places[r.c] : null;
+    const e = GrimFicha.huntEst({G, voc, pid:r.c, L, pl, r, compatFor, avgMon}), a = estAdj(e, pl);
+    let xp=a.xp; const lo=a.lo;
+    const {est, src, estx, cmp} = e;
     const sh=evShare(r.c), boost=sh>0&&xp!=null ? sh*ST.ui.ev.p/100 : 0, xp0=xp;
     if (boost) xp=Math.round(xp*(1+boost)/1000)*1000;
-    return {i, voc, r, vars:g, p, l:r.l, xp, xp0, boost, lo, est, src, estx, cmp, d:p?p.d:2, q:p?p.q:null, wiki:!!(p&&p.w), fill:!!r.f};
+    return {i, voc, r, vars:g, p, l:r.l, xp, xp0, boost, lo, est, src, estx, Lm:e.Lm, below:a.below, cmp, d:p?p.d:2, q:p?p.q:null, wiki:!!(p&&p.w), fill:!!r.f};
   });
 }
 // "segura": risco 1, risco 2 quando já estás 30+ níveis acima do mínimo, ou risco 3 com 1,5× o nível mínimo; e a criatura não resiste ao teu dano
@@ -45076,7 +45074,8 @@ const HSTORE = {};
 /* r6-t2 */ // marca do número nos cartões: ≈ = estimado (o title diz de onde), sup 'r' = sessões reais da tua vocação, sup 'a' = TibiaPal de antes do rebalance
 function hcEst(h){ if(!h) return ""; const x=h.estx||{};
   const t = h.src==="hao" ? "estimado a partir de sessões reais de outras vocações" : h.src==="mx" ? `estimado pela XP das criaturas (cerca de ${nf(Math.round((x.k||1000)/10)*10)} mortes por hora)` : h.src==="est"&&hasKey(G.voc,h.est) ? `estimado a partir do número de ${G.voc[h.est].n}${x.o?" (de antes do rebalance)":""}` : "";
-  return `${h.est?(t?`<span title="${esc(t)}">≈</span>`:"≈"):""}${h.src==="ha"?'<sup class="rl" title="Mediana de sessões solo reais desde junho">r</sup>':""}${h.src==="old"?'<sup class="rl rla" title="Número do TibiaPal de antes do rebalance de junho de 2026">a</sup>':""}`; }
+  const tm = t && h.Lm ? `${t} (medição no nível ${nf(h.Lm)})` : t;
+  return `${h.est?(tm?`<span title="${esc(tm)}">≈</span>`:"≈"):""}${h.src==="ha"?'<sup class="rl" title="Mediana de sessões solo reais desde junho">r</sup>':""}${h.src==="old"?'<sup class="rl rla" title="Número do TibiaPal de antes do rebalance de junho de 2026">a</sup>':""}`; }
 // frase do fim da ficha conforme a origem do número: outra vocação, sessões de outras vocações ('hao'), XP das criaturas ('mx') ou antes do rebalance ('old')
 function estTxt(h){ const e=h&&h.est, x=(h&&h.estx)||{}, vn=v=>esc(G.voc[v].n); let t="";
   if(e==="old") t="Número do TibiaPal de antes do rebalance de junho de 2026: ainda não voltou a ser medido.";
@@ -45085,10 +45084,11 @@ function estTxt(h){ const e=h&&h.est, x=(h&&h.estx)||{}, vn=v=>esc(G.voc[v].n); 
   else if(e&&hasKey(G.voc,e)) t=`Sem medição para ${vn(h.voc)}: valores de ${vn(e)}${x.o?" (do TibiaPal, de antes do rebalance de junho de 2026)":""} ajustados ao teu dano e ao que cada vocação costuma render.`;
   return t?`<p class="tiny muted">${t}</p>`:""; }
 function huntCard(h, cats){
+  if(!CRDV) fxDiffWait();
   const c=C(), p=h.p, name=p?p.n:h.r.place, locked=h.l>c.level+3, key="h"+h.voc+h.i; HSTORE[key]=h;
   const qok = !h.q || qDone(c,h.q);
   const tops=((G.pm[h.r.c]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,3), mc=h.r.c?mainCls(h.r.c):null;
-  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"${h.r.c?` data-pid="${esc(h.r.c)}"`:""}><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.xp==null?`<span class="hcx">${starsTxt(p)||"XP e lucro por medir"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b></span><span class="hc-p"><span class="hc-pe"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}</span>${mc?`<span class="cls"><i class="hc-sep" aria-hidden="true">· </i>${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?'<span class="lk"><i class="hc-sep" aria-hidden="true">· </i>quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
+  return `<button class="hc ${locked?"locked":""}" data-hunt="${key}"${h.r.c?` data-pid="${esc(h.r.c)}"`:""}><span class="hc-th">${huntMap(h,"thumb")||'<span class="hthumb-x"></span>'}${tops.length?`<span class="hc-mons">${tops.map(([k])=>crSpr(k,34)).join("")}</span>`:""}</span><span class="hc-b">${cats&&cats.length?`<span class="hc-cat cat-${cats[0]}">${CATS[cats[0]]}</span><span class="sr-only">: </span>`:""}<b class="hc-t">${esc(name)}</b><span class="hc-n">${h.below?'<span class="hcx">abaixo do nível da medição</span>':h.xp==null?`<span class="hcx">${starsTxt(p)||"XP e lucro por medir"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class="hc-ev" title="Evento: ${esc(evLabel())}">+${Math.round(h.boost*100)}%</span>`:""} · <b>${fmt(h.lo)}</b> lucro`} · <b>${h.l}+</b>${h.r.c?` · <span data-fxd="${esc(h.r.c)}" data-fxdc="1">dificuldade ${diffFor(h.r.c,c).n}/5</span>`:""}</span><span class="hc-p"><span class="hc-pe"><i class="dot ${h.cmp.cls}" title="${esc(h.cmp.txt)}"></i>${esc(CMP_SHORT[h.cmp.cls])}</span>${mc?`<span class="cls"><i class="hc-sep" aria-hidden="true">· </i>${esc(clsName(mc[0]).toLowerCase())}</span>`:""}${!qok?'<span class="lk"><i class="hc-sep" aria-hidden="true">· </i>quest</span>':""}<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span>${HCMP_RISK[h.d]?`<span class="sr-only"> · risco ${HCMP_RISK[h.d]}</span>`:""}</span></span><span class="hc-go" aria-hidden="true">›</span></button>`;
 }
 const DIRS=["norte","nordeste","leste","sudeste","sul","sudoeste","oeste","noroeste"];
 const CITIES=[["Thais",32369,32241],["Carlin",32360,31782],["Venore",32957,32076],["Ab'Dendriel",32732,31634],["Kazordoon",32649,31925],["Edron",33217,31814],["Darashia",33213,32454],["Ankrahmun",33194,32853],["Port Hope",32594,32745],["Liberty Bay",32317,32826],["Svargrond",32212,31132],["Yalahar",32787,31276],["Farmine",33023,31521],["Gray Beach",33447,31323],["Roshamuul",33513,32363],["Rathleton",33594,31899],["Krailos",33657,31665],["Issavi",33921,31477],["Feyrist",33490,32221],["Marapur",33783,32850],["Bounac",32424,32445],["Oskayaat",33025,32930],["Dawnport",32064,31894]];
@@ -45468,7 +45468,7 @@ document.addEventListener("keydown",e=>{ if((e.key==="/"&&!/input|textarea|selec
 function monSheet(k){ location.hash=monHref(k); }
 function itemSheet(n){ location.hash=itemHref(n); }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if(!b) return; const [t,...rest]=b.dataset.gs.split(":"), k=rest.join(":"), c=C(); gsClose();
-  if(t==="h"){ const hr=c?huntRows(c.voc).find(r=>r.r.c===k):null; if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr)); } else { const m=G.hm[k]; openSheet(`<div class="sh-h"><h3>${esc(G.places[k].n)}</h3></div>${tabsUI([["rota","Como chegar",huntRoute(k)],["mons","Monstros e loot",monsPanel((G.pm[k]||{}).h,(G.pm[k]||{}).r)],["quests","Quests",questsTab(questsForHunt(k,null))]])}`); } }
+  if(t==="h"){ const hr=c?huntRows(c.voc).find(r=>r.r.c===k):null; if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr),"sh-ficha"); } else if(hasKey(G.places,k)) openSheet(placeSheet(k),"sh-ficha"); }
   else if(t==="c"||t==="b") location.hash=monHref(k);
   else if(t==="q"&&k.startsWith("w:")) openQuestW(k.slice(2));
   else if(t==="q"&&guiaOf(k,(QBY[k]||{}).n)) location.href=guiaHref(guiaOf(k,(QBY[k]||{}).n)); // r27: quest com guia = Questski
@@ -45482,7 +45482,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-gs]"); if
   else if(t==="hc"||t==="ht"){ const x="#hunts/"+(t==="hc"?"cidade":"tipo")+"/"+k; if(location.hash===x) route(); else location.hash=x; } // r5-t2
   else if(t==="ch") mdVT(()=>{ go("charms"); charmFocus(k); }); // r5-t5: leva ao charm no cartão dos 25
   else if(t==="im") mdVT(()=>{ ST.ui.eqv="imbu"; go("equip"); eqView(); }); });
-function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); (root||document).querySelectorAll("[data-haccess]").forEach(hAccessFill); }
+function initRoutes(root){ (root||document).querySelectorAll("[data-rt]").forEach(b=>drawRoute(b.dataset.rt)); (root||document).querySelectorAll("[data-haccess]").forEach(hAccessFill); (root||document).querySelectorAll("[data-cam]").forEach(camFill); }
 document.addEventListener("change",e=>{ const s=e.target.closest("[data-rthome]"); if(!s) return; const c=C(); if(!c) return; c.home=s.value||""; save();
   document.querySelectorAll("[data-rt]").forEach(b=>{ const R=RTS[b.dataset.rt]; if(!R) return; const hi=R.routes.findIndex(r=>r.s===c.home); R.sel=hi>=0?hi:R.sel; R.step=null; b.innerHTML=rtInner(b.dataset.rt); drawRoute(b.dataset.rt); }); });
 document.addEventListener("click",e=>{
@@ -45535,16 +45535,17 @@ function routeHTML(pid,x,y,z){
 // NAVD = profundidade da navegação dentro do site (history.state.gd): o '← Voltar' só faz history.back() se houver para onde voltar.
 let NAVD=0, SHEET_OPENER=null, SHEET_BACK=false;
 function sheetInert(on){ document.querySelectorAll("header.bar,body>.shell,#bottom,body>.ad-side,body>.ui-hint,#hcmpTray").forEach(el=>{ if(on){ if(!el.hasAttribute("inert")){ el.setAttribute("inert",""); el.dataset.shInert="1"; } } else if(el.dataset.shInert){ el.removeAttribute("inert"); delete el.dataset.shInert; } }); }
-function openSheet(html){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"); clearTimeout(sh._shT); sh.classList.remove("closing"); if(typeof mdTipHide==="function") mdTipHide();
+function shCls(cls){ const shc=$("sheet").querySelector(".sh"); if(!shc) return; if(shc.dataset.cls){ shc.classList.remove(shc.dataset.cls); delete shc.dataset.cls; } if(cls){ shc.classList.add(cls); shc.dataset.cls=cls; } }
+function openSheet(html,cls){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"); clearTimeout(sh._shT); sh.classList.remove("closing"); if(typeof mdTipHide==="function") mdTipHide(); shCls(cls);
   if(!was){ let op=document.activeElement; if(op&&op.closest&&op.closest("#gsPop")) op=$("gsBtn"); SHEET_OPENER=op&&op!==document.body?op:null;
     if(!(history.state&&history.state.sheet)){ try{ history.pushState({sheet:1,gd:NAVD+1},""); NAVD++; }catch(e){} } sheetInert(true); }
-  $("sheetBody").innerHTML=html; initRoutes($("sheetBody")); initKstat($("sheetBody")); sh.classList.add("on"); document.body.classList.add("noscroll"); $("sheetBody").scrollTop=0; $("sheetX").focus({preventScroll:true}); const shc=sh.querySelector(".sh"); if(shc) shc.scrollLeft=0; }
+  $("sheetBody").innerHTML=html; initRoutes($("sheetBody")); fxInit($("sheetBody")); sh.classList.add("on"); document.body.classList.add("noscroll"); $("sheetBody").scrollTop=0; $("sheetX").focus({preventScroll:true}); const shc=sh.querySelector(".sh"); if(shc) shc.scrollLeft=0; }
 function closeSheet(o){ const sh=$("sheet"), was=sh.classList.contains("on")&&!sh.classList.contains("closing"), pop=!!(o&&o.fromPop===true), nav=!!(o&&o.nav===true);
   if(was){ sheetInert(false); const op=SHEET_OPENER; SHEET_OPENER=null; if(!nav&&op&&op.isConnected){ try{ op.focus({preventScroll:true}); }catch(e){} }
     const st=history.state; if(st&&st.sheet){ if(nav){ try{ history.replaceState(Object.assign({},st,{sheet:0}),""); }catch(e){} } else if(!pop){ SHEET_BACK=true; history.back(); } } }
   clearTimeout(sh._shT);
-  if(was && typeof mdMotion==="function" && mdMotion()){ sh.classList.add("closing"); sh._shT=setTimeout(()=>{ sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); },190); return; }
-  sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); }
+  if(was && typeof mdMotion==="function" && mdMotion()){ sh.classList.add("closing"); sh._shT=setTimeout(()=>{ sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); shCls(); },190); return; }
+  sh.classList.remove("on","closing"); document.body.classList.remove("noscroll"); shCls(); }
 const IMMN={paralyze:"paralisia",invisible:"invisível",drown:"afogamento",lifedrain:"dreno de vida",manadrain:"dreno de mana",outfit:"outfit",drunk:"embriaguez",bleed:"sangramento"};
 function crSpr(k,sz){ const i=G.cr[k]; return i==null?`<span class="cr cr-x" style="--s:${sz||52}px" aria-hidden="true">${IC.criaturas}</span>`:`<span class="cr" style="--s:${sz||52}px;--x:${i%32};--y:${Math.floor(i/32)}" aria-hidden="true"></span>`; }
 function ltSpr(n){ const i=G.lt[n]; return i==null?`<span class="lti"></span>`:`<span class="lti" style="--x:${i%32};--y:${Math.floor(i/32)}" aria-hidden="true"></span>`; }
@@ -45577,32 +45578,101 @@ function questsForHunt(pid,h){ const ids=new Set(); if(h&&h.q&&h.q!=="marapur") 
   G.quests.forEach(q=>{ const n=q.n.toLowerCase().replace(/^the /,"").replace(/ quest$/,""); if(n.length>5&&txt.includes(n)) ids.add(q.id); });
   return [...ids].filter(id=>QBY[id]); }
 function questsTab(ids){ if(!ids.length) return `<p class="small muted">Esta hunt não exige quests.</p>`; return ids.map(id=>`<div data-qcard="${id}"><div class="qcard"><h4>${esc(qName(id))}</h4><p class="small muted">A carregar…</p></div></div>`).join(""); }
-function huntSheet(h){
-  const c=C(), p=h.p, name=p?p.n:h.r.place, cmp=h.cmp, m=h.r.c&&G.hm[h.r.c];
-  /* r6-t2 */ const nA = h.src==="old" ? " (antes do rebalance)" : h.est ? " ≈" : "";
-  let acc="";
-  if (h.q){ const dn=qDone(c,h.q), qq=QBY[h.q]; acc = dn ? `<span class="tag ok">acesso ✓ ${esc(qName(h.q))}</span>` : `<span class="tag warn">precisa de ${esc(qName(h.q))}${qq&&qq.s==="party"?" (grupo)":""}</span>${guiaBtn(guiaOf(h.q),"Guia passo a passo ›","tag acc")}`; }
-  const vars = h.vars.length>1 ? `<div class="vars">${h.vars.map(v=>`<span class="tag">${esc(v.place)}${v.xp?` · ${fmt(v.xp)}`:""}</span>`).join("")}</div>` : "";
-  return `<div class="sh-h"><div><span class="eyebrow" style="margin:0">${esc(VD().n)} · ${h.l}+</span><h3>${esc(name)}</h3></div>${hcmpBtn(h)}</div>
-    <div class="shero">${huntMap(h)}${m?`<button type="button" class="btn small shspawn" data-hspawn="${h.r.c}">Ver spawns no mapa</button>`:""}${((G.pm[h.r.c]||{}).h||[]).length?`<span class="hero-mons">${((G.pm[h.r.c]||{}).h||[]).filter(([k])=>G.cr[k]!=null).slice(0,4).map(([k])=>crSpr(k,56)).join("")}</span>`:""}</div>
-    <div class="sh-n">${h.xp==null&&p&&(p.xs||p.ls)?`<div><b class="stars">${stars(p.xs)||"—"}</b><span>XP (TibiaWiki)</span></div><div><b class="stars">${stars(p.ls)||"—"}</b><span>loot (TibiaWiki)</span></div>`:`<div><b>${fmt(h.xp)}</b><span>XP/h${nA}</span></div><div><b>${fmt(h.lo)}</b><span>lucro/h${h.lo!=null?nA:""}</span></div>`}<div><b>${h.l}+</b><span>nível</span></div><div><span class="danger-dots d${h.d}"><i></i><i></i><i></i></span><span>risco</span></div></div>
-    ${(()=>{ const comp=h.r.c?Object.entries(clsShares(h.r.c)).filter(([k,v])=>k!=="?"&&v>=0.05).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${clsName(k)} ${Math.round(v*100)}%`).join(" · "):""; return comp?`<p class="small muted" style="margin:0">Criaturas, pela parte do XP: ${esc(comp)}</p>`:""; })()}
-    ${h.boost?`<p class="small" style="margin:0;color:var(--ok)">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</p>`:""}
-    <div class="pills"><span class="compat ${cmp.cls}">${esc(cmp.txt)}</span>${cmp.alt?`<span class="tag acc">${esc(cmp.alt)}</span>`:""}${cmp.imm&&cmp.imm.length?`<span class="tag warn">imune a ${esc(cmp.imm.join(" e "))}</span>`:""}${acc}</div>
-    ${haHTML(h.r.c,h.voc)}
-    ${h.r.c?`<div class="kstat" data-kstat="${h.r.c}"></div>`:""}
-    <div class="whatb"><h5>Setup para ${esc(G.voc[h.voc].n)} ${c.level}</h5>${setupHTML(h.voc,c.level,p,h)}<details><summary class="small">Dano de cada elemento</summary>${elemHTML(h.voc,p)}</details></div>
-    ${h.r.c?hsetsHTML(h.r.c):""}
-    ${h.r.c?hwheelHTML(h.r.c,h.d):""}
-    ${tabsUI([["rota","Como chegar",huntRoute(h.r.c)],
-      ["mons","Monstros e loot",`${h.r.how?`<p class="small" style="margin:0"><b>${h.voc==="paladin"?"Munição":h.voc==="knight"||h.voc==="monk"?"Arma":"Rotação"}:</b> ${esc(h.r.how)}</p>`:""}${monsPanel((G.pm[h.r.c]||{}).h,(G.pm[h.r.c]||{}).r)}`,((G.pm[h.r.c]||{}).h||[]).length||0],
-      ...(h.r.c?[["loot","Loot e lucro",`<div class="lp" data-lootp="${h.r.c}" data-xp="${h.xp0??""}"${(()=>{ const e=ST.ui.ev; return evOn()&&e.t==="mon"&&hasKey(G.mon,e.v)?` data-evk="${esc(e.v)}"`:""; })()} data-lo="${h.lo??""}" data-lsrc="${h.src==="hao"||h.src==="mx"?"est":h.src||""}" data-how="${esc(h.r.how||"")}"><p class="small muted">A calcular os preços…</p></div>`]]:[]),
-      ["quests","Quests",questsTab(questsForHunt(h.r.c,h)),questsForHunt(h.r.c,h).length||0],
-      ...(vars||(p&&p.note)?[["info","Notas",`${p&&p.note?`<p class="small">${esc(p.note)}</p>`:""}${vars?`<h4 class="sub">Variantes no TibiaPal</h4>${vars}`:""}`]]:[])])}
-    ${h.wiki?`<p class="tiny muted">Hunting place da TibiaWiki${p.city?` (perto de ${esc(p.city)})`:""}: nível recomendado e notas de XP e loot de 1 a 5. ${h.xp==null?"Ainda sem medição de XP/h.":h.src==="ha"?"O XP/h vem de sessões reais.":h.est?"Ainda sem medição de XP/h: o número é uma estimativa.":""}${p.acc&&((G.hv&&G.hv[h.r.c])||G.routes[h.r.c])?" "+esc(p.acc):""}</p>`:""}
-    ${h.fill?`<p class="tiny muted">O TibiaPal não lista esta hunt para ${esc(G.voc[h.voc].n)}: o nível vem da TibiaWiki ou das outras vocações${h.est?", e o XP é estimado":""}.</p>`:""}
-    ${estTxt(h)}`;
+/* r35 fichas (Task 4) */ // ficha objetiva: mapa ao lado de «Como lá chegar», 5 números, pré-requisitos, criaturas, loot, charms e preys.
+// fichaHTML é comum às hunts e aos bosses (Task 5); a dificuldade é da personagem ativa (diffFor: set, nível e vocação).
+function fichaHTML(m){
+  return `<div class="sh-h"><div><span class="eyebrow" style="margin:0">${m.eyebrow}</span><h3>${m.title}</h3></div>${m.head||""}</div>
+    <div class="fx"><div class="fx-top"><div class="fx-map">${m.map}</div><div class="fx-cam">${m.cam}</div></div>
+    <div class="fx-stats">${m.stats.map(x=>`<div class="fx-s" data-fxs="${x.k}"><span class="fx-l">${x.l}</span><div class="fx-v">${x.v}</div></div>`).join("")}</div>
+    <section class="fx-sec"><h4>Pré-requisitos</h4>${m.pre}</section>
+    <section class="fx-sec fx-mons"><h4>Criaturas</h4>${m.mons}</section>
+    <section class="fx-sec fx-loot"><h4>Loot principal</h4>${m.loot}</section>
+    ${m.tips?`<section class="fx-sec fx-tips"><h4>Charms e preys</h4>${m.tips}</section>`:""}
+    ${m.foot||""}</div>`;
 }
+function diffHTML(n,extra){ return `<span class="fx-diff"><span class="fx-dm" aria-hidden="true">${[1,2,3,4,5].map(i=>`<i${i<=n?' class="on"':""}></i>`).join("")}</span><b>${n}/5</b><span> · ${esc(GrimFicha.DIFF[n])}</span></span>${extra||""}`; }
+// proteções da personagem: o set ativo com «Os meus sets» (c.hset "mine"), senão o best set do nível; itens + imbuements (setStats)
+const PROTC=new Map();
+function protOf(c){ if(!c) return {prot:{},lbl:"Sem personagem: conta só a vida."};
+  const my=c.hset==="mine"&&Array.isArray(c.sets)?c.sets.find(s=>s.id===c.aset):null;
+  const key=my?"m|"+c.id+"|"+c.level+"|"+(c.imbTier||"")+"|"+my.name+"|"+JSON.stringify(my.slots):"b|"+[c.id,c.voc,c.level,c.wtype||"",(c.hs&&c.hs.sk&&c.hs.sk.k)||""].join("|");
+  if(!PROTC.has(key)){ rebuildIndex(); const t=setStats(my||bisSet(c),imTier(c)), prot={};
+    Object.keys(Object.assign({},t.ab,t.abi)).forEach(e=>prot[e]=(t.ab[e]||0)+(t.abi[e]||0));
+    PROTC.set(key,{prot,lbl:my?`Contas com o teu set "${my.name}"`:`Contas com o best set do nível ${c.level}`}); }
+  return PROTC.get(key); }
+// sem personagem: a vocação do site (a do rascunho, senão druid) e o nível recomendado da hunt
+function fxVoc(){ const v=document.body.dataset.voc; return hasKey(G.voc,v)?v:"druid"; }
+function fxRecL(pid,voc){ const ls=v=>(G.hunts[v]||[]).filter(x=>x.c===pid).map(x=>x.l), a=ls(voc), b=a.length?a:Object.keys(G.hunts).flatMap(ls); return b.length?Math.min(...b):8; }
+// dificuldade 1–5 para a personagem: pior golpe efetivo das criaturas principais (data/crdmg.json, com as proteções) ÷ vida efetiva
+function diffFor(pid,c){ const p=hasKey(G.places,pid)?G.places[pid]:{}, voc=c?c.voc:fxVoc(), L=c?c.level:fxRecL(pid,voc);
+  const ms=new Set((p.mons||[]).map(x=>String(x).trim().toLowerCase())), ok=k=>hasKey(G.mon,k)&&!G.mon[k][7];
+  let ks=((G.pm[pid]||{}).h||[]).map(([k])=>k).filter(k=>ms.has(k)&&ok(k)); if(!ks.length) ks=[...ms].filter(ok);
+  let hit=null; if(CRDV){ const pr=protOf(c).prot; ks.forEach(k=>{ const v=hasKey(CRDV,k)?GrimFicha.effHit(CRDV[k],pr):null; if(v!=null&&(hit==null||v>hit)) hit=v; }); }
+  const n=GrimFicha.huntDiff({d:p.d, hit, eff:GrimBoss.effHP(voc,L,chStats(c||{voc,level:L}).ml), adj:CALIB.dz[pid]});
+  return {n,lbl:GrimFicha.DIFF[n]}; }
+// o dano das criaturas chega depois: os cartões, a dificuldade e as preys da ficha atualizam-se quando o crdmg.json carrega
+let FXDW=false;
+function fxDiffWait(){ if(CRDV||FXDW) return; FXDW=true; crdLoad().then(()=>fxDiffSync(document)); }
+function fxDiffSync(root){ const c=C();
+  root.querySelectorAll("[data-fxd]").forEach(el=>{ const d=diffFor(el.dataset.fxd,c); el.innerHTML=el.dataset.fxdc?`dificuldade ${d.n}/5`:diffHTML(d.n,'<i data-fxdok hidden></i>'); });
+  root.querySelectorAll("[data-fxprey]").forEach(el=>{ el.innerHTML=fxPreyHTML(el.dataset.fxprey); }); }
+// parte D: a criatura principal da hunt (XP × quantidade no G.pm, sem bosses) está nos 10 % mais mortos da semana no mundo da personagem
+// shortcut: o plural do TibiaData só pelo kPlural (cyclopes, werewolves… ficam sem nota); usar os plurais do _dev/tibiadata.py se fizer falta
+function fxKstFill(box){ const c=C(), w=c&&c.world, pid=box.dataset.fxkst; if(!w) return;
+  const m=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)&&!G.mon[k][7]).map(([k,n])=>[k,(+G.mon[k][2]||0)*Math.max(+n||0,1)]).sort((a,b)=>b[1]-a[1])[0];
+  if(m) kstatLoad(w).then(ks=>{ const e=ks&&(ks[m[0]]||ks[kPlural(m[0])]); if(!e||!box.isConnected) return;
+    const v=Object.keys(ks).filter(r=>r[0]!=="(").map(r=>+ks[r].last_week_killed||0).sort((a,b)=>a-b), p90=v[Math.ceil(v.length*0.9)-1];
+    if(+e.last_week_killed>0&&+e.last_week_killed>=p90) box.hidden=false; }); }
+function fxInit(root){ root.querySelectorAll("[data-fxloot]").forEach(fxLootFill); root.querySelectorAll("[data-fxkst]").forEach(fxKstFill); if(!root.querySelector("[data-fxd]")) return; if(CRDV) fxDiffSync(root); else crdLoad().then(()=>fxDiffSync(root)); }
+function fxPreyHTML(pid){ const c=C(), L=c?c.level:fxRecL(pid,fxVoc());
+  const ms=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)&&!G.mon[k][7]).map(([k,n])=>({k,n:G.mon[k][0],xp:+G.mon[k][2]||0,cnt:Math.max(+n||0,1),hit:CRDV&&hasKey(CRDV,k)&&typeof CRDV[k].m==="number"?CRDV[k].m:null}));
+  const P=GrimFicha.preyPicks(ms,L); if(!P.length) return `<p class="small muted">Sem criaturas para escolher preys.</p>`;
+  return `<ul class="fx-prey">${P.map(x=>`<li>${crSpr(x.k,32)}<span>${mlink(x.k,esc(x.n))}</span><span class="tag">${esc(GrimFicha.PREY[x.bonus])}</span></li>`).join("")}</ul>${P.length===3?`<p class="tiny muted">O 3.º slot de prey compra-se na Store.</p>`:""}`; }
+// loot principal: os preços do NPC (G.mon) logo; com o items.json e o Market do mundo, a regra do site (priceOf)
+const fxPct = ch => `${ch<1?(+ch).toFixed(2):(+ch).toFixed(ch<10?1:0)}%`;
+function fxScan(u){ if(!(u>0)) return ""; const d=new Date(u*1000), t=d.toLocaleTimeString("pt-PT",{hour:"2-digit",minute:"2-digit"});
+  return d.toDateString()===new Date().toDateString()?`hoje às ${t}`:`${d.toLocaleDateString("pt-PT",{day:"numeric",month:"numeric"})} às ${t}`; }
+function fxLootHTML(pid,w,st){ const src={}, live=!!ITV;
+  const mons=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)).map(([k,n])=>({n:G.mon[k][0],cnt:Math.max(+n||0,1),loot:(G.mon[k][6]||[]).map(([,ln,pct,v])=>{
+    let val=+v||0, from="NPC"; if(live){ const pr=priceOf(ln,w); if(pr.v>0){ val=pr.v; from=pr.best==="market"?"Market":pr.best==="coin"?"":"NPC"; } }
+    src[ln]=from; return {n:ln,pct:+pct||0,v:val}; })}));
+  const L=GrimFicha.topLoot(mons,8), note=fxLNote(w,st);
+  if(!L.length) return `<p class="small muted">Sem dados de loot.</p>`;
+  return `<ul class="fx-lt">${L.map(x=>`<li data-fxln="${esc(x.n.toLowerCase())}">${ltSpr(x.n)}<span class="fx-ln">${ilink(x.n)}<span class="tiny muted">loot de ${esc(x.from)}</span></span><span class="fx-lp">${fxPct(x.pct)}</span><span class="fx-lv"><b>${gp(x.v)}</b><span class="tiny muted fx-lsrc">${src[x.n]||""}</span></span></li>`).join("")}</ul>
+    <p class="tiny muted fx-lnote">${note}</p>`; }
+function fxLNote(w,st){ const mk=w&&MKV[w];
+  return st==="wait" ? `<span class="fx-lwait">A ver os preços do Market de ${esc(w)}…</span>` : st==="mkt" ? `Preços do Market de ${esc(w)}${mk&&mk.updated?`, scan de ${fxScan(mk.updated)}`:""}.`
+    : st==="fail" ? "Preços do NPC: o Market não respondeu." : "Escolhe o mundo da personagem para ver os preços do Market."; }
+function fxLootFill(box){ if(box.dataset.fxok) return; box.dataset.fxok="1"; const c=C(), w=(c&&c.world)||"", pid=box.dataset.fxloot;
+  Promise.all([ITV?null:dsafe("items").then(d=>{ if(!ITV&&d&&Object.keys(d).length) ITV=d; }), w?mktLoad(w):null]).then(([,m])=>{
+    if(box.isConnected) box.innerHTML=fxLootHTML(pid,w,!w?"noworld":m?"mkt":"fail"); }); }
+// resistências: os 2 elementos que mais dano levam e o que menos leva; os 7 num <details>
+function fxResHTML(p){ const R=GrimFicha.resist(p&&p.eff); if(!R.length) return `<b>—</b>`;
+  const one=r=>`<span class="fx-rc">${chip(r.el)} ${r.imm?"imune":r.heal?"cura-se":r.pct+"%"}</span>`;
+  return `<span class="fx-rs">${[R[0],R[1],R[R.length-1]].map(one).join("")}</span><details class="fx-rd"><summary>Ver os 7 elementos</summary><span class="fx-rs">${R.map(one).join("")}</span></details>`; }
+function huntSheet(h,noCmp){
+  const c=C(), p=h.p||{}, pid=h.r.c, name=p.n||h.r.place, m=pid&&G.hm[pid];
+  const below=`<b class="fx-bl"${h.Lm?` title="Medido no nível ${nf(h.Lm)}"`:""}>abaixo do nível da medição</b>`, wiki=h.xp==null&&!h.below&&(p.xs||p.ls);
+  const xp = h.below ? below : wiki ? `<b class="stars">${stars(p.xs)||"—"}</b>` : h.xp==null ? "<b>—</b>" : `<b>${fmt(h.xp)}</b>${hcEst(h)}`;
+  const lo = h.below ? below : wiki ? `<b class="stars">${stars(p.ls)||"—"}</b>` : h.lo==null ? "<b>—</b>" : `<b${h.lo<0?' class="warnt"':""}>${fmt(h.lo)}</b>${h.est?"≈":""}`;
+  const d=diffFor(pid,c), hl=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k));
+  return fichaHTML({
+    eyebrow:`${esc(G.voc[h.voc].n)} · ${h.l}+`, title:esc(name), head:noCmp?"":hcmpBtn(h),
+    map:`${(m&&huntMap(h))||`<p class="small muted">Sem mapa desta zona.</p>`}${m?`<div class="fx-mapb">${mapBtn(m[0],m[1],m[2],name,"Abrir o mapa")}<button type="button" class="btn small ghost" data-hspawn="${esc(pid)}">Ver spawns no mapa</button></div>${m[3]==="a"?`<p class="tiny muted">O ponto no mapa é a zona aproximada.</p>`:""}`:""}`,
+    cam:`<div data-cam="h:${esc(pid)}"><p class="tkload">A carregar o caminho…</p></div>`,
+    stats:[{k:"xp",v:xp,l:wiki?"XP (TibiaWiki)":"XP/h"},{k:"lo",v:lo,l:wiki?"loot (TibiaWiki)":"lucro/h"},{k:"lv",v:`<b>${h.l}+</b>`,l:"nível recomendado"},
+      {k:"res",v:fxResHTML(p),l:"resistências"},{k:"dif",v:`<span data-fxd="${esc(pid)}">${diffHTML(d.n,CRDV?'<i data-fxdok hidden></i>':"")}</span><span class="tiny muted fx-pl">${esc(protOf(c).lbl)}</span>${c&&c.world?`<span class="tiny warnt fx-kst" data-fxkst="${esc(pid)}" hidden>Hunt muito disputada no teu mundo</span>`:""}`,l:"dificuldade"}],
+    pre:`<div data-campre></div>`,
+    mons:hl.length?`<ul class="fx-ml">${hl.map(([k,n])=>{ const M=G.mon[k]; return `<li>${crSpr(k,44)}<span class="fx-mn"><span>${mlink(k,esc(M[0]))}${M[7]?' <span class="tag gold">boss</span>':""}${n>1?` <span class="muted">× ${n}</span>`:""}</span>${M[1]>0||M[2]>0?`<span class="tiny muted">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:""}</span></li>`; }).join("")}</ul>`:`<p class="small muted">Sem dados de criaturas para esta zona.</p>`,
+    loot:`<div class="fx-loot-b" data-fxloot="${esc(pid)}">${fxLootHTML(pid,(c&&c.world)||"",c&&c.world?"wait":"noworld")}</div>`,
+    tips:`<div class="fx-tg">${c?`<div class="fx-charms"><h5>Charms</h5>${hCharmsHTML(c,G.places[pid],h)}</div>`:""}<div class="fx-preys"><h5>Preys</h5><div data-fxprey="${esc(pid)}">${fxPreyHTML(pid)}</div></div></div>`,
+    foot:`${h.boost?`<p class="tiny muted">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</p>`:""}${estTxt(h)}${p.note?`<p class="tiny muted">${esc(p.note)}</p>`:""}`
+  });
+}
+// hunt sem linha para a vocação (pesquisa geral): a mesma ficha, com os números do GrimFicha.huntEst ajustados ao nível
+function placeSheet(pid){ const c=C(), voc=c?c.voc:fxVoc(), p=G.places[pid], L=c?c.level+5:fxRecL(pid,voc), pl=c?c.level:L;
+  const e=GrimFicha.huntEst({G,voc,pid,L,pl,compatFor,avgMon})||{xp:null,lo:null,l:fxRecL(pid,voc),src:null,est:null,estx:null,Lm:null,cmp:compatFor(voc,p,"")}, a=estAdj(e,pl);
+  return huntSheet({i:-1,voc,r:{c:pid,place:p.n,l:e.l,how:""},vars:[],p,l:e.l,xp:a.xp,xp0:a.xp,boost:0,lo:a.lo,est:e.est,src:e.src,estx:e.estx,Lm:e.Lm,below:a.below,cmp:e.cmp,d:p.d,q:p.q,wiki:!!p.w,fill:false},true); }
 $("sheetX").onclick=closeSheet; $("sheet").addEventListener("click",e=>{ if(e.target.id==="sheet") closeSheet(); }); document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&$("sheet").classList.contains("on")) closeSheet(); });
 window.addEventListener("popstate",()=>{ const st=history.state, sh=$("sheet"), open=sh.classList.contains("on")&&!sh.classList.contains("closing");
   if(st&&typeof st.gd==="number") NAVD=st.gd;
@@ -45613,7 +45683,7 @@ document.addEventListener("keydown",e=>{ if(e.key!=="Tab") return; const sh=$("s
   const f=[...sh.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex="-1"])')].filter(x=>x.getClientRects().length&&!x.closest("[inert]")); if(!f.length) return;
   if(!a||!sh.contains(a)){ e.preventDefault(); (e.shiftKey?f[f.length-1]:f[0]).focus(); return; }
   const i=f.indexOf(a); if(e.shiftKey&&i===0){ e.preventDefault(); f[f.length-1].focus(); } else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } });
-document.addEventListener("click", e=>{ const b=e.target.closest("[data-hunt]"); if(!b) return; const h=HSTORE[b.dataset.hunt]; if(h) openSheet(huntSheet(h)); });
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-hunt]"); if(!b) return; const h=HSTORE[b.dataset.hunt]; if(h) openSheet(huntSheet(h),"sh-ficha"); });
 
 /* r3-t3 */ // comparar até 3 hunts solo lado a lado: botão na ficha (hcmpBtn no huntSheet), bandeja fixa em baixo (#hcmpTray) e tabela no painel (hcmpSheet).
 // Estado: ST.ui.hcmp = {cid, l:[pid,…]}; só conta para a personagem ativa (outro cid = lista vazia).
@@ -45674,11 +45744,11 @@ function hcmpHTML(){
     return `<th scope="col"><div class="hcmp-hd">${tops.length?`<span class="hcmp-mons" aria-hidden="true">${tops.map(([k])=>crSpr(k,32)).join("")}</span>`:""}<div class="hcmp-hn"><button type="button" class="linkbtn" data-hunt="h${h.voc}${h.i}">${n}</button><button type="button" class="hcmp-x" data-hcmpdel="${esc(h.r.c)}" aria-label="Tirar ${n} da comparação">${HCMP_X}</button></div></div></th>`; }).join("");
   const body=[
     row("Nível",H.map(h=>`<b>${h.l}+</b>`)),
-    row("XP/h",H.map(h=>h.xp==null?(h.p&&h.p.xs?`<span class="stars">${stars(h.p.xs)}</span> <span class="tiny muted">(TibiaWiki)</span>`:na)
+    row("XP/h",H.map(h=>h.xp==null?(h.below?"abaixo do nível da medição":h.p&&h.p.xs?`<span class="stars">${stars(h.p.xs)}</span> <span class="tiny muted">(TibiaWiki)</span>`:na)
       :`<b>${fmt(h.xp)}</b>${h.est?"≈":""}${h.src==="ha"?'<sup class="rl" title="Mediana de sessões solo reais desde junho">r</sup>':""}${h.boost?` <span class="tiny muted">(evento +${Math.round(h.boost*100)}%)</span>`:""}`),H.map(h=>h.xp),1),
     row("Lucro/h",H.map(h=>h.lo==null?(h.xp==null&&h.p&&h.p.ls?`<span class="stars">${stars(h.p.ls)}</span> <span class="tiny muted">(TibiaWiki)</span>`:na)
       :`<b${h.lo<0?' class="warnt"':""}>${fmt(h.lo)}</b>${h.est?"≈":""}`),H.map(h=>h.lo),1),
-    row("Risco",H.map(h=>`<span class="danger-dots d${h.d}" aria-hidden="true"><i></i><i></i><i></i></span> ${HCMP_RISK[h.d]||"—"}`),H.map(h=>h.d),-1),
+    row("Dificuldade",H.map(h=>diffHTML(diffFor(h.r.c,c).n)),H.map(h=>diffFor(h.r.c,c).n),-1),
     row("Tipo de criatura",H.map(h=>{ const mc=mainCls(h.r.c); return mc?esc(clsName(mc[0]).toLowerCase()):Object.keys(clsShares(h.r.c)).some(k=>k!=="?")?"mista":na; })),
     row("Ataca com",H.map(h=>h.cmp&&h.cmp.best&&h.cmp.v!=null?`${chip(h.cmp.best)} <b>${h.cmp.v}%</b>${h.cmp.via?` <span class="tiny muted">· ${h.voc==="paladin"?"munição":h.voc==="druid"||h.voc==="sorcerer"?"runas":"arma"}</span>`:""}`:na),H.map(h=>h.cmp&&h.cmp.best?h.cmp.v:null),1),
     row("Dano que vais levar",H.map(h=>{ if(!CRDV) return wait; const pf=huntProfile(h.r.c);
@@ -45689,7 +45759,7 @@ function hcmpHTML(){
     row("Sessões reais",H.map(h=>{ const v=G.ha&&G.ha[h.r.c]&&G.ha[h.r.c].v&&G.ha[h.r.c].v[h.voc]; return v?`${v[0]} ${v[0]===1?"sessão":"sessões"} · ${fmt(v[3])}/h`:na; }))
   ].join("");
   return out+`<div class="scroll-x hcmp-w"><table class="hcmp" aria-label="Hunts lado a lado"><thead><tr><td class="hcmp-k"></td>${head}</tr></thead><tbody>${body}</tbody></table></div>
-    <p class="tiny muted" style="margin:0">«Melhor»: mais XP e lucro, menos risco, o teu elemento a render mais, o golpe mais pequeno e menos caminho desde o templo${c.home?` (de ${esc(c.home)} quando há percurso)`:""}. ≈ = estimado a partir de outra vocação; r = mediana de sessões solo reais. Carrega no nome para abrir a ficha da hunt.</p>`;
+    <p class="tiny muted" style="margin:0">«Melhor»: mais XP e lucro, menor dificuldade, o teu elemento a render mais, o golpe mais pequeno e menos caminho desde o templo${c.home?` (de ${esc(c.home)} quando há percurso)`:""}. ≈ = estimado a partir de outra vocação; r = mediana de sessões solo reais. Carrega no nome para abrir a ficha da hunt.</p>`;
 }
 function hcmpSheet(){ if(!C()) return; openSheet(hcmpHTML());
   if(!CRDV) crdLoad().then(()=>{ const sh=$("sheet"); if(sh.classList.contains("on")&&!sh.classList.contains("closing")&&sh.querySelector("table.hcmp")) $("sheetBody").innerHTML=hcmpHTML(); }); }
@@ -46419,7 +46489,7 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget
 // mundo (lootPerKill) e o Bosstiary (c.bst = {chave: estágio 0–3}; pontos e bónus de loot pela Cyclopedia). O dano de boss vem
 // do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
 // personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
-let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null;
+let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null, BSROW={}, BSCRW=false; // BSROW[k] = {b, r, lo}: o último renderBosses, para a ficha
 let BSACCESS=null;
 function bsAccessData(){
   return BSACCESS||(BSACCESS=dload("boss-access").then(d=>{
@@ -46443,6 +46513,88 @@ function travelPlaceHTML(p){
     ${p.entrance?mapBtn(p.entrance.x,p.entrance.y,p.entrance.z,p.title,"Ver o ponto de chegada à zona"):""}
     ${(p.leave||[]).length?`<details class="rt-pre"><summary>Como sair</summary>${list(p.leave)}</details>`:""}</details>`;
 }
+/* fichas:caminho */ // r35 (fichas, Task 3): «Como lá chegar» em troços (data/caminhos.json), o mapa de cada troço (GrimMini,
+// shared/minimapa.js, o minimapa do Questski) e os pré-requisitos. Os eventos ficam depois da marca do fim (o teste corre sem document).
+let CAMP=null; const CAMPTS={};
+function camData(){
+  return CAMP||(CAMP=dload("caminhos").then(d=>{
+    if(!d||d.v!==1||!d.h||!d.b) throw new Error("Caminhos indisponíveis");
+    return d;
+  }).catch(e=>{ CAMP=null; throw e; }));
+}
+const CAMST={ok:["ok","confirmado"],rev:["acc","revisto"],part:["","falta o último troço"],none:["warn","por documentar"]};
+const camOkC=c=>Array.isArray(c)&&c.length===3&&c.every(Number.isFinite);
+// passo com NPC: o bloco «Fala com …» já mostra a fala e o preço; tira do texto a mesma fala («: hi, …, yes») e o «(N gp)» a seguir
+function camSayCut(t,n){ const w=(n.say||[]).map(k=>`['"‘’]?${String(k).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}['"‘’]?`); if(!w.length) return t;
+  const r=String(t).replace(new RegExp(`\\s*[:,]?\\s*(?<![\\w'"‘’])${w.join("\\s*,\\s*")}(?:\\s*\\(\\s*[\\d.,]+\\s*gp\\s*\\))?`,"i"),"").trim();
+  return r||t; }
+function camHTML(cam,id,places){
+  cam=cam||{st:"none",pos:null,pa:0,pre:[],legs:[]}; places=places||{};
+  const st=hasKey(CAMST,cam.st)?CAMST[cam.st]:CAMST.none;
+  // troço {ref}: a ficha do local (chegar, avisos, ponto de chegada; o sair fica num <details>)
+  const legs=(cam.legs||[]).map(l=>{ if(!l.ref) return l; const p=hasKey(places,l.ref)?places[l.ref]:null; if(!p) return null;
+    const e=p.entrance, steps=(p.arrive||[]).concat(e?[{s:e.label||p.title,c:[e.x,e.y,e.z],npc:null,arr:1}]:[]);
+    return {t:"Chegar a "+p.title,steps,warn:p.warnings||[],leave:p.leave||[]}; }).filter(l=>l&&(l.steps||[]).length);
+  const list=xs=>`<ol class="cam-st">${xs.map((s,j)=>`<li><span class="cam-n">${j+1}</span><div class="cam-tx">${travelTextHTML(s.s)}</div></li>`).join("")}</ol>`;
+  const npc=n=>`<div class="cam-npc">${npcSpr(n.n,true)}<span>Fala com ${elink("npc",n.n)}${(n.say||[]).length?": "+n.say.map(k=>`<kbd>${esc(k)}</kbd>`).join(", "):""}${n.gp!=null?` · ${esc(n.gp)} gp`:""}</span></div>`;
+  const leg=(l,i)=>{ const key=id+":"+i, pts=[];
+    const lis=l.steps.map((s,j)=>{ let n=`<span class="cam-n">${j+1}</span>`;
+      if(camOkC(s.c)){ pts.push({c:s.c,n:j+1}); n=`<button type="button" class="cam-pin" data-camstep="${esc(key)}:${pts.length-1}" aria-label="Ver o passo ${j+1} no mapa">${j+1}</button>`; }
+      return `<li>${n}<div class="cam-tx">${s.arr?"<b>Chegada:</b> ":""}${travelTextHTML(s.npc?camSayCut(s.s,s.npc):s.s)}${s.npc?npc(s.npc):""}</div></li>`; });
+    CAMPTS[key]=pts;
+    return `<h5>${esc(l.t)}</h5>${pts.length?`<details class="cam-map" data-cammap="${esc(key)}"><summary>Ver no mapa</summary><div class="cam-mm"><canvas class="cam-cv"></canvas></div>
+      <p class="tiny muted"><span data-camfloor></span> · A linha mostra a ordem dos passos, não o caminho a pé.</p>
+      <a class="btn small ghost" data-camq href="quests/#/mapa">Abrir no mapa do Questski</a></details>`:""}<ol class="cam-st">${lis.join("")}</ol>
+      ${(l.warn||[]).map(t=>`<p class="small qwarn">${travelTextHTML(t)}</p>`).join("")}
+      ${(l.leave||[]).length?`<details class="rt-pre"><summary>Como sair</summary>${list(l.leave)}</details>`:""}`; };
+  const refs=cam.refs||[];
+  return `<div class="cam"><div class="cam-h"><b>Como lá chegar</b><span class="tag${st[0]?" "+st[0]:""}">${st[1]}</span>${cam.from?`<span class="small muted">A partir de ${esc(cam.from)}</span>`:""}</div>
+    ${legs.map(leg).join("")}
+    ${cam.st==="none"?`<p class="small muted">Ainda não temos este caminho passo a passo.</p>`:""}
+    ${refs.length?`<h5>Nos guias das quests</h5><ul class="small cam-refs">${refs.map(r=>`<li><a href="${guiaHref(r.slug)}/guia/sec-${esc(r.sec)}">${esc(r.t)}</a> <span class="muted">· ${esc(r.quest)}</span></li>`).join("")}</ul>`:""}</div>`;
+}
+// box = o <details class="cam-map">; pts = CAMPTS[troço] ([{c:[x,y,z], n}]); sel = índice em pts
+async function drawCam(box,pts,sel){
+  if(!box||!pts||!pts[sel]) return;
+  const mm=box.querySelector(".cam-mm"), z=pts[sel].c[2], [x,y]=pts[sel].c;
+  const fl=box.querySelector("[data-camfloor]"); if(fl) fl.textContent=window.I18N?I18N.tr(floorTxt(z)):floorTxt(z);
+  const q=box.querySelector("[data-camq]"); if(q) q.href=`quests/#/mapa/${x},${y},${z}`;
+  document.querySelectorAll(`[data-camstep^="${box.dataset.cammap}:"]`).forEach(b=>b.classList.toggle("on",b.dataset.camstep===box.dataset.cammap+":"+sel));
+  const acc=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+  await GrimMini.draw(mm,{img:floorImg(z),sel,line:true,color:acc||undefined,marks:pts.map((p,i)=>({x:p.c[0],y:p.c[1],z:p.c[2],n:p.n,cls:"small"+(i===sel?" sel":"")}))});
+}
+function preHTML(pre,c){
+  if(!pre||!pre.length) return `<p class="small muted">Sem pré-requisitos.</p>`;
+  return `<ul class="fx-pre">${pre.map(p=>{
+    if(p.k==="quest"){ const nm=esc(p.n), a=p.slug?`<a href="${guiaHref(p.slug)}${p.sec!=null?"/guia/sec-"+esc(p.sec):""}">${nm}</a>`:nm;
+      return `<li>${a}${p.note?` <span class="muted">— ${qmd(p.note)}</span>`:""}${c&&p.id?(qDone(c,p.id)?' <span class="tag ok">✓ feita</span>':' <span class="tag warn">por fazer</span>'):""}</li>`; }
+    if(p.k==="level") return `<li>Nível ${esc(p.n)}${p.rec?" recomendado":""}${c?(c.level>=p.n?' <span class="tag ok">✓</span>':' <span class="tag warn">acima do teu nível</span>'):""}</li>`;
+    if(p.k==="premium") return `<li>Conta premium</li>`;
+    if(p.k==="item") return `<li>${qmd("{item:"+p.n+"}")}</li>`;
+    return `<li>${qmd(p.s)}</li>`; }).join("")}</ul>`;
+}
+async function camFill(box){
+  if(!box||box.dataset.loaded) return;
+  box.dataset.loaded="1";
+  const root=(box.closest&&box.closest(".fx"))||box.parentElement, pb=root&&root.querySelector("[data-campre]");
+  try{ const [d]=await Promise.all([camData(),typeof linkIdxLoad==="function"?linkIdxLoad():null]); // índice dos NPCs para as ligações
+    if(!box.isConnected) return;
+    const id=String(box.dataset.cam||""), i=id.indexOf(":"), set=id.slice(0,i)==="b"?d.b:d.h, k=id.slice(i+1), cam=hasKey(set,k)?set[k]:null;
+    box.innerHTML=camHTML(cam||{st:"none",pos:null,pa:0,pre:[],legs:[]},id,d.places);
+    if(pb) pb.innerHTML=preHTML(cam?cam.pre:[],C());
+  }catch(e){ delete box.dataset.loaded; if(pb) pb.innerHTML="";
+    box.innerHTML=`<p class="small muted">Não consegui carregar o caminho.</p><button class="btn small ghost" data-camretry>Tentar de novo</button>`; }
+}
+/* fichas:caminho:fim */
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-camretry]"); if(b) camFill(b.closest("[data-cam]")); });
+// o mapa de cada troço desenha-se quando abre (1.º passo com ponto, ou o passo tocado) e muda de andar com o passo escolhido
+document.addEventListener("toggle",e=>{ const d=e.target; if(!d.matches||!d.matches(".cam-map")||!d.open) return;
+  drawCam(d,CAMPTS[d.dataset.cammap],+(d.dataset.sel||0)); },true);
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-camstep]"); if(!b) return;
+  const v=b.dataset.camstep, j=v.lastIndexOf(":"), key=v.slice(0,j), sel=+v.slice(j+1);
+  const d=[...document.querySelectorAll("[data-cammap]")].find(x=>x.dataset.cammap===key); if(!d) return;
+  d.dataset.sel=sel; if(d.open) drawCam(d,CAMPTS[key],sel); else d.open=true;
+  d.scrollIntoView({block:"nearest",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); });
 function bsAccessHTML(d,k){
   const a=hasKey(d.b,k)?d.b[k]:null;
   if(!a) return `<p class="small muted">Acesso deste boss por documentar.</p>`;
@@ -46451,17 +46603,9 @@ function bsAccessHTML(d,k){
   return `<h4 class="sub">Como chegar</h4><p class="small muted">Segue as entradas e os transportes descritos abaixo. A posição da sala no mapa não indica a cidade por onde se entra.</p>${places}${guides}
     ${!places&&!guides?`<p class="small muted">Ainda não há um percurso documentado para este boss.</p>`:!guides?`<p class="small muted">O acesso acima leva à zona. O troço até à sala do boss ainda está por documentar.</p>`:""}`;
 }
-async function bsAccessFill(box){
-  if(!box||box.dataset.loaded) return;
-  box.dataset.loaded="1";
-  try{ const d=await bsAccessData(); if(box.isConnected) box.innerHTML=bsAccessHTML(d,box.dataset.baccess); }
-  catch(e){ delete box.dataset.loaded; box.innerHTML=`<p class="small muted">Não consegui carregar os acessos.</p><button class="btn small ghost" data-bsretry>Tentar de novo</button>`; }
-}
-document.addEventListener("click",e=>{ const b=e.target.closest("[data-bsretry]"); if(b) bsAccessFill(b.closest("[data-baccess]")); });
 // o título é sempre escrito de novo inteiro (o tradutor do site traduz a frase toda; um remendo no texto já traduzido misturava línguas)
 function bsLead(P){ if(BSLEAD) $("bsLead").textContent=`Nível ${BSLEAD.L}: ${BSLEAD.solo} sozinho, ${BSLEAD.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`; }
 const BSF=[["solo","Sozinho"],["team","Em equipa"],["later","Mais tarde"],["all","Todos"]];
-const BSPROT={fire:"p_fire",earth:"p_earth",ice:"p_ice",energy:"p_energy",death:"p_death",holy:"p_holy"};
 const BSSTG=["—","Prowess","Expertise","Mastery"];
 const bsT = s => s==null?"—":s<60?`${Math.max(1,Math.round(s))} s`:s<3600?`${Math.round(s/60)} min`:`${Math.round(s/360)/10} h`;
 function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt);
@@ -46472,8 +46616,8 @@ function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt
   return BSCACHE={key, curve, real, gr}; }
 function bsStageBtn(c,k,b){ const st=(c.bst&&+c.bst[k])||0, pt=BSD.pts[b.c]||[], nx=pt[st];
   return `<button type="button" class="bs-tier s${st}" data-bstier="${esc(k)}" aria-label="${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}"><span class="tiny">Bosstiary</span><b>${BSSTG[st]}</b><span class="tiny muted">${nx?`${BSSTG[st+1]}: ${nx[0]} ${nx[0]===1?"morte":"mortes"} · +${nx[1]}`:"completo"}</span></button>`; }
-function bsRow(c,r,b,lo,CR){
-  const L=c.level, cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
+function bsRow(c,r,b,lo){
+  const cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
   const st = r.st==="solo" ? `<span class="tag ok">Sozinho · ≈ ${bsT(r.ttk)}</span>`
     : r.st==="team" ? `<span class="tag acc">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:""}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`
     : r.st==="locked" ? `<span class="tag">Acesso no nível ${b.ql}</span>`
@@ -46481,28 +46625,42 @@ function bsRow(c,r,b,lo,CR){
     : `<span class="tag warn">${r.teamL?`Em equipa ~${r.teamL}`:"Grupo grande"}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`;
   const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : "loot sem preço";
   const top = lo&&lo.top.length ? lo.top.slice(0,3).map(([n,g,pct])=>`${esc(n)} <span class="muted">${pct<1?pct.toFixed(1).replace(".",DECSEP):Math.round(pct)}%</span>`).join(" · ") : "";
-  const dm=Object.entries(b.dm||{}).sort((a,x)=>x[1]-a[1]), prot=dm.map(([e])=>BSPROT[e]).filter(Boolean)[0];
-  const why=[];
-  if(b.md) why.push(r.eff>=2*b.md?`Aguentas: vida efetiva ≈ ${nf(r.eff)}${isMage(c)?" (vida + Magic Shield)":""} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscado: golpes até ${nf(b.md)} por turno e tens ≈ ${nf(r.eff)} de vida efetiva${isMage(c)?" (vida + Magic Shield)":""} (pedimos o dobro do golpe).`);
-  if(r.hp) why.push(`${nf(r.hp)} de vida: com ≈ ${nf(r.dps)} de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})`:""}, ≈ ${bsT(r.ttk)} sozinho${r.ttkT?`, ≈ ${bsT(r.ttkT)} com 4 como tu`:""}.`);
-  else why.push("A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.");
-  if(b.q) why.push(`Acesso: ${elink("quest",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:""})`:""}.`);
-  if(b.lv) why.push("Sala com alavanca: até 5 jogadores, normalmente.");
-  if(b.sp==="r") why.push("Aparece em raids: não se marca, aparece no mundo.");
   return `<div class="bs-r" data-bsk="${esc(r.k)}"${b.q?` data-lsx="${esc(b.q)}"`:""}><span class="bs-ic">${crSpr(r.k,44)}</span>
-    <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
+    <div class="bs-m"><div class="bs-h"><button type="button" class="linkbtn bs-nm" data-boss="${esc(r.k)}"><b>${esc(b.n)}</b></button><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
       <div class="bs-st">${st}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
-      <details class="bs-d"><summary>${b.pos?"Porquê, como e onde":"Porquê e como"}</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
-        ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}</li>`:""}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:""}
-        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul>${bsMapHTML(b,loc)}<div data-baccess="${esc(r.k)}"><p class="tkload">A carregar o acesso…</p></div></details></div>
+      <div><button type="button" class="btn small ghost" data-boss="${esc(r.k)}">Ver ficha</button></div></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
-/* r24: onde está cada boss (data/bosses.json pos, de _dev/build_bosses.py): o mapa como nas quests e nos NPCs (canvas .qpos,
-   desenhado com drawPos quando «Porquê, como e onde» abre) e «Abrir no mapa»; pa = 1 é a entrada da zona, não o sítio exato */
-function bsMapHTML(b,loc){ if(!b.pos) return `<p class="small muted">Posição da sala por confirmar. Consulta o acesso abaixo.</p>`; const [x,y,z]=b.pos;
-  return `<div class="bs-map"><canvas class="qpos" width="360" height="240" data-qpos="${x},${y},${z}" aria-label="Mapa de ${esc(b.n)}"></canvas>
-    <p class="tiny muted">${b.pa?(loc?`Ponto aproximado de ${esc(loc)}; não confirma a entrada nem a sala do boss.`:"Ponto aproximado da zona; não confirma a entrada nem a sala do boss."):(loc?`Onde aparece: ${esc(loc)}.`:"Onde aparece.")}</p>${mapBtn(x,y,z,b.n+(loc?" · "+loc:""),"Abrir no mapa")}</div>`; }
-document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("bs-d")&&d.open){ bsAccessFill(d.querySelector("[data-baccess]")); } if(d.classList&&d.classList.contains("bs-d")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
+/* r35 fichas (Task 5) */ // ficha do boss: a mesma das hunts (fichaHTML), com o resultado do GrimBoss.judge da personagem ativa
+// (BSROW, com as proteções do set) e o mapa da sala (canvas .qpos com drawPos; pa = 1 é a zona, não a sala). Sem charms nem preys.
+function bossSheet(k){
+  const {b,r,lo}=BSROW[k], c=C(), w=(c&&c.world)||"", cr=BSD.cr&&hasKey(BSD.cr,k)?BSD.cr[k]:null, cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
+  const n=GrimFicha.bossDiff({st:r.st,eff:r.eff,md:b.md?r.md:null,ttk:r.ttk,tmax:GrimBoss.TMAX[b.c]||300});
+  const lv=[[r.soloL,"sozinho"],[r.teamL,"em equipa"]].filter(x=>x[0]!=null);
+  const dm=Object.entries(b.dm||{}).sort((x,y)=>y[1]-x[1]);
+  const sp=[b.lv&&"Sala com alavanca",b.sp==="r"&&"Aparece em raids: não se marca",b.sp==="g"&&"Aparece no mundo, ao acaso"].filter(Boolean);
+  const st=!w?"noworld":MKV[w]&&MKV[w].items?"mkt":"fail";
+  const loot=lo&&lo.top.length?`<ul class="fx-lt">${lo.top.slice(0,8).map(([nm,,pct])=>{ const pr=priceOf(nm,w);
+      return `<li data-fxln="${esc(nm.toLowerCase())}">${ltSpr(nm.toLowerCase())}<span class="fx-ln">${ilink(nm)}</span><span class="fx-lp">${fxPct(pct)}</span><span class="fx-lv"><b>${gp(pr.v)}</b><span class="tiny muted fx-lsrc">${pr.best==="market"?"Market":pr.best==="coin"?"":"NPC"}</span></span></li>`; }).join("")}</ul>
+    <p class="tiny muted fx-lnote">${fxLNote(w,st)}</p>`:`<p class="small muted">Sem dados de loot.</p>`;
+  return fichaHTML({
+    eyebrow:`${esc(GrimBoss.CLS[b.c])}${cd?` · ${esc(cd)}`:""}`, title:esc(b.n),
+    map:b.pos?`<canvas class="qpos" width="360" height="240" data-qpos="${b.pos.join(",")}" role="img" aria-label="${esc("Mapa de "+b.n)}"></canvas>
+      <div class="fx-mapb">${mapBtn(b.pos[0],b.pos[1],b.pos[2],b.n+(loc?" · "+loc:""),"Abrir o mapa")}</div>${b.pa?`<p class="tiny muted">O ponto no mapa é a zona aproximada.</p>`:""}${loc?`<p class="small">${esc(loc)}</p>`:""}`
+      :`<p class="small muted">Posição por confirmar.</p>${loc?`<p class="small">${esc(loc)}</p>`:""}`,
+    cam:`<div data-cam="b:${esc(k)}"><p class="tkload">A carregar o caminho…</p></div>`,
+    stats:[{k:"xp",v:b.xp?`<b>${nf(b.xp)}</b>`:"<b>—</b>",l:"XP por kill"},
+      {k:"lo",v:lo&&!lo.nodata?`<b>≈ ${gp(Math.round(lo.v))}</b>`:"<b>sem preço</b>",l:"valor por kill"},
+      {k:"lv",v:lv.length?lv.map(([l,t])=>`<b>${l}+</b> <span class="small muted">${t}</span>`).join("<br>"):`<b>${b.qr?b.qr+"+":"—"}</b>`,l:"nível recomendado"},
+      {k:"res",v:fxResHTML({eff:cr&&cr.el?Object.assign({min:cr.el},cr.el):null}),l:"resistências"},
+      {k:"dif",v:`${diffHTML(n,'<span class="tiny muted">para o teu nível</span><span class="tiny muted" aria-hidden="true"> · </span>')}<span class="tiny muted fx-pl">${esc(protOf(c).lbl)}</span>`,l:"dificuldade"}],
+    pre:`<div data-campre></div>`,
+    mons:`<ul class="fx-ml"><li>${crSpr(k,44)}<span class="fx-mn"><span>${mlink(b.n,esc(b.n))}</span><span class="tiny muted">${r.hp?`${nf(r.hp)} de vida`:"vida desconhecida"}${b.md?` · golpe até ${nf(b.md)} por turno`:""}</span>${dm.length?`<span class="fx-rs">${dm.map(([e,v])=>`<span class="fx-rc">${chip(e)} ${v}%</span>`).join("")}</span>`:""}</span></li></ul>${sp.map(t=>`<p class="small">${t}.</p>`).join("")}`,
+    loot, tips:""
+  });
+}
+document.addEventListener("click", e=>{ const x=e.target.closest("[data-boss]"); if(!x||!hasKey(BSROW,x.dataset.boss)) return;
+  openSheet(bossSheet(x.dataset.boss),"sh-ficha"); $("sheetBody").querySelectorAll("canvas[data-qpos]").forEach(drawPos); });
 function renderBosses(){
   const el=$("bsBody"), c=C(); if(!el||!c) return;
   if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class="small muted">Não consegui carregar o motor dos bosses.</p>`; return; }
@@ -46511,9 +46669,9 @@ function renderBosses(){
     if(!BSERR) Promise.all([dload("bosses"),dload("rotacoes"),dsafe("items"),dsafe("creatures"),w?mktLoad(w):null]).then(([b,r,items,crs])=>{ BSD=b; RXD=RXD||r; if(!ITV&&items&&Object.keys(items).length) ITV=items; BSD.cr=crs||{}; renderBosses(); }).catch(()=>{ BSERR=true; renderBosses(); });
     return; }
   let cv; try{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui calcular o teu dano de boss.</p>`; return; }
-  const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[];
-  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0});
-    all.push({k,b,r,lo:lootPerKill(k,CR,w)}); });
+  const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[], prot=protOf(c).prot; BSROW={};
+  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0,prot,d:CRDV&&hasKey(CRDV,k)?CRDV[k].d:null});
+    const x={k,b,r,lo:lootPerKill(k,CR,w)}; all.push(x); BSROW[k]=x; });
   const cnt={solo:0,team:0,later:0,all:all.length}; all.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
   const f=BSF.some(x=>x[0]===ST.ui.bsf)?ST.ui.bsf:"solo";
   const pick=x=>f==="all"||(f==="solo"?x.r.st==="solo":f==="team"?(x.r.st==="team"||x.r.st==="unknown"):(x.r.st==="later"||x.r.st==="locked"));
@@ -46529,7 +46687,7 @@ function renderBosses(){
   const mk=w&&MKV[w]&&MKV[w].items;
   el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
       <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
-    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
+    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo)).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
     ${shown.length>120?`<p class="small muted">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:""}
     <details class="card bs-how"><summary>Como contamos</summary><ul class="small">
       <li>Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).</li>
@@ -46538,6 +46696,8 @@ function renderBosses(){
       <li>Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).</li>
       <li>Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Tibia Grimoire. ${nf(Object.keys(BSD.b).length)} bosses do Bosstiary.</li></ul></details>`;
   seg($("bsSeg"),BSF.map(([k,t])=>[k,`${t} <span class="tiny">${cnt[k]}</span>`]),f,v=>{ ST.ui.bsf=v; save(); renderBosses(); });
+  // o dano por elemento (data/crdmg.json, o mesmo das hunts) chega depois: com ele, as proteções do set contam; desenha outra vez
+  if(!CRDV&&!BSCRW){ BSCRW=true; crdLoad().then(()=>renderBosses()); }
 }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-bstier]"); if(!b) return; const c=C(), k=b.dataset.bstier, bd=BSD&&BSD.b[k]; if(!bd) return;
   if(!c.bst||typeof c.bst!=="object") c.bst={}; const s=((+c.bst[k]||0)+1)%4; if(s) c.bst[k]=s; else delete c.bst[k]; save();
@@ -47050,17 +47210,6 @@ function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((
       if(left<=0) break; } }
   return to||fill?{pts:P, map:add, list:Object.entries(add).map(([i,n])=>[+i,n]).sort((a,b)=>b[1]-a[1]), left, to, fill}:null; }
 // build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
-function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
-  const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
-  const sc=w=>{ const n=String(w.note||"");
-    if(voc==="sorcerer"&&n){ const els=["energy","fire","death"].filter(e=>new RegExp(e,"i").test(n)); let v=Math.max(...els.map(e=>eff&&eff[e]!=null?eff[e]:100)); if(/\(TH\)/.test(n)) v-=3; return {v, why:eff&&els.length?els.sort((a,b)=>(eff[b]??100)-(eff[a]??100))[0]:null}; }
-    if(voc==="paladin"&&n){ if(/resistant/i.test(n)) return {v:eff&&eff.physical!=null&&eff.physical<90?300:0, why:"physical"}; if(/bossing/i.test(n)) return {v:-1}; if(/holy/i.test(n)) return {v:eff&&eff.holy!=null?eff.holy:100, why:"holy"}; if(/physical/i.test(n)) return {v:eff&&eff.physical!=null?eff.physical:100, why:"physical"}; }
-    if(voc==="knight") return {v:(dang>=3?/Combat Mastery/:/Executioner/).test(w.t)?1:0, why:dang>=3?"risk":"fast"};
-    return {v:0}; };
-  let best=null, bs=-1e9, bw=null; ws.filter(w=>w.p>=top-200).forEach(w=>{ const s=sc(w), x=s.v*1000+w.p; if(x>=bs){ bs=x; best=w; bw=s.why; } });
-  const e=eff&&bw&&ELN[bw]&&eff[bw]!=null?eff[bw]:null;
-  const why = bw==="risk"?"hunt de risco alto: Combat Mastery dá mais segurança":bw==="fast"&&/Executioner/.test(best.t)?"Executioner's Throw acaba as criaturas mais depressa":e!=null?`as criaturas levam ${e}% de ${ELN[bw]}`:"";
-  return {w:best, why}; }
 const WNOTE = {"Holy Build":"build holy","Physical Build":"build física","Base Bossing Build":"para bosses","Base Ranged Spawn Build":"hunts à distância","Physical Resistant Build, e.g. Rosh":"criaturas que resistem a físico (ex.: Rosh)",
   "Energy":"energia","Fire/Death":"fogo e morte","Energy/Death":"energia e morte","Fire (TH)":"fogo, em team hunt","Fire (Solo)":"fogo, solo","Fire (Solo)/Death":"fogo (solo) e morte","Energy/Death/Fire (TH)":"energia, morte e fogo (team hunt)"};
 const wnote = n => n ? (WNOTE[n]||n) : "";
@@ -47078,22 +47227,6 @@ function hCharmsHTML(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" dat
   if(hasKey(G.charms,"lowblow")) cards.push(`<li class="hch-all">${charmBadge("lowblow")}<span class="hch-t"><b>${CL("lowblow")}</b><span class="tiny muted">crítico extra em qualquer criatura: o melhor para levar ao estágio 3</span></span></li>`);
   if(p&&p.d>=3&&hasKey(G.charms,"dodge")) cards.push(`<li class="hch-all">${charmBadge("dodge")}<span class="hch-t"><b>${CL("dodge")}</b><span class="tiny muted">risco alto: evita ataques por completo</span></span></li>`);
   return `<ul class="hch">${cards.join("")}</ul>`; }
-// bloco 'Wheel, gemas e charms' da ficha da hunt
-function hwheelHTML(pid,d){ const c=C(); if(!c||!hasKey(G.wheel,c.voc)) return ""; const ph=`<div class="hwh" data-hwheel="${pid}" data-hd="${d||0}"><p class="small muted" style="margin:0">A preparar a Wheel para esta hunt…</p></div>`;
-  if(!WHD||!CRDV){ Promise.all([whLoad(),crdLoad()]).then(()=>document.querySelectorAll("[data-hwheel]").forEach(x=>{ if(WHD) x.outerHTML=hwheelHTML(x.dataset.hwheel,+x.dataset.hd); })); return ph; }
-  const pts=wpOf(c), pk=whPick(c.voc,pts,pid,d), p=G.places[pid]||null, h={r:{c:pid}}, prof=huntProfile(pid);
-  const ch=`<div class="hwh-s"><h6>Charms</h6>${hCharmsHTML(Object.assign({},c),p,h)}</div>`;
-  if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms</h5></div><p class="small">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:""}</p>${ch}</div>`; }
-  const w=pk.w, b=WHD.b[w.c]; if(!b) return "";
-  const S=whSum(c.voc,b), V=WHD.voc[c.voc], keys=[...WHDOM.filter(x=>S.rev[x]).map(x=>`<span class="hwh-k" style="--wc:${WHC[x][0]}">${whPkIco(c.voc,x,16)}${esc(V.rev[x])} <b>${S.rev[x]}</b></span>`),
-    ...Object.entries(S.conv).filter(([n])=>/^Augmented /.test(n)).map(([n,k])=>`<span class="hwh-k">${esc(n.replace(/^Augmented /,""))} <b>${ROM[Math.min(k,3)]}</b></span>`)];
-  const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,"whp-gem")}<span><span class="whp-n"><b>${whGemName(c.voc,S.vr[x])}</b><span class="tiny muted">no vessel ${WHDN[x]}</span></span><span class="tiny">${esc(whGemMods(c.voc,S.vr[x],prof,gi).join(" + "))}</span></span></li>`).join("");
-  return `<div class="hwh" data-hwheel="${pid}"><div class="hwh-h"><h5>Wheel, gemas e charms para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class="tiny muted">As resistências das gemas seguem o dano desta hunt.</span>`:""}</div>
-    <div class="hwh-g"><div class="hwh-w">${whSVG(c.voc,b,{size:"sm"})}</div>
-      <div class="hwh-c"><div class="hwh-s"><h6>Wheel</h6><p class="hwh-t"><b>${esc(w.t)}</b> <span class="tag">${w.p} pontos</span>${w.note?` <span class="tag acc">${esc(wnote(w.note))}</span>`:""}</p>${pk.why?`<p class="tiny muted" style="margin:2px 0 0">Porquê: ${esc(pk.why)}.</p>`:""}
-          ${keys.length?`<div class="hwh-ks">${keys.join("")}</div>`:""}<p class="hwh-a"><button class="btn small" data-copy="${esc(w.c)}" data-copied="Código copiado">Copiar código</button> <a href="#wheel" data-go="wheel" class="small">Ver e editar na Wheel ›</a></p></div>
-        <div class="hwh-s"><h6>Gemas</h6>${gems?`<ul class="whp-l">${gems}</ul>`:`<p class="small muted" style="margin:0">Esta build ainda não ativa nenhum vessel.</p>`}</div>
-        ${ch}</div></div></div>`; }
 /* ---------- planeador da Wheel: distribuir pontos como no jogo, importar e exportar o código ---------- */
 // código do jogo: letra da vocação + '0' + deflate cru (36 pontos + 12 bytes de gemas) em base64url sem '='
 async function whEncode(voc,pts,gems){ if(typeof CompressionStream!=="function") return null; const u=new Uint8Array(48).fill(255);
@@ -47713,17 +47846,6 @@ const KSTAT={};
 async function kstatLoad(w){ const day=gameDay(), key=w+"|"+day; if(KSTAT[key]) return KSTAT[key];
   return KSTAT[key]=getJSON(`${API}/killstatistics/${encodeURIComponent(w)}`,10000).then(j=>{ const m={}; ((j&&j.killstatistics&&j.killstatistics.entries)||[]).forEach(e=>{ m[String(e.race).toLowerCase()]=e; }); return m; }).catch(()=>{ delete KSTAT[key]; return null; }); }
 const kPlural = n => n.replace(/y$/,"ies").replace(/([^s])$/,"$1s");
-function initKstat(root){ const c=C(), w=c&&c.world; (root||document).querySelectorAll("[data-kstat]:not([data-ksok])").forEach(async el=>{ el.dataset.ksok="1";
-  if(!w){ el.remove(); return; } const p=G.places[el.dataset.kstat]; const mons=(p&&p.mons||[]).filter(x=>typeof x==="string"); if(!mons.length){ el.remove(); return; }
-  el.innerHTML=`<p class="small muted" style="margin:0">A ver as mortes de ontem em ${esc(w)}…</p>`;
-  const m=await kstatLoad(w); if(!m){ el.innerHTML=`<p class="small muted" style="margin:0">Sem ligação à TibiaData para as mortes de ontem.</p>`; return; }
-  const find=n=>{ const k=n.toLowerCase(); return m[k]||m[kPlural(k)]||null; };
-  let kd=0, pk=0, kw=0, known=0; const rows=mons.map(n=>{ const e=find(n); if(!e) return ""; known++; kd+=e.last_day_killed; pk+=e.last_day_players_killed; kw+=e.last_week_killed;
-    return `<li><span>${esc(n)}</span><b>${nf(e.last_day_killed)}</b>${e.last_day_players_killed?`<em>${nf(e.last_day_players_killed)} ✝</em>`:""}</li>`; }).join("");
-  if(!known){ el.remove(); return; }
-  const avg=kw/7, lvl=kd>avg*1.4&&kd>500?["warn","mais cheia do que o costume"]:kd<avg*.6?["ok","mais calma do que o costume"]:["","movimento normal"];
-  el.innerHTML=`<details class="ks"><summary><span class="ks-h">Ontem em ${esc(w)}</span><b>${nf(kd)}</b> criaturas mortas${pk?` · <b class="ks-d">${nf(pk)}</b> jogadores mortos aqui`:""} <span class="tag ${lvl[0]}">${lvl[1]}</span></summary>
-    <ul class="ks-l">${rows}</ul><p class="tiny muted" style="margin:6px 0 0">Kill statistics oficiais do dia anterior (média da semana: ${nf(Math.round(avg))} por dia). ✝ = jogadores mortos por essa criatura.</p></details>`; }); }
 function initLoot(root){ (root||document).querySelectorAll("[data-lootp]:not([data-lpok])").forEach(el=>{ el.dataset.lpok="1"; const c=C(), w=c&&c.world||"";
   el.innerHTML=`<div class="lp-sk" aria-hidden="true"><i></i><i></i><i></i></div><p class="small muted">A calcular os preços${w?` do Market de ${esc(w)}`:""}…</p>`;
   Promise.all([dsafe("items"),dsafe("creatures"),mktLoad(w),npcData().catch(()=>({})),linkIdxLoad()]).then(([items,crs,,np])=>{ if(!ITV&&items&&Object.keys(items).length) ITV=items; if(!el.isConnected) return;
@@ -48002,7 +48124,6 @@ function huntProfile(pid){
 const HSI={off:'<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2M14.5 6.5 18 3h3v3l-3.5 3.5M5 14l4 4M7 17l-3 3M3 19l2 2"/>',
   bal:'<path d="M12 3v18M7 21h10"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/><path d="m2 16 3-8 3 8a4.2 4.2 0 0 1-6 0zM16 16l3-8 3 8a4.2 4.2 0 0 1-6 0z"/>',
   def:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>'};
-const HSM=[["off","Ofensivo","Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa."],["bal","Consistente","Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt."],["def","Defensivo","Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa."]];
 /* r4-t5 */ // paladino sem tipo de arma escolhido: o da munição do TibiaPal nesta hunt (how da linha de G.hunts.paladin:
 // bolt → besta, arrow → arco, spear/star → arremesso), para os 3 sets baterem com a linha 'Munição' do Setup;
 // '' = o do pickSet (arco a partir do 100). O [data-hsave] usa o huntSet, por isso guarda o mesmo set que a ficha mostra.
@@ -48022,40 +48143,6 @@ function huntImbs(c,pid,S){
   DOLL.forEach(([k])=>{ const e=k&&S.slots[k], it=e&&BYID[e.id]; if(!it||!it.is||!it.it||!it.it.length) return; rows.push([k,it,defaultImbs(c,set,it,ctx)]); });
   const wr=rows.find(r=>r[0]==="weapon"), el=wr&&wr[2].some(x=>x.startsWith("e_")) ? defImbElem(c,ctx.eff,wr[1]) : null;
   return {set,ctx,rows,el,phys:!!pf&&!top};
-}
-function hsetsHTML(pid){
-  const c=C(); if(!c) return ""; rebuildIndex();
-  if(!CRDV) crdLoad().then(()=>document.querySelectorAll("[data-hsets]").forEach(x=>{ x.outerHTML=hsetsHTML(x.dataset.hsets); }));
-  const pf=huntProfile(pid), top=Object.entries(pf||{physical:1}).sort((a,b)=>b[1]-a[1]), sel=ST.ui.hsel||"bal";
-  const sets=HSM.map(([k])=>huntSet(c,pid,k));
-  const same=(a,b)=>JSON.stringify(a.slots)===JSON.stringify(b.slots);
-  const imbLine=S=>{ const hd='<p class="small hset-imb"><b>Imbuements:</b> ';
-    if(!CRDV) return hd+'<span class="muted">A analisar o dano…</span></p>';
-    const H=huntImbs(c,pid,S), n=H.rows.reduce((a,r)=>a+r[2].length,0);
-    if(!n) return hd+'<span class="muted">nenhum item deste set tem slots de imbuement.</span></p>';
-    const ar=H.rows.find(r=>r[0]==="armor"), sr=H.rows.find(r=>r[0]==="shield"), fr=[];
-    if(ar&&ar[2].length===1&&ar[2][0]==="vamp") fr.push("a armadura fica só com Vampirism"); if(sr&&!sr[2].length) fr.push(sr[1].b==="spellbook"?"o livro fica sem imbuement":sr[1].b==="quiver"?"a aljava fica sem imbuement":"o escudo fica sem imbuement");
-    // uma linha por item (grelha no CSS); os ' · ' só contam no texto corrido
-    const parts=H.rows.filter(r=>r[2].length).map(([k,it,r],i)=>`<span class="hs-is">${i?'<i class="hs-sep">· </i>':""}<span class="hs-sl">${esc(itemKind(it))}</span> <span class="hs-iv">${r.map(x=>`<span class="hs-im" style="--imc:${imColor(x)}">${esc(IMBL[x]||x)}</span>`).join(" + ")}${k==="weapon"&&H.el?` <span class="tiny muted">(+${Math.round(H.el.g)}% de dano: as criaturas levam ${Math.round(H.el.v)}% de ${esc(ELN[H.el.el])} e ${Math.round(H.el.ph)}% de físico)</span>`:""}</span></span>`);
-    return hd+parts.join(" ")
-      +(H.phys?` <span class="tiny muted hs-ph"><i class="hs-sep">· </i>dano quase todo físico: não há imbuement de proteção física${fr.length?", por isso "+fr.join(" e "):""}</span>`:"")
-      +` <span class="tiny muted hs-fee"><i class="hs-sep">· </i>taxas do altar: ${nf(n*TFEE[imTier(c)])} gp a cada 20 h</span></p>`; };
-  const panes=HSM.map(([k,t,d],i)=>{ const S=sets[i], T=setTotals(S.slots), so=setSkOk(c,T), sk=Object.entries(T.sk).filter(([x,v])=>v&&so.ok(x)).sort((a,b)=>b[1]-a[1]).slice(0,3);
-    const twin = i>0 && same(S,sets[i-1]) ? HSM[i-1][1] : i<2 && same(S,sets[i+1]) ? HSM[i+1][1] : "";
-    const W=c.voc==="monk"&&S.slots.weapon?BYID[S.slots.weapon.id]:null, ef=(G.places[pid]||{}).eff, wv=W&&W.bond&&ef&&ef[W.bond]!=null?Math.round(ef[W.bond]):null; // r6-t3: arma do monk e o que as criaturas levam da ligação
-    return `<div class="hset-p" data-hpane="${k}" ${k===sel?"":"hidden"}><p class="small hset-d">${esc(d)}${twin?` <span class="tiny muted">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:""}</p>
-      <div class="hset-b"><div class="bisdoll sm" role="group" aria-label="Set ${esc(t.toLowerCase())}">${DOLL.map(([x,lab0])=>{ const lab=x?slotLab(c,x):lab0; if(!x) return '<div aria-hidden="true"></div>'; if(x==="bag") return `<span class="bslot none" aria-hidden="true">${IC.bag}</span>`;
-        const it=S.slots[x]&&BYID[S.slots[x].id]; /* r10 */ const am=x==="shield"?palAmmo(c,S):null;
-        if(am) return `<span class="bslot pal2">${it?`<a class="pq" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="Aljava: ${esc(it.n)}">${spr(it)}</a>`:`<span class="pq" title="Aljava: ${esc(quivTip)}">${emptyIc(c,x)}</span>`}<span class="pa" title="Munição: ${esc(am[2])} (ataque ${am[1]})">${itemSpr(am[2])}</span></span>`;
-        return it?`<a class="bslot" href="${itemHref(it.n)}" data-look="${it.id}" aria-label="${lab}: ${esc(it.n)}">${spr(it)}</a>`:`<span class="bslot none" title="${lab}: ${x==="shield"&&c.voc==="paladin"?esc(quivTip):"nada"}">${emptyIc(c,x)}</span>`; }).join("")}</div>
-        <div class="hset-t"><div class="hset-kv"><div><b>${T.arm}</b><span>armadura</span></div>${T.def?`<div><b>${T.def}</b><span>defesa</span></div>`:""}${sk.map(([x,v])=>`<div><b>+${v}</b><span>${esc(SKN[x]||x)}</span></div>`).join("")}</div>
-          ${c.voc==="paladin"&&(T.wb==="bow"||T.wb==="crossbow")?`<p class="small hset-wb hs-am"><b>Munição:</b> <span class="hs-chips">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!=="quiver"?` <span class="tiny muted">Aljava: ${esc(quivTip)}.</span>`:""}</p>`:""}
-          ${W&&W.bond?`<p class="tiny muted hset-wb">Arma: <a href="${itemHref(W.n)}" data-look="${W.id}">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:""}</p>`:""}
-          <div class="hs-chips">${top.slice(0,4).map(([e])=>{ const v=T.ab[e]||0; return `<span class="hs-pr c-${e}${v<0?" neg":""}">${esc(elName(e))} <b>${v>0?"+":""}${v}%</b></span>`; }).join("")}</div>
-          ${imbLine(S)}
-          <button type="button" class="btn small ghost" data-hsave="${pid}|${k}">Guardar nos meus sets</button></div></div></div>`; }).join("");
-  return `<div class="hsets" data-hsets="${pid}"><div class="hsets-h"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class="hs-chips"><span class="tiny muted">Dano que vais levar:</span>${top.slice(0,4).map(([e,v])=>`<span class="chip c-${e}">${esc(elName(e))} ${Math.round(v*100)}%</span>`).join("")}</div>`:`<p class="tiny muted" style="margin:0">${CRDV?"Sem dados do dano destas criaturas: sets pensados para dano físico.":"A analisar o dano das criaturas…"}</p>`}</div>
-    <div class="hset-tabs" role="tablist" aria-label="Tipo de set">${HSM.map(([k,t])=>`<button type="button" role="tab" data-hsel="${k}" aria-selected="${k===sel}"><svg viewBox="0 0 24 24" aria-hidden="true">${HSI[k]}</svg><span>${t}</span></button>`).join("")}</div>${panes}${(G.places[pid]||{}).eff?`<p class="tiny muted hset-note">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:""}</div>`;
 }
 document.addEventListener("click", e=>{
   const t=e.target.closest("[data-hsel]");
@@ -48859,7 +48946,7 @@ document.addEventListener("click", async e=>{ const b=e.target.closest("[data-ar
     if(b.isConnected&&location.hash===fromHash) openSheet(`<div class="sh-h"><h3>${esc(cap1(a.mon||"Acesso"))}</h3></div><p class="small muted">Não consegui confirmar o acesso. Fecha este painel e tenta de novo.</p>`);
     return;
   }
-  const pid=a.cl[5]; if(pid){ const hr=huntRows(C().voc).find(r=>r.r.c===pid); if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr)); return; } }
+  const pid=a.cl[5]; if(pid){ const hr=huntRows(C().voc).find(r=>r.r.c===pid); if(hr){ HSTORE["h"+hr.voc+hr.i]=hr; openSheet(huntSheet(hr),"sh-ficha"); return; } }
   openSheet(areaSheet(a)); const cv=$("sheetBody").querySelector("canvas.shmap"); if(cv) drawSpawn(cv,a.cl); });
 function bestArea(c,cls){ let b=0, bs=-1; cls.forEach((cl,i)=>{ const h=recLvl(c,cl,0); const sc=cl[3]*(h.src==="hunt"&&h.l<=c.level+10?1.5:1); if(sc>bs){bs=sc;b=i;} }); return b; }
 async function fillTask(c,t,el){
@@ -49561,6 +49648,9 @@ bootSync();
 route(); if(ST.ui.p==="novidades") renderNews(); if(ST.ui.p==="sistemas") renderSys(); if(ST.ui.p==="calc") renderCalc(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
 setUI("modern", false);
 linkIdxLoad();
+// parte D: a calibração semanal chega depois do primeiro desenho; com outro k, o início e os cartões das hunts voltam a desenhar-se
+// (shortcut: uma ficha já aberta fica com o XP/h do k antigo até se reabrir), e a dificuldade com o dz segue o fxDiffSync
+dsafe("calib").then(j=>{ const k0=CALIB.k; CALIB=GrimFicha.calibOf(j); if(CALIB.k!==k0&&ST.chars.length){ renderInicio(); renderHunts(); } if(CRDV) fxDiffSync(document); });
 
 if (window.claude && typeof window.claude.use==="function"){
   window.claude.use("sample").then(fn=>{ sampleFn=fn||null; if(!fn) $("askNote").textContent="O assistente não está disponível nesta vista."; }).catch(()=>{});

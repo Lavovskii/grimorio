@@ -1,0 +1,228 @@
+{
+ "h": {
+  "w_ancient_temple": {
+   "st": "ok",
+   "from": "Thais",
+   "pos": [32381, 32145, 10],
+   "pa": 1,
+   "pre": [
+    {"k": "item", "n": "Rope"}
+   ],
+   "legs": [
+    {"t": "Até ao Ancient Temple", "steps": [
+     {"s": "Sai de Thais pela porta norte", "c": null, "npc": null},
+     {"s": "Anda para noroeste até ao {wiki:Ancient Temple}", "c": null, "npc": null},
+     {"s": "Desce os degraus do templo para as grutas", "c": [32356, 32170, 7], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_carlin_amazon_camp": {
+   "st": "ok",
+   "from": "Carlin",
+   "pos": [32424, 31590, 7],
+   "pa": 0,
+   "pre": [],
+   "legs": [
+    {"t": "Até ao Carlin Amazon Camp", "steps": [
+     {"s": "De Carlin, anda para norte até ao acampamento das {creature:Amazon|Amazons}", "c": [32422, 31605, 7], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_carlin_graveyard": {
+   "st": "rev",
+   "from": "Carlin",
+   "pos": [32405, 31792, 9],
+   "pa": 0,
+   "pre": [
+    {"k": "item", "n": "Rope"},
+    {"k": "text", "s": "Se a porta da cripta estiver trancada, abre-a com a {item:Key 3520}: está numa caixa no edifício a noroeste do barco de Carlin {coord:32375,31803,7}"}
+   ],
+   "legs": [
+    {"t": "Até ao Carlin Graveyard", "steps": [
+     {"s": "De Carlin, anda para leste até ao cemitério", "c": [32407, 31784, 7], "npc": null},
+     {"s": "Desce as escadas da cripta, no extremo sul do cemitério", "c": [32404, 31790, 7], "npc": null}
+    ]},
+    {"t": "Até às grutas dos Trolls", "steps": [
+     {"s": "Na cripta, passa a porta a oeste", "c": null, "npc": null},
+     {"s": "Desce pelo buraco para as grutas dos {creature:Troll|Trolls}", "c": [32392, 31787, 8], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_dusalk_s_troll_clan_cave": {
+   "st": "rev",
+   "from": "Thais",
+   "pos": [32645, 31985, 9],
+   "pa": 0,
+   "pre": [
+    {"k": "item", "n": "Shovel"},
+    {"k": "item", "n": "Rope"}
+   ],
+   "legs": [
+    {"t": "Até à Dusalk's Troll Clan Cave", "steps": [
+     {"s": "De Thais, anda para nordeste até à {wiki:Dwarf Bridge}", "c": null, "npc": null},
+     {"s": "Atravessa a ponte e segue para leste até à entrada da gruta", "c": [32662, 31966, 7], "npc": null}
+    ]},
+    {"t": "Entrar na gruta", "steps": [
+     {"s": "Usa a {item:Shovel} no buraco escondido atrás de uma árvore", "c": [32663, 31962, 7], "npc": null},
+     {"s": "Desce pelo buraco ao piso −1", "c": [32663, 31962, 8], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_edron_troll_goblin_peninsula": {
+   "st": "rev",
+   "from": "Edron",
+   "pos": [33107, 31845, 7],
+   "pa": 0,
+   "pre": [
+    {"k": "premium"}
+   ],
+   "legs": [
+    {"t": "Até à península Troll-Goblin", "steps": [
+     {"s": "Em Edron, vai à torre sudoeste do castelo", "c": null, "npc": null},
+     {"s": "Desce à cave da torre", "c": [33165, 31827, 7], "npc": null},
+     {"s": "Segue a passagem subterrânea para oeste (só há um caminho)", "c": null, "npc": null},
+     {"s": "Sobe à superfície, já na península", "c": [33128, 31810, 8], "npc": null}
+    ]},
+    {"t": "Na península", "steps": [
+     {"s": "Anda para sudoeste pela península", "c": [33107, 31845, 7], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_lost_mines": {
+   "st": "rev",
+   "from": "Edron",
+   "pos": [33104, 31811, 7],
+   "pa": 0,
+   "pre": [
+    {"k": "premium"}
+   ],
+   "legs": [
+    {"t": "Até à península Troll-Goblin", "steps": [
+     {"s": "Em Edron, vai à torre sudoeste do castelo", "c": null, "npc": null},
+     {"s": "Desce à cave da torre", "c": [33165, 31827, 7], "npc": null},
+     {"s": "Segue a passagem subterrânea para oeste (só há um caminho)", "c": null, "npc": null},
+     {"s": "Sobe à superfície, já na península", "c": [33128, 31810, 8], "npc": null}
+    ]},
+    {"t": "Até às Lost Mines", "steps": [
+     {"s": "Anda para oeste até à ponta oeste da península, junto ao mar", "c": null, "npc": null},
+     {"s": "Desce ao túnel das Lost Mines", "c": [33102, 31811, 7], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_shadow_caves": {
+   "st": "rev",
+   "from": "Ab'Dendriel",
+   "pos": [32646, 31655, 9],
+   "pa": 1,
+   "pre": [
+    {"k": "text", "s": "{item:Key 3033} para as portas da mina (o {npc:Shirith} vende-a por 50 gp), ou {item:Machete} e {item:Shovel} para entrar pela gruta dos slimes"}
+   ],
+   "legs": [
+    {"t": "Até à Shadow Caves Street", "steps": [
+     {"s": "Do depot de Ab'Dendriel (piso −1), anda para noroeste pela Shadow Caves Street", "c": null, "npc": null},
+     {"s": "Desce ao piso −2, entre as casas", "c": [32654, 31670, 8], "npc": null}
+    ]},
+    {"t": "Até à mina dos Trolls", "steps": [
+     {"s": "Compra a {item:Key 3033} ao {npc:Shirith}, a norte das casas", "c": [32646, 31655, 9],
+      "npc": {"n": "Shirith", "say": ["hi", "trade"], "gp": 50}},
+     {"s": "Abre com a Key 3033 as duas portas da mina, à frente do Shirith", "c": null, "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_thais_wolf_den": {
+   "st": "rev",
+   "from": "Thais",
+   "pos": [32505, 32283, 7],
+   "pa": 1,
+   "pre": [],
+   "legs": [
+    {"t": "Até à Thais Wolf Den", "steps": [
+     {"s": "Sai de Thais para leste, até à península de Thais", "c": null, "npc": null},
+     {"s": "Vai até ao {npc:Hector The Mentor}", "c": [32476, 32286, 7], "npc": null},
+     {"s": "Anda para leste até à gruta dos lobos", "c": null, "npc": null},
+     {"s": "Desce à gruta", "c": [32505, 32281, 7], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "w_venore_salamander_cave": {
+   "st": "rev",
+   "from": "Venore",
+   "pos": [32893, 32132, 10],
+   "pa": 0,
+   "pre": [],
+   "legs": [
+    {"t": "Até à Venore Salamander Cave", "steps": [
+     {"s": "Sai de Venore pela porta sul", "c": null, "npc": null},
+     {"s": "Desce à gruta, logo à saída da porta", "c": [32924, 32148, 7], "npc": null}
+    ]},
+    {"t": "Até ao piso de caça", "steps": [
+     {"s": "Desce outra vez, para o piso −2", "c": [32919, 32142, 8], "npc": null}
+    ]}
+   ],
+   "refs": []
+  },
+  "weretigers": {
+   "st": "rev",
+   "from": "Ankrahmun",
+   "pos": [33022, 32930, 8],
+   "pa": 0,
+   "pre": [
+    {"k": "quest", "n": "Grimvale Quest", "id": null, "slug": "grimvale-quest", "sec": 10, "note": "até entregares a ocarina"},
+    {"k": "quest", "n": "Grimvale Quest", "id": null, "slug": "grimvale-quest", "sec": 11, "note": "só para o piso −2: os 6 mosaicos e o Fog Portal"},
+    {"k": "premium"},
+    {"k": "level", "n": 200, "rec": true}
+   ],
+   "legs": [
+    {"t": "Chegar a Oskayaat", "steps": [
+     {"s": "Em Ankrahmun, vai ao barqueiro {npc:Tonar}", "c": null, "npc": null},
+     {"s": "Pede ao Tonar passagem para Oskayaat", "c": [33182, 32884, 7],
+      "npc": {"n": "Tonar", "say": ["hi", "passage", "yes"], "gp": null}},
+     {"s": "Desembarcas em Oskayaat, junto ao barco do Tonar", "c": [33067, 32919, 7], "npc": null}
+    ]},
+    {"t": "Até à Oskayaat Undercity", "steps": [
+     {"s": "Anda para oeste até à gruta dos {creature:Weretiger|Weretigers}", "c": [32999, 32932, 7], "npc": null},
+     {"s": "Desce ao piso −1 da gruta", "c": [32999, 32933, 8], "npc": null}
+    ]}
+   ],
+   "refs": [
+    {"slug": "grimvale-quest", "sec": 10, "t": "11. Paradise Lost: chegar a Oskayaat", "quest": "Grimvale Quest"},
+    {"slug": "grimvale-quest", "sec": 11, "t": "12. Paradise Lost: mosaicos e símbolos da lua", "quest": "Grimvale Quest"}
+   ]
+  },
+  "werecrocs": {
+   "st": "rev",
+   "from": "Ankrahmun",
+   "pos": [32966, 32927, 8],
+   "pa": 1,
+   "pre": [
+    {"k": "quest", "n": "Grimvale Quest", "id": null, "slug": "grimvale-quest", "sec": 10, "note": "até entregares a ocarina"},
+    {"k": "premium"},
+    {"k": "level", "n": 200, "rec": true}
+   ],
+   "legs": [
+    {"t": "Chegar a Oskayaat", "steps": [
+     {"s": "Em Ankrahmun, vai ao barqueiro {npc:Tonar}", "c": null, "npc": null},
+     {"s": "Pede ao Tonar passagem para Oskayaat", "c": [33182, 32884, 7],
+      "npc": {"n": "Tonar", "say": ["hi", "passage", "yes"], "gp": null}},
+     {"s": "Desembarcas em Oskayaat, junto ao barco do Tonar", "c": [33067, 32919, 7], "npc": null}
+    ]},
+    {"t": "Até às Murky Caverns", "steps": [
+     {"s": "Anda para oeste até à gruta dos {creature:Werecrocodile|Werecrocodiles}", "c": [32966, 32926, 7], "npc": null},
+     {"s": "Desce ao piso −1 das Murky Caverns", "c": [32966, 32927, 8], "npc": null}
+    ]}
+   ],
+   "refs": [
+    {"slug": "grimvale-quest", "sec": 10, "t": "11. Paradise Lost: chegar a Oskayaat", "quest": "Grimvale Quest"}
+   ]
+  }
+ },
+ "b": {}
+}

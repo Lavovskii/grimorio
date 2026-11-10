@@ -490,37 +490,15 @@
   function hydrateMinimaps(root) {
     $$(".minimap[data-mm]", root).forEach((el) => (mmObserver ? mmObserver.observe(el) : drawMinimap(el)));
   }
-  async function drawMinimap(el) {
+  // r35: o desenho é o GrimMini (shared/minimapa.js), partilhado com as fichas do Grimório; aqui fica só o enquadramento de sempre
+  function drawMinimap(el) {
     const d = JSON.parse(el.dataset.mm);
-    let img;
-    try { img = await floorImage(d.z); } catch (e) { return; }
+    const marks = (d.marks || []).map((m, i) => ({ x: m.x, y: m.y, z: m.z ?? d.z, n: i + 1, cls: "small" }));
     const cw = el.clientWidth || 260, ch = el.clientHeight || 173;
-    let cx = d.x - MAP.x0 + 0.5, cy = d.y - MAP.y0 + 0.5, s = d.s || 5;
-    const pts = (d.marks || []).map((m) => ({ x: m.x - MAP.x0 + 0.5, y: m.y - MAP.y0 + 0.5, z: m.z ?? d.z, label: m.label }));
-    if (pts.length) {
-      const xs = pts.map((p) => p.x).concat(cx), ys = pts.map((p) => p.y).concat(cy);
-      const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
-      cx = (minX + maxX) / 2; cy = (minY + maxY) / 2;
-      s = Math.max(0.6, Math.min(5, cw / (maxX - minX + 12), ch / (maxY - minY + 12)));
-    }
-    const dpr = window.devicePixelRatio || 1;
-    const cv = $("canvas", el);
-    cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr);
-    cv.style.width = cw + "px"; cv.style.height = ch + "px";
-    const ctx = cv.getContext("2d");
-    ctx.imageSmoothingEnabled = false;
-    const sw = cw / s, sh = ch / s, sx = cx - sw / 2, sy = cy - sh / 2;
-    ctx.fillStyle = "#000"; ctx.fillRect(0, 0, cv.width, cv.height);
-    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, cv.width, cv.height);
-    const place = (px, py, cls, n) => {
-      const m = document.createElement("span");
-      m.className = "mm-mark " + cls;
-      m.style.left = (px - sx) * s + "px"; m.style.top = (py - sy) * s + "px";
-      if (n) m.dataset.n = n;
-      el.appendChild(m);
-    };
-    if (pts.length) pts.forEach((p, i) => place(p.x, p.y, "small", i + 1));
-    else if (!d.nomark) place(d.x - MAP.x0 + 0.5, d.y - MAP.y0 + 0.5, "");
+    const view = marks.length ? GrimMini.fit([[d.x, d.y, d.z]].concat(marks.map((m) => [m.x, m.y, m.z])), null, cw, ch)
+      : { cx: d.x + 0.5, cy: d.y + 0.5, s: d.s || 5 };
+    if (!marks.length && !d.nomark) marks.push({ x: d.x, y: d.y, cls: "" });
+    return GrimMini.draw(el, { img: floorImage(d.z), view, marks, line: false });
   }
 
   // ---------------------------------------------------------------- leaflet map

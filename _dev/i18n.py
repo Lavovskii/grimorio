@@ -448,7 +448,8 @@ def extract_ui():
 # ------------------------------------------------------------------ conteúdo do Grimório (G e data/*.json) → frases
 G_SKIP = {'hm', 'sp', 'gems', 'pm', 'cr', 'lt', 'mon', 'np', 'mc', 'vr', 'ha', 'built', 'tpdate', 'spriteCols', 'wheel', 'towns', 'marapur'}
 G_ALL = {'mcn'}  # nomes PT sem acentos nem palavras pequenas (ex. 'Humanos'): entram todos
-DATA_SKIP = {'guias.json', 'spawns.json', 'crdmg.json', 'npcpos.json', 'items.json'}
+DATA_SKIP = {'guias.json', 'spawns.json', 'crdmg.json', 'npcpos.json', 'items.json',
+             'caminhos.json', 'hunt-access.json', 'boss-access.json'}  # estes três: cam_strings() (só os textos que o site mostra)
 
 
 def load_G():
@@ -498,8 +499,80 @@ def shown(s):
     return [x for x in (v, w) if x != s]
 
 
+CAM_TOKEN = re.compile(r'\{(\w+):([^}|]*)(?:\|([^}]*))?\}')
+
+
+def cam_say_cut(t, npc):
+    """O camSayCut do index.html: um passo com NPC perde a fala («: hi, …, yes») e o «(N gp)» (o bloco «Fala com» já os mostra)."""
+    w = ["['\"‘’]?%s['\"‘’]?" % re.escape(str(k)) for k in (npc or {}).get('say') or []]
+    if not w:
+        return t
+    r = re.sub(r"\s*[:,]?\s*(?<![\w'\"‘’])" + r'\s*,\s*'.join(w) + r'(?:\s*\(\s*[\d.,]+\s*gp\s*\))?', '', t, count=1, flags=re.I | re.A).strip()
+    return r or t
+
+
+def cam_render(t):
+    """O texto que o travelTextHTML põe no ecrã: as marcas do Questski passam ao texto que mostram e cada {coord:…} é um botão
+    (que parte a frase em duas para o tradutor do site)."""
+    out = []
+    for piece in re.split(r'\{coord:\d+,\d+,\d+\}', t):
+        piece = CAM_TOKEN.sub(lambda m: (m.group(2) if m.group(1) == 'key' else (m.group(3) or m.group(2))).strip(), piece)
+        piece = re.sub(r'\*\*([^*]+)\*\*', r'\1', piece)
+        piece = re.sub(r'(^|[^*])\*([^*\s][^*]*)\*', r'\1\2', piece)
+        piece = norm(piece)
+        if LETTER.search(piece) and len(piece) >= 3:
+            out.append(piece)
+    return out
+
+
+def cam_inline(t):
+    """O texto dos elementos dentro de um passo (**negrito**, *itálico*, {item:…|rótulo}): o tradutor do site procura-o na frase
+    traduzida para o pôr no sítio; se a tradução o mudou ("norte" → "north"), precisa dele como chave própria."""
+    out = [norm(m.group(3)) for m in CAM_TOKEN.finditer(t) if m.group(3) and m.group(1) != 'key']
+    t = CAM_TOKEN.sub(lambda m: (m.group(3) or m.group(2)).strip(), t)
+    out += [norm(x) for x in re.findall(r'\*\*([^*]+)\*\*', t)]
+    out += [norm(x) for x in re.findall(r'(?:^|[^*])\*([^*\s][^*]*)\*', re.sub(r'\*\*[^*]+\*\*', '', t))]
+    return [x for x in out if LETTER.search(x) and len(x) >= 3]
+
+
+def cam_units():
+    """[(texto de origem, npc)] do data/caminhos.json (e das fichas de locais do hunt-access/boss-access, que o site ainda mostra na
+    ficha de grupo e na zona de um boss): passos (s), troços (t), pré-requisitos (note, s, nome da quest), avisos, títulos e
+    pontos de chegada dos locais, títulos dos guias. As falas dos NPCs (say) não: são palavras do jogo."""
+    out = []
+    cam = rd(os.path.join(ROOT, 'data', 'caminhos.json'), {}) or {}
+    for sec in ('h', 'b'):
+        for c in (cam.get(sec) or {}).values():
+            for leg in c.get('legs') or []:
+                out.append((leg.get('t'), None))
+                out += [(s.get('s'), s.get('npc')) for s in leg.get('steps') or []]
+            for p in c.get('pre') or []:
+                out += [(p.get('note'), None), (p.get('s'), None)] + ([(p.get('n'), None)] if p.get('k') == 'quest' else [])
+            out += [(r.get('t'), None) for r in c.get('refs') or []]
+    places = list((cam.get('places') or {}).values())
+    for n in ('hunt-access.json', 'boss-access.json'):
+        places += list(((rd(os.path.join(ROOT, 'data', n), {}) or {}).get('places') or {}).values())
+    for p in places:
+        out += [(p.get('title'), None), ((p.get('entrance') or {}).get('label'), None)]
+        for k in ('arrive', 'leave', 'warnings', 'requirements'):
+            out += [(s.get('s'), s.get('npc')) if isinstance(s, dict) else (s, None) for s in p.get(k) or []]
+    return [(s, n) for s, n in out if isinstance(s, str) and s.strip()]
+
+
+def cam_strings():
+    """As frases do ecrã de cada texto de cam_units() que pareça português (um passo inteiro é uma chave: o tradutor do site
+    procura primeiro o texto todo), e o texto dos seus elementos (cam_inline)."""
+    out = []
+    for s, npc in cam_units():
+        for t in {s, cam_say_cut(s, npc)}:
+            out += [x for x in cam_render(t) + cam_inline(t) if looks_pt(x) or PT_HINT.search(x)]
+    return out
+
+
 def extract_content():
     found = {}
+    for s in cam_strings():
+        found[hkey(s)] = s
     for s in [y for x in content_strings() for y in [x] + shown(x)]:
         n = norm(re.sub(r'<[^>]+>', ' ', s)) if '<' in s else norm(s)
         for piece in [n] if len(sentences(n)) < 2 else sentences(n):

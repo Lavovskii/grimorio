@@ -58,3 +58,14 @@ html[data-ui="modern"] .sitesw a[aria-current="page"] { background: linear-gradi
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 /* r8: 44 px de toque no telemóvel */
 @media (pointer:coarse) { .sitesw a { min-width: 44px; min-height: 44px; justify-content: center; } }
+
+/* Minimapa (shared/minimapa.js, GrimMini): marcadores do Questski e das fichas do Grimório. O número vai em data-n. */
+.mm-mark {
+  position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+  border: 3px solid #fff; background: #e23b2e; box-shadow: 0 0 0 2px #000, 0 0 12px 3px rgba(255, 60, 40, .8);
+  animation: mmPulse 1.6s ease-in-out infinite;
+}
+.mm-mark.small { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-width: 2px; animation: none; background: #f3c33b; box-shadow: 0 0 0 2px #000; }
+.mm-mark.small[data-n]::after { content: attr(data-n); position: absolute; left: 10px; top: -13px; font: 700 12px var(--font-game, Verdana, Tahoma, sans-serif); color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000; }
+@keyframes mmPulse { 50% { box-shadow: 0 0 0 2px #000, 0 0 2px 8px rgba(255, 60, 40, .25); } }
+@media (prefers-reduced-motion: reduce) { .mm-mark { animation: none; } }
