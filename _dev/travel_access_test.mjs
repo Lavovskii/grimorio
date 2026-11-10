@@ -35,7 +35,7 @@ assert.match(h2,/por documentar/);assert(!h2.includes('data-cammap='));
 // zona aproximada nunca é «entrada»
 const aprox=Object.entries(CAM.h).find(([,c])=>c.pa===1&&c.pos);
 const ha=cx.camHTML(aprox[1],'h:'+aprox[0],CAM.places);
-assert.match(ha,/zona aproximada/);
+assert(!/zona aproximada/.test(ha)); // a ficha diz isto por baixo do mapa, não no caminho
 assert(!/entrada/i.test(ha.replace(/<ol[\s\S]*?<\/ol>/g,'')));
 // pré-requisitos
 const pre=[{k:'quest',n:'Grimvale Quest',id:'grim',slug:'grimvale-quest',sec:10,note:'até entregares a ocarina'},

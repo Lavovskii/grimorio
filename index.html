@@ -46544,8 +46544,7 @@ function camHTML(cam,id,places){
   return `<div class="cam"><div class="cam-h"><b>Como lá chegar</b><span class="tag${st[0]?" "+st[0]:""}">${st[1]}</span>${cam.from?`<span class="small muted">A partir de ${esc(cam.from)}</span>`:""}</div>
     ${legs.map(leg).join("")}
     ${cam.st==="none"?`<p class="small muted">Ainda não temos este caminho passo a passo.</p>`:""}
-    ${refs.length?`<h5>Nos guias das quests</h5><ul class="small cam-refs">${refs.map(r=>`<li><a href="${guiaHref(r.slug)}/guia/sec-${esc(r.sec)}">${esc(r.t)}</a> <span class="muted">· ${esc(r.quest)}</span></li>`).join("")}</ul>`:""}
-    ${cam.pa===1&&cam.pos?`<p class="small muted">O ponto no mapa é a zona aproximada.</p>`:""}</div>`;
+    ${refs.length?`<h5>Nos guias das quests</h5><ul class="small cam-refs">${refs.map(r=>`<li><a href="${guiaHref(r.slug)}/guia/sec-${esc(r.sec)}">${esc(r.t)}</a> <span class="muted">· ${esc(r.quest)}</span></li>`).join("")}</ul>`:""}</div>`;
 }
 // box = o <details class="cam-map">; pts = CAMPTS[troço] ([{c:[x,y,z], n}]); sel = índice em pts
 async function drawCam(box,pts,sel){
@@ -47204,17 +47203,6 @@ function whSuggest(pts,next,free){ const P=[...pts], add={}, ord=WHD.slots.map((
       if(left<=0) break; } }
   return to||fill?{pts:P, map:add, list:Object.entries(add).map(([i,n])=>[+i,n]).sort((a,b)=>b[1]-a[1]), left, to, fill}:null; }
 // build aconselhada para uma hunt: a mais recente para os teus pontos, e entre as variantes (holy/físico, energia/fogo/morte) a que rende mais nas criaturas
-function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
-  const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
-  const sc=w=>{ const n=String(w.note||"");
-    if(voc==="sorcerer"&&n){ const els=["energy","fire","death"].filter(e=>new RegExp(e,"i").test(n)); let v=Math.max(...els.map(e=>eff&&eff[e]!=null?eff[e]:100)); if(/\(TH\)/.test(n)) v-=3; return {v, why:eff&&els.length?els.sort((a,b)=>(eff[b]??100)-(eff[a]??100))[0]:null}; }
-    if(voc==="paladin"&&n){ if(/resistant/i.test(n)) return {v:eff&&eff.physical!=null&&eff.physical<90?300:0, why:"physical"}; if(/bossing/i.test(n)) return {v:-1}; if(/holy/i.test(n)) return {v:eff&&eff.holy!=null?eff.holy:100, why:"holy"}; if(/physical/i.test(n)) return {v:eff&&eff.physical!=null?eff.physical:100, why:"physical"}; }
-    if(voc==="knight") return {v:(dang>=3?/Combat Mastery/:/Executioner/).test(w.t)?1:0, why:dang>=3?"risk":"fast"};
-    return {v:0}; };
-  let best=null, bs=-1e9, bw=null; ws.filter(w=>w.p>=top-200).forEach(w=>{ const s=sc(w), x=s.v*1000+w.p; if(x>=bs){ bs=x; best=w; bw=s.why; } });
-  const e=eff&&bw&&ELN[bw]&&eff[bw]!=null?eff[bw]:null;
-  const why = bw==="risk"?"hunt de risco alto: Combat Mastery dá mais segurança":bw==="fast"&&/Executioner/.test(best.t)?"Executioner's Throw acaba as criaturas mais depressa":e!=null?`as criaturas levam ${e}% de ${ELN[bw]}`:"";
-  return {w:best, why}; }
 const WNOTE = {"Holy Build":"build holy","Physical Build":"build física","Base Bossing Build":"para bosses","Base Ranged Spawn Build":"hunts à distância","Physical Resistant Build, e.g. Rosh":"criaturas que resistem a físico (ex.: Rosh)",
   "Energy":"energia","Fire/Death":"fogo e morte","Energy/Death":"energia e morte","Fire (TH)":"fogo, em team hunt","Fire (Solo)":"fogo, solo","Fire (Solo)/Death":"fogo (solo) e morte","Energy/Death/Fire (TH)":"energia, morte e fogo (team hunt)"};
 const wnote = n => n ? (WNOTE[n]||n) : "";
@@ -48129,7 +48117,6 @@ function huntProfile(pid){
 const HSI={off:'<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2M14.5 6.5 18 3h3v3l-3.5 3.5M5 14l4 4M7 17l-3 3M3 19l2 2"/>',
   bal:'<path d="M12 3v18M7 21h10"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/><path d="m2 16 3-8 3 8a4.2 4.2 0 0 1-6 0zM16 16l3-8 3 8a4.2 4.2 0 0 1-6 0z"/>',
   def:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>'};
-const HSM=[["off","Ofensivo","Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa."],["bal","Consistente","Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt."],["def","Defensivo","Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa."]];
 /* r4-t5 */ // paladino sem tipo de arma escolhido: o da munição do TibiaPal nesta hunt (how da linha de G.hunts.paladin:
 // bolt → besta, arrow → arco, spear/star → arremesso), para os 3 sets baterem com a linha 'Munição' do Setup;
 // '' = o do pickSet (arco a partir do 100). O [data-hsave] usa o huntSet, por isso guarda o mesmo set que a ficha mostra.
