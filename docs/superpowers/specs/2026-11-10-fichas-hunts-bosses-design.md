@@ -96,7 +96,8 @@ como» e o botão do Bosstiary da ficha (o Bosstiary continua na linha da lista)
 ### Modelo de dados (`data/caminhos.json`)
 
 ```
-{ "v": 1, "gen": "AAAA-MM-DD", "h": { "<pid>": Caminho }, "b": { "<chave do boss>": Caminho } }
+{ "v": 1, "gen": "AAAA-MM-DD", "h": { "<pid>": Caminho }, "b": { "<chave do boss>": Caminho },
+  "places": { "<título>": Local } }      // cada ficha de local uma só vez (ronda 1, Q3)
 
 Caminho = { "st": "ok" | "rev" | "part" | "none",
             "from": "Thais" | null,
@@ -104,7 +105,8 @@ Caminho = { "st": "ok" | "rev" | "part" | "none",
             "pre": [Pre], "legs": [Troco],
             "refs": [ { "slug": "grimvale-quest", "sec": 10, "t": "11. Paradise Lost: chegar a Oskayaat",
                         "quest": "Grimvale Quest" } ] }      // passos de guias do Questski que levam lá (opcional)
-Troco   = { "t": "Chegar a Issavi", "steps": [Passo] }
+Troco   = { "t": "Chegar a Issavi", "steps": [Passo] } | { "ref": "<título de places>" }
+Local   = { "title", "entrance": {x,y,z,label} | null, "arrive": [Passo], "leave": [Passo], "warnings": ["…"] }
 Passo   = { "s": "texto", "c": [x, y, z] | null,
             "npc": { "n": "Captain Bluebear", "say": ["hi", "targuna", "yes"], "gp": 110 | null } | null }
 Pre     = { "k": "quest", "n": "Grimvale Quest", "id": "<id do G.quests>" | null,
@@ -167,6 +169,21 @@ Sem mundo na personagem, ou com o Market em baixo: preço do NPC e a frase «Pre
 
 Os 7 elementos do `p.eff` (média das criaturas), cada um com a percentagem de dano que levam, do mais fraco para o
 mais resistente; imune (`eff.min` = 0) e cura assinalados. Nos bosses, o `el` da criatura.
+
+## Decisões da ronda 1 (grilling, 10/11/2026; o dono respondeu «ok» às recomendações)
+
+- **Q1** Equipamento e Wheel saem só das fichas; as páginas próprias ficam.
+- **Q2** A ficha continua no painel (`#sheet`); o `fichaHTML` fica pronto para as páginas com endereço próprio, depois.
+- **Q3** Fichas de locais uma só vez em `places`; os troços apontam com `{"ref": "<título>"}`.
+- **Q4** O texto dos caminhos entra no circuito de conteúdo do i18n (`content.json`, tradução para inglês; as outras
+  línguas caem no inglês). Cada lote da parte C traz a tradução inglesa dos seus passos.
+- **Q5** Os pré-requisitos mostram o estado da quest inteira (`c.done`). O estado por passo («até entregares a ocarina»)
+  fica para o desenho de 7/11 (passos do Questski por personagem), a fazer a seguir a este.
+- **Q6** Dificuldade: nas hunts igual para todos; nos bosses, para o nível da personagem.
+- **Q7** Um agente por tarefa, com revisão antes da seguinte. O dono aprova no fim da parte A, no fim da parte B (com
+  capturas) e em cada lote da parte C (PR). Nada entra no `main` sem o OK dele.
+- **Q8** Parte C: fontes = dados do site, guias do Questski e TibiaWiki pela API (`api.php`; a página normal dá 403).
+  `ok` só com a wiki a confirmar todos os passos. Lotes de 25, em paralelo com a parte B depois da Task 2.
 
 ## Deixado ao construtor
 

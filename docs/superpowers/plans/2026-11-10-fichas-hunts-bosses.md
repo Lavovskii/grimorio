@@ -22,7 +22,9 @@
 - Nunca inventar um caminho: sem passos confirmados, o estado é `none` e a ficha diz «por documentar».
 - Um ponto com `pa = 1` nunca é apresentado como entrada: a legenda diz «zona aproximada».
 - Texto novo visível passa pelo i18n (Tarefa 6): `i18n/src/ui-extra.json`, `python3 -I _dev/i18n.py extract`, `merge ui <língua>`, `build`, para en, pt-BR, es, de, pl, sv, nl.
-- Ramo de trabalho: `fichas-hunts-bosses`, a partir do `main`. Um commit por tarefa. PR no fim de cada parte (A+B juntas, depois cada lote da parte C).
+- Ramo de trabalho: `fichas-hunts-bosses` (já existe, com o plano e as skills). Um commit por tarefa.
+- **Aprovações do dono (ronda 1, Q7):** para no fim da parte A (mostra o `--report`), no fim da parte B (capturas antes/depois a 1440 e 390 px) e em cada lote da parte C (um PR por lote). Nunca faças merge para o `main` sem o OK dele.
+- Decisões da ronda 1 (Q1–Q8): secção «Decisões da ronda 1» da spec. Valem para todas as tarefas.
 - Não mexer nas páginas Equipamento e Wheel, nos filtros das Hunts nem no comparar hunts.
 
 ## Review Focus
@@ -170,7 +172,7 @@ git commit -m "Fichas: modelo de dificuldade, preys, loot, resistências e viewp
 
 **Interfaces:**
 - Consumes: o G (`load_G` do `_dev/gjson.py`: `places`, `hv`, `routes`, `hm`, `quests`), `data/hunt-access.json` (`h`, `places`), `data/boss-access.json` (`b`, `places`), `data/bosses.json` (`b[k].pos`, `pa`, `q`, `ql`, `qr`, `loc`), `data/npcs.json` (chaves em minúsculas, com `x`, `y`, `z`), `data/guias.json` (`q2s`: id do G.quests → slug; `n2s`: nome normalizado → slug; `g`), `_dev/caminhos_manual.json`.
-- Produces: `data/caminhos.json` no formato da spec (`{v: 1, gen, h, b}`), com **todas** as chaves de `G.places` em `h` e todas as de `data/bosses.json` em `b`. Linha de comando:
+- Produces: `data/caminhos.json` no formato da spec (`{v: 1, gen, h, b, places}`; as fichas de locais ficam uma vez em `places` e os troços apontam-lhes com `{ref}`), com **todas** as chaves de `G.places` em `h` e todas as de `data/bosses.json` em `b`. Linha de comando:
   - `python3 -I _dev/build_caminhos.py` → grava;
   - `--check` → sai com 1 se o ficheiro em disco for diferente do que geraria, ou se a validação falhar;
   - `--report` → conta por estado (`ok`/`rev`/`part`/`none`), passos com ponto e passos com NPC, hunts e bosses em separado;
@@ -209,7 +211,9 @@ assert.deepEqual(blue.npc, { n: "Captain Bluebear", say: ["hi", "targuna", "yes"
 assert(T.legs.flatMap(l => l.steps).some(s => s.c && s.c.join() === "31962,31898,7"));
 assert(CAM.h.werelions.pre.some(p => p.k === "quest" && /Lion's Rock/.test(p.n) && p.slug));
 assert(CAM.h.werelions.pre.some(p => p.k === "premium"));
-assert(CAM.h.upperspike.legs[0].t.includes("Upper Spike"));                 // ficha de local como 1.º troço
+assert.equal(CAM.h.upperspike.legs[0].ref, "Upper Spike");                   // ficha de local como 1.º troço, por referência
+for (const c of [...Object.values(CAM.h), ...Object.values(CAM.b)]) for (const l of c.legs) if (l.ref) assert(CAM.places[l.ref], "ref sem local: " + l.ref);
+assert(readFileSync(new URL("../data/caminhos.json", import.meta.url)).length < 400 * 1024, "caminhos.json passa de 400 KB");
 assert(Object.values(CAM.h).filter(c => c.st === "none").length <= 129);
 assert(CAM.b.abyssador.refs.some(r => r.slug === "bigfoots-burden-quest" && r.sec === 8));
 assert(Object.values(CAM.h).every(c => c.st !== "none" || c.legs.length === 1)); // a frase do p.acc fica como único passo
@@ -230,7 +234,7 @@ Regras de conversão (o resto fica ao teu critério):
 - Com `G.hv[pid].st`: `st = "ok"` se `v == "ok"`, `"rev"` se `v == "fix"`, senão `"part"`. Um troço `"Caminho"` com um passo por linha do `st`. Se houver `t` (transporte), é o 1.º passo.
 - Sem `hv` mas com `G.routes[pid]` (`[de, viagem, passos, requisito]`): `st = "part"`, `from = de`, passos = `viagem` (se houver) + `passos`; o `requisito` vai para `pre` como texto.
 - Sem nenhum: `st = "none"`, um troço `"O que se sabe"` com um passo = `G.places[pid].acc`.
-- Ficha de local (`hunt-access.json`: `h[pid]` → nomes → `places[nome]`): cada uma entra **antes** como troço `"Chegar a <title>"`, com os passos do `arrive` (texto tal como está; a marcação `{coord:}` fica no texto e o 1.º `{coord:}` do passo vai também para `c`). Os `requirements` vão para `pre` como texto. Com ficha de local e `st == "none"`, o estado sobe para `"part"` e o troço «O que se sabe» mantém-se no fim.
+- Ficha de local (`hunt-access.json`: `h[pid]` → nomes → `places[nome]`): cada uma entra **antes** como troço `{"ref": "<title>"}`, e a ficha vai uma vez para `places[title]` = `{title, entrance, arrive, leave, warnings}`, com `arrive` e `leave` convertidos em `Passo` (texto tal como está; a marcação `{coord:}` fica no texto e o 1.º `{coord:}` do passo vai também para `c`; NPCs como nos outros passos). Os `requirements` vão para `pre` como texto. Com ficha de local e `st == "none"`, o estado sobe para `"part"` e o troço «O que se sabe» mantém-se no fim.
 - `from`: a 1.ª cidade da lista `CITIES` do `index.html` (linha `const CITIES=[["Thais",…`) que apareça no 1.º passo; senão `G.places[pid].city`; senão `null`.
 
 *Passos*
@@ -281,7 +285,7 @@ git commit -m "Caminhos: data/caminhos.json com troços, passos, pontos, NPCs e 
 - Produces:
   - `openSheet(html: string, cls?: string)` — `cls` é posta na `.sh` e tirada no `openSheet` seguinte sem `cls` e no `closeSheet`.
   - `camData(): Promise<{v, h, b}>` — carrega uma vez; falha → a próxima chamada tenta de novo.
-  - `camHTML(cam: Caminho, id: string): string` — o bloco «Como lá chegar».
+  - `camHTML(cam: Caminho, id: string, places: object): string` — o bloco «Como lá chegar».
   - `camFill(box: Element): Promise<void>` — enche `<div data-cam="h:<pid>">` ou `data-cam="b:<chave>"`; também enche o irmão `[data-campre]` com os pré-requisitos.
   - `drawCam(cv: HTMLCanvasElement, pts: [x,y,z][], sel: number): Promise<void>`
   - `preHTML(pre: Pre[], c: personagem|null): string`
@@ -298,16 +302,17 @@ const cx = { esc: x => String(x), hasKey: (o, k) => Object.hasOwn(o, k), qmd: x 
 vm.createContext(cx);
 vm.runInContext(take(html, '/* fichas:caminho */', '/* fichas:caminho:fim */'), cx);
 // caminho com passos, NPC e pontos
-const h1 = cx.camHTML(CAM.h.targuna_inf, 'h:targuna_inf');
+const h1 = cx.camHTML(CAM.h.targuna_inf, 'h:targuna_inf', CAM.places);
+assert.match(cx.camHTML(CAM.h.upperspike, 'h:upperspike', CAM.places), /Chegar a Upper Spike/);
 assert.match(h1, /revisto/); assert.match(h1, /<npc:Emiliana>/); assert.match(h1, /<kbd>hi<\/kbd>/); assert.match(h1, /110 gp/);
 assert.match(h1, /data-cammap="h:targuna_inf:\d+"/); assert.match(h1, /data-camstep="h:targuna_inf:\d+:\d+"/);
 // hunt por documentar: diz que falta e não desenha mapa de troço
 const none = Object.entries(CAM.h).find(([, c]) => c.st === 'none');
-const h2 = cx.camHTML(none[1], 'h:' + none[0]);
+const h2 = cx.camHTML(none[1], 'h:' + none[0], CAM.places);
 assert.match(h2, /por documentar/); assert(!h2.includes('data-cammap='));
 // zona aproximada nunca é «entrada»
 const aprox = Object.entries(CAM.h).find(([, c]) => c.pa === 1 && c.pos);
-assert(!/entrada/i.test(cx.camHTML(aprox[1], 'h:' + aprox[0]).replace(/<ol[\s\S]*?<\/ol>/g, '')));
+assert(!/entrada/i.test(cx.camHTML(aprox[1], 'h:' + aprox[0], CAM.places).replace(/<ol[\s\S]*?<\/ol>/g, '')));
 // pré-requisitos
 const pre = [{ k: 'quest', n: 'Grimvale Quest', id: 'grim', slug: 'grimvale-quest', sec: 10, note: 'até entregares a ocarina' },
   { k: 'level', n: 250, rec: true }, { k: 'premium' }, { k: 'item', n: 'Pá' }, { k: 'text', s: 'Grupo recomendado' }];
@@ -332,7 +337,7 @@ Expected: FAIL com `/* fichas:caminho */` (marca não encontrada)
 - [ ] **Step 3: Implementa as peças no `index.html`**, entre os comentários `/* fichas:caminho */` e `/* fichas:caminho:fim */` (as funções e as variáveis desta tarefa ficam entre as duas marcas, para o teste as extrair; os `addEventListener` ficam **depois** da marca do fim, porque o teste corre sem `document`)
 
 - `let CAMP = null;` e `camData()` como o `hAccessData` de hoje (valida `v === 1`, `h`, `b`; limpa `CAMP` na falha).
-- `camHTML(cam, id)`:
+- `camHTML(cam, id, places)` (assinatura nova: `places` = `CAM.places`; um troço `{ref}` desenha-se como um troço normal com o título «Chegar a <title>», os passos do `arrive`, os `warnings` e um passo final com a `entrance`; o `leave` fica num `<details>` «Como sair»):
   - cabeçalho: `<b>Como lá chegar</b>` + etiqueta do estado: `ok` → «confirmado» (`tag ok`), `rev` → «revisto» (`tag acc`), `part` → «falta o último troço» (`tag`), `none` → «por documentar» (`tag warn`); com `from`, «A partir de <cidade>».
   - por troço: `<h5>` com o título; se algum passo tem `c`, um `<details class="cam-map" data-cammap="<id>:<nº do troço>"><summary>Ver no mapa</summary><canvas class="cam-cv" width="720" height="420" …></canvas><p class="tiny muted">…andar…</p></details>` **antes** da lista;
   - `<ol class="cam-st">`: cada passo é o texto (`travelTextHTML`), e, com `c`, um botão `<button class="cam-pin" data-camstep="<id>:<troço>:<passo>" aria-label="Ver o passo N no mapa">N</button>` (N = número do passo dentro do troço); com `npc`, um bloco `.cam-npc`: `npcSpr(n, true)`, «Fala com » + `elink("npc", n)`, as palavras em `<kbd>` separadas por vírgula, e « · N gp» quando há preço;
@@ -511,7 +516,9 @@ git commit -m "Bosses: a mesma ficha objetiva das hunts"
 
 - [ ] **Step 2: Extrai, traduz e constrói**
 
-Run: `python3 -I _dev/i18n.py extract`, depois para cada língua (en, pt-BR, es, de, pl, sv, nl) um ficheiro `{"<texto pt-PT>": "<tradução>"}` com **todas** as chaves novas e `python3 -I _dev/i18n.py merge ui <língua> <ficheiro>`, e por fim `python3 -I _dev/i18n.py build`.
+Primeiro, o conteúdo (ronda 1, Q4): acrescenta o `data/caminhos.json` ao `content_strings()` do `_dev/i18n.py` (os textos `s` dos passos, os `t` dos troços, as `note`/`s` dos pré-requisitos, os `arrive`/`leave`/`warnings` de `places`; os `say` dos NPCs **não**, porque são palavras do jogo), corre `python3 -I _dev/i18n.py extract`, tira o lote com `python3 -I _dev/i18n.py todo content en 400` (repete até vir vazio), traduz para inglês mantendo as marcas (`{npc:…}`, `{item:…|…}`, `{key:…}`, `{coord:…}`, `**…**`) e junta com `merge content en <ficheiro>`; confirma que o `shared/i18n.js` aplica o `content.en.js` ao texto da ficha (a ficha é desenhada depois do carregamento: se o tradutor não a apanhar, chama a mesma função que as outras fichas chamam depois de desenhar).
+
+Depois a interface: `python3 -I _dev/i18n.py extract`, depois para cada língua (en, pt-BR, es, de, pl, sv, nl) um ficheiro `{"<texto pt-PT>": "<tradução>"}` com **todas** as chaves novas e `python3 -I _dev/i18n.py merge ui <língua> <ficheiro>`, e por fim `python3 -I _dev/i18n.py build`.
 Expected: o `extract` não lista chaves novas por traduzir depois do `merge`. Termos do jogo ficam em inglês (Bonus XP → «XP Bonus», prey, charm, nomes de NPCs, criaturas, itens e quests).
 
 - [ ] **Step 3: Sobe as versões** — `?v=` do `shared/fichas.js`, do `shared/i18n.js` (`DV`) e dos `i18n/ui.*.js` em todos os sítios (`grep -rn "fichas.js\|i18n.js?v" index.html quests/index.html privacidade.html`).
@@ -572,9 +579,9 @@ Sem código novo: cada lote acrescenta entradas ao `_dev/caminhos_manual.json`, 
   - `st`: `ok` só se a fonte 3 confirma **todos** os passos; senão `rev`; se faltar o último troço, `part` (e os troços que se sabem);
   - o que não se conseguir confirmar **não entra**: mais vale `part` do que um passo inventado.
 
-- [ ] **Step 4: Valida**
+- [ ] **Step 4: Valida e traduz**
 
-Run: `python3 -I _dev/build_caminhos.py && python3 -I _dev/build_caminhos.py --check && node _dev/fichas_test.mjs && python3 -I _dev/build_caminhos.py --report`
+Run: `python3 -I _dev/build_caminhos.py && python3 -I _dev/build_caminhos.py --check && node _dev/fichas_test.mjs && python3 -I _dev/build_caminhos.py --report`, e depois a tradução inglesa dos passos novos: `python3 -I _dev/i18n.py extract`, `todo content en 400`, `merge content en <ficheiro>`, `build` (ronda 1, Q4).
 Expected: sem erros; no `--report`, as hunts `none` desceram e os passos com ponto e com NPC subiram.
 
 - [ ] **Step 5: Confirma no mapa** — abre cada uma das hunts no site (ou com o `_dev/fichas_browser.cjs` em modo captura) e olha para o mapa de cada troço: os pinos caem em chão caminhável, na ordem dos passos, no andar certo. Um pino no preto ou dentro de uma parede é um erro de coordenada: corrige.
