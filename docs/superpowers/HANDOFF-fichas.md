@@ -44,7 +44,17 @@ fica para o desenho de 7/11 · Q6 dificuldade fixa nas hunts, pelo nível nos bo
 revisão; aprovações no fim da parte A, da parte B e em cada lote da C · Q8 parte C pela TibiaWiki (`api.php`), lotes
 de 25, em paralelo depois da Task 2. Detalhe: secção «Decisões da ronda 1» da spec.
 
-## Perguntas em aberto (ronda 2 do grilling: faz estas antes de escrever código)
+## Rondas 2 a 4 (feitas a 10/11/2026)
+
+Respondidas pelo dono. As decisões estão na spec («Decisões das rondas 2 a 4») e o plano já as tem (Task 2b, Task 3
+Step 0, Tasks 4–5 com a personagem, parte D com as Tasks 18–23). Resumo: números e dificuldade **da personagem**
+(vocação, nível, set ativo ou best set); minimapa do Questski partilhado; parte D com TibiaData, sessões importadas
+(Hunt Analyser pelo Chrome do dono, numa sessão local) e rotina semanal com PR. Ambiente cloud `grimorio` criado com
+acesso a `api.tibiadata.com` e `tibia.fandom.com`.
+
+**Próximo passo:** paragem 1 (o dono aprova o plano final); depois a Task 1.
+
+## Perguntas da ronda 2 (histórico)
 
 Usa a skill `grilling`: as perguntas numeradas, cada uma com a recomendação, e espera pelas respostas.
 

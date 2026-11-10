@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Trocar a ficha das hunts e a dos bosses por uma ficha única e objetiva: mapa ao lado de «Como lá chegar», pré-requisitos ligados às quests, criaturas, loot principal, charms e preys, e só cinco números (XP/h, lucro/h, nível recomendado, resistências, dificuldade de 1 a 5).
+**Goal:** (Atualizado com as rondas 2 a 4 do grilling: números e dificuldade da personagem, minimapa do Questski, parte D de calibração.) Trocar a ficha das hunts e a dos bosses por uma ficha única e objetiva: mapa ao lado de «Como lá chegar», pré-requisitos ligados às quests, criaturas, loot principal, charms e preys, e só cinco números (XP/h, lucro/h, nível recomendado, resistências, dificuldade de 1 a 5).
 
-**Architecture:** O caminho de cada hunt e de cada boss passa para um ficheiro novo, `data/caminhos.json`, gerado por `_dev/build_caminhos.py` a partir dos dados que já existem e de um ficheiro escrito à mão que tem prioridade. A lógica nova (dificuldade, preys, loot, resistências, enquadramento do mapa) fica em `shared/fichas.js`, testável em node. O `index.html` só desenha: uma função `fichaHTML` comum, usada pela ficha da hunt e pela do boss. No fim, os caminhos em falta são escritos por lotes, sem tocar no código.
+**Architecture:** O caminho de cada hunt e de cada boss passa para um ficheiro novo, `data/caminhos.json`, gerado por `_dev/build_caminhos.py` a partir dos dados que já existem e de um ficheiro escrito à mão que tem prioridade. A lógica nova (dificuldade, preys, loot, resistências, enquadramento do mapa) fica em `shared/fichas.js`, testável em node. O `index.html` só desenha: uma função `fichaHTML` comum, usada pela ficha da hunt e pela do boss. No fim, os caminhos em falta são escritos por lotes, sem tocar no código. A parte D acrescenta um motor de calibração (`_dev/calibrar.py` → `data/calib.json`) com as sessões reais e as estatísticas do TibiaData, corrido por uma rotina semanal na cloud.
 
 **Tech Stack:** HTML/CSS/JS sem bibliotecas (o `index.html` é uma SPA de um só ficheiro), `<canvas>` sobre `maps/floor-NN-map.png`, Python 3 para os scripts de dados (`python3 -I`), node para os testes (`node:assert`, `node:vm`), Playwright para o teste no browser.
 
@@ -23,9 +23,10 @@
 - Um ponto com `pa = 1` nunca é apresentado como entrada: a legenda diz «zona aproximada».
 - Texto novo visível passa pelo i18n (Tarefa 6): `i18n/src/ui-extra.json`, `python3 -I _dev/i18n.py extract`, `merge ui <língua>`, `build`, para en, pt-BR, es, de, pl, sv, nl.
 - Ramo de trabalho: `fichas-hunts-bosses` (já existe, com o plano e as skills). Um commit por tarefa.
-- **Aprovações do dono (ronda 1, Q7):** para no fim da parte A (mostra o `--report`), no fim da parte B (capturas antes/depois a 1440 e 390 px) e em cada lote da parte C (um PR por lote). Nunca faças merge para o `main` sem o OK dele.
-- Decisões da ronda 1 (Q1–Q8): secção «Decisões da ronda 1» da spec. Valem para todas as tarefas.
-- Não mexer nas páginas Equipamento e Wheel, nos filtros das Hunts nem no comparar hunts.
+- **Aprovações do dono (ronda 1, Q7):** para no fim da parte A (mostra o `--report` e a saída do teste de ouro da Task 2b), no fim da parte B (capturas antes/depois a 1440 e 390 px) e em cada lote da parte C (um PR por lote, para o ramo `fichas-hunts-bosses`). Parte D: para no fim da Task 21 (relatório do `calibrar.py`) e antes de criar a rotina (Task 23). Nunca faças merge para o `main` sem o OK dele.
+- Decisões da ronda 1 (Q1–Q8) e das rondas 2 a 4 (Q1–Q15): secções «Decisões da ronda 1» e «Decisões das rondas 2 a 4» da spec. Valem para todas as tarefas; onde as duas se contradizem, vale a das rondas 2 a 4 (sobretudo a dificuldade, que deixou de ser igual para todos).
+- Não mexer nas páginas Equipamento e Wheel nem nos filtros das Hunts. No comparar hunts muda só a coluna «Risco» (Task 4).
+- Dados de sessões: nunca nomes de personagens no repositório, nos commits nem nos PRs (só agregados por hunt, vocação e nível).
 
 ## Review Focus
 
@@ -34,6 +35,9 @@
 3. **Passos em andares diferentes**: o mapa do troço mostra o andar do passo escolhido e só os pontos desse andar; ao tocar noutro passo, muda de andar. Teste na Tarefa 1 (`viewport`) e na Tarefa 3.
 4. **Hunt sem criaturas com dano conhecido ou sem loot com preço**: dificuldade fica na base, preys saem só as que dá para decidir, loot diz «sem dados»; nada de `NaN` nem `undefined`. Teste na Tarefa 1.
 5. **Personagem sem a quest do pré-requisito, ou sem personagem**: o pré-requisito mostra «por fazer» com ligação ao guia; sem personagem ativa, mostra a lista sem estado. Teste na Tarefa 3 (`preHTML`).
+6. **Mesma hunt, personagens diferentes**: um sorcerer 150 sem set e um knight 150 com set de proteção dão dificuldades diferentes; trocar o set na página Equipamento muda a dificuldade ao reabrir a ficha. Teste nas Tarefas 1 e 4.
+7. **O motor extraído dá os mesmos números**: antes do ajuste de nível, `GrimFicha.huntEst` devolve, para as 5 vocações × todas as hunts, exatamente o que o `huntRows` dava. Teste de ouro na Task 2b.
+8. **`data/calib.json` em falta ou estragado**: o site usa os valores de omissão (`k = 0,5`, sem `dz`) sem erros. Teste nas Tarefas 1 e 21.
 
 ---
 
@@ -41,14 +45,23 @@
 
 | Ficheiro | Papel |
 |---|---|
-| `shared/fichas.js` (novo) | `window.GrimFicha`: funções puras (dificuldade, preys, loot, resistências, viewport). Mesmo invólucro UMD do `shared/bosses.js`. |
+| `shared/fichas.js` (novo) | `window.GrimFicha`: funções puras (dificuldade da personagem, golpe efetivo, ajuste de nível, `huntEst`, preys, loot, resistências). Mesmo invólucro UMD do `shared/bosses.js`. |
+| `shared/minimapa.js` (novo) | `window.GrimMini`: o minimapa do Questski (`drawMinimap`) tirado de `quests/js/app.js`, com `fit` puro e linha tracejada opcional; usado pelos dois sites. CSS dos marcadores em `shared/sites.css`. |
+| `_dev/huntest_gold.mjs`, `_dev/huntest_gold.json` (novos) | Saída do `huntRows` antes da extração (teste de ouro da Task 2b). |
+| `_dev/calibrar.py` (novo, parte D) | Motor de calibração → `data/calib.json` e relatório. |
+| `_dev/tibiadata.py` (novo, parte D) | Vai buscar as `killstatistics` de todos os mundos ao TibiaData. |
+| `_dev/sessoes/`, `_dev/import_sessoes.py` (novos, parte D) | Sessões importadas (JSON/CSV agregado, sem nomes). |
+| `_dev/SESSOES.md` (novo, parte D) | Formato dos ficheiros de sessões e como recolher no Hunt Analyser pelo Chrome. |
+| `data/calib.json` (novo, gerado, parte D) | `k`, mortes/h por zona, `dz` (perigo) e sessões agregadas. |
 | `_dev/fichas_test.mjs` (novo) | Testes do `shared/fichas.js` e do `data/caminhos.json`. |
 | `_dev/build_caminhos.py` (novo) | Gera `data/caminhos.json`; `--check`, `--report`, `--lote`. |
 | `_dev/caminhos_manual.json` (novo) | Caminhos escritos à mão (têm prioridade). Começa com `{"h": {}, "b": {}}`. |
 | `data/caminhos.json` (novo, gerado) | O que o site lê. |
 | `_dev/fichas_browser.cjs` (novo) | Teste no browser com Playwright (Hunts e Bosses, 2 larguras, 3 línguas). |
 | `_dev/CAMINHOS.md` (novo) | Como escrever um caminho à mão (formato, fontes, regras, exemplo). |
-| `index.html` (mudado) | `camData`, `camFill`, `camHTML`, `drawCam`, `preHTML`, `fichaHTML`, `huntSheet` (reescrita), `placeSheet`, `bossSheet`, CSS `.fx-*`/`.cam-*`. |
+| `index.html` (mudado) | `camData`, `camFill`, `camHTML`, `drawCam`, `preHTML`, `protOf`, `diffFor`, `fichaHTML`, `huntSheet` (reescrita), `placeSheet`, `bossSheet`, `huntRows` (passa a chamar o `GrimFicha.huntEst`), coluna do comparar hunts, CSS `.fx-*`/`.cam-*`. |
+| `quests/js/app.js`, `quests/index.html` (mudados) | O `drawMinimap` passa a chamar o `GrimMini.draw` (mesmo resultado). |
+| `shared/bosses.js` (mudado) | `judge` aceita `opt.prot` (Task 5). |
 | `_dev/travel_access_test.mjs` (mudado) | Passa a testar o `camFill` em vez do `huntRoute`/`hAccessFill`. |
 | `_dev/GRIMORIO.md`, `README.md` (mudados) | Secção nova e lista de ferramentas. |
 
@@ -66,14 +79,16 @@
 - Consumes: nada.
 - Produces (`GrimFicha`):
   - `refHp(L: number): number`
-  - `huntDiff(o: {d: 1|2|3, hit: number|null, L: number}): 1|2|3|4|5`
+  - `effHit(dm: {d?: {[el]: number}, m?: number|null}|null, prot: {[el]: number}|null): number|null` — golpe efetivo de uma criatura (máx por elemento de `d[el] × (1 − prot[el]/100)`; sem `d`, `m` como físico; proteções limitadas a 0–100)
+  - `huntDiff(o: {d: 1|2|3, hit: number|null, eff: number|null, adj?: -1|0|1}): 1|2|3|4|5` — `hit` = o pior `effHit` das criaturas principais; `eff` = vida efetiva da personagem (`GrimBoss.effHP`)
+  - `levelFactor(L: number, Lm: number|null, k?: number): {f: number, ok: boolean}` — `f = (L/Lm)^k` limitado a 0,7–1,25 (`k` = 0,5 por omissão); `ok = false` com `L < 0,6 × Lm`; `Lm` nulo → `{f: 1, ok: true}`
+  - `calibOf(x: any): {k: number, dz: object, kz: object, ha: object}` — valida o `data/calib.json`; estragado ou nulo → `{k: 0.5, dz: {}, kz: {}, ha: {}}`
   - `bossDiff(o: {st: string, eff: number|null, md: number|null, ttk: number|null, tmax: number}): 2|3|4|5`
   - `DIFF: string[]` = `["", "muito fácil", "fácil", "média", "difícil", "muito difícil"]`
   - `PREY: {xp: "Bónus de XP", dmg: "Bónus de dano", red: "Redução de dano"}`
   - `preyPicks(mons: {k: string, n: string, xp: number, cnt: number, hit: number|null}[], L: number): {k: string, n: string, bonus: "xp"|"dmg"|"red"}[]`
   - `topLoot(mons: {k: string, n: string, cnt: number, loot: {n: string, pct: number, v: number}[]}[], max?: number): {n: string, pct: number, v: number, from: string}[]`
   - `resist(eff: object|null): {el: string, pct: number, imm: boolean, heal: boolean}[]`
-  - `viewport(pts: [number, number, number][], sel: number, W: number, H: number): {z: number, x0: number, y0: number, s: 1|2|4|8, on: number[]}`
 
 - [ ] **Step 1: Escreve o teste que falha** em `_dev/fichas_test.mjs`
 
@@ -81,18 +96,44 @@
 // Modelo das fichas (shared/fichas.js). Uso: node _dev/fichas_test.mjs
 import { createRequire } from "module";
 import assert from "node:assert/strict";
-const F = createRequire(import.meta.url)("../shared/fichas.js");
+const require = createRequire(import.meta.url);
+const F = require("../shared/fichas.js");
 
 // vida de referência
 assert.equal(F.refHp(8), 185); assert.equal(F.refHp(100), 1105); assert.equal(F.refHp(1), 185);
-// dificuldade das hunts
-assert.equal(F.huntDiff({ d: 1, hit: null, L: 50 }), 1);
-assert.equal(F.huntDiff({ d: 1, hit: 400, L: 50 }), 2);      // 400 / 605 ≥ 0,5
-assert.equal(F.huntDiff({ d: 2, hit: 100, L: 100 }), 2);     // 100 / 1105 < 0,2
-assert.equal(F.huntDiff({ d: 2, hit: 300, L: 100 }), 3);
-assert.equal(F.huntDiff({ d: 3, hit: 900, L: 100 }), 5);
-assert.equal(F.huntDiff({ d: 3, hit: 100, L: 400 }), 3);
-assert.equal(F.huntDiff({ d: 9, hit: NaN, L: 100 }), 4);     // d fora de 1..3 conta como 3; dano inválido = sem dano
+// golpe efetivo com as proteções do set
+assert.equal(F.effHit({ d: { fire: 400, physical: 200 } }, null), 400);
+assert.equal(F.effHit({ d: { fire: 400, physical: 200 } }, { fire: 60 }), 200);      // 400 × 0,4 = 160 < 200 físico
+assert.equal(F.effHit({ d: {}, m: 300 }, { physical: 10 }), 270);                   // sem d: o m conta como físico
+assert.equal(F.effHit({ d: { ice: 100 } }, { ice: 140 }), 0);                       // proteção acima de 100 conta como 100
+assert.equal(F.effHit(null, null), null); assert.equal(F.effHit({ d: {}, m: null }, null), null);
+// dificuldade das hunts (para a personagem)
+assert.equal(F.huntDiff({ d: 1, hit: null, eff: 1000 }), 1);
+assert.equal(F.huntDiff({ d: 1, hit: 500, eff: 1000 }), 2);    // r = 0,5
+assert.equal(F.huntDiff({ d: 1, hit: 1000, eff: 1000 }), 3);   // r = 1: um golpe pode matar (+2)
+assert.equal(F.huntDiff({ d: 2, hit: 100, eff: 1000 }), 2);    // r < 0,2 e d > 1
+assert.equal(F.huntDiff({ d: 3, hit: 900, eff: 1000 }), 5);
+assert.equal(F.huntDiff({ d: 3, hit: 300, eff: 1000, adj: 1 }), 5);
+assert.equal(F.huntDiff({ d: 1, hit: null, eff: null, adj: -1 }), 1);
+assert.equal(F.huntDiff({ d: 9, hit: NaN, eff: 1000 }), 4);    // d fora de 1..3 conta como 3; dano inválido = sem dano
+// a mesma hunt para duas personagens: mage sem set vs knight com proteções
+const B = require("../shared/bosses.js");
+const dm = { d: { fire: 1300, physical: 400 } };   // mage 150: 1300 ÷ 2335 ≥ 0,5 → 4; knight 150 com 30 % de fogo: 910 ÷ 3125 → 3
+const dMage = F.huntDiff({ d: 2, hit: F.effHit(dm, null), eff: B.effHP("sorcerer", 150, 0) });
+const dKnight = F.huntDiff({ d: 2, hit: F.effHit(dm, { fire: 30 }), eff: B.effHP("knight", 150) });
+assert(dMage > dKnight, "mage sem set tem de ser mais difícil: " + dMage + " vs " + dKnight);
+// ajuste ao nível
+assert.deepEqual(F.levelFactor(400, 100), { f: 1.25, ok: true });
+assert.deepEqual(F.levelFactor(100, 100), { f: 1, ok: true });
+assert.deepEqual(F.levelFactor(81, 100), { f: 0.9, ok: true });
+assert.equal(F.levelFactor(50, 100).ok, false);
+assert.deepEqual(F.levelFactor(300, null), { f: 1, ok: true });
+assert.equal(F.levelFactor(200, 100, 0.3).f, Math.round(Math.pow(2, 0.3) * 100) / 100);
+// calibração estragada → omissões
+assert.deepEqual(F.calibOf(null), { k: 0.5, dz: {}, kz: {}, ha: {} });
+assert.deepEqual(F.calibOf({ v: 9 }), { k: 0.5, dz: {}, kz: {}, ha: {} });
+assert.equal(F.calibOf({ v: 1, k: 0.4, dz: { a: 1 }, kz: {}, ha: {} }).k, 0.4);
+assert.equal(F.calibOf({ v: 1, k: 7, dz: {}, kz: {}, ha: {} }).k, 0.5);          // k fora de 0,1–1 é ignorado
 // dificuldade dos bosses
 assert.equal(F.bossDiff({ st: "solo", eff: 9000, md: 3000, ttk: 100, tmax: 300 }), 2);
 assert.equal(F.bossDiff({ st: "solo", eff: 7000, md: 3000, ttk: 100, tmax: 300 }), 3);
@@ -123,14 +164,6 @@ const R = F.resist({ physical: 100, fire: 110, ice: 96, earth: 81, energy: 99, h
 assert.equal(R.length, 7); assert.equal(R[0].el, "fire"); assert.equal(R[0].pct, 110);
 assert.equal(R.find(x => x.el === "earth").imm, true); assert.equal(R.find(x => x.el === "death").heal, true);
 assert.equal(R.find(x => x.el === "fire").imm, false); assert.deepEqual(F.resist(null), []);
-// viewport do mapa
-assert.deepEqual(F.viewport([[100, 200, 7]], 0, 720, 420), { z: 7, x0: 55, y0: 174, s: 8, on: [0] });
-const V = F.viewport([[100, 200, 7], [300, 200, 7], [100, 200, 8]], 0, 720, 420);
-assert.equal(V.z, 7); assert.deepEqual(V.on, [0, 1]); assert.equal(V.s, 2);   // 200 + 24 de margem cabe a 2 px por sqm (360), não a 4 (180)
-assert.equal(F.viewport([[100, 200, 7], [300, 200, 7], [100, 200, 8]], 2, 720, 420).z, 8);
-assert.equal(F.viewport([[0, 0, 7], [5000, 0, 7]], 0, 720, 420).s, 1);         // não cabe: escala mínima, centrado no passo escolhido
-assert.equal(F.viewport([[0, 0, 7], [5000, 0, 7]], 1, 720, 420).x0, 5000 - 360);
-assert.equal(F.viewport([], 0, 720, 420), null);
 console.log("fichas: ok");
 ```
 
@@ -143,12 +176,15 @@ Expected: FAIL com `Cannot find module '../shared/fichas.js'`
 
 Copia o invólucro UMD do topo e do fim do `shared/bosses.js` (exporta para `module.exports` e para `window.GrimFicha`). Regras que a assinatura e os testes não fixam:
 - `refHp(L) = 185 + 10 * (max(8, L) − 8)`.
-- `huntDiff`: `base = [1, 3, 4][d − 1]`; `r = hit / refHp(L)`; `+1` se `r ≥ 0,5`; `−1` se `r < 0,2` e `d > 1`; limites 1 e 5; `hit` nulo ou não finito = sem ajuste.
+- `effHit`: elementos `physical, fire, ice, earth, energy, holy, death`; `prot[el]` limitado a 0–100; resultado arredondado; sem `d` com valores nem `m` → `null`.
+- `huntDiff`: `base = [1, 3, 4][d − 1]` (d fora de 1..3 conta como 3); `r = hit / eff`; `+2` se `r ≥ 1`, senão `+1` se `r ≥ 0,5`; `−1` se `r < 0,2` e `d > 1`; depois `+ adj`; limites 1 e 5; `hit` ou `eff` nulos ou não finitos = sem ajuste pelo `r`.
+- `levelFactor`: `f` arredondado a 2 casas.
+- `calibOf`: aceita só `v === 1`, objetos em `dz`/`kz`/`ha`, e `k` entre 0,1 e 1 (senão 0,5).
+- Mantém `refHp` (usado pelas preys).
 - `bossDiff`: `solo` com `eff ≥ 3 × md` e `ttk ≤ tmax / 2` → 2; `solo` → 3; `team` e `unknown` → 4; o resto → 5.
 - `preyPicks`: ordena por `xp × cnt` (desc), ignora quem tem `xp × cnt ≤ 0`. 1.ª = `xp`, 2.ª = `dmg`. 3.ª: a criatura ainda não escolhida com o maior `hit`, se `hit / refHp(L) ≥ 0,35` → `red`; senão a seguinte por XP → `dmg`.
 - `topLoot`: pontuação `v × pct / 100 × cnt`; ignora `v ≤ 0`; um item por nome, com a criatura de maior pontuação em `from` (e o `pct` dela); ordena por pontuação desc; `max` = 8 por omissão.
 - `resist`: os 7 elementos `physical, fire, ice, earth, energy, holy, death`, ordenados por `pct` desc; `imm = min[el] === 0`; `heal = min[el] < 0`.
-- `viewport`: `z = pts[sel][2]`; `on` = índices com esse `z`; caixa dos pontos `on` com 12 sqm de margem de cada lado; `s` = o maior de 8, 4, 2, 1 em que a caixa cabe em `W × H`; se nem a 1 couber, `s = 1` e centra no ponto `sel`; senão centra na caixa; `x0 = round(cx − W / s / 2)`, `y0 = round(cy − H / s / 2)`.
 
 - [ ] **Step 4: Corre e confirma que passa**
 
@@ -159,7 +195,7 @@ Expected: `fichas: ok`
 
 ```bash
 git add shared/fichas.js _dev/fichas_test.mjs
-git commit -m "Fichas: modelo de dificuldade, preys, loot, resistências e viewport do mapa"
+git commit -m "Fichas: modelo de dificuldade da personagem, ajuste de nível, preys, loot e resistências"
 ```
 
 ---
@@ -272,6 +308,27 @@ git commit -m "Caminhos: data/caminhos.json com troços, passos, pontos, NPCs e 
 
 ---
 
+### Task 2b: Motor dos números em `GrimFicha.huntEst` (rondas 2–4, Q3/Q5/Q6)
+
+**Files:**
+- Modify: `shared/fichas.js`, `index.html` (`function huntRows(` passa a chamar o `GrimFicha.huntEst`)
+- Create: `_dev/huntest_gold.mjs` (gera e compara), `_dev/huntest_gold.json` (gerado **antes** de mexer no `huntRows`)
+- Test: `_dev/fichas_test.mjs` (acrescenta)
+
+**Interfaces:**
+- Consumes: o corpo atual do `huntRows` (e o que ele chama: `compatFor`, `huntEls`, `EST_ORDER`, `G.vr`, `G.ha`, `avgXp`/`avgMon`, `hasKey`, `VOCS`).
+- Produces:
+  - `GrimFicha.huntEst(ctx: {G, voc, pid, L, pl, compatFor, avgMon, calib}): {xp, lo, l, src, est, estx, Lm} | null` — os números de **uma** hunt para uma vocação, mesmo sem linha dessa vocação em `G.hunts[voc]` (aí usa as linhas das outras vocações com o fator de sempre). `Lm` = nível da medição usada (linha do TibiaPal: o `l`; sessões reais: o nível mediano; `mx`: `null`).
+  - `huntRows(voc, L, pl)` mantém a assinatura e o resultado; por dentro chama o `huntEst` e aplica o `levelFactor(pl, Lm, calib.k)`.
+
+- [ ] **Step 1: Teste de ouro antes de mexer.** `_dev/huntest_gold.mjs --save`: carrega o `index.html` num `vm` (como o `_dev/travel_access_test.mjs` faz), corre `huntRows(voc, L, pl)` para as 5 vocações × níveis 50, 150, 300, 600, 1000 (sem personagem: `C()` devolve `{level: pl}`), e grava `{voc|L: [[c, xp, lo, l, src]]}` em `_dev/huntest_gold.json`. Commit só deste ficheiro e do script.
+- [ ] **Step 2: Escreve o teste que falha** (`_dev/fichas_test.mjs`): `typeof F.huntEst === "function"`; para uma hunt que só 1 vocação tem (procura nos dados: `G.places` com linha só em 1 vocação), `huntEst` com outra vocação devolve `xp` ≠ null e `est` ≠ null.
+- [ ] **Step 3: Extrai.** Move o cálculo por grupo do `huntRows` para `GrimFicha.huntEst` (pura: tudo o que lia do `index.html` entra pelo `ctx`). O `huntRows` fica com o agrupamento e a escolha da variante.
+- [ ] **Step 4: Corre o ouro sem o fator de nível** — `node _dev/huntest_gold.mjs` (compara com `k = 0`, que dá `f = 1`) tem de dizer `0 diferenças`. Só depois liga o `levelFactor` com `k = 0,5` e confirma, no mesmo script com `--nivel`, que as diferenças estão todas dentro de 0,7–1,25 × o valor antigo e que nenhuma linha com `pl < 0,6 × Lm` tem número.
+- [ ] **Step 5: Commit** — `git commit -m "Hunts: motor dos números em GrimFicha.huntEst, para qualquer hunt, com ajuste ao nível"`
+
+---
+
 # Parte B — A ficha
 
 ### Task 3: Peças comuns no `index.html` (caminho, mapa do troço, pré-requisitos)
@@ -281,14 +338,17 @@ git commit -m "Caminhos: data/caminhos.json com troços, passos, pontos, NPCs e 
 - Test: `_dev/travel_access_test.mjs` (reescrito), `_dev/fichas_browser.cjs` (novo)
 
 **Interfaces:**
-- Consumes: `GrimFicha.viewport` (Task 1); `data/caminhos.json` (Task 2); do `index.html`: `dload`, `hasKey`, `esc`, `qmd`, `travelTextHTML`, `elink`, `npcSpr`, `floorImg`, `floorTxt`, `mapBtn`, `guiaHref`, `qDone`, `C`, `I18N.tr`.
+- Consumes: `GrimMini` (Step 0 desta tarefa); `data/caminhos.json` (Task 2); do `index.html`: `dload`, `hasKey`, `esc`, `qmd`, `travelTextHTML`, `elink`, `npcSpr`, `floorImg`, `floorTxt`, `mapBtn`, `guiaHref`, `qDone`, `C`, `I18N.tr`.
 - Produces:
   - `openSheet(html: string, cls?: string)` — `cls` é posta na `.sh` e tirada no `openSheet` seguinte sem `cls` e no `closeSheet`.
   - `camData(): Promise<{v, h, b}>` — carrega uma vez; falha → a próxima chamada tenta de novo.
   - `camHTML(cam: Caminho, id: string, places: object): string` — o bloco «Como lá chegar».
   - `camFill(box: Element): Promise<void>` — enche `<div data-cam="h:<pid>">` ou `data-cam="b:<chave>"`; também enche o irmão `[data-campre]` com os pré-requisitos.
-  - `drawCam(cv: HTMLCanvasElement, pts: [x,y,z][], sel: number): Promise<void>`
+  - `drawCam(box: Element, pts: [x,y,z][], sel: number): Promise<void>` — desenha com o `GrimMini.draw`
+  - `GrimMini.fit(pts: [x,y,z][], sel: number, W: number, H: number): {z, on: number[], cx, cy, s} | null` (pura, testada em node) e `GrimMini.draw(el: Element, o: {z, marks: {x,y,z,n}[], sel, line: boolean}): Promise<void>`
   - `preHTML(pre: Pre[], c: personagem|null): string`
+
+- [ ] **Step 0: Minimapa partilhado (ronda 3, Q8).** Tira o `drawMinimap` de `quests/js/app.js` para `shared/minimapa.js` (UMD, `window.GrimMini`), separando a parte pura `fit` (andar do passo escolhido, pontos desse andar, centro e escala 0,6–5 com 12 sqm de margem, como hoje) do desenho. O CSS `.mm-mark` (com o número em `data-n`) passa para `shared/sites.css`. `draw` com `line: true` traça, no canvas, uma linha tracejada (2 px, cor de destaque, 60 % de opacidade) entre marcadores seguidos do mesmo andar. O Questski passa a chamar o `GrimMini.draw` com `line: false`. Testes em `_dev/fichas_test.mjs`: `fit` com 1 ponto, com 2 andares (só os do andar escolhido), com pontos longe (escala mínima 0,6, centrado no escolhido), e `[]` → `null`. Captura do minimapa de uma quest do Questski antes e depois: igual.
 
 - [ ] **Step 1: Reescreve `_dev/travel_access_test.mjs`** (o `huntRoute` e o `hAccessFill` vão sair na Task 4; este teste passa a guardar o comportamento novo)
 
@@ -339,12 +399,12 @@ Expected: FAIL com `/* fichas:caminho */` (marca não encontrada)
 - `let CAMP = null;` e `camData()` como o `hAccessData` de hoje (valida `v === 1`, `h`, `b`; limpa `CAMP` na falha).
 - `camHTML(cam, id, places)` (assinatura nova: `places` = `CAM.places`; um troço `{ref}` desenha-se como um troço normal com o título «Chegar a <title>», os passos do `arrive`, os `warnings` e um passo final com a `entrance`; o `leave` fica num `<details>` «Como sair»):
   - cabeçalho: `<b>Como lá chegar</b>` + etiqueta do estado: `ok` → «confirmado» (`tag ok`), `rev` → «revisto» (`tag acc`), `part` → «falta o último troço» (`tag`), `none` → «por documentar» (`tag warn`); com `from`, «A partir de <cidade>».
-  - por troço: `<h5>` com o título; se algum passo tem `c`, um `<details class="cam-map" data-cammap="<id>:<nº do troço>"><summary>Ver no mapa</summary><canvas class="cam-cv" width="720" height="420" …></canvas><p class="tiny muted">…andar…</p></details>` **antes** da lista;
+  - por troço: `<h5>` com o título; se algum passo tem `c`, um `<details class="cam-map" data-cammap="<id>:<nº do troço>"><summary>Ver no mapa</summary><div class="cam-mm"><canvas class="cam-cv"></canvas></div><p class="tiny muted">…andar…</p></details>` **antes** da lista;
   - `<ol class="cam-st">`: cada passo é o texto (`travelTextHTML`), e, com `c`, um botão `<button class="cam-pin" data-camstep="<id>:<troço>:<passo>" aria-label="Ver o passo N no mapa">N</button>` (N = número do passo dentro do troço); com `npc`, um bloco `.cam-npc`: `npcSpr(n, true)`, «Fala com » + `elink("npc", n)`, as palavras em `<kbd>` separadas por vírgula, e « · N gp» quando há preço;
   - `refs`: `<h5>Nos guias das quests</h5>` + lista de ligações `guiaHref(slug) + "/guia/sec-" + sec` com o título e a quest;
   - com `pa === 1` e `pos`: «O ponto no mapa é a zona aproximada.» (nunca a palavra «entrada»);
   - `none`: depois do passo único, «Ainda não temos este caminho passo a passo.».
-- `drawCam(cv, pts, sel)`: `GrimFicha.viewport(pts, sel, cv.width, cv.height)`; fundo preto; `floorImg(z)` desenhado como no `drawPos` (origem do mapa: x − 31744, y − 30976); um pino numerado por ponto de `on` (círculo de 11 px com o número do passo; o escolhido maior e a cor de destaque); etiqueta do andar com `I18N.tr(floorTxt(z))` como no `drawPos`.
+- `drawCam(box, pts, sel)`: `GrimMini.draw(box, {…, line: true})` com os marcadores numerados do Questski (o escolhido com a classe de destaque); etiqueta do andar com `I18N.tr(floorTxt(z))`; legenda pequena «A linha mostra a ordem dos passos, não o caminho a pé.»; ligação «Abrir no mapa do Questski» (`quests/#/mapa` com o ponto, no formato que o `renderMapPage` já lê; confirma o formato no `quests/js/app.js`).
 - Eventos (delegados no `document`): `toggle` em `.cam-map` aberta → `drawCam` com o 1.º passo com ponto; clique em `[data-camstep]` → abre a `.cam-map` do troço, `drawCam` com esse passo, `scrollIntoView({block: "nearest"})`. Os pontos de cada troço ficam num mapa `CAMPTS[id + ":" + troço] = [{c, n}]` preenchido pelo `camHTML`.
 - `preHTML(pre, c)`: lista `<ul class="fx-pre">`; quest: ligação ao guia (com `sec` → `/guia/sec-<sec>`; sem `slug` → só o nome), a `note` a seguir, e, com `c` e `id`, «✓ feita» (`tag ok`) ou «por fazer» (`tag warn`); nível: «Nível N» (+ « recomendado»), com `c` → `tag ok`/`tag warn` conforme `c.level ≥ n`; premium: «Conta premium»; item: `qmd("{item:" + n + "}")`; texto: `qmd`. Lista vazia → `<p class="small muted">Sem pré-requisitos.</p>`.
 - `camFill(box)`: como o `hAccessFill` de hoje (marca `dataset.loaded`, verifica `isConnected`, na falha apaga a marca e mostra «Não consegui carregar o caminho.» + `<button class="btn small ghost" data-camretry>Tentar de novo</button>`); enche também `box.parentElement.querySelector("[data-campre]")` com `preHTML(cam.pre, C())` se existir. Chave sem entrada → `camHTML({st: "none", pos: null, pa: 0, pre: [], legs: []}, id)`.
@@ -370,7 +430,7 @@ Expected: `ok` em 6 combinações
 - [ ] **Step 6: Commit**
 
 ```bash
-git add index.html shared/fichas.js _dev/travel_access_test.mjs _dev/fichas_browser.cjs
+git add index.html shared/fichas.js shared/minimapa.js shared/sites.css quests/js/app.js quests/index.html _dev/travel_access_test.mjs _dev/fichas_browser.cjs _dev/fichas_test.mjs
 git commit -m "Fichas: caminho em troços com mapa por troço, NPCs e pré-requisitos"
 ```
 
@@ -383,11 +443,13 @@ git commit -m "Fichas: caminho em troços com mapa por troço, NPCs e pré-requi
 - Test: `_dev/fichas_browser.cjs` (acrescenta), `_dev/fichas_test.mjs` (sem mudanças)
 
 **Interfaces:**
-- Consumes: `camFill`, `preHTML`, `openSheet(html, cls)` (Task 3); `GrimFicha.huntDiff`, `preyPicks`, `topLoot`, `resist`, `DIFF`, `PREY` (Task 1); do `index.html`: `huntMap(h)`, `mapBtn`, `crSpr`, `mlink`, `ilink`, `ltSpr`, `chip`, `elName`, `gp`, `fmt`, `nf`, `priceOf`, `charmPicks`, `hCharmsHTML`, `hcmpBtn`, `crdLoad`, `CRDV`, `hcmpHit(pid)`, `G.pm`, `G.mon`, `G.places`, `G.hm`, `estTxt`.
+- Consumes: `camFill`, `preHTML`, `openSheet(html, cls)` (Task 3); `GrimFicha.huntDiff`, `effHit`, `huntEst`, `levelFactor`, `preyPicks`, `topLoot`, `resist`, `DIFF`, `PREY` (Tasks 1 e 2b); `GrimBoss.effHP`; do `index.html` também `setTotals`, `bisSet`, `C`; do `index.html`: `huntMap(h)`, `mapBtn`, `crSpr`, `mlink`, `ilink`, `ltSpr`, `chip`, `elName`, `gp`, `fmt`, `nf`, `priceOf`, `charmPicks`, `hCharmsHTML`, `hcmpBtn`, `crdLoad`, `CRDV`, `hcmpHit(pid)`, `G.pm`, `G.mon`, `G.places`, `G.hm`, `estTxt`.
 - Produces:
   - `fichaHTML(m: {eyebrow: string, title: string, head?: string, map: string, cam: string, stats: {v: string, l: string}[], pre: string, mons: string, loot: string, tips: string, foot: string}): string`
   - `huntSheet(h): string` (mesma assinatura de hoje)
-  - `placeSheet(pid: string): string` (hunt sem linha para a vocação: mesma ficha, sem XP/h)
+  - `placeSheet(pid: string): string` (hunt sem linha para a vocação: mesma ficha, com os números estimados pelo `huntEst`)
+  - `protOf(c): {prot: {[el]: number}, lbl: string}` — set ativo (`c.hset === "mine"` e `c.aset`) senão `bisSet(c)`; `setTotals(slots)` → `ab[el] + abi[el]`; `lbl` = «Contas com o teu set "<nome>"» ou «Contas com o best set do nível N»; sem `c` → `{prot: {}, lbl: "Sem personagem: conta só a vida."}`
+  - `diffFor(pid, c): {n: 1..5, lbl: string}` — junta o `effHit` das criaturas principais (`G.pm[pid].h` ∩ `mons`, sem bosses, dano do `CRDV`), `GrimBoss.effHP(c.voc, c.level, c.ml)`, `p.d` e `calib.dz[pid]`
   - `diffHTML(n: 1..5, extra?: string): string` — 5 marcas + «N/5 · <nome>»
 
 - [ ] **Step 1: Acrescenta o teste que falha** ao `_dev/fichas_browser.cjs`
@@ -401,7 +463,9 @@ Em cada combinação, depois de `#hunts` carregar: clica no 1.º `[data-hunt]`, 
 - `.fx-tips` tem um bloco de charms e um de preys; cada prey tem o nome de uma criatura e um dos três bónus;
 - preços do loot: o teste intercepta `**/api/market.php*` (`page.route`) e responde com um JSON fixo (`{world, updated, items}` com o id do Market do 1.º item do loot e um `month_average_sell` alto, `month_sold` 50); a linha desse item passa a dizer «Market» e o valor do JSON, e a nota diz o mundo. Numa 2.ª corrida o route responde 503: a ficha mostra os preços do NPC e «o Market não respondeu». Sem `world` na personagem: a frase de escolher o mundo;
 - clicar num `.cam-pin` abre a `.cam-map` e o `<canvas>` deixa de estar todo preto (`getImageData` com algum píxel ≠ 0 fora do pino);
-- fecha a ficha; pesquisa geral por uma hunt que a vocação ativa não tem e confirma que a ficha abre com a mesma estrutura (sem o número de XP/h: «—»).
+- fecha a ficha; pesquisa geral por uma hunt que a vocação ativa não tem e confirma que a ficha abre com a mesma estrutura **e com XP/h estimado** («≈» e a origem no `title`);
+- dificuldade da personagem: com o sorcerer de teste sem set e depois com o knight de teste com um set guardado, a mesma hunt dá números diferentes e a nota diz qual set foi usado; muda o `hset` para `"bis"` no `localStorage`, reabre a ficha, e a nota passa a «best set»;
+- comparar hunts: junta 2 hunts à bandeja e abre a tabela; a coluna que era «Risco» mostra «N/5» igual ao da ficha.
 Repete com a 1.ª hunt cujo `data-pid` tenha `st == "none"` no `data/caminhos.json`: a ficha abre, mostra «por documentar» (pt-PT) e o mapa da zona.
 
 Run: `node _dev/fichas_browser.cjs`
@@ -422,16 +486,18 @@ Estrutura fixa do `fichaHTML` (classes entre parênteses):
 `huntSheet(h)`:
 - `map`: `huntMap(h)` (o botão com a miniatura que já existe) + `mapBtn(…, "Abrir o mapa")` + o botão «Ver spawns no mapa» (`data-hspawn`) que já existe; com `G.hm[pid][3] === "a"`, a legenda «zona aproximada».
 - `cam`: `<div data-cam="h:<pid>"><p class="tkload">A carregar o caminho…</p></div>`; `pre`: `<div data-campre></div>` (o `camFill` enche-o).
-- `stats`: (1) `fmt(h.xp)` + «≈» quando `h.est`, ou «—», rótulo «XP/h»; (2) `fmt(h.lo)` + «≈» quando `h.est`, com a classe `warnt` quando `h.lo < 0`, ou «—», rótulo «lucro/h»; quando `h.xp == null` e a hunt tem as notas da TibiaWiki (`p.xs`/`p.ls`), os dois primeiros mostram as estrelas (`stars(p.xs)`, `stars(p.ls)`) com «(TibiaWiki)» no rótulo, como a ficha de hoje; (3) `h.l + "+"`, «nível recomendado»; (4) resistências: os 2 elementos de maior `pct` e o de menor do `GrimFicha.resist(p.eff)`, como chips (`chip(el)` + `pct %`), rótulo «resistências», e um `<details>` «Ver os 7 elementos» com a lista completa (imune / cura assinalados); (5) `diffHTML(GrimFicha.huntDiff({d: p.d, hit: hcmpHit(pid), L: h.l}))`, rótulo «dificuldade». O dano vem do `data/crdmg.json`: se `CRDV` ainda não carregou, mostra a base e chama `crdLoad().then(…)` para atualizar só esse número (como o `hcmpSheet` faz).
+- `stats`: (1) `fmt(h.xp)` + «≈» quando `h.est`, ou «—», rótulo «XP/h»; (2) `fmt(h.lo)` + «≈» quando `h.est`, com a classe `warnt` quando `h.lo < 0`, ou «—», rótulo «lucro/h»; quando `h.xp == null` e a hunt tem as notas da TibiaWiki (`p.xs`/`p.ls`), os dois primeiros mostram as estrelas (`stars(p.xs)`, `stars(p.ls)`) com «(TibiaWiki)» no rótulo, como a ficha de hoje; (3) `h.l + "+"`, «nível recomendado»; (4) resistências: os 2 elementos de maior `pct` e o de menor do `GrimFicha.resist(p.eff)`, como chips (`chip(el)` + `pct %`), rótulo «resistências», e um `<details>` «Ver os 7 elementos» com a lista completa (imune / cura assinalados); (5) `diffHTML(diffFor(pid, C()).n)`, rótulo «dificuldade», com a nota `protOf(C()).lbl` por baixo, em letra pequena. O dano vem do `data/crdmg.json`: se `CRDV` ainda não carregou, mostra a base e chama `crdLoad().then(…)` para atualizar só esse número (como o `hcmpSheet` faz). Os números (1) e (2) já vêm ajustados ao nível pelo `huntRows`/`huntEst` (Task 2b); o `title` do «≈» diz a origem e o nível da medição.
 - `mons`: `G.pm[pid].h` com criatura conhecida: sprite (`crSpr`, 44 px), nome (`mlink`), vida e XP (`G.mon[k][1]`, `[2]`), «× n» quando n > 1. Sem dados: «Sem dados de criaturas para esta zona.».
 - `loot`: `<div class="fx-loot-b" data-fxloot="<pid>">` desenhado já com os preços do NPC (o valor que vem no `G.mon[k][6]`, `[ix, nome, %, valor]`) e **refeito** quando os preços do Market chegam: `Promise.all([ITV ? null : dsafe("items"), mktLoad(c.world)])` (guarda o `items.json` em `ITV` como o `renderBosses` faz). Com os dois: valor = `priceOf(nome, c.world).v` quando for maior que 0, senão o do NPC; `GrimFicha.topLoot(…)` volta a ordenar com estes valores. Cada linha: `ltSpr`, `ilink(nome)`, probabilidade (mesma formatação do `monCard`), `gp(valor)`, «Market» ou «NPC» (de onde veio o valor), «de <criatura>». Por baixo, numa linha pequena: com Market, «Preços do Market de <mundo>, scan de <dia e hora de `MKV[w].updated`>»; sem mundo, «Escolhe o mundo da personagem para ver os preços do Market.»; Market falhou (`mktLoad` deu `null`), «Preços do NPC: o Market não respondeu.». Vazio: «Sem dados de loot.». Não há atualização própria a fazer: o `api/market.php` já vai ao TibiaMarket (cache de 6 h) e o browser guarda 2 h.
 - `tips`: charms = `hCharmsHTML(c, p, h)` (só os charms; nada da Wheel nem das gemas); preys = `GrimFicha.preyPicks(…)` com `xp`/`cnt` do `G.pm`/`G.mon` e `hit` = `CRDV[k].m`; cada prey: sprite, nome, `GrimFicha.PREY[bonus]`; nota: «O 3.º slot de prey compra-se na Store.» quando há 3.
 - `foot`: `estTxt(h)` e, com `p.note`, a nota da hunt.
 - `head`: `hcmpBtn(h)`.
 
-`placeSheet(pid)`: a mesma ficha com `h` mínimo (`{p: G.places[pid], r: {c: pid, place: G.places[pid].n}, l: nível mais baixo dessa hunt em G.hunts, xp: null, …}`), sem charms nem botão de comparar.
+`placeSheet(pid)`: a mesma ficha com `h` vindo do `GrimFicha.huntEst` para a vocação e o nível da personagem (sem personagem: vocação do filtro das Hunts e nível recomendado), com charms e sem botão de comparar.
 
-Cartão (`huntCard`): a linha `.hc-n` mantém o XP/h, o lucro e o nível, e ganha no fim « · dificuldade N/5»; o resto do cartão fica igual.
+Comparar hunts: a coluna «Risco» (`hcmpSheet` e a bandeja) passa a mostrar `diffFor(pid, C()).n + "/5"` com o nome da dificuldade, e ordena por esse número; o resto da tabela fica igual.
+
+Cartão (`huntCard`): a linha `.hc-n` mantém o XP/h, o lucro e o nível, e ganha no fim « · dificuldade N/5» (`diffFor`); o resto do cartão fica igual.
 
 Sai da ficha (apaga as chamadas; apaga a função se o `grep` mostrar que não tem mais nenhum uso): `haHTML`, `[data-kstat]`/`initKstat` na ficha, a frase da composição por tipo, os `pills` de compatibilidade, o bloco «Setup» (`setupHTML`, `elemHTML` dentro dele), `hsetsHTML`, `hwheelHTML`, `tabsUI` na ficha, `[data-lootp]` na ficha, `questsTab`/`questsForHunt` na ficha, as variantes, `huntRoute`, `vRoute`, `routeHTML`, `hAccessData`, `hAccessFill`, o clique `[data-hretry]`.
 
@@ -458,7 +524,7 @@ git commit -m "Hunts: ficha objetiva (mapa e caminho, 5 números, pré-requisito
 - Test: `_dev/fichas_browser.cjs` (acrescenta), `_dev/boss_access_test.mjs` (atualiza ou apaga as asserções sobre o `bsAccessHTML`)
 
 **Interfaces:**
-- Consumes: `fichaHTML`, `diffHTML`, `camFill`, `openSheet(html, "sh-ficha")` (Tasks 3 e 4); `GrimFicha.bossDiff`, `resist`; do `index.html`: `BSD`, `GrimBoss.judge` (o resultado `r` já calculado no `renderBosses`), `GrimBoss.CLS`, `GrimBoss.cdText`, `lootPerKill`, `bsT`, `crSpr`, `monHref`, `chip`.
+- Consumes: `fichaHTML`, `diffHTML`, `camFill`, `protOf`, `openSheet(html, "sh-ficha")` (Tasks 3 e 4); `GrimFicha.bossDiff`, `resist`, `effHit`; do `index.html`: `BSD`, `GrimBoss.judge` (o resultado `r` já calculado no `renderBosses`), `GrimBoss.CLS`, `GrimBoss.cdText`, `lootPerKill`, `bsT`, `crSpr`, `monHref`, `chip`.
 - Produces: `bossSheet(k: string): string`; cada linha da lista tem `data-boss="<chave>"` num botão «Ver ficha» (e o nome do boss abre a mesma ficha).
 
 - [ ] **Step 1: Acrescenta o teste que falha** ao `_dev/fichas_browser.cjs`
@@ -468,7 +534,7 @@ Em cada combinação: abre `#bosses`, espera pelas linhas `.bs-r`, clica no 1.º
 - `.fx-stats` com 5 itens: XP por kill, valor por kill, nível recomendado (sozinho / em equipa), resistências, dificuldade;
 - não há `<details class="bs-d">` na página;
 - a linha da lista continua a ter o botão do Bosstiary (`[data-bstier]`) e este continua a rodar o estágio.
-Corre também `node _dev/bosses_test.mjs` (o motor não muda).
+Corre também `node _dev/bosses_test.mjs`. O motor muda só num ponto (ronda 3, Q7): `GrimBoss.judge(b, opt)` aceita `opt.prot` e, com `b.dm` (dano por elemento), usa `md = effHit({d: b.dm, m: b.md}, opt.prot)` em vez de `b.md` (a mesma regra do `GrimFicha.effHit`, copiada para o `shared/bosses.js` para não criar dependência entre os dois ficheiros); sem `opt.prot`, igual a hoje. Acrescenta ao `_dev/bosses_test.mjs`: um boss com `dm: {fire: X}` fica `solo` mais cedo com `prot: {fire: 50}` do que sem proteções; sem `prot`, os resultados de hoje não mudam. O `renderBosses` passa `prot: protOf(C()).prot`.
 
 Run: `node _dev/fichas_browser.cjs`
 Expected: FAIL (`[data-boss]` não existe)
@@ -496,8 +562,8 @@ Expected: sem erros
 - [ ] **Step 5: Commit**
 
 ```bash
-git add index.html _dev/fichas_browser.cjs _dev/boss_access_test.mjs
-git commit -m "Bosses: a mesma ficha objetiva das hunts"
+git add index.html shared/bosses.js _dev/bosses_test.mjs _dev/fichas_browser.cjs _dev/boss_access_test.mjs
+git commit -m "Bosses: a mesma ficha objetiva das hunts, com as proteções da personagem"
 ```
 
 ---
@@ -512,7 +578,7 @@ git commit -m "Bosses: a mesma ficha objetiva das hunts"
 - Consumes: todo o texto novo das Tasks 3–5.
 - Produces: o site em 8 línguas sem texto novo por traduzir; documentação para a Parte C.
 
-- [ ] **Step 1: Junta as chaves manuais** — texto que o tradutor não apanha sozinho (texto montado em JS com partes variáveis, `aria-label`, texto no `<canvas>`): acrescenta a `i18n/src/ui-extra.json` no formato `{"c": "<contexto>", "k": "<texto pt-PT>"}`. No mínimo: os 5 nomes da dificuldade, os 3 bónus de prey, os 4 estados do caminho, «Como lá chegar», «Ver no mapa», «Fala com », «zona aproximada», «por fazer», «feita», «Sem pré-requisitos.», «Tentar de novo», os rótulos dos 5 números (hunt e boss).
+- [ ] **Step 1: Junta as chaves manuais** — texto que o tradutor não apanha sozinho (texto montado em JS com partes variáveis, `aria-label`, texto no `<canvas>`): acrescenta a `i18n/src/ui-extra.json` no formato `{"c": "<contexto>", "k": "<texto pt-PT>"}`. No mínimo: as notas do set (`protOf`), «≈ a partir de …», «A linha mostra a ordem dos passos, não o caminho a pé.», «Abrir no mapa do Questski», os 5 nomes da dificuldade, os 3 bónus de prey, os 4 estados do caminho, «Como lá chegar», «Ver no mapa», «Fala com », «zona aproximada», «por fazer», «feita», «Sem pré-requisitos.», «Tentar de novo», os rótulos dos 5 números (hunt e boss).
 
 - [ ] **Step 2: Extrai, traduz e constrói**
 
@@ -542,7 +608,7 @@ git commit -m "Fichas: traduções em 7 línguas, versões e documentação"
 git push -u origin fichas-hunts-bosses
 ```
 
-Abre o PR «Fichas objetivas de hunts e bosses» (pela API REST: `gh api repos/Lavovskii/grimorio/pulls`), com as capturas antes/depois e a saída dos testes. **Não faças merge sem o dono dizer.**
+Abre o PR «Fichas objetivas de hunts e bosses» (pela API REST: `gh api repos/Lavovskii/grimorio/pulls`), com as capturas antes/depois e a saída dos testes. **Não faças merge sem o dono dizer.** (O PR fica aberto enquanto correm as partes C e D: os lotes da C entram no ramo `fichas-hunts-bosses` por PRs próprios.)
 
 ---
 
@@ -612,8 +678,70 @@ Nos lotes 13 a 16, o texto do `G.hv` é o ponto de partida: mantém o que está 
 
 ---
 
+# Parte D — Calibração dos números (rondas 3–4, Q6, Q10–Q15)
+
+Depois da parte B. Afina o `k` do ajuste de nível, as mortes/h por zona e o perigo (`dz`), sem mudar a ficha. A ficha já lê o `data/calib.json` desde a Task 1 (`calibOf`); sem o ficheiro, usa as omissões.
+
+### Task 18: Estatísticas de mortes do TibiaData
+
+**Files:** Create `_dev/tibiadata.py`, `_dev/fixtures/ks_antica.json`; Test `_dev/calib_test.py` (novo, `python3 -I`, `unittest`).
+
+- [ ] **Step 1: Teste que falha**: com uma resposta gravada de `GET https://api.tibiadata.com/v4/killstatistics/Antica` (fixture só com `race` e os 4 números), `agrega([fixture, fixture])` soma por criatura (nome em minúsculas, como as chaves do `data/creatures.json`) e ignora as linhas entre parênteses (`(elemental forces)`).
+- [ ] **Step 2: Implementa**: `GET /v4/worlds` → lista de mundos; `GET /v4/killstatistics/<mundo>` para cada um, 1 pedido por segundo, 3 tentativas com espera; grava o agregado em `_dev/cache/ks-AAAA-MM-DD.json` (pasta no `.gitignore`). Só a API do TibiaData (já no CSP; nenhum domínio novo no site).
+- [ ] **Step 3**: corre de verdade (`python3 -I _dev/tibiadata.py`) e mostra quantos mundos e criaturas vieram.
+- [ ] **Step 4: Commit** — `git commit -m "Calibração: estatísticas de mortes de todos os mundos (TibiaData)"`
+
+### Task 19: Sessões importadas e recolha no Hunt Analyser
+
+**Files:** Create `_dev/SESSOES.md`, `_dev/sessoes/.gitkeep`, `_dev/import_sessoes.py`; Test `_dev/calib_test.py`.
+
+- [ ] **Step 1: Formato** (em `_dev/SESSOES.md`): um ficheiro JSON por recolha, `[{pid, voc, lvl, xph, loh, min, data, src}]` (`pid` = chave de `G.places`; `src` = "huntanalyser" | "tibiaroute" | "manual"; sem nomes de personagens nem de mundos). CSV com as mesmas colunas também serve.
+- [ ] **Step 2: Teste que falha**: o importador rejeita uma linha com um campo a mais chamado `name`/`char`/`personagem`, com `pid` desconhecido, com `min < 15`, ou com mais de 4000 mortes/h (a regra do `G.ha`); agrega como o `G.ha` (`[sessões, nível mínimo, nível mediano, XP/h, lucro/h]` por hunt e vocação).
+- [ ] **Step 3: Recolha no Hunt Analyser (sessão local, com o Chrome do dono).** Este passo não corre na cloud: precisa do Chrome do dono com a sessão do Hunt Analyser já aberta (o dono está autorizado a entrar; a palavra-passe nunca vai para ficheiros, commits ou chats). Procedimento em `_dev/SESSOES.md`: abrir as sessões públicas, filtrar por solo, ler hunt, vocação, nível, XP/h, lucro/h e duração; fazer a correspondência do nome da hunt com o `pid` (pelo `G.places[pid].n` e pelos nomes do TibiaPal); gravar só os campos do formato. Sessões em grupo ou sem hunt reconhecida ficam de fora.
+- [ ] **Step 4: Commit** — `git commit -m "Calibração: formato e importação de sessões reais (sem nomes)"`
+
+### Task 20: Motor `_dev/calibrar.py`
+
+**Files:** Create `_dev/calibrar.py`, `data/calib.json` (gerado), `_dev/calib_relatorio.md` (gerado); Test `_dev/calib_test.py`.
+
+**Produces:** `data/calib.json` = `{v: 1, gen, k, kz: {pid: mortes/h}, dz: {pid: -1|0|1}, ha: {pid: {v: {voc: [n, lmin, lmed, xph, loh]}}}, n: {sessoes, mundos}}`.
+
+- [ ] **Step 1: Testes que falham**, com dados pequenos inventados **só nos testes**:
+  - `k`: pares de sessões da mesma hunt e vocação em níveis diferentes dão o `k` por mínimos quadrados de `log(xph)` contra `log(nível)`; com menos de 10 pares fica 0,5; o resultado fica entre 0,1 e 1;
+  - `kz`: mortes/h por hunt = mediana de `xph ÷ avgXp(pid)` das sessões solo;
+  - parecidas: uma hunt sem sessões herda o `kz` da mediana das 5 hunts mais parecidas (distância normalizada entre nível recomendado, número de spawns do `G.pm` e vida média das criaturas);
+  - `dz`: razão `jogadores mortos ÷ criaturas mortas` por hunt (pesada pelo `G.pm`); 10 % mais altos → +1; 30 % mais baixos → −1; hunts com menos de 1000 mortes de criaturas na semana → 0;
+  - relatório: lista as hunts em que o `huntEst` (com o `k` novo) se afasta mais de 25 % da mediana das sessões reais.
+- [ ] **Step 2: Implementa** (lê o G pelo `load_G`, o `_dev/cache/ks-*.json` mais recente, o `G.ha` e o `_dev/sessoes/`). `--check` falha se o `data/calib.json` não bater com o que geraria. O `huntEst` não se duplica em Python: o relatório corre o `shared/fichas.js` por `node` (um script pequeno que recebe JSON pelo stdin).
+- [ ] **Step 3: Corre** — `python3 -I _dev/calibrar.py && python3 -I _dev/calibrar.py --check` e mostra o relatório.
+- [ ] **Step 4: Commit** — `git commit -m "Calibração: k do nível, mortes por hora, hunts parecidas e perigo"`
+
+### Task 21: O site lê a calibração · **paragem do dono**
+
+**Files:** Modify `index.html` (carrega `data/calib.json` com o `dsafe` e passa-o ao `huntEst`/`diffFor`; nota «Hunt muito disputada no teu mundo»); Test `_dev/fichas_browser.cjs`.
+
+- [ ] **Step 1: Teste que falha** (browser): com `data/calib.json` interceptado (`page.route`) a dar `dz[pid] = 1`, a dificuldade dessa hunt sobe 1; com 404, a ficha abre igual à da parte B. Com o `killstatistics` do mundo da personagem interceptado a pôr a criatura principal nos 10 % mais mortos do mundo, aparece «Hunt muito disputada no teu mundo»; com erro do TibiaData, a nota não aparece e não há erros na consola.
+- [ ] **Step 2: Implementa** (o pedido ao TibiaData já é permitido pelo CSP; guarda a resposta 6 h, como o resto do site faz com o TibiaData).
+- [ ] **Step 3: Corre tudo** (testes de A, B e D) e **para**: mostra ao dono o `_dev/calib_relatorio.md`, o `k` novo e as 10 hunts que mais mudaram.
+- [ ] **Step 4: Commit** — `git commit -m "Fichas: números e dificuldade com a calibração semanal"`
+
+### Task 22: Documentação
+
+- [ ] `_dev/GRIMORIO.md` (secção «Calibração (r35-D)»: ficheiros, comandos, formato do `calib.json`, a regra «sem nomes»), `README.md` (ferramentas novas), `_dev/SESSOES.md` revisto. Commit.
+
+### Task 23: Rotina semanal · **paragem do dono antes de criar**
+
+- [ ] **Step 1**: mostra ao dono o texto da tarefa agendada e espera pelo OK.
+- [ ] **Step 2**: cria a tarefa agendada (sessão nova em cada execução, no ambiente cloud `grimorio`, que já permite `api.tibiadata.com`), `CRON_TZ=UTC 41 5 * * 1`, com este pedido:
+  «No repositório Lavovskii/grimorio, ramo main atualizado: corre `python3 -I _dev/tibiadata.py`, `python3 -I _dev/import_sessoes.py`, `python3 -I _dev/calibrar.py` e os testes (`node _dev/fichas_test.mjs`, `python3 -I _dev/calib_test.py`). Se o `data/calib.json` mudou e os testes passam, cria o ramo `calib-AAAA-MM-DD`, faz commit e abre um PR para o `main` (API REST) com o `_dev/calib_relatorio.md` no texto. Se nada mudou, não abras PR. Nunca faças merge. Nunca escrevas nomes de personagens.»
+- [ ] **Step 3**: dispara-a uma vez à mão e mostra o PR que abriu (ou «sem mudanças»).
+- [ ] Nota: a recolha no Hunt Analyser (Task 19, Step 3) não entra na rotina, porque precisa do Chrome do dono; a rotina usa o que estiver em `_dev/sessoes/`.
+
+---
+
 ## Self-review (feito pelo autor do plano)
 
 - **Cobertura da spec:** objetivo 1 → Tasks 3–5; 2 → Task 2; 3 e 4 → Task 3; 5 → Tasks 2 e 3; 6 e 7 → Tasks 1 e 4; 8 → Tasks 7–17; «o que sai da ficha» → Tasks 4 e 5; traduções e documentação → Task 6.
 - **Nomes iguais em todo o plano:** `camData`, `camFill`, `camHTML`, `drawCam`, `preHTML`, `fichaHTML`, `diffHTML`, `huntSheet`, `placeSheet`, `bossSheet`; `GrimFicha.refHp/huntDiff/bossDiff/preyPicks/topLoot/resist/viewport/DIFF/PREY`; atributos `data-cam`, `data-campre`, `data-cammap`, `data-camstep`, `data-camretry`, `data-boss`; classes `.fx-top/.fx-map/.fx-cam/.fx-stats/.fx-mons/.fx-loot/.fx-tips/.fx-pre`, `.cam-map/.cam-st/.cam-pin/.cam-npc/.cam-cv`, `.sh-ficha`.
-- **Review Focus:** os 5 casos têm teste nas Tasks 1, 2, 3 e 4.
+- **Review Focus:** os 8 casos têm teste nas Tasks 1, 2, 2b, 3, 4 e 21.
+- **Rondas 2 a 4:** Q1 → Task 2; Q2 → Task 4 (comparar); Q3/Q7/Q9 → Tasks 1, 4 e 5 (`effHit`, `huntDiff`, `protOf`, `diffFor`, `judge` com `prot`); Q5/Q6 → Task 2b; Q8 → Task 3 (Step 0); Q10–Q15 → Tasks 18–23; Q4 → Parte C.
