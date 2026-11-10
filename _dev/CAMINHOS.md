@@ -168,3 +168,44 @@ simples: mantém os nomes do jogo e as palavras das falas iguais, para os links 
    passos, no andar certo. Um pino no preto ou dentro de uma parede é uma coordenada errada: corrige.
 5. **PR** para o ramo `fichas-hunts-bosses` com o `--report` antes e depois. Se um lote tiver mais de 5 hunts que só dão
    `part`, pára e pergunta ao dono.
+
+O que o lote 1 ensinou:
+
+- A TibiaWiki lê-se pela API (`https://tibia.fandom.com/api.php?action=parse&page=<Nome>&prop=wikitext&format=json`; a página
+  normal dá 403). `{{Mapper Coords|127.151|124.226|7}}` = `x = 127 × 256 + 151`, `y = 124 × 256 + 226`, `z = 7`.
+- Antes de escrever, procura a ficha do local no `quests/data/places.json` (mesmo sem estar no `hunt-access.json`): costuma
+  ter a entrada, a chegada e os itens.
+- O mapa do site (`maps/floor-NN-map.png`, 1 px por sqm a partir de 31744, 30976) confirma escadas e buracos: a casa amarela
+  (`#FFFF00`) é uma mudança de andar e aparece nos dois andares que liga. Um ponto que só o mapa confirma deixa o `st` em `rev`.
+- Uma hunt sem caminho que se confirme fica **sem** entrada no manual (uma entrada `none` tirava-a da lista do `--lote`);
+  anota o porquê em `_dev/hv_notas.json` (lote 1: `w_mad_mage_valley`).
+
+Exemplo do lote 1 (a hunt de Oskayaat, com a quest que abre o acesso a meio, um NPC e um troço em dois andares):
+
+```json
+"werecrocs": {
+ "st": "rev", "from": "Ankrahmun", "pos": [32966, 32927, 8], "pa": 1,
+ "pre": [
+  {"k": "quest", "n": "Grimvale Quest", "id": null, "slug": "grimvale-quest", "sec": 10, "note": "até entregares a ocarina"},
+  {"k": "premium"},
+  {"k": "level", "n": 200, "rec": true}
+ ],
+ "legs": [
+  {"t": "Chegar a Oskayaat", "steps": [
+   {"s": "Em Ankrahmun, vai ao barqueiro {npc:Tonar}", "c": null, "npc": null},
+   {"s": "Pede ao Tonar passagem para Oskayaat", "c": [33182, 32884, 7],
+    "npc": {"n": "Tonar", "say": ["hi", "passage", "yes"], "gp": null}},
+   {"s": "Desembarcas em Oskayaat, junto ao barco do Tonar", "c": [33067, 32919, 7], "npc": null}
+  ]},
+  {"t": "Até às Murky Caverns", "steps": [
+   {"s": "Anda para oeste até à gruta dos {creature:Werecrocodile|Werecrocodiles}", "c": [32966, 32926, 7], "npc": null},
+   {"s": "Desce ao piso −1 das Murky Caverns", "c": [32966, 32927, 8], "npc": null}
+  ]}
+ ],
+ "refs": [{"slug": "grimvale-quest", "sec": 10, "t": "11. Paradise Lost: chegar a Oskayaat", "quest": "Grimvale Quest"}]
+}
+```
+
+Fica `rev` e não `ok` porque o `yes` depois de `passage` vem do `G.hv` (a wiki só diz «ask him for a passage»); o resto (o
+Tonar, a ocarina, as entradas das grutas) está no spoiler da Grimvale Quest. O `id` fica `null` porque o acesso abre a meio da
+parte Paradise Lost (o `G.quests` só tem as partes inteiras).

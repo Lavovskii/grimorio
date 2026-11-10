@@ -698,7 +698,7 @@ estão no `i18n/src/ui-extra.json` (contexto «à mão (r35)»). O «de <criatur
 `python3 -m http.server 8765 --bind 127.0.0.1` na raiz (Playwright; pt-PT, en e de a 1440 e 390 px; erros, scroll lateral,
 letra < 12 px, alvos < 44 px na ficha, estrutura fixa, Market fixo/503/sem mundo, dificuldade do sorcerer e do knight com set,
 comparar, bosses de alavanca/raid/sem posição, e em en/de nenhuma das frases pt-PT «à mão (r35)» nas fichas). Deve dizer `ok`
-nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110h`.
+nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110i` (calibração e lote 1 dos caminhos).
 
 ## Calibração (r35-D, 10/11/2026)
 
