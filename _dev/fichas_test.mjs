@@ -1,6 +1,7 @@
 // Modelo das fichas (shared/fichas.js). Uso: node _dev/fichas_test.mjs
 import { createRequire } from "module";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 const require = createRequire(import.meta.url);
 const F = require("../shared/fichas.js");
 
@@ -69,4 +70,41 @@ const R = F.resist({ physical: 100, fire: 110, ice: 96, earth: 81, energy: 99, h
 assert.equal(R.length, 7); assert.equal(R[0].el, "fire"); assert.equal(R[0].pct, 110);
 assert.equal(R.find(x => x.el === "earth").imm, true); assert.equal(R.find(x => x.el === "death").heal, true);
 assert.equal(R.find(x => x.el === "fire").imm, false); assert.deepEqual(F.resist(null), []);
+// data/caminhos.json (_dev/build_caminhos.py)
+const J = p => JSON.parse(readFileSync(new URL("../" + p, import.meta.url), "utf8"));
+const CAM = J("data/caminhos.json"), BOS = J("data/bosses.json"), NPC = J("data/npcs.json");
+const G = JSON.parse(readFileSync(new URL("../index.html", import.meta.url), "utf8").match(/<script[^>]*id="G"[^>]*>([\s\S]*?)<\/script>/)[1]);
+assert.equal(CAM.v, 1);
+assert.deepEqual(Object.keys(CAM.h).sort(), Object.keys(G.places).sort());
+assert.deepEqual(Object.keys(CAM.b).sort(), Object.keys(BOS.b).sort());
+const okC = c => Array.isArray(c) && c.length === 3 && c[0] > 31000 && c[0] < 34500 && c[1] > 30900 && c[1] < 33100 && c[2] >= 0 && c[2] <= 15;
+for (const [k, c] of [...Object.entries(CAM.h), ...Object.entries(CAM.b)]) {
+  assert(["ok", "rev", "part", "none"].includes(c.st), k);
+  assert(c.pos === null || okC(c.pos), k + " pos");
+  assert(Array.isArray(c.pre) && Array.isArray(c.legs), k);
+  for (const p of c.pre) assert(["quest", "level", "premium", "item", "text"].includes(p.k), k + " pre");
+  for (const l of c.legs) { if (l.ref) continue;                              // troço por referência: os passos estão em CAM.places
+    assert(l.t && l.steps.length, k + " troço vazio");
+    for (const s of l.steps) { assert(typeof s.s === "string" && s.s.trim(), k + " passo vazio");
+      assert(s.c === null || okC(s.c), k + " ponto"); assert(!/\(\d{5},\s*\d{5}/.test(s.s), k + " coordenada no texto: " + s.s);
+      if (s.npc) { assert(NPC[s.npc.n.toLowerCase()], k + " NPC desconhecido: " + s.npc.n); assert(s.npc.say.length >= 1, k); } } }
+  if (c.st === "none") assert(c.legs.length <= 1, k + " none com passos");
+}
+// casos conhecidos (dados de 10/11/2026)
+const T = CAM.h.targuna_inf;
+assert.equal(T.st, "rev"); assert.equal(T.from, "Thais");
+assert(T.pre.some(p => p.k === "level" && p.n === 12));
+const emi = T.legs.flatMap(l => l.steps).find(s => s.npc && s.npc.n === "Emiliana");
+assert.deepEqual(emi.npc.say, ["hi", "mission", "yes"]);
+const blue = T.legs.flatMap(l => l.steps).find(s => s.npc && s.npc.n === "Captain Bluebear");
+assert.deepEqual(blue.npc, { n: "Captain Bluebear", say: ["hi", "targuna", "yes"], gp: 110 });
+assert(T.legs.flatMap(l => l.steps).some(s => s.c && s.c.join() === "31962,31898,7"));
+assert(CAM.h.werelions.pre.some(p => p.k === "quest" && /Lion's Rock/.test(p.n) && p.slug));
+assert(CAM.h.werelions.pre.some(p => p.k === "premium"));
+assert.equal(CAM.h.upperspike.legs[0].ref, "Upper Spike");                   // ficha de local como 1.º troço, por referência
+for (const c of [...Object.values(CAM.h), ...Object.values(CAM.b)]) for (const l of c.legs) if (l.ref) assert(CAM.places[l.ref], "ref sem local: " + l.ref);
+assert(readFileSync(new URL("../data/caminhos.json", import.meta.url)).length < 1024 * 1024, "caminhos.json passa de 1 MB"); // as fichas de locais sozinhas já passam de 400 KB
+assert(Object.values(CAM.h).filter(c => c.st === "none").length <= 129);
+assert(CAM.b.abyssador.refs.some(r => r.slug === "bigfoots-burden-quest" && r.sec === 8));
+assert(Object.values(CAM.h).every(c => c.st !== "none" || c.legs.length === 1)); // a frase do p.acc fica como único passo
 console.log("fichas: ok");
