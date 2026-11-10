@@ -21,17 +21,21 @@ SRCS = ('huntanalyser', 'tibiaroute', 'manual')
 MAX_KH = 4000   # a regra do G.ha: mais de 4000 mortes/h não é solo nem desta zona
 
 
-def avg_mon(G, pid):
-    """[XP, vida] média de uma morte na zona = avgMon(pid) do index.html (o calibrar.py confere-o contra o JS)."""
+def hunt_mons(G, pid):
+    """[(criatura, quantidade)] da zona: G.pm[pid].h ∩ mons, sem bosses; sem nenhuma, as de mons com 1 (como o avgMon)."""
     p = G['places'].get(pid)
     if p is None:
-        return None
+        return []
     ms = list(dict.fromkeys(str(x).strip().lower() for x in p.get('mons') or []))
     ok = lambda k: k in G['mon'] and not G['mon'][k][7]
     h = [(k, n) for k, n in (G['pm'].get(pid) or {}).get('h') or [] if k in ms and ok(k)] or [(k, 1) for k in ms if ok(k)]
+    return [(k, max(int(n or 0), 1)) for k, n in h]
+
+
+def avg_mon(G, pid):
+    """[XP, vida] média de uma morte na zona = avgMon(pid) do index.html (o calibrar.py confere-o contra o JS)."""
     t = v = w = 0
-    for k, n in h:
-        q = max(int(n or 0), 1)
+    for k, q in hunt_mons(G, pid):
         t += (G['mon'][k][2] or 0) * q
         v += (G['mon'][k][1] or 0) * q
         w += q

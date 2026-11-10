@@ -8,22 +8,11 @@
 // Chaves "voc|L": huntRows(voc, L, L) com C() = {level: L}. Chaves "voc|La": huntRows(voc) sem L nem pl (o caminho de
 // omissão: teto = nível + 5, pl = nível), também com C() = {level: L}.
 import fs from "node:fs";
-import vm from "node:vm";
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
+import { huntVm, Fichas as F } from "./hunt_vm.mjs";
 const arg = k => process.argv.includes("--" + k);
-const html = fs.readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const OUT = new URL("huntest_gold.json", import.meta.url);
-const take = (a, b, from = 0) => { const s = html.indexOf(a, from); if (s < 0) throw new Error("sem " + a); const e = html.indexOf(b, s); if (e < 0) throw new Error("sem " + b); return html.slice(s, e); };
-const G = JSON.parse(html.match(/<script[^>]*id="G"[^>]*>([\s\S]*?)<\/script>/)[1]);
-const F = require("../shared/fichas.js");
 const GF = arg("k0") ? { ...F, levelFactor: () => ({ f: 1, ok: true }) } : F;
-const ctx = { G, GrimFicha: GF, ST: { ui: {} }, LV: 100, hasKey: (o, k) => !!o && Object.prototype.hasOwnProperty.call(o, k), cap1: s => s };
-ctx.C = () => ({ level: ctx.LV });
-vm.createContext(ctx);
-const app = html.indexOf("<script>\n(function(){");
-vm.runInContext([take("const VOCS = ", "\n", app), take("const ELN = ", "\n", app),
-  take("/* ---------- hunts ---------- */", '// "segura": risco 1', app)].join("\n"), ctx);
+const ctx = huntVm(GF);
 
 const VOCS = ["knight", "paladin", "sorcerer", "druid", "monk"], LS = [50, 150, 300, 600, 1000];
 const run = () => { const o = {}, full = {};
