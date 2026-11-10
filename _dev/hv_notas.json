@@ -1984,7 +1984,7 @@
    "ok": true
   },
   "werecrocs": {
-   "n": "O curated 'Ocarina para o Tonar (Grimvale)' está certo: Tonar só te leva depois da missão Paradise Lost. O NPC no Canary não tem essa condição (passagem grátis). O Canary não tem spawns de Werecrocodile no ficheiro de monstros (Oskayaat é recente), por isso o map_point não pôde ser confirmado por spawns; coincide com a caverna do mosaico (z=8) indicada pela quest. Na mesma caverna há também Werepanthers.",
+   "n": "O curated 'Ocarina para o Tonar (Grimvale)' está certo: Tonar só te leva depois da missão Paradise Lost. O NPC no Canary não tem essa condição (passagem grátis). O Canary não tem spawns de Werecrocodile no ficheiro de monstros (Oskayaat é recente), por isso o map_point não pôde ser confirmado por spawns; coincide com a caverna do mosaico (z=8) indicada pela quest. Na mesma caverna há também Werepanthers. Lote 1 dos caminhos (10/11/2026): Tonar em Ankrahmun 33182,32884,7 (wiki; o G.hv tinha 33178,32884). Entrada 32966,32926,7 e piso −1 em 32966,32927,8 (wiki). Nível recomendado na wiki: 200 (o G.hv dizia 300). O 'yes' depois de 'passage' vem do G.hv.",
    "ed": "Entrada 'Murky Caverns' a oeste do desembarque em Oskayaat; desce ao −1 (z=8) e segue para sul/sudoeste (mosaico em 32969,32946,8)",
    "e": [
     32966,
@@ -2274,7 +2274,7 @@
    }
   },
   "weretigers": {
-   "n": "Rota curada coerente; a exigência de 'ocarina' não aparece no NPC Tonar (Canary) nem na wiki: remover ou confirmar em jogo. Faltam Cunning Werepanther (difícil) e Foxmouse (criatura de montaria) na lista de monstros. Boss: Rakesh Moonfang. Sem spawns de Oskayaat no otservbr-monster.xml local.",
+   "n": "Rota curada coerente; a exigência de 'ocarina' não aparece no NPC Tonar (Canary) nem na wiki: remover ou confirmar em jogo. Faltam Cunning Werepanther (difícil) e Foxmouse (criatura de montaria) na lista de monstros. Boss: Rakesh Moonfang. Sem spawns de Oskayaat no otservbr-monster.xml local. Lote 1 dos caminhos (10/11/2026): a TibiaWiki (Grimvale Quest/Spoiler, Paradise Lost) confirma a ocarina: o Tonar só leva a Oskayaat depois de a receber. Tonar em Ankrahmun 33182,32884,7 (página do NPC; o G.hv tinha 33181,32883). Entrada da gruta 32999,32932,7 e piso −1 em 32999,32933,8 (wiki); o −2 só pelo Fog Portal, depois dos 6 mosaicos. Nível recomendado na wiki: 200 (o G.hv dizia ~300). O 'yes' depois de 'passage' vem do G.hv, não da wiki.",
    "ed": "Buraco 'Oskayaat Undercity' na cidade de Oska, a oeste do desembarque (marcador); desce ao −1 (z8) e depois ao −2 (z9)",
    "mf": [
     "Weretiger",
@@ -2450,6 +2450,81 @@
     1
    ],
    "s": "Edron",
+   "ok": null
+  },
+  "w_carlin_graveyard": {
+   "n": "Lote 1 dos caminhos (10/11/2026): a wiki diz que a entrada da cripta foi trancada; o Questski diz que a porta pode estar trancada e abre com a Key 3520 (wiki: 'For access to the Carlin Graveyard'). O buraco para as grutas (32392,31787,8) vem do mapa do site (casa amarela no −1 e no −2, a oeste da escada da cripta), não da wiki.",
+   "e": [
+    32404,
+    31790,
+    7
+   ],
+   "s": "Carlin",
+   "ok": false
+  },
+  "w_dusalk_s_troll_clan_cave": {
+   "n": "Lote 1 dos caminhos (10/11/2026): partida de Thais, como no Questski (atravessa a Dwarf Bridge e segue para leste); o gerador punha Venore. O buraco (32663,31962,7) vem do mapa do site: a subida do −1 fica por baixo dessa casa, a 4 sqm da entrada do Questski (32662,31966,7) e da wiki (32663,31970,7).",
+   "e": [
+    32663,
+    31962,
+    7
+   ],
+   "s": "Thais",
+   "ok": false
+  },
+  "w_edron_troll_goblin_peninsula": {
+   "n": "Lote 1 dos caminhos (10/11/2026): a wiki confirma a cave da torre sudoeste do castelo e a passagem subterrânea; os pontos vêm da ficha Edron Goblin Cave do Questski e do mapa (escada 33165,31827,7; subida 33128,31810,8). No mapa, a passagem desce e volta a subir por vários andares (−1, −2, …): só o início e a saída têm ponto.",
+   "e": [
+    33165,
+    31827,
+    7
+   ],
+   "s": "Edron",
+   "ok": false
+  },
+  "w_lost_mines": {
+   "n": "Lote 1 dos caminhos (10/11/2026): mesmo acesso da península; a entrada da mina (33102,31811,7) vem do mapa; a wiki dá 33103 e 33104,31811. No mapa, a passagem desce e volta a subir por vários andares (−1, −2, …): só o início e a saída têm ponto.",
+   "e": [
+    33102,
+    31811,
+    7
+   ],
+   "s": "Edron",
+   "ok": false
+  },
+  "w_shadow_caves": {
+   "n": "Lote 1 dos caminhos (10/11/2026): a wiki põe o depot no −1 (Shadow Caves Street) e o Shirith no −2, à frente da mina; o Questski diz 'desce ao piso das lojas e depois desce outra vez' com a rua em z8 (o −1), o que não bate. A escada do −1 para o −2 (32654,31670,8) vem do mapa. As falas para comprar a chave ('hi', 'trade') não estão na transcrição da wiki, que só diz que o Shirith a vende por 50 gp. As portas da mina ficam sem ponto.",
+   "e": [
+    32646,
+    31655,
+    9
+   ],
+   "s": "Ab'Dendriel",
+   "ok": false
+  },
+  "w_thais_wolf_den": {
+   "n": "Lote 1 dos caminhos (10/11/2026): entrada 32505,32281,7 pelo mapa (a wiki dá 32505,32283); Hector The Mentor em 32476,32286,7 (wiki). A wiki não descreve o caminho de Thais até à península.",
+   "e": [
+    32505,
+    32281,
+    7
+   ],
+   "s": "Thais",
+   "ok": false
+  },
+  "w_venore_salamander_cave": {
+   "n": "Lote 1 dos caminhos (10/11/2026): entrada 32924,32148,7 (wiki); a escada para o −2 (32919,32142,8) vem do mapa.",
+   "e": [
+    32924,
+    32148,
+    7
+   ],
+   "s": "Venore",
+   "ok": false
+  },
+  "w_mad_mage_valley": {
+   "n": "Lote 1 dos caminhos (10/11/2026): sem caminho passo a passo: a wiki só diz que se entra por norte, à volta das Femor Hills, ou por leste, através de Kazordoon, e não há ficha do Questski. Fica por documentar (sem entrada no manual).",
+   "s": "Kazordoon",
    "ok": null
   }
  }
