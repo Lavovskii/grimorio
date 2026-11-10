@@ -10,7 +10,19 @@
 // Market (resposta fixa, 503 e sem mundo), a dificuldade do sorcerer sem set e do knight com set guardado, e o comparar hunts.
 // Task 5: abre a ficha do 1.º boss da lista em cada combinação (a mesma estrutura, sem charms e preys; o botão do Bosstiary
 // continua na linha) e, em pt-PT, um boss de alavanca com guias, um de raid e um sem posição, e a nota do set do knight.
+// Task 6: em en e de, a ficha da 1.ª hunt, a da Forgotten Crypt (troço de um local), a do 1.º boss e a do boss de alavanca não
+// podem ter nenhuma das frases pt-PT escritas à mão para as fichas (i18n/src/ui-extra.json, contexto «à mão (r35)»).
 const { chromium } = require('playwright');
+const path = require('path'), fs = require('fs');
+// frases pt-PT da Task 6 (as fixas inteiras; dos modelos, as partes fixas com 6+ letras)
+const PT35 = Object.entries(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'i18n', 'src', 'ui-extra.json'), 'utf8')))
+  .filter(([, v]) => /^à mão \(r35\)/.test(v.c))
+  .flatMap(([k, v]) => v.k === 'x' ? [k] : k.split(/\{\d+\}/).map(x => x.trim()).filter(x => x.replace(/[^\p{L}]/gu, '').length >= 6));
+// corre dentro da página: as frases da lista que aparecem no texto da ficha (palavras inteiras)
+function ptLeft(list) {
+  const t = document.querySelector('#sheetBody').innerText;
+  return list.filter(k => new RegExp('(?<![\\p{L}])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\p{L}])', 'u').test(t));
+}
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const URL0 = arg('--url', 'http://127.0.0.1:8765/'), HOST = new URL(URL0).host;
 // hunt em que o sorcerer 570 sem set e o knight 812 com o set «Proteção» têm dificuldades diferentes
@@ -121,8 +133,9 @@ async function bosses(p, W, lang, r, fails) {
   await waitSheet(p);
   fails.push(...(await p.evaluate(fxCheck, { W, boss: true })).map(x => 'boss: ' + x));
   const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small); r.tiny.push(...a.tiny);
+  if (lang !== 'pt-PT') { const pt = await p.evaluate(ptLeft, PT35); if (pt.length) fails.push('boss com pt-PT: ' + pt.join(' | ')); }
   await closeSheet(p);
-  if (lang !== 'pt-PT') return;
+  if (lang !== 'pt-PT') { await openBoss(p, BOSS_LEVER); const pt = await p.evaluate(ptLeft, PT35); if (pt.length) fails.push(`${BOSS_LEVER} com pt-PT: ` + pt.join(' | ')); await closeSheet(p); return; }
   const one = async (k, f) => { await openBoss(p, k);
     const s = await p.evaluate(fxCheck, { W, boss: true }); if (s.length) fails.push(`${k}: ${s.join('; ')}`);
     const x = await p.evaluate(() => { const B = document.querySelector('#sheetBody');
@@ -321,7 +334,9 @@ async function deep(p, W, fails, MK) {
       await waitSheet(p);
       fails.push(...await p.evaluate(fxCheck, W));
       const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small); r.tiny.push(...a.tiny);
+      if (lang !== 'pt-PT') { const pt = await p.evaluate(ptLeft, PT35); if (pt.length) fails.push('hunt com pt-PT: ' + pt.join(' | ')); }
       await closeSheet(p);
+      if (lang !== 'pt-PT') { await openPid(p, 'forgottencrypt'); const pt = await p.evaluate(ptLeft, PT35); if (pt.length) fails.push('forgottencrypt com pt-PT: ' + pt.join(' | ')); await closeSheet(p); }
       if (lang === 'pt-PT') await deep(p, W, fails, MK);
       await bosses(p, W, lang, r, fails);
     } catch (e) { fails.push('erro: ' + String(e).split('\n')[0].slice(0, 200)); }

@@ -52,7 +52,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261103c";
+    var DV = "?v=20261110g";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
@@ -501,10 +501,15 @@
       // onde entra cada elemento na tradução
       var ins = [], cur = 0;
       els.forEach(function (e, n) {
+        // (um elemento com texto que a tradução mudou, ex.: o negrito "norte" → "north", procura-se pela tradução
+        // dele: a do conteúdo em cada língua, porque a frase pode ter vindo do inglês de reserva, e a da interface)
         var et = norm(e.textContent);
         if (et) {
           var at = ct.t.indexOf(et, cur);
-          if (at < 0) { var alt = ui(et); if (alt) { at = ct.t.indexOf(alt, cur); if (at >= 0) et = alt; } }
+          if (at < 0) { var hk = hkey(et), alts = (conts() || []).map(function (m) { return m[hk]; }).concat([ui(et)]);
+            for (var ai = 0; ai < alts.length && at < 0; ai++) if (alts[ai]) { at = ct.t.indexOf(alts[ai], cur); if (at >= 0) et = alts[ai]; }
+            // (o texto do elemento fica o da frase: noutra língua, a interface punha "Norden" numa frase em inglês)
+            var t0 = e.firstChild; if (at >= 0 && t0 && t0 === e.lastChild && t0.nodeType === 3) { t0.data = et; MINE.set(t0, et); } }
           if (at >= 0) { ins.push([at, et.length, e, n]); cur = at + et.length; }
           return;
         }
