@@ -5,7 +5,7 @@ Data: 10/11/2026. Pedido do dono do site. Plano: `docs/superpowers/plans/2026-11
 ## Intenção
 
 O dono abre uma hunt ou um boss e não encontra depressa o que precisa. A ficha de hoje mistura setup, sets de
-equipamento, Wheel, gemas, lucro, sessões reais e cinco separadores. O pedido é uma ficha **objetiva**, igual para
+equipamento, Wheel, gemas, sessões reais e cinco separadores. O pedido é uma ficha **objetiva**, igual para
 hunts e bosses, que responde por esta ordem:
 
 1. **Onde é e como lá chego** — o mapa do sítio ao lado do caminho, passo a passo.
@@ -13,7 +13,8 @@ hunts e bosses, que responde por esta ordem:
 3. **O que lá encontro** — as criaturas e o loot principal.
 4. **O que levo** — só as recomendações de charms e de preys.
 
-E só quatro números: **XP por hora, nível recomendado, resistências e índice de dificuldade.**
+E só cinco números: **XP por hora, lucro por hora, nível recomendado, resistências e índice de dificuldade.**
+(O lucro foi acrescentado pelo dono a 10/11/2026, depois da primeira versão deste desenho.)
 
 O foco maior é a qualidade dos caminhos: mapas que se expandem, cada passo com o seu ponto, e os NPCs com quem é
 preciso falar (onde estão, o que dizer, quanto custa).
@@ -33,7 +34,7 @@ preciso falar (onde estão, o que dizer, quanto custa).
 1. **Uma ficha só**, com a mesma estrutura para hunts e bosses:
    - cabeçalho: nome e nível recomendado;
    - **mapa + «Como lá chegar»** lado a lado (um por cima do outro no telemóvel);
-   - os quatro números;
+   - os cinco números;
    - pré-requisitos;
    - criaturas (num boss: o próprio boss);
    - loot principal;
@@ -53,7 +54,7 @@ preciso falar (onde estão, o que dizer, quanto custa).
 
 ## O que sai da ficha
 
-Da ficha da hunt saem: lucro por hora, sessões reais (`haHTML`), mortes de ontem (`kstat`), composição por tipo de
+Da ficha da hunt saem: sessões reais (`haHTML`), mortes de ontem (`kstat`), composição por tipo de
 criatura, o bloco «Setup» (`setupHTML`), os sets de equipamento (`hsetsHTML`), o bloco «Wheel, gemas e charms»
 (`hwheelHTML`, ficam só os charms), as variantes do TibiaPal e os cinco separadores. Do boss saem a lista «Porquê e
 como» e o botão do Bosstiary da ficha (o Bosstiary continua na linha da lista).
@@ -131,6 +132,13 @@ Nomes: 1 muito fácil, 2 fácil, 3 média, 4 difícil, 5 muito difícil.
 Para bosses, pelo resultado do `GrimBoss.judge` da personagem ativa: sozinho com folga (vida efetiva ≥ 3 × golpe e
 tempo ≤ metade do limite) 2; sozinho 3; em equipa ou vida desconhecida 4; mais tarde ou sem acesso 5. A ficha diz
 «para o teu nível».
+
+### XP e lucro por hora
+
+Os mesmos números que a ficha mostra hoje (`h.xp` e `h.lo` do `huntRows`): com «≈» quando são estimados, lucro
+negativo a vermelho, e as estrelas da TibiaWiki quando a hunt ainda não tem medição. O painel «Loot e lucro» (a conta
+com os preços do Market) não volta: fica só o número. Nos bosses, o lugar do lucro por hora é o **valor por kill**
+(`lootPerKill`, aos preços do mundo da personagem).
 
 ### Preys
 

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Trocar a ficha das hunts e a dos bosses por uma ficha única e objetiva: mapa ao lado de «Como lá chegar», pré-requisitos ligados às quests, criaturas, loot principal, charms e preys, e só quatro números (XP/h, nível recomendado, resistências, dificuldade de 1 a 5).
+**Goal:** Trocar a ficha das hunts e a dos bosses por uma ficha única e objetiva: mapa ao lado de «Como lá chegar», pré-requisitos ligados às quests, criaturas, loot principal, charms e preys, e só cinco números (XP/h, lucro/h, nível recomendado, resistências, dificuldade de 1 a 5).
 
 **Architecture:** O caminho de cada hunt e de cada boss passa para um ficheiro novo, `data/caminhos.json`, gerado por `_dev/build_caminhos.py` a partir dos dados que já existem e de um ficheiro escrito à mão que tem prioridade. A lógica nova (dificuldade, preys, loot, resistências, enquadramento do mapa) fica em `shared/fichas.js`, testável em node. O `index.html` só desenha: uma função `fichaHTML` comum, usada pela ficha da hunt e pela do boss. No fim, os caminhos em falta são escritos por lotes, sem tocar no código.
 
@@ -389,9 +389,10 @@ git commit -m "Fichas: caminho em troços com mapa por troço, NPCs e pré-requi
 
 Em cada combinação, depois de `#hunts` carregar: clica no 1.º `[data-hunt]`, espera por `#sheet.on [data-cam][data-loaded]`, e verifica dentro de `#sheetBody`:
 - existe `.fx-top` com 2 filhos (`.fx-map` e `.fx-cam`); a 1440 px estão lado a lado (`getBoundingClientRect().top` igual, ±4 px); a 390 px o mapa está por cima;
-- `.fx-stats` tem exatamente 4 itens, com os rótulos (traduzidos pelo site; compara pela ordem, não pelo texto) XP/h, nível, resistências, dificuldade;
+- `.fx-stats` tem exatamente 5 itens, por esta ordem (os rótulos são traduzidos pelo site; compara pela ordem, não pelo texto): XP/h, lucro/h, nível, resistências, dificuldade;
+- numa hunt com `lo` negativo no `G.hunts` da vocação ativa (procura uma nos dados; se não houver, salta), o lucro tem a classe `warnt`;
 - existem, por esta ordem no DOM: `.fx-top`, `.fx-stats`, `[data-campre]`, `.fx-mons`, `.fx-loot`, `.fx-tips`;
-- **não** existem: `.tabs`, `.whatb`, `[data-hwheel]`, `.hsets`, `[data-kstat]`, `[data-lootp]`, nem o texto «lucro/h» (em pt-PT);
+- **não** existem: `.tabs`, `.whatb`, `[data-hwheel]`, `.hsets`, `[data-kstat]`, `[data-lootp]`;
 - `.fx-tips` tem um bloco de charms e um de preys; cada prey tem o nome de uma criatura e um dos três bónus;
 - clicar num `.cam-pin` abre a `.cam-map` e o `<canvas>` deixa de estar todo preto (`getImageData` com algum píxel ≠ 0 fora do pino);
 - fecha a ficha; pesquisa geral por uma hunt que a vocação ativa não tem e confirma que a ficha abre com a mesma estrutura (sem o número de XP/h: «—»).
@@ -405,7 +406,7 @@ Expected: FAIL (`.fx-top` não existe)
 Estrutura fixa do `fichaHTML` (classes entre parênteses):
 1. cabeçalho (`.sh-h`): `eyebrow`, `<h3>` com o título, `head` (botão de comparar);
 2. `.fx-top`: `.fx-map` (`m.map`) e `.fx-cam` (`m.cam`); grelha de 2 colunas a partir de 760 px (`minmax(0,340px) minmax(0,1fr)`), 1 coluna abaixo;
-3. `.fx-stats`: os 4 números, numa linha (2 × 2 abaixo de 480 px);
+3. `.fx-stats`: os 5 números, numa linha (em 2 colunas abaixo de 480 px, com a dificuldade a ocupar a linha toda);
 4. `<section><h4>Pré-requisitos</h4>` + `m.pre`;
 5. `<section class="fx-mons"><h4>Criaturas</h4>` + `m.mons`;
 6. `<section class="fx-loot"><h4>Loot principal</h4>` + `m.loot`;
@@ -415,7 +416,7 @@ Estrutura fixa do `fichaHTML` (classes entre parênteses):
 `huntSheet(h)`:
 - `map`: `huntMap(h)` (o botão com a miniatura que já existe) + `mapBtn(…, "Abrir o mapa")` + o botão «Ver spawns no mapa» (`data-hspawn`) que já existe; com `G.hm[pid][3] === "a"`, a legenda «zona aproximada».
 - `cam`: `<div data-cam="h:<pid>"><p class="tkload">A carregar o caminho…</p></div>`; `pre`: `<div data-campre></div>` (o `camFill` enche-o).
-- `stats`: (1) `fmt(h.xp)` + «≈» quando `h.est`, ou «—», rótulo «XP/h»; (2) `h.l + "+"`, «nível recomendado»; (3) resistências: os 2 elementos de maior `pct` e o de menor do `GrimFicha.resist(p.eff)`, como chips (`chip(el)` + `pct %`), rótulo «resistências», e um `<details>` «Ver os 7 elementos» com a lista completa (imune / cura assinalados); (4) `diffHTML(GrimFicha.huntDiff({d: p.d, hit: hcmpHit(pid), L: h.l}))`, rótulo «dificuldade». O dano vem do `data/crdmg.json`: se `CRDV` ainda não carregou, mostra a base e chama `crdLoad().then(…)` para atualizar só esse número (como o `hcmpSheet` faz).
+- `stats`: (1) `fmt(h.xp)` + «≈» quando `h.est`, ou «—», rótulo «XP/h»; (2) `fmt(h.lo)` + «≈» quando `h.est`, com a classe `warnt` quando `h.lo < 0`, ou «—», rótulo «lucro/h»; quando `h.xp == null` e a hunt tem as notas da TibiaWiki (`p.xs`/`p.ls`), os dois primeiros mostram as estrelas (`stars(p.xs)`, `stars(p.ls)`) com «(TibiaWiki)» no rótulo, como a ficha de hoje; (3) `h.l + "+"`, «nível recomendado»; (4) resistências: os 2 elementos de maior `pct` e o de menor do `GrimFicha.resist(p.eff)`, como chips (`chip(el)` + `pct %`), rótulo «resistências», e um `<details>` «Ver os 7 elementos» com a lista completa (imune / cura assinalados); (5) `diffHTML(GrimFicha.huntDiff({d: p.d, hit: hcmpHit(pid), L: h.l}))`, rótulo «dificuldade». O dano vem do `data/crdmg.json`: se `CRDV` ainda não carregou, mostra a base e chama `crdLoad().then(…)` para atualizar só esse número (como o `hcmpSheet` faz).
 - `mons`: `G.pm[pid].h` com criatura conhecida: sprite (`crSpr`, 44 px), nome (`mlink`), vida e XP (`G.mon[k][1]`, `[2]`), «× n» quando n > 1. Sem dados: «Sem dados de criaturas para esta zona.».
 - `loot`: `GrimFicha.topLoot(…)` com `loot` de cada criatura = `G.mon[k][6]` (`[ix, nome, %, valor]`) e o valor = `priceOf(nome, mundo).v` quando for maior que 0, senão o valor do NPC que vem no `G.mon`; cada linha: `ltSpr`, `ilink(nome)`, probabilidade (mesma formatação do `monCard`), `gp(valor)`, «de <criatura>». Vazio: «Sem dados de loot.».
 - `tips`: charms = `hCharmsHTML(c, p, h)` (só os charms; nada da Wheel nem das gemas); preys = `GrimFicha.preyPicks(…)` com `xp`/`cnt` do `G.pm`/`G.mon` e `hit` = `CRDV[k].m`; cada prey: sprite, nome, `GrimFicha.PREY[bonus]`; nota: «O 3.º slot de prey compra-se na Store.» quando há 3.
@@ -424,7 +425,7 @@ Estrutura fixa do `fichaHTML` (classes entre parênteses):
 
 `placeSheet(pid)`: a mesma ficha com `h` mínimo (`{p: G.places[pid], r: {c: pid, place: G.places[pid].n}, l: nível mais baixo dessa hunt em G.hunts, xp: null, …}`), sem charms nem botão de comparar.
 
-Cartão (`huntCard`): a linha `.hc-n` passa a `<b>XP/h</b> · <b>nível+</b> · dificuldade N/5` (sem o lucro); o resto do cartão fica igual.
+Cartão (`huntCard`): a linha `.hc-n` mantém o XP/h, o lucro e o nível, e ganha no fim « · dificuldade N/5»; o resto do cartão fica igual.
 
 Sai da ficha (apaga as chamadas; apaga a função se o `grep` mostrar que não tem mais nenhum uso): `haHTML`, `[data-kstat]`/`initKstat` na ficha, a frase da composição por tipo, os `pills` de compatibilidade, o bloco «Setup» (`setupHTML`, `elemHTML` dentro dele), `hsetsHTML`, `hwheelHTML`, `tabsUI` na ficha, `[data-lootp]` na ficha, `questsTab`/`questsForHunt` na ficha, as variantes, `huntRoute`, `vRoute`, `routeHTML`, `hAccessData`, `hAccessFill`, o clique `[data-hretry]`.
 
@@ -433,13 +434,13 @@ Sai da ficha (apaga as chamadas; apaga a função se o `grep` mostrar que não t
 Run: `node _dev/fichas_browser.cjs && node _dev/travel_access_test.mjs && node _dev/fichas_test.mjs && python3 -I _dev/gjson.py . --check`, mais o `node --check` do JS extraído
 Expected: tudo sem erros; o browser diz `ok` nas 6 combinações
 
-- [ ] **Step 4: Vê com os teus olhos** — tira capturas da ficha a 1440 e a 390 px (3 hunts: uma com caminho `ok`, uma `part` com ficha de local, uma `none`) e confirma: o mapa está ao lado do caminho; nada cortado; os 4 números leem-se à primeira.
+- [ ] **Step 4: Vê com os teus olhos** — tira capturas da ficha a 1440 e a 390 px (3 hunts: uma com caminho `ok`, uma `part` com ficha de local, uma `none`) e confirma: o mapa está ao lado do caminho; nada cortado; os 5 números leem-se à primeira.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add index.html _dev/fichas_browser.cjs
-git commit -m "Hunts: ficha objetiva (mapa e caminho, 4 números, pré-requisitos, criaturas, loot, charms e preys)"
+git commit -m "Hunts: ficha objetiva (mapa e caminho, 5 números, pré-requisitos, criaturas, loot, charms e preys)"
 ```
 
 ---
@@ -458,7 +459,7 @@ git commit -m "Hunts: ficha objetiva (mapa e caminho, 4 números, pré-requisito
 
 Em cada combinação: abre `#bosses`, espera pelas linhas `.bs-r`, clica no 1.º `[data-boss]`, espera por `#sheet.on [data-cam][data-loaded]` e verifica:
 - a mesma ordem de blocos da hunt (`.fx-top`, `.fx-stats`, `[data-campre]`, `.fx-mons`, `.fx-loot`), **sem** `.fx-tips`;
-- `.fx-stats` com 4 itens: XP por kill, nível recomendado (sozinho / em equipa), resistências, dificuldade;
+- `.fx-stats` com 5 itens: XP por kill, valor por kill, nível recomendado (sozinho / em equipa), resistências, dificuldade;
 - não há `<details class="bs-d">` na página;
 - a linha da lista continua a ter o botão do Bosstiary (`[data-bstier]`) e este continua a rodar o estágio.
 Corre também `node _dev/bosses_test.mjs` (o motor não muda).
@@ -472,9 +473,9 @@ Expected: FAIL (`[data-boss]` não existe)
 - `eyebrow`: classe do Bosstiary (`GrimBoss.CLS[b.c]`) e o cooldown (`GrimBoss.cdText(b.cd)`); `title`: nome.
 - `map`: com `b.pos`, o `<canvas class="qpos" data-qpos="x,y,z">` de hoje (desenhado ao abrir, com `drawPos`) + `mapBtn(…, "Abrir o mapa")`; com `b.pa`, «zona aproximada»; sem `pos`, «Posição por confirmar.».
 - `cam`: `<div data-cam="b:<k>">…</div>`; `pre`: `<div data-campre></div>`.
-- `stats`: (1) `nf(b.xp)` ou «—», «XP por kill»; (2) nível: `r.soloL` («sozinho») e `r.teamL` («em equipa»), o que houver; senão `b.qr`; rótulo «nível recomendado»; (3) resistências do `BSD.cr[k].el` (aqui o valor é a % de dano que leva: usa-o direto no formato do `GrimFicha.resist`, 100 = normal, 0 = imune); (4) `diffHTML(GrimFicha.bossDiff({st: r.st, eff: r.eff, md: b.md, ttk: r.ttk, tmax: limite da classe}), "para o teu nível")` (limites: Bane 150 s, Archfoe 300 s, Nemesis 600 s, como no `_dev/BOSSES.md`).
+- `stats`: (1) `nf(b.xp)` ou «—», «XP por kill»; (2) `≈ gp(lo.v)` ou «sem preço» (`lo.nodata`), «valor por kill»; (3) nível: `r.soloL` («sozinho») e `r.teamL` («em equipa»), o que houver; senão `b.qr`; rótulo «nível recomendado»; (4) resistências do `BSD.cr[k].el` (aqui o valor é a % de dano que leva: usa-o direto no formato do `GrimFicha.resist`, 100 = normal, 0 = imune); (5) `diffHTML(GrimFicha.bossDiff({st: r.st, eff: r.eff, md: b.md, ttk: r.ttk, tmax: limite da classe}), "para o teu nível")` (limites: Bane 150 s, Archfoe 300 s, Nemesis 600 s, como no `_dev/BOSSES.md`).
 - `mons`: o próprio boss: sprite, vida (`r.hp` ou «desconhecida»), golpe máximo (`b.md`), o dano que faz por elemento (`b.dm`), e uma linha com o tipo de aparição: «Sala com alavanca» (`b.lv`), «Aparece em raids: não se marca» (`b.sp === "r"`), «Aparece no mundo, ao acaso» (`b.sp === "g"`).
-- `loot`: `lo.top` (até 8) no mesmo formato da hunt + «≈ <valor> por kill»; sem preço: «loot sem preço».
+- `loot`: `lo.top` (até 8) no mesmo formato da hunt; sem dados: «Sem dados de loot.».
 - `tips`: vazio (bosses não levam charm nem prey; não mostrar o bloco).
 
 `bsRow`: fica o sprite, o nome (botão que abre a ficha), a etiqueta do estado (sozinho/equipa/…), o valor por kill, o sítio, o botão «Ver ficha» (`data-boss`) e o botão do Bosstiary. Sai o `<details class="bs-d">` com «Porquê e como».
@@ -505,7 +506,7 @@ git commit -m "Bosses: a mesma ficha objetiva das hunts"
 - Consumes: todo o texto novo das Tasks 3–5.
 - Produces: o site em 8 línguas sem texto novo por traduzir; documentação para a Parte C.
 
-- [ ] **Step 1: Junta as chaves manuais** — texto que o tradutor não apanha sozinho (texto montado em JS com partes variáveis, `aria-label`, texto no `<canvas>`): acrescenta a `i18n/src/ui-extra.json` no formato `{"c": "<contexto>", "k": "<texto pt-PT>"}`. No mínimo: os 5 nomes da dificuldade, os 3 bónus de prey, os 4 estados do caminho, «Como lá chegar», «Ver no mapa», «Fala com », «zona aproximada», «por fazer», «feita», «Sem pré-requisitos.», «Tentar de novo», os rótulos dos 4 números (hunt e boss).
+- [ ] **Step 1: Junta as chaves manuais** — texto que o tradutor não apanha sozinho (texto montado em JS com partes variáveis, `aria-label`, texto no `<canvas>`): acrescenta a `i18n/src/ui-extra.json` no formato `{"c": "<contexto>", "k": "<texto pt-PT>"}`. No mínimo: os 5 nomes da dificuldade, os 3 bónus de prey, os 4 estados do caminho, «Como lá chegar», «Ver no mapa», «Fala com », «zona aproximada», «por fazer», «feita», «Sem pré-requisitos.», «Tentar de novo», os rótulos dos 5 números (hunt e boss).
 
 - [ ] **Step 2: Extrai, traduz e constrói**
 
