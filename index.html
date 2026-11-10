@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261110g" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110f"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261110h" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110f"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -446,7 +446,7 @@ body.noch .hcmp-tray{display:none!important}
 .fx-rs{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}.fx-rc{display:inline-flex;align-items:center;gap:4px;font-size:13px;white-space:nowrap}
 .fx-rd summary{cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;min-height:32px}.fx-rd[open] summary{margin-bottom:4px}
 .fx-diff{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.fx-diff b{font-family:var(--serif);font-size:20px;line-height:1.15}
-.fx-dm{display:flex;gap:3px;flex:1 0 100%}.fx-dm i{width:10px;height:10px;border-radius:50%;border:2px solid var(--gold)}.fx-dm i.on{background:var(--gold)}
+.fx-kst{display:block}.fx-dm{display:flex;gap:3px;flex:1 0 100%}.fx-dm i{width:10px;height:10px;border-radius:50%;border:2px solid var(--gold)}.fx-dm i.on{background:var(--gold)}
 .fx-sec{display:grid;gap:8px;min-width:0}.fx-sec h4{margin:0}.fx-sec h5{margin:0 0 6px;font-size:14px}
 .fx-ml,.fx-lt,.fx-prey{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .fx-ml{grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}.fx-ml li,.fx-prey li{display:flex;align-items:center;gap:10px;min-width:0}
@@ -45014,7 +45014,7 @@ function avgMon(pid){ if(hasKey(AVGXP,pid)) return AVGXP[pid];
   let t=0, v=0, w=0; h.forEach(([k,n])=>{ const q=Math.max(+n||0,1); t+=(+G.mon[k][2]||0)*q; v+=(+G.mon[k][1]||0)*q; w+=q; });
   return AVGXP[pid] = w&&t>0 ? [t/w, v/w] : null; }
 function avgXp(pid){ const a=avgMon(pid); return a?a[0]:null; }
-/* Task 2b (fichas) */ // calibração dos números (data/calib.json, parte D do plano): até lá, as omissões (k = 0,5)
+/* Task 2b (fichas) */ // calibração dos números (data/calib.json, parte D do plano): as omissões (k = 0,5, sem dz) até o ficheiro chegar (fim do script)
 let CALIB = GrimFicha.calibOf(null);
 // ajuste ao nível do jogador: (pl / nível da medição)^k entre 0,7 e 1,25; abaixo de 0,6 × o nível da medição não há número (below)
 function estAdj(e, pl){ const lf=GrimFicha.levelFactor(pl, e.Lm, CALIB.k); let xp=e.xp, lo=e.lo;
@@ -45616,7 +45616,14 @@ function fxDiffWait(){ if(CRDV||FXDW) return; FXDW=true; crdLoad().then(()=>fxDi
 function fxDiffSync(root){ const c=C();
   root.querySelectorAll("[data-fxd]").forEach(el=>{ const d=diffFor(el.dataset.fxd,c); el.innerHTML=el.dataset.fxdc?`dificuldade ${d.n}/5`:diffHTML(d.n,'<i data-fxdok hidden></i>'); });
   root.querySelectorAll("[data-fxprey]").forEach(el=>{ el.innerHTML=fxPreyHTML(el.dataset.fxprey); }); }
-function fxInit(root){ root.querySelectorAll("[data-fxloot]").forEach(fxLootFill); if(!root.querySelector("[data-fxd]")) return; if(CRDV) fxDiffSync(root); else crdLoad().then(()=>fxDiffSync(root)); }
+// parte D: a criatura principal da hunt (XP × quantidade no G.pm, sem bosses) está nos 10 % mais mortos da semana no mundo da personagem
+// shortcut: o plural do TibiaData só pelo kPlural (cyclopes, werewolves… ficam sem nota); usar os plurais do _dev/tibiadata.py se fizer falta
+function fxKstFill(box){ const c=C(), w=c&&c.world, pid=box.dataset.fxkst; if(!w) return;
+  const m=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)&&!G.mon[k][7]).map(([k,n])=>[k,(+G.mon[k][2]||0)*Math.max(+n||0,1)]).sort((a,b)=>b[1]-a[1])[0];
+  if(m) kstatLoad(w).then(ks=>{ const e=ks&&(ks[m[0]]||ks[kPlural(m[0])]); if(!e||!box.isConnected) return;
+    const v=Object.keys(ks).filter(r=>r[0]!=="(").map(r=>+ks[r].last_week_killed||0).sort((a,b)=>a-b), p90=v[Math.ceil(v.length*0.9)-1];
+    if(+e.last_week_killed>0&&+e.last_week_killed>=p90) box.hidden=false; }); }
+function fxInit(root){ root.querySelectorAll("[data-fxloot]").forEach(fxLootFill); root.querySelectorAll("[data-fxkst]").forEach(fxKstFill); if(!root.querySelector("[data-fxd]")) return; if(CRDV) fxDiffSync(root); else crdLoad().then(()=>fxDiffSync(root)); }
 function fxPreyHTML(pid){ const c=C(), L=c?c.level:fxRecL(pid,fxVoc());
   const ms=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)&&!G.mon[k][7]).map(([k,n])=>({k,n:G.mon[k][0],xp:+G.mon[k][2]||0,cnt:Math.max(+n||0,1),hit:CRDV&&hasKey(CRDV,k)&&typeof CRDV[k].m==="number"?CRDV[k].m:null}));
   const P=GrimFicha.preyPicks(ms,L); if(!P.length) return `<p class="small muted">Sem criaturas para escolher preys.</p>`;
@@ -45654,7 +45661,7 @@ function huntSheet(h,noCmp){
     map:`${(m&&huntMap(h))||`<p class="small muted">Sem mapa desta zona.</p>`}${m?`<div class="fx-mapb">${mapBtn(m[0],m[1],m[2],name,"Abrir o mapa")}<button type="button" class="btn small ghost" data-hspawn="${esc(pid)}">Ver spawns no mapa</button></div>${m[3]==="a"?`<p class="tiny muted">O ponto no mapa é a zona aproximada.</p>`:""}`:""}`,
     cam:`<div data-cam="h:${esc(pid)}"><p class="tkload">A carregar o caminho…</p></div>`,
     stats:[{k:"xp",v:xp,l:wiki?"XP (TibiaWiki)":"XP/h"},{k:"lo",v:lo,l:wiki?"loot (TibiaWiki)":"lucro/h"},{k:"lv",v:`<b>${h.l}+</b>`,l:"nível recomendado"},
-      {k:"res",v:fxResHTML(p),l:"resistências"},{k:"dif",v:`<span data-fxd="${esc(pid)}">${diffHTML(d.n,CRDV?'<i data-fxdok hidden></i>':"")}</span><span class="tiny muted fx-pl">${esc(protOf(c).lbl)}</span>`,l:"dificuldade"}],
+      {k:"res",v:fxResHTML(p),l:"resistências"},{k:"dif",v:`<span data-fxd="${esc(pid)}">${diffHTML(d.n,CRDV?'<i data-fxdok hidden></i>':"")}</span><span class="tiny muted fx-pl">${esc(protOf(c).lbl)}</span>${c&&c.world?`<span class="tiny warnt fx-kst" data-fxkst="${esc(pid)}" hidden>Hunt muito disputada no teu mundo</span>`:""}`,l:"dificuldade"}],
     pre:`<div data-campre></div>`,
     mons:hl.length?`<ul class="fx-ml">${hl.map(([k,n])=>{ const M=G.mon[k]; return `<li>${crSpr(k,44)}<span class="fx-mn"><span>${mlink(k,esc(M[0]))}${M[7]?' <span class="tag gold">boss</span>':""}${n>1?` <span class="muted">× ${n}</span>`:""}</span>${M[1]>0||M[2]>0?`<span class="tiny muted">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:""}</span></li>`; }).join("")}</ul>`:`<p class="small muted">Sem dados de criaturas para esta zona.</p>`,
     loot:`<div class="fx-loot-b" data-fxloot="${esc(pid)}">${fxLootHTML(pid,(c&&c.world)||"",c&&c.world?"wait":"noworld")}</div>`,
@@ -49641,6 +49648,9 @@ bootSync();
 route(); if(ST.ui.p==="novidades") renderNews(); if(ST.ui.p==="sistemas") renderSys(); if(ST.ui.p==="calc") renderCalc(); if(ST.ui.p==="itens") renderItemList(); if(ST.ui.p==="criaturas") renderMonList(); if(ST.ui.p==="feiticos") renderSpellList(); if(ST.ui.p==="npcs") renderNpcList(); if(ST.ui.p==="colecoes") renderColList();
 setUI("modern", false);
 linkIdxLoad();
+// parte D: a calibração semanal chega depois do primeiro desenho; com outro k, o início e os cartões das hunts voltam a desenhar-se
+// (shortcut: uma ficha já aberta fica com o XP/h do k antigo até se reabrir), e a dificuldade com o dz segue o fxDiffSync
+dsafe("calib").then(j=>{ const k0=CALIB.k; CALIB=GrimFicha.calibOf(j); if(CALIB.k!==k0&&ST.chars.length){ renderInicio(); renderHunts(); } if(CRDV) fxDiffSync(document); });
 
 if (window.claude && typeof window.claude.use==="function"){
   window.claude.use("sample").then(fn=>{ sampleFn=fn||null; if(!fn) $("askNote").textContent="O assistente não está disponível nesta vista."; }).catch(()=>{});

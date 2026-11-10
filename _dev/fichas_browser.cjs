@@ -12,6 +12,9 @@
 // continua na linha) e, em pt-PT, um boss de alavanca com guias, um de raid e um sem posição, e a nota do set do knight.
 // Task 6: em en e de, a ficha da 1.ª hunt, a da Forgotten Crypt (troço de um local), a do 1.º boss e a do boss de alavanca não
 // podem ter nenhuma das frases pt-PT escritas à mão para as fichas (i18n/src/ui-extra.json, contexto «à mão (r35)»).
+// Task 21 (pt-PT, 1440): data/calib.json com dz[pid] = 1 sobe 1 a dificuldade dessa hunt e com k = 1 muda o XP/h dos cartões
+// em relação ao 404 (que fica com as omissões); killstatistics do mundo da personagem com a criatura principal nos 10 % mais
+// mortos → «Hunt muito disputada no teu mundo» na ficha; TibiaData com erro → sem a nota.
 const { chromium } = require('playwright');
 const path = require('path'), fs = require('fs');
 // frases pt-PT da Task 6 (as fixas inteiras; dos modelos, as partes fixas com 6+ letras)
@@ -193,6 +196,37 @@ const diffOf = p => p.evaluate(async () => {
   return d ? { n: (/(\d)\/5/.exec(d.textContent) || [])[1], note: (d.querySelector('.fx-pl') || {}).textContent || '', ok: !!d.querySelector('[data-fxdok]') } : null;
 });
 
+// Task 21: a calibração (data/calib.json) e a nota «Hunt muito disputada no teu mundo» (killstatistics do TibiaData)
+const calibWait = p => p.waitForFunction(() => performance.getEntriesByType('resource').some(e => /data\/calib\.json/.test(e.name) && e.responseEnd > 0), null, { timeout: 10000 }).then(() => sleep(800));
+async function calibTest(p, fails, CB, KS) {
+  const cards = () => p.evaluate(() => [...document.querySelectorAll('[data-hunt][data-pid]')].filter(b => b.getClientRects().length).map(b => (b.querySelector('.hc-n b') || {}).textContent || '').join('|'));
+  const look = async pid => { await calibWait(p).catch(() => fails.push('o data/calib.json não foi pedido')); await crdWait(p); const c = await cards();
+    // sem pid: o 1.º cartão com dificuldade abaixo de 5 (o dz = 1 tem de se ver)
+    pid = pid || await p.evaluate(() => { const b = [...document.querySelectorAll('[data-hunt][data-pid]')].filter(b => b.getClientRects().length).find(b => /dificuldade [1-4]\/5/.test(b.textContent)); return b && b.dataset.pid; });
+    await openPid(p, pid); const d = await diffOf(p); await closeSheet(p); return { c, pid, n: d && +d.n }; };
+  CB.mode = 404; await setState(p, ''); const a = await look();
+  CB.mode = 'json'; CB.json = { v: 1, gen: '2026-11-10', k: 1, dz: { [a.pid]: 1 }, kz: {}, ha: {} }; await setState(p, ''); const b = await look(a.pid);
+  CB.mode = 'real';
+  console.log(`  calib.json: ${a.pid} 404 ${a.n}/5, dz = 1 ${b.n}/5`);
+  if (!(a.n >= 1 && a.n < 5)) fails.push(`${a.pid}: dificuldade com o 404 = ${a.n} (precisa de 1–4 para o teste)`);
+  else if (b.n !== a.n + 1) fails.push(`${a.pid}: com dz = 1 a dificuldade ficou ${b.n} (404: ${a.n})`);
+  if (a.c === b.c) fails.push('calib.json com k = 1: o XP/h dos cartões não mudou');
+  // criatura principal (XP × quantidade no G.pm, sem bosses) da 1.ª hunt nos 10 % mais mortos da semana em Bona
+  const pid = await p.evaluate(() => [...document.querySelectorAll('[data-hunt][data-pid]')].find(b => b.getClientRects().length).dataset.pid);
+  const main = await p.evaluate(pid => { const g = JSON.parse(document.getElementById('G').textContent);
+    return ((g.pm[pid] || {}).h || []).filter(([k]) => g.mon[k] && !g.mon[k][7]).map(([k, n]) => [g.mon[k][0], (+g.mon[k][2] || 0) * Math.max(+n || 0, 1)]).sort((x, y) => y[1] - x[1])[0][0]; }, pid);
+  const ent = (race, n) => ({ race, last_day_players_killed: 0, last_day_killed: Math.round(n / 7), last_week_players_killed: 0, last_week_killed: n });
+  KS.mode = 'ok'; KS.json = { killstatistics: { world: 'Bona', entries: [ent('(elemental forces)', 0), ent(main, 90000), ...Array.from({ length: 19 }, (_, i) => ent('Teste ' + i, 100 * (i + 1)))] } };
+  await setState(p, ''); await openPid(p, pid);
+  const on = await p.waitForFunction(() => /Hunt muito disputada no teu mundo/.test(document.querySelector('#sheetBody [data-fxs="dif"]').innerText), null, { timeout: 5000 }).then(() => true, () => false);
+  if (!on) fails.push(`${pid} (${main} nos 10 % mais mortos): sem «Hunt muito disputada no teu mundo»`);
+  await closeSheet(p);
+  KS.mode = 500; await setState(p, ''); await openPid(p, pid); await sleep(1500);
+  if (await p.evaluate(() => /Hunt muito disputada/.test(document.querySelector('#sheetBody').innerText))) fails.push(`${pid}: TibiaData com erro e mesmo assim a nota`);
+  await closeSheet(p);
+  KS.mode = 'abort';
+}
+
 // passos só em pt-PT: devolve a lista de problemas
 async function deep(p, W, fails, MK) {
   const G = await p.evaluate(() => { const g = JSON.parse(document.getElementById('G').textContent); return { hunts: g.hunts, places: Object.fromEntries(Object.entries(g.places).map(([k, v]) => [k, v.n])), items: g.items.map(x => [x.n.toLowerCase(), x.id]) }; });
@@ -309,6 +343,10 @@ async function deep(p, W, fails, MK) {
     const MK = { mode: 503, json: null };
     await ctx.route('**/*', r => new URL(r.request().url()).host === HOST ? r.continue() : r.abort());
     await ctx.route('**/api/market.php*', r => MK.mode === 'ok' ? r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(MK.json) }) : r.fulfill({ status: 503, body: '' }));
+    // Task 21: o data/calib.json (o real, 404 ou um fixo) e o killstatistics do TibiaData (abortado como o resto, 500 ou um fixo)
+    const CB = { mode: 'real', json: null }, KS = { mode: 'abort', json: null };
+    await ctx.route('**/data/calib.json', r => CB.mode === 'real' ? r.continue() : CB.mode === 'json' ? r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(CB.json) }) : r.fulfill({ status: 404, body: '' }));
+    await ctx.route(/\/killstatistics\//, r => KS.mode === 'ok' ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(KS.json) }) : KS.mode === 500 ? r.fulfill({ status: 500, headers: { 'access-control-allow-origin': '*' }, body: '' }) : r.abort());
     const p = await ctx.newPage(), errs = [], fails = [];
     p.on('pageerror', e => errs.push('pageerror: ' + String(e).slice(0, 200)));
     p.on('console', m => {
@@ -317,6 +355,7 @@ async function deep(p, W, fails, MK) {
       if (u && new URL(u, URL0).host !== HOST) return;                                 // pedidos de fora, abortados de propósito
       if (/Failed to load resource/.test(t) && (/api\/stats\.php/.test(u) || /501/.test(t))) return; // o http.server não aceita o POST das estatísticas
       if (/Failed to load resource/.test(t) && /api\/market\.php/.test(u) && /503/.test(t)) return;  // o Market em baixo, de propósito
+      if (/Failed to load resource/.test(t) && /data\/calib\.json/.test(u) && /404/.test(t)) return; // o calib.json em falta, de propósito
       if (/net::ERR_FAILED/.test(t)) return;
       errs.push('console: ' + t.slice(0, 200) + (u ? ' ' + u : ''));
     });
@@ -338,6 +377,7 @@ async function deep(p, W, fails, MK) {
       await closeSheet(p);
       if (lang !== 'pt-PT') { await openPid(p, 'forgottencrypt'); const pt = await p.evaluate(ptLeft, PT35); if (pt.length) fails.push('forgottencrypt com pt-PT: ' + pt.join(' | ')); await closeSheet(p); }
       if (lang === 'pt-PT') await deep(p, W, fails, MK);
+      if (lang === 'pt-PT' && W > 800) await calibTest(p, fails, CB, KS);
       await bosses(p, W, lang, r, fails);
     } catch (e) { fails.push('erro: ' + String(e).split('\n')[0].slice(0, 200)); }
     r.fails = fails;
