@@ -28,6 +28,11 @@
 - Não mexer nas páginas Equipamento e Wheel nem nos filtros das Hunts. No comparar hunts muda só a coluna «Risco» (Task 4).
 - Dados de sessões: nunca nomes de personagens no repositório, nos commits nem nos PRs (só agregados por hunt, vocação e nível).
 
+## Decisões da paragem 2 (10/11/2026, aprovadas pelo dono)
+
+- O `data/caminhos.json` pode ir até 1 MB (776 KB hoje; substitui o `hunt-access.json` e o `boss-access.json`, 653 KB juntos, e só carrega ao abrir uma ficha).
+- Hunt sem número por estar abaixo de 0,6 × o nível da medição (`h.below` do `huntRows`): o cartão e a ficha mostram «abaixo do nível da medição» no lugar do XP/h e do lucro/h (Task 4), nunca vazio.
+
 ## Review Focus
 
 1. **Hunt sem caminho documentado** (129 hoje): a ficha abre, mostra o mapa da zona e a frase que existe, com «por documentar»; não fica vazia nem com erro. Teste na Tarefa 2 (`st == "none"`) e na Tarefa 4 (browser).
