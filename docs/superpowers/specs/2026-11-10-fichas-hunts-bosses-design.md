@@ -152,7 +152,16 @@ Sem repetir criaturas; menos criaturas, menos preys. A ficha lembra que o 3.º s
 ### Loot principal
 
 Até 8 itens diferentes das criaturas da hunt, por `valor × probabilidade × quantidade`, com a criatura que o deixa
-cair, a probabilidade e o valor (a regra de preços do site: `priceOf`). Nos bosses, o `top` do `lootPerKill`.
+cair, a probabilidade e o valor. Nos bosses, o `top` do `lootPerKill`.
+
+**Preços do Market do mundo da personagem, sempre do dia** (pedido do dono, 10/11/2026). Não é preciso nada novo para
+os manter atualizados: o `api/market.php` já vai buscar os preços ao TibiaMarket por mundo e guarda-os 6 horas; o
+browser guarda-os 2 horas (`mktLoad`). Quem abre uma ficha recebe preços com, no máximo, umas horas. A ficha usa a
+regra de preços do site (`priceOf`: o Market quando é fiável e paga mais do que o NPC, senão o NPC) e diz de onde vem
+cada valor e de quando é o scan do Market (o campo `updated` da resposta: «Market de Antica, hoje às 06:12»).
+Sem mundo na personagem, ou com o Market em baixo: preço do NPC e a frase «Preços do NPC: o Market não respondeu.»
+(ou «Escolhe o mundo da personagem para ver os preços do Market.»). O lucro por hora continua a ser o número medido
+(TibiaPal ou sessões reais), não uma conta com os preços do dia.
 
 ### Resistências
 
