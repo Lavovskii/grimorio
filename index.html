@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261024b"></script><script src="shared/fichas.js?v=20261110b"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261103c" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110e"></script><script src="shared/fichas.js?v=20261110b"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -711,10 +711,6 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#F2D68C}
 .bs-st{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .bs-v{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;font-size:14px}
 .bs-v .small{flex-basis:100%}
-.bs-d summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
-.bs-d ul{margin:0 0 4px;padding-left:18px;display:grid;gap:4px}
-.bs-map{display:grid;gap:6px;justify-items:start;margin:10px 0 4px}
-.bs-map p{margin:0}
 .bs-loc{font-size:13px}
 .bs-tier{display:grid;justify-items:center;gap:1px;min-width:96px;min-height:56px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--ink);font:inherit;cursor:pointer;text-align:center}
 .bs-tier b{font-size:14px}
@@ -45633,12 +45629,13 @@ function fxLootHTML(pid,w,st){ const src={}, live=!!ITV;
   const mons=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k)).map(([k,n])=>({n:G.mon[k][0],cnt:Math.max(+n||0,1),loot:(G.mon[k][6]||[]).map(([,ln,pct,v])=>{
     let val=+v||0, from="NPC"; if(live){ const pr=priceOf(ln,w); if(pr.v>0){ val=pr.v; from=pr.best==="market"?"Market":pr.best==="coin"?"":"NPC"; } }
     src[ln]=from; return {n:ln,pct:+pct||0,v:val}; })}));
-  const L=GrimFicha.topLoot(mons,8), mk=w&&MKV[w];
-  const note = st==="wait" ? `<span class="fx-lwait">A ver os preços do Market de ${esc(w)}…</span>` : st==="mkt" ? `Preços do Market de ${esc(w)}${mk&&mk.updated?`, scan de ${fxScan(mk.updated)}`:""}.`
-    : st==="fail" ? "Preços do NPC: o Market não respondeu." : "Escolhe o mundo da personagem para ver os preços do Market.";
+  const L=GrimFicha.topLoot(mons,8), note=fxLNote(w,st);
   if(!L.length) return `<p class="small muted">Sem dados de loot.</p>`;
   return `<ul class="fx-lt">${L.map(x=>`<li data-fxln="${esc(x.n.toLowerCase())}">${ltSpr(x.n)}<span class="fx-ln">${ilink(x.n)}<span class="tiny muted">de ${esc(x.from)}</span></span><span class="fx-lp">${fxPct(x.pct)}</span><span class="fx-lv"><b>${gp(x.v)}</b><span class="tiny muted fx-lsrc">${src[x.n]||""}</span></span></li>`).join("")}</ul>
     <p class="tiny muted fx-lnote">${note}</p>`; }
+function fxLNote(w,st){ const mk=w&&MKV[w];
+  return st==="wait" ? `<span class="fx-lwait">A ver os preços do Market de ${esc(w)}…</span>` : st==="mkt" ? `Preços do Market de ${esc(w)}${mk&&mk.updated?`, scan de ${fxScan(mk.updated)}`:""}.`
+    : st==="fail" ? "Preços do NPC: o Market não respondeu." : "Escolhe o mundo da personagem para ver os preços do Market."; }
 function fxLootFill(box){ if(box.dataset.fxok) return; box.dataset.fxok="1"; const c=C(), w=(c&&c.world)||"", pid=box.dataset.fxloot;
   Promise.all([ITV?null:dsafe("items").then(d=>{ if(!ITV&&d&&Object.keys(d).length) ITV=d; }), w?mktLoad(w):null]).then(([,m])=>{
     if(box.isConnected) box.innerHTML=fxLootHTML(pid,w,!w?"noworld":m?"mkt":"fail"); }); }
@@ -46485,7 +46482,7 @@ document.addEventListener("click", e=>{ const b=e.target.closest("[data-rxforget
 // mundo (lootPerKill) e o Bosstiary (c.bst = {chave: estágio 0–3}; pontos e bónus de loot pela Cyclopedia). O dano de boss vem
 // do motor de rotações: GrimRot.plan(cenário boss) nos níveis GrimBoss.ANCHORS com stats estimados, escalado pelo dano real da
 // personagem no seu nível (skills e equipamento, como na Rotação). Os dados carregam só quando a página abre.
-let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null;
+let BSD=null, BSERR=false, BSCACHE=null, BSLEAD=null, BSROW={}; // BSROW[k] = {b, r, lo}: o último renderBosses, para a ficha
 let BSACCESS=null;
 function bsAccessData(){
   return BSACCESS||(BSACCESS=dload("boss-access").then(d=>{
@@ -46600,17 +46597,9 @@ function bsAccessHTML(d,k){
   return `<h4 class="sub">Como chegar</h4><p class="small muted">Segue as entradas e os transportes descritos abaixo. A posição da sala no mapa não indica a cidade por onde se entra.</p>${places}${guides}
     ${!places&&!guides?`<p class="small muted">Ainda não há um percurso documentado para este boss.</p>`:!guides?`<p class="small muted">O acesso acima leva à zona. O troço até à sala do boss ainda está por documentar.</p>`:""}`;
 }
-async function bsAccessFill(box){
-  if(!box||box.dataset.loaded) return;
-  box.dataset.loaded="1";
-  try{ const d=await bsAccessData(); if(box.isConnected) box.innerHTML=bsAccessHTML(d,box.dataset.baccess); }
-  catch(e){ delete box.dataset.loaded; box.innerHTML=`<p class="small muted">Não consegui carregar os acessos.</p><button class="btn small ghost" data-bsretry>Tentar de novo</button>`; }
-}
-document.addEventListener("click",e=>{ const b=e.target.closest("[data-bsretry]"); if(b) bsAccessFill(b.closest("[data-baccess]")); });
 // o título é sempre escrito de novo inteiro (o tradutor do site traduz a frase toda; um remendo no texto já traduzido misturava línguas)
 function bsLead(P){ if(BSLEAD) $("bsLead").textContent=`Nível ${BSLEAD.L}: ${BSLEAD.solo} sozinho, ${BSLEAD.team} em equipa. Bosstiary: ${nf(P)} pontos, ${GrimBoss.lootBonus(P)}% de bónus de loot no boss do slot.`; }
 const BSF=[["solo","Sozinho"],["team","Em equipa"],["later","Mais tarde"],["all","Todos"]];
-const BSPROT={fire:"p_fire",earth:"p_earth",ice:"p_ice",energy:"p_energy",death:"p_death",holy:"p_holy"};
 const BSSTG=["—","Prowess","Expertise","Mastery"];
 const bsT = s => s==null?"—":s<60?`${Math.max(1,Math.round(s))} s`:s<3600?`${Math.round(s/60)} min`:`${Math.round(s/360)/10} h`;
 function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt);
@@ -46621,8 +46610,8 @@ function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt
   return BSCACHE={key, curve, real, gr}; }
 function bsStageBtn(c,k,b){ const st=(c.bst&&+c.bst[k])||0, pt=BSD.pts[b.c]||[], nx=pt[st];
   return `<button type="button" class="bs-tier s${st}" data-bstier="${esc(k)}" aria-label="${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}"><span class="tiny">Bosstiary</span><b>${BSSTG[st]}</b><span class="tiny muted">${nx?`${BSSTG[st+1]}: ${nx[0]} ${nx[0]===1?"morte":"mortes"} · +${nx[1]}`:"completo"}</span></button>`; }
-function bsRow(c,r,b,lo,CR){
-  const L=c.level, cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
+function bsRow(c,r,b,lo){
+  const cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
   const st = r.st==="solo" ? `<span class="tag ok">Sozinho · ≈ ${bsT(r.ttk)}</span>`
     : r.st==="team" ? `<span class="tag acc">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:""}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`
     : r.st==="locked" ? `<span class="tag">Acesso no nível ${b.ql}</span>`
@@ -46630,28 +46619,42 @@ function bsRow(c,r,b,lo,CR){
     : `<span class="tag warn">${r.teamL?`Em equipa ~${r.teamL}`:"Grupo grande"}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`;
   const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : "loot sem preço";
   const top = lo&&lo.top.length ? lo.top.slice(0,3).map(([n,g,pct])=>`${esc(n)} <span class="muted">${pct<1?pct.toFixed(1).replace(".",DECSEP):Math.round(pct)}%</span>`).join(" · ") : "";
-  const dm=Object.entries(b.dm||{}).sort((a,x)=>x[1]-a[1]), prot=dm.map(([e])=>BSPROT[e]).filter(Boolean)[0];
-  const why=[];
-  if(b.md) why.push(r.eff>=2*b.md?`Aguentas: vida efetiva ≈ ${nf(r.eff)}${isMage(c)?" (vida + Magic Shield)":""} contra golpes até ${nf(b.md)} por turno.`:`Sozinho é arriscado: golpes até ${nf(b.md)} por turno e tens ≈ ${nf(r.eff)} de vida efetiva${isMage(c)?" (vida + Magic Shield)":""} (pedimos o dobro do golpe).`);
-  if(r.hp) why.push(`${nf(r.hp)} de vida: com ≈ ${nf(r.dps)} de dano por segundo em ${esc(ELN[r.el]||r.el)}${r.mult!==1?` (leva ${Math.round(r.mult*100)}% de ${esc(ELN[r.el]||r.el)})`:""}, ≈ ${bsT(r.ttk)} sozinho${r.ttkT?`, ≈ ${bsT(r.ttkT)} com 4 como tu`:""}.`);
-  else why.push("A TibiaWiki não tem a vida deste boss: segue o nível recomendado da quest.");
-  if(b.q) why.push(`Acesso: ${elink("quest",b.q)}${b.ql?` (nível ${b.ql}${b.qr&&b.qr!==b.ql?`, recomendado ${b.qr}`:""})`:""}.`);
-  if(b.lv) why.push("Sala com alavanca: até 5 jogadores, normalmente.");
-  if(b.sp==="r") why.push("Aparece em raids: não se marca, aparece no mundo.");
   return `<div class="bs-r" data-bsk="${esc(r.k)}"${b.q?` data-lsx="${esc(b.q)}"`:""}><span class="bs-ic">${crSpr(r.k,44)}</span>
-    <div class="bs-m"><div class="bs-h"><a class="elink" href="${monHref(b.n)}"><b>${esc(b.n)}</b></a><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
+    <div class="bs-m"><div class="bs-h"><button type="button" class="linkbtn bs-nm" data-boss="${esc(r.k)}"><b>${esc(b.n)}</b></button><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
       <div class="bs-st">${st}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
-      <details class="bs-d"><summary>${b.pos?"Porquê, como e onde":"Porquê e como"}</summary><ul class="small">${why.map(x=>`<li>${x}</li>`).join("")}
-        ${dm.length?`<li>Dano que faz: ${dm.map(([e,v])=>`${chip(e)} ${v}%`).join(" ")}</li>`:""}${prot?`<li>Proteção: <b>${esc(IMBL[prot])}</b>.</li>`:""}
-        ${CR&&CR.el?`<li>Leva mais dano de: ${Object.entries(CR.el).filter(([e,v])=>ELN[e]&&+v>100).sort((a,x)=>x[1]-a[1]).slice(0,3).map(([e,v])=>`${chip(e)} ${v}%`).join(" ")||"nenhum elemento"}.</li>`:""}</ul>${bsMapHTML(b,loc)}<div data-baccess="${esc(r.k)}"><p class="tkload">A carregar o acesso…</p></div></details></div>
+      <div><button type="button" class="btn small ghost" data-boss="${esc(r.k)}">Ver ficha</button></div></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
-/* r24: onde está cada boss (data/bosses.json pos, de _dev/build_bosses.py): o mapa como nas quests e nos NPCs (canvas .qpos,
-   desenhado com drawPos quando «Porquê, como e onde» abre) e «Abrir no mapa»; pa = 1 é a entrada da zona, não o sítio exato */
-function bsMapHTML(b,loc){ if(!b.pos) return `<p class="small muted">Posição da sala por confirmar. Consulta o acesso abaixo.</p>`; const [x,y,z]=b.pos;
-  return `<div class="bs-map"><canvas class="qpos" width="360" height="240" data-qpos="${x},${y},${z}" aria-label="Mapa de ${esc(b.n)}"></canvas>
-    <p class="tiny muted">${b.pa?(loc?`Ponto aproximado de ${esc(loc)}; não confirma a entrada nem a sala do boss.`:"Ponto aproximado da zona; não confirma a entrada nem a sala do boss."):(loc?`Onde aparece: ${esc(loc)}.`:"Onde aparece.")}</p>${mapBtn(x,y,z,b.n+(loc?" · "+loc:""),"Abrir no mapa")}</div>`; }
-document.addEventListener("toggle",e=>{ const d=e.target; if(d.classList&&d.classList.contains("bs-d")&&d.open){ bsAccessFill(d.querySelector("[data-baccess]")); } if(d.classList&&d.classList.contains("bs-d")&&d.open) d.querySelectorAll("canvas[data-qpos]:not([data-ok])").forEach(cv=>{ cv.dataset.ok=1; drawPos(cv); }); },true);
+/* r35 fichas (Task 5) */ // ficha do boss: a mesma das hunts (fichaHTML), com o resultado do GrimBoss.judge da personagem ativa
+// (BSROW, com as proteções do set) e o mapa da sala (canvas .qpos com drawPos; pa = 1 é a zona, não a sala). Sem charms nem preys.
+function bossSheet(k){
+  const {b,r,lo}=BSROW[k], c=C(), w=(c&&c.world)||"", cr=BSD.cr&&hasKey(BSD.cr,k)?BSD.cr[k]:null, cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
+  const n=GrimFicha.bossDiff({st:r.st,eff:r.eff,md:b.md?r.md:null,ttk:r.ttk,tmax:GrimBoss.TMAX[b.c]||300});
+  const lv=[[r.soloL,"sozinho"],[r.teamL,"em equipa"]].filter(x=>x[0]!=null);
+  const dm=Object.entries(b.dm||{}).sort((x,y)=>y[1]-x[1]);
+  const sp=[b.lv&&"Sala com alavanca",b.sp==="r"&&"Aparece em raids: não se marca",b.sp==="g"&&"Aparece no mundo, ao acaso"].filter(Boolean);
+  const st=!w?"noworld":MKV[w]&&MKV[w].items?"mkt":"fail";
+  const loot=lo&&lo.top.length?`<ul class="fx-lt">${lo.top.slice(0,8).map(([nm,,pct])=>{ const pr=priceOf(nm,w);
+      return `<li data-fxln="${esc(nm.toLowerCase())}">${ltSpr(nm.toLowerCase())}<span class="fx-ln">${ilink(nm)}</span><span class="fx-lp">${fxPct(pct)}</span><span class="fx-lv"><b>${gp(pr.v)}</b><span class="tiny muted fx-lsrc">${pr.best==="market"?"Market":pr.best==="coin"?"":"NPC"}</span></span></li>`; }).join("")}</ul>
+    <p class="tiny muted fx-lnote">${fxLNote(w,st)}</p>`:`<p class="small muted">Sem dados de loot.</p>`;
+  return fichaHTML({
+    eyebrow:`${esc(GrimBoss.CLS[b.c])}${cd?` · ${esc(cd)}`:""}`, title:esc(b.n),
+    map:b.pos?`<canvas class="qpos" width="360" height="240" data-qpos="${b.pos.join(",")}" role="img" aria-label="${esc("Mapa de "+b.n)}"></canvas>
+      <div class="fx-mapb">${mapBtn(b.pos[0],b.pos[1],b.pos[2],b.n+(loc?" · "+loc:""),"Abrir o mapa")}</div>${b.pa?`<p class="tiny muted">O ponto no mapa é a zona aproximada.</p>`:""}${loc?`<p class="small">${esc(loc)}</p>`:""}`
+      :`<p class="small muted">Posição por confirmar.</p>${loc?`<p class="small">${esc(loc)}</p>`:""}`,
+    cam:`<div data-cam="b:${esc(k)}"><p class="tkload">A carregar o caminho…</p></div>`,
+    stats:[{k:"xp",v:b.xp?`<b>${nf(b.xp)}</b>`:"<b>—</b>",l:"XP por kill"},
+      {k:"lo",v:lo&&!lo.nodata?`<b>≈ ${gp(Math.round(lo.v))}</b>`:"<b>sem preço</b>",l:"valor por kill"},
+      {k:"lv",v:lv.length?lv.map(([l,t])=>`<b>${l}+</b> <span class="small muted">${t}</span>`).join("<br>"):`<b>${b.qr?b.qr+"+":"—"}</b>`,l:"nível recomendado"},
+      {k:"res",v:fxResHTML({eff:cr&&cr.el?Object.assign({min:cr.el},cr.el):null}),l:"resistências"},
+      {k:"dif",v:`${diffHTML(n,'<span class="tiny muted">para o teu nível</span><span class="tiny muted" aria-hidden="true"> · </span>')}<span class="tiny muted fx-pl">${esc(protOf(c).lbl)}</span>`,l:"dificuldade"}],
+    pre:`<div data-campre></div>`,
+    mons:`<ul class="fx-ml"><li>${crSpr(k,44)}<span class="fx-mn"><span>${mlink(b.n,esc(b.n))}</span><span class="tiny muted">${r.hp?`${nf(r.hp)} de vida`:"vida desconhecida"}${b.md?` · golpe até ${nf(b.md)} por turno`:""}</span>${dm.length?`<span class="fx-rs">${dm.map(([e,v])=>`<span class="fx-rc">${chip(e)} ${v}%</span>`).join("")}</span>`:""}</span></li></ul>${sp.map(t=>`<p class="small">${t}.</p>`).join("")}`,
+    loot, tips:""
+  });
+}
+document.addEventListener("click", e=>{ const x=e.target.closest("[data-boss]"); if(!x||!hasKey(BSROW,x.dataset.boss)) return;
+  openSheet(bossSheet(x.dataset.boss),"sh-ficha"); $("sheetBody").querySelectorAll("canvas[data-qpos]").forEach(drawPos); });
 function renderBosses(){
   const el=$("bsBody"), c=C(); if(!el||!c) return;
   if(!window.GrimBoss||!window.GrimRot){ el.innerHTML=`<p class="small muted">Não consegui carregar o motor dos bosses.</p>`; return; }
@@ -46660,9 +46663,9 @@ function renderBosses(){
     if(!BSERR) Promise.all([dload("bosses"),dload("rotacoes"),dsafe("items"),dsafe("creatures"),w?mktLoad(w):null]).then(([b,r,items,crs])=>{ BSD=b; RXD=RXD||r; if(!ITV&&items&&Object.keys(items).length) ITV=items; BSD.cr=crs||{}; renderBosses(); }).catch(()=>{ BSERR=true; renderBosses(); });
     return; }
   let cv; try{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui calcular o teu dano de boss.</p>`; return; }
-  const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[];
-  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0});
-    all.push({k,b,r,lo:lootPerKill(k,CR,w)}); });
+  const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[], prot=protOf(c).prot; BSROW={};
+  Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0,prot});
+    const x={k,b,r,lo:lootPerKill(k,CR,w)}; all.push(x); BSROW[k]=x; });
   const cnt={solo:0,team:0,later:0,all:all.length}; all.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
   const f=BSF.some(x=>x[0]===ST.ui.bsf)?ST.ui.bsf:"solo";
   const pick=x=>f==="all"||(f==="solo"?x.r.st==="solo":f==="team"?(x.r.st==="team"||x.r.st==="unknown"):(x.r.st==="later"||x.r.st==="locked"));
@@ -46678,7 +46681,7 @@ function renderBosses(){
   const mk=w&&MKV[w]&&MKV[w].items;
   el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
       <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
-    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,CR[x.k])).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
+    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo)).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
     ${shown.length>120?`<p class="small muted">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:""}
     <details class="card bs-how"><summary>Como contamos</summary><ul class="small">
       <li>Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).</li>

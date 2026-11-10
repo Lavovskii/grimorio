@@ -8,6 +8,8 @@
 // Task 4: abre a ficha da 1.ª hunt em cada combinação (estrutura fixa) e, em pt-PT, a ficha de uma hunt com lucro negativo,
 // o mapa de um troço, uma hunt «por documentar», uma hunt de outra vocação pela pesquisa (número estimado), os preços do
 // Market (resposta fixa, 503 e sem mundo), a dificuldade do sorcerer sem set e do knight com set guardado, e o comparar hunts.
+// Task 5: abre a ficha do 1.º boss da lista em cada combinação (a mesma estrutura, sem charms e preys; o botão do Bosstiary
+// continua na linha) e, em pt-PT, um boss de alavanca com guias, um de raid e um sem posição, e a nota do set do knight.
 const { chromium } = require('playwright');
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const URL0 = arg('--url', 'http://127.0.0.1:8765/'), HOST = new URL(URL0).host;
@@ -51,9 +53,9 @@ function audit() {
   return { hscroll: document.documentElement.scrollWidth > W + 1, small: small.slice(0, 10), tiny: tiny.slice(0, 10) };
 }
 
-// estrutura fixa da ficha (Task 4); devolve a lista de problemas
-function fxCheck(W) {
-  const B = document.querySelector('#sheetBody'), out = [], q = s => B.querySelector(s);
+// estrutura fixa da ficha (Task 4; com boss, a da Task 5: sem .fx-tips); devolve a lista de problemas
+function fxCheck(a) {
+  const W = a.W || a, boss = !!a.boss, B = document.querySelector('#sheetBody'), out = [], q = s => B.querySelector(s);
   const top = q('.fx-top');
   if (!top) return ['.fx-top não existe'];
   const ch = [...top.children].map(x => x.className.split(' ')[0]);
@@ -65,7 +67,16 @@ function fxCheck(W) {
   }
   const st = [...B.querySelectorAll('.fx-stats > .fx-s')].map(x => x.dataset.fxs);
   if (st.join() !== 'xp,lo,lv,res,dif') out.push('.fx-stats: ' + st.join());
-  const order = ['.fx-top', '.fx-stats', '[data-campre]', '.fx-mons', '.fx-loot', '.fx-tips'].map(s => [s, q(s)]);
+  const order = ['.fx-top', '.fx-stats', '[data-campre]', '.fx-mons', '.fx-loot', ...(boss ? [] : ['.fx-tips'])].map(s => [s, q(s)]);
+  if (boss) {
+    if (q('.fx-tips')) out.push('boss com .fx-tips');
+    const L = [...B.querySelectorAll('.fx-stats > .fx-s > .fx-l')].map(x => x.textContent.trim());
+    if (document.documentElement.lang === 'pt-PT' && L.join() !== 'XP por kill,valor por kill,nível recomendado,resistências,dificuldade') out.push('rótulos do boss: ' + L.join());
+    const d = q('[data-fxs="dif"]');
+    if (!d || !/\d\/5/.test(d.textContent)) out.push('boss sem dificuldade N/5');
+    else if (document.documentElement.lang === 'pt-PT' && (!/para o teu nível/.test(d.textContent) || !/^Contas com o /.test((d.querySelector('.fx-pl') || {}).textContent || ''))) out.push('dificuldade do boss sem «para o teu nível» ou sem a nota do set: ' + d.textContent);
+    if (document.querySelector('details.bs-d')) out.push('ainda existe details.bs-d');
+  }
   order.forEach(([s, e]) => { if (!e) out.push('falta ' + s); });
   for (let i = 1; i < order.length; i++) { const a = order[i - 1][1], b = order[i][1];
     if (a && b && !(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)) out.push(`${order[i][0]} antes de ${order[i - 1][0]}`); }
@@ -80,6 +91,51 @@ function fxCheck(W) {
   }
   if (/NaN|undefined/.test(B.innerText)) out.push('NaN ou undefined no texto');
   return out;
+}
+
+// Task 5: bosses. Em cada combinação: o 1.º boss da lista e o botão do Bosstiary; em pt-PT, três bosses escolhidos
+const BOSS_LEVER = 'count vlarkorth', BOSS_RAID = 'barbaria', BOSS_NOPOS = 'abyssador';
+async function openBoss(p, k) {
+  await p.evaluate(k => { const x = document.createElement('button'); x.dataset.boss = k; document.body.appendChild(x); x.click(); x.remove(); }, k);
+  await waitSheet(p);
+}
+async function bosses(p, W, lang, r, fails) {
+  await p.evaluate(() => { location.hash = '#bosses'; });
+  await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 });
+  await sleep(500);
+  if (await p.evaluate(() => !!document.querySelector('details.bs-d'))) fails.push('a lista ainda tem details.bs-d');
+  // o Bosstiary roda o estágio na linha (4 toques = volta ao início)
+  const k0 = await p.evaluate(() => document.querySelector('.bs-r [data-bstier]').dataset.bstier);
+  const tier = () => p.evaluate(k => { const b = document.querySelector(`.bs-r [data-bstier="${CSS.escape(k)}"]`); return b ? (b.className.match(/\bs(\d)\b/) || [])[1] : null; }, k0);
+  const t0 = await tier();
+  await p.click(`.bs-r [data-bstier="${k0}"]`); const t1 = await tier();
+  for (let i = 0; i < 3; i++) await p.click(`.bs-r [data-bstier="${k0}"]`);
+  const t4 = await tier();
+  if (t0 !== '0' || t1 !== '1' || t4 !== '0') fails.push(`Bosstiary de ${k0}: ${t0} → ${t1} → ${t4}`);
+  await p.locator('.bs-r [data-boss]:visible').first().click();
+  await waitSheet(p);
+  fails.push(...(await p.evaluate(fxCheck, { W, boss: true })).map(x => 'boss: ' + x));
+  const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small); r.tiny.push(...a.tiny);
+  await closeSheet(p);
+  if (lang !== 'pt-PT') return;
+  const one = async (k, f) => { await openBoss(p, k);
+    const s = await p.evaluate(fxCheck, { W, boss: true }); if (s.length) fails.push(`${k}: ${s.join('; ')}`);
+    const x = await p.evaluate(() => { const B = document.querySelector('#sheetBody');
+      return { map: B.querySelector('.fx-map').textContent, cv: !!B.querySelector('.fx-map canvas.qpos'), mons: B.querySelector('.fx-mons').textContent, refs: B.querySelectorAll('.cam-refs li').length,
+        pre: B.querySelectorAll('[data-campre] li').length, note: (B.querySelector('[data-fxs="dif"] .fx-pl') || {}).textContent || '' }; });
+    f(x); const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small); r.tiny.push(...a.tiny); await closeSheet(p); };
+  await one(BOSS_LEVER, x => { if (!x.refs) fails.push(`${BOSS_LEVER}: sem as ligações aos guias`); if (!x.pre) fails.push(`${BOSS_LEVER}: sem pré-requisitos`);
+    if (!/Sala com alavanca/.test(x.mons)) fails.push(`${BOSS_LEVER}: sem «Sala com alavanca»`); if (!x.cv || !/zona aproximada/.test(x.map)) fails.push(`${BOSS_LEVER}: mapa sem o ponto ou sem «zona aproximada»`);
+    if (!/best set do nível 570/.test(x.note)) fails.push(`${BOSS_LEVER}: nota do sorcerer: ${x.note}`); });
+  await one(BOSS_RAID, x => { if (!/Aparece em raids/.test(x.mons)) fails.push(`${BOSS_RAID}: sem «Aparece em raids»`); if (!x.cv) fails.push(`${BOSS_RAID}: sem mapa`); });
+  await one(BOSS_NOPOS, x => { if (x.cv || !/Posição por confirmar/.test(x.map)) fails.push(`${BOSS_NOPOS}: sem «Posição por confirmar»`); });
+  // o knight com o set «Proteção»: a nota diz o nome do set
+  await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); s.active = 't2'; localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); });
+  await p.reload(); await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 }); await sleep(500);
+  await openBoss(p, BOSS_LEVER);
+  const kn = await p.evaluate(() => (document.querySelector('#sheetBody [data-fxs="dif"] .fx-pl') || {}).textContent || '');
+  if (!/Proteção/.test(kn)) fails.push('boss com o knight: nota sem o nome do set: ' + kn);
+  await closeSheet(p);
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -254,6 +310,7 @@ async function deep(p, W, fails, MK) {
       const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small); r.tiny.push(...a.tiny);
       await closeSheet(p);
       if (lang === 'pt-PT') await deep(p, W, fails, MK);
+      await bosses(p, W, lang, r, fails);
     } catch (e) { fails.push('erro: ' + String(e).split('\n')[0].slice(0, 200)); }
     r.fails = fails;
     const ok = !r.errs.length && !r.hscroll && !r.small.length && !r.tiny.length && !fails.length;

@@ -25,6 +25,21 @@ for (const voc of R.VOCS) {
     }
   }
 }
+// proteções da personagem (ronda 3, Q7): com b.dm (% do dano por elemento) o md passa a ser o golpe efetivo; sem opt.prot, igual
+{ const voc = "knight", curve = B.makeCurve(l => { const p = R.plan(D, { voc, level: l, scen: "boss" }); return p.empty ? 1 : p.econ.dps + (p.econ.autoDps || 0); });
+  const mlAt = l => R.stats(voc, l).mlBase, t = { n: "Teste", c: "b", hp: 20000, md: 3000, dm: { fire: 100 } }, o = { k: "t", voc, level: 300, cr: {}, curve, mlAt };
+  const a = B.judge(t, o), p = B.judge(t, Object.assign({ prot: { fire: 50 } }, o)), e = B.judge(t, Object.assign({ prot: { ice: 50 } }, o));
+  if (!(p.soloL < a.soloL) || p.md !== 1500) fail(`proteção de fogo 50%: sozinho a ${p.soloL} (sem ${a.soloL}), md ${p.md}`);
+  if (JSON.stringify(e) !== JSON.stringify(a)) fail("proteção de outro elemento mudou o resultado");
+  let same = 0, diff = 0;
+  for (const [k, b] of Object.entries(BD.b)) for (const L of [150, 600]) {
+    const x = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt }), y = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt, prot: {} });
+    const z = B.judge(b, { k, voc, level: L, cr: CR[k], curve, mlAt, prot: { physical: 40, fire: 40, ice: 40, earth: 40, energy: 40, holy: 40, death: 40 } });
+    if (JSON.stringify(x) !== JSON.stringify(y)) fail(`${b.n}: prot vazio mudou o resultado`);
+    if (!b.dm && JSON.stringify(x) !== JSON.stringify(z)) fail(`${b.n}: sem dm e a proteção mudou o resultado`);
+    if (JSON.stringify(x) === JSON.stringify(z)) same++; else diff++;
+  }
+  console.log(`proteções de 40% (knight 150 e 600): ${diff} avaliações mudam, ${same} iguais`); }
 // Bosstiary (Cyclopedia): 25% a 0 pontos, +1% a cada 10 até 250 (50%), +1% a cada 20 até 1250 (100%), depois 25, 30, 35… pontos por 1%
 [[0, 25], [10, 26], [249, 49], [250, 50], [270, 51], [1249, 99], [1250, 100], [1274, 100], [1275, 101], [1305, 102]].forEach(([p, v]) => {
   if (B.lootBonus(p) !== v) fail(`bónus com ${p} pontos: ${B.lootBonus(p)} (esperava ${v})`); });
