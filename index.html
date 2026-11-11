@@ -1819,6 +1819,8 @@ html[data-ui="modern"] .csw-save::before{content:"";width:7px;height:7px;border-
 }
 /* r37: com a língua no topo, até 420 px a personagem fica só com o retrato */
 @media (max-width:420px){ html[data-ui="modern"] .csw-btn{gap:0;padding:4px} html[data-ui="modern"] .csw-btn :is(.csw-tx,.csw-chev){display:none} html[data-ui="modern"] header.bar .in{gap:8px} }
+/* r38: a 340 px ou menos o emblema sai do topo (o site continua no seletor ao lado); com ele, o retrato ficava por baixo da pesquisa */
+@media (max-width:340px){ header.bar .brand{display:none} }
 
 /* ======================= navegação ======================= */
 html[data-ui="modern"] nav.side{position:sticky}
