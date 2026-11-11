@@ -122,6 +122,44 @@
     if (h < 120) return "a cada " + Math.round(h / 24 * 10) / 10 + " dias";
     return "a cada " + Math.round(h / 24) + " dias";
   }
+  // r36 bosses do dia. Evento = b.ev ('wc' world change, 'saz' sazonal, 'raid'); sem ev = permanente.
+  function isEvent(b) { return !!(b && b.ev); }
+  // hora de Berlim (0–23) de um instante (o server save é às 10:00 de Berlim, CET ou CEST)
+  function berlinH(t) { return +new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Berlin", hour: "numeric", hourCycle: "h23" }).format(new Date(t)); }
+  // o 1.º server save depois de t (ms)
+  function nextSS(t) {
+    for (var d = 0; d < 3; d++) for (var off = 1; off <= 2; off++) {
+      var x = new Date(t), s = Date.UTC(x.getUTCFullYear(), x.getUTCMonth(), x.getUTCDate() + d, 10 - off);
+      if (s > t && berlinH(s) === 10) return s;
+    }
+    return t + 864e5;
+  }
+  // ms até o boss voltar, marcado como feito em ts: ts + cd horas; sem cd, o server save seguinte. 0 = já voltou (ou sem ts)
+  function cdLeft(ts, cdH, now) {
+    if (!ts) return 0;
+    var end = cdH > 0 ? ts + cdH * 3600e3 : nextSS(ts);
+    return Math.max(0, end - now);
+  }
+  // rows: [{k, b, r (GrimBoss.judge), lo (lootPerKill), t (feito em, ms)}]. Até 4 bosses permanentes, sozinho, fora do cooldown,
+  // sem repetir: o boss em destaque (boostedKey), o melhor lucro (lo.v), mais XP (b.xp) e o mais rápido (r.ttk).
+  // → {boost: {k, why: null (entrou) | 'ev' | 'st' (não é sozinho) | 'cd' | 'none' (não está na lista)} | null, picks: [[cat, row]]}
+  function dailyPicks(rows, boostedKey, now) {
+    var ok = function (x) { return !isEvent(x.b) && x.r && x.r.st === "solo" && !cdLeft(x.t, x.b.cd, now); };
+    var used = {}, picks = [], boost = null;
+    if (boostedKey) {
+      var bx = rows.filter(function (x) { return x.k === boostedKey; })[0];
+      boost = { k: boostedKey, why: !bx ? "none" : isEvent(bx.b) ? "ev" : !bx.r || bx.r.st !== "solo" ? "st" : !ok(bx) ? "cd" : null };
+      if (bx && !boost.why) { picks.push(["boost", bx]); used[bx.k] = 1; }
+    }
+    [["lucro", function (x) { return x.lo && !x.lo.nodata && x.lo.v > 0 ? x.lo.v : null; }],
+     ["xp", function (x) { return x.b.xp > 0 ? x.b.xp : null; }],
+     ["rapido", function (x) { return x.r.ttk > 0 ? -x.r.ttk : null; }]].forEach(function (c) {
+      var best = null, bv = null;
+      rows.forEach(function (x) { if (used[x.k] || !ok(x)) return; var v = c[1](x); if (v != null && (bv == null || v > bv)) { best = x; bv = v; } });
+      if (best) { picks.push([c[0], best]); used[best.k] = 1; }
+    });
+    return { boost: boost, picks: picks };
+  }
   return { judge: judge, makeCurve: makeCurve, curveAt: curveAt, effHP: effHP, laneMult: laneMult, stageOf: stageOf, pointsOf: pointsOf,
-    lootBonus: lootBonus, cdText: cdText, ANCHORS: ANCHORS, CLS: CLS, TMAX: TMAX };
+    lootBonus: lootBonus, cdText: cdText, isEvent: isEvent, cdLeft: cdLeft, dailyPicks: dailyPicks, ANCHORS: ANCHORS, CLS: CLS, TMAX: TMAX };
 });
