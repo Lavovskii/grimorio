@@ -738,6 +738,19 @@ eventos» e «Bosses do dia»).
   `lingua_browser.cjs` mede as peças do topo (cada uma com os filhos) a 320/340/360/390/1440 px, com efeitos completos e
   leves, e falha com sobreposições, peças fora da barra, scroll horizontal, toque < 44 px ou letra < 12 px
   (`SHOTS=<pasta>` grava o topo a 320 px). `quests/css/style.css` em `20261111c`.
+- Elementos dos caminhos nas frases traduzidas (11/11/2026): o `cam_strings()` faz chave de **todos** os elementos de um passo
+  (negrito, itálico, rótulos; também «1.º», «e», «rank 5», «3 000») e o `PT_HINT` apanha títulos de troços como «8. Batalha
+  final: …». O `run()` do `shared/i18n.js` procura cada elemento primeiro como palavra inteira (`wordAt`: o `<kbd>hi</kbd>` já
+  não cai dentro de «Darashia») e só depois em qualquer sítio («Erd» em «Erdschaden»); o `text()` tenta o conteúdo também sem
+  o separador da frente («— acesso às masmorras; …» das notas dos pré-requisitos) antes dos modelos. O `qmd` do `index.html`
+  guarda as marcas enquanto faz o negrito, como o `rich` do Questski («**2 {item:Bloody Tears}**» é um só negrito).
+  Verificar uma língua: `python3 -I _dev/i18n_elcheck.py <língua>` (o mesmo algoritmo do `run()` com `i18n/tm` e `i18n/ui`;
+  «fim» = elemento repetido no fim da frase, a corrigir reescrevendo a frase ou, com cuidado, a tradução do elemento, que é
+  partilhada; «palavra» = só achado a meio de uma palavra, quase sempre palavras compostas, sem mal; sai com 1 se houver
+  «fim»; `--json f` grava os casos) e `python3 -I _dev/i18n_elcheck.py --keys` (textos do ecrã sem chave, para ver a olho).
+  No browser: `node _dev/i18n_elbrowser.cjs --url http://127.0.0.1:8790/ --langs <l,…> [--hunts …] [--bosses …] [--shots
+  <pasta>]` (fichas a 390 px: erros, elementos juntados no fim, palavras pt-PT; `DUMP=<texto>` mostra o HTML dos passos).
+  en, pt-BR, es e de com 0 «fim». `shared/i18n.js` e o `DV` em `20261111d`.
 
 ## Calibração (r35-D, 10/11/2026)
 

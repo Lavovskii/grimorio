@@ -532,8 +532,9 @@ def cam_inline(t):
     t = CAM_TOKEN.sub(lambda m: (m.group(3) or m.group(2)).strip(), t)
     out += [norm(x) for x in re.findall(r'\*\*([^*]+)\*\*', t)]
     out += [norm(x) for x in re.findall(r'(?:^|[^*])\*([^*\s][^*]*)\*', re.sub(r'\*\*[^*]+\*\*', '', t))]
-    # todos com uma letra («1.º», «e», «rank 5»): o site mostra-os e, se a frase traduzida os mudou, só os acha pela tradução deles
-    return [x for x in out if re.search(r'[^\W\d_]', x)]
+    # todos com uma letra («1.º», «e», «rank 5») ou números com separador («3 000» → «3,000»): o site mostra-os e, se a frase
+    # traduzida os mudou, só os acha pela tradução deles
+    return [x for x in out if re.search(r'[^\W\d_]|\d[\s.,]\d', x)]
 
 
 def cam_units():

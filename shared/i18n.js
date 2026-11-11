@@ -67,7 +67,7 @@
     document.head.appendChild(hs);
     setTimeout(release, 2500);
     // DV: muda quando os dicionários mudam (i18n/*.js não têm cabeçalho de cache; sem isto o browser podia ficar com os antigos)
-    var DV = "?v=20261111b";
+    var DV = "?v=20261111d";
     document.write('<script src="' + BASE + "i18n/ui." + lang + '.js' + DV + '"><\/script>');
     CLS.forEach(function (l) {
       if (me && me.hasAttribute("data-c")) document.write('<script src="' + BASE + "i18n/content." + l + '.js' + DV + '"><\/script>');
@@ -365,7 +365,10 @@
       t = exact(k.charAt(0).toLowerCase() + k.slice(1));
       if (t != null) return t.charAt(0).toUpperCase() + t.slice(1);
     }
-    if (conts()) { var cf = cget(hkey(k)); if (cf != null) return cf; }
+    if (conts()) { var cf = cget(hkey(k)); if (cf != null) return cf;
+      // também com um separador à frente ("— acesso às masmorras; …" da nota de um pré-requisito): antes dos modelos, que só a
+      // traduziam em parte ("— acesso às masmorras; level 250 …")
+      var ce = /^([·:;,–—(]\s*)(.+)$/.exec(k); if (ce && (cf = cget(hkey(ce[2]))) != null) return ce[1] + cf; }
     t = ui(k);
     if (t != null) return t;
     var c = content(k);
@@ -518,13 +521,15 @@
       els.forEach(function (e, n) {
         // (um elemento com texto que a tradução mudou, ex.: o negrito "norte" → "north", procura-se pela tradução
         // dele: a do conteúdo em cada língua, porque a frase pode ter vindo do inglês de reserva, e a da interface)
+        // (primeiro como palavra inteira, com o texto e as traduções: o <kbd>hi</kbd> não cai dentro de "Darashia" nem o
+        // negrito "e" dentro de "the"; só depois em qualquer sítio, ex.: "Erd" em "Erdschaden")
         var et = norm(e.textContent);
         if (et) {
-          var at = ct.t.indexOf(et, cur);
-          if (at < 0) { var hk = hkey(et), alts = (conts() || []).map(function (m) { return m[hk]; }).concat([ui(et)]);
-            for (var ai = 0; ai < alts.length && at < 0; ai++) if (alts[ai]) { at = ct.t.indexOf(alts[ai], cur); if (at >= 0) et = alts[ai]; }
+          var at = wordAt(ct.t, et, cur);
+          if (at < 0) { var hk = hkey(et), cs = [et].concat((conts() || []).map(function (m) { return m[hk]; }), [ui(et)]).filter(Boolean), e0 = et;
+            for (var ps = 0; ps < 2 && at < 0; ps++) for (var ai = 0; ai < cs.length && at < 0; ai++) { at = ps ? ct.t.indexOf(cs[ai], cur) : wordAt(ct.t, cs[ai], cur); if (at >= 0) et = cs[ai]; }
             // (o texto do elemento fica o da frase: noutra língua, a interface punha "Norden" numa frase em inglês)
-            var t0 = e.firstChild; if (at >= 0 && t0 && t0 === e.lastChild && t0.nodeType === 3) { t0.data = et; MINE.set(t0, et); } }
+            var t0 = e.firstChild; if (at >= 0 && et !== e0 && t0 && t0 === e.lastChild && t0.nodeType === 3) { t0.data = et; MINE.set(t0, et); } }
           if (at >= 0) { ins.push([at, et.length, e, n]); cur = at + et.length; }
           return;
         }
@@ -553,6 +558,13 @@
     var after = kids[z + 1] || null;
     for (var r = a; r <= z; r++) if (kids[r].parentNode === el) el.removeChild(kids[r]);
     el.insertBefore(frag, after && after.parentNode === el ? after : null);
+  }
+  // onde está s em t (a partir de from) como palavra inteira, ou -1
+  var WCH = /[\p{L}\p{N}]/u;
+  function wordAt(t, s, from) {
+    for (var i = t.indexOf(s, from); i >= 0; i = t.indexOf(s, i + 1))
+      if (!(WCH.test(s.charAt(0)) && WCH.test(t.charAt(i - 1))) && !(WCH.test(s.charAt(s.length - 1)) && WCH.test(t.charAt(i + s.length)))) return i;
+    return -1;
   }
   // junta texto já com os espaços normalizados (um só espaço entre palavras)
   function joinN(acc, s) {
