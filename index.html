@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261110i" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261110f"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261111b" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261111a"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -18,7 +18,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="shared/pub.css?v=20261106b">
-<link rel="stylesheet" href="shared/sites.css?v=20261110c">
+<link rel="stylesheet" href="shared/sites.css?v=20261111b">
 <style>
 /* r34: a letra mono (JetBrains Mono 500, OFL) vem do próprio site. As Alegreya do Google Fonts saíram: o tema Tibia usa
    Palatino/Tahoma/Verdana, e pedir letras à Google mandava o IP de cada visitante para lá (RGPD). */
@@ -721,6 +721,13 @@ html[data-ui="modern"] .qcard h4 .qtl-go{color:#F2D68C}
 .tag.bs-ca{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .tag.bs-cn{background:var(--gold-soft,var(--surface-2));color:var(--gold,var(--ink));border-color:transparent}
 .bs-how{padding:10px 16px;margin-top:14px}
+/* r36 bosses do dia */ .bs-segs{display:flex;flex-wrap:wrap;gap:8px 18px}.bs-top .seg button{min-height:44px}
+.bs-day{display:grid;gap:10px;padding:14px 16px;margin-bottom:14px}.bs-day h3{margin:0;font-size:20px}.bs-day p{margin:0}
+.bs-picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));gap:10px}
+.bs-pk{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 10px;align-items:start;align-content:start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.bs-pk>.hc-cat{grid-column:1/-1}.bs-pk-m{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;min-width:0}.bs-pk .bs-nm{flex-basis:100%;min-height:44px;display:flex;align-items:center;text-align:left}
+.bs-dw{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 8px}.btn.small.bs-done{min-height:44px}.bs-acts{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.bs-r .bs-cat{flex-basis:100%}.cat-boost{color:var(--holy)} .cat-rapido{color:var(--energy)} .tag.bs-ev{background:var(--surface-2)}
 .bs-how summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
 .bs-how ul{margin:0 0 6px;padding-left:18px;display:grid;gap:6px}
 @media (max-width:560px){ .bs-r{grid-template-columns:44px minmax(0,1fr)} .bs-tier{grid-column:1/-1;justify-self:stretch;grid-template-columns:auto auto auto;justify-content:center;gap:8px;min-height:44px} .bs-ic{width:44px;height:44px} }
@@ -1810,6 +1817,8 @@ html[data-ui="modern"] .csw-save::before{content:"";width:7px;height:7px;border-
   html[data-ui="modern"] .csw-pop{position:fixed;left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 66px);width:auto}
   html[data-ui="modern"] .csw-pop::before{right:74px}
 }
+/* r37: com a língua no topo, até 420 px a personagem fica só com o retrato */
+@media (max-width:420px){ html[data-ui="modern"] .csw-btn{gap:0;padding:4px} html[data-ui="modern"] .csw-btn :is(.csw-tx,.csw-chev){display:none} html[data-ui="modern"] header.bar .in{gap:8px} }
 
 /* ======================= navegação ======================= */
 html[data-ui="modern"] nav.side{position:sticky}
@@ -3626,6 +3635,7 @@ html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
     <div class="chars" id="chars" role="group" aria-label="Personagens"></div>
     <div class="charsw" id="charSw"></div>
     <button class="srchbtn" id="gsBtn" aria-label="Pesquisar hunts, monstros, itens e quests"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sb-txt" aria-hidden="true">Procurar hunts, itens, criaturas…</span><kbd aria-hidden="true">/</kbd></button>
+    <div class="bar-lang" data-lang-picker="top"></div>
     <span class="save" id="save">A carregar…</span>
   </div>
 </header>
@@ -46616,7 +46626,33 @@ function bsCurve(c){ const gr=rxGear(c), opt=rxOpt(c,gr), key=JSON.stringify(opt
   return BSCACHE={key, curve, real, gr}; }
 function bsStageBtn(c,k,b){ const st=(c.bst&&+c.bst[k])||0, pt=BSD.pts[b.c]||[], nx=pt[st];
   return `<button type="button" class="bs-tier s${st}" data-bstier="${esc(k)}" aria-label="${esc(`Bosstiary de ${b.n}: ${BSSTG[st]}. Toca para mudar.`)}"><span class="tiny">Bosstiary</span><b>${BSSTG[st]}</b><span class="tiny muted">${nx?`${BSSTG[st+1]}: ${nx[0]} ${nx[0]===1?"morte":"mortes"} · +${nx[1]}`:"completo"}</span></button>`; }
-function bsRow(c,r,b,lo){
+/* r36 */ // bosses do dia: destaques (GrimBoss.dailyPicks), «Feito hoje» (c.bcd = {chave: quando}, GrimBoss.cdLeft) e eventos (b.ev)
+const BSCAT={boost:"Boss em destaque",lucro:"Melhor lucro",xp:"Mais XP",rapido:"Mais rápido"};
+const BSE=[["perm","Permanentes"],["ev","Eventos"],["all","Todos"]];
+const BSEVN={wc:"World change",saz:"Evento sazonal",raid:"Raid"};
+let BSKS={key:null,m:null}, BSTD=null;
+const bsPad=n=>String(n).padStart(2,"0");
+function bsBack(left){ const d=new Date(Date.now()+left), hm=bsPad(d.getHours())+":"+bsPad(d.getMinutes());
+  const dm=bsPad(d.getDate())+"/"+bsPad(d.getMonth()+1); return left<864e5?`volta às ${hm}`:`volta a ${dm} às ${hm}`; }
+function bsDoneBtn(k,b){ const c=C(), left=GrimBoss.cdLeft(c&&c.bcd&&+c.bcd[k]||0,b.cd,Date.now());
+  return `<span class="bs-dw" data-bsdw="${esc(k)}"><button type="button" class="btn small ghost bs-done" data-bsdone="${esc(k)}" aria-pressed="${left>0}">${left>0?'<span aria-hidden="true">✓ </span>':""}Feito hoje</button>${left>0?`<span class="tiny muted bs-back">${bsBack(left)}</span>`:""}</span>`; }
+// mortes de ontem no mundo (kstatLoad), uma vez por mundo e dia de jogo; desenha outra vez quando chegam
+function bsKsGet(w){ const key=w+"|"+gameDay();
+  if(BSKS.key!==key){ BSKS={key,m:null}; kstatLoad(w).then(m=>{ if(BSKS.key===key&&m){ BSKS.m=m; renderBosses(); } }); }
+  return BSKS.m; }
+function bsPickHTML([cat,x]){ const {k,b,r,lo}=x;
+  const v=cat==="xp"?`${nf(b.xp)} XP`:cat==="rapido"?`≈ ${bsT(r.ttk)} sozinho`:lo&&!lo.nodata?`≈ ${gp(Math.round(lo.v))} por kill`:`${nf(b.xp||0)} XP`;
+  return `<div class="bs-pk" data-bspk="${cat}" data-bsp="${esc(k)}"><span class="hc-cat cat-${cat}">${BSCAT[cat]}</span><span class="bs-ic">${crSpr(k,44)}</span>
+    <div class="bs-pk-m"><button type="button" class="linkbtn bs-nm" data-boss="${esc(k)}"><b>${esc(b.n)}</b></button><span class="small">${v}</span>${bsDoneBtn(k,b)}</div></div>`; }
+function bsDayHTML(pk,TD){
+  const BW={ev:"Não entra: é de um evento.",st:"Não entra: não o fazes sozinho no teu nível.",cd:"Não entra: já o fizeste e ainda está em cooldown.",none:"Não entra: não está na lista dos bosses do Bosstiary."};
+  const bo=pk.boost, nm=bo?(BSD.b[bo.k]||{}).n||TD.boss:"";
+  const note=bo&&bo.why?`<p class="small bs-bnote"><span>Boss em destaque hoje: <b>${esc(nm)}</b>.</span> <span>${BW[bo.why]}</span></p>`
+    :TD&&TD.err?`<p class="small muted bs-bnote">Sem ligação à TibiaData: não sei qual é o boss em destaque hoje.</p>`:"";
+  return `<div class="card bs-day"><h3>Bosses do dia</h3><p class="small muted">Permanentes que fazes sozinho e que não estão em cooldown. Toca em «Feito hoje» depois de os matares.</p>
+    ${pk.picks.length?`<div class="bs-picks">${pk.picks.map(bsPickHTML).join("")}</div>`:`<p class="small muted">Hoje não há bosses permanentes que faças sozinho fora do cooldown.</p>`}${note}</div>`; }
+function bsRow(c,r,b,lo,o){
+  o=o||{};
   const cls=GrimBoss.CLS[b.c], cd=GrimBoss.cdText(b.cd), loc=(b.loc||[]).slice(0,2).join(", ");
   const st = r.st==="solo" ? `<span class="tag ok">Sozinho · ≈ ${bsT(r.ttk)}</span>`
     : r.st==="team" ? `<span class="tag acc">Em equipa${r.ttkT?` · ≈ ${bsT(r.ttkT)} com 4`:""}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`
@@ -46625,11 +46661,11 @@ function bsRow(c,r,b,lo){
     : `<span class="tag warn">${r.teamL?`Em equipa ~${r.teamL}`:"Grupo grande"}</span>${r.soloL?` <span class="tiny muted">sozinho ~${r.soloL}</span>`:""}`;
   const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : "loot sem preço";
   const top = lo&&lo.top.length ? lo.top.slice(0,3).map(([n,g,pct])=>`${esc(n)} <span class="muted">${pct<1?pct.toFixed(1).replace(".",DECSEP):Math.round(pct)}%</span>`).join(" · ") : "";
-  return `<div class="bs-r" data-bsk="${esc(r.k)}"${b.q?` data-lsx="${esc(b.q)}"`:""}><span class="bs-ic">${crSpr(r.k,44)}</span>
-    <div class="bs-m"><div class="bs-h"><button type="button" class="linkbtn bs-nm" data-boss="${esc(r.k)}"><b>${esc(b.n)}</b></button><span class="tag bs-c${b.c}">${cls}</span>${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
-      <div class="bs-st">${st}</div>
+  return `<div class="bs-r" data-bsk="${esc(r.k)}"${b.ev?` data-bsev="${esc(b.ev)}"`:""}${b.q?` data-lsx="${esc(b.q)}"`:""}><span class="bs-ic">${crSpr(r.k,44)}</span>
+    <div class="bs-m"><div class="bs-h">${o.cat?`<span class="hc-cat bs-cat cat-${o.cat}">${BSCAT[o.cat]}</span>`:""}<button type="button" class="linkbtn bs-nm" data-boss="${esc(r.k)}"><b>${esc(b.n)}</b></button><span class="tag bs-c${b.c}">${cls}</span>${b.ev?`<span class="tag bs-ev">${BSEVN[b.ev]}</span>`:""}${cd?`<span class="tiny muted">${esc(cd)}</span>`:""}${b.pos?`<button type="button" class="linkbtn tiny bs-loc" data-map="${b.pos.join(",")}" data-maplabel="${esc(b.n+(loc?" · "+loc:""))}">${esc(loc||"Ver no mapa")} ›</button>`:loc?`<span class="tiny muted">${esc(loc)}</span>`:""}</div>
+      <div class="bs-st">${st}${o.seen?` <span class="tag ok bs-seen">visto ontem no teu mundo</span>`:""}</div>
       <div class="bs-v"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:""}${top?`<span class="small muted">${top}</span>`:""}</div>
-      <div><button type="button" class="btn small ghost" data-boss="${esc(r.k)}">Ver ficha</button></div></div>
+      <div class="bs-acts"><button type="button" class="btn small ghost" data-boss="${esc(r.k)}">Ver ficha</button>${bsDoneBtn(r.k,b)}</div></div>
     ${bsStageBtn(c,r.k,b)}</div>`; }
 /* r35 fichas (Task 5) */ // ficha do boss: a mesma das hunts (fichaHTML), com o resultado do GrimBoss.judge da personagem ativa
 // (BSROW, com as proteções do set) e o mapa da sala (canvas .qpos com drawPos; pa = 1 é a zona, não a sala). Sem charms nem preys.
@@ -46644,7 +46680,7 @@ function bossSheet(k){
       return `<li data-fxln="${esc(nm.toLowerCase())}">${ltSpr(nm.toLowerCase())}<span class="fx-ln">${ilink(nm)}</span><span class="fx-lp">${fxPct(pct)}</span><span class="fx-lv"><b>${gp(pr.v)}</b><span class="tiny muted fx-lsrc">${pr.best==="market"?"Market":pr.best==="coin"?"":"NPC"}</span></span></li>`; }).join("")}</ul>
     <p class="tiny muted fx-lnote">${fxLNote(w,st)}</p>`:`<p class="small muted">Sem dados de loot.</p>`;
   return fichaHTML({
-    eyebrow:`${esc(GrimBoss.CLS[b.c])}${cd?` · ${esc(cd)}`:""}`, title:esc(b.n),
+    eyebrow:`${esc(GrimBoss.CLS[b.c])}${cd?` · ${esc(cd)}`:""}`, title:esc(b.n), head:bsDoneBtn(k,b),
     map:b.pos?`<canvas class="qpos" width="360" height="240" data-qpos="${b.pos.join(",")}" role="img" aria-label="${esc("Mapa de "+b.n)}"></canvas>
       <div class="fx-mapb">${mapBtn(b.pos[0],b.pos[1],b.pos[2],b.n+(loc?" · "+loc:""),"Abrir o mapa")}</div>${b.pa?`<p class="tiny muted">O ponto no mapa é a zona aproximada.</p>`:""}${loc?`<p class="small">${esc(loc)}</p>`:""}`
       :`<p class="small muted">Posição por confirmar.</p>${loc?`<p class="small">${esc(loc)}</p>`:""}`,
@@ -46671,12 +46707,20 @@ function renderBosses(){
   let cv; try{ cv=bsCurve(c); }catch(e){ console.error(e); el.innerHTML=`<p class="small muted">Não consegui calcular o teu dano de boss.</p>`; return; }
   const mlAt=l=>GrimRot.stats(c.voc,l).mlBase, CR=BSD.cr, all=[], prot=protOf(c).prot; BSROW={};
   Object.entries(BSD.b).forEach(([k,b])=>{ const r=GrimBoss.judge(b,{k,voc:c.voc,level:c.level,cr:CR[k],curve:cv.curve,mlAt,ml:isMage(c)&&c.ml>0?c.ml+(cv.gr.g.ml||0):0,prot,d:CRDV&&hasKey(CRDV,k)?CRDV[k].d:null});
-    const x={k,b,r,lo:lootPerKill(k,CR,w)}; all.push(x); BSROW[k]=x; });
-  const cnt={solo:0,team:0,later:0,all:all.length}; all.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
+    const x={k,b,r,lo:lootPerKill(k,CR,w),t:c.bcd&&+c.bcd[k]||0}; all.push(x); BSROW[k]=x; });
+  // r36: Permanentes · Eventos · Todos (ST.ui.bse), o bloco «Bosses do dia» e «visto ontem no teu mundo» (kstatLoad)
+  const fe=BSE.some(x=>x[0]===ST.ui.bse)?ST.ui.bse:"perm", base=all.filter(x=>fe==="all"||(fe==="ev")===GrimBoss.isEvent(x.b));
+  const cntE={perm:0,ev:0,all:all.length}; all.forEach(x=>cntE[GrimBoss.isEvent(x.b)?"ev":"perm"]++);
+  const TD=TODAY&&TODAY.day===gameDay()?TODAY:null;
+  if(!TD&&BSTD!==gameDay()){ BSTD=gameDay(); todayLoad().then(()=>renderBosses()); }
+  const pk=GrimBoss.dailyPicks(all,TD&&TD.boss?TD.boss.toLowerCase():null,Date.now()), pcat={}; pk.picks.forEach(([ct,x])=>{ pcat[x.k]=ct; });
+  const ks=fe!=="perm"&&w?bsKsGet(w):null;
+  const seen=x=>!!ks&&GrimBoss.isEvent(x.b)&&[x.b.n,kPlural(x.b.n)].some(n=>{ const e=ks[n.toLowerCase()]; return !!e&&e.last_day_killed>0; });
+  const cnt={solo:0,team:0,later:0,all:base.length}; base.forEach(x=>{ if(x.r.st==="solo") cnt.solo++; else if(x.r.st==="team"||x.r.st==="unknown") cnt.team++; else cnt.later++; });
   const f=BSF.some(x=>x[0]===ST.ui.bsf)?ST.ui.bsf:"solo";
   const pick=x=>f==="all"||(f==="solo"?x.r.st==="solo":f==="team"?(x.r.st==="team"||x.r.st==="unknown"):(x.r.st==="later"||x.r.st==="locked"));
   const lv=x=>Math.min(x.r.soloL||9999,x.r.teamL||9999,x.r.st==="locked"?x.b.ql:9999);
-  const list=all.filter(pick).sort(f==="later"?(a,b)=>lv(a)-lv(b):(a,b)=>((b.lo&&b.lo.v)||0)-((a.lo&&a.lo.v)||0));
+  const list=base.filter(pick).sort(f==="later"?(a,b)=>lv(a)-lv(b):(a,b)=>((b.lo&&b.lo.v)||0)-((a.lo&&a.lo.v)||0));
   // r25: só se mostram 120; com pesquisa, filtra-se antes nos dados (nome, classe, sítio, quest, loot) para não perder os outros
   const qw=lsNorm(LSQ.bosses).split(/\s+/).filter(Boolean);
   const shown=qw.length&&list.length>120 ? list.filter(x=>{ const t=lsNorm([x.b.n,GrimBoss.CLS[x.b.c],(x.b.loc||[]).join(" "),x.b.q||"",...((x.lo&&x.lo.top)||[]).map(y=>y[0])].join(" ")); return qw.every(w2=>t.includes(w2)); }) : list;
@@ -46685,9 +46729,11 @@ function renderBosses(){
   Object.entries(bst).forEach(([k,s])=>{ const b=BSD.b[k]; if(b&&+s>0){ P+=GrimBoss.pointsOf(BSD.pts,b.c,+s); done++; } });
   BSLEAD={L:c.level, solo:cnt.solo, team:cnt.team}; bsLead(P);
   const mk=w&&MKV[w]&&MKV[w].items;
-  el.innerHTML=`<div class="card bs-top"><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div>
+  el.innerHTML=`<div class="card bs-top"><div class="bs-segs"><div class="seg" id="bsSegE" role="group" aria-label="Bosses permanentes ou de eventos"></div><div class="seg" id="bsSeg" role="group" aria-label="Que bosses mostrar"></div></div>
+      ${fe==="perm"?"":`<p class="small muted bs-evnote" style="margin:0">${w?`<span>«Visto ontem no teu mundo» vem das mortes de ontem em ${esc(w)}.</span>`:`<span>Escolhe o mundo da personagem para veres que bosses de evento foram mortos ontem.</span>`} <span>Fica um dia atrasado: não há API oficial.</span></p>`}
       <p class="small muted" style="margin:0">Contas com o teu dano de boss (≈ ${nf(cv.real)} por segundo no nível ${c.level}, da <a href="#rotacao" data-go="rotacao">rotação</a> com ${esc(cv.gr.src.replace(/^do /,"o ").replace(/^dos /,"os "))}) e a tua vida. ${mk?`Loot aos preços do Market de ${esc(w)}.`:`Loot aos preços de NPC${w?` (sem dados do Market de ${esc(w)} agora)`:""}.`} Toca no Bosstiary de cada boss para marcares o teu progresso.</p></div>
-    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo)).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
+    ${fe==="ev"?"":bsDayHTML(pk,TD)}
+    <div class="bs-list">${shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo,{cat:pcat[x.k],seen:seen(x)})).join("")||`<p class="small muted">Nenhum boss nesta lista.</p>`}</div>
     ${shown.length>120?`<p class="small muted">E mais ${shown.length-120}: escolhe outra lista ou escreve o nome na pesquisa.</p>`:""}
     <details class="card bs-how"><summary>Como contamos</summary><ul class="small">
       <li>Aguentar: a tua vida efetiva (vida × defesa da vocação; magos: vida + Magic Shield) tem de chegar a 2 golpes do dano máximo por turno do boss (1,3 em equipa).</li>
@@ -46696,9 +46742,16 @@ function renderBosses(){
       <li>Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).</li>
       <li>Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Tibia Grimoire. ${nf(Object.keys(BSD.b).length)} bosses do Bosstiary.</li></ul></details>`;
   seg($("bsSeg"),BSF.map(([k,t])=>[k,`${t} <span class="tiny">${cnt[k]}</span>`]),f,v=>{ ST.ui.bsf=v; save(); renderBosses(); });
+  seg($("bsSegE"),BSE.map(([k,t])=>[k,`${t} <span class="tiny">${cntE[k]}</span>`]),fe,v=>{ ST.ui.bse=v; save(); renderBosses(); });
   // o dano por elemento (data/crdmg.json, o mesmo das hunts) chega depois: com ele, as proteções do set contam; desenha outra vez
   if(!CRDV&&!BSCRW){ BSCRW=true; crdLoad().then(()=>renderBosses()); }
 }
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-bsdone]"); if(!b) return; const c=C(), k=b.dataset.bsdone, bd=BSD&&hasKey(BSD.b,k)?BSD.b[k]:null; if(!c||!bd) return;
+  const now=Date.now(), sh=!!b.closest("#sheet"); if(!c.bcd||typeof c.bcd!=="object") c.bcd={};
+  Object.keys(c.bcd).forEach(x=>{ if(!hasKey(BSD.b,x)||!GrimBoss.cdLeft(+c.bcd[x],BSD.b[x].cd,now)) delete c.bcd[x]; });
+  if(hasKey(c.bcd,k)) delete c.bcd[k]; else c.bcd[k]=now; save();
+  renderBosses(); document.querySelectorAll(`#sheetBody [data-bsdw="${CSS.escape(k)}"]`).forEach(x=>{ x.outerHTML=bsDoneBtn(k,bd); });
+  const nb=document.querySelector(sh?`#sheetBody [data-bsdone="${CSS.escape(k)}"]`:`.bs-r [data-bsdone="${CSS.escape(k)}"]`); if(nb) nb.focus({preventScroll:true}); });
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-bstier]"); if(!b) return; const c=C(), k=b.dataset.bstier, bd=BSD&&BSD.b[k]; if(!bd) return;
   if(!c.bst||typeof c.bst!=="object") c.bst={}; const s=((+c.bst[k]||0)+1)%4; if(s) c.bst[k]=s; else delete c.bst[k]; save();
   b.outerHTML=bsStageBtn(c,k,bd); const P=Object.entries(c.bst).reduce((t,[x,v])=>t+(BSD.b[x]?GrimBoss.pointsOf(BSD.pts,BSD.b[x].c,+v):0),0);

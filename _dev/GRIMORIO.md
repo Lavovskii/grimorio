@@ -700,6 +700,40 @@ letra < 12 px, alvos < 44 px na ficha, estrutura fixa, Market fixo/503/sem mundo
 comparar, bosses de alavanca/raid/sem posição, e em en/de nenhuma das frases pt-PT «à mão (r35)» nas fichas). Deve dizer `ok`
 nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110i` (calibração e lote 1 dos caminhos).
 
+## Bosses do dia (r36, 11/11/2026)
+
+Plano: `docs/superpowers/plans/2026-11-11-bosses-do-dia.md`. Modelo, fontes e regras: `_dev/BOSSES.md` («Permanentes e
+eventos» e «Bosses do dia»).
+- Dados: campo `ev` no `data/bosses.json` (`"wc"`, `"saz"`, `"raid"`; sem = permanente) pelo `_dev/build_bosses.py` (TibiaWiki;
+  `--ev` refaz só esse campo) e `_dev/bosses_eventos.json` (à mão, tem prioridade).
+- `shared/bosses.js`: `isEvent(b)`, `cdLeft(ts, cdH, agora)` e `dailyPicks(rows, boostedKey, agora)` (puras, testadas no
+  `node _dev/bosses_test.mjs`).
+- `index.html` (`renderBosses`, `bsRow(c, r, b, lo, {cat, seen})`, `bsDayHTML`, `bsPickHTML`, `bsDoneBtn`, `bsKsGet`, `BSE`,
+  `BSCAT`, `BSEVN`): filtro `ST.ui.bse` (`#bsSegE`), bloco `.bs-day`, «Feito hoje» (`[data-bsdone]`, `c.bcd`, também no
+  cabeçalho da ficha), «visto ontem no teu mundo» (`.bs-seen`) e a nota `.bs-evnote`. O boosted vem do `todayLoad` (o mesmo
+  do «Hoje no Tibia»); as mortes de ontem do `kstatLoad`, uma vez por mundo e dia de jogo.
+- Traduções: `i18n/src/ui-extra.json`, contexto «à mão (bosses do dia)», nas 7 línguas.
+- Teste no browser: bloco `bdd` do `_dev/fichas_browser.cjs` (boostablebosses e killstatistics intercetados; em en e de,
+  nenhuma frase pt-PT «à mão (bosses do dia)» no bloco e na nota).
+- Versões: `shared/bosses.js`, `shared/i18n.js` e o `DV` em `20261111a`.
+
+## Língua no topo e revisão das traduções (r37, 11/11/2026)
+- Seletor curto no topo dos dois sites, ao lado da pesquisa: `<div class="bar-lang" data-lang-picker="top">` (o rodapé fica). O
+  `mountPickers` do `shared/i18n.js` chama `pickerHTML(true)`: globo + código (`EN`, `PT-PT`, `PT-BR`…; `.lang-code`) e, por cima,
+  o `<select data-lang-set>` nativo invisível com os nomes todos (44 px de toque, o mesmo `aria-label` e o mesmo `setLang`). CSS em
+  `shared/sites.css` («r37»): 38 px de altura (44 px em ecrãs de toque), letra de 12 px até 520 px e sem globo até 370 px. Para caber
+  a 390 px, até 420 px a personagem do topo fica só com o retrato (`.csw-btn` no `index.html`, `.qchar` no Questski) e o espaço entre
+  as peças do topo desce para 8 px.
+- 1.ª visita (sem `grimorio-lang`): `fromBrowser(navigator.languages)` — `pt-BR` → pt-BR; `pt` e outros `pt-*` → pt-PT; senão a
+  primeira língua suportada pelo prefixo (en, pl, es, de, sv, nl); senão en. Não grava nada: uma escolha guardada nunca muda. Teste:
+  `node _dev/lingua_browser.cjs` (Playwright: 15 casos de língua do browser e o seletor dos dois sites a 1440 e 390 px).
+- Traduções revistas (chaves novas desde a r35 nas 7 línguas e o inglês dos caminhos): pt-BR sem «por confirmar»/«por fazer»;
+  bónus das preys com os nomes do jogo (Damage Boost, Bonus XP, Damage Reduction); «boosted» em inglês (de, es, pl); nl/sv/de
+  «ficha» = pagina/sida/Datenblatt (o «kaart» do nl era também o mapa); no inglês dos caminhos, «the The … Quest», pontos
+  cardeais sem hífen e «centre». A linha do boss na ficha («{0} de vida · golpe até {1} por turno») tem um modelo inteiro: o
+  modelo genérico «{0} por {1}» apanhava-a em es, nl e sv.
+- Versões: `shared/i18n.js`, o `DV`, `shared/sites.css` e o `quests/css/style.css` em `20261111b`.
+
 ## Calibração (r35-D, 10/11/2026)
 
 Parte D do plano das fichas (Tasks 18–23; spec, rondas 3–4, Q10–Q15). Afina os números das hunts sem mudar a ficha: o `k`

@@ -15,15 +15,21 @@
 // Task 21 (pt-PT, 1440): data/calib.json com dz[pid] = 1 sobe 1 a dificuldade dessa hunt e com k = 1 muda o XP/h dos cartões
 // em relação ao 404 (que fica com as omissões); killstatistics do mundo da personagem com a criatura principal nos 10 % mais
 // mortos → «Hunt muito disputada no teu mundo» na ficha; TibiaData com erro → sem a nota.
+// r36 bosses do dia (pt-PT, 1440 e 390): filtro Permanentes/Eventos/Todos guardado no ST.ui.bse, bloco «Bosses do dia» com até
+// 4 bosses sem repetir (boosted do TibiaData intercetado: um de evento não entra e o bloco diz porquê; um permanente sozinho
+// entra em 1.º), etiquetas nas linhas, «Feito hoje» tira o boss do bloco e mostra «volta às», tocar de novo desfaz; no filtro
+// Eventos, o killstatistics intercetado com um boss de evento morto ontem dá «visto ontem no teu mundo» só a esse; alvos ≥ 44 px.
+// Em en e de, o bloco e a nota dos eventos não têm frases pt-PT «à mão (bosses do dia)».
 const { chromium } = require('playwright');
 const path = require('path'), fs = require('fs');
-// frases pt-PT da Task 6 (as fixas inteiras; dos modelos, as partes fixas com 6+ letras)
-const PT35 = Object.entries(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'i18n', 'src', 'ui-extra.json'), 'utf8')))
-  .filter(([, v]) => /^à mão \(r35\)/.test(v.c))
+// frases pt-PT da Task 6 e dos bosses do dia (as fixas inteiras; dos modelos, as partes fixas com 6+ letras)
+const UIX = Object.entries(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'i18n', 'src', 'ui-extra.json'), 'utf8')));
+const ptOf = re => UIX.filter(([, v]) => re.test(v.c))
   .flatMap(([k, v]) => v.k === 'x' ? [k] : k.split(/\{\d+\}/).map(x => x.trim()).filter(x => x.replace(/[^\p{L}]/gu, '').length >= 6));
-// corre dentro da página: as frases da lista que aparecem no texto da ficha (palavras inteiras)
-function ptLeft(list) {
-  const t = document.querySelector('#sheetBody').innerText;
+const PT35 = ptOf(/^à mão \(r35\)/), PTBD = ptOf(/^à mão \(bosses do dia\)/);
+// corre dentro da página: as frases da lista (a, ou {list, sel}) que aparecem no texto da ficha (ou de sel; palavras inteiras)
+function ptLeft(a) {
+  const list = Array.isArray(a) ? a : a.list, t = [...document.querySelectorAll(a.sel || '#sheetBody')].map(e => e.innerText).join('\n');
   return list.filter(k => new RegExp('(?<![\\p{L}])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\p{L}])', 'u').test(t));
 }
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
@@ -165,6 +171,87 @@ async function bosses(p, W, lang, r, fails) {
   console.log(`  ${BOSS_PROT}, knight 812: set «Proteção» «${lm}», best set «${lb}»`);
   if (!lm || lm === lb) fails.push(`${BOSS_PROT}: o set «Proteção» e o best set dão o mesmo nível (${lm})`);
   await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); s.active = 't1'; s.chars.find(c => c.id === 't2').hset = 'mine'; localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); });
+}
+
+// r36: bosses do dia. BB = boostablebosses do TibiaData (abort | ok com BB.name), KS = killstatistics (o da Task 21)
+async function bdd(p, W, lang, r, fails, BB, KS) {
+  const go = async (f, args) => { await p.evaluate(([f, a]) => { const s = JSON.parse(localStorage.getItem('grimorio-tibia-v4')); new Function('s', 'a', f)(s, a);
+      localStorage.setItem('grimorio-tibia-v4', JSON.stringify(s)); localStorage.removeItem('grimorio-today'); }, [f || '', args || null]);
+    await p.reload(); await p.evaluate(() => { location.hash = '#bosses'; }); await p.waitForSelector('.bs-r [data-boss]', { timeout: 60000 });
+    await p.waitForFunction(() => !!document.querySelector('.bs-day .bs-bnote, .bs-day [data-bspk="boost"]') || !document.querySelector('.bs-day'), null, { timeout: 15000 }).catch(() => {});
+    await sleep(600); };
+  const day = () => p.evaluate(() => ({ seg: [...document.querySelectorAll('#bsSegE button')].map(b => b.dataset.v + (b.getAttribute('aria-pressed') === 'true' ? '*' : '')).join(),
+    picks: [...document.querySelectorAll('.bs-day [data-bspk]')].map(x => x.dataset.bspk + '=' + x.dataset.bsp), note: (document.querySelector('.bs-day .bs-bnote') || {}).textContent || '',
+    ev: [...document.querySelectorAll('.bs-r')].filter(x => x.dataset.bsev).length, rows: document.querySelectorAll('.bs-r').length, block: !!document.querySelector('.bs-day') }));
+  // offsetHeight: sem as animações de escala do Modern
+  const tiny = () => p.evaluate(() => [...document.querySelectorAll('.bs-day button, [data-bsdone], #bsSegE button')].filter(b => b.getClientRects().length && b.offsetHeight < 44)
+    .map(b => `${b.className.split(' ')[0] || b.tagName} ${b.offsetHeight}px «${b.textContent.trim().slice(0, 20)}»`).slice(0, 10));
+  BB.mode = 'ok'; BB.name = 'Ferumbras';
+  KS.mode = 'ok'; KS.json = { killstatistics: { world: 'Bona', entries: [{ race: 'Ferumbras', last_day_players_killed: 0, last_day_killed: 1, last_week_players_killed: 0, last_week_killed: 1 },
+    { race: 'Groam', last_day_players_killed: 0, last_day_killed: 0, last_week_players_killed: 0, last_week_killed: 3 }] } };
+  await go('s.ui.bse=undefined; s.ui.bsf="solo"; s.chars.forEach(c=>{ delete c.bcd; });');
+  if (lang !== 'pt-PT') {
+    let pt = await p.evaluate(ptLeft, { list: PTBD, sel: '.bs-top, .bs-day' });
+    await p.click('#bsSegE button[data-v="ev"]'); await sleep(800);
+    pt = pt.concat(await p.evaluate(ptLeft, { list: PTBD, sel: '.bs-top, .bs-list' }));
+    if (pt.length) fails.push('bosses do dia com pt-PT: ' + [...new Set(pt)].join(' | '));
+    await go('s.ui.bse=undefined;'); BB.mode = KS.mode = 'abort'; return;
+  }
+  let d = await day();
+  if (d.seg !== 'perm*,ev,all') fails.push('filtro de eventos: ' + d.seg);
+  if (d.ev) fails.push(`Permanentes com ${d.ev} bosses de evento`);
+  if (!d.block) fails.push('sem o bloco «Bosses do dia»');
+  if (!/Ferumbras/.test(d.note) || !/evento/.test(d.note)) fails.push('boosted de evento: nota «' + d.note + '»');
+  if (d.picks.some(x => x.startsWith('boost='))) fails.push('boosted de evento entrou no bloco');
+  if (d.picks.length < 3) fails.push('bloco com ' + d.picks.length + ' bosses');
+  // boosted = o boss do «melhor lucro» (permanente e sozinho): entra em 1.º e o bloco fica com 4, sem repetir
+  const lk = (d.picks.find(x => x.startsWith('lucro=')) || '').slice(6);
+  BB.name = await p.evaluate(k => document.querySelector(`.bs-r[data-bsk="${CSS.escape(k)}"] .bs-nm b`).textContent, lk);
+  await go();
+  d = await day();
+  const ks = d.picks.map(x => x.split('=')[1]);
+  if (d.picks[0] !== 'boost=' + lk) fails.push(`boosted ${BB.name} não é o 1.º: ${d.picks.join()}`);
+  if (d.picks.length !== 4 || new Set(ks).size !== 4) fails.push('bloco sem 4 bosses diferentes: ' + d.picks.join());
+  if (d.note) fails.push('boosted que entra e ainda a nota: ' + d.note);
+  const tags = await p.evaluate(ks => ks.map(k => { const x = document.querySelector(`.bs-r[data-bsk="${CSS.escape(k)}"]`); return x ? (x.querySelector('.bs-cat') || {}).textContent || '' : '?'; }), ks);
+  if (tags.some(t => !t.trim())) fails.push('linhas dos destaques sem etiqueta: ' + tags.join('|'));
+  console.log(`  bosses do dia (${W}): ${d.picks.join(', ')} · etiquetas ${tags.join(' | ')}`);
+  // «Feito hoje» no 2.º destaque: sai do bloco, a linha diz «volta às» e fica guardado; tocar de novo desfaz
+  const k2 = ks[1];
+  await p.click(`.bs-day [data-bsdone="${k2}"]`); await sleep(600);
+  const dn = await p.evaluate(k => { const x = document.querySelector(`.bs-r[data-bsk="${CSS.escape(k)}"]`), b = x && x.querySelector('[data-bsdone]'), s = JSON.parse(localStorage.getItem('grimorio-tibia-v4'));
+    return { inBlock: !!document.querySelector(`.bs-day [data-bsp="${CSS.escape(k)}"]`), back: x ? (x.querySelector('.bs-back') || {}).textContent || '' : '', pr: b && b.getAttribute('aria-pressed'), ts: (s.chars.find(c => c.id === s.active).bcd || {})[k],
+      picks: [...document.querySelectorAll('.bs-day [data-bspk]')].map(x => x.dataset.bsp) }; }, k2);
+  if (dn.inBlock) fails.push(`«Feito hoje» em ${k2} e continua no bloco`);
+  if (!/volta (às|a) /.test(dn.back) || dn.pr !== 'true' || !(dn.ts > 0)) fails.push(`«Feito hoje» em ${k2}: «${dn.back}», aria-pressed ${dn.pr}, bcd ${dn.ts}`);
+  if (dn.picks.length < 3 || new Set(dn.picks).size !== dn.picks.length) fails.push('bloco depois do «Feito hoje»: ' + dn.picks.join());
+  // a ficha do boss também tem o botão (e diz que está feito)
+  await openBoss(p, k2);
+  if (await p.evaluate(k => { const b = document.querySelector(`#sheetBody [data-bsdone="${CSS.escape(k)}"]`); return !b || b.getAttribute('aria-pressed') !== 'true'; }, k2)) fails.push(`ficha de ${k2} sem «Feito hoje» marcado`);
+  await closeSheet(p);
+  await p.click(`.bs-r[data-bsk="${k2}"] [data-bsdone]`); await sleep(600);
+  const un = await p.evaluate(k => ({ inBlock: !!document.querySelector(`.bs-day [data-bsp="${CSS.escape(k)}"]`), back: !!document.querySelector(`.bs-r[data-bsk="${CSS.escape(k)}"] .bs-back`) }), k2);
+  if (!un.inBlock || un.back) fails.push(`desfazer «Feito hoje» em ${k2}: no bloco ${un.inBlock}, «volta às» ${un.back}`);
+  // Eventos (com Todos no outro filtro): só bosses de evento, a nota fixa, sem bloco, «visto ontem» só no Ferumbras
+  await p.click('#bsSeg button[data-v="all"]'); await sleep(400);
+  await p.click('#bsSegE button[data-v="ev"]');
+  await p.waitForFunction(() => document.querySelector('.bs-seen'), null, { timeout: 8000 }).catch(() => {});
+  d = await day();
+  const ev = await p.evaluate(() => ({ note: (document.querySelector('.bs-evnote') || {}).textContent || '', seen: [...document.querySelectorAll('.bs-r')].filter(x => x.querySelector('.bs-seen')).map(x => x.dataset.bsk) }));
+  if (d.seg !== 'perm,ev*,all' || d.ev !== d.rows || !d.rows || d.block) fails.push(`Eventos: ${d.seg}, ${d.ev} de ${d.rows} de evento, bloco ${d.block}`);
+  if (!/Fica um dia atrasado: não há API oficial\./.test(ev.note)) fails.push('Eventos sem a nota: ' + ev.note);
+  if (ev.seen.join() !== 'ferumbras') fails.push('«visto ontem no teu mundo»: ' + ev.seen.join());
+  const t1 = await tiny(); if (t1.length) fails.push('bosses do dia com alvos < 44 px: ' + t1.join('; '));
+  const a = await p.evaluate(audit); r.hscroll = r.hscroll || a.hscroll; r.small.push(...a.small);
+  // fica guardado; sem mundo, a nota pede o mundo
+  await go();
+  if ((await day()).seg !== 'perm,ev*,all') fails.push('o filtro Eventos não ficou guardado');
+  await go('s.chars.find(c=>c.id===s.active).world="";');
+  if (!/mundo/.test(await p.evaluate(() => (document.querySelector('.bs-evnote') || {}).textContent || ''))) fails.push('Eventos sem mundo: a nota não pede o mundo');
+  await go('s.chars.find(c=>c.id===s.active).world="Bona"; s.ui.bse=undefined; s.ui.bsf="solo"; s.chars.forEach(c=>{ delete c.bcd; });');
+  const t2 = await tiny(); if (t2.length) fails.push('bosses do dia com alvos < 44 px: ' + t2.join('; '));
+  const a2 = await p.evaluate(audit); r.hscroll = r.hscroll || a2.hscroll; r.small.push(...a2.small);
+  BB.mode = KS.mode = 'abort';
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -344,7 +431,10 @@ async function deep(p, W, fails, MK) {
     await ctx.route('**/*', r => new URL(r.request().url()).host === HOST ? r.continue() : r.abort());
     await ctx.route('**/api/market.php*', r => MK.mode === 'ok' ? r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(MK.json) }) : r.fulfill({ status: 503, body: '' }));
     // Task 21: o data/calib.json (o real, 404 ou um fixo) e o killstatistics do TibiaData (abortado como o resto, 500 ou um fixo)
-    const CB = { mode: 'real', json: null }, KS = { mode: 'abort', json: null };
+    const CB = { mode: 'real', json: null }, KS = { mode: 'abort', json: null }, BB = { mode: 'abort', name: null };
+    // r36: o boss em destaque (boostablebosses) e a criatura (o todayLoad pede os dois juntos)
+    await ctx.route(/\/v5\/(boostablebosses|creatures)$/, r => BB.mode !== 'ok' ? r.abort() : r.fulfill({ status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' },
+      body: JSON.stringify(/boostablebosses$/.test(r.request().url()) ? { boostable_bosses: { boosted: { name: BB.name, featured: true }, boostable_boss_list: [] } } : { creatures: { boosted: { name: 'Dragon' }, creature_list: [] } }) }));
     await ctx.route('**/data/calib.json', r => CB.mode === 'real' ? r.continue() : CB.mode === 'json' ? r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(CB.json) }) : r.fulfill({ status: 404, body: '' }));
     await ctx.route(/\/killstatistics\//, r => KS.mode === 'ok' ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(KS.json) }) : KS.mode === 500 ? r.fulfill({ status: 500, headers: { 'access-control-allow-origin': '*' }, body: '' }) : r.abort());
     const p = await ctx.newPage(), errs = [], fails = [];
@@ -379,6 +469,7 @@ async function deep(p, W, fails, MK) {
       if (lang === 'pt-PT') await deep(p, W, fails, MK);
       if (lang === 'pt-PT' && W > 800) await calibTest(p, fails, CB, KS);
       await bosses(p, W, lang, r, fails);
+      await bdd(p, W, lang, r, fails, BB, KS);
     } catch (e) { fails.push('erro: ' + String(e).split('\n')[0].slice(0, 200)); }
     r.fails = fails;
     const ok = !r.errs.length && !r.hscroll && !r.small.length && !r.tiny.length && !fails.length;

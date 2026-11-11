@@ -13,9 +13,16 @@ quest/alavanca, 'r' raid, 'g' spawn normal; null), lv (1 = alavanca), q (quest),
 loc ([sítios]), md (dano máximo por turno, sem summons; null = desconhecido), dm ({elemento: %} do dano que faz),
 pos ([x, y, z] no mapa: o {{Mapper Coords}} da localização na TibiaWiki; senão o 1.º spawn de data/spawns.json; senão a
 entrada do 1.º sítio em quests/data/places.json do Questski, ou o 1.º {{Mapper Coords}} da página desse sítio na
-TibiaWiki, e então pa = 1: aproximada, é a zona e não o sítio do boss).
-Uso: python -I build_bosses.py [raiz] [--cache PASTA] [--offline] [--check] [--loot]
+TibiaWiki, e então pa = 1: aproximada, é a zona e não o sítio do boss),
+ev (r36: 'wc' world change ou mini world change, 'saz' evento sazonal, 'raid'; sem ev = permanente). O ev vem, por esta ordem,
+de _dev/bosses_eventos.json (à mão: {"<chave>": "wc" | "saz" | "raid" | null}), do spawntype com 'Raid', das páginas das
+categorias 'World Changes', 'Mini World Changes' e 'Events' (as listas «… Events» e a página 'Raid' não contam) que a
+localização ou as notas do boss ligam, dos bosses ligados nos campos reward/dangers da Infobox Quest de um world change, e da
+quest do boss com type 'event' (sazonal) ou 'change'/'mwc'. Um spawntype 'Event' sem nenhuma destas provas fica permanente e
+entra na lista «a rever», tal como um boss com duas classes diferentes (fica a 1.ª pela ordem acima).
+Uso: python -I build_bosses.py [raiz] [--cache PASTA] [--offline] [--check] [--loot] [--ev]
   --check: não grava; sai com 1 se o ficheiro gerado for diferente do que está no disco.
+  --ev: só refaz o campo ev no data/bosses.json que já está no disco (o resto fica igual, mesmo que a wiki de hoje mude).
   --loot: acrescenta também a data/items.json os itens do loot destes bosses que lá faltam (ex.: Gold Token, Silver Token),
           com a mesma Infobox Object e os mesmos NPCs do build_supplies.py, para o site lhes dar preço (NPC e Market). Nunca
           muda uma chave que já existe. Depois: python -I build_search.py."""
@@ -33,6 +40,9 @@ ACCESS = {'Count Vlarkorth': 'Grave Danger Quest', 'Earl Osam': 'Grave Danger Qu
           'Soul of Dragonking Zyrtarch': 'Forgotten Knowledge Quest', 'The Enraged Thorn Knight': 'Forgotten Knowledge Quest',
           'The Last Lore Keeper': 'Forgotten Knowledge Quest', 'Melting Frozen Horror': 'Forgotten Knowledge Quest',
           'Abyssador': "Bigfoot's Burden Quest"}
+EVCATS = {'Category:World Changes': 'wc', 'Category:Mini World Changes': 'wc', 'Category:Events': 'saz'}
+QEV = {'change': 'wc', 'mwc': 'wc', 'event': 'saz'}   # type da Infobox Quest
+EVORD = ('raid', 'wc', 'saz')
 NOTQ = {'World Quest'}   # 'World Quest' é o nome genérico das quests de mundo (eventos), não uma quest com nível
 PTS = {'b': [[25, 5], [100, 15], [300, 30]], 'a': [[5, 10], [20, 30], [60, 60]], 'n': [[1, 10], [3, 30], [5, 60]]}
 ELS = {'physical': 'physical', 'fire': 'fire', 'ice': 'ice', 'earth': 'earth', 'energy': 'energy', 'holy': 'holy', 'death': 'death',
@@ -161,6 +171,32 @@ def places(root):
     return out
 
 
+def evpages(cache, off):
+    """Páginas de eventos → classe; sem as páginas que são listas ('World Changes', 'Raid', '… Events')."""
+    out = {}
+    for cat, e in EVCATS.items():
+        for t in members(cat, cache, off):
+            if t not in ('World Changes', 'Mini World Changes', 'Raid') and not t.endswith('Events'):
+                out.setdefault(t, e)
+    return out
+
+
+def evof(t, f, q, qtype, evp, wcl, man):
+    """(ev, dúvida): ev do boss t (None = permanente); dúvida = texto para «a rever» ou None."""
+    if t.lower() in man:
+        return man[t.lower()], None
+    st = str(f.get('spawntype') or '').lower()
+    src = [('raid', 'spawntype')] if 'raid' in st else []
+    src += [(evp[x], x) for x in links(f.get('location', '') + ' ' + f.get('notes', '')) if x in evp]
+    src += [('wc', x) for x in wcl.get(t, [])]
+    if q and QEV.get(qtype.get(q)):
+        src.append((QEV[qtype[q]], q))
+    evs = sorted({e for e, _ in src}, key=EVORD.index)
+    if not evs:
+        return None, (f'{t} (spawntype «{f.get("spawntype")}», sem página de evento): permanente' if 'event' in st else None)
+    return evs[0], (f'{t}: {", ".join(sorted({f"{e} ({w})" for e, w in src}))} → {evs[0]}' if len(evs) > 1 else None)
+
+
 def spawn(s):
     s = str(s or '').lower()
     return 't' if 'trigger' in s else 'r' if 'raid' in s else 'g' if 'regular' in s else None
@@ -188,10 +224,24 @@ def build(o):
             quests.add(q)
         raw[t] = (c, f, q)
     qp = BS.fetch(sorted(quests), cache, off)
-    qinfo = {}
+    qinfo, qtype = {}, {}
     for q in quests:
         f = infobox((qp.get(q) or {}).get('content') or '', 'Quest')
         qinfo[q] = (num(f.get('lvl')), num(f.get('lvlrec')))
+        qtype[q] = str(f.get('type') or '').strip().lower()
+    # eventos: páginas das categorias; nos world changes, os bosses ligados em reward/dangers da Infobox Quest
+    evp = evpages(cache, off)
+    ep = BS.fetch(sorted(evp), cache, off)
+    wcl = {}
+    for x, e in evp.items():
+        f = infobox((ep.get(x) or {}).get('content') or '', 'Quest')
+        if e == 'wc':
+            for b in links(f.get('reward', '') + ' ' + f.get('dangers', '')):
+                wcl.setdefault(b, []).append(x)
+    mp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bosses_eventos.json')
+    man = {k: v for k, v in json.load(open(mp, encoding='utf-8')).items() if not k.startswith('_')}
+    assert all(v in (None,) + EVORD for v in man.values()), 'bosses_eventos.json: valor inválido'
+    rever = []
     crs = json.load(open(os.path.join(o['root'], 'data', 'creatures.json'), encoding='utf-8'))
     sps = json.load(open(os.path.join(o['root'], 'data', 'spawns.json'), encoding='utf-8'))
     pls = places(o['root'])
@@ -221,9 +271,12 @@ def build(o):
             pos = next((pls[x.lower()] for x in e['loc'] if x.lower() in pls), None)
             pa = 1 if pos else 0
         e['pos'], e['pa'] = pos, pa
+        e['ev'], dv = evof(t, f, q, qtype, evp, wcl, man)
+        if dv:
+            rever.append(dv)
         out[k] = {x: v for x, v in e.items() if v not in (None, [], {}, 0) or x in ('c', 'n')}
     return {'v': 1, 'fontes': 'TibiaWiki (Infobox Creature, Infobox Quest, Bosstiary e Lever Bosses), outubro de 2026',
-            'pts': PTS, 'b': out}
+            'pts': PTS, 'b': out, 'rever': rever}
 
 
 def dump(D):
@@ -268,11 +321,19 @@ def add_loot(o, keys):
 
 def main(argv):
     chk = '--check' in argv
-    o = BS.args([a for a in argv if a not in ('--check', '--loot')])
+    o = BS.args([a for a in argv if a not in ('--check', '--loot', '--ev')])
     D = build(o)
+    dst = os.path.join(o['root'], 'data', 'bosses.json')
+    if '--ev' in argv:  # só o ev: o resto fica como está no disco
+        old = json.load(open(dst, encoding='utf-8'))
+        for k, x in old['b'].items():
+            x.pop('ev', None)
+            if (D['b'].get(k) or {}).get('ev'):
+                x['ev'] = D['b'][k]['ev']
+        old['rever'] = D['rever']
+        D = old
     txt = dump(D)
     json.loads(txt)
-    dst = os.path.join(o['root'], 'data', 'bosses.json')
     if chk:
         old = open(dst, encoding='utf-8').read() if os.path.exists(dst) else ''
         print('igual' if old == txt else 'diferente'); return 0 if old == txt else 1
@@ -283,6 +344,8 @@ def main(argv):
           sum(1 for x in b.values() if x['c'] == 'n'), 'Nemesis | com quest:', sum(1 for x in b.values() if 'q' in x),
           '| com dano máximo:', sum(1 for x in b.values() if 'md' in x), '| alavanca:', sum(1 for x in b.values() if 'lv' in x),
           '| no mapa:', sum(1 for x in b.values() if 'pos' in x), f"({sum(1 for x in b.values() if 'pa' in x)} pela entrada da zona)")
+    print('eventos:', ', '.join(f"{sum(1 for x in b.values() if x.get('ev') == e)} {e}" for e in ('wc', 'saz', 'raid')) + ';',
+          'a rever:', '; '.join(D['rever']) or 'nada')
     if '--loot' in argv:
         return add_loot(o, list(b))
     return 0

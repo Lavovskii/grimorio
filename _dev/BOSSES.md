@@ -9,7 +9,12 @@ mais tarde. Mostra também quanto dá cada um e o progresso no Bosstiary.
     dano máximo por turno e % de cada elemento no dano que faz.
   - `--loot` acrescenta ao `data/items.json` os itens do loot dos bosses que lá faltavam (ex.: Gold e Silver Token), para terem
     preço do NPC e do Market. Depois corre `build_search.py`.
-- `shared/bosses.js` (`window.GrimBoss`): o modelo (`judge`, `makeCurve`, Bosstiary). Teste: `node _dev/bosses_test.mjs`.
+  - `ev` (r36): `"wc"` (world change ou mini world change), `"saz"` (evento sazonal) ou `"raid"`; sem `ev` = permanente. Ver
+    «Permanentes e eventos» mais abaixo. `--ev` refaz só este campo no `data/bosses.json` que está no disco (o resto fica
+    igual, mesmo que a wiki de hoje dê outras posições).
+- `_dev/bosses_eventos.json` (à mão): `{"<chave>": "wc" | "saz" | "raid" | null}`; tem prioridade sobre a TibiaWiki.
+- `shared/bosses.js` (`window.GrimBoss`): o modelo (`judge`, `makeCurve`, Bosstiary) e os bosses do dia (`isEvent`, `cdLeft`,
+  `dailyPicks`). Teste: `node _dev/bosses_test.mjs`.
 - O loot e as resistências vêm do `data/creatures.json`; o valor por kill sai do `lootPerKill` do site, aos preços do mundo.
 
 ## O modelo (por boss, com a vocação e o nível)
@@ -27,6 +32,39 @@ mais tarde. Mostra também quanto dá cada um e o progresso no Bosstiary.
 
 O dano de boss é o `GrimRot.plan` (cenário boss, com os ataques automáticos) nos níveis `GrimBoss.ANCHORS`, com stats estimados.
 A curva é escalada pelo dano real da personagem no seu nível (o ML ou skill da ficha e o equipamento: o set, ou o BiS do nível).
+
+## Permanentes e eventos (r36)
+
+O `build_bosses.py` dá a cada boss uma classe, por esta ordem (fica a 1.ª que existir):
+1. `_dev/bosses_eventos.json`, escrito à mão;
+2. `spawntype` com «Raid» → `raid`;
+3. páginas das categorias «World Changes» e «Mini World Changes» (`wc`) e «Events» (`saz`) ligadas na localização ou nas
+   notas do boss; as páginas que são listas não contam («World Changes», «Mini World Changes», «Raid» e as «… Events»,
+   ex.: «Double Loot Events», «Rapid Respawn Events»);
+4. bosses ligados nos campos `reward` e `dangers` da Infobox Quest de um world change ou mini world change (`wc`);
+5. a quest do boss com `type = event` (`saz`, ex.: First Dragon Quest) ou `change`/`mwc` (`wc`).
+
+Na dúvida fica permanente. O relatório do script acaba com «eventos: N wc, N saz, N raid; a rever: …»: um `spawntype`
+«Event» sem nenhuma prova, ou um boss com duas classes (fica a 1.ª pela ordem acima). Revê-os e, se for preciso, escreve a
+decisão no ficheiro à mão. Em 11/11/2026: 23 wc, 6 saz, 51 raid e 236 permanentes; a rever: Jaul («Event / Triggered»). À
+mão: Arthom the Hunter, Oodok Witchmaster e The Mean Masher são `wc` (a wiki chama-lhes raid, mas só aparecem com o mini
+world change); a Rotworm Queen é `raid` (o Awash só a cita como «possibly»).
+
+## Bosses do dia (r36)
+
+- Página `#bosses`: filtro Permanentes · Eventos · Todos (`ST.ui.bse`, Permanentes por omissão), junto ao filtro sozinho /
+  em equipa / mais tarde / todos (`ST.ui.bsf`).
+- Bloco «Bosses do dia» (Permanentes e Todos): `GrimBoss.dailyPicks(rows, boosted, agora)` dá até 4 bosses permanentes, que a
+  personagem faz sozinha (`judge` → `solo`) e fora do cooldown, sem repetir: o boss em destaque do dia (TibiaData
+  `/boostablebosses`, pelo `todayLoad` do Início; se não entrar, o bloco diz porquê: evento, não sozinho, cooldown ou fora da
+  lista), o melhor lucro (`lootPerKill`), o que dá mais XP e o mais rápido (`ttk`). As linhas levam a mesma etiqueta.
+- «Feito hoje» (linha, bloco e ficha): `c.bcd[chave] = quando`. Regra do cooldown, `GrimBoss.cdLeft(ts, cd, agora)`: volta em
+  `ts + cd` horas; sem `cd`, no server save seguinte (10:00 de Berlim, CET ou CEST). Enquanto não volta, sai do bloco e a
+  linha diz «volta às HH:MM» (hora local; a mais de 24 h, «volta a DD/MM às HH:MM»). Tocar de novo desfaz; as marcas que já
+  passaram apagam-se no toque seguinte.
+- Eventos: etiqueta do tipo (World change, Evento sazonal, Raid) e «visto ontem no teu mundo» quando o killstatistics do
+  mundo da personagem (`kstatLoad`, nome ou plural do `kPlural`) tem `last_day_killed > 0`. Nota fixa: fica um dia atrasado,
+  não há API oficial; sem mundo, pede para o escolher. Nunca se diz que um evento está ativo.
 
 ## Bosstiary (Cyclopedia, TibiaWiki)
 

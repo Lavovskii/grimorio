@@ -1883,6 +1883,10 @@
   "c": "index.html: >${esc(has?G.mon[k][0]:name)}</b><span class=\"td-s\">${lab===\"Boss em destaque\"?\"+ Bosstiary e loot",
   "k": "x"
  },
+ "Boss em destaque hoje: {0}.": {
+  "c": "index.html: bo?(BSD.b[bo.k]||{}).n||TD.boss:\"\"; const note=bo&&bo.why?`<p class=\"small bs-bnote\"><span>Boss em destaque hoje: <b>${esc(nm)}</b>.</span> <span>${BW[bo.why]}</span></p>` :TD&&TD.err?`<p",
+  "k": "p"
+ },
  "Boss ou um monstro só: carrega sempre nesta.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
@@ -1893,6 +1897,14 @@
  },
  "Bosses com dificuldade escalável (Make Believe)": {
   "c": "index.html: 30dad)\", \"d\": \"2026-07-13\"}, {\"id\": \"scalable-bosses\", \"t\": \"Bosses com dificuldade escalável (Make Believe)\", \"s\": \"Os bosses da",
+  "k": "x"
+ },
+ "Bosses do dia": {
+  "c": "index.html: : não sei qual é o boss em destaque hoje.</p>`:\"\"; return `<div class=\"card bs-day\"><h3>Bosses do dia</h3><p class=\"small muted\">Permanentes que fazes sozinho e que não estão em cooldown. Toca em «Feito hoje» depois de o",
+  "k": "x"
+ },
+ "Bosses permanentes ou de eventos": {
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Bosses: Mimar Haffar, Maior Domus e Phosphorus (o boss final), com formas finais Mimar Haffar (Final), Maior Domus (Final) e Phosphorus (Final). Quest para premium, nível 300 mínimo, recomendado 800+.": {
@@ -1908,7 +1920,7 @@
   "k": "p"
  },
  "Bosstiary: Bane 25/100/300 mortes (5+15+30 pontos), Archfoe 5/20/60 (10+30+60) e Nemesis 1/3/5 (10+30+60). O bónus de loot do boss no slot sobe com os pontos (25% a 0, 50% a 250, 100% a 1250).": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Botas": {
@@ -2512,7 +2524,7 @@
   "k": "x"
  },
  "Como contamos": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Como funcionam as mecânicas que chegaram com os últimos updates: Echo Raids, Weapon Proficiency, bosses com dificuldade escalável, Discovery, Newhaven e o Task Board.": {
@@ -2700,7 +2712,7 @@
   "k": "p"
  },
  "Contas com o teu dano de boss (≈ {0} por segundo no nível {1}, da {2} com {3}) e a tua vida. {4} Toca no Bosstiary de cada boss para marcares o teu progresso.": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "p"
  },
  "Contas com o teu set \"{0}\"": {
@@ -3771,6 +3783,10 @@
   "c": "index.html:  : st===\"fail\" ? \"Preços do NPC: o Market não respondeu.\" : \"Escolhe o mundo da personagem para ver os preços do Market.\"; } function fxLootF",
   "k": "x"
  },
+ "Escolhe o mundo da personagem para veres que bosses de evento foram mortos ontem.": {
+  "c": "index.html: no teu mundo» vem das mortes de ontem em ${esc(w)}.</span>`:`<span>Escolhe o mundo da personagem para veres que bosses de evento foram mortos ontem.</span>`} <span>Fica um dia ",
+  "k": "x"
+ },
  "Escolhe o que usas · ordenado por pontuação": {
   "c": "index.html: ria-label\",`Escolher ${SLOTNAME[slot]}`); pop.innerHTML = `<div class=\"pk-h\"><div><b>${esc(SLOTNAME[slot])}</b><span>Escolhe o que usas · ordenado por pontuação</span></div><button type=\"button\" class=\"pk-x\" data-pkx=\"1\"",
   "k": "x"
@@ -4023,9 +4039,17 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Evento sazonal": {
+  "c": "index.html: ntos\"],[\"all\",\"Todos\"]]; const BSEVN={wc:\"World change\",saz:\"Evento sazonal\",raid:\"Raid\"}; let B",
+  "k": "x"
+ },
  "Evento: {0}": {
   "c": "index.html: dir\"}</span>`:`<b>${fmt(h.xp)}</b>${hcEst(h)} XP/h${h.boost?` <span class=\"hc-ev\" title=\"Evento: ${esc(evLabel())}\">+${Math.round(h.boost*100)}%</span>`:\"\"} · <b>${fmt(h.lo",
   "k": "p"
+ },
+ "Eventos": {
+  "c": "index.html: ido:\"Mais rápido\"}; const BSE=[[\"perm\",\"Permanentes\"],[\"ev\",\"Eventos\"],[\"all\",\"Todos\"]]; ",
+  "k": "x"
  },
  "Evita": {
   "c": "index.html: walk=[ci.thru?`Atravessa ${esc(cpTr(ci.thru))}`:\"\", ci.walk?`Evita ${esc(cpTr(ci.walk))}`:\"\"].filter(Boolean)",
@@ -4219,6 +4243,10 @@
   "c": "index.html: in(\",\")}\" width=\"360\" height=\"240\"></canvas>`:\"\"} ${c?`<label class=\"qck\"><input type=\"checkbox\" data-qstep=\"${id}:${mi}.${si}\" ${qp[mi+\".\"+si]?\"checked\":\"\"}>Feito</label>`:\"\"}</li>`).join(\"\")",
   "k": "x"
  },
+ "Feito hoje": {
+  "c": "index.html: ss.cdLeft(c&&c.bcd&&+c.bcd[k]||0,b.cd,Date.now()); return `<span class=\"bs-dw\" data-bsdw=\"${esc(k)}\"><button type=\"button\" class=\"btn small ghost bs-done\" data-bsdone=\"${esc(k)}\" aria-pressed=\"${left>0}\">${left>0?'<span ",
+  "k": "x"
+ },
  "Ferramenta": {
   "c": "index.html: :\"Anel\",\"Food\":\"Comida\",\"Rods\":\"Rod\",\"Wands\":\"Wand\",\"Tools\":\"Ferramenta\",\"Fist Fighting Weap",
   "k": "x"
@@ -4233,6 +4261,10 @@
  },
  "Fica guardada neste browser: da próxima vez que entrares, a tua personagem já cá está e o nível atualiza-se sozinho. Os dados públicos vêm do tibia.com através da TibiaData.": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Fica um dia atrasado: não há API oficial.": {
+  "c": "index.html: el=\"Que bosses mostrar\"></div></div> ${fe===\"perm\"?\"\":`<p class=\"small muted bs-evnote\" style=\"margin:0\">${w?`<span>«Visto ontem no teu mundo» vem das mortes de ontem em ${esc(w)}.</span>`:`<span>Escolhe o mundo da perso",
   "k": "x"
  },
  "Ficha completa (TibiaWiki)": {
@@ -4384,7 +4416,7 @@
   "k": "x"
  },
  "Fontes: TibiaWiki (vida, dano máximo, cooldown, quests e níveis) e o loot do Tibia Grimoire. {0} bosses do Bosstiary.": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "p"
  },
  "Food": {
@@ -4861,6 +4893,10 @@
  },
  "Hoje no Tibia": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Hoje não há bosses permanentes que faças sozinho fora do cooldown.": {
+  "c": "index.html: lass=\"bs-picks\">${pk.picks.map(bsPickHTML).join(\"\")}</div>`:`<p class=\"small muted\">Hoje não há bosses permanentes que faças sozinho fora do cooldown.</p>`}${note}</div>`; } f",
   "k": "x"
  },
  "Holy Build": {
@@ -5867,6 +5903,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Mais rápido": {
+  "c": "index.html: \"Boss em destaque\",lucro:\"Melhor lucro\",xp:\"Mais XP\",rapido:\"Mais rápido\"}; const BSE=[[\"perm",
+  "k": "x"
+ },
  "Mais segura": {
   "c": "index.html: lucro:\"Melhor lucro\",xp:\"XP express\",livre:\"Sem quest\",mseg:\"Mais segura\"}; const floorTxt = ",
   "k": "x"
@@ -6064,7 +6104,7 @@
   "k": "x"
  },
  "Matar: a vida do boss ÷ 70% do teu dano por segundo de boss (o resto do tempo vai para mexer, curar e fugir), no elemento a que o boss é mais fraco, até 2,5 min (Bane), 5 min (Archfoe) ou 10 min (Nemesis) sozinho; em equipa, com 4 como tu e mais 50% de tempo.": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Maça": {
@@ -6520,7 +6560,7 @@
   "k": "x"
  },
  "Nenhum boss nesta lista.": {
-  "c": "index.html: {shown.slice(0,120).map(x=>bsRow(c,x.r,x.b,x.lo)).join(\"\")||`<p class=\"small muted\">Nenhum boss nesta lista.</p>`}</div> ${shown.",
+  "c": "index.html: Row(c,x.r,x.b,x.lo,{cat:pcat[x.k],seen:seen(x)})).join(\"\")||`<p class=\"small muted\">Nenhum boss nesta lista.</p>`}</div> ${shown.",
   "k": "x"
  },
  "Nenhum feitiço com esses filtros.": {
@@ -6800,7 +6840,7 @@
   "k": "x"
  },
  "Nunca abaixo do nível mínimo e do recomendado da quest de acesso: as fases e mecânicas dos bosses não entram nas contas.": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Não consegui abrir esta notícia agora.": {
@@ -6918,6 +6958,22 @@
  "Não encontrei “{0}” no Tibia. Confirma o nome tal como aparece no jogo.": {
   "c": "index.html: (r.ok) look.res=r; else look.err = r.why===\"notfound\" ? `Não encontrei “${esc(q)}” no Tibia. Confirma o nome tal como aparece no jogo.` : \"Não consegui con",
   "k": "p"
+ },
+ "Não entra: já o fizeste e ainda está em cooldown.": {
+  "c": "index.html: ento.\",st:\"Não entra: não o fazes sozinho no teu nível.\",cd:\"Não entra: já o fizeste e ainda está em cooldown.\",none:\"Não entra: nã",
+  "k": "x"
+ },
+ "Não entra: não está na lista dos bosses do Bosstiary.": {
+  "c": "index.html: cd:\"Não entra: já o fizeste e ainda está em cooldown.\",none:\"Não entra: não está na lista dos bosses do Bosstiary.\"}; const bo=pk.boo",
+  "k": "x"
+ },
+ "Não entra: não o fazes sozinho no teu nível.": {
+  "c": "index.html: HTML(pk,TD){ const BW={ev:\"Não entra: é de um evento.\",st:\"Não entra: não o fazes sozinho no teu nível.\",cd:\"Não entra: já o",
+  "k": "x"
+ },
+ "Não entra: é de um evento.": {
+  "c": "index.html: }</div></div>`; } function bsDayHTML(pk,TD){ const BW={ev:\"Não entra: é de um evento.\",st:\"Não entra: não ",
+  "k": "x"
  },
  "Não faz parte de nenhuma quest conhecida e as zonas onde aparece não pedem quest.": {
   "c": "index.html: v class=\"pills\">${acc.map(qBtn).join(\"\")}</div>`:\"\") || `<p class=\"small muted\">Não faz parte de nenhuma quest conhecida e as zonas onde aparece não pedem quest.</p>`; const tabs=[[\"on",
@@ -7903,6 +7959,14 @@
   "c": "quests/js/app.js: ></section>`); if ((d.dangers || []).length) parts.push(`<section class=\"box\"><h2 class=\"box-caption\">${icon(\"skull\")}Perigos (criaturas)</h2><div class=\"box-body\"><div class=\"ent-grid\">${d.dangers.map((c) => entCard(c, ",
   "k": "x"
  },
+ "Permanentes": {
+  "c": "index.html: cro\",xp:\"Mais XP\",rapido:\"Mais rápido\"}; const BSE=[[\"perm\",\"Permanentes\"],[\"ev\",\"Eventos\"],[",
+  "k": "x"
+ },
+ "Permanentes que fazes sozinho e que não estão em cooldown. Toca em «Feito hoje» depois de os matares.": {
+  "c": "index.html: : não sei qual é o boss em destaque hoje.</p>`:\"\"; return `<div class=\"card bs-day\"><h3>Bosses do dia</h3><p class=\"small muted\">Permanentes que fazes sozinho e que não estão em cooldown. Toca em «Feito hoje» depois de o",
+  "k": "x"
+ },
  "Personagem ativa: {0}. Mudar de personagem": {
   "c": "index.html: \"}`, open=box.classList.contains(\"open\"); box.innerHTML = `<button type=\"button\" class=\"csw-btn\" aria-haspopup=\"listbox\" aria-expanded=\"${open}\" aria-controls=\"cswList\" aria-label=\"Personagem ativa: ${nm(c)}. Mudar de pe",
   "k": "p"
@@ -8612,7 +8676,7 @@
   "k": "x"
  },
  "Que bosses mostrar": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "Que hotkeys me faltam?": {
@@ -8753,6 +8817,10 @@
  },
  "Quivers": {
   "c": "index.html: Items\":\"Item mágico\",\"Books\":\"Livro\",\"Ammunition\":\"Munição\",\"Quivers\":\"Aljava\",\"Support R",
+  "k": "x"
+ },
+ "Raid": {
+  "c": "index.html: ]; const BSEVN={wc:\"World change\",saz:\"Evento sazonal\",raid:\"Raid\"}; let BSKS={key:nul",
   "k": "x"
  },
  "Rashid": {
@@ -9257,6 +9325,10 @@
  },
  "Sem ligação à TibiaData de momento.": {
   "c": "index.html: ||!L.length){ box.innerHTML=`<p class=\"small muted\">${L.err?\"Sem ligação à TibiaData de momento.\":\"Sem notícias de de",
+  "k": "x"
+ },
+ "Sem ligação à TibiaData: não sei qual é o boss em destaque hoje.": {
+  "c": "index.html: /b>.</span> <span>${BW[bo.why]}</span></p>` :TD&&TD.err?`<p class=\"small muted bs-bnote\">Sem ligação à TibiaData: não sei qual é o boss em destaque hoje.</p>`:\"\"; return `<div ",
   "k": "x"
  },
  "Sem loot conhecido.": {
@@ -10804,7 +10876,7 @@
   "k": "x"
  },
  "Ver ficha": {
-  "c": "index.html: CSEP):Math.round(pct)}%</span>`).join(\" · \") : \"\"; return `<div class=\"bs-r\" data-bsk=\"${esc(r.k)}\"${b.q?` data-lsx=\"${esc(b.q)}\"`:\"\"}><span class=\"bs-ic\">${crSpr(r.k,44)}</span> <div class=\"bs-m\"><div class=\"bs-h\"><butt",
+  "c": "index.html: CSEP):Math.round(pct)}%</span>`).join(\" · \") : \"\"; return `<div class=\"bs-r\" data-bsk=\"${esc(r.k)}\"${b.ev?` data-bsev=\"${esc(b.ev)}\"`:\"\"}${b.q?` data-lsx=\"${esc(b.q)}\"`:\"\"}><span class=\"bs-ic\">${crSpr(r.k,44)}</span> <di",
   "k": "x"
  },
  "Ver mais {0} ({1})": {
@@ -11137,6 +11209,10 @@
  },
  "World Change": {
   "c": "quests/js/app.js: abel: \"Troca\", icon: \"swap\" }, \"world-change\": { label: \"World Change\", icon: \"globe\" }, ",
+  "k": "x"
+ },
+ "World change": {
+  "c": "index.html: nentes\"],[\"ev\",\"Eventos\"],[\"all\",\"Todos\"]]; const BSEVN={wc:\"World change\",saz:\"Evento sazonal",
   "k": "x"
  },
  "Wound ({0} pontos)Físico.": {
@@ -14763,6 +14839,10 @@
   "c": "index.html: u && x>L){ out+=youRow; you=true; } out+=`<li class=\"${x<=L?\"past\":\"\"}\"><span class=\"l",
   "k": "x"
  },
+ "perm": {
+  "c": "index.html: lhor lucro\",xp:\"Mais XP\",rapido:\"Mais rápido\"}; const BSE=[[\"perm\",\"Permanentes\"],[\"ev",
+  "k": "x"
+ },
  "perso": {
   "c": "index.html: ) return; if(b.dataset.add){ draft=null; look=newLook(); go(\"perso\"); renderPerso(); co",
   "k": "x"
@@ -15103,6 +15183,10 @@
   "c": "index.html: =\"monk\") return false; if(c.voc===\"paladin\") return b===\"quiver\" || (!twoH && b===\"s",
   "k": "x"
  },
+ "rapido": {
+  "c": "index.html: t {k,b,r,lo}=x; const v=cat===\"xp\"?`${nf(b.xp)} XP`:cat===\"rapido\"?`≈ ${bsT(r.ttk)} so",
+  "k": "x"
+ },
  "raramente": {
   "c": "index.html: ito frequente\"],[/\\boften\\b/gi,\"frequente\"],[/\\brarely\\b/gi,\"raramente\"],[/\\bunknown effect",
   "k": "x"
@@ -15344,7 +15428,7 @@
   "k": "x"
  },
  "rotação": {
-  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"seg\" id=\"bsSeg\" role=\"group\" aria-label=\"Que bosses mostrar\"></div> <p class=\"small muted\" style=\"margin:0\">Contas com o teu d",
+  "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
  "round": {
@@ -16407,6 +16491,10 @@
   "c": "index.html: /span><span class=\"tiny muted\">${r.hp?`${nf(r.hp)} de vida`:\"vida desconhecida\"}${b.md?` · golpe at",
   "k": "x"
  },
+ "vida desconhecida · golpe até {0} por turno": {
+  "c": "à mão (r35): fichas de hunts e bosses (texto montado, shared/fichas.js, aria-label, title)",
+  "k": "p"
+ },
  "vida {0}%": {
   "c": "index.html: join(\" · \")]); if(it.lch) rows.push([\"Leech\",[it.lch[0]?`vida ${it.lch[0]}%`:\"\",it.lch[1]?`mana ",
   "k": "p"
@@ -16427,6 +16515,10 @@
   "c": "index.html: d1,r.d0)?` (+${pct(r.d1,r.d0)}%)`:\"\"}</span> ${t.life?`<span class=\"small\">vida: +${nf(r.life)}/s do life leech</span>`:\"\"} ${t.mana?",
   "k": "p"
  },
+ "visto ontem no teu mundo": {
+  "c": "index.html: )}</span>`:\"\"}</div> <div class=\"bs-st\">${st}${o.seen?` <span class=\"tag ok bs-seen\">visto ontem no teu mundo</span>`:\"\"}</div> <di",
+  "k": "x"
+ },
  "vocation": {
   "c": "quests/js/app.js: \"level\": \"Nível\", \"required level\": \"Nível necessário\", \"vocation\": \"Vocação\", \"vocati",
   "k": "x"
@@ -16442,6 +16534,22 @@
  "void": {
   "c": "index.html: ? defImbElem(c,ctx.eff,it) : null; const want = { helmet:[\"void\",wsk], weapon: isMag",
   "k": "x"
+ },
+ "volta a {0} às": {
+  "c": "index.html: \"+bsPad(d.getMonth()+1); return left<864e5?`volta às ${hm}`:`volta a ${dm} às ${hm}`; } function bsDoneB",
+  "k": "p"
+ },
+ "volta a {0} às {1}": {
+  "c": "index.html: \"+bsPad(d.getMonth()+1); return left<864e5?`volta às ${hm}`:`volta a ${dm} às ${hm}`; } function bsDoneB",
+  "k": "p"
+ },
+ "volta às": {
+  "c": "index.html: d(d.getDate())+\"/\"+bsPad(d.getMonth()+1); return left<864e5?`volta às ${hm}`:`volta a ${dm} às $",
+  "k": "x"
+ },
+ "volta às {0}": {
+  "c": "index.html: d(d.getDate())+\"/\"+bsPad(d.getMonth()+1); return left<864e5?`volta às ${hm}`:`volta a ${dm} às $",
+  "k": "p"
  },
  "várias": {
   "c": "quests/js/app.js: \" title=\"A região principal desta quest é ${esc(q.region || \"várias\")}, mas tem passos e",
@@ -16829,6 +16937,10 @@
  },
  "{0} de vida": {
   "c": "index.html: {mlink(b.n,esc(b.n))}</span><span class=\"tiny muted\">${r.hp?`${nf(r.hp)} de vida`:\"vida desconhecida\"",
+  "k": "p"
+ },
+ "{0} de vida · golpe até {1} por turno": {
+  "c": "à mão (r35): fichas de hunts e bosses (texto montado, shared/fichas.js, aria-label, title)",
   "k": "p"
  },
  "{0} de vida · {1} XP": {
@@ -17971,6 +18083,10 @@
   "c": "quests/js/app.js: v>` : \"\").join(\"\")}</div></section> ${inProg.length ? `<section class=\"box\"><h2 class=\"box-caption\">${icon(\"clock\")}Em curso (${inProg.length})</h2><div class=\"box-body\"><div class=\"qgrid\">${inProg.map(questCard).join(\"\"",
   "k": "p"
  },
+ "{0}Feito hoje": {
+  "c": "index.html: ss.cdLeft(c&&c.bcd&&+c.bcd[k]||0,b.cd,Date.now()); return `<span class=\"bs-dw\" data-bsdw=\"${esc(k)}\"><button type=\"button\" class=\"btn small ghost bs-done\" data-bsdone=\"${esc(k)}\" aria-pressed=\"${left>0}\">${left>0?'<span ",
+  "k": "p"
+ },
  "{0}Ficha completa (TibiaWiki)": {
   "c": "quests/js/app.js: .t].x != null ? S.npcs[p.t] : null); view().innerHTML = ` <article class=\"wiki-page\"> <header class=\"box wiki-head\"><div class=\"box-body\"> <span class=\"slot wiki-sprite\">${p.i ? `<img src=\"${p.i}\" alt=\"\">` : icon(kind[1]",
   "k": "p"
@@ -18359,6 +18475,10 @@
   "c": "index.html: |{}, r=rs[i]; return p.city||r?`${p.city?esc(p.city):\"\"}${r?`<span class=\"hcmp-sub\">~${nf(r.c)} sqm de ${esc(r.s)}</span>`:\"\"}`:na; }),rs.map(",
   "k": "p"
  },
+ "«Visto ontem no teu mundo» vem das mortes de ontem em {0}.": {
+  "c": "index.html: \"?\"\":`<p class=\"small muted bs-evnote\" style=\"margin:0\">${w?`<span>«Visto ontem no teu mundo» vem das mortes de ontem em ${esc(w)}.</span>`:`<span>Escolhe o mu",
+  "k": "p"
+ },
  "· 10 a 99 gp/oz": {
   "c": "index.html: pan class=\"small muted\">nada nesta hunt</span>`; const pk=`<p class=\"small\">Tens <b>${nf(capOf(c))} oz</b> de capacidade: apanha primeiro o que rende mais por oz.</p><div class=\"lp-pick\"><div class=\"lp-pg ok\"><h6>Apanha ",
   "k": "x"
@@ -18584,7 +18704,7 @@
   "k": "p"
  },
  "· {0} XP": {
-  "c": "index.html: st\">${st}</div> <div class=\"bs-v\"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:\"\"}${top?`<span cla",
+  "c": "index.html: pan>`:\"\"}</div> <div class=\"bs-v\"><b>${val}</b>${b.xp?` · ${nf(b.xp)} XP`:\"\"}${top?`<span cla",
   "k": "p"
  },
  "· {0} XP/h": {
@@ -18792,7 +18912,11 @@
   "k": "p"
  },
  "≈ {0} por kill": {
-  "c": "index.html: ho ~${r.soloL}</span>`:\"\"}`; const val = lo&&!lo.nodata ? `≈ ${gp(Math.round(lo.v))} por kill` : \"loot sem preço\";",
+  "c": "index.html: XP`:cat===\"rapido\"?`≈ ${bsT(r.ttk)} sozinho`:lo&&!lo.nodata?`≈ ${gp(Math.round(lo.v))} por kill`:`${nf(b.xp||0)} XP`",
+  "k": "p"
+ },
+ "≈ {0} sozinho": {
+  "c": "index.html: lo}=x; const v=cat===\"xp\"?`${nf(b.xp)} XP`:cat===\"rapido\"?`≈ ${bsT(r.ttk)} sozinho`:lo&&!lo.nodata?`≈ $",
   "k": "p"
  },
  "≈ {0} · Market de": {
