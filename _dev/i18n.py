@@ -79,7 +79,7 @@ def sentences(s):
 
 
 LETTER = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ]')
-PT_HINT = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀº]|\bboss final\b|\b(o|chegas|batalha|missao|dia|de|da|do|das|dos|para|com|não|uma|um|os|as|em|que|por|sem|mais|ou|ao|aos|na|no|nas|nos|é|se|à|às|tu|teu|tua|já|até|só|quando|onde|como|cada|este|esta|isto|vai|fala|usa|sobe|desce|mata|leva|tens|podes|fica)\b", re.I)
+PT_HINT = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀº]|\bboss final\b|\bcap\.\s|(?-i:(?:^|[.:]\s)A\s[a-z])|\b(o|chegas|batalha|missao|dia|de|da|do|das|dos|para|com|não|uma|um|os|as|em|que|por|sem|mais|ou|ao|aos|na|no|nas|nos|é|se|à|às|tu|teu|tua|já|até|só|quando|onde|como|cada|este|esta|isto|vai|fala|usa|sobe|desce|mata|leva|tens|podes|fica)\b", re.I)
 
 
 # palavras que também existem em inglês ('do', 'as', 'no', 'os', 'um', 'se', 'em', 'a') não chegam para dizer que é PT

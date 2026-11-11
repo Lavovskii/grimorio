@@ -751,6 +751,9 @@ eventos» e «Bosses do dia»).
   No browser: `node _dev/i18n_elbrowser.cjs --url http://127.0.0.1:8790/ --langs <l,…> [--hunts …] [--bosses …] [--shots
   <pasta>]` (fichas a 390 px: erros, elementos juntados no fim, palavras pt-PT; `DUMP=<texto>` mostra o HTML dos passos).
   en, pt-BR, es e de com 0 «fim». `shared/i18n.js` e o `DV` em `20261111d`.
+- pl, sv e nl (11/11/2026): elementos traduzidos e 0 «fim» nas 7 línguas (frases reescritas; no sv o «sul» é «söder» e as
+  frases com «södra» passaram a «i söder»). O `PT_HINT` apanha também «Cap.» e um «A» português antes de uma palavra em
+  minúsculas («3. A boss Ekatrix», «A excavation site Firefoot»). `shared/i18n.js` e o `DV` em `20261111e`.
 
 ## Calibração (r35-D, 10/11/2026)
 
