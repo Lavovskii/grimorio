@@ -733,6 +733,11 @@ eventos» e «Bosses do dia»).
   cardeais sem hífen e «centre». A linha do boss na ficha («{0} de vida · golpe até {1} por turno») tem um modelo inteiro: o
   modelo genérico «{0} por {1}» apanhava-a em es, nl e sv.
 - Versões: `shared/i18n.js`, o `DV`, `shared/sites.css` e o `quests/css/style.css` em `20261111b`.
+- r38 (320 px): a 340 px ou menos o emblema (`.brand`) sai do topo dos dois sites; sem isso o retrato da personagem ficava
+  por baixo da pesquisa. No Questski, em ecrãs de toque, o emblema e a personagem (`.qchar`) têm 44 px de altura. O
+  `lingua_browser.cjs` mede as peças do topo (cada uma com os filhos) a 320/340/360/390/1440 px, com efeitos completos e
+  leves, e falha com sobreposições, peças fora da barra, scroll horizontal, toque < 44 px ou letra < 12 px
+  (`SHOTS=<pasta>` grava o topo a 320 px). `quests/css/style.css` em `20261111c`.
 
 ## Calibração (r35-D, 10/11/2026)
 

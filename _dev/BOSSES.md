@@ -46,9 +46,12 @@ O `build_bosses.py` dá a cada boss uma classe, por esta ordem (fica a 1.ª que 
 
 Na dúvida fica permanente. O relatório do script acaba com «eventos: N wc, N saz, N raid; a rever: …»: um `spawntype`
 «Event» sem nenhuma prova, ou um boss com duas classes (fica a 1.ª pela ordem acima). Revê-os e, se for preciso, escreve a
-decisão no ficheiro à mão. Em 11/11/2026: 23 wc, 6 saz, 51 raid e 236 permanentes; a rever: Jaul («Event / Triggered»). À
-mão: Arthom the Hunter, Oodok Witchmaster e The Mean Masher são `wc` (a wiki chama-lhes raid, mas só aparecem com o mini
-world change); a Rotworm Queen é `raid` (o Awash só a cita como «possibly»).
+decisão no ficheiro à mão (as chaves que começam por `_` são comentários e o script ignora-as). Em 11/11/2026: 26 wc, 6 saz,
+51 raid e 233 permanentes; a rever: nada. À mão: Arthom the Hunter, Oodok Witchmaster e The Mean Masher são `wc` (a wiki
+chama-lhes raid, mas só aparecem com o mini world change); a Rotworm Queen é `raid` (o Awash só a cita como «possibly»);
+Jaul, Obujos e Tanjis (os Deepling Guardians da Liquid Black Quest) são `wc`: só aparecem no estágio 3 do Deeplings World
+Change, um por dia (sorteado no server save), e só para quem ganhou o acesso no estágio 2 (Liquid Black Quest/Spoiler); a
+página do world change não os liga, e o Jaul era o único «a rever» («Event / Triggered»).
 
 ## Bosses do dia (r36)
 

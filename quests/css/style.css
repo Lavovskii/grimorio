@@ -1213,6 +1213,9 @@ nav.side ul + ul { margin-top: 14px; } /* visitante: páginas soltas (Início, Q
 @media (max-width: 520px) { .qchar { height: 42px; max-width: 220px; padding-right: 10px; } .qchar .csw-tx small { display: none; } .qchar + .search { margin-left: 0; } }
 /* r37: com a língua no topo, até 420 px a personagem fica só com o retrato (como no Grimório) */
 @media (max-width: 420px) { .qchar { gap: 0; padding: 4px; } .qchar :is(.csw-tx, .csw-chev) { display: none; } .topbar .in { gap: 8px; } }
+/* r38: a 340 px ou menos o emblema sai do topo (como no Grimório); 44 px de toque no emblema e na personagem */
+@media (max-width: 340px) { .topbar .brand { display: none; } }
+@media (pointer: coarse) { .topbar .brand, .qchar { min-height: 44px; } }
 /* r31: "MARCAR"/"FEITO" em Tahoma é mais largo: coluna do número maior; no telemóvel só o número (o rótulo fica no aria-label) */
 .step { grid-template-columns: 58px minmax(0, 1fr); }
 @media (max-width: 600px) { .step { grid-template-columns: 36px minmax(0, 1fr); } .step-check .tick { display: none; } }
