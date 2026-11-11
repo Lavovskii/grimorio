@@ -717,6 +717,23 @@ eventos» e «Bosses do dia»).
   nenhuma frase pt-PT «à mão (bosses do dia)» no bloco e na nota).
 - Versões: `shared/bosses.js`, `shared/i18n.js` e o `DV` em `20261111a`.
 
+## Língua no topo e revisão das traduções (r37, 11/11/2026)
+- Seletor curto no topo dos dois sites, ao lado da pesquisa: `<div class="bar-lang" data-lang-picker="top">` (o rodapé fica). O
+  `mountPickers` do `shared/i18n.js` chama `pickerHTML(true)`: globo + código (`EN`, `PT-PT`, `PT-BR`…; `.lang-code`) e, por cima,
+  o `<select data-lang-set>` nativo invisível com os nomes todos (44 px de toque, o mesmo `aria-label` e o mesmo `setLang`). CSS em
+  `shared/sites.css` («r37»): 38 px de altura (44 px em ecrãs de toque), letra de 12 px até 520 px e sem globo até 370 px. Para caber
+  a 390 px, até 420 px a personagem do topo fica só com o retrato (`.csw-btn` no `index.html`, `.qchar` no Questski) e o espaço entre
+  as peças do topo desce para 8 px.
+- 1.ª visita (sem `grimorio-lang`): `fromBrowser(navigator.languages)` — `pt-BR` → pt-BR; `pt` e outros `pt-*` → pt-PT; senão a
+  primeira língua suportada pelo prefixo (en, pl, es, de, sv, nl); senão en. Não grava nada: uma escolha guardada nunca muda. Teste:
+  `node _dev/lingua_browser.cjs` (Playwright: 15 casos de língua do browser e o seletor dos dois sites a 1440 e 390 px).
+- Traduções revistas (chaves novas desde a r35 nas 7 línguas e o inglês dos caminhos): pt-BR sem «por confirmar»/«por fazer»;
+  bónus das preys com os nomes do jogo (Damage Boost, Bonus XP, Damage Reduction); «boosted» em inglês (de, es, pl); nl/sv/de
+  «ficha» = pagina/sida/Datenblatt (o «kaart» do nl era também o mapa); no inglês dos caminhos, «the The … Quest», pontos
+  cardeais sem hífen e «centre». A linha do boss na ficha («{0} de vida · golpe até {1} por turno») tem um modelo inteiro: o
+  modelo genérico «{0} por {1}» apanhava-a em es, nl e sv.
+- Versões: `shared/i18n.js`, o `DV`, `shared/sites.css` e o `quests/css/style.css` em `20261111b`.
+
 ## Calibração (r35-D, 10/11/2026)
 
 Parte D do plano das fichas (Tasks 18–23; spec, rondas 3–4, Q10–Q15). Afina os números das hunts sem mudar a ficha: o `k`

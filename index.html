@@ -18,7 +18,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="shared/pub.css?v=20261106b">
-<link rel="stylesheet" href="shared/sites.css?v=20261110c">
+<link rel="stylesheet" href="shared/sites.css?v=20261111b">
 <style>
 /* r34: a letra mono (JetBrains Mono 500, OFL) vem do próprio site. As Alegreya do Google Fonts saíram: o tema Tibia usa
    Palatino/Tahoma/Verdana, e pedir letras à Google mandava o IP de cada visitante para lá (RGPD). */
@@ -1817,6 +1817,8 @@ html[data-ui="modern"] .csw-save::before{content:"";width:7px;height:7px;border-
   html[data-ui="modern"] .csw-pop{position:fixed;left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 66px);width:auto}
   html[data-ui="modern"] .csw-pop::before{right:74px}
 }
+/* r37: com a língua no topo, até 420 px a personagem fica só com o retrato */
+@media (max-width:420px){ html[data-ui="modern"] .csw-btn{gap:0;padding:4px} html[data-ui="modern"] .csw-btn :is(.csw-tx,.csw-chev){display:none} html[data-ui="modern"] header.bar .in{gap:8px} }
 
 /* ======================= navegação ======================= */
 html[data-ui="modern"] nav.side{position:sticky}
@@ -3633,6 +3635,7 @@ html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
     <div class="chars" id="chars" role="group" aria-label="Personagens"></div>
     <div class="charsw" id="charSw"></div>
     <button class="srchbtn" id="gsBtn" aria-label="Pesquisar hunts, monstros, itens e quests"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sb-txt" aria-hidden="true">Procurar hunts, itens, criaturas…</span><kbd aria-hidden="true">/</kbd></button>
+    <div class="bar-lang" data-lang-picker="top"></div>
     <span class="save" id="save">A carregar…</span>
   </div>
 </header>

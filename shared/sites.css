@@ -50,6 +50,15 @@ html[data-ui="modern"] .lang-pick svg { color: #E6C06A; }
 html[data-ui="modern"] .lang-pick:focus-within { outline-color: #F2D68C; }
 html[data-ui="modern"] .lang-pick option { color: #F0E6CE; background: #1A140E; }
 @media (max-width: 420px) { .lang-pick .lang-lab { display: none; } }
+/* r37: a versão curta do topo (data-lang-picker="top"): o código à vista e, por cima, a lista nativa invisível (44 px de toque) */
+.bar-lang { display: flex; flex: none; }
+.lang-top { gap: 6px; height: 38px; min-height: 38px; padding: 0 10px; }
+.lang-top svg { width: 16px; height: 16px; }
+.lang-top .lang-code { font-size: 13px; font-weight: 700; letter-spacing: .04em; line-height: 1; white-space: nowrap; }
+.lang-top select { position: absolute; left: 0; top: 50%; width: 100%; height: 44px; margin-top: -22px; max-width: none; padding: 0; opacity: 0; font-size: 16px; }
+@media (max-width: 520px) { .lang-top { gap: 4px; padding: 0 6px; } .lang-top .lang-code { font-size: 12px; letter-spacing: 0; } }
+@media (max-width: 370px) { .lang-top svg { display: none; } }
+@media (pointer: coarse) { .lang-top { height: 44px; } }
 
 /* r28: tema Tibia (moldura escura com chanfro; o site aberto num botão de metal dourado) */
 html[data-ui="modern"] .sitesw { background: #0E0A07; border: 1px solid #3E3122; border-radius: 4px; color: #E8DCC0; box-shadow: inset 0 1px 3px rgba(0,0,0,.7); }

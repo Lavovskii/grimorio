@@ -5,7 +5,8 @@
      as outras línguas mostram o conteúdo em inglês e o PT-BR fica com o PT-PT);
    - os dados do Questski (guias, fichas de locais), por sobreposições em i18n/en/q/… aplicadas quando o JSON chega.
    Nada na lógica dos sites muda: os dados ficam em PT-PT na memória e só o DOM (texto e title/placeholder/aria-label/alt) é traduzido.
-   A língua fica em localStorage "grimorio-lang" (a mesma nos dois sites). Por omissão: inglês.
+   A língua fica em localStorage "grimorio-lang" (a mesma nos dois sites). Sem nada guardado: a do browser (navigator.languages),
+   senão inglês.
    Carrega-se no <head>, antes de tudo: <script src="shared/i18n.js" data-c></script> (data-c = dicionário de conteúdo do Tibia Grimoire,
    data-q = sobreposições do Questski). Ferramenta: _dev/i18n.py (extrair, construir, ver o que falta). */
 (function () {
@@ -28,7 +29,21 @@
   var me = document.currentScript;
   var BASE = me && me.src ? me.src.replace(/shared\/i18n\.js(?:[?#].*)?$/, "") : "";
   var lang = DEF;
-  try { var st = localStorage.getItem(KEY); if (st && BYCODE[st]) lang = st; } catch (e) { /* sem armazenamento: inglês */ }
+  // 1.ª visita (nada guardado): a língua do browser; uma escolha guardada nunca muda
+  function fromBrowser(list) {
+    for (var i = 0; i < list.length; i++) {
+      var t = String(list[i] || "").toLowerCase(), p = t.split("-")[0];
+      if (t === "pt-br") return "pt-BR";
+      if (p === "pt") return "pt-PT";
+      if (BYCODE[p]) return p;
+    }
+    return DEF;
+  }
+  try {
+    var st = localStorage.getItem(KEY);
+    if (st && BYCODE[st]) lang = st;
+    else if (!st) lang = fromBrowser(navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]);
+  } catch (e) { /* sem armazenamento: inglês */ }
   var ON = lang !== SRC;                                  // traduzir a interface?
   // línguas do conteúdo, por ordem: a escolhida e o inglês de reserva (o PT-BR cai no original PT-PT)
   var CLS = lang === SRC ? [] : lang === "pt-BR" ? ["pt-BR"] : lang === "en" ? ["en"] : [lang, "en"];
@@ -41,7 +56,7 @@
   var I18N = window.I18N = {
     lang: lang, locale: LOC, contentLang: CL, contentLangs: CLS, langs: LANGS, base: BASE, on: ON,
     tr: function (s) { return s; }, now: function () {}, overlay: function (url, d) { return Promise.resolve(d); },
-    set: setLang, pickerHTML: pickerHTML
+    set: setLang, pickerHTML: pickerHTML, fromBrowser: fromBrowser
   };
 
   if (ON) {
@@ -630,15 +645,15 @@
     }, Promise.resolve()).then(function () { return d; });
   }
 
-  /* ---------------------------------------------------------------- escolher a língua (rodapé) */
-  function pickerHTML() {
+  /* ---------------------------------------------------------------- escolher a língua (rodapé; top = a versão curta do topo) */
+  function pickerHTML(top) {
     var opts = LANGS.map(function (l) { return '<option value="' + l[0] + '"' + (l[0] === lang ? " selected" : "") + ">" + l[1] + "</option>"; }).join("");
-    return '<label class="lang-pick" translate="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3z"/></svg>' +
-      '<span class="lang-lab">Language</span><select data-lang-set aria-label="Language / Língua / Język / Idioma / Sprache / Språk / Taal">' + opts + "</select></label>";
+    return '<label class="lang-pick' + (top ? " lang-top" : "") + '" translate="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3z"/></svg>' +
+      (top ? '<span class="lang-code" aria-hidden="true">' + lang.toUpperCase() + "</span>" : '<span class="lang-lab">Language</span>') + '<select data-lang-set aria-label="Language / Língua / Język / Idioma / Sprache / Språk / Taal">' + opts + "</select></label>";
   }
   function mountPickers() {
     var hosts = document.querySelectorAll("[data-lang-picker]");
-    for (var i = 0; i < hosts.length; i++) if (!hosts[i].firstChild) hosts[i].innerHTML = pickerHTML();
+    for (var i = 0; i < hosts.length; i++) if (!hosts[i].firstChild) hosts[i].innerHTML = pickerHTML(hosts[i].getAttribute("data-lang-picker") === "top");
   }
   function setLang(l) {
     if (!BYCODE[l] || l === lang) return;
