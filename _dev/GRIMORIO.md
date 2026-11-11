@@ -700,6 +700,23 @@ letra < 12 px, alvos < 44 px na ficha, estrutura fixa, Market fixo/503/sem mundo
 comparar, bosses de alavanca/raid/sem posição, e em en/de nenhuma das frases pt-PT «à mão (r35)» nas fichas). Deve dizer `ok`
 nas 6 combinações. Versões: `shared/fichas.js` em `20261110g`; `shared/i18n.js` e o `DV` em `20261110i` (calibração e lote 1 dos caminhos).
 
+## Bosses do dia (r36, 11/11/2026)
+
+Plano: `docs/superpowers/plans/2026-11-11-bosses-do-dia.md`. Modelo, fontes e regras: `_dev/BOSSES.md` («Permanentes e
+eventos» e «Bosses do dia»).
+- Dados: campo `ev` no `data/bosses.json` (`"wc"`, `"saz"`, `"raid"`; sem = permanente) pelo `_dev/build_bosses.py` (TibiaWiki;
+  `--ev` refaz só esse campo) e `_dev/bosses_eventos.json` (à mão, tem prioridade).
+- `shared/bosses.js`: `isEvent(b)`, `cdLeft(ts, cdH, agora)` e `dailyPicks(rows, boostedKey, agora)` (puras, testadas no
+  `node _dev/bosses_test.mjs`).
+- `index.html` (`renderBosses`, `bsRow(c, r, b, lo, {cat, seen})`, `bsDayHTML`, `bsPickHTML`, `bsDoneBtn`, `bsKsGet`, `BSE`,
+  `BSCAT`, `BSEVN`): filtro `ST.ui.bse` (`#bsSegE`), bloco `.bs-day`, «Feito hoje» (`[data-bsdone]`, `c.bcd`, também no
+  cabeçalho da ficha), «visto ontem no teu mundo» (`.bs-seen`) e a nota `.bs-evnote`. O boosted vem do `todayLoad` (o mesmo
+  do «Hoje no Tibia»); as mortes de ontem do `kstatLoad`, uma vez por mundo e dia de jogo.
+- Traduções: `i18n/src/ui-extra.json`, contexto «à mão (bosses do dia)», nas 7 línguas.
+- Teste no browser: bloco `bdd` do `_dev/fichas_browser.cjs` (boostablebosses e killstatistics intercetados; em en e de,
+  nenhuma frase pt-PT «à mão (bosses do dia)» no bloco e na nota).
+- Versões: `shared/bosses.js`, `shared/i18n.js` e o `DV` em `20261111a`.
+
 ## Calibração (r35-D, 10/11/2026)
 
 Parte D do plano das fichas (Tasks 18–23; spec, rondas 3–4, Q10–Q15). Afina os números das hunts sem mudar a ficha: o `k`
