@@ -79,7 +79,7 @@ def sentences(s):
 
 
 LETTER = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ]')
-PT_HINT = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀ]|\b(de|da|do|das|dos|para|com|não|uma|um|os|as|em|que|por|sem|mais|ou|ao|aos|na|no|nas|nos|é|se|à|às|tu|teu|tua|já|até|só|quando|onde|como|cada|este|esta|isto|vai|fala|usa|sobe|desce|mata|leva|tens|podes|fica)\b", re.I)
+PT_HINT = re.compile(r"[ãõçáéíóúâêôàÃÕÇÁÉÍÓÚÂÊÔÀº]|\bboss final\b|\b(o|chegas|batalha|missao|dia|de|da|do|das|dos|para|com|não|uma|um|os|as|em|que|por|sem|mais|ou|ao|aos|na|no|nas|nos|é|se|à|às|tu|teu|tua|já|até|só|quando|onde|como|cada|este|esta|isto|vai|fala|usa|sobe|desce|mata|leva|tens|podes|fica)\b", re.I)
 
 
 # palavras que também existem em inglês ('do', 'as', 'no', 'os', 'um', 'se', 'em', 'a') não chegam para dizer que é PT
@@ -532,7 +532,8 @@ def cam_inline(t):
     t = CAM_TOKEN.sub(lambda m: (m.group(3) or m.group(2)).strip(), t)
     out += [norm(x) for x in re.findall(r'\*\*([^*]+)\*\*', t)]
     out += [norm(x) for x in re.findall(r'(?:^|[^*])\*([^*\s][^*]*)\*', re.sub(r'\*\*[^*]+\*\*', '', t))]
-    return [x for x in out if LETTER.search(x) and len(x) >= 3]
+    # todos com uma letra («1.º», «e», «rank 5»): o site mostra-os e, se a frase traduzida os mudou, só os acha pela tradução deles
+    return [x for x in out if re.search(r'[^\W\d_]', x)]
 
 
 def cam_units():
@@ -565,7 +566,7 @@ def cam_strings():
     out = []
     for s, npc in cam_units():
         for t in {s, cam_say_cut(s, npc)}:
-            out += [x for x in cam_render(t) + cam_inline(t) if looks_pt(x) or PT_HINT.search(x)]
+            out += [x for x in cam_render(t) if looks_pt(x) or PT_HINT.search(x)] + cam_inline(t)
     return out
 
 
