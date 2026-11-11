@@ -62,7 +62,9 @@ if (B.pointsOf(BD.pts, "b", 3) !== 50 || B.pointsOf(BD.pts, "a", 3) !== 100 || B
 if (B.stageOf(BD.pts, "b", 99) !== 1 || B.stageOf(BD.pts, "a", 20) !== 2 || B.stageOf(BD.pts, "n", 5) !== 3) fail("estágio pelas mortes");
 // r36 bosses do dia: campo ev (TibiaWiki + _dev/bosses_eventos.json) e as funções puras do bloco «Bosses do dia»
 { const ev = { groam: "wc", furyosa: "wc", horestis: "wc", "the mutated pumpkin": "saz", zorvorax: "saz", ferumbras: "raid", barbaria: "raid",
-    abyssador: undefined, "count vlarkorth": undefined, lloyd: undefined };
+    abyssador: undefined, "count vlarkorth": undefined, lloyd: undefined,
+    // Deepling Guardians: só no estágio 3 do Deeplings World Change (_dev/bosses_eventos.json, TibiaWiki Liquid Black Quest/Spoiler)
+    jaul: "wc", obujos: "wc", tanjis: "wc" };
   for (const [k, e] of Object.entries(ev)) { if (!BD.b[k]) fail(`ev: falta o boss ${k}`); else if (BD.b[k].ev !== e) fail(`ev de ${k}: ${BD.b[k].ev} (esperava ${e})`); }
   for (const [k, b] of Object.entries(BD.b)) if (b.ev != null && !["wc", "saz", "raid"].includes(b.ev)) fail(`ev de ${k}: ${b.ev}`);
   if (typeof B.isEvent !== "function" || typeof B.cdLeft !== "function" || typeof B.dailyPicks !== "function") fail("faltam isEvent, cdLeft ou dailyPicks");

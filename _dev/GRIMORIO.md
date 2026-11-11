@@ -733,6 +733,27 @@ eventos» e «Bosses do dia»).
   cardeais sem hífen e «centre». A linha do boss na ficha («{0} de vida · golpe até {1} por turno») tem um modelo inteiro: o
   modelo genérico «{0} por {1}» apanhava-a em es, nl e sv.
 - Versões: `shared/i18n.js`, o `DV`, `shared/sites.css` e o `quests/css/style.css` em `20261111b`.
+- r38 (320 px): a 340 px ou menos o emblema (`.brand`) sai do topo dos dois sites; sem isso o retrato da personagem ficava
+  por baixo da pesquisa. No Questski, em ecrãs de toque, o emblema e a personagem (`.qchar`) têm 44 px de altura. O
+  `lingua_browser.cjs` mede as peças do topo (cada uma com os filhos) a 320/340/360/390/1440 px, com efeitos completos e
+  leves, e falha com sobreposições, peças fora da barra, scroll horizontal, toque < 44 px ou letra < 12 px
+  (`SHOTS=<pasta>` grava o topo a 320 px). `quests/css/style.css` em `20261111c`.
+- Elementos dos caminhos nas frases traduzidas (11/11/2026): o `cam_strings()` faz chave de **todos** os elementos de um passo
+  (negrito, itálico, rótulos; também «1.º», «e», «rank 5», «3 000») e o `PT_HINT` apanha títulos de troços como «8. Batalha
+  final: …». O `run()` do `shared/i18n.js` procura cada elemento primeiro como palavra inteira (`wordAt`: o `<kbd>hi</kbd>` já
+  não cai dentro de «Darashia») e só depois em qualquer sítio («Erd» em «Erdschaden»); o `text()` tenta o conteúdo também sem
+  o separador da frente («— acesso às masmorras; …» das notas dos pré-requisitos) antes dos modelos. O `qmd` do `index.html`
+  guarda as marcas enquanto faz o negrito, como o `rich` do Questski («**2 {item:Bloody Tears}**» é um só negrito).
+  Verificar uma língua: `python3 -I _dev/i18n_elcheck.py <língua>` (o mesmo algoritmo do `run()` com `i18n/tm` e `i18n/ui`;
+  «fim» = elemento repetido no fim da frase, a corrigir reescrevendo a frase ou, com cuidado, a tradução do elemento, que é
+  partilhada; «palavra» = só achado a meio de uma palavra, quase sempre palavras compostas, sem mal; sai com 1 se houver
+  «fim»; `--json f` grava os casos) e `python3 -I _dev/i18n_elcheck.py --keys` (textos do ecrã sem chave, para ver a olho).
+  No browser: `node _dev/i18n_elbrowser.cjs --url http://127.0.0.1:8790/ --langs <l,…> [--hunts …] [--bosses …] [--shots
+  <pasta>]` (fichas a 390 px: erros, elementos juntados no fim, palavras pt-PT; `DUMP=<texto>` mostra o HTML dos passos).
+  en, pt-BR, es e de com 0 «fim». `shared/i18n.js` e o `DV` em `20261111d`.
+- pl, sv e nl (11/11/2026): elementos traduzidos e 0 «fim» nas 7 línguas (frases reescritas; no sv o «sul» é «söder» e as
+  frases com «södra» passaram a «i söder»). O `PT_HINT` apanha também «Cap.» e um «A» português antes de uma palavra em
+  minúsculas («3. A boss Ekatrix», «A excavation site Firefoot»). `shared/i18n.js` e o `DV` em `20261111e`.
 
 ## Calibração (r35-D, 10/11/2026)
 
