@@ -95,6 +95,10 @@
   "c": "index.html: h3>Compara com a tua barra do Tibia</h3>`; if(!tb) return `<div class=\"card rx-cmp\">${head}<p class=\"small\">Escolhe o ficheiro <code>clientoptions.json</code> do teu Tibia e o site diz o que mudava na tua barra. No Windo",
   "k": "x"
  },
+ "(+{0}% de dano: as criaturas levam {1}% de {2} e {3}% de físico)": {
+  "c": "index.html: {esc(IMBL[x]||x)}</span>`).join(\" + \")}${k===\"weapon\"&&H.el?` <span class=\"tiny muted\">(+${Math.round(H.el.g)}% de dano: as criaturas levam ${Math.round(H.el.v)}% de ${esc(ELN[H.el.el])} e ${Math.round(H.el.ph)}% de físi",
+  "k": "p"
+ },
  "(100 = o melhor deste slot até ao nível {0})": {
   "c": "index.html: p>`:\"\"} ${sc!=null&&notaItem(c,it,sc,\"combat\",\"\")!=null?`<p class=\"lk-sc\">Nota para ${esc(c.name||G.voc[c.voc].n)}: <b>${notaItem(c,it,sc,\"combat\",\"\")}</b> de 100 <small>(100 = o melhor deste slot até ao nível ${c.level}",
   "k": "p"
@@ -245,6 +249,10 @@
  },
  "({0} páginas)": {
   "c": "quests/js/app.js: nts[p.k] = (counts[p.k] || 0) + 1)); view().innerHTML = ` <div class=\"toolbar\"><h1>Wiki do Questski <span class=\"muted\" style=\"font-size:18px\">(${S.wiki.pages.length.toLocaleString(LOC)} páginas)</span></h1></div> <p cla",
+  "k": "p"
+ },
+ "({0}% da tua vida)": {
+  "c": "index.html: ?`É a que bate mais forte: até ${nf(x.hit)} por golpe${eh>0?` (${Math.round(x.hit/eh*100)}% da tua vida)`:\"\"}.`:`É a criatura",
   "k": "p"
  },
  "({0}; nível {1}+; XP {2}/h{3}; lucro {4}/h; {5}; risco {6}/3; acesso {7})": {
@@ -405,6 +413,10 @@
  },
  ", mantra": {
   "c": "index.html: \"note\">Pontos = armadura, proteções, skills${c.voc===\"monk\"?\", mantra\":\"\"}, velocidade e s",
+  "k": "x"
+ },
+ ", por isso": {
+  "c": "index.html: todo físico: não há imbuement de proteção física${fr.length?\", por isso \"+fr.join(\" e \"):\"\"}<",
   "k": "x"
  },
  ", por isso a aljava fica sem imbuement": {
@@ -647,6 +659,18 @@
   "c": "quests/js/app.js: ().dataset.slug === slug; if (!same) view().innerHTML = `<div class=\"loading\">A abrir o pergaminho…</div>`; const d = awai",
   "k": "x"
  },
+ "A analisar o dano das criaturas…": {
+  "c": "index.html:  do dano destas criaturas: sets pensados para dano físico.\":\"A analisar o dano das criaturas…\"}</p>`}</div> <d",
+  "k": "x"
+ },
+ "A analisar o dano…": {
+  "c": "index.html: all hset-imb\"><b>Imbuements:</b> '; if(!CRDV) return hd+'<span class=\"muted\">A analisar o dano…</span></p>'; const H=huntIm",
+  "k": "x"
+ },
+ "A arma de cada set conta com o elemento que as criaturas desta hunt levam.": {
+  "c": "index.html: /button>`).join(\"\")}</div>${panes}${(G.places[pid]||{}).eff?`<p class=\"tiny muted hset-note\">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:\"\"}</div>`; } docum",
+  "k": "x"
+ },
  "A arma deste set é de duas mãos:": {
   "c": "index.html: Weapon(set).h2 && (c.voc===\"knight\"||c.voc===\"paladin\")) h+=`<p class=\"small\" style=\"color:var(--warn);margin-top:6px\">A arma deste set é de duas mãos: ${c.voc===\"paladin\"?\"aqui só entra a aljava.\":\"não dá para usar escu",
   "k": "x"
@@ -692,7 +716,7 @@
   "k": "x"
  },
  "A carregar o caminho…": {
-  "c": "index.html:  ponto no mapa é a zona aproximada.</p>`:\"\"}`:\"\"}`, cam:`<div data-cam=\"h:${esc(pid)}\"><p class=\"tkload\">A carregar o caminho…</p></div>`, stats:[{k:\"xp\"",
+  "c": "index.html: span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ hunt:()=>`<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx-mapb\">${mapBtn(m[0],m[1],m[2],name,\"",
   "k": "x"
  },
  "A carregar o item…": {
@@ -783,8 +807,16 @@
   "c": "index.html: ; $(\"tkList\").innerHTML = c.tasks.length ? c.tasks.map(t=>`<article class=\"card tk ${t.done?\"done\":\"\"}\" data-tk=\"${t.id}\"><div class=\"tk-h\"><div><span class=\"eyebrow\" style=\"margin:0\">${TKT.find(x=>x[0]===t.t)[1]}${t.q?`",
   "k": "x"
  },
+ "A preparar a Wheel para esta hunt…": {
+  "c": "index.html: t c=C(); if(!c||!hasKey(G.wheel,c.voc)) return \"\"; const ph=`<div class=\"hwh\" data-hwheel=\"${pid}\" data-hd=\"${d||0}\"><p class=\"small muted\" style=\"margin:0\">A preparar a Wheel para esta hunt…</p></div>`; if(!WHD||!CRDV){",
+  "k": "x"
+ },
  "A primeira build chega com {0} pontos (nível {1}).": {
   "c": "index.html: .\"}); else if(nw) steps.push({t:\"Wheel: ainda sem pontos\",d:`A primeira build chega com ${nw.p} pontos (nível ${nw.p+50}).`}); const ch = vd.",
+  "k": "p"
+ },
+ "A primeira build da Wheel chega com {0} pontos (nível {1}).": {
+  "c": "index.html: s=\"hwh-h\"><h5>Wheel e gemas</h5></div><p class=\"small\">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (nível ${nx.p+50}).`:\"\"}</p></div>`; } ",
   "k": "p"
  },
  "A primeira vez que matas o Warden de cada espécie ganhas Charm Points conforme a dificuldade: Harmless 1, Trivial 2, Easy 5, Medium 10, Hard 15, Challenging 30. Todos os que causarem dano recebem o bónus; o progresso aparece no Bestiário.": {
@@ -1039,6 +1071,10 @@
   "c": "index.html: \">${esc(o.base||\"—\")}</p> ${(o.addons||[]).length?`<h4 class=\"sub\">Addons</h4><ol class=\"small\" style=\"margin:0;padding-left:20px;display:grid;gap:6px\">${o.addons.map(a=>`<li><b>${esc(a.n||\"Addon\")}</b>: ${esc(a.how||\"—\"",
   "k": "x"
  },
+ "Adiciona a tua personagem para ver isto ajustado ao teu nível e à tua vocação.": {
+  "c": "index.html: st?\"≈\":\"\"}`; const d=diffFor(pid,c), id=\"hx\"+(++HXN), noc=\"Adiciona a tua personagem para ver isto ajustado ao teu nível e à tua vocação.\"; const stats=[{k:",
+  "k": "x"
+ },
  "Adicionar": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -1090,6 +1126,10 @@
  "Ainda não chegas à primeira build": {
   "c": "index.html:  ${nx.p+50})</p>`:\"\"; if (!cur) $(\"wheelNow\").innerHTML = `<div class=\"wh-main\"><h4>Ainda não chegas à primeira build</h4>${nx?`<p>Com ${nx.p} pontos (nível ${nx.p+50}): ${esc(nx.t)}.</p>`:\"\"}${prog}</div>`; else $(\"whee",
   "k": "x"
+ },
+ "Ainda não há builds da Wheel para {0}.": {
+  "c": "index.html: voc?hxNoChar(noc):hasKey(G.wheel,c.voc)?hwheelHTML(pid,p.d):`<p class=\"small muted\">Ainda não há builds da Wheel para ${esc(G.voc[c.voc].n)}.</p>`, sup:()=>`<sect",
+  "k": "p"
  },
  "Ainda não há hunts para comparar. Abre a ficha de uma hunt e carrega em ＋ Comparar (até 3).": {
   "c": "index.html: :\"esta hunt\"} para ${vn}).</p>`; if(!H.length) return out+`<p class=\"small muted\" style=\"margin:0\">Ainda não há hunts para comparar. Abre a ficha de uma hunt e carrega em ＋ Comparar (até 3).</p>`; if(H.length<2) o",
@@ -1168,11 +1208,15 @@
   "k": "x"
  },
  "Aljava: {0}": {
-  "c": "index.html: onst am=k===\"shield\"?palAmmo(c,set):null; if(am) return `<div class=\"slot-pal\"><button class=\"slot half ${it?\"has\":\"\"}\" data-slot=\"${k}\" ${it?`data-look=\"${it.id}\"`:\"\"} aria-pressed=\"${sel===k}\" aria-label=\"Aljava: ${it?",
+  "c": "index.html: :null; if(am) return `<span class=\"bslot pal2\">${it?`<a class=\"pq\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\" aria-label=\"Aljava: ${esc(it.n)}\">${spr(it)}</a>`:`<span class=\"pq\" t",
   "k": "p"
  },
  "Aljava: {0} · Munição: {1} (ataque {2})": {
   "c": "index.html:  am=k===\"shield\"?palAmmo(c,set):null; if(am){ const t=`Aljava: ${it?it.n:\"vazio (\"+quivTip+\")\"} · Munição: ${am[2]} (ataque ${am[1]})`; return `<b",
+  "k": "p"
+ },
+ "Aljava: {0}.": {
+  "c": "index.html: hips\">${ammoChips(T.wb,c.level,ef)}</span>${T.sb!==\"quiver\"?` <span class=\"tiny muted\">Aljava: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ",
   "k": "p"
  },
  "Also available to Free Accounts. You do not need to accept the mission. Recommended level: {0}.": {
@@ -1323,6 +1367,10 @@
   "c": "index.html: 5.31 também a podes ativar à mão (clique direito + Usar).\", \"Ao ativares a raid nascem 8 criaturas normais ou 4 criaturas influenciadas; as criaturas ficam 10 minutos e depois desaparecem.\", \"Há 10% de hipótes",
   "k": "x"
  },
+ "Ao lado de cada uma, o teu elemento que lhe faz mais dano.": {
+  "c": "index.html: span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ hunt:()=>`<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx-mapb\">${mapBtn(m[0],m[1],m[2],name,\"",
+  "k": "x"
+ },
  "Ao puxares a alavanca abre-se uma janela onde escolhes a dificuldade; a luta só começa a partir dessa janela.": {
   "c": "index.html: . Quest para premium, nível 300 mínimo, recomendado 800+.\", \"Ao puxares a alavanca abre-se uma janela onde escolhes a dificuldade; a luta só começa a partir dessa janela.\", \"O nível mais baix",
   "k": "x"
@@ -1431,6 +1479,14 @@
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Arma: Crypt bile",
   "k": "p"
  },
+ "Arma: {0} · ligação": {
+  "c": "index.html: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
+  "k": "p"
+ },
+ "Arma: {0} · ligação {1}{2}": {
+  "c": "index.html: ${esc(quivTip)}.</span>`:\"\"}</p>`:\"\"} ${W&&W.bond?`<p class=\"tiny muted hset-wb\">Arma: <a href=\"${itemHref(W.n)}\" data-look=\"${W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}",
+  "k": "p"
+ },
  "Armadura": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -1472,11 +1528,11 @@
   "k": "x"
  },
  "ArrowLeft": {
-  "c": "quests/js/app.js: lse); } else if (!$(\"#lightbox\").hidden && (e.key === \"ArrowLeft\" || e.key === \"Arrow",
+  "c": "index.html:  const n = e.key===\"ArrowRight\"?(i+1)%all.length : e.key===\"ArrowLeft\"?(i-1+all.length)%al",
   "k": "x"
  },
  "ArrowRight": {
-  "c": "quests/js/app.js: (\"#lightbox\").hidden && (e.key === \"ArrowLeft\" || e.key === \"ArrowRight\")) lbStep(e.key === ",
+  "c": "index.html: orAll(\"[data-hxt]\")], i=all.indexOf(b); const n = e.key===\"ArrowRight\"?(i+1)%all.length : ",
   "k": "x"
  },
  "ArrowUp": {
@@ -1521,6 +1577,10 @@
  },
  "As que deves ter nas hotkeys agora.": {
   "c": "index.html: \"))}</b> · <a href=\"#\" data-go=\"defesa\">ver custos ›</a>`,d:\"As que deves ter nas hotkeys agora.\"}); /* r6-t5: só os ",
+  "k": "x"
+ },
+ "As resistências das gemas seguem o dano desta hunt.": {
+  "c": "index.html: l e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistências das gemas seguem o dano desta hunt.</span>`:\"\"}</div> <div ",
   "k": "x"
  },
  "As teclas que um jogador usa: cada uma com o mesmo papel nas duas linhas. MAB: no jogo, botão direito numa tecla da barra → {0}; cada toque dispara a 1.ª ação que estiver pronta.": {
@@ -1568,7 +1628,7 @@
   "k": "x"
  },
  "Ataca com": {
-  "c": "index.html: clsShares(h.r.c)).some(k=>k!==\"?\")?\"mista\":na; })), row(\"Ataca com\",H.map(h=>h.cmp&&h.c",
+  "c": "index.html: span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ hunt:()=>`<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx-mapb\">${mapBtn(m[0],m[1],m[2],name,\"",
   "k": "x"
  },
  "Ataca sempre com a arma: rods e wands geram mana desde junho.": {
@@ -1590,6 +1650,10 @@
  "Ataque · +{0} {1}": {
   "c": "index.html: wb,c.level):null; /* r7 */ kv.push([\"atk\",a[1]&&a[1][1]?`Ataque · +${a[1][1]} ${ELN[a[1][0]]}`:\"Ataque\",a[0],mb?`+",
   "k": "p"
+ },
+ "Ataque, runas e poções": {
+  "c": "index.html: lds da Wheel para ${esc(G.voc[c.voc].n)}.</p>`, sup:()=>`<section class=\"fx-sec\"><h4>Ataque, runas e poções</h4>${setupHTML(voc,L,p,h)||`<p class=\"small muted\">Sem dados de supplies para esta hunt.</p>`}</section> <secti",
+  "k": "x"
  },
  "Ataques": {
   "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
@@ -2047,6 +2111,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Cada criatura só pode estar num slot de prey. Usa Prey Wildcards para escolher a criatura certa sem esperar pelo reroll.": {
+  "c": "index.html: \"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>'}; return `<p class=\"hx-lead\">${lead}</p><ol class=\"hx-prey\">${out.map((o,i)=>`<li class=\"hx-pc hx-p-${o.bonus}\"><span class=\"hx-ps\">Slot ${i+1}${i===2?` <span class=\"tiny ",
+  "k": "x"
+ },
  "Cada dificuldade superior tem de ser desbloqueada vencendo a anterior; o desbloqueio é individual, por isso o grupo sobe em conjunto.": {
   "c": "index.html: modo de aprendizagem 'seguro', mas mesmo aí podes morrer.\", \"Cada dificuldade superior tem de ser desbloqueada vencendo a anterior; o desbloqueio é individual, por isso o grupo sobe em conjunto.\", \"Não há limite máx",
   "k": "x"
@@ -2460,7 +2528,7 @@
   "k": "x"
  },
  "Com o evento ({0}): +{1}% XP, de {2} para {3} por hora.": {
-  "c": "index.html: >${fxPreyHTML(pid)}</div></div></div>`, foot:`${h.boost?`<p class=\"tiny muted\">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</p>`:\"\"}${estTxt(h)}${p.",
+  "c": "index.html: &c.world?\"wait\":\"noworld\")}</div></section> ${h.boost?`<p class=\"tiny muted\">Com o evento (${esc(evLabel())}): +${Math.round(h.boost*100)}% XP, de ${fmt(h.xp0)} para ${fmt(h.xp)} por hora.</p>`:\"\"}${estTxt(h)}${p.",
   "k": "p"
  },
  "Com o item base a {0}: cerca de {1} no total (média).": {
@@ -2669,6 +2737,10 @@
  },
  "Conselho rápido": {
   "c": "index.html: >${m[8]} spawns no mapa</span>`:\"\"}`; box.innerHTML = `${tp?`<p class=\"loc\"><span class=\"tag acc\">TibiaPal</span> ${esc(tp[1])}</p>`:\"\"}${m[5]?`<p class=\"loc clamp\"><b>Bestiário:</b> ${esc(m[5])}</p>`:\"\"} ${cls.length?`<",
+  "k": "x"
+ },
+ "Consistente": {
+  "c": "index.html: do já dominas a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistente\",\"Equilíbrio entre d",
   "k": "x"
  },
  "Constructos": {
@@ -3044,7 +3116,7 @@
   "k": "x"
  },
  "Dano de cada elemento": {
-  "c": "index.html: n(\"\"); const rows=g.hs.map((h,i)=>{ const m=ms[i]; return `<div class=\"gmem\"><div class=\"gmem-h\">${VI(h.voc,\"lg\")}<div><b>${esc(m.name)}</b><div class=\"tiny muted\">${esc(G.voc[h.voc].n)} ${m.level} · hunt a partir do ${h",
+  "c": "index.html: ss=\"fx-v\">${fxResHTML(p)}</div></div></div> ${p.eff?`<details class=\"hx-det\"><summary>Dano de cada elemento</summary>${elemHTML(voc,p)}</details>`:\"\"}</section> ",
   "k": "x"
  },
  "Dano elemental na arma": {
@@ -3061,6 +3133,10 @@
  },
  "Dano que vais levar": {
   "c": "index.html: }`:na),H.map(h=>h.cmp&&h.cmp.best?h.cmp.v:null),1), row(\"Dano que vais levar\",H.map(h=>{ if(!CRDV",
+  "k": "x"
+ },
+ "Dano que vais levar:": {
+  "c": "index.html: conselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span class=\"tiny muted\">Dano que vais levar:</span>${top.slice(0,4).map(([e,v])=>`<span class=\"chip c-${e}\">${esc(elName(e))} ${Math.rou",
   "k": "x"
  },
  "Dano recebido por elemento": {
@@ -3109,6 +3185,10 @@
  },
  "Dedication Perks": {
   "c": "index.html: /h5><div class=\"wbox-b\">${b}</div></section>`; return box(\"Dedication Perks\",ded)+box(\"Convictio",
+  "k": "x"
+ },
+ "Defensivo": {
+  "c": "index.html: roteção: o set para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\",\"Proteção máxima: p",
   "k": "x"
  },
  "Defesa": {
@@ -3583,6 +3663,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Elemento a usar": {
+  "c": "index.html: span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ hunt:()=>`<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx-mapb\">${mapBtn(m[0],m[1],m[2],name,\"",
+  "k": "x"
+ },
  "Elemento: todos": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -3668,7 +3752,7 @@
   "k": "x"
  },
  "End": {
-  "c": "index.html: y===\"ArrowDown\"||e.key===\"ArrowUp\"||e.key===\"Home\"||e.key===\"End\"){ if(!open){ if(e.t",
+  "c": "index.html: t\"?(i-1+all.length)%all.length : e.key===\"Home\"?0 : e.key===\"End\"?all.length-1 : -1; ",
   "k": "x"
  },
  "Endgame": {
@@ -3737,6 +3821,10 @@
  },
  "Equilíbrio entre dano e proteção:": {
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Equilíbrio entre dano e proteção:",
+  "k": "x"
+ },
+ "Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt.": {
+  "c": "index.html: a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistente\",\"Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\"",
   "k": "x"
  },
  "Equipa": {
@@ -3931,9 +4019,17 @@
   "c": "index.html: o o que a recomendada tem, pela ordem certa.</p>`; return `<div class=\"card rx-cmp\">${head}<div class=\"rx-cmph\">${pick}<div class=\"rx-bbtn\">${file(\"Ler outra vez\")}<button type=\"button\" class=\"btn small ghost\" data-rxfor",
   "k": "x"
  },
+ "Esta build ainda não ativa nenhum vessel.": {
+  "c": "index.html: wh-s\"><h6>Gemas</h6>${gems?`<ul class=\"whp-l\">${gems}</ul>`:`<p class=\"small muted\" style=\"margin:0\">Esta build ainda não ativa nenhum vessel.</p>`}</div></div></div><",
+  "k": "x"
+ },
  "Esta hunt não exige quests.": {
   "c": "index.html: QBY[id]); } function questsTab(ids){ if(!ids.length) return `<p class=\"small muted\">Esta hunt não exige quests.</p>`; return ids.map(id=",
   "k": "x"
+ },
+ "Esta hunt é difícil para ti ({0}/5): a redução de dano vem primeiro, depois o XP.": {
+  "c": "index.html: a golpe pesa: a redução de dano vem primeiro, depois o XP.`:`Esta hunt é difícil para ti (${d}/5): a redução de dano vem primeiro, depois o XP.`) : mode===\"atk\"",
+  "k": "p"
  },
  "Esta quest não tem coordenadas registadas. Usa o {0} para explorar.": {
   "c": "quests/js/app.js:  const pts = collectPoints(d); if (!pts.length) return `<div class=\"note-box\">Esta quest não tem coordenadas registadas. Usa o <a href=\"#/mapa\">mapa geral</a> para explorar.</div>`; return `<p cla",
@@ -4085,6 +4181,10 @@
  },
  "Executioner's Throw Mastery": {
   "c": "index.html: astery Mastery\":[\"Knight_RevelationMastery_CombatMastery\"], \"Executioner's Throw Mastery\":[\"Knight_Revelation",
+  "k": "x"
+ },
+ "Executioner's Throw acaba as criaturas mais depressa": {
+  "c": "index.html:  dá mais segurança\":bw===\"fast\"&&/Executioner/.test(best.t)?\"Executioner's Throw acaba as criaturas mais depressa\":e!=null?`as criatur",
   "k": "x"
  },
  "Exercise weapons 25% mais caras: normal 434 028 gp, durable 1 562 500 gp, lasting 12 500 000 gp (a calculadora de treino já usa estes preços).": {
@@ -4611,6 +4711,10 @@
   "c": "index.html: )}<b>${esc(whGemName(voc,t))}</b></span>`; const gems=tb([\"Gema\",\"Mods\",\"Onde cai\",\"",
   "k": "x"
  },
+ "Gemas": {
+  "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistê",
+  "k": "x"
+ },
  "Gemas e fragments": {
   "c": "index.html: d>${nf(a)}</td><td>${nf(b)}</td></tr>`).join(\"\")); return `<h3>Gemas e fragments</h3> <div class=\"wgf-g\"><section class=\"card\"><h4>As gemas de ${esc(G.voc[voc].n)}</h4>${gems} <ul class=\"wgf-l\"><li>Antes de revelada, a g",
   "k": "x"
@@ -4775,6 +4879,10 @@
   "c": "index.html: ntrols\"><button class=\"btn\" type=\"submit\">${d.mode===\"edit\"?\"Guardar alterações\":\"Adicionar personag",
   "k": "x"
  },
+ "Guardar nos meus sets": {
+  "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
+  "k": "x"
+ },
  "Guardian": {
   "c": "index.html:  Atelier, Lesser/Regular/Greater Gem) const GEMVN = {knight:\"Guardian\", paladin:\"Marksman\"",
   "k": "x"
@@ -4908,7 +5016,7 @@
   "k": "p"
  },
  "Home": {
-  "c": "index.html: urn; } if(e.key===\"ArrowDown\"||e.key===\"ArrowUp\"||e.key===\"Home\"||e.key===\"End\"){ if",
+  "c": "index.html: : e.key===\"ArrowLeft\"?(i-1+all.length)%all.length : e.key===\"Home\"?0 : e.key===\"End\"?a",
   "k": "x"
  },
  "Horas de sessão": {
@@ -5133,6 +5241,10 @@
  },
  "If you plan to do the Warzones many times, it's worth buying the {0} (always dropped by Deathstrike) to get permanent access to Warzone {1}.": {
   "c": "recolhida: /grimorio/quests/#/quest/bigfoots-burden-quest · ex.: If you plan to do the Warzones many times, it's worth buying the {0} (always dropped by Deathstrike) to get permanent ac",
+  "k": "p"
+ },
+ "Igual ao {0} para o teu nível.": {
+  "c": "index.html: ===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())} para o teu nível.</span>`:\"\"}</p> <div ",
   "k": "p"
  },
  "Ilusionável": {
@@ -5711,6 +5823,10 @@
   "c": "index.html: me:nm,cls:\"sm wic\"})}${esc(nm)}</span><b>${st?`Stage ${st}`:\"Locked\"}</b></button>`; }).",
   "k": "x"
  },
+ "Logo a seguir em XP: {0} XP{1}.": {
+  "c": "index.html: ke(byXp,\"xp\",wXp); take(byHp,\"dmg\",wDmg); take(byXp,\"xp\",x=>`Logo a seguir em XP: ${nf(x.xp)} XP${x.cnt>1?` × ${x.cnt}`:\"\"}.`); } const lead = ",
+  "k": "p"
+ },
  "Loja": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -5897,6 +6013,10 @@
  },
  "Mais dados": {
   "c": "index.html: th||0]]; if(ci.spawn||ci.att||ci.ptype) tabs.push([\"info\",\"Mais dados\",`<dl class=\"ip-dl\">",
+  "k": "x"
+ },
+ "Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa.": {
+  "c": "index.html: nte, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistent",
   "k": "x"
  },
  "Mais pontos": {
@@ -6375,6 +6495,10 @@
   "c": "index.html: rCase(), pg=G.lt[k]!=null||!!EQBYN[k], tag=pg?\"a\":\"span\", t=`Munição para o nível ${c.level}: ${am[2]} (ataque ${am[1]})`; return `<${tag} ",
   "k": "p"
  },
+ "Munição: {0} (ataque {0})": {
+  "c": "index.html: st am=x===\"shield\"?palAmmo(c,S):null; if(am) return `<span class=\"bslot pal2\">${it?`<a class=\"pq\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\" aria-label=\"Aljava: ${esc(it.n)}\">${spr(it)}</a>`:`<span class=\"pq\" title=\"A",
+  "k": "p"
+ },
  "Mystic": {
   "c": "index.html: ight:\"Guardian\", paladin:\"Marksman\", sorcerer:\"Sage\", druid:\"Mystic\", monk:\"Spiritualist",
   "k": "x"
@@ -6705,6 +6829,14 @@
  },
  "No jogo, abre o Party Hunt Analyser, carrega em {0} e cola aqui.": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "No nível {0} cada golpe pesa: a redução de dano vem primeiro, depois o XP.": {
+  "c": "index.html:  × ${x.cnt}`:\"\"}.`); } const lead = mode===\"def\" ? (L<100?`No nível ${L} cada golpe pesa: a redução de dano vem primeiro, depois o XP.`:`Esta hunt é difíci",
+  "k": "p"
+ },
+ "No nível {0} e numa hunt calma ({1}/5) já não precisas de defesa: XP e dano rendem mais.": {
+  "c": "index.html: o de dano vem primeiro, depois o XP.`) : mode===\"atk\" ? `No nível ${L} e numa hunt calma (${d}/5) já não precisas de defesa: XP e dano rendem mais.` : `Nível ${L} numa ",
   "k": "p"
  },
  "No terreno da hunt": {
@@ -7163,6 +7295,10 @@
   "c": "index.html: r} <span>do equipamento</span>`:\"\"})</span>`; const bits=[`Nível <b>${c.level}</b>`]; if(mage) bits.p",
   "k": "p"
  },
+ "Nível {0} numa hunt de dificuldade {1}/5: XP e dano, com redução se alguma criatura bater forte.": {
+  "c": "index.html: {d}/5) já não precisas de defesa: XP e dano rendem mais.` : `Nível ${L} numa hunt de dificuldade ${d}/5: XP e dano, com redução se alguma criatura bater forte.`; const BIC={xp:'<",
+  "k": "p"
+ },
  "Nível {0} recomendado": {
   "c": "à mão (r35): fichas de hunts e bosses (texto montado, shared/fichas.js, aria-label, title)",
   "k": "p"
@@ -7364,7 +7500,7 @@
   "k": "x"
  },
  "O ponto no mapa é a zona aproximada.": {
-  "c": "index.html: \"${esc(pid)}\">Ver spawns no mapa</button></div>${m[3]===\"a\"?`<p class=\"tiny muted\">O ponto no mapa é a zona aproximada.</p>`:\"\"}`:\"\"}`, cam:",
+  "c": "index.html: \"${esc(pid)}\">Ver spawns no mapa</button></div>${m[3]===\"a\"?`<p class=\"tiny muted\">O ponto no mapa é a zona aproximada.</p>`:\"\"}`:\"\"}</div> ",
   "k": "x"
  },
  "O preço do Market está muito acima da referência: as vendas deste mês podem incluir itens com tier.": {
@@ -7462,6 +7598,10 @@
  "Oeste de {0}": {
   "c": "r12: percorrer o site em inglês (Tibia Grimoire)",
   "k": "p"
+ },
+ "Ofensivo": {
+  "c": "index.html: o, consistente, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills ",
+  "k": "x"
  },
  "Olhos e ombreira": {
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
@@ -7847,6 +7987,10 @@
   "c": "index.html:  Cada mod no grau IV dá +1 wheel point.\"], [\"Fragments\",`${t===3?`A ${nm} dá 1–4 Greater Fragments se a partires por revelar, ou 1–5 se a desmontares depois de revelada.`:t===2?`A ${nm} dá 2–8 Lesser Fragments se a parti",
   "k": "x"
  },
+ "Partes da ficha": {
+  "c": "index.html: n(\"\")}</ul>`; } function hxTabsHTML(id,panes,sel){ return `<div class=\"hx\" data-hx=\"${id}\"><div class=\"hx-tabs\" role=\"tablist\" aria-label=\"Partes da ficha\">${HXT.map(([k,l])=>`<button type=\"button\" role=\"tab\" id=\"${id}-t",
+  "k": "x"
+ },
  "Partida": {
   "c": "à mão (r19): textos antigos (notas dos itens, ficha da hunt, guias)",
   "k": "x"
@@ -8167,6 +8311,10 @@
   "c": "quests/js/app.js: e=\"margin-top:10px\"> <div class=\"seg\">${[[\"area\", \"Por zona / acesso\"], [\"quest\", \"Por qu",
   "k": "x"
  },
+ "Porquê: {0}.": {
+  "c": "index.html: ass=\"tag acc\">${esc(wnote(w.note))}</span>`:\"\"}</p>${pk.why?`<p class=\"tiny muted\" style=\"margin:2px 0 0\">Porquê: ${esc(pk.why)}.</p>`:\"\"} ${key",
+  "k": "p"
+ },
  "Port Hope": {
   "c": "index.html: ,31814],[\"Darashia\",33213,32454],[\"Ankrahmun\",33194,32853],[\"Port Hope\",32594,32745],[\"Libe",
   "k": "x"
@@ -8276,7 +8424,7 @@
   "k": "x"
  },
  "Preys": {
-  "c": "index.html: c.world)||\"\",c&&c.world?\"wait\":\"noworld\")}</div>`, tips:`<div class=\"fx-tg\">${c?`<div class=\"fx-charms\"><h5>Charms</h5>${hCharmsHTML(c,G.places[pid],h)}</div>`:\"\"}<div class=\"fx-preys\"><h5>Preys</h5><div data-fxprey=\"${e",
+  "c": "index.html: ements\"],[\"wheel\",\"Wheel\"],[\"sup\",\"Runas e charms\"],[\"prey\",\"Preys\"]]; const HXL=new Ma",
   "k": "x"
  },
  "Preço": {
@@ -8517,6 +8665,10 @@
  },
  "Proteção máxima:": {
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Proteção máxima:",
+  "k": "x"
+ },
+ "Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.": {
+  "c": "index.html: et para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\",\"Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.\"]]; function hsetsHT",
   "k": "x"
  },
  "Proteção prioritária": {
@@ -8987,6 +9139,10 @@
   "c": "quests/js/app.js: Transcrições\", \"properties\": \"Propriedades\", \"resistances\": \"Resistências\", \"immunities\": \"Imu",
   "k": "x"
  },
+ "Resistências da hunt": {
+  "c": "index.html: span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ hunt:()=>`<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx-mapb\">${mapBtn(m[0],m[1],m[2],name,\"",
+  "k": "x"
+ },
  "Resistências das criaturas: base de dados de monstros (percentagens do Cyclopedia), verificada por amostragem na {0}.": {
   "c": "index.html (HTML)",
   "k": "p"
@@ -9109,6 +9265,10 @@
  },
  "Runas": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Runas e charms": {
+  "c": "index.html: \"Hunt\"],[\"set\",\"Set e imbuements\"],[\"wheel\",\"Wheel\"],[\"sup\",\"Runas e charms\"],[\"prey\",\"Preys\"]];",
   "k": "x"
  },
  "Ruse": {
@@ -9263,6 +9423,10 @@
   "c": "index.html: TML(voc,p){ const L=elemList(voc,p); if(!L.length) return `<p class=\"small muted\" style=\"margin:0\">Sem dados de resistência para esta zona.</p>`; const mage=voc==",
   "k": "x"
  },
+ "Sem dados de supplies para esta hunt.": {
+  "c": "index.html: sec\"><h4>Ataque, runas e poções</h4>${setupHTML(voc,L,p,h)||`<p class=\"small muted\">Sem dados de supplies para esta hunt.</p>`}</section> <s",
+  "k": "x"
+ },
  "Sem dados do Market agora.": {
   "c": "index.html: all class=\"tkload\">A carregar…</small>`; else if(!mk) mkt=`<small>Sem dados do Market agora.</small>`; else { const m=m",
   "k": "x"
@@ -9274,6 +9438,10 @@
  "Sem dados do Market de {0} agora: só preços de NPC.": {
   "c": "index.html:  ao Tibia para usares os preços do teu mundo.</span>`:!mkOk?`<span class=\"small muted\">Sem dados do Market de ${esc(w)} agora: só preços de NPC.</span>`:\"\"].filter(Boolean)",
   "k": "p"
+ },
+ "Sem dados do dano destas criaturas: sets pensados para dano físico.": {
+  "c": "index.html: (\"\")}</div>`:`<p class=\"tiny muted\" style=\"margin:0\">${CRDV?\"Sem dados do dano destas criaturas: sets pensados para dano físico.\":\"A analisar o dano ",
+  "k": "x"
  },
  "Sem dados dos ataques desta criatura.": {
   "c": "index.html: esc(cpEn(d)||\"—\")}</td></tr>`).join(\"\")}</tbody></table>` : `<p class=\"small muted\" style=\"margin:0\">Sem dados dos ataques desta criatura.</p>`; const othL = oth",
@@ -9340,7 +9508,7 @@
   "k": "p"
  },
  "Sem mapa desta zona.": {
-  "c": "index.html: ame), head:noCmp?\"\":hcmpBtn(h), map:`${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx",
+  "c": "index.html: `<div class=\"fx-top\"><div class=\"fx-map\">${(m&&huntMap(h))||`<p class=\"small muted\">Sem mapa desta zona.</p>`}${m?`<div class=\"fx",
   "k": "x"
  },
  "Sem medição para {0}: valores de {1}{2} ajustados ao teu dano e ao que cada vocação costuma render.": {
@@ -9463,13 +9631,25 @@
   "c": "index.html: \"small muted\" style=\"grid-column:1/-1\">${set.mode===\"speed\"?\"Set de velocidade: para andar entre hunts, tasks e quests. Valoriza velocidade e Swiftness/Vibrancy nas botas; troca para o de combate antes de puxar.\":`Set de",
   "k": "x"
  },
+ "Set e imbuements": {
+  "c": "index.html: 19v4M1 12h4M19 12h4\"/>'}; const HXT=[[\"hunt\",\"Hunt\"],[\"set\",\"Set e imbuements\"],[\"wheel\",\"Wheel\"],",
+  "k": "x"
+ },
  "Set {0}": {
-  "c": "index.html:  const id=\"s\"+Date.now().toString(36); c.sets.push({id,name:`Set ${c.sets.length+1}`,mode:\"combat\",prot:",
+  "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "p"
  },
  "Sets": {
   "c": "index.html (HTML)",
   "k": "x"
+ },
+ "Sets aconselhados para {0}": {
+  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
+  "k": "p"
+ },
+ "Sets aconselhados para {0} {1}": {
+  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
+  "k": "p"
  },
  "Sets e inventário": {
   "c": "index.html (HTML)",
@@ -9570,6 +9750,10 @@
  "Slot extra": {
   "c": "index.html: s\":\"Troféu\",\"Documents and Papers\":\"Documento\",\"Extra Slot\":\"Slot extra\",\"Liquids\":\"Líquido\"",
   "k": "x"
+ },
+ "Slot {0}{1}": {
+  "c": "index.html: s=\"hx-lead\">${lead}</p><ol class=\"hx-prey\">${out.map((o,i)=>`<li class=\"hx-pc hx-p-${o.bonus}\"><span class=\"hx-ps\">Slot ${i+1}${i===2?` <span class=\"tiny muted\">(Store)</span>`:\"\"}</span> <span class=\"hx-pm\">${crSpr(o.x.",
+  "k": "p"
  },
  "Slots de imbuement": {
   "c": "quests/js/app.js: ets\": \"Ruas\", \"attributes\": \"Atributos\", \"imbuement slots\": \"Slots de imbuement\", \"upgrade classific",
@@ -10155,6 +10339,10 @@
   "c": "r13: site todo em inglês (percorrer com o motor)",
   "k": "p"
  },
+ "Tem mais vida no total: é onde o dano extra poupa mais tempo.": {
+  "c": "index.html: total: ${nf(x.xp)} XP${x.cnt>1?` × ${x.cnt}`:\"\"}.`, wDmg=x=>`Tem mais vida no total: é onde o dano extra poupa mais tempo.`, wRed=x=>x.hit!",
+  "k": "x"
+ },
  "Templo de": {
   "c": "index.html:  · ~${r.c} sqm a pé</span>`; const steps=[[-1,{i:\"home\",t:`Templo de ${r.s}`,d:t?`${t[0]}, ${t[1",
   "k": "x"
@@ -10465,6 +10653,10 @@
  },
  "Tipo de outfit": {
   "c": "index.html (HTML)",
+  "k": "x"
+ },
+ "Tipo de set": {
+  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
   "k": "x"
  },
  "Tipo de tarefa": {
@@ -10875,6 +11067,10 @@
   "c": "index.html: =\"${wkHref(\"feitico\",key)}\">${rune?\"Ver a página da runa ›\":\"Ver a página do feitiço ›\"}</a>`:\"\"}`; } funct",
   "k": "x"
  },
+ "Ver e editar na Wheel ›": {
+  "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistê",
+  "k": "x"
+ },
  "Ver ficha": {
   "c": "index.html: CSEP):Math.round(pct)}%</span>`).join(\" · \") : \"\"; return `<div class=\"bs-r\" data-bsk=\"${esc(r.k)}\"${b.ev?` data-bsev=\"${esc(b.ev)}\"`:\"\"}${b.q?` data-lsx=\"${esc(b.q)}\"`:\"\"}><span class=\"bs-ic\">${crSpr(r.k,44)}</span> <di",
   "k": "x"
@@ -11152,8 +11348,20 @@
   "k": "x"
  },
  "Wheel": {
-  "c": "index.html: .voc]||[]).forEach(w=>{ if(w.p+50<=520) ev.push({l:w.p+50,k:\"Wheel\",t:`${w.p} pontos: $",
+  "c": "index.html: st HXT=[[\"hunt\",\"Hunt\"],[\"set\",\"Set e imbuements\"],[\"wheel\",\"Wheel\"],[\"sup\",\"Runas e ch",
   "k": "x"
+ },
+ "Wheel e gemas": {
+  "c": "index.html: e(pid); if(!pk){ const nx=(G.wheel[c.voc]||[])[0]; return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas</h5></div><p class=\"small\">${nx?`A primeira build da Wheel chega com ${nx.p} pontos (n",
+  "k": "x"
+ },
+ "Wheel e gemas para {0}": {
+  "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistê",
+  "k": "p"
+ },
+ "Wheel e gemas para {0} {1}": {
+  "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistê",
+  "k": "p"
  },
  "Wheel of Destiny": {
   "c": "index.html (HTML)",
@@ -11220,7 +11428,7 @@
   "k": "p"
  },
  "XP (TibiaWiki)": {
-  "c": "index.html: regar o caminho…</p></div>`, stats:[{k:\"xp\",v:xp,l:wiki?\"XP (TibiaWiki)\":\"XP/h\"},{k:\"lo\",v:l",
+  "c": "index.html: nível e à tua vocação.\"; const stats=[{k:\"xp\",v:xp,l:wiki?\"XP (TibiaWiki)\":\"XP/h\"},{k:\"lo\",v:l",
   "k": "x"
  },
  "XP e lucro": {
@@ -11371,12 +11579,20 @@
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "p"
  },
+ "a aljava fica sem imbuement": {
+  "c": "index.html: \"spellbook\"?\"o livro fica sem imbuement\":sr[1].b===\"quiver\"?\"a aljava fica sem imbuement\":\"o escudo fica sem ",
+  "k": "x"
+ },
  "a analisar…": {
   "c": "index.html: }</tr>`; }; const na='<span class=\"muted\">—</span>', wait='<span class=\"muted\">a analisar…</span>'; const rs=H.map(h",
   "k": "x"
  },
  "a arder": {
   "c": "index.html: mbriagado\"],[/\\bcursed\\b/gi,\"amaldiçoado\"],[/\\bburning\\b/gi,\"a arder\"],[/\\belectrified\\b/",
+  "k": "x"
+ },
+ "a armadura fica só com Vampirism": {
+  "c": "index.html: []; if(ar&&ar[2].length===1&&ar[2][0]===\"vamp\") fr.push(\"a armadura fica só com Vampirism\"); if(sr&&!sr[2].len",
   "k": "x"
  },
  "a cada 2 s a atacar: ≈ {0} vezes por hora, Avatar 7 s ({1}% do tempo)": {
@@ -11648,7 +11864,7 @@
   "k": "p"
  },
  "armadura": {
-  "c": "index.html: s por hora de combate. */ const FTSLOT={weapon:\"arma\",armor:\"armadura\",helmet:\"capacete\",l",
+  "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "x"
  },
  "armadura {0}": {
@@ -11689,6 +11905,10 @@
  },
  "asuravaults": {
   "c": "index.html: \"Asuras com mais XP, Norcferatu com menos\",h:[\"asuramirror\",\"asuravaults\",\"asuracitadel\",\"asu",
+  "k": "x"
+ },
+ "ataca com": {
+  "c": "index.html: i?\"loot (TibiaWiki)\":\"lucro/h\"},{k:\"atk\",v:hxAtk(voc,p,h),l:\"ataca com\"},{k:\"lv\",v:`<b>${h.",
   "k": "x"
  },
  "ataque": {
@@ -12508,7 +12728,7 @@
   "k": "x"
  },
  "de vida · {0} XP": {
-  "c": "index.html: pan class=\"muted\">× ${n}</span>`:\"\"}</span>${M[1]>0||M[2]>0?`<span class=\"tiny muted\">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:\"\"}</span></li>`; }",
+  "c": "index.html: pan class=\"muted\">× ${n}</span>`:\"\"}</span>${M[1]>0||M[2]>0?`<span class=\"tiny muted\">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:\"\"}${hxMonEl(k,voc)",
   "k": "p"
  },
  "de {0}": {
@@ -12555,6 +12775,10 @@
   "c": "quests/js/app.js: rice\": \"Preço\", \"creature\": \"Criatura\", \"attack\": \"Ataque\", \"defense\": \"Defesa\", \"level\":",
   "k": "x"
  },
+ "defesa": {
+  "c": "index.html: -kv\"><div><b>${T.arm}</b><span>armadura</span></div>${T.def?`<div><b>${T.def}</b><span>defesa</span></div>`:\"\"}${sk.map(([x,v])",
+  "k": "x"
+ },
  "deliv": {
   "c": "index.html: nst TKT=[[\"bounty\",\"Bounty task\"],[\"kill\",\"Weekly: matar\"],[\"deliv\",\"Weekly: entregar\"]",
   "k": "x"
@@ -12592,7 +12816,7 @@
   "k": "x"
  },
  "dificuldade": {
-  "c": "index.html: )}\" hidden>Hunt muito disputada no teu mundo</span>`:\"\"}`,l:\"dificuldade\"}], pre:`<div da",
+  "c": "index.html: )}\" hidden>Hunt muito disputada no teu mundo</span>`:\"\"}`,l:\"dificuldade\"}]; const panes={ ",
   "k": "x"
  },
  "dificuldade {0}/5": {
@@ -13155,6 +13379,10 @@
   "c": "index.html: upo\",buff:\"buff\",stance:\"stance\",utility:\"utilidade\",summon:\"familiar\"}; const sp = (vd.",
   "k": "x"
  },
+ "fast": {
+  "c": "index.html: t Mastery/:/Executioner/).test(w.t)?1:0, why:dang>=3?\"risk\":\"fast\"}; return {v:0};",
+  "k": "x"
+ },
  "feather": {
   "c": "index.html: \"vibr\") return `${v(\"vibr\")}% de anular paralyze`; if(k===\"feather\") return `+${v(\"feat",
   "k": "x"
@@ -13635,6 +13863,10 @@
   "c": "index.html: ; } // r7: com os guias do Questski const GSC = {h:[\"Hunts\",\"hunt\"],hc:[\"Hunts\",\"lista",
   "k": "x"
  },
+ "hunt de risco alto: Combat Mastery dá mais segurança": {
+  "c": "index.html: [bw]&&eff[bw]!=null?eff[bw]:null; const why = bw===\"risk\"?\"hunt de risco alto: Combat Mastery dá mais segurança\":bw===\"fast\"&&/Execu",
+  "k": "x"
+ },
  "hunts": {
   "c": "index.html:  ST.ui.hf.city=hit; else ST.ui.hf.cls=[hit]; } save(); go(\"hunts\"); if(ST.chars.lengt",
   "k": "x"
@@ -13924,7 +14156,7 @@
   "k": "x"
  },
  "loot (TibiaWiki)": {
-  "c": "index.html: p\",v:xp,l:wiki?\"XP (TibiaWiki)\":\"XP/h\"},{k:\"lo\",v:lo,l:wiki?\"loot (TibiaWiki)\":\"lucro/h\"},{k:\"lv\",",
+  "c": "index.html: p\",v:xp,l:wiki?\"XP (TibiaWiki)\":\"XP/h\"},{k:\"lo\",v:lo,l:wiki?\"loot (TibiaWiki)\":\"lucro/h\"},{k:\"atk\"",
   "k": "x"
  },
  "loot de": {
@@ -14291,6 +14523,10 @@
   "c": "index.html: ><b>${esc(m.n)}</b><span class=\"tag\">${esc(m.c)}</span>${my?`<span class=\"tag acc\">na tua ordem</span>`:\"\"}${c.charms[k]?`<",
   "k": "x"
  },
+ "nada": {
+  "c": "index.html: tle=\"${lab}: ${x===\"shield\"&&c.voc===\"paladin\"?esc(quivTip):\"nada\"}\">${emptyIc(c,x)}</",
+  "k": "x"
+ },
  "nada nesta hunt": {
   "c": "index.html:  <small>${ozTxt(o.oz)} gp/oz</small>`:\"\"}</span>`).join(\"\"):`<span class=\"small muted\">nada nesta hunt</span>`; const pk=`<p cla",
   "k": "x"
@@ -14309,6 +14545,10 @@
  },
  "nearest": {
   "c": "index.html: t\",i===GS.sel)); const a=o[GS.sel]; a.scrollIntoView({block:\"nearest\"}); $(\"gsQ\").setAttr",
+  "k": "x"
+ },
+ "nenhum item deste set tem slots de imbuement.": {
+  "c": "index.html: H.rows.reduce((a,r)=>a+r[2].length,0); if(!n) return hd+'<span class=\"muted\">nenhum item deste set tem slots de imbuement.</span></p>'; const ar=H.row",
   "k": "x"
  },
  "nenhuma": {
@@ -14362,6 +14602,14 @@
  "no set": {
   "c": "index.html: -pressed=\"${own}\">${own?\"tenho ✓\":\"tenho?\"}</button>${inSet?`<span class=\"tag acc\">no set</span>`:`<button class=\"btn",
   "k": "x"
+ },
+ "no vessel": {
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,\"whp-gem\")}<span><span class=\"whp-n\"><b>${whGemName(c.voc,S.vr[x])}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></sp",
+  "k": "x"
+ },
+ "no vessel {0}": {
+  "c": "index.html: span>`)]; const gems=WHDOM.filter(x=>S.vr[x]).map((x,gi)=>`<li>${whGemImg(c.voc,x,S.vr[x],22,\"whp-gem\")}<span><span class=\"whp-n\"><b>${whGemName(c.voc,S.vr[x])}</b><span class=\"tiny muted\">no vessel ${WHDN[x]}</span></sp",
+  "k": "p"
  },
  "noai": {
   "c": "index.html: =>x[0]!==\"ask\"); }); document.documentElement.classList.add(\"noai\"); } /* r1b-t5 */ //",
@@ -14496,7 +14744,7 @@
   "k": "x"
  },
  "nível recomendado": {
-  "c": "index.html: ?\"loot (TibiaWiki)\":\"lucro/h\"},{k:\"lv\",v:`<b>${h.l}+</b>`,l:\"nível recomendado\"}, {k:\"res\",v:",
+  "c": "index.html: :hxAtk(voc,p,h),l:\"ataca com\"},{k:\"lv\",v:`<b>${h.l}+</b>`,l:\"nível recomendado\"}, {k:\"dif\",v:`<",
   "k": "x"
  },
  "nível {0}": {
@@ -14539,8 +14787,16 @@
   "c": "index.html: aPal; ${ELN[best.x]} rende ${best.v}%</span>`:tp&&tp!==best?` <span class=\"tiny muted\">o TibiaPal usa ${ELN[tp.x]} (${tp.v}%)</span>`:\"\"}${pick.imm.lengt",
   "k": "p"
  },
+ "o escudo fica sem imbuement": {
+  "c": "index.html: imbuement\":sr[1].b===\"quiver\"?\"a aljava fica sem imbuement\":\"o escudo fica sem imbuement\"); // uma linha ",
+  "k": "x"
+ },
  "o grupo": {
   "c": "index.html: y?` em ${f.city}`:\"\"}${grp?` para ${ms.length===2?\"os dois\":\"o grupo\"}`:\"\"}${f.cls.length",
+  "k": "x"
+ },
+ "o livro fica sem imbuement": {
+  "c": "index.html: rism\"); if(sr&&!sr[2].length) fr.push(sr[1].b===\"spellbook\"?\"o livro fica sem imbuement\":sr[1].b===\"quiver\"?",
   "k": "x"
  },
  "o melhor set para o nível {0} (BiS)": {
@@ -15075,6 +15331,10 @@
   "c": "index.html: nst hb=$(\"hotbar\"); hb.scrollBy({left:(b.classList.contains(\"prev\")?-.8:.8)*hb.clientW",
   "k": "x"
  },
+ "prey": {
+  "c": "index.html:  e imbuements\"],[\"wheel\",\"Wheel\"],[\"sup\",\"Runas e charms\"],[\"prey\",\"Preys\"]]; const HX",
+  "k": "x"
+ },
  "preço": {
   "c": "index.html: an>preço (gp)</span>${inp(\"p\",x.n+\": preço de cada\",b.v||\"\",\"preço\")}</label></div>`; }",
   "k": "x"
@@ -15372,7 +15632,7 @@
   "k": "x"
  },
  "resistências": {
-  "c": "index.html: b>`,l:\"nível recomendado\"}, {k:\"res\",v:fxResHTML(p),l:\"resistências\"},{k:\"dif\",v:`<span ",
+  "c": "index.html: ML({eff:cr&&cr.el?Object.assign({min:cr.el},cr.el):null}),l:\"resistências\"}, {k:\"dif\",v:",
   "k": "x"
  },
  "resultado": {
@@ -15405,6 +15665,10 @@
  },
  "risco alto: evita ataques por completo": {
   "c": "index.html: li>`); if(p&&p.d>=3&&hasKey(G.charms,\"dodge\")) cards.push(`<li class=\"hch-all\">${charmBadge(\"dodge\")}<span class=\"hch-t\"><b>${CL(\"dodge\")}</b><span class=\"tiny muted\">risco alto: evita ataques por completo</span></span><",
+  "k": "x"
+ },
+ "risk": {
+  "c": "index.html: ?/Combat Mastery/:/Executioner/).test(w.t)?1:0, why:dang>=3?\"risk\":\"fast\"}; return",
   "k": "x"
  },
  "role": {
@@ -16156,7 +16420,7 @@
   "k": "x"
  },
  "title=\"Medido no nível {0}\"": {
-  "c": "index.html: ce, m=pid&&G.hm[pid]; const below=`<b class=\"fx-bl\"${h.Lm?` title=\"Medido no nível ${nf(h.Lm)}\"`:\"\"}>abaixo do nível",
+  "c": "index.html: evel:fxRecL(pid,voc); const below=`<b class=\"fx-bl\"${h.Lm?` title=\"Medido no nível ${nf(h.Lm)}\"`:\"\"}>abaixo do nível",
   "k": "p"
  },
  "todas as vocações": {
@@ -16364,7 +16628,7 @@
   "k": "x"
  },
  "vamp": {
-  "c": "index.html: elmet:[\"void\",wsk], weapon: isMage(c)?[\"void\",\"strike\"]:el?[\"vamp\",\"e_\"+el.el,\"void\",\"",
+  "c": "index.html: ==\"shield\"), fr=[]; if(ar&&ar[2].length===1&&ar[2][0]===\"vamp\") fr.push(\"a armadur",
   "k": "x"
  },
  "vazia": {
@@ -16944,7 +17208,7 @@
   "k": "p"
  },
  "{0} de vida · {1} XP": {
-  "c": "index.html: pan class=\"muted\">× ${n}</span>`:\"\"}</span>${M[1]>0||M[2]>0?`<span class=\"tiny muted\">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:\"\"}</span></li>`; }",
+  "c": "index.html: pan class=\"muted\">× ${n}</span>`:\"\"}</span>${M[1]>0||M[2]>0?`<span class=\"tiny muted\">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:\"\"}${hxMonEl(k,voc)",
   "k": "p"
  },
  "{0} de vida: com ≈ {1} de dano por segundo em {2} (leva {3}% de {4}), ≈ {5} sozinho, ≈ {6} com 4 como tu.": {
@@ -17127,6 +17391,10 @@
   "c": "r15: percorrer o site em inglês (hunts, personagem, quests)",
   "k": "p"
  },
+ "{0} imune": {
+  "c": "index.html: [pk.x]}</span><b>${pk.v}%</b></span>${pk.imm&&pk.imm.length?`<span class=\"tiny warnt\">${esc(pk.imm.join(\", \"))} imune</span>`:\"\"}`; } // preys pe",
+  "k": "p"
+ },
  "{0} itens": {
   "c": "index.html: (q)?0:1)||a.n.length-b.n.length); $(\"ilLead\").textContent=`${L.length} itens`; box.innerHTML = ",
   "k": "p"
@@ -17224,7 +17492,7 @@
   "k": "p"
  },
  "{0} pontos": {
-  "c": "index.html: rde\":\"Build escolhida\"; const tags=w.calc&&!E.t&&!E.dirty?`<span class=\"tag\">${w.p} pontos</span><span class=\"tag acc\">algoritmo</span>`:E.t||E.dirty?`<span",
+  "c": "index.html: f,gi).join(\" + \"))}</span></span></li>`).join(\"\"); return `<div class=\"hwh\" data-hwheel=\"${pid}\"><div class=\"hwh-h\"><h5>Wheel e gemas para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${prof?`<span class=\"tiny muted\">As resistê",
   "k": "p"
  },
  "{0} pontos de promoção": {
@@ -18363,6 +18631,14 @@
   "c": "recolhida: /grimorio/quests/#/quest/the-explorer-society-quest · ex.: {0}[...] we need you to collect some ectoplasm from the corpse of a ghost. [...] Do you think you are ready for that mis",
   "k": "p"
  },
+ "{0}dano quase todo físico: não há imbuement de proteção física": {
+  "c": "index.html: pan></span>`); return hd+parts.join(\" \") +(H.phys?` <span class=\"tiny muted hs-ph\"><i class=\"hs-sep\">· </i>dano quase todo físico: não há imbuement de proteção física${fr.length?\", por isso \"+fr.join(\" e \"):\"\"}</span>`:\"",
+  "k": "p"
+ },
+ "{0}dano quase todo físico: não há imbuement de proteção física{1}": {
+  "c": "index.html: pan></span>`); return hd+parts.join(\" \") +(H.phys?` <span class=\"tiny muted hs-ph\"><i class=\"hs-sep\">· </i>dano quase todo físico: não há imbuement de proteção física${fr.length?\", por isso \"+fr.join(\" e \"):\"\"}</span>`:\"",
+  "k": "p"
+ },
  "{0}fraco ao teu dano · {1} · {2}{3}{4}": {
   "c": "recolhida: /grimorio/#inicio · ex.: {0}fraco ao teu dano · {1} · {2}{3}{4}",
   "k": "p"
@@ -18381,6 +18657,10 @@
  },
  "{0}s não podem usar este feitiço.": {
   "c": "index.html: .voc))} chega lá ao nível ${s.l} (faltam ${s.l-c.level}).`):`${esc(VOCN(c.voc))}s não podem usar este feitiço.`}</p>`:\"\"}</section>",
+  "k": "p"
+ },
+ "{0}taxas do altar: {1} gp a cada 20 h": {
+  "c": "index.html: .length?\", por isso \"+fr.join(\" e \"):\"\"}</span>`:\"\") +` <span class=\"tiny muted hs-fee\"><i class=\"hs-sep\">· </i>taxas do altar: ${nf(n*TFEE[imTier(c)])} gp a cada 20 h</span></p>`; }; const panes=H",
   "k": "p"
  },
  "{0}{1} Gem": {
@@ -18529,6 +18809,10 @@
  },
  "· arm {0}": {
   "c": "index.html: ?` · ${hands(it)}`:\"\"}${it.l?` · nível ${it.l}`:\"\"}${it.arm?` · arm ${it.arm}`:\"\"}` : \"\"; /* -----",
+  "k": "p"
+ },
+ "· as criaturas levam {0}%": {
+  "c": "index.html: {W.id}\">${esc(W.n)}</a> · ligação ${chip(W.bond)}${wv!=null?` · as criaturas levam ${wv}%`:\"\"}</p>`:\"\"} ",
   "k": "p"
  },
  "· até T": {
@@ -18777,6 +19061,18 @@
  },
  "Área: {0} {1}{2}{3}{4}": {
   "c": "index.html: ?show.reduce((m,x)=>val(x)>val(m)?x:m):null; const one=x=>`<span class=\"hs-sk\">Área: ${ln(x[1])} <b>+${x[3]}</b>${x[2]!==\"physical\"?` ${chip(x[2])}`:\"\"}${ev(x)!=null?` <b>${ev(x)}%</b>`:\"\"}${x===top?' <span class=\"tag ok",
+  "k": "p"
+ },
+ "É a criatura que mais aparece.": {
+  "c": "index.html: e${eh>0?` (${Math.round(x.hit/eh*100)}% da tua vida)`:\"\"}.`:`É a criatura que mais aparece.`; if(mode===\"def\")",
+  "k": "x"
+ },
+ "É a que bate mais forte: até {0} por golpe{1}.": {
+  "c": "index.html: de o dano extra poupa mais tempo.`, wRed=x=>x.hit!=null?`É a que bate mais forte: até ${nf(x.hit)} por golpe${eh>0?` (${Math.round(x.hit/eh*100)}% da tua vida)`:\"\"}.`:`É a criatura que m",
+  "k": "p"
+ },
+ "É a que dá mais XP no total: {0} XP{1}.": {
+  "c": "index.html: d(x.k); out.push({x,bonus,why:why(x)}); } }; const wXp=x=>`É a que dá mais XP no total: ${nf(x.xp)} XP${x.cnt>1?` × ${x.cnt}`:\"\"}.`, wDmg=x=>`Tem mais ",
   "k": "p"
  },
  "És um conselheiro experiente de Tibia (servidores oficiais) a ajudar um jogador português. Responde em português europeu (tu), direto e prático, no máximo ~220 palavras. Usa estes dados validados; se algo pode ter mudado ou não tens certeza, diz isso em vez de inventar. DADOS (JSON): {0} PERGUNTA:": {
