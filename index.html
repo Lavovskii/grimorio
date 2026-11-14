@@ -2512,10 +2512,9 @@ html[data-ui="modern"] main{view-transition-name:mdmain}
 
 /* ======================= primeira visita ======================= */
 .ob-art{width:min(280px,72%);margin:6px auto 4px;overflow:visible}
-.brand .sig-img{width:auto;height:34px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
-.home-logo{display:flex;justify-content:center;margin:0 0 14px}
-.home-logo img{display:block;width:min(190px,48vw);height:auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55))}
-@media (max-width:640px){.home-logo img{width:min(140px,42vw)}.brand .sig-img{height:30px}}
+.brand .brand-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.brand .sig-img{width:auto;height:54px;margin-block:-8px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+@media (max-width:640px){.brand .sig-img{height:44px}}
 .ob-logo{display:block;width:min(300px,78%);height:auto;margin:4px auto 8px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55))}
 .ob-art .book{animation:mdFloat 5s ease-in-out infinite;transform-origin:center}
 @keyframes mdFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
@@ -3672,7 +3671,7 @@ html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
 
 <header class="bar">
   <div class="in">
-    <div class="brand"><img class="sig sig-img" src="shared/logo-grimoire-mark.webp?v=20261106d" width="154" height="96" alt="" aria-hidden="true"><b>Tibia Grimoire</b></div>
+    <div class="brand"><img class="sig sig-img" src="shared/logo-grimoire-nav.webp?v=20261114a" width="127" height="120" alt="" aria-hidden="true"><b class="brand-sr">Tibia Grimoire</b></div>
     <nav class="sitesw" aria-label="Mudar de site"><a href="./" aria-current="page" title="Hunts, builds, equipamento e wiki"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M5 16a4 4 0 0 1 4-4h11"/></svg><span>Tibia Grimoire</span></a><a href="quests/" id="swQuests" title="Guias de quests passo a passo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h11a2 2 0 0 1 2 2v1H9M7 3a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h10a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-4 0"/><path d="M9 8h7M9 12h7"/></svg><span>Questski</span></a></nav>
     <div class="chars" id="chars" role="group" aria-label="Personagens"></div>
     <div class="charsw" id="charSw"></div>
@@ -3697,7 +3696,6 @@ html.fx-lite[data-ui="modern"] a.td-t:hover{transform:none}
 
     <!-- INÍCIO -->
     <section class="panel" data-p="inicio">
-      <div class="home-logo"><img src="shared/logo-grimoire.webp?v=20261106c" width="600" height="565" alt="Tibia Grimoire"></div>
       <div class="card hero">
         <div class="ring"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mdRingGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6C06A"/><stop offset=".5" stop-color="#B08034"/><stop offset="1" stop-color="#C8442E"/></linearGradient></defs><circle cx="50" cy="50" r="44" fill="none" stroke="var(--sunk)" stroke-width="8"/><circle id="ringProg" cx="50" cy="50" r="44" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" stroke-dasharray="276.46" stroke-dashoffset="276.46"/></svg><div class="lv"><div><b id="lvNum">—</b><span>nível</span></div></div></div>
         <div class="who">
