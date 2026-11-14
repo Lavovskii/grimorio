@@ -130,8 +130,9 @@ kbd { font-family: var(--font-mono); }
 @keyframes tbTorch { 0% { opacity: .55; transform: scale(.94); } 35% { opacity: .85; } 60% { opacity: .7; transform: scale(1.04); } 100% { opacity: 1; transform: scale(.98); } }
 html.fx-lite .brand::before { animation: none; opacity: .8; }
 .brand .sig { position: relative; width: 28px; height: 28px; flex: none; color: #E6C06A; }
-.brand .sig-img { width: auto; height: 34px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
-@media (max-width: 640px) { .brand .sig-img { height: 30px; } }
+.brand .brand-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.brand .sig-img { width: auto; height: 54px; margin-block: -8px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
+@media (max-width: 640px) { .brand .sig-img { height: 44px; } }
 .brand b { position: relative; font-family: var(--font-head); font-size: 22px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; color: #F2D68C; text-shadow: 0 1px 0 #000, 0 2px 6px rgba(0, 0, 0, .6); }
 .search {
   margin-left: auto; position: relative; display: flex; align-items: center; gap: 10px;
