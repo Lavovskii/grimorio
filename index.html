@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261122a" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261111a"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script src="shared/i18n.js?v=20261122b" data-c data-q></script><script src="shared/nav.js?v=20261028a"></script><script src="shared/rotacoes.js?v=20261026a"></script><script src="shared/bosses.js?v=20261111a"></script><script src="shared/fichas.js?v=20261110g"></script><script src="shared/minimapa.js?v=20261110c"></script></head><body>
 <title>Tibia Grimoire</title>
 <meta name="description" content="Hunts de Tibia para o teu nível e vocação: onde caçar, com que set, que elemento, quanto rende e como lá chegar. Builds, Wheel, charms, imbuements, quests e wiki com preços do Market.">
 <link rel="canonical" href="https://tibiagrimoire.me/">
@@ -463,8 +463,10 @@ body.noch .hcmp-tray{display:none!important}
 html[data-ui="modern"] .hnx-l0 li{background:linear-gradient(180deg,rgba(201,164,90,.10),rgba(201,164,90,.03));border-color:rgba(201,164,90,.2);border-radius:4px}
 html[data-ui="modern"] .hnx-l b{font-family:var(--tb-num),var(--sans);font-weight:700}
 .cr-sets .hsets{border:0;padding:0;background:none}.cr-sets .hsets-h h5{display:none}
+.cr-hx .hx-tabs{position:static;margin:0;padding:6px}.cr-hx .hx-p{padding-top:4px}
+.hnx-nx{grid-column:2/-1;margin-top:-2px}.hnx-nx a{white-space:nowrap}
 .hx{display:grid;gap:14px;min-width:0}
-.hx-tabs{position:sticky;top:-18px;z-index:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:0 -6px;padding:6px 50px 6px 6px;background:var(--surface);border-bottom:1px solid var(--line)}
+.hx-tabs{position:sticky;top:-18px;z-index:1;display:grid;grid-template-columns:repeat(var(--hxn,5),minmax(0,1fr));gap:4px;margin:0 -6px;padding:6px 50px 6px 6px;background:var(--surface);border-bottom:1px solid var(--line)}
 .hx-tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:56px;padding:6px 4px;border:1px solid transparent;border-radius:10px;background:none;color:var(--muted);font:600 12px/1.15 var(--sans);text-align:center;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s}
 .hx-tabs button svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .hx-tabs button:hover{color:var(--ink);background:var(--surface-2)}
@@ -45047,7 +45049,7 @@ function elPick(voc,p,how,L){ L=L||elemList(voc,p); const best=L.filter(r=>r.mai
 const CLS_PT = {Demon:"Demónios",Undead:"Mortos-vivos",Dragon:"Dragões",Human:"Humanos",Humanoid:"Humanoides",Elemental:"Elementais",Lycanthrope:"Licantropos",Magical:"Mágicos",Mammal:"Mamíferos",Reptile:"Répteis",Vermin:"Vermes e insetos",Amphibic:"Anfíbios",Aquatic:"Aquáticos",Bird:"Aves",Construct:"Constructos","Extra Dimensional":"Extradimensionais",Fey:"Fadas",Giant:"Gigantes",Inkborn:"Inkborn",Plant:"Plantas",Slime:"Gosmas"};
 const clsName = c => CLS_PT[c]||c;
 const monCls = k => { const i=(G.mc||{})[k]; return i==null?null:G.mcn[i]; };
-const huntMons = pid => ((G.pm[pid]||{}).h||[]).filter(([k])=>G.mon[k] && !G.mon[k][7]);
+const huntMons = pid => String(pid).startsWith("cr:") ? [[String(pid).slice(3),1]].filter(([k])=>G.mon[k]) : ((G.pm[pid]||{}).h||[]).filter(([k])=>G.mon[k] && !G.mon[k][7]);
 // peso de cada criatura no spawn = XP × quantidade (quantidade desconhecida conta como 1)
 const monW = ([k,n]) => (G.mon[k][2]||0)*Math.max(n||0,1);
 const SHARES = {};
@@ -45673,7 +45675,8 @@ function fxDiffWait(){ if(CRDV||FXDW) return; FXDW=true; crdLoad().then(()=>fxDi
 function fxDiffSync(root){ const c=C();
   root.querySelectorAll("[data-fxd]").forEach(el=>{ const d=diffFor(el.dataset.fxd,c); el.innerHTML=el.dataset.fxdc?`dificuldade ${d.n}/5`:diffHTML(d.n,'<i data-fxdok hidden></i>'); });
   root.querySelectorAll("[data-fxprey]").forEach(el=>{ el.innerHTML=fxPreyHTML(el.dataset.fxprey); });
-  root.querySelectorAll("[data-hxprey]").forEach(el=>{ el.innerHTML=hxPreyHTML(el.dataset.hxprey); }); }
+  root.querySelectorAll("[data-hxprey]").forEach(el=>{ el.innerHTML=hxPreyHTML(el.dataset.hxprey); });
+  root.querySelectorAll("[data-crprey]").forEach(el=>{ el.innerHTML=crPreyHTML(el.dataset.crprey); }); }
 // parte D: a criatura principal da hunt (XP × quantidade no G.pm, sem bosses) está nos 10 % mais mortos da semana no mundo da personagem
 // shortcut: o plural do TibiaData só pelo kPlural (cyclopes, werewolves… ficam sem nota); usar os plurais do _dev/tibiadata.py se fizer falta
 function fxKstFill(box){ const c=C(), w=c&&c.world, pid=box.dataset.fxkst; if(!w) return;
@@ -45748,9 +45751,9 @@ function hxPreyHTML(pid){ const c=C(), voc=c?c.voc:fxVoc(), L=c?c.level:fxRecL(p
 function hxCreatures(pid,voc){ const hl=((G.pm[pid]||{}).h||[]).filter(([k])=>hasKey(G.mon,k));
   if(!hl.length) return `<p class="small muted">Sem dados de criaturas para esta zona.</p>`;
   return `<ul class="fx-ml hx-ml">${hl.map(([k,n])=>{ const M=G.mon[k]; return `<li>${crSpr(k,44)}<span class="fx-mn"><span>${mlink(k,esc(M[0]))}${M[7]?' <span class="tag gold">boss</span>':""}${n>1?` <span class="muted">× ${n}</span>`:""}</span>${M[1]>0||M[2]>0?`<span class="tiny muted">${nf(M[1])} de vida · ${nf(M[2])} XP</span>`:""}${hxMonEl(k,voc)}</span></li>`; }).join("")}</ul>`; }
-function hxTabsHTML(id,panes,sel){
-  return `<div class="hx" data-hx="${id}"><div class="hx-tabs" role="tablist" aria-label="Partes da ficha">${HXT.map(([k,l])=>`<button type="button" role="tab" id="${id}-t-${k}" aria-controls="${id}-p-${k}" data-hxt="${k}" aria-selected="${k===sel}" tabindex="${k===sel?0:-1}"><svg viewBox="0 0 24 24" aria-hidden="true">${HXI[k]}</svg><span>${l}</span></button>`).join("")}</div>
-    ${HXT.map(([k])=>`<div class="hx-p" role="tabpanel" id="${id}-p-${k}" aria-labelledby="${id}-t-${k}" data-hxp="${k}"${k===sel?"":" hidden"}${k===sel||k==="hunt"?"":' data-hxl="1"'}>${k===sel||k==="hunt"?panes[k]():""}</div>`).join("")}</div>`; }
+function hxTabsHTML(id,panes,sel,T){ T=T||HXT;
+  return `<div class="hx" data-hx="${id}"><div class="hx-tabs" role="tablist" aria-label="Partes da ficha" style="--hxn:${T.length}">${T.map(([k,l])=>`<button type="button" role="tab" id="${id}-t-${k}" aria-controls="${id}-p-${k}" data-hxt="${k}" aria-selected="${k===sel}" tabindex="${k===sel?0:-1}"><svg viewBox="0 0 24 24" aria-hidden="true">${HXI[k]}</svg><span>${l}</span></button>`).join("")}</div>
+    ${T.map(([k])=>`<div class="hx-p" role="tabpanel" id="${id}-p-${k}" aria-labelledby="${id}-t-${k}" data-hxp="${k}"${k===sel?"":" hidden"}${k===sel||k==="hunt"?"":' data-hxl="1"'}>${k===sel||k==="hunt"?panes[k]():""}</div>`).join("")}</div>`; }
 function hxGo(b,focus){ const box=b.closest(".hx"); if(!box) return; const k=b.dataset.hxt; if(ST.ui.htab!==k){ ST.ui.htab=k; save(); }
   box.querySelectorAll("[data-hxt]").forEach(x=>{ const on=x===b; x.setAttribute("aria-selected",String(on)); x.tabIndex=on?0:-1; });
   box.querySelectorAll("[data-hxp]").forEach(p=>{ const on=p.dataset.hxp===k; p.hidden=!on; if(on&&p.dataset.hxl){ delete p.dataset.hxl; const f=(HXL.get(box.dataset.hx)||{})[k]; if(f){ p.innerHTML=f(); initRoutes(p); fxInit(p); } } });
@@ -47390,7 +47393,7 @@ function hCharmsHTML(c,p,h){ const CL=k=>`<a href="#charms" data-go="charms" dat
   if(p&&p.d>=3&&hasKey(G.charms,"dodge")) cards.push(`<li class="hch-all">${charmBadge("dodge")}<span class="hch-t"><b>${CL("dodge")}</b><span class="tiny muted">risco alto: evita ataques por completo</span></span></li>`);
   return `<ul class="hch">${cards.join("")}</ul>`; }
 function whPick(voc,pts,pid,dang){ const ws=(G.wheel[voc]||[]).filter(w=>w.p<=pts); if(!ws.length) return null;
-  const top=ws[ws.length-1].p, eff=pid?(G.places[pid]||{}).eff||null:null;
+  const top=ws[ws.length-1].p, eff=pid?plOf(pid).eff||null:null;
   const sc=w=>{ const n=String(w.note||"");
     if(voc==="sorcerer"&&n){ const els=["energy","fire","death"].filter(e=>new RegExp(e,"i").test(n)); let v=Math.max(...els.map(e=>eff&&eff[e]!=null?eff[e]:100)); if(/\(TH\)/.test(n)) v-=3; return {v, why:eff&&els.length?els.sort((a,b)=>(eff[b]??100)-(eff[a]??100))[0]:null}; }
     if(voc==="paladin"&&n){ if(/resistant/i.test(n)) return {v:eff&&eff.physical!=null&&eff.physical<90?300:0, why:"physical"}; if(/bossing/i.test(n)) return {v:-1}; if(/holy/i.test(n)) return {v:eff&&eff.holy!=null?eff.holy:100, why:"holy"}; if(/physical/i.test(n)) return {v:eff&&eff.physical!=null?eff.physical:100, why:"physical"}; }
@@ -47583,7 +47586,9 @@ function palAmHalf(c,am){ const k=am[2].toLowerCase(), pg=G.lt[k]!=null||!!EQBYN
 // SCW = quanto vale o dano e a proteção em cada vocação, calibrado com as listas de equipamento do TibiaPal: a 1:1 um anel só de
 // proteção (Prismatic ring) ganhava aos anéis de classe do nível 400 em todos os magos e no paladino. Servem para comparar itens,
 // não para prever o dano. Os modos pesam D, P e a velocidade (SCMODE). O jogador vê a nota 0–100 do notaItem, não este valor.
-const SCMODE={combat:[1,1,1],bal:[1,1,1],off:[1.5,.5,1],def:[.6,1.6,1],speed:[.3,.3,10]};
+/* r38 */ // off = best in slot de dano (a proteção só desempata), bal = metade dano e metade proteção, def = best in slot de proteção
+// contra o dano da hunt ou da criatura (o dano só desempata); nestes 3 modos o peso da vocação (SCW) não conta
+const SCMODE={combat:[1,1,1],bal:[1,1,1],off:[1,.03,.25],def:[.03,1,.25],dmg:[1,0,0],prot:[0,1,0],speed:[.3,.3,10]};
 const SCW={knight:[1,1.1],monk:[1.5,.8],paladin:[1.5,.8],druid:[1.6,.8],sorcerer:[1.6,.8]}; // [dano, proteção] no modo
 const SCML=9; // multiplicador do ML nos feitiços (nível/5 + SCML × ML)
 const SCMLS={knight:.03,paladin:.3,monk:.15,druid:1,sorcerer:1}; // parte do dano que vem do ML (paladino: holy, Divine Barrage desde junho de 2026)
@@ -47607,7 +47612,7 @@ function scBase(c){ const {L,sk,ml}=chStats(c), v=c.voc, k=v==="paladin"?.09:.08
 const scPhys=(B,A)=>B.spl*(2.05*(B.sk+2*A)+B.L/5)/B.spe+(1-B.spl)*(B.k*A*B.sk+B.L/5)/B.aut;
 function scoreItem(c,it,mode,prot,eff){
   if(it.ns||it.cu) return null;
-  const B=scBase(c), v=c.voc, M=SCMODE[mode]||SCMODE.combat, W=SCW[v]||[1,1], rs=relSkills(c), speed=mode==="speed", P0=scPF(c);
+  const B=scBase(c), v=c.voc, M=SCMODE[mode]||SCMODE.combat, W=["off","bal","def","dmg","prot"].includes(mode)?[1,1]:SCW[v]||[1,1], rs=relSkills(c), speed=mode==="speed", P0=scPF(c);
   const pf = prot&&typeof prot==="object" ? prot : prot ? Object.assign({},P0,{[prot]:(P0[prot]||0)+.5}) : P0, ph=pf.physical||0;
   const skv=n=>100*(1-B.mls)*n*(B.spl*2.05/B.spe+(1-B.spl)*B.k*B.At/B.aut), mlv=n=>100*SCML*n/B.mag;
   let D=0,P=0,S=0,X=0;
@@ -47661,9 +47666,12 @@ function slotTop(c,slot,mode,prot,set,eff){ const w=setWeapon(set);
   if(NOTAC.has(key)) return NOTAC.get(key); if(NOTAC.size>400) NOTAC.clear();
   const r=ranked(c,slot,mode||"combat",prot||"",it=>it.l<=c.level&&!it.cu&&!it.chg&&!(it.dur&&it.dur<900),set||{slots:{}},eff)[0], b=r&&r.s>0?r.s:null; NOTAC.set(key,b); return b; }
 function notaItem(c,it,s,mode,prot,set,eff){ if(s==null||!it) return null; const b=slotTop(c,it.s,mode,prot,set,eff); return b?Math.max(0,Math.round(100*s/b)):null; }
-function ranked(c,slot,mode,prot,f,set,eff){
-  return allItems().filter(it=>slotFits(c,it,slot,set)&&canUse(c,it)&&(!f||f(it))).map(it=>({it,s:scoreItem(c,it,mode,prot,eff)}))
-    .sort((a,b)=>((b.s??-1)-(a.s??-1)) || b.it.l-a.it.l);
+/* r38 */ // modo bal (set consistente): 50 % da nota = dano em % do melhor dano do slot, 50 % = proteção em % da melhor proteção do slot
+function ranked(c,slot,mode,prot,f,set,eff){ const L=allItems().filter(it=>slotFits(c,it,slot,set)&&canUse(c,it)&&(!f||f(it)));
+  let R; if(mode==="bal"){ const d=L.map(it=>scoreItem(c,it,"dmg",prot,eff)), p=L.map(it=>scoreItem(c,it,"prot",prot,eff)), mx=a=>Math.max(0,...a.filter(x=>x!=null)), md=mx(d), mp=mx(p), n=(x,m)=>m>0&&x>0?x/m:0;
+    R=L.map((it,i)=>({it,s:d[i]==null?null:Math.round(5000*(n(d[i],md)+n(p[i],mp)))/100})); }
+  else R=L.map(it=>({it,s:scoreItem(c,it,mode,prot,eff)}));
+  return R.sort((a,b)=>((b.s??-1)-(a.s??-1)) || b.it.l-a.it.l);
 }
 const spr = it => it && it.ix>=0 ? `<span class="spr" style="background-position:-${(it.ix%G.spriteCols)*32}px -${Math.floor(it.ix/G.spriteCols)*32}px" aria-hidden="true"></span>` : "";
 const hands = it => it && it.s==="weapon" && !it.cu ? (it.h2?"duas mãos":"uma mão") : "";
@@ -48301,7 +48309,9 @@ let CRDV=null, CRDP=null;
 function crdLoad(){ return CRDP||(CRDP=dsafe("crdmg").then(d=>{ CRDV=d||{}; return CRDV; })); }
 /* r37 */ // sets contra uma criatura: pid "cr:<chave>" funciona como uma hunt só com essa criatura (perfil de dano do crdmg.json e
 // resistências da criatura); plOf devolve o G.places da hunt ou esse lugar virtual
-function plOf(pid){ const s=String(pid||""); if(s.startsWith("cr:")){ const k=s.slice(3); return {n:(G.mon[k]||[])[0]||cap1(k), eff:crDmg(k,null), mons:[k]}; } return G.places[pid]||{}; }
+const CRDC=new Map(); // r38: dificuldade base de uma criatura = a mais baixa das hunts onde aparece (2 se não aparece em nenhuma)
+function crD(k){ if(!CRDC.has(k)){ const ds=huntsWith(k).map(p=>+G.places[p].d||0).filter(x=>x>0); CRDC.set(k,ds.length?Math.min(...ds):2); } return CRDC.get(k); }
+function plOf(pid){ const s=String(pid||""); if(s.startsWith("cr:")){ const k=s.slice(3); return {n:(G.mon[k]||[])[0]||cap1(k), eff:crDmg(k,null), mons:[k], d:crD(k)}; } return G.places[pid]||{}; }
 function huntProfile(pid){
   if(!CRDV) return null;
   const pm=String(pid).startsWith("cr:")?[[String(pid).slice(3),1]]:(G.pm[pid]||{}).h||[], list=pm.length?pm:((plOf(pid).mons)||[]).map(k=>[String(k).toLowerCase(),1]); const acc={}; let tot=0;
@@ -48335,7 +48345,7 @@ function huntImbs(c,pid,S){
   return {set,ctx,rows,el,phys:!!pf&&!top};
 }
 /* r36 */ // aba Set e imbuements da ficha da hunt: os 3 sets (ofensivo, consistente, defensivo) com imbuements
-const HSM=[["off","Ofensivo","Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa."],["bal","Consistente","Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt."],["def","Defensivo","Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa."]];
+const HSM=[["off","Ofensivo","Best in slot de dano: o que dá mais dano no teu nível em cada slot. A proteção só desempata."],["bal","Consistente","Metade dano, metade proteção contra o dano que vais levar: o set para usar todos os dias."],["def","Defensivo","Best in slot de proteção contra o dano que vais levar: para aprender, puxar mais ou quando a vida desce depressa."]];
 function hsetsHTML(pid){
   const c=C(); if(!c) return ""; rebuildIndex();
   if(!CRDV) crdLoad().then(()=>document.querySelectorAll("[data-hsets]").forEach(x=>{ x.outerHTML=hsetsHTML(x.dataset.hsets); hnextKick(); }));
@@ -48370,23 +48380,30 @@ function hsetsHTML(pid){
       <div class="hnx" data-hnext="${esc(pid)}|${k}"><h6>Próximos upgrades</h6><p class="tiny muted" style="margin:0">A calcular…</p></div></div>`; }).join("");
   hnextKick();
   return `<div class="hsets" data-hsets="${esc(pid)}"><div class="hsets-h"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class="hs-chips"><span class="tiny muted">Dano que vais levar:</span>${top.slice(0,4).map(([e,v])=>`<span class="chip c-${e}">${esc(elName(e))} ${Math.round(v*100)}%</span>`).join("")}</div>`:`<p class="tiny muted" style="margin:0">${CRDV?"Sem dados do dano destas criaturas: sets pensados para dano físico.":"A analisar o dano das criaturas…"}</p>`}</div>
-    <div class="hset-tabs" role="tablist" aria-label="Tipo de set">${HSM.map(([k,t])=>`<button type="button" role="tab" data-hsel="${k}" aria-selected="${k===sel}"><svg viewBox="0 0 24 24" aria-hidden="true">${HSI[k]}</svg><span>${t}</span></button>`).join("")}</div>${panes}${(G.places[pid]||{}).eff?`<p class="tiny muted hset-note">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:""}</div>`;
+    <div class="hset-tabs" role="tablist" aria-label="Tipo de set">${HSM.map(([k,t])=>`<button type="button" role="tab" data-hsel="${k}" aria-selected="${k===sel}"><svg viewBox="0 0 24 24" aria-hidden="true">${HSI[k]}</svg><span>${t}</span></button>`).join("")}</div>${panes}${plOf(pid).eff?`<p class="tiny muted hset-note">${String(pid).startsWith("cr:")?"A arma de cada set conta com o elemento que esta criatura leva.":"A arma de cada set conta com o elemento que as criaturas desta hunt levam."}</p>`:""}</div>`;
 }
-/* r37 */ // «Próximos upgrades»: para cada slot, o 1.º item que entra no mesmo set (mesmo modo, mesma hunt ou criatura) num nível acima.
-// Corre o huntSet nos próximos níveis de itens da vocação (até 16 níveis distintos); um set de cada vez, fora do fio do clique.
-function hnextLv(c){ const L=c.level, ls=new Set(); allItems().forEach(it=>{ if(it.l>L&&!it.ns&&DOLL.some(([k])=>k&&k===it.s)&&canUse(c,it)) ls.add(it.l); }); return [...ls].sort((a,b)=>a-b).slice(0,16); }
-function hnextHTML(c,pid,k){ const S=huntSet(c,pid,k), lv=hnextLv(c), out={};
-  for(const L2 of lv){ const S2=huntSet(Object.assign({},c,{level:L2}),pid,k);
-    DOLL.forEach(([x])=>{ if(!x||x==="bag"||out[x]) return; const a=S.slots[x]&&S.slots[x].id, b=S2.slots[x]&&S2.slots[x].id, it=b&&BYID[b]; if(b&&b!==a&&it&&it.l>c.level) out[x]=it; });
-    if(DOLL.every(([x])=>!x||x==="bag"||out[x])) break; }
-  const rows=DOLL.filter(([x])=>x&&x!=="bag").map(([x])=>{ const it=out[x], lab=slotLab(c,x);
-    return it?`<li><a class="hnx-i" href="${itemHref(it.n)}" data-look="${it.id}">${spr(it)}</a><span class="hnx-t"><span class="tiny muted">${esc(lab)}</span><a href="${itemHref(it.n)}" data-look="${it.id}">${esc(it.n)}</a></span><span class="hnx-l"><b>${it.l-c.level}</b><span class="tiny muted">níveis · nível ${it.l}</span></span></li>`:""; }).filter(Boolean);
-  const last=lv.length?lv[lv.length-1]:null;
-  return `<h6>Próximos upgrades</h6>${rows.length?`<ul class="hnx-l0">${rows.join("")}</ul>`:""}<p class="tiny muted" style="margin:0">${rows.length?`Itens que este set passa a usar quando subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:""}.`:last?`Nenhum slot muda até ao nível ${last}.`:"Já tens o melhor de cada slot."}</p>`; }
-let HNXT=0;
-function hnextKick(){ clearTimeout(HNXT); HNXT=setTimeout(function step(){ const c=C(), el=document.querySelector("[data-hnext]:not([data-hnok])"); if(!c||!el) return;
-  el.dataset.hnok="1"; const [pid,k]=el.dataset.hnext.split("|"); try{ el.innerHTML=hnextHTML(c,pid,k); }catch(e){ console.error(e); el.innerHTML=`<h6>Próximos upgrades</h6><p class="tiny muted" style="margin:0">Não deu para calcular.</p>`; }
-  HNXT=setTimeout(step,30); },40); }
+/* r38 */ // «Próximos upgrades»: corre o huntSet em todos os níveis de itens da vocação acima do teu (um nível por passo, sem bloquear a
+// página; o set à vista primeiro) e guarda, por slot, os 3 primeiros itens que entram no set e o nível em que entram. Para quando
+// todos os slots têm 3 ou quando acabam os níveis.
+function hnextLv(c){ const L=c.level, ls=new Set(); allItems().forEach(it=>{ if(it.l>L&&!it.ns&&DOLL.some(([k])=>k&&k===it.s)&&canUse(c,it)) ls.add(it.l); }); return [...ls].sort((a,b)=>a-b); }
+const HNXN=3, HNXS=()=>DOLL.map(([x])=>x).filter(x=>x&&x!=="bag");
+function hnextHTML(c,st,fin){ const upto=st.i>0?st.lv[st.i-1]:c.level;
+  const rows=HNXS().map(x=>{ const ch=st.ch[x]; if(!ch||!ch.length) return ""; const f=ch[0], it=f.it, r=ch.slice(1);
+    return `<li><a class="hnx-i" href="${itemHref(it.n)}" data-look="${it.id}">${spr(it)}</a><span class="hnx-t"><span class="tiny muted">${esc(slotLab(c,x))}</span><a href="${itemHref(it.n)}" data-look="${it.id}">${esc(it.n)}</a></span><span class="hnx-l"><b>${f.L-c.level}</b><span class="tiny muted">níveis · nível ${f.L}</span></span>${r.length?`<span class="hnx-nx tiny muted">Depois: ${r.map(y=>`<a href="${itemHref(y.it.n)}" data-look="${y.it.id}">${esc(y.it.n)}</a> (nível ${y.L})`).join(" → ")}</span>`:""}</li>`; }).filter(Boolean);
+  const foot = !st.lv.length ? "Já tens o melhor de cada slot." : !fin ? `A calcular… até ao nível ${upto}.`
+    : rows.length ? `Itens que este set passa a usar quando subires de nível, até ao nível ${upto}. Os slots que não aparecem não mudam.` : `Nenhum slot muda até ao nível ${upto}.`;
+  return `<h6>Próximos upgrades</h6>${rows.length?`<ul class="hnx-l0">${rows.join("")}</ul>`:""}<p class="tiny muted" style="margin:0">${foot}</p>`; }
+let HNXT=0; const HNXST=new WeakMap();
+function hnextKick(){ clearTimeout(HNXT); HNXT=setTimeout(function step(){ const c=C(), q="[data-hnext]:not([data-hnok])", el=document.querySelector(".hset-p:not([hidden]) "+q)||document.querySelector(q); if(!c||!el) return;
+  try{ let st=HNXST.get(el);
+    if(!st){ const [pid,k]=el.dataset.hnext.split("|"), S=huntSet(c,pid,k), cur={}; HNXS().forEach(x=>{ cur[x]=S.slots[x]&&S.slots[x].id; }); st={pid,k,lv:hnextLv(c),i:0,ch:{},cur}; HNXST.set(el,st); }
+    else if(st.i<st.lv.length){ const L2=st.lv[st.i++], S2=huntSet(Object.assign({},c,{level:L2}),st.pid,st.k);
+      HNXS().forEach(x=>{ const ch=st.ch[x]||(st.ch[x]=[]), b=S2.slots[x]&&S2.slots[x].id, it=b&&BYID[b]; if(!b) return;
+        if(ch.length<HNXN&&b!==st.cur[x]&&it&&it.l>(ch.length?ch[ch.length-1].it.l:c.level)&&!ch.some(y=>y.it.id===b)) ch.push({it,L:L2}); st.cur[x]=b; });
+      if(HNXS().every(x=>(st.ch[x]||[]).length>=HNXN)) st.lv=st.lv.slice(0,st.i); }
+    const fin=st.i>=st.lv.length; el.innerHTML=hnextHTML(c,st,fin); if(fin) el.dataset.hnok="1";
+  }catch(e){ console.error(e); el.dataset.hnok="1"; el.innerHTML=`<h6>Próximos upgrades</h6><p class="tiny muted" style="margin:0">Não deu para calcular.</p>`; }
+  HNXT=setTimeout(step,15); },40); }
 
 document.addEventListener("click", e=>{
   const t=e.target.closest("[data-hsel]");
@@ -49607,6 +49624,36 @@ const mdNum = v => { const m=String(v||"").match(/\d[\d,.]*/); return m ? +m[0].
 const rsCls = v => v<0?"heal":v===0?"imm":v<100?"res":v===100?"neu":"weak";
 const CPTR = {fire:"fogo",energy:"energia",poison:"veneno",earth:"terra",ice:"gelo"};
 const cpTr = s => String(s||"").split(/,\s*/).map(x=>CPTR[x.trim().toLowerCase()]||x.trim()).filter(Boolean).join(", ");
+/* r38 */ // página da criatura: como caçar só esta criatura, nas abas da ficha da hunt sem a aba Hunt (Set e imbuements, Wheel, Runas e
+// charms, Preys). Rotação e supplies: as do TibiaPal na hunt com esta criatura mais perto do nível (abaixo, senão a mais baixa).
+const CRT=[["set","Set e imbuements"],["wheel","Wheel"],["sup","Runas e charms"],["prey","Preys"]];
+const HXBIC={xp:'<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',dmg:'<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4"/>',red:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'};
+function crHow(key,voc,L){ const ps=new Set(huntsWith(key)), H=(G.hunts[voc]||[]).filter(x=>x&&ps.has(x.c)&&x.how); if(!H.length) return null;
+  return H.filter(x=>x.l<=L).sort((a,b)=>b.l-a.l)[0]||H.slice().sort((a,b)=>a.l-b.l)[0]; }
+function crDiff(key,c){ let hit=null; if(CRDV&&hasKey(CRDV,key)) hit=GrimFicha.effHit(CRDV[key],protOf(c).prot);
+  return GrimFicha.huntDiff({d:crD(key), hit, eff:GrimBoss.effHP(c.voc,c.level,chStats(c).ml)}); }
+function crPreyHTML(key){ const c=C(), M=G.mon[key]; if(!c||!M) return "";
+  const L=c.level, d=crDiff(key,c), hit=CRDV&&hasKey(CRDV,key)&&typeof CRDV[key].m==="number"?CRDV[key].m:null;
+  let eh=null; try{ eh=GrimBoss.effHP(c.voc,L,chStats(c).ml); }catch(e){ eh=null; }
+  const pct=hit!=null&&eh>0?Math.round(hit/eh*100):null, red=L<100||d>=4||(pct!=null&&pct>=50), ord=red?["red","xp","dmg"]:["xp","dmg","red"];
+  const why={xp:"Mais XP por cada criatura que matas: é o bónus que mais sobe a tua XP/h quando a caça corre bem.",
+    dmg:`Matas mais depressa (${nf(M[1])} de vida cada): também sobe a XP/h, mas menos do que o bónus de XP.`,
+    red:pct!=null?`Bate até ${nf(hit)} por golpe (${pct}% da tua vida): menos dano, menos mortes e menos poções.`:"Menos dano recebido, menos mortes e menos poções."};
+  const lead=red?(L<100?`No nível ${L} cada golpe pesa: a redução de dano vem primeiro.`:`Esta criatura é perigosa para ti (${d}/5): a redução de dano vem primeiro.`):`No nível ${L} e com dificuldade ${d}/5, o bónus de XP é o que mais rende.`;
+  return `<p class="hx-lead">${lead}</p><ol class="hx-prey">${ord.map((b,i)=>`<li class="hx-pc hx-p-${b}"><span class="hx-ps">${i?"Alternativa":"Aconselhado"}</span>
+    <span class="hx-pm">${crSpr(key,48)}<span class="hx-pn"><b>${esc(M[0])}</b><span class="hx-pb"><svg viewBox="0 0 24 24" aria-hidden="true">${HXBIC[b]}</svg>${esc(GrimFicha.PREY[b])}</span></span></span>
+    <span class="small hx-pw">${why[b]}</span></li>`).join("")}</ol>
+    <p class="tiny muted">Uma criatura só pode estar num slot de prey. Usa Prey Wildcards para a escolher sem esperar pelo reroll e para trocar o bónus até sair o que queres.</p>`; }
+function crHxHTML(key){ const c=C(); if(!c) return hxNoChar("Adiciona a tua personagem para ver o set, a Wheel, as runas, os charms e as preys contra esta criatura, para o teu nível.");
+  if(!CRDV) crdLoad().then(()=>document.querySelectorAll("[data-crprey]").forEach(el=>{ el.innerHTML=crPreyHTML(el.dataset.crprey); }));
+  const pid="cr:"+key, p=plOf(pid), r=crHow(key,c.voc,c.level), h={r:{c:pid,how:r?r.how:""}}, id="hx"+(++HXN);
+  const panes={ set:()=>hsetsHTML(pid),
+    wheel:()=>hasKey(G.wheel,c.voc)?hwheelHTML(pid,p.d):`<p class="small muted">Ainda não há builds da Wheel para ${esc(G.voc[c.voc].n)}.</p>`,
+    sup:()=>`<section class="fx-sec"><h4>Ataque, runas e poções</h4>${setupHTML(c.voc,c.level,p,h)||`<p class="small muted">Sem dados de supplies para esta criatura.</p>`}${r&&G.places[r.c]?`<p class="tiny muted" style="margin:6px 0 0">Rotação e supplies de ${esc(G.places[r.c].n)}, a hunt com esta criatura mais perto do teu nível.</p>`:""}</section>
+      <section class="fx-sec"><h4>Charms</h4>${hCharmsHTML(c,p,h)}</section>`,
+    prey:()=>`<div data-crprey="${esc(key)}">${crPreyHTML(key)}</div>`};
+  HXL.set(id,panes); if(HXL.size>12) HXL.delete(HXL.keys().next().value);
+  return hxTabsHTML(id,panes,CRT.some(([k])=>k===ST.ui.htab)?ST.ui.htab:"set",CRT); }
 async function renderMonPage(key){
   const el=$("monPage"); el.innerHTML=`<p class="tkload">A carregar a criatura…</p>`;
   const [crs,items,sp,cinf,qs]=await Promise.all([dsafe("creatures"),dsafe("items"),dsafe("spawns"),dsafe("crinfo"),dsafe("quests"),guiasLoad()]);
@@ -49651,7 +49698,7 @@ async function renderMonPage(key){
   if(ci.spawn||ci.att||ci.ptype) tabs.push(["info","Mais dados",`<dl class="ip-dl">${ci.spawn?`<dt>Spawn</dt><dd>${esc(ci.spawn)}</dd>`:""}${ci.att?`<dt>Tipo de ataque</dt><dd>${esc(ci.att)}</dd>`:""}${ci.ptype?`<dt>Tipo</dt><dd>${esc(ci.ptype)}</dd>`:""}${ci.bclass?`<dt>Classe do Bestiary</dt><dd>${esc(ci.bclass)}</dd>`:""}${ci.heal?`<dt>Cura recebida</dt><dd>${esc(ci.heal)}</dd>`:""}</dl>`]);
   el.innerHTML = pageHead("Criatura", esc(name), crSpr(key,72), tags) + spec + `
     <section class="card rs-card"><h3>Fraquezas e resistências<span class="h3s">dano que leva de cada elemento</span></h3>${res}</section>
-    <section class="card cr-sets"><h3>Sets contra esta criatura<span class="h3s">${c?`para ${esc(G.voc[c.voc].n)} ${c.level}, só com o dano e as resistências desta criatura`:"para a tua personagem"}</span></h3>${c?hsetsHTML("cr:"+key):hxNoChar("Adiciona a tua personagem para ver os sets ofensivo, consistente e defensivo contra esta criatura, para o teu nível.")}</section>
+    <section class="card cr-sets cr-hx"><h3>Como caçar esta criatura<span class="h3s">${c?`para ${esc(G.voc[c.voc].n)} ${c.level}, só com o dano e as resistências desta criatura`:"para a tua personagem"}</span></h3>${crHxHTML(key)}</section>
     <div class="pg2">
       <section class="card"><h3>Ataques${mdNum(ci.maxdmg)?`<span class="h3s">até ${nf(mdNum(ci.maxdmg))} por turno</span>`:""}</h3>${atkT}
         ${othL.length?`<p class="pt-ab"><b>Habilidades</b> ${othL.join(" · ")}</p>`:""}
