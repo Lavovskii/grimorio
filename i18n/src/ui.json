@@ -668,7 +668,11 @@
   "k": "x"
  },
  "A arma de cada set conta com o elemento que as criaturas desta hunt levam.": {
-  "c": "index.html: /button>`).join(\"\")}</div>${panes}${(G.places[pid]||{}).eff?`<p class=\"tiny muted hset-note\">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:\"\"}</div>`; } /* r3",
+  "c": "index.html: a de cada set conta com o elemento que esta criatura leva.\":\"A arma de cada set conta com o elemento que as criaturas desta hunt levam.\"}</p>`:\"\"}</div>`; }",
+  "k": "x"
+ },
+ "A arma de cada set conta com o elemento que esta criatura leva.": {
+  "c": "index.html: lass=\"tiny muted hset-note\">${String(pid).startsWith(\"cr:\")?\"A arma de cada set conta com o elemento que esta criatura leva.\":\"A arma de cada set",
   "k": "x"
  },
  "A arma deste set é de duas mãos:": {
@@ -698,6 +702,10 @@
  "A calcular…": {
   "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "x"
+ },
+ "A calcular… até ao nível {0}.": {
+  "c": "index.html: = !st.lv.length ? \"Já tens o melhor de cada slot.\" : !fin ? `A calcular… até ao nível ${upto}.` : rows.length ?",
+  "k": "p"
  },
  "A carregar a criatura…": {
   "c": "index.html: n renderMonPage(key){ const el=$(\"monPage\"); el.innerHTML=`<p class=\"tkload\">A carregar a criatura…</p>`; const [crs,items",
@@ -1059,6 +1067,10 @@
   "c": "index.html: .slice(0,40).map(x=>row(x)).join(\"\")}`:\"\") + (up.length?`<div class=\"pk-g\">Acima do teu nível</div>${up.slice(0,20).map(x=>row(x,1)).join(\"\")}`:\"\"); } function pic",
   "k": "x"
  },
+ "Aconselhado": {
+  "c": "index.html: ass=\"hx-pc hx-p-${b}\"><span class=\"hx-ps\">${i?\"Alternativa\":\"Aconselhado\"}</span> <span c",
+  "k": "x"
+ },
  "Addon": {
   "c": "index.html: ;display:grid;gap:6px\">${o.addons.map(a=>`<li><b>${esc(a.n||\"Addon\")}</b>: ${esc(a.how|",
   "k": "x"
@@ -1079,8 +1091,8 @@
   "c": "index.html: st?\"≈\":\"\"}`; const d=diffFor(pid,c), id=\"hx\"+(++HXN), noc=\"Adiciona a tua personagem para ver isto ajustado ao teu nível e à tua vocação.\"; const stats=[{k:",
   "k": "x"
  },
- "Adiciona a tua personagem para ver os sets ofensivo, consistente e defensivo contra esta criatura, para o teu nível.": {
-  "c": "index.html: a personagem\"}</span></h3>${c?hsetsHTML(\"cr:\"+key):hxNoChar(\"Adiciona a tua personagem para ver os sets ofensivo, consistente e defensivo contra esta criatura, para o teu nível.\")}</section> <di",
+ "Adiciona a tua personagem para ver o set, a Wheel, as runas, os charms e as preys contra esta criatura, para o teu nível.": {
+  "c": "index.html: function crHxHTML(key){ const c=C(); if(!c) return hxNoChar(\"Adiciona a tua personagem para ver o set, a Wheel, as runas, os charms e as preys contra esta criatura, para o teu nível.\"); if(!CRDV) crdLo",
   "k": "x"
  },
  "Adicionar": {
@@ -1241,6 +1253,10 @@
  },
  "Alt+": {
   "c": "index.html: oUpperCase() : k; return (e.ctrlKey?\"Ctrl+\":\"\")+(e.altKey?\"Alt+\":\"\")+(e.shiftKey?\"Sh",
+  "k": "x"
+ },
+ "Alternativa": {
+  "c": "index.html: (b,i)=>`<li class=\"hx-pc hx-p-${b}\"><span class=\"hx-ps\">${i?\"Alternativa\":\"Aconselhado\"}</spa",
   "k": "x"
  },
  "Alternativas": {
@@ -1867,6 +1883,10 @@
   "c": "à mão (r19): textos antigos (páginas de criatura, item, NPC, outfit)",
   "k": "x"
  },
+ "Bate até {0} por golpe ({1}% da tua vida): menos dano, menos mortes e menos poções.": {
+  "c": "index.html: a XP/h, mas menos do que o bónus de XP.`, red:pct!=null?`Bate até ${nf(hit)} por golpe (${pct}% da tua vida): menos dano, menos mortes e menos poções.`:\"Menos dano recebid",
+  "k": "p"
+ },
  "Beam Mastery Mastery": {
   "c": "index.html: Salvation Healing\":[\"Paladin_Salvation_HealingIncrease\"], \"Beam Mastery Mastery\":[\"Sorcerer_Revelati",
   "k": "x"
@@ -1877,6 +1897,14 @@
  },
  "Best in slot (com 3 VR: Greater gem)": {
   "c": "index.html: ; return head+`<p class=\"wsel-sec bis\">${n?\"Best in slot\":\"Best in slot (com 3 VR: Greater gem)\"}</p><ul class=\"wmod",
+  "k": "x"
+ },
+ "Best in slot de dano: o que dá mais dano no teu nível em cada slot. A proteção só desempata.": {
+  "c": "index.html: nte, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Best in slot de dano: o que dá mais dano no teu nível em cada slot. A proteção só desempata.\"],[\"bal\",\"Consistent",
+  "k": "x"
+ },
+ "Best in slot de proteção contra o dano que vais levar: para aprender, puxar mais ou quando a vida desce depressa.": {
+  "c": "index.html:  levar: o set para usar todos os dias.\"],[\"def\",\"Defensivo\",\"Best in slot de proteção contra o dano que vais levar: para aprender, puxar mais ou quando a vida desce depressa.\"]]; function hsetsHT",
   "k": "x"
  },
  "Best in slot e outras boas opções": {
@@ -2583,6 +2611,10 @@
   "c": "index.html: h&&vocKey(ch.vocation), dup=ch&&haveChar(ch.name); return `<form class=\"lk\" novalidate style=\"display:grid;gap:14px\"> <div class=\"fname\"><label for=\"lk-name\">Nome da personagem no Tibia</label><div class=\"lkrow\"><input i",
   "k": "x"
  },
+ "Como caçar esta criatura{0}": {
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
+  "k": "p"
+ },
  "Como chegar": {
   "c": "index.html: rows}</div> ${haHTML(g.pid,null)} ${tabsUI([[\"rota\",\"Como chegar\",huntRoute(g.pid)], ",
   "k": "x"
@@ -2748,7 +2780,7 @@
   "k": "x"
  },
  "Consistente": {
-  "c": "index.html: do já dominas a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistente\",\"Equilíbrio entre d",
+  "c": "index.html: o teu nível em cada slot. A proteção só desempata.\"],[\"bal\",\"Consistente\",\"Metade dano, metad",
   "k": "x"
  },
  "Constructos": {
@@ -3196,7 +3228,7 @@
   "k": "x"
  },
  "Defensivo": {
-  "c": "index.html: roteção: o set para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\",\"Proteção máxima: p",
+  "c": "index.html: ano que vais levar: o set para usar todos os dias.\"],[\"def\",\"Defensivo\",\"Best in slot de pr",
   "k": "x"
  },
  "Defesa": {
@@ -3254,6 +3286,10 @@
  "Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.": {
   "c": "index.html: wsug-n\">+${n}</b></li>`; }).join(\"\")}</ul> ${sug.fill?`<p class=\"wsub\">Depois dessa build, o resto vai para os domínios onde já tens mais pontos, até aos 1000 de cada um.</p>`:\"\"}${sug.left>0?`<p",
   "k": "x"
+ },
+ "Depois: {0}": {
+  "c": "index.html: =\"tiny muted\">níveis · nível ${f.L}</span></span>${r.length?`<span class=\"hnx-nx tiny muted\">Depois: ${r.map(y=>`<a href=\"${itemHref(y.it.n)}\" data-look=\"${y.it.id}\">${esc(y.it.n)}</a> (nível ${y.L})`).join(\" → \")}</span",
+  "k": "p"
  },
  "Desbloqueado na Wheel (perto do nível": {
   "c": "index.html: fn))}</b> <code>${esc(f.t)}</code><span class=\"d\">${f.wheel?\"Desbloqueado na Wheel (perto do nível \"+f.l+\")\":\"Nível \"+f.",
@@ -3831,10 +3867,6 @@
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Equilíbrio entre dano e proteção:",
   "k": "x"
  },
- "Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt.": {
-  "c": "index.html: a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistente\",\"Equilíbrio entre dano e proteção: o set para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\"",
-  "k": "x"
- },
  "Equipa": {
   "c": "quests/js/app.js: ocaleCompare(b.name)); $(\"#sidebarFilters\").innerHTML = ` <details class=\"filters\" ${f.open ? \"open\" : \"\"}> <summary class=\"filter-summary\"><span><b id=\"fcount\"></b></span><span class=\"link-btn\">Filtros</span></summary> ",
   "k": "x"
@@ -4030,6 +4062,10 @@
  "Esta build ainda não ativa nenhum vessel.": {
   "c": "index.html: wh-s\"><h6>Gemas</h6>${gems?`<ul class=\"whp-l\">${gems}</ul>`:`<p class=\"small muted\" style=\"margin:0\">Esta build ainda não ativa nenhum vessel.</p>`}</div></div></div><",
   "k": "x"
+ },
+ "Esta criatura é perigosa para ti ({0}/5): a redução de dano vem primeiro.": {
+  "c": "index.html: ível ${L} cada golpe pesa: a redução de dano vem primeiro.`:`Esta criatura é perigosa para ti (${d}/5): a redução de dano vem primeiro.`):`No nível ${L} e c",
+  "k": "p"
  },
  "Esta hunt não exige quests.": {
   "c": "index.html: QBY[id]); } function questsTab(ids){ if(!ids.length) return `<p class=\"small muted\">Esta hunt não exige quests.</p>`; return ids.map(id=",
@@ -5487,8 +5523,8 @@
   "c": "index.html: d small\">Nada nos próximos 120 níveis.</li>'}</ul>` }; h+=`<div class=\"sltabs\" role=\"tablist\" aria-label=\"Itens para este slot\">${[[\"top\",`Melhores até ao nível ${L}`,top.length],[\"mine\",\"Os teus\",mine.length],[\"next\",\"P",
   "k": "x"
  },
- "Itens que este set passa a usar quando subires de nível. Os slots que não aparecem não mudam{0}.": {
-  "c": "index.html: l>`:\"\"}<p class=\"tiny muted\" style=\"margin:0\">${rows.length?`Itens que este set passa a usar quando subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum slot m",
+ "Itens que este set passa a usar quando subires de nível, até ao nível {0}. Os slots que não aparecem não mudam.": {
+  "c": "index.html: n ? `A calcular… até ao nível ${upto}.` : rows.length ? `Itens que este set passa a usar quando subires de nível, até ao nível ${upto}. Os slots que não aparecem não mudam.` : `Nenhum slot muda",
   "k": "p"
  },
  "Itens raros também aparecem:": {
@@ -5584,7 +5620,7 @@
   "k": "x"
  },
  "Já tens o melhor de cada slot.": {
-  "c": "index.html: {last}`:\"\"}.`:last?`Nenhum slot muda até ao nível ${last}.`:\"Já tens o melhor de cada slot.\"}</p>`; } let HNXT=0",
+  "c": "index.html: }</li>`; }).filter(Boolean); const foot = !st.lv.length ? \"Já tens o melhor de cada slot.\" : !fin ? `A calcula",
   "k": "x"
  },
  "Kabuto": {
@@ -6027,12 +6063,12 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
- "Mais dados": {
-  "c": "index.html: th||0]]; if(ci.spawn||ci.att||ci.ptype) tabs.push([\"info\",\"Mais dados\",`<dl class=\"ip-dl\">",
+ "Mais XP por cada criatura que matas: é o bónus que mais sobe a tua XP/h quando a caça corre bem.": {
+  "c": "index.html: =red?[\"red\",\"xp\",\"dmg\"]:[\"xp\",\"dmg\",\"red\"]; const why={xp:\"Mais XP por cada criatura que matas: é o bónus que mais sobe a tua XP/h quando a caça corre bem.\", dmg:`Matas mai",
   "k": "x"
  },
- "Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa.": {
-  "c": "index.html: nte, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills e arma em primeiro. Para quando já dominas a hunt e queres matar mais depressa.\"],[\"bal\",\"Consistent",
+ "Mais dados": {
+  "c": "index.html: th||0]]; if(ci.spawn||ci.att||ci.ptype) tabs.push([\"info\",\"Mais dados\",`<dl class=\"ip-dl\">",
   "k": "x"
  },
  "Mais pontos": {
@@ -6243,6 +6279,10 @@
   "c": "index.html: Lead(P); const mk=w&&MKV[w]&&MKV[w].items; el.innerHTML=`<div class=\"card bs-top\"><div class=\"bs-segs\"><div class=\"seg\" id=\"bsSegE\" role=\"group\" aria-label=\"Bosses permanentes ou de eventos\"></div><div class=\"seg\" id=\"bs",
   "k": "x"
  },
+ "Matas mais depressa ({0} de vida cada): também sobe a XP/h, mas menos do que o bónus de XP.": {
+  "c": "index.html: que mais sobe a tua XP/h quando a caça corre bem.\", dmg:`Matas mais depressa (${nf(M[1])} de vida cada): também sobe a XP/h, mas menos do que o bónus de XP.`, red:pct!=null?",
+  "k": "p"
+ },
  "Maça": {
   "c": "index.html: and / rod'). const IKIND={sword:\"Espada\",axe:\"Machado\",club:\"Maça\",bow:\"Arco\",crossbow",
   "k": "x"
@@ -6299,12 +6339,20 @@
   "c": "index.html:  role=\"tablist\" aria-label=\"Itens para este slot\">${[[\"top\",`Melhores até ao nível ${L}`,top.length],[\"mine\"",
   "k": "p"
  },
+ "Menos dano recebido, menos mortes e menos poções.": {
+  "c": "index.html: t}% da tua vida): menos dano, menos mortes e menos poções.`:\"Menos dano recebido, menos mortes e menos poções.\"}; const lead=red?",
+  "k": "x"
+ },
  "Menos tipos": {
   "c": "index.html: ata-hcls-all aria-expanded=\"${!!ST.ui.hfAll}\">${ST.ui.hfAll?\"Menos tipos\":`+${nx} tipos`}</bu",
   "k": "x"
  },
  "Meta": {
   "c": "index.html: hkName(e){ const k=e.key; if(!k||[\"Shift\",\"Control\",\"Alt\",\"Meta\",\"CapsLock\",\"Tab\",\"D",
+  "k": "x"
+ },
+ "Metade dano, metade proteção contra o dano que vais levar: o set para usar todos os dias.": {
+  "c": "index.html:  cada slot. A proteção só desempata.\"],[\"bal\",\"Consistente\",\"Metade dano, metade proteção contra o dano que vais levar: o set para usar todos os dias.\"],[\"def\",\"Defensivo\"",
   "k": "x"
  },
  "Metade das vezes até": {
@@ -6744,7 +6792,7 @@
   "k": "x"
  },
  "Nenhum slot muda até ao nível {0}.": {
-  "c": "index.html: aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum slot muda até ao nível ${last}.`:\"Já tens o melhor d",
+  "c": "index.html: é ao nível ${upto}. Os slots que não aparecem não mudam.` : `Nenhum slot muda até ao nível ${upto}.`; return `<h6>Próx",
   "k": "p"
  },
  "Nenhuma": {
@@ -6853,6 +6901,14 @@
  },
  "No nível {0} cada golpe pesa: a redução de dano vem primeiro, depois o XP.": {
   "c": "index.html:  × ${x.cnt}`:\"\"}.`); } const lead = mode===\"def\" ? (L<100?`No nível ${L} cada golpe pesa: a redução de dano vem primeiro, depois o XP.`:`Esta hunt é difíci",
+  "k": "p"
+ },
+ "No nível {0} cada golpe pesa: a redução de dano vem primeiro.": {
+  "c": "index.html: do, menos mortes e menos poções.\"}; const lead=red?(L<100?`No nível ${L} cada golpe pesa: a redução de dano vem primeiro.`:`Esta criatura é pe",
+  "k": "p"
+ },
+ "No nível {0} e com dificuldade {1}/5, o bónus de XP é o que mais rende.": {
+  "c": "index.html: erigosa para ti (${d}/5): a redução de dano vem primeiro.`):`No nível ${L} e com dificuldade ${d}/5, o bónus de XP é o que mais rende.`; return `<p class",
   "k": "p"
  },
  "No nível {0} e numa hunt calma ({1}/5) já não precisas de defesa: XP e dano rendem mais.": {
@@ -7056,7 +7112,7 @@
   "k": "x"
  },
  "Não deu para calcular.": {
-  "c": "index.html: extHTML(c,pid,k); }catch(e){ console.error(e); el.innerHTML=`<h6>Próximos upgrades</h6><p class=\"tiny muted\" style=\"margin:0\">Não deu para calcular.</p>`; } HNXT=setTimeou",
+  "c": "index.html: tch(e){ console.error(e); el.dataset.hnok=\"1\"; el.innerHTML=`<h6>Próximos upgrades</h6><p class=\"tiny muted\" style=\"margin:0\">Não deu para calcular.</p>`; } HNXT=setTimeou",
   "k": "x"
  },
  "Não deu para copiar": {
@@ -7624,7 +7680,7 @@
   "k": "p"
  },
  "Ofensivo": {
-  "c": "index.html: o, consistente, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Mais dano: skills ",
+  "c": "index.html: o, consistente, defensivo) com imbuements const HSM=[[\"off\",\"Ofensivo\",\"Best in slot de da",
   "k": "x"
  },
  "Olhos e ombreira": {
@@ -8012,7 +8068,7 @@
   "k": "x"
  },
  "Partes da ficha": {
-  "c": "index.html: n(\"\")}</ul>`; } function hxTabsHTML(id,panes,sel){ return `<div class=\"hx\" data-hx=\"${id}\"><div class=\"hx-tabs\" role=\"tablist\" aria-label=\"Partes da ficha\">${HXT.map(([k,l])=>`<button type=\"button\" role=\"tab\" id=\"${id}-t",
+  "c": "index.html: ; } function hxTabsHTML(id,panes,sel,T){ T=T||HXT; return `<div class=\"hx\" data-hx=\"${id}\"><div class=\"hx-tabs\" role=\"tablist\" aria-label=\"Partes da ficha\" style=\"--hxn:${T.length}\">${T.map(([k,l])=>`<button type=\"button",
   "k": "x"
  },
  "Partida": {
@@ -8691,10 +8747,6 @@
   "c": "recolhida: /grimorio/#hunts/tipo/elemental · ex.: Proteção máxima:",
   "k": "x"
  },
- "Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.": {
-  "c": "index.html: et para usar todos os dias nesta hunt.\"],[\"def\",\"Defensivo\",\"Proteção máxima: para aprender a hunt, puxar mais ou quando a vida desce depressa.\"]]; function hsetsHT",
-  "k": "x"
- },
  "Proteção prioritária": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
@@ -9247,6 +9299,10 @@
   "c": "index.html (HTML)",
   "k": "x"
  },
+ "Rotação e supplies de {0}, a hunt com esta criatura mais perto do teu nível.": {
+  "c": "index.html: dos de supplies para esta criatura.</p>`}${r&&G.places[r.c]?`<p class=\"tiny muted\" style=\"margin:6px 0 0\">Rotação e supplies de ${esc(G.places[r.c].n)}, a hunt com esta criatura mais perto do teu nível.</p>`:\"\"}</section",
+  "k": "p"
+ },
  "Rotten Blood mais pobre e menos sensível": {
   "c": "index.html:  atualiza-se sozinha todos os dias).\"]}, {d:\"2026-10-27\",t:\"Rotten Blood mais pobre e menos sensível\",h:[\"jadedroots\",\"gl",
   "k": "x"
@@ -9445,6 +9501,10 @@
  },
  "Sem dados de resistência para esta zona.": {
   "c": "index.html: TML(voc,p){ const L=elemList(voc,p); if(!L.length) return `<p class=\"small muted\" style=\"margin:0\">Sem dados de resistência para esta zona.</p>`; const mage=voc==",
+  "k": "x"
+ },
+ "Sem dados de supplies para esta criatura.": {
+  "c": "index.html: >Ataque, runas e poções</h4>${setupHTML(c.voc,c.level,p,h)||`<p class=\"small muted\">Sem dados de supplies para esta criatura.</p>`}${r&&G.places[r.c]?",
   "k": "x"
  },
  "Sem dados de supplies para esta hunt.": {
@@ -9673,10 +9733,6 @@
  },
  "Sets aconselhados para {0} {1}": {
   "c": "index.html: lar…</p></div></div>`; }).join(\"\"); hnextKick(); return `<div class=\"hsets\" data-hsets=\"${esc(pid)}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span",
-  "k": "p"
- },
- "Sets contra esta criatura{0}": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "p"
  },
  "Sets e inventário": {
@@ -10919,6 +10975,10 @@
   "c": "index.html: ao vosso\":\"ao teu\"} nível.`; $(\"huntFilters\").innerHTML = ` <div class=\"hf-bar\"><button type=\"button\" class=\"btn ghost hf-toggle\" data-hfmore aria-expanded=\"${open}\" aria-controls=\"huntFilters\" aria-label=\"Filtros: ${res",
   "k": "x"
  },
+ "Uma criatura só pode estar num slot de prey. Usa Prey Wildcards para a escolher sem esperar pelo reroll e para trocar o bónus até sair o que queres.": {
+  "c": "index.html: uldade ${d}/5, o bónus de XP é o que mais rende.`; return `<p class=\"hx-lead\">${lead}</p><ol class=\"hx-prey\">${ord.map((b,i)=>`<li class=\"hx-pc hx-p-${b}\"><span class=\"hx-ps\">${i?\"Alternativa\":\"Aconselhado\"}</span> <span",
+  "k": "x"
+ },
  "Uma vez no início de cada boss: dano contínuo durante a luta.": {
   "c": "à mão (r18): texto dos motores ou das páginas novas (rotação, bosses, imbuements)",
   "k": "x"
@@ -11970,14 +12030,6 @@
  "até": {
   "c": "index.html: \"poisoned\", \"9 seconds, rarely\") const CPEN=[[/\\bup to\\b/gi,\"até\"],[/\\bhp\\/turn\\b/gi,",
   "k": "x"
- },
- "até ao nível": {
-  "c": "index.html: subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum ",
-  "k": "x"
- },
- "até ao nível {0}": {
-  "c": "index.html: subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum ",
-  "k": "p"
  },
  "até {0} por turno": {
   "c": "index.html: > <section class=\"card\"><h3>Ataques${mdNum(ci.maxdmg)?`<span class=\"h3s\">até ${nf(mdNum(ci.maxdmg))} por turno</span>`:\"\"}</h3>${atkT} ",
@@ -14768,11 +14820,11 @@
   "k": "x"
  },
  "níveis · nível": {
-  "c": "index.html: p(([x])=>{ const it=out[x], lab=slotLab(c,x); return it?`<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(lab)}</span><a href=\"${itemHref",
+  "c": "index.html: eturn \"\"; const f=ch[0], it=f.it, r=ch.slice(1); return `<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(slotLab(c,x))}</span><a href=\"$",
   "k": "x"
  },
  "níveis · nível {0}": {
-  "c": "index.html: p(([x])=>{ const it=out[x], lab=slotLab(c,x); return it?`<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(lab)}</span><a href=\"${itemHref",
+  "c": "index.html: eturn \"\"; const f=ch[0], it=f.it, r=ch.slice(1); return `<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(slotLab(c,x))}</span><a href=\"$",
   "k": "p"
  },
  "nível": {
@@ -15008,7 +15060,7 @@
   "k": "x"
  },
  "para a tua personagem": {
-  "c": "index.html: ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua personagem\"}</span></h3>${c?hse",
+  "c": "index.html: ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua personagem\"}</span></h3>${crHxH",
   "k": "x"
  },
  "para bosses": {
@@ -15084,7 +15136,7 @@
   "k": "p"
  },
  "para {0} {1}, só com o dano e as resistências desta criatura": {
-  "c": "index.html: cr-sets\"><h3>Sets contra esta criatura<span class=\"h3s\">${c?`para ${esc(G.voc[c.voc].n)} ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua persona",
+  "c": "index.html: ts cr-hx\"><h3>Como caçar esta criatura<span class=\"h3s\">${c?`para ${esc(G.voc[c.voc].n)} ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua persona",
   "k": "p"
  },
  "paralisia": {
@@ -15424,7 +15476,7 @@
   "k": "x"
  },
  "prot": {
-  "c": "index.html: if(k.startsWith(\"p_\")) return `${k===\"p_death\"?v(\"protd\"):v(\"prot\")}% de proteção a ${",
+  "c": "index.html: , M=SCMODE[mode]||SCMODE.combat, W=[\"off\",\"bal\",\"def\",\"dmg\",\"prot\"].includes(mode)?[1,",
   "k": "x"
  },
  "protd": {
@@ -16140,7 +16192,7 @@
   "k": "x"
  },
  "speed": {
-  "c": "index.html: MODE.combat, W=SCW[v]||[1,1], rs=relSkills(c), speed=mode===\"speed\", P0=scPF(c); cons",
+  "c": "index.html: es(mode)?[1,1]:SCW[v]||[1,1], rs=relSkills(c), speed=mode===\"speed\", P0=scPF(c); cons",
   "k": "x"
  },
  "spell": {
@@ -17013,6 +17065,10 @@
  },
  "{0} (níveis e solo/grupo das quests)": {
   "c": "index.html (HTML)",
+  "k": "p"
+ },
+ "{0} (nível {1})": {
+  "c": "index.html: .length?`<span class=\"hnx-nx tiny muted\">Depois: ${r.map(y=>`<a href=\"${itemHref(y.it.n)}\" data-look=\"${y.it.id}\">${esc(y.it.n)}</a> (nível ${y.L})`).join(\" → \")}</span",
   "k": "p"
  },
  "{0} (o TibiaPal mediu esta hunt para a tua vocação)": {
