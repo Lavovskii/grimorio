@@ -668,7 +668,7 @@
   "k": "x"
  },
  "A arma de cada set conta com o elemento que as criaturas desta hunt levam.": {
-  "c": "index.html: /button>`).join(\"\")}</div>${panes}${(G.places[pid]||{}).eff?`<p class=\"tiny muted hset-note\">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:\"\"}</div>`; } docum",
+  "c": "index.html: /button>`).join(\"\")}</div>${panes}${(G.places[pid]||{}).eff?`<p class=\"tiny muted hset-note\">A arma de cada set conta com o elemento que as criaturas desta hunt levam.</p>`:\"\"}</div>`; } /* r3",
   "k": "x"
  },
  "A arma deste set é de duas mãos:": {
@@ -693,6 +693,10 @@
  },
  "A calcular os preços…": {
   "c": "index.html: .h||[]).length||0], ...(g.pid?[[\"loot\",\"Loot e lucro\",`<div class=\"lp\" data-lootp=\"${g.pid}\" data-g=\"1\" data-xp=\"${g.party0??\"\"}\"${(()=>{ const e=ST.ui.ev; return evOn()&&e.t===\"mon\"&&hasKey(G.mon,e.v)?` data-evk=\"${esc(",
+  "k": "x"
+ },
+ "A calcular…": {
+  "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "x"
  },
  "A carregar a criatura…": {
@@ -1073,6 +1077,10 @@
  },
  "Adiciona a tua personagem para ver isto ajustado ao teu nível e à tua vocação.": {
   "c": "index.html: st?\"≈\":\"\"}`; const d=diffFor(pid,c), id=\"hx\"+(++HXN), noc=\"Adiciona a tua personagem para ver isto ajustado ao teu nível e à tua vocação.\"; const stats=[{k:",
+  "k": "x"
+ },
+ "Adiciona a tua personagem para ver os sets ofensivo, consistente e defensivo contra esta criatura, para o teu nível.": {
+  "c": "index.html: a personagem\"}</span></h3>${c?hsetsHTML(\"cr:\"+key):hxNoChar(\"Adiciona a tua personagem para ver os sets ofensivo, consistente e defensivo contra esta criatura, para o teu nível.\")}</section> <di",
   "k": "x"
  },
  "Adicionar": {
@@ -1656,7 +1664,7 @@
   "k": "x"
  },
  "Ataques": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "x"
  },
  "Atenção": {
@@ -4564,7 +4572,7 @@
   "k": "x"
  },
  "Fraquezas e resistências{0}": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "p"
  },
  "Free": {
@@ -5479,6 +5487,10 @@
   "c": "index.html: d small\">Nada nos próximos 120 níveis.</li>'}</ul>` }; h+=`<div class=\"sltabs\" role=\"tablist\" aria-label=\"Itens para este slot\">${[[\"top\",`Melhores até ao nível ${L}`,top.length],[\"mine\",\"Os teus\",mine.length],[\"next\",\"P",
   "k": "x"
  },
+ "Itens que este set passa a usar quando subires de nível. Os slots que não aparecem não mudam{0}.": {
+  "c": "index.html: l>`:\"\"}<p class=\"tiny muted\" style=\"margin:0\">${rows.length?`Itens que este set passa a usar quando subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum slot m",
+  "k": "p"
+ },
  "Itens raros também aparecem:": {
   "c": "recolhida: /grimorio/#inicio · ex.: Itens raros também aparecem:",
   "k": "x"
@@ -5569,6 +5581,10 @@
  },
  "Já não precisas de iniciar manualmente as descobertas de cada área no Cyclopedia: todas as subáreas estão ativas.": {
   "c": "index.html: área por completo dá-te velocidade extra lá dentro.\", \"p\": [\"Já não precisas de iniciar manualmente as descobertas de cada área no Cyclopedia: todas as subáreas estão ativas.\", \"Continuas a poder",
+  "k": "x"
+ },
+ "Já tens o melhor de cada slot.": {
+  "c": "index.html: {last}`:\"\"}.`:last?`Nenhum slot muda até ao nível ${last}.`:\"Já tens o melhor de cada slot.\"}</p>`; } let HNXT=0",
   "k": "x"
  },
  "Kabuto": {
@@ -6727,6 +6743,10 @@
   "c": "index.html:  esses filtros.\"),M.length],[\"o\",\"Outfits\",grid(O,\"o\",oCard,\"Nenhum outfit com esses filtros.\"),O.length]]); WLS",
   "k": "x"
  },
+ "Nenhum slot muda até ao nível {0}.": {
+  "c": "index.html: aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum slot muda até ao nível ${last}.`:\"Já tens o melhor d",
+  "k": "p"
+ },
  "Nenhuma": {
   "c": "index.html: n>`; const wt = WTYPES[c.voc]; $(\"setMeta\").innerHTML = `<div class=\"setacts\"><button class=\"btn small\" data-fill=\"own\">Preencher com o melhor que tenho</button><button class=\"btn small ghost\" data-fill=\"best\">Sugerir o ",
   "k": "x"
@@ -7033,6 +7053,10 @@
  },
  "Não consegui montar a barra.": {
   "c": "index.html: .layout(RXD,opt); }catch(e){ console.error(e); el.innerHTML=`<p class=\"small muted\">Não consegui montar a barra.</p>`; return; } if(!Lr",
+  "k": "x"
+ },
+ "Não deu para calcular.": {
+  "c": "index.html: extHTML(c,pid,k); }catch(e){ console.error(e); el.innerHTML=`<h6>Próximos upgrades</h6><p class=\"tiny muted\" style=\"margin:0\">Não deu para calcular.</p>`; } HNXT=setTimeou",
   "k": "x"
  },
  "Não deu para copiar": {
@@ -8712,7 +8736,7 @@
   "k": "x"
  },
  "Próximos upgrades": {
-  "c": "index.html: el ${L}`,top.length],[\"mine\",\"Os teus\",mine.length],[\"next\",\"Próximos upgrades\",nxt.length]].map(([",
+  "c": "index.html: ma do monk e o que as criaturas levam da ligação return `<div class=\"hset-p\" data-hpane=\"${k}\" ${k===sel?\"\":\"hidden\"}><p class=\"small hset-d\">${esc(d)}${twin?` <span class=\"tiny muted\">Igual ao ${esc(twin.toLowerCase())}",
   "k": "x"
  },
  "Publicidade": {
@@ -9644,11 +9668,15 @@
   "k": "x"
  },
  "Sets aconselhados para {0}": {
-  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
+  "c": "index.html: lar…</p></div></div>`; }).join(\"\"); hnextKick(); return `<div class=\"hsets\" data-hsets=\"${esc(pid)}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span",
   "k": "p"
  },
  "Sets aconselhados para {0} {1}": {
-  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
+  "c": "index.html: lar…</p></div></div>`; }).join(\"\"); hnextKick(); return `<div class=\"hsets\" data-hsets=\"${esc(pid)}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span",
+  "k": "p"
+ },
+ "Sets contra esta criatura{0}": {
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "p"
  },
  "Sets e inventário": {
@@ -10656,7 +10684,7 @@
   "k": "x"
  },
  "Tipo de set": {
-  "c": "index.html: eus sets</button></div></div></div>`; }).join(\"\"); return `<div class=\"hsets\" data-hsets=\"${pid}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span cl",
+  "c": "index.html: lar…</p></div></div>`; }).join(\"\"); hnextKick(); return `<div class=\"hsets\" data-hsets=\"${esc(pid)}\"><div class=\"hsets-h\"><h5>Sets aconselhados para ${esc(G.voc[c.voc].n)} ${c.level}</h5>${pf?`<div class=\"hs-chips\"><span",
   "k": "x"
  },
  "Tipo de tarefa": {
@@ -11943,6 +11971,14 @@
   "c": "index.html: \"poisoned\", \"9 seconds, rarely\") const CPEN=[[/\\bup to\\b/gi,\"até\"],[/\\bhp\\/turn\\b/gi,",
   "k": "x"
  },
+ "até ao nível": {
+  "c": "index.html: subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum ",
+  "k": "x"
+ },
+ "até ao nível {0}": {
+  "c": "index.html: subires de nível. Os slots que não aparecem não mudam${last?` até ao nível ${last}`:\"\"}.`:last?`Nenhum ",
+  "k": "p"
+ },
  "até {0} por turno": {
   "c": "index.html: > <section class=\"card\"><h3>Ataques${mdNum(ci.maxdmg)?`<span class=\"h3s\">até ${nf(mdNum(ci.maxdmg))} por turno</span>`:\"\"}</h3>${atkT} ",
   "k": "p"
@@ -12692,7 +12728,7 @@
   "k": "x"
  },
  "dano que leva de cada elemento": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "x"
  },
  "darklightcore": {
@@ -14008,7 +14044,7 @@
   "k": "p"
  },
  "itens · do que mais rende ao que menos": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "x"
  },
  "itens · tens {0} marcados": {
@@ -14731,6 +14767,14 @@
   "c": "index.html: fl>0?`<span class=\"tiny wfal\">faltam ${fl} ${fl===1?\"nível\":\"níveis\"}</span>`:\"\"}</td><t",
   "k": "x"
  },
+ "níveis · nível": {
+  "c": "index.html: p(([x])=>{ const it=out[x], lab=slotLab(c,x); return it?`<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(lab)}</span><a href=\"${itemHref",
+  "k": "x"
+ },
+ "níveis · nível {0}": {
+  "c": "index.html: p(([x])=>{ const it=out[x], lab=slotLab(c,x); return it?`<li><a class=\"hnx-i\" href=\"${itemHref(it.n)}\" data-look=\"${it.id}\">${spr(it)}</a><span class=\"hnx-t\"><span class=\"tiny muted\">${esc(lab)}</span><a href=\"${itemHref",
+  "k": "p"
+ },
  "nível": {
   "c": "index.html (HTML)",
   "k": "x"
@@ -14963,6 +15007,10 @@
   "c": "index.html:  if(k===\"w\") return {i:\"w\",t:`Caminha ~${s[1]} sqm${s[2]>=0?\" para \"+DIRN[s[2]]:\"\"}`}; ",
   "k": "x"
  },
+ "para a tua personagem": {
+  "c": "index.html: ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua personagem\"}</span></h3>${c?hse",
+  "k": "x"
+ },
  "para bosses": {
   "c": "index.html:  holy\",\"Physical Build\":\"build física\",\"Base Bossing Build\":\"para bosses\",\"Base Ranged Spawn ",
   "k": "x"
@@ -15033,6 +15081,10 @@
  },
  "para {0}": {
   "c": "index.html: ength}`:rows.length} hunts${f.city?` em ${f.city}`:\"\"}${grp?` para ${ms.length===2?\"os dois\":\"o grupo\"}`:\"\"}${f.cls.length?`",
+  "k": "p"
+ },
+ "para {0} {1}, só com o dano e as resistências desta criatura": {
+  "c": "index.html: cr-sets\"><h3>Sets contra esta criatura<span class=\"h3s\">${c?`para ${esc(G.voc[c.voc].n)} ${c.level}, só com o dano e as resistências desta criatura`:\"para a tua persona",
   "k": "p"
  },
  "paralisia": {
@@ -17408,7 +17460,7 @@
   "k": "p"
  },
  "{0} itens · do que mais rende ao que menos": {
-  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <div class=\"pg2\"> <sect",
+  "c": "index.html: geHead(\"Criatura\", esc(name), crSpr(key,72), tags) + spec + ` <section class=\"card rs-card\"><h3>Fraquezas e resistências<span class=\"h3s\">dano que leva de cada elemento</span></h3>${res}</section> <section class=\"card cr",
   "k": "p"
  },
  "{0} itens · tens {1} marcados": {
